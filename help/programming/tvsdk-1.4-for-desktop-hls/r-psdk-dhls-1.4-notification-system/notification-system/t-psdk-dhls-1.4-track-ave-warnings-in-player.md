@@ -1,0 +1,117 @@
+---
+description: Utilizzando NotificationEvent, potete tenere traccia degli avvisi passati da Adobe Video Engine (AVE).
+seo-description: Utilizzando NotificationEvent, potete tenere traccia degli avvisi passati da Adobe Video Engine (AVE).
+seo-title: Tenere traccia degli avvisi AVE nel lettore
+title: Tenere traccia degli avvisi AVE nel lettore
+uuid: 236aee5e-6b1a-4298-9d3b-f33b40416c19
+translation-type: tm+mt
+source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+
+---
+
+
+# Tenere traccia degli avvisi AVE nel lettore{#track-ave-warnings-in-your-player}
+
+Utilizzando NotificationEvent, potete tenere traccia degli avvisi passati da Adobe Video Engine (AVE).
+
+L’app lettore può tenere traccia degli avvisi e degli errori di riproduzione generati dall’AVE, ad esempio gli eventi di failover o di spegnimento della rete, che non arrestano la riproduzione e non richiedono necessariamente l’intervento dell’app. Mentre alcuni errori AVE vengono gestiti da TVSDK, `NotificationEvent` funge da meccanismo generale di passaggio al livello dell’applicazione per gli avvisi AVE. Dopo aver ricevuto gli avvisi AVE, potete scegliere di eseguire alcune azioni, ad esempio interrompere la riproduzione in modo proattivo, attivare un piano di emergenza, registrare messaggi e così via.
+
+Utilizzate i seguenti elementi API per tenere traccia degli avvisi AVE nel lettore:
+
+**NotificationCode**
+
+```
+public final class NotificationCode { 
+    /** 
+     * Warning message for playback status. 
+     */ 
+    public static const GENERAL_WARNING:int = 101100; 
+}
+```
+
+**NotificationEvent**
+
+```
+/** 
+ * Event dispatched by MediaPlayer when a notification is available 
+ * for the current media stream being played. 
+ */ 
+public class NotificationEvent extends Event { 
+    /** 
+     * Event dispatched when a new warning has been received for the current item. 
+     * 
+     * The newly created Notification object can be accessed through  
+     * the notification property of this event. 
+     */ 
+    public static const WARNING_AVAILABLE:String = "warningAvailable"; 
+    /** 
+     * Helper method for creating NotificationEvent events. 
+     * Throws an ArgumentError if the specified ad break is null. 
+     * @param notification Associated notification object. 
+     * 
+     * @return a valid notification event instance. 
+     */ 
+    public static function create( 
+           type:String, notification:Notification):NotificationEvent; 
+     /** 
+     * Default constructor 
+     * Throws an ArgumentError if the specified ad break is null. 
+     * @param type           Event type. 
+     * @param bubbles        Whether the event can bubble up the display list hierarchy. 
+     * @param cancelable     Whether the behavior associated with the event can be prevented. 
+     * @param notification   Associated notification object. 
+     */ 
+    public function NotificationEvent(type:String,  
+                                      bubbles:Boolean=false,  
+                                      cancelable:Boolean=false,  
+                                      notification:Notification= null); 
+     /** 
+     * The notification associated with this event. 
+     */ 
+    public function get notification():Notification; 
+    /** 
+     * @inheritDoc 
+     */ 
+    public override function clone():Event; 
+}
+```
+
+Aggiungete un listener di eventi al lettore per intercettare gli avvisi AVE.
+
+Ad esempio:
+
+```
+var _player:DefaultMediaPlayer = new DefaultMediaPlayer(context); 
+_player.addEventListener(NotificationEvent.WARNING_AVAILABLE, onWarningAvailable); 
+ 
+private function onWarningAvailable(event:NotificationEvent):void { 
+    var metadata:Metadata = event.notification.metadata; 
+    if (metadata != null) { 
+        for each (var key:String in metadata.keySet()) { 
+            var value:String = metadata.getValue(key); 
+            if (!StringUtils.isEmpty(key) && !StringUtils.isEmpty(value)) { 
+                _logger.warn("#onWarningAvailable metadata [{0}:{1}]", key, value); 
+            } 
+        } 
+    } 
+} 
+```
+
+<!--<a id="example_C35262605D394718B40C084B569A5052"></a>-->
+
+Di seguito è riportato un esempio di avvisi AVE che sono stati tracciati utilizzando `NotificationEvent`:
+
+```
+[WARN ] [psdkdemo::PSDKDemo] #onWarningAvailable metadata [resourceType:HLS] 
+[WARN ] [psdkdemo::PSDKDemo] #onWarningAvailable metadata [resourceId:0] 
+[WARN ] [psdkdemo::PSDKDemo] #onWarningAvailable metadata [runtimeCode:66] 
+[WARN ] [psdkdemo::PSDKDemo] #onWarningAvailable metadata [runtimeCodeMessage:SEGMENT_SKIPPED_ON_FAILURE] 
+[WARN ] [psdkdemo::PSDKDemo] #onWarningAvailable metadata [eventType:Warning] 
+ 
+<ph>
+  [WARN ] [psdkdemo::PSDKDemo] #onWarningAvailable metadata [description:url::= 
+   https://xyz.corp.adobe.com/pmp/assets/abc/failover/tc.1.04/content/backup-01/ 
+   low-res/main-stream4-4x3-info6.ts,periodIndex::=0, 
+   sizeBytes::=0,downloadTime(ms)::=0,mediaDuration(ms)::=0] 
+</ph>
+```
