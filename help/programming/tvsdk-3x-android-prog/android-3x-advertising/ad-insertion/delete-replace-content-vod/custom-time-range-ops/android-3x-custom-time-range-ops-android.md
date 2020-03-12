@@ -1,0 +1,35 @@
+---
+description: La classe CustomRangeMetadata identifica diversi tipi di intervalli di tempo in un indicatore di flusso VOD, elimina e sostituisce. Per ciascuno di questi tipi di intervallo di tempo personalizzato, potete eseguire le operazioni corrispondenti, compresa l'eliminazione e la sostituzione del contenuto di un annuncio.
+seo-description: La classe CustomRangeMetadata identifica diversi tipi di intervalli di tempo in un indicatore di flusso VOD, elimina e sostituisce. Per ciascuno di questi tipi di intervallo di tempo personalizzato, potete eseguire le operazioni corrispondenti, compresa l'eliminazione e la sostituzione del contenuto di un annuncio.
+seo-title: Operazioni intervallo di tempo personalizzato
+title: Operazioni intervallo di tempo personalizzato
+uuid: eadd4d8d-0e03-40ca-ae3b-eede82bf2df8
+translation-type: tm+mt
+source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+
+---
+
+
+# Operazioni intervallo di tempo personalizzato {#custom-time-range-operations}
+
+La classe CustomRangeMetadata identifica diversi tipi di intervalli di tempo in un flusso VOD: contrassegnare, eliminare e sostituire. Per ciascuno di questi tipi di intervallo di tempo personalizzato, potete eseguire le operazioni corrispondenti, compresa l&#39;eliminazione e la sostituzione del contenuto di un annuncio.
+
+<!--<a id="section_1323C0BAC259424C85A6ACFB48FE77EC"></a>-->
+
+Per l’eliminazione e la sostituzione degli annunci, TVSDK utilizza le seguenti modalità operative *dell’intervallo di tempo* personalizzato:
+
+* **MARK** Questa modalità è stata definita come indicatori di annunci personalizzati nelle versioni precedenti di TVSDK. La modalità contrassegna l&#39;ora iniziale e finale per gli annunci già inseriti nel flusso VOD. Quando nel flusso sono presenti indicatori di intervallo di tempo di tipo `MARK` , il posizionamento iniziale di `Mode.MARK` viene generato da `CustomMarkerOpportunityGenerator` e risolto da `CustomRangeResolver`. Non vengono inseriti annunci.
+
+* **ELIMINA** Per `DELETE` gli intervalli di tempo, `placementInformation` viene creata e risolta una prima `Mode.DELETE` di tipo `CustomRangeResolver`. `DeleteRangeTimelineOperation` definisce gli intervalli da rimuovere dalla timeline e TVSDK utilizza `removeByLocalTime` dall’API Adobe Video Engine (AVE) per completare l’operazione. Se sono presenti intervalli DELETE e metadati Adobe Primetime per la decisione degli annunci, gli intervalli vengono eliminati per primi, quindi gli `AuditudeResolver` annunci vengono risolti utilizzando il tipico flusso di lavoro Adobe Primetime e per la decisione degli annunci.
+
+* **SOSTITUISCI** Per `REPLACE` gli intervalli di tempo, `placementInformations` vengono creati due intervalli iniziali, uno `Mode.DELETE` e uno `Mode.REPLACE`. `CustomRangeResolver` elimina prima gli intervalli di tempo e quindi `AuditudeResolver` inserisce nella timeline gli annunci degli annunci degli annunci specificati `replaceDuration` . Se non `replaceDuration` viene specificato alcun valore, il server determina cosa inserire.
+
+Per supportare queste operazioni dell’intervallo di tempo personalizzato, TVSDK fornisce quanto segue:
+
+* Più risolutori di contenuti
+
+   Un flusso può avere più risolutori di contenuto basati sulla modalità di segnalazione degli annunci e sui metadati degli annunci. Il comportamento cambia con diverse combinazioni di modalità di segnalazione annunci e metadati annuncio.
+* Più opportunità iniziali tramite `CustomMarkerOpportunityGenerator`.
+* Una nuova modalità di segnalazione annunci, `CUSTOM_RANGES`.
+
+   Gli annunci vengono inseriti in base ai dati Intervallo di tempo provenienti da un&#39;origine esterna, ad esempio un file JSON.
