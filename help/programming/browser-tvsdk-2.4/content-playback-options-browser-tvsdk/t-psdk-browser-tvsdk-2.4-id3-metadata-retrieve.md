@@ -1,0 +1,173 @@
+---
+description: I tag ID3 forniscono informazioni su un file audio o video, ad esempio il titolo del file o il nome dell’artista. Browser TVSDK rileva i tag ID3 a livello di segmento del flusso di trasporto (TS) nei flussi HLS e invia un evento. L'applicazione può estrarre dati dal tag .
+seo-description: I tag ID3 forniscono informazioni su un file audio o video, ad esempio il titolo del file o il nome dell’artista. Browser TVSDK rileva i tag ID3 a livello di segmento del flusso di trasporto (TS) nei flussi HLS e invia un evento. L'applicazione può estrarre dati dal tag .
+seo-title: ID3, tag
+title: ID3, tag
+uuid: a47cd0cc-b11d-47df-b1fb-56918896ef4c
+translation-type: tm+mt
+source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+
+---
+
+
+# ID3, tag{#id-tags}
+
+I tag ID3 forniscono informazioni su un file audio o video, ad esempio il titolo del file o il nome dell’artista. Browser TVSDK rileva i tag ID3 a livello di segmento del flusso di trasporto (TS) nei flussi HLS e invia un evento. L&#39;applicazione può estrarre dati dal tag .
+
+Quando si trovano nuovi metadati ID3 nel flusso HLS sottostante, Browser TVSDK attiva un `AdobePSDK.TimedMetadataEvent` evento.
+
+L&#39; `TimedMetadata` oggetto ID3 ha le seguenti proprietà:
+
+<table id="table_6C61886187FB44B4B9821E4B00200018"> 
+ <thead> 
+  <tr> 
+   <th colname="col1" class="entry"> Nome proprietà </th> 
+   <th colname="col2" class="entry"> Dettagli </th> 
+  </tr> 
+ </thead>
+ <tbody> 
+  <tr> 
+   <td colname="col1"> <p> <span class="codeph"> type </span> </p> </td> 
+   <td colname="col2"> <p>Tipo di oggetto <span class="codeph"> TimedMetadata </span> . </p> <p>Per i metadati ID3, il valore è <span class="codeph"> AdobePSDK.TimedMetadataType.ID3 </span>. </p> </td> 
+  </tr> 
+  <tr> 
+   <td colname="col1"> <p> <span class="codeph"> time </span> </p> </td> 
+   <td colname="col2"> <p> Tempo del lettore in cui sono stati rilevati i metadati temporizzati. </p> </td> 
+  </tr> 
+  <tr> 
+   <td colname="col1"> <p> <span class="codeph"> id </span> </p> </td> 
+   <td colname="col2"> <p>ID dell’oggetto <span class="codeph"> TimedMetadata </span> . </p> </td> 
+  </tr> 
+  <tr> 
+   <td colname="col1"> <p> <span class="codeph"> name </span> </p> </td> 
+   <td colname="col2"> <p>Nome dell'oggetto <span class="codeph"> TimedMetadata </span> . Per i metadati ID3, il valore è "ID3". </p> </td> 
+  </tr> 
+  <tr> 
+   <td colname="col1"> <p> <span class="codeph"> content </span> </p> </td> 
+   <td colname="col2"> <p>Il contenuto dei metadati temporizzati. Per i tag ID3, questo valore rappresenta l'array di byte serializzato. </p> </td> 
+  </tr> 
+  <tr> 
+   <td colname="col1"> <p> <span class="codeph"> metadata </span> </p> </td> 
+   <td colname="col2"> <p> <span class="codeph"> Informazioni elaborate dai metadati temporizzati </span> , che è un’istanza di <span class="codeph"> AdobePSDK.Metadati </span> in cui sono memorizzati i fotogrammi ID3. </p> <p> <p>Nota:  Per il <span class="codeph"> tag video Safari, i dati del frame del tag ID3 sono esposti nel modulo di un oggetto tramite un oggetto </span> AdobePSDK.Metadata <span class="codeph"> , mentre per altri browser i dati del frame del tag ID3 sono esposti sotto forma di un array di byte tramite l'oggetto </span> AdobePSDK.Metadata <span class="codeph"> </span> . </p> </p> </td> 
+  </tr> 
+ </tbody> 
+</table>
+
+&#x200B;
+
+I diversi tag ID3 memorizzati in `TimedMetadata` possono essere recuperati dall&#39;applicazione nei due modi seguenti:
+
+* Nel listener di eventi AdobePSDK.PSDKEventType.TIMED_METADATA_AVAILABLE.
+
+   ```
+   var isSafari = function () { 
+       var nAgt = navigator.userAgent; 
+       var appName = navigator.appName; 
+       if ((nAgt.indexOf('MSIE') === -1) && //is not MS IE 
+           (appName !== 'Netscape' || nAgt.indexOf('Trident/') === -1) && //is not MS IE11 
+           (appName !== 'Netscape' || nAgt.indexOf('Edge') === -1) && // is not edge 
+           (nAgt.indexOf('Chrome') === -1) && // is not chrome 
+           (nAgt.indexOf('Safari') !== -1) //is Safari 
+       ){ 
+           return true; 
+       } 
+       return false; 
+   }; 
+   var hex2a = function (hex, offset, max) { 
+       var str = ''; 
+       if (!hex) 
+           return str; 
+       for (var i = offset; i < hex.length && i < offset + max; i++) 
+           str += String.fromCharCode(hex[i]); 
+       return str; 
+   }; 
+   var mediaPlayer = new AdobePSDK.MediaPlayer(); 
+   mediaPlayer.addEventListener( AdobePSDK.PSDKEventType.TIMED_METADATA_AVAILABLE ,function(event){ 
+       var td = event.timedMetadata; 
+       if(td.type == AdobePSDK.TimedMetadataType.ID3){ 
+           var md = td.metadata; 
+           var keySet = md.keySet; 
+           var onSafari = isSafari(); 
+           if(keySet && keySet.length){ 
+               var msg = ''; 
+               for(var j = 0; j < keySet.length; j++){ 
+                   var idTag = keySet[j]; 
+                   msg += idTag; 
+                   if(idTag.indexOf("T") == 0){ 
+                       /* text frame*/ 
+                       if(onSafari){ 
+                           /* text frame data is exposed in object format 
+                            * where corresponding text data is exposed through 
+                            * data key of text frame data object 
+                            * */ 
+                           var frameDataObject = md.getObject(idTag); 
+                           msg += " : " + frameDataObject.data; 
+                       } else { 
+                           var buff = md.getByteArray(idTag); 
+                           msg += " : " + hex2a(buff, 0, buff.length - 1); 
+                       } 
+                   } 
+                   msg += " ; "; 
+               } 
+           } 
+       } 
+   }); 
+   ```
+
+* Utilizzo della `MediaPlayerItem`proprietà `timedMetadata` .
+
+   ```
+   var isSafari = function () { 
+       var nAgt = navigator.userAgent; 
+       var appName = navigator.appName; 
+       if ((nAgt.indexOf('MSIE') === -1) && //is not MS IE 
+           (appName !== 'Netscape' || nAgt.indexOf('Trident/') === -1) && //is not MS IE11 
+           (appName !== 'Netscape' || nAgt.indexOf('Edge') === -1) && // is not edge 
+           (nAgt.indexOf('Chrome') === -1) && // is not chrome 
+           (nAgt.indexOf('Safari') !== -1) //is Safari 
+       ){ 
+           return true; 
+       } 
+       return false; 
+   }; 
+   var hex2a = function (hex, offset, max) { 
+       var str = ''; 
+       if (!hex) 
+           return str; 
+       for (var i = offset; i < hex.length && i < offset + max; i++) 
+           str += String.fromCharCode(hex[i]); 
+       return str; 
+   }; 
+   var timedMetadataList = player.currentItem.timedMetadata; 
+   for(var i = 0; i < timedMetadataList.length; i++){ 
+       var td = timedMetadataList[i]; 
+       if(td.type == AdobePSDK.TimedMetadataType.ID3){ 
+           var md = td.metadata; 
+           var keySet = md.keySet; 
+           var onSafari = isSafari(); 
+           if(keySet && keySet.length){ 
+               var msg = ''; 
+               for(var j = 0; j < keySet.length; j++){ 
+                   var idTag = keySet[j]; 
+                   msg += idTag; 
+                   if(idTag.indexOf("T") == 0){ 
+                       /* text frame*/ 
+                       if(onSafari){ 
+                           /* text frame data is exposed in object format 
+                            * where corresponding text data is exposed through 
+                            * data key of text frame data object 
+                            * */ 
+                           var frameDataObject = md.getObject(idTag); 
+                           msg += " : " + frameDataObject.data; 
+                       } else { 
+                           var buff = md.getByteArray(idTag); 
+                           msg += " : " + hex2a(buff, 0, buff.length - 1); 
+                       } 
+                   } 
+                   msg += " ; "; 
+               } 
+           } 
+       } 
+   } 
+   ```
+
