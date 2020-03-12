@@ -1,0 +1,68 @@
+---
+description: Queste classi forniscono informazioni utili per determinare il livello di prestazioni del lettore.
+seo-description: Queste classi forniscono informazioni utili per determinare il livello di prestazioni del lettore.
+seo-title: Classi QoS
+title: Classi QoS
+uuid: c1f0218d-4a79-4141-9a74-e70ac4f70aa5
+translation-type: tm+mt
+source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+
+---
+
+
+# Classi QoS {#qos-classes}
+
+Queste classi forniscono informazioni utili per determinare il livello di prestazioni del lettore.
+
+Pacchetto: Pacchetto [com.adobe.mediacore.qos](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/package-summary.html) : [com.adobe.mediacore.qos.metriche](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/package-summary.html)
+
+<table frame="all" colsep="1" rowsep="1" id="table_2893EFF9755149159A4F94E781C76B6E"> 
+ <thead> 
+  <tr rowsep="1"> 
+   <th colname="1" class="entry"> Nome </th> 
+   <th colname="2" class="entry"> Descrizione </th> 
+  </tr> 
+ </thead>
+ <tbody> 
+  <tr rowsep="1"> 
+   <td colname="1"><span class="codeph">metriche.<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/BufferingMetrics.html" format="html" scope="external"> BufferingMetrics</a></span></td> 
+   <td colname="2"> Fornisce informazioni sul tempo trascorso dal lettore durante il buffering e sulla frequenza con cui si è verificato un evento di buffering. </td> 
+  </tr> 
+  <tr rowsep="1"> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/DeviceInformation.html" format="html" scope="external"> DeviceInformation</a> </span></td> 
+   <td colname="2">Fornisce informazioni sulla piattaforma e sul sistema operativo su cui viene eseguita la Frase: 
+    <ul id="ul_0DE69F3B38E84964AB98DCCD11E5E123"> 
+     <li id="li_19B2D1889FCA4B0F8FCB0EE8F87353B2">Versione del sistema operativo della piattaforma </li> 
+     <li id="li_CA35F4A48FD34555AC7D7832D5997AD4">Numero di versione della libreria Frase </li> 
+     <li id="li_30D38320C2A3440E92C0A477FFFBF9A0">Nome del modello del dispositivo </li> 
+     <li id="li_2D15164B987E405685B96A900EBF041D">Nome del produttore del dispositivo </li> 
+     <li id="li_B78485CB9580444DB9694404706BA191">UUID dispositivo </li> 
+     <li id="li_841EA77499B44F0692192F9DE1A798E4">Larghezza/altezza dello schermo del dispositivo </li> 
+    </ul> </td> 
+  </tr> 
+  <tr rowsep="1"> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/LoadInfo.html" format="html" scope="external"> LoadInfo</a></span> </td> 
+   <td colname="2"> Contiene varie informazioni QoS sul caricamento di varie risorse (file, file manifesto o playlist, frammenti/segmenti, tracce e così via). </td> 
+  </tr> 
+  <tr rowsep="1"> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/PlaybackInformation.html" format="html" scope="external"> PlaybackInformation</a></span> </td> 
+   <td colname="2"> Fornisce informazioni sulle prestazioni della riproduzione. Ciò include il frame rate, il bit rate del profilo, il tempo totale impiegato nel buffering, il numero di tentativi di buffering, il tempo necessario per ottenere il primo byte dal primo frammento video, il tempo necessario per eseguire il rendering del primo fotogramma, la lunghezza attualmente memorizzata nel buffer e il tempo di buffer. </td> 
+  </tr> 
+  <tr rowsep="1"> 
+   <td colname="1"><span class="codeph">metriche.<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/PlaybackLoadMetrics.html" format="html" scope="external"> PlaybackLoadMetrics</a></span> </td> 
+   <td colname="2"> Fornisce informazioni sul tempo necessario al caricamento del contenuto multimediale, sul tempo necessario per il rendering del primo fotogramma o, in caso di errore, per il mancato caricamento del file multimediale. </td> 
+  </tr> 
+  <tr rowsep="1"> 
+   <td colname="1"><span class="codeph">metriche.<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/PlaybackLoadMetrics.html" format="html" scope="external"> PlaybackMetrics</a> </span></td> 
+   <td colname="2"> Fornisce informazioni sul funzionamento della riproduzione. Ciò include il frame rate, il bit rate, la lunghezza del buffer e così via. </td> 
+  </tr> 
+  <tr rowsep="1"> 
+   <td colname="1"><span class="codeph">metriche.<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/PlaybackSessionMetrics.html" format="html" scope="external"> PlaybackSessionMetrics</a></span> </td> 
+   <td colname="2"> Fornisce informazioni su quanti secondi il lettore ha trascorso durante la riproduzione e su quanto tempo il video è stato effettivamente visualizzato sullo schermo. </td> 
+  </tr> 
+  <tr rowsep="1"> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/QOSProvider.html" format="html" scope="external"> QOSProvider</a></span></td> 
+   <td colname="2">Fornisce metriche QoS essenziali sia per la riproduzione che per il dispositivo. Classe provider di informazioni QOS.</td> 
+  </tr> 
+ </tbody> 
+</table>
