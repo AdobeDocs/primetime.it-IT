@@ -1,0 +1,29 @@
+---
+description: Se pttrackingmode=simple o ptplayer=ios-mobileweb, il server di manifesto invia nuovamente un file in formato JSON contenente Master-M3U8, un URL che il client deve utilizzare per richiedere il file M3U8 che descrive il contenuto.
+seo-description: Se pttrackingmode=simple o ptplayer=ios-mobileweb, il server di manifesto invia nuovamente un file in formato JSON contenente Master-M3U8, un URL che il client deve utilizzare per richiedere il file M3U8 che descrive il contenuto.
+seo-title: Formato JSON per l'URL per la richiesta di playlist con manifesto variante
+title: Formato JSON per l'URL per la richiesta di playlist con manifesto variante
+uuid: 9f9693d0-3c93-4555-b20c-7f4576742f41
+translation-type: tm+mt
+source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+
+---
+
+
+# Formato JSON per l&#39;URL per la richiesta di playlist con manifesto variante {#json-format-for-url-for-requesting-variant-manifest-playlist}
+
+Se `pttrackingmode=simple` o `ptplayer=ios-mobileweb`, il server di manifesto invia un file in formato JSON contenente Master-M3U8, un URL che il client deve utilizzare per richiedere il file M3U8 che descrive il contenuto.
+
+Questo è il formato del file JSON contenente l&#39; `Master-M3U8` URL.
+
+```
+{
+"Master-M3U8": "https://manifest.auditude.com/auditude/variant/{publisherAssetID}/
+  {sessionId}/{Base 64 of the url of the content}.m3u8
+  ?u={Ad Request Id}
+  &z={Ad Zone Id}
+  &pttrackingmode=simple
+  &pttrackingversion=v1
+  &{other query parameters}"
+}
+```
