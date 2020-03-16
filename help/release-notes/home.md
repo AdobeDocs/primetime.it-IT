@@ -4,7 +4,7 @@ seo-title: Note sulla versione di Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: c6036a6777e9158861850b60dd1e0749c30fa280
+source-git-commit: 2b1ce2cfea7db0a644507ffdb9d18569b55c84da
 
 ---
 
@@ -13,9 +13,9 @@ source-git-commit: c6036a6777e9158861850b60dd1e0749c30fa280
 
 Benvenuti nelle note sulla versione di Adobe Primetime. I documenti elencati nella navigazione a sinistra forniscono informazioni specifiche sulla versione, requisiti di sistema, limitazioni, problemi risolti e problemi noti.
 
-## Miglioramenti e correzioni nelle note sulla versione di TVSDK 3.10 iOS
+## Miglioramenti e correzioni nelle note sulla versione di TVSDK 3.11 iOS
 
-Il rilascio si è concentrato sulla risoluzione dei principali problemi dei clienti e sull&#39;aggiornamento del certificato di trasporto dell&#39;individualizzazione.
+Il rilascio si è concentrato sulla risoluzione dei principali problemi dei clienti.
 
 Per ulteriori informazioni sulla versione rilasciata corrente per [iOS](../release-notes/tvsdk-3x-ios.md), consulta.
 
