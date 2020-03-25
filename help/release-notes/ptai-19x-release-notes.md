@@ -2,7 +2,7 @@
 title: Note sulla versione PTAI 19.11.1
 description: Le note sulla versione di PTAI 19.11.1 descrivono le novità o le modifiche, i problemi risolti e noti in Primetime Dynamic Ad Insertion nel 2019.
 translation-type: tm+mt
-source-git-commit: 8c1aa935c3ca75c41de82d52908054c109d1160b
+source-git-commit: ededb36a0b460fff4644a3716b36971ff9454c37
 
 ---
 
@@ -200,4 +200,3 @@ ZD#37503 - Le risposte Json per le regole CRS vengono memorizzate nella cache pe
 **PTAI 19.7.1**
 
 Nessuna nuova limitazione aggiunta.
-
