@@ -43,26 +43,20 @@ Per aggiungere il supporto VPAID 2.0:
    >Inoltre, è consigliabile creare la visualizzazione annunci personalizzata solo quando il lettore è nello stato PREPARATO,
    >
    >
-   >Eliminate la visualizzazione annunci personalizzata solo quando viene chiamato il ripristino. Ad esempio:    >
+   >Eliminate la visualizzazione annunci personalizzata solo quando viene chiamato il ripristino. Ad esempio:
    >
-   >
-   ```>
+   >```
    >// on reset 
    >if (_mediaPlayer != null) { 
    >       _mediaPlayer.disposeCustomAdView(); 
    >       ... 
    >} 
    >
+   >```
    >
-   ```   >
+   >Infine, prima di eliminare la visualizzazione personalizzata dell&#39;annuncio, è necessario rimuoverla dall&#39; `FrameLayout`. Ad esempio:
    >
-
-
-
-   >Infine, prima di eliminare la visualizzazione personalizzata dell&#39;annuncio, è necessario rimuoverla dall&#39; `FrameLayout`. Ad esempio:    >
-   >
-   >
-   ```>
-   if (_playerFrame != null) 
-      _playerFrame.removeAllViews(); 
-   ```
+   >```
+   >if (_playerFrame != null) 
+   >   _playerFrame.removeAllViews(); 
+   >```
