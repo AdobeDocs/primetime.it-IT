@@ -5,7 +5,7 @@ seo-title: Autenticazione DRM prima della riproduzione
 title: Autenticazione DRM prima della riproduzione
 uuid: 6b4fbcfb-95fd-4591-bbb2-a17afd783383
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 16b88f07468811f2c84decb1324b0c5bd2372131
 
 ---
 
@@ -48,26 +48,25 @@ In questo esempio, potete utilizzare `DRMHelper` i metodi per scaricare il conte
 
 1. Implementa le callback nel `DRMLoadMetadataListener`.
 
-       Il `loadDRMMetadata` chiama questi gestori di eventi.
-       
- &quot;java     
- public interface DRMLoadMetadataListener {     
-     
-     public void onLoadMetadataUrlStart();
-       
-     /**
-     * @param authNeeded
-     * se è necessaria l&#39;autenticazione DRM.
-       * @param drmMetadata
- * i DRMMetadata analizzati ottenuti     .    */
- vuoto     pubblico onLoadMetadataUrlComplete(boolean authNeeded, DRMMetadata drmMetadata);
-       public void onLoadMetadataUrlError();
-       }
-     
- &quot;     
- Di     
-     seguito sono riportati ulteriori dettagli sui gestori:
+   Questi gestori di eventi vengono `loadDRMMetadata` chiamati.
+
+   ```java
+   public interface DRMLoadMetadataListener { 
    
+       public void onLoadMetadataUrlStart(); 
+   
+       /** 
+       * @param authNeeded 
+       * whether DRM authentication is needed. 
+       * @param drmMetadata 
+       * the parsed DRMMetadata obtained.    */ 
+       public void onLoadMetadataUrlComplete(boolean authNeeded, DRMMetadata drmMetadata); 
+       public void onLoadMetadataUrlError(); 
+   } 
+   ```
+
+   Di seguito sono riportati ulteriori dettagli sui gestori:
+
    * `onLoadMetadataUrlStart` rileva l’inizio del caricamento dell’URL dei metadati.
    * `onLoadMetadataUrlComplete` rileva il termine del caricamento dell’URL dei metadati.
    * `onLoadMetadataUrlError` indica che il caricamento dei metadati non è riuscito.
