@@ -48,26 +48,26 @@ In questo esempio, potete utilizzare `DRMHelper` i metodi per scaricare il conte
 
 1. Implementa le callback nel `DRMLoadMetadataListener`.
 
-       Il `loadDRMMetadata` chiama questi gestori di eventi.
-       
- &quot;java     
- public interface DRMLoadMetadataListener {     
-     
-     public void onLoadMetadataUrlStart();
-       
-     /**
-     * @param authNeeded
-     * se è necessaria l&#39;autenticazione DRM.
-       * @param drmMetadata
- * i DRMMetadata analizzati ottenuti     .    */
- vuoto     pubblico onLoadMetadataUrlComplete(boolean authNeeded, DRMMetadata drmMetadata);
-       public void onLoadMetadataUrlError();
-       }
-     
- &quot;     
- Di     
-     seguito sono riportati ulteriori dettagli sui gestori:
+   Il `loadDRMMetadata` chiama questi gestori di eventi.
+
+   ```java
+   public interface DRMLoadMetadataListener { 
+    
+       public void onLoadMetadataUrlStart(); 
+    
+       /** 
+       * @param authNeeded 
+       * whether DRM authentication is needed. 
+       * @param drmMetadata 
+       * the parsed DRMMetadata obtained.    */ 
+       public void onLoadMetadataUrlComplete(boolean authNeeded, DRMMetadata drmMetadata); 
+       public void onLoadMetadataUrlError(); 
+   } 
    
+   ```
+
+   Di seguito sono riportati ulteriori dettagli sui gestori:
+
    * `onLoadMetadataUrlStart` rileva l’inizio del caricamento dell’URL dei metadati.
    * `onLoadMetadataUrlComplete` rileva il termine del caricamento dell’URL dei metadati.
    * `onLoadMetadataUrlError` indica che il caricamento dei metadati non è riuscito.
