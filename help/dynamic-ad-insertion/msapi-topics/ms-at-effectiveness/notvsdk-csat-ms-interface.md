@@ -5,7 +5,7 @@ seo-title: API per l'interazione dei lettori con il server manifesto
 title: API per l'interazione dei lettori con il server manifesto
 uuid: ab7a19e7-6c28-4960-a56b-3b33c525e6b3
 translation-type: tm+mt
-source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+source-git-commit: 32a7901e3061cca03f1f1fa5ab06f5bb950d248a
 
 ---
 
@@ -16,14 +16,11 @@ Utilizzate i parametri di `pttrackingmode`query, `pttrackingversion``pttrackingp
 
 ## Parametri query {#query-parameters}
 
-|**pttrackingmode**|
-Esempio: pttrackingmode=simpleSpecificando semplicemente il server manifesto che si desidera ottenere informazioni di tracciamento.
+**pttrackingmode**Esempio: pttrackingmode=simpleSpecificando semplicemente il server manifesto che si desidera ottenere informazioni di tracciamento.
 Specificatelo su una richiesta per recuperare l&#39;M3U8 prima di richiedere le informazioni di tracciamento. Quando non lo specificate, il server di manifesto restituisce le informazioni di tracciamento nei tag #EXT-X-MARKER.
 Oppure, se specificate un valore valido diverso dal semplice tracciamento lato server, viene richiamato.
 
-|**pttrackingversion**|
-Esempio: pttrackingversion=v2Questo parametro indica al server manifesto il formato da utilizzare per restituire le informazioni di tracciamento (consultate Formati [di](../../msapi-topics/ms-list-file-formats/ms-api-file-formats.md)file).
+**pttrackingversion** Esempio: pttrackingversion=v2Questo parametro indica al server manifesto il formato da utilizzare per restituire le informazioni di tracciamento (consultate Formati [di](../../msapi-topics/ms-list-file-formats/ms-api-file-formats.md)file).
 Specificatelo su una richiesta per recuperare l&#39;M3U8 prima di richiedere le informazioni di tracciamento. Se non lo specificate o non specificate un valore non valido, il server manifesto utilizza v1.
 
-|**pttrackingposition**|
-Esempio: pttrackingpositionQuesto parametro indica al server manifesto di restituire le informazioni di tracciamento del video come oggetto JSON o VMAP nel file M3U8. Il server manifesto ignora il valore specificato e invia tutte le informazioni di tracciamento di cui dispone per quella sessione. Se non viene passato alcun valore, il server manifesto restituisce il file M3U8 richiesto.
+**pttrackingposition** Esempio: pttrackingpositionQuesto parametro indica al server manifesto di restituire le informazioni di tracciamento del video come oggetto JSON o VMAP nel file M3U8. Il server manifesto ignora il valore specificato e invia tutte le informazioni di tracciamento di cui dispone per quella sessione. Se non viene passato alcun valore, il server manifesto restituisce il file M3U8 richiesto.
