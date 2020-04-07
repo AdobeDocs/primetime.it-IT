@@ -2,7 +2,7 @@
 title: Note sulla versione TVSDK 3.11 per iOS
 description: TVSDK 3.11 per iOS - Note sulla versione - descrive le novità o le modifiche apportate, i problemi risolti e noti e i problemi del dispositivo in TVSDK iOS 3.11.
 translation-type: tm+mt
-source-git-commit: 2b1ce2cfea7db0a644507ffdb9d18569b55c84da
+source-git-commit: ac75f63f98060e1937570476362bb5d4458d1f85
 
 ---
 
@@ -183,7 +183,6 @@ Nella `PTSDKConfig` classe è stata aggiunta l&#39;API forceHTTPS.
 La `PTSDKConfig` classe fornisce metodi per applicare SSL alle richieste effettuate ai server Adobe Primetime ad alsgerment, DRM e Video Analytics. Per ulteriori informazioni, vedere `forceHTTPS` e `isForcingHTTPS` metodi in questa classe. Se un manifesto viene caricato su HTTPS, TVSDK mantiene l&#39;uso del contenuto HTTPS e lo rispetta quando carica eventuali URL relativi da tale manifesto.
 
 >[!NOTE] Le richieste ai domini di terze parti come Pixel di tracciamento annunci, URL di contenuti e annunci e richieste simili non vengono modificate, ed è responsabilità dei provider di contenuto e dei server di annunci fornire URL supportati tramite HTTPS.
-> 
 
 **Versione 1.4.18**
 
@@ -219,7 +218,6 @@ Primetime iOS TVSDK ora supporta i creativi JavaScript VPAID 2.0 per consentire 
 
 >[!NOTE] Il modulo Nielsen è stato rimosso dalla build TVSDK. TVSDK verrà aggiornato prossimamente con un nuovo modulo di integrazione Nielsen.
 
-
 **Ad Fallback, catena a margherita nella logica di selezione degli annunci (Zendesk #3103)**
 
 Per gli annunci VAST (creativi) con la regola di fallback abilitata, TVSDK tratta un annuncio con un tipo MIME non valido come un annuncio vuoto e tenta di utilizzare gli annunci di fallback al suo posto. Potete configurare alcuni aspetti del comportamento di fallback. Per ulteriori informazioni, vedi Abbandono annunci per annunci VAST e VMAP.
@@ -254,7 +252,7 @@ I criteri DRM ora possono specificare la risoluzione massima consentita, a secon
 
    * Aggiunta la possibilità di raggruppare diversi casi di utilizzo di analisi, da altri SDK o lettori, con Adobe Analytics Video Essentials.
    * Il tracciamento degli annunci è stato ottimizzato rimuovendo i `trackAdBreakStart` metodi e `trackAdBreakComplete` . L’interruzione dell’annuncio viene ricavata dalle chiamate `trackAdStart` e ai `trackAdComplete` metodi.
-   * La `playhead` proprietà non è più necessaria durante il tracciamento degli annunci.
+   * La `playhead` proprietà non è più necessaria per il tracciamento degli annunci.
    * È stato aggiunto il supporto per l’ID visitatore di Marketing Cloud.
 
 * **Integrazione SDK Nielsen**
@@ -1108,9 +1106,11 @@ Supporto per il ping di URL vuoti per il tracciamento delle interruzioni di annu
 ## Certificazione e supporto dei dispositivi {#device-certification-and-support}
 
 >[!NOTE]
-Le seguenti funzionalità **non** sono supportate in TVSDK:
-* Slow motion, su qualsiasi piattaforma o versione.
-* Giochi di trucchi dal vivo.
+>
+>Le seguenti funzionalità **non** sono supportate in TVSDK:
+>
+>* Slow motion, su qualsiasi piattaforma o versione.
+>* Giochi di trucchi dal vivo.
 
 
 **Versione 1.4.43**
