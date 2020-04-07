@@ -5,7 +5,7 @@ seo-title: Autenticazione DRM prima della riproduzione
 title: Autenticazione DRM prima della riproduzione
 uuid: be319b04-a506-4278-8275-db32cd3f18aa
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: e300238be5a2bddc7c6b9bd26682dcb4401959b1
 
 ---
 
@@ -48,13 +48,13 @@ In questo esempio, potete utilizzare `DRMHelper` i metodi per scaricare il conte
 
 1. Implementa le callback nel `DRMLoadMetadataListener`.
 
-   Il `loadDRMMetadata` chiama questi gestori di eventi.
+   Questi gestori di eventi vengono `loadDRMMetadata` chiamati.
 
    ```java
    public interface DRMLoadMetadataListener { 
-    
+   
        public void onLoadMetadataUrlStart(); 
-    
+   
        /** 
        * @param authNeeded 
        * whether DRM authentication is needed. 
@@ -63,7 +63,6 @@ In questo esempio, potete utilizzare `DRMHelper` i metodi per scaricare il conte
        public void onLoadMetadataUrlComplete(boolean authNeeded, DRMMetadata drmMetadata); 
        public void onLoadMetadataUrlError(); 
    } 
-   
    ```
 
    Di seguito sono riportati ulteriori dettagli sui gestori:
