@@ -5,7 +5,7 @@ seo-title: Caricamento di una risorsa multimediale in MediaPlayer
 title: Caricamento di una risorsa multimediale in MediaPlayer
 uuid: 8af3e8d1-359d-483c-b394-b95054f7265a
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 84924d84bfa436a8807c2e8d74d1dc268d457051
 
 ---
 
@@ -36,49 +36,48 @@ Caricate una risorsa creando direttamente un&#39;istanza di MediaResource e cari
 
 Se si verifica un errore, MediaPlayer passa allo stato ERROR. Invia inoltre una notifica all’applicazione inviando l’ `STATUS_CHANGED` evento al `MediaPlayerStatusChangeEvent` callback.
 
-Questo passa diversi parametri: >
+Questo passa diversi parametri:
 * Un `type` parametro di tipo stringa con il valore `ERROR`.
 
 * Un `MediaError` parametro che può essere utilizzato per ottenere una notifica contenente informazioni diagnostiche sull&#39;evento di errore.
 
 
-><!--<a id="example_3774607C6F08473282CF0CB7F3D82373"></a>-->
-
+<!--<a id="example_3774607C6F08473282CF0CB7F3D82373"></a>-->
 
 Il seguente codice di esempio semplificato illustra il processo di caricamento di una risorsa multimediale:
->```>
->>// mediaResource is a properly configured MediaResource instance 
+
+```
+// mediaResource is a properly configured MediaResource instance 
 // mediaPlayer is a MediaPlayer instance 
 // register an event listener with the MediaPlayer instance 
 mediaPlayer.addEventListener(MediaPlayerStatusChangeEvent.STATUS_CHANGED,  
-                            onStatusChanged); 
+                             onStatusChanged); 
 private function onStatusChanged(event:MediaPlayerStatusChangeEvent):void { 
-  switch(event.status) { 
-     case MediaPlayerStatus.INITIALIZED: 
-         // at this point, the resource is successfully loaded 
-         // the media player will provide a reference to the current 
-         // "playable item" ( is guarantee to be valid and not-null). 
-         var playerItem: MediaPlayerItem = mediaPlayer.currentItem; 
-         // we can take a look at the media item characteristics like 
-         // alternate audio tracks, profile information, if is a live stream 
-         // if is drm protected 
-         mediaPlayer.prepareToPlay(); 
-         break; 
-   case MediaPlayerStatus.PREPARED: 
-        // at this point, the resource is successfully processed all  
-        // advertisement placements have been executed and the the  
-        // MediaPlayer is ready to start the playback 
-       if (autoPlay) { 
-           mediaPlayer.play(); 
-       } 
-       break; 
-   case MediaPlayerStatus.ERROR: 
-       // something bad happened - the resource cannot be loaded 
-       // details about the problem are provided via the event.error property 
-       break; 
-       // implementation of the other methods in the PlaybackEventListener interface 
-       ... 
-   } 
+   switch(event.status) { 
+      case MediaPlayerStatus.INITIALIZED: 
+          // at this point, the resource is successfully loaded 
+          // the media player will provide a reference to the current 
+          // "playable item" ( is guarantee to be valid and not-null). 
+          var playerItem: MediaPlayerItem = mediaPlayer.currentItem; 
+          // we can take a look at the media item characteristics like 
+          // alternate audio tracks, profile information, if is a live stream 
+          // if is drm protected 
+          mediaPlayer.prepareToPlay(); 
+          break; 
+    case MediaPlayerStatus.PREPARED: 
+         // at this point, the resource is successfully processed all  
+         // advertisement placements have been executed and the the  
+         // MediaPlayer is ready to start the playback 
+        if (autoPlay) { 
+            mediaPlayer.play(); 
+        } 
+        break; 
+    case MediaPlayerStatus.ERROR: 
+        // something bad happened - the resource cannot be loaded 
+        // details about the problem are provided via the event.error property 
+        break; 
+        // implementation of the other methods in the PlaybackEventListener interface 
+        ... 
+    } 
 }
-```>
->
+```
