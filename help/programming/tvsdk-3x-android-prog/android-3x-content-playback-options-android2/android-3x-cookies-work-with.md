@@ -5,7 +5,7 @@ seo-title: Operazioni con i cookie
 title: Operazioni con i cookie
 uuid: 618bc59a-032d-445e-a867-ed2bf260570d
 translation-type: tm+mt
-source-git-commit: ad58732842eb651514a47dd565e31e3d98a84c46
+source-git-commit: 5ada8632a7a5e3cb5d795dc42110844244656095
 
 ---
 
@@ -64,8 +64,9 @@ Per lavorare con i cookie:
    `config.setNetworkConfiguration(networkConfiguration)`
 
    >[!NOTE]
-   Dopo aver impostato &#39;setReadSetCookieHeader&#39; su false, impostate i cookie per le richieste di chiave utilizzando il gestore di cookie JAVA.
    >
+   >Dopo aver impostato &#39;setReadSetCookieHeader&#39; su false, impostate i cookie per le richieste di chiave utilizzando il gestore di cookie JAVA.
+
    `onCookiesUpdated(CookiesUpdatedEvent cookiesUpdatedEvent)`
 Questa API di callback verrà attivata ogni volta che si verifica un aggiornamento nei cookie C++ (cookie provenienti dalla risposta http). L&#39;applicazione deve ascoltare questo callback e può aggiornare il loro JAVA CookieStore di conseguenza in modo che le chiamate di rete in JAVA possano utilizzare i cookie come segue:
 
