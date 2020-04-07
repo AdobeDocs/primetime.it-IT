@@ -3,7 +3,7 @@ seo-title: Configurazione HSM
 title: Configurazione HSM
 uuid: da4d7118-65a8-460d-a796-b7bf5c28b208
 translation-type: tm+mt
-source-git-commit: 47b2ed65ff0ea4f54a210cf7627ed535782296b9
+source-git-commit: ac75f63f98060e1937570476362bb5d4458d1f85
 
 ---
 
@@ -21,6 +21,6 @@ keytool -keystore NONE -storetype PKCS11 -providerClass sun.security.pkcs11.SunP
 
 Se nell’elenco vengono visualizzate le credenziali, l’HSM è configurato correttamente e il server delle licenze sarà in grado di accedere alle credenziali.
 
-> [!NOTE]
-> Adobe Access Server per lo streaming protetto non supporta attualmente gli HSM nei sistemi operativi Windows a 64 bit.
-
+>[!NOTE]
+>
+>Adobe Access Server per lo streaming protetto non supporta attualmente gli HSM nei sistemi operativi Windows a 64 bit.
