@@ -5,7 +5,7 @@ seo-title: Creazione di una risorsa multimediale
 title: Creazione di una risorsa multimediale
 uuid: f34a11a3-dac2-405e-8632-1d9617cc019d
 translation-type: tm+mt
-source-git-commit: fd686391df0fa711bba99bc1bc312c9ef619f184
+source-git-commit: 1b7ec3759561159c55018b4b81f896ecc99a25e8
 
 ---
 
@@ -20,32 +20,32 @@ La classe MediaResource rappresenta il contenuto da caricare dall&#39;istanza Me
 
    Il `MediaResource` costruttore richiede i seguenti parametri:
 
-   <table id="table_22886D6770FB45E99D35D0B90E6CC302"> 
-      <thead> 
-      <tr> 
-      <th colname="col1" class="entry"> Parametro costruttore </th> 
-      <th colname="col2" class="entry"> Descrizione </th> 
-      </tr> 
+   <table id="table_22886D6770FB45E99D35D0B90E6CC302">
+      <thead>
+      <tr>
+      <th colname="col1" class="entry"> Parametro costruttore </th>
+      <th colname="col2" class="entry"> Descrizione </th>
+      </tr>
       </thead>
-      <tbody> 
-      <tr> 
-      <td colname="col1"> <span class="codeph"> url </span> </td> 
-      <td colname="col2"> Una stringa che rappresenta l'URL del manifesto/elenco di riproduzione del file multimediale. </td> 
-      </tr> 
-      <tr> 
-      <td colname="col1"> <span class="codeph"> type </span> </td> 
-      <td colname="col2"> Uno dei seguenti membri dell'enum <span class="codeph"> MediaResource.Type </span> , corrispondente al tipo di file indicato: 
-      <ul id="ul_C286ED3C31364B858A1C9AF3356E9282"> 
-      <li id="li_25B24EF76D8849DE8764539F25E435FA"> <span class="codeph"> HLS </span> - M3U8 </li> 
-      <li id="li_1344A41B434D49229E392F1AAF9ECA81"> <span class="codeph"> ISOBMFF </span> - Formato file multimediale di base ISO (MP4) </li> 
-      <li id="li_92392073B7334916B06B16570C51AC91"> <span class="codeph"> DASH </span> - Descrizione della presentazione multimediale MPEG-DASH (MPD) </li> 
-      </ul> </td> 
-      </tr> 
-      <tr> 
-      <td colname="col1"> <span class="codeph"> metadata </span> </td> 
-      <td colname="col2"> Un'istanza della <span class="codeph"> classe </span> Metadata (una struttura simile a un dizionario), che potrebbe contenere informazioni aggiuntive sul contenuto che sta per essere caricato, ad esempio contenuto alternativo o di annunci da inserire all'interno del contenuto principale. Se si utilizza la pubblicità, impostare <span class="codeph"> AuditudeSettings </span> prima di utilizzare questo costruttore (vedere <a keyref="ad-insertion-metadata"></a>). </td> 
-      </tr> 
-      </tbody> 
+      <tbody>
+      <tr>
+      <td colname="col1"> <span class="codeph"> url </span> </td>
+      <td colname="col2"> Una stringa che rappresenta l'URL del manifesto/elenco di riproduzione del file multimediale. </td>
+      </tr>
+      <tr>
+      <td colname="col1"> <span class="codeph"> type </span> </td>
+      <td colname="col2"> Uno dei seguenti membri dell'enum <span class="codeph"> MediaResource.Type </span> , corrispondente al tipo di file indicato:
+      <ul id="ul_C286ED3C31364B858A1C9AF3356E9282">
+      <li id="li_25B24EF76D8849DE8764539F25E435FA"> <span class="codeph"> HLS </span> - M3U8 </li>
+      <li id="li_1344A41B434D49229E392F1AAF9ECA81"> <span class="codeph"> ISOBMFF </span> - Formato file multimediale di base ISO (MP4) </li>
+      <li id="li_92392073B7334916B06B16570C51AC91"> <span class="codeph"> DASH </span> - Descrizione della presentazione multimediale MPEG-DASH (MPD) </li>
+      </ul> </td>
+      </tr>
+      <tr>
+      <td colname="col1"> <span class="codeph"> metadata </span> </td>
+      <td colname="col2"> Un'istanza della <span class="codeph"> classe </span> Metadata (una struttura simile a un dizionario), che potrebbe contenere informazioni aggiuntive sul contenuto che sta per essere caricato, ad esempio contenuto alternativo o di annunci da inserire all'interno del contenuto principale. Se si utilizza la pubblicità, impostare <span class="codeph"> AuditudeSettings </span> prima di utilizzare questo costruttore. </td>
+      </tr>
+      </tbody>
    </table>
 
    >[!IMPORTANT]
@@ -57,11 +57,11 @@ La classe MediaResource rappresenta il contenuto da caricare dall&#39;istanza Me
    Il codice seguente crea un&#39; `MediaResource` istanza:
 
    ```java
-   // To do: Create metadata here 
-   MediaResource res = new MediaResource( 
-     "https://www.example.com/video/some-video.m3u8",  
-     MediaResource.Type.HLS, 
-     metadata); 
+   // To do: Create metadata here
+   MediaResource res = new MediaResource(
+     "https://www.example.com/video/some-video.m3u8",
+     MediaResource.Type.HLS,
+     metadata);
    ```
 
    In qualsiasi momento dopo questo passaggio, potete utilizzare `MediaResource` accessor (getters) per esaminare il tipo, l&#39;URL e i metadati della risorsa.
