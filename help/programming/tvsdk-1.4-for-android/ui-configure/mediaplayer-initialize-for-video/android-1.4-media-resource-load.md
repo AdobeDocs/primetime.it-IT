@@ -5,7 +5,7 @@ seo-title: Caricamento di una risorsa multimediale in MediaPlayer
 title: Caricamento di una risorsa multimediale in MediaPlayer
 uuid: 6ee8032f-0728-423f-a1d2-5030aa7db14f
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 4ef05be045334a2e723da4c7c6a7ee22fb0f776c
 
 ---
 
@@ -26,12 +26,14 @@ Caricate una risorsa creando direttamente un&#39;istanza di MediaResource e cari
 1. Quando lo stato del lettore multimediale diventa INITIALIZED, potete chiamare `MediaPlayer.prepareToPlay`
 
    Lo stato INITIALIZED indica che il supporto è stato caricato correttamente. La chiamata `prepareToPlay` avvia il processo di risoluzione e posizionamento pubblicitario, se presente.
+
 1. Quando TVSDK chiama il `onPrepared` callback, il flusso multimediale è stato caricato correttamente ed è pronto per la riproduzione.
 
    Quando il flusso multimediale viene caricato, `MediaPlayerItem` viene creato un
+
 >Se si verifica un errore, si passa `MediaPlayer` allo stato ERROR. Inoltre, invia una notifica all’applicazione chiamando il `PlaybackEventListener.onStateChanged`callback.
 >
->Questo passa diversi parametri: >
+>Questo passa diversi parametri:
 >* Un `state` parametro di tipo `MediaPlayer.PlayerState` con il valore di `MediaPlayer.PlayerState.ERROR`.
    >
    >
@@ -40,43 +42,37 @@ Caricate una risorsa creando direttamente un&#39;istanza di MediaResource e cari
 
 Il seguente codice di esempio semplificato illustra il processo di caricamento di una risorsa multimediale:
 
->```java>
->// mediaResource is a properly configured MediaResource instance 
->// mediaPlayer is a MediaPlayer instance 
->// register a PlaybackEventListener implementation with the MediaPlayer  
->instancemediaPlayer.addEventListener( 
->   MediaPlayer.Event.PLAYBACK, 
->   new MediaPlayer.PlaybackEventListener()) { 
->       @Overridepublic void onPrepared() { 
->               // at this point, the resource is successfully loaded and available 
->               // and the MediaPlayer is ready to start the playback 
->               // once the resource is loaded, the MediaPlayer is able to 
->               // provide a reference to the current "playable item" 
-> 
->        
-       MediaPlayerItem playerItem = mediaPlayer.CurrentItem(); 
-> 
->        
-       if (playerItem != null) {     
->                       // here we can take a look at the properties of the     
->                       // loaded stream 
->               } 
->       } @Overridepublic void onStateChanged( 
->               MediaPlayer.PlayerState state,  
->               MediaPlayerNotification notification) { 
->               if (state == MediaPlayer.PlayerState.ERROR) { 
->                       // something bad happened - the resource cannot be loaded    
->                       // details about the problem are provided via the  
->                       // MediaPlayerNotification instance 
->               }  
->               elseif (state == MediaPlayer.PlayerState.INITIALIZED) {     
->                       mediaPlayer.prepareToPlay(); 
->               } 
->       } 
->       // implementation of the other methods in the PlaybackEventListener interface... 
->} 
->
->
-```>
-
-
+```java
+// mediaResource is a properly configured MediaResource instance 
+// mediaPlayer is a MediaPlayer instance 
+// register a PlaybackEventListener implementation with the MediaPlayer  
+instancemediaPlayer.addEventListener( 
+  MediaPlayer.Event.PLAYBACK, 
+  new MediaPlayer.PlaybackEventListener()) { 
+    @Overridepublic void onPrepared() { 
+        // at this point, the resource is successfully loaded and available 
+        // and the MediaPlayer is ready to start the playback 
+        // once the resource is loaded, the MediaPlayer is able to 
+        // provide a reference to the current "playable item" 
+ 
+        MediaPlayerItem playerItem = mediaPlayer.CurrentItem(); 
+ 
+        if (playerItem != null) {     
+            // here we can take a look at the properties of the     
+            // loaded stream 
+        } 
+    } @Overridepublic void onStateChanged( 
+        MediaPlayer.PlayerState state,  
+        MediaPlayerNotification notification) { 
+        if (state == MediaPlayer.PlayerState.ERROR) { 
+            // something bad happened - the resource cannot be loaded    
+            // details about the problem are provided via the  
+            // MediaPlayerNotification instance 
+        }  
+        elseif (state == MediaPlayer.PlayerState.INITIALIZED) {     
+            mediaPlayer.prepareToPlay(); 
+        } 
+    } 
+    // implementation of the other methods in the PlaybackEventListener interface... 
+} 
+```
