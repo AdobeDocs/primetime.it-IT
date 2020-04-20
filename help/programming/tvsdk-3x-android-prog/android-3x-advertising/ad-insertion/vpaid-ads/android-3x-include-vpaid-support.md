@@ -5,7 +5,7 @@ seo-title: Implementare l'integrazione VPAID 2.0
 title: Implementare l'integrazione VPAID 2.0
 uuid: d512fb5b-001c-4a7a-a553-d5962002bb30
 translation-type: tm+mt
-source-git-commit: 1034a0520590777cc0930d2f732741202bc3bc04
+source-git-commit: 83df68905f74931355264661aed6cff43b802d3f
 
 ---
 
@@ -41,10 +41,10 @@ Per aggiungere il supporto VPAID 2.0, aggiungi una visualizzazione ad personaliz
    >Inoltre, è consigliabile creare la visualizzazione annunci personalizzata solo quando il lettore è nello stato PREPARATO,
    >
    >
-   >Eliminate la visualizzazione annunci personalizzata solo quando viene chiamato il ripristino. Ad esempio:    >
+   >Eliminate la visualizzazione annunci personalizzata solo quando viene chiamato il ripristino. Ad esempio:
    >
    >
-   ```>
+   ```
    >// on reset 
    >if (_mediaPlayer != null) { 
    >       _mediaPlayer.disposeCustomAdView(); 
@@ -52,9 +52,11 @@ Per aggiungere il supporto VPAID 2.0, aggiungi una visualizzazione ad personaliz
    >} 
    >
    >```
-
-   Infine, prima di eliminare la visualizzazione personalizzata dell&#39;annuncio, è necessario rimuoverla dall&#39; `FrameLayout`. Ad esempio:
-   >```
-   >if (_playerFrame != null) 
-      _playerFrame.removeAllViews(); 
+   >
+   >Infine, prima di eliminare la visualizzazione personalizzata dell&#39;annuncio, è necessario rimuoverla dall&#39; `FrameLayout`. Ad esempio:
+   >
+   >
    ```
+   >if (_playerFrame != null) 
+   >       _playerFrame.removeAllViews(); 
+   >```
