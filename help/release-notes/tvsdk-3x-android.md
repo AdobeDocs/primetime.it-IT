@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: e41213acf027e4dc4d016ef31c2d3d1665f54dfc
+source-git-commit: 3e5078c25a1426c3991669809426eefab0386ac9
 
 ---
 
@@ -290,20 +290,16 @@ Quando TVSDK apre una connessione, richiede al server una connessione *keep-aliv
 
 * **SizeAvaliableEventListener**
 
-   * i metodi getHeight() e getWidth() di SizeAvailableEvent restituiranno ora l&#39;output rispettivamente in altezza e larghezza. Le proporzioni di visualizzazione possono essere calcolate come segue:
+   * `getHeight()` e `getWidth()` i metodi di `SizeAvailableEvent` restituiranno ora l&#39;output rispettivamente in altezza e larghezza. Le proporzioni di visualizzazione possono essere calcolate come segue:
 
-   ```java
-   SizeAvailableEvent e;
-   DAR = e.getWidth()/ e.getHeight();
-   ```
+      SizeAvailableEvent e;
+DAR = e.getWidth()/ e.getHeight();
 
-   Le proporzioni dello storage in termini di larghezza e altezza Sar possono essere utilizzate anche per calcolare la larghezza e l&#39;altezza del frame:
+      Le proporzioni dello storage in termini di larghezza e altezza Sar possono essere utilizzate anche per calcolare la larghezza e l&#39;altezza del frame:
 
-   ```java
-   SAR = e.getSarWidth()/e.getSarHeight();
-   frameHeight = e.getHeight();
-   frameWidth = e.getWidth()/SAR;
-   ```
+      SAR = e.getSarWidth()/e.getSarHeight();
+frameHeight = e.getHeight();
+frameWidth = e.getWidth()/SAR;
 
 * **Cookie**
 
