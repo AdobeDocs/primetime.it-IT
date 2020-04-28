@@ -1,5 +1,5 @@
 ---
-title: Note sulla versione TVSDK 3.11 per Android
+title: Note sulla versione TVSDK 3.10 per Android
 seo-title: Note sulla versione TVSDK 3.11 per Android
 description: TVSDK 3.11 per Android - Note sulla versione - descrive le novità o le modifiche, i problemi risolti e noti e i problemi del dispositivo in TVSDK Android 3.10
 seo-description: TVSDK 3.11 per Android - Note sulla versione - descrive le novità o le modifiche, i problemi risolti e noti e i problemi del dispositivo in TVSDK Android 3.11
@@ -8,14 +8,14 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: b71ac860652f53b171926b570c004db2351d3d3a
+source-git-commit: 34ec714ec190e77a70bf4e966d6df02ec0c99cb3
 
 ---
 
 
-# Note sulla versione TVSDK 3.11 per Android {#tvsdk-for-android-release-notes}
+# Note sulla versione TVSDK 3.10 per Android {#tvsdk-for-android-release-notes}
 
-TVSDK 3.11 per Android - Note sulla versione - descrive le novità o le modifiche, i problemi risolti e noti e i problemi del dispositivo in TVSDK Android 3.11.
+TVSDK 3.10 per Android - Note sulla versione - descrive le novità o le modifiche, i problemi risolti e noti e i problemi del dispositivo in TVSDK Android 3.10.
 
 Il lettore di riferimento Android è incluso con Android TVSDK nella directory samples/ della distribuzione. Il file README.md di accompagnamento spiega come creare il lettore di riferimento.
 
@@ -33,22 +33,20 @@ TVSDK per Android offre molti miglioramenti in termini di prestazioni rispetto a
 
 Il set completo di funzioni supportate e non supportate è presentato nella sezione Matrice [](#feature-matrix) funzioni delle note sulla versione.
 
-<!-- ## New features {#new-features} -->
-
-## Android TVSDK 3.11
-
-**Recupero del riquadro di intestazione specifica del sistema di protezione (PSSH) consentito**
-
-TVSDK ora consente il recupero della casella di intestazione specifica del sistema di protezione associata alla risorsa multimediale caricata corrente. È stata aggiunta una nuova API `getPSSH()` a `com.adobe.mediacore.drm.DRMManager`.
-Per ulteriori informazioni, vedere [Widevine DRM](../programming/tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-widevine.md).
-
-I principali problemi risolti dal cliente nella versione corrente sono riportati nella sezione dei problemi [](#resolved-issues) risolti.
-
-### Nuove funzioni e miglioramenti nelle versioni precedenti
-
 **Android TVSDK 3.10**
 
 Questa release era dedicata alla risoluzione dei principali problemi dei clienti, come indicato nella sezione dei problemi [](#resolved-issues) risolti.
+
+<!-- ## New features {#new-features} -->
+
+<!--
+## Android TVSDK 3.11
+**Protection System Specific Header (PSSH) Box fetching allowed**
+TVSDK now allows fetching of Protection System Specific Header Box associated with current loaded Media Resource. New API `getPSSH()` has been added to `com.adobe.mediacore.drm.DRMManager`.
+For more information, see [Widevine DRM](../programming/tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-widevine.md).
+Top customer issues fixed in the current release are mentioned in [resolved issues](#resolved-issues) section. -->
+
+### Nuove funzioni e miglioramenti nelle versioni precedenti
 
 **Android TVSDK 3.9**
 
@@ -169,7 +167,7 @@ TVSDK ora annulla il download in corso del segmento, se necessario, e passa in m
    Esempio: L&#39;utente si unisce al centro (a 40 secondi) di un annuncio pubblicitario di 90 secondi composto da tre annunci da 30 secondi. Questo è 10 secondi dopo il secondo annuncio nell&#39;interruzione.
 
    * Il secondo annuncio viene riprodotto per la durata rimanente (20 sec) seguita dal terzo annuncio.
-   * I tracciatori annunci per l’annuncio parziale riprodotto (secondo annuncio) non vengono attivati. I tracciatori solo per il terzo annuncio vengono attivati.
+   * I tracciatori annunci per l&#39;annuncio parziale riprodotto (secondo annuncio) non vengono attivati. I tracciatori solo per il terzo annuncio vengono attivati.
 
 * **Proteggere il caricamento di annunci tramite HTTPS**
 
@@ -393,17 +391,15 @@ Nelle tabelle delle funzioni riportate di seguito, un &#39;Y&#39; indica che la 
 
 Quando la risoluzione è associata a un problema segnalato, viene visualizzato un riferimento Zendesk, ad esempio ZD#xxxxx.
 
-**Android TVSDK 3.11**
-
-Questa sezione fornisce un riepilogo del problema risolto nella release Android di TVSDK 3.11.
-
-* ZD#41252 - I caratteri coreani vengono visualizzati come simboli di glifo mancanti per i manifesti HLS con WebVTT nell&#39;app di riferimento Android TVSDK.
-
-### Risolti i problemi nelle versioni precedenti
-
 **Android TVSDK 3.10**
 
 * ZD#40340 - Arresto anomalo dell&#39;applicazione con errore &quot;App Not Responding&quot; durante il tentativo di riproduzione dopo la blacklist di tutti i file TS (TypeScript).
+
+<!-- **Android TVSDK 3.11**
+This section provides a summary of the issue resolved in TVSDK 3.11 Android release.
+* ZD#41252 - Korean characters are displayed as missing glyph symbols for HLS manifests with WebVTT in Android TVSDK reference app. -->
+
+### Risolti i problemi nelle versioni precedenti
 
 **Android TVSDK 3.8**
 
