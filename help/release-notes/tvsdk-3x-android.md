@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 3e5078c25a1426c3991669809426eefab0386ac9
+source-git-commit: 5cf340119147799cd7b2c40a2a312595eebaa737
 
 ---
 
@@ -168,7 +168,7 @@ TVSDK ora annulla il download in corso del segmento, se necessario, e passa in m
    Esempio: L&#39;utente si unisce al centro (a 40 secondi) di un annuncio pubblicitario di 90 secondi composto da tre annunci da 30 secondi. Questo è 10 secondi dopo il secondo annuncio nell&#39;interruzione.
 
    * Il secondo annuncio viene riprodotto per la durata rimanente (20 sec) seguita dal terzo annuncio.
-   * I tracciatori annunci per l’annuncio parziale riprodotto (secondo annuncio) non vengono attivati. I tracciatori solo per il terzo annuncio vengono attivati.
+   * I tracciatori annunci per l&#39;annuncio parziale riprodotto (secondo annuncio) non vengono attivati. I tracciatori solo per il terzo annuncio vengono attivati.
 
 * **Proteggere il caricamento di annunci tramite HTTPS**
 
@@ -396,7 +396,7 @@ Quando la risoluzione è associata a un problema segnalato, viene visualizzato u
 
 Questa sezione fornisce un riepilogo del problema risolto nella release Android di TVSDK 3.11.
 
-* ZD# - I caratteri coreani vengono visualizzati come simboli di glifo mancanti per i manifesti HLS con WebVTT nell&#39;app di riferimento TVSDK per Android.
+* I caratteri coreani vengono visualizzati come simboli di glifo mancanti per i manifesti HLS con WebVTT nell&#39;app di riferimento TVSDK per Android.
 
 ### Risolti i problemi nelle versioni precedenti
 
