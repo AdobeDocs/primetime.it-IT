@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 34ec714ec190e77a70bf4e966d6df02ec0c99cb3
+source-git-commit: 1f03dd8975fed27836a34159a403ba4aeec199c1
 
 ---
 
@@ -46,7 +46,7 @@ TVSDK now allows fetching of Protection System Specific Header Box associated wi
 For more information, see [Widevine DRM](../programming/tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-widevine.md).
 Top customer issues fixed in the current release are mentioned in [resolved issues](#resolved-issues) section. -->
 
-### Nuove funzioni e miglioramenti nelle versioni precedenti
+## Nuove funzioni e miglioramenti nelle versioni precedenti
 
 **Android TVSDK 3.9**
 
@@ -167,7 +167,7 @@ TVSDK ora annulla il download in corso del segmento, se necessario, e passa in m
    Esempio: L&#39;utente si unisce al centro (a 40 secondi) di un annuncio pubblicitario di 90 secondi composto da tre annunci da 30 secondi. Questo è 10 secondi dopo il secondo annuncio nell&#39;interruzione.
 
    * Il secondo annuncio viene riprodotto per la durata rimanente (20 sec) seguita dal terzo annuncio.
-   * I tracciatori annunci per l&#39;annuncio parziale riprodotto (secondo annuncio) non vengono attivati. I tracciatori solo per il terzo annuncio vengono attivati.
+   * I tracciatori annunci per l’annuncio parziale riprodotto (secondo annuncio) non vengono attivati. I tracciatori solo per il terzo annuncio vengono attivati.
 
 * **Proteggere il caricamento di annunci tramite HTTPS**
 
