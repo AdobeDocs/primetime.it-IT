@@ -4,7 +4,7 @@ seo-title: Note sulla versione di Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 33abc0364a7dbe123ef1e6e444ad8578b5596f63
+source-git-commit: b986cdcb772c692cf71361d7c04b92130b3e0eea
 
 ---
 
@@ -13,11 +13,9 @@ source-git-commit: 33abc0364a7dbe123ef1e6e444ad8578b5596f63
 
 Benvenuti nelle note sulla versione di Adobe Primetime. I documenti elencati nella navigazione a sinistra forniscono informazioni specifiche sulla versione, requisiti di sistema, limitazioni, problemi risolti e problemi noti.
 
-## Correzioni in TVSDK 3.11 Android
-
-Il rilascio ha migliorato il supporto per DRM widevine e ha risolto i principali problemi dei clienti.
-
-Per ulteriori informazioni sulla versione rilasciata corrente per [Android](../release-notes/tvsdk-3x-android.md), consulta.
+<!-- ## Fixes in TVSDK 3.11 Android
+The release enhanced support for Widevine DRM and resolved top customer issues.
+Check out for more information about the current released version for [Android](../release-notes/tvsdk-3x-android.md). -->
 
 ## Miglioramenti e correzioni nelle note sulla versione di TVSDK 3.11 iOS
 
