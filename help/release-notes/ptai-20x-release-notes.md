@@ -2,9 +2,9 @@
 title: Note di rilascio di PTAI 20.5.1
 description: Le note sulla versione di PTAI 20.5.1 descrivono le novità o le modifiche, i problemi risolti e noti in Primetime Dynamic Ad Insertion nel 2020.
 translation-type: tm+mt
-source-git-commit: 4f97591b819d705891a053961eccd50a3cd05aa2
+source-git-commit: 9c117678a049e34bfcf960e992a4ce7361968f3e
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '548'
 ht-degree: 0%
 
 ---
@@ -104,6 +104,16 @@ Le note sulla versione Dynamic Ad Insertion 20.5.1 descrivono le novità o le mo
 ## Problemi risolti
 
 Se la risoluzione è associata a un problema segnalato, viene visualizzato un riferimento Zendesk. Ad esempio, ZD#xxxxx.
+
+**PTAI 20.5.1**
+
+* Problemi con le intestazioni CORS quando vengono inviate le intestazioni If-Modified-Since.
+
+* Problemi nel dashboard CRS.
+
+**PTAI 20.3.4**
+
+* Problema che causava la mancata sincronizzazione dei sottotitoli dopo l’inserimento di annunci in VOD/WebVTT.
 
 **PTAI 20.3.3**
 
