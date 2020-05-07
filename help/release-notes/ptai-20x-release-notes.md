@@ -2,9 +2,9 @@
 title: Note di rilascio di PTAI 20.5.1
 description: Le note sulla versione di PTAI 20.5.1 descrivono le novità o le modifiche, i problemi risolti e noti in Primetime Dynamic Ad Insertion nel 2020.
 translation-type: tm+mt
-source-git-commit: 266b884707e9160d539a06fd089732ef8ade21ba
+source-git-commit: 4f97591b819d705891a053961eccd50a3cd05aa2
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '518'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Le note sulla versione Dynamic Ad Insertion 20.5.1 descrivono le novità o le mo
 
 ## Novità di PTAI 20.5.1
 
-**Quando:** Martedì 5 maggio 2020 dalle 04:00 alle 05:00 AM EST
+**Quando:** Martedì 5 maggio 2020 dalle 04:00 alle 05:00 ora orientale
 
 * È stato risolto un problema per garantire che le intestazioni CORS corrette vengano fornite quando vengono inviate le intestazioni If-Modified-Since.
 
@@ -28,7 +28,7 @@ Le note sulla versione Dynamic Ad Insertion 20.5.1 descrivono le novità o le mo
 
 ### Versione 20.3.4
 
-**Quando:** Mercoledì 1 aprile 2020 dalle 03:00 alle 04:00 AM EST
+**Quando:** Mercoledì, 1 aprile 2020 dalle 03:00 AM alle 04:00 AM Ora orientale
 
 * È stato risolto un problema che causava la mancata sincronizzazione dei sottotitoli dopo l&#39;inserimento di annunci in VOD/WebVTT.
 
@@ -36,7 +36,7 @@ Le note sulla versione Dynamic Ad Insertion 20.5.1 descrivono le novità o le mo
 
 ### Versione 20.3.3
 
-**Quando:** Giovedì 26 marzo 2020 dalle 03:00 alle 04:00 a Est
+**Quando:** Giovedì 26 marzo 2020 dalle 03:00 AM alle 04:00 Ora orientale
 
 * Le risposte SSAI 4XX e 5XX ora forniscono correttamente le intestazioni relative a CORS, consentendo ai client javascript/webview di leggere con successo le risposte agli errori tra domini.
 
@@ -44,9 +44,36 @@ Le note sulla versione Dynamic Ad Insertion 20.5.1 descrivono le novità o le mo
 
 * È stato risolto un problema con i flussi audio CMAF/demuxed, a causa del quale in alcuni scenari i numeri EXT-X-MEDIA-SEQUENCE aumentavano in modo errato.
 
+### Versione 20.3.2
+
+**Quando:** Mercoledì 11 marzo 2020 dalle 05:30 AM alle 07:00 AM Ora orientale
+
+* Miglioramenti alla gestione del segnale SCTE35.
+
+* Aggiornamenti di manutenzione.
+
+### Versione 20.3.1
+
+**Quando:** Giovedì 05 marzo 2020 dalle 02:30 alle 04:30 Ora orientale
+
+* Miglioramenti delle prestazioni:
+
+   * È stato aggiunto il supporto della cache per i manifesti m3u8 master/media. Questi manifesti ora rispondono a Cache-Control: intestazioni public e Max-Age, che possono spesso migliorare le prestazioni di avvio video.
+
+   * È stato aggiunto il supporto per forzare il recupero delle creatività https tramite http, che può anche migliorare le prestazioni di avvio video.
+
+* Correzioni di sicurezza e manutenzione.
+
+### Versione 20.2.1
+
+**Quando:** Giovedì 13 febbraio 2020 dalle 04:30 alle 05:30 Ora orientale
+
+* È stato aggiunto il supporto per l’unione di risorse pubblicitarie contenenti più flussi solo audio in base al linguaggio/codec/bitrate.
+* Piccoli miglioramenti delle prestazioni e aggiornamenti di manutenzione.
+
 ### Versione 20.1.3
 
-**Quando:** Martedì 28 gennaio 2020 dalle 2:00 alle 03:00 a Est
+**Quando:** Martedì 28 gennaio 2020 dalle 2:00 alle 03:00 Ora orientale
 
 * **VMAP con supporto FER per nbc CueFormat**
 
@@ -57,6 +84,22 @@ Le note sulla versione Dynamic Ad Insertion 20.5.1 descrivono le novità o le mo
 * Filtrare i caratteri di controllo/non stampabili (codice ASCII &lt; 32) dalle intestazioni HTTP dell&#39;agente utente prima di inviarli ad Auditude e ad altri fornitori di annunci, CDN. Auditude Ad-Call utilizzata per errore per tali intestazioni non valide.
 
 * Rimuovere vecchi oggetti V1 dai gruppi NetStorage per mantenere il conteggio degli oggetti entro i limiti di sicurezza di Akamai.
+
+### Versione 20.1.2 [Hotfix]
+
+**Quando:** Lunedì 20 gennaio 2020 dalle 02:00 alle 03:00 ora orientale
+
+* Aggiornamenti di manutenzione.
+
+### Versione 20.1.1
+
+**Quando:** Mercoledì 15 gennaio 2020 dalle 04:00 alle 05:00 Ora orientale
+
+* Creative Repackaging Service offre ora un inserimento più rapido degli annunci inserendo automaticamente nella blacklist creativi malformati.
+
+* È stato aggiunto il supporto per la fase 1 per il nuovo formato di cue SCTE 35 nell&#39;inserimento di annunci lato server.
+
+* Aggiornamenti di manutenzione.
 
 ## Problemi risolti
 
