@@ -2,7 +2,7 @@
 title: Note di rilascio di PTAI 20.5.1
 description: Le note sulla versione di PTAI 20.5.1 descrivono le novità o le modifiche, i problemi risolti e noti in Primetime Dynamic Ad Insertion nel 2020.
 translation-type: tm+mt
-source-git-commit: 7c6acf4b310a7df4ea79a5974f66f7f4b615b21c
+source-git-commit: 75f95c1ddbca6fc9aa2a722635b1bfb6f097f8cc
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 0%
