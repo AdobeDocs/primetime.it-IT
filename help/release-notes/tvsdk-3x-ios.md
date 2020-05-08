@@ -1,29 +1,36 @@
 ---
-title: Note sulla versione TVSDK 3.11 per iOS
-description: TVSDK 3.11 per iOS - Note sulla versione - descrive le novità o le modifiche apportate, i problemi risolti e noti e i problemi del dispositivo in TVSDK iOS 3.11.
+title: Note sulla versione TVSDK 3.12 per iOS
+description: TVSDK 3.12 per iOS - Note sulla versione - descrive le novità o le modifiche apportate, i problemi risolti e noti e i problemi del dispositivo in TVSDK iOS 3.12.
 translation-type: tm+mt
-source-git-commit: ac75f63f98060e1937570476362bb5d4458d1f85
+source-git-commit: f6a0fbaec3d164dd0c15d2738b58c7486bbc6e57
+workflow-type: tm+mt
+source-wordcount: '7665'
+ht-degree: 0%
 
 ---
 
 
-# Note sulla versione TVSDK 3.11 per iOS {#tvsdk-for-ios-release-notes}
+# Note sulla versione TVSDK 3.12 per iOS {#tvsdk-for-ios-release-notes}
 
-TVSDK 3.11 per iOS - Note sulla versione - descrive le novità o le modifiche apportate, i problemi risolti e noti e i problemi del dispositivo in TVSDK iOS 3.11.
+TVSDK 3.12 per iOS - Note sulla versione - descrive le novità o le modifiche apportate, i problemi risolti e noti e i problemi del dispositivo in TVSDK iOS 3.12.
 
 ## Requisiti di sistema e software {#system-software-requirements}
 
-Prima di scaricare iOS 3.11, assicurati che le versioni di hardware, sistemi operativi e applicazioni siano conformi ai seguenti requisiti:
+Prima di scaricare iOS 3.12, assicurati che le versioni di hardware, sistemi operativi e applicazioni siano conformi ai seguenti requisiti:
 
 Sistema operativo: iOS 8.0 o versione successiva.
 
-## iOS TVSDK 3.11
+## iOS TVSDK 3.12
 
-Correzioni dei problemi dei clienti per i quali `isFallbackOnInvalidCreativeEnabled` e i metodi `customParams` causano l&#39;arresto anomalo dell&#39;applicazione.
+È stato risolto un problema che causava un errore nello streaming live dopo 15 minuti di riproduzione.
 
 Per le correzioni nella versione corrente, consultate la sezione sui problemi [dei clienti risolti](#resolved-issues) e, per le limitazioni, consultate la sezione sui problemi e sulle limitazioni [noti](#known-issues-and-limitations) .
 
 ### Nuove funzioni e problemi risolti nelle versioni precedenti {#whats-new-previous}
+
+**iOS TVSDK 3.11**
+
+Correzioni dei problemi dei clienti per i quali `isFallbackOnInvalidCreativeEnabled` e i metodi `customParams` causano l&#39;arresto anomalo dell&#39;applicazione.
 
 **iOS TVSDK 3.10**
 
@@ -226,7 +233,7 @@ Per gli annunci VAST (creativi) con la regola di fallback abilitata, TVSDK tratt
 
 **Segnalazione Del Blackout Con Sostituzione Alternativa Dei Contenuti**
 
-Come parte dell&#39;aggiornamento 1.4 TVSDK, ora siamo anche in grado di entrare e tornare dai blackout regionali rispetto ai contenuti lineari. Il TVSDK ora può elaborare due file manifest in parallelo, principale e alternativo, per monitorare i segnali blackout anche quando la programmazione alternativa viene mostrata al posto della programmazione originale.
+Come parte dell&#39;aggiornamento 1.4 TVSDK, ora siamo anche in grado di entrare e tornare dai blackout regionali rispetto ai contenuti lineari. Il TVSDK ora può elaborare due file manifest in parallelo, principale e alternativo, per monitorare i segnali di blackout anche quando la programmazione alternativa viene mostrata al posto della programmazione originale.
 
 **Versione 1.4.8**
 
@@ -263,7 +270,7 @@ TVSDK ora supporta l’invio di beacon mTVR e MDPR ID3 all’SDK Nielsen senza a
 
 * **Segnalazione Del Blackout Con Sostituzione Alternativa Dei Contenuti**
 
-Come parte dell’aggiornamento 1.4 TVSDK, TVSDK ora supporta anche l’accesso e il ritorno dai blackout regionali rispetto ai contenuti lineari. Il TVSDK ora può elaborare due file manifest in parallelo, principale e alternativo, per monitorare i segnali blackout anche quando la programmazione alternativa viene mostrata al posto della programmazione originale.
+Come parte dell’aggiornamento 1.4 TVSDK, TVSDK ora supporta anche l’accesso e il ritorno dai blackout regionali rispetto ai contenuti lineari. Il TVSDK ora può elaborare due file manifest in parallelo, principale e alternativo, per monitorare i segnali di blackout anche quando la programmazione alternativa viene mostrata al posto della programmazione originale.
 
 * **Rimuovi/Sostituisci annunci C3**
 
@@ -291,14 +298,17 @@ Comment Type: draft
  <p>TVSDK versions earlier than version 1.4.28 sometimes exhibit a long delay in the startup time when ad-enabled content is played on devices that are running on iOS 10. To resolve this issue, upgrade to version 1.4.28 or later. Version 1.4.28 was released on August 31, 2016, and iOS 10 was released on September 13, 2016.</p> 
 </note>
  -->
+**iOS TVSDK 3.12**
+
+* Lo streaming live non riesce dopo 15 minuti di riproduzione quando si utilizza TVSDK per iOS 3.10.
+
+### Risolti i problemi nelle versioni precedenti {#resolved-issues-previous}
 
 **iOS TVSDK 3.11**
 
 * (ZD#40998) - Le `isFallbackOnInvalidCreativeEnabled` cause dell&#39;arresto anomalo dell&#39;applicazione.
 
 * (ZD#41289) - `NSInvalidArgumentException` viene osservato con il metodo che `customParams` porta all&#39;arresto anomalo dell&#39;applicazione.
-
-### Risolti i problemi nelle versioni precedenti {#resolved-issues-previous}
 
 **iOS TVSDK 3.10**
 
@@ -499,7 +509,7 @@ Correzione migliorata fornita per il problema chiuso #34385 nella release 1.4.42
 
 Utilizzo di ID creativi e AdSystem nella richiesta CRS in base alle regole di normalizzazione CRS
 
-* (ZD #29176) - Arresto anomalo `PTAdPolicyDeligate``satAdBreakAsWatched:position`
+* (ZD #29176) - Arresto anomalo in corso `PTAdPolicyDeligate` `satAdBreakAsWatched:position`
 
 L&#39;arresto anomalo dovuto a AdBreak vuoto viene gestito ora.
 
