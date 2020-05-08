@@ -4,7 +4,7 @@ seo-title: Note sulla versione di Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 8e19c638caf2f9ea37dbf2ec7373ae9f470b93fe
+source-git-commit: bc9f03647d0b6114b6030ded058eb452e2b80887
 workflow-type: tm+mt
 source-wordcount: '290'
 ht-degree: 0%
@@ -14,24 +14,25 @@ ht-degree: 0%
 
 # Note sulla versione di Primetime
 
-Benvenuti nelle note sulla versione di Adobe Primetime. I documenti elencati nella navigazione a sinistra forniscono informazioni specifiche sulla versione, requisiti di sistema, limitazioni, problemi risolti e problemi noti.
+Benvenuti nelle note sulla versione di Adobe Primetime. I documenti elencati nella navigazione a sinistra forniscono informazioni specifiche sulla versione, requisiti di sistema, limitazioni, problemi risolti e problemi noti
 
-## Miglioramenti e problemi risolti in PTAI 20.5.1
-
-Concentrati sulla risoluzione dei principali problemi dei clienti.
-
-## Correzioni in TVSDK 3.11 Android
-
-Il rilascio ha migliorato il supporto per DRM widevine e ha risolto i principali problemi dei clienti.
-Per ulteriori informazioni sulla versione rilasciata corrente per [Android](../release-notes/tvsdk-3x-android.md), consulta.
-
-## Miglioramenti e correzioni nelle note sulla versione di TVSDK 3.11 iOS
+## Miglioramenti e correzioni nelle note sulla versione di TVSDK 3.12 iOS
 
 Il rilascio si è concentrato sulla risoluzione dei principali problemi dei clienti.
 
 Per ulteriori informazioni sulla versione rilasciata corrente per [iOS](../release-notes/tvsdk-3x-ios.md), consulta.
 
-Per ulteriori informazioni sull&#39;attuale versione rilasciata di Dynamic Ad Insertion, consulta [Note](ptai-19x-release-notes.md)sulla versione PTAI.
+## Miglioramenti e problemi risolti in PTAI 20.5.1
+
+Concentrati sulla risoluzione dei principali problemi dei clienti.
+
+Per ulteriori informazioni sull&#39;attuale versione rilasciata di Dynamic Ad Insertion, consulta [Note](ptai-20x-release-notes.md)sulla versione PTAI.
+
+## Correzioni in TVSDK 3.11 Android
+
+Il rilascio ha migliorato il supporto per DRM widevine e ha risolto i principali problemi dei clienti.
+
+Per ulteriori informazioni sulla versione rilasciata corrente per [Android](../release-notes/tvsdk-3x-android.md), consulta.
 
 ## Vedi anche
 
