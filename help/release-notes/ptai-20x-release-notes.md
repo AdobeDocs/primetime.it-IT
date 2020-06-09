@@ -1,20 +1,40 @@
 ---
-title: Note di rilascio di PTAI 20.5.1
-description: Le note sulla versione di PTAI 20.5.1 descrivono le novità o le modifiche, i problemi risolti e noti in Primetime Dynamic Ad Insertion nel 2020.
+title: Note sulla versione di PTAI 20.6.1
+description: Le note sulla versione di PTAI 20.6.1 descrivono le novità o le modifiche, i problemi risolti e noti in Primetime Dynamic Ad Insertion nel 2020.
 translation-type: tm+mt
-source-git-commit: e5fb84a7199e16a5eb7b6fd61aa7a1e50bb05c73
+source-git-commit: fc09f185489ff7e3decb7c77b495825e4c9c7c09
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
 
 
-# Note sulla versione Primetime Dynamic Ad Insertion 20.5.1
+# Note sulla versione Primetime Dynamic Ad Insertion 20.6.1
 
-Le note sulla versione Dynamic Ad Insertion 20.5.1 descrivono le novità o le modifiche apportate, i problemi risolti e noti in Primetime Dynamic Ad Insertion nel 2020.
+Le note sulla versione Dynamic Ad Insertion 20.6.1 descrivono le novità o le modifiche apportate, i problemi risolti e noti in Primetime Dynamic Ad Insertion nel 2020.
 
-## Novità di PTAI 20.5.1
+## Novità di PTAI 20.6.1
+
+**Quando:** Martedì 2 giugno 2020 dalle 03:00 alle 05:00 Ora orientale
+
+**Nuove funzioni**
+
+Contattate il supporto Adobe per abilitare le seguenti nuove funzionalità tramite la configurazione lato server:
+
+* Manipolazione manifesto: Ora è possibile trasformare gli URL di segmenti e risorse HLS tra HTTP e HTTPS per migliorare le prestazioni riducendo i handshakes TLS sulle richieste back-end. Può essere utilizzato anche per unificare frammenti di annunci/contenuti nelle stesse CDN.
+
+* VOD a forma lunga: Sono state migliorate le API per mantenere in vita le sessioni con risorse VOD lunghe.
+
+**Correzioni dei bug**
+
+* È stato risolto un problema per il quale i frammenti WebVTT venivano sempre richiesti in base al protocollo http, indipendentemente dal protocollo originale richiesto.
+
+* È stato risolto un problema per il quale i tag EXT-X-DISCONTINUITY venivano rimossi dalla parte superiore della playlist quando si passava dagli annunci ai contenuti. Per abilitare questa correzione, contattate il supporto Adobe.
+
+## Modifiche apportate alle versioni precedenti
+
+### Versione 20.5.1
 
 **Quando:** Martedì 5 maggio 2020 dalle 04:00 alle 05:00 ora orientale
 
@@ -23,8 +43,6 @@ Le note sulla versione Dynamic Ad Insertion 20.5.1 descrivono le novità o le mo
 * Correzioni di bug nel dashboard CRS.
 
 * Aggiornamenti di manutenzione.
-
-## Modifiche apportate alle versioni precedenti
 
 ### Versione 20.3.4
 
