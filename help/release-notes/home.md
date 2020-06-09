@@ -4,9 +4,9 @@ seo-title: Note sulla versione di Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: bc9f03647d0b6114b6030ded058eb452e2b80887
+source-git-commit: 4060de986dbf3d1ee57a415a4af302b1631db6a3
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
@@ -14,19 +14,19 @@ ht-degree: 0%
 
 # Note sulla versione di Primetime
 
-Benvenuti nelle note sulla versione di Adobe Primetime. I documenti elencati nella navigazione a sinistra forniscono informazioni specifiche sulla versione, requisiti di sistema, limitazioni, problemi risolti e problemi noti
+Benvenuti nelle note sulla versione di Adobe Primetime. I documenti elencati nella navigazione a sinistra forniscono informazioni specifiche sulla versione, requisiti di sistema, limitazioni, problemi risolti e problemi noti.
+
+## Miglioramenti e problemi risolti in PTAI 20.6.1
+
+La release era incentrata su funzionalità quali la manipolazione Manifest e il miglioramento delle API per mantenere in vita le sessioni con risorse VOD a forma lunga. Il rilascio include inoltre correzioni ai problemi più importanti dei clienti.
+
+Per ulteriori informazioni sull&#39;attuale versione rilasciata di Dynamic Ad Insertion, consulta [Note](ptai-20x-release-notes.md)sulla versione PTAI.
 
 ## Miglioramenti e correzioni nelle note sulla versione di TVSDK 3.12 iOS
 
 Il rilascio si è concentrato sulla risoluzione dei principali problemi dei clienti.
 
 Per ulteriori informazioni sulla versione rilasciata corrente per [iOS](../release-notes/tvsdk-3x-ios.md), consulta.
-
-## Miglioramenti e problemi risolti in PTAI 20.5.1
-
-Concentrati sulla risoluzione dei principali problemi dei clienti.
-
-Per ulteriori informazioni sull&#39;attuale versione rilasciata di Dynamic Ad Insertion, consulta [Note](ptai-20x-release-notes.md)sulla versione PTAI.
 
 ## Correzioni in TVSDK 3.11 Android
 
