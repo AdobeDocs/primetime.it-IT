@@ -4,7 +4,7 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Note sulla versione di Primetime
 translation-type: tm+mt
-source-git-commit: 1ec9411ac897ac6e7328aef9a6ddd614f533f1d0
+source-git-commit: 73c69ac4747db60cd17a1b385ab519f15b9003ac
 workflow-type: tm+mt
 source-wordcount: '101'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 + [Panoramica sulle note sulla versione](home.md)
 + Primetime Dynamic Ad Insertion {#ptai}
-   + [Note sulla versione di PTAI 20.5.1](ptai-20x-release-notes.md)
+   + [Note sulla versione di PTAI 20.6.1](ptai-20x-release-notes.md)
    + [Note sulla versione PTAI 19.11.1](ptai-19x-release-notes.md)
 + TVSDK per iOS {#tvsdk-ios}
    + [Note sulla versione TVSDK 3.12 per iOS](tvsdk-3x-ios.md)
