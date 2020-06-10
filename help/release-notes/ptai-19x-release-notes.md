@@ -2,7 +2,10 @@
 title: Note sulla versione PTAI 19.11.1
 description: Le note sulla versione di PTAI 19.11.1 descrivono le novità o le modifiche, i problemi risolti e noti in Primetime Dynamic Ad Insertion nel 2019.
 translation-type: tm+mt
-source-git-commit: ededb36a0b460fff4644a3716b36971ff9454c37
+source-git-commit: 0a58cce0d80ade581e32b5dd9376d336e02fac8b
+workflow-type: tm+mt
+source-wordcount: '1968'
+ht-degree: 0%
 
 ---
 
@@ -48,6 +51,7 @@ Aggiornamenti di sicurezza
 **Quando:** Mercoledì 21 agosto 2019 2:00 AM alle 3:00 Ora orientale
 
 * Dashboard SSAI: Sezione Stato sessione. Potete esportare gli eventi di sessione tramite l’opzione Scarica CSV.
+
 * Aggiornamenti di manutenzione
 
 ### Versione 19.8.1
