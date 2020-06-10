@@ -8,7 +8,10 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: fdb4e4eb741dd066017d96205cea8cbd15dcbc7b
+source-git-commit: 5dd5015c01565964b53ef82659308190ee350a89
+workflow-type: tm+mt
+source-wordcount: '5490'
+ht-degree: 0%
 
 ---
 
@@ -180,7 +183,7 @@ TVSDK ora annulla il download in corso del segmento, se necessario, e passa in m
 
    * Il secondo annuncio viene riprodotto per la durata rimanente (20 sec) seguita dal terzo annuncio.
 
-   * I tracciatori annunci per l’annuncio parziale riprodotto (secondo annuncio) non vengono attivati. I tracciatori solo per il terzo annuncio vengono attivati.
+   * I tracciatori annunci per l&#39;annuncio parziale riprodotto (secondo annuncio) non vengono attivati. I tracciatori solo per il terzo annuncio vengono attivati.
 
 * **Proteggere il caricamento di annunci tramite HTTPS**
 
@@ -334,7 +337,8 @@ Nelle tabelle delle funzioni riportate di seguito, un &#39;Y&#39; indica che la 
 | Riproduzione generale (Riproduci, Pausa, Cerca) | VOD + Live | Y |
 | FER - Riproduzione generale (riproduzione, pausa, ricerca) | FER VOD | Y |
 | Cercare quando viene riprodotto un annuncio | VOD + Live | Non supportato |
-| AC3 | VOD + Live | Non supportato |
+| Riproduzione HEVC | VOD + Live | Solo contenitore fMP4 |
+| AC3 ed EAC3 | VOD + Live | Non supportato |
 | MP3 | VOD | Non supportato |
 | Riproduzione di contenuti MP4 | VOD | Y |
 | Logica di commutazione bitrate adattivo | VOD + Live | Y |
@@ -354,7 +358,6 @@ Nelle tabelle delle funzioni riportate di seguito, un &#39;Y&#39; indica che la 
 | Rilegatura audio tardiva | VOD + Live | Y |
 | 302 Redirect | VOD + Live | Y |
 | Riproduzione con offset | VOD + Live | Y |
-| Riproduzione solo audio | VOD + Live | Y |
 | Gioco di mattoni | VOD + Live | Y |
 | Lento movimento in riproduzione su mattoni | VOD + Live | Non supportato |
 | Gioca a mattoni liscia (con ABR) | VOD + Live | Y |
@@ -384,19 +387,43 @@ Nelle tabelle delle funzioni riportate di seguito, un &#39;Y&#39; indica che la 
 | Lazy Ad Resolve | VOD | Y |
 | Supporto dei marcatori di discontinuità - SSAI | VOD + Live | Y |
 | Annunci per la compagnia, Annunci per banner e Annunci cliccabili | VOD + Live | Y |
+| 302 Distinzione di reindirizzamento | VOD + Live | Y |
+
+| Feature | Tipo di contenuto | HLS |
+|---|---|---|
+| Riproduzione generale, annunci attivati | VOD + Live | Y |
+| Contenuto FER con annunci abilitati | VOD | Y |
+| Comportamenti annuncio predefiniti | VOD + Live | Y |
+| VAST 2.0/3.0 | VOD + Live | Y |
+| VMAP 1.0 | VOD + Live | Y |
+| Annunci MP4 | VOD + Live | Y (da CRS) |
+| Gioco di mattoni con annunci attivati | VOD + Live | Y |
+| Solo annunci | VOD | Y |
+| Parametri di targeting | VOD + Live | Y |
+| Parametri personalizzati | VOD + Live | Y |
+| Comportamenti annuncio personalizzati | VOD + Live | Y |
+| Tag Ad Personalizzati | Live | Y |
+| Risolutori annunci personalizzati | VOD + Live | Y |
+| Risolutore annunci personalizzato a ruota libera | VOD | Y |
+| C3 | VOD + Live | Non supportato |
+| Lazy Ad Resolve | VOD | Y |
+| Supporto dei marcatori di discontinuità - SSAI | VOD + Live | Y |
+| Annunci per la compagnia, Annunci per banner e Annunci cliccabili | VOD + Live | Y |
 | VPAID 2.0 | VOD + Live | Y (JS) |
 | Uscita Annuncio Precoce | Live | Y |
 | Definizione delle priorità creative basate su regole | VOD + Live | Y |
 | Regole CRS | VOD + Live | Y |
 | JSON Ad Resolver | VOD + Live | Non supportato |
 | Integrazione Moat | VOD + Live | Y |
+| Inserimento interruzione annuncio parziale | Live | Y |
 
 | Feature | Tipo di contenuto | HLS |
 |---|---|---|
 | Crittografia AES | VOD + Live | Y |
 | Cifratura AES di esempio | VOD + Live | Y |
 | Flussi token | VOD + Live | Y |
-| DRM | VOD + Live | Solo DRM Primetime (futuro) Widevine) |
+| DRM Widevine | VOD + Live | Solo contenitore fMP4 |
+| DRM Primetime | VOD + Live | Y |
 | Riproduzione esterna (RBOP) | VOD + Live | Solo Primetime DRM |
 | Rotazione licenza | VOD + Live | Solo Primetime DRM |
 | Rotazione chiave | VOD + Live | Solo Primetime DRM |
