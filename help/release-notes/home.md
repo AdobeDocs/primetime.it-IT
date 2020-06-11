@@ -4,7 +4,7 @@ seo-title: Note sulla versione di Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 4060de986dbf3d1ee57a415a4af302b1631db6a3
+source-git-commit: 8f8b9d167d7456968879edac847c51e6c9e1da3c
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%
@@ -15,6 +15,12 @@ ht-degree: 0%
 # Note sulla versione di Primetime
 
 Benvenuti nelle note sulla versione di Adobe Primetime. I documenti elencati nella navigazione a sinistra forniscono informazioni specifiche sulla versione, requisiti di sistema, limitazioni, problemi risolti e problemi noti.
+
+## Correzioni in TVSDK 3.12 Android
+
+Il rilascio si è concentrato sull’aggiornamento della versione gradle dell’applicazione Primetime Reference alla versione 5.6.4.
+
+Per ulteriori informazioni sulla versione rilasciata corrente per [Android](../release-notes/tvsdk-3x-android.md), consulta.
 
 ## Miglioramenti e problemi risolti in PTAI 20.6.1
 
@@ -27,12 +33,6 @@ Per ulteriori informazioni sull&#39;attuale versione rilasciata di Dynamic Ad In
 Il rilascio si è concentrato sulla risoluzione dei principali problemi dei clienti.
 
 Per ulteriori informazioni sulla versione rilasciata corrente per [iOS](../release-notes/tvsdk-3x-ios.md), consulta.
-
-## Correzioni in TVSDK 3.11 Android
-
-Il rilascio ha migliorato il supporto per DRM widevine e ha risolto i principali problemi dei clienti.
-
-Per ulteriori informazioni sulla versione rilasciata corrente per [Android](../release-notes/tvsdk-3x-android.md), consulta.
 
 ## Vedi anche
 
