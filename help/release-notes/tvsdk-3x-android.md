@@ -1,24 +1,24 @@
 ---
-title: Note sulla versione TVSDK 3.11 per Android
-seo-title: Note sulla versione TVSDK 3.11 per Android
-description: TVSDK 3.11 per Android - Note sulla versione - descrive le novità o le modifiche, i problemi risolti e noti e i problemi del dispositivo in TVSDK Android 3.11
-seo-description: TVSDK 3.11 per Android - Note sulla versione - descrive le novità o le modifiche, i problemi risolti e noti e i problemi del dispositivo in TVSDK Android 3.11
+title: Note sulla versione TVSDK 3.12 per Android
+seo-title: Note sulla versione TVSDK 3.12 per Android
+description: TVSDK 3.12 per Android - Note sulla versione - descrive le novità o le modifiche, i problemi risolti e noti e i problemi del dispositivo in TVSDK Android 3.12
+seo-description: TVSDK 3.12 per Android - Note sulla versione - descrive le novità o le modifiche, i problemi risolti e noti e i problemi del dispositivo in TVSDK Android 3.12
 uuid: 685d46f5-5a02-4741-af5c-91e91babd6f7
 products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 5dd5015c01565964b53ef82659308190ee350a89
+source-git-commit: db3f488e29468fc29ea8bf033877124a9abdecd0
 workflow-type: tm+mt
-source-wordcount: '5490'
+source-wordcount: '5531'
 ht-degree: 0%
 
 ---
 
 
-# Note sulla versione TVSDK 3.11 per Android {#tvsdk-for-android-release-notes}
+# Note sulla versione TVSDK 3.12 per Android {#tvsdk-for-android-release-notes}
 
-TVSDK 3.11 per Android - Note sulla versione - descrive le novità o le modifiche, i problemi risolti e noti e i problemi del dispositivo in TVSDK Android 3.11.
+TVSDK 3.12 per Android - Note sulla versione - descrive le novità o le modifiche, i problemi risolti e noti e i problemi del dispositivo in TVSDK Android 3.12.
 
 Il lettore di riferimento Android è incluso con Android TVSDK nella directory samples/ della distribuzione. Il file README.md di accompagnamento spiega come creare il lettore di riferimento.
 
@@ -36,26 +36,31 @@ TVSDK per Android offre molti miglioramenti in termini di prestazioni rispetto a
 
 Il set completo di funzioni supportate e non supportate è presentato nella sezione Matrice [](#feature-matrix) funzioni delle note sulla versione.
 
-## Android TVSDK 3.11
+## Android TVSDK 3.12
 
-**Recupero del riquadro di intestazione specifica del sistema di protezione (PSSH) consentito**
+La versione gradle dell&#39;applicazione Primetime Reference ora viene aggiornata alla versione 5.6.4.
 
-TVSDK ora consente il recupero della casella di intestazione specifica del sistema di protezione associata alla risorsa multimediale caricata corrente. È stata aggiunta una nuova API `getPSSH()` a `com.adobe.mediacore.drm.DRMManager`.
-Per ulteriori informazioni, vedere [Widevine DRM](../programming/tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-widevine.md).
+Per impostare ed eseguire l&#39;app di riferimento utilizzando Android Studio, segui le istruzioni fornite nel file Leggimi disponibile con il file TVSDK zip in `TVSDK_Android_x.x.x.x/samples/PrimetimeReference/src/README.md`.
 
 I principali problemi risolti dal cliente nella versione corrente sono riportati nella sezione dei problemi [](#resolved-issues) risolti.
 
 ### Nuove funzioni e miglioramenti nelle versioni precedenti
 
+**Android TVSDK 3.11**
+
+* **Recupero consentito** per il riquadro dell&#39;intestazione specifica del sistema di protezione - TVSDK consente il recupero della casella di intestazione specifica del sistema di protezione associata alla risorsa multimediale caricata corrente. Nuova API `getPSSH()` aggiunta a `com.adobe.mediacore.drm.DRMManager`.
+
+Per ulteriori informazioni, vedere [Widevine DRM](../programming/tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-widevine.md).
+
 **Android TVSDK 3.10**
 
-Questa release era dedicata alla risoluzione dei principali problemi dei clienti, come indicato nella sezione dei problemi [](#resolved-issues) risolti.
+Il rilascio si è concentrato sulla risoluzione dei principali problemi dei clienti, come indicato nella sezione dei problemi [](#resolved-issues) risolti.
 
 **Android TVSDK 3.9**
 
-* **Consegna sicura tramite HTTPS** - Android TVSDK 3.9 introduce le funzionalità di consegna sicura tramite HTTPS per distribuire contenuti in modo sicuro con scalabilità e prestazioni senza precedenti.
+* **Consegna sicura tramite HTTPS** - Android TVSDK 3.9 ha introdotto le funzionalità di distribuzione sicura tramite HTTPS per distribuire contenuti in modo sicuro con scalabilità e prestazioni senza precedenti.
 
-   Per abilitare la distribuzione protetta tramite HTTPS, in `NetworkConfiguration` classe viene introdotta una nuova API.
+   Per abilitare la distribuzione protetta tramite HTTPS, è stata introdotta una nuova API in `NetworkConfiguration` classe.
 
    `public void setForceHTTPS (boolean value)`
 
@@ -65,7 +70,7 @@ Questa release era dedicata alla risoluzione dei principali problemi dei clienti
 
 * **Supporto pre-rollio con funzione** Ad-Break parziale - Con questo miglioramento, TVSDK 3.8 supporta gli annunci pre-roll con funzione Ad-Break (PABI) parziale.
 
-   L&#39;annuncio pre-roll, se disponibile, viene riprodotto, e poi il contenuto viene riprodotto dal punto in diretta emulando l&#39;esperienza della televisione in diretta.
+L&#39;annuncio pre-roll, se disponibile, viene riprodotto, e poi il contenuto viene riprodotto dal punto in diretta emulando l&#39;esperienza della televisione in diretta.
 
 **Android TVSDK 3.7**
 
@@ -82,6 +87,7 @@ Questa release era dedicata alla risoluzione dei principali problemi dei clienti
 **Versione 3.5**
 
 * **Solo nella risoluzione** degli annunci nel tempo - TVSDK 3.5 rimuove il supporto degli annunci riprodotti dalla timeline.
+
 * **Supporto per la riproduzione** offline abilitato: con la riproduzione offline, gli utenti ora possono scaricare contenuti video sui propri dispositivi e visualizzarli quando non sono connessi. Per informazioni dettagliate, consultate &quot;Riproduzione[offline con Android](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_android_3.5.pdf)&quot;.
 
 **Versione 3.4**
@@ -183,7 +189,7 @@ TVSDK ora annulla il download in corso del segmento, se necessario, e passa in m
 
    * Il secondo annuncio viene riprodotto per la durata rimanente (20 sec) seguita dal terzo annuncio.
 
-   * I tracciatori annunci per l&#39;annuncio parziale riprodotto (secondo annuncio) non vengono attivati. I tracciatori solo per il terzo annuncio vengono attivati.
+   * I tracciatori annunci per l’annuncio parziale riprodotto (secondo annuncio) non vengono attivati. I tracciatori solo per il terzo annuncio vengono attivati.
 
 * **Proteggere il caricamento di annunci tramite HTTPS**
 
@@ -269,7 +275,7 @@ Quando TVSDK apre una connessione, richiede al server una connessione *keep-aliv
 
 * **Riproduzione**
 
-* **Riproduzione dei contenuti MP4 -** le clip brevi MP4 non devono essere transcodificate per essere riprodotte in TVSDK.
+* **Riproduzione dei contenuti MP4 -** le clip brevi MP4 non devono essere transcodificate di nuovo per essere riprodotte in TVSDK.
 
    > [!NOTE]
    >
@@ -437,13 +443,17 @@ Nelle tabelle delle funzioni riportate di seguito, un &#39;Y&#39; indica che la 
 
 Quando la risoluzione è associata a un problema segnalato, viene visualizzato un riferimento Zendesk, ad esempio ZD#xxxxx.
 
-**Android TVSDK 3.11**
+**Android TVSDK 3.12**
 
-Questa sezione fornisce un riepilogo del problema risolto nella release Android di TVSDK 3.11.
+Questa sezione fornisce un riepilogo del problema risolto nella release Android di TVSDK 3.12.
 
-* ZD#41252 - Caratteri coreani in WebVTT interrotti dopo Android 7.1.
+* ZD#40584 - L&#39;app Primetime Reference non viene creata con la versione più recente.
 
 ### Risolti i problemi nelle versioni precedenti
+
+**Android TVSDK 3.11**
+
+* ZD#41252 - Caratteri coreani in WebVTT interrotti dopo Android 7.1.
 
 **Android TVSDK 3.10**
 
