@@ -8,9 +8,9 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: db3f488e29468fc29ea8bf033877124a9abdecd0
+source-git-commit: d1881d1fe97d416ee0f69f62828aef46c5ad21bb
 workflow-type: tm+mt
-source-wordcount: '5531'
+source-wordcount: '5415'
 ht-degree: 0%
 
 ---
@@ -275,7 +275,7 @@ Quando TVSDK apre una connessione, richiede al server una connessione *keep-aliv
 
 * **Riproduzione**
 
-* **Riproduzione dei contenuti MP4 -** le clip brevi MP4 non devono essere transcodificate di nuovo per essere riprodotte in TVSDK.
+* **Riproduzione dei contenuti MP4 -** le clip brevi MP4 non devono essere transcodificate per essere riprodotte in TVSDK.
 
    > [!NOTE]
    >
@@ -371,28 +371,6 @@ Nelle tabelle delle funzioni riportate di seguito, un &#39;Y&#39; indica che la 
 | Blackout degli annunci | VOD + Live | Non supportato |
 | Instant On | VOD + Live | Non supportato |
 | Supporto dei marcatori di discontinuità | VOD + Live | Y |
-| 302 Distinzione di reindirizzamento | VOD + Live | Y |
-
-| Feature | Tipo di contenuto | HLS |
-|---|---|---|
-| Riproduzione generale, annunci attivati | VOD + Live | Y |
-| Contenuto FER con annunci abilitati | VOD | Y |
-| Comportamenti annuncio predefiniti | VOD + Live | Y |
-| VAST 2.0/3.0 | VOD + Live | Y |
-| VMAP 1.0 | VOD + Live | Y |
-| Annunci MP4 | VOD + Live | Y (da CRS) |
-| Gioco di mattoni con annunci attivati | VOD + Live | Y |
-| Solo annunci | VOD | Y |
-| Parametri di targeting | VOD + Live | Y |
-| Parametri personalizzati | VOD + Live | Y |
-| Comportamenti annuncio personalizzati | VOD + Live | Y |
-| Tag Ad Personalizzati | Live | Y |
-| Risolutori annunci personalizzati | VOD + Live | Y |
-| Risolutore annunci personalizzato a ruota libera | VOD | Y |
-| C3 | VOD + Live | Non supportato |
-| Lazy Ad Resolve | VOD | Y |
-| Supporto dei marcatori di discontinuità - SSAI | VOD + Live | Y |
-| Annunci per la compagnia, Annunci per banner e Annunci cliccabili | VOD + Live | Y |
 | 302 Distinzione di reindirizzamento | VOD + Live | Y |
 
 | Feature | Tipo di contenuto | HLS |
@@ -723,7 +701,7 @@ WebViewDebbuging è impostato su False per impostazione predefinita. Per abilita
 
 **Android TVSDK 3.2**
 
-* TVSDK 3.2 non supporta la riproduzione CMAF Sample AES e dei flussi AES128.
+* TVSDK 3.2 non supporta la riproduzione di flussi CMAF Sample AES e AES128.
 * I flussi HEVC CMAF non includono il supporto per la riproduzione di sottotitoli codificati.
 * La colorazione verde viene visualizzata per i flussi crittografati WV quando la ricerca viene eseguita intorno al segmento non crittografato.
 * I flussi CMAF non supportano gli eventi ID3.
