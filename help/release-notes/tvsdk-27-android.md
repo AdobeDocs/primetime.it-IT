@@ -8,7 +8,10 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: bab78e9f-f9ba-4e1c-b778-0936ae704037
 translation-type: tm+mt
-source-git-commit: 36a1619b43d22ccc7286d4a4b74f2c6297d0fd47
+source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+workflow-type: tm+mt
+source-wordcount: '4123'
+ht-degree: 0%
 
 ---
 
@@ -146,8 +149,8 @@ Nota: Per la riproduzione MP4 non sono supportati lo switching ABR, la riproduzi
 
 * **Supporto dei flussi di lavoro**
 
-   * **Direct Billing Integration -** invia le metriche di fatturazione al back-end di Adobe Analytics, certificato da Adobe Primetime per i flussi utilizzati dal cliente.
-TVSDK raccoglie automaticamente le metriche, rispettando il contratto di vendita del cliente per generare rapporti di utilizzo periodici richiesti a scopo di fatturazione. A ogni evento di inizio flusso, TVSDK utilizza l&#39;API di inserimento dati di Adobe Analytics per inviare metriche di fatturazione quali il tipo di contenuto, i flag abilitati per l&#39;inserimento di annunci e i flag abilitati per l&#39;abilitazione di drm, in base alla durata del flusso fatturabile, alla suite di rapporti di proprietà di Adobe Analytics Primetime. Ciò non interferisce con le suite di rapporti Adobe Analytics o le chiamate server del cliente, né viene incluso in esse. Su richiesta, questo rapporto sull&#39;utilizzo della fatturazione viene inviato periodicamente ai clienti. Questa è la prima fase della funzione di fatturazione che supporta solo la fatturazione dell&#39;utilizzo. Può essere configurato in base al contratto di vendita utilizzando le API descritte nella documentazione. Questa funzione è abilitata per impostazione predefinita. Per disattivare questa funzione, fare riferimento al campione del lettore di riferimento.
+   * **Direct Billing Integration -** invia le metriche di fatturazione al back-end Adobe  Analytics, certificato da Adobe Primetime per i flussi utilizzati dal cliente.
+TVSDK raccoglie automaticamente le metriche, rispettando il contratto di vendita del cliente per generare rapporti di utilizzo periodici richiesti a scopo di fatturazione. A ogni evento di inizio flusso, TVSDK utilizza l&#39;API di inserimento dati Adobe  Analytics per inviare metriche di fatturazione come il tipo di contenuto, i flag abilitati per l&#39;inserimento di annunci e i flag abilitati per l&#39;abilitazione di drm, in base alla durata del flusso fatturabile, alla suite di rapporti di proprietà di Adobe  Analytics Primetime. Ciò non interferisce con le suite di rapporti Adobe  Analytics o le chiamate server del cliente, né viene incluso in esse. Su richiesta, questo rapporto sull&#39;utilizzo della fatturazione viene inviato periodicamente ai clienti. Questa è la prima fase della funzione di fatturazione che supporta solo la fatturazione dell&#39;utilizzo. Può essere configurato in base al contratto di vendita utilizzando le API descritte nella documentazione. Questa funzione è abilitata per impostazione predefinita. Per disattivare questa funzione, fare riferimento al campione del lettore di riferimento.
    * **Supporto per il failover migliorato: sono state implementate** strategie aggiuntive per continuare la riproduzione senza interruzioni, nonostante gli errori dei server host, dei file playlist e dei segmenti.
 
 * **Pubblicità**
@@ -157,7 +160,7 @@ TVSDK raccoglie automaticamente le metriche, rispettando il contratto di vendita
 
 * **Analytics**
 
-   * **VHL 2.0 -** Questa è l&#39;integrazione della libreria Video Heartbeat (VHL) ottimizzata più recente per la raccolta automatica dei dati di utilizzo per Adobe Analytics. La complessità delle API è stata ridotta per semplificare l&#39;implementazione. Scaricate la libreria VHL [v2.0.0 per Android](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) ed estraete il file JAR nella cartella libs.
+   * **VHL 2.0 -** Si tratta dell&#39;ultima integrazione ottimizzata per Video Heartbeats Library (VHL) per la raccolta automatica dei dati di utilizzo per Adobe  Analytics. La complessità delle API è stata ridotta per semplificare l&#39;implementazione. Scaricate la libreria VHL [v2.0.0 per Android](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) ed estraete il file JAR nella cartella libs.
 
 * **SizeAvaliableEventListener**
    * i metodi getHeight() e getWidth() di SizeAvailableEvent restituiranno ora l&#39;output rispettivamente in altezza e larghezza. Le proporzioni di visualizzazione possono essere calcolate come segue:
@@ -204,7 +207,7 @@ Nelle tabelle delle funzioni riportate di seguito, un &#39;Y&#39; indica che la 
 | Failover avanzato | VOD + Live | Y |
 | Notifiche QoS e del lettore | VOD + Live | Y |
 | Supporto per le intestazioni dei cookie | VOD + Live | Y |
-| Supporto per intestazioni HTTP personalizzate | VOD + Live | Y (Whitelist obbligatorio) |
+| Supporto per intestazioni HTTP personalizzate | VOD + Live | Y (consentire l&#39;inserimento nell&#39;elenco obbligatorio) |
 | Impostare i parametri di controllo del buffer | VOD + Live | Y |
 | Impostare controlli bitrate adattivi | VOD + Live | Y |
 | Tag Manifest Personalizzati | VOD + Live | Y |
@@ -260,7 +263,7 @@ Nelle tabelle delle funzioni riportate di seguito, un &#39;Y&#39; indica che la 
 
 | Feature | Tipo di contenuto | HLS |
 |---|---|---|
-| Integrazione VHL di Adobe Analytics | VOD + Live | Y |
+| Integrazione Adobe  Analytics VHL | VOD + Live | Y |
 | Fatturazione | VOD + Live | Y |
 
 ## Problemi risolti {#resolved-issues}
