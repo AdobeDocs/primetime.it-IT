@@ -8,7 +8,10 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 452f8699-7857-49ab-9caa-22204b19fe4a
 translation-type: tm+mt
-source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+workflow-type: tm+mt
+source-wordcount: '6578'
+ht-degree: 0%
 
 ---
 
@@ -67,7 +70,7 @@ Integrare e certificare VHL 2.0 in iOS TVSDK: Ridurre la barriera nell&#39;imple
 
 * Informazioni annuncio di rete
 
-   Le API TVSDK ora forniscono informazioni aggiuntive sulle risposte VAST di terze parti. Ad ID, Ad System e VAST Ad Extensions sono forniti in `PTNetworkAdInfo` classe accessibili tramite `networkAdInfo` la proprietà su una Ad Asset. Queste informazioni possono essere utilizzate per l&#39;integrazione con altre piattaforme di Ad Analytics come **Moat Analytics**.
+   Le API TVSDK ora forniscono informazioni aggiuntive sulle risposte VAST di terze parti. Ad ID, Ad System e VAST Ad Extensions sono forniti in `PTNetworkAdInfo` classe accessibili tramite `networkAdInfo` la proprietà su una Ad Asset. Queste informazioni possono essere utilizzate per l&#39;integrazione con altre piattaforme Ad  Analytics come **Moat  Analytics**.
 
 **Versione 1.4.31**
 
@@ -81,7 +84,7 @@ Ogni volta che TVSDK genera un evento di avvio del flusso, il lettore inizia a i
 
 Nella classe PTSDKConfig, è stata aggiunta l&#39;API forceHTTPS.
 
-La classe PTSDKConfig fornisce metodi per applicare SSL alle richieste effettuate ai server Adobe Primetime ad alsazietà, DRM e Video Analytics. Per ulteriori informazioni, vedere `forceHTTPS` e `isForcingHTTPS` metodi in questa classe. Se un manifesto viene caricato su HTTPS, TVSDK mantiene l&#39;uso del contenuto HTTPS e lo rispetta quando carica eventuali URL relativi da tale manifesto.
+La classe PTSDKConfig fornisce metodi per applicare SSL alle richieste effettuate ai server Analytics Adobe Primetime ad DECISioning, DRM e Video . Per ulteriori informazioni, vedere `forceHTTPS` e `isForcingHTTPS` metodi in questa classe. Se un manifesto viene caricato su HTTPS, TVSDK mantiene l&#39;uso del contenuto HTTPS e lo rispetta quando carica eventuali URL relativi da tale manifesto.
 
 **Nota**: Le richieste ai domini di terze parti come Pixel di tracciamento annunci, URL di contenuti e annunci e richieste simili non vengono modificate, ed è responsabilità dei provider di contenuto e dei server di annunci fornire URL supportati tramite HTTPS.
 
@@ -154,7 +157,7 @@ I criteri DRM ora possono specificare la risoluzione massima consentita, a secon
 
 * **Video Heartbeats Library (VHL) aggiornamento alla versione 1.4.1.1**
 
-   * Aggiunta la possibilità di raggruppare diversi casi di utilizzo di analisi, da altri SDK o lettori, con Adobe Analytics Video Essentials.
+   * Aggiunta la possibilità di raggruppare diversi casi di utilizzo di analisi, da altri SDK o lettori, con Adobe  Analytics Video Essentials.
    * Il tracciamento degli annunci è stato ottimizzato rimuovendo i metodi trackAdBreakStart e trackAdBreakComplete. L’interruzione dell’annuncio viene ricavata dalle chiamate dei metodi trackAdStart e trackAdComplete.
    * La proprietà playhead non è più necessaria per il tracciamento degli annunci.
    * È stato aggiunto il supporto per l’ID visitatore di Marketing Cloud.
@@ -311,9 +314,9 @@ Comment Type: draft
 * (ZD#31979) - Non viene compilato/eseguito quando è iOS 10 o versione successiva per iPhone 7/iPhone7+
 
    È stato corretto il seguente problema: la compilazione di documenti IB per versioni precedenti a iOS 7 non era più supportata
-* (ZD#32920) - schermata bianca all&#39;interno di un&#39;interruzione annuncio e nessun completamento interruzione annuncio
+* (ZD#32920) - Schermata vuota entro un&#39;interruzione annuncio e senza completamento interruzione annuncio
 
-   Quando un&#39;interruzione annuncio presenta le istanze di Annuncio e al termine di un&#39;istanza di annuncio, viene visualizzata una schermata bianca
+   Quando un&#39;interruzione annuncio presenta istanze di annunci e al termine di un&#39;istanza di annuncio, viene visualizzata una schermata vuota
 * (ZD#32509) - Disattivazione della registrazione dello schermo iOS 11 Disattivazione della registrazione dello schermo su iOS 11
 
 * (ZD#33179) - Errore di evento intermittente su iOS11
@@ -329,7 +332,7 @@ Comment Type: draft
 * (ZD #31951) - Errore TVSDK durante le rotazioni della licenza.
 
    È stato corretto il problema di rotazione della licenza.
-* (ZD #31951) - Schermata bianca all&#39;interno di un&#39;interruzione annuncio e nessun completamento interruzione annuncio.
+* (ZD #31951) - Schermata vuota entro un&#39;interruzione annuncio e nessun completamento interruzione annuncio.
 
    È stato risolto un problema per il quale gli annunci VPAID Facebook spesso restituivano più blocchi CDATA in un unico \&amp;lt;AdParameters\&amp;gt; Nodo VAST.
 * (ZD #3336) - [iOS] TVSDK - I contenitori degli annunci non vengono compilati, nonostante la quantità di annunci restituiti da FreeWheeler sia sufficiente.
@@ -489,9 +492,9 @@ Questo problema è stato risolto fornendo una soluzione alternativa per i flussi
 
 In questa versione sono stati risolti i seguenti problemi per TVSDK:
 
-* (ZD# 24180) Aggiungere un&#39;intestazione personalizzata alla whitelist
+* (ZD# 24180) Aggiungete un&#39;intestazione personalizzata per consentire l&#39;elenco
 
-Una nuova intestazione personalizzata è stata aggiunta alla whitelist TVSDK.
+All’elenco Consenti TVSDK è stata aggiunta una nuova intestazione personalizzata.
 
 * (ZD# 25016) Il flusso di failover viene selezionato in modo casuale quando vengono impostati i parametri di controllo ABR
 
@@ -511,19 +514,19 @@ Quando l&#39;ora di inizio dell&#39;ultima interruzione annuncio dal VMAP cade p
 
 * La libreria Video Heartbeat (VHL) è stata aggiornata alla versione 1.5.9 per risolvere i seguenti problemi:
 
-   * (ZD #22351) VHL - Analytics: Durata risorsa video dal vivo
+   * (ZD #22351) VHL -  Analytics: Durata risorsa video dal vivo
 
 Questo problema è stato risolto aggiungendo l’API assetDuration per aggiornare la durata delle risorse per i flussi Live/Linear e fornire una logica per il controllo del flusso live. `PTVideoAnalyticsTrackingMetadata`
 
-* (ZD# 22675) VHL - Analytics: Aggiornamento della durata della risorsa video in diretta
+* (ZD# 22675) VHL -  Analytics: Aggiornamento della durata della risorsa video in diretta
 
 Questo problema è lo stesso di ZD #22351.
 
-* (ZD #25908) VHL - Analytics: Arresto anomalo evento Adobe Heartbeat
+* (ZD #25908) VHL -  Analytics: Arresto anomalo evento Adobe Heartbeat
 
 Questo problema è stato risolto aggiornando l&#39;implementazione per utilizzare la versione più recente di VHL per iOS versione 1.5.9 per migliorare stabilità e prestazioni.
 
-* (ZD #25956) VHL - Analytics: Arresto anomalo durante la riproduzione ripetuta dei video
+* (ZD #25956) VHL -  Analytics: Arresto anomalo durante la riproduzione ripetuta dei video
 
 Questo problema è lo stesso di ZD #25908.
 
@@ -609,7 +612,7 @@ Questo problema è stato risolto aggiungendo ulteriori controlli oggetti null du
 
 Questo problema è lo stesso di (ZD #21590).
 
-* (ZD #22280) - La lunghezza video di Analytics è impostata su 0
+* (ZD #22280) -  Lunghezza video Analytics impostata su 0
 
 Questo problema è lo stesso di (ZD #21590).
 
@@ -635,7 +638,7 @@ Questo problema è stato risolto aggiornando la logica per scoprire la visualizz
 
 Questo problema è stato risolto aggiornando VideoAnalyticsTracker per rilevare correttamente l’inizio/il completamento del capitolo durante la transizione tra i limiti dei capitoli e non dei capitoli.
 
-* (ZD #20784) - Analytics: Attivazione di contenuti completi per transizioni video live
+* (ZD #20784) -  Analytics: Attivazione di contenuti completi per transizioni video live
 
 Questo problema è stato risolto aggiungendo una logica per attivare manualmente il completamento del contenuto durante una sessione di tracciamento video.
 
@@ -900,7 +903,7 @@ Per supportare correttamente iOS 9, è necessario configurare le eccezioni di Ap
 
 **Versione 1.4.12** (1.4.12.463) per iOS 6.0+
 
-* (ZD #2751) CSAI e CRS| Miglioramento: Gestire gli elementi dinamici in alcuni URL di file multimediali.
+* (ZD #2751) CSAI e CRS | Miglioramento: Gestire gli elementi dinamici in alcuni URL di file multimediali.
 
 Creative Repackaging Service è stato aggiornato per gestire correttamente gli annunci con URL creativi dinamici.
 
@@ -950,7 +953,7 @@ Supporto per il ping di URL vuoti di tracciamento delle interruzioni di annunci,
 
 **Versione 1.4.5** (1.4.5.283)
 
-* (ZD #2141) Implementazione di Analytics per l&#39;app TreeHouse, aggiunta della libreria AdobeAnalyticsPlugin.a per creare il pacchetto.
+* (ZD #2141)  implementazione Analytics per l&#39;app TreeHouse, è stata aggiunta la libreria AdobeAnalyticsPlugin.a per creare il pacchetto.
 * Video Heartbeats Library update to 1.4.1.2
 * [PTPALY-4226] [relativo a ZD #2423] L&#39;esecuzione della reimpostazione DRM può comportare l&#39;eliminazione dei dati del documento dell&#39;applicazione.
 
