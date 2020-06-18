@@ -9,7 +9,10 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: f1ebc1a8-185a-493a-9c00-a6102dffb128
 translation-type: tm+mt
-source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+workflow-type: tm+mt
+source-wordcount: '7913'
+ht-degree: 0%
 
 ---
 
@@ -38,7 +41,7 @@ Accetta un valore di parametri booleani. Se il valore è `True`, il client utili
 Esperienza simile a quella televisiva di partecipare nel mezzo di un annuncio pubblicitario senza attivare il tracciamento per l&#39;annuncio parzialmente guardato.
 Esempio: L&#39;utente si unisce al centro (a 40 secondi) di un annuncio pubblicitario di 90 secondi composto da tre annunci da 30 secondi. Questo è 10 secondi dopo il secondo annuncio nell&#39;interruzione.
 * Il secondo annuncio viene riprodotto per la durata rimanente (20 sec) seguita dal terzo annuncio.
-* I tracciatori annunci per l&#39;annuncio parziale riprodotto (secondo annuncio) non vengono attivati. I tracciatori solo per il terzo annuncio vengono attivati.
+* I tracciatori annunci per l’annuncio parziale riprodotto (secondo annuncio) non vengono attivati. I tracciatori solo per il terzo annuncio vengono attivati.
 
 **Versione 1.4.41**
 
@@ -89,7 +92,7 @@ Correzione di bug per Salta contenuto su Android.
 
 * **Informazioni annuncio di rete**
 
-   Le API TVSDK ora forniscono informazioni aggiuntive sulle risposte VAST di terze parti. Ad ID, Ad System e VAST Ad Extensions sono forniti nella classe NetworkAdInfo accessibile tramite la proprietà networkAdInfo su una Ad Asset. Queste informazioni possono essere utilizzate per l&#39;integrazione con altre piattaforme di Ad Analytics come **Moat Analytics**.
+   Le API TVSDK ora forniscono informazioni aggiuntive sulle risposte VAST di terze parti. Ad ID, Ad System e VAST Ad Extensions sono forniti nella classe NetworkAdInfo accessibile tramite la proprietà networkAdInfo su una Ad Asset. Queste informazioni possono essere utilizzate per l&#39;integrazione con altre piattaforme Ad  Analytics come **Moat  Analytics**.
 
 **Versione 1.4.31**
 
@@ -125,7 +128,7 @@ Per ulteriori informazioni, vedi [Fallback annunci per annunci](../programming/t
 
 * **Video Heartbeats Library (VHL) aggiornamento alla versione 1.4.0.1**
 
-   * Aggiunta la possibilità di raggruppare diversi casi di utilizzo di analisi, da altri SDK o lettori, con Adobe Analytics Video Essentials.
+   * Aggiunta la possibilità di raggruppare diversi casi di utilizzo di analisi, da altri SDK o lettori, con Adobe  Analytics Video Essentials.
    * Il tracciamento degli annunci è stato ottimizzato rimuovendo i metodi trackAdBreakStart e trackAdBreakComplete. L’interruzione dell’annuncio viene ricavata dalle chiamate dei metodi trackAdStart e trackAdComplete.
    * La proprietà playhead non è più necessaria per il tracciamento degli annunci.
 
@@ -133,7 +136,7 @@ Per ulteriori informazioni, vedi [Fallback annunci per annunci](../programming/t
 
 **Versione 1.4.0**
 
-* **Segnalazione di blackout con sostituzione** di contenuti alternativi Nel quadro dell’aggiornamento TVSDK 1.4, TVSDK ora supporta anche l’accesso e la restituzione dai blackout regionali rispetto ai contenuti lineari. Il TVSDK ora può elaborare due file manifest in parallelo, principale e alternativo, per monitorare i segnali blackout anche quando la programmazione alternativa viene mostrata al posto della programmazione originale.
+* **Segnalazione di blackout con sostituzione** di contenuti alternativi Nel quadro dell’aggiornamento TVSDK 1.4, TVSDK ora supporta anche l’accesso e la restituzione dai blackout regionali rispetto ai contenuti lineari. Il TVSDK ora può elaborare due file manifest in parallelo, principale e alternativo, per monitorare i segnali di blackout anche quando la programmazione alternativa viene mostrata al posto della programmazione originale.
 
 * **Rimuovi/Sostituisci annunci** C3 Ora, non è necessario alcun lavoro di preparazione aggiuntivo per inserire dinamicamente nuovi annunci nelle risorse video-on-demand (VOD) che escono dalla finestra C3. TVSDK fornisce ora un&#39;API per rimuovere intervalli di contenuto personalizzati e inserire nuovi annunci in modo dinamico. Questa nuova potente funzionalità è utile anche nei casi in cui i contenuti live/lineari vengono inviati in onda durante la trasmissione e immediatamente ridotti per essere utilizzati come contenuti on demand senza il tempo necessario per &quot;pulire&quot; la risorsa.
 
@@ -248,7 +251,7 @@ TVSDK 1.4.43 è stato certificato con dispositivi Android con Android 6.0.1/ 7.0
 
 * Zendesk #33068 - Problema di sincronizzazione labbro Amazon sul nuovo dispositivo. È stato corretto un problema di sincronizzazione labbra in questa release.
 * Zendesk #32215 - Android TVSDK 1.4.38 - Problemi di sicurezza `[Hotlist]`. Aggiornati alla versione più recente di OpenSSL-1.1.0 e curl-7.55.1.
-* Zendesk #32920 - schermata bianca all&#39;interno di un&#39;interruzione pubblicitaria e senza completamento interruzione annuncio. È stato risolto un problema per il quale un contenitore VPAID poteva trovarsi in uno stato sospeso e gestiva un problema per cui gli annunci VPAID Facebook spesso restituivano più blocchi CDATA in un singolo \&amp;lt;AdParameters\&amp;gt; Nodo VAST.
+* Zendesk #32920 - Schermo vuoto all&#39;interno di un&#39;interruzione pubblicitaria e nessun completamento interruzione annuncio. È stato risolto un problema per il quale un contenitore VPAID poteva trovarsi in uno stato sospeso e gestiva un problema per cui gli annunci VPAID Facebook spesso restituivano più blocchi CDATA in un singolo \&amp;lt;AdParameters\&amp;gt; Nodo VAST.
 
 **Versione 1.4.39 (1744)**
 
@@ -336,7 +339,7 @@ Il codice è stato aggiornato per fare in modo che la richiesta di `cdn.auditude
 
 * Zendesk #25067 - Arresto anomalo in VideoEngineTimelineCiò si verifica perché gli oggetti non venivano puliti correttamente e gli eventi venivano richiamati dopo la distruzione degli oggetti. Il problema è stato risolto mediante l&#39;aggiunta di controlli per evitare eccezioni null.
 
-* Zendesk #25352 - Imposta intestazione HTTP personalizzataQuesto problema è stato risolto aggiungendo una nuova intestazione personalizzata alla whitelist in TVSDK.
+* Zendesk #25352 - Imposta intestazione HTTP personalizzataQuesto problema è stato risolto aggiungendo una nuova intestazione personalizzata all’elenco Consenti in TVSDK.
 
 * Zendesk #25617 - Il rollover PTS del flusso live causa la discontinuità del lettore e l&#39;arresto anomalo della memoriaQuesto problema è stato risolto aggiungendo una gestione di rollover PTS in FrammentHTTPStreamer quando si verifica un rollover nel mezzo di un segmento.
 
@@ -364,7 +367,7 @@ Il codice è stato aggiornato per fare in modo che la richiesta di `cdn.auditude
 
 **Versione 1.4.24 (1612)**
 
-* Zendesk #20784 - Analytics: Attivazione dei contenuti completi per le transizioni video liveQuesto problema è stato risolto aggiungendo un’API (trackVideoComplete) per attivare manualmente il completamento del contenuto durante una sessione di tracciamento video live/lineare.
+* Zendesk #20784 -  Analytics: Attivazione dei contenuti completi per le transizioni video liveQuesto problema è stato risolto aggiungendo un’API (trackVideoComplete) per attivare manualmente il completamento del contenuto durante una sessione di tracciamento video live/lineare.
 
 * Zendesk #21977 VideoEngineArresto anomalo della timeline durante il funzionamento di placeAdBreak/AcceptAd
    * In questo problema, sono state aggiornate le seguenti librerie:
@@ -453,7 +456,7 @@ RENDITION_TIMEOUT_THRESHOLD è stato impostato su 100 ms, ma si è scoperto che 
 
 * Zendesk #19699 - Il TVSDK non passa tra le tracce dei sottotitoli VTT. Questo problema è stato risolto creando il dump del lettore e ricaricando il manifesto quando una traccia cambia e correggendo il problema di conversione delle stringhe UTF8 che ha interessato i nomi delle tracce delle didascalie WebVTT a doppio byte.
 
-* Zendesk #19717 - Problema di visualizzazione delle opzioni CCQuesto problema è stato risolto gestendo correttamente la stringa Unicode.
+* Zendesk #19717 - Problema di visualizzazione delle opzioni CC: questo problema è stato risolto gestendo correttamente la stringa Unicode.
 
 * Zendesk #19910 - Impossibile rilevare i tag TIT2 ID3. Questo problema è stato risolto fornendo supporto più completo per le codifiche di stringhe ID3 v2.4 e per il supporto per ID3 v2.3.
 
@@ -561,7 +564,7 @@ Per evitare l&#39;arresto anomalo era necessaria una correzione aggiuntiva.
 
 **Versione 1.4.12 (1388)**
 
-* Zendesk #2751 - CSAI e CRS| Miglioramento: Gestire gli elementi dinamici in alcuni URL di file multimediali.
+* Zendesk #2751 - CSAI e CRS | Miglioramento: Gestire gli elementi dinamici in alcuni URL di file multimediali.
 Creative Repackaging Service è stato aggiornato per gestire correttamente gli annunci con URL creativi dinamici.
 
 * Zendesk #3965 - Il passaggio alla riproduzione normale dal trickplay determina un salto in avanti un po&#39; prima di avviare la riproduzione.
@@ -585,9 +588,9 @@ Instant On è stato aggiornato per consentire un punto iniziale diverso da zero.
 
 **Versione 1.4.11 (1363)**
 
-* Zendesk #2076 - Tutter frequente durante la riproduzione di video su Motorola Xoom con dispositivi Android 4.0.3Aggiunti alla whitelist per evitare che tentino di riprodurre contenuti di alto profilo.
+* Zendesk #2076 - Tutter frequente durante la riproduzione di video su Motorola Xoom con dispositivi Android 4.0.3Aggiunti per consentire l&#39;elenco per evitare che tentino di riprodurre contenuti di alto profilo.
 
-* Zendesk #2197 - `[Ads]` Errori di tracciamento e invio dell&#39;operazioneFailedEvent con notifica di avviso. 
+* Zendesk #2197 - `[Ads]` Errori di tracciamento e invio dell&#39;operazioneFailedEvent con notifica di avviso.
 
 * Zendesk #3304 - VAST 3.0 `[ERRORCODE]` macro non popolata
    * il codice di errore 400 sarà esposto se l&#39;annuncio in linea ha un cattivo creativo.
@@ -597,9 +600,9 @@ Instant On è stato aggiornato per consentire un punto iniziale diverso da zero.
 
 * Zendesk #2941 - Le risorse live non hanno &quot;0&quot; nell&#39;intervallo ricercabilePrecedentemente era presente un buffer di 3 segmenti quando si cercava l&#39;inizio di un flusso live, ora è possibile cercare all&#39;inizio di un flusso live (cioè l&#39;inizio del primo segmento).
 
-* Zendesk #3169 - Aggiornamento del lettore di riferimento con l&#39;integrazione di Adobe AnalyticsIl lettore di riferimento è stato aggiornato con la libreria Adobe Analytics come impianto di esempio. 
+* Zendesk #3169 - Aggiornare il lettore di riferimento con l&#39;integrazione di Adobe  AnalyticsIl lettore di riferimento è stato aggiornato con la libreria Adobe  Analytics come impianto di esempio.
 * Zendesk #3299 - Comportamento di gioco ingannevole inspiegabile
-   * È stato corretto un bug a causa del quale il ripristino dello stato di riproduzione dopo l’arresto della riproduzione potrebbe richiedere diversi secondi (a volte più di 25 secondi).
+   * È stato corretto un bug a causa del quale il ripristino dello stato di riproduzione dopo l’arresto della riproduzione potrebbe richiedere alcuni secondi (a volte più di 25 secondi).
    * È stato corretto un bug a causa del quale il trucco di richiamo veniva riprodotto una seconda volta sullo stesso supporto, che causava il blocco del flusso al momento corrente.
 * Zendesk #3433 - Android e Flash - Problemi con i sottotitoli
 
@@ -638,7 +641,7 @@ Dopo una ricerca, è possibile che il motore video imposti lo stato su PLAYING p
 * Zendesk #2885 - Riproduzione di Auditude Crash, stesso problema di Zendesk #2719
 * Zendesk #2895 - Errore HLS live in modo coerente dopo 10 minuti di riproduzione
 * Zendesk #2925 - Feedback sulla build Android dev (1.4.5), su alcuni dispositivi quando mettiamo in coda il pacchetto alla coda di ingresso, se il PTS è negativo, il decoder va in uno stato strano che otteniamo sempre un PTS di output negativo per i pacchetti futuri. La correzione imposta l&#39;input PTS su zero se è negativo per evitare questo problema.
-* PTPLAY-4645 - Disattivare il supporto per i caratteri RC4 in open. Esistono degli usi noti per RC4. Ciò significa che se viene eseguito un tentativo di connessione con un server che supporta solo RC4, non riuscirà.
+* PTPLAY-4645 - Disattivare il supporto per i cifrari RC4 in open. Esistono degli usi noti per RC4. Ciò significa che se viene eseguito un tentativo di connessione con un server che supporta solo RC4, non riuscirà.
 
 **Versione 1.4.6 (1282)**
 
@@ -657,7 +660,7 @@ Questo problema è stato risolto aggiungendo la latenza tra i download dei segme
 * Zendesk #1757 - È stato corretto l&#39;arresto anomalo di Nexus 4 e Nexus 7 solo per l&#39;audio riprodotto o per il lettore
 * Zendesk #2072 - TimedMetadata for AdEvent non contiene l’URL completo solo &quot;http&quot;
 * Zendesk #2192 - Il bitrate non sempre si riduce in condizioni di rete scadenti
-* Zendesk #2256 - Accesso alla playlist principale, PSDK aggiornato per l&#39;invio di eventi TimedMetadata per i tag sottoscritti nella playlist principale.
+* Zendesk #2256 - Accesso alla sequenza di riproduzione principale, aggiornamento di PSDK per l&#39;invio di eventi TimedMetadata per i tag sottoscritti nella playlist principale.
 * Zendesk #2269 - Due lingue di sottotitoli diversi vengono visualizzate sullo schermo contemporaneamente con WebVTT
 * Zendesk #2417 - Lettore che tenta di scaricare i sottotitoli prima dell&#39;avvio della riproduzione, WebVTT utilizzava la variabile del numero di segmento errata per la corrispondenza del numero di segmento. Il bug veniva visualizzato solo per i supporti che avevano indici di segmento a partire da zero.
 * Zendesk #2470 - PSDK che non ritorna dallo stato SOSPESO quando si verifica un cambiamento del bitrate dopo la sospensione. In una situazione speciale in cui la ricerca intelligente viene chiamata da RestoreGPUResource (ripristino del lettore dallo stato di sospensione) e l&#39;interruttore di flusso rilevato in precedenza, la ricerca intelligente non è in grado di completare e ottenere buffering costante.
