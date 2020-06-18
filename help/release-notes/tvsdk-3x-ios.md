@@ -2,7 +2,7 @@
 title: Note sulla versione TVSDK 3.12 per iOS
 description: TVSDK 3.12 per iOS - Note sulla versione - descrive le novità o le modifiche apportate, i problemi risolti e noti e i problemi del dispositivo in TVSDK iOS 3.12.
 translation-type: tm+mt
-source-git-commit: f6a0fbaec3d164dd0c15d2738b58c7486bbc6e57
+source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
 workflow-type: tm+mt
 source-wordcount: '7665'
 ht-degree: 0%
@@ -173,7 +173,7 @@ Integrare e certificare VHL 2.0 in iOS TVSDK: Ridurre la barriera nell&#39; `Vid
 
 **Informazioni annuncio di rete**
 
-Le API TVSDK ora forniscono informazioni aggiuntive sulle risposte VAST di terze parti. Ad ID, Ad System e VAST Ad Extensions sono forniti in `PTNetworkAdInfo` classe accessibili tramite `networkAdInfo` la proprietà su una Ad Asset. Queste informazioni possono essere utilizzate per l&#39;integrazione con altre piattaforme di Ad Analytics come **Moat Analytics**.
+Le API TVSDK ora forniscono informazioni aggiuntive sulle risposte VAST di terze parti. Ad ID, Ad System e VAST Ad Extensions sono forniti in `PTNetworkAdInfo` classe accessibili tramite `networkAdInfo` la proprietà su una Ad Asset. Queste informazioni possono essere utilizzate per l&#39;integrazione con altre piattaforme Ad  Analytics come **Moat  Analytics**.
 
 **Versione 1.4.31**
 
@@ -187,7 +187,7 @@ Le API TVSDK ora forniscono informazioni aggiuntive sulle risposte VAST di terze
 
 Nella `PTSDKConfig` classe è stata aggiunta l&#39;API forceHTTPS.
 
-La `PTSDKConfig` classe fornisce metodi per applicare SSL alle richieste effettuate ai server Adobe Primetime ad alsgerment, DRM e Video Analytics. Per ulteriori informazioni, vedere `forceHTTPS` e `isForcingHTTPS` metodi in questa classe. Se un manifesto viene caricato su HTTPS, TVSDK mantiene l&#39;uso del contenuto HTTPS e lo rispetta quando carica eventuali URL relativi da tale manifesto.
+La `PTSDKConfig` classe fornisce metodi per applicare SSL alle richieste effettuate ai server Analytics Adobe Primetime ad alsgerment, DRM e Video . Per ulteriori informazioni, vedere `forceHTTPS` e `isForcingHTTPS` metodi in questa classe. Se un manifesto viene caricato su HTTPS, TVSDK mantiene l&#39;uso del contenuto HTTPS e lo rispetta quando carica eventuali URL relativi da tale manifesto.
 
 >[!NOTE] Le richieste ai domini di terze parti come Pixel di tracciamento annunci, URL di contenuti e annunci e richieste simili non vengono modificate, ed è responsabilità dei provider di contenuto e dei server di annunci fornire URL supportati tramite HTTPS.
 
@@ -233,7 +233,7 @@ Per gli annunci VAST (creativi) con la regola di fallback abilitata, TVSDK tratt
 
 **Segnalazione Del Blackout Con Sostituzione Alternativa Dei Contenuti**
 
-Come parte dell&#39;aggiornamento 1.4 TVSDK, ora siamo anche in grado di entrare e tornare dai blackout regionali rispetto ai contenuti lineari. Il TVSDK ora può elaborare due file manifest in parallelo, principale e alternativo, per monitorare i segnali di blackout anche quando la programmazione alternativa viene mostrata al posto della programmazione originale.
+Come parte dell&#39;aggiornamento 1.4 TVSDK, ora siamo anche in grado di entrare e tornare dai blackout regionali rispetto ai contenuti lineari. Il TVSDK ora può elaborare due file manifest in parallelo, principale e alternativo, per monitorare i segnali blackout anche quando la programmazione alternativa viene mostrata al posto della programmazione originale.
 
 **Versione 1.4.8**
 
@@ -257,7 +257,7 @@ I criteri DRM ora possono specificare la risoluzione massima consentita, a secon
 
 * **Video Heartbeats Library (VHL) aggiornamento alla versione 1.4.1.1**
 
-   * Aggiunta la possibilità di raggruppare diversi casi di utilizzo di analisi, da altri SDK o lettori, con Adobe Analytics Video Essentials.
+   * Aggiunta la possibilità di raggruppare diversi casi di utilizzo di analisi, da altri SDK o lettori, con Adobe  Analytics Video Essentials.
    * Il tracciamento degli annunci è stato ottimizzato rimuovendo i `trackAdBreakStart` metodi e `trackAdBreakComplete` . L’interruzione dell’annuncio viene ricavata dalle chiamate `trackAdStart` e ai `trackAdComplete` metodi.
    * La `playhead` proprietà non è più necessaria per il tracciamento degli annunci.
    * È stato aggiunto il supporto per l’ID visitatore di Marketing Cloud.
@@ -270,7 +270,7 @@ TVSDK ora supporta l’invio di beacon mTVR e MDPR ID3 all’SDK Nielsen senza a
 
 * **Segnalazione Del Blackout Con Sostituzione Alternativa Dei Contenuti**
 
-Come parte dell’aggiornamento 1.4 TVSDK, TVSDK ora supporta anche l’accesso e il ritorno dai blackout regionali rispetto ai contenuti lineari. Il TVSDK ora può elaborare due file manifest in parallelo, principale e alternativo, per monitorare i segnali di blackout anche quando la programmazione alternativa viene mostrata al posto della programmazione originale.
+Come parte dell’aggiornamento 1.4 TVSDK, TVSDK ora supporta anche l’accesso e il ritorno dai blackout regionali rispetto ai contenuti lineari. Il TVSDK ora può elaborare due file manifest in parallelo, principale e alternativo, per monitorare i segnali blackout anche quando la programmazione alternativa viene mostrata al posto della programmazione originale.
 
 * **Rimuovi/Sostituisci annunci C3**
 
@@ -340,11 +340,12 @@ Nessun nuovo problema in questa versione.
 
 **Versione 3.3**
 
-(ZD#37820): aggiunta della whitelist per l&#39;intestazione personalizzata HS-Id, HS-SSAI-TAG.
+(ZD#37820): aggiunta dell’opzione Consenti l’inserimento nell’elenco dell’intestazione personalizzata HS-Id, HS-SSAI-TAG.
 
 **Versione 3.2**
 
 * **Ticket#36588** - Si verifica un arresto anomalo del lettore quando viene chiamato il metodo STOP di MediaPlayer.
+
 È stato corretto un arresto anomalo intermittente che si verificava quando il metodo STOP veniva chiamato per alcuni flussi con sottotitoli.
 
 * **Ticket#37080** - Richieste duplicate visualizzate per chiamate Manifest.
@@ -438,24 +439,29 @@ Correzione migliorata fornita per il problema chiuso #34385 nella release 1.4.42
    È stato corretto l&#39;errore che si verificava durante il tentativo di riproduzione del contenuto su Apple TV, impedendo la riproduzione completa
 * (ZD #32146) - Non `PTMediaPlayerStatusError` viene ricevuto alcun contenuto per HLS Live che blocca iOS 11 dev beta
 
-   Non `PTMediaPlayerStatusError` viene ricevuto alcun contenuto HLS Live e VOD per il blocco tramite Charles (Drop connection e 403)
-* (ZD #29242) - La riproduzione video Airplay non riesce con gli annunci attivati
+   Non `PTMediaPlayerStatusError` viene ricevuto alcun contenuto HLS Live e VOD per il blocco tramite Charles (Drop connection e 403).
 
-   Quando gli annunci sono attivati e AirPlay è abilitato all’avvio della riproduzione di un video, la riproduzione video non viene mai avviata e non viene visualizzato alcun errore
-* (ZD#33341) - `DRMInterface.h` attiva la generazione di avvisi in Xcode 9
+* (ZD #29242) - La riproduzione video Airplay non riesce con gli annunci attivati.
 
-   Sono stati corretti due prototipi di blocchi in `DRMInterface.h` cui mancava la parola &#39;void&#39; negli elenchi dei relativi parametri
-* (ZD#31979) - Non viene compilato/eseguito quando è iOS 10 o versione successiva per iPhone 7/iPhone7+
+   Quando gli annunci sono attivati e AirPlay è abilitato all’avvio della riproduzione di un video, la riproduzione video non viene mai avviata e non viene visualizzato alcun errore.
 
-   È stato corretto il seguente problema: la compilazione di documenti IB per versioni precedenti a iOS 7 non era più supportata
-* (ZD#32920) - schermata bianca all&#39;interno di un&#39;interruzione annuncio e nessun completamento interruzione annuncio
+* (ZD#33341) - `DRMInterface.h` attiva la generazione di avvisi in Xcode 9.
 
-   Quando un&#39;interruzione annuncio presenta le istanze di Annuncio e al termine di un&#39;istanza di annuncio, viene visualizzata una schermata bianca
-* (ZD#32509) - Disattivazione della registrazione dello schermo iOS 11 Disattivazione della registrazione dello schermo su iOS 11
+   Sono stati corretti due prototipi di blocchi in `DRMInterface.h` cui mancava la parola &#39;void&#39; negli elenchi dei relativi parametri.
 
-* (ZD#33179) - Errore di evento intermittente su iOS11
+* (ZD#31979) - Non viene compilato/eseguito quando è iOS 10 o versione successiva per iPhone 7/iPhone7+.
 
-   È stato corretto l&#39;errore di evento su iOS 11
+   È stato corretto il seguente problema: la compilazione di documenti IB per versioni precedenti a iOS 7 non era più supportata.
+
+* (ZD#32920) - Schermata vuota entro un&#39;interruzione annuncio e nessun completamento interruzione annuncio.
+
+   Quando un&#39;interruzione annuncio presenta le istanze di Annuncio e al termine di un&#39;istanza di annuncio, viene visualizzata una schermata vuota.
+
+* (ZD#32509) - Disattivazione della registrazione schermo iOS 11 Disattivazione della registrazione schermo su iOS 11.
+
+* (ZD#33179) - Errore di evento intermittente su iOS11.
+
+   È stato corretto l&#39;errore di evento su iOS 11.
 
 **Versione 1.4.40** (1.4.40.72)
 
@@ -466,7 +472,7 @@ Correzione migliorata fornita per il problema chiuso #34385 nella release 1.4.42
 * (ZD #31951) - Errore TVSDK durante le rotazioni della licenza.
 
    È stato corretto il problema di rotazione della licenza.
-* (ZD #31951) - Schermata bianca all&#39;interno di un&#39;interruzione annuncio e nessun completamento interruzione annuncio.
+* (ZD #31951) - Schermata vuota entro un&#39;interruzione annuncio e nessun completamento interruzione annuncio.
 
    È stato risolto un problema per il quale gli annunci VPAID Facebook spesso restituivano più blocchi CDATA in un singolo nodo `<AdParameters>` VAST.
 * (ZD #33336) - iOS TVSDK - I contenitori degli annunci non vengono compilati, nonostante la quantità di annunci restituiti da FreeWheel sia sufficiente.
@@ -625,9 +631,9 @@ Questo problema è stato risolto fornendo una soluzione alternativa per i flussi
 
 In questa versione sono stati risolti i seguenti problemi per TVSDK:
 
-* (ZD# 24180) Aggiungere un&#39;intestazione personalizzata alla whitelist
+* (ZD# 24180) Aggiungete un&#39;intestazione personalizzata per consentire l&#39;elenco.
 
-Una nuova intestazione personalizzata è stata aggiunta alla whitelist TVSDK.
+All’elenco Consenti TVSDK è stata aggiunta una nuova intestazione personalizzata.
 
 * (ZD# 25016) Il flusso di failover viene selezionato in modo casuale quando vengono impostati i parametri di controllo ABR
 
@@ -647,19 +653,19 @@ Quando l&#39;ora di inizio dell&#39;ultima interruzione annuncio dal VMAP cade p
 
 * La libreria Video Heartbeat (VHL) è stata aggiornata alla versione 1.5.9 per risolvere i seguenti problemi:
 
-* (ZD #22351) VHL - Analytics: Durata risorsa video dal vivo
+* (ZD #22351) VHL -  Analytics: Durata risorsa video dal vivo
 
 Questo problema è stato risolto aggiungendo l’API assetDuration a PTVideoAnalyticsTrackingMetadata per aggiornare la durata delle risorse per i flussi Live/Linear e fornire una logica per il controllo del flusso live.
 
-* (ZD# 22675) VHL - Analytics: Aggiornamento della durata della risorsa video in diretta
+* (ZD# 22675) VHL -  Analytics: Aggiornamento della durata della risorsa video in diretta
 
 Questo problema è lo stesso di ZD #22351.
 
-* (ZD #25908) VHL - Analytics: Arresto anomalo evento Adobe Heartbeat
+* (ZD #25908) VHL -  Analytics: Arresto anomalo evento Adobe Heartbeat
 
 Questo problema è stato risolto aggiornando l&#39;implementazione per utilizzare la versione più recente di VHL per iOS versione 1.5.9 per migliorare stabilità e prestazioni.
 
-* (ZD #25956) VHL - Analytics: Arresto anomalo durante la riproduzione ripetuta dei video
+* (ZD #25956) VHL -  Analytics: Arresto anomalo durante la riproduzione ripetuta dei video
 
 Questo problema è lo stesso di ZD #25908.
 
@@ -745,7 +751,7 @@ Questo problema è stato risolto aggiungendo ulteriori controlli oggetti null du
 
 Questo problema è lo stesso di (ZD #21590).
 
-* (ZD #22280) - La lunghezza video di Analytics è impostata su 0
+* (ZD #22280) -  Lunghezza video Analytics impostata su 0
 
 Questo problema è lo stesso di (ZD #21590).
 
@@ -771,7 +777,7 @@ Questo problema è stato risolto aggiornando la logica per scoprire la visualizz
 
 Questo problema è stato risolto aggiornando VideoAnalyticsTracker per rilevare correttamente l’inizio/il completamento del capitolo durante la transizione tra i limiti dei capitoli e non dei capitoli.
 
-* (ZD #20784) - Analytics: Attivazione di contenuti completi per transizioni video live
+* (ZD #20784) -  Analytics: Attivazione di contenuti completi per transizioni video live
 
 Questo problema è stato risolto aggiungendo una logica per attivare manualmente il completamento del contenuto durante una sessione di tracciamento video.
 
@@ -1086,7 +1092,7 @@ Supporto per il ping di URL vuoti per il tracciamento delle interruzioni di annu
 
 **Versione 1.4.5** (1.4.5.283)
 
-* (ZD #2141) Implementazione di Analytics per l&#39;app TreeHouse, aggiunta della `AdobeAnalyticsPlugin.a` libreria per creare il pacchetto.
+* (ZD #2141)  implementazione Analytics per l&#39;app TreeHouse, aggiunta della `AdobeAnalyticsPlugin.a` libreria per creare il pacchetto.
 * Video Heartbeats Library update to 1.4.1.2
 * [PTPALY-4226] [relativo a ZD #2423] L&#39;esecuzione della reimpostazione DRM può comportare l&#39;eliminazione dei dati del documento dell&#39;applicazione.
 
