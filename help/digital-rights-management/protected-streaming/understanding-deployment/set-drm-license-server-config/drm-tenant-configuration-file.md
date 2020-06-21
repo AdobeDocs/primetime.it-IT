@@ -5,7 +5,10 @@ seo-title: File di configurazione tenant
 title: File di configurazione tenant
 uuid: bc9ee4a1-63b6-4362-9929-3e9fe8251075
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '798'
+ht-degree: 0%
 
 ---
 
@@ -45,13 +48,13 @@ Il file di configurazione del tenant include:
    * *Gioca a destra* — È necessario specificare almeno un diritto. Se specificate più diritti, il client utilizza il primo diritto che soddisfa tutti i requisiti.
 
       * *Protezione* dell&#39;uscita Controlla se l&#39;output su dispositivi di rendering esterni deve essere protetto.
-      * *Restrizioni per applicazioni AIR e SWF* — Whitelist facoltativo delle applicazioni SWF e AIR che possono riprodurre il contenuto (ad esempio, sono consentite solo le applicazioni specificate). Le applicazioni SWF sono identificate da un URL o dal riassunto del file SWF e dal tempo massimo per consentire il download e la verifica del riassunto.
+      * *Restrizioni per applicazioni AIR e SWF* — L&#39;opzione consente l&#39;elenco di applicazioni SWF e AIR che possono riprodurre il contenuto (ad esempio, sono consentite solo le applicazioni specificate). Le applicazioni SWF sono identificate da un URL o dal riassunto del file SWF e dal tempo massimo per consentire il download e la verifica del riassunto.
 
          Per informazioni su come calcolare il riassunto SWF, consultate *SWF Hash Calculator* .
 
-         L&#39;ID editore e l&#39;ID applicazione opzionale, la versione minima e la versione massima identificano le applicazioni AIR e iOS. Se non specificate alcuna restrizione dell’applicazione, qualsiasi applicazione SWF o AIR può riprodurre il contenuto.
+         L&#39;ID editore e l&#39;ID applicazione opzionale, la versione minima e la versione massima identificano le applicazioni AIR e iOS. Se non specificate alcuna limitazione per l’applicazione, qualsiasi applicazione SWF o AIR può riprodurre il contenuto.
 
-      * *Limitazioni* per i moduli DRM e Runtime Specifica il livello di protezione minimo richiesto per il modulo DRM/Runtime. Facoltativamente, include una blacklist di versioni alle quali non è consentito riprodurre il contenuto. Le versioni dei moduli sono identificate da attributi, ad esempio sistema operativo e/o numero di versione.
+      * *Limitazioni* per i moduli DRM e Runtime Specifica il livello di protezione minimo richiesto per il modulo DRM/Runtime. Facoltativamente, include un elenco di blocchi di versioni alle quali non è consentito riprodurre il contenuto. Le versioni dei moduli sono identificate da attributi, ad esempio sistema operativo e/o numero di versione.
 
          Limitazioni del modulo DRM e limitazioni del modulo runtime ora supportano i seguenti attributi aggiuntivi:
 
