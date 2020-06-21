@@ -8,7 +8,10 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: baec714e-9d41-4e8b-b134-13a736885cbd
 translation-type: tm+mt
-source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1929'
+ht-degree: 0%
 
 ---
 
@@ -31,7 +34,7 @@ Novità delle release Primetime Streaming Server 1.3 e 1.4.
 
 * La crittografia HLS AES è disponibile per i flussi di lavoro Live e VOD. Origin Primetime può solo in Time applicare la crittografia HLS AES ai flussi HLS in arrivo o ai file MP4.
 * Può anche applicare la cifratura JIT HLS AES quando viene utilizzata per convertire i flussi HDS in arrivo nei flussi HLS.
-* Primetime Origin ora supporta la whitelist SWF per i flussi PHLS. Precedentemente era supportato solo per i flussi PHDS
+* Primetime Origin ora supporta il formato SWF che consente l&#39;elencazione dei flussi PHLS. Precedentemente era supportato solo per i flussi PHDS
 
 **Primetime Live Packager**
 
@@ -39,7 +42,7 @@ Novità delle release Primetime Streaming Server 1.3 e 1.4.
 
 I certificati PHDS/PHLS sono stati aggiornati. La nuova data di scadenza per lo stesso sarà 10/01/2016.
 
-### **Correzioni di bug incluse nella release 1.4**{#bug-fixes-included-in-release}
+### **Correzioni di bug incluse nella release 1.4** {#bug-fixes-included-in-release}
 
 * PTPUB-282 - Il manifesto a livello di set HLS creato da OfflinePackager 1.3.1 non dispone di informazioni sul codec e sulla risoluzione.
 * PTPUB-353 - PlayListCreator non supporta l&#39;aggiunta di informazioni WebVTT nel manifesto del livello impostato
