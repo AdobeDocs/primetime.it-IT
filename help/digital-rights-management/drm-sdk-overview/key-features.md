@@ -3,7 +3,10 @@ seo-title: Funzioni principali
 title: Funzioni principali
 uuid: bee91fd7-a335-4881-abad-8972f28630d5
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1147'
+ht-degree: 0%
 
 ---
 
@@ -45,6 +48,6 @@ Adobe Primetime DRM offre le seguenti funzionalità principali:
 * **Creazione di pacchetti di contenuti scollegati:** La creazione di pacchetti di contenuto non richiede una connessione di rete al server licenze. In questo modo è possibile garantire la sicurezza delle operazioni back-end limitando l&#39;esposizione di contenuti compressi non ancora protetti.
 * **Controllo del ripristino dell&#39;orologio: **Primetime DRM fornisce il calcolo sicuro e accurato del tempo per rilevare il rollback dell&#39;orologio sul computer client. In questo modo vengono applicati i diritti relativi all&#39;accesso ai contenuti per un periodo di tempo specifico e i consumatori non possono sovvertire i diritti di accesso modificando l&#39;ora del computer.
 * **Individuazione**: Consente il binding del contenuto a un computer specifico.
-* **whitelist dell&#39;applicazione:** Consente al runtime client di garantire che il contenuto protetto venga riprodotto solo all&#39;interno di un&#39;applicazione SWF o AIR autorizzata.
+* **Elenco di opzioni applicazione:** Consente al runtime client di garantire che il contenuto protetto venga riprodotto solo all&#39;interno di un&#39;applicazione SWF o AIR autorizzata.
 * **Revoca dei client compromessi:** Il software client compromesso può essere revocato. Se il runtime Flash Player o Adobe AIR viene determinato come compromesso, il servizio può essere rifiutato a tali client fino a quando non effettuano l&#39;aggiornamento a una versione più recente e sicura del software client.
 * **Criteri multipli per lo stesso file video:** Un singolo contenuto video può presentare più criteri incorporati durante la creazione del pacchetto. Quando si rilascia una licenza, il server licenze può decidere quale criterio utilizzare, consentendo a un distributore di contenuti di utilizzare lo stesso file protetto per diversi modelli aziendali (ad esempio noleggio e vendita elettronica).
