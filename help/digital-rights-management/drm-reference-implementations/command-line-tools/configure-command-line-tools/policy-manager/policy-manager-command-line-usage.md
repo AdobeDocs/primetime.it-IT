@@ -5,7 +5,10 @@ seo-title: Utilizzo della riga di comando di Policy Manager
 title: Utilizzo della riga di comando di Policy Manager
 uuid: 9b17bc9a-0b1b-405f-a62b-0310c43c9255
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1228'
+ht-degree: 0%
 
 ---
 
@@ -85,7 +88,7 @@ java -jar AdobePolicyManager.jar
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Finestra di riproduzione, che indica il numero di minuti in cui il contenuto può essere visualizzato dalla prima riproduzione. </p> <p>Se non è specificato, o se <span class="codeph"> -w </span> viene utilizzato senza specificare un numero di minuti, non vi è alcun limite alla finestra di riproduzione. Il valore deve essere non negativo. </p> <p>L'opzione <span class="codeph"> consenteHS </span> o <span class="codeph"> disattivaHS </span> segnali di flag sia per abilitare o disabilitare l'arresto rigido. Il flag indica se il contesto di decrittazione viene distrutto alla fine della finestra di riproduzione (attivato) o meno (disabilitato). </p> <p>Ad esempio, per specificare che il contenuto può essere visualizzato solo per 60 minuti e richiede un arresto rigido: 
      <codeblock>
        -w&amp;nbsp;60,enableHS 
-     </codeblock> </p> <p>Nota:  Al momento <i>l'arresto</i> rigido non è supportato in Flash Player, Android e iOS. </p> </td> 
+     </codeblock> </p> <p>Nota:  <i>L'arresto</i> rigido non è attualmente supportato in Flash Player, Android e iOS. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -l minuti </span> </td> 
@@ -109,27 +112,27 @@ java -jar AdobePolicyManager.jar
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -air pubId </span>[: <span class="+ topic/ph pr-d/codeph codeph"> appId </span>[:[ <span class="+ topic/ph pr-d/codeph codeph"> min </span>]:[ <span class="+ topic/ph pr-d/codeph codeph"> max </span>]]] </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Una whitelist di applicazioni AIR in grado di riprodurre contenuto protetto. </p> <p class="- topic/p ">Potete applicare questa opzione per limitare gli editori, le applicazioni e le versioni che possono accedere al contenuto protetto tramite questo criterio DRM. </p> <p class="- topic/p ">Se non specificate <i class="+ topic/ph hi-d/i ">appId</i>, sono consentite tutte le applicazioni per publisher <i class="+ topic/ph hi-d/i ">pubId</i> . </p> <p>Nota:  I numeri di versione <i class="+ topic/ph hi-d/i ">min</i> e <i class="+ topic/ph hi-d/i ">max</i> sono facoltativi. </p> <p class="- topic/p ">Potete specificare più opzioni <span class="codeph"> -air </span> per consentire più applicazioni. Se non specificate un'applicazione AIR o SWF, tutte le applicazioni possono accedere a questo contenuto. Durante un aggiornamento, per rimuovere o eliminare tutte le voci dall'elenco, applicare <span class="codeph"> -air </span> senza gli argomenti rimanenti. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Elenco di applicazioni AIR che possono riprodurre contenuto protetto. </p> <p class="- topic/p ">Potete applicare questa opzione per limitare gli editori, le applicazioni e le versioni che possono accedere al contenuto protetto tramite questo criterio DRM. </p> <p class="- topic/p ">Se non specificate <i class="+ topic/ph hi-d/i ">appId</i>, sono consentite tutte le applicazioni per publisher <i class="+ topic/ph hi-d/i ">pubId</i> . </p> <p>Nota:  <i class="+ topic/ph hi-d/i ">i numeri di versione min</i> e <i class="+ topic/ph hi-d/i ">max</i> sono facoltativi. </p> <p class="- topic/p ">Potete specificare più opzioni <span class="codeph"> -air </span> per consentire più applicazioni. Se non specificate un'applicazione AIR o SWF, tutte le applicazioni possono accedere a questo contenuto. Durante un aggiornamento, per rimuovere o eliminare tutte le voci dall'elenco, applicare <span class="codeph"> -air </span> senza gli argomenti rimanenti. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -drmBlacklist nome </span> / <i class="+ topic/ph hi-d/i "></i> valore <span class="+ topic/ph pr-d/codeph codeph"></span><i class="+ topic/ph hi-d/i "> </i> <span class="+ topic/ph pr-d/codeph codeph"> coppie </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">I client DRM che non possono accedere al contenuto protetto. </p> <p class="- topic/p ">Il valore supporta coppie nome:valore separate da virgole nel seguente formato: </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> os| release= stringValue </span> </p> <p class="- topic/p ">Ad esempio, <span class="codeph"> os=Win,release=2.0.1 </span>. Durante un aggiornamento, per rimuovere tutte le voci dall'elenco, applicare <span class="codeph"> -drmBlacklist </span> senza gli argomenti rimanenti. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">I client DRM che non possono accedere al contenuto protetto. </p> <p class="- topic/p ">Il valore supporta coppie nome:valore separate da virgole nel seguente formato: </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> os | release= stringValue </span> </p> <p class="- topic/p ">Ad esempio, <span class="codeph"> os=Win,release=2.0.1 </span>. Durante un aggiornamento, per rimuovere tutte le voci dall'elenco, applicare <span class="codeph"> -drmBlacklist </span> senza gli argomenti rimanenti. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -drmLevel int </span> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Indica che i client DRM devono avere un livello di protezione minimo assegnato per poter accedere al contenuto protetto. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> -opAnalogico NO_PROTECTION| USE_IF_AVAILABLE| RICHIESTO| NO_PLAYBACK| REQUIRED_ACP| REQUIRED_CGMSA| USE_IF_AVAILABLE_ACP| USE_IF_AVAILABLE_CGMSA </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> -opAnalogico NO_PROTECTION | USE_IF_AVAILABLE | RICHIESTO | NO_PLAYBACK | REQUIRED_ACP | REQUIRED_CGMSA | USE_IF_AVAILABLE_ACP | USE_IF_AVAILABLE_CGMSA </span> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Limiti di protezione dell'uscita analogica </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> -opDigital NO_PROTECTION| USE_IF_AVAILABLE| RICHIESTO| NO_PLAYBACK </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> -opDigital NO_PROTECTION | USE_IF_AVAILABLE | RICHIESTO | NO_PLAYBACK </span> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Vincoli per la protezione dell'output digitale </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -runtimeBlacklist nome </span> / <i class="+ topic/ph hi-d/i ">valore</i><span class="+ topic/ph pr-d/codeph codeph"></span> <i class="+ topic/ph hi-d/i "> </i> <span class="+ topic/ph pr-d/codeph codeph"> coppie </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">I tempi di esecuzione dell'applicazione che non possono accedere al contenuto protetto. </p> <p class="- topic/p ">Il valore supporta coppie nome:valore separate da virgola nel seguente formato: </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> o| domanda| release= stringValue </span> </p> <p class="- topic/p ">Ad esempio, <span class="codeph"> os=Win,release=2.0.1,application=AIR </span>. Durante un aggiornamento, per rimuovere tutte le voci dall'elenco, applicare <span class="codeph"> -runtimeBlacklist </span> senza gli argomenti rimanenti. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">I tempi di esecuzione dell'applicazione che non possono accedere al contenuto protetto. </p> <p class="- topic/p ">Il valore supporta coppie nome:valore separate da virgola nel seguente formato: </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> os | domanda | release= stringValue </span> </p> <p class="- topic/p ">Ad esempio, <span class="codeph"> os=Win,release=2.0.1,application=AIR </span>. Durante un aggiornamento, per rimuovere tutte le voci dall'elenco, applicare <span class="codeph"> -runtimeBlacklist </span> senza gli argomenti rimanenti. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -runtimeLevel int </span> </td> 
@@ -137,7 +140,7 @@ java -jar AdobePolicyManager.jar
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> -swf url </span> </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> -swf file= swf_file </span>, <span class="+ topic/ph pr-d/codeph codeph"> time= max_time_to_verify </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Una whitelist di applicazioni SWF consentite per riprodurre contenuto protetto. </p> <p class="- topic/p ">Potete specificare più opzioni <span class="codeph"> -swf </span> per consentire più applicazioni. Se non specificate applicazioni AIR o SWF, tutte le applicazioni possono accedere a questo contenuto. </p> <p>Durante un aggiornamento, per rimuovere tutte le voci dall'elenco, applicare <span class="codeph"> -swf </span> senza gli argomenti rimanenti. Per identificare un file SWF in base al relativo valore hash, è necessario specificare il file SWF per il quale calcolare l'hash e il tempo massimo per consentire il completamento della verifica SWF (in secondi). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Elenco di applicazioni SWF consentite per la riproduzione di contenuto protetto. </p> <p class="- topic/p ">Potete specificare più opzioni <span class="codeph"> -swf </span> per consentire più applicazioni. Se non specificate applicazioni AIR o SWF, tutte le applicazioni possono accedere a questo contenuto. </p> <p>Durante un aggiornamento, per rimuovere tutte le voci dall'elenco, applicare <span class="codeph"> -swf </span> senza gli argomenti rimanenti. Per identificare un file SWF in base al relativo valore hash, è necessario specificare il file SWF per il quale calcolare l'hash e il tempo massimo per consentire il completamento della verifica SWF (in secondi). </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -k name= value </span> </td> 
@@ -148,8 +151,8 @@ java -jar AdobePolicyManager.jar
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Aggiunge una proprietà personalizzata che viene visualizzata nella licenza generata per ciascun client. </p> <p class="- topic/p ">Potete specificare più opzioni <span class="codeph"> -p </span> per aggiungere più proprietà. Durante un aggiornamento, è necessario applicare <span class="codeph"> -p </span> senza gli argomenti rimanenti se si desidera rimuovere tutte le proprietà. L'interpretazione o la gestione di questi dati è gestita dall'implementazione dell'applicazione client. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> <span class="codeph"> -opOTA whitelist=&lt;tipi di connessione&gt; </span></span> </td> 
-   <td colname="2" class="- topic/entry "> Limiti di protezione dell'uscita dell'aria (OTA). Il campo <span class="codeph"> whitelist </span> specifica quali tipi di connessione inserire nella whitelist e il formato di &lt;tipi di connessione&gt; è <span class="codeph"> [type(,type)*] </span>, dove type può essere uno dei seguenti: MIRACAST, AEROPORTO, WIDI, DLNA </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> <span class="codeph"> -opOTA whitelist=&lt;tipi di connessione&gt; </span> </span> </td> 
+   <td colname="2" class="- topic/entry "> Limiti di protezione dell'uscita dell'aria (OTA). Il campo <span class="codeph"> whitelist </span> specifica quali tipi di connessione consentire l'elenco e il formato di &lt;tipi di connessione&gt; è <span class="codeph"> [type(,type)*] </span>, dove type può essere uno dei seguenti: MIRACAST, AEROPORTO, WIDI, DLNA </td> 
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "> <span class="codeph"> -opResolution &lt;nomefile&gt; </span> </td> 
