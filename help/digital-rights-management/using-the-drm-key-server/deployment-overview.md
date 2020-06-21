@@ -3,7 +3,10 @@ seo-title: Implementazione della panoramica del server chiavi DRM di Primetime
 title: Implementazione della panoramica del server chiavi DRM di Primetime
 uuid: 86630675-c15d-4f32-8212-d7343f4f92e0
 translation-type: tm+mt
-source-git-commit: 105dedcfe47a5f454a067e66a95827e638290742
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1077'
+ht-degree: 0%
 
 ---
 
@@ -153,7 +156,7 @@ Il file di configurazione tenant **Xbox 360** include:
 
 * Credenziali XSTS - Specifica la credenziale dello sviluppatore di applicazioni utilizzata per decifrare i token XSTS
 * Certificato di firma XSTS - Specifica il certificato utilizzato per verificare la firma sui token XSTS.
-* Whitelist di Packager - Certificati Packager attendibili dal server chiavi. Se nell&#39;elenco non sono presenti certificati packager, tutti i certificati packager saranno considerati attendibili.
+* Elenco Consenti Packager - Certificati Packager attendibili dal server chiavi. Se nell&#39;elenco non sono presenti certificati packager, tutti i certificati packager saranno considerati attendibili.
 
 ## File di registro {#log-files}
 
