@@ -8,9 +8,9 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
 workflow-type: tm+mt
-source-wordcount: '5417'
+source-wordcount: '5418'
 ht-degree: 0%
 
 ---
@@ -189,7 +189,7 @@ TVSDK ora annulla il download in corso del segmento, se necessario, e passa in m
 
    * Il secondo annuncio viene riprodotto per la durata rimanente (20 sec) seguita dal terzo annuncio.
 
-   * I tracciatori annunci per l’annuncio parziale riprodotto (secondo annuncio) non vengono attivati. I tracciatori solo per il terzo annuncio vengono attivati.
+   * I tracciatori annunci per l&#39;annuncio parziale riprodotto (secondo annuncio) non vengono attivati. I tracciatori solo per il terzo annuncio vengono attivati.
 
 * **Proteggere il caricamento di annunci tramite HTTPS**
 
@@ -435,7 +435,7 @@ Questa sezione fornisce un riepilogo del problema risolto nella release Android 
 
 **Android TVSDK 3.10**
 
-* ZD#40340 - Arresto anomalo dell&#39;applicazione con errore &quot;App Not Responding&quot; durante il tentativo di riproduzione dopo la blacklist di tutti i file TS (TypeScript).
+* ZD#40340 - Arresto anomalo dell&#39;applicazione con errore &quot;App Not Responding&quot; durante il tentativo di riproduzione dopo il blocco in cui sono elencati tutti i file TS (TypeScript).
 
 **Android TVSDK 3.8**
 
