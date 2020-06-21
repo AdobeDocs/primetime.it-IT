@@ -3,7 +3,10 @@ seo-title: Esecuzione del server DRM per lo streaming protetto
 title: Esecuzione del server DRM per lo streaming protetto
 uuid: 9bbe211d-268b-43c2-9e55-7ce62de40d30
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '807'
+ht-degree: 0%
 
 ---
 
@@ -81,4 +84,4 @@ In assenza di una versione memorizzata nella cache, il caricamento della configu
 
 ### Aggiornamento del file di configurazione del tenant {#section_71624DB8DF28480F84F34F0FF7FD4365}
 
-È possibile modificare tutti i valori specificati nel [!DNL flashaccess-tenant.xml] file in qualsiasi momento. Le modifiche avranno effetto alla successiva ricarica del file di configurazione da parte del server. Inoltre, il server verifica la presenza di eventuali modifiche in tutti i file di credenziali ( [!DNL .pfx]) e i file di certificati whitelist del packager a cui viene fatto riferimento nel file di configurazione del tenant.
+È possibile modificare tutti i valori specificati nel [!DNL flashaccess-tenant.xml] file in qualsiasi momento. Le modifiche avranno effetto alla successiva ricarica del file di configurazione da parte del server. Inoltre, il server verifica la presenza di eventuali modifiche in tutti i file di credenziali ( [!DNL .pfx]) e di packager per consentire file di certificati di elenco a cui viene fatto riferimento nel file di configurazione del tenant.
