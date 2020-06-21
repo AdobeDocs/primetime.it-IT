@@ -5,7 +5,10 @@ seo-title: Creazione di pacchetti di contenuto
 title: Creazione di pacchetti di contenuto
 uuid: 2e47a9a2-bbc6-4995-8ce5-6ca6b116349b
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 0%
 
 ---
 
@@ -28,4 +31,4 @@ https://mylicenseserver.com:8080/flashaccessserver/tenant1
 
 Se ogni tenant utilizza un server licenze e credenziali di trasporto diverse, accertatevi di specificare il certificato corretto del tenant nel packager.
 
-Se desiderate essere certi che il server rilasci licenze solo per il contenuto dei packager noti, dovete includere il certificato del packager nella whitelist del packager del file di configurazione tenant.
+Per essere certi che il server rilasci licenze solo per il contenuto dei packager noti, è necessario includere il certificato del packager nell&#39;elenco di consenti del file di configurazione tenant.
