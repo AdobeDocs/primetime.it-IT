@@ -5,7 +5,10 @@ seo-title: Protezione del server licenze
 title: Protezione del server licenze
 uuid: 7b5de17d-d0a7-41df-9651-4ff51c9965c6
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1199'
+ht-degree: 0%
 
 ---
 
@@ -44,7 +47,7 @@ Per generare CRL, vedere [RevocationListFactory](https://help.adobe.com/en_US/pr
 
 ## Rilevamento del rollback {#rollback-detection}
 
-Se l&#39;implementazione di Adobe Primetime DRM utilizza regole aziendali che richiedono al client di mantenere lo stato (ad esempio, l&#39;intervallo della finestra di riproduzione), Adobe consiglia al server di tenere traccia del contatore di rollback e di utilizzare la whitelist AIR o SWF.
+Se l&#39;implementazione di Adobe Primetime DRM utilizza regole aziendali che richiedono al client di mantenere lo stato (ad esempio, l&#39;intervallo della finestra di riproduzione), Adobe consiglia al server di tenere traccia del contatore di rollback e di utilizzare AIR o SWF per consentire l&#39;elencazione.
 
 Il contatore di rollback viene inviato al server nella maggior parte delle richieste dal client. Se l&#39;implementazione di Primetime DRM non richiede il contatore di rollback, può essere ignorata. In caso contrario, Adobe consiglia al server di memorizzare l&#39;ID computer casuale, ottenuto utilizzando [MachineToken.getUniqueId()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/cert/MachineId.html#getUniqueId()), e il valore del contatore corrente in un database.
 
@@ -72,11 +75,11 @@ Un attacco DoS è un tentativo da parte degli aggressori di impedire agli utenti
 
 Per ulteriori informazioni sulla protezione della riproduzione, vedere [ AbstractRequestMessage.getMessageId()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/protocol/AbstractRequestMessage.html#getMessageId()).
 
-## Gestione di una whitelist di pacchetti di contenuti affidabili{#maintain-a-whitelist-of-trusted-content-packagers}
+## Gestisci un elenco di pacchetti di contenuti attendibili{#maintain-a-allowlist-of-trusted-content-packagers}
 
-Una whitelist è un elenco di entità affidabili.
+Un elenco di autorizzazioni è un elenco di entità affidabili.
 
-Per i pacchetti di contenuti, le entità sono organizzazioni considerate attendibili dal proprietario del contenuto per creare pacchetti (o cifrare) di file video e creare contenuto protetto DRM. Quando distribuite Adobe Primetime DRM, è necessario mantenere una whitelist di pacchetti di contenuti affidabili. Prima di rilasciare una licenza, è inoltre necessario verificare l&#39;identità di Content Packager nei metadati DRM di un file protetto DRM.
+Per i pacchetti di contenuti, le entità sono organizzazioni considerate attendibili dal proprietario del contenuto per creare pacchetti (o cifrare) di file video e creare contenuto protetto DRM. Durante l&#39;implementazione di Adobe Primetime DRM, è necessario mantenere un elenco di pacchetti di contenuti affidabili. Prima di rilasciare una licenza, è inoltre necessario verificare l&#39;identità di Content Packager nei metadati DRM di un file protetto DRM.
 
 Per informazioni su come ottenere informazioni sull&#39;entità che crea il pacchetto del contenuto, consultate [V2ContentMetaData.getPackagerInfo()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/media/drm/keys/v2/V2ContentMetaData.html#getPackagerInfo()).
 
