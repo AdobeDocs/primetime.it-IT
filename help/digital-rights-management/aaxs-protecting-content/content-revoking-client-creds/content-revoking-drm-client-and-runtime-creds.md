@@ -3,14 +3,17 @@ seo-title: Revoca delle credenziali client e runtime DRM
 title: Revoca delle credenziali client e runtime DRM
 uuid: 774b8ac7-51bb-42fc-a05d-cfa718e24a81
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: fbc175f383c850a7286b1e6e89daa027e00b29ef
+workflow-type: tm+mt
+source-wordcount: '390'
+ht-degree: 0%
 
 ---
 
 
 # Revoca delle credenziali client e runtime DRM{#revoking-drm-client-and-runtime-credentials}
 
-Le versioni DRM/Runtime sono identificate dal livello di protezione, dal numero di versione e da altri attributi, inclusi il sistema operativo e il runtime. Per limitare le versioni DRM/Runtime consentite, impostate le limitazioni del modulo in un criterio o in un `HandlerConfiguration`. Le restrizioni ai moduli possono includere un livello di protezione minimo e un elenco delle versioni dei moduli che non possono essere rilasciate. Consultate [Black-list of DRM Clients restricted from access protected content](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-blacklist-drm-clients.md) (Elenco nero dei client DRM a cui non è consentito accedere al contenuto protetto) per informazioni dettagliate sugli attributi utilizzati per identificare un modulo DRM/Runtime.
+Le versioni DRM/Runtime sono identificate dal livello di protezione, dal numero di versione e da altri attributi, inclusi il sistema operativo e il runtime. Per limitare le versioni DRM/Runtime consentite, impostate le limitazioni del modulo in un criterio o in un `HandlerConfiguration`. Le restrizioni ai moduli possono includere un livello di protezione minimo e un elenco delle versioni dei moduli che non possono essere rilasciate. Consultate [Blocco elenco di client DRM con restrizioni all&#39;accesso al contenuto](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-blocklist-drm-clients.md) protetto per informazioni dettagliate sugli attributi utilizzati per identificare un modulo DRM/Runtime.
 
 Se è impostato il livello di protezione minimo, la versione sul client (specificata nel token del computer) deve essere maggiore o uguale al valore specificato.
 
@@ -18,4 +21,4 @@ Se viene specificato un elenco di versioni escluse e la versione del client corr
 
 Nel caso in cui venga segnalata una violazione con una particolare versione di DRM client o runtime, il proprietario del contenuto e il distributore di contenuti (che esegue il server licenze) possono configurare il server in modo che rifiutino di rilasciare licenze durante un periodo in cui Adobe non dispone di una correzione. Questo può essere configurato tramite `HandlerConfiguration` come descritto in precedenza, o modificando tutti i criteri. In quest&#39;ultimo caso, potete mantenere un elenco di aggiornamento dei criteri e utilizzarlo per verificare se un criterio è stato aggiornato o revocato.
 
-Se è necessaria una versione più recente di Adobe® Flash® Player/Adobe® AIR® Runtime o della libreria Adobe Content Protection (modulo DRM), aggiornate i criteri come mostrato in [Aggiornamento di un criterio tramite l&#39;API](../../aaxs-protecting-content/content-working-with-policies/content-updating-policy-using-java-api.md) Java e create un elenco di aggiornamento dei criteri, oppure impostate le limitazioni in `HandlerConfiguration` richiamando `HandlerConfiguration.setRuntimeModuleRequirements()` o `HandlerConfiguration.setDRMModuleRequirements()`. Quando un utente richiede una nuova licenza con queste blacklist abilitate, è necessario installare i tempi di esecuzione e le librerie più recenti prima di poter rilasciare una licenza. Per un esempio sull&#39;inserimento in blacklist delle versioni DRM e runtime, consultate il codice di esempio in [Aggiornamento di un criterio tramite l&#39;API](../../aaxs-protecting-content/content-working-with-policies/content-updating-policy-using-java-api.md)Java.
+Se è necessaria una versione più recente di Adobe® Flash® Player/Adobe® AIR® Runtime o della libreria Adobe Content Protection (modulo DRM), aggiornate i criteri come mostrato in [Aggiornamento di un criterio tramite l&#39;API](../../aaxs-protecting-content/content-working-with-policies/content-updating-policy-using-java-api.md) Java e create un elenco di aggiornamento dei criteri, oppure impostate le limitazioni in `HandlerConfiguration` richiamando `HandlerConfiguration.setRuntimeModuleRequirements()` o `HandlerConfiguration.setDRMModuleRequirements()`. Quando un utente richiede una nuova licenza con questi elenchi di blocchi abilitati, prima di rilasciare una licenza è necessario installare i tempi di esecuzione e le librerie più recenti. Per un esempio di elenco dei blocchi in cui sono elencate le versioni DRM e runtime, consultate il codice di esempio in [Aggiornamento di un criterio tramite l&#39;API](../../aaxs-protecting-content/content-working-with-policies/content-updating-policy-using-java-api.md)Java.
