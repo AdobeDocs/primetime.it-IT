@@ -5,7 +5,10 @@ seo-title: Panoramica
 title: Panoramica
 uuid: 874c175b-8207-49fa-aad4-204ccbee9c2c
 translation-type: tm+mt
-source-git-commit: 53654b740b03c6a79394d30704a41186d4655237
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '482'
+ht-degree: 0%
 
 ---
 
@@ -40,4 +43,4 @@ L’SDK fornisce un’API Java per eseguire queste attività e include implement
 
 Specifica le regole di utilizzo personalizzate. I dati personalizzati possono essere inclusi nelle licenze rilasciate dal server licenze. L&#39;interpretazione/gestione di questi dati è completamente all&#39;implementazione dell&#39;applicazione client e del server licenze.
 
-Esempio di utilizzo: Consente l&#39;estensibilità delle regole di utilizzo consentendo ad altre regole aziendali di essere trasmesse in modo sicuro come parte del criterio e/o della licenza di contenuto. Per motivi di sicurezza, poiché queste regole di utilizzo sono applicate nel codice applicazione client personalizzato, questa opzione deve essere utilizzata insieme alle opzioni dell&#39;applicazione AIR o dell&#39;elenco bianco SWF di Flash Player. Per ulteriori informazioni, vedere &quot;Limitazioni relative al[runtime e all&#39;applicazione](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-whitelist-air.md)&quot;.
+Esempio di utilizzo: Consente l&#39;estensibilità delle regole di utilizzo consentendo ad altre regole aziendali di essere trasmesse in modo sicuro come parte del criterio e/o della licenza di contenuto. Per motivi di sicurezza, poiché queste regole di utilizzo sono applicate nel codice applicazione client personalizzato, questa opzione deve essere utilizzata insieme all&#39;applicazione AIR o al file SWF di Flash Player che consente le opzioni di elenco. Per ulteriori informazioni, vedere &quot;Limitazioni relative al[runtime e all&#39;applicazione](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-air.md)&quot;.
