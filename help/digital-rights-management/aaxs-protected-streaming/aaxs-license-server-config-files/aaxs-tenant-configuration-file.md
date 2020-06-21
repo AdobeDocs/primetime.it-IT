@@ -3,7 +3,10 @@ seo-title: File di configurazione tenant
 title: File di configurazione tenant
 uuid: 6e5c82c9-b8f5-4fca-8325-a884b2c779f7
 translation-type: tm+mt
-source-git-commit: 47b2ed65ff0ea4f54a210cf7627ed535782296b9
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '727'
+ht-degree: 0%
 
 ---
 
@@ -31,8 +34,8 @@ Il file di configurazione del tenant include:
    * **Gioca a destra** — È necessario specificare almeno un diritto. Se vengono specificati più diritti, il client utilizzerà il primo diritto per il quale soddisfa tutti i requisiti.
 
       * **Protezione** dell&#39;uscita Controlla se l&#39;output su dispositivi di rendering esterni deve essere protetto.
-      * **Restrizioni per applicazioni AIR e SWF** — Whitelist facoltativo delle applicazioni SWF e AIR che possono riprodurre il contenuto (ad es., sono consentite solo le applicazioni specificate). Le applicazioni SWF sono identificate da un URL o dal riassunto del file SWF e dal tempo massimo per consentire il download e la verifica del riassunto. Per informazioni sul calcolo del riassunto SWF, consultate la sezione &quot;SWF Hash Calculator&quot;. Le applicazioni AIR e iOS sono identificate dall&#39;ID editore e dall&#39;ID applicazione opzionale, dalla versione minima e dalla versione massima. Se non vengono specificate restrizioni per l&#39;applicazione, è possibile che il contenuto venga riprodotto da qualsiasi applicazione SWF o AIR.
-      * **Limitazioni** per i moduli DRM e Runtime Specifica il livello di protezione minimo richiesto per il modulo DRM/Runtime. Facoltativamente, include una blacklist di versioni alle quali non è consentito riprodurre il contenuto. Le versioni dei moduli sono identificate da attributi quali il sistema operativo e/o un numero di versione. Limitazioni del modulo DRM e limitazioni del modulo runtime ora supportano i seguenti attributi aggiuntivi:
+      * **Restrizioni per applicazioni AIR e SWF** — L&#39;opzione consente l&#39;elenco di applicazioni SWF e AIR che possono riprodurre il contenuto (ad es., sono consentite solo le applicazioni specificate). Le applicazioni SWF sono identificate da un URL o dal riassunto del file SWF e dal tempo massimo per consentire il download e la verifica del riassunto. Per informazioni sul calcolo del riassunto SWF, consultate la sezione &quot;SWF Hash Calculator&quot;. Le applicazioni AIR e iOS sono identificate dall&#39;ID editore e dall&#39;ID applicazione opzionale, dalla versione minima e dalla versione massima. Se non vengono specificate restrizioni per l&#39;applicazione, è possibile che il contenuto venga riprodotto da qualsiasi applicazione SWF o AIR.
+      * **Limitazioni** per i moduli DRM e Runtime Specifica il livello di protezione minimo richiesto per il modulo DRM/Runtime. Facoltativamente, include un elenco di blocchi di versioni alle quali non è consentito riprodurre il contenuto. Le versioni dei moduli sono identificate da attributi quali il sistema operativo e/o un numero di versione. Limitazioni del modulo DRM e limitazioni del modulo runtime ora supportano i seguenti attributi aggiuntivi:
 
          * `oemVendor`
          * `model`
