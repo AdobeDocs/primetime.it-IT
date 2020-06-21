@@ -3,7 +3,10 @@ seo-title: Proprietà del file di configurazione
 title: Proprietà del file di configurazione
 uuid: aec5fee7-4d77-4299-8d85-3e9042b2bbd1
 translation-type: tm+mt
-source-git-commit: 99d7eea63b18a97d2b99d0bb7aab5cdc50ae5ffc
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1121'
+ht-degree: 0%
 
 ---
 
@@ -72,11 +75,11 @@ Il file di configurazione specifica le seguenti proprietà. Per i nomi di propri
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.drmVersionBlacklist.n</span> <p class="- topic/p "><span class="codeph"> -drmBlacklist</span> <i class="+ topic/ph hi-d/i ">name/value-pair</i> </p> </td> 
-   <td colname="2" class="- topic/entry ">Ai client DRM è stato negato l'accesso al contenuto protetto. Questa opzione specifica un elenco di versioni dei moduli DRM che non possono essere utilizzate (lista nera). Il valore è costituito da coppie nome=valore separate da virgola con il seguente formato: <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Le coppie nome/valore aggiuntive devono essere separate da virgola. Ad esempio: <span class="codeph"> os=Win,release=2.0,arch=32</span>. </p> </td> 
+   <td colname="2" class="- topic/entry ">Ai client DRM è stato negato l'accesso al contenuto protetto. Questa opzione specifica un elenco di versioni dei moduli DRM che non possono essere utilizzate (elenco dei blocchi). Il valore è costituito da coppie nome=valore separate da virgola con il seguente formato: <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Le coppie nome/valore aggiuntive devono essere separate da virgola. Ad esempio: <span class="codeph"> os=Win,release=2.0,arch=32</span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.runtimeVersionBlacklist.n</span> <p class="- topic/p "><span class="codeph"> -runtimeBlacklist</span> <i class="+ topic/ph hi-d/i ">name/value-pair</i> </p> </td> 
-   <td colname="2" class="- topic/entry ">I runtime dell'applicazione non possono accedere al contenuto protetto. Questa opzione specifica un elenco di versioni di moduli runtime che non possono essere utilizzate (lista nera). Il valore è costituito da coppie nome=valore separate da virgola con il seguente formato: <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|applicazione|arco|modello|fornitore|env|screen=value</span> </p> <p class="- topic/p ">Le coppie nome/valore aggiuntive devono essere separate da virgola. Ad esempio, <span class="codeph"> os=Win,application=AIR</span>. </p> </td> 
+   <td colname="2" class="- topic/entry ">I runtime dell'applicazione non possono accedere al contenuto protetto. Questa opzione specifica un elenco di versioni di moduli runtime che non possono essere utilizzate (elenco blocchi). Il valore è costituito da coppie nome=valore separate da virgola con il seguente formato: <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|applicazione|arco|modello|fornitore|env|screen=value</span> </p> <p class="- topic/p ">Le coppie nome/valore aggiuntive devono essere separate da virgola. Ad esempio, <span class="codeph"> os=Win,application=AIR</span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.v1DeviceCapabilities</span> <p class="- topic/p "><span class="codeph"> -devCapabilitiesV1</span> <i class="+ topic/ph hi-d/i ">name/value-pair</i> </p> </td> 
@@ -145,11 +148,11 @@ Il file di configurazione specifica le seguenti proprietà. Per i nomi di propri
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.allowAIRApplication.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Elenco bianco delle applicazioni Adobe AIR o iOS consentite per riprodurre contenuto protetto. La proprietà deve utilizzare il formato seguente: <span class="+ topic/ph pr-d/codeph codeph">pubId</span>[:<span class="+ topic/ph pr-d/codeph codeph">appId</span>[:[<span class="+ topic/ph pr-d/codeph codeph">min</span>]:[<span class="+ topic/ph pr-d/codeph codeph">max</span>]] </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Un elenco di autorizzazioni per le applicazioni Adobe AIR o iOS consentite per la riproduzione di contenuto protetto. La proprietà deve utilizzare il formato seguente: <span class="+ topic/ph pr-d/codeph codeph">pubId</span>[:<span class="+ topic/ph pr-d/codeph codeph">appId</span>[:[<span class="+ topic/ph pr-d/codeph codeph">min</span>]:[<span class="+ topic/ph pr-d/codeph codeph">max</span>]] </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.allowSWFApplication.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Elenco bianco delle applicazioni SWF consentite per riprodurre contenuto protetto. Utilizzate il formato seguente: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph">URL</span> o file=<span class="+ topic/ph pr-d/codeph codeph">swf_file</span>,time=<i class="+ topic/ph hi-d/i ">max_time_to_verify</i> <i class="+ topic/ph hi-d/i ">swf_file</i> è il file SWF per il quale calcolare l’hash e <i class="+ topic/ph hi-d/i ">max_time_to_verify</i> è il tempo massimo per consentire il download e la verifica del file SWF per il completamento (in secondi). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Elenco di applicazioni SWF consentite per riprodurre contenuto protetto. Utilizzate il formato seguente: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph">URL</span> o file=<span class="+ topic/ph pr-d/codeph codeph">swf_file</span>,time=<i class="+ topic/ph hi-d/i ">max_time_to_verify</i> <i class="+ topic/ph hi-d/i ">swf_file</i> è il file SWF per il quale calcolare l’hash e <i class="+ topic/ph hi-d/i ">max_time_to_verify</i> è il tempo massimo per consentire il download e la verifica del file SWF per il completamento (in secondi). </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.license.customProp.n</span> </td> 
