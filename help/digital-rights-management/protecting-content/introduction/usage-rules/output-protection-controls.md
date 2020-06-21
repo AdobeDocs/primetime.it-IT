@@ -3,7 +3,10 @@ seo-title: Controlli di protezione dell'uscita
 title: Controlli di protezione dell'uscita
 uuid: a0518392-cd33-4ef0-834c-f90145a9b421
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '655'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ La protezione dell&#39;output controlla il parametro che controlla se l&#39;outp
 
 Controlla se l&#39;output su dispositivi di rendering esterni deve essere limitato. Per dispositivo esterno si intende qualsiasi dispositivo video o audio non incorporato nel computer. I display integrati, come nei notebook, non sono considerati esterni nello scenario dei controlli di protezione dell&#39;output.
 
-I tipi di connessione per l&#39;aria (OTA) sono tutti inseriti in blacklist per impostazione predefinita, ma possono essere inseriti in una whitelist se necessario. Le connessioni OTA supportate includono: Miracast, AirPlay, DLNA e WIDI.
+I tipi di connessione per l&#39;aria (OTA) sono tutti blocchi elencati per impostazione predefinita, ma possono essere elencati in modo esplicito se necessario. Le connessioni OTA supportate includono: Miracast, AirPlay, DLNA e WIDI.
 
 **Protezione dell&#39;uscita basata sulla risoluzione: (Disponibile dalla versione 5.3 in avanti). ** Offre una protezione dell&#39;output basata sul numero verticale di pixel del contenuto, che consente di specificare una serie di requisiti di protezione in base al numero verticale di pixel.
 
