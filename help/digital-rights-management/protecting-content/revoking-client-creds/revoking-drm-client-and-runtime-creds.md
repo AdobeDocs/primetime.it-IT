@@ -3,7 +3,10 @@ seo-title: Revoca delle credenziali client e runtime DRM
 title: Revoca delle credenziali client e runtime DRM
 uuid: 8e36536a-8eed-4d27-8a5f-8d3219817e57
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '413'
+ht-degree: 0%
 
 ---
 
@@ -12,7 +15,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 Le versioni DRM/Runtime sono identificate dal livello di protezione, dal numero di versione e da altri attributi, compresi il sistema operativo e il runtime. Per limitare le versioni DRM/Runtime consentite, impostate le limitazioni del modulo in un criterio DRM o in un `HandlerConfiguration`. Le restrizioni ai moduli possono includere un livello di protezione minimo e un elenco delle versioni dei moduli che non possono essere rilasciate.
 
-Per informazioni sugli attributi utilizzati per identificare un modulo DRM/Runtime, consultate [Lista nera dei client DRM con restrizioni all&#39;accesso al contenuto](../../protecting-content/introduction/usage-rules/runtime-application-restrictions/blacklist-drm-clients.md) protetto.
+Consultate [Blocco elenco di client DRM con restrizioni all&#39;accesso al contenuto](../../protecting-content/introduction/usage-rules/runtime-application-restrictions/blocklist-drm-clients.md) protetto per informazioni dettagliate sugli attributi utilizzati per identificare un modulo DRM/Runtime.
 
 Se è impostato il livello di protezione minimo, la versione sul client (specificata nel token del computer) deve essere maggiore o uguale al valore specificato.
 
@@ -24,6 +27,6 @@ Se è necessaria una versione più recente di Adobe Flash Player/Adobe AIR Runti
 
 Consultate [Aggiornamento di un criterio tramite l&#39;API](../../protecting-content/working-policies-overview/updating-policy-using-java-api.md)Java.
 
-Quindi devi creare un elenco di aggiornamento criteri DRM o impostare le restrizioni in `HandlerConfiguration` richiamando `HandlerConfiguration.setRuntimeModuleRequirements()` o `HandlerConfiguration.setDRMModuleRequirements()`. Quando un utente richiede una nuova licenza con le blacklist specificate abilitate, è necessario installare i runtime e le librerie più recenti prima di poter rilasciare una licenza.
+Quindi devi creare un elenco di aggiornamento criteri DRM o impostare le restrizioni in `HandlerConfiguration` richiamando `HandlerConfiguration.setRuntimeModuleRequirements()` o `HandlerConfiguration.setDRMModuleRequirements()`. Quando un utente richiede una nuova licenza con gli elenchi di blocchi specificati abilitati, è necessario installare i runtime e le librerie più recenti prima di poter rilasciare una licenza.
 
-Vedere il codice di esempio in [Aggiornamento di un criterio tramite l&#39;API JavaPer un esempio sull&#39;inserimento in blacklist delle versioni](../../protecting-content/working-policies-overview/updating-policy-using-java-api.md) DRM e runtime, per un esempio sull&#39;inserimento in blacklist delle versioni DRM e runtime.
+Vedere il codice di esempio in [Aggiornamento di un criterio tramite l&#39;API JavaPer un esempio in cui sono elencate versioni](../../protecting-content/working-policies-overview/updating-policy-using-java-api.md) DRM e runtime per un esempio in cui sono elencati i blocchi DRM e le versioni runtime.
