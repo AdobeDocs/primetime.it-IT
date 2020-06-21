@@ -2,7 +2,7 @@
 title: Note sulla versione PTAI 19.11.1
 description: Le note sulla versione di PTAI 19.11.1 descrivono le novità o le modifiche, i problemi risolti e noti in Primetime Dynamic Ad Insertion nel 2019.
 translation-type: tm+mt
-source-git-commit: 0a58cce0d80ade581e32b5dd9376d336e02fac8b
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
 workflow-type: tm+mt
 source-wordcount: '1968'
 ht-degree: 0%
@@ -174,13 +174,13 @@ Aggiornamenti di sicurezza
    * Vecchia struttura chiave di ricerca: Zone, Ad System, Ad ID, Creative ID, Creative URL e parametri di formato (durata target, formato di output, CDN di destinazione)
    * Le chiavi di ricerca per le risorse CRS esistenti verranno aggiornate in modo da corrispondere alla nuova struttura prima della release di produzione, ma si noti che le nuove risorse transcodificate tra l&#39;aggiornamento delle chiavi di ricerca e la release di produzione potrebbero non essere disponibili. In tal caso, avvierebbero una nuova richiesta CRS al successivo rilevamento dopo il rilascio
 
-* CRS: Aggiunta la possibilità di richieste CRS blacklist/whitelist da sistemi di annunci pubblicitari, ID di annunci, ID creativi, URL creativi e/o formato creativo specifici
+* CRS: Aggiunta la possibilità di bloccare/consentire richieste CRS da sistemi di annunci pubblicitari, ID di annunci, ID creativi, URL creativi e/o formato creativo specifici
 
    >Nota
    >
-   >Adobe aggiungerà delle regole per la blacklist quando verranno trovati fornitori di annunci con valori dinamici (ad esempio, parametri dinamici in URL) per lo stesso annuncio. Tali regole della blacklist verranno disattivate dopo che il componente dinamico è stato risolto, dal provider o tramite una regola di normalizzazione.
+   >Adobe aggiungerà delle regole per l&#39;elenco di blocchi quando verranno trovati fornitori di annunci con valori dinamici (ad esempio, parametri dinamici in URL) per lo stesso annuncio. Tali regole del blocco verranno disattivate dopo che il componente dinamico sarà stato risolto, dal provider o tramite una regola di normalizzazione.
 
-   * Se desiderate aggiungere una regola di blacklist o whitelist per la vostra zona, rivolgetevi al vostro responsabile dell&#39;account tecnico per assistenza.
+   * Se desiderate aggiungere una regola blocklist o Allowlist per la vostra zona, rivolgetevi al vostro responsabile dell&#39;account tecnico per assistenza.
 
 ### Versione 19.1.1
 
