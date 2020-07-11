@@ -3,9 +3,9 @@ seo-title: Utilizzo della riga di comando
 title: Utilizzo della riga di comando
 uuid: e549a98e-b027-4472-8860-6aa1d56d4a8b
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1026'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ La tabella seguente descrive le opzioni della riga di comando che è possibile s
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -air pubId </span>[: <span class="+ topic/ph pr-d/codeph codeph"> appId </span>[:[ <span class="+ topic/ph pr-d/codeph codeph"> min </span>]:[ <span class="+ topic/ph pr-d/codeph codeph"> max </span>]]] </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Un elenco consentito di applicazioni AIR consentite per riprodurre contenuto protetto. Utilizzate questa opzione per limitare quali editori, applicazioni e versioni possono accedere al contenuto protetto tramite questo criterio. </p> <p class="- topic/p ">Se <i class="+ topic/ph hi-d/i ">appId</i> non è specificato, sono consentite tutte le applicazioni per publisher <i class="+ topic/ph hi-d/i ">pubId</i> . </p> <p class="- topic/p "><i class="+ topic/ph hi-d/i ">i numeri di versione min</i> e <i class="+ topic/ph hi-d/i ">max</i> sono facoltativi. </p> <p class="- topic/p ">È possibile specificare più opzioni <span class="codeph"> - aria </span> per consentire più applicazioni. Se non vengono specificate applicazioni AIR o SWF, tutte le applicazioni possono accedere a questo contenuto. Durante un aggiornamento, utilizzate -air senza gli argomenti rimanenti per rimuovere tutte le voci dall'elenco. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Un elenco consentiti  di applicazioni AIR consentite per riprodurre contenuto protetto. Utilizzate questa opzione per limitare quali editori, applicazioni e versioni possono accedere al contenuto protetto tramite questo criterio. </p> <p class="- topic/p ">Se <i class="+ topic/ph hi-d/i ">appId</i> non è specificato, sono consentite tutte le applicazioni per publisher <i class="+ topic/ph hi-d/i ">pubId</i> . </p> <p class="- topic/p "><i class="+ topic/ph hi-d/i ">i numeri di versione min</i> e <i class="+ topic/ph hi-d/i ">max</i> sono facoltativi. </p> <p class="- topic/p ">È possibile specificare più opzioni <span class="codeph"> - aria </span> per consentire più applicazioni. Se non vengono specificate applicazioni AIR o SWF, tutte le applicazioni possono accedere a questo contenuto. Durante un aggiornamento, utilizzate -air senza gli argomenti rimanenti per rimuovere tutte le voci dall'elenco. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -drmBlacklist nome </span> / <i class="+ topic/ph hi-d/i "></i> valore <span class="+ topic/ph pr-d/codeph codeph"></span><i class="+ topic/ph hi-d/i "> </i> <span class="+ topic/ph pr-d/codeph codeph"> coppie </span> </td> 
@@ -120,7 +120,7 @@ La tabella seguente descrive le opzioni della riga di comando che è possibile s
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> -swf url </span> </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> -swf file= swf_file </span>, <span class="+ topic/ph pr-d/codeph codeph"> time= max_time_to_verify </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Elenco consentito di applicazioni SWF consentite per riprodurre contenuto protetto. È possibile specificare più opzioni -swf per consentire l'utilizzo di più applicazioni. Se non vengono specificate applicazioni AIR o SWF, tutte le applicazioni possono accedere a questo contenuto. Durante un aggiornamento, utilizzate -swf senza gli argomenti rimanenti per rimuovere tutte le voci dall'elenco. Per identificare un file SWF in base al relativo valore hash, specificate il file SWF per il quale calcolare l'hash e il tempo massimo per consentire il completamento della verifica SWF (in secondi). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Un elenco consentiti  di applicazioni SWF consentite per riprodurre contenuto protetto. È possibile specificare più opzioni -swf per consentire l'utilizzo di più applicazioni. Se non vengono specificate applicazioni AIR o SWF, tutte le applicazioni possono accedere a questo contenuto. Durante un aggiornamento, utilizzate -swf senza gli argomenti rimanenti per rimuovere tutte le voci dall'elenco. Per identificare un file SWF in base al relativo valore hash, specificate il file SWF per il quale calcolare l'hash e il tempo massimo per consentire il completamento della verifica SWF (in secondi). </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -k name= value </span> </td> 
