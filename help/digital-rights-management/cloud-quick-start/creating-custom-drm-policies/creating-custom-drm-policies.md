@@ -3,9 +3,9 @@ seo-title: Creare criteri DRM personalizzati (facoltativo)
 title: Creare criteri DRM personalizzati (facoltativo)
 uuid: 701b51d9-6dde-4c21-bc5b-09e612582968
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '292'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Creare criteri DRM personalizzati (facoltativo){#create-custom-drm-policies-optional}
 
-Il kit di protezione DRM di Primetime Cloud include alcuni criteri preconfigurati che possono essere utilizzati durante la creazione del pacchetto. Se desiderate ulteriori configurazioni di criteri, ad esempio un diritto specifico di inclusione in SWF, per generare criteri personalizzati è possibile utilizzare Gestione criteri DRM di Primetime incluso.
+Il kit di protezione DRM di Primetime Cloud include alcuni criteri preconfigurati che possono essere utilizzati durante la creazione del pacchetto. Se sono desiderate configurazioni aggiuntive del criterio, ad esempio un diritto di elenco che consente l&#39;utilizzo di SWF, il Gestore dei criteri DRM di Primetime incluso può essere utilizzato per generare criteri personalizzati.
 
 >[!NOTE]
 >
