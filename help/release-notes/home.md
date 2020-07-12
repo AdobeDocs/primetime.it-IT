@@ -4,9 +4,9 @@ seo-title: Note sulla versione di Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 8f8b9d167d7456968879edac847c51e6c9e1da3c
+source-git-commit: 7c8b9778f9b63151617e57bc2318ba77e0b630bc
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
@@ -22,9 +22,9 @@ Il rilascio si è concentrato sull’aggiornamento della versione gradle dell’
 
 Per ulteriori informazioni sulla versione rilasciata corrente per [Android](../release-notes/tvsdk-3x-android.md), consulta.
 
-## Miglioramenti e problemi risolti in PTAI 20.6.1
+## Miglioramenti e problemi risolti in PTAI 20.7.1
 
-La release era incentrata su funzionalità quali la manipolazione Manifest e il miglioramento delle API per mantenere in vita le sessioni con risorse VOD a forma lunga. Il rilascio include inoltre correzioni ai problemi più importanti dei clienti.
+Il rilascio è stato incentrato sul miglioramento di SCTE35, l&#39;aggiunta di ulteriori informazioni nelle intestazioni di risposta HTTP X-ADBE-AI-X1, l&#39;aggregazione delle metriche migliorata e il pannello &quot;Stati sessione&quot;.
 
 Per ulteriori informazioni sull&#39;attuale versione rilasciata di Dynamic Ad Insertion, consulta [Note](ptai-20x-release-notes.md)sulla versione PTAI.
 
