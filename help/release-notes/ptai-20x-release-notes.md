@@ -1,20 +1,44 @@
 ---
-title: Note sulla versione di PTAI 20.6.1
-description: Le note sulla versione di PTAI 20.6.1 descrivono le novità o le modifiche, i problemi risolti e noti in Primetime Dynamic Ad Insertion nel 2020.
+title: Note di rilascio di PTAI 20.7.1
+description: Le note sulla versione di PTAI 20.7.1 descrivono le novità o le modifiche, i problemi risolti e noti in Primetime Dynamic Ad Insertion nel 2020.
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 7c8b9778f9b63151617e57bc2318ba77e0b630bc
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '793'
 ht-degree: 0%
 
 ---
 
 
-# Note sulla versione Primetime Dynamic Ad Insertion 20.6.1
+# Note sulla versione Primetime Dynamic Ad Insertion 20.7.1
 
-Le note sulla versione Dynamic Ad Insertion 20.6.1 descrivono le novità o le modifiche apportate, i problemi risolti e noti in Primetime Dynamic Ad Insertion nel 2020.
+Le note sulla versione di Dynamic Ad Insertion 20.7.1 descrivono i problemi nuovi o modificati, risolti e noti in Primetime Dynamic Ad Insertion nel 2020.
 
-## Novità di PTAI 20.6.1
+## Novità di PTAI 20.7.1
+
+**Quando:** Giovedì 9 luglio 2020 dalle 03:00 alle 05:00 Ora orientale
+
+**Nuove funzioni e miglioramenti**
+
+* Miglioramento di SCTE35 per l&#39;utilizzo di messaggi di inizio/fine annuncio fornitore o di inizio/fine interruzione per identificare il cue point.
+
+* Intestazione X-ADBE-AI-X1 aggiornata con informazioni aggiuntive per la risoluzione dei problemi.
+
+* Aggregazione delle metriche migliorata.
+
+* Dashboard della console SSAI migliorato per il pannello Stati sessione.
+
+### Miglioramenti e correzioni nelle versioni precedenti
+
+#### Versione 20.6.2
+
+**Quando:** Giovedì 18 giugno 2020 dalle 03:00 alle 04:00 Ora orientale
+
+**Miglioramenti**
+
+Migliorata la sincronizzazione del flusso per i client video che richiedono una precisione in millisecondi. Contattate il supporto Adobe per abilitare la precisione in millisecondi per `#EXT-X-PROGRAM-DATE-TIME tags`.
+
+#### Versione 20.6.1
 
 **Quando:** Martedì 2 giugno 2020 dalle 03:00 alle 05:00 Ora orientale
 
@@ -26,13 +50,13 @@ Contattate il supporto Adobe per abilitare le seguenti nuove funzionalità trami
 
 * VOD a forma lunga: Sono state migliorate le API per mantenere in vita le sessioni con risorse VOD lunghe.
 
-**Correzioni dei bug**
+**Correzioni di bug**
 
 * È stato risolto un problema per il quale i frammenti WebVTT venivano sempre richiesti in base al protocollo http, indipendentemente dal protocollo originale richiesto.
 
 * È stato risolto un problema per il quale i tag EXT-X-DISCONTINUITY venivano rimossi dalla parte superiore della playlist quando si passava dagli annunci ai contenuti. Per abilitare questa correzione, contattate il supporto Adobe.
 
-### Versione 20.5.1
+#### Versione 20.5.1
 
 **Quando:** Martedì 5 maggio 2020 dalle 04:00 alle 05:00 ora orientale
 
@@ -42,7 +66,7 @@ Contattate il supporto Adobe per abilitare le seguenti nuove funzionalità trami
 
 * Aggiornamenti di manutenzione.
 
-### Versione 20.3.4
+#### Versione 20.3.4
 
 **Quando:** Mercoledì, 1 aprile 2020 dalle 03:00 AM alle 04:00 AM Ora orientale
 
@@ -50,7 +74,7 @@ Contattate il supporto Adobe per abilitare le seguenti nuove funzionalità trami
 
 * Aggiornamenti di protezione.
 
-### Versione 20.3.3
+#### Versione 20.3.3
 
 **Quando:** Giovedì 26 marzo 2020 dalle 03:00 AM alle 04:00 Ora orientale
 
@@ -60,7 +84,7 @@ Contattate il supporto Adobe per abilitare le seguenti nuove funzionalità trami
 
 * È stato risolto un problema con i flussi audio CMAF/demuxed, a causa del quale in alcuni scenari i numeri EXT-X-MEDIA-SEQUENCE aumentavano in modo errato.
 
-### Versione 20.3.2
+#### Versione 20.3.2
 
 **Quando:** Mercoledì 11 marzo 2020 dalle 05:30 AM alle 07:00 AM Ora orientale
 
@@ -68,7 +92,7 @@ Contattate il supporto Adobe per abilitare le seguenti nuove funzionalità trami
 
 * Aggiornamenti di manutenzione.
 
-### Versione 20.3.1
+#### Versione 20.3.1
 
 **Quando:** Giovedì 05 marzo 2020 dalle 02:30 alle 04:30 Ora orientale
 
@@ -80,14 +104,14 @@ Contattate il supporto Adobe per abilitare le seguenti nuove funzionalità trami
 
 * Correzioni di sicurezza e manutenzione.
 
-### Versione 20.2.1
+#### Versione 20.2.1
 
 **Quando:** Giovedì 13 febbraio 2020 dalle 04:30 alle 05:30 Ora orientale
 
 * È stato aggiunto il supporto per l’unione di risorse pubblicitarie contenenti più flussi solo audio in base al linguaggio/codec/bitrate.
 * Piccoli miglioramenti delle prestazioni e aggiornamenti di manutenzione.
 
-### Versione 20.1.3
+#### Versione 20.1.3
 
 **Quando:** Martedì 28 gennaio 2020 dalle 2:00 alle 03:00 Ora orientale
 
@@ -101,13 +125,13 @@ Contattate il supporto Adobe per abilitare le seguenti nuove funzionalità trami
 
 * Rimuovere vecchi oggetti V1 dai gruppi NetStorage per mantenere il conteggio degli oggetti entro i limiti di sicurezza di Akamai.
 
-### Versione 20.1.2 (Hotfix)
+#### Versione 20.1.2 (Hotfix)
 
 **Quando:** Lunedì 20 gennaio 2020 dalle 02:00 alle 03:00 ora orientale
 
 * Aggiornamenti di manutenzione.
 
-### Versione 20.1.1
+#### Versione 20.1.1
 
 **Quando:** Mercoledì 15 gennaio 2020 dalle 04:00 alle 05:00 Ora orientale
 
@@ -120,6 +144,12 @@ Contattate il supporto Adobe per abilitare le seguenti nuove funzionalità trami
 ## Problemi risolti
 
 Se la risoluzione è associata a un problema segnalato, viene visualizzato un riferimento Zendesk. Ad esempio: `ZD#xxxxx`
+
+**PTAI 20.6.1**
+
+* `WebVTT` i frammenti sono sempre stati richiesti in base al protocollo http, indipendentemente dal protocollo originale richiesto.
+
+* `EXT-X-DISCONTINUITY` i tag vengono rimossi dalla parte superiore della playlist quando si passa dagli annunci ai contenuti. Per abilitare questa correzione, contattate il supporto Adobe.
 
 **PTAI 20.5.1**
 
