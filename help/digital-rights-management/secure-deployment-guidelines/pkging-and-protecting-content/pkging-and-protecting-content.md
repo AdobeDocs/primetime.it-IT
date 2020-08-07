@@ -5,7 +5,10 @@ seo-title: Imballaggio e protezione del contenuto
 title: Imballaggio e protezione del contenuto
 uuid: 9bf89f86-082e-40f9-8deb-c9774a9d8e02
 translation-type: tm+mt
-source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '822'
+ht-degree: 0%
 
 ---
 
@@ -24,13 +27,13 @@ Se l&#39;implementazione della creazione di pacchetti di contenuto richiede conn
 
 ## Creazione sicura di contenuti {#securely-packaging-content}
 
-Il file di configurazione per lo strumento della riga di comando Adobe Primetime DRM Media Packager richiede una credenziale PKCS12 utilizzata durante la creazione del pacchetto.
+Il file di configurazione per lo strumento della riga di comando  Adobe Primetime DRM Media Packager richiede una credenziale PKCS12 utilizzata durante la creazione del pacchetto.
 
 Negli strumenti della riga di comando Implementazione di riferimento, la password per il file di credenziali PKCS12 viene memorizzata nel `flashaccess.properties` file in testo non visibile. Per questo motivo, prestare maggiore attenzione quando si protegge il computer che ospita questo file e assicurarsi che il computer si trovi in un ambiente protetto. Per ulteriori informazioni, vedere Sicurezza [fisica e accesso](../../secure-deployment-guidelines/physical-sec-and-access.md).
 
 Il packager utilizza anche i certificati License Server e License Server Transport e l&#39;integrità e la riservatezza di tali informazioni devono essere protette. Solo le entità autorizzate devono poter utilizzare il packager. Se le chiavi private sono compromesse, informa immediatamente Adobe Systems Incorporated in modo che il certificato possa essere revocato.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >L&#39;API consente di utilizzare la stessa chiave per più contenuti. Per garantire il massimo livello di protezione, utilizzate questa funzione solo per i contenuti FMS con bitrate multiplo. Non usate la stessa chiave per più file che rappresentano contenuti diversi.
 
@@ -46,7 +49,7 @@ Quando il pacchetto è completo, il codice di imballaggio viene raccolto e non v
 
 ## Criteri di memorizzazione sicura {#securely-storing-policies}
 
-L&#39;SDK DRM di Adobe Primetime consente di sviluppare applicazioni che possono essere utilizzate per la creazione di pacchetti di contenuti e di criteri.
+L’SDK  Adobe Primetime DRM consente di sviluppare applicazioni che possono essere utilizzate per la creazione di pacchetti di contenuti e la creazione di criteri.
 
 Quando create queste applicazioni, potete consentire ad alcuni utenti di creare e modificare i criteri e limitare altri utenti ad applicare solo i criteri esistenti al contenuto. Dovete implementare i controlli di accesso necessari e creare account utente con privilegi diversi per la creazione dei criteri e l&#39;applicazione dei criteri.
 
@@ -66,4 +69,4 @@ Quando si crea un pacchetto di contenuto, la chiave pubblica del server licenze 
 >
 >Accertatevi di ottenere il certificato del server licenze che include la chiave pubblica da un&#39;origine affidabile. In questo modo, potete assicurarvi che si tratti della chiave del server licenze e non di una chiave pubblica fuorviante. Se gli aggressori sostituissero la chiave pubblica del server licenze, potrebbero decifrare il contenuto.
 
-Per ulteriori informazioni su come creare pacchetti di contenuto, consultate [Utilizzo di Adobe Primetime DRM SDK per la protezione dei contenuti](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_protecting_content.pdf).
+Per ulteriori informazioni su come creare pacchetti di contenuto, consultate [Utilizzo dell&#39;SDK DRM di Adobe Primetime  per la protezione dei contenuti](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_protecting_content.pdf).
