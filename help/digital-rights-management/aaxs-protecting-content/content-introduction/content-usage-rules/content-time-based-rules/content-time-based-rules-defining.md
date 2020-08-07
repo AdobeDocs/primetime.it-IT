@@ -3,14 +3,17 @@ seo-title: Definizione di regole basate sul tempo
 title: Definizione di regole basate sul tempo
 uuid: 17c69869-ac81-4561-9fb6-b1c5c9c4006d
 translation-type: tm+mt
-source-git-commit: 53654b740b03c6a79394d30704a41186d4655237
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '577'
+ht-degree: 0%
 
 ---
 
 
 # Definizione di regole basate sul tempo {#defining-time-based-rules}
 
-Adobe Access utilizza l&#39;applicazione non restrittiva delle restrizioni di licenza basate sull&#39;ora. Se un diritto di ora scade durante la riproduzione di un video, il comportamento predefinito di Adobe Access consiste nel non limitare la riproduzione fino alla successiva creazione dello streaming video (mediante chiamate `Netstream.stop()` e `Netstream.play()`).
+ Adobe Access utilizza l&#39;applicazione non restrittiva delle restrizioni di licenza basate su tempo. Se un diritto di Adobe scade durante la riproduzione di un video, il comportamento predefinito di Accesso  non limita la riproduzione fino alla successiva creazione dello streaming video (mediante chiamata `Netstream.stop()` e `Netstream.play()`).
 
 Anche se l&#39;imposizione non restrittiva è il comportamento predefinito, potete anche abilitare l&#39;imposizione forzata eseguendo una delle seguenti operazioni:
 
@@ -59,6 +62,6 @@ Il comportamento di sincronizzazione è definito utilizzando i seguenti parametr
 * Intervallo di arresto rigido — (Facoltativo). Disattiva la riproduzione se la sincronizzazione non ha avuto esito positivo nel tempo specificato.
 * Forza probabilità di sincronizzazione — (Facoltativo). Probabilità con cui il client deve inviare un messaggio di sincronizzazione prima del successivo intervallo di inizio.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
->Questa regola di utilizzo è supportata dai client Adobe Access versione 3.0 e successive. Il comportamento dei client meno recenti dipende dalla versione client minima supportata dal server licenze. Vedere, Versione [client](../../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md)minima.
+>Questa regola di utilizzo è supportata dai client di accesso  Adobe versione 3.0 e successive. Il comportamento dei client meno recenti dipende dalla versione client minima supportata dal server licenze. Vedere, Versione [client](../../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md)minima.
