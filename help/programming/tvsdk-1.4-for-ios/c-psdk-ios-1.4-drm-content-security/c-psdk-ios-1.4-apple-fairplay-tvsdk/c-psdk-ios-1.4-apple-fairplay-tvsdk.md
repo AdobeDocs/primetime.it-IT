@@ -5,12 +5,15 @@ seo-title: Apple FairPlay nelle applicazioni TVSDK
 title: Apple FairPlay nelle applicazioni TVSDK
 uuid: 4384d379-37cd-46c5-8c25-0cda16bdebb8
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '585'
+ht-degree: 0%
 
 ---
 
 
-# Apple FairPlay nelle applicazioni TVSDK {#apple-fairplay-in-tvsdk-applications}
+# Apple FairPlay nelle applicazioni TVSDK  {#apple-fairplay-in-tvsdk-applications}
 
 Per implementare FairPlay Streaming nella tua app TVSDK, devi scrivere un Resource Loader, che invia una richiesta di acquisizione della licenza al tuo server FairPlay Streaming.
 
@@ -20,7 +23,7 @@ Il codice Resource Loader è responsabile delle seguenti attività:
 1. Formattate la richiesta.
 1. Fornire le informazioni necessarie al server, in modo che il server possa decidere se la richiesta deve essere consentita.
 
-Ad esempio, se utilizzi Adobe Primetime Cloud DRM basato su ExpressPlay, Resource Loader invia la richiesta a:
+Ad esempio, se state utilizzando  Adobe  DRM di Primetime Cloud basato su ExpressPlay, Resource Loader invia la richiesta a:
 
 ```
 https://fp-gen.service.expressplay.com
@@ -162,7 +165,7 @@ Potete implementare Apple FairPlay Streaming, che è la soluzione DRM di Apple, 
 
    Il `resourceLoader:shouldWaitForLoadingOfRequestedResource` metodo è equivalente a quello presente in `AVAssetResourceLoaderDelegate`.
 
-   >[!IMPORTANT] {important=&quot;high&quot;}
+   >[!IMPORTANT]
    >
    >Nello scenario del server licenze ExpressPlay, per riprodurre contenuto, modificate lo schema URL nell’URL della richiesta di licenza del server ExpressPlay FairPlay da `skd://` a `https://` (o `https://`).
 
