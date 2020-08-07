@@ -3,7 +3,10 @@ seo-title: Controlli di protezione dell'uscita
 title: Controlli di protezione dell'uscita
 uuid: 1f4cc617-7f14-4952-8e61-6acbdf01d10e
 translation-type: tm+mt
-source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '635'
+ht-degree: 0%
 
 ---
 
@@ -26,32 +29,32 @@ Sono disponibili le seguenti opzioni/livelli di applicazione:
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Obbligatorio</b> — La protezione dell'uscita analogica per la copia (ACP) o il sistema di gestione della generazione di copie (CGMS-A) deve essere attivata per poter riprodurre il contenuto su un dispositivo esterno. I client Adobe Access devono abilitare la protezione dell'output tramite ACP o CGMS-A. Sui dispositivi che supportano entrambi, i client Adobe Access 3.0 tenteranno di abilitare entrambi. Tuttavia, per riprodurre il contenuto è necessario abilitare solo uno. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Obbligatorio</b> — La protezione dell'uscita analogica per la copia (ACP) o il sistema di gestione della generazione di copie (CGMS-A) deve essere attivata per poter riprodurre il contenuto su un dispositivo esterno.  client di accesso al Adobe devono abilitare la protezione dell'output utilizzando ACP o CGMS-A. Sui dispositivi che supportano entrambi, i client  Adobe Access 3.0 tenteranno di abilitare entrambi. Tuttavia, per riprodurre il contenuto è necessario abilitare solo uno. </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">SÌ </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">SÌ </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">ACP richiesto</b> — È richiesta la protezione dell'output ACP. La riproduzione non è consentita su CGMS-A. I client Adobe Access 2.0 non supportano questa opzione. Se impostato, un client Adobe Access 2.0 si comporta come se fosse stata specificata l'opzione "Nessuna riproduzione". </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">ACP richiesto</b> — È richiesta la protezione dell'output ACP. La riproduzione non è consentita su CGMS-A.  client Access 2.0 di Adobe non supporta questa opzione. Se impostato, un client  Access 2.0 si comporta come se fosse stata specificata l'opzione "Nessuna riproduzione". </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">SÌ </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">- </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">CGMS-A richiesto</b> — È necessaria la protezione dell'uscita CGMS-A. La riproduzione non è consentita su ACP. I client Adobe Access 2.0 non supportano questa opzione. Se impostato, un client Adobe Access 2.0 si comporta come se fosse stata specificata l'opzione "Nessuna riproduzione". </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">CGMS-A richiesto</b> — È necessaria la protezione dell'uscita CGMS-A. La riproduzione non è consentita su ACP.  client Access 2.0 di Adobe non supporta questa opzione. Se impostato, un client  Access 2.0 si comporta come se fosse stata specificata l'opzione "Nessuna riproduzione". </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">SÌ </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">- </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Usa se disponibile</b> : Cercate di abilitare la protezione dell'output ACP e CGMS-A se disponibile e di consentire la riproduzione se non disponibile. I client Adobe Access 3.0 tenteranno di abilitare sia ACP che CGMS-A, se possibile. I client Adobe Access 2.0 tentano di abilitare solo ACP o CGMS-A. Ad esempio, il client Adobe Access tenterà di abilitare ACP o CGMS-A. Se il tentativo ha esito positivo, l'altra opzione non sarà abilitata. Se il tentativo non riesce, verrà effettuato un secondo tentativo per abilitare l'altra opzione. Anche se entrambi i tentativi non riescono, il contenuto verrà comunque riprodotto. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Usa se disponibile</b> : Cercate di abilitare la protezione dell'output ACP e CGMS-A se disponibile e di consentire la riproduzione se non disponibile.  client Adobe Access 3.0 cercherà di abilitare sia ACP che CGMS-A, se possibile.  client Adobe Access 2.0 tenterà di abilitare solo ACP o CGMS-A. Ad esempio, il client di accesso al Adobe  tenterà di abilitare ACP o CGMS-A. Se il tentativo ha esito positivo, l'altra opzione non sarà abilitata. Se il tentativo non riesce, verrà effettuato un secondo tentativo per abilitare l'altra opzione. Anche se entrambi i tentativi non riescono, il contenuto verrà comunque riprodotto. </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">SÌ </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">SÌ </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Usa ACP se disponibile</b> — Se disponibile, provate a abilitare la protezione dell'output ACP, ma consentite la riproduzione se non disponibile. La protezione non è disponibile su CGMS-A. I client Adobe Access 2.0 non supportano questa opzione. Se impostato, un client Adobe Access 2.0 si comporta come se fosse stata specificata l'opzione "Nessuna protezione". </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Usa ACP se disponibile</b> — Se disponibile, provate a abilitare la protezione dell'output ACP, ma consentite la riproduzione se non disponibile. La protezione non è disponibile su CGMS-A.  client Access 2.0 di Adobe non supporta questa opzione. Se impostato, un client di accesso  Adobe 2.0 si comporta come se fosse stata specificata l'opzione "Nessuna protezione". </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">SÌ </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">- </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Usa CGMS-A se disponibile </b>— Tentate di abilitare la protezione dell'output CGMS-A se disponibile, ma consentite la riproduzione se non disponibile. La protezione non è disponibile sugli ACP. I client Adobe Access 2.0 non supportano questa opzione. Se impostato, un client Adobe Access 2.0 si comporta come se fosse stata specificata l'opzione "Nessuna protezione". </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Usa CGMS-A se disponibile </b>— Tentate di abilitare la protezione dell'output CGMS-A se disponibile, ma consentite la riproduzione se non disponibile. La protezione non è disponibile sugli ACP.  client Access 2.0 di Adobe non supporta questa opzione. Se impostato, un client di accesso  Adobe 2.0 si comporta come se fosse stata specificata l'opzione "Nessuna protezione". </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">SÌ </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">- </p> </td> 
   </tr> 
@@ -68,7 +71,7 @@ Sono disponibili le seguenti opzioni/livelli di applicazione:
  </tbody> 
 </table>
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Sebbene queste regole siano applicate in modo coerente su tutte le piattaforme, al momento è possibile attivare la protezione dell&#39;output solo in modo sicuro sulle piattaforme Windows. Su altre piattaforme (come Macintosh e Linux) non sono disponibili funzioni del sistema operativo supportate per le applicazioni di terze parti.
 
