@@ -3,7 +3,10 @@ seo-title: Licenze di pre-generazione
 title: Licenze di pre-generazione
 uuid: 31430753-11f1-4ce5-b402-cf4279119a05
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '402'
+ht-degree: 0%
 
 ---
 
@@ -16,9 +19,9 @@ Durante la generazione di una licenza Leaf, i metadati del contenuto devono esse
 
 Quando si genera una licenza Root, i metadati del contenuto possono essere specificati come descritto sopra. In alternativa, è possibile generare una licenza radice utilizzando un criterio ( `setSelectedPolicy()`) e l&#39;URL del server della licenza ( `setLicenseServerURL()`) invece dei metadati.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
->È necessario un URL del server licenze anche se non è presente un server licenze Adobe Access dal quale i client possono richiedere una licenza. In questo caso, l&#39;URL del server licenze deve specificare un URL che identifica l&#39;emittente della licenza.
+>È necessario un URL del server licenze anche se non è presente  server licenze di accesso Adobe dal quale i client possono richiedere una licenza. In questo caso, l&#39;URL del server licenze deve specificare un URL che identifica l&#39;emittente della licenza.
 
 Se il criterio utilizza il concatenamento licenze avanzato, è necessario specificare una credenziale del server licenze per decrittografare la chiave di crittografia principale nel criterio ( `setRootKeyRetrievalInfo()`).
 
