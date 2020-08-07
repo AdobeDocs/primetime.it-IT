@@ -5,7 +5,10 @@ seo-title: Primetime e metadati del server
 title: Primetime e metadati del server
 uuid: 314f14c0-4da4-4da6-96f9-5a5ffea22a99
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '443'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 TVSDK supporta la risoluzione e l&#39;inserimento di annunci per VOD e flussi live/lineari.
 
->[!NOTE] {othertype=&quot;Prequisite&quot;}
+>[!NOTE]
 >
 >Prima di includere la pubblicità nei contenuti video, fornite le seguenti informazioni sui metadati:
 >
@@ -22,6 +25,7 @@ TVSDK supporta la risoluzione e l&#39;inserimento di annunci per VOD e flussi li
 >* Il vostro `zoneID`, che identifica la vostra società o il vostro sito Web.
 >* Il dominio del server di annunci, che specifica il dominio del server di annunci assegnato.
 >* Altri parametri di targeting.
+
 >
 
 
@@ -78,7 +82,7 @@ Per i contenuti live, TVSDK utilizza i metadati/suggerimenti presenti nel manife
 
 L’applicazione deve indicare a TVSDK se il contenuto è live o VOD specificando il `PTAdSignalingMode`.
 
-Per un flusso FER, il server Adobe Primetime ad Decioning non deve fornire l&#39;elenco delle interruzioni pubblicitarie che devono essere inserite nella timeline prima di avviare la riproduzione. Questo è il processo tipico per il contenuto VOD. Al contrario, specificando una diversa modalità di segnalazione, TVSDK legge tutti i cue point dal manifesto FER e va al server di annunci per ogni cue point per richiedere un&#39;interruzione annuncio. Questo processo è simile al contenuto live/DVR.
+Per un flusso FER, il server di gestione annunci  Adobe Primetime non deve fornire l&#39;elenco delle interruzioni pubblicitarie che devono essere inserite nella timeline prima di avviare la riproduzione. Questo è il processo tipico per il contenuto VOD. Al contrario, specificando una diversa modalità di segnalazione, TVSDK legge tutti i cue point dal manifesto FER e va al server di annunci per ogni cue point per richiedere un&#39;interruzione annuncio. Questo processo è simile al contenuto live/DVR.
 
 Oltre a ogni richiesta associata a un cue point, TVSDK invia una richiesta aggiuntiva per annunci pre-roll.
 
