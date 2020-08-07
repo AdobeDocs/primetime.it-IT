@@ -5,7 +5,10 @@ seo-title: Regole firewall
 title: Regole firewall
 uuid: 309b35b5-8c0a-4cd7-9289-b6b035955697
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '383'
+ht-degree: 0%
 
 ---
 
@@ -41,7 +44,7 @@ Gli utenti esterni possono accedere ai seguenti URL utilizzando il firewall este
      <li id="li_01B2E17BF4DB456383FD6E18E9DE28F5"><span class="filepath"> /flashaccess/authn/v5/*</span> </li> 
      <li id="li_096D349CCD7945B387CB80C3E99063C7"><span class="filepath"> /flashaccess/authn/v6/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Per autenticare gli utenti. </p> <p>Questo URL deve essere accessibile se utilizzate le API client Adobe Primetime DRM per l'autenticazione dell'utente. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Per autenticare gli utenti. </p> <p>Questo URL deve essere accessibile se utilizzate  API client Adobe Primetime DRM per l'autenticazione dell'utente. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -90,7 +93,7 @@ Gli utenti esterni possono accedere ai seguenti URL utilizzando il firewall este
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /edcws/services/urn:EDCLicenseService/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL del servizio Web LiveCycle Rights Management ES. Se il contenuto è stato pubblicato utilizzando una versione precedente di FMRMS, questo URL consente ai client meno recenti di connettersi al server. A questi client viene richiesto di eseguire l'aggiornamento ad Adobe Primetime DRM. </p> <p class="- topic/p ">Nota: Questo URL deve usare SSL (HTTPS). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">LiveCycle Rights Management ES URL servizio Web. Se il contenuto è stato pubblicato utilizzando una versione precedente di FMRMS, questo URL consente ai client meno recenti di connettersi al server. A questi client viene richiesto di effettuare l'aggiornamento a  Adobe Primetime DRM. </p> <p class="- topic/p ">Nota: Questo URL deve usare SSL (HTTPS). </p> </td> 
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "> 
@@ -103,13 +106,13 @@ Gli utenti esterni possono accedere ai seguenti URL utilizzando il firewall este
  </tbody> 
 </table>
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Il firewall interno dovrebbe consentire solo le connessioni al server licenze DRM Primetime attraverso il proxy inverso e solo agli URL nella tabella. Per migliorare la scalabilità, utilizzate HTTP per le connessioni tra il proxy inverso e il DRM di Primetime.
 
 ## URL in uscita {#section_FFF9F7BB353149F4A27F8788E9934A48}
 
-Gli URL in uscita consentono al server licenze di scaricare i CRL da Adobe.
+Gli URL in uscita consentono al server licenze di scaricare i CRL da  Adobe.
 
 Elenco degli URL in uscita che potete usare:
 
