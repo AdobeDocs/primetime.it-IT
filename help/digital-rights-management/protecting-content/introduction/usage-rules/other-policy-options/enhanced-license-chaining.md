@@ -3,7 +3,10 @@ seo-title: Concatenamento delle licenze migliorato
 title: Concatenamento delle licenze migliorato
 uuid: 5e4e825a-de84-4ab2-a652-02cc03153957
 translation-type: tm+mt
-source-git-commit: 53654b740b03c6a79394d30704a41186d4655237
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '263'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Primetime DRM 2.0 supporta la concatenazione delle licenze in cui sia le licenze
 
 Se si desidera abilitare il concatenamento avanzato delle licenze, è necessario assegnare una chiave di crittografia principale a un criterio DRM di Primetime. La chiave di crittografia principale viene utilizzata per eseguire un binding crittografato della licenza foglia con la licenza radice.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Il concatenamento delle licenze migliorato è supportato dai client Primetime DRM versione 3.0 o successiva. Se un client meno recente richiede una licenza per il contenuto che supporta il concatenamento avanzato delle licenze, il server licenze può comunque rilasciare una licenza a questo client utilizzando il concatenamento delle licenze supportato da Primetime DRM 2.0.
 
