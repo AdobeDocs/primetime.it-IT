@@ -3,7 +3,10 @@ seo-title: 'Strumenti della riga di comando per la creazione di pacchetti di con
 title: 'Strumenti della riga di comando per la creazione di pacchetti di contenuti e di elenchi di revoche '
 uuid: 2c740521-2004-4320-88e1-118b84e80e31
 translation-type: tm+mt
-source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '458'
+ht-degree: 0%
 
 ---
 
@@ -25,9 +28,9 @@ L&#39;implementazione di riferimento include i seguenti strumenti della riga di 
 I requisiti per l&#39;utilizzo degli strumenti della riga di comando disponibili nelle implementazioni di riferimento sono i seguenti:
 
 * Tutti gli strumenti della riga di comando richiedono Java 1.5 o versione successiva.
-* Credenziali del Packager e del License Server (certificato e password) emesse da Adobe. Per crittografare e firmare i file video, per firmare gli elenchi Aggiornamento e Revoca criteri e per pregenerare le licenze sono necessarie delle credenziali.
+* Credenziali Packager e License Server (certificato e password) emesse dal Adobe . Per crittografare e firmare i file video, per firmare gli elenchi Aggiornamento e Revoca criteri e per pregenerare le licenze sono necessarie delle credenziali.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >A causa di un bug Java, gli argomenti utilizzati sulla riga di comando (quali nomi di file, nomi di criteri o descrizioni) devono utilizzare solo caratteri del set di caratteri predefinito del sistema operativo.
 
@@ -44,8 +47,8 @@ Il file di configurazione utilizza il formato di file delle proprietà Java. Se 
 
 Impostate i valori delle proprietà nel file di configurazione prima di eseguire gli strumenti. Per alcuni strumenti della riga di comando, è possibile impostare i valori di alcune opzioni tramite la riga di comando o il file di configurazione. In questi casi, i valori impostati tramite la riga di comando hanno la precedenza su qualsiasi valore presente nel file di configurazione.
 
-## Installazione degli strumenti della riga di comando {#installing-the-command-line-tools}
+## Installazione degli strumenti della riga di comando  {#installing-the-command-line-tools}
 
 È possibile copiare i file necessari dalla [!DNL \Reference Implementation\Command Line Tools] directory del DVD, che contiene il file di [!DNL flashaccesstools.properties] configurazione predefinito, e una [!DNL libs] directory, che contiene i file JAR per gli strumenti.
 
-La [!DNL samples] directory contiene diversi file sorgente Java di esempio che dimostrano l’utilizzo delle API SDK di Adobe Access. Per creare ed eseguire gli esempi, utilizzare lo script [!DNL build-samples.xml] Ant.
+La [!DNL samples] directory contiene diversi file sorgente Java di esempio che dimostrano l’utilizzo delle API SDK di accesso al Adobe . Per creare ed eseguire gli esempi, utilizzare lo script [!DNL build-samples.xml] Ant.
