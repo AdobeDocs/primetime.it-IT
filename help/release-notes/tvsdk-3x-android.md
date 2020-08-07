@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: e467153067bb10107054a5d4166b1d9c2ac646ab
 workflow-type: tm+mt
 source-wordcount: '5418'
 ht-degree: 0%
@@ -28,8 +28,6 @@ Il lettore di riferimento Android è incluso con Android TVSDK nella directory s
 >
 >1. Scaricate VideoHeartbeat.jar da [https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) (libreria VideoHeartbeat per Android v2.0.0)
 >1. Estrai VideoHeartbeat.jar nella cartella libs/.
->
-
 
 
 TVSDK per Android offre molti miglioramenti in termini di prestazioni rispetto alle versioni precedenti. Fornisce un&#39;esperienza di visualizzazione di alta qualità e include tutte le funzioni della versione 1.4, ad eccezione del supporto Multi-CDN.
@@ -145,9 +143,9 @@ L&#39;annuncio pre-roll, se disponibile, viene riprodotto, e poi il contenuto vi
 
 * **Giusto in Time - La risoluzione di annunci più vicini ai marcatori** Lazy Ad Resolving ora risolve ogni interruzione di annuncio in modo indipendente. Precedentemente, la risoluzione degli annunci era un approccio in due fasi: i pre-roll venivano risolti prima dell&#39;avvio della riproduzione e tutti gli slot di rollover intermedi/post combinati dopo l&#39;avvio della riproduzione. Grazie a questa funzione avanzata, ogni interruzione di annuncio viene ora risolta in un momento specifico prima del cue point dell&#39;annuncio.
 
-> [!NOTE]
+>[!NOTE]
 >
-> Lazy Ad Resolving ora è stato modificato per essere disattivato per impostazione predefinita, e deve essere attivato esplicitamente.
+>Lazy Ad Resolving ora è stato modificato per essere disattivato per impostazione predefinita, e deve essere attivato esplicitamente.
 
 Viene aggiunta una nuova API `AdvertisingMetadata::setDelayAdLoadingTolerance` per ottenere la tolleranza di caricamento ritardata degli annunci associata a questi metadati della pubblicità.\
 La ricerca è ora consentita subito dopo la PREPARAZIONE, la ricerca di nuove interruzioni di annuncio darà luogo a una risoluzione immediata prima del completamento della ricerca.\
@@ -189,11 +187,11 @@ TVSDK ora annulla il download in corso del segmento, se necessario, e passa in m
 
    * Il secondo annuncio viene riprodotto per la durata rimanente (20 sec) seguita dal terzo annuncio.
 
-   * I tracciatori annunci per l&#39;annuncio parziale riprodotto (secondo annuncio) non vengono attivati. I tracciatori solo per il terzo annuncio vengono attivati.
+   * I tracciatori annunci per l’annuncio parziale riprodotto (secondo annuncio) non vengono attivati. I tracciatori solo per il terzo annuncio vengono attivati.
 
 * **Proteggere il caricamento di annunci tramite HTTPS**
 
-   Adobe Primetime fornisce un&#39;opzione per richiedere la prima chiamata a server di annunci primetime e CRS attraverso https.
+    Adobe Primetime fornisce un&#39;opzione per richiedere la prima chiamata a server di annunci primetime e CRS attraverso https.
 
 * **Aggiunto AdSystem e Creative Id alle richieste CRS**
 
@@ -277,9 +275,9 @@ Quando TVSDK apre una connessione, richiede al server una connessione *keep-aliv
 
 * **Riproduzione dei contenuti MP4 -** le clip brevi MP4 non devono essere transcodificate per essere riprodotte in TVSDK.
 
-   > [!NOTE]
+   >[!NOTE]
    >
-   > Per la riproduzione MP4 non sono supportati lo switching ABR, la riproduzione a trucco, l&#39;inserimento di annunci, la rilegatura audio tardiva e la segmentazione secondaria.
+   >Per la riproduzione MP4 non sono supportati lo switching ABR, la riproduzione a trucco, l&#39;inserimento di annunci, la rilegatura audio tardiva e la segmentazione secondaria.
 
 * **Riproduzione dei mattoni con bitrate adattivo (ABR) -** Questa funzione consente a TVSDK di passare da un flusso all&#39;altro in modalità di riproduzione a trucco. Potete utilizzare profili non iFrame per eseguire la riproduzione a velocità più basse.
 
@@ -291,12 +289,13 @@ Quando TVSDK apre una connessione, richiede al server una connessione *keep-aliv
 
 * **Protezione dei contenuti**
 
-   * **Protezione dell&#39;uscita basata sulla risoluzione - Questa funzione associa le restrizioni di riproduzione a risoluzioni specifiche, fornendo controlli DRM più precisi.**
+   * **Protezione dell&#39;output basata sulla risoluzione - Questa funzione associa le restrizioni di riproduzione a risoluzioni specifiche, fornendo controlli DRM più precisi.**
 
 * **Supporto dei flussi di lavoro**
 
-   * **Direct Billing Integration -** invia le metriche di fatturazione al back-end Adobe  Analytics, certificato da Adobe Primetime per i flussi utilizzati dal cliente.
-   TVSDK raccoglie automaticamente le metriche, rispettando il contratto di vendita del cliente per generare rapporti di utilizzo periodici richiesti a scopo di fatturazione. A ogni evento di inizio flusso, TVSDK utilizza l&#39;API di inserimento dati Adobe  Analytics per inviare metriche di fatturazione come il tipo di contenuto, i flag abilitati per l&#39;inserimento di annunci e i flag abilitati per l&#39;abilitazione di drm, in base alla durata del flusso fatturabile, alla suite di rapporti di proprietà di Adobe  Analytics Primetime. Ciò non interferisce con le suite di rapporti Adobe  Analytics o le chiamate server del cliente, né viene incluso in esse. Su richiesta, questo rapporto sull&#39;utilizzo della fatturazione viene inviato periodicamente ai clienti. Questa è la prima fase della funzione di fatturazione che supporta solo la fatturazione dell&#39;utilizzo. Può essere configurato in base al contratto di vendita utilizzando le API descritte nella documentazione. Questa funzione è abilitata per impostazione predefinita. Per disattivare questa funzione, fare riferimento al campione del lettore di riferimento.
+   * **Direct Billing Integration -** invia le metriche di fatturazione al back-end Adobe Analytics , certificato da  Adobe Primetime per i flussi utilizzati dal cliente.
+
+   TVSDK raccoglie automaticamente le metriche, rispettando il contratto di vendita del cliente per generare rapporti di utilizzo periodici richiesti a scopo di fatturazione. In ogni evento di inizio flusso, TVSDK utilizza l&#39;API di inserimento dati Adobe Analytics  per inviare metriche di fatturazione come il tipo di contenuto, i flag abilitati per l&#39;inserimento di annunci e i flag abilitati per l&#39;abilitazione di drm, in base alla durata del flusso fatturabile, alla suite di rapporti di proprietà di Adobe Analytics Primetime . Ciò non interferisce con le suite di rapporti Adobe Analytics o le chiamate server  del cliente, né viene incluso in esse. Su richiesta, questo rapporto sull&#39;utilizzo della fatturazione viene inviato periodicamente ai clienti. Questa è la prima fase della funzione di fatturazione che supporta solo la fatturazione dell&#39;utilizzo. Può essere configurato in base al contratto di vendita utilizzando le API descritte nella documentazione. Questa funzione è abilitata per impostazione predefinita. Per disattivare questa funzione, fare riferimento al campione del lettore di riferimento.
 
    * **Supporto per il failover migliorato: sono state implementate** strategie aggiuntive per continuare la riproduzione senza interruzioni, nonostante gli errori dei server host, dei file playlist e dei segmenti.
 
@@ -309,7 +308,7 @@ Quando TVSDK apre una connessione, richiede al server una connessione *keep-aliv
 
 * **Analytics**
 
-   * **VHL 2.0 -** Si tratta dell&#39;ultima integrazione ottimizzata per Video Heartbeats Library (VHL) per la raccolta automatica dei dati di utilizzo per Adobe  Analytics. La complessità delle API è stata ridotta per semplificare l&#39;implementazione. Scaricate la libreria VHL [v2.0.0 per Android](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) ed estraete il file JAR nella cartella libs.
+   * **VHL 2.0 -** Questa è la più recente integrazione ottimizzata della libreria Video Heartbeat (VHL) per la raccolta automatica dei dati di utilizzo per  Adobe Analytics. La complessità delle API è stata ridotta per semplificare l&#39;implementazione. Scaricate la libreria VHL [v2.0.0 per Android](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) ed estraete il file JAR nella cartella libs.
 
 * **SizeAvaliableEventListener**
 
@@ -414,7 +413,7 @@ Nelle tabelle delle funzioni riportate di seguito, un &#39;Y&#39; indica che la 
 
 | Feature | Tipo di contenuto | HLS |
 |---|---|---|
-| Integrazione Adobe  Analytics VHL | VOD + Live | Y |
+| Integrazione  Adobe Analytics VHL | VOD + Live | Y |
 | Fatturazione | VOD + Live | Y |
 
 ## Problemi risolti {#resolved-issues}
@@ -468,7 +467,7 @@ Questa sezione fornisce un riepilogo del problema risolto nella release Android 
    * È stato risolto un problema specifico relativo agli eventi di tracciamento degli annunci.
 * ZD#37491 - Il codice di stato HTTP con metadati di errore non è presente.
    * È stato eseguito il processo di propagazione degli errori di rete più alti nello stack.
-* ZD#37808 - Consenti elenco Nuova intestazione personalizzata.
+* ZD#37808 -  Elenco consentiti Nuova intestazione personalizzata.
    * Supporto SSAI_TAG aggiunto come parte di questa correzione.
 * ZD#37622 - URISyntax Errori da specifici contenitori di annunci.
    * È stato risolto un problema relativo all&#39;arresto anomalo della riproduzione in streaming quando l&#39;app Android del cliente veniva servita di annunci che contenevano un % non codificato
@@ -543,7 +542,7 @@ Questa sezione fornisce un riepilogo del problema risolto nella release Android 
 
    * È stato corretto lo scenario per evitare l’arresto anomalo.
 
-* ZD #32256 - Problema di rotazione della licenza e rotazione della chiave - Adobe Access
+* ZD #32256 - Problema di rotazione della licenza e rotazione della chiave - Accesso  Adobe
 
    * È stata corretta l&#39;inizializzazione dei segmenti con i metadati DRM per il contenuto SampleAES. Funziona perfettamente con i contenuti AES128.
 
@@ -622,7 +621,7 @@ WebViewDebbuging è impostato su False per impostazione predefinita. Per abilita
 * Zendesk#32794-1080P flusso di risoluzione non riprodotto su Android
 
    abbiamo modificato i metodi SizeAvailableEvent e Precedentemente getHeight() e getWidth() di SizeAvailableEvent in 2.5, utilizzati per restituire l&#39;altezza e la larghezza del frame, che sono stati restituiti dal formato multimediale. Ora restituisce rispettivamente l&#39;altezza e la larghezza di output restituiti dal decoder.
-* Arresti anomali di Flash Player per Zendesk #19359 a causa della posizione dell&#39;attributo #EXT-X-FAXS-CM nel manifesto a livello di set.
+* Arresti anomali del Flash Player Zendesk #19359 a causa della posizione dell&#39;attributo #EXT-X-FAXS-CM nel manifesto a livello di set.
 
    Il tag #EXT-X-FAXS-CM deve essere sempre visualizzato nella playlist principale prima che singoli bitrate o segmenti vengano visualizzati nella playlist.
 
@@ -640,7 +639,7 @@ WebViewDebbuging è impostato su False per impostazione predefinita. Per abilita
 
    La stringa agente utente non verrà più troncata dopo 128 caratteri.
 
-   La stringa di versione di Adobe Primetime viene aggiunta all&#39;agente utente del sistema.
+    stringa di versione Adobe Primetime viene aggiunta all&#39;agente utente del sistema.
 
 * Zendesk #30809 L&#39;evento SEEK_END mancante impedisce la transizione dell&#39;app a uno stato di riproduzione.
 * Il colore &#39;Cyan&#39; dei sottotitoli codificati Zendesk #30415 è ora più scuro del blu (turchese) rispetto alle precedenti versioni TVSDK di Primetime.
@@ -759,4 +758,4 @@ Questa versione di TVSDK presenta i seguenti problemi:
 * [Documento](https://help.adobe.com/en_US/primetime/api/psdk/cpp_3.5/namespaces.html) API TVSDK Android C++ - Ogni classe Java ha una classe C++ corrispondente, e la documentazione C++ contiene più materiale esplicativo rispetto a Javadocs, pertanto consulta la documentazione C++ per una migliore comprensione dell&#39;API Java.
 * [Guida alla migrazione a TVSDK da 1.4 a 2.5 per Android (Java)](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-25-android.html)
 * Per gestire gli scenari di attivazione/disattivazione della schermata, vedete il `Application_Changes_for_Screen_On_Off.pdf` file incluso nella build.
-* Consulta la documentazione completa della guida nella pagina Informazioni e supporto [di](https://helpx.adobe.com/support/primetime.html) Adobe Primetime.
+* Consulta la documentazione completa della guida [pagina Informazioni e supporto](https://helpx.adobe.com/support/primetime.html) di Adobe Primetime.
