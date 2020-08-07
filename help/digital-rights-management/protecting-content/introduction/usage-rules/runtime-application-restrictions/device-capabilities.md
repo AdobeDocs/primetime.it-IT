@@ -5,7 +5,10 @@ seo-title: Funzionalità del dispositivo necessarie per riprodurre contenuto pro
 title: Funzionalità del dispositivo necessarie per riprodurre contenuto protetto
 uuid: 1490711b-65d9-4716-8779-ae1da7d2c82c
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '131'
+ht-degree: 0%
 
 ---
 
@@ -39,9 +42,9 @@ I seguenti attributi possono identificare le funzionalità del dispositivo:
  </tbody> 
 </table>
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
->Questa regola di utilizzo è supportata dai client Adobe Primetime DRM versione 2.0.2 e successive. Il comportamento dei client meno recenti dipende dalla versione client minima supportata dal server licenze.
+>Questa regola di utilizzo è supportata  client Adobe Primetime DRM versione 2.0.2 e successive. Il comportamento dei client meno recenti dipende dalla versione client minima supportata dal server licenze.
 >
 >Consultate Versione [client](../../../../protecting-content/setting-up-the-sdk/setup-dev-env.md)minima.
 
