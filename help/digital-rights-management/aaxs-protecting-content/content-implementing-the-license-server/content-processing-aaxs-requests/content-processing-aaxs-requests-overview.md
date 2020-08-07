@@ -3,7 +3,10 @@ seo-title: Panoramica
 title: Panoramica
 uuid: 870c32f5-1119-4fec-abed-25e51dd1ebe3
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '312'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ La classe di base utilizzata per gestire l&#39;interazione singola richiesta/ris
 
 Se la richiesta ha esito positivo, impostate i dati della risposta; altrimenti invocare `RequestMessageBase.setErrorData()` in caso di errore. Termina sempre l&#39;implementazione richiamando il `close()` metodo (si consiglia di `close()` chiamarlo nel `finally` blocco di un&#39; `try` istruzione). Per un esempio di come richiamare il gestore, consultate la documentazione di riferimento `MessageHandlerBase` API.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Il codice di stato HTTP 200 (OK) deve essere inviato in risposta a tutte le richieste elaborate dal gestore. Se non è stato possibile creare il gestore a causa di un errore del server, il server potrebbe rispondere con un altro codice di stato, ad esempio 500 (Errore interno del server).
 
