@@ -3,7 +3,10 @@ seo-title: Requisiti per la sincronizzazione
 title: Requisiti per la sincronizzazione
 uuid: 19a6ee7e-9580-48bb-a3a6-ff2cedcc796a
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '161'
+ht-degree: 0%
 
 ---
 
@@ -18,6 +21,6 @@ Il comportamento di sincronizzazione è definito utilizzando i seguenti parametr
 * **Intervallo** di arresto rigido - (facoltativo). Disattiva la riproduzione se la sincronizzazione non ha avuto esito positivo nel tempo specificato.
 * **Forza probabilità** sincronizzazione - (facoltativo). Probabilità con cui il client deve inviare un messaggio di sincronizzazione prima del successivo intervallo di inizio.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Questa regola di utilizzo è supportata dai client DRM Primetime versione 3.0 o successiva. Il comportamento dei client meno recenti dipende dalla versione client minima supportata dal server licenze.
