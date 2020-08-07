@@ -3,7 +3,10 @@ seo-title: Regole firewall
 title: Regole firewall
 uuid: a5667030-c4d0-42e3-b56e-20a12c903954
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '365'
+ht-degree: 0%
 
 ---
 
@@ -34,7 +37,7 @@ Configurate il firewall esterno in modo da esporre solo gli URL per la funzional
      <li id="li-ED3C15EB4D194FFE99954BDB7D5C1E41"><span class="filepath"> /flashaccess/authn/v4/*</span> </li> 
      <li id="li-4DD6CBBE939F4E6EABA474E3DCCBD893"><span class="filepath"> /flashaccess/authn/v5/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL per l’autenticazione dell’utente. Questo URL deve essere accessibile solo se utilizzate le API client Adobe Access per eseguire l'autenticazione utente. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL per l’autenticazione dell’utente. Questo URL deve essere accessibile solo se utilizzate  API client di accesso Adobe per eseguire l'autenticazione dell'utente. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -75,11 +78,11 @@ Configurate il firewall esterno in modo da esporre solo gli URL per la funzional
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/headerconversion/v1/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL da utilizzare per convertire i metadati DRM FMRMS 1.x nei metadati DRM di Adobe Access. </p> <p class="- topic/p ">Nota: <i class="+ topic/ph hi-d/i ">Questo URL deve utilizzare SSL (HTTPS)</i>. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL da utilizzare dal client per convertire i metadati DRM FMRMS 1.x in metadati DRM di accesso  Adobe. </p> <p class="- topic/p ">Nota: <i class="+ topic/ph hi-d/i ">Questo URL deve utilizzare SSL (HTTPS)</i>. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /edcws/services/urn:EDCLicenseService/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL del servizio Web LiveCycle Rights Management ES. Se il contenuto è stato pubblicato con una versione precedente di FMRMS, questo URL consente ai client meno recenti di connettersi al server e ricevere la richiesta di effettuare l'aggiornamento ad Adobe Access. </p> <p class="- topic/p ">Nota: <i class="+ topic/ph hi-d/i ">Questo URL deve utilizzare SSL (HTTPS)</i>. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">LiveCycle Rights Management ES URL servizio Web. Se il contenuto è stato pubblicato con una versione precedente di FMRMS, questo URL consente ai client meno recenti di connettersi al server e viene richiesto di effettuare l'aggiornamento a  accesso al Adobe. </p> <p class="- topic/p ">Nota: <i class="+ topic/ph hi-d/i ">Questo URL deve utilizzare SSL (HTTPS)</i>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/lreturn/v5</span> </td> 
@@ -88,13 +91,13 @@ Configurate il firewall esterno in modo da esporre solo gli URL per la funzional
  </tbody> 
 </table>
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
->Il firewall interno deve consentire solo le connessioni al server licenze di Adobe Access tramite il proxy inverso e solo agli URL elencati sopra. Per migliorare la scalabilità, le connessioni tra il proxy inverso e Adobe Access avverranno attraverso HTTP.
+>Il firewall interno deve consentire solo le connessioni al server delle licenze di accesso al Adobe  attraverso il proxy inverso e solo agli URL elencati sopra. Per migliorare la scalabilità, le connessioni tra il proxy inverso e  accesso al Adobe avverranno attraverso HTTP.
 
 ## URL in uscita {#section-FFF9F7BB353149F4A27F8788E9934A48}
 
-Il server licenze richiede l&#39;accesso tramite firewall per scaricare i seguenti CRL da Adobe:
+Il server licenze richiede l&#39;accesso attraverso il firewall per scaricare i seguenti CRL da  Adobe:
 
 * <span></span>https://crl2.adobe.com/Adobe/FlashAccessRootCA.crl
 * <span></span>https://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl
