@@ -3,9 +3,9 @@ seo-title: Esecuzione del server DRM per lo streaming protetto
 title: Esecuzione del server DRM per lo streaming protetto
 uuid: 9bbe211d-268b-43c2-9e55-7ce62de40d30
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '804'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Esecuzione del server DRM per lo streaming protetto {#running-the-drm-server-for-protected-streaming}
 
-Prima di avviare Adobe Primetime DRM Server for Protected Streaming, è consigliabile verificare la validità delle impostazioni nei file di configurazione.
+Prima di avviare  Adobe Primetime DRM Server for Protected Streaming, si consiglia di verificare la validità delle impostazioni nei file di configurazione.
 
 È possibile verificare la validità delle impostazioni utilizzando le utility fornite con il server licenze. (vedere Convalida della *configurazione* in questa guida.
 
@@ -23,9 +23,9 @@ Dopo l&#39;avvio del server, è necessario verificare che sia stato configurato 
 
 ## File di registro {#log-files}
 
-I file di registro generati da Adobe Primetime DRM Server for Protected Streaming application si trovano nella directory specificata da LicenseServer.LogRoot.
+I file di registro generati dal server DRM  Adobe Primetime per l&#39;applicazione di streaming protetto si trovano nella directory specificata da LicenseServer.LogRoot.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Se i file di registro correnti vengono eliminati o spostati durante l&#39;esecuzione del server, il file di registro potrebbe non essere ricreato. È pertanto possibile eliminare alcune informazioni di registro.
 
@@ -50,7 +50,7 @@ Le directory di registro sono strutturate per semplificare l&#39;utilizzo. La di
 
 ### File di registro globale {#section_1CFA90748142439C9F3BE380969539DA}
 
-Il file di registro globale, [!DNL flashaccess-global.log], si trova in *LicenseServer.LogRoot*. Il registro può includere messaggi di registro che l&#39;SDK Java DRM di Adobe Primetime o i messaggi di registro potrebbero essere stati generati durante il periodo in cui il server è stato inizializzato.
+Il file di registro globale, [!DNL flashaccess-global.log], si trova in *LicenseServer.LogRoot*. Il registro può includere messaggi di registro che l&#39;SDK Java  Adobe Primetime DRM o i messaggi di registro possono aver generato durante il momento in cui il server è stato inizializzato.
 
 ### File di registro delle partizioni {#section_5660137CD6AA40519E72A4315534846B}
 
@@ -84,4 +84,4 @@ In assenza di una versione memorizzata nella cache, il caricamento della configu
 
 ### Aggiornamento del file di configurazione del tenant {#section_71624DB8DF28480F84F34F0FF7FD4365}
 
-È possibile modificare tutti i valori specificati nel [!DNL flashaccess-tenant.xml] file in qualsiasi momento. Le modifiche avranno effetto alla successiva ricarica del file di configurazione da parte del server. Inoltre, il server verifica la presenza di eventuali modifiche in tutti i file di credenziali ( [!DNL .pfx]) e di packager per consentire file di certificati di elenco a cui viene fatto riferimento nel file di configurazione del tenant.
+È possibile modificare tutti i valori specificati nel [!DNL flashaccess-tenant.xml] file in qualsiasi momento. Le modifiche avranno effetto alla successiva ricarica del file di configurazione da parte del server. Inoltre, il server verifica la presenza di eventuali modifiche in tutti i file di credenziali ( [!DNL .pfx]) e di certificati di elenco consentiti  packager a cui viene fatto riferimento nel file di configurazione del tenant.
