@@ -5,7 +5,10 @@ seo-title: Richiesta/risposta token licenza FairPlay
 title: Richiesta/risposta token licenza FairPlay
 uuid: 10d4a760-8895-4fb3-8288-1c3a640df587
 translation-type: tm+mt
-source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '829'
+ht-degree: 5%
 
 ---
 
@@ -45,7 +48,7 @@ L&#39;interfaccia del token di licenza FairPlay fornisce servizi di produzione e
 
 **Parametri query di richiesta**
 
-**Tabella 4: Parametri query token**
+**Tabella 3: Parametri query token**
 
 | Parametro query | Descrizione | Obbligatorio |
 |--- |--- |--- |
@@ -97,8 +100,8 @@ L&#39;interfaccia del token di licenza FairPlay fornisce servizi di produzione e
 | **Codice di stato HTTP** | **Descrizione** | **Content-Type** | **Il corpo dell&#39;entità contiene** |
 |---|---|---|---|
 | `200 OK` | Nessun errore. | `text/uri-list` | URL acquisizione licenza + token |
-| `400 Bad Request` | Argomenti non validi | `text/html` os `application/json` | Descrizione errore |
-| `401 Unauthorized` | Autenticazione non riuscita | `text/html` os `application/json` | Descrizione errore |
+| `400 Bad Request` | Argomenti non validi | `text/html` o `application/json` | Descrizione errore |
+| `401 Unauthorized` | Autenticazione non riuscita | `text/html` o `application/json` | Descrizione errore |
 | `404 Not found` | URL non valido | `text/html` o `application/json` | Descrizione errore |
 | `50x Server Error` | Errore del server | `text/html` o `application/json` | Descrizione errore |
 
