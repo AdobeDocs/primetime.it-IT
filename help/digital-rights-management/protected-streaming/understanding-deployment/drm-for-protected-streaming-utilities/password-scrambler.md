@@ -1,18 +1,21 @@
 ---
-description: L'utility Password Scrambler crittografa una password per i file di configurazione Adobe Primetime DRM Server for Protected Streaming.
-seo-description: L'utility Password Scrambler crittografa una password per i file di configurazione Adobe Primetime DRM Server for Protected Streaming.
+description: L'utility Password Scrambler crittografa una password per i file di configurazione Adobe Primetime DRM Server per lo streaming protetto .
+seo-description: L'utility Password Scrambler crittografa una password per i file di configurazione Adobe Primetime DRM Server per lo streaming protetto .
 seo-title: Scrambler password
 title: Scrambler password
 uuid: 56df0f49-f3fd-464d-b4ba-25e1b497158a
 translation-type: tm+mt
-source-git-commit: 105dedcfe47a5f454a067e66a95827e638290742
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '112'
+ht-degree: 0%
 
 ---
 
 
 # Scrambler password {#password-scrambler}
 
-L&#39;utility Password Scrambler crittografa una password per i file di configurazione Adobe Primetime DRM Server for Protected Streaming.
+L&#39;utility Password Scrambler crittografa una password per i file di configurazione Adobe Primetime DRM Server per lo streaming protetto .
 
 Per eseguire lo scorrimento, digitare:
 
@@ -43,6 +46,6 @@ Encrypted password:
 
 Tutte le password specificate nei [!DNL flashaccess-global.xml] file e [!DNL flashaccess-tenant.xml] devono essere crittografate.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >L&#39;utility Password Scrambler nel server DRM di Primetime per lo streaming protetto non è intercambiabile con lo scanner fornito con il server delle licenze di implementazione di riferimento.
