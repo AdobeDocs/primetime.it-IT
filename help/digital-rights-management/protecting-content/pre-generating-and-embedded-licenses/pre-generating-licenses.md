@@ -1,18 +1,21 @@
 ---
-description: Se utilizzate Adobe Primetime DRM Professional, potete generare in anticipo licenze e licenze da incorporare nel contenuto. Questa funzione può essere combinata con la Concatenazione licenza avanzata, in modo che una licenza Leaf sia pregenerata e incorporata nel contenuto, e il client possa richiedere una licenza Root (associata a un computer o a un dominio) da un server licenze. In alternativa, le applicazioni client possono implementare un flusso di lavoro in cui il dispositivo si preregistra con un server, il server pre-genera licenze associate a tale dispositivo e il client recupera le licenze da un semplice server Web HTTP.
-seo-description: Se utilizzate Adobe Primetime DRM Professional, potete generare in anticipo licenze e licenze da incorporare nel contenuto. Questa funzione può essere combinata con la Concatenazione licenza avanzata, in modo che una licenza Leaf sia pregenerata e incorporata nel contenuto, e il client possa richiedere una licenza Root (associata a un computer o a un dominio) da un server licenze. In alternativa, le applicazioni client possono implementare un flusso di lavoro in cui il dispositivo si preregistra con un server, il server pre-genera licenze associate a tale dispositivo e il client recupera le licenze da un semplice server Web HTTP.
+description: Se utilizzate  Adobe Primetime DRM Professional, potete pregenerare licenze e incorporare licenze nel contenuto. Questa funzione può essere combinata con la Concatenazione licenza avanzata, in modo che una licenza Leaf sia pregenerata e incorporata nel contenuto, e il client possa richiedere una licenza Root (associata a un computer o a un dominio) da un server licenze. In alternativa, le applicazioni client possono implementare un flusso di lavoro in cui il dispositivo si preregistra con un server, il server pre-genera licenze associate a tale dispositivo e il client recupera le licenze da un semplice server Web HTTP.
+seo-description: Se utilizzate  Adobe Primetime DRM Professional, potete pregenerare licenze e incorporare licenze nel contenuto. Questa funzione può essere combinata con la Concatenazione licenza avanzata, in modo che una licenza Leaf sia pregenerata e incorporata nel contenuto, e il client possa richiedere una licenza Root (associata a un computer o a un dominio) da un server licenze. In alternativa, le applicazioni client possono implementare un flusso di lavoro in cui il dispositivo si preregistra con un server, il server pre-genera licenze associate a tale dispositivo e il client recupera le licenze da un semplice server Web HTTP.
 seo-title: Licenze di pre-generazione
 title: Licenze di pre-generazione
 uuid: aa7d5038-5a9b-40a2-a240-266622158b43
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '704'
+ht-degree: 0%
 
 ---
 
 
 # Licenze di pre-generazione {#pre-generating-licenses}
 
-Se utilizzate Adobe Primetime DRM Professional, potete generare in anticipo licenze e licenze da incorporare nel contenuto. Questa funzione può essere combinata con la Concatenazione licenza avanzata, in modo che una licenza Leaf sia pregenerata e incorporata nel contenuto, e il client possa richiedere una licenza Root (associata a un computer o a un dominio) da un server licenze. In alternativa, le applicazioni client possono implementare un flusso di lavoro in cui il dispositivo si preregistra con un server, il server pre-genera licenze associate a tale dispositivo e il client recupera le licenze da un semplice server Web HTTP.
+Se utilizzate  Adobe Primetime DRM Professional, potete pregenerare licenze e incorporare licenze nel contenuto. Questa funzione può essere combinata con la Concatenazione licenza avanzata, in modo che una licenza Leaf sia pregenerata e incorporata nel contenuto, e il client possa richiedere una licenza Root (associata a un computer o a un dominio) da un server licenze. In alternativa, le applicazioni client possono implementare un flusso di lavoro in cui il dispositivo si preregistra con un server, il server pre-genera licenze associate a tale dispositivo e il client recupera le licenze da un semplice server Web HTTP.
 
 Per generare in anticipo le licenze, è necessario utilizzare `com.adobe.flashaccess.sdk.license.pregen.LicenseFactory.getInstance()` per ottenere un&#39;istanza di `LicenseFactory`. È necessario specificare una credenziale Server licenze per firmare le licenze generate da questo factory. Questa classe supporta la generazione di licenze Leaf senza concatenamento licenze e licenze Leaf e Root con concatenamento [Enhanced](../../protecting-content/implementing-the-license-server/license-chaining/gen-enhanced-license-chaining.md).
 
@@ -20,9 +23,9 @@ Quando generate una licenza Foglia, dovete specificare i metadati di contenuto a
 
 Quando generate una licenza Root, dovete specificare i metadati del contenuto come descritto sopra. In alternativa, potete generare una licenza Root applicando un criterio DRM ( `setSelectedPolicy()`) e un URL del server delle licenze ( `setLicenseServerURL()`) invece dei metadati.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
->È richiesto un URL del server licenze anche se non è presente un server licenze Adobe Primetime DRM da cui i client possono richiedere una licenza. In questo caso, l&#39;URL del server licenze deve specificare un URL che identifica l&#39;emittente della licenza.
+>È richiesto un URL del server licenze anche se non è presente  server licenze Adobe Primetime DRM dal quale i client possono richiedere una licenza. In questo caso, l&#39;URL del server licenze deve specificare un URL che identifica l&#39;emittente della licenza.
 
 Se il criterio DRM utilizza il concatenamento licenze avanzato, è necessario specificare una credenziale Server licenze per decrittografare la chiave di crittografia principale nel criterio DRM ( `setRootKeyRetrievalInfo()`).
 
