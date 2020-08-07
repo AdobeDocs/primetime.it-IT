@@ -3,7 +3,10 @@ seo-title: Funzionalità del dispositivo necessarie per riprodurre contenuto pro
 title: Funzionalità del dispositivo necessarie per riprodurre contenuto protetto
 uuid: 16ed73d9-e02f-4c86-bf15-2d3e7122bf5a
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '132'
+ht-degree: 0%
 
 ---
 
@@ -37,7 +40,7 @@ Le funzionalità del dispositivo possono essere identificate dagli attributi spe
  </tbody> 
 </table>
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
->Questa regola di utilizzo è supportata dai client Adobe Access versione 2.0.2 e successive. Il comportamento dei client meno recenti dipende dalla versione client minima supportata dal server licenze. Vedere, Versione [client](../../../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md)minima.
+>Questa regola di utilizzo è supportata  client di accesso al Adobe versione 2.0.2 e successive. Il comportamento dei client meno recenti dipende dalla versione client minima supportata dal server licenze. Vedere, Versione [client](../../../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md)minima.
 
