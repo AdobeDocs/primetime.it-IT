@@ -3,9 +3,9 @@ seo-title: Controlli di protezione dell'uscita
 title: Controlli di protezione dell'uscita
 uuid: a0518392-cd33-4ef0-834c-f90145a9b421
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '652'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Sono disponibili le seguenti opzioni/livelli di applicazione:
 | **Nessuna protezione** — Per le uscite analogiche e digitali non viene applicata alcuna abilitazione alla protezione dell&#39;uscita. | SÌ | SÌ |
 | **Nessuna riproduzione** — Non consentire la riproduzione su dispositivi esterni per le uscite analogiche e digitali. | SÌ | SÌ |
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Sebbene queste regole siano applicate in modo coerente su tutte le piattaforme, è possibile attivare la protezione dell&#39;output solo in modo sicuro sulle piattaforme Windows. Su altre piattaforme, come Macintosh e Linux, non sono disponibili funzioni del sistema operativo supportate per le applicazioni di terze parti.
 
