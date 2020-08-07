@@ -3,7 +3,10 @@ seo-title: Livello di cifratura parziale
 title: Livello di cifratura parziale
 uuid: dbd9ce92-c829-4cad-9ac4-c57bd4f70345
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '279'
+ht-degree: 0%
 
 ---
 
@@ -12,7 +15,7 @@ source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
 
 Questa opzione di package specifica se tutti i frame, o solo un sottoinsieme di frame, devono essere codificati. Sono disponibili tre livelli di crittografia: bassa, media e alta.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >La cifratura parziale si applica alla traccia video solo nei file F4V/MP4.
 
