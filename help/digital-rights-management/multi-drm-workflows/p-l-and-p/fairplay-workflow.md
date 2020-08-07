@@ -5,7 +5,10 @@ seo-title: Flusso di lavoro Multi-DRM per FairPlay
 title: Flusso di lavoro Multi-DRM per FairPlay
 uuid: cd940a70-400c-435e-8322-55bd624164e1
 translation-type: tm+mt
-source-git-commit: 29149594c4b41956a091ef27093304e74ff15f2f
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '1514'
+ht-degree: 0%
 
 ---
 
@@ -65,7 +68,7 @@ Attenetevi a questa procedura per abilitare il servizio ExpressPlay per la prote
    1. Per completare la generazione del certificato, fai clic su **[!UICONTROL Continue]**.
    1. Dopo aver verificato di aver salvato la richiesta, fate clic **[!UICONTROL Generate]** per continuare.
 
-      >[!NOTE] {important=&quot;high&quot;}
+      >[!NOTE]
       >
       >È importante salvare una copia della richiesta e archiviarla in modo sicuro. *Se l’ASK è compromesso, non sarà più possibile proteggere i contenuti con lo streaming FairPlay.* Solo un (1) ASK è assegnato al team. Il valore non verrà più fornito e non sarà possibile recuperarlo in un secondo momento.
 
@@ -100,7 +103,7 @@ Ora potete creare applicazioni iOS o pagine HTML5 con la protezione del contenut
 
 ### Creazione di pacchetti di contenuti per FairPlay {#package-your-content-for-fairplay}
 
-Per creare pacchetti di contenuti, potete utilizzare Adobe Offline Packager o altri strumenti come il packager ExpressPlay Bento4.
+Per creare pacchetti di contenuti, potete utilizzare  Adobe Offline Packager o altri strumenti come ExpressPlay&#39;s Bento4 packager.
 
 I Packager preparano il video per la riproduzione (ad esempio, frammentando il file originale e inserendolo in un manifesto) e proteggono il video con la soluzione DRM scelta (in questo caso FairPlay):
 
@@ -113,7 +116,7 @@ I Packager preparano il video per la riproduzione (ad esempio, frammentando il f
 
 1. Create pacchetti per il contenuto.
 
-   Di seguito è riportato un esempio di package con Adobe Offline Packager. Il Packager utilizza un file di configurazione (ad esempio, [!DNL fairplay.xml]) simile al seguente:
+   Di seguito è riportato un esempio di package con  Adobe Offline Packager. Il Packager utilizza un file di configurazione (ad esempio, [!DNL fairplay.xml]) simile al seguente:
 
    ```
    <config>
@@ -141,6 +144,7 @@ I Packager preparano il video per la riproduzione (ad esempio, frammentando il f
    * `iv_file_path` - Questa è la posizione del file IV sul computer di imballaggio.
    * `key_url` - Il parametro URI del `EXT-X-KEY` tag del [!DNL .m3u8] file.
    * `content_id` - Valore predefinito.
+
    Come indicato nella documentazione [di](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=7)Packager, &quot;Come procedura ottimale, create un file di configurazione che contenga le opzioni comuni che desiderate utilizzare per generare gli output. Quindi, create l&#39;output fornendo opzioni specifiche come argomento della riga di comando.&quot;
 
    ```
@@ -158,9 +162,9 @@ I Packager preparano il video per la riproduzione (ad esempio, frammentando il f
 
 ### Impostazione dei criteri per FairPlay {#setting-policies-for-fairplay}
 
-Potete impostare criteri per il contenuto protetto da FairPlay utilizzando un server di adesione. Potete configurare il vostro account o utilizzare un server di adesione di esempio fornito da Adobe.
+Potete impostare criteri per il contenuto protetto da FairPlay utilizzando un server di adesione. Potete configurare un server di adesione di esempio personalizzato o utilizzare un server di adesione di Adobe .
 
-Adobe fornisce un server di adesione ExpressPlay di esempio (SEES) che mostra come eseguire l&#39;adesione in base all&#39; *ora* e il binding ** del dispositivo. Questo server di adesione di esempio è basato sui servizi ExpressPlay.
+ Adobe fornisce un server di adesione ExpressPlay (SEES) di esempio che mostra come eseguire l&#39;adesione in base all&#39; *ora* e il binding *del* dispositivo. Questo server di adesione di esempio è basato sui servizi ExpressPlay.
 
 [Server di riferimento: Sample ExpressPlay Entitlement Server (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md)
 
