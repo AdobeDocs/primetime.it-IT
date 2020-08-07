@@ -5,7 +5,10 @@ seo-title: Licenze
 title: Licenze
 uuid: 9f433d62-5609-4d88-95fd-c1e7c0f6aa75
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '393'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
 
 La licenza è il meccanismo principale mediante il quale gli utenti possono o meno riprodurre contenuti video protetti. A un utente legittimo (autorizzato) può essere rilasciata una licenza (una chiave) per decifrare e riprodurre uno specifico elemento del contenuto crittografato del suo fornitore di contenuti.
 
-Prima che l&#39;app o la pagina Web sul dispositivo dell&#39;utente finale possa riprodurre contenuto protetto da DRM, l&#39;app deve acquisire un token da un server di adesione o storefront che l&#39;utente, il cliente, utilizza. Adobe fornisce un server di riferimento di esempio a tale scopo: Server [di riferimento: Esempio di ExpressPlay Entitlement Server (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md).
+Prima che l&#39;app o la pagina Web sul dispositivo dell&#39;utente finale possa riprodurre contenuto protetto da DRM, l&#39;app deve acquisire un token da un server di adesione o storefront che l&#39;utente, il cliente, utilizza.  Adobe fornisce un server di riferimento di esempio a tal fine: [Server di riferimento: Esempio di ExpressPlay Entitlement Server (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md).
 
 L&#39;adesione o il server di storefront richiederà un token di licenza dal server ExpressPlay interessato, solo dopo aver verificato con i propri sistemi back-end se l&#39;utente specifico ha diritto di visualizzare il contenuto richiesto. La risposta restituita dalla richiesta di token di licenza è un URL pronto per l’uso per il server licenze oppure contiene l’URL in una struttura JSON, a seconda della soluzione DRM con cui state lavorando.
 
