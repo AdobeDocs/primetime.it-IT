@@ -5,7 +5,10 @@ seo-title: Tag personalizzati
 title: Tag personalizzati
 uuid: 2892712f-bb01-4112-baee-6dcafd4fb923
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '372'
+ht-degree: 0%
 
 ---
 
@@ -26,9 +29,11 @@ TVSDK fornisce supporto out-of-the-box per specifici tag `#EXT` pubblicitari. L&
 >
 >È possibile abbonarsi a tag personalizzati sia per i flussi VOD che live/lineari.
 
->[!LIMITATION] {othertype=&quot;Limitazione&quot;}
+>[!NOTE]
 >
->Quando HLS viene riprodotto utilizzando il tag Video in Safari e non utilizzando Flash Fallback, questa funzione non sarà disponibile in Safari.
+>**Limitazione**
+>
+>Quando HLS viene riprodotto utilizzando il tag Video in Safari e non utilizzando il Flash Fallback, questa funzione non sarà disponibile in Safari.
 
 ## Utilizzo di tag HLS personalizzati {#section_AD032318AEF5418393D2B1DF36B0BABB}
 
