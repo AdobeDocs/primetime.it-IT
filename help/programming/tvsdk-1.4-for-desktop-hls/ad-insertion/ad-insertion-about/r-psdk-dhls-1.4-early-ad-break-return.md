@@ -5,7 +5,10 @@ seo-title: Implementazione di un ritorno rapido all'interruzione dell'annuncio
 title: Implementazione di un ritorno rapido all'interruzione dell'annuncio
 uuid: 984b6ed0-c929-49a3-9553-e30d1a7758ed
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '413'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 Per l&#39;inserimento di annunci in streaming dal vivo, potrebbe essere necessario uscire da un&#39;interruzione di annuncio prima che tutti gli annunci nell&#39;interruzione siano riprodotti al completamento.
 
->[!NOTE] {othertype=&quot;Prerequisite&quot;}
+>[!NOTE]
 >
 >È necessario iscriversi agli indicatori di annuncio in uscita/in della copia ( `#EXT-X-CUE-OUT`, `#EXT-X-CUE-IN`e `#EXT-X-CUE`).
 
