@@ -3,7 +3,10 @@ seo-title: Panoramica sulla creazione di pacchetti di file multimediali
 title: Panoramica sulla creazione di pacchetti di file multimediali
 uuid: 9509bcdc-ee4d-4025-9bb6-9b8ac439b926
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '663'
+ht-degree: 0%
 
 ---
 
@@ -18,11 +21,11 @@ Per pacchetto si intende il processo di cifratura e applicazione di un criterio 
 
 Il pacchetto viene scollegato dal server licenze. Non è necessario che il packager si connetta al server licenze per scambiare informazioni sul contenuto. Tutto ciò che il server licenze deve sapere per rilasciare una licenza è incluso nei metadati del contenuto.
 
-Quando un file è crittografato, il suo contenuto non può essere analizzato senza la licenza appropriata. È possibile utilizzare Primetime DRM per selezionare le parti del file da cifrare. Poiché DRM di Primetime è in grado di analizzare il formato file del contenuto video, può crittografare in modo intelligente parti selettive di un file invece di un intero file. I dati, come metadati e cue point, possono rimanere non crittografati, per consentire ai motori di ricerca di continuare a eseguire ricerche nel file.
+Quando un file è crittografato, il suo contenuto non può essere analizzato senza la licenza appropriata. È possibile utilizzare Primetime DRM per selezionare le parti del file da cifrare. Poiché DRM di Primetime è in grado di analizzare il formato file del contenuto video, può crittografare in modo intelligente parti selettive di un file invece di un intero file. I dati, come metadati e cue point, possono rimanere non crittografati, in modo che i motori di ricerca possano comunque eseguire ricerche nel file.
 
 Un contenuto specifico può avere più criteri DRM. Ad esempio, potete concedere in licenza il contenuto in diversi modelli aziendali senza dover più creare pacchetti di contenuto. Inoltre, potete consentire l&#39;accesso anonimo per un breve periodo di tempo e consentire al cliente di acquistare il contenuto per avere accesso illimitato. Se il contenuto è incluso in un pacchetto utilizzando più criteri DRM, il server licenze deve implementare la logica per selezionare quale criterio DRM deve essere utilizzato per rilasciare una licenza.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >L&#39;architettura consente di specificare i criteri DRM di utilizzo e di associarli al contenuto quando il contenuto viene incluso nel pacchetto. Prima che un client possa riprodurre il contenuto, deve acquisire una licenza per un computer specificato. La licenza specifica le regole di utilizzo applicate e fornisce la chiave da utilizzare per decrittografare il contenuto. Il criterio DRM rappresenta un modello per la generazione di una licenza. Tuttavia, il server licenze potrebbe ignorare le regole di utilizzo quando rilascia una licenza. Il rendering della licenza potrebbe non essere valido da tali vincoli, ad esempio tempi di scadenza o finestre di riproduzione.
 
@@ -34,6 +37,6 @@ In alcuni casi potrebbe essere necessario archiviare i metadati del contenuto co
 
 Tutte queste attività possono essere eseguite con l&#39;API Java.
 
-Consultate *Adobe Primetime DRM API Reference* (Riferimento API DRM di Adobe Primetime) per informazioni dettagliate sull&#39;API Java.
+Consultate *Adobe Primetime DRM API Reference* (Riferimento API DRM) per informazioni dettagliate sull&#39;API Java.
 
-Consultate *Utilizzo delle implementazioni* di riferimento DRM di Adobe Primetime per informazioni sull&#39;implementazione di riferimento di Media Packager.
+Consultate *Utilizzo delle  implementazioni* di riferimento Adobe Primetime DRM per informazioni sull&#39;implementazione di riferimento di Media Packager.
