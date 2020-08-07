@@ -3,7 +3,10 @@ seo-title: Panoramica delle preferenze
 title: Panoramica delle preferenze
 uuid: d1c067b1-6c2b-460e-8d00-5a5bfee0789c
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '184'
+ht-degree: 0%
 
 ---
 
@@ -12,7 +15,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 Ad eccezione dell&#39;URL di Packager Server, tutte le preferenze specificate di seguito vengono memorizzate nel [!DNL flashaccess-refimpl-packager.properties] file sul server. Tutte le impostazioni possono essere modificate direttamente nel file delle proprietà o tramite l&#39;applicazione AIR. Le password vengono crittografate quando vengono memorizzate nel file delle proprietà sul server. Digita la password non crittografata nell&#39;interfaccia utente e verrà crittografata prima di essere memorizzata nel file.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Tutte le directory e i percorsi fanno riferimento alle directory sul server packager, non sul client che esegue l&#39;applicazione AIR.
 
