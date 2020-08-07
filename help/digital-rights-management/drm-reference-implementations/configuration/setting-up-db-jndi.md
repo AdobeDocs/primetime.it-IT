@@ -5,7 +5,10 @@ seo-title: Configurare il database del server licenze
 title: Configurare il database del server licenze
 uuid: aa6185f2-8e9d-4b65-971a-b7534d910580
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '219'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ Il server licenze di implementazione di riferimento richiede un database che sup
 
 L&#39;acquisizione anonima della licenza non richiede l&#39;esecuzione del database.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Questa procedura si applica solo a Microsoft Windows. Per altri sistemi operativi, consultate la documentazione del sistema operativo in uso o la documentazione di MySQL.
 
@@ -42,7 +45,7 @@ Per eseguire il server licenze, è necessario installare e configurare MySQL:
       Ad esempio, unità *di sistema:*, che si trova in [!DNL \Program Files\MySQL\MySQL Server 5.1].
 1. Per installare MySQL JDBC Driver 5.1.7, copiate il [!DNL mysql-connector-java-5.1.7-bin.jar] file nella [!DNL Third Party\MySQL\Installer\5.1] cartella del DVD nella [!DNL ...\Tomcat6.0\lib] directory del server Tomcat.
 
-   >[!NOTE] {class=&quot;- topic/note &quot;}
+   >[!NOTE]
    >
    >MySQL JDBC Driver 5.1.7 funziona con Tomcat 6.0. Le versioni precedenti di Tomcat non sono più supportate.
 
