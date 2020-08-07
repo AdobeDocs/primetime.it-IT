@@ -3,7 +3,10 @@ seo-title: Supporti pacchetto
 title: Supporti pacchetto
 uuid: f6e877be-d916-4766-bc44-99891a3df3a8
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '370'
+ht-degree: 0%
 
 ---
 
@@ -16,9 +19,9 @@ Se desiderate creare un pacchetto per un singolo file FLV o F4V, scegliete l&#39
 
 Se desiderate creare un pacchetto per tutti i file di una cartella, scegliete l’ **[!UICONTROL Select Single Folder]** opzione. Specificate la cartella che contiene i file sorgente. Solo i file nella cartella di input che corrispondono ai **[!UICONTROL Input Media File Selection]** criteri verranno inclusi in un pacchetto (i file nelle sottocartelle non vengono inclusi nel pacchetto). Scegliere se cifrare [!DNL .flv] file, [!DNL .f4v] file o immettere un&#39;espressione regolare personalizzata (ad esempio &quot;.*&quot; codifica tutti i file nella cartella). I file crittografati verranno salvati nella cartella di output specificata, utilizzando lo stesso nome file del file originale.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
->I percorsi dei file devono fare riferimento ai file disponibili per il server di creazione pacchetti. Se Flash Access Manager viene eseguito su un computer diverso dal server di creazione del pacchetto, è necessario specificare un percorso accessibile dal server (che si trova su un&#39;unità di rete o sul server stesso).
+>I percorsi dei file devono fare riferimento ai file disponibili per il server di creazione pacchetti. Se si esegue Gestione Flash Access su un computer diverso dal server di creazione pacchetti, è necessario specificare un percorso accessibile dal server (che si trova su un&#39;unità di rete o sul server stesso).
 
 Nella tabella seguente sono descritte le preferenze per i file multimediali pacchetto:
 
