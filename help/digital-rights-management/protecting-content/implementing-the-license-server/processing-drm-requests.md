@@ -1,14 +1,17 @@
 ---
-seo-title: Elabora richieste DRM Adobe Primetime
-title: Elabora richieste DRM Adobe Primetime
+seo-title: Elabora  richieste Adobe Primetime DRM
+title: Elabora  richieste Adobe Primetime DRM
 uuid: ee10504d-84f0-472a-b58a-2a87fdeedfc1
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '1251'
+ht-degree: 0%
 
 ---
 
 
-# Elabora richieste DRM Adobe Primetime {#process-adobe-primetime-drm-requests}
+# Elabora  richieste Adobe Primetime DRM {#process-adobe-primetime-drm-requests}
 
 L&#39;approccio generale alla gestione delle richieste consiste nel creare un gestore, analizzare la richiesta, impostare i dati o il codice di errore della risposta e chiudere il gestore.
 
@@ -16,7 +19,7 @@ La classe di base utilizzata per gestire l&#39;interazione singola richiesta/ris
 
 Se la richiesta ha esito positivo, impostate i dati della risposta; altrimenti invocare `RequestMessageBase.setErrorData()` in caso di errore. Termina sempre l&#39;implementazione richiamando il `close()` metodo (si consiglia di `close()` chiamarlo nel `finally` blocco di un&#39; `try` istruzione). Per un esempio di come richiamare il gestore, consultate la documentazione di riferimento `MessageHandlerBase` API.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Il codice di stato HTTP 200 (OK) deve essere inviato in risposta a tutte le richieste elaborate dal gestore. Se non è stato possibile creare il gestore a causa di un errore del server, il server potrebbe rispondere con un altro codice di stato, ad esempio 500 (Errore interno del server).
 
@@ -26,24 +29,24 @@ Una richiesta di licenza può contenere un token di autenticazione. Se è stata 
 
 ## Utilizzare gli identificatori del computer {#use-machine-identifiers}
 
-Tutte le richieste DRM di Adobe Primetime (ad eccezione delle richieste che supportano la compatibilità FMRMS) includono informazioni sul token computer che è stato rilasciato al client durante l&#39;individualizzazione. Il token del computer include un ID computer, che è un identificatore assegnato durante l&#39;individualizzazione. Potete utilizzare questo identificatore per contare il numero di computer da cui un utente ha richiesto una licenza o ha aderito a un dominio.
+Tutte  richieste Adobe Primetime DRM (ad eccezione delle richieste che supportano la compatibilità FMRMS) includono informazioni sul token computer che è stato rilasciato al client durante l&#39;individualizzazione. Il token del computer include un ID computer, che è un identificatore assegnato durante l&#39;individualizzazione. Potete utilizzare questo identificatore per contare il numero di computer da cui un utente ha richiesto una licenza o ha aderito a un dominio.
 
 Potete usare un identificatore come segue:
 
-* Il `getUniqueId()` metodo restituisce una stringa che è stata assegnata a un dispositivo durante l&#39;individualizzazione. È possibile memorizzare le stringhe in un database e cercare per identificatore. Tuttavia, questo identificatore viene modificato se l&#39;utente riformatta il disco rigido e lo individua di nuovo. Questo identificatore ha anche un valore diverso tra Adobe AIR e Adobe Flash Player in diversi browser sullo stesso computer.
+* Il `getUniqueId()` metodo restituisce una stringa che è stata assegnata a un dispositivo durante l&#39;individualizzazione. È possibile memorizzare le stringhe in un database e cercare per identificatore. Tuttavia, questo identificatore viene modificato se l&#39;utente riformatta il disco rigido e lo individua di nuovo. Questo identificatore ha anche un valore diverso tra  Adobe AIR e  Adobe Flash Player in diversi browser sullo stesso computer.
 * Se si desidera contare più accuratamente i computer, è possibile utilizzare `getBytes()` per memorizzare l&#39;intero identificatore. Per determinare se il computer è stato visto in precedenza, ottenere tutti gli identificatori per un nome utente e chiamare `matches()` per verificare se esiste una corrispondenza. Poiché il `matches()` metodo deve essere utilizzato per confrontare i valori restituiti da `MachineId.getBytes`, questa opzione è pratica solo se vi è un numero limitato di valori da confrontare; ad esempio, i computer associati a un utente specifico.
 
 ## Autenticazione utente {#user-authentication}
 
-Una richiesta Adobe Primetime DRM può contenere un token di autenticazione.
+Una richiesta  Adobe Primetime DRM può contenere un token di autenticazione.
 
-Se è stata utilizzata l&#39;autenticazione tramite nome utente/password, la richiesta potrebbe includere un `AuthenticationToken` generato dal `AuthenticationHandler`. Per accedere e verificare il token, è necessario utilizzare `RequestMessageBase.getAuthenticationToken()`. Per avviare una richiesta di nome utente/password sul client, utilizzate l&#39;API `DRMManager.authenticate()` ActionScript o iOS.
+Se è stata utilizzata l&#39;autenticazione tramite nome utente/password, la richiesta potrebbe includere un `AuthenticationToken` generato dal `AuthenticationHandler`. Per accedere e verificare il token, è necessario utilizzare `RequestMessageBase.getAuthenticationToken()`. Per avviare una richiesta di nome utente/password sul client, utilizzate l&#39;API `DRMManager.authenticate()` ActionScript o iOS .
 
-Se client e server utilizzano un meccanismo di autenticazione personalizzato, il client ottiene un token di autenticazione tramite un altro canale e imposta il token di autenticazione personalizzato tramite l&#39;API `DRMManager.setAuthenticationToken` ActionScript 3.0. Utilizzare `RequestMessageBase.getRawAuthenticationToken()` per ottenere il token di autenticazione personalizzato. L&#39;implementazione del server determina se il token di autenticazione personalizzato è valido.
+Se il client e il server utilizzano un meccanismo di autenticazione personalizzato, il client ottiene un token di autenticazione tramite un altro canale e imposta il token di autenticazione personalizzato tramite l&#39;API `DRMManager.setAuthenticationToken`  ActionScript 3.0. Utilizzare `RequestMessageBase.getRawAuthenticationToken()` per ottenere il token di autenticazione personalizzato. L&#39;implementazione del server determina se il token di autenticazione personalizzato è valido.
 
 ## Protezione di ripetizione {#replay-protection}
 
-Per la protezione di ripetizione, potrebbe essere utile verificare se l&#39;identificatore del messaggio è stato visualizzato di recente chiamando `RequestMessageBase.getMessageId()`. In tal caso, un utente malintenzionato potrebbe tentare di riprodurre nuovamente la richiesta, cosa che dovrebbe essere negata. Per rilevare i tentativi di riproduzione, il server può memorizzare un elenco di ID messaggio visti di recente e controllare ogni richiesta in entrata rispetto all&#39;elenco memorizzato nella cache. Per limitare il tempo necessario per memorizzare gli identificatori del messaggio, chiama `HandlerConfiguration.setTimestampTolerance()`. Se questa proprietà è impostata, l’SDK nega quindi qualsiasi richiesta con marca temporale per più di un numero specificato di secondi dall’ora del server.
+Per la protezione di ripetizione, potrebbe essere utile verificare se l&#39;identificatore del messaggio è stato visualizzato di recente chiamando `RequestMessageBase.getMessageId()`. In tal caso, un utente malintenzionato potrebbe tentare di riprodurre nuovamente la richiesta, cosa che dovrebbe essere negata. Per rilevare i tentativi di ripetizione, il server può memorizzare un elenco di ID messaggio visti di recente e controllare ogni richiesta in entrata rispetto all&#39;elenco memorizzato nella cache. Per limitare il tempo necessario per memorizzare gli identificatori del messaggio, chiama `HandlerConfiguration.setTimestampTolerance()`. Se questa proprietà è impostata, l’SDK nega quindi qualsiasi richiesta con marca temporale per più di un numero specificato di secondi dall’ora del server.
 
 ## Rilevamento del rollback {#rollback-detection}
 
@@ -63,7 +66,7 @@ La tolleranza per il windback dell&#39;orologio è una proprietà che può esser
 
 Se il server licenze è ospitato su un dominio diverso dal file SWF di riproduzione video, è necessario un file di criteri DRM ( [!DNL crossdomain.xml]) tra più domini per consentire al file SWF di richiedere licenze da un server licenze. Un file di criteri DRM tra domini è rappresentato da un file XML che consente al server di indicare che i suoi dati e documenti sono disponibili per i file SWF gestiti da altri domini. Tutti i file SWF gestiti da un dominio specificato nel file di criteri DRM del server licenze possono accedere ai dati o alle risorse da tale server licenze.
 
-Adobe consiglia agli sviluppatori di seguire le procedure ottimali durante la distribuzione del file dei criteri per i domini diversi, consentendo solo ai domini trusted di accedere al server delle licenze e limitando l&#39;accesso alla sottodirectory delle licenze sul server Web.
+ Adobe consiglia agli sviluppatori di seguire le procedure ottimali durante la distribuzione del file dei criteri per i domini diversi, consentendo solo ai domini trusted di accedere al server licenze e limitando l&#39;accesso alla sottodirectory della licenza sul server Web.
 
 Per ulteriori informazioni sui file di criteri DRM tra domini, consulta le seguenti posizioni:
 
