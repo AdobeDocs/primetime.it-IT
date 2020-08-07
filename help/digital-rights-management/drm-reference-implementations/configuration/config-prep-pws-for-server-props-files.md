@@ -5,7 +5,10 @@ seo-title: Preparare le password per i file delle proprietà del server
 title: Preparare le password per i file delle proprietà del server
 uuid: 3e00ba9b-b692-4713-8306-5ab896461f2a
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '103'
+ht-degree: 0%
 
 ---
 
@@ -20,6 +23,6 @@ Per eseguire lo strumento, è possibile utilizzare uno script Ant o Java.
 
 L&#39;utilità genera la password crittografata, che è necessario copiare nel [!DNL flashaccess-refimpl.properties] file.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Le password che sono state codificate con l&#39;implementazione di riferimento `ScrambleUtil.class` fornita non funzionano con il server DRM Primetime per lo streaming protetto.
