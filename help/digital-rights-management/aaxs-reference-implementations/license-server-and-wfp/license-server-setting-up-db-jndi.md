@@ -3,7 +3,10 @@ seo-title: Configurazione del database e configurazione dell'origine dati JNDI
 title: Configurazione del database e configurazione dell'origine dati JNDI
 uuid: 1326523f-c053-4169-a934-1b2d3907b1f4
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '521'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ Il server licenze di implementazione di riferimento richiede un database che sup
 
 L&#39;acquisizione anonima della licenza non richiede l&#39;esecuzione di un database.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Le istruzioni riportate in questa sezione sono relative alla piattaforma Microsoft Windows. Per altri sistemi operativi, consultate la documentazione del sistema operativo in uso o la documentazione di MySQL.
 
@@ -37,7 +40,7 @@ Per eseguire il server licenze, è necessario installare e configurare MySQL 5.1
 
 Successivamente, sarà necessario installare il driver MySQL JDBC 5.1.7. A questo scopo, copiate [!DNL mysql-connector-java-5.1.7-bin.jar] (nella [!DNL Third Party\MySQL\Installer\5.1] cartella del DVD) nella directory Tomcat Server lib: [!DNL ...\Tomcat6.0\lib].
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >MySQL JDBC Driver 5.1.7 funziona con Tomcat 6.0. Le versioni precedenti di Tomcat non sono supportate.
 
@@ -53,7 +56,7 @@ Configurate il database di esempio configurando lo schema del database e compila
 1. Modificare lo script che compila i dati di esempio nelle tabelle per includere i dati a scopo di test: [!DNL Reference Implementation\Server\dbscript\PopulateSampleDB.sql].
 1. Esegui questo script per compilare i dati come hai fatto al passaggio 2.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >La prima volta che si esegue lo [!DNL CreateSampleDB.sql] script si verificherà l&#39;errore seguente:
 
