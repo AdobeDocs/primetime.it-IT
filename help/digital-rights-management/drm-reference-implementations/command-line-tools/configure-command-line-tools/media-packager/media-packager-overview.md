@@ -5,7 +5,10 @@ seo-title: Panoramica
 title: Panoramica
 uuid: f4474837-9460-479d-89c2-dd697e0fb997
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '1317'
+ht-degree: 0%
 
 ---
 
@@ -77,7 +80,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
 
 * `metadatafile` è un [!DNL .metadata] file che include i metadati DRM.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Durante la creazione del pacchetto, Media Packager non è più in grado di generare un [!DNL .header] file per impostazione predefinita. Per generare un [!DNL .header] file, utilizzate l&#39; `-h` opzione durante la creazione del pacchetto.
 
@@ -168,7 +171,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.contents.video.level</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Indica il livello di cifratura del video. </p> <p class="- topic/p ">Per cifrare tutto il contenuto video viene utilizzato un valore <span class="codeph"> elevato</span> , mentre per cifrare parti del contenuto video per i file mp4 che includono contenuto H.264 vengono utilizzati valori <span class="codeph"> medi</span> e <span class="codeph"> bassi</span> . </p> <p class="- topic/p ">value = <span class="codeph"> high| medium| low</span> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Indica il livello di cifratura del video. </p> <p class="- topic/p ">Per cifrare tutto il contenuto video viene utilizzato un valore <span class="codeph"> elevato</span> , mentre per cifrare parti del contenuto video per i file mp4 che includono contenuto H.264 vengono utilizzati valori <span class="codeph"> medi</span> e <span class="codeph"> bassi</span> . </p> <p class="- topic/p ">value = <span class="codeph"> high | medium | low</span> </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.contents.SecondiNon crittografato</span> </td> 
@@ -200,7 +203,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.license.minServerVersion</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Imposta la versione server minima necessaria per rilasciare licenze per il contenuto in fase di creazione del pacchetto. </p> <p class="- topic/p ">Specificate x (per Primetime DRM x.0) dove x rappresenta un numero di rilascio principale. Tutte le versioni dei server che precedono Adobe Primetime versione 3.0 non supportano questa impostazione. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Imposta la versione server minima necessaria per rilasciare licenze per il contenuto in fase di creazione del pacchetto. </p> <p class="- topic/p ">Specificate x (per Primetime DRM x.0) dove x rappresenta un numero di rilascio principale. Tutte le versioni dei server che precedono  versione 3.0 di Adobe Primetime non supportano questa impostazione. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">encrypt.keys.policyFile.n .domain.transportcert </span> </td> 
