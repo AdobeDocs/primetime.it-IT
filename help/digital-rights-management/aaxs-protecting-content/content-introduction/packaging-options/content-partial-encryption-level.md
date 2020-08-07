@@ -3,7 +3,10 @@ seo-title: Livello di cifratura parziale
 title: Livello di cifratura parziale
 uuid: 462ca2d0-0d37-43a8-b8a0-8a25ecf73ce1
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '272'
+ht-degree: 0%
 
 ---
 
@@ -12,7 +15,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 Specifica se tutti i fotogrammi, o solo un sottoinsieme di fotogrammi, devono essere codificati. Sono disponibili tre livelli di crittografia: bassa, media e alta.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Per la traccia video solo in file F4V/H.264.
 
