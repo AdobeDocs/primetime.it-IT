@@ -5,7 +5,10 @@ seo-title: Codici di notifica di AVVISO
 title: Codici di notifica di AVVISO
 uuid: 136b5a65-b842-40fd-8ddd-efe01d73c388
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '378'
+ht-degree: 3%
 
 ---
 
@@ -166,4 +169,6 @@ La maggior parte degli avvisi contiene metadati rilevanti, ad esempio l’URL de
  </tbody> 
 </table>
 
->[!NOTE] è possibile recuperare adID e origine (URL) tramite PTAdAsset nei metadati di notifica con la `AD_ASSET` chiave.
+>[!NOTE]
+>
+>è possibile recuperare adID e origine (URL) tramite PTAdAsset nei metadati di notifica con la `AD_ASSET` chiave.
