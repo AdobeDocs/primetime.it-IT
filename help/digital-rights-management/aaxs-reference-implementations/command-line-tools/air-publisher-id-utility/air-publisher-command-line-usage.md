@@ -3,7 +3,10 @@ seo-title: Utilizzo della riga di comando
 title: Utilizzo della riga di comando
 uuid: 54b1e867-c6cc-4355-b8e6-a7ec910bd33d
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '75'
+ht-degree: 0%
 
 ---
 
@@ -30,7 +33,7 @@ java -jar AdobePublisherIDUtility.jar
 
 * `signingcert` specifica il certificato utilizzato per firmare l&#39;applicazione AIR
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Per determinare l&#39;ID editore per un&#39;applicazione iOS, utilizzate l&#39; `-s` opzione e specificate il certificato utilizzato per firmare l&#39;applicazione iOS. ***Adobe Primetime è richiesto per creare applicazioni iOS in grado di riprodurre contenuto*** protetto da Access.
 
