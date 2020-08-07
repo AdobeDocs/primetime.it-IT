@@ -3,9 +3,9 @@ seo-title: Panoramica
 title: Panoramica
 uuid: f45c6b58-53c5-41e0-be3d-590231dd214a
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '203'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 Quando create un file AIR, ADT (AIR Developer Tool) genera automaticamente un ID Publisher. L&#39;utility AIR Publisher ID ( [!DNL AdobePublisherIDUtility.jar]) calcola l&#39;ID Publisher per un&#39;applicazione AIR.
 
-L&#39;ID editore è univoco per il certificato utilizzato per creare un file AIR. Se riutilizzate lo stesso certificato per più applicazioni AIR, tutte le applicazioni AIR hanno lo stesso ID editore. Una versione AIR che ha esito positivo alla release 1.5.2 non aggiunge l&#39;ID editore generato a un file. Di conseguenza, se intendete utilizzare un elenco di applicazioni AIR allow, utilizzate questo strumento per determinare l&#39;ID editore.
+L&#39;ID editore è univoco per il certificato utilizzato per creare un file AIR. Se riutilizzate lo stesso certificato per più applicazioni AIR, tutte le applicazioni AIR hanno lo stesso ID editore. Una versione AIR che ha esito positivo alla release 1.5.2 non aggiunge l&#39;ID editore generato a un file. Pertanto, se prevedete di utilizzare un&#39;applicazione AIR  elenco consentiti, utilizzate questo strumento per determinare l&#39;ID dell&#39;editore.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
->L&#39;ID editore utilizzato per AIR consente l&#39;imposizione degli elenchi non è lo stesso ID editore specificato dall&#39;editore nel [!DNL application.xml] file dell&#39;applicazione.
+>L&#39;ID editore utilizzato per l&#39;applicazione del elenco consentiti AIR  non è lo stesso ID editore specificato dall&#39;editore dell&#39;applicazione nel [!DNL application.xml] file dell&#39;applicazione.
 
 ## Utilizzo della riga di comando dell&#39;utility ID di AIR Publisher {#air-publisher-id-utility-command-line-usage}
 
