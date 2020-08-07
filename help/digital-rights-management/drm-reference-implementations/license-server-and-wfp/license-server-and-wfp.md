@@ -1,20 +1,23 @@
 ---
-description: Il server di implementazione di riferimento può essere utile per creare un server di licenze completamente funzionante che utilizza tutte le funzionalità dell’SDK Java DRM di Adobe Primetime.
-seo-description: Il server di implementazione di riferimento può essere utile per creare un server di licenze completamente funzionante che utilizza tutte le funzionalità dell’SDK Java DRM di Adobe Primetime.
+description: Il server di implementazione di riferimento può essere utile per creare un server di licenze completamente funzionante che utilizza tutte le funzionalità dell'SDK Java  Adobe Primetime DRM.
+seo-description: Il server di implementazione di riferimento può essere utile per creare un server di licenze completamente funzionante che utilizza tutte le funzionalità dell'SDK Java  Adobe Primetime DRM.
 seo-title: Server licenze
 title: Server licenze
 uuid: 39cb0d0f-f3dc-48e9-b6fd-6960a9ade291
 translation-type: tm+mt
-source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '297'
+ht-degree: 0%
 
 ---
 
 
 # Server licenze {#license-server}
 
-Il server di implementazione di riferimento può essere utile per creare un server di licenze completamente funzionante che utilizza tutte le funzionalità dell’SDK Java DRM di Adobe Primetime.
+Il server di implementazione di riferimento può essere utile per creare un server di licenze completamente funzionante che utilizza tutte le funzionalità dell&#39;SDK Java  Adobe Primetime DRM.
 
-In questa implementazione, gli utenti vengono autenticati in base alle voci degli utenti in un database. Il server include logica aziendale dimostrativa per il rilascio di licenze e fornisce supporto per la compatibilità con Flash Media Rights Management Server 1.0 e 1.5.
+In questa implementazione, gli utenti vengono autenticati in base alle voci degli utenti in un database. Il server include logica aziendale dimostrativa per il rilascio delle licenze e fornisce supporto per la compatibilità con Flash Media Rights Management Server 1.0 e 1.5.
 
 ## Requisiti del server di licenze {#license-server-requirements}
 
@@ -25,11 +28,11 @@ Requisiti del server licenze:
 * Verificare che sia installato Java 1.6 o versione successiva
 * Per eseguire gli script di compilazione di esempio, verificare di disporre di Ant 1.8 o versione successiva
 
-Dopo aver installato Tomcat e MySQL, contattate Adobe per il set di credenziali DRM richieste.
+Dopo aver installato Tomcat e MySQL, contattate  Adobe per il set di credenziali DRM richieste.
 
 ## Creare il server licenze {#build-the-license-server}
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >La creazione del server licenze è necessaria solo se si intende modificare il codice sorgente. A scopo di valutazione, è possibile semplicemente utilizzare i file WAR come spedito.
 
