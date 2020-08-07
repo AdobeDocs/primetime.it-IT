@@ -3,7 +3,10 @@ seo-title: Configurazione HSM
 title: Configurazione HSM
 uuid: 1cc5be99-c24c-4c1e-9348-fb69f96d8ca5
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '147'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ L&#39;utilizzo di un HSM non è richiesto, ma è consigliato. L’implementazion
 
 Se nell’elenco vengono visualizzate le credenziali, l’HSM è configurato correttamente.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
->A partire da Java 1.7, Sun Java per Windows a 64 bit non supporta le interfacce PKCS11 richieste da Adobe Access DRM per comunicare con i dispositivi HSM. Se intendete utilizzare un HSM, utilizzate una versione a 32 bit di Java o un JDK che supporti le interfacce PKCS11 complete.
+>A partire da Java 1.7, Sun Java per Windows a 64 bit non supporta le interfacce PKCS11 che  Adobe Access DRM richiede per comunicare con i dispositivi HSM. Se intendete utilizzare un HSM, utilizzate una versione a 32 bit di Java o un JDK che supporti le interfacce PKCS11 complete.
 
