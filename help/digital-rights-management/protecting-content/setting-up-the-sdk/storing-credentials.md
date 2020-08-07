@@ -3,7 +3,10 @@ seo-title: Memorizzazione delle credenziali
 title: Memorizzazione delle credenziali
 uuid: a9e9db72-c921-4c28-ad1d-3fd3c2283f14
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '396'
+ht-degree: 0%
 
 ---
 
@@ -14,13 +17,13 @@ L&#39;SDK DRM di Primetime supporta diversi modi per memorizzare le credenziali,
 
 Per garantire la sicurezza del contenuto e del server licenze, dovete proteggere attentamente le chiavi private. PKCS12 è un formato di file di archivio standard per la memorizzazione delle credenziali crittografate con una password. Potete inoltre cifrare e firmare il file PKCS12 stesso. L&#39;estensione del file [!DNL .pfx] è comunemente utilizzata per i file che supportano questo formato.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
->Adobe consiglia di utilizzare un HSM per la massima sicurezza.
+> Adobe consiglia di utilizzare un HSM per la massima sicurezza.
 >
->Consultate la guida alle linee guida *per la distribuzione protetta DRM di* Adobe Primetime.
+>Consultate la guida *alle linee guida* per la distribuzione protetta di Adobe Primetime DRM.
 
->[!NOTE] {important=&quot;high&quot;}
+>[!NOTE]
 >
 >A partire da Java 1.7, Sun Java a 64 bit per Windows non supporta più le interfacce PKCS11 richieste da Primetime DRM per la comunicazione con i dispositivi HSM. Se si intende utilizzare un HSM, è necessario utilizzare una versione a 32 bit di Java, oppure un JDK che supporti le interfacce PKCS11 complete.
 
