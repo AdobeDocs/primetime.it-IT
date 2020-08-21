@@ -2,7 +2,7 @@
 title: Note sulla versione TVSDK 3.12 per iOS
 description: TVSDK 3.12 per iOS - Note sulla versione - descrive le novità o le modifiche apportate, i problemi risolti e noti e i problemi del dispositivo in TVSDK iOS 3.12.
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
 workflow-type: tm+mt
 source-wordcount: '7665'
 ht-degree: 0%
@@ -237,7 +237,7 @@ Per gli annunci VAST (creativi) con la regola di fallback abilitata, TVSDK tratt
 
 **Segnalazione Del Blackout Con Sostituzione Alternativa Dei Contenuti**
 
-Come parte dell&#39;aggiornamento 1.4 TVSDK, ora siamo anche in grado di entrare e tornare dai blackout regionali rispetto ai contenuti lineari. Il TVSDK ora può elaborare due file manifest in parallelo, principale e alternativo, per monitorare i segnali blackout anche quando la programmazione alternativa viene mostrata al posto della programmazione originale.
+Come parte dell&#39;aggiornamento 1.4 TVSDK, ora siamo anche in grado di entrare e tornare dai blackout regionali rispetto ai contenuti lineari. Il TVSDK ora può elaborare due file manifest in parallelo, principale e alternativo, per monitorare i segnali di blackout anche quando la programmazione alternativa viene mostrata al posto della programmazione originale.
 
 **Versione 1.4.8**
 
@@ -541,7 +541,7 @@ Problema di riproduzione quando il tag # EXT-X-PLAYLIST-TYPE nel flusso è impos
 
 Utilizzo di Creative Id e AdSystem nella richiesta CRS in base alle regole di normalizzazione CRS.
 
-* [ ZD #29462) - TremorHub ad A&amp;E VOD causando un arresto anomalo nelle app iOS
+* (ZD #29462) - TremorHub ad A&amp;E VOD causando un arresto anomalo nelle app iOS
 
 **Versione 1.4.36 (1.4.36.835)**
 
@@ -1098,7 +1098,7 @@ Supporto per il ping di URL vuoti per il tracciamento delle interruzioni di annu
 
 * (ZD #2141) Implementazione di Analytics per l&#39;app TreeHouse, aggiunta della `AdobeAnalyticsPlugin.a` libreria per creare il pacchetto.
 * Video Heartbeats Library update to 1.4.1.2
-* [PTPALY-4226] [relativo a ZD #2423] L&#39;esecuzione della reimpostazione DRM può comportare l&#39;eliminazione dei dati del documento dell&#39;applicazione.
+* (PTPALY-4226) (relativo a ZD #2423) L&#39;esecuzione di ripristino DRM può comportare l&#39;eliminazione dei dati del documento dell&#39;applicazione.
 
 **Versione 1.4.4** (1.4.4.242)
 
