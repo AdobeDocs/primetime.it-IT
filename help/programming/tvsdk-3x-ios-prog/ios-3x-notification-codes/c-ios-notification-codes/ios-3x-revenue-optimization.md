@@ -4,7 +4,10 @@ seo-description: 'Questa tabella fornisce informazioni dettagliate sulle notific
 seo-title: Codice di ottimizzazione REVENUE
 title: Codice di ottimizzazione REVENUE
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+workflow-type: tm+mt
+source-wordcount: '763'
+ht-degree: 0%
 
 ---
 
@@ -15,12 +18,15 @@ Questa tabella fornisce informazioni dettagliate sulle notifiche di OTTIMIZZAZIO
 
 ## Abilita report di ottimizzazione ricavi {#enable-revenue-optimization-reporting}
 
-Per abilitare questo rapporto, usa l’API PTMediaPlayer: `[mediaPlayer
-setRevenueOptimizationReportingLevel:PTNotificationTypeInfo]`.
+Per abilitare questo rapporto, usa l’API PTMediaPlayer: `[mediaPlayersetRevenueOptimizationReportingLevel:PTNotificationTypeInfo]`.
 
-[!NNota]: La maggior parte delle notifiche informative contiene metadati rilevanti, ad esempio l’URL della risorsa che non è stato possibile scaricare. Alcune notifiche contengono metadati per specificare se il problema si è verificato nel contenuto video principale, nel contenuto audio alternativo o in un annuncio.
+>[!NOTE]
+>
+>La maggior parte delle notifiche informative contiene metadati rilevanti, ad esempio l’URL della risorsa che non è stato possibile scaricare. Alcune notifiche contengono metadati per specificare se il problema si è verificato nel contenuto video principale, nel contenuto audio alternativo o in un annuncio.
 
-|Codice|Nome|Notifica interna|Tasti metadati|Commenti||—|—|—|—|—||401001| REVENUE_OPTIMIZATION_REPORTING| Nessuno| Consultare la tabella riportata di seguito per le chiavi di metadati basate su eventi diversi. | Nessuno|
+|Codice |Nome |Notifica interna |Tasti metadati |Commenti |
+|—|—|—|—|—|
+|401001 | REVENUE_OPTIMIZATION_REPORTING | Nessuno | Consultare la tabella riportata di seguito per le chiavi di metadati basate su eventi diversi. | Nessuno |
 
 | Dettagli evento | ContextMetadata |
 |---|---|
