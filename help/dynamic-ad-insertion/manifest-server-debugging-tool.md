@@ -13,7 +13,10 @@ pagecreatedat: en
 pagelayout: video
 sidecolumn: left
 translation-type: tm+mt
-source-git-commit: b77f4988103b68d0ce8926407d2ccb2e0c68e322
+source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+workflow-type: tm+mt
+source-wordcount: '2430'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ source-git-commit: b77f4988103b68d0ce8926407d2ccb2e0c68e322
 
 ## Panoramica dello strumento di debug {#overview-of-debugging-tool}
 
-Lo strumento di debug consente agli editori di esaminare i problemi di inserimento di annunci potenzialmente costosi esaminando le informazioni di debug restituite in tempo reale dal server del manifesto nelle intestazioni HTTP o, quando sono necessarie informazioni più dettagliate, esaminando i registri di sessione dopo il fatto. I partner Adobe come Akamai possono utilizzare lo strumento per eseguire il debug delle integrazioni con le decisioni relative agli annunci Primetime.
+Lo strumento di debug consente agli editori di esaminare i problemi di inserimento di annunci potenzialmente costosi esaminando le informazioni di debug restituite in tempo reale dal server del manifesto nelle intestazioni HTTP o, quando sono necessarie informazioni più dettagliate, esaminando i registri di sessione dopo il fatto.  partner di Adobe come Akamai possono utilizzare lo strumento per eseguire il debug delle integrazioni con le decisioni relative agli annunci Primetime.
 
 Lo strumento supporta il debug e l&#39;inserimento di problemi in una qualsiasi delle configurazioni principali del server manifesto e del tracciamento:
 
@@ -32,7 +35,7 @@ Lo strumento supporta il debug e l&#39;inserimento di problemi in una qualsiasi 
 
 Per supportare tutti questi casi, lo strumento non richiede o utilizza codici editore del lettore.
 
-Quando avviate una sessione del server di manifesto, potete impostare un parametro sull&#39;URL della richiesta in modo da chiedere di registrare le informazioni di debug. Utilizzando valori diversi di tale parametro, potete anche chiedere al server di manifesto di restituire determinate informazioni di debug nelle intestazioni HTTP, ma le intestazioni possono contenere solo una quantità limitata di informazioni. È possibile ottenere le credenziali da Adobe per accedere ai file di registro completi, che il server manifesto salva periodicamente (ad esempio ogni ora) in un server di archivio. Una volta ottenute le credenziali per quel server, potete accedervi direttamente in qualsiasi momento.
+Quando avviate una sessione del server di manifesto, potete impostare un parametro sull&#39;URL della richiesta in modo da chiedere di registrare le informazioni di debug. Utilizzando valori diversi di tale parametro, potete anche chiedere al server di manifesto di restituire determinate informazioni di debug nelle intestazioni HTTP, ma le intestazioni possono contenere solo una quantità limitata di informazioni. È possibile ottenere le credenziali da  Adobe per accedere ai file di registro completi, che il server manifesto salva periodicamente (ad esempio ogni ora) in un server di archivio. Una volta ottenute le credenziali per quel server, potete accedervi direttamente in qualsiasi momento.
 
 <!-- You can also see the [server side event tracking captured in the SSAI dashboard](ssai-debugging-dashboard.md).-->
 
@@ -96,7 +99,7 @@ La struttura di un record di registro è la seguente:
 | record_type | string | Tipo di evento da registrare |
 | altri campi | *** | Dipende dal tipo di evento |
 
-### Record TRACE_REQUEST_INFO {#trace-request-info-records}
+### TRACE_REQUEST_INFO, record {#trace-request-info-records}
 
 I record di questo tipo registrano i risultati delle richieste HTTP. I campi oltre TRACE_REQUEST_INFO vengono visualizzati nell&#39;ordine indicato nella tabella, separati da tabulazioni.
 
@@ -127,7 +130,7 @@ TRACE_REQUEST_INFO 301 GET /auditude/variant/pubAsset/aHR0cDov. . ..m3u8
 
 ### Record TRACE_HTTP_HEADER {#trace-http-header-records}
 
-Record di questo tipo di intestazioni HTTP del registro scambiate durante le chiamate HTTP tra il server manifesto e il client, il server di annunci o il server del contenuto. I campi oltre TRACE_HTTP_HEADER vengono visualizzati nell&#39;ordine indicato nella tabella, separati da tabulazioni.
+Record di questo tipo di intestazioni HTTP del registro scambiate durante le chiamate HTTP tra il server manifesto e il client, il server di annunci o il server del contenuto. I campi oltre TRACE_HTTP_HEADER vengono visualizzati nell’ordine indicato nella tabella, separati da tabulazioni.
 
 | Field | Tipo | Descrizione |
 |--- |--- |--- |
@@ -171,9 +174,9 @@ Esempio:
     UNKNOWN RESPONSE  Via MS4xIH. . .
 ```
 
-### Record TRACE_AD_CALL {#trace-ad-call-records}
+### TRACE_AD_CALL, record {#trace-ad-call-records}
 
-I record di questo tipo registrano i risultati delle richieste di annunci server manifest. I campi oltre TRACE_AD_CALL vengono visualizzati nell&#39;ordine indicato nella tabella, separati da tabulazioni.
+I record di questo tipo registrano i risultati delle richieste di annunci server manifest. I campi oltre a TRACE_AD_CALL vengono visualizzati nell’ordine indicato nella tabella, separati da tabulazioni.
 
 | Field | Tipo | Descrizione |
 |--- |--- |--- |
@@ -192,7 +195,7 @@ Esempio:
 200 8 https://ad.stg2.auditude.com/adserver/a?cip=0.0.0.0&g=1000012&of=1.5 &ptcueformat=turner&ptdebug=true&tl=l,150,30,m&tm=63&u=ceceb. . . Auditude IvpIyC. . . 150 PD94bWw. . .
 ```
 
-### Record TRACE_AD_INSERT, TRACE_AD_RESOLVE e TRACE_AD_REDIRECT {#trace-ad-insert-trace-ad-resolve-and-trace-ad-redirect-records}
+### record TRACE_AD_INSERT, TRACE_AD_RESOLVE e TRACE_AD_REDIRECT {#trace-ad-insert-trace-ad-resolve-and-trace-ad-redirect-records}
 
 I record di questo tipo registrano i risultati delle richieste di annunci indicate dal tipo di record. I campi oltre il tipo di record vengono visualizzati nell&#39;ordine indicato nella tabella, separati da tabulazioni.
 
@@ -234,9 +237,9 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 ```
 
-### Record TRACE_TRACKING_URL {#trace-tracking-url-records}
+### TRACE_TRACKING_URL, record {#trace-tracking-url-records}
 
-I record di questo tipo registrano i risultati delle richieste di annunci server manifest. I campi oltre TRACE_TRACKING_URL vengono visualizzati nell&#39;ordine indicato nella tabella, separati da tabulazioni.
+I record di questo tipo registrano i risultati delle richieste di annunci server manifest. I campi oltre a TRACE_TRACKING_URL vengono visualizzati nell&#39;ordine indicato nella tabella, separati da tabulazioni.
 
 | Field | Tipo | Descrizione |
 |--- |--- |--- |
@@ -253,13 +256,13 @@ Esempio:
     sid:3086f5cd . . .;pts:0    200
 ```
 
-### Record TRACE_TRANSCODING_NO_MEDIA_TO_TRANSCODE {#trace-transcoding-no-media-to-transcode-records}
+### TRACE_TRANSCODING_NO_MEDIA_TO_TRANSCODE, record {#trace-transcoding-no-media-to-transcode-records}
 
 I record di questo tipo registrano un annuncio creativo mancante. Nella tabella viene visualizzato l’unico campo oltre TRACE_TRANSCODING_NO_MEDIA_TO_TRANSCODE.
 
 | Field | Tipo | Descrizione |
 |--- |--- |--- |
-| ad_id | string | ID annuncio completo `(FQ_AD_ID: Q_AD_ID[;Q_AD_ID[;Q_AD_ID...]`] Q_AD_ID: `PROTOCOL:AD_SYSTEM:AD_ID[:CREATIVE_ID[:MEDIA_ID]`] PROTOCOLLO: AUDITUDE,VAST) |
+| ad_id | string | ID annuncio completo `(FQ_AD_ID: Q_AD_ID[;Q_AD_ID[;Q_AD_ID...]]` Q_AD_ID: `PROTOCOL:AD_SYSTEM:AD_ID[:CREATIVE_ID[:MEDIA_ID]]` PROTOCOLLO: AUDITUDE,VASTA`)` |
 
 ### TRACE_TRANSCODING_REQUESTED records {#trace-transcoding-requested-records}
 
@@ -273,7 +276,7 @@ I record di questo tipo registrano i risultati delle richieste di transcodifica 
 | flag | string | ID3 indica se la richiesta di transcodifica include una richiesta per aggiungere un tag ID3 |
 | target_Duration | string | Durata target (secondi) del creativo transcodificato |
 
-### Record TRACE_TRACKING_REQUEST {#trace-tracking-request-records}
+### TRACE_TRACKING_REQUEST record {#trace-tracking-request-records}
 
 I record di questo tipo indicano una richiesta di tracciamento lato server. I campi oltre TRACE_TRACKING_REQUEST vengono visualizzati nell&#39;ordine indicato nella tabella, separati da tabulazioni.
 
@@ -283,9 +286,9 @@ I record di questo tipo indicano una richiesta di tracciamento lato server. I ca
 | start | float | Tempo di inizio del frammento PTS (secondi con precisione in millisecondi) |
 | end | float | Tempo di fine del frammento PTS (secondi con precisione in millisecondi) |
 
-### Record TRACE_TRACKING_REQUEST_URL {#trace-tracking-request-url-records}
+### TRACE_TRACKING_REQUEST_URL, record {#trace-tracking-request-url-records}
 
-I record di questo tipo forniscono un URL di tracciamento per il tracciamento lato server. I campi oltre TRACE_TRACKING_REQUEST_URL vengono visualizzati nell&#39;ordine indicato nella tabella, separati da tabulazioni.
+I record di questo tipo forniscono un URL di tracciamento per il tracciamento lato server. I campi oltre TRACE_TRACKING_REQUEST_URL vengono visualizzati nell’ordine indicato nella tabella, separati da tabulazioni.
 
 | Field | Tipo | Descrizione |
 |--- |--- |--- |
@@ -293,7 +296,7 @@ I record di questo tipo forniscono un URL di tracciamento per il tracciamento la
 | ad_system | string | Ad system (ad esempio, auditude) |
 | url | string | URL del ping |
 
-### Record TRACE_WEBVTT_REQUEST {#trace-webvtt-request-records}
+### TRACE_WEBVTT_REQUEST record {#trace-webvtt-request-records}
 
 Record di questo tipo di richieste di registro eseguite dal server manifesto per le didascalie WEBVTT. I campi oltre TRACE_WEBVTT_REQUEST vengono visualizzati nell&#39;ordine indicato nella tabella, separati da tabulazioni.
 
@@ -304,18 +307,18 @@ Record di questo tipo di richieste di registro eseguite dal server manifesto per
 | start | float | Ora inizio divisione (secondi con precisione in millisecondi) |
 | end | float | Tempo di fine diviso (secondi con precisione in millisecondi) |
 
-### Record TRACE_WEBVTT_RESPONSE {#trace-webvtt-response-records}
+### TRACE_WEBVTT_RESPONSE, record {#trace-webvtt-response-records}
 
-Registra ``of ``questo ``type ``registro ``responses ``del ``manifest ``server ``sends ``per ``clients ``l&#39;accesso `` `answer` ``alle ``requests ```for```WEBVTT ``didascalie. I campi oltre TRACE_WEBVTT_RESPONSE &quot;vengono visualizzati nell&#39;ordine indicato nella tabella, `by`schede separate.
+Registra ``of ``questo ``type ``registro ``responses ``del ``manifest ``server ``sends ``per ``clients ``l&#39;accesso `` `answer` ``alle ``requests ```for```WEBVTT ``didascalie. I campi oltre a TRACE_WEBVTT_RESPONSE &quot;vengono visualizzati nell&#39;ordine indicato nella tabella e nelle `by`schede separate.
 
 | Field | Tipo | Descrizione |
 |--- |--- |--- |
 | status | string | Codice di stato HTTP restituito |
 | response | string | Risposta con codifica Base64 inviata al client |
 
-### Record TRACE_WEBVTT_SOURCE {#trace-webvtt-source-records}
+### TRACE_WEBVTT_SOURCE, record {#trace-webvtt-source-records}
 
-Record di questo tipo di risposte del registro alle richieste fatte dal server manifesto per le didascalie WEBVTT. I campi oltre TRACE_WEBVTT_SOURCE vengono visualizzati nell&#39;ordine indicato nella tabella, separati da tabulazioni.
+Record di questo tipo di risposte del registro alle richieste fatte dal server manifesto per le didascalie WEBVTT. I campi oltre a TRACE_WEBVTT_SOURCE vengono visualizzati nell&#39;ordine indicato nella tabella, separati da tabulazioni.
 
 | Field | Tipo | Descrizione |
 |--- |--- |--- |
@@ -323,7 +326,7 @@ Record di questo tipo di risposte del registro alle richieste fatte dal server m
 | source | string | Contenuto VTT originale con codifica Base64 |
 
 
-### Record TRACE_MISC {#trace-misc-records}
+### TRACE_MISC records {#trace-misc-records}
 
 I record di questo tipo consentono al server di manifesto di registrare eventi e informazioni non altrimenti pianificate per l&#39;acquisizione di annunci. Il campo oltre TRACE_MISC è costituito da una stringa di messaggio. I messaggi che potrebbero essere visualizzati includono:
 
@@ -331,26 +334,26 @@ I record di questo tipo consentono al server di manifesto di registrare eventi e
 * AdPlacement adManifestURL=*adManifestURL*, durataSeconds=*secondi*, ignore=*ignore*, redirectAd=*redirectAd*, priority=*priority*
 * La posizione dell&#39;annuncio ha restituito null.
 * Annuncio bloccato.
-* Chiamata annuncio non riuscita: messaggio *di errore*.
-* Aggiunta di agente utente per recuperare il manifesto non elaborato: agente *utente*.
+* Chiamata annuncio non riuscita: *messaggio* di errore.
+* Aggiunta di agente utente per recuperare il manifesto non elaborato: *user-agent*.
 * Aggiunta di cookie per recuperare il manifesto non elaborato: [cookie]
 * Messaggio di errore URL *richiesto* non valido. (Impossibile analizzare l&#39;URL della variante)
 * URL denominato: URL *restituito: codice* di risposta. (Live URL)
 * URL denominato: Codice *restituito URL: codice* di risposta. (URL VOD)
 * È stato rilevato un conflitto durante la risoluzione degli annunci: uno dei due elementi: inizio medio o fine medio-rollio rientra nel pre-rollio o prerotolo contenuto nel mid-roll (VOD).
-* Rilevata eccezione non gestita generata dal gestore per URI: URL ** richiesta.
+* Rilevata eccezione non gestita generata dal gestore per URI: *richiedi URL*.
 * Generazione del manifesto della variante completata. (Variante)
 * Generazione del manifesto della variante completata.
-* Eccezione nella gestione del reindirizzamento VAST *URL di reindirizzamento *errore: messaggio di *errore*.
+* Eccezione nella gestione del reindirizzamento VAST *URL di reindirizzamento *errore: *messaggio* di errore.
 * Impossibile recuperare la playlist dell&#39;annuncio per l&#39;URL *del manifesto dell&#39;* annuncio.
 * Impossibile generare il manifesto di destinazione. (HLSManifestResolver)
-* Impossibile analizzare la risposta della prima chiamata ad: messaggio *di errore*.
-* Impossibile elaborare *GET|POST *richiesta di percorso: URL ** richiesta. (Live/VOD)
-* Impossibile elaborare la richiesta del manifesto live: URL ** richiesta. (Live)
-* Impossibile restituire un manifesto di variante: messaggio di *errore*.
-* Impossibile convalidare l&#39;ID gruppo: ID ** gruppo.
-* Recupero del manifesto non elaborato: URL ** contenuto. (Live)
-* Dopo il reindirizzamento VAST: URL ** di reindirizzamento.
+* Impossibile analizzare la risposta della prima chiamata ad: *messaggio* di errore.
+* Impossibile elaborare *GET|POST *richiesta percorso: *richiedi URL*. (Live/VOD)
+* Impossibile elaborare la richiesta del manifesto live: *richiedi URL*. (Live)
+* Impossibile restituire un manifesto di variante: *messaggio* di errore.
+* Impossibile convalidare l&#39;ID gruppo: *ID* gruppo.
+* Recupero del manifesto non elaborato: *URL* contenuto. (Live)
+* Dopo il reindirizzamento VAST: *redirect URL*.
 * Trovate delle risorse vuote. (VOD)
 * Trovato *numero *annunci. (VOD)
 * Richiesta HTTP ricevuta. (Primo messaggio)
@@ -366,11 +369,11 @@ I record di questo tipo consentono al server di manifesto di registrare eventi e
 * Richiesta non valida. Didascalia non è una richiesta di tracciamento valida. (VOD)
 * Richiesta non valida. La richiesta di didascalia deve essere eseguita dopo che è stata stabilita la sessione. (VOD)
 * Richiesta non valida. La richiesta di tracciamento deve essere eseguita dopo che è stata stabilita la sessione. (VOD)
-* Istanza del server non valida per l&#39;ID del gruppo di sovraccarico: ID ** gruppo. (Live)
+* Istanza del server non valida per l&#39;ID del gruppo di sovraccarico: *ID* gruppo. (Live)
 * Limite di reindirizzamenti VAST raggiunti - *numero*.
-* Chiamata ad annunci: URL *chiamata* ad.
-* Nessun manifesto trovato per: URL ** contenuto. (Live)
-* Nessun valore corrispondente trovato per l&#39;ID valido: ID ** valido. (HLSManifestResolver)
+* Chiamata ad annunci: *ad call URL*.
+* Nessun manifesto trovato per: *URL* contenuto. (Live)
+* Nessun valore corrispondente trovato per l&#39;ID valido: *ID* valido. (HLSManifestResolver)
 * Nessuna sessione di riproduzione trovata. (HLSManifestResolver)
 * Elaborazione della richiesta VOD per l&#39;URL *del* contenuto manifesto.
 * Variante di elaborazione.
@@ -378,28 +381,28 @@ I record di questo tipo consentono al server di manifesto di registrare eventi e
 * Elaborazione della richiesta di tracciamento. (VOD)
 * Reindirizza risposta annuncio vuota. (VASTStAX)
 * Richiesta: *URL*.
-* Risposta di errore restituita per la richiesta GET perché non è stata trovata alcuna sessione di riproduzione. (VOD)
-* Risposta di errore restituita per la richiesta GET a causa di un errore interno del server.
-* Risposta di errore di ritorno per la richiesta GET che specifica una risorsa non valida: ID *richiesta* annuncio. (VOD)
-* Risposta di errore di ritorno per la richiesta GET che specifica un ID gruppo vuoto o non valido: ID ** gruppo. (VOD)
-* Risposta di errore restituita per la richiesta GET che specifica un valore di posizione di tracciamento non valido. (VOD)
-* Risposta di errore di ritorno per la richiesta GET con sintassi non valida - URL ** richiesta. (Live/VOD)
+* Risposta di errore di ritorno per la richiesta di GET perché non è stata trovata alcuna sessione di riproduzione. (VOD)
+* Risposta di errore restituita per la richiesta di GET a causa di un errore interno del server.
+* Risposta di errore di ritorno per la richiesta di GET che specifica una risorsa non valida: *ID* richiesta annuncio. (VOD)
+* Risposta di errore di ritorno per la richiesta di GET che specifica un ID gruppo vuoto o non valido: *ID* gruppo. (VOD)
+* Risposta di errore restituita per la richiesta di GET che specifica un valore di posizione di tracciamento non valido. (VOD)
+* Risposta di errore di ritorno per la richiesta di GET con sintassi non valida - URL ** richiesta. (Live/VOD)
 * Risposta di errore di ritorno per la richiesta con metodo HTTP non supportato: *GET|POST*. (Live/VOD)
 * Restituzione del manifesto dalla cache. (VOD)
 * Il server è sovraccarico. Procedete senza richiesta di punto e punto. (Variante)
 * Iniziate a generare il manifesto di destinazione. (HLSManifestResolver)
-* Avvia la generazione del manifesto della variante da: URL ** contenuto. (Variante)
+* Avvia la generazione del manifesto della variante da: *URL* contenuto. (Variante)
 * Iniziate a raggruppare gli annunci in manifest. (VODHLSResolver)
-* Tentativo di cucire l&#39;annuncio su *HH:MM:SS*: AdPlacement [adManifestURL=*ad Manifest URL*, durataSeconds=*secondi*, ignore=*ignore*, redirectAd=*redirect ad*, priority=*priority*. (HLSManifestResolver)
+* Tentativo di cucire l&#39;annuncio su *HH:MM:SS*: AdPlacement adManifestURL=*ad Manifest URL*, durataSeconds=*secondi*, ignore=*ignore*, redirectAd=*redirect ad*, priority=*priority*. (HLSManifestResolver)
 * Impossibile ottenere gli annunci a causa di una cronologia pitimeline non valida - ha restituito il contenuto senza annunci. (VOD)
 * Impossibile ottenere gli annunci: è stato restituito il contenuto senza annunci. (VOD)
 * Impossibile ottenere la richiesta di annuncio e non è stato fornito alcun URL di contenuto. (VOD)
 * URL ricevuto valido. (VOD/Variant)
 * Impossibile trovare la variante M3U8. (Variante)
 
-### Record TRACE_TRACKING_URL {#trace-tracking-url-records-1}
+### TRACE_TRACKING_URL, record {#trace-tracking-url-records-1}
 
-Il server manifesto genera record di questo tipo dopo aver chiamato un URL di tracciamento durante il flusso di lavoro di tracciamento lato server. I campi oltre TRACE_TRACKING_URL vengono visualizzati nell&#39;ordine indicato nella tabella, separati da tabulazioni.
+Il server manifesto genera record di questo tipo dopo aver chiamato un URL di tracciamento durante il flusso di lavoro di tracciamento lato server. I campi oltre a TRACE_TRACKING_URL vengono visualizzati nell&#39;ordine indicato nella tabella, separati da tabulazioni.
 
 | Field | Tipo | Descrizione |
 |--- |--- |--- |
@@ -408,9 +411,9 @@ Il server manifesto genera record di questo tipo dopo aver chiamato un URL di tr
 | url | string | URL con cerniera |
 | state | string | Codice di stato HTTP |
 
-### Record TRACE_PLAYBACK_PROGRESS {#trace-playback-progress-records}
+### TRACE_PLAYBACK_PROGRESS, record {#trace-playback-progress-records}
 
-Il server manifesto genera record di questo tipo quando riceve un segnale sull’avanzamento della riproduzione durante il flusso di lavoro di tracciamento lato server. I campi oltre TRACE_PLAYBACK_PROGRESS vengono visualizzati nell&#39;ordine indicato nella tabella, separati da tabulazioni.
+Il server manifesto genera record di questo tipo quando riceve un segnale sull’avanzamento della riproduzione durante il flusso di lavoro di tracciamento lato server. I campi oltre a TRACE_PLAYBACK_PROGRESS vengono visualizzati nell&#39;ordine indicato nella tabella, separati da tabulazioni.
 
 | Field | Tipo | Descrizione |
 |--- |--- |--- |
@@ -430,4 +433,4 @@ Il server manifesto genera record di questo tipo quando riceve un segnale sull�
 
 ## Risorse utili {#helpful-resources}
 
-* Consulta la documentazione completa della guida nella pagina Informazioni e supporto [di](https://helpx.adobe.com/support/primetime.html) Adobe Primetime.
+* Consulta la documentazione completa della guida [pagina Informazioni e supporto](https://helpx.adobe.com/support/primetime.html) di Adobe Primetime.
