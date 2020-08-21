@@ -5,7 +5,10 @@ seo-title: Parametri query server manifesto
 title: Parametri query server manifesto
 uuid: 03632da3-ae20-427c-bd24-4794ab627cc8
 translation-type: tm+mt
-source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+workflow-type: tm+mt
+source-wordcount: '790'
+ht-degree: 0%
 
 ---
 
@@ -45,5 +48,5 @@ Il server manifesto riconosce i seguenti parametri. Li elabora o li trasmette, i
 | pttrackingposition | Indica al server manifesto di restituire solo le informazioni di tracciamento annunci. Non specificate questo parametro nella richiesta di avvio automatico. | Tracciamento lato client | Nota alfanumerica:  Il server manifesto ignora tutti i valori passati. Tuttavia, se si passa una stringa null o vuota, il server manifesto restituisce M3U8 invece delle informazioni di tracciamento. |
 | pttrackingversion | Versione formato delle informazioni di tracciamento lato client. | Tracciamento lato client | v1 , v2 , v3 , o vmap |
 | scteTracking | Recupera M3U8 , prima che le informazioni di tracciamento SCTE possano essere recuperate nel sidecar JSON V2.  <br/>Questo parametro indica al server manifesto che il lettore che recupera M3U8 deve recuperare le informazioni del tag SCTE. | No (predefinito:  false ) | true o false Note:  I dati SCTE-35 vengono restituiti nel sidecar JSON con la seguente combinazione di valori dei parametri di query: <ul><li>`ptcueformat=turner | elemental | nfl | DPIScte35` </li><li>pttrackingversion=v2 </li><li>scteTracking=true</li></ul> |
-| vetargetmoltiplicatore | Il numero di segmenti dal punto vivo L&#39;offset pre-roll è configurato utilizzando:   `(  vetargetmultiplier  *  targetduration ) +  vebufferlength` Nota <br/><br/>****:  Solo Live/Linear | No (predefinito:  3.0 ) | Mobile |
+| vetargetmoltiplicatore | Il numero di segmenti dal punto vivo L&#39;offset pre-roll è configurato utilizzando:   `(  vetargetmultiplier  *  targetduration ) +  vebufferlength`  <br/><br/>**Nota**:  Solo Live/Linear | No (predefinito:  3.0 ) | Mobile |
 | vebufferLength | Il numero di secondi dalla nota del punto attivo:  Solo Live/Linear | No (predefinito:  3.0 ) | Mobile |
