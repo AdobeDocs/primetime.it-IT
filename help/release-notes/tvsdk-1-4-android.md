@@ -9,9 +9,9 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: f1ebc1a8-185a-493a-9c00-a6102dffb128
 translation-type: tm+mt
-source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
 workflow-type: tm+mt
-source-wordcount: '7913'
+source-wordcount: '7830'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Note sulla versione di TVSDK 1.4 per Android descrivono le novità o le modifich
 
 **Proteggere il caricamento di annunci tramite HTTPS**
 
-Adobe Primetime fornisce un&#39;opzione per richiedere la prima chiamata al server di annunci primetime e al CRS tramite HTTPS.
+ Adobe Primetime fornisce un&#39;opzione per richiedere la prima chiamata al server di annunci primetime e al CRS attraverso HTTPS.
 
 **alwaysUseAudioOutputLatency(valore booleano) nella classe MediaPlayer**
 
@@ -92,19 +92,19 @@ Correzione di bug per Salta contenuto su Android.
 
 * **Informazioni annuncio di rete**
 
-   Le API TVSDK ora forniscono informazioni aggiuntive sulle risposte VAST di terze parti. Ad ID, Ad System e VAST Ad Extensions sono forniti nella classe NetworkAdInfo accessibile tramite la proprietà networkAdInfo su una Ad Asset. Queste informazioni possono essere utilizzate per l&#39;integrazione con altre piattaforme Ad  Analytics come **Moat  Analytics**.
+   Le API TVSDK ora forniscono informazioni aggiuntive sulle risposte VAST di terze parti. Ad ID, Ad System e VAST Ad Extensions sono forniti nella classe NetworkAdInfo accessibile tramite la proprietà networkAdInfo su una Ad Asset. Queste informazioni possono essere utilizzate per l&#39;integrazione con altre piattaforme di Ad Analytics come **Moat Analytics**.
 
 **Versione 1.4.31**
 
 **Supporto multi-CDN per annunci CRS**
-* Per impostazione predefinita, tutte le risorse transcodificate saranno ospitate sulla rete CDN di proprietà di Adobe su Akamai. Con la versione più recente, Adobe Creative Repackaging Service (CRS) consente di caricare le creatività transcodificate in più CDN, come specificato dal cliente.
+* Per impostazione predefinita, tutte le risorse transcodificate saranno ospitate  CDN di proprietà del Adobe su Akamai. Con la versione più recente,  Adobe Creative Repackaging Service (CRS) consente di caricare i creativi transcodificati in più CDN, come specificato dal cliente.
 * Nuove API vengono aggiunte a TVSDK per abilitare la specifica dell&#39;URL creativo CRS finale quando l&#39;URL predefinito non è utilizzato. Per informazioni sull&#39;utilizzo di queste nuove API, consultate la documentazione.
 
 **La versione 1.4.18** Primetime Android TVSDK ora supporta i creativi Javascript VPAID 2.0 per consentire un&#39;esperienza pubblicitaria interattiva avanzata. Per ulteriori informazioni su VPAID 2.0, consulta [VPAID e assistenza](../programming/tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/vpaid-ads/android-3x-vpaid-ads.md).
 
 **Versione 1.4.17**
 
-AC-3 5.1 è supportato solo su Amazon FireTV.
+AC-3 5.1 è supportato solo su  Amazon FireTV.
 
 **Versione 1.4.11**
 
@@ -118,17 +118,17 @@ Per ulteriori informazioni, vedi [Fallback annunci per annunci](../programming/t
 
 **Versione 1.4.7**
 
-* **Supporto per l&#39;** individuazione localeSupporto per le installazioni aziendali interne di Adobe Individualization Server per personalizzare la richiesta di individualizzazione del client per passare a un endpoint diverso.
+* **Supporto per l&#39;** individuazione localeSupporto per le installazioni aziendali interne del server di Individuazione del Adobe  per personalizzare la richiesta di individualizzazione del client per passare a un endpoint diverso.
 
 **Versione 1.4.6**
 
-* **Cifratura AES di esempio (richiede Flash Player versione 17.0.0.134)**È ora supportata la crittografia AES basata su esempio.
+* **Cifratura AES di esempio (richiede la versione di Flash Player 17.0.0.134)**È ora supportata la crittografia AES basata su campione.
 
 **Versione 1.4.2**
 
 * **Video Heartbeats Library (VHL) aggiornamento alla versione 1.4.0.1**
 
-   * Aggiunta la possibilità di raggruppare diversi casi di utilizzo di analisi, da altri SDK o lettori, con Adobe  Analytics Video Essentials.
+   * Aggiunta la possibilità di raggruppare diversi casi di utilizzo di analisi, da altri SDK o lettori, con  Adobe Analytics Video Essentials.
    * Il tracciamento degli annunci è stato ottimizzato rimuovendo i metodi trackAdBreakStart e trackAdBreakComplete. L’interruzione dell’annuncio viene ricavata dalle chiamate dei metodi trackAdStart e trackAdComplete.
    * La proprietà playhead non è più necessaria per il tracciamento degli annunci.
 
@@ -136,31 +136,33 @@ Per ulteriori informazioni, vedi [Fallback annunci per annunci](../programming/t
 
 **Versione 1.4.0**
 
-* **Segnalazione di blackout con sostituzione** di contenuti alternativi Nel quadro dell’aggiornamento TVSDK 1.4, TVSDK ora supporta anche l’accesso e la restituzione dai blackout regionali rispetto ai contenuti lineari. Il TVSDK ora può elaborare due file manifest in parallelo, principale e alternativo, per monitorare i segnali di blackout anche quando la programmazione alternativa viene mostrata al posto della programmazione originale.
+* **Segnalazione di blackout con sostituzione** di contenuti alternativi Nel quadro dell’aggiornamento TVSDK 1.4, TVSDK ora supporta anche l’accesso e la restituzione dai blackout regionali rispetto ai contenuti lineari. Il TVSDK ora può elaborare due file manifest in parallelo, principale e alternativo, per monitorare i segnali blackout anche quando la programmazione alternativa viene mostrata al posto della programmazione originale.
 
 * **Rimuovi/Sostituisci annunci** C3 Ora, non è necessario alcun lavoro di preparazione aggiuntivo per inserire dinamicamente nuovi annunci nelle risorse video-on-demand (VOD) che escono dalla finestra C3. TVSDK fornisce ora un&#39;API per rimuovere intervalli di contenuto personalizzati e inserire nuovi annunci in modo dinamico. Questa nuova potente funzionalità è utile anche nei casi in cui i contenuti live/lineari vengono inviati in onda durante la trasmissione e immediatamente ridotti per essere utilizzati come contenuti on demand senza il tempo necessario per &quot;pulire&quot; la risorsa.
 
 * L’interfaccia PlaybackEventListener dispone di un nuovo metodo chiamato onReplaceMediaPlayerItem, che consente di ascoltare un nuovo evento, `ITEM_REPLACED`. Questo evento viene inviato ogni volta che un&#39;istanza MediaPlayeritem viene sostituita in MediaPlayer. L&#39;applicazione client che implementa questo oggetto PlaybackEventListener deve implementare o ignorare questo nuovo metodo.
 * AdClientFactory ha una nuova funzione aggiunta alla classe per registrarsi per più Rilevatori opportunità:
 
-   public List&lt;PlacementOpportunityDetector> createOpportunityDetectors(elemento MediaPlayerItem);
-
-   Ad esempio, per la funzione di uscita anticipata e in uscita, sono necessari due Rilevatori opportunità: uno per l’inserimento di annunci e l’altro per l’uscita anticipata da `ad`.
-
-   Per ignorare questa nuova funzione, create un singolo Rilevatore opportunità, quindi inserite in un array e restituite:
-
+   ```
+   public List&lt;PlacementOpportunityDetector&gt; createOpportunityDetectors(MediaPlayerItem item);
+   
+   For example for early ad exit feature, you need two Opportunity Detectors - one for ad insertion and another for  early  exit from  `ad`.
+   
+   To override this new function create a single Opportunity Detector, and put into an array and return:
+   
    @Override
-
-   public List&lt;PlacementOpportunityDetector> createOpportunityDetectors(MediaPlayerItem mediaPlayerItem) {
-
-   List&lt;PlacementOpportunityDetector> opportunitàDetectors = new ArrayList&lt;PlacementOpportunityDetector>();
-
-   opportunitàDetectors.add(createOpportunityDetector(mediaPlayerItem));
-
-   return experienceDetectors;
-}
-
+   
+   public List&lt;PlacementOpportunityDetector&gt; createOpportunityDetectors(MediaPlayerItem mediaPlayerItem) {
+   
+   List&lt;PlacementOpportunityDetector&gt; opportunityDetectors = new ArrayList&lt;PlacementOpportunityDetector&gt;();
+   
+   opportunityDetectors.add(createOpportunityDetector(mediaPlayerItem));
+   
+   return opportunityDetectors;
    }
+   
+   }
+   ```
 
 ## Modifiche TVSDK per 1.4 {#tvsdk-changes}
 
@@ -168,25 +170,29 @@ Per ulteriori informazioni, vedi [Fallback annunci per annunci](../programming/t
 
 * AdClientFactory ha una nuova funzione aggiunta alla classe per registrarsi per più Rilevatori opportunità:
 
-public List`<PlacementOpportunityDetector>` createOpportunityDetectors(elemento MediaPlayerItem);
+```
+public List`<PlacementOpportunityDetector>` createOpportunityDetectors(MediaPlayerItem item);
+```
 
 Ad esempio, per la funzione di uscita anticipata e in uscita, sono necessari due Rilevatori opportunità, uno per l’inserimento di annunci e l’altro per l’uscita anticipata dall’annuncio.
 
 Per ignorare questa nuova funzione, create un singolo Rilevatore opportunità, quindi inserite in un array e restituite:
 
+```
 @Override
 
 public List`<PlacementOpportunityDetector>` createOpportunityDetectors(MediaPlayerItem mediaPlayerItem) {
 
-List`<PlacementOpportunityDetector>` opportunitàDetectors = new ArrayList`<PlacementOpportunityDetector>`();
+List`<PlacementOpportunityDetector>` opportunityDetectors = new ArrayList`<PlacementOpportunityDetector>`();
 
-opportunitàDetectors.add(createOpportunityDetector(mediaPlayerItem));
+opportunityDetectors.add(createOpportunityDetector(mediaPlayerItem));
 
-return experienceDetectors;
-
-}
+return opportunityDetectors;
 
 }
+
+}
+```
 
 ## Certificazione e supporto dei dispositivi in 1.4 {#device-certification-and-support-in}
 
@@ -208,7 +214,7 @@ TVSDK 1.4.43 è stato certificato con dispositivi Android con Android 6.0.1/ 7.0
 
 * **Versione 1.4.18:**
 
-   * Primetime è stato certificato per Amazon Fire TV.
+   * Primetime è stata certificata per  Amazon Fire TV.
    * VPAID 2.0 è supportato solo sui dispositivi con Android 4.0 e versioni successive.
 
 ## Risolti i problemi in 1.4 {#resolved-issues-in}
@@ -227,7 +233,7 @@ TVSDK 1.4.43 è stato certificato con dispositivi Android con Android 6.0.1/ 7.0
 
 * Ticket #33902 - Consegna pubblicitaria sicura tramite HTTPS
 
-   * Adobe Primetime fornisce un&#39;opzione per richiedere la prima chiamata a server di annunci primetime e CRS attraverso https.
+   *  Adobe Primetime fornisce un&#39;opzione per richiedere la prima chiamata a server di annunci primetime e CRS attraverso https.
 
 * Biglietto #34493 - Ritardo audio Bluetooth
 
@@ -249,13 +255,13 @@ TVSDK 1.4.43 è stato certificato con dispositivi Android con Android 6.0.1/ 7.0
 
 **Versione 1.4.40 (1764)**
 
-* Zendesk #33068 - Problema di sincronizzazione labbro Amazon sul nuovo dispositivo. È stato corretto un problema di sincronizzazione labbra in questa release.
+* Zendesk #33068 -  problema di sincronizzazione labbro Amazon sul nuovo dispositivo. È stato corretto un problema di sincronizzazione labbra in questa release.
 * Zendesk #32215 - Android TVSDK 1.4.38 - Problemi di sicurezza `[Hotlist]`. Aggiornati alla versione più recente di OpenSSL-1.1.0 e curl-7.55.1.
 * Zendesk #32920 - Schermo vuoto all&#39;interno di un&#39;interruzione pubblicitaria e nessun completamento interruzione annuncio. È stato risolto un problema per il quale un contenitore VPAID poteva trovarsi in uno stato sospeso e gestiva un problema per cui gli annunci VPAID Facebook spesso restituivano più blocchi CDATA in un singolo \&amp;lt;AdParameters\&amp;gt; Nodo VAST.
 
 **Versione 1.4.39 (1744)**
 
-* Zendesk #28976 - La richiesta di licenza richiede più di un secondo. Mentre sono in esecuzione le chiamate di richiesta di licenza DRM che utilizzano POST, Curl aggiunge &quot;Expes: 100 continue&quot;. È stata rimossa l’intestazione &quot;Expect:&quot; in TVSDK.
+* Zendesk #28976 - La richiesta di licenza richiede più di un secondo. Mentre sono in esecuzione le chiamate di richiesta di licenza DRM che utilizzano POST, Curl aggiunge &quot;Aspettate: 100 continue&quot;. È stata rimossa l’intestazione &quot;Expect:&quot; in TVSDK.
 * Zendesk #27707 - Gli ambienti CSAI che non rispettano i marcatori CUE IN per un ritorno anticipato o un ritorno ai contenuti. Supporto per più generatori di opportunità.
 
 **Versione 1.4.38 (1722)**
@@ -293,8 +299,8 @@ Questo problema viene risolto inviando gli URL creativi originali.
 
 * Zendesk #25023 - Riproduzione video di lunga durata: blocco video, sfarfallio dello schermoQuesto problema è stato risolto impostando le dimensioni massime del formato video per i dispositivi set-top box CenturyLink.
 
-* Zendesk #27460 - Il nuovo account Akamai non è in grado di gestire una richiesta POST cdn.
-Il codice è stato aggiornato per fare in modo che la richiesta di `cdn.auditude.com` annuncio fosse GET invece di POST.
+* Zendesk #27460 - Il nuovo account Akamai non è in grado di gestire una richiesta di POST cdn.
+Il codice è stato aggiornato per fare in modo che la richiesta di `cdn.auditude.com` annuncio fosse GET anziché POST.
 
 * Zendesk #28245 - Lo stato di riproduzione non viene notificato correttamente quando l&#39;app va dallo sfondo al primo piano. Questo problema è stato risolto ripristinando correttamente lo stato di riproduzione per la riproduzione in modo che venga riprodotto o messo in pausa quando l&#39;applicazione torna in primo piano.
 
@@ -302,7 +308,7 @@ Il codice è stato aggiornato per fare in modo che la richiesta di `cdn.auditude
 
 * Zendesk #25779 - La vulnerabilità di sicurezza rilevata con TVSDKAndroid 4.2 e versioni precedenti presenta una vulnerabilità di sicurezza quando JavaScript è abilitato in una WebView. L&#39;utilizzo di WebView da parte di TVSDK è stato disattivato per i dispositivi con sistema operativo 4.2 o inferiore. In questo modo viene disattivato l&#39;uso di annunci VPAID in TVSDK su questi dispositivi.
 
-* Zendesk #26890 - Problema di utilizzo dello schermo (ON/OFF) Lettore: quando Adobe Video Engine (AVE) riprende da uno stato SOSPESO, DefaultMediaPlayer non ne aggiorna lo stato. Di conseguenza, DefaultMediaPlayer rimane in stato SOSPESO anche se l’AVE è in stato di riproduzione. Questo problema è stato risolto impostando lo stato DefaultMediaPlayer su PLAYING quando viene ricevuto uno stato PLAY dall&#39;AVE, anche se lo stato corrente di DefaultMediaPlayer è SOSPESO.
+* Zendesk #26890 - Problema di utilizzo dello schermo (ON/OFF) Lettore: quando il motore video  Adobe (AVE) riprende da uno stato SOSPESO, DefaultMediaPlayer non aggiorna il suo stato. Di conseguenza, DefaultMediaPlayer rimane in stato SOSPESO anche se l’AVE è in stato di riproduzione. Questo problema è stato risolto impostando lo stato DefaultMediaPlayer su PLAYING quando viene ricevuto uno stato PLAY dall&#39;AVE, anche se lo stato corrente di DefaultMediaPlayer è SOSPESO.
 
 **Versione 1.4.31 (1675)**
 
@@ -339,7 +345,7 @@ Il codice è stato aggiornato per fare in modo che la richiesta di `cdn.auditude
 
 * Zendesk #25067 - Arresto anomalo in VideoEngineTimelineCiò si verifica perché gli oggetti non venivano puliti correttamente e gli eventi venivano richiamati dopo la distruzione degli oggetti. Il problema è stato risolto mediante l&#39;aggiunta di controlli per evitare eccezioni null.
 
-* Zendesk #25352 - Imposta intestazione HTTP personalizzataQuesto problema è stato risolto aggiungendo una nuova intestazione personalizzata all’elenco Consenti in TVSDK.
+* Zendesk #25352 - Imposta intestazione HTTP personalizzataQuesto problema è stato risolto aggiungendo una nuova intestazione personalizzata al elenco consentiti  su TVSDK.
 
 * Zendesk #25617 - Il rollover PTS del flusso live causa la discontinuità del lettore e l&#39;arresto anomalo della memoriaQuesto problema è stato risolto aggiungendo una gestione di rollover PTS in FrammentHTTPStreamer quando si verifica un rollover nel mezzo di un segmento.
 
@@ -360,14 +366,14 @@ Il codice è stato aggiornato per fare in modo che la richiesta di `cdn.auditude
 
 **Versione 1.4.25 (1620)**
 
-* Zendesk #22900 - Il flusso DRM Adobe Primetime Live non viene riprodotto sul lettore di riferimento Android. Il problema di allocazione della memoria è stato risolto.
+* Zendesk #22900 - Il flusso DRM  Adobe Primetime live non viene riprodotto sul lettore di riferimento AndroidIl problema di allocazione della memoria è stato risolto.
 * Zendesk #23176 - Arresto anomalo dell&#39;applicazione durante il tentativo di riprodurre annunci VPAIDL&#39;arresto anomalo si è verificato perché l&#39;applicazione non crea una visualizzazione pubblicitaria personalizzata per il rendering di un annuncio VPAID. Questo problema è stato risolto ignorando gli annunci VPAID nella risposta del server di annunci in assenza di una visualizzazione annunci personalizzata.
 
 * Zendesk #23153 - SampleAES DRM Stream - Arresto della riproduzione nel lettore di riferimento TVSDKQuesto problema è identico a Zendesk #22900.
 
 **Versione 1.4.24 (1612)**
 
-* Zendesk #20784 -  Analytics: Attivazione dei contenuti completi per le transizioni video liveQuesto problema è stato risolto aggiungendo un’API (trackVideoComplete) per attivare manualmente il completamento del contenuto durante una sessione di tracciamento video live/lineare.
+* Zendesk #20784 - Analytics: Attivazione dei contenuti completi per le transizioni video liveQuesto problema è stato risolto aggiungendo un’API (trackVideoComplete) per attivare manualmente il completamento del contenuto durante una sessione di tracciamento video live/lineare.
 
 * Zendesk #21977 VideoEngineArresto anomalo della timeline durante il funzionamento di placeAdBreak/AcceptAd
    * In questo problema, sono state aggiornate le seguenti librerie:
@@ -443,7 +449,7 @@ Questo problema è stato risolto consentendo al TVSDK di segnalare la risposta d
 
 * Zendesk #18358 - Il lettore blocca l&#39;interruttore del bitrate con discontinuità fuori sincronizzazioneQuesto problema è stato risolto gestendo i casi di cucitura ABR in modo appropriato.
 
-* Zendesk #19232 - L&#39;app che utilizza TVSDK 1.4.18 si comporta stranamente sulla versione precedente di Amazon OS 4Questo problema è stato risolto rimuovendo la creazione di una visualizzazione Web nascosta nel processo di inizializzazione del lettore TVSDK per evitare conflitti con i dispositivi che non supportano Android Webview.
+* Zendesk #19232 - L&#39;app che utilizza TVSDK 1.4.18 si comporta in modo strano sulla precedente versione di Amazon OS 4Questo problema è stato risolto rimuovendo la creazione di visualizzazione Web nascosta nel processo di inizializzazione del lettore TVSDK per evitare conflitti con i dispositivi che non supportano Android Webview.
 
 * Zendesk #19585 - Riproduzione slow motion in caso di transizione con bitrate adattivo.
 Durante lo switch ABR, se il nuovo profilo ha una frequenza di campionamento audio diversa dal profilo corrente, la riproduzione diventa veloce o slow motion. Questo perché al relatore video non viene notificato che il formato audio è cambiato.
@@ -456,7 +462,7 @@ RENDITION_TIMEOUT_THRESHOLD è stato impostato su 100 ms, ma si è scoperto che 
 
 * Zendesk #19699 - Il TVSDK non passa tra le tracce dei sottotitoli VTT. Questo problema è stato risolto creando il dump del lettore e ricaricando il manifesto quando una traccia cambia e correggendo il problema di conversione delle stringhe UTF8 che ha interessato i nomi delle tracce delle didascalie WebVTT a doppio byte.
 
-* Zendesk #19717 - Problema di visualizzazione delle opzioni CC: questo problema è stato risolto gestendo correttamente la stringa Unicode.
+* Zendesk #19717 - Problema di visualizzazione delle opzioni CCQuesto problema è stato risolto gestendo correttamente la stringa Unicode.
 
 * Zendesk #19910 - Impossibile rilevare i tag TIT2 ID3. Questo problema è stato risolto fornendo supporto più completo per le codifiche di stringhe ID3 v2.4 e per il supporto per ID3 v2.3.
 
@@ -511,7 +517,7 @@ Questo problema è stato risolto controllando la dimensione dei metadati DRM del
 
 * Zendesk #17919 - Android - il contenuto cerca causa errori heartbeatIl problema quando il heartbeat è in stato di errore quando è stata risolta una ricerca in un capitolo.
 
-* Zendesk #18053 - Arresti anomali di Adobe Primetime su MarshmallowIl TVSDK si arrestava in modo anomalo su Android M OS quando la libreria TVSDK utilizzava il codice neon che esegue la conversione colore YUV -> RGB. Il problema è stato risolto aggiornando le funzioni che causano il problema utilizzando la versione non neon del codice.
+* Zendesk #18053 -  Adobe Primetime si arresta in modo anomalo su MarshmallowIl TVSDK si arrestava in modo anomalo su Android M OS quando la libreria TVSDK utilizzava il codice neon che esegue la conversione colore YUV -> RGB. Il problema è stato risolto aggiornando le funzioni che causano il problema utilizzando la versione non neon del codice.
 
 * Zendesk #18072 - Android M - Arresto anomalo dell&#39;applicazioneQuando si verifica il supporto del profilo e del livello, si verifica un arresto anomalo durante la chiamata delle API MediaCodecList e MediaCodecInfo. Il problema è stato risolto fornendo una soluzione temporanea caricando in anticipo tutte le informazioni del codec per evitare di chiamare queste API solo quando sono necessarie informazioni sul codec.
 
@@ -588,7 +594,7 @@ Instant On è stato aggiornato per consentire un punto iniziale diverso da zero.
 
 **Versione 1.4.11 (1363)**
 
-* Zendesk #2076 - Tutter frequente durante la riproduzione di video su Motorola Xoom con dispositivi Android 4.0.3Aggiunti per consentire l&#39;elenco per evitare che tentino di riprodurre contenuti di alto profilo.
+* Zendesk #2076 - Tutter frequente durante la riproduzione di video su Motorola Xoom con dispositivi Android 4.0.3Aggiunti al elenco consentiti per evitare che tentino di riprodurre contenuti di alto profilo.
 
 * Zendesk #2197 - `[Ads]` Errori di tracciamento e invio dell&#39;operazioneFailedEvent con notifica di avviso.
 
@@ -600,7 +606,7 @@ Instant On è stato aggiornato per consentire un punto iniziale diverso da zero.
 
 * Zendesk #2941 - Le risorse live non hanno &quot;0&quot; nell&#39;intervallo ricercabilePrecedentemente era presente un buffer di 3 segmenti quando si cercava l&#39;inizio di un flusso live, ora è possibile cercare all&#39;inizio di un flusso live (cioè l&#39;inizio del primo segmento).
 
-* Zendesk #3169 - Aggiornare il lettore di riferimento con l&#39;integrazione di Adobe  AnalyticsIl lettore di riferimento è stato aggiornato con la libreria Adobe  Analytics come impianto di esempio.
+* Zendesk #3169 - Aggiornamento del lettore di riferimento con  integrazione Adobe AnalyticsIl lettore di riferimento è stato aggiornato con la  libreria Adobe Analytics come impianto di esempio.
 * Zendesk #3299 - Comportamento di gioco ingannevole inspiegabile
    * È stato corretto un bug a causa del quale il ripristino dello stato di riproduzione dopo l’arresto della riproduzione potrebbe richiedere alcuni secondi (a volte più di 25 secondi).
    * È stato corretto un bug a causa del quale il trucco di richiamo veniva riprodotto una seconda volta sullo stesso supporto, che causava il blocco del flusso al momento corrente.
@@ -620,7 +626,7 @@ Dopo una ricerca, è possibile che il motore video imposti lo stato su PLAYING p
 
 * Zendesk #2846 - Richiesta di miglioramento: Consente di impostare una stringa agente utente diversa per le chiamate effettuate dalla libreria Auditude
 
-È stata aggiunta una nuova API per impostare l’agente utente per le chiamate correlate agli annunci, auditudeSettings.setUserAgent(&quot;user/agent&quot;). Se non è impostato alcun agente utente, verrà utilizzato il valore predefinito. Questo incide solo sull’agente utente per le chiamate correlate agli annunci, l’agente utente per le chiamate ai supporti non subisce modifiche, che è &quot;Adobe Primetime&quot;+&lt;agente utente predefinito>.
+È stata aggiunta una nuova API per impostare l’agente utente per le chiamate correlate agli annunci, auditudeSettings.setUserAgent(&quot;user/agent&quot;). Se non è impostato alcun agente utente, verrà utilizzato il valore predefinito. Questo incide solo sull’agente utente per le chiamate correlate agli annunci, l’agente utente per le chiamate ai supporti non subisce modifiche, che è &quot; Adobe Primetime&quot;+&lt;agente utente predefinito>.
 
 **Versione 1.4.8 (1324)**
 
@@ -637,7 +643,7 @@ Dopo una ricerca, è possibile che il motore video imposti lo stato su PLAYING p
 * Zendesk #2760 - Tag DISCONTINUITÀ ignorato durante la modalità TrickPlay
 * Zendesk #2805 - Arresto anomalo del lettore all&#39;inizio della riproduzione, stessa correzione di Zendesk #2719
 * Zendesk #2817 - Lettore Android - Il lettore a volte si blocca e si interrompe la riproduzione, risolto estendendo i buffer di decodifica da 2.0 a 3.0 secondi
-* Zendesk #2839 - Adobe Primetime PSDK supporta i chipset ARMv8?, aggiunta della correzione per l&#39;arresto anomalo rilevato su Galaxy S6.
+* Zendesk #2839 -  Adobe Primetime PSDK supporta i chipset ARMv8?, è stata aggiunta una correzione per l&#39;arresto anomalo trovato su Galaxy S6.
 * Zendesk #2885 - Riproduzione di Auditude Crash, stesso problema di Zendesk #2719
 * Zendesk #2895 - Errore HLS live in modo coerente dopo 10 minuti di riproduzione
 * Zendesk #2925 - Feedback sulla build Android dev (1.4.5), su alcuni dispositivi quando mettiamo in coda il pacchetto alla coda di ingresso, se il PTS è negativo, il decoder va in uno stato strano che otteniamo sempre un PTS di output negativo per i pacchetti futuri. La correzione imposta l&#39;input PTS su zero se è negativo per evitare questo problema.
@@ -674,7 +680,7 @@ Questo problema è stato risolto aggiungendo la latenza tra i download dei segme
 * Zendesk #1158 - La riproduzione non riesce su Huawei Valiant (Y301A1)
 * Zendesk #1709 - Dimensioni dei supporti errate e video allungato
 * Zendesk #1757 - Solo l&#39;audio riprodotto dopo l&#39;interruttore di profilo tra flussi con dati spa/pps identici
-* Zendesk #2095 - Stato HTTP 307 (reindirizzamento) causa l&#39;arresto della riproduzione da parte del lettore Adobe
+* Zendesk #2095 - Stato HTTP 307 (reindirizzamento) causa l&#39;arresto della riproduzione  lettore Adobe
 * Zendesk #2126 - Evento TimedMetaData mancante per l&#39;ultimo evento ADEVENT, i tag Sottoscritti esistenti dopo l&#39;ultimo segmento non sono stati segnalati a PSDK da AVE
 * Zendesk #2227 - Blocchi in VideoEngine nativiReset e nativiPausa
 * Bug #3921755 - Aggiornamento della libreria OpenSSL alla versione 1.0.1L
@@ -810,4 +816,4 @@ Media Player invia erroneamente MediaPlayer PlayerState.Complete durante l’ope
 
 ## Risorse utili {#helpful-resources}
 
-* Consulta la documentazione completa della guida nella pagina Informazioni e supporto [di](https://helpx.adobe.com/support/primetime.html) Adobe Primetime.
+* Consulta la documentazione completa della guida [pagina Informazioni e supporto](https://helpx.adobe.com/support/primetime.html) di Adobe Primetime.
