@@ -5,7 +5,10 @@ seo-title: Utilizzare il comportamento di riproduzione predefinito
 title: Utilizzare il comportamento di riproduzione predefinito
 uuid: 36f76c42-4c6c-4620-9b47-ec97519a642a
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
@@ -40,19 +43,20 @@ Per personalizzare i comportamenti degli annunci:
 1. Implementare l&#39; `AdPolicySelector` interfaccia e tutti i relativi metodi.
 1. Assegnate l&#39;istanza del criterio che deve essere utilizzata da TVSDK tramite il modulo pubblicitario.
 
->[!NOTE]
->class CustomContentFactory extension ContentFactory {
->...
->@Override
->public AdPolicySelector retrieveAdPolicySelector>>(MediaPlayerItem mediaPlayerItem) {
->restituisce il nuovo CustomAdPolicySelector(mediaPlayerItem);
->}
->...
->}
->// Registra il content factory personalizzato con il lettore multimediale
->Configurazione MediaPlayerItemConfig = new MediaPlayerItemConfig();
->config.setAdvertisingFactory(new CustomContentFactory());
->// Questa configurazione verrà successivamente passata durante il caricamento > la risorsa
->mediaPlayer.replaceCurrentResource(resource, config);
+   >[!NOTE]
+   >
+   >class CustomContentFactory estende ContentFactory &amp;lbrace;
+   >...
+   >@Override
+   >public AdPolicySelector retrieveAdPolicySelector>>(MediaPlayerItem mediaPlayerItem) &amp;lbrace;
+   >restituisce il nuovo CustomAdPolicySelector(mediaPlayerItem);
+   >&amp;rampa;
+   >...
+   >&amp;rampa;
+   >// Registra il content factory personalizzato con il lettore multimediale
+   >Configurazione MediaPlayerItemConfig = new MediaPlayerItemConfig();
+   >config.setAdvertisingFactory(new CustomContentFactory());
+   >// Questa configurazione verrà successivamente passata durante il caricamento > la risorsa
+   >mediaPlayer.replaceCurrentResource(resource, config);
 
 1. Implementa le personalizzazioni.
