@@ -5,7 +5,10 @@ seo-title: Inserire annunci
 title: Inserire annunci
 uuid: 6e31cae5-7363-454f-82dd-e03c1e34cd3f
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '628'
+ht-degree: 0%
 
 ---
 
@@ -69,7 +72,7 @@ Di seguito sono riportati alcuni esempi di restituzione anticipata delle interru
    Sebbene sia stata specificata una durata predefinita, se il gioco riprende prima del termine dell&#39;interruzione, l&#39;interruzione dell&#39;annuncio deve essere terminata.
 * Un segnale di emergenza durante un&#39;interruzione pubblicitaria in un flusso live.
 
-La possibilità di uscire dall&#39;inizio di un&#39;interruzione dell&#39;annuncio è identificata tramite un tag personalizzato nel manifesto noto come plug-in o tag cue-in. TVSDK consente all’applicazione di sottoscrivere questi tag di collegamento per fornire un’opportunità di accesso facilitato.
+La possibilità di uscire dall&#39;inizio di un&#39;interruzione dell&#39;annuncio è identificata tramite un tag personalizzato nel manifesto noto come plug-in o tag di cue-in. TVSDK consente all’applicazione di sottoscrivere questi tag di collegamento per fornire un’opportunità di accesso facilitato.
 
 * Per utilizzare il `#EXT-X-CUE-IN` tag come opportunità di collegamento e implementare un ritorno iniziale all’interruzione dell’annuncio:
 
@@ -93,11 +96,11 @@ La possibilità di uscire dall&#39;inizio di un&#39;interruzione dell&#39;annunc
 
 1. Se l’applicazione sta condividendo lo stesso cue point per indicare cue out/splice-out e cue-in/splice-in, estendere `PTDefaultAdOpportunityResolver` e implementare il `preparePlacementOpportunity` metodo.
 
-   [!TIP]
+   >[!TIP]
+   >
+   >Il codice seguente presuppone che l&#39;app disponga di un&#39;implementazione per il `isCueInOpportunity` metodo.
 
-   Il codice seguente presuppone che l&#39;app disponga di un&#39;implementazione per il `isCueInOpportunity` metodo.
-
-```
+   ```
    - (PTPlacementOpportunity *)preparePlacementOpportunity:(PTTimedMetadata *)timedMetadata 
    { 
          if ([self isCueInOpportunity:timedMetadata]) 
@@ -109,7 +112,7 @@ La possibilità di uscire dall&#39;inizio di un&#39;interruzione dell&#39;annunc
                return [super preparePlacementOpportunity:timedMetadata]; 
          } 
    }
-```
+   ```
 
 1. Registra il risolutore di opportunità esteso nell&#39; `PTDefaultMediaPlayerClientFactory` istanza.
 
