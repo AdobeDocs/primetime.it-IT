@@ -2,9 +2,13 @@
 cloud: experience-cloud
 product: primetime
 audience: end-user
-user-guide-title: Primetime Reference Implementation Help
+user-guide-title: Guida all’implementazione di riferimento Primetime
+user-guide-description: Helps understand the TVSDK and modify the feature managers to customize your personal player.
 translation-type: tm+mt
-source-git-commit: abcbe6991d9a024f62554c3b5ec057f9b3c71c53
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '232'
+ht-degree: 0%
 
 ---
 
@@ -60,7 +64,7 @@ source-git-commit: abcbe6991d9a024f62554c3b5ec057f9b3c71c53
       + [Panoramica](paytvpass-entitlement/paytvpass-entitlement-overview.md)
       + [Panoramica di Entitlement Manager](paytvpass-entitlement/entitlement-overvivew.md)
       + [Integrare l&#39;autenticazione Primetime](paytvpass-entitlement/integrate-pass.md)
-      + [Configurare i rapporti di Adobe Analytics](paytvpass-entitlement/pass-analytics-setup.md)
+      + [Configurare  rapporti Adobe Analytics](paytvpass-entitlement/pass-analytics-setup.md)
       + [Documentazione API correlata](paytvpass-entitlement/pass-apis-callbacks.md)
    + Analisi video {#video-analytics}
       + [Analisi video](video-analytics/video-analytics-overview.md)
