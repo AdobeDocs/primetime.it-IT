@@ -2,20 +2,25 @@
 cloud: experience-cloud
 product: adobe primetime
 audience: end-user
-user-guide-title: Primetime Dynamic Ad Insertion Help
+user-guide-title: Primetime Dynamic  Ad Insertion Help
+user-guide-description: Explains how to monetize content by inserting user-targeted dynamic ads on the server and engage audience with personalized ads.
 translation-type: tm+mt
-source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '196'
+ht-degree: 0%
 
 ---
 
 
-# Aiuto per l&#39;inserimento di annunci dinamici {#ad-insertion}
+# Guida per Ad Insertion  dinamici {#ad-insertion}
 
-+ [Panoramica sull&#39;inserimento dinamico degli annunci](home.md)
-+ [Note sulla versione Dynamic Ad Insertion](https://docs.adobe.com/content/help/en/primetime/release-notes/ptai/ptai-19x-release-notes.html)
++ [Panoramica Ad Insertion  dinamico](home.md)
++ [Note sulla versione di Ad Insertion  dinamici](https://docs.adobe.com/content/help/en/primetime/release-notes/ptai/ptai-19x-release-notes.html)
 + [Strumento di debug server manifesto](manifest-server-debugging-tool.md)
+
 <!-- + [Server Side Ad Insertion debugging dashboard](ssai-debugging-dashboard.md)-->
-+ Manifest Server API for Ad Insertion {#manifest-server}
++ Manifest Server API for  Ad Insertion {#manifest-server}
    + [Panoramica delle interazioni del server manifesto](msapi-topics/ms-overview.md)
    + Guida introduttiva al server manifesto {#get-started}
       + [Invio di un comando al server manifesto](msapi-topics/ms-getting-started/ms-sending-cmd.md)
