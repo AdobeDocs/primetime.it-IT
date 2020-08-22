@@ -6,7 +6,7 @@ seo-title: Panoramica dell'interfaccia DRM di Primetime
 title: Panoramica dell'interfaccia DRM di Primetime
 uuid: 5e794147-cc58-448c-b8ec-065e80ef01fd
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 0%
@@ -46,9 +46,9 @@ TVSDK invia una `PTMediaPlayerItemDRMMetadataChanged` notifica quando i metadati
 
 Se il flusso protetto da DRM è codificato con bitrate multiplo (MBR), i metadati DRM utilizzati per la playlist variante devono essere identici ai metadati utilizzati in tutti i flussi di bit rate.
 
-[!TIP]
-
-Quando fate riferimento agli URL di risorse protetti da DRM nell&#39;app iOS, il parametro della stringa di query `?faxs=1` deve essere aggiunto all&#39;URL M3U8 (MBR) a livello di set. Ad esempio:
+>[!TIP]
+>
+>Quando fate riferimento agli URL di risorse protetti da DRM nell&#39;app iOS, il parametro della stringa di query `?faxs=1` deve essere aggiunto all&#39;URL M3U8 (MBR) a livello di set. Ad esempio:
 
 ```
 https://your.domain.com/hls/[...]/index.m3u8?faxs=1
