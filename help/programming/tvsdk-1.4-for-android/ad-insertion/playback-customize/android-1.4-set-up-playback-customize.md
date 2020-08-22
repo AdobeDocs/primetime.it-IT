@@ -5,7 +5,10 @@ seo-title: Configurare la riproduzione personalizzata
 title: Configurare la riproduzione personalizzata
 uuid: 9cbf0bcf-7932-409e-a690-e79f284eaf74
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 1%
 
 ---
 
@@ -30,7 +33,7 @@ Per personalizzare i comportamenti degli annunci:
 
 1. Assegnate l&#39;istanza del criterio che deve essere utilizzata da TVSDK tramite il modulo pubblicitario.
 
->[!ATTENTION]
+>[!IMPORTANT]
 >
 >I criteri di annunci personalizzati registrati all&#39;inizio di >riproduzione vengono cancellati quando l&#39;istanza di MediaPlayer è >deallocata. L&#39;applicazione deve registrare un&#39;istanza di criterio > selettore ogni volta che viene creata una nuova sessione di riproduzione.
 
