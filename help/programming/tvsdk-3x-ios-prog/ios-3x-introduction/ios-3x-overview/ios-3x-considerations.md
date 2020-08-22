@@ -5,7 +5,10 @@ seo-title: Considerazioni e procedure ottimali
 title: Considerazioni e procedure ottimali
 uuid: a65c9739-ed83-4519-8ae5-7ba4c8f1ca49
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '412'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Per utilizzare TVSDK nel modo più efficace, è necessario prendere in considera
 
 Ricorda le seguenti informazioni quando utilizzi TVSDK:
 
-* Adobe Primetime non funziona sui simulatori iOS.
+*  Adobe Primetime non funziona sui simulatori iOS.
 
    Per eseguire il test dovete utilizzare dei dispositivi reali.
 
@@ -54,6 +57,6 @@ Seguono alcune pratiche consigliate per TVSDK:
 
 Per ulteriori informazioni, vedere i metodi forceHTTPS e isForcingHTTPS in questa classe.
 
-[!IMPORTANT]
-
-Le richieste inviate a domini di terze parti, quali Pixel di tracciamento annunci, URL di contenuti e annunci e richieste simili, non vengono modificate. È responsabilità dei fornitori di contenuti e dei server di annunci fornire URL supportati tramite HTTPS.
+>[!IMPORTANT]
+>
+>Le richieste inviate a domini di terze parti, quali Pixel di tracciamento annunci, URL di contenuti e annunci e richieste simili, non vengono modificate. È responsabilità dei fornitori di contenuti e dei server di annunci fornire URL supportati tramite HTTPS.
