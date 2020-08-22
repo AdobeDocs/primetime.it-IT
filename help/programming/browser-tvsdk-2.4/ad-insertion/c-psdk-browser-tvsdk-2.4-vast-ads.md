@@ -5,7 +5,10 @@ seo-title: Annunci VAST
 title: Annunci VAST
 uuid: 052dae0c-2425-456c-aebe-531f68bb5aa8
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '368'
+ht-degree: 0%
 
 ---
 
@@ -56,14 +59,18 @@ Ulteriori informazioni sui tipi di annunci:
       * `MediaFiles`
 
       * `MediaFile`
-         [!TIP]
-In questo elemento, sono supportati gli `id`, `bitrate`, `delivery`, `width`, `height`, `scalable`, `maintainAspectRatio`, e `apiFramework``type` gli attributi.
+
+         >[!TIP]
+         >
+         >In questo elemento sono supportati gli `id`, `bitrate`, `delivery`, `width`, `height`, `scalable`, `maintainAspectRatio`, e `apiFramework``type` gli attributi.
 
 * **Annunci** non lineari Sono supportati i seguenti elementi:
 
    * `Non-linear`
-      [!TIP]
-In questo elemento, sono supportati gli `id`, `width`, `height`, `apiFramework`, `expandedWidth`, `expandedHeight`, `scalable`, e `maintainAspectRatio``minSuggestedDuration` gli attributi.
+
+      >[!TIP]
+      >
+      >In questo elemento sono supportati gli `id`, `width`, `height`, `apiFramework`, `expandedWidth`, `expandedHeight`, `scalable`, e `maintainAspectRatio``minSuggestedDuration` gli attributi.
 
       * `StaticResource`
       * `IFrameResource`
@@ -74,8 +81,10 @@ In questo elemento, sono supportati gli `id`, `width`, `height`, `apiFramework`,
 * **Companion ads** Sono supportati i seguenti elementi:
 
    * `Companion`
-      [!TIP]
-In questo elemento sono supportati gli `id`, `width`, `height`, `apiFramework`, `expandedWidth`e `expandedHeight` gli attributi.
+
+      >[!TIP]
+      >
+      >In questo elemento sono supportati gli `id`, `width`, `height`, `apiFramework`, `expandedWidth`e `expandedHeight` gli attributi.
 
       * `StaticResource`
       * `IFrameResource`
@@ -84,7 +93,8 @@ In questo elemento sono supportati gli `id`, `width`, `height`, `apiFramework`, 
 
 ## Estensioni {#section_17401C75F419453BAE83637EEB6E1E60}
 
-[!TIP]
-Sono supportate solo le estensioni specifiche per l&#39;audio.
+>[!TIP]
+>
+>Sono supportate solo le estensioni specifiche per l&#39;audio.
 
 * `Extension`
