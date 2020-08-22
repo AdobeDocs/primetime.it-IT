@@ -5,7 +5,10 @@ seo-title: Controllo dello stile dei sottotitoli codificati
 title: Controllo dello stile dei sottotitoli codificati
 uuid: b5d9c783-755f-47a2-acb1-966df9d6116e
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '871'
+ht-degree: 0%
 
 ---
 
@@ -123,20 +126,22 @@ Potete formattare il testo dei sottotitoli codificati con i metodi TVSDK.
       public void setTreatSpaceAsAlphaNum(bool)
       ```
 
-      [!IMPORTANT]
+      >[!IMPORTANT]
+      >
+      >**Impostazioni colore:** In Android TVSDK 2.X, è stato migliorato lo stile dei colori dei sottotitoli codificati. Questa funzione consente di impostare i colori dei sottotitoli codificati utilizzando una stringa esadecimale che rappresenta i valori di colore RGB. La rappresentazione del colore esadecimale RGB è la nota stringa a 6 byte utilizzata in applicazioni come Photoshop:
+      >
+      >* FFFF = Nero
+      >* 000000 = Bianco
+      >* FF0000 = Rosso
+      >* 00FF00 = Verde
+      >* 0000FF = Blu
+         >e così via.
 
-      **Impostazioni colore:** In Android TVSDK 2.X, è stato migliorato lo stile dei colori dei sottotitoli codificati. Questa funzione consente di impostare i colori dei sottotitoli codificati utilizzando una stringa esadecimale che rappresenta i valori di colore RGB. La rappresentazione del colore esadecimale RGB è la nota stringa a 6 byte utilizzata in applicazioni come Photoshop:
+      >
+      >Nell&#39;applicazione, ogni volta che trasmettete informazioni sullo stile del colore, `TextFormatBuilder`utilizzate comunque l&#39; `Color` enumerazione come precedente, ma ora dovete aggiungere `getValue()` al colore per ottenere il valore come una stringa. Ad esempio:
+      >
+      >`tfb = tfb.setBackgroundColor(TextFormat.Color.RED      <b>.getValue()</b>);`
 
-          * FFFFFF = Nero
-          * 000000 = Bianco
-          * FF0000 = Rosso
-          * 00FF00 = Verde
-          * 0000FF = Blu
-      e così via.
-
-      Nell&#39;applicazione, ogni volta che trasmettete informazioni sullo stile del colore, `TextFormatBuilder`utilizzate comunque l&#39; `Color` enumerazione come precedente, ma ora dovete aggiungere `getValue()` al colore per ottenere il valore come una stringa. Ad esempio:
-
-      `tfb = tfb.setBackgroundColor(TextFormat.Color.RED      <b>.getValue()</b>);`
 
 
 L&#39;impostazione dello stile dei sottotitoli codificati è un&#39;operazione asincrona, pertanto la visualizzazione delle modifiche sullo schermo potrebbe richiedere alcuni secondi.
