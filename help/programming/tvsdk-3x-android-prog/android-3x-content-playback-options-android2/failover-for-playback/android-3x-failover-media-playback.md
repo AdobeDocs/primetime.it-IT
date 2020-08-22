@@ -5,7 +5,10 @@ seo-title: Riproduzione e failover dei supporti
 title: Riproduzione e failover dei supporti
 uuid: e0072eeb-8ad1-436f-bf4a-fee6885a25bd
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '649'
+ht-degree: 0%
 
 ---
 
@@ -45,9 +48,12 @@ Quando TVSDK non è in grado di ottenere un segmento alternativo, attiva una not
 
 Se il motore video non è in grado di ottenere i segmenti in modo continuo, limita l’salita continua a 5, dopo di che la riproduzione viene arrestata e TVSDK emette un errore `NATIVE_ERROR` con il codice 5.
 
->[!Rlimitazioni]
+>[!NOTE]
+>
+>**Restrizioni**
 >
 >Di seguito sono riportate alcune limitazioni alle quali devi essere a conoscenza:
+>
 >* I parametri di controllo ABR (Adaptive Bit Rate) non vengono presi in considerazione quando si verifica un failover.
 >
 >  
