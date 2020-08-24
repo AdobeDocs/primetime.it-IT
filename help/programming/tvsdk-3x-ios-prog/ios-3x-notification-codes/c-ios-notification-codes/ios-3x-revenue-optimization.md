@@ -4,9 +4,9 @@ seo-description: 'Questa tabella fornisce informazioni dettagliate sulle notific
 seo-title: Codice di ottimizzazione REVENUE
 title: Codice di ottimizzazione REVENUE
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: df3d60874701383325be1afdd1ec5fe036f855f8
 workflow-type: tm+mt
-source-wordcount: '763'
+source-wordcount: '764'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ Per abilitare questo rapporto, usa l’API PTMediaPlayer: `[mediaPlayersetRevenu
 >
 >La maggior parte delle notifiche informative contiene metadati rilevanti, ad esempio l’URL della risorsa che non è stato possibile scaricare. Alcune notifiche contengono metadati per specificare se il problema si è verificato nel contenuto video principale, nel contenuto audio alternativo o in un annuncio.
 
-|Codice |Nome |Notifica interna |Tasti metadati |Commenti |
-|—|—|—|—|—|
-|401001 | REVENUE_OPTIMIZATION_REPORTING | Nessuno | Consultare la tabella riportata di seguito per le chiavi di metadati basate su eventi diversi. | Nessuno |
+| Code | Nome | Notifica interna | Tasti metadati | Commenti |
+|---|---|---|---|---|
+| 401001 | REVENUE_OPTIMIZATION_REPORTING | None | Per le chiavi dei metadati basate su eventi diversi, consultate la tabella seguente. | None |
 
 | Dettagli evento | ContextMetadata |
 |---|---|
