@@ -3,14 +3,17 @@ seo-title: Domini anonimi
 title: Domini anonimi
 uuid: ee29ae4d-65b2-48de-b441-18c8cf55de32
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 4f196bbd079edeb1a423afee6b4b7e249d380f40
+workflow-type: tm+mt
+source-wordcount: '380'
+ht-degree: 0%
 
 ---
 
 
 # Domini anonimi {#anonymous-domains}
 
-In questo caso, un numero elevato di dispositivi appartiene a un solo dominio e l&#39;autenticazione potrebbe non essere necessaria. Per utilizzare questo tipo di dominio con l&#39;implementazione del riferimento, creare il criterio specificando che è necessaria la registrazione del dominio. Specificate l&#39;URL del server di dominio come [*!DNL https:// host:port/flashaccess/domainserver/domainname/*] e l&#39;autenticazione anonima.
+In questo caso, un numero elevato di dispositivi appartiene a un solo dominio e l&#39;autenticazione potrebbe non essere necessaria. Per utilizzare questo tipo di dominio con l&#39;implementazione del riferimento, creare il criterio specificando che è necessaria la registrazione del dominio. Specificate l&#39;URL del server di dominio come `https:// host:port/flashaccess/domainserver/domainname/` e l&#39;autenticazione anonima.
 
 L&#39;implementazione di riferimento implementa la seguente logica per la registrazione del dominio:
 
