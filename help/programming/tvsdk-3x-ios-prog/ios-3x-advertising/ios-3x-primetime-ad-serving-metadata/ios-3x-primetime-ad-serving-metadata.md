@@ -5,7 +5,10 @@ seo-title: Primetime e metadati del server
 title: Primetime e metadati del server
 uuid: 61e224dd-551a-438f-8560-e64915087fef
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 9d60bff4035963572e49fa49effa576ca854f799
+workflow-type: tm+mt
+source-wordcount: '153'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 
 TVSDK supporta la risoluzione e l&#39;inserimento di annunci per VOD e flussi live/lineari.
 
-[!PREREQUISITE] {othertype=&quot;Prequisite&quot;}
+## Prerequisito
 
 Prima di includere la pubblicità nei contenuti video, fornite le seguenti informazioni sui metadati:
 
