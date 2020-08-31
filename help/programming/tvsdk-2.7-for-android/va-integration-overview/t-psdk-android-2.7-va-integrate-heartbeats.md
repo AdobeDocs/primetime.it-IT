@@ -5,7 +5,10 @@ seo-title: Inizializzare e configurare l'analisi video
 title: Inizializzare e configurare l'analisi video
 uuid: 98017a20-4997-42f7-9b03-fd9c4b6ccd92
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 1985694f99c548284aad6e6b4e070bece230bdf4
+workflow-type: tm+mt
+source-wordcount: '575'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Prima di attivare il tracciamento video (heartbeat video), accertatevi di dispor
 * TVSDK 2.5 per Android.
 * Informazioni di configurazione/inizializzazione
 
-   Per informazioni specifiche sull’account di tracciamento video, contattate il vostro rappresentante Adobe:
+   Per informazioni specifiche sull’account di tracciamento video, contattate il rappresentante del Adobe :
 
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
@@ -28,7 +31,7 @@ Prima di attivare il tracciamento video (heartbeat video), accertatevi di dispor
   </tr> 
   <tr> 
    <td colname="col1"> Endpoint del server di tracciamento AppMeasurement </td> 
-   <td colname="col2"> L'URL dell'endpoint della raccolta back-end di Adobe Analytics (ex SiteCatalyst). </td> 
+   <td colname="col2"> L'URL dell'endpoint della raccolta back-end di Adobe Analytics  (precedentemente SiteCatalyst). </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Endpoint del server di tracciamento analisi video </td> 
@@ -49,38 +52,39 @@ Per configurare il tracciamento video nel lettore:
 
 1. Verificate che le opzioni di caricamento nel file della `ADBMobileConfig.json` risorsa siano corrette.
 
-       &quot;
-     {
-     &quot;version&quot; : &quot;1.1&quot;,
-     &quot;analytics&quot;: {
- &quot;     &quot;rsids&quot;: &quot;adobedevelopment&quot;,
-     &quot;server&quot;: &quot;10.131.129.149:3000&quot;,
-     &quot;charset&quot; : &quot;UTF-8&quot;,
-     &quot;ssl&quot; : false,
-     &quot;offlineEnabled&quot;: false,
-     &quot;lifecycleTimeout&quot;: 5,
-     &quot;batchLimit&quot; : 50,
-     &quot;privacyDefault&quot; : &quot;optedin&quot;,
-     &quot;poi&quot;: []
-     },
-     &quot;marketingCloud&quot;: {
- &quot;     org&quot;: &quot;VALORE FORNITO ADOBE&quot;
-     },
-     &quot;target&quot; : {
-     &quot;clientCode&quot;: &quot;&quot;,
-     &quot;timeout&quot;: 5
-     },
-     &quot;audienceManager&quot;: {
-     &quot;server&quot;: &quot;&quot;
-     }
-     }
-     &quot;
-     
-     Questo file di configurazione in formato JSON viene fornito come risorsa con TVSDK. Il lettore legge questi valori solo al momento del caricamento e i valori rimangono costanti durante l&#39;esecuzione dell&#39;applicazione.
-       
- Per     configurare le opzioni relative al tempo di caricamento:
-   
-   1. Verificate che il `ADBMobileConfig.json` file contenga i valori appropriati (forniti da Adobe).
+   ```
+   { 
+       "version" : "1.1", 
+       "analytics" : { 
+           "rsids" : "adobedevelopment", 
+           "server" : "10.131.129.149:3000", 
+           "charset" : "UTF-8", 
+           "ssl" : false, 
+           "offlineEnabled" : false, 
+           "lifecycleTimeout" : 5, 
+           "batchLimit" : 50, 
+           "privacyDefault" : "optedin", 
+           "poi" : [] 
+       }, 
+       "marketingCloud": { 
+           "org": "ADOBE PROVIDED VALUE"  
+       }, 
+       "target" : { 
+           "clientCode" : "", 
+           "timeout" : 5 
+       }, 
+       "audienceManager" : { 
+           "server" : "" 
+       } 
+   }
+   ```
+
+   Questo file di configurazione JSON viene fornito come risorsa con TVSDK. Il lettore legge questi valori solo al momento del caricamento e i valori rimangono costanti durante l&#39;esecuzione dell&#39;applicazione.
+
+   Per configurare le opzioni di caricamento:
+
+
+   1. Verificate che il `ADBMobileConfig.json` file contenga i valori appropriati (forniti dal Adobe ).
    1. Verificate che il file si trovi nella `assets/` cartella.
 
       Questa cartella deve trovarsi nella radice della struttura di origine dell&#39;applicazione.
@@ -88,7 +92,7 @@ Per configurare il tracciamento video nel lettore:
    1. Compilate e create l&#39;applicazione.
    1. Implementare ed eseguire l&#39;applicazione fornita in bundle.
 
-      Per ulteriori informazioni su queste impostazioni AppMeasurement, vedi [Misurazione dei video in Adobe Analytics](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/video/).
+      Per ulteriori informazioni su queste impostazioni AppMeasurement, vedi [Misurazione dei video in  Adobe Analytics](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/video/).
 
 1. Inizializzare e configurare i metadati di tracciamento heartbeat video.
 
