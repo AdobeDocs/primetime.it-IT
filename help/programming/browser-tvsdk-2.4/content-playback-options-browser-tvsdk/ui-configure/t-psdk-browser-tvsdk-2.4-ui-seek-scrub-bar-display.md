@@ -5,7 +5,10 @@ seo-title: Gestire la ricerca quando si utilizza la barra di ricerca
 title: Gestire la ricerca quando si utilizza la barra di ricerca
 uuid: a7c74141-581f-40a3-9d28-ce56ba56773c
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 1985694f99c548284aad6e6b4e070bece230bdf4
+workflow-type: tm+mt
+source-wordcount: '361'
+ht-degree: 0%
 
 ---
 
@@ -38,15 +41,15 @@ Nel browser TVSDK, puoi cercare una posizione specifica (tempo) in un flusso. Un
 
 1. Attendete che l&#39;SDK del browser attivi l&#39; `AdobePSDK.PSDKEventType.SEEK_END` evento, che restituisce la posizione corretta nell&#39; `actualPosition` attributo dell&#39;evento:
 
-       &quot;js
-     player.addEventListener(AdobePSDK.PSDKEventType.SEEK_END, onSeekComplete);
-       onSeekComplete = function (event) {
- /     / event.effectivePosition
- }     
- &quot;     
-     
-     Questo è importante perché la posizione iniziale effettiva dopo la ricerca potrebbe essere diversa dalla posizione richiesta. Possono essere applicate alcune delle seguenti regole:
-   
+   ```js
+   player.addEventListener(AdobePSDK.PSDKEventType.SEEK_END, onSeekComplete); 
+   onSeekComplete = function (event) {
+       // event.actualPosition
+   }
+   ```
+
+   Questo è importante perché la posizione iniziale effettiva dopo la ricerca potrebbe essere diversa dalla posizione richiesta. Possono essere applicate alcune delle seguenti regole:
+
    * Il comportamento di riproduzione è interessato dal fatto che una ricerca, o un altro riposizionamento, termina al centro di un&#39;interruzione dell&#39;annuncio o salta le interruzioni dell&#39;annuncio.
    * Potete effettuare ricerche solo nella durata della risorsa. Per il VOD, ossia da 0 alla durata della risorsa.
 
