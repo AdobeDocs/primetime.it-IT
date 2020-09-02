@@ -1,28 +1,44 @@
 ---
-title: Note sulla versione di PTAI 20.8.1
-description: Le note sulla versione di PTAI 20.8.1 descrivono le novità o le modifiche, i problemi risolti e noti nel Ad Insertion Primetime Dynamic  nel 2020.
+title: Note sulla versione di PTAI 20.9.1
+description: Le note sulla versione di PTAI 20.9.1 descrivono le novità o le modifiche, i problemi risolti e noti nel Ad Insertion Primetime Dynamic  nel 2020.
 translation-type: tm+mt
-source-git-commit: 6b2aaa96f8604af27810cceee5a8a98c4feebd6f
+source-git-commit: c23b052f14c6673d4ba2aae6a317a55a2e611e8a
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '860'
 ht-degree: 0%
 
 ---
 
 
-# Note sulla versione di Primetime Dynamic  Ad Insertion 20.8.1
+# Note sulla versione di Primetime Dynamic  Ad Insertion 20.9.1
 
-Le note sulla versione di Dynamic  Ad Insertion 20.8.1 descrivono i problemi nuovi o modificati, risolti e noti in Primetime Dynamic  Ad Insertion nel 2020.
+Le note sulla versione di Dynamic  Ad Insertion 20.9.1 descrivono i problemi nuovi o modificati, risolti e noti in Primetime Dynamic  Ad Insertion nel 2020.
 
-## Novità di PTAI 20.8.1
+## Novità di PTAI 20.9.1
 
-**Quando:** Martedì 4 agosto 2020 dalle 3:00 AM alle 6:00 Ora orientale
+**Quando:** Martedì 1 settembre 2020 dalle 3:30 alle 7:30 Ora orientale
+
+**Problemi risolti**
+
+* È stato risolto il problema per i clienti che utilizzano HLS/CMAF, a causa del quale talvolta i token CDN o i tag EXT-X-MAP mancavano a volte nella finestra DVR.
+
+### Miglioramenti e correzioni nelle versioni precedenti
+
+#### Versione 20.8.4
+
+**Quando:** Mercoledì 19 agosto 2020 dalle 03:30 alle 07:30 Ora orientale
 
 **Miglioramenti e correzioni**
 
 Aggiornamenti di manutenzione.
 
-### Miglioramenti e correzioni nelle versioni precedenti
+#### Versione 20.8.1
+
+**Quando:** Martedì 4 agosto 2020 dalle 3:00 alle 6:00 Ora orientale
+
+**Miglioramenti e correzioni**
+
+Aggiornamenti di manutenzione.
 
 #### Versione 20.7.1
 
@@ -66,7 +82,7 @@ Contattate il supporto  Adobe per abilitare le seguenti nuove funzionalità tram
 
 #### Versione 20.5.1
 
-**Quando:** Martedì 5 maggio 2020 dalle 04:00 alle 05:00 ora orientale
+**Quando:** Martedì 5 maggio 2020 dalle 04:00 AM alle 05:00 Ora orientale
 
 * È stato risolto un problema per garantire che le intestazioni CORS corrette vengano fornite quando vengono inviate le intestazioni If-Modified-Since.
 
@@ -135,7 +151,7 @@ Contattate il supporto  Adobe per abilitare le seguenti nuove funzionalità tram
 
 #### Versione 20.1.2 (Hotfix)
 
-**Quando:** Lunedì 20 gennaio 2020 dalle 02:00 alle 03:00 ora orientale
+**Quando:** Lunedì, gennaio 20, 2020 dalle 02:00 AM alle 03:00 Ora orientale
 
 * Aggiornamenti di manutenzione.
 
