@@ -1,18 +1,21 @@
 ---
-description: Utilizzando NotificationEvent, potete tenere traccia degli avvisi passati da Adobe Video Engine (AVE).
-seo-description: Utilizzando NotificationEvent, potete tenere traccia degli avvisi passati da Adobe Video Engine (AVE).
+description: Utilizzando NotificationEvent, potete tenere traccia degli avvisi passati dal motore video  Adobe (AVE).
+seo-description: Utilizzando NotificationEvent, potete tenere traccia degli avvisi passati dal motore video  Adobe (AVE).
 seo-title: Tenere traccia degli avvisi AVE nel lettore
 title: Tenere traccia degli avvisi AVE nel lettore
 uuid: 236aee5e-6b1a-4298-9d3b-f33b40416c19
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '187'
+ht-degree: 1%
 
 ---
 
 
 # Tenere traccia degli avvisi AVE nel lettore{#track-ave-warnings-in-your-player}
 
-Utilizzando NotificationEvent, potete tenere traccia degli avvisi passati da Adobe Video Engine (AVE).
+Utilizzando NotificationEvent, potete tenere traccia degli avvisi passati dal motore video  Adobe (AVE).
 
 L’app lettore può tenere traccia degli avvisi e degli errori di riproduzione generati dall’AVE, ad esempio gli eventi di failover o di spegnimento della rete, che non arrestano la riproduzione e non richiedono necessariamente l’intervento dell’app. Mentre alcuni errori AVE vengono gestiti da TVSDK, `NotificationEvent` funge da meccanismo generale di passaggio al livello dell’applicazione per gli avvisi AVE. Dopo aver ricevuto gli avvisi AVE, potete scegliere di eseguire alcune azioni, ad esempio interrompere la riproduzione in modo proattivo, attivare un piano di emergenza, registrare messaggi e così via.
 
@@ -108,10 +111,10 @@ Di seguito è riportato un esempio di avvisi AVE che sono stati tracciati utiliz
 [WARN ] [psdkdemo::PSDKDemo] #onWarningAvailable metadata [runtimeCodeMessage:SEGMENT_SKIPPED_ON_FAILURE] 
 [WARN ] [psdkdemo::PSDKDemo] #onWarningAvailable metadata [eventType:Warning] 
  
-<ph>
+<pre>
   [WARN ] [psdkdemo::PSDKDemo] #onWarningAvailable metadata [description:url::= 
    https://xyz.corp.adobe.com/pmp/assets/abc/failover/tc.1.04/content/backup-01/ 
    low-res/main-stream4-4x3-info6.ts,periodIndex::=0, 
    sizeBytes::=0,downloadTime(ms)::=0,mediaDuration(ms)::=0] 
-</ph>
+</pre>
 ```
