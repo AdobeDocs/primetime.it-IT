@@ -5,7 +5,10 @@ seo-title: Attributi di MediaPlayer per accedere alle informazioni di MediaResou
 title: Attributi di MediaPlayer per accedere alle informazioni di MediaResource
 uuid: d26f39d6-0a6b-4072-b99a-8767a511a846
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
@@ -53,9 +56,9 @@ I metodi della classe MediaPlayerItem consentono di ottenere informazioni sul fl
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> selectedAudioTrack </span> </td> 
    <td colname="3"> 
-    <ph>
+    <pre>
       Recupera la traccia audio correntemente selezionata con <span class="codeph"> SelezionaAudioTrack </span>. 
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="1"> Metadati temporizzati </td> 
