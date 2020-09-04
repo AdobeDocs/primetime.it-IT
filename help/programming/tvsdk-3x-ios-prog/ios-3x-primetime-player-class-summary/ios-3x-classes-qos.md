@@ -5,7 +5,10 @@ seo-title: Classi QoS
 title: Classi QoS
 uuid: f145b744-6385-40df-aaee-ae9430d85895
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '197'
+ht-degree: 0%
 
 ---
 
@@ -41,12 +44,12 @@ Queste classi forniscono informazioni utili per determinare il livello di presta
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTQoSProvider.html" format="html" scope="external"> PTQoSProvider</a> </td> 
    <td colname="2">
-    <ph>
+    <pre>
       Fornisce metriche QoS essenziali sia per la riproduzione che per il dispositivo.
-    </ph>
-    <ph>
+    </pre>
+    <pre>
       Classe provider di informazioni QOS.
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
  </tbody> 
 </table>
