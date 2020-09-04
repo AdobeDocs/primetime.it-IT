@@ -5,7 +5,10 @@ seo-title: Download paralleli
 title: Download paralleli
 uuid: 11d37a39-391d-4127-9aa7-c94eb8a6a6a8
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '320'
+ht-degree: 0%
 
 ---
 
@@ -32,9 +35,9 @@ Senza download paralleli, TVSDK invia una richiesta per il segmento video, e dop
 <!-- 
 
 See comment above (DASH use case removed).
-<note type="restriction">
+`<note type="restriction">`
   This feature applies only to content where the audio and video are encoded into different files (unmuxed content) and does not apply to MP4 content, which is always muxed. Most DASH content is unmuxed, and HLS content is often unmuxed, especially with alternate audio. 
-</note>
+`</note>`
 
  -->
 
