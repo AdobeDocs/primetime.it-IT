@@ -5,9 +5,9 @@ seo-title: File di registro
 title: File di registro
 uuid: 4498fe60-65af-4f99-8f9b-e85013d0c9e9
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
@@ -42,12 +42,12 @@ Le directory di registro sono strutturate per semplificare l&#39;utilizzo. La di
 
 ## File di registro globale {#section_1CFA90748142439C9F3BE380969539DA}
 
-Il file di registro globale, [!DNL flashaccess-global.log], si trova in *LicenseServer.LogRoot*. Il registro può includere messaggi di registro che l&#39;SDK Java  Adobe Primetime DRM o i messaggi di registro possono aver generato durante il momento in cui il server è stato inizializzato.
+Il file di registro globale, `flashaccess-global.log`, si trova in *LicenseServer.LogRoot*. Il registro può includere messaggi di registro che l&#39;SDK Java  Adobe Primetime DRM o i messaggi di registro possono aver generato durante il momento in cui il server è stato inizializzato.
 
 ## File di registro delle partizioni {#section_5660137CD6AA40519E72A4315534846B}
 
-Il file di registro della partizione, [!DNL flashaccess-partition.log], si trova nella [!DNL <LicenseServer.LogRoot>/flashaccesserver] directory. Include i messaggi di registro generati durante l&#39;elaborazione di una richiesta di licenza.
+Il file di registro della partizione, `flashaccess-partition.log`, si trova nella `<LicenseServer.LogRoot>/flashaccesserver` directory. Include i messaggi di registro generati durante l&#39;elaborazione di una richiesta di licenza.
 
 ## File di registro tenant {#section_F0257CC0831647F18A746B4F02E3E910}
 
-Il file di registro del tenant di ciascun tenant, [!DNL flashaccess-tenant.log], si trova in [!DNL &lt;LicenseServer.LogRoot>/flashaccesserver/locants/<tenantname>]. Il registro tenant include informazioni di controllo che descrivono ogni licenza generata per questo tenant.
+Il file di registro del tenant di ciascun tenant, `flashaccess-tenant.log`, si trova in `<LicenseServer.LogRoot>/flashaccesserver/tenants/<tenantname>`. Il registro tenant include informazioni di controllo che descrivono ogni licenza generata per questo tenant.
