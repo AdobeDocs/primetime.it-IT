@@ -3,9 +3,9 @@ seo-title: Implementazione della panoramica del server chiavi DRM di Primetime
 title: Implementazione della panoramica del server chiavi DRM di Primetime
 uuid: 86630675-c15d-4f32-8212-d7343f4f92e0
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1075'
 ht-degree: 0%
 
 ---
@@ -86,13 +86,13 @@ JAVA_OPTS=-DKeyServer.ConfigRoot=”absolute-path-to-config-folder”
 
 ## Credenziali DRM di Primetime {#primetime-drm-credentials}
 
-Per elaborare le richieste chiave dai client iOS e Xbox 360 DRM di Primetime, il server chiavi DRM di Primetime deve essere configurato con un set di credenziali emesse da Adobe. Queste credenziali possono essere archiviate in file PKCS#12 ( [!DNL .pfx]) o in un file HSM.
+Per elaborare le richieste chiave dai client iOS e Xbox 360 DRM di Primetime, il server chiavi DRM di Primetime deve essere configurato con un insieme di credenziali emesse dal Adobe . Queste credenziali possono essere archiviate in file PKCS#12 ( [!DNL .pfx]) o in un file HSM.
 
-I [!DNL .pfx] file possono trovarsi ovunque, ma per semplificare la configurazione, Adobe consiglia di collocare i [!DNL .pfx] file nella directory di configurazione del tenant. Per ulteriori informazioni, vedere File [di configurazione del server](#key-server-configuration-files)chiavi.
+I [!DNL .pfx] file possono trovarsi ovunque, ma per semplificare la configurazione,  Adobe consiglia di collocare i [!DNL .pfx] file nella directory di configurazione del tenant. Per ulteriori informazioni, vedere File [di configurazione del server](#key-server-configuration-files)chiavi.
 
 ### Configurazione HSM {#section_13A19E3E32934C5FA00AEF621F369877}
 
-Se scegliete di utilizzare un HSM per memorizzare le credenziali del server, dovete caricare le chiavi private e i certificati nell&#39;HSM e creare un file di configurazione *pkcs11.cfg* . Questo file deve trovarsi nella directory *KeyServer.ConfigRoot* . Consulta [!DNL <Primetime DRM Key Server>/configs] directory per un file di configurazione PKCS 11 di esempio. Per informazioni sul formato di [!DNL pkcs11.cfg], consultate la documentazione del fornitore Sun PKCS11.
+Se scegliete di utilizzare un HSM per memorizzare le credenziali del server, dovete caricare le chiavi private e i certificati nell&#39;HSM e creare un file di configurazione *pkcs11.cfg* . Questo file deve trovarsi nella directory *KeyServer.ConfigRoot* . Consultate la `<Primetime DRM Key Server>/configs` directory per un file di configurazione PKCS 11 di esempio. Per informazioni sul formato di [!DNL pkcs11.cfg], consultate la documentazione del fornitore Sun PKCS11.
 
 Per verificare che i file di configurazione HSM e Sun PKCS11 siano configurati correttamente, potete utilizzare il seguente comando dalla directory in cui si trova il [!DNL pkcs11.cfg] file ( [!DNL keytool] è installato con Java JRE e JDK):
 
@@ -112,7 +112,7 @@ Il server chiavi DRM di Primetime richiede due tipi di file di configurazione:
 
 Se vengono apportate modifiche ai file di configurazione, il server deve essere riavviato affinché le modifiche abbiano effetto.
 
-Per evitare di rendere le password disponibili in testo chiaro nei file di configurazione, tutte le password specificate nei file di configurazione globali e tenant devono essere crittografate. Per ulteriori informazioni sulla cifratura delle password, vedere [*Password Scrambler *in* Utilizzo del server DRM di Primetime per lo streaming *](../protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/password-scrambler.md)protetto.
+Per evitare di rendere le password disponibili in testo chiaro nei file di configurazione, tutte le password specificate nei file di configurazione globali e tenant devono essere crittografate. Per ulteriori informazioni sulla cifratura delle password, vedere [*Password Scrambler* in *Utilizzo del server DRM di Primetime per lo streaming*](../protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/password-scrambler.md) protetto.
 
 ## Struttura della directory di configurazione {#configuration-directory-structure}
 
@@ -136,7 +136,7 @@ Il file di [!DNL flashaccess-keyserver-global.xml] configurazione contiene impos
 * Registrazione - Specifica il livello di registrazione e la frequenza di scorrimento dei file di registro.
 * Password HSM - necessaria solo se viene utilizzato un HSM per memorizzare le credenziali del server.
 
-Vedere i commenti nel file di configurazione globale di esempio che si trova in [!DNL <Primetime DRM Key Server>/configs] per ulteriori dettagli.
+Per ulteriori informazioni, vedere i commenti presenti nel file di configurazione globale di esempio `<Primetime DRM Key Server>/configs` .
 
 ## File di configurazione tenant {#tenant-configuration-files}
 
@@ -146,7 +146,7 @@ I file [!DNL flashaccess-ioskeyserver-tenant.xml] e [!DNL flashaccess-xboxkeyser
 
 Tutti i file di configurazione del tenant includono:
 
-* Credenziali server chiavi - Specifica una o più credenziali server chiavi (certificato e chiave privata) emesse da Adobe. Può essere specificato come percorso di un [!DNL .pfx] file e di una password, o come alias di una credenziale memorizzata in un HSM. Diverse credenziali possono essere specificate qui, come percorsi di file, alias chiave, o entrambi.
+* Credenziali server chiavi - Specifica una o più credenziali server chiavi (certificato e chiave privata) emesse dal Adobe . Può essere specificato come percorso di un [!DNL .pfx] file e di una password, o come alias di una credenziale memorizzata in un HSM. Diverse credenziali possono essere specificate qui, come percorsi di file, alias chiave, o entrambi.
 
 Il file di configurazione del tenant **iOS** include:
 
@@ -156,7 +156,7 @@ Il file di configurazione tenant **Xbox 360** include:
 
 * Credenziali XSTS - Specifica la credenziale dello sviluppatore di applicazioni utilizzata per decifrare i token XSTS
 * Certificato di firma XSTS - Specifica il certificato utilizzato per verificare la firma sui token XSTS.
-* Elenco Consenti Packager - Certificati Packager attendibili dal server chiavi. Se nell&#39;elenco non sono presenti certificati packager, tutti i certificati packager saranno considerati attendibili.
+* Elenco consentiti Packager  - Certificati Packager attendibili dal server chiavi. Se nell&#39;elenco non sono presenti certificati packager, tutti i certificati packager saranno considerati attendibili.
 
 ## File di registro {#log-files}
 
