@@ -5,7 +5,10 @@ seo-title: Dati banner complementari
 title: Dati banner complementari
 uuid: b2c709da-9d19-49d1-8116-9c947371b77c
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '190'
+ht-degree: 0%
 
 ---
 
@@ -46,9 +49,9 @@ Ciascuno `AdBannerAsset` fornisce informazioni sulla visualizzazione della risor
   </tr> 
   <tr> 
    <td colname="col1">
-    <ph>
+    <pre>
       dati banner
-    </ph> </td> 
+    </pre> </td> 
    <td colname="col2"> I dati del tipo specificato da <span class="codeph"> resourceType</span> per il banner ausiliario. </td> 
   </tr> 
   <tr> 
