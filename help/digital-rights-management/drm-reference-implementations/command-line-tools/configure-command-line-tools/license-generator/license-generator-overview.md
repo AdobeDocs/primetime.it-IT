@@ -3,7 +3,10 @@ seo-title: Panoramica
 title: Panoramica
 uuid: 857390be-dd14-46c0-b8f7-2bc661c515d4
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '672'
+ht-degree: 0%
 
 ---
 
@@ -26,9 +29,9 @@ java -jar AdobeLicenseGenerator.jar -m
 </i class="+ topic>
 ```
 
-* `metadata` - Include i metadati DRM di Adobe Primetime.
+* `metadata` - Include i metadati DRM  Adobe Primetime.
 
-   Potete recuperare questo file dal contenuto protetto con le `-d -m` opzioni di Media Packager.
+   Potete recuperare questo file dal contenuto protetto con le `-d -m` opzioni in Media Packager.
 
 **Visualizzare una licenza generata in precedenza:**
 
@@ -39,7 +42,7 @@ java -jar AdobeLicenseGenerator.jar -d
 </i class="+ topic>
 ```
 
-* `license` - Contiene una licenza Adobe Primetime DRM generata dal Generatore di licenze.
+* `license` - Contiene una licenza Adobe Primetime DRM  generata dal Generatore di licenze.
 
 **Tabella 6: Opzioni**
 
@@ -108,11 +111,11 @@ Prima di eseguire License Generator, è necessario specificare i valori per le p
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> licensegen.minClientVersion</span> </td> 
-   <td colname="2" class="- topic/entry "> <p>Imposta la versione client minima attualmente supportata. Se non si imposta questa proprietà, per impostazione predefinita vengono automaticamente supportate tutte le versioni. </p> <p>Potete impostare questo valore per controllare in che modo i client meno recenti rispondono ai requisiti di licenza che non supportano. Specificate <span class="codeph"> x</span> (per Adobe Primetime DRM x.0) dove <span class="codeph"> x</span> rappresenta un numero di rilascio principale. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>Imposta la versione client minima attualmente supportata. Se non si imposta questa proprietà, per impostazione predefinita vengono automaticamente supportate tutte le versioni. </p> <p>Potete impostare questo valore per controllare in che modo i client meno recenti rispondono ai requisiti di licenza che non supportano. Specificate <span class="codeph"> x</span> (per  Adobe Primetime DRM x.0) dove <span class="codeph"> x</span> rappresenta un numero di rilascio principale. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> licensegen.keyServerCert</span> </td> 
-   <td colname="2" class="- topic/entry "> Certificato server chiavi, un certificato server licenze emesso da Adobe e utilizzato dal server chiavi. Questo certificato viene applicato solo se il criterio metadati/DRM indica che per la consegna delle chiavi ai dispositivi iOS è necessario un server chiavi. </td> 
+   <td colname="2" class="- topic/entry "> Certificato server chiavi, che è un certificato del server licenze emesso  Adobe utilizzato dal server chiavi. Questo certificato viene applicato solo se il criterio metadati/DRM indica che per la consegna delle chiavi ai dispositivi iOS è necessario un server chiavi. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> licensegen.sign.certfile</span> </td> 
@@ -128,16 +131,14 @@ Prima di eseguire License Generator, è necessario specificare i valori per le p
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
-    <lines>
-     <span class="+ topic/ph pr-d/codeph codeph">licensegen.keys.asymmetric. licenseServerCredential.n</span>
-    </lines> </td> 
+    <code>licensegen.keys.asymmetric. licenseServerCredential.n</code>
+   </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">File PKCS12 opzionale che include credenziali aggiuntive per il server licenze per decrittografare CEK nei metadati e nei criteri DRM. È possibile configurare credenziali aggiuntive se il contenuto è stato precedentemente incluso in un pacchetto con un certificato del server licenze diverso da quelle specificate con <span class="codeph"> licensegen.sign.certfile</span>. Questa proprietà deve fare riferimento a un file <span class="filepath"> .pfx</span> che include un certificato e una chiave privata. <span class="codeph">n</span> deve aumentare monotonicamente, a partire da 1. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
-    <lines>
-     <span class="+ topic/ph pr-d/codeph codeph">licensegen.keys.asymmetric. licenseServerCredential.n.password</span>
-    </lines> </td> 
+    <code>licensegen.keys.asymmetric. licenseServerCredential.n.password</code>
+   </td> 
    <td colname="2" class="- topic/entry "> <p>La password viene applicata per proteggere il file specificato con la<span class="+ topic/ph pr-d/codeph codeph"> proprietà licensegen.keys.asymMetric.licenseServerCredential.n</span> . </p> </td> 
   </tr> 
  </tbody> 
