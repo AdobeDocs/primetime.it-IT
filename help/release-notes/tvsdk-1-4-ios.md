@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 452f8699-7857-49ab-9caa-22204b19fe4a
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
 workflow-type: tm+mt
 source-wordcount: '6578'
 ht-degree: 0%
@@ -170,7 +170,7 @@ I criteri DRM ora possono specificare la risoluzione massima consentita, a secon
 
 * **Segnalazione Del Blackout Con Sostituzione Alternativa Dei Contenuti**
 
-   * Come parte dell’aggiornamento 1.4 TVSDK, TVSDK ora supporta anche l’accesso e il ritorno dai blackout regionali rispetto ai contenuti lineari. Il TVSDK ora può elaborare due file manifest in parallelo, principale e alternativo, per monitorare i segnali blackout anche quando la programmazione alternativa viene mostrata al posto della programmazione originale.
+   * Come parte dell’aggiornamento 1.4 TVSDK, TVSDK ora supporta anche l’accesso e il ritorno dai blackout regionali rispetto ai contenuti lineari. Il TVSDK ora può elaborare due file manifest in parallelo, principale e alternativo, per monitorare i segnali di blackout anche quando la programmazione alternativa viene mostrata al posto della programmazione originale.
 
 * **Rimuovi/Sostituisci annunci C3**
 
@@ -221,10 +221,10 @@ Questa versione di TVSDK è stata certificata con il supporto FairPlay per iOS e
 
 Comment Type: draft
 
-<note type="note"> 
+`<note type="note">` 
  <p>All TVSDK customers who use CRS are strongly encouraged to upgrade to TVSDK 1.4.39 or latest on iOS and Android. This upgrade is a drop-in replacement to the existing app implementation. After the upgrade, check for the CRS creative URL requests in a proxy tool (for example, Charles) to verify that the version in the path reflects version 3.1. For example:</p> 
  <p><span class="code">https://primetime-a.akamaihd.net/assets/3p/v3.1/222000/167/d77/ 167d775d00cbf7fd224b112sf5a4bc7d_0e34cd3ca5177fbc74d66d784bf3586d.m3u8</span></p> 
-</note>
+`</note>`
 
  -->
 
@@ -232,9 +232,9 @@ Comment Type: draft
 
 Comment Type: draft
 
-<note type="note"> 
+`<note type="note"> `
  <p>TVSDK versions earlier than version 1.4.28 sometimes exhibit a long delay in the startup time when ad-enabled content is played on devices that are running on iOS 10. To resolve this issue, upgrade to version 1.4.28 or later. Version 1.4.28 was released on August 31, 2016, and iOS 10 was released on September 13, 2016.</p> 
-</note>
+`</note>`
 
  -->
 
@@ -799,7 +799,7 @@ Questo problema è stato risolto aggiornando l&#39;implementazione API PTMediaPl
 
 * (ZD #18844) Tracciamento dell&#39;indicatore di riproduzione per il contenuto live nel lettore iOS.
 
-Questo problema è stato risolto consentendo alle applicazioni di impostare il proprio valore della testina di riproduzione.
+Questo problema è stato risolto consentendo alle applicazioni di impostare il proprio valore di playhead.
 
 * Zendesk #18518 - Se il nome del video non è specificato, per impostazione predefinita il nome di TVSDK è un lettore basato su *PSDK.*
 
