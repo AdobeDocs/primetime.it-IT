@@ -2,7 +2,7 @@
 title: Note sulla versione TVSDK 3.12 per iOS
 description: TVSDK 3.12 per iOS - Note sulla versione - descrive le novità o le modifiche apportate, i problemi risolti e noti e i problemi del dispositivo in TVSDK iOS 3.12.
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
 workflow-type: tm+mt
 source-wordcount: '7665'
 ht-degree: 0%
@@ -181,7 +181,7 @@ Le API TVSDK ora forniscono informazioni aggiuntive sulle risposte VAST di terze
 
    Ogni volta che TVSDK genera un evento di avvio del flusso, il lettore inizia a inviare messaggi HTTP periodicamente a  Adobe  sistema di fatturazione. Il periodo, noto come durata fatturabile, può essere diverso per VOD standard, pro VOD (annunci mid-roll abilitati) e contenuti live. La durata predefinita di ciascun tipo di contenuto è di 30 minuti, ma il contratto con  Adobe determina i valori effettivi.
 
-* **Supporto multi-CDN per CDN Ads** TVSDK ora supporta Multi-CDN per annunci CRS. Fornendo i dettagli FTP per gli annunci CRS, potete specificare posizioni CDN diverse da quelle predefinite  CDN di proprietà del Adobe, ad esempio Akamai.
+* **Il supporto multi-CDN per gli annunci** CRS TVSDK ora supporta Multi-CDN per gli annunci CRS. Fornendo i dettagli FTP per gli annunci CRS, potete specificare posizioni CDN diverse da quelle predefinite  CDN di proprietà del Adobe, ad esempio Akamai.
 
 **Versione 1.4.29**
 
@@ -288,19 +288,19 @@ Quando la risoluzione è associata a un problema segnalato, viene visualizzato u
 
 Comment Type: draft
 
-<note type="note"> 
+`<note type="note"> `
  <p>All TVSDK customers who use CRS are strongly encouraged to upgrade to TVSDK 1.4.39 or latest on iOS and Android. This upgrade is a drop-in replacement to the existing app implementation. After the upgrade, check for the CRS creative URL requests in a proxy tool (for example, Charles) to verify that the version in the path reflects version 3.1. For example:</p> 
  <p><span class="code">https://primetime-a.akamaihd.net/assets/3p/v3.1/222000/167/d77/ 167d775d00cbf7fd224b112sf5a4bc7d_0e34cd3ca5177fbc74d66d784bf3586d.m3u8</span></p> 
-</note>
+`</note>`
 
  -->
 
 <!--
 Comment Type: draft
 
-<note type="note"> 
+`<note type="note"> `
  <p>TVSDK versions earlier than version 1.4.28 sometimes exhibit a long delay in the startup time when ad-enabled content is played on devices that are running on iOS 10. To resolve this issue, upgrade to version 1.4.28 or later. Version 1.4.28 was released on August 31, 2016, and iOS 10 was released on September 13, 2016.</p> 
-</note>
+`</note>`
  -->
 **iOS TVSDK 3.12**
 
@@ -941,7 +941,7 @@ Questo problema è stato risolto aggiornando l&#39;implementazione API PTMediaPl
 
 * (ZD #18844) Tracciamento dell&#39;indicatore di riproduzione per il contenuto live nel lettore iOS.
 
-Questo problema è stato risolto consentendo alle applicazioni di impostare il proprio valore della testina di riproduzione.
+Questo problema è stato risolto consentendo alle applicazioni di impostare il proprio valore di playhead.
 
 * (Zendesk #18518) - Se il nome del video non è specificato, per impostazione predefinita il nome di TVSDK è * lettore basato su PSDK.*
 
