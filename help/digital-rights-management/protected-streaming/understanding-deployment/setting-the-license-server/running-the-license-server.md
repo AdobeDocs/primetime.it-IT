@@ -3,9 +3,9 @@ seo-title: Esecuzione del server DRM per lo streaming protetto
 title: Esecuzione del server DRM per lo streaming protetto
 uuid: 9bbe211d-268b-43c2-9e55-7ce62de40d30
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 51b3713e04fcb4adeaa7a8d1b700372b1dba7cf6
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '795'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Prima di avviare  Adobe Primetime DRM Server for Protected Streaming, si consigl
 
 Se si desidera avviare Tomcat e il server licenze, è necessario eseguire [!DNL catalina.bat start] o [!DNL catalina.sh start] dalla [!DNL bin] directory Tomcat.
 
-Dopo l&#39;avvio del server, è necessario verificare che sia stato configurato correttamente aprendo [!DNL https://<lic<span></span>ense-server-host:port>/flashaccessserver/<tenant-name>/flashaccess/license/v1] in una finestra del browser. Se la configurazione del tenant è stata caricata correttamente, viene visualizzato un messaggio di conferma.
+Dopo l&#39;avvio del server, è necessario verificare che sia stato configurato correttamente aprendo `https://<lic<span></span>ense-server-host:port>/flashaccessserver/<tenant-name>/flashaccess/license/v1` la finestra di un browser. Se la configurazione del tenant è stata caricata correttamente, viene visualizzato un messaggio di conferma.
 
 ## File di registro {#log-files}
 
@@ -54,11 +54,11 @@ Il file di registro globale, [!DNL flashaccess-global.log], si trova in *License
 
 ### File di registro delle partizioni {#section_5660137CD6AA40519E72A4315534846B}
 
-Il file di registro della partizione, [!DNL flashaccess-partition.log], si trova nella [!DNL <LicenseServer.LogRoot>/flashaccesserver] directory. Include i messaggi di registro generati durante l&#39;elaborazione di una richiesta di licenza.
+Il file di registro della partizione, [!DNL flashaccess-partition.log], si trova nella `<LicenseServer.LogRoot>/flashaccesserver` directory. Include i messaggi di registro generati durante l&#39;elaborazione di una richiesta di licenza.
 
 ### File di registro tenant {#section_F0257CC0831647F18A746B4F02E3E910}
 
-Il file di registro del tenant di ciascun tenant, [!DNL flashaccess-tenant.log], si trova in [!DNL &lt;LicenseServer.LogRoot>/flashaccesserver/locants/<tenantname>]. Il registro tenant include informazioni di controllo che descrivono ogni licenza generata per questo tenant.
+Il file di registro del tenant di ciascun tenant, [!DNL flashaccess-tenant.log], si trova in `<LicenseServer.LogRoot>/flashaccesserver/tenants/<tenantname>`. Il registro tenant include informazioni di controllo che descrivono ogni licenza generata per questo tenant.
 
 ## Aggiornamento dei file di configurazione {#updating-configuration-files}
 
