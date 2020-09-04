@@ -5,7 +5,10 @@ seo-title: Codici di notifica
 title: Codici di notifica
 uuid: a7b77a5c-9873-45cf-8499-aa00270a7ad6
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '246'
+ht-degree: 0%
 
 ---
 
@@ -36,9 +39,9 @@ Gli oggetti di notifica forniscono informazioni relative allo stato del lettore.
      <li id="li_11AE91D1325E4F718228E662C9C55F9A">Eventi di notifica di avviso, dal 20000 al 299999 </li> 
      <li id="li_6D3EA03845294DC2BAD1ACF507639E51">Eventi di notifica delle informazioni, da 300000 a 399999 </li> 
     </ul> <p>Ciascun intervallo di livello principale, ad esempio errori, è suddiviso in sottointervalli, ad esempio da 101000 a 101999 che rappresentano errori di riproduzione. </p>
-    <ph>
+    <pre>
      L'enumerazione <span class="codeph"> mediacore.PSDKErrorCode</span> elenca i valori possibili.
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> name </td> 
