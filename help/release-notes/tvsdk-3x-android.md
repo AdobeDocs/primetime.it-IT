@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: e467153067bb10107054a5d4166b1d9c2ac646ab
+source-git-commit: 33509042e32c2167fab21788042bfb2bb877c0f4
 workflow-type: tm+mt
 source-wordcount: '5418'
 ht-degree: 0%
@@ -187,7 +187,7 @@ TVSDK ora annulla il download in corso del segmento, se necessario, e passa in m
 
    * Il secondo annuncio viene riprodotto per la durata rimanente (20 sec) seguita dal terzo annuncio.
 
-   * I tracciatori annunci per l’annuncio parziale riprodotto (secondo annuncio) non vengono attivati. I tracciatori solo per il terzo annuncio vengono attivati.
+   * I tracciatori annunci per l&#39;annuncio parziale riprodotto (secondo annuncio) non vengono attivati. I tracciatori solo per il terzo annuncio vengono attivati.
 
 * **Proteggere il caricamento di annunci tramite HTTPS**
 
@@ -289,7 +289,7 @@ Quando TVSDK apre una connessione, richiede al server una connessione *keep-aliv
 
 * **Protezione dei contenuti**
 
-   * **Protezione dell&#39;output basata sulla risoluzione - Questa funzione associa le restrizioni di riproduzione a risoluzioni specifiche, fornendo controlli DRM più precisi.**
+   * **Protezione dell&#39;uscita basata sulla risoluzione - Questa funzione associa le restrizioni di riproduzione a risoluzioni specifiche, fornendo controlli DRM più precisi.**
 
 * **Supporto dei flussi di lavoro**
 
@@ -329,7 +329,7 @@ Quando TVSDK apre una connessione, richiede al server una connessione *keep-aliv
 
 * **Cookie**
 
-   * Android TVSDK ora supporta l&#39;accesso ai cookie JAVA memorizzati in CookieStore dell&#39;applicazione Android. Viene fornita un’API di callback (onCookiesUpdated) per la registrazione ogni volta che un nuovo cookie viene fornito come parte dell’intestazione **Set-Cookie** Response. Questi cookie sono disponibili come elenco di cookie HttpCookie utilizzati per un URI/dominio diverso impostando questi valori di cookie su tale URI/dominio utilizzando CookieStore. Analogamente, i valori dei cookie in TVSDK vengono aggiornati utilizzando l&#39;API di aggiunta CookieStore.
+   * Android TVSDK ora supporta l&#39;accesso ai cookie JAVA memorizzati in CookieStore dell&#39;applicazione Android. Viene fornita un&#39;API di callback (onCookiesUpdated) per la registrazione ogni volta che un nuovo cookie viene fornito come parte dell&#39;intestazione **Set-Cookie** Response. Questi cookie sono disponibili come elenco di cookie HttpCookie utilizzati per un URI/dominio diverso impostando questi valori di cookie su tale URI/dominio utilizzando CookieStore. Analogamente, i valori dei cookie in TVSDK vengono aggiornati utilizzando l&#39;API di aggiunta CookieStore.
 
 ## Matrice di funzioni {#feature-matrix}
 
@@ -424,7 +424,7 @@ Quando la risoluzione è associata a un problema segnalato, viene visualizzato u
 
 Questa sezione fornisce un riepilogo del problema risolto nella release Android di TVSDK 3.12.
 
-* ZD#40584 - L&#39;app Primetime Reference non viene creata con la versione più recente.
+* ZD#40584 - L’app Primetime Reference non viene creata con la versione più recente.
 
 ### Risolti i problemi nelle versioni precedenti
 
@@ -556,7 +556,7 @@ Questa sezione fornisce un riepilogo del problema risolto nella release Android 
 
 * ZD #34189 - Problema quando si cerca di iniziare l&#39;interruzione dell&#39;annuncio.
 
-   * Il problema era con gli annunci SSAI che sono cuciti con discontinuità. E la causa era un comportamento quando cerchiamo di iniziare tali annunci, cerchiamo un fotogramma chiave e non lo troviamo. Il motivo era che la marca temporale audio minima dell&#39;annuncio era precedente alla marca temporale del video principale. Quindi, finiamo per cercare un fotogramma chiave in presenza di dati frammentDump errati. È stato corretto.
+   * Il problema era con gli annunci SSAI che sono cuciti con discontinuità. E la causa era un comportamento quando cerchiamo di iniziare tali annunci, cerchiamo un fotogramma chiave e non lo troviamo. Il motivo era che la marca temporale audio minima dell&#39;annuncio era precedente alla marca temporale del video principale. Quindi, finiamo per cercare un fotogramma chiave in un dato frammentDump errato. È stato corretto.
 
 * ZD #34528 - La risoluzione video non viene aggiornata oltre 640x360 su un dongle FireTV di terza generazione.
 
