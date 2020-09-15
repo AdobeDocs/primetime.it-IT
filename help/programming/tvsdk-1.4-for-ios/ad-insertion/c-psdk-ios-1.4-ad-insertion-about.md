@@ -5,7 +5,10 @@ seo-title: Inserire annunci
 title: Inserire annunci
 uuid: 6fffb340-65ea-4c47-a55b-c0ec4917d37c
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '628'
+ht-degree: 0%
 
 ---
 
@@ -69,7 +72,7 @@ Di seguito sono riportati alcuni esempi di restituzione anticipata delle interru
    Sebbene sia stata specificata una durata predefinita, se il gioco riprende prima del termine dell&#39;interruzione, l&#39;interruzione dell&#39;annuncio deve essere terminata.
 * Un segnale di emergenza durante un&#39;interruzione pubblicitaria in un flusso live.
 
-La possibilità di uscire dall&#39;inizio di un&#39;interruzione dell&#39;annuncio è identificata tramite un tag personalizzato nel manifesto noto come plug-in o tag cue-in. TVSDK consente all’applicazione di sottoscrivere questi tag di collegamento per fornire un’opportunità di accesso facilitato.
+La possibilità di uscire dall&#39;inizio di un&#39;interruzione dell&#39;annuncio è identificata tramite un tag personalizzato nel manifesto noto come plug-in o tag di cue-in. TVSDK consente all’applicazione di sottoscrivere questi tag di collegamento per fornire un’opportunità di accesso facilitato.
 
 * Per utilizzare il `#EXT-X-CUE-IN` tag come opportunità di collegamento e implementare un ritorno iniziale all’interruzione dell’annuncio:
 
@@ -98,10 +101,7 @@ La possibilità di uscire dall&#39;inizio di un&#39;interruzione dell&#39;annunc
       >Il codice seguente presuppone che l&#39;app disponga di un&#39;implementazione per il `isCueInOpportunity` metodo.
       >
       >
-      >
-      >
-      >
-      ```>
+      ```
       >- (PTPlacementOpportunity *)preparePlacementOpportunity:(PTTimedMetadata *)timedMetadata 
       >{ 
       >       if ([self isCueInOpportunity:timedMetadata]) 
@@ -113,10 +113,7 @@ La possibilità di uscire dall&#39;inizio di un&#39;interruzione dell&#39;annunc
       >               return [super preparePlacementOpportunity:timedMetadata]; 
       >       } 
       >}
-      >```       >
-      >
-
-
+      >```
 
    1. Registra il risolutore di opportunità esteso nell&#39; `PTDefaultMediaPlayerClientFactory` istanza.
 
