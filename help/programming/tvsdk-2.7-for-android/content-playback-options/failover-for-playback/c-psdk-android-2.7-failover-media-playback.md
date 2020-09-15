@@ -5,7 +5,10 @@ seo-title: Riproduzione e failover dei supporti
 title: Riproduzione e failover dei supporti
 uuid: 5189cef4-ee09-43b3-ae3d-1052fc535480
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '648'
+ht-degree: 0%
 
 ---
 
@@ -47,7 +50,8 @@ Se il motore video non è in grado di ottenere i segmenti in modo continuo, limi
 
 >[!NOTE]
 >
->Di seguito sono riportate alcune limitazioni alle quali devi essere a conoscenza: >
+>Di seguito sono riportate alcune limitazioni alle quali devi essere a conoscenza:
+>
 >* I parametri di controllo ABR (Adaptive Bit Rate) non vengono presi in considerazione quando si verifica un failover.
 >
 >  
