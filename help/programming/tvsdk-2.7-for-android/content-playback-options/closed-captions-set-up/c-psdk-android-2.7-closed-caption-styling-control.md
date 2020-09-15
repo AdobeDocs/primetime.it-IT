@@ -5,7 +5,10 @@ seo-title: Controllo dello stile dei sottotitoli codificati
 title: Controllo dello stile dei sottotitoli codificati
 uuid: fa4f637f-f13c-465d-8eee-5e66a6dd9db2
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '882'
+ht-degree: 0%
 
 ---
 
@@ -128,21 +131,23 @@ Potete formattare il testo dei sottotitoli codificati con i metodi TVSDK.
 
       >[!IMPORTANT]
       >
-      >**Impostazioni colore:** In Android TVSDK 2.X, è stato migliorato lo stile dei colori dei sottotitoli codificati. Questa funzione consente di impostare i colori dei sottotitoli codificati utilizzando una stringa esadecimale che rappresenta i valori di colore RGB. La rappresentazione del colore esadecimale RGB è la nota stringa a 6 byte utilizzata in applicazioni come Photoshop:       >
+      >**Impostazioni colore:** In Android TVSDK 2.X, è stato migliorato lo stile dei colori dei sottotitoli codificati. Questa funzione consente di impostare i colori dei sottotitoli codificati utilizzando una stringa esadecimale che rappresenta i valori di colore RGB. La rappresentazione del colore esadecimale RGB è la nota stringa a 6 byte utilizzata in applicazioni come Photoshop:
       >
       >    * FFFF = Nero
       >    * 000000 = Bianco
       >    * FF0000 = Rosso
       >    * 00FF00 = Verde
       >    * 0000FF = Blu
+
       >
       >e così via.
       >
       >Nell&#39;applicazione, ogni volta che trasmettete informazioni sullo stile del colore, `TextFormatBuilder`utilizzate comunque l&#39; `Color` enumerazione come precedente, ma ora dovete aggiungere `getValue()` al colore per ottenere il valore come una stringa. Ad esempio:
-      >
+
       ```
-      >tfb = tfb.setBackgroundColor(TextFormat.Color.RED <b>.getValue()</b>);
-      >```
+      tfb = tfb.setBackgroundColor(TextFormat.Color.RED <b>.getValue()</b>);
+      ```
+
 
 
 
@@ -169,8 +174,7 @@ public TextFormatBuilder(
 ```
 
 >[!TIP]
->
->Nelle opzioni che definiscono i valori predefiniti (ad esempio, `DEFAULT`), tale valore si riferisce a ciò che era l&#39;impostazione quando la didascalia era originariamente specificata.
+Nelle opzioni che definiscono i valori predefiniti (ad esempio, `DEFAULT`), tale valore si riferisce a ciò che era l&#39;impostazione quando la didascalia era originariamente specificata.
 
 <table frame="all" colsep="1" rowsep="1" id="table_87205DEFEE384AF4AF83952B15E18A42"> 
  <thead> 
