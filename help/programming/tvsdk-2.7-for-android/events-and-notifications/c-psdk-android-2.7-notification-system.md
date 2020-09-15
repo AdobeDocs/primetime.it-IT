@@ -5,7 +5,10 @@ seo-title: Notifiche ed eventi per lo stato, l'attività, gli errori e la regist
 title: Notifiche ed eventi per lo stato, l'attività, gli errori e la registrazione del lettore
 uuid: ec840f14-38d1-4f43-b119-e1326515fc63
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '574'
+ht-degree: 0%
 
 ---
 
@@ -72,11 +75,10 @@ Di seguito è riportato un esempio di come recuperare le notifiche:
 
    >[!NOTE]
    >
-   >Per evitare questo overflow, effettuare una delle seguenti operazioni:    >
-   >    
-   >    
-   >    1. Diminuisce l&#39;intervallo di tempo che guida il thread che esegue il polling per i nuovi eventi.
-   >    1. Aumentate la dimensione dell&#39;elenco delle notifiche.
+   >Per evitare questo overflow, effettuare una delle seguenti operazioni:
+   >
+   >1. Diminuisce l&#39;intervallo di tempo che guida il thread che esegue il polling per i nuovi eventi.
+   >1. Aumentate la dimensione dell&#39;elenco delle notifiche.
 
 
 1. Serializzare le voci dell&#39;evento di notifica più recente in formato JSON e inviare le voci a un server remoto per la post-elaborazione.
