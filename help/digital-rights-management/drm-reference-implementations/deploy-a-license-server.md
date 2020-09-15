@@ -5,7 +5,10 @@ seo-title: Distribuzione del server licenze
 title: Distribuzione del server licenze
 uuid: bee7ead1-ed13-4894-80f9-5196bf2f818f
 translation-type: tm+mt
-source-git-commit: 29149594c4b41956a091ef27093304e74ff15f2f
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '294'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: 29149594c4b41956a091ef27093304e74ff15f2f
 
    >[!NOTE]
    >
-   >Se in precedenza avete distribuito file WAR del server licenze, potrebbe essere necessario eliminare le directory WAR non compresse nella [!DNL webapps] directory sul server Tomcat:        >
+   >Se in precedenza avete distribuito file WAR del server licenze, potrebbe essere necessario eliminare le directory WAR non compresse nella [!DNL webapps] directory sul server Tomcat:
    >
    >* [!DNL webapps/flashaccess]
    >* [!DNL webapps/edcws]
@@ -28,7 +31,7 @@ source-git-commit: 29149594c4b41956a091ef27093304e74ff15f2f
 
    >[!NOTE]
    >
-   >Non eseguite la distribuzione [!DNL edsws.war] , a meno che non sia necessaria la compatibilità con il contenuto Flash Media Rights Management (FMRMS) v1.5. (Questo è un requisito molto raro.)
+   >Non eseguire la distribuzione [!DNL edsws.war] a meno che non sia necessaria la compatibilità con il contenuto FMRMS (Flash Media Rights Management) v1.5. (Questo è un requisito molto raro.)
    >
    >Se preferite impedire a Tomcat di disfare i file WAR, modificate `server.xml` nella `conf` directory e impostate `unpackWARs` su `false`.
 
@@ -39,7 +42,8 @@ source-git-commit: 29149594c4b41956a091ef27093304e74ff15f2f
    * [!DNL flashaccesstools.properties] - Il file delle proprietà del server licenze.
    * [!DNL log4j.xml] - Configurazione registrazione server licenze
    * [!DNL *.pol] - File di criteri DRM di esempio.
-   Inoltre, potete anche scegliere di copiare i file di certificazione Adobe in questa posizione.
+
+   Inoltre, potete anche scegliere di copiare i file di certificazione  Adobe in questa posizione.
 
 1. Modificate le impostazioni del server licenze in [!DNL flashaccesstools.properties] modo da riflettere la configurazione del server.
 
