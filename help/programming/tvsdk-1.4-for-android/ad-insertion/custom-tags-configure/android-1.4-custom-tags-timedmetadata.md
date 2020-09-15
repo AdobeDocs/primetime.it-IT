@@ -5,7 +5,10 @@ seo-title: Classe di metadati temporizzati
 title: Classe di metadati temporizzati
 uuid: 3debfad4-084f-4fb5-b699-ea5e8fd1ed51
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '389'
+ht-degree: 0%
 
 ---
 
@@ -65,16 +68,13 @@ Ricorda quanto segue:
 
    >[!TIP]
    >
-   >I dati complessi nei tag personalizzati nel manifesto, come le stringhe con caratteri speciali, devono essere racchiusi tra virgolette. Ad esempio:   >
+   >I dati complessi nei tag personalizzati nel manifesto, come le stringhe con caratteri speciali, devono essere racchiusi tra virgolette. Ad esempio:
    >
    >
-   ```>
+   ```
    >#EXT-CUSTOM-TAG:type=SpliceOut,ID=1,time=71819.7222,duration=30.0, 
    >url="www.example.com:8090?parameter1=xyz&parameter2=abc"
-   >```  >
-   >
-
-
+   >```
 
 * Se l&#39;estrazione non riesce a causa di un formato di tag personalizzato, la proprietà dei metadati sarà vuota e l&#39;applicazione deve estrarre le informazioni effettive. In questo caso non viene generato alcun errore.
 
