@@ -6,7 +6,10 @@ seo-title: Risoluzione degli annunci nel tempo
 title: Risoluzione degli annunci nel tempo
 uuid: 77028f6e-7e53-45d1-bcc0-54f8224d6d18
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '696'
+ht-degree: 0%
 
 ---
 
@@ -20,6 +23,7 @@ La risoluzione degli annunci e il caricamento degli annunci potrebbero causare u
    1. TVSDK scarica un manifesto (playlist) e *risolve* tutti gli annunci.
    1. TVSDK *carica* tutti gli annunci e li inserisce nella timeline.
    1. TVSDK sposta il lettore nello stato PREPARATO e inizia la riproduzione del contenuto.
+
    Il lettore utilizza gli URL nel manifesto per ottenere il contenuto dell’annuncio (creativi), assicura che il contenuto dell’annuncio sia in un formato che possa essere riprodotto da TVSDK e che TVSDK inserisca gli annunci nella timeline. Questo processo di base per la risoluzione e il caricamento degli annunci può causare un ritardo inaccettabilmente lungo per un utente che attende di riprodurre il proprio contenuto, soprattutto se il manifesto contiene diversi URL di annunci.
 
 * *Caricamento* annuncio non aggiornato:
@@ -27,6 +31,7 @@ La risoluzione degli annunci e il caricamento degli annunci potrebbero causare u
    1. TVSDK scarica una playlist e *risolve* tutti gli annunci.
    1. TVSDK *carica* annunci pre-roll, sposta il lettore nello stato PREPARATO e inizia la riproduzione del contenuto.
    1. TVSDK *carica* gli annunci rimanenti e li inserisce nella timeline durante la riproduzione.
+
    Questa funzione migliora il processo di base mettendo il lettore nello stato PREPARATO prima che tutti gli annunci vengano caricati.
 
 * *Lazy Ad Resolving*:
@@ -43,7 +48,8 @@ La risoluzione degli annunci e il caricamento degli annunci potrebbero causare u
 
 >[!IMPORTANT]
 >
->**Fattori da considerare con Lazy Ad Resolving:** >
+>**Fattori da considerare con Lazy Ad Resolving:**
+>
 >* Lazy Ad Resolving è supportato solo per i flussi VOD solo con le modalità SERVER_MAP e MANIFEST_CUES.
 >* La risoluzione annuncio non è abilitata per impostazione predefinita. Se disabilitato, tutti gli annunci vengono risolti sui flussi VOD prima dell&#39;avvio della riproduzione.
 >* Lazy Ad Resolving è incompatibile con la funzione Instant On. Per ulteriori informazioni su Attivato istantaneo, consultate Attivato istantaneo.
@@ -52,6 +58,7 @@ La risoluzione degli annunci e il caricamento degli annunci potrebbero causare u
 >* Non è consigliabile ridurre il valore di *setDelayAdLoadingTolerance() *al di sotto del valore predefinito (5 secondi). In questo modo il lettore potrebbe creare un &quot;buffer&quot; inutilmente.
 >* Lazy Ad Resolving non influisce sugli annunci pre-roll.
 >* Lazy Ad Resolving è attualmente supportato con Auditude-Plugin. È consigliabile non impostare ** setDelayAdLoadingsu true se si utilizza un risolutore personalizzato.
+
 >
 
 
