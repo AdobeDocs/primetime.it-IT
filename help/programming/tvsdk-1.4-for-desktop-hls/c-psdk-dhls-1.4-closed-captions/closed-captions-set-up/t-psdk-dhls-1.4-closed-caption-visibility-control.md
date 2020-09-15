@@ -5,7 +5,10 @@ seo-title: Controllo della visibilità dei sottotitoli
 title: Controllo della visibilità dei sottotitoli
 uuid: 360d1158-67d9-40d9-b4b6-8ef46f9d73c0
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '243'
+ht-degree: 0%
 
 ---
 
@@ -20,14 +23,13 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
 
 >[!NOTE]
 >
->I valori di visibilità per le didascalie chiuse sono definiti in `ClosedCaptionsVisibility`. >
+>I valori di visibilità per le didascalie chiuse sono definiti in `ClosedCaptionsVisibility`.
 >
-```>
+>
+```
 >public static const HIDDEN:String = hidden; 
 >public static const VISIBLE:String = visible;
->```>
-
-
+>```
 
 1. Attendere che lo stato `MediaPlayer` di PREPARAZIONE sia almeno pari a PREPARATO (vedere [Attendere uno stato](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)valido).
 1. Per ottenere l’impostazione di visibilità corrente per i sottotitoli codificati, utilizzate il metodo getter in `MediaPlayer`, che restituisce un valore di visibilità.
