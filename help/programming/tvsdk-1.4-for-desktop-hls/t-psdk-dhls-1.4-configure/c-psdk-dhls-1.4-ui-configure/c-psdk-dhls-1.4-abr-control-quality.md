@@ -5,7 +5,10 @@ seo-title: Bitrate adattivo (ABR) per la qualità video
 title: Bitrate adattivo (ABR) per la qualità video
 uuid: e3d5ef90-067d-48e0-a025-081de931d842
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '1011'
+ht-degree: 0%
 
 ---
 
@@ -34,7 +37,7 @@ Potete impostare i criteri di commutazione ABR (Bitrate adattivo) e i bitrate in
   </tr> 
   <tr> 
    <td colname="col01"> Criteri di commutazione ABR </td> 
-   <td colname="col2"> Quando possibile, la riproduzione passa gradualmente al profilo con bitrate più elevato. Puoi impostare il criterio per il passaggio ABR, che determina la velocità con cui TVSDK passa da un profilo all'altro. Il valore predefinito è <span class="codeph"> MODERATE_POLICY </span>. <p>Quando TVSDK decide di passare a un bitrate più elevato, il lettore seleziona il profilo di bitrate ideale a cui passare in base al criterio ABR corrente: 
+   <td colname="col2"> Quando possibile, la riproduzione passa gradualmente al profilo con bitrate più elevato. Puoi impostare il criterio per il passaggio ABR, che determina la velocità con cui TVSDK passa da un profilo all'altro. Il valore predefinito è <span class="codeph"> MODERATE_POLICY </span>. <p>Quando TVSDK decide di passare a un bitrate più alto, il lettore seleziona il profilo di bitrate ideale a cui passare in base al criterio ABR corrente: 
      <ul id="ul_058D0FFC944C476A83BB9E756B95DEBD"> 
       <li id="li_C690A12DC34C4754B01C2D0616FB6A0A"> <span class="codeph"> CONSERVATIVE_POLICY </span>: Passa al profilo con bitrate successivo più elevato quando la larghezza di banda è superiore del 50% rispetto al bitrate corrente. </li> 
       <li id="li_FF5BDB099B554940AC296938C7A12B81"> <span class="codeph"> MODERATE_POLICY </span>: Passa al successivo profilo di bitrate più elevato quando la larghezza di banda è superiore del 20% rispetto al bitrate corrente. </li> 
@@ -80,20 +83,17 @@ Questa classe include anche il metodo `toABRControlParameters()` helper. Utilizz
 
    >[!NOTE]
    >
-   >Ad esempio, l’esempio seguente inizializza tutti i parametri in base alle impostazioni predefinite, imposta solo il criterio su conservativo e limita il bitrate massimo a 1000000:    >
+   >Ad esempio, l’esempio seguente inizializza tutti i parametri in base alle impostazioni predefinite, imposta solo il criterio su conservativo e limita il bitrate massimo a 1000000:
    >
    >
-   ```>
+   ```
    >var abrBuilder:ABRControlParametersBuilder =  
    >   new ABRControlParametersBuilder(); 
    >abrBuilder.policy = ABRControlParameters.CONSERVATIVE_POLICY; 
    >abrBuilder.maxBitRate = 1000000; 
    >mediaPlayer.abrControlParameters =  
    >   abrBuilder.toABRControlParameters();
-   >```   >
-   >
-
-
+   >```
 
 1. Modificare i singoli parametri ABR in fase di esecuzione.
 
