@@ -5,7 +5,10 @@ seo-title: Pelli personalizzate
 title: Pelli personalizzate
 uuid: bc71926e-0dec-4628-8248-911224a7a6c2
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '242'
+ht-degree: 0%
 
 ---
 
@@ -41,14 +44,11 @@ Potete apportare i seguenti tipi di modifiche:
 
       >[!TIP]
       >
-      >Per utilizzare uno dei filatori di buffering, è necessario aggiungere la classe nell’elemento buffering-overlay. Ad esempio, per utilizzare `overlay-text`, aggiungere le righe seguenti nel `BufferOverlay.js` file:       >
+      >Per utilizzare uno dei filatori di buffering, è necessario aggiungere la classe nell’elemento buffering-overlay. Ad esempio, per utilizzare `overlay-text`, aggiungere le righe seguenti nel `BufferOverlay.js` file:
       >
       >
-      ```js      >
+      ```js
       >var overlay = document.getElementById("buffering-overlay"); 
       >overlay.classList.add ("spinner");
-      >```      >
-      >
-
-
+      >```
 
