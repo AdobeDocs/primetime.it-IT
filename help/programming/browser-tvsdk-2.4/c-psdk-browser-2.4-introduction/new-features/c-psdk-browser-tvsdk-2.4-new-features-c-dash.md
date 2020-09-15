@@ -5,7 +5,10 @@ seo-title: Funzioni DASH supportate
 title: Funzioni DASH supportate
 uuid: 299516a4-09ed-4b8a-b0bf-a04f204f385a
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '506'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ Browser TVSDK supporta una serie di funzioni DASH che potete implementare per ag
 
 >[!TIP]
 >
->Nelle tabelle delle matrici di feature riportate di seguito, ![](assets/supported15.png)>
+>Nelle tabelle delle matrici di feature riportate di seguito,  ![](assets/supported15.png)
 >significa che la funzione è supportata nella versione corrente.
 
 Sono supportate le seguenti funzionalità:
@@ -83,7 +86,7 @@ Sono supportate le seguenti funzionalità:
 
 | Categoria | Tipo di contenuto | Feature | HTML5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
-| Integrazioni | VOD + Live | Integrazione VHL di Adobe Analytics | ![](assets/supported15.png) |
+| Integrazioni | VOD + Live | Integrazione  Adobe Analytics VHL | ![](assets/supported15.png) |
 | Integrazioni | VOD + Live | Fatturazione | ![](assets/supported15.png) |
 | Integrazioni | VOD + Live | Browserify | ![](assets/supported15.png) |
 
@@ -91,26 +94,26 @@ Sono supportate le seguenti funzionalità:
 
 | Categoria | Tipo di contenuto | Feature | HTML5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
-| Inserimento annunci | VOD | Solo annunci | Non supportato |
-| Inserimento annunci | VOD | Parametri di targeting | Solo VOD |
-| Inserimento annunci | VOD | Parametri personalizzati | Solo VOD |
-| Inserimento annunci | VOD + Live | Criterio annunci personalizzato | Non supportato |
-| Inserimento annunci | VOD + Live | Lazy e caricamento | Non supportato |
-| Inserimento annunci | VOD | Annunci pubblicitari, banner pubblicitari e annunci cliccabili | Non supportato |
-| Inserimento annunci | VOD | VPAID 2.0 | Non supportato |
+| Ad Insertion  | VOD | Solo annunci | Non supportato |
+| Ad Insertion  | VOD | Parametri di targeting | Solo VOD |
+| Ad Insertion  | VOD | Parametri personalizzati | Solo VOD |
+| Ad Insertion  | VOD + Live | Criterio annunci personalizzato | Non supportato |
+| Ad Insertion  | VOD + Live | Lazy e caricamento | VOCE |
+| Ad Insertion  | VOD | Annunci pubblicitari, banner pubblicitari e annunci cliccabili | Non supportato |
+| Ad Insertion  | VOD | VPAID 2.0 | Non supportato |
 
 ## Funzioni principali di inserimento annunci DASH (CSAI) {#dash-core-ad-insertion}
 
 | Categoria | Tipo di contenuto | Feature | HTML5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
-| Inserimento annunci | VOD + Live | Pre-roll | Solo VOD |
-| Inserimento annunci | VOD + Live | Media roll | Solo VOD |
-| Inserimento annunci | VOD + Live | Post-roll | Solo VOD |
-| Inserimento annunci | FER VOD | Risoluzione degli annunci e comportamenti | Non supportato |
-| Inserimento annunci | VOD + Live | Criterio annunci predefinito | Solo VOD |
-| Inserimento annunci | VOD + Live | VAST 2.0/3.0 | Solo VOD |
-| Inserimento annunci | VOD + Live | VMAP 1.0 | Solo VOD |
-| Inserimento annunci | VOD + Live | CRS v3.1 | Solo VOD |
+| Ad Insertion  | VOD + Live | Pre-roll | Solo VOD |
+| Ad Insertion  | VOD + Live | Media roll | Solo VOD |
+| Ad Insertion  | VOD + Live | Post-roll | Solo VOD |
+| Ad Insertion  | FER VOD | Risoluzione degli annunci e comportamenti | Non supportato |
+| Ad Insertion  | VOD + Live | Criterio annunci predefinito | Solo VOD |
+| Ad Insertion  | VOD + Live | VAST 2.0/3.0 | Solo VOD |
+| Ad Insertion  | VOD + Live | VMAP 1.0 | Solo VOD |
+| Ad Insertion  | VOD + Live | CRS v3.1 | Solo VOD |
 
 ## Funzioni di protezione dei contenuti DASH {#dash-content-protection}
 
@@ -128,7 +131,7 @@ Sono supportate le seguenti funzionalità:
    <td colname="col1"> Protezione dei contenuti </td> 
    <td colname="col2"> VOD + Live </td> 
    <td colname="col3"> AES-128 </td> 
-   <td colname="col6"> Non supportato </td>
+   <td colname="col6"> VOCE </td>
   </tr> 
   <tr> 
    <td colname="col1"> Protezione dei contenuti </td> 
@@ -149,7 +152,7 @@ Sono supportate le seguenti funzionalità:
        <li id="li_BC06B0A6EAAC4FC991C713775A8BB4DA">Chromecast </li> 
       </ul> </li> 
      <li id="li_D48B51C2208F423CB85D08886C2E1C66">PlayReady in Internet Explorer su Windows 8.1 ed Edge </li> 
-     <li id="li_2786AC19387241A296E015EE6FD07F2D">Adobe Access for Windows Firefox (solo video) </li> 
+     <li id="li_2786AC19387241A296E015EE6FD07F2D">Accesso  Adobe per Windows Firefox (solo video) </li> 
     </ul> </td> 
   </tr> 
  </tbody> 
