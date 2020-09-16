@@ -1,28 +1,43 @@
 ---
-title: Note sulla versione di PTAI 20.9.1
-description: Le note sulla versione di PTAI 20.9.1 descrivono le novità o le modifiche, i problemi risolti e noti nel Ad Insertion Primetime Dynamic  nel 2020.
+title: Note sulla versione di PTAI 20.9.2
+description: Le note sulla versione di PTAI 20.9.2 descrivono le novità o le modifiche, i problemi risolti e noti nel Ad Insertion Primetime Dynamic  nel 2020.
 translation-type: tm+mt
-source-git-commit: 699e6a463bce4f7853406cb7fe529fb09f87ca92
+source-git-commit: e3d2811e40bc34bfdaacdab1529fa9b01e416a98
 workflow-type: tm+mt
-source-wordcount: '887'
+source-wordcount: '962'
 ht-degree: 0%
 
 ---
 
 
-# Note sulla versione di Primetime Dynamic  Ad Insertion 20.9.1
+# Note sulla versione di Primetime Dynamic  Ad Insertion 20.9.2
 
-Le note sulla versione di Dynamic  Ad Insertion 20.9.1 descrivono i problemi nuovi o modificati, risolti e noti in Primetime Dynamic  Ad Insertion nel 2020.
+Le note sulla versione di Dynamic  Ad Insertion 20.9.2 descrivono i problemi nuovi o modificati, risolti e noti in Primetime Dynamic  Ad Insertion nel 2020.
 
-## Novità di PTAI 20.9.1
+## Novità di PTAI 20.9.2
+
+**Quando:** Martedì 15 settembre 2020 dalle 3:30 alle 6:30 Ora orientale
+
+**Miglioramenti**
+
+* È stato fornito il supporto per l&#39;inclusione di tipi di annunci non lineari tramite `EXT-X-MARKER` tag.
+Per ulteriori informazioni o per attivare questa funzione, contattate il rappresentante di assistenza tecnica.
+
+* È stato fornito il supporto necessario per limitare il tempo complessivo di risoluzione degli annunci, se i fornitori richiedono troppo tempo per rispondere. Per abilitare la limitazione, impostate il parametro API di avvio `ptadtimeout` su un valore in millisecondi.
+
+   >[!NOTE]
+   >
+   >Questo timeout si applica solo alle richieste di annunci, non alle richieste di annunci creativi.
+
+### Miglioramenti e correzioni nelle versioni precedenti
+
+#### Versione 20.9.1
 
 **Quando:** Martedì 1 settembre 2020 dalle 3:30 alle 7:30 Ora orientale
 
 **Modifiche**
 
 * È stato risolto il problema per i clienti che utilizzano HLS/CMAF, a causa del quale talvolta i token CDN o i tag EXT-X-MAP mancavano a volte nella finestra DVR.
-
-### Miglioramenti e correzioni nelle versioni precedenti
 
 #### Versione 20.8.4
 
