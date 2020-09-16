@@ -4,9 +4,9 @@ seo-title: ' note sulla versione di Adobe Primetime'
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: ca603507f696f75a32b4a4fc8cc35f9e1c14c214
+source-git-commit: e3d2811e40bc34bfdaacdab1529fa9b01e416a98
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '313'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 0%
 
 Benvenuti nelle  note sulla versione di Adobe Primetime. I documenti elencati nella navigazione a sinistra forniscono informazioni specifiche sulla versione, requisiti di sistema, limitazioni, problemi risolti e problemi noti.
 
-## Miglioramenti e correzioni in PTAI 20.9.1
+## Miglioramenti e correzioni in PTAI 20.9.2
 
-Il rilascio si è focalizzato sulla risoluzione del problema più grave per il cliente, per cui a EXT-X-MAP mancavano token CDN o tag EXT-X-MAP distribuiti erroneamente dalla finestra DVR.
+Il rilascio si è concentrato sul supporto per l&#39;inclusione di tipi di annunci non lineari tramite `EXT-X-MARKER` tag e per limitare il tempo complessivo di risoluzione degli annunci quando i fornitori richiedono troppo tempo per rispondere.
 
 Per ulteriori informazioni sull’attuale versione rilasciata del Ad Insertion  dinamico, consulta [Note](ptai-20x-release-notes.md)sulla versione PTAI.
 
