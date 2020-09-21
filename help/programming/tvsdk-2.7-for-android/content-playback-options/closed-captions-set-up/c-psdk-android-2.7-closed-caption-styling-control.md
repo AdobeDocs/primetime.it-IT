@@ -5,7 +5,7 @@ seo-title: Controllo dello stile dei sottotitoli codificati
 title: Controllo dello stile dei sottotitoli codificati
 uuid: fa4f637f-f13c-465d-8eee-5e66a6dd9db2
 translation-type: tm+mt
-source-git-commit: 4ccc99f1ad6536ceb5e09c898dba3f71fa2de3f3
+source-git-commit: b02dfafdc78ca209da5ba0ed855342952be4288f
 workflow-type: tm+mt
 source-wordcount: '882'
 ht-degree: 0%
@@ -133,11 +133,11 @@ Potete formattare il testo dei sottotitoli codificati con i metodi TVSDK.
       >
       >**Impostazioni colore:** In Android TVSDK 2.X, è stato migliorato lo stile dei colori dei sottotitoli codificati. Questa funzione consente di impostare i colori dei sottotitoli codificati utilizzando una stringa esadecimale che rappresenta i valori di colore RGB. La rappresentazione del colore esadecimale RGB è la nota stringa a 6 byte utilizzata in applicazioni come Photoshop:
       >
-      >    * FFFF = Nero
-      >    * 000000 = Bianco
-      >    * FF0000 = Rosso
-      >    * 00FF00 = Verde
-      >    * 0000FF = Blu
+      >* FFFF = Nero
+      >* 000000 = Bianco
+      >* FF0000 = Rosso
+      >* 00FF00 = Verde
+      >* 0000FF = Blu
 
       >
       >e così via.
