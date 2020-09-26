@@ -5,9 +5,9 @@ seo-title: Parametri query server manifesto
 title: Parametri query server manifesto
 uuid: 03632da3-ae20-427c-bd24-4794ab627cc8
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: 6d25fc11bc4ca91556cae0b944322cd224c89fb5
 workflow-type: tm+mt
-source-wordcount: '790'
+source-wordcount: '846'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 0%
 
 I parametri di query indicano al server di manifesto quale tipo di client ha inviato la richiesta e cosa desidera che esegua il server di manifesto. Alcuni sono obbligatori e alcuni hanno formati o valori accettabili specifici.
 
-L’URL completo è costituito dall’URL di base seguito da un punto interrogativo, quindi `parameterName=value` da argomenti, separati da e-mail: `Base URL?name1=value1&name2=value2& . . .&name n=value n`
+L’URL completo è costituito dall’URL di base seguito da un punto interrogativo, quindi `parameterName=value` da argomenti, separati da e-mail: `Base URL?name1=value1&name2=value2& . . .&name n=value n`.
 
-## Parametri riconosciuti {#section_072845B7FA94468C8068E9092983C9E6}
+## Parametri riconosciuti {#recognized-parameters}
 
 Il server manifesto riconosce i seguenti parametri. Li elabora o li trasmette, insieme a tutti i parametri non riconosciuti, al server di annunci.
 
@@ -50,3 +50,5 @@ Il server manifesto riconosce i seguenti parametri. Li elabora o li trasmette, i
 | scteTracking | Recupera M3U8 , prima che le informazioni di tracciamento SCTE possano essere recuperate nel sidecar JSON V2.  <br/>Questo parametro indica al server manifesto che il lettore che recupera M3U8 deve recuperare le informazioni del tag SCTE. | No (predefinito:  false ) | true o false Note:  I dati SCTE-35 vengono restituiti nel sidecar JSON con la seguente combinazione di valori dei parametri di query: <ul><li>`ptcueformat=turner | elemental | nfl | DPIScte35` </li><li>pttrackingversion=v2 </li><li>scteTracking=true</li></ul> |
 | vetargetmoltiplicatore | Il numero di segmenti dal punto vivo L&#39;offset pre-roll è configurato utilizzando:   `(  vetargetmultiplier  *  targetduration ) +  vebufferlength`  <br/><br/>**Nota**:  Solo Live/Linear | No (predefinito:  3.0 ) | Mobile |
 | vebufferLength | Il numero di secondi dalla nota del punto attivo:  Solo Live/Linear | No (predefinito:  3.0 ) | Mobile |
+| ptadtimeout | Per limitare il tempo complessivo di risoluzione degli annunci, se i fornitori richiedono troppo tempo per rispondere. | Sì, per abilitare | valore in millisecondi |
+| ptparallelstream | Consente ai clienti con lettori che richiedono flussi audio o video demussati CMAF in parallelo per garantire la coerenza degli annunci nelle tracce audio e video. | Sì, per abilitare la funzione o omettere di disattivarla. | true |
