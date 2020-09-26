@@ -1,20 +1,30 @@
 ---
-title: Note sulla versione di PTAI 20.9.2
-description: Le note sulla versione di PTAI 20.9.2 descrivono le novità o le modifiche, i problemi risolti e noti nel Ad Insertion Primetime Dynamic  nel 2020.
+title: Note sulla versione di PTAI 20.9.3
+description: Le note sulla versione di PTAI 20.9.3 descrivono le novità o le modifiche, i problemi risolti e noti nel Ad Insertion Primetime Dynamic  nel 2020.
 translation-type: tm+mt
-source-git-commit: e3d2811e40bc34bfdaacdab1529fa9b01e416a98
+source-git-commit: 6d25fc11bc4ca91556cae0b944322cd224c89fb5
 workflow-type: tm+mt
-source-wordcount: '962'
+source-wordcount: '1017'
 ht-degree: 0%
 
 ---
 
 
-# Note sulla versione di Primetime Dynamic  Ad Insertion 20.9.2
+# Note sulla versione di Primetime Dynamic  Ad Insertion 20.9.3
 
-Le note sulla versione di Dynamic  Ad Insertion 20.9.2 descrivono i problemi nuovi o modificati, risolti e noti in Primetime Dynamic  Ad Insertion nel 2020.
+Le note sulla versione di Dynamic  Ad Insertion 20.9.3 descrivono i problemi nuovi o modificati, risolti e noti in Primetime Dynamic  Ad Insertion nel 2020.
 
-## Novità di PTAI 20.9.2
+## Novità di PTAI 20.9.3
+
+**Quando:** Mercoledì 30 settembre 2020 alle 3:30 AM alle 6:30 Ora orientale
+
+**Modifiche**
+
+* È stato aggiunto il parametro API Bootstrap `ptparallelstream`. Questo consente ai clienti con lettori che richiedono flussi audio o video demussati CMAF in parallelo, per garantire che gli annunci nelle tracce audio e video siano coerenti. Impostate il valore del parametro su true per abilitare questa funzione o omettete di disattivarla.
+
+### Miglioramenti e correzioni nelle versioni precedenti
+
+#### Versione 20.9.2
 
 **Quando:** Martedì 15 settembre 2020 dalle 3:30 alle 6:30 Ora orientale
 
@@ -28,8 +38,6 @@ Per ulteriori informazioni o per attivare questa funzione, contattate il rappres
    >[!NOTE]
    >
    >Questo timeout si applica solo alle richieste di annunci, non alle richieste di annunci creativi.
-
-### Miglioramenti e correzioni nelle versioni precedenti
 
 #### Versione 20.9.1
 
