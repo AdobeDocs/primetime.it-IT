@@ -5,7 +5,10 @@ seo-title: Visualizzare le statistiche sulla riproduzione e sul dispositivo QoS
 title: Visualizzare le statistiche sulla riproduzione e sul dispositivo QoS
 uuid: 8fc45a2f-03d4-4fa0-979b-eb816419c4f7
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: e1c6ab1d50f9262aaf70aef34854cf293fb4f30d
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -28,9 +31,11 @@ Le `QoSManager` statistiche QoS vengono monitorate ottenendo informazioni sul di
 
    * Per creare un QosManager:
       * Questa applicazione deve utilizzare la funzione del flusso di lavoro pubblicitario
+
    QoSManager qosManager = nuovo QosManagerOn();
 
    * Per utilizzare ManagerFactory per attivare la visualizzazione delle statistiche di QoS:
+
    qosManager = ManagerFactory.getQosManager(
    <b>true</b>, config, mediaPlayer);
 
