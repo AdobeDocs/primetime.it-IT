@@ -1,18 +1,18 @@
 ---
 title: Note sulla versione PTAI 19.11.1
-description: Le note sulla versione di PTAI 19.11.1 descrivono le novità o le modifiche, i problemi risolti e noti in Primetime Dynamic Ad Insertion nel 2019.
+description: Le note sulla versione di PTAI 19.11.1 descrivono le novità o le modifiche, i problemi risolti e noti in Primetime  Ad Insertion nel 2019.
 translation-type: tm+mt
-source-git-commit: 369dc8d987f5d49467ec376d4df5ffc46ea6d36c
+source-git-commit: 7d74e526dbc4c9f623d1ec30e4bc70d9318a89f9
 workflow-type: tm+mt
-source-wordcount: '1974'
+source-wordcount: '1971'
 ht-degree: 0%
 
 ---
 
 
-# Note sulla versione Primetime Dynamic Ad Insertion 19.11.1
+# Primetime  Ad Insertion 19.11.1 - Note sulla versione
 
-Le note sulla versione Dynamic Ad Insertion 19.11.1 descrivono i problemi nuovi o modificati, risolti e noti in Primetime Dynamic Ad Insertion nel 2019.
+Le note sulla versione di Primetime  Ad Insertion 19.11.1 descrivono le novità o le modifiche apportate, i problemi risolti e noti in Primetime  Ad Insertion nel 2019.
 
 ## Novità di PTAI 19.11.1
 
@@ -88,6 +88,7 @@ Aggiornamenti di sicurezza
    * È stata aggiunta la regola di normalizzazione creativa degli URL per Innovid, utilizzata da SSAI
    * La regola di normalizzazione utilizzata da CRS è stata aggiunta in una versione precedente
    * TVSDK: La regola di normalizzazione da aggiungere nel JSON delle regole del CRS è stata fornita dopo una release precedente, ma per essere sicuro, parla con il tuo Account Manager tecnico per rivedere tutte le regole di normalizzazione in vigore.
+
       >[!NOTE]
       >
       >La maggior parte degli URL creativi Invid verranno transcodificati e cuciti correttamente senza la regola di normalizzazione. Occasionalmente, tuttavia, vengono incontrati URL creativi Innovid con parametri dinamici. La regola di normalizzazione è necessaria per gestire queste istanze.
@@ -102,7 +103,7 @@ Aggiornamenti di sicurezza
    * CRS: È stato aggiunto un flusso di lavoro per ricompilare gli annunci in formato CMAF (HLS/fMP4)
 * SSAI: È stato risolto un problema che impediva l&#39;inserimento di annunci non muxed in contenuto non muxed, quando sia il contenuto che l&#39;annuncio non disponevano di flussi solo audio (EXT-X-STREAM-INF)
 * SSAI: È stato aggiunto il supporto per i token di autenticazione CDN Limelight (LLNW) per i segmenti di contenuto
-   * Quando `pttoken=limelight` o `pttoken=llnw` viene aggiunto all’URL del programma di avvio, al momento del recupero della playlist principale di origine verrà aggiunta un’intestazione segreta, quindi verranno aggiunti i parametri di query dall’intestazione X-Adobe-Sig di LLNW ai segmenti di contenuto
+   * Quando `pttoken=limelight` o `pttoken=llnw` viene aggiunto all&#39;URL del programma di avvio, al momento del recupero della playlist principale di origine verrà aggiunta un&#39;intestazione segreta, quindi verranno aggiunti i parametri di query dall&#39;intestazione X- Adobe-Sig di LLNW ai segmenti di contenuto
 * SSAI: È stato aggiunto un altro valore di token (`pttoken=centurylink`) per il supporto del token di autenticazione CDN CenturyLink, rilasciato il 30 luglio 2018
    * `pttoken=centurylink` ha lo stesso comportamento `pttoken=level3`e entrambi i valori sono validi
 
@@ -119,9 +120,9 @@ Aggiornamenti di sicurezza
 
 **Quando:** Mercoledì 10 Aprile 2:30 Ora orientale a Mercoledì 10 Aprile 4:30 Ora orientale
 
-* CRS: L&#39;API CRS Repackage non supporterà più i comandi HTTP POST. L&#39;API CRS Repackaging reindirizzerà automaticamente (301) i comandi HTTP POST a HTTPS
-   * A partire dal 20 maggio, il reindirizzamento HTTP->HTTPS per i comandi HTTP POST verrà disattivato
-   * Se utilizzate l&#39;API CRS Repackage per rigenerare gli annunci in anticipo, passate i comandi POST su HTTPS entro il 20 maggio
+* CRS: L&#39;API CRS Repackage non supporterà più i comandi POST HTTP. L&#39;API CRS Repackaging reindirizzerà automaticamente (301) i comandi POST HTTP a HTTPS
+   * A partire dal 20 maggio, il reindirizzamento HTTP->HTTPS per i comandi POST HTTP verrà disattivato
+   * Se utilizzate l&#39;API CRS Repackage per rigenerare gli annunci in anticipo, passate i comandi POST a HTTPS entro il 20 maggio
 * CRS: Architettura e flusso di lavoro riprogettati per caricare le risorse CRS nelle origini CDN dei clienti
    * I processi di processo per origine CDN sono separati, quindi i colli di bottiglia di caricamento per un’origine CDN non influiranno sui caricamenti in altre origini CDN
    * Altri vantaggi: Sono stati migliorati i tempi di elaborazione dei processi CRS e le frequenze di caricamento per le origini CDN dei clienti
@@ -174,13 +175,13 @@ Aggiornamenti di sicurezza
    * Vecchia struttura chiave di ricerca: Zone, Ad System, Ad ID, Creative ID, Creative URL e parametri di formato (durata target, formato di output, CDN di destinazione)
    * Le chiavi di ricerca per le risorse CRS esistenti verranno aggiornate in modo da corrispondere alla nuova struttura prima della release di produzione, ma si noti che le nuove risorse transcodificate tra l&#39;aggiornamento delle chiavi di ricerca e la release di produzione potrebbero non essere disponibili. In tal caso, avvierebbero una nuova richiesta CRS al successivo rilevamento dopo il rilascio
 
-* CRS: Aggiunta la possibilità di bloccare le richieste CRS di elenchi di elenchi o elenchi di elenchi da sistemi di annunci, ID di annunci, ID creativi, URL creativi e/o formato creativo specifici
+* CRS: Aggiunta la possibilità di  richieste CRS elenco Bloccati/ elenco consentiti da sistemi di annunci pubblicitari, ID di annunci, ID creativi, URL creativi e/o formato creativo specifici
 
    >Nota
    >
-   >Adobe aggiungerà regole per gli elenchi di blocchi quando verranno trovati fornitori di annunci con valori dinamici (ad esempio, parametri dinamici in URL) per lo stesso annuncio. Tali regole dell&#39;elenco blocchi verranno disattivate dopo che il componente dinamico sarà stato risolto, dal provider o tramite una regola di normalizzazione.
+   > Adobe aggiungerà  regole di elenco Bloccati quando verranno trovati fornitori di annunci con valori dinamici (ad esempio, parametri dinamici in URL) per lo stesso annuncio. Tali regole  elenco Bloccati verranno disattivate dopo che il componente dinamico sarà stato risolto, dal provider o tramite una regola di normalizzazione.
 
-   * Se desiderate aggiungere un elenco di blocchi o consentire una regola di elenco per la vostra zona, contattate l&#39;Account Manager tecnico per assistenza.
+   * Se desiderate aggiungere una regola di elenco Bloccati o di elenco consentiti  per la vostra zona, rivolgetevi al vostro responsabile dell&#39;account tecnico per assistenza.
 
 ### Versione 19.1.1
 
