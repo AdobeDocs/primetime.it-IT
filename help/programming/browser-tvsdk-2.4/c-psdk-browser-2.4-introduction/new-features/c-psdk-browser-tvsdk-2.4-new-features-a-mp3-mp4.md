@@ -5,7 +5,10 @@ seo-title: Funzioni MP3 e MP4 supportate
 title: Funzioni MP3 e MP4 supportate
 uuid: 33e3130f-fc78-40b8-a4b7-2fcdd5a2b4f9
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: ba291a4615a8e0713cf610f76f41e328da96ec4d
+workflow-type: tm+mt
+source-wordcount: '220'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,7 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
 Browser TVSDK supporta una serie di funzioni MP3 e MP4 che potete implementare per aggiungere funzionalità alle vostre applicazioni.
 * [Funzioni audio MP3 - Riproduzione di base](#core-playback)
 * [Funzioni audio MP4 - Riproduzione core](#mp4-audio-features)
-* [Funzioni video MP4 - Inserimento di annunci principali](#section_1A8CBC5AA4FA4477813FD9EFF26AC104)
+* [Funzioni video MP4 - Ad Insertion  core](#section_1A8CBC5AA4FA4477813FD9EFF26AC104)
 
 >[!TIP]
 >
@@ -31,7 +34,7 @@ Browser TVSDK supporta una serie di funzioni MP3 e MP4 che potete implementare p
 
 ## Funzioni audio MP4 {#mp4-audio-features}
 
-### Riproduzione di base
+### Riproduzione di base {#mp4-core-playback}
 
 | Categoria | Tipo di contenuto | Feature | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
@@ -43,5 +46,5 @@ Browser TVSDK supporta una serie di funzioni MP3 e MP4 che potete implementare p
 
 | Categoria | Tipo di contenuto | Feature | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| Inserimento annunci | MP4 VOD | Pre-roll | Non supportato | ![icona supportata](assets/supported15.png) | ![icona supportata](assets/supported15.png) |
-| Inserimento annunci | MP4 VOD | Post-roll | Non supportato | ![icona supportata](assets/supported15.png) | ![icona supportata](assets/supported15.png) |
+| Ad Insertion  | MP4 VOD | Pre-roll | Non supportato | ![icona supportata](assets/supported15.png) | ![icona supportata](assets/supported15.png) |
+| Ad Insertion  | MP4 VOD | Post-roll | Non supportato | ![icona supportata](assets/supported15.png) | ![icona supportata](assets/supported15.png) |
