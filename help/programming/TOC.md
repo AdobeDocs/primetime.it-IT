@@ -2,18 +2,18 @@
 cloud: experience-cloud
 product: adobe primetime
 audience: end-user
-user-guide-title: Guida alla programmazione Primetime
-user-guide-description: Allows you to learn to develop applications and video players using Java on Android devices and Objective-C on iOS devices.
+user-guide-title: Guida alla programmazione di Primetime
+user-guide-description: Consente di imparare a sviluppare applicazioni e lettori video utilizzando Java su dispositivi Android e Objective-C su dispositivi iOS.
 translation-type: tm+mt
 source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
 workflow-type: tm+mt
-source-wordcount: '4307'
+source-wordcount: '4327'
 ht-degree: 0%
 
 ---
 
 
-# Guida alla programmazione Primetime {#programming}
+# Guida alla programmazione di Primetime {#programming}
 
 + [Panoramica sulla programmazione](home.md)
 + TVSDK 3x per Android {#tvsdk-3x-android-prog}
@@ -279,7 +279,7 @@ ht-degree: 0%
       + [Classi del lettore multimediale](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-media-player-ios.md)
       + [Classi di registrazione](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-logging.md)
       + [Classi di metadati](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-metadata.md)
-      + [Codici di notifica](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-notifications.md)
+      + [Classi di notifica](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-notifications.md)
       + [Classi QoS](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-qos.md)
       + [Classi Timeline](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-timeline.md)
       + [Classi pubblicitarie nella timeline](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-timeline-advertising.md)
@@ -630,13 +630,13 @@ ht-degree: 0%
          + [Informazioni, classi](tvsdk-1.4-for-android/class-summary/android-1.4-classes-info.md)
          + [Classi di registrazione](tvsdk-1.4-for-android/class-summary/android-1.4-classes-logging.md)
          + [Classi di metadati](tvsdk-1.4-for-android/class-summary/android-1.4-classes-metadata.md)
-         + [Codici di notifica](tvsdk-1.4-for-android/class-summary/android-1.4-classes-notifications.md)
+         + [Classi di notifica](tvsdk-1.4-for-android/class-summary/android-1.4-classes-notifications.md)
          + [Classi QoS](tvsdk-1.4-for-android/class-summary/android-1.4-classes-qos.md)
          + [Classi Timeline](tvsdk-1.4-for-android/class-summary/android-1.4-classes-timeline.md)
          + [Classi pubblicitarie nella timeline](tvsdk-1.4-for-android/class-summary/android-1.4-classes-timeline-advertising.md)
          + [Classi di utilità](tvsdk-1.4-for-android/class-summary/android-1.4-classes-utility.md)
       + Sistema di notifica {#notification-system}
-         + [per i codici di notifica](tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/android-1.4-notification-codes.md)
+         + [Codici di notifica](tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/android-1.4-notification-codes.md)
          + [Codici di notifica di errore](tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/android-1.4-notifications-errors.md)
          + [Codici di notifica di AVVISO](tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/android-1.4-notification-warnings.md)
          + [Codici di notifica INFO](tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/android-1.4-notification-info.md)
@@ -739,7 +739,7 @@ ht-degree: 0%
       + [Classi pubblicitarie nella timeline](tvsdk-1.4-for-ios/c-psdk-ios-1.4-primetime-player-class-summary/r-psdk-ios-1.4-classes-timeline-advertising.md)
       + [classi di Digital Rights Management](tvsdk-1.4-for-ios/c-psdk-ios-1.4-primetime-player-class-summary/r-psdk-ios-1.4-classes-digital-rights-management-ios.md)
       + [Classi Analisi video](tvsdk-1.4-for-ios/c-psdk-ios-1.4-primetime-player-class-summary/r-psdk-ios-1.4-classes-video-analytics.md)
-   + per i codici di notifica {#notification-codes}
+   + Codici di notifica {#notification-codes}
       + [Sistema di notifica TVSDK](tvsdk-1.4-for-ios/c-psdk-ios-1.4-notification-codes/c-psdk-ios-1.4-notification-codes.md)
       + [Codici di notifica di errore](tvsdk-1.4-for-ios/c-psdk-ios-1.4-notification-codes/r-psdk-ios-1.4-notifications-errors.md)
       + [Codici di notifica di AVVISO](tvsdk-1.4-for-ios/c-psdk-ios-1.4-notification-codes/r-psdk-ios-1.4-notification-warnings.md)
@@ -920,7 +920,7 @@ ht-degree: 0%
       + [Informazioni, classi](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-info.md)
       + [Classi di registrazione](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-logging.md)
       + [Classi di metadati](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-metadata.md)
-      + [Codici di notifica](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-notifications.md)
+      + [Classi di notifica](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-notifications.md)
       + [Classi QoS](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-qos.md)
       + [Classi SCTE 35](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-scte35.md)
       + [Classi di sistema](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-system.md)
