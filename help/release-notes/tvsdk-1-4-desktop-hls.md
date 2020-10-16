@@ -9,7 +9,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: e4437a26-9454-4da1-ae87-0fce664aac3d
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: ba291a4615a8e0713cf610f76f41e328da96ec4d
 workflow-type: tm+mt
 source-wordcount: '5222'
 ht-degree: 0%
@@ -704,8 +704,8 @@ i tipi mime per il formato HLS erano sensibili alla distinzione tra maiuscole e 
 
 **Versione 1.4.5**
 
-* Zendesk #2256 - Accesso alla sequenza di riproduzione principale, aggiornamento di PSDK per l&#39;invio di eventi TimedMetadata per i tag sottoscritti nella playlist principale. (richiede la versione di Flash Player 17.0.0.134)
-* Zendesk #2417 - Lettore che tenta di scaricare i sottotitoli prima dell&#39;avvio della riproduzione, WebVTT utilizzava la variabile del numero di segmento errata per la corrispondenza del numero di segmento. Il bug veniva visualizzato solo per i supporti che avevano indici di segmento a partire da zero. (richiede la versione di Flash Player 17.0.0.134)
+* Zendesk #2256 - Accesso alla playlist principale, PSDK aggiornato per l&#39;invio di eventi TimedMetadata per i tag sottoscritti nella playlist principale. (richiede la versione di Flash Player 17.0.0.134)
+* Zendesk #2417 - Lettore che tenta di scaricare i sottotitoli prima dell&#39;avvio della riproduzione, WebVTT utilizzava la variabile del numero di segmento errata per la corrispondenza del numero di segmento. Il bug veniva visualizzato solo per i supporti con indici di segmento a partire da zero. (richiede la versione di Flash Player 17.0.0.134)
 * Zendesk #2537 - Arresto anomalo del lettore Flash quando si utilizza il plugin pepe con Chrome (richiede la versione di Flash Player 17.0.0.134)
 * Zendesk #2547 - Sottotitoli in arabo: Il testo deve essere allineato a destra (richiede la versione di Flash Player 17.0.0.134)
 
@@ -734,9 +734,6 @@ i tipi mime per il formato HLS erano sensibili alla distinzione tra maiuscole e 
 * Zendesk #1024 - Funzione per rimuovere gli annunci dal flusso tramite manifesto
 * Zendesk #1423 - Errore di riproduzione HLS durante il blocco del Flash Player (senza errori segnalati)
 * Zendesk #1674 - ClosedCaption Non visualizzato, corretta visualizzazione della didascalia 708 quando mancano i codici ETX 0x03.
-
-</p>
-</details>
 
 ## Problemi noti {#known-issues}
 
