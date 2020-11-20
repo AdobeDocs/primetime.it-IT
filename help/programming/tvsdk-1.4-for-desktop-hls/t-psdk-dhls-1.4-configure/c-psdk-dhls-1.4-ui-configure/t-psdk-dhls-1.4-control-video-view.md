@@ -37,8 +37,7 @@ Potete ignorare il comportamento predefinito delle proporzioni specificando un c
    >
    >Ad esempio:
    >
-   >
-   ```
+   >```
    >public class CustomScalePolicy implements MediaPlayerViewScalePolicy { 
    >       /** 
    >         * Default constructor. 
