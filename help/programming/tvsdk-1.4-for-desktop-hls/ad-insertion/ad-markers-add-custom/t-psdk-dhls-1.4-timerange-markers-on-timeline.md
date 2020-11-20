@@ -5,7 +5,10 @@ seo-title: Inserite i marcatori TimeRange nella timeline
 title: Inserite i marcatori TimeRange nella timeline
 uuid: cbcc4c84-0d56-4331-b555-b8e59f7d52d4
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: fd21a29bb186238142d43e0277bbf92f8406f6f7
+workflow-type: tm+mt
+source-wordcount: '430'
+ht-degree: 0%
 
 ---
 
@@ -26,10 +29,9 @@ Questo esempio mostra il modo consigliato per includere le specifiche TimeRange 
 
 * Si presume che l’elemento del lettore multimediale che viene caricato punti a una risorsa VOD. TVSDK verifica questo problema ogni volta che l’applicazione tenta di caricare una risorsa multimediale i cui metadati contengono `TimeRange` specifiche che possono essere utilizzate solo nel contesto della funzione di annunci pubblicitari personalizzati. Se la risorsa sottostante non è di tipo VOD, la libreria TVSDK genera un&#39;eccezione.
 
-* Quando si tratta di annunci pubblicitari personalizzati, TVSDK disattiva altri meccanismi di risoluzione degli annunci (tramite il processo di decisione degli annunci Adobe Primetime (precedentemente noto come Auditude) o altri sistemi di provisioning degli annunci). Potete utilizzare uno dei vari moduli per la risoluzione di annunci forniti da TVSDK o il meccanismo di marcatori di annunci personalizzati. Quando si utilizza l&#39;API per marcatori pubblicitari personalizzati, il contenuto dell&#39;annuncio viene considerato già risolto e inserito nella timeline.
->
-><!--<a id="example_639BD1B66CE74F3DB65ED06CAD23EB09"></a>-->
+* Quando si tratta di annunci pubblicitari personalizzati, TVSDK disattiva altri meccanismi di risoluzione degli annunci (tramite  Adobe Primetime ad Decision (precedentemente noto come Auditude) o altri sistemi di provisioning degli annunci). Potete utilizzare uno dei vari moduli per la risoluzione di annunci forniti da TVSDK o il meccanismo di marcatori di annunci personalizzati. Quando si utilizza l&#39;API per marcatori pubblicitari personalizzati, il contenuto dell&#39;annuncio viene considerato già risolto e inserito nella timeline.
 
+<!--<a id="example_639BD1B66CE74F3DB65ED06CAD23EB09"></a>-->
 
 Il frammento di codice seguente fornisce un esempio semplice in cui un set di tre `TimeRange` specifiche viene inserito nella timeline come indicatori di annunci personalizzati.
 
