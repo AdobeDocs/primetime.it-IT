@@ -6,11 +6,14 @@ title: Visualizzare una barra di scorrimento della ricerca con la posizione di r
 uuid: f940b305-4893-4531-9a79-53670f5fd23f
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '313'
+ht-degree: 0%
 
 ---
 
 
-# Visualizzare una barra di scorrimento della ricerca con la posizione di riproduzione corrente{#display-a-seek-scrub-bar-with-the-current-playback-position}
+# Visualizza una barra di scorrimento ricerca con la posizione di riproduzione corrente{#display-a-seek-scrub-bar-with-the-current-playback-position}
 
 TVSDK supporta la ricerca di una posizione (ora) specifica in cui il flusso è una playlist con finestra scorrevole, sia nei flussi video on demand (VOD) che in quelli live.
 
@@ -30,8 +33,8 @@ TVSDK supporta la ricerca di una posizione (ora) specifica in cui il flusso è u
 
    Gli stati validi sono PREPARATI, COMPLETATI, SOSPESI E RIPRODUZIONE.
 
-1. Ascoltare l’evento appropriato per visualizzare quando l’utente sta eseguendo il trascinamento.
-1. Passa la posizione di ricerca richiesta (millisecondi) al `MediaPlayer.seek` metodo.
+1. Ascoltare l&#39;evento appropriato per vedere quando l&#39;utente sta eseguendo il trascinamento.
+1. Passa la posizione di ricerca richiesta (millisecondi) al metodo `MediaPlayer.seek`.
 
    ```
    function seek(position:Number):void;
@@ -43,7 +46,7 @@ TVSDK supporta la ricerca di una posizione (ora) specifica in cui il flusso è u
    >
    >In questo modo la testina di riproduzione si sposta in una nuova posizione nel flusso, ma la posizione calcolata finale potrebbe essere diversa dalla posizione di ricerca specificata.
 
-1. Attendi che TVSDK invii l&#39; `SeekEvent.SEEK_END` evento.
+1. Attendi che TVSDK invii l&#39;evento `SeekEvent.SEEK_END`.
 1. Recuperate la posizione di riproduzione rettificata finale utilizzando event.effectivePosition.
 
        Questo è importante perché la posizione iniziale effettiva dopo la ricerca può essere diversa dalla posizione richiesta. Possono essere applicate varie regole, tra cui:
