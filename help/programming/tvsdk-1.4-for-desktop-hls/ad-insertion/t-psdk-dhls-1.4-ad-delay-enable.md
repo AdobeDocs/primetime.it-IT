@@ -6,11 +6,14 @@ title: Abilitare il caricamento di annunci pigri
 uuid: ac7c8801-7fa2-4f17-b79c-c603b3236948
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '345'
+ht-degree: 0%
 
 ---
 
 
-# Abilitare il caricamento di annunci pigri{#enable-lazy-ad-loading}
+# Abilita caricamento annunci pigri{#enable-lazy-ad-loading}
 
 Potete specificare se consentire la riproduzione prima che tutti gli annunci vengano caricati e inseriti nella timeline. L’avvio della riproduzione in questo modo consente a un visualizzatore di accedere più rapidamente al contenuto principale. Questa funzione è applicabile solo per i DVR live e non funziona, ad esempio, sulle risorse VOD.
 
@@ -19,9 +22,9 @@ Potete specificare se consentire la riproduzione prima che tutti gli annunci ven
    * Se è false, TVSDK attende che tutti gli annunci vengano risolti e inseriti prima di passare allo stato PREPARATO. Per impostazione predefinita è false.
    * Se true, TVSDK risolve solo gli annunci iniziali e le transizioni allo stato PREPARATO. Gli altri annunci vengono risolti e inseriti durante la riproduzione.
 
-1. Per attivare anche il caricamento ritardato degli annunci con Adobe Primetime e la decisione degli annunci, imposta questo valore al `true` momento della creazione `AuditudeSettings`.
+1. Per attivare anche il caricamento ritardato dell&#39;annuncio con  decisione dell&#39;annuncio Adobe Primetime, imposta questo valore su `true` quando crei `AuditudeSettings`.
 
-   La `AuditudeSettings` classe eredita questa proprietà da `AdvertisingMetadata`, ma non eredita il valore corrente.
+   La classe `AuditudeSettings` eredita questa proprietà da `AdvertisingMetadata`, ma non eredita il valore corrente.
 
    ```
    var auditudeSettings:AuditudeSettings = new AuditudeSettings(); 
@@ -30,7 +33,7 @@ Potete specificare se consentire la riproduzione prima che tutti gli annunci ven
    auditudeSettings.delayAdLoading = true;
    ```
 
-1. Per riflettere con precisione gli annunci come segnali su una barra di scorrimento, ascoltate il `TimelineEvent`. `TIMELINE_UPDATED` e ridisegnate la barra di scorrimento ogni volta che ricevete questo evento.
+1. Per riflettere con precisione gli annunci come segnali su una barra di scorrimento, ascoltare la `TimelineEvent`. `TIMELINE_UPDATED` e ridisegnate la barra di scorrimento ogni volta che ricevete questo evento.
 
    Quando i flussi VoD utilizzano il caricamento ritardato degli annunci, non tutti gli annunci vengono inseriti nella timeline quando il lettore entra nello stato PREPARATO, pertanto devi ridisegnare esplicitamente la barra di scorrimento.
 
