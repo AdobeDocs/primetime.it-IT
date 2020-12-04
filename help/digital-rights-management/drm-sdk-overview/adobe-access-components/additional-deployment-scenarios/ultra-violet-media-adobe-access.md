@@ -1,20 +1,23 @@
 ---
-seo-title: Supporti UltraViolet e Adobe Primetime DRM
-title: Supporti UltraViolet e Adobe Primetime DRM
+seo-title: Supporti UltraViolet e  Adobe Primetime DRM
+title: Supporti UltraViolet e  Adobe Primetime DRM
 uuid: 7076c0f9-e092-48e4-9118-8a414bd03c7a
 translation-type: tm+mt
 source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+workflow-type: tm+mt
+source-wordcount: '478'
+ht-degree: 0%
 
 ---
 
 
-# Supporti UltraViolet e Adobe Primetime DRM {#ultraviolet-media-and-adobe-primetime-drm}
+# Supporti UltraViolet e  Adobe Primetime DRM {#ultraviolet-media-and-adobe-primetime-drm}
 
-Adobe Primetime DRM può essere utilizzato con altre soluzioni di streaming di contenuti di terze parti per configurare un ecosistema di distribuzione basato su DRM completo e sicuro.
+ Adobe Primetime DRM può essere utilizzato con altre soluzioni di streaming di contenuti di terze parti per configurare un ecosistema di distribuzione dei contenuti multimediali completo e sicuro basato su DRM.
 
-UltraViolet ( [https://www.myuv.com/](https://www.uvvu.com/)) è un sistema di autenticazione dei diritti digitali e di distribuzione basato su cloud che consente ai consumatori di contenuti di home entertainment digitali di trasmettere e scaricare contenuti acquistati tramite più piattaforme e dispositivi. I contenuti UltraViolet verranno scaricati (o trasmessi in streaming) in un formato di file comune (CFF) utilizzando la crittografia comune (CENC).
+UltraViolet ( [https://www.myuv.com/](https://www.uvvu.com/)) è un sistema di autenticazione dei diritti digitali e di distribuzione basato sul cloud che consente ai consumatori di contenuti di home entertainment digitali di trasmettere e scaricare contenuti acquistati tramite più piattaforme e dispositivi. I contenuti UltraViolet verranno scaricati (o trasmessi in streaming) in un formato di file comune (CFF) utilizzando la crittografia comune (CENC).
 
-È facile configurare un sistema UltraViolet insieme ad Adobe Primetime DRM. Il seguente esempio di utilizzo illustra il comportamento del flusso di contenuto:
+È facile configurare un sistema UltraViolet insieme  Adobe Primetime DRM. Il seguente esempio di utilizzo illustra il comportamento del flusso di contenuto:
 
 <!--<a id="fig_cxy_dc2_44"></a>-->
 
@@ -23,7 +26,7 @@ UltraViolet ( [https://www.myuv.com/](https://www.uvvu.com/)) è un sistema di a
 1. Il proprietario del contenuto codifica e crea pacchetti per il contenuto in CFF. Il contenuto del pacchetto viene concesso in licenza a un rivenditore per la distribuzione.
 1. Il rivenditore carica il contenuto su un fornitore di servizi digitali, come CDN. Il contenuto è ora disponibile per il download. Tenete presente che alcuni di questi ruoli possono essere giocati da una o più società.
 
-   L&#39;utente finale dispone di un dispositivo che supporta Adobe AIR. Inoltre, l&#39;utente deve installare un&#39;applicazione compatibile con UltraViolet. L&#39;applicazione include il codice necessario per analizzare il CFF e presentarlo per l&#39;uso da parte del runtime. Tutte le operazioni di crittografia sensibili vengono gestite nel runtime protetto.
+   L&#39;utente finale ha un dispositivo che supporta  Adobe AIR. Inoltre, l&#39;utente deve installare un&#39;applicazione compatibile con UltraViolet. L&#39;applicazione include il codice necessario per analizzare il CFF e presentarlo per l&#39;uso da parte del runtime. Tutte le operazioni di crittografia sensibili vengono gestite nel runtime protetto.
 1. L&#39;applicazione può attivare un join di dominio per il dispositivo, che interagisce con il coordinatore. Il coordinatore mantiene un blocco dei diritti, un database utente e domini. Il gestore di dominio del coordinatore è creato utilizzando l&#39;SDK DRM di Primetime per implementare le operazioni di join/uscita del dominio specifiche di Primetime DRM.
 1. L&#39;utente può quindi utilizzare l&#39;applicazione per selezionare il video che desidera acquisire dal rivenditore. In genere, il rivenditore fornisce un portale Web e gestisce tutte le logiche aziendali.
 1. Il rivenditore interagisce quindi con il coordinatore per aggiungere un token di diritti. Il rivenditore quindi reindirizzerà la richiesta al provider di servizi per il download effettivo del contenuto.
