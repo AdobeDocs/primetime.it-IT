@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Licenze basate sull&#39;identità {#identity-based-licenses}
 
-Se si utilizza una licenza basata sull&#39;identità, il server verifica la presenza di un token di autenticazione valido prima di rilasciare una licenza. Per informazioni dettagliate sulla gestione dei token di autenticazione, consultate Autenticazione [](../../../aaxs-protecting-content/content-introduction/content-usage-rules/content-authentication/content-user-authentication.md) utente.
+Se si utilizza una licenza basata sull&#39;identità, il server verifica la presenza di un token di autenticazione valido prima di rilasciare una licenza. Per informazioni dettagliate sulla gestione dei token di autenticazione, vedere [Autenticazione utente](../../../aaxs-protecting-content/content-introduction/content-usage-rules/content-authentication/content-user-authentication.md).
 
 >[!NOTE]
 >
