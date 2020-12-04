@@ -6,6 +6,9 @@ title: Lettore base
 uuid: 44a27458-be12-452f-92b9-3cef79439257
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '440'
+ht-degree: 0%
 
 ---
 
@@ -28,13 +31,13 @@ Questo modulo viene utilizzato per creare istanze del lettore, in cui ogni istan
 
 L&#39;attuazione di ciascun controllo è articolata in due aspetti:
 
-* Una `HTMLElement`, che è la rappresentazione visiva del componente sullo schermo
-* A, che gestisce `Behavior``HTMLElement` e fornisce un&#39;API per le interazioni
+* Un `HTMLElement`, che è la rappresentazione visiva del componente sullo schermo
+* A `Behavior`, che gestisce la `HTMLElement` e fornisce un&#39;API per le interazioni
 
-I dettagli relativi a questi controlli vengono forniti all&#39;utente `VideoPlayer` utilizzando un oggetto config, che viene passato al lettore all&#39;istanza. Per impostazione predefinita, ogni componente forma una gerarchia di oggetti, con l&#39;elemento fornito all&#39;istanza del lettore alla radice della struttura. Man mano che viene creato, ciascun componente viene aggiunto al DOM nella posizione appropriata.
+I dettagli relativi a questi controlli vengono forniti alla `VideoPlayer` utilizzando un oggetto config, che viene passato al lettore all&#39;istanza del controllo. Per impostazione predefinita, ciascun componente forma una gerarchia di oggetti, con l&#39;elemento fornito all&#39;istanza del lettore alla radice della struttura. Man mano che viene creato, ciascun componente viene aggiunto al DOM nella posizione appropriata.
 
-Ogni componente ha un nome, che è la chiave nell&#39;oggetto config quando l&#39;oggetto è registrato. La classe CSS dell’elemento DOM sottostante è formata come `vp-` prefisso che viene aggiunto al nome del componente.
+Ogni componente ha un nome, che è la chiave nell&#39;oggetto config quando l&#39;oggetto è registrato. La classe CSS dell&#39;elemento DOM sottostante è formata come prefisso `vp-` aggiunto al nome del componente.
 
 I componenti possono essere estesi o sostituiti, la loro configurazione può essere modificata e le proprietà iniziali impostate. Questo consente di avere un controllo più ampio sulle proprietà API, sul nome della classe CSS e, facoltativamente, su alcuni aspetti dell&#39;implementazione del componente. Queste opzioni possono essere utilizzate per personalizzare le funzionalità e consentire più istanze di un componente che possono essere formattate o configurate singolarmente.
 
-È possibile accedere a tutte le istanze dei componenti con la `.behaviors` proprietà. Le istanze possono essere abilitate e disattivate e visualizzate o nascoste. Tuttavia, una volta create le istanze, queste non possono essere rimosse.
+È possibile accedere a tutte le istanze di componenti con la proprietà `.behaviors`. Le istanze possono essere abilitate e disattivate e visualizzate o nascoste. Tuttavia, una volta create le istanze, queste non possono essere rimosse.
