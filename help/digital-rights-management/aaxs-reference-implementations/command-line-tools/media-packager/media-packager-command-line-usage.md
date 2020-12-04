@@ -13,9 +13,9 @@ ht-degree: 0%
 
 # Utilizzo della riga di comando {#command-line-usage}
 
-Prima di utilizzare Media Packager, accertatevi di soddisfare i requisiti elencati in Requisiti e che il file di configurazione contenga le informazioni necessarie (consultate il file di configurazione in *Utilizzo delle implementazioni* di riferimento per l&#39;accesso al Adobe .
+Prima di utilizzare Media Packager, accertatevi di soddisfare i requisiti elencati in Requisiti e che il file di configurazione contenga le informazioni necessarie (consultate il file di configurazione nella sezione *Utilizzo delle implementazioni di riferimento per l&#39;accesso al Adobe*.
 
-Media Packager si trova nella [!DNL \Reference Implementation\Command Line tools] directory del DVD. Per cifrare un singolo file, utilizzare la sintassi seguente:
+Media Packager si trova nella directory [!DNL \Reference Implementation\Command Line tools] del DVD. Per cifrare un singolo file, utilizzare la sintassi seguente:
 
 ```
 java -jar AdobePackager.jar  
@@ -68,11 +68,11 @@ Per visualizzare informazioni su un file di metadati, utilizzate la sintassi seg
 java -jar AdobePackager.jar -dm <metadatafile> [-e]
 ```
 
-* `metadatafile` è un [!DNL .metadata] file contenente i metadati DRM.
+* `metadatafile` è un  [!DNL .metadata] file contenente i metadati DRM.
 
 >[!NOTE]
 >
->Durante la creazione del pacchetto, per impostazione predefinita Media Packager non genera più un file .header. Per generare questo file, utilizzate l&#39; `-h` opzione durante la creazione del pacchetto.
+>Durante la creazione del pacchetto, per impostazione predefinita Media Packager non genera più un file .header. Per generare questo file, utilizzate l&#39;opzione `-h` durante la creazione del pacchetto.
 
 La tabella seguente contiene le descrizioni delle opzioni della riga di comando mostrate nella sintassi precedente:
 
@@ -85,11 +85,11 @@ La tabella seguente contiene le descrizioni delle opzioni della riga di comando 
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-c <span class="+ topic/ph pr-d/codeph codeph"> configfile </span> </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-c <span class="+ topic/ph pr-d/codeph codeph"> file di configurazione </span> </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Specifica il percorso del file di configurazione. Se questa opzione non viene utilizzata, Media Packager cercherà <span class="filepath"> flashaccesstools.properties </span> nella directory di lavoro. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-d <span class="+ topic/ph pr-d/codeph codeph"> encryptedfile </span> </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-d <span class="+ topic/ph pr-d/codeph codeph"> file crittografato </span> </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Mostra informazioni su un file già incluso nel pacchetto. I file di origine e di destinazione non sono richiesti. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
@@ -102,15 +102,15 @@ La tabella seguente contiene le descrizioni delle opzioni della riga di comando 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-h </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Utilizzate with <span class="codeph"> -d </span> per estrarre l'intestazione DRM da un file pacchetto. Un file viene creato nella stessa directory del file crittografato, utilizzando il nome del file e l'estensione <span class="filepath"> .header </span> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Utilizzate con <span class="codeph"> -d </span> per estrarre l'intestazione DRM da un file pacchetto. Un file viene creato nella stessa directory del file crittografato, utilizzando il nome del file e l'estensione <span class="filepath"> .header </span> </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-i <span class="+ topic/ph pr-d/codeph codeph"> contentID </span> </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Specifica un identificatore univoco per questo contenuto. Se non viene specificato alcun identificatore, verrà utilizzato il nome del file di destinazione. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-k <span class="+ topic/ph pr-d/codeph codeph"> key </span>= <span class="+ topic/ph pr-d/codeph codeph"> value </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Specifica una chiave/valore personalizzato da aggiungere ai metadati del contenuto. È possibile specificare più opzioni <span class="codeph"> -k </span> . </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-k <span class="+ topic/ph pr-d/codeph codeph"> chiave </span>= <span class="+ topic/ph pr-d/codeph codeph"> valore </span> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Specifica una chiave/valore personalizzato da aggiungere ai metadati del contenuto. È possibile specificare più opzioni <span class="codeph"> -k </span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-m </p> </td> 
@@ -118,7 +118,7 @@ La tabella seguente contiene le descrizioni delle opzioni della riga di comando 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-noprompt </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Non chiedere se il file di destinazione deve essere sovrascritto. Se il file di destinazione esiste già e <span class="codeph"> -o non </span> è impostato, viene restituito un errore. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Non chiedere se il file di destinazione deve essere sovrascritto. Se il file di destinazione esiste già e <span class="codeph"> -o </span> non è impostato, verrà restituito un errore. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-o </p> </td> 
