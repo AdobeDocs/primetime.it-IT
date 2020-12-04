@@ -6,6 +6,9 @@ title: Failover del segmento mancante
 uuid: 17ee1221-e1eb-4f64-a406-4d7eff1d7555
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '321'
+ht-degree: 0%
 
 ---
 
@@ -21,9 +24,9 @@ Se sul server manca un segmento perché, ad esempio, il file manifesto non è pr
 1. Scorri ogni bitrate disponibile in ogni variante disponibile.
 1. Salta il segmento ed emette un avviso.
 
-Quando TVSDK non è in grado di ottenere un segmento alternativo, attiva una notifica `CONTENT_ERROR` di errore. Questa notifica contiene una notifica interna con il `DOWNLOAD_ERROR` codice. Se il flusso con il problema è una traccia audio alternativa, genera la notifica di `AUDIO_TRACK_ERROR` errore.
+Quando TVSDK non riesce a ottenere un segmento alternativo, attiva una notifica di errore `CONTENT_ERROR`. Questa notifica contiene una notifica interna con il codice `DOWNLOAD_ERROR`. Se il flusso con il problema è una traccia audio alternativa, genera la notifica di errore `AUDIO_TRACK_ERROR`.
 
-Se il motore video non è in grado di ottenere i segmenti in modo continuo, limita l’opzione di salta continua a 5, dopo di che la riproduzione viene interrotta ed emette un `NATIVE_ERROR` messaggio con il codice 5.
+Se il motore video non è in grado di ottenere i segmenti in modo continuo, limita l’opzione di salta continua a 5, dopo di che la riproduzione viene arrestata ed emette un `NATIVE_ERROR` con il codice 5.
 
 >[!NOTE]
 >
