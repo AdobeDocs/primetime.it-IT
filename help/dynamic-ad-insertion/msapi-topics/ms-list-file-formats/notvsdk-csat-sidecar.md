@@ -6,6 +6,9 @@ title: Formati JSON per il tracciamento degli URL
 uuid: 4b17639b-c0de-4ef4-931b-aa7c4c036c0a
 translation-type: tm+mt
 source-git-commit: 2c7ac5c1b2d30b7eb819157ee4568739c1bdfb9d
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 2c7ac5c1b2d30b7eb819157ee4568739c1bdfb9d
 
 Se il client richiede informazioni di tracciamento in formato JSON, il server manifesto invia un file in uno dei formati JSON.
 
-## Formato JSON per tracciamento versione 1 {#json_v1}
+## Formato JSON per il tracciamento della versione 1 {#json_v1}
 
 Il file JSON che il server di manifesto invia se `pttrackingversion=v1` ha il seguente formato generale:
 
@@ -32,7 +35,7 @@ Il file JSON che il server di manifesto invia se `pttrackingversion=v1` ha il se
 }, ...]}
 ```
 
-## Formato JSON per tracciamento versione 2 {#json_v2}
+## Formato JSON per il tracciamento della versione 2 {#json_v2}
 
 Il file JSON che il server di manifesto invia se `pttrackingversion=v2` ha il formato del seguente esempio, che proviene da un blocco JSON tipico.
 
@@ -364,7 +367,7 @@ Il file JSON che il server di manifesto invia se `pttrackingversion=v2` ha il fo
 
 >[!NOTE]
 >
->Il `offset` valore dell&#39; `scte35` attributo come estratto `ad breaks` potrebbe essere negativo. Questo perché il sidecar JSON V2 contiene informazioni sulle interruzioni pubblicitarie che si trovano parzialmente nella finestra di riproduzione corrente. Quindi, l&#39; `scte35` attributo contiene anche informazioni su tali interruzioni pubblicitarie.
+>Il valore `offset` dell&#39;attributo `scte35` come estratto da `ad breaks` potrebbe essere negativo. Questo perché il sidecar JSON V2 contiene informazioni sulle interruzioni pubblicitarie che si trovano parzialmente nella finestra di riproduzione corrente. Pertanto, l&#39;attributo `scte35` contiene anche informazioni su tali interruzioni pubblicitarie.
 
 ## Formato JSON per il tracciamento della versione 3 {#json_v3}
 
