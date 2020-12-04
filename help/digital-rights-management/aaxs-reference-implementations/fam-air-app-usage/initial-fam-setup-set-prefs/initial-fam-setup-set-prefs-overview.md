@@ -11,9 +11,9 @@ ht-degree: 0%
 ---
 
 
-# Panoramica delle preferenze {#setting-preferences-overview}
+# Panoramica delle preferenze di impostazione {#setting-preferences-overview}
 
-Ad eccezione dell&#39;URL di Packager Server, tutte le preferenze specificate di seguito vengono memorizzate nel [!DNL flashaccess-refimpl-packager.properties] file sul server. Tutte le impostazioni possono essere modificate direttamente nel file delle proprietà o tramite l&#39;applicazione AIR. Le password vengono crittografate quando vengono memorizzate nel file delle proprietà sul server. Digita la password non crittografata nell&#39;interfaccia utente e verrà crittografata prima di essere memorizzata nel file.
+Ad eccezione dell&#39;URL di Packager Server, tutte le preferenze specificate di seguito vengono memorizzate nel file [!DNL flashaccess-refimpl-packager.properties] sul server. Tutte le impostazioni possono essere modificate direttamente nel file delle proprietà o tramite l&#39;applicazione AIR. Le password vengono crittografate quando vengono memorizzate nel file delle proprietà sul server. Digita la password non crittografata nell&#39;interfaccia utente e verrà crittografata prima di essere memorizzata nel file.
 
 >[!NOTE]
 >
@@ -33,7 +33,7 @@ Le descrizioni delle preferenze utilizzano i termini seguenti:
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> URL del server Packager </td> 
-   <td colname="2" class="- topic/entry "> Posizione del server in cui è in esecuzione <span class="filepath"> flashaccess-packager.war </span>; ad esempio <span class="filepath"> https://localhost:8080 </span> </td> 
+   <td colname="2" class="- topic/entry "> Posizione del server in cui è in esecuzione <span class="filepath"> flashaccess-packager.war </span>; ad esempio, <span class="filepath"> https://localhost:8080 </span> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> Directory risorse </td> 
@@ -41,7 +41,7 @@ Le descrizioni delle preferenze utilizzano i termini seguenti:
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> URL server licenze </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL del server dal quale il cliente deve richiedere una licenza; ad esempio <span class="filepath"> https://mylicenseserver.com:8080 </span> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL del server dal quale il cliente deve richiedere una licenza; ad esempio, <span class="filepath"> https://mylicenseserver.com:8080 </span> </p> </td> 
   </tr> 
  </tbody> 
 </table>
