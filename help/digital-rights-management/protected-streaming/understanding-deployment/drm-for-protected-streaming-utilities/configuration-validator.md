@@ -1,18 +1,21 @@
 ---
-description: Adobe consiglia di eseguire l'utility Configuration Validator se si apportano modifiche nel file di configurazione prima di avviare il server. Questa utility è in grado di rilevare la maggior parte degli errori di configurazione in anticipo, prima che questi causino errori durante l'elaborazione della richiesta.
-seo-description: Adobe consiglia di eseguire l'utility Configuration Validator se si apportano modifiche nel file di configurazione prima di avviare il server. Questa utility è in grado di rilevare la maggior parte degli errori di configurazione in anticipo, prima che questi causino errori durante l'elaborazione della richiesta.
+description: ' Adobe consiglia di eseguire l''utility Configuration Validator se si apportano modifiche nel file di configurazione prima di avviare il server. Questa utility è in grado di rilevare la maggior parte degli errori di configurazione in anticipo, prima che questi causino errori durante l''elaborazione della richiesta.'
+seo-description: ' Adobe consiglia di eseguire l''utility Configuration Validator se si apportano modifiche nel file di configurazione prima di avviare il server. Questa utility è in grado di rilevare la maggior parte degli errori di configurazione in anticipo, prima che questi causino errori durante l''elaborazione della richiesta.'
 seo-title: Convalida della configurazione
 title: Convalida della configurazione
 uuid: 7b44919a-0319-4675-95e2-ad1ad72ec0cb
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '259'
+ht-degree: 0%
 
 ---
 
 
 # Convalida della configurazione{#configuration-validator}
 
-Adobe consiglia di eseguire l&#39;utility Configuration Validator se si apportano modifiche nel file di configurazione prima di avviare il server. Questa utility è in grado di rilevare la maggior parte degli errori di configurazione in anticipo, prima che questi causino errori durante l&#39;elaborazione della richiesta.
+ Adobe consiglia di eseguire l&#39;utility Configuration Validator se si apportano modifiche nel file di configurazione prima di avviare il server. Questa utility è in grado di rilevare la maggior parte degli errori di configurazione in anticipo, prima che questi causino errori durante l&#39;elaborazione della richiesta.
 
 Per eseguire la convalida, digitare:
 
