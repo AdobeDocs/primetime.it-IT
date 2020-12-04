@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Considerazioni e procedure ottimali {#considerations-and-best-practices}
+# Considerazioni e best practice {#considerations-and-best-practices}
 
 Per utilizzare TVSDK nel modo più efficace, è necessario prendere in considerazione alcuni dettagli del suo funzionamento e seguire alcune best practice.
 
