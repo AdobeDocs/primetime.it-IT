@@ -6,6 +6,9 @@ title: Token espliciti
 uuid: 6103e1b2-127d-4758-a589-15f0f3c73db1
 translation-type: tm+mt
 source-git-commit: d0ba1f98b16f6350ae842ca2ce1261bf49dd8a66
+workflow-type: tm+mt
+source-wordcount: '152'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ token?customerAuthenticator=<your expressplay customer authenticator>
 &hdcpOutputControl=0
 ```
 
-L&#39;ID di memorizzazione della chiave di crittografia del contenuto o CEKSID fornito al `kid` parametro e la chiave di crittografia del contenuto o CEK data al `contentKey` parametro devono corrispondere all&#39;ID di memorizzazione della chiave di crittografia del contenuto e alla chiave di crittografia del contenuto utilizzata per la creazione del pacchetto. Il testo seguente è un esempio della risposta del server token:
+L&#39;ID di archiviazione o CEKSID della chiave di crittografia del contenuto fornito al parametro `kid` e la chiave di crittografia del contenuto o CEK data al parametro `contentKey` devono corrispondere all&#39;ID di memorizzazione della chiave di crittografia del contenuto e alla chiave di crittografia del contenuto utilizzata per la creazione del pacchetto. Il testo seguente è un esempio della risposta del server token:
 
 ```
 https://wv.service.expressplay.com/hms/wv/rights/
@@ -37,4 +40,4 @@ https://wv.service.expressplay.com/hms/wv/rights/
 È possibile
 
 * utilizzare l&#39;URL restituito e la query come URL del server licenze, oppure
-* estraete la query dall’URL e passate il token ExpressPlayToken separatamente come intestazione HTTP POST
+* estrarre la query dall’URL e trasmettere il token ExpressPlayToken separatamente come intestazione POST HTTP
