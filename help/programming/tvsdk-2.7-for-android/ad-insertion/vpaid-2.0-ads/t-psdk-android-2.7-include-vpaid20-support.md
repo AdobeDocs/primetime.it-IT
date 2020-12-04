@@ -6,6 +6,9 @@ title: Implementare l'integrazione VPAID 2.0
 uuid: fa5b9cdd-e684-4656-91b7-50781dc59e23
 translation-type: tm+mt
 source-git-commit: 25f97c8d296f71deddc8f9d12b97007ddf73f603
+workflow-type: tm+mt
+source-wordcount: '184'
+ht-degree: 2%
 
 ---
 
@@ -37,7 +40,7 @@ Per aggiungere il supporto VPAID 2.0:
 
    >[!IMPORTANT]
    >
-   >In un flusso di lavoro VPAID 2.0, per le visualizzazioni di annunci personalizzate è molto importante mantenere l&#39; `CustomAdView` istanza per tutti `AdBreak` gli avvii (evento `AD_BREAK_START`) e `AdBreak` completati (evento `AD_BREAK_COMPLETE`), dal momento in cui si crea la visualizzazione di annunci personalizzata fino a quando non ne si dispone. Ovvero, non create una visualizzazione annunci personalizzata per ogni inizio di interruzione e non eliminatela per ogni interruzione di annuncio completata.
+   >In un flusso di lavoro VPAID 2.0, per le visualizzazioni di annunci personalizzate è molto importante mantenere l&#39;istanza `CustomAdView` tra `AdBreak` avvii (evento `AD_BREAK_START`) e `AdBreak` completati (evento `AD_BREAK_COMPLETE`), dal momento in cui create la visualizzazione di annunci personalizzata fino al momento in cui la eliminate. Ovvero, non create una visualizzazione annunci personalizzata per ogni inizio di interruzione e non eliminatela per ogni interruzione di annuncio completata.
    >
    >
    >Inoltre, è consigliabile creare la visualizzazione annunci personalizzata solo quando il lettore è nello stato PREPARATO,
