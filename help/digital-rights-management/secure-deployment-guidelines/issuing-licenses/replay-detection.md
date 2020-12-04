@@ -6,11 +6,14 @@ title: Protezione di ripetizione
 uuid: 93749dd3-a42c-4866-ac54-1b20d6683c42
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '148'
+ht-degree: 0%
 
 ---
 
 
-# Protezione di ripetizione{#replay-protection}
+# Protezione riproduzione{#replay-protection}
 
 La protezione di ripetizione impedisce a un aggressore di riprodurre un messaggio di richiesta di licenza e potrebbe causare un attacco DoS (Denial of Service) contro il client.
 
