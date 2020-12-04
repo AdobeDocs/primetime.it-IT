@@ -13,15 +13,15 @@ ht-degree: 0%
 ---
 
 
-# Caricamento di una risorsa multimediale in MediaPlayer {#load-a-media-resource-in-the-mediaplayer}
+# Caricare una risorsa multimediale in MediaPlayer {#load-a-media-resource-in-the-mediaplayer}
 
 Caricate una risorsa creando direttamente un&#39;istanza di MediaResource e caricando il contenuto video da riprodurre.
 
-1. Impostare l&#39;elemento `MediaPlayer` riproducibile dell&#39;oggetto con la nuova risorsa da riprodurre.
+1. Impostate l&#39;elemento riproducibile dell&#39;oggetto `MediaPlayer` con la nuova risorsa da riprodurre.
 
-   Sostituire l&#39;elemento attualmente riproducibile dell&#39; `MediaPlayer` oggetto esistente chiamando `replaceCurrentResource` e passando un&#39; `MediaResource` istanza esistente.
+   Sostituisci l&#39;elemento `MediaPlayer` attualmente riproducibile dell&#39;oggetto esistente chiamando `replaceCurrentResource` e passando un&#39;istanza `MediaResource` esistente.
 
-1. Attendete che l’SDK per browser TVSDK venga inviato `AdobePSDK.MediaPlayerStatusChangeEvent` con `event.status` uguale a uno dei seguenti elementi:
+1. Attendete che l&#39;SDK per browser TVSDK invii `AdobePSDK.MediaPlayerStatusChangeEvent` con `event.status` uguale a uno dei seguenti elementi:
 
    * `MediaPlayerStatus.INITIALIZED`
    * `MediaPlayerStatus.PREPARED`
@@ -29,14 +29,14 @@ Caricate una risorsa creando direttamente un&#39;istanza di MediaResource e cari
 
       Attraverso questi eventi, l&#39;oggetto MediaPlayer comunica all&#39;applicazione se la risorsa multimediale è stata caricata correttamente.
 
-1. Quando lo stato del lettore multimediale cambia in `MediaPlayerStatus.INITIALIZED`, puoi chiamare `MediaPlayer.prepareToPlay`.
+1. Quando lo stato del lettore multimediale diventa `MediaPlayerStatus.INITIALIZED`, è possibile chiamare `MediaPlayer.prepareToPlay`.
 
-   Lo stato INITIALIZED indica che il supporto è stato caricato correttamente. La chiamata `prepareToPlay` avvia il processo di risoluzione e posizionamento pubblicitario, se presente.
-1. Quando Browser TVSDK invia l’ `MediaPlayerStatus.PREPARED` evento, il flusso multimediale è stato caricato correttamente (viene creato un oggetto MediaPlayerItem) ed è pronto per la riproduzione.
+   Lo stato INITIALIZED indica che il supporto è stato caricato correttamente. La chiamata di `prepareToPlay` avvia la risoluzione e il processo di posizionamento della pubblicità, se presente.
+1. Quando Browser TVSDK invia l&#39;evento `MediaPlayerStatus.PREPARED` il flusso multimediale è stato caricato correttamente (viene creato un oggetto MediaPlayerItem) ed è pronto per la riproduzione.
 
 Se si verifica un errore, `MediaPlayer` passa alla `MediaPlayerStatus.ERROR`.
 
-Inoltre, invia una notifica all’applicazione inviando l’ `MediaPlayerStatus.ERROR` evento.
+Inoltre, invia una notifica all&#39;applicazione inviando l&#39;evento `MediaPlayerStatus.ERROR`.
 
 ><!--<a id="example_3774607C6F08473282CF0CB7F3D82373"></a>-->
 
