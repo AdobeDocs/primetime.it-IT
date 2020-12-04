@@ -6,6 +6,9 @@ title: Formato AC-3 5.1
 uuid: 9d1adf33-4c9b-4d31-8212-ac301f3e44c5
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '442'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 Il codec audio 3 (AC-3, noto anche come formato Dolby Digital®) 5.1, consente ai fornitori di contenuti di comprimere le dimensioni dei file audio multicanale senza compromettere la qualità audio. L&#39;AC-3 è un formato 5.1, che offre cinque canali a larghezza di banda completa per un&#39;esperienza utente più completa.
 
-Per ulteriori informazioni, consulta [Dolby Digital 5.1](https://www.dolby.com/us/en/technologies/dolby-digital.html).
+Per ulteriori informazioni, vedere [Dolby Digital 5.1](https://www.dolby.com/us/en/technologies/dolby-digital.html).
 
 TVSDK supporta le seguenti funzionalità AC-3 5.1:
 
@@ -29,7 +32,7 @@ TVSDK supporta le seguenti funzionalità AC-3 5.1:
 
 >[!IMPORTANT]
 >
->TVSDK supporta le funzionalità AC-3 5.1 solo sul dispositivo Amazon Fire TV di prima generazione.
+>TVSDK supporta le funzioni AC-3 5.1 solo sul dispositivo  Amazon Fire TV di prima generazione.
 
 Le seguenti funzioni AC-3 5.1 non sono supportate:
 
