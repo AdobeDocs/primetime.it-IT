@@ -6,6 +6,9 @@ title: Selezionare una traccia di didascalia corrente tra le tracce disponibili
 uuid: 637a70c9-9bef-4b13-8b1f-62f22f983e80
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '247'
+ht-degree: 0%
 
 ---
 
@@ -24,5 +27,5 @@ TVSDK supporta il rendering di questi formati:
 È possibile:
 
 * Selezionate una traccia di didascalia disponibile come traccia corrente e ascoltate gli eventi che indicano tracce aggiuntive disponibili.
-* Attivate o disattivate i sottotitoli (visibili o non visibili) utilizzando l&#39; `MediaPlayer` interfaccia.
-* Selezionate le opzioni di stile che determinano il rendering dei sottotitoli codificati da parte del motore video sottostante. Utilizzare l&#39; `MediaPlayerItem` interfaccia per selezionare formati quali il font o il colore del font.
+* Attivate o disattivate i sottotitoli (visibili o non visibili) utilizzando l&#39;interfaccia `MediaPlayer`.
+* Selezionate le opzioni di stile che determinano il rendering dei sottotitoli codificati da parte del motore video sottostante. Utilizzare l&#39;interfaccia `MediaPlayerItem` per selezionare formati quali il font o il colore del font.
