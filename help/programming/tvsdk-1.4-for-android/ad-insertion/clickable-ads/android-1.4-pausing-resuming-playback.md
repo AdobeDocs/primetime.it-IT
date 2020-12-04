@@ -6,6 +6,9 @@ title: Sospendi e riprendi riproduzione
 uuid: a8fec392-3a71-4086-abf1-23522d023680
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '67'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 Quando un utente fa clic su un annuncio, l&#39;applicazione deve mettere in pausa la riproduzione del contenuto video principale.
 
-Ignorate l&#39;attività `onPause` e `onResume` dall&#39;attività Android.
+Ignorate le `onPause` e `onResume` dall&#39;attività Android.
 
 ```java
 @Override 
