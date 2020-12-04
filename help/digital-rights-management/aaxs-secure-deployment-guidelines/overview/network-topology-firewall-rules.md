@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Regole firewall {#firewall-rules}
 
-## URL in entrata {#section-F111526A9DB844CBBF21A3CAE5F50880}
+## URL in arrivo {#section-F111526A9DB844CBBF21A3CAE5F50880}
 
 Configurate il firewall esterno in modo da esporre solo gli URL per la funzionalità dell’applicazione che desiderate fornire agli utenti finali. Consente agli utenti esterni di accedere tramite il firewall esterno solo agli URL elencati nella tabella seguente:
 
@@ -99,7 +99,7 @@ Configurate il firewall esterno in modo da esporre solo gli URL per la funzional
 
 Il server licenze richiede l&#39;accesso attraverso il firewall per scaricare i seguenti CRL da  Adobe:
 
-* <span></span>https://crl2.adobe.com/Adobe/FlashAccessRootCA.crl
-* <span></span>https://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl
-* <span></span>https://crl3.adobe.com/AdobeSystemsIncorporatedFlashAccessRuntime/LatestCRL.crl
-* <span></span>https://crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl
+* h<span></span>ttps://crl2.adobe.com/Adobe/FlashAccessRootCA.crl
+* ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl
+* ht<span></span>tps://crl3.adobe.com/AdobeSystemsIncorporatedFlashAccessRuntime/LatestCRL.crl
+* ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl
