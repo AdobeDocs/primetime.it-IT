@@ -6,6 +6,9 @@ title: Ignora interruzioni annuncio per un periodo di tempo
 uuid: 1a18d5fd-c957-481b-83ae-2129590c1678
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '232'
+ht-degree: 0%
 
 ---
 
