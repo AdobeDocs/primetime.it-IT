@@ -6,6 +6,9 @@ title: Accedere a tracce audio alternative
 uuid: 77e39633-bf17-4a06-a2a1-93fdaadedd17
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '135'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 L&#39;audio con associazione tardiva utilizza PTMediaPlayer per riprodurre un video specificato in una playlist HLS M3U8 e che può contenere diversi flussi audio alternativi.
 
-1. Attendete che MediaPlayer sia almeno nello `PTMediaPlayerStatusReady` stato.
+1. Attendete che MediaPlayer sia almeno nello stato `PTMediaPlayerStatusReady`.
 1. Ascoltare l&#39;evento:
 
    notifica `PTMediaPlayerItemMediaSelectionOptionsAvailable`: È disponibile l&#39;elenco iniziale delle tracce audio.
@@ -26,7 +29,7 @@ L&#39;audio con associazione tardiva utilizza PTMediaPlayer per riprodurre un vi
         object:self.player];
    ```
 
-1. Ottenete le tracce audio disponibili dall’ `PTMediaPlayerItem` istanza.
+1. Ottenete le tracce audio disponibili dall&#39;istanza `PTMediaPlayerItem`.
 
    ```
    - (void) onMediaPlayerItemMediaSelectionOptionsAvailable:(NSNotification *) notification { 
@@ -36,4 +39,4 @@ L&#39;audio con associazione tardiva utilizza PTMediaPlayer per riprodurre un vi
    ```
 
 1. (Facoltativo) Presentare all’utente le tracce disponibili.
-1. Impostate la traccia audio selezionata sull’ `PTMediaPlayerItem` istanza.
+1. Impostate la traccia audio selezionata sull&#39;istanza `PTMediaPlayerItem`.
