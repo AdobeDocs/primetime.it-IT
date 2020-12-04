@@ -6,6 +6,9 @@ title: Configurare MediaPlayer
 uuid: 49c3edb9-b6e2-49f8-b4aa-f230af7de6b0
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '133'
+ht-degree: 0%
 
 ---
 
@@ -16,13 +19,13 @@ TVSDK fornisce strumenti per la creazione di un’applicazione per lettori video
 
 Creare un&#39;istanza di MediaPlayer e visualizzarne una visualizzazione in un layout di frame.
 
-1. Creare un&#39;istanza `MediaPlayer`, passare un `android.content.Context` oggetto al costruttore:
+1. Creare un&#39;istanza `MediaPlayer`, passando un oggetto `android.content.Context` al costruttore:
 
    ```java
    MediaPlayer mediaPlayer = new MediaPlayer(context);
    ```
 
-1. Fornite un layout di fotogramma ( `android.widget.FrameLayout`) per contenere un `ViewGroup` di `mediaPlayer`:
+1. Fornire un layout di fotogramma ( `android.widget.FrameLayout`) per contenere una `ViewGroup` di `mediaPlayer`:
 
    ```java
    FrameLayout playerFrame = (FrameLayout) _viewGroup.findViewById(R.id.playerFrame);
@@ -40,10 +43,10 @@ Creare un&#39;istanza di MediaPlayer e visualizzarne una visualizzazione in un l
     }
    ```
 
-1. Inserite una vista all’ `mediaPlayer` interno del layout della cornice:
+1. Inserite una vista di `mediaPlayer` all&#39;interno del layout del frame:
 
    ```java
    playerFrame.addView(mediaPlayer.getView());
    ```
 
->L&#39; `MediaPlayer` istanza ( `mediaPlayer`) è ora disponibile e configurata correttamente per visualizzare il contenuto video sullo schermo del dispositivo.
+>L&#39;istanza `MediaPlayer` ( `mediaPlayer`) è ora disponibile e configurata correttamente per visualizzare il contenuto video sullo schermo del dispositivo.
