@@ -6,11 +6,14 @@ title: Annunci per banner
 uuid: 6f38f6ec-bc8b-4ea1-845f-90031b3d8a00
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '600'
+ht-degree: 0%
 
 ---
 
 
-# Annunci per banner {#companion-banner-ads}
+# Annunci per banner completi {#companion-banner-ads}
 
 TVSDK supporta i banner pubblicitari di compagnia, che sono annunci che accompagnano un annuncio lineare e spesso rimangono sulla pagina dopo la fine dell&#39;annuncio lineare. La vostra applicazione è responsabile della visualizzazione dei banner associati forniti con un annuncio lineare.
 
@@ -29,14 +32,14 @@ Quando visualizzate annunci di accompagnamento, attenetevi alle seguenti raccoma
 
    Lo standard prevede la visualizzazione di ciascun banner complementare fino a quando non si dispone di una sostituzione per questo banner.
 
-## Dati banner complementari {#companion-banner-data}
+## Dati del banner della compagnia {#companion-banner-data}
 
 Il contenuto di una risorsa PTAdAsset descrive un banner complementare.
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-La `PTMediaPlayerAdStartedNotification` notifica restituisce un&#39; `PTAd` istanza che contiene una `companionAssets` proprietà (array di `PtAdAsset`).
-Ciascuno `PtAdAsset` fornisce informazioni sulla visualizzazione della risorsa.
+La notifica `PTMediaPlayerAdStartedNotification` restituisce un&#39;istanza `PTAd` che contiene una proprietà `companionAssets` (array di `PtAdAsset`).
+Ogni `PtAdAsset` fornisce informazioni sulla visualizzazione della risorsa.
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
  <thead> 
@@ -74,26 +77,26 @@ Ciascuno `PtAdAsset` fornisce informazioni sulla visualizzazione della risorsa.
 
 Per visualizzare gli annunci per banner, dovete creare istanze di banner e consentire a TVSDK di ascoltare gli eventi relativi agli annunci.
 
-TVSDK fornisce un elenco di banner pubblicitari associati a un annuncio lineare attraverso l&#39;evento di `PTMediaPlayerAdPlayStartedNotification` notifica.
+TVSDK fornisce un elenco di banner pubblicitari associati a un annuncio lineare tramite l&#39;evento di notifica `PTMediaPlayerAdPlayStartedNotification`.
 
 I manifesti possono specificare annunci banner complementari per:
 
 * Snippet HTML
 * URL di una pagina iFrame
-* URL di un’immagine statica o di un file SWF Adobe Flash
+* URL di un’immagine statica o di un file SWF di Flash di Adobi 
 
 Per ogni annuncio aggiuntivo complementare, TVSDK indica quali tipi sono disponibili per l’applicazione.
 
-1. Create un’ `PTAdBannerView` istanza per ciascun annuncio aggiuntivo complementare sulla pagina.
+1. Create un&#39;istanza `PTAdBannerView` per ciascun annuncio aggiuntivo complementare sulla pagina.
 
        Verificate che siano state fornite le seguenti informazioni:
    
    * Per impedire il recupero di annunci companion di dimensioni diverse, un’istanza di banner che specifica la larghezza e l’altezza.
    * Dimensioni dei banner standard.
 
-1. Aggiungete un osservatore per l’operazione `PTMediaPlayerAdStartedNotification` che segue:
+1. Aggiungete un osservatore per la `PTMediaPlayerAdStartedNotification` che esegue le seguenti operazioni:
    1. Cancella gli annunci esistenti nell&#39;istanza del banner.
-   1. Ottiene l&#39;elenco degli annunci di accompagnamento da `Ad.getCompanionAssets``PTAd.companionAssets`.
+   1. Ottiene l&#39;elenco degli annunci complementari da `Ad.getCompanionAssets` `PTAd.companionAssets`.
    1. Se l&#39;elenco degli annunci complementari non è vuoto, ripetete l&#39;operazione sull&#39;elenco per le istanze del banner.
 
       Ogni istanza del banner ( a `PTAdAsset`) contiene informazioni quali larghezza, altezza, tipo di risorsa (html, iframe o statico) e dati necessari per visualizzare il banner ausiliario.
@@ -102,7 +105,7 @@ Per ogni annuncio aggiuntivo complementare, TVSDK indica quali tipi sono disponi
       Per visualizzare un annuncio di visualizzazione indipendente, aggiungete la logica allo script per eseguire un tag di annuncio di visualizzazione normale DFP (DoubleClick for Publishers) nell&#39;istanza di banner appropriata.
    1. Invia le informazioni sul banner a una funzione sulla pagina che visualizza i banner in una posizione appropriata.
 
-      In genere si tratta di un `div`, e la funzione utilizza il `div ID` per visualizzare il banner. Ad esempio:
+      In genere si tratta di un `div` e la funzione utilizza il `div ID` per visualizzare il banner. Ad esempio:
 
       ```
       - (void) onMediaPlayerAdPlayStarted:(NSNotification *) notification { 
