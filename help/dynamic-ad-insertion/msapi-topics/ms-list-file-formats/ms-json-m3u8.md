@@ -6,15 +6,18 @@ title: Formato JSON per l'URL per la richiesta di playlist con manifesto variant
 uuid: 9f9693d0-3c93-4555-b20c-7f4576742f41
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '133'
+ht-degree: 0%
 
 ---
 
 
-# Formato JSON per l&#39;URL per la richiesta di playlist con manifesto variante {#json-format-for-url-for-requesting-variant-manifest-playlist}
+# Formato JSON per l&#39;URL per la richiesta della playlist del manifesto variante {#json-format-for-url-for-requesting-variant-manifest-playlist}
 
-Se `pttrackingmode=simple` o `ptplayer=ios-mobileweb`, il server di manifesto invia un file in formato JSON contenente Master-M3U8, un URL che il client deve utilizzare per richiedere il file M3U8 che descrive il contenuto.
+Se `pttrackingmode=simple` o `ptplayer=ios-mobileweb`, il server manifesto invia un file in formato JSON contenente Master-M3U8, un URL che il client deve utilizzare per richiedere il file M3U8 che descrive il contenuto.
 
-Questo è il formato del file JSON contenente l&#39; `Master-M3U8` URL.
+Questo è il formato del file JSON contenente l&#39;URL `Master-M3U8`.
 
 ```
 {
