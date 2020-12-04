@@ -4,15 +4,18 @@ title: Gestione elenco revoca DRM
 uuid: 30ab5f54-4aac-4535-b30c-b4e5dbfbc475
 translation-type: tm+mt
 source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+workflow-type: tm+mt
+source-wordcount: '446'
+ht-degree: 0%
 
 ---
 
 
 # Gestione elenco revoca DRM {#policy-revocation-list-manager}
 
-Utilizzare lo strumento della riga di comando Gestione elenchi revoca DRM di Primetime per creare e gestire elenchi di revoche e per verificare se i criteri sono stati revocati. [!DNL AdobeRevocationListManager.jar]
+Utilizzare lo strumento della riga di comando Gestione elenchi revoca DRM di Primetime ( [!DNL AdobeRevocationListManager.jar]) per creare e gestire elenchi di revoche e per verificare se i criteri sono stati revocati.
 
-Prima di eseguire [!DNL AdobeRevocationListManager.jar], è necessario impostare le proprietà nella sezione *Policy Update List Manager e Proprietà* Gestione elenco revoca del file di configurazione.
+Prima di eseguire [!DNL AdobeRevocationListManager.jar], è necessario impostare le proprietà nella sezione *Gestione elenco aggiornamenti criteri e Proprietà Gestione elenchi revoca* del file di configurazione.
 
 >[!NOTE]
 >
@@ -52,7 +55,7 @@ java -jar AdobeRevocationListManager.jar
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-c file di configurazione</span> </td> 
-   <td colname="2" class="- topic/entry "><p class="- topic/p ">Specifica il nome e la posizione del file di configurazione. </p><p class="- topic/p ">Se non si specifica un nome o una posizione, DRM Revocation List Manager cerca <span class="filepath"> flashaccesstools.properties</span> nella directory di lavoro corrente. </p><p>Nota:  Le opzioni specificate nella riga di comando hanno la precedenza rispetto alle opzioni specificate nel file di configurazione. </p>Specifica il percorso del file di configurazione. Se non si applica questa opzione, il Gestore elenco revoca cerca <span class="filepath"> flashaccesstools.properties</span> nella directory di lavoro. </td> 
+   <td colname="2" class="- topic/entry "><p class="- topic/p ">Specifica il nome e la posizione del file di configurazione. </p><p class="- topic/p ">Se non si specifica un nome o una posizione, DRM Revocation List Manager cerca <span class="filepath"> flashaccesstools.properties</span> nella directory di lavoro corrente. </p><p>Nota:  Le opzioni specificate nella riga di comando hanno la precedenza rispetto alle opzioni specificate nel file di configurazione. </p>Specifica il percorso del file di configurazione. Se non si applica questa opzione, Gestione elenco revoca cerca <span class="filepath"> flashaccesstools.properties</span> nella directory di lavoro. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-d nomefile</span> </td> 
@@ -80,7 +83,7 @@ java -jar AdobeRevocationListManager.jar
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">-r issuersName serialNumber revocaDate</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Revoca il certificato identificato da <span class="codeph"> issuersName</span> e <span class="codeph"> serialNumber</span> alla data specificata. Il <span class="codeph"> nome dell'emittente</span> deve utilizzare il formato 509. Ad esempio, <span class="codeph"> CN=12345,O=Adobe Systems Incorporated,C=US</span>. </p> <p>È necessario specificare i numeri di serie in un formato esadecimale. È inoltre necessario specificare la data di revoca in uno dei seguenti formati: 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Revoca il certificato identificato da <span class="codeph"> issuersName</span> e <span class="codeph"> serialNumber</span> alla data specificata. Il formato <span class="codeph"> issuersName</span> deve essere 509. Ad esempio, <span class="codeph"> CN=12345,O=Adobe Systems Incorporated,C=US</span>. </p> <p>È necessario specificare i numeri di serie in un formato esadecimale. È inoltre necessario specificare la data di revoca in uno dei seguenti formati: 
      <ul id="ul_1524FBC6818248F3A2B271243E649400"> 
       <li id="li_BC618EA2332D42A59B1B5434CAFFD2AF"><span class="+ topic/ph pr-d/codeph codeph">aaaa-mm-gg</span> </li> 
       <li id="li_97F77810D20C4CF2944EFCFF5DFAE467"><span class="+ topic/ph pr-d/codeph codeph">aaaa-mm-gg-h24:min:sec</span> </li> 
