@@ -6,6 +6,9 @@ title: Eventi di riproduzione
 uuid: 6d6491d7-cf25-4130-8388-68b8c028bb71
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '541'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
 
 L’applicazione può monitorare l’attività nel lettore e lo stato di modifica del lettore ascoltando gli eventi inviati da TVSDK.
 
-TVSDK invia eventi di riproduzione quando si verificano operazioni di riproduzione per contenuti multimediali, ad esempio un video che inizia la riproduzione. Per ricevere notifiche su tutti gli eventi relativi alla riproduzione, registrare i listener con l&#39; `MediaPlayer` oggetto per gli eventi seguenti.
+TVSDK invia eventi di riproduzione quando si verificano operazioni di riproduzione per contenuti multimediali, ad esempio un video che inizia la riproduzione. Per ricevere notifiche su tutti gli eventi relativi alla riproduzione, registrare i listener con l&#39;oggetto `MediaPlayer` per gli eventi seguenti.
 
 <table frame="all" colsep="1" rowsep="1" id="table_922EEA3DE0BD47BA982E11F890CA0A6B"> 
  <thead> 
@@ -50,7 +53,7 @@ TVSDK invia eventi di riproduzione quando si verificano operazioni di riproduzio
   </tr> 
   <tr rowsep="1"> 
    <td colname="1">ProfileEvent.<a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/ProfileEvent.html#PROFILE_CHANGED" format="html" scope="external"> PROFILE_CHANGED</a> </td> 
-   <td colname="2">Il profilo corrente del lettore multimediale è cambiato. Utilizzare la proprietà <span class="codeph"> ProfileEvent.profile</span> per ottenere il nuovo profilo in corso di riproduzione. Utilizzare la proprietà <span class="codeph"> time</span> per ottenere l'ora in cui si è verificato l'evento. </td> 
+   <td colname="2">Il profilo corrente del lettore multimediale è cambiato. Utilizzare la proprietà <span class="codeph"> ProfileEvent.profile</span> per ottenere il nuovo profilo in fase di riproduzione. Utilizzare la proprietà <span class="codeph"> time</span> per ottenere l'ora in cui si è verificato l'evento. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><b>MediaplayerItem</b> </td> 
@@ -58,7 +61,7 @@ TVSDK invia eventi di riproduzione quando si verificano operazioni di riproduzio
   </tr> 
   <tr rowsep="1"> 
    <td colname="1">Evento MediaPlayerItem.<a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerItemEvent.html#ITEM_CREATED" format="html" scope="external"> ITEM_CREATED</a> </td> 
-   <td colname="2">È stato creato <span class="codeph"> MediaPlayerItem</span> . </td> 
+   <td colname="2">È stato creato un <span class="codeph"> MediaPlayerItem</span>. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1">Evento MediaPlayerItem.<a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerItemEvent.html#ITEM_UPDATED" format="html" scope="external"> ITEM_UPDATED</a> </td> 
@@ -74,7 +77,7 @@ TVSDK invia eventi di riproduzione quando si verificano operazioni di riproduzio
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Evento MediaPlayerItem.<a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerItemEvent.html#CAPTION_UPDATED" format="html" scope="external"> CAPTION_UPDATED</a> </td> 
-   <td colname="2">Nel flusso multimediale è stata rilevata una nuova traccia di sottotitoli codificati e la raccolta <span class="codeph"> ClosedCaptionsTracks</span> è stata aggiornata. </td> 
+   <td colname="2">Nel flusso multimediale è stata rilevata una nuova traccia di sottotitoli codificati e la raccolta <span class="codeph"> closedCaptionsTracks</span> è stata aggiornata. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><b>Manifesto e Timeline</b> </td> 
