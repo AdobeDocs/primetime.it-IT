@@ -6,6 +6,9 @@ description: Il seguente blocco di codice fornisce un esempio di oggetto JSON qu
 seo-description: Il seguente blocco di codice fornisce un esempio di oggetto JSON quando l'ID risorsa di adesione è una semplice stringa di testo.
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '122'
+ht-degree: 0%
 
 ---
 
