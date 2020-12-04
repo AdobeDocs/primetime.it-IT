@@ -6,11 +6,14 @@ title: Effetto sull’inserimento e l’eliminazione di annunci dalla modalità 
 uuid: c2ae8148-889d-46ae-848a-5f45d993a0e2
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '472'
+ht-degree: 0%
 
 ---
 
 
-# Effetto sull’inserimento e l’eliminazione di annunci dalla modalità di segnalazione e dalle combinazioni di metadati degli annunci{#effect-on-ad-insertion-and-deletion-from-ad-signaling-mode-and-ad-metadata-combinations}
+# Effetto sull&#39;inserimento e l&#39;eliminazione di annunci dalla modalità di segnalazione e dalle combinazioni di metadati degli annunci{#effect-on-ad-insertion-and-deletion-from-ad-signaling-mode-and-ad-metadata-combinations}
 
 Potete contrassegnare, eliminare e sostituire gli intervalli di tempo nei flussi VOD utilizzando diverse combinazioni di metadati e modalità di segnalazione annunci. Diverse combinazioni di modalità di segnalazione e metadati determinano comportamenti diversi.
 
@@ -18,7 +21,7 @@ Potete contrassegnare, eliminare e sostituire gli intervalli di tempo nei flussi
 >
 >In caso di conflitto tra intervalli di tempo e modalità di segnalazione degli annunci, TVSDK assegna la priorità agli intervalli di tempo.
 
-**Tabella 4: Modalità di segnalazione/Combinazione di metadati**
+**Tabella 3: Modalità di segnalazione/Combinazione di metadati**
 
 <table>  
  <thead> 
@@ -26,7 +29,7 @@ Potete contrassegnare, eliminare e sostituire gli intervalli di tempo nei flussi
    <th class="entry"> Modalità di segnalazione annunci </th> 
    <th class="entry"> Aggiungi metadati </th> 
    <th class="entry"> Risolutori creati </th> 
-   <th class="entry"><span class="codeph"> PlacementInformation</span> create </th> 
+   <th class="entry"><span class="codeph"> PlacementInformation</span> screated </th> 
    <th class="entry"> Comportamento risultante </th> 
   </tr> 
  </thead>
@@ -51,7 +54,7 @@ Potete contrassegnare, eliminare e sostituire gli intervalli di tempo nei flussi
    <td> Elimina, Auditude </td> 
    <td> 
     <ul> 
-     <li><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), </span> </li> 
+     <li><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE),  </span> </li> 
      <li><span class="codeph"> PlacementInfo (Type.SERVER_MAP, Mode.INSERT)</span> </li> 
     </ul> </td> 
    <td> Intervalli eliminati, Annunci inseriti </td> 
