@@ -16,7 +16,7 @@ ht-degree: 0%
 ---
 
 
-# Note sulla versione di TVSDK 1.4 per iOS {#tvsdk-for-ios-release-notes}
+# Note sulla versione TVSDK 1.4 per iOS {#tvsdk-for-ios-release-notes}
 
 Le Note sulla versione di TVSDK 1.4 per iOS descrivono le novità o le modifiche, i problemi risolti e noti e i problemi del dispositivo in TVSDK iOS 1.4.
 
@@ -70,11 +70,11 @@ Integrare e certificare VHL 2.0 in iOS TVSDK: Ridurre la barriera nell&#39;imple
 
 * Informazioni annuncio di rete
 
-   Le API TVSDK ora forniscono informazioni aggiuntive sulle risposte VAST di terze parti. Ad ID, Ad System e VAST Ad Extensions sono forniti in `PTNetworkAdInfo` classe accessibili tramite `networkAdInfo` la proprietà su una Ad Asset. Queste informazioni possono essere utilizzate per l&#39;integrazione con altre piattaforme di Ad Analytics come **Moat Analytics**.
+   Le API TVSDK ora forniscono informazioni aggiuntive sulle risposte VAST di terze parti. Ad ID, Ad System e VAST Ad Extensions sono forniti nella classe `PTNetworkAdInfo` accessibile tramite la proprietà `networkAdInfo` su una Ad Asset. Queste informazioni possono essere utilizzate per l&#39;integrazione con altre piattaforme di Ad Analytics come **Moat Analytics**.
 
 **Versione 1.4.31**
 
-* **Metriche** di fatturazione Per soddisfare i clienti che desiderano pagare solo per ciò che utilizzano, piuttosto che per un tasso fisso indipendentemente dall&#39;uso effettivo,  Adobe raccoglie le metriche di utilizzo e utilizza queste metriche per determinare quanto addebitare ai clienti.
+* **Metriche** di fatturazionePer soddisfare i clienti che desiderano pagare solo per ciò che utilizzano, anziché un tasso fisso indipendentemente dall&#39;uso effettivo,  Adobe raccoglie le metriche di utilizzo e utilizza queste metriche per determinare quanto addebitare ai clienti.
 
 Ogni volta che TVSDK genera un evento di avvio del flusso, il lettore inizia a inviare messaggi HTTP periodicamente a  Adobe  sistema di fatturazione. Il periodo, noto come durata fatturabile, può essere diverso per VOD standard, pro VOD (annunci mid-roll abilitati) e contenuti live. La durata predefinita di ciascun tipo di contenuto è di 30 minuti, ma il contratto con  Adobe determina i valori effettivi.
 
@@ -84,7 +84,7 @@ Ogni volta che TVSDK genera un evento di avvio del flusso, il lettore inizia a i
 
 Nella classe PTSDKConfig, è stata aggiunta l&#39;API forceHTTPS.
 
-La classe PTSDKConfig fornisce metodi per applicare SSL alle richieste effettuate  server Adobe Primetime per le decisioni, DRM e Video Analytics. Per ulteriori informazioni, vedere `forceHTTPS` e `isForcingHTTPS` metodi in questa classe. Se un manifesto viene caricato su HTTPS, TVSDK mantiene l&#39;uso del contenuto HTTPS e lo rispetta quando carica eventuali URL relativi da tale manifesto.
+La classe PTSDKConfig fornisce metodi per applicare SSL alle richieste effettuate  server Adobe Primetime per le decisioni, DRM e Video Analytics. Per ulteriori informazioni, vedere i metodi `forceHTTPS` e `isForcingHTTPS` in questa classe. Se un manifesto viene caricato su HTTPS, TVSDK mantiene l&#39;uso del contenuto HTTPS e lo rispetta quando carica eventuali URL relativi da tale manifesto.
 
 **Nota**: Le richieste ai domini di terze parti come Pixel di tracciamento annunci, URL di contenuti e annunci e richieste simili non vengono modificate, ed è responsabilità dei provider di contenuto e dei server di annunci fornire URL supportati tramite HTTPS.
 
@@ -92,7 +92,7 @@ La classe PTSDKConfig fornisce metodi per applicare SSL alle richieste effettuat
 
 Primetime iOS TVSDK ora supporta i creativi JavaScript VPAID 2.0 per consentire un&#39;esperienza pubblicitaria interattiva avanzata.
 
-Per ulteriori informazioni su VPAID 2.0, consulta [VPAID e assistenza](../programming/tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-vpaid-2.0-ads.md).
+Per ulteriori informazioni su VPAID 2.0, vedere [Supporto per annunci VPAID](../programming/tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-vpaid-2.0-ads.md).
 
 **Versione 1.4.17**
 
@@ -128,7 +128,7 @@ Per ulteriori informazioni su VPAID 2.0, consulta [VPAID e assistenza](../progra
 
 Per gli annunci VAST (creativi) con la regola di fallback abilitata, TVSDK tratta un annuncio con un tipo MIME non valido come un annuncio vuoto e tenta di utilizzare gli annunci di fallback al suo posto. Potete configurare alcuni aspetti del comportamento di fallback.
 
-Per ulteriori informazioni, vedi [Fallback annunci per annunci](../programming/tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-ad-fallback.md)VAST e VMAP.
+Per ulteriori informazioni, consultate [Ad fallback for VAST and VMAP ads](../programming/tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-ad-fallback.md) (Annunci di fallback per VAST e VMAP annunci).
 
 **Versione 1.4.9**
 
@@ -180,7 +180,7 @@ I criteri DRM ora possono specificare la risoluzione massima consentita, a secon
 
 >[!NOTE]
 >
->Le seguenti funzionalità **non** sono supportate in TVSDK:
+>Le seguenti funzionalità sono **non** supportate nel TVSDK:
 >
 >* Slow motion, su qualsiasi piattaforma o versione.
 >* Giochi di trucchi dal vivo.
@@ -240,7 +240,7 @@ Comment Type: draft
    * Sono stati corretti i problemi di compilazione con TVSDK su XCode 10. A causa dei requisiti XCode 10, le app create su TVSDK per iOS 1.4.45 in avanti richiedono la destinazione di distribuzione minima come iOS 7.0
 
 * Biglietto #36321 - Discrepanza osservata nell&#39;intervallo ricercabile tra PTMediaPlayer e l&#39;istanza AVPlayer nello stato &quot;Riproduzione&quot;.
-* Biglietto #36493 - Supporto `libstdc++` su iOS 12
+* Biglietto #36493 - `libstdc++` supportato su iOS 12
 
    * Sono stati corretti i problemi di compilazione con TVSDK su iOS 12. Le app create su TVSDK per iOS 1.4.45 a partire richiedono la destinazione di distribuzione minima come iOS 7.0
 
@@ -330,7 +330,7 @@ Comment Type: draft
 * (ZD #31951) - Schermata vuota entro un&#39;interruzione annuncio e nessun completamento interruzione annuncio.
 
    È stato risolto un problema per il quale gli annunci VPAID Facebook spesso restituivano più blocchi CDATA in un unico \&amp;lt;AdParameters\&amp;gt; Nodo VAST.
-* (ZD #3336) - [iOS] TVSDK - I contenitori degli annunci non vengono compilati, nonostante la quantità di annunci restituiti da FreeWheeler sia sufficiente.
+* (ZD #3336) - [iOS] TVSDK - I contenitori annuncio non vengono compilati, nonostante la quantità di annunci restituiti da FreeWheel sia sufficiente.
 
    È stata creata una relazione padre-figlio tra l&#39;annuncio della sequenza e l&#39;annuncio di fallback e l&#39;ordinamento in base alla sequenza padre e all&#39;indice.
 
@@ -430,7 +430,7 @@ Risolti più arresti anomali correlati alla sincronizzazione.
 
 * (ZD# 28481) - Uscita FER a causa della chiave errata aggiunta alla fine di un&#39;interruzione annuncio per quei flussi FER
 
-Per un flusso FER, il tasto prima dell&#39;interruzione dell&#39;annuncio viene inserito dopo la fine dell&#39;interruzione dell&#39;annuncio. Questo problema è stato risolto aggiungendo l&#39; *ultima chiave* visualizzata alla fine dell&#39;interruzione dell&#39;annuncio.
+Per un flusso FER, il tasto prima dell&#39;interruzione dell&#39;annuncio viene inserito dopo la fine dell&#39;interruzione dell&#39;annuncio. Questo problema è stato risolto aggiungendo l&#39; *ultima chiave visualizzata* alla fine dell&#39;interruzione dell&#39;annuncio.
 
 **Versione 1.4.33** (1.4.33.803 per iOS 6.0+)
 
@@ -442,9 +442,9 @@ Abilitata inviando l&#39;URL creativo originale per la richiesta CRS 1401 invece
 
 Questo problema è stato risolto aggiornando il caricamento delle risorse per cercare da tutti i bundle disponibili.
 
-* (ZD# 27460) Prima chiamata Ad Midroll - POST a cdn.auditude<span></span>.com che restituisce 403.
+* (ZD# 27460) Prima chiamata ad Apple - POST a cdn.auditude<span></span>.com che restituisce 403.
 
-Il nuovo account CDN non è in grado di gestire una richiesta CDN POST. Questo problema è stato risolto aggiornando il codice in modo che la richiesta di `cdn.auditude.com` annuncio fosse GET anziché POST.
+Il nuovo account CDN non è in grado di gestire una richiesta CDN POST. Questo problema è stato risolto aggiornando il codice in modo che la richiesta di annunci `cdn.auditude.com` fosse GET invece che POST.
 
 **Versione 1.4.32** (1.4.32.792 per iOS 6.0+)
 
@@ -460,7 +460,7 @@ Il problema è stato risolto inserendo il tag all&#39;inizio della playlist.
 
 * (ZD# 24528) Implementare le metriche di utilizzo TVSDK per la fatturazione
 
-Per ulteriori informazioni, vedi Metriche [](../programming/tvsdk-1.4-for-ios/c-psdk-ios-1.4-billing/c-psdk-ios-1.4-billing.md)di fatturazione.
+Per ulteriori informazioni, vedere [Metriche di fatturazione](../programming/tvsdk-1.4-for-ios/c-psdk-ios-1.4-billing/c-psdk-ios-1.4-billing.md).
 
 * (ZD# 24642) Supporto Picture-in-Picture per TVSDK
 
@@ -512,7 +512,7 @@ Quando l&#39;ora di inizio dell&#39;ultima interruzione annuncio dal VMAP cade p
 
    * (ZD #22351) VHL - Analytics: Durata risorsa video dal vivo
 
-Questo problema è stato risolto aggiungendo l’API assetDuration per aggiornare la durata delle risorse per i flussi Live/Linear e fornire una logica per il controllo del flusso live. `PTVideoAnalyticsTrackingMetadata`
+Questo problema è stato risolto aggiungendo l&#39;API assetDuration a `PTVideoAnalyticsTrackingMetadata` per aggiornare la durata delle risorse per i flussi Live/Linear e fornire una logica per il controllo del flusso live.
 
 * (ZD# 22675) VHL - Analytics: Aggiornamento della durata della risorsa video in diretta
 
@@ -746,7 +746,7 @@ Questo problema è stato risolto fornendo un evento di timeout (requestTimeout) 
 Questo problema è stato risolto consentendo la sottoscrizione dell’applicazione al programma EXT-X-PROGRAM-DATE-TIME sui flussi live.
 
 * (ZD #19459) - Arresto anomalo durante la preparazione di audio alternativo con PTMediaPlayerItem PrepareAudioOptionsWithAVMediaSelectionOptions
-* (ZD #19460) - Arresto anomalo - [PTMediaPlayerItem PrepareSottotitoliOptionsWithAVMediaSelectionOptions:nonForcedOptions:]
+* (ZD #19460) - Arresto anomalo - [PTMediaPlayerItem PreparaSottotitoliOpzioniConAVMediaSelectionOptions:nonForcedOptions:]
 
 Questo problema è lo stesso di Zendesk #19459.
 
@@ -796,7 +796,7 @@ Questo problema è stato risolto aggiornando l&#39;implementazione API PTMediaPl
 
 Questo problema è stato risolto consentendo alle applicazioni di impostare il proprio valore di playhead.
 
-* Zendesk #18518 - Se il nome del video non è specificato, per impostazione predefinita il nome di TVSDK è un lettore basato su *PSDK.*
+* Zendesk #18518 - Se il nome del video non è specificato, per impostazione predefinita il nome di TVSDK è *Lettore basato su PSDK.*
 
 Questo problema è stato risolto rimuovendo il valore predefinito per il nome del lettore.
 
@@ -870,17 +870,17 @@ Sono stati aggiunti metadati per esporre il contenuto quando si verifica la noti
 
 È possibile riinizializzare il tracciatore heartbeat video durante una sessione di riproduzione del flusso lineare.
 
-**Versione 1.4.14** (1.4.14.498) per iOS 6.0+
+**Versione 1.4.14**  (1.4.14.498) per iOS 6.0+
 
 * (ZD #17260) - Arresto anomalo su playlistManagerForURL
 
 È stato corretto un arresto anomalo intermittente dovuto a problemi di concorrenza.
 
-**Versione 1.4.13** (iOS 6.0+)
+**Versione 1.4.13**  (iOS 6.0+)
 
-* (ZD #3304) - VAST 3.0 `[ERRORCODE]` macro non popolata
+* (ZD #3304) - La macro VAST 3.0 `[ERRORCODE]` non viene popolata
 
-   * Il codice di errore 400 sarà esposto se l&#39;annuncio in linea ha un cattivo creativo.
+   * Il codice di errore 400 sarà esposto se in linea   ad ha una pessima creatività.
    * `[ERRORCODE]` la macro verrà codificata nell&#39;URL.
 
 * (ZD #3865) Integrazione Heartbeat con gli annunci IMA
@@ -976,7 +976,7 @@ Supporto per il ping di URL vuoti di tracciamento delle interruzioni di annunci,
 
 * Zendesk #1024 - Funzione per rimuovere gli annunci dal flusso tramite manifesto
 
-## Problemi noti nella versione 1.4 {#known-issues-in}
+## Problemi noti in 1.4 {#known-issues-in}
 
 * In iOS TVSDK, tutti gli annunci vengono inseriti nel manifesto del contenuto. I comportamenti degli annunci vengono implementati ricercando in base alla durata del contenuto e dei segmenti degli annunci. Pertanto, se le durate del segmento non sono precise, la ricerca potrebbe non terminare sempre al fotogramma esatto dell&#39;inizio o della fine dell&#39;interruzione dell&#39;annuncio. Anche se le durate sono al frame, c&#39;è una tolleranza che la piattaforma stessa impone alla ricerca e ci possono essere alcuni fotogrammi o annunci o contenuto visualizzati. Si tratta di una limitazione della piattaforma e del modo in cui l’inserimento di annunci funziona con TVSDK su iOS.
 * La decisione di saltare avviene sull&#39;evento di ricerca in questo caso. Tuttavia, poiché le durate del segmento di annuncio nel manifesto non rappresentano con precisione la durata effettiva dell&#39;annuncio, la ricerca non è accurata per i fotogrammi. Di conseguenza, alcuni fotogrammi dell&#39;annuncio vengono visualizzati quando vengono applicati i criteri degli annunci.
@@ -994,4 +994,4 @@ Supporto per il ping di URL vuoti di tracciamento delle interruzioni di annunci,
 
 ## Risorse utili {#helpful-resources}
 
-* Consulta la documentazione completa della guida [pagina Informazioni e supporto](https://helpx.adobe.com/support/primetime.html) di Adobe Primetime.
+* Consulta la documentazione completa della guida in linea alla pagina [ Informazioni e supporto per Adobe Primetime](https://helpx.adobe.com/support/primetime.html).
