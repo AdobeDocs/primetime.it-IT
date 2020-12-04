@@ -6,11 +6,14 @@ title: Framework interfaccia utente
 uuid: 8460d65c-b9aa-40d0-9e68-771b9f73a7b4
 translation-type: tm+mt
 source-git-commit: 2399515edaad49341cfa406a13887bcc8a3562be
+workflow-type: tm+mt
+source-wordcount: '886'
+ht-degree: 0%
 
 ---
 
 
-# Framework interfaccia utente {#the-ui-framework}
+# Framework di interfaccia utente {#the-ui-framework}
 
 Il framework dell’interfaccia utente è un livello dell’interfaccia utente sopra al TVSDK del browser, che offre diversi costrutti dell’interfaccia utente correlati ai lettori video. È possibile creare un lettore altamente personalizzabile apportando le modifiche necessarie per l&#39;ambiente.
 
@@ -22,7 +25,7 @@ Potete riscrivere i vostri comportamenti o ignorare le funzionalità di determin
 
 ## Creazione di un lettore di base {#section_30E4812C4DDA4B519C9C837930B6AE45}
 
-`primetimevisualapi.min.js` è la libreria del framework dell&#39;interfaccia utente e tutte le sue funzionalità sono esposte attraverso il ptp dell&#39;oggetto globale. Nell&#39;esempio seguente, `videoPlayer` methods crea il lettore sottostante:
+`primetimevisualapi.min.js` è la libreria del framework dell&#39;interfaccia utente e tutte le sue funzionalità sono esposte attraverso il ptp dell&#39;oggetto globale. Nell&#39;esempio seguente, i metodi `videoPlayer` creano il lettore sottostante:
 
 ```js
 <script src="scripts/primetimevisualapi.min.js"></script> 
@@ -40,12 +43,12 @@ Potete riscrivere i vostri comportamenti o ignorare le funzionalità di determin
 * Utilizzo dell&#39;oggetto JSON
 * Utilizzo delle API
 
-Per generare l&#39;oggetto JSON, Browser TVSDK fornisce uno strumento di configurazione dell&#39;interfaccia utente. Nello strumento, potete selezionare diverse impostazioni, fare clic **[!UICONTROL Test Configuration]** per verificare le impostazioni e fare clic **[!UICONTROL Download Configuration]** per scaricare le impostazioni. Il contenuto del file scaricato viene utilizzato come oggetto JSON da passare all&#39; `ptp.videoPlayer` API.
+Per generare l&#39;oggetto JSON, Browser TVSDK fornisce uno strumento di configurazione dell&#39;interfaccia utente. Nello strumento, è possibile selezionare diverse impostazioni, fare clic su **[!UICONTROL Test Configuration]** per verificare le impostazioni, quindi fare clic su **[!UICONTROL Download Configuration]** per scaricare le impostazioni. Il contenuto del file scaricato viene utilizzato come oggetto JSON da passare all&#39;API `ptp.videoPlayer`.
 
 **Come eseguire lo strumento** di configurazione dell&#39;interfaccia utente:
 
-1. Ospita la `frameworks` cartella, disponibile in Browser TVSDK, su un server Web locale.
-1. Per aprire lo strumento, aprite un browser e passate a `< path-to-hosted-frameworks-folder>/ui-framework/ui-configurator/`.
+1. Ospita la cartella `frameworks`, disponibile in Browser TVSDK, su un server Web locale.
+1. Per aprire lo strumento, aprire un browser e passare a `< path-to-hosted-frameworks-folder>/ui-framework/ui-configurator/`.
 
 **Configurazione del comportamento del lettore**
 
@@ -55,13 +58,13 @@ Per generare l&#39;oggetto JSON, Browser TVSDK fornisce uno strumento di configu
 >
 >Per alcune delle impostazioni, entrambe le opzioni sono disponibili.
 
-* **L&#39;utilizzo delle API** videoBehavior `ptp.videoPlayer` restituisce il `ptp.videoBehavior`, che consente di configurare il lettore video sottostante. Se è necessario configurare alcune impostazioni relative alla riproduzione, potete utilizzare questa opzione.
+* **L&#39;utilizzo dell&#39;** `ptp.videoPlayer` API videoBehavior restituisce il  `ptp.videoBehavior`, che consente di configurare il lettore video sottostante. Se è necessario configurare alcune impostazioni relative alla riproduzione, potete utilizzare questa opzione.
 
    ```js
    player.setAbrControlParameters ({object})
    ```
 
-* **Trasmissione di un oggetto di configurazione alla funzione** videoPlayer Quando si utilizza questo oggetto, il comportamento dell&#39;interfaccia utente può essere configurato in aggiunta alle impostazioni di riproduzione sopra descritte. Il chiamante deve specificare i parametri da modificare e il lettore continuerà a utilizzare i valori predefiniti per i parametri non specificati.
+* **Trasmissione di un oggetto di configurazione alla** funzione videoPlayerQuando si utilizza questo oggetto, il comportamento dell&#39;interfaccia utente può essere configurato in aggiunta alle impostazioni di riproduzione di cui sopra. Il chiamante deve specificare i parametri da modificare e il lettore continuerà a utilizzare i valori predefiniti per i parametri non specificati.
 
    ```js
    var player = ptp.videoPlayer('#video1', { 
@@ -76,9 +79,9 @@ Per generare l&#39;oggetto JSON, Browser TVSDK fornisce uno strumento di configu
 
    Fare riferimento alla sezione della struttura degli oggetti di configurazione per la struttura dell&#39;oggetto di configurazione.
 
-* **Accesso ad AdobePSDK.MediaPlayer** È possibile utilizzare `videoPlayer.getMediaPlayer` in alcuni casi d&#39;uso avanzati in cui è necessario accedere a MediaPlayer del browser TVSDK.
+* **Accesso ad AdobePSDK.** MediaPlayerÈ possibile utilizzare  `videoPlayer.getMediaPlayer` in alcuni casi d’uso avanzati in cui è necessario accedere a MediaPlayer di Browser TVSDK.
 
-* **Configurazione dello skinning del lettore** Per ulteriori informazioni sullo skinning del lettore, vedere [Skinning del lettore](../../browser-tvsdk-2.4/c-psdk-browser-2.4-userinterface/c-psdk-browser-tvsdk-2.4-skin-the-player.md).
+* **Configurazione dello skinning del** lettorePer ulteriori informazioni sullo skinning del lettore, vedere  [Skinning del lettore](../../browser-tvsdk-2.4/c-psdk-browser-2.4-userinterface/c-psdk-browser-tvsdk-2.4-skin-the-player.md).
 
 ## Modifica di un comportamento predefinito {#section_D5D692638FFF4BEF81F7BE70E438CCE9}
 
@@ -111,15 +114,15 @@ var player = ptp.videoPlayer('.videoHolder', {
 
 >[!NOTE]
 >
->A seconda della personalizzazione desiderata, potete escludere determinate funzionalità nel comportamento o scrivere il vostro comportamento. Per ulteriori informazioni sulle funzionalità che possono essere sostituite, consulta la documentazione API del framework [](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html) dell’interfaccia utente.
+>A seconda della personalizzazione desiderata, potete escludere determinate funzionalità nel comportamento o scrivere il vostro comportamento. Per ulteriori informazioni sulle funzionalità che possono essere ignorate, consultate la documentazione API [Framework dell&#39;interfaccia utente](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html).
 
 ## Riferimenti {#section_0A76A3F44D8A49B09FE4C83F3FACCB76}
 
 Seguono alcune informazioni di riferimento aggiuntive:
 
-* **Visualizza struttura** oggetti di configurazione Questa è la struttura di oggetto completa che elenca tutti i comportamenti predefiniti in modo gerarchico con gli elementi predefiniti per i comportamenti. Nella configurazione di esempio, per creare l’elemento sono state utilizzate le fabbriche dell’interfaccia utente. Potete usare gli stessi o i metodi preferiti per creare gli elementi.
+* **Visualizza** struttura di oggetti di configurazioneQuesta è la struttura di oggetti completa che menziona tutti i comportamenti predefiniti in modo gerarchico con gli elementi predefiniti per i comportamenti. Nella configurazione di esempio, per creare l’elemento sono state utilizzate le fabbriche dell’interfaccia utente. Potete usare gli stessi o i metodi preferiti per creare gli elementi.
 
-   È necessario specificare solo le parti che si desidera modificare e il resto della funzionalità sarà selezionato per impostazione predefinita. Per iniziare, a seconda del caso di utilizzo, è necessario fornire la `SingleViewConfigurationObject` o la `MultiViewConfigurationObject` struttura.
+   È necessario specificare solo le parti che si desidera modificare e il resto della funzionalità sarà selezionato per impostazione predefinita. Per iniziare, a seconda del caso di utilizzo, è necessario fornire la struttura `SingleViewConfigurationObject` o `MultiViewConfigurationObject`.
 
    ```js
    var DEFAULT_CONTROL_BAR_CONFIG = { 
@@ -766,11 +769,11 @@ Seguono alcune informazioni di riferimento aggiuntive:
    };
    ```
 
-* **Costruttori** Helper Questo costrutto è composto dai seguenti elementi:
+* **costrutti** di supportoQuesto costrutto è composto dai seguenti elementi:
 
-   * **Fabbriche** Per creare gli elementi visivi è possibile utilizzare `ptp.factories.simpleButtonFactory`, `ptp.factories.simpleDivFactory`, `ptp.factories.simpleHRFactory`e `ptp.factories.simpleSliderFactory`. Per ulteriori informazioni, consulta la documentazione [UI Framework](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html) API.
+   * **** FabbrichePer creare gli elementi visivi, è possibile utilizzare  `ptp.factories.simpleButtonFactory`,  `ptp.factories.simpleDivFactory`,  `ptp.factories.simpleHRFactory`e  `ptp.factories.simpleSliderFactory`. Per ulteriori informazioni, consultate la documentazione relativa a [UI Framework](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html) API.
 
-   * **Mixins** Mixins sono moduli componibili che possono essere composti nei comportamenti per utilizzare costrutti comuni. Ad esempio, molti dei componenti desiderano essere consapevoli dei cambiamenti che potrebbero influenzare il loro comportamento durante, ad esempio, la riproduzione di un annuncio. Tutti questi elementi aggiungeranno una `adBreak` classe.
+   * **** MixinsMixins sono moduli componibili che possono essere composti nei comportamenti per utilizzare costrutti comuni. Ad esempio, molti dei componenti desiderano essere consapevoli dei cambiamenti che potrebbero influenzare il loro comportamento durante, ad esempio, la riproduzione di un annuncio. Tutti questi elementi aggiungeranno una classe `adBreak`.
 
       Di seguito è riportato un esempio di come implementare il mixin incorporato `adBreakStyling`:
 
@@ -798,7 +801,7 @@ Seguono alcune informazioni di riferimento aggiuntive:
       }
       ```
 
-      Ora `customBehavior` è possibile utilizzare tutti i metodi esposti da `adBreakStyling`, che in questo esempio è `manageAdBreakStyle`. Un ulteriore esempio di utilizzo è rappresentato dal fatto che un mixin può aggiungere listener di eventi e che, nel gestore, il mixin può modificare l&#39;elemento in qualche modo. Successivamente, i componenti che utilizzano questo mixin avranno automaticamente questa funzionalità.
+      Ora `customBehavior` può utilizzare tutti i metodi esposti da `adBreakStyling`, che in questo esempio è `manageAdBreakStyle`. Un ulteriore esempio di utilizzo è rappresentato dal fatto che un mixin può aggiungere listener di eventi e che, nel gestore, il mixin può modificare l&#39;elemento in qualche modo. Successivamente, i componenti che utilizzano questo mixin avranno automaticamente questa funzionalità.
 
-   * **Utilizzo** Alcune utility, come `ptp.elementGetter`, utilizzate nella sezione di configurazione e `ptp.deepmerge`, possono essere utili per la scrittura o l&#39;estensione dei comportamenti. Per ulteriori informazioni, consulta la documentazione [UI Framework](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html) API.
+   * **** UtilsAlcune utility, come  `ptp.elementGetter`, utilizzate nella sezione di configurazione e  `ptp.deepmerge`possono essere utili per scrivere o estendere i comportamenti. Per ulteriori informazioni, consultate la documentazione relativa a [UI Framework](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html) API.
 
