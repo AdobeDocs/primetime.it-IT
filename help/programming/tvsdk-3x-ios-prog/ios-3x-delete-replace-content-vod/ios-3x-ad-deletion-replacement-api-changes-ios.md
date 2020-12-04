@@ -6,6 +6,9 @@ title: Modifiche alle API di eliminazione e sostituzione degli annunci
 uuid: 3689d31f-4feb-4ea5-ac49-ef2e71472f4b
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '390'
+ht-degree: 0%
 
 ---
 
@@ -33,21 +36,21 @@ Le seguenti modifiche nel supporto TVSDK e nella sostituzione degli annunci.
       >
       >Tutti gli oggetti dell&#39;array devono essere dello stesso tipo.
 
-   * `PTTimeRangeCollectionType` è un enum che definisce il comportamento degli intervalli definiti in `PTTimeRangeCollection`:
+   * `PTTimeRangeCollectionType` è un enum che definisce il comportamento degli intervalli definiti in  `PTTimeRangeCollection`:
 
-      * `PTTimeRangeCollectionTypeMarkRanges`: Il tipo di intervallo è *Contrassegno*. Gli intervalli vengono utilizzati per contrassegnare gli intervalli nel contenuto come Annunci.
+      * `PTTimeRangeCollectionTypeMarkRanges`: Il tipo di intervallo è  *Contrassegno*. Gli intervalli vengono utilizzati per contrassegnare gli intervalli nel contenuto come Annunci.
 
       * `PTTimeRangeCollectionTypeDeleteRanges`: Il tipo di intervallo è Elimina. Gli intervalli definiti vengono rimossi dal contenuto principale prima dell’inserimento degli annunci.
       * `PTTimeRangeCollectionTypeReplaceRanges`: Il tipo degli intervalli è Replace (Sostituisci). Gli intervalli definiti vengono sostituiti dal principale con Annunci (la modalità Ad Signaling è impostata su `PTAdSignalingModeCustomTimeRanges`).
 
-* `PTReplacementTimeRange` - Nuova classe pubblica che definisce un singolo intervallo di `PTTimeRangeCollection`:
+* `PTReplacementTimeRange` - Nuova classe pubblica che definisce un singolo intervallo di  `PTTimeRangeCollection`:
 
    * `property CMTimeRange range` - Definisce l&#39;inizio e la durata dell&#39;intervallo.
-   * `property long replacementDuration` - Se il tipo di `TimeRangeCollection` oggetto è `PTTimeRangeCollectionTypeReplaceRanges`, `replacementDuration` viene utilizzato per creare un&#39;opportunità di posizionamento (inserimento di annunci) con una durata di `replacementDuration`. Se non `replacementDuration` è impostato, il server degli annunci determinerà la durata e il numero di annunci per tale opportunità di posizionamento.
+   * `property long replacementDuration` - Se il tipo di oggetto  `TimeRangeCollection` è  `PTTimeRangeCollectionTypeReplaceRanges`,  `replacementDuration` viene utilizzato per creare un&#39;opportunità di posizionamento (inserimento di annunci) con una durata di  `replacementDuration`. Se `replacementDuration` non è impostato, il server degli annunci determinerà la durata e il numero di annunci per tale opportunità di posizionamento.
 
 * `PTAdSignalingMode`:
 
-   * `PTAdSignalingModeCustomTimeRanges` - Aggiunta di un nuovo tipo di `PTAdSignalingMode`. Questa modalità viene utilizzata insieme al `PTTimeRangeCollection` tipo `PTTimeRangeCollectionReplace` per l&#39;inserimento di annunci in base agli intervalli di sostituzione.
+   * `PTAdSignalingModeCustomTimeRanges` - Aggiunta di un nuovo tipo di  `PTAdSignalingMode`. Questa modalità viene utilizzata insieme a `PTTimeRangeCollection` con il tipo `PTTimeRangeCollectionReplace` per l&#39;inserimento di annunci in base agli intervalli di sostituzione.
 
 * `PTAdMetadata`:
 
@@ -69,4 +72,4 @@ Le seguenti modifiche nel supporto TVSDK e nella sostituzione degli annunci.
 
 * `PTAdMetadata`:
 
-   * `property NSArray* externalAdRanges` - Questa proprietà è stata utilizzata in precedenza per definire gli intervalli C3 per la marcatura. Ora è obsoleto, in quanto questi intervalli vengono impostati tramite `PTTimeRangeCollection`.
+   * `property NSArray* externalAdRanges` - Questa proprietà è stata utilizzata in precedenza per definire gli intervalli C3 per la marcatura. Ora è obsoleto, in quanto questi intervalli sono impostati tramite `PTTimeRangeCollection`.
