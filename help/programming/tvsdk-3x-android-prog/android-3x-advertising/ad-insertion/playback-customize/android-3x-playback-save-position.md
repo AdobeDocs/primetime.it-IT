@@ -6,6 +6,9 @@ title: Salvate la posizione del video e riprendete più tardi
 uuid: cff1715e-c7a9-4eda-ad71-31892c3c1e78
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '419'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 Potete salvare la posizione di riproduzione corrente in un video e riprendere la riproduzione nella stessa posizione in una sessione futura.
 
-Gli annunci inseriti dinamicamente differiscono tra le sessioni utente, pertanto il salvataggio della posizione **con** gli annunci a giunzione fa riferimento a una posizione diversa in una sessione futura. TVSDK fornisce metodi per recuperare la posizione di riproduzione ignorando gli annunci in sequenza.
+Gli annunci inseriti dinamicamente differiscono tra le sessioni utente, pertanto il salvataggio della posizione **con** annunci con giunzione a coppie fa riferimento a una posizione diversa in una sessione futura. TVSDK fornisce metodi per recuperare la posizione di riproduzione ignorando gli annunci in sequenza.
 
 1. Quando l’utente esce da un video, l’applicazione recupera e salva la posizione nel video.
 
@@ -24,11 +27,11 @@ Gli annunci inseriti dinamicamente differiscono tra le sessioni utente, pertanto
 
    Le interruzioni di annuncio possono variare in ogni sessione a causa di pattern di annunci, limiti di frequenza e così via. L’ora corrente del video in una sessione potrebbe essere diversa in una sessione futura. Quando si salva una posizione nel video, l&#39;applicazione recupera l&#39;ora locale, che è possibile salvare sul dispositivo o in un database sul server.
 
-   Ad esempio, se l’utente si trova al 20° minuto del video e questa posizione include cinque minuti di annunci, `getCurrentTime` restituirà 1200 secondi, mentre `getLocalTime` a questa posizione restituiranno 900 secondi.
+   Ad esempio, se l&#39;utente si trova al 20° minuto del video e questa posizione include cinque minuti di annunci, `getCurrentTime` restituirà 1200 secondi, mentre `getLocalTime` a questa posizione restituirà 900 secondi.
 
    >[!IMPORTANT]
    >
-   >L&#39;ora locale e l&#39;ora corrente sono uguali per i flussi live/lineari. In questo caso, `convertToLocalTime` non ha effetto. Per VOD, l&#39;ora locale rimane invariata mentre gli annunci suonano.
+   >L&#39;ora locale e l&#39;ora corrente sono uguali per i flussi live/lineari. In questo caso, `convertToLocalTime` non ha alcun effetto. Per VOD, l&#39;ora locale rimane invariata mentre gli annunci suonano.
 
    ```java
    // Save the user session when player activity stops 
@@ -78,9 +81,9 @@ Gli annunci inseriti dinamicamente differiscono tra le sessioni utente, pertanto
       >
       >Questo metodo viene chiamato solo con valori di ora locali. Se il metodo viene chiamato con i risultati dell&#39;ora corrente, si verifica un comportamento non corretto.
 
-   * Per cercare l&#39;ora corrente, utilizza `seek`.
+   * Per cercare l&#39;ora corrente, utilizzare `seek`.
 
-1. Quando l&#39;applicazione riceve l&#39;evento `onStatusChanged` di modifica dello stato, cerca l&#39;ora locale salvata.
+1. Quando l&#39;applicazione riceve l&#39;evento di modifica dello stato `onStatusChanged`, cercare l&#39;ora locale salvata.
 
    ```java
    private final MediaPlayer.PlaybackEventListener _playbackEventListener =  
