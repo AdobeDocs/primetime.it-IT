@@ -4,32 +4,35 @@ title: Dettagli del flusso di lavoro dei criteri
 uuid: b355fcf6-3416-440f-9b30-a155e20f9f74
 translation-type: tm+mt
 source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+workflow-type: tm+mt
+source-wordcount: '593'
+ht-degree: 0%
 
 ---
 
 
-# BEES Workflow {#bees-workflow}
+# Flusso di lavoro BEES {#bees-workflow}
 
 **Riepilogo:**
 
-* **Criterio** - Crea un criterio basato su DRM che indichi che BEES è richiesto per tutti i contenuti inclusi in un pacchetto utilizzando questo criterio.
-* **Creazione di pacchetti** - Creazione di pacchetti di contenuti tramite la politica DRM basata su BEES.
+* **Criterio** : crea un criterio basato su DRM che indichi che BEES è richiesto per tutti i contenuti inclusi in un pacchetto utilizzando questo criterio.
+* **Creazione di pacchetti**  - Creazione di pacchetti di contenuto tramite la politica DRM basata su BEES.
 * **Autenticazione** : autenticate il dispositivo client e utilizzate l&#39;API DRM di Primetime, o l&#39;API Primetime, per associare questo token a DRM di Primetime Cloud. In questo modo il dispositivo client invierà il token di autenticazione a Primetime Cloud DRM insieme a tutte le richieste di licenza. Primetime Cloud DRM non elaborerà il token, ma lo trasmetterà (come bobina opaca) all&#39;endpoint BEES per l&#39;elaborazione.
-* **Licenze** - Richiedi una licenza per il contenuto protetto. Il dispositivo client aggiungerà automaticamente il token di autenticazione precedentemente impostato alla chiamata.
-* **Adesione** - Primetime Cloud DRM determinerà che il contenuto è stato incluso in un pacchetto con un criterio che richiede BEES. Primetime Cloud DRM crea una richiesta JSON da inviare all’endpoint BEES. La risposta di BEES indicherà a Primetime Cloud DRM se rilasciare o meno una licenza e, facoltativamente, quale criterio DRM utilizzare.
+* **Licenze**  - Richiedi una licenza per il contenuto protetto. Il dispositivo client aggiungerà automaticamente il token di autenticazione precedentemente impostato alla chiamata.
+* **Adesione**  - Primetime Cloud DRM determinerà che il contenuto è stato incluso in un pacchetto con un criterio che richiede BEES. Primetime Cloud DRM crea una richiesta JSON da inviare all’endpoint BEES. La risposta di BEES indicherà a Primetime Cloud DRM se rilasciare o meno una licenza e, facoltativamente, quale criterio DRM utilizzare.
 
 ## Dettagli del flusso di lavoro dei criteri {#policy-workflow-details}
 
-Quando Primetime Cloud DRM elabora una richiesta di licenza, analizza il criterio DRM nella richiesta per determinare se è necessaria una chiamata a un servizio di adesione backend prima che sia possibile visualizzare il contenuto. Se *è* richiesta una chiamata API, Primetime Cloud DRM creerà la richiesta BEES, quindi analizzerà il criterio DRM per ottenere un endpoint URL API specificato per la richiesta BEES.
+Quando Primetime Cloud DRM elabora una richiesta di licenza, analizza il criterio DRM nella richiesta per determinare se è necessaria una chiamata a un servizio di adesione backend prima che sia possibile visualizzare il contenuto. Se una chiamata BEES *è* obbligatoria, Primetime Cloud DRM creerà la richiesta BEES, quindi analizzerà il criterio DRM per ottenere un endpoint URL API specificato per la richiesta BEES.
 
 Applicate il criterio DRM che indica il requisito BEES, specificando le due seguenti proprietà personalizzate nel criterio:
 
-    * `policy.customProp.1=api.Required=&lt;true| false>`
-    * `policy.customProp.2=bees.url=&lt;url dell&#39;endpoint BEES>`
+    * `policy.customProp.1=api.Required=&lt;true>`
+    * `policy.customProp.2=api.url=&lt;url to=&quot;&quot; your=&quot;&quot; BEES=&quot;&quot; endpoint=&quot;&quot;>`
 
 <!--<a id="example_F617FC49A4824C0CB234C92E57D876D3"></a>-->
 
-Ad esempio, utilizzando Primetime DRM Policy Manager ( [!DNL AdobePolicyManager.jar]), è possibile specificare le due proprietà personalizzate seguenti nel file di [!DNL flashaccesstools.properties] configurazione:
+Ad esempio, utilizzando Gestione criteri DRM Primetime ( [!DNL AdobePolicyManager.jar]), è possibile specificare le due proprietà personalizzate seguenti nel file di configurazione [!DNL flashaccesstools.properties]:
 
 * `policy.customProp.1=bees.required=true`
 * `policy.customProp.2=bees.url=https://mybeesserver.example.com/bees`
@@ -40,19 +43,19 @@ Ad esempio, utilizzando Primetime DRM Policy Manager ( [!DNL AdobePolicyManager.
 
 ## Dettagli del flusso di lavoro del pacchetto {#package-workflow-details}
 
-Durante la creazione del pacchetto dei contenuti protetti da Adobe Access, è necessario applicare al contenuto uno dei criteri DRM compatibili con le API.
+Durante la preparazione del contenuto protetto da accesso al Adobe , è necessario applicare al contenuto uno dei criteri DRM compatibili con le API.
 
 ## Dettagli del flusso di lavoro di autenticazione {#authentication-workflow-details}
 
 Affinché l&#39;endpoint BEES possa prendere decisioni sull&#39;adesione, il dispositivo client deve fornire informazioni sull&#39;autenticazione. A tal fine, utilizzate un token di autenticazione specifico per il cliente.
 
-Primetime Cloud DRM non deve comprendere questo token; passa semplicemente questo token all’endpoint BEES. Il dispositivo client è responsabile della creazione o acquisizione del token e della relativa impostazione tramite l&#39; `DRMManager.setAuthenticationToken()` API.
+Primetime Cloud DRM non deve comprendere questo token; passa semplicemente questo token all’endpoint BEES. Il dispositivo client è responsabile della creazione o acquisizione di questo token e della relativa impostazione tramite l&#39;API `DRMManager.setAuthenticationToken()`.
 
 Per associare questo token a DRM di Primetime Cloud, effettuate le seguenti operazioni in modo che venga inviato con la richiesta di licenza:
 
-Create un&#39;istanza dell&#39; `DRMManager` oggetto con i metadati DRM del contenuto incluso nel pacchetto per DRM di Primetime Cloud.
+Create un&#39;istanza dell&#39;oggetto `DRMManager` con i metadati DRM del contenuto incluso nel pacchetto per DRM di Primetime Cloud.
 
-Il `setAuthenticationToken()` metodo funziona associando l&#39;array di byte specificato all&#39;URL del server licenze fornito nei metadati DRM utilizzati per creare un&#39;istanza `DRMManager`.
+Il metodo `setAuthenticationToken()` funziona associando l&#39;array di byte specificato all&#39;URL del server licenze fornito nei metadati DRM utilizzati per creare un&#39;istanza `DRMManager`.
 
 ```java
 //client device acquires auth token needed by your BEES endpoint  
@@ -64,7 +67,7 @@ Il token viene inviato con tutte le richieste di licenza finché il token non vi
 
 ## Dettagli del flusso di lavoro della licenza{#license-workflow-details}
 
-Richiedi una licenza da Primetime Cloud DRM chiamando `mgr.loadVoucher()`.
+Richiedete una licenza da Primetime Cloud DRM chiamando `mgr.loadVoucher()`.
 
 ## Dettagli richiesta di adesione e risposta{#entitlement-request-and-response-details}
 
