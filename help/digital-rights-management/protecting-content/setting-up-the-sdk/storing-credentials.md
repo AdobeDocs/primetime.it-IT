@@ -21,16 +21,16 @@ Per garantire la sicurezza del contenuto e del server licenze, dovete proteggere
 >
 > Adobe consiglia di utilizzare un HSM per la massima sicurezza.
 >
->Consultate la guida *alle linee guida* per la distribuzione protetta di Adobe Primetime DRM.
+>Vedere la guida *alle linee guida per la distribuzione protetta di Adobe Primetime DRM*.
 
 >[!NOTE]
 >
 >A partire da Java 1.7, Sun Java a 64 bit per Windows non supporta più le interfacce PKCS11 richieste da Primetime DRM per la comunicazione con i dispositivi HSM. Se si intende utilizzare un HSM, è necessario utilizzare una versione a 32 bit di Java, oppure un JDK che supporti le interfacce PKCS11 complete.
 
-È possibile mantenere una chiave privata su un HSM e utilizzare Primetime DRM SDK per trasmettere la credenziale ottenuta dall’HSM. Se si desidera utilizzare una credenziale memorizzata in un HSM, è necessario utilizzare un provider JCE in grado di comunicare con un HSM per ottenere una maniglia per la chiave privata. Quindi dovete passare l&#39;handle di chiave privata, il nome del provider e il certificato a cui è inclusa la chiave pubblica a `ServerCredentialFactory.getServerCredential()`.
+È possibile mantenere una chiave privata su un HSM e utilizzare Primetime DRM SDK per trasmettere la credenziale ottenuta dall’HSM. Se si desidera utilizzare una credenziale memorizzata in un HSM, è necessario utilizzare un provider JCE in grado di comunicare con un HSM per ottenere una maniglia per la chiave privata. Quindi, è necessario passare l&#39;handle di chiave privata, il nome del provider e il certificato che include la chiave pubblica a `ServerCredentialFactory.getServerCredential()`.
 
 Il provider SunPKCS11 rappresenta un esempio di provider JCE che potete utilizzare per accedere a una chiave privata su un HSM. Alcuni HSM sono inclusi anche con un SDK Java fornito con un provider JCE.
 
 Per istruzioni sull&#39;utilizzo di questo provider, consultate la documentazione di Sun Java.
 
-PEM e DER sono metodi per codificare un certificato di chiave pubblica. PEM è una codifica base-64 e DER è una codifica binaria. I file di certificato in genere utilizzano l’estensione [!DNL .cer], [!DNL .pem]o [!DNL .der]. I certificati vengono utilizzati quando è richiesta solo una chiave pubblica. Se un componente richiede solo la chiave pubblica per funzionare, si consiglia di fornire al componente il certificato invece di un file di credenziali o PKCS12.
+PEM e DER sono metodi per codificare un certificato di chiave pubblica. PEM è una codifica base-64 e DER è una codifica binaria. I file di certificato in genere utilizzano l&#39;estensione [!DNL .cer], [!DNL .pem] o [!DNL .der]. I certificati vengono utilizzati quando è richiesta solo una chiave pubblica. Se un componente richiede solo la chiave pubblica per funzionare, si consiglia di fornire al componente il certificato invece di un file di credenziali o PKCS12.
