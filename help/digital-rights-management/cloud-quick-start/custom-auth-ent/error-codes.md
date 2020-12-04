@@ -4,6 +4,9 @@ title: Codici di errore BEES
 uuid: 7b2d0dd1-9a43-47e3-b932-a4eaf784ae7a
 translation-type: tm+mt
 source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+workflow-type: tm+mt
+source-wordcount: '211'
+ht-degree: 0%
 
 ---
 
@@ -12,7 +15,7 @@ source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
 
 <!--<a id="section_81946679E1114DBA9FE173D0AA9E2F09"></a>-->
 
-Se si verifica un errore durante un controllo BEES, `DRMErrorEvent` verrà restituito un errore al client. È possibile analizzare le proprietà dell&#39;evento per ottenere informazioni dettagliate sulla natura dell&#39;errore. Di seguito è riportato un sottoinsieme di possibili codici di errore.
+Se si verifica un errore durante un controllo BEES, viene restituito al client un `DRMErrorEvent`. È possibile analizzare le proprietà dell&#39;evento per ottenere informazioni dettagliate sulla natura dell&#39;errore. Di seguito è riportato un sottoinsieme di possibili codici di errore.
 
 | Errore | Descrizione |
 |---|---|
