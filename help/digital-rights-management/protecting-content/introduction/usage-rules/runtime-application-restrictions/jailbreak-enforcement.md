@@ -13,9 +13,9 @@ ht-degree: 0%
 ---
 
 
-# Esecuzione di Jailbreak (richiede  Adobe Primetime DRM){#jailbreak-enforcement-requires-adobe-primetime-drm}
+# Applicazione della sospensione (richiede  Adobe Primetime DRM){#jailbreak-enforcement-requires-adobe-primetime-drm}
 
-Sulle piattaforme che supportano il rilevamento delle interruzioni di chiamata, come dispositivi mobili Android e iOS, potete abilitare l&#39;imposizione delle interruzioni di chiamata per impedire la riproduzione del contenuto se [!DNL jailbreak/root] è stato rilevato sul dispositivo.
+Sulle piattaforme che supportano il rilevamento delle interruzioni di chiamata, come dispositivi mobili Android e iOS, è possibile abilitare l&#39;imposizione delle interruzioni di chiamata per impedire la riproduzione del contenuto se [!DNL jailbreak/root] è stato rilevato sul dispositivo.
 
 >[!NOTE]
 >
