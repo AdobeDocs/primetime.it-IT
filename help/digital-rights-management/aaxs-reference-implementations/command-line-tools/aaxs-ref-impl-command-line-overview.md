@@ -42,13 +42,13 @@ Il file di configurazione predefinito è [!DNL flashaccesstools.properties]. si 
 
 Il file di configurazione utilizza il formato di file delle proprietà Java. Se i valori di una delle proprietà contengono caratteri speciali, tenere presente le seguenti limitazioni:
 
-* Sbarra rovesciata con una barra rovesciata aggiuntiva. Ad esempio, per specificare il [!DNL C:\credentials.pfx] file, specificarlo come [!DNL C:\\credentials.pfx] o `C:/credentials.pfx`. Per specificare un file su un server di rete, specificare `\\\\server\\folder\\filename.pfx`.
-* Il file di configurazione può contenere solo caratteri Latin-1. Se è necessario utilizzare caratteri non latini-1, utilizzare la sequenza di escape Unicode appropriata (utilizzando, facoltativamente, lo [!DNL native2ascii] strumento fornito con Java).
+* Sbarra rovesciata con una barra rovesciata aggiuntiva. Ad esempio, per specificare il file [!DNL C:\credentials.pfx], specificarlo come [!DNL C:\\credentials.pfx] o `C:/credentials.pfx`. Per specificare un file su un server di rete, specificare `\\\\server\\folder\\filename.pfx`.
+* Il file di configurazione può contenere solo caratteri Latin-1. Se è necessario utilizzare caratteri non latini-1, utilizzare la sequenza di escape Unicode appropriata (utilizzando, facoltativamente, lo strumento [!DNL native2ascii] fornito con Java).
 
 Impostate i valori delle proprietà nel file di configurazione prima di eseguire gli strumenti. Per alcuni strumenti della riga di comando, è possibile impostare i valori di alcune opzioni tramite la riga di comando o il file di configurazione. In questi casi, i valori impostati tramite la riga di comando hanno la precedenza su qualsiasi valore presente nel file di configurazione.
 
-## Installazione degli strumenti della riga di comando  {#installing-the-command-line-tools}
+## Installazione degli strumenti della riga di comando {#installing-the-command-line-tools}
 
-È possibile copiare i file necessari dalla [!DNL \Reference Implementation\Command Line Tools] directory del DVD, che contiene il file di [!DNL flashaccesstools.properties] configurazione predefinito, e una [!DNL libs] directory, che contiene i file JAR per gli strumenti.
+È possibile copiare i file necessari dalla directory [!DNL \Reference Implementation\Command Line Tools] del DVD, che contiene il file di configurazione [!DNL flashaccesstools.properties] predefinito, e una directory [!DNL libs], che contiene i file JAR per gli strumenti.
 
-La [!DNL samples] directory contiene diversi file sorgente Java di esempio che dimostrano l’utilizzo delle API SDK di accesso al Adobe . Per creare ed eseguire gli esempi, utilizzare lo script [!DNL build-samples.xml] Ant.
+La directory [!DNL samples] contiene diversi file sorgente Java di esempio che dimostrano l&#39;utilizzo delle API SDK di accesso al Adobe . Per creare ed eseguire gli esempi, utilizzare lo script [!DNL build-samples.xml] Ant.
