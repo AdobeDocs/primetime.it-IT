@@ -6,11 +6,14 @@ title: Qualità delle statistiche di servizio
 uuid: 8e990461-065b-4efa-b77c-b2b832f86f7d
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '286'
+ht-degree: 0%
 
 ---
 
 
-# Qualità delle statistiche di servizio {#quality-of-service-statistics}
+# Statistiche sulla qualità del servizio {#quality-of-service-statistics}
 
 Quality of Service (QoS) fornisce una visualizzazione dettagliata delle prestazioni del motore video. TVSDK fornisce statistiche dettagliate su riproduzione, buffering e dispositivi.
 
@@ -20,27 +23,27 @@ TVSDK fornisce inoltre informazioni sulle seguenti risorse scaricate:
 * Frammenti di file
 * Informazioni di tracciamento per i file
 
-## Tenere traccia a livello di frammento utilizzando le informazioni sul caricamento {#section_4439D91E8EDC45588EF1D7BE25697350}
+## Tenere traccia a livello di frammento utilizzando le informazioni di caricamento {#section_4439D91E8EDC45588EF1D7BE25697350}
 
-È possibile leggere informazioni sulla qualità del servizio (QoS) relative alle risorse scaricate, come frammenti e tracce, dalla `LoadInformation` classe.
+Dalla classe `LoadInformation` è possibile leggere informazioni sulla qualità del servizio (QoS) relative alle risorse scaricate, come frammenti e tracce.
 
-1. Implementare e registrare il listener di `MediaPlayerEvent.LOAD_INFORMATION_AVAILABLE` eventi.
-1. Chiamata `event.getLoadInformation()` per leggere i dati pertinenti dal `event` parametro passato al callback.
+1. Implementare e registrare il listener di eventi `MediaPlayerEvent.LOAD_INFORMATION_AVAILABLE`.
+1. Chiamate `event.getLoadInformation()` per leggere i dati pertinenti dal parametro `event` passato al callback.
 
    >[!NOTE]
    >
-   >Per ulteriori informazioni `LoadInformation`, consultate [2.7 per i documenti API di Android (Java)](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/index.html) .
+   >Per ulteriori informazioni su `LoadInformation`, vedere [2.7 per i documenti API Android (Java)](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/index.html).
 
-## Lettura delle statistiche relative a riproduzione, buffering e dispositivo QOS {#section_D21722600F324E67A9F06234D338B243}
+## Leggi le statistiche relative a riproduzione, buffering e dispositivo QOS {#section_D21722600F324E67A9F06234D338B243}
 
-Dalla `QOSProvider` classe è possibile leggere le statistiche relative a riproduzione, buffering e dispositivo.
+È possibile leggere le statistiche relative a riproduzione, buffering e dispositivo dalla classe `QOSProvider`.
 
-La `QOSProvider` classe fornisce diverse statistiche, tra cui informazioni sul buffering, i bit rate, i frame rate, i dati temporali e così via. Fornisce inoltre informazioni sul dispositivo, come il produttore, il modello, il sistema operativo, la versione SDK, l&#39;ID dispositivo del produttore e la dimensione/densità dello schermo.
+La classe `QOSProvider` fornisce diverse statistiche, tra cui informazioni sul buffering, i bit rate, i frame rate, i dati temporali e così via. Fornisce inoltre informazioni sul dispositivo, come il produttore, il modello, il sistema operativo, la versione SDK, l&#39;ID dispositivo del produttore e la dimensione/densità dello schermo.
 
 1. Creare un&#39;istanza di un lettore multimediale.
-1. Creare un `QOSProvider` oggetto e associarlo al lettore multimediale.
+1. Create un oggetto `QOSProvider` e collegatelo al lettore multimediale.
 
-   Il `QOSProvider` costruttore prende il contesto di un lettore in modo che possa recuperare informazioni specifiche per il dispositivo.
+   Il costruttore `QOSProvider` prende il contesto di un lettore in modo che possa recuperare informazioni specifiche per il dispositivo.
 
    ```java
    // Create Media Player. 
