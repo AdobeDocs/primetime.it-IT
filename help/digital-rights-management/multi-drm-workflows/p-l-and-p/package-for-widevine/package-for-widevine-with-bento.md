@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Utilizziamo sia il packager Bento4 che il packager offline del Adobe  per creare contenuto DASH crittografato. Bento4 prende come input contenuto mp4 non crittografato.
 
-## Pacchetto dei contenuti con Bento4{#package-your-content-with-bento}
+## Creare pacchetti di contenuti con Bento4{#package-your-content-with-bento}
 
 Il packager Bento4 prevede la pre-frammentazione dell&#39;input mp4. La distribuzione del packager Bento4 include uno strumento per questo.
 
@@ -66,11 +66,11 @@ L&#39;esempio seguente combina gli schemi PlayReady e Widevine. In questo caso p
 
 dove
 
-Il valore del `--encryption-key` flag è nel modulo `<base16 encoded key id>:<base16 encoded encryption key>`.
+Il valore del flag `--encryption-key` è nel formato `<base16 encoded key id>:<base16 encoded encryption key>`.
 
-Il `--widevine-header=provider:intertrust#content_id:2a` flag indica al packager di includere la casella pssh nel manifesto, che TVSDK richiede attualmente per la riproduzione.
+Il flag `--widevine-header=provider:intertrust#content_id:2a` indica al packager di includere la casella postale nel manifesto, che TVSDK richiede attualmente per la riproduzione.
 
-Il valore per `-playready-header` è per l&#39;acquisizione della licenza PlayReady.
+Il valore di `-playready-header` è relativo all&#39;acquisizione della licenza PlayReady.
 
 ## Creare pacchetti con  Adobe Offline Packager {#package-your-content-with-adobe-offline-packager}
 
@@ -92,7 +92,7 @@ http://pr.test.expressplay.com/playready/RightsManager.asmx
 -content_id c595f214d84dc7ecf31a8ebf1b7ddda5
 ```
 
-In questo caso particolare, il packager offline aggiunge sia la protezione del contenuto Widevine che i dati di inizializzazione della protezione del contenuto PlayReady al contenuto DASH di output. Il valore di `-key_file_path` è per una chiave con codifica base64. Il valore di `-playready_LA_URL` è per l&#39;acquisizione della licenza PlayReady.
+In questo caso particolare, il packager offline aggiunge sia la protezione del contenuto Widevine che i dati di inizializzazione della protezione del contenuto PlayReady al contenuto DASH di output. Il valore di `-key_file_path` corrisponde a una chiave con codifica base64. Il valore di `-playready_LA_URL` è relativo all&#39;acquisizione della licenza PlayReady.
 
 L&#39;argomento conf_path punta al file di configurazione che contiene quanto segue:
 
