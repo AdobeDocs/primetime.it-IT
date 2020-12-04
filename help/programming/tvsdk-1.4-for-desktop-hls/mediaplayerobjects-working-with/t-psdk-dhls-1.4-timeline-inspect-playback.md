@@ -1,16 +1,19 @@
 ---
 description: È possibile ottenere una descrizione della cronologia associata all’elemento attualmente selezionato riprodotto da TVSDK. Ciò è particolarmente utile quando l'applicazione visualizza un controllo personalizzato della barra di scorrimento in cui vengono identificate le sezioni di contenuto corrispondenti al contenuto dell'annuncio.
 seo-description: È possibile ottenere una descrizione della cronologia associata all’elemento attualmente selezionato riprodotto da TVSDK. Ciò è particolarmente utile quando l'applicazione visualizza un controllo personalizzato della barra di scorrimento in cui vengono identificate le sezioni di contenuto corrispondenti al contenuto dell'annuncio.
-seo-title: Controllare la timeline di riproduzione
-title: Controllare la timeline di riproduzione
+seo-title: ' Inspect la timeline di riproduzione'
+title: ' Inspect la timeline di riproduzione'
 uuid: 2f903493-2d88-4af2-ac71-36300b49735b
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '251'
+ht-degree: 0%
 
 ---
 
 
-# Controllare la timeline di riproduzione{#inspect-the-playback-timeline}
+#  Inspect la timeline di riproduzione{#inspect-the-playback-timeline}
 
 È possibile ottenere una descrizione della cronologia associata all’elemento attualmente selezionato riprodotto da TVSDK. Ciò è particolarmente utile quando l&#39;applicazione visualizza un controllo personalizzato della barra di scorrimento in cui vengono identificate le sezioni di contenuto corrispondenti al contenuto dell&#39;annuncio.
 
@@ -19,11 +22,11 @@ Di seguito è riportato un esempio di implementazione come mostrato nella scherm
 
 ![](assets/inspect-playback.jpg){width=&quot;368.641pt&quot;}
 
-1. Accedere all&#39; `Timeline` &#39;oggetto nel `MediaPlayer` metodo utilizzando il `get` .
+1. Accedere all&#39;oggetto `Timeline` in `MediaPlayer` utilizzando il metodo `get`.
 
-   La `Timeline` classe racchiude le informazioni correlate al contenuto della cronologia associata all&#39;elemento multimediale attualmente caricato dall&#39; `MediaPlayer` istanza. La `Timeline` classe fornisce l&#39;accesso a una vista di sola lettura della timeline sottostante. La `Timeline` classe fornisce un metodo getter per ottenere tutti `TimelineMarker` gli oggetti posizionati.
+   La classe `Timeline` racchiude le informazioni correlate al contenuto della cronologia associata all&#39;elemento multimediale attualmente caricato dall&#39;istanza `MediaPlayer`. La classe `Timeline` consente di accedere a una vista di sola lettura della timeline sottostante. La classe `Timeline` fornisce un metodo getter per ottenere tutti gli oggetti `TimelineMarker` inseriti.
 
-1. Scorri l’elenco di `TimelineMarkers` e utilizza le informazioni restituite per implementare la timeline.
+1. Iterate l&#39;elenco di `TimelineMarkers` e utilizzate le informazioni restituite per implementare la timeline.
 
        Un oggetto `TimelineMarker` contiene due informazioni:
    
