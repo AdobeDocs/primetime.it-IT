@@ -6,11 +6,14 @@ title: Considerazioni e procedure ottimali
 uuid: e698ae09-280b-4406-a9b8-4f468b7a6b9c
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '348'
+ht-degree: 0%
 
 ---
 
 
-# Considerazioni e procedure ottimali{#considerations-and-best-practices}
+# Considerazioni e best practice{#considerations-and-best-practices}
 
 Per utilizzare TVSDK nel modo più efficace, è necessario prendere in considerazione alcuni dettagli del suo funzionamento e seguire alcune best practice.
 
@@ -18,7 +21,7 @@ Per utilizzare TVSDK nel modo più efficace, è necessario prendere in considera
 
 Ricorda le seguenti informazioni quando utilizzi TVSDK:
 
-* Adobe Primetime al momento non funziona sugli emulatori Android.
+*  Adobe Primetime attualmente non funziona sugli emulatori Android.
 
    Per eseguire il test dovete utilizzare dei dispositivi reali.
 * La riproduzione è supportata solo per il contenuto HTTP Live Streaming (HLS).
@@ -27,7 +30,7 @@ Ricorda le seguenti informazioni quando utilizzi TVSDK:
 * Attualmente, è necessario eseguire la maggior parte delle operazioni API TVSDK sul thread dell&#39;interfaccia utente, che è il thread Android principale.
 
    Le operazioni eseguite correttamente sul thread principale potrebbero generare un errore e uscire quando eseguite su un thread in background.
-* La riproduzione video richiede Adobe Video Engine (AVE). Questo incide su come e quando è possibile accedere alle risorse multimediali:
+* La riproduzione video richiede il motore video  Adobe (AVE). Questo incide su come e quando è possibile accedere alle risorse multimediali:
 
    * I sottotitoli codificati sono supportati nella misura fornita dall’AVE.
    * A seconda della precisione del codificatore, la durata effettiva del supporto codificato potrebbe essere diversa dalle durate registrate nel manifesto della risorsa di flusso.
