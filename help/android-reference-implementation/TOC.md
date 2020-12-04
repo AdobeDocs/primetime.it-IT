@@ -16,10 +16,10 @@ ht-degree: 7%
 # PSDK 1.4 per l&#39;implementazione di riferimento Android {#reference-implementation}
 
 + [Panoramica dell&#39;implementazione di riferimento per Android](home.md)
-+ Implementazione di riferimento Primetime {#reference}
++ Implementazione riferimento Primetime {#reference}
    + [Come utilizzare l&#39;implementazione di riferimento Primetime](ref-implementation/how-to-use-ref-player.md)
    + [Struttura di implementazione di riferimento](ref-implementation/ref-player-structure.md)
-   + Come utilizzare i feature manager {#feature-managers}
+   + Come utilizzare i manager delle funzioni {#feature-managers}
       + [Come utilizzare i feature manager](ref-implementation/using-feature-managers/how-to-use-feature-managers.md)
       + [Creazione di feature manager trasmettendo le informazioni di configurazione a MediaPlayer...](ref-implementation/using-feature-managers/creating-feature-managers.md)
       + [Attivazione o disattivazione delle funzioni tramite ManagerFactory](ref-implementation/using-feature-managers/turning-features-on-off.md)
@@ -44,23 +44,23 @@ ht-degree: 7%
       + [Abilita riproduzione video](implement-video-playback/enable-video-playback.md)
       + [Protezione dei contenuti DRM](implement-video-playback/content-protection.md)
    + [Bitrate multipli](implement-video-playback/mbr.md)
-   + Impostare un lettore per la riproduzione DVR con gli annunci {#dvr}
+   + Impostare un lettore per la riproduzione DVR con annunci {#dvr}
       + [DVR senza inserimento annunci](implement-video-playback/dvr/dvr-without-ad-insertion.md)
       + [DVR con inserimento annunci](implement-video-playback/dvr/dvr-with-ad-insertion.md)
       + [Scelta di un punto di partenza personalizzato per il DVR](implement-video-playback/dvr/dvr-custom-start-point.md)
       + [Impostazione di un&#39;ora di inizio personalizzata nell&#39;implementazione di riferimento](implement-video-playback/dvr/set-custom-start-time-dvr.md)
    + [Visualizzare le statistiche sulla riproduzione e sul dispositivo QoS](implement-video-playback/qos-statistics.md)
-   + Inserire annunci {#insert-ads}
+   + Inserisci annunci {#insert-ads}
       + [Inserimento annunci](insert-ads/ad-insertion.md)
       + [Tipi di inserimento annunci](insert-ads/ad-insertion-types.md)
       + [Aggiunta di pubblicità](insert-ads/add-advertising.md)
       + [Documentazione API correlata](insert-ads/aps-callbacks-ad-insertion.md)
-   + Connessione audio ritardata {#late-binding-audio}
+   + Audio con associazione tardiva {#late-binding-audio}
       + [Panoramica](late-binding-audio/late-binding-audio-overview.md)
       + [Integrare l&#39;audio con binding ritardato](late-binding-audio/aa-enable.md)
       + [Selezionare le tracce audio](late-binding-audio/select-audio-tracks.md)
       + [Documentazione API correlata](late-binding-audio/aa-api-callbacks.md)
-   + Flussi di adesione per l&#39;autenticazione Primetime {#primetime-authentications}
+   + Flussi di adesione di autenticazione Primetime {#primetime-authentications}
       + [Panoramica](paytvpass-entitlement/paytvpass-entitlement-overview.md)
       + [Panoramica di Entitlement Manager](paytvpass-entitlement/entitlement-overvivew.md)
       + [Integrare l&#39;autenticazione Primetime](paytvpass-entitlement/integrate-pass.md)
