@@ -1,24 +1,27 @@
 ---
-description: Potete utilizzare le funzioni del sistema DRM (Digital Rights Management) di Primetime per fornire un accesso protetto ai contenuti video. In alternativa, puoi utilizzare soluzioni DRM di terze parti come alternativa alla soluzione integrata di Adobe.
-seo-description: Potete utilizzare le funzioni del sistema DRM (Digital Rights Management) di Primetime per fornire un accesso protetto ai contenuti video. In alternativa, puoi utilizzare soluzioni DRM di terze parti come alternativa alla soluzione integrata di Adobe.
+description: Potete utilizzare le funzioni del sistema Digital Rights Management Primetime (DRM) per fornire un accesso sicuro ai contenuti video. In alternativa, potete utilizzare soluzioni DRM di terze parti come alternativa  soluzione integrata  Adobe.
+seo-description: Potete utilizzare le funzioni del sistema Digital Rights Management Primetime (DRM) per fornire un accesso sicuro ai contenuti video. In alternativa, potete utilizzare soluzioni DRM di terze parti come alternativa  soluzione integrata  Adobe.
 seo-title: DRM Widevine
 title: DRM Widevine
 uuid: 3a5fd786-4319-4e92-83b6-0f5328df6a44
 translation-type: tm+mt
 source-git-commit: 0271af21b74e80455ddb2c53571cd75f3a0f56ba
+workflow-type: tm+mt
+source-wordcount: '325'
+ht-degree: 0%
 
 ---
 
 
 # DRM Widevine {#widevine-drm}
 
-Potete utilizzare le funzioni del sistema DRM (Digital Rights Management) di Primetime per fornire un accesso protetto ai contenuti video. In alternativa, puoi utilizzare soluzioni DRM di terze parti come alternativa alla soluzione integrata di Adobe.
+Potete utilizzare le funzioni del sistema Digital Rights Management Primetime (DRM) per fornire un accesso sicuro ai contenuti video. In alternativa, potete utilizzare soluzioni DRM di terze parti come alternativa  soluzione integrata  Adobe.
 
-Per informazioni aggiornate sulla disponibilità di soluzioni DRM di terze parti, contattate il vostro rappresentante Adobe.
+Per informazioni aggiornate sulla disponibilità di soluzioni DRM di terze parti, contattate il rappresentante del Adobe .
 
 <!--<a id="section_1385440013EF4A9AA45B6AC98919E662"></a>-->
 
-È possibile utilizzare il DRM Widevine nativo Android con flussi CMAF HLS.
+Potete utilizzare il DRM Widevine nativo Android con flussi CMAF HLS.
 
 >[!NOTE]
 >
@@ -39,7 +42,7 @@ Map<String, String> requestProperties)
 
 ### Argomenti {#arguments-license-server}
 
-* `drm` - `"com.widevine.alpha"` per Widevine.
+* `drm` -  `"com.widevine.alpha"` per Widevine.
 
 * `licenseServerURL` - L&#39;URL del server licenze Widevine che riceve le richieste di licenza.
 
@@ -55,7 +58,7 @@ DRMManager.setProtectionData(
   null);
 ```
 
-## Fornire un callback personalizzato {#custom-callback}
+## Fornire una callback personalizzata {#custom-callback}
 
 Chiama la seguente `com.adobe.mediacore.drm.DRMManager` API prima di caricare la risorsa MediaPlayer.
 
@@ -66,13 +69,13 @@ MediaDrmCallback callback)
 
 ### Argomenti {#arguments-custom-callback}
 
-* `callback` - implementazione personalizzata di MediaDrmCallback da utilizzare invece del valore predefinito `com.adobe.mediacore.drm.WidevineMediaDrmCallback`.
+* `callback` - implementazione personalizzata di MediaDrmCallback da utilizzare invece del valore predefinito  `com.adobe.mediacore.drm.WidevineMediaDrmCallback`.
 
-Per informazioni dettagliate, consultate la documentazione [API TVSDK 3.11 per](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.11/index.html)Android.
+Per informazioni dettagliate, consultate [Documentazione API TVSDK 3.11 per Android](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.11/index.html).
 
 ## Recupera casella PSSH della risorsa MediaPlayer caricata corrente {#pssh-box-mediaplayer-resoource}
 
-Chiama la seguente `com.adobe.mediacore.drm.DRMManager` API, preferibilmente nell’implementazione di callback personalizzata.
+Chiama la seguente `com.adobe.mediacore.drm.DRMManager` API, preferibilmente nell&#39;implementazione di callback personalizzata.
 
 ```java
 public static byte[] getPSSH()
