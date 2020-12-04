@@ -6,11 +6,14 @@ title: Skinning del lettore
 uuid: 516ff846-d76d-4062-b64b-3032f7a70470
 translation-type: tm+mt
 source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+workflow-type: tm+mt
+source-wordcount: '1449'
+ht-degree: 0%
 
 ---
 
 
-# Skinning del lettore {#skinning-the-player}
+# Skin del lettore {#skinning-the-player}
 
 È possibile utilizzare le informazioni seguenti per facilitare l&#39;incarnato del lettore. Per ciascun costrutto visivo, i comportamenti corrispondenti sono indicati nel comportamento predefinito.
 
@@ -18,13 +21,13 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
 >
 >I dettagli di associazione in questo documento riguardano gli elementi dell&#39;interfaccia utente predefiniti creati dal framework dell&#39;interfaccia utente. Se il lettore ha modificato questi elementi, è necessario modificare anche gli elementi di skinning.
 
-## Contenitore subacqueo {#section_99B0D598219D4150B57E97D5381B118F}
+## Contenitore div {#section_99B0D598219D4150B57E97D5381B118F}
 
 Di seguito sono riportati gli stili per i div contenitore:
 
 >[!TIP]
 >
->Questi div sono elencati nel `common-styles.css` file.
+>Questi div sono elencati nel file `common-styles.css`.
 
 Di seguito sono riportati gli stili per il div principale:
 
@@ -89,7 +92,7 @@ Di seguito sono riportati gli stili per i controlli di lettore generici:
 
 >[!TIP]
 >
->Questi stili sono elencati nel `default-controls.css` file.
+>Questi stili sono elencati nel file `default-controls.css`.
 
 <table id="table_0ACB6BAB5DAD42DBBD18CA7C0385A261"> 
  <thead> 
@@ -234,11 +237,11 @@ Di seguito sono riportati gli stili per il pulsante Riproduci/Pausa:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> ptp-btn-playpause.pause-state</span> </td>
-   <td colname="col2"> <p><span class="codeph"> ptp-btn-playpause</span> nello stato di pausa </p> </td>
+   <td colname="col2"> <p><span class="codeph"> ptp-btn-</span> playpausin stato di pausa </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> ptp-btn-playpause.pause-state</span> </td> 
-   <td colname="col2"> <p><span class="codeph"> ptp-btn-playpause</span> nello stato di riproduzione </p> </td>
+   <td colname="col2"> <p><span class="codeph"> ptp-btn-</span> playpausin stato di riproduzione </p> </td>
   </tr>
  </tbody>
 </table>
@@ -330,7 +333,7 @@ Di seguito è riportato lo stile del pulsante Riavvolgi:
 
 Il comportamento predefinito è `rewindButtonBehavior`.
 
-## Time {#section_0E6549B3DF6D4C10947D445A5F8EEA7F}
+## Tempo {#section_0E6549B3DF6D4C10947D445A5F8EEA7F}
 
 Di seguito è riportato lo stile per visualizzare il tempo rimanente sulla barra di controllo:
 
@@ -393,7 +396,7 @@ Di seguito è riportato lo stile del pulsante Riavvolgi lentamente:
 
 Il comportamento predefinito è `slowRewindButtonBehavior`.
 
-## Lento in avanti {#section_92ACF092EECC4A5EAF6AA090C05E552E}
+## Avanti lento {#section_92ACF092EECC4A5EAF6AA090C05E552E}
 
 Di seguito è riportato lo stile del pulsante Avanti lento:
 
@@ -414,7 +417,7 @@ Di seguito è riportato lo stile del pulsante Avanti lento:
 
 Il comportamento predefinito è `slowForwardButtonBehavior`.
 
-## Avanzamento rapido {#section_F90ED8B3739B49ACAB1F12DF18F0E4D6}
+## Avanti veloce {#section_F90ED8B3739B49ACAB1F12DF18F0E4D6}
 
 Di seguito è riportato lo stile del pulsante Avanti rapido:
 
@@ -477,7 +480,7 @@ Di seguito sono riportati gli stili per configurare la traccia audio:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-audio-track-selection-header</span> </td>
-   <td colname="col2"> <p>L’intestazione del pannello <span class="codeph"></span>ptp-audio-track-selection. </p> </td>
+   <td colname="col2"> <p>Intestazione del <span class="codeph"> ptp-audio-track-selection-panel</span>. </p> </td>
   </tr>
   <tr>
    <td colname="col1"> <p><b>Menu di selezione della traccia audio (N)</b> </p> </td>
@@ -485,7 +488,7 @@ Di seguito sono riportati gli stili per configurare la traccia audio:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-audio-track-selection-menu</span> </td>
-   <td colname="col2"> <p>Le voci di menu nel pannello <span class="codeph"></span>ptp-audio-track-selection. </p> </td>
+   <td colname="col2"> <p>Le voci di menu nel <span class="codeph"> ptp-audio-track-selection-panel</span>. </p> </td>
   </tr>
  </tbody>
 </table>
@@ -508,7 +511,7 @@ Di seguito sono riportati gli stili per configurare la condivisione:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-btn-share-video</span> </td> 
-   <td colname="col2"> <p>Pulsante di condivisione social media nella barra di controllo che consente di aprire il pannello <span class="codeph"></span>ptp-share-video. </p> </td>
+   <td colname="col2"> <p>Pulsante di condivisione social media nella barra di controllo che si aprirà <span class="codeph"> ptp-share-video-panel</span>. </p> </td>
   </tr>
   <tr>
    <td colname="col1">Il comportamento predefinito è <span class="codeph"> shareVideoButtonBehavior</span>. </td>
@@ -531,11 +534,11 @@ Di seguito sono riportati gli stili per configurare la condivisione:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-audio-track-selection-header</span> </td>
-   <td colname="col2"> <p>L’intestazione del pannello <span class="codeph"></span>ptp-audio-track-selection. </p> </td>
+   <td colname="col2"> <p>Intestazione del <span class="codeph"> ptp-audio-track-selection-panel</span>. </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .share-video-panel-menu</span> </td>
-   <td colname="col2"> <p>Il menu nel <span class="codeph"> ptp-share-video-panel</span> che visualizza tutte le opzioni per condividere i contenuti sui social media. </p> </td>
+   <td colname="col2"> <p>Il menu in <span class="codeph"> ptp-share-video-panel</span> che visualizza tutte le opzioni per condividere il contenuto sui social media. </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-share-video-panel-menu-item</span> </td>
@@ -578,7 +581,7 @@ Di seguito sono riportati gli stili per configurare i sottotitoli codificati:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-btn-closed-caption</span> </td>
-   <td colname="col2"> <p>Pulsante <span class="uicontrol"> Sottotitoli</span> codificati nella barra di controllo. </p> </td>
+   <td colname="col2"> <p>Il pulsante <span class="uicontrol"> Sottotitoli codificati</span> nella barra di controllo. </p> </td>
   </tr>
   <tr>
    <td colname="col1">Il comportamento predefinito è <span class="codeph"> closedCaptionButtonBehavior</span>. </td>
@@ -606,10 +609,10 @@ Di seguito sono riportati gli stili per configurare i sottotitoli codificati:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-closed-caption-language-panel:</span> </td>
-   <td colname="col2"> <p>L’intestazione del pannello <span class="codeph"></span>ptp-audio-track-selection. </p> </td>
+   <td colname="col2"> <p>Intestazione del <span class="codeph"> ptp-audio-track-selection-panel</span>. </p> </td>
   </tr>
   <tr>
-   <td colname="col1"><span class="codeph"> .ptp-closed-caption-language-menu: </span> </td>
+   <td colname="col1"><span class="codeph"> .ptp-closed-caption-language-menu:  </span> </td>
    <td colname="col2"> <p>Il menu nel pannello dei sottotitoli codificati. </p> </td>
   </tr>
   <tr>
@@ -618,7 +621,7 @@ Di seguito sono riportati gli stili per configurare i sottotitoli codificati:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-closed-caption-options-btn</span> </td>
-   <td colname="col2"> <p>Pulsante <span class="uicontrol"> Opzioni</span> nel pannello delle opzioni dei sottotitoli. </p> </td>
+   <td colname="col2"> <p>Il pulsante <span class="uicontrol"> Options</span> nel pannello delle opzioni dei sottotitoli. </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-closed-caption-options-panel</span> </td>
@@ -634,7 +637,7 @@ Di seguito sono riportati gli stili per configurare i sottotitoli codificati:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-closed-caption-done-btn</span> </td> 
-   <td colname="col2"> <p>Il pulsante <span class="uicontrol"> Fine</span> nell’intestazione del pannello delle opzioni dei sottotitoli codificati. </p> </td> 
+   <td colname="col2"> <p>Il pulsante <span class="uicontrol"> Fine</span> nell'intestazione del pannello delle opzioni dei sottotitoli codificati. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-closed-caption-options-menu</span> </td> 
@@ -658,7 +661,7 @@ Di seguito sono riportati gli stili per configurare i sottotitoli codificati:
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-closed-caption-options-menu-item</span> </td> 
-   <td colname="col2"> <p>Voce di menu <span class="uicontrol"> Opzioni</span> didascalia chiusa. </p> </td> 
+   <td colname="col2"> <p>La voce di menu della didascalia <span class="uicontrol"> Options</span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-closed-caption-preview-panel</span> </td> 
@@ -670,7 +673,7 @@ Di seguito sono riportati gli stili per configurare i sottotitoli codificati:
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-closed-caption-options-reset-button</span> </td> 
-   <td colname="col2"> <p>Il pulsante <span class="uicontrol"> Ripristina</span> nel piè di pagina del pannello delle opzioni dei sottotitoli codificati. </p> </td> 
+   <td colname="col2"> <p>Il pulsante <span class="uicontrol"> Reset</span> nel piè di pagina del pannello delle opzioni dei sottotitoli codificati. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-closed-caption-options-apply-button</span> </td> 
@@ -696,11 +699,11 @@ Di seguito sono riportati gli stili per configurare opzioni aggiuntive:
  <tbody> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-btn-more-options</span> </td> 
-   <td colname="col2"> <p>Pulsante <span class="uicontrol"> Altre opzioni</span> . </p> </td> 
+   <td colname="col2"> <p>Il pulsante <span class="uicontrol"> Altre opzioni</span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-btn-more-options.ptp-control-bar-btn</span> </td> 
-   <td colname="col2"> <p>Le opzioni <span class="codeph"> ptp-btn-more</span> utilizzate nella barra di controllo. </p> </td> 
+   <td colname="col2"> <p><span class="codeph"> ptp-btn-more-options</span> utilizzati nella barra di controllo. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-more-options-control-panel</span> </td> 
@@ -721,7 +724,7 @@ Il comportamento predefinito è `moreOptionsButtonBehavior`.
 
 ## Pulsante PIP (W) {#section_1EE039DEA99541D391B30BD1DF72A83E}
 
-Stile del [!UICONTROL PIP<] pulsante:
+Di seguito è riportato lo stile del pulsante [!UICONTROL PIP<]:
 
 <table id="table_EE2E882C87E24D39B8D5347686F29E55"> 
  <thead> 
@@ -756,14 +759,14 @@ Di seguito è riportato lo stile per configurare lo schermo intero:
  <tbody> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-btn-fullscreen</span> </td> 
-   <td colname="col2"> <p>Pulsante <span class="uicontrol"> Schermo</span> intero sulla barra di controllo. </p> </td> 
+   <td colname="col2"> <p>Il pulsante <span class="uicontrol"> Schermo intero</span> sulla barra di controllo. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 Il comportamento predefinito è `fullScreenButtonBehavior`.
 
-## Riproduzione mattoni (Y) {#section_AE6F83BB7EE2497FB13CD94A8316192D}
+## Riproduzione dei mattoni (Y) {#section_AE6F83BB7EE2497FB13CD94A8316192D}
 
 Di seguito è riportato lo stile per configurare il trucco:
 
@@ -798,7 +801,7 @@ Di seguito è riportato lo stile per configurare la visualizzazione multipla:
  <tbody> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-btn-multiview</span> </td> 
-   <td colname="col2"> <p>Il pulsante <span class="uicontrol"> Visualizzazione</span> multipla sulla barra di controllo e lo stato iniziale del pulsante <span class="uicontrol"> Visualizzazione</span> multipla. </p> </td> 
+   <td colname="col2"> <p>Il pulsante <span class="uicontrol"> MultiView</span> sulla barra di controllo e lo stato iniziale del pulsante <span class="uicontrol"> Multiview</span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1">Il comportamento predefinito è <span class="codeph"> multiViewButtonBehavior</span>. </td> 
@@ -900,11 +903,11 @@ Di seguito è riportato lo stile del pulsante Avanti rapido:
       <li id="li_FDF2CEDB0A854098907FF9CBCF1A61C1"><span class="codeph"> .ptp-btn-slow-forward</span> </li> 
       <li id="li_CD2E14DB3DD64C10A253DA23FBE04A04"><span class="codeph"> .ptp-btn-slow-forward</span> </li> 
       <li id="li_A230359E8F7F4571A9EBFF0E4C2462D7"><span class="codeph"> .ptp-btn-slow rewind</span> </li> 
-      <li id="li_5711A315872F4FA59FDDF0EF0AFD03C6"><span class="codeph"> .ptp-btn-more-options </span> </li> 
+      <li id="li_5711A315872F4FA59FDDF0EF0AFD03C6"><span class="codeph"> .ptp-btn-more-options  </span> </li> 
       <li id="li_71C8E76077A84ED590160AB5ABFCC0D7"><span class="codeph"> .ptp-btn-share-video</span> </li> 
-      <li id="li_4A3113C0360F4F708AAA96AB316FA057"><span class="codeph"> .ptp-btn-closed-caption </span> </li> 
+      <li id="li_4A3113C0360F4F708AAA96AB316FA057"><span class="codeph"> .ptp-btn-closed-caption  </span> </li> 
       <li id="li_901A0186D65A48A1B774DC555CEC5367"><span class="codeph"> .ptp-btn-audio-track</span> </li> 
-      <li id="li_2331583C01C2482B8EE72979FBF111DB"><span class="codeph"> .ptp-btn-pip </span> </li> 
+      <li id="li_2331583C01C2482B8EE72979FBF111DB"><span class="codeph"> .ptp-btn-pip  </span> </li> 
       <li id="li_7BB39BDF5E294AEB8FA3DCD9F9A29468"><span class="codeph"> .ptp-btn-rewind</span> </li> 
       <li id="li_E4FEF5A7486A40F6A5FE1119BD63AFEF"><span class="codeph"> .ptp-scrub-bar</span> </li> 
       <li id="li_12153547558A4871842EE0416BCCA8B2"><span class="codeph"> .ptp-search-to-bar</span> </li> 
@@ -924,7 +927,7 @@ Di seguito è riportato lo stile del pulsante Avanti rapido:
    <td colname="col1"><span class="codeph"> .fullscreen-state</span> </td> 
    <td colname="col2"> <p>Il lettore è in modalità a schermo intero. </p> <p>Si applica a quanto segue: 
      <ul id="ul_B235C1D339F64B2FAC6BC72F03807616"> 
-      <li id="li_6E050EE74C604FDAB4C9C0447F547A9D"><span class="codeph"> .ptp-control-bar </span> </li> 
+      <li id="li_6E050EE74C604FDAB4C9C0447F547A9D"><span class="codeph"> .ptp-control-bar  </span> </li> 
       <li id="li_67D54B1A41764B2DA544479CDA1C901C"><span class="codeph"> .ptp-btn-fullscreen</span> </li> 
      </ul> </p> </td> 
   </tr> 
