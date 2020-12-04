@@ -6,15 +6,18 @@ title: API SEES Public
 uuid: f3a17d61-04ee-4bdb-9d64-a98066c6d1c8
 translation-type: tm+mt
 source-git-commit: 15403abbd53486e1faa2146cda83f41bd8116632
+workflow-type: tm+mt
+source-wordcount: '179'
+ht-degree: 0%
 
 ---
 
 
-# API SEES Public {#sees-public-api}
+# SEGUE API pubblica {#sees-public-api}
 
 La richiesta e la risposta di adesione vengono trasmesse tramite una connessione SSL reciprocamente autenticata tra il server licenze e il servizio di adesione del cliente.
 
-Lo schema URI HTTPS ( [https://tools.ietf.org/html/rfc7230#section-2.7.2](https://tools.ietf.org/html/rfc7230#section-2.7.2)) viene utilizzato per definire l&#39;endpoint di adesione e per la richiesta viene utilizzato il metodo di richiesta HTTP POST ( [https://tools.ietf.org/html/rfc7231#section-4.3.3](https://tools.ietf.org/html/rfc7231#section-4.3.3)). L&#39;endpoint di adesione, così come un flag che indica l&#39;adesione back-end, è obbligatorio e deve essere incluso nel criterio al momento della creazione del pacchetto.
+Per definire l&#39;endpoint di adesione viene utilizzato lo schema URI HTTPS ( [https://tools.ietf.org/html/rfc7230#section-2.7.2](https://tools.ietf.org/html/rfc7230#section-2.7.2)), mentre per la richiesta viene utilizzato il metodo di richiesta POST HTTP ( [https://tools.ietf.org/html/rfc7231#section-4.3.3](https://tools.ietf.org/html/rfc7231#section-4.3.3)). L&#39;endpoint di adesione, così come un flag che indica l&#39;adesione back-end, è obbligatorio e deve essere incluso nel criterio al momento della creazione del pacchetto.
 
 ## Richiesta di adesione {#section_BFBFEF0795CA46D6842C479256B95F95}
 
