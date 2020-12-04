@@ -6,11 +6,14 @@ title: Riepilogo degli eventi del lettore Primetime
 uuid: ed3be4c2-8df3-4d96-a30b-74c196262798
 translation-type: tm+mt
 source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+workflow-type: tm+mt
+source-wordcount: '632'
+ht-degree: 0%
 
 ---
 
 
-# Riepilogo degli eventi del lettore Primetime {#primetime-player-events-summary-overview}
+# Riepilogo eventi del lettore Primetime {#primetime-player-events-summary-overview}
 
 L’applicazione può monitorare l’attività nel lettore e lo stato di modifica del lettore ascoltando gli eventi inviati da TVSDK.
 
@@ -20,7 +23,7 @@ TVSDK avvisa quando si verificano eventi ai quali l’applicazione deve risponde
 
 >[!TIP]
 >
->I codici evento sono le costanti dell&#39; `MediaPlayerEvent` enum.
+>I codici evento sono le costanti dell&#39;enum `MediaPlayerEvent`.
 
 ## AdBreakCompletedEventListener {#section_D7A74A4EACA44E54806D040491B7D879}
 
@@ -222,7 +225,7 @@ TVSDK avvisa quando si verificano eventi ai quali l’applicazione deve risponde
 
 * ** Codice evento ** `RESERVATION_REACHED`
 
-## SeekBeginEventListener {#section_749E02ED2B1647438F50224C85260A1D}
+## CercaBeginEventListener {#section_749E02ED2B1647438F50224C85260A1D}
 
 * ** Significato ** Operazione di ricerca avviata.
 
@@ -230,7 +233,7 @@ TVSDK avvisa quando si verificano eventi ai quali l’applicazione deve risponde
 
 * ** Codice evento ** `SEEK_BEGIN`
 
-## SeekEndEventListener {#section_4F70BAD695AF4717B2254D9DBA1071E4}
+## CercaEndEventListener {#section_4F70BAD695AF4717B2254D9DBA1071E4}
 
 * ** Significato ** L&#39;operazione di ricerca è terminata.
 
