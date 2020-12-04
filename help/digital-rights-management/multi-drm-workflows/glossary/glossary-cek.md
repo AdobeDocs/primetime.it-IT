@@ -2,6 +2,9 @@
 uuid: 2d927ae8-4c4b-4b64-88b8-9c86430e226c
 translation-type: tm+mt
 source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+workflow-type: tm+mt
+source-wordcount: '225'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +35,7 @@ Il CEK stesso può essere memorizzato in un sistema di gestione chiave e cifrato
 Alcune chiamate utilizzano sia CEK che CEK Storage ID CEKSID, mentre il CEK recuperato dall’archivio deve corrispondere al CEK fornito nella chiamata.
 Per HLS Offline con FairPlay, esiste anche un `persistentContentKey` che può essere impostato per scadere.
 
-## ID archiviazione chiave di crittografia del contenuto {#content-encryption-key-storage-id}
+## ID archiviazione chiave di crittografia contenuto {#content-encryption-key-storage-id}
 
 L&#39;ID di archiviazione della chiave di crittografia dei contenuti (CEKSID) è un ID per il recupero di una chiave di crittografia dei contenuti da un sistema di gestione delle chiavi.
 
