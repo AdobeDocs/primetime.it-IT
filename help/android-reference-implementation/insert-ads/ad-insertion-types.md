@@ -6,6 +6,9 @@ title: Tipi di inserimento annunci
 uuid: 6b5c3555-1ddd-4215-8bb2-03d16bb818c5
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '270'
+ht-degree: 0%
 
 ---
 
@@ -26,19 +29,19 @@ Supporta i seguenti tipi di flussi di lavoro di inserimento di annunci per VOD e
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> Annunci pubblicitari di Adobe Primetime </td> 
+   <td colname="col1">  annunci pubblicitari su Adobe Primetime </td> 
    <td colname="col2">VOD <p>Live </p> <p>Linear </p> </td> 
-   <td colname="col3">L'implementazione di riferimento fornisce informazioni <span class="codeph"> AuditudeMetadata</span> per connettersi al server per la decisione degli annunci Primetime (in precedenza denominata Auditude), sulla base delle informazioni fornite nella parte</a> degli annunci Primetime del file</a>di configurazione JSON. </td> 
+   <td colname="col3">L'implementazione di riferimento fornisce <span class="codeph"> AuditudeMetadata</span> informazioni per la connessione al server per la decisione di annunci Primetime (precedentemente nota come Auditude), sulla base delle informazioni fornite nella porzione di annunci Primetime</a> del file di configurazione JSON</a>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Interruzioni annuncio dirette </td> 
    <td colname="col2"> VOD </td> 
-   <td colname="col3">Devi fornire gli URL degli annunci nel file JSON di input. Quando TVSDK tenta di risolvere un annuncio, chiama il risolutore di interruzioni pubblicitarie dirette e risolve gli annunci in base alle informazioni di interruzioni pubblicitarie dirette fornite nel file</a>di configurazione JSON. </td> 
+   <td colname="col3">Devi fornire gli URL degli annunci nel file JSON di input. Quando TVSDK tenta di risolvere un annuncio, chiama il risolutore di interruzioni pubblicitarie dirette e risolve gli annunci in base alle informazioni di interruzioni pubblicitarie dirette fornite nel file di configurazione JSON</a>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Indicatori di annunci personalizzati </td> 
    <td colname="col2"> VOD </td> 
-   <td colname="col3">I marcatori di annunci personalizzati sono utili quando il flusso video contiene sia il contenuto principale che gli annunci, ma non include informazioni relative alle posizioni e ai tempi degli annunci. Se le informazioni sul posizionamento dell’annuncio vengono ottenute in un altro modo, ad esempio tramite un CMS esterno, potete definire indicatori di annunci personalizzati e passarli alla timeline del lettore. <p>Per impostare un lettore per l'inserimento di annunci, è necessario trasmettere i metadati degli annunci nella sezione dei metadati degli annunci personalizzati del file</a>di configurazione JSON, che dispone di un'implementazione ad provider di supporto nell'implementazione di riferimento. </p> </td>
+   <td colname="col3">I marcatori di annunci personalizzati sono utili quando il flusso video contiene sia il contenuto principale che gli annunci, ma non include informazioni relative alle posizioni e ai tempi degli annunci. Se le informazioni sul posizionamento dell’annuncio vengono ottenute in un altro modo, ad esempio tramite un CMS esterno, potete definire indicatori di annunci personalizzati e passarli alla timeline del lettore. <p>Per impostare un lettore per l'inserimento di annunci, è necessario trasmettere i metadati degli annunci nella sezione dei metadati degli annunci personalizzati del file di configurazione JSON</a>, che dispone di un'implementazione del provider di annunci di supporto nell'implementazione di riferimento. </p> </td>
   </tr>
  </tbody>
 </table>
