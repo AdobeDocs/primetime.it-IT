@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Apple FairPlay nelle applicazioni TVSDK  {#apple-fairplay-in-tvsdk-applications}
+# Apple FairPlay nelle applicazioni TVSDK {#apple-fairplay-in-tvsdk-applications}
 
 Per implementare FairPlay Streaming nella tua app TVSDK, devi scrivere un Resource Loader, che invia una richiesta di acquisizione della licenza al tuo server FairPlay Streaming.
 
@@ -31,17 +31,17 @@ https://fp-gen.service.expressplay.com
 
 Resource Loader formatta la richiesta e allega un token ExpressPlay che autorizza la riproduzione all&#39;URL. Quando si acquisisce il token ExpressPlay, è possibile considerare diverse opzioni. Queste opzioni sono determinate dalla modalità di creazione del pacchetto del contenuto.
 
-Quando create il pacchetto del contenuto, il packager inserisce `skd:` gli URL nel manifesto M3U8. Dopo la `skd:` voce, è possibile inserire qualsiasi dato nel manifesto. È possibile utilizzare questi dati nel codice dell&#39;applicazione per completare le attività elencate sopra. Ad esempio, potete utilizzare `skd:{content_id}` in modo che l&#39;app possa determinare l&#39;ID del contenuto in corso di riproduzione e richiedere un token per quel contenuto specifico. Potete anche utilizzare, ad esempio, `skd:{entitlement_server_url}?cid={content_id}`in modo che l&#39;app non debba avere l&#39;URL del server di adesione hardcoded.
+Quando create il pacchetto del contenuto, il packager inserisce gli URL `skd:` nel manifesto M3U8. Dopo la voce `skd:`, è possibile inserire qualsiasi dato nel manifesto. È possibile utilizzare questi dati nel codice dell&#39;applicazione per completare le attività elencate sopra. Ad esempio, potete utilizzare `skd:{content_id}` in modo che l&#39;app possa determinare l&#39;ID del contenuto in corso di riproduzione e richiedere un token per quel contenuto specifico. Potete anche utilizzare `skd:{entitlement_server_url}?cid={content_id}`, in modo che l&#39;app non debba avere l&#39;URL del server di adesione hardcoded.
 
-Potrebbe non essere necessaria alcuna informazione nell’ `skd:` URL se, all’avvio della riproduzione, conoscete già l’ID contenuto attraverso altri canali. Il secondo esempio è una soluzione ideale per testare la configurazione, ma è anche possibile utilizzarla in un ambiente di produzione.
+Potrebbe non essere necessario inserire informazioni nell&#39;URL `skd:` se, all&#39;avvio della riproduzione, si conosce già l&#39;ID contenuto attraverso altri canali. Il secondo esempio è una soluzione ideale per testare la configurazione, ma è anche possibile utilizzarla in un ambiente di produzione.
 
 >[!TIP]
 >
 >È possibile determinare il formato di `skd:`.
 
-Il contenuto viene ottenuto utilizzando il `skd:` protocollo, ma la richiesta di licenza viene utilizzata `https:`. Le opzioni più comuni per gestire questi protocolli sono:
+Il contenuto viene ottenuto utilizzando il protocollo `skd:`, ma la richiesta di licenza utilizza `https:`. Le opzioni più comuni per gestire questi protocolli sono:
 
-* **Test iniziale della riproduzione** end-to-end Quando create il pacchetto del contenuto, selezionate un `skd:` URL. Durante il test dell&#39;app, acquisite manualmente una licenza da ExpressPlay e codificate la licenza (un `https:` URL) e l&#39;URL del contenuto nel caricatore.
+* **Test iniziale della** riproduzione end-to-endQuando create il pacchetto del contenuto, selezionate un  `skd:` URL. Durante il test dell&#39;app, acquisite manualmente una licenza da ExpressPlay e codificate la licenza (un URL `https:`) e l&#39;URL del contenuto nel caricatore.
 
    Ad esempio:
 
@@ -53,7 +53,7 @@ Il contenuto viene ottenuto utilizzando il `skd:` protocollo, ma la richiesta di
        ExpressPlayToken={copy_your_token_to_here}";
    ```
 
-* **Nella maggior parte degli altri casi** , quando create il pacchetto del contenuto, selezionate un `skd:` URL che rappresenti in modo univoco l’ID del contenuto. Nel caricatore, analizzate l’ `skd:` URL, inviatelo al server per acquisire un token e utilizzate il token risultante come URL.
+* **La maggior parte degli altri** casiQuando create il pacchetto del contenuto, selezionate un  `skd:` URL che rappresenti in modo univoco l’ID del contenuto. Nel caricatore, analizzate l&#39; `skd:` URL, inviatelo al server per acquisire un token e utilizzate il token risultante come URL.
 
    Ad esempio:
 
@@ -151,25 +151,25 @@ Il contenuto viene ottenuto utilizzando il `skd:` protocollo, ma la richiesta di
    }
    ```
 
-## Abilitare Apple FairPlay nelle applicazioni TVSDK{#enable-apple-fairplay-in-tvsdk-applications}
+## Abilita Apple FairPlay nelle applicazioni TVSDK{#enable-apple-fairplay-in-tvsdk-applications}
 
 Potete implementare Apple FairPlay Streaming, che è la soluzione DRM di Apple, nelle vostre applicazioni TVSDK.
 
 1. Crea il caricatore di risorse cliente FairPlay implementando `PTAVAssetResourceLoaderDelegate`.
 
-   Per ulteriori informazioni, consultate [Apple FairPlay nelle applicazioni](../../../tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/c-psdk-ios-1.4-apple-fairplay-tvsdk/c-psdk-ios-1.4-apple-fairplay-tvsdk.md)TVSDK.
+   Per ulteriori informazioni, consultate [Apple FairPlay in applicazioni TVSDK](../../../tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/c-psdk-ios-1.4-apple-fairplay-tvsdk/c-psdk-ios-1.4-apple-fairplay-tvsdk.md).
 
    >[!NOTE]
    >
-   >Accertatevi di seguire le istruzioni riportate nella guida *al programma* FairPlay Streaming ( *FairPlayStreaming_PG.pdf*), inclusa nell’SDK per server [FairPlay per lo sviluppo di un’app](https://developer.apple.com/services-account/download?path=/Developer_Tools/FairPlay_Streaming_SDK/FairPlay_Streaming_Server_SDK.zip)in base a FPS.
+   >Assicurati di seguire le istruzioni riportate nella *Guida al programma di streaming FairPlay* ( *FairPlayStreaming_PG.pdf*), inclusa in [FairPlay Server SDK per lo sviluppo di un&#39;app in base a FPS](https://developer.apple.com/services-account/download?path=/Developer_Tools/FairPlay_Streaming_SDK/FairPlay_Streaming_Server_SDK.zip)).
 
-   Il `resourceLoader:shouldWaitForLoadingOfRequestedResource` metodo è equivalente a quello presente in `AVAssetResourceLoaderDelegate`.
+   Il metodo `resourceLoader:shouldWaitForLoadingOfRequestedResource` equivale a quello presente in `AVAssetResourceLoaderDelegate`.
 
    >[!IMPORTANT]
    >
-   >Nello scenario del server licenze ExpressPlay, per riprodurre contenuto, modificate lo schema URL nell’URL della richiesta di licenza del server ExpressPlay FairPlay da `skd://` a `https://` (o `https://`).
+   >Nello scenario del server licenze ExpressPlay, per riprodurre contenuto, modificate lo schema URL nell&#39;URL della richiesta di licenza del server ExpressPlay FairPlay da `skd://` a `https://` (o `https://`).
 
-1. Registra il caricatore di risorse cliente *FairPlay* con `registerPTAVAssetResourceLoader`.
+1. Registrare il caricatore di risorse cliente *FairPlay* con `registerPTAVAssetResourceLoader`.
 
    ```
    PTFairPlayResourceLoader *resourceLoader =  
