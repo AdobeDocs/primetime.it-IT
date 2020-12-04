@@ -6,15 +6,18 @@ title: Criteri tempo di buffer
 uuid: 8d3ce9be-cca4-485e-ba66-d2f2aa6822dd
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '333'
+ht-degree: 0%
 
 ---
 
 
-# Criteri tempo di buffer {#buffering-time-policies}
+# Criteri tempo di buffering {#buffering-time-policies}
 
 Per fornire un’esperienza di visualizzazione più fluida, TVSDK a volte carica il flusso video. È possibile configurare il modo in cui il lettore bufferizza.
 
-TVSDK definisce un buffer di riproduzione di almeno 30 secondi e un tempo di buffer iniziale entro il quale, prima dell&#39;avvio della riproduzione del supporto, almeno 5 secondi. Dopo le chiamate dell’applicazione `play` ma prima dell’inizio della riproduzione, TVSDK esegue il buffer dei contenuti multimediali fino al tempo iniziale per dare un avvio corretto all’avvio effettivo della riproduzione.
+TVSDK definisce un buffer di riproduzione di almeno 30 secondi e un tempo di buffer iniziale entro il quale, prima dell&#39;avvio della riproduzione del supporto, almeno 5 secondi. Dopo le chiamate dell&#39;applicazione `play` ma prima dell&#39;inizio della riproduzione, TVSDK esegue il buffer dei supporti fino al tempo iniziale per dare un avvio corretto all&#39;avvio effettivo della riproduzione.
 
 È possibile modificare i tempi del buffer definendo nuovi criteri di buffering.
 
