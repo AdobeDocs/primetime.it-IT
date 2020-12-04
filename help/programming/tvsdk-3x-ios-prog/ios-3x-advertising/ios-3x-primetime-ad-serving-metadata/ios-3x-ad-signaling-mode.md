@@ -6,6 +6,9 @@ title: Modalità di segnalazione annunci
 uuid: 6e6e72cf-4de4-4ac1-9726-7521e47ccd83
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '137'
+ht-degree: 0%
 
 ---
 
@@ -14,9 +17,9 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 
 La modalità di segnalazione degli annunci consente di specificare dove il flusso video deve ricevere informazioni pubblicitarie.
 
-I valori validi sono `PTAdSignalingModeDefault`, `PTAdSignalingModeManifestCues`, e `PTAdSignalingModeServerMap`.
+I valori validi sono `PTAdSignalingModeDefault`, `PTAdSignalingModeManifestCues` e `PTAdSignalingModeServerMap`.
 
-La tabella seguente descrive l&#39;effetto dei `AdSignalingMode` valori per vari tipi di flussi HLS:
+La tabella seguente descrive l&#39;effetto dei valori `AdSignalingMode` per vari tipi di flussi HLS:
 
 <table frame="all" colsep="1" rowsep="1" id="table_AdSignalingMode"> 
  <thead> 
