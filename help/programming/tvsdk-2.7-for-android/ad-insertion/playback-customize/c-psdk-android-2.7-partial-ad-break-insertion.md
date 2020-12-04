@@ -6,6 +6,9 @@ title: Inserimento interruzione annuncio parziale
 uuid: cc071c89-f813-419e-a2b2-4f6a9fdccd6a
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '206'
+ht-degree: 0%
 
 ---
 
