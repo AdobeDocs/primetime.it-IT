@@ -6,17 +6,20 @@ title: Misurazioni di annunci da Moat
 uuid: 4de4ea5e-ef52-4b6b-b215-7601a2dfdb96
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '286'
+ht-degree: 0%
 
 ---
 
 
-# Misurazioni di annunci da Moat {#ad-measurements-from-moat}
+# Aggiungi misurazioni da Moat {#ad-measurements-from-moat}
 
 TVSDK prende informazioni da FreeWheel e altri server di annunci che forniscono risposte VAST. FreeWheel fornisce, all&#39;interno delle risposte VAST, informazioni dal servizio Moat. Il servizio Moat conta gli annunci con una precisione che mostra meglio se i creativi catturano o trascurano gli interessi del pubblico.
 
 Moat è un servizio di misurazione e visualizzazione per molti usi, dai browser alle applicazioni interne. Moat genera dati di analisi di marketing in tempo reale su più piattaforme.
 
-L&#39;XML di risposta VAST ha una proprietà e un elemento che il codice può leggere, la `Ad id` proprietà più esterna e l&#39; `Extension` elemento più esterno. In entrambi i casi, il codice può utilizzare TVSDK per salvare sia le `Ad id` informazioni che le `Extension` informazioni, quindi organizzare le informazioni in una struttura ad albero. Con questa organizzazione, il codice può raccogliere i dati da qualsiasi livello e trasmetterli ovunque sia necessario. Il valore della `Ad id` proprietà più esterna consente al codice di coordinare le informazioni della campagna associata.
+L&#39;XML di risposta VAST ha una proprietà e un elemento che il codice può leggere, la proprietà `Ad id` più esterna e l&#39;elemento `Extension` più esterno. In entrambi i casi, il codice può utilizzare TVSDK per salvare le informazioni `Ad id` e `Extension`, quindi organizzare le informazioni in una struttura ad albero. Con questa organizzazione, il codice può raccogliere i dati da qualsiasi livello e trasmetterli ovunque sia necessario. Il valore della proprietà `Ad id` più esterna consente al codice di coordinare le informazioni della campagna associata.
 
 Ad esempio, FreeWheel può restituire i dati in un elemento Extensions. Di seguito è riportato un elemento di esempio.
 
@@ -36,7 +39,7 @@ Ad esempio, FreeWheel può restituire i dati in un elemento Extensions. Di segui
 </Extensions> 
 ```
 
-La ruota libera può anche impostare la `id` proprietà nell&#39; `Ad` elemento, come illustrato nell&#39;esempio seguente.
+La ruota libera può anche impostare la proprietà `id` nell&#39;elemento `Ad`, come illustrato nell&#39;esempio seguente.
 
 ```xml
 <Ad id="118566" sequence="1">
