@@ -6,6 +6,9 @@ title: Attendere uno stato valido
 uuid: ad9df366-c443-4e6b-a7ab-658d5691eb94
 translation-type: tm+mt
 source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+workflow-type: tm+mt
+source-wordcount: '113'
+ht-degree: 0%
 
 ---
 
@@ -14,6 +17,6 @@ source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
 
 Per poter utilizzare la maggior parte dei metodi del lettore TVSDK, il lettore deve avere uno stato valido.
 
-Il lettore passa attraverso vari stati. In attesa che il lettore sia nello stato corretto, la risorsa multimediale viene caricata correttamente. Se il lettore non ha almeno lo stato richiesto, vengono lanciati molti metodi di lettore `IllegalStateException`.
+Il lettore passa attraverso vari stati. In attesa che il lettore sia nello stato corretto, la risorsa multimediale viene caricata correttamente. Se il lettore non ha almeno lo stato richiesto, molti metodi di lettore generano `IllegalStateException`.
 
 In genere lo stato richiesto è `PTMediaPlayerStatusReady`.
