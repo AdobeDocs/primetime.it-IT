@@ -6,6 +6,9 @@ title: Eventi QoS
 uuid: fd657cf0-c6d4-4e9a-b212-7d09d483cae9
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '219'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
 
 TVSDK invia eventi di qualità del servizio (QoS) per notificare all&#39;applicazione gli eventi che potrebbero influenzare il calcolo delle statistiche di QoS, ad esempio buffering o ricerca.
 
-Per ricevere notifiche su tutti gli eventi relativi a QoS, registrare i listener di eventi con l&#39; `MediaPlayer` oggetto per gli eventi seguenti:
+Per ricevere notifiche su tutti gli eventi relativi a QoS, registrare i listener di eventi con l&#39;oggetto `MediaPlayer` per i seguenti eventi:
 
 | Evento | Significato |
 |---|---|
