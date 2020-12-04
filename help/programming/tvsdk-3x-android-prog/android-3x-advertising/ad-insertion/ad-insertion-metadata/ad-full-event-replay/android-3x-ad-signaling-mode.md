@@ -6,6 +6,9 @@ title: Modalità di segnalazione annunci
 uuid: 947544f9-667e-4d81-af83-155f0db7788e
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '139'
+ht-degree: 0%
 
 ---
 
@@ -14,17 +17,17 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 La modalità di segnalazione degli annunci consente di specificare dove il flusso video deve ricevere informazioni pubblicitarie.
 
-I valori validi sono `DEFAULT`, `SERVER_MAP`, e `MANIFEST_CUES`.
+I valori validi sono `DEFAULT`, `SERVER_MAP` e `MANIFEST_CUES`.
 
-La tabella seguente descrive l&#39;effetto dei `AdSignalingMode` valori per i vari tipi di flussi HLS:
+La tabella seguente descrive l&#39;effetto dei valori `AdSignalingMode` per i vari tipi di flussi HLS:
 
 <table frame="all" colsep="1" rowsep="1" id="table_AdSignalingMode"> 
  <thead> 
   <tr rowsep="1"> 
    <th colname="1" class="entry"> </th> 
-   <th colname="2" class="entry"> <b>Predefinito </b></th> 
+   <th colname="2" class="entry"> <b>Predefinito  </b></th> 
    <th colname="3" class="entry"><b> Manifesti</b> </th> 
-   <th colname="4" class="entry"> <b>Aggiungi mappa server </b></th> 
+   <th colname="4" class="entry"> <b>Aggiungi mappa server  </b></th> 
   </tr> 
  </thead>
  <tbody> 
