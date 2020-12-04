@@ -15,15 +15,15 @@ ht-degree: 0%
 
 # Distribuzione del server licenze{#deploy-the-license-server}
 
-1. Copiate i file di guerra di implementazione di riferimento nella `webapps` directory sul server Tomcat.
+1. Copiate i file di guerra di implementazione di riferimento nella directory `webapps` sul server Tomcat.
 
-   Per utilizzare il server licenze di implementazione di riferimento così com&#39;è, è sufficiente copiare il file WAR del server licenze ( `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\\flashaccess.war`) nella `webapps` directory del server Tomcat.
+   Per utilizzare il server licenze di implementazione di riferimento così com&#39;è, è sufficiente copiare il file WAR del server licenze ( `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\\flashaccess.war`) nella directory `webapps` sul server Tomcat.
 
-   Se state personalizzando il server licenze di implementazione di riferimento, copiate i file di guerra del server generati `DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl-build\wars` nella `webapps` directory.
+   Se state personalizzando il server licenze di implementazione di riferimento, copiate i file di guerra del server generati da `DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl-build\wars` nella directory `webapps`.
 
    >[!NOTE]
    >
-   >Se in precedenza avete distribuito file WAR del server licenze, potrebbe essere necessario eliminare le directory WAR non compresse nella [!DNL webapps] directory sul server Tomcat:
+   >Se avete precedentemente distribuito file WAR del server licenze, potrebbe essere necessario eliminare le directory WAR non compresse nella directory [!DNL webapps] sul server Tomcat:
    >
    >* [!DNL webapps/flashaccess]
    >* [!DNL webapps/edcws]
@@ -31,13 +31,13 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >Non eseguire la distribuzione [!DNL edsws.war] a meno che non sia necessaria la compatibilità con il contenuto FMRMS (Flash Media Rights Management) v1.5. (Questo è un requisito molto raro.)
+   >Non distribuire [!DNL edsws.war] a meno che non sia necessaria la compatibilità con contenuti FMRMS (Flash Media Rights Management) v1.5. (Questo è un requisito molto raro.)
    >
-   >Se preferite impedire a Tomcat di disfare i file WAR, modificate `server.xml` nella `conf` directory e impostate `unpackWARs` su `false`.
+   >Se si preferisce impedire a Tomcat di disfare i file WAR, modificare `server.xml` nella directory `conf` e impostare `unpackWARs` su `false`.
 
-1. Copiate l’intero contenuto della `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\resources\` directory nella [!DNL tomcat] directory.
+1. Copiate l&#39;intero contenuto della directory `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\resources\` nella directory [!DNL tomcat].
 
-   La [!DNL resources] directory include:
+   La directory [!DNL resources] include:
 
    * [!DNL flashaccesstools.properties] - Il file delle proprietà del server licenze.
    * [!DNL log4j.xml] - Configurazione registrazione server licenze
@@ -45,7 +45,7 @@ ht-degree: 0%
 
    Inoltre, potete anche scegliere di copiare i file di certificazione  Adobe in questa posizione.
 
-1. Modificate le impostazioni del server licenze in [!DNL flashaccesstools.properties] modo da riflettere la configurazione del server.
+1. Modificate le impostazioni del server licenze in [!DNL flashaccesstools.properties] per riflettere la configurazione del server.
 
    Come minimo, impostate i valori per le seguenti proprietà:
 
@@ -60,25 +60,25 @@ ht-degree: 0%
    * `V2KeyParameters.KeyOptions.AsymmetricKeyOptions.Certificate`
    * V2KeyParameters.LicenseServerTransportCertificate
 
-1. Modificate il `catalina.properties` file nella directory Tomcat `conf` ; aggiungete alla [!DNL resources] proprietà il percorso della `shared.loader` directory (o il percorso alternativo in cui avete memorizzato il file delle proprietà e altri file di risorse).
+1. Modificate il file `catalina.properties` nella directory Tomcat `conf`; aggiungere la posizione della directory [!DNL resources] (o la posizione alternativa in cui sono stati memorizzati i file delle proprietà e altri file di risorse) alla proprietà `shared.loader`.
 
-   Ad esempio, se si `flashaccess-refimpl.properties` trova in [!DNL [Tomcat home]\resources\]:
+   Ad esempio, se `flashaccess-refimpl.properties` si trova in [!DNL [Tomcat home]\resources\]:
 
    ```
    shared.loader=..\resources
    ```
 
-   Viene posizionato `flashaccess-refimpl.properties` sul percorso di classe.
-1. Verificate che gli altri file di risorse ( [!DNL log4j.xml]file di criteri, certificazioni) si trovino nella [!DNL resources] directory oppure che si trovino nel percorso di classe e nella posizione specificata in [!DNL flashaccess-refimpl.properties].
+   Posiziona `flashaccess-refimpl.properties` nel percorso di classe.
+1. Verificate che gli altri file di risorse ( [!DNL log4j.xml], i file dei criteri e le certificazioni) si trovino nella directory [!DNL resources] oppure siano nel percorso di classe e nella posizione specificata in [!DNL flashaccess-refimpl.properties].
 
-   È probabile che si desideri eseguire inizialmente `log4j` in modalità debug. In [!DNL log4j.xml], impostate `debug` su true:
+   È probabile che si desideri eseguire inizialmente `log4j` in modalità di debug. In [!DNL log4j.xml], impostare `debug` su true:
 
    ```
    <log4j:configuration xmlns:log4j="https://jakarta.apache.org/log4j/"<b>debug="true"</b>>
    ...
    ```
 
-1. Dalla directory Tomcat [!DNL bin] , avviate il server.
+1. Dalla directory Tomcat [!DNL bin], avviate il server.
 
    In Linux:
 
