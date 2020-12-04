@@ -6,13 +6,16 @@ title: Implementare il supporto dei capitoli
 uuid: 6e2c3994-d28b-489f-ae60-9b876125a871
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '62'
+ht-degree: 0%
 
 ---
 
 
 # Implementare il supporto dei capitoli {#implement-chapter-support}
 
-Potete definire e monitorare capitoli *personalizzati* per il tracciamento video nelle applicazioni basate su TVSDK.
+Potete definire e tenere traccia dei capitoli *personalizzati* per il tracciamento video nelle applicazioni basate su TVSDK.
 
 I capitoli personalizzati sono gestiti dall&#39;applicazione e si basano sui dati CMS o su un altro modo utilizzato dall&#39;applicazione per definire i capitoli.
 
