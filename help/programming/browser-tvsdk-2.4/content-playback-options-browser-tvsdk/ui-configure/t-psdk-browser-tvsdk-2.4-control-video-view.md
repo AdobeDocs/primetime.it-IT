@@ -6,6 +6,9 @@ title: Controllare la posizione e le dimensioni della visualizzazione video
 uuid: d09dbc18-1ec0-4336-bf3f-7ff6c265c443
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '317'
+ht-degree: 0%
 
 ---
 
@@ -16,23 +19,23 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
 
 Per impostazione predefinita, il browser TVSDK tenta di mantenere le proporzioni della visualizzazione video ogni volta che le dimensioni o la posizione del video vengono modificate a causa di una modifica apportata dall’applicazione, un interruttore del profilo, uno switch del contenuto e così via.
 
-Potete ignorare il comportamento predefinito delle proporzioni specificando un criterio *di* scala diverso. Specificare il criterio di scala utilizzando la proprietà dell&#39; `MediaPlayerView` oggetto `scalePolicy` . Il criterio di scala predefinito di `MediaPlayerView` è impostato con un&#39;istanza della `MaintainAspectRatioScalePolicy` classe. Per ripristinare il criterio di scala, sostituite l&#39;istanza predefinita di `MaintainAspectRatioScalePolicy` on `MediaPlayerView.scalePolicy` con il criterio personalizzato.
+È possibile ignorare il comportamento predefinito delle proporzioni specificando un diverso *criterio di scala*. Specificare il criterio di scala utilizzando la proprietà `MediaPlayerView` dell&#39;oggetto `scalePolicy`. Il criterio di scala predefinito di `MediaPlayerView` è impostato con un&#39;istanza della classe `MaintainAspectRatioScalePolicy`. Per ripristinare il criterio di scala, sostituisci l&#39;istanza predefinita di `MaintainAspectRatioScalePolicy` su `MediaPlayerView.scalePolicy` con il tuo criterio.
 
 >[!IMPORTANT]
 >
->Non è possibile impostare la `scalePolicy` proprietà su un valore null.
+>Non è possibile impostare la proprietà `scalePolicy` su un valore null.
 
 ## Scenari di fallback non Flash {#non-flash-fallback-scenarios}
 
-Negli scenari di fallback non Flash, affinché il criterio di ridimensionamento funzioni correttamente, l&#39;elemento div video fornito nel `View` costruttore deve restituire valori diversi da zero per `offsetWidth` e `offsetHeight`. Per fornire un esempio di funzione non corretta, talvolta quando la larghezza e l&#39;altezza degli elementi div video non sono impostate esplicitamente in css, il `View` costruttore restituisce zero per `offsetWidth` o `offsetHeight`.
+Negli scenari di fallback non Flash, affinché il criterio di ridimensionamento funzioni correttamente, l&#39;elemento div video fornito nel costruttore `View` deve restituire valori diversi da zero per `offsetWidth` e `offsetHeight`. Per fornire un esempio di funzione non corretta, talvolta quando la larghezza e l&#39;altezza degli elementi div video non sono impostate esplicitamente in css, il costruttore `View` restituisce zero per `offsetWidth` o `offsetHeight`.
 
 >[!NOTE]
 >
 >CustomScalePolicy dispone di un supporto limitato per alcuni browser, in particolare IE, Edge e Safari 9. Per questi browser, non è possibile modificare le proporzioni native del video. Tuttavia, la posizione e le dimensioni del video verranno applicate in base ai criteri di ridimensionamento.
 
-1. Implementate l&#39; `MediaPlayerViewScalePolicy` interfaccia per creare un criterio di scala personalizzato.
+1. Implementate l&#39;interfaccia `MediaPlayerViewScalePolicy` per creare un criterio di scala personalizzato.
 
-   È `MediaPlayerViewScalePolicy` disponibile un metodo:
+   `MediaPlayerViewScalePolicy` dispone di un metodo:
 
    ```js
    /** 
@@ -64,14 +67,14 @@ Negli scenari di fallback non Flash, affinché il criterio di ridimensionamento 
    };
    ```
 
-1. Assegnare l&#39;implementazione alla `MediaPlayerView` proprietà.
+1. Assegnare l&#39;implementazione alla proprietà `MediaPlayerView`.
 
    ```js
    var view = new AdobePSDK.MediaPlayerView(videoDiv); 
    view.scalePolicy= new MediaPlayerViewCustomScalePolicy();
    ```
 
-1. Aggiungere la visualizzazione alla `view` proprietà di Media Player.
+1. Aggiungere la visualizzazione alla proprietà `view` di Media Player.
 
    ```
    mediaplayer.view = view;
