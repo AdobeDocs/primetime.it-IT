@@ -6,6 +6,9 @@ title: Metodi della classe di configurazione per i tag
 uuid: 3317fc8b-c13c-4e7d-8334-aa8cdf40fa05
 translation-type: tm+mt
 source-git-commit: b9e98ef2b4246fdfd79ebcd91db344c97367d661
+workflow-type: tm+mt
+source-wordcount: '243'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Potete configurare i nomi dei tag personalizzati in TVSDK a livello globale con 
 
 TVSDK applica automaticamente la configurazione globale a qualsiasi flusso multimediale che non specifica una configurazione specifica per il flusso.
 
-Per gestire i tag personalizzati, `PSDKConfig` ed `MediaPlayerItemConfig` esporre questi metodi:
+Sia `PSDKConfig` che `MediaPlayerItemConfig` esporre questi metodi per gestire i tag personalizzati:
 
 <table id="table_B37A6C75270D47BC99258F2884AD6905"> 
  <tbody> 
@@ -25,23 +28,23 @@ Per gestire i tag personalizzati, `PSDKConfig` ed `MediaPlayerItemConfig` esporr
    <td colname="3"> </td>
   </tr> 
   <tr> 
-   <td colname="col1"><span class="codeph"> public function get subscriptionTags():Vector.&lt;String&gt;</span> </td> 
+   <td colname="col1"><span class="codeph"> public function get subscriptionTags():Vector.&lt;string&gt;</span> </td> 
    <td colname="col2"> Recupera l'elenco corrente di tag sottoscritti. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"><span class="codeph"> public function set subscriTags():Vector.&lt;String&gt;</span> </td> 
-   <td colname="col2">Imposta l'elenco dei tag sottoscritti che verranno esposti all'applicazione. <p>L’applicazione viene inoltre sottoscritta automaticamente a tutti i tag trasmessi tramite <span class="codeph"> tag</span>ad. </p> </td> 
+   <td colname="col1"><span class="codeph"> public function set subscriTags():Vector.&lt;string&gt;</span> </td> 
+   <td colname="col2">Imposta l'elenco dei tag sottoscritti che verranno esposti all'applicazione. <p>L'applicazione viene inoltre sottoscritta automaticamente a tutti i tag trasmessi tramite <span class="codeph"> adTags</span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="1"><b>Personalizzare i tag degli annunci utilizzati dal rilevatore di opportunità predefinito </b> </td> 
+   <td colname="1"><b>Personalizzare i tag degli annunci utilizzati dal rilevatore di opportunità predefinito  </b> </td> 
    <td colname="3"> </td>
   </tr> 
   <tr> 
-   <td colname="col1"><span class="codeph"> public function get adTags():Vector.&lt;String&gt;</span> </td> 
+   <td colname="col1"><span class="codeph"> public function get adTags():Vector.&lt;string&gt;</span> </td> 
    <td colname="col2"> Recupera l'elenco corrente di tag degli annunci. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"><span class="codeph"> public function set adTags():Vector.&lt;String&gt;</span> </td> 
+   <td colname="col1"><span class="codeph"> public function set adTags():Vector.&lt;string&gt;</span> </td> 
    <td colname="col2"> Imposta l'elenco dei tag degli annunci che verranno utilizzati dal generatore di opportunità predefinito. </td> 
   </tr> 
  </tbody> 
