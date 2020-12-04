@@ -6,6 +6,9 @@ title: Tipi mime validi
 uuid: ab2baac9-a9ef-44f1-83a1-2e6e471e3231
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '156'
+ht-degree: 0%
 
 ---
 
@@ -26,4 +29,4 @@ auditudeSettings.validMimeTypes = mimeTypes;
 
 dove `mimeTypes` è un array di stringhe e ogni stringa rappresenta un tipo mime.
 
-Se per un annuncio vengono restituiti più file multimediali, la selezione dipende dall&#39;ordine in cui i file multimediali vengono visualizzati nell&#39; `validMimeTypes` array. Ai tipi mime con indice inferiore viene assegnata una preferenza rispetto a quelli con indice più alto.
+Se per un annuncio vengono restituiti più file multimediali, la selezione dipende dall&#39;ordine in cui i file multimediali vengono visualizzati nell&#39;array `validMimeTypes`. Ai tipi mime con indice inferiore viene assegnata una preferenza rispetto a quelli con indice più alto.
