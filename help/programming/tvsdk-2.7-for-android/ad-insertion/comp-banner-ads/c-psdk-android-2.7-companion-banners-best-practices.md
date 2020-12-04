@@ -6,11 +6,14 @@ title: Procedure ottimali per gli annunci banner pubblicitari associati
 uuid: d844babb-20ab-4380-9487-eb1c24b58877
 translation-type: tm+mt
 source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+workflow-type: tm+mt
+source-wordcount: '163'
+ht-degree: 0%
 
 ---
 
 
-# Annunci per banner {#companion-banner-ads}
+# Annunci per banner completi {#companion-banner-ads}
 
 TVSDK supporta i banner pubblicitari di compagnia, che sono annunci che accompagnano un annuncio lineare e spesso rimangono sulla pagina dopo la fine dell&#39;annuncio lineare. La vostra applicazione è responsabile della visualizzazione dei banner associati forniti con un annuncio lineare.
 
