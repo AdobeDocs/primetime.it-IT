@@ -6,20 +6,23 @@ title: Lettura delle statistiche relative a riproduzione, buffering e dispositiv
 uuid: 5ee631fc-cd6f-4f35-8621-2ffdc51a57c7
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 1%
 
 ---
 
 
-# Lettura delle statistiche relative a riproduzione, buffering e dispositivo QOS{#read-qos-playback-buffering-and-device-statistics}
+# Leggi le statistiche relative a riproduzione, buffering e dispositivo QOS{#read-qos-playback-buffering-and-device-statistics}
 
 Dalla classe QOSProvider è possibile leggere le statistiche relative a riproduzione, buffering e dispositivo.
 
-La `QOSProvider` classe fornisce diverse statistiche, tra cui informazioni sul buffering, i bit rate, i frame rate, i dati temporali e così via.
+La classe `QOSProvider` fornisce diverse statistiche, tra cui informazioni sul buffering, i bit rate, i frame rate, i dati temporali e così via.
 
 Fornisce inoltre informazioni sul dispositivo, come il produttore, il modello, il sistema operativo, la versione SDK e la dimensione/densità dello schermo.
 
 1. Creare un&#39;istanza di un lettore multimediale.
-1. Creare un `QOSProvider` oggetto e associarlo al lettore multimediale.
+1. Create un oggetto `QOSProvider` e collegatelo al lettore multimediale.
 
    ```
    // Create Media Player. 
