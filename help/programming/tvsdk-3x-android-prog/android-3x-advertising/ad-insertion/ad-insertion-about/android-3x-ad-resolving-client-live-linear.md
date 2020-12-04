@@ -6,6 +6,9 @@ title: Risoluzione e inserimento di annunci live/lineari
 uuid: 722569f2-d260-4fcc-b6b9-01d86aa00e28
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '291'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ TVSDK inserisce gli annunci nei seguenti modi:
 * **Pre-roll**, che viene posizionato prima del contenuto.
 * **Mid-roll**, che viene posizionato al centro del contenuto.
 
-TVSDK accetta l&#39;interruzione dell&#39;annuncio anche se la durata è più lunga o più breve della durata di sostituzione del cue point. Per impostazione predefinita, TVSDK supporta il `#EXT-X-CUE` cue point come indicatore pubblicitario valido per la risoluzione e il posizionamento degli annunci. Questo marcatore richiede che il valore del campo di metadati `DURATION` sia espresso in secondi e l&#39;ID univoco del cue point. Ad esempio:
+TVSDK accetta l&#39;interruzione dell&#39;annuncio anche se la durata è più lunga o più breve della durata di sostituzione del cue point. Per impostazione predefinita, TVSDK supporta il cue `#EXT-X-CUE` come indicatore pubblicitario valido per la risoluzione e il posizionamento degli annunci. Questo marcatore richiede che il valore del campo di metadati `DURATION` sia espresso in secondi e l&#39;ID univoco del cue point. Ad esempio:
 
 ```
 #EXT-X-CUE:DURATION=27,ID="..."
@@ -29,4 +32,4 @@ TVSDK accetta l&#39;interruzione dell&#39;annuncio anche se la durata è più lu
 
 Puoi definire e iscriverti ad altri suggerimenti (tag).
 
-Dopo l’avvio della riproduzione, il motore video aggiorna periodicamente il file manifesto. TVSDK risolve eventuali nuovi annunci e inserisce gli annunci quando viene rilevato un cue point nel flusso live o lineare definito nel manifesto. Dopo che gli annunci sono stati risolti e inseriti, TVSDK calcola di nuovo la timeline virtuale e invia un `TimelineItemsUpdatedEventListener.onTimelineUpdated` evento.
+Dopo l’avvio della riproduzione, il motore video aggiorna periodicamente il file manifesto. TVSDK risolve eventuali nuovi annunci e inserisce gli annunci quando viene rilevato un cue point nel flusso live o lineare definito nel manifesto. Dopo che gli annunci sono stati risolti e inseriti, TVSDK calcola di nuovo la timeline virtuale e invia un evento `TimelineItemsUpdatedEventListener.onTimelineUpdated`.
