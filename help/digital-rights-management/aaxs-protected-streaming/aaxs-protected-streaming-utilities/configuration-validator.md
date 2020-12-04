@@ -4,13 +4,16 @@ title: Convalida della configurazione
 uuid: 60ebd35c-290a-4f08-9bd0-178903857149
 translation-type: tm+mt
 source-git-commit: 47b2ed65ff0ea4f54a210cf7627ed535782296b9
+workflow-type: tm+mt
+source-wordcount: '185'
+ht-degree: 0%
 
 ---
 
 
 # Convalida della configurazione {#configuration-validator}
 
-Adobe consiglia di eseguire l&#39;utility Configuration Validator prima di avviare il server ogni volta che vengono apportate modifiche al file di configurazione. Questa utility è in grado di rilevare la maggior parte degli errori di configurazione in anticipo, prima che questi causino errori durante l&#39;elaborazione della richiesta.
+ Adobe consiglia di eseguire l&#39;utility Configuration Validator prima di avviare il server ogni volta che vengono apportate modifiche al file di configurazione. Questa utility è in grado di rilevare la maggior parte degli errori di configurazione in anticipo, prima che questi causino errori durante l&#39;elaborazione della richiesta.
 
 Per eseguire la convalida, utilizzare il comando:
 
