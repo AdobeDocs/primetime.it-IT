@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Notifiche ed eventi per lo stato, l&#39;attività, gli errori e la registrazione del lettore {#notifications-and-events-for-player-status-activity-errors-and-logging}
+# Notifiche ed eventi per lo stato del lettore, l&#39;attività, gli errori e la registrazione {#notifications-and-events-for-player-status-activity-errors-and-logging}
 
 Eventi e notifiche consentono di gestire gli aspetti asincroni dell’applicazione video.
 
@@ -25,7 +25,7 @@ L&#39;applicazione può recuperare le informazioni relative a notifica e stato. 
 
 `MediaPlayerNotification` fornisce informazioni relative allo stato del lettore.
 
-TVSDK fornisce un elenco cronologico delle `MediaPlayerNotification` notifiche e ogni notifica contiene le informazioni seguenti:
+TVSDK fornisce un elenco cronologico delle notifiche `MediaPlayerNotification`, e ogni notifica contiene le informazioni seguenti:
 
 * Timestamp
 * Metadati diagnostici costituiti dai seguenti elementi:
@@ -35,7 +35,7 @@ TVSDK fornisce un elenco cronologico delle `MediaPlayerNotification` notifiche e
    * `name`: Descrizione leggibile della notifica, ad esempio SEEK_ERROR
    * `metadata`: Coppie chiave/valore contenenti informazioni rilevanti sulla notifica. Ad esempio, una chiave denominata `URL` fornisce un valore che è un URL correlato alla notifica.
 
-   * `innerNotification`: Un riferimento a un altro `MediaPlayerNotification` oggetto che influisce direttamente su questa notifica.
+   * `innerNotification`: Un riferimento a un altro  `MediaPlayerNotification` oggetto che influisce direttamente su questa notifica.
 
 Potete archiviare queste informazioni localmente per un&#39;analisi successiva o inviarle a un server remoto per la registrazione e la rappresentazione grafica.
 
@@ -43,16 +43,16 @@ Potete archiviare queste informazioni localmente per un&#39;analisi successiva o
 
 Potete ascoltare le notifiche.
 
-Il nucleo del sistema di notifica Primetime Player è la `Notification` classe, che rappresenta una notifica standalone.
+Il nucleo del sistema di notifica Primetime Player è la classe `Notification`, che rappresenta una notifica standalone.
 
 Per ricevere le notifiche, ascolta le notifiche nel modo seguente:
 
-1. Implementa il `NotificationEventListener.onNotification()` callback.
-1. TVSDK passa un `NotificationEvent` oggetto al callback.
+1. Implementa il callback `NotificationEventListener.onNotification()`.
+1. TVSDK passa un oggetto `NotificationEvent` al callback.
 
    >[!NOTE]
    >
-   >I tipi di notifiche sono enumerati nell&#39; `Notification.Type` enum:
+   >I tipi di notifiche sono enumerati nell&#39;enum `Notification.Type`:
 
    * `ERROR`
    * `INFO`
