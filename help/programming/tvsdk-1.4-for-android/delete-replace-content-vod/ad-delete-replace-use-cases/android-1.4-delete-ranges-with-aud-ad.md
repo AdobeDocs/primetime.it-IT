@@ -6,6 +6,9 @@ title: Elimina intervalli
 uuid: 2f4afa0d-69e3-4929-8dbd-b553c8a64d96
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '94'
+ht-degree: 0%
 
 ---
 
@@ -16,9 +19,9 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 >[!NOTE]
 >
->Se desiderate rimuovere solo alcuni intervalli dal contenuto e la mappa degli annunci deve essere utilizzata come definito dal server degli annunci, create un&#39; `CustomRangeMetadata` istanza e specificate il tipo come operazione DELETE con gli intervalli personalizzati definiti.
+>Se desiderate rimuovere solo alcuni intervalli dal contenuto e la mappa degli annunci deve essere utilizzata come definito dal server degli annunci, create un&#39;istanza `CustomRangeMetadata` e specificate il tipo come operazione DELETE con gli intervalli personalizzati definiti.
 
-Elimina intervalli con un annuncio pubblicitario Adobe Primetime.
+Elimina intervalli con un annuncio pubblicitario  Adobe Primetime.
 
 ```
 {   
