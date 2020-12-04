@@ -6,34 +6,37 @@ title: Gestione degli errori di aggiunta ed eliminazione
 uuid: ab153591-0011-44b4-87f9-be0302c2295e
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '333'
+ht-degree: 0%
 
 ---
 
 
-# Gestione degli errori di aggiunta ed eliminazione {#ad-deletion-and-replacement-error-handling}
+# Gestione degli errori di eliminazione e sostituzione degli annunci {#ad-deletion-and-replacement-error-handling}
 
 TVSDK gestisce gli errori dell&#39;intervallo di tempo in base al problema specifico, unendo o riordinando gli intervalli di tempo definiti in modo errato.
 
-TVSDK gestisce `timeRanges` gli errori eseguendo l&#39;unione e il riordinamento predefiniti. Innanzitutto, ordina gli intervalli di tempo definiti dal cliente in base all&#39;ora di *inizio* . In base a questo ordine di ordinamento, unisce quindi gli intervalli adiacenti e li unisce in presenza di sottoinsiemi e intersezioni tra gli intervalli.
+TVSDK gestisce gli errori `timeRanges` effettuando l&#39;unione e il riordinamento predefiniti. Innanzitutto, ordina gli intervalli di tempo definiti dal cliente in base all&#39;ora *start*. In base a questo ordine di ordinamento, unisce quindi gli intervalli adiacenti e li unisce in presenza di sottoinsiemi e intersezioni tra gli intervalli.
 
 TVSDK gestisce gli errori relativi all’intervallo di tempo come segue:
 
 * Fuori ordine: TVSDK riordina gli intervalli di tempo.
 * Subset - TVSDK unisce i sottoinsiemi dell’intervallo di tempo.
 * Intersect - TVSDK unisce gli intervalli di tempo intersecanti.
-* Sostituire gli intervalli in conflitto - TVSDK sceglie la durata di sostituzione dalla prima visualizzazione `timeRange` nel gruppo in conflitto.
+* Sostituire gli intervalli in conflitto - TVSDK sceglie la durata di sostituzione dalla prima `timeRange` visualizzata nel gruppo in conflitto.
 
 TVSDK gestisce i conflitti in modalità di segnalazione come segue:
 
 * Se gli intervalli REPLACE sono definiti, TVSDK modifica automaticamente la modalità di segnalazione in CUSTOM_RANGE.
-* Se gli intervalli DELETE o MARK sono definiti e la modalità di segnalazione è CUSTOM_RANGE, TVSDK elimina o contrassegna questi intervalli. Nessun inserimento di annunci in questo caso.
-* Se un intervallo DELETE o MARK definisce una durata di sostituzione, TVSDK ignora questa durata.
+* Se sono definiti intervalli di DELETE o MARK e la modalità di segnalazione è CUSTOM_RANGE, TVSDK elimina o contrassegna questi intervalli. Nessun inserimento di annunci in questo caso.
+* Se un intervallo di DELETE o MARK definisce una durata di sostituzione, TVSDK ignora questa durata.
 
-Quando il server non restituisce valori validi `AdBreaks`:
+Quando il server non restituisce un valore `AdBreaks` valido:
 
-* TVSDK genera ed elabora un `NOPTimelineOperation` nome per il vuoto `AdBreak`. Nessuna pubblicità gioca.
+* TVSDK genera ed elabora un `NOPTimelineOperation` per il `AdBreak` vuoto. Nessuna pubblicità gioca.
 
-## Esempi di errori nell&#39;intervallo di tempo {#time-range-error-examples}
+## Esempi di errori dell&#39;intervallo di tempo {#time-range-error-examples}
 
 TVSDK risponde a specifiche errate dell&#39;intervallo di tempo unendo o sostituendo gli intervalli di tempo come appropriato.
 
