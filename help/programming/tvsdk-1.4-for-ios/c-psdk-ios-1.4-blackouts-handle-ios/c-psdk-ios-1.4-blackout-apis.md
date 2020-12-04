@@ -6,6 +6,9 @@ title: Elementi API Blackout
 uuid: ddc81558-4218-44d2-92df-15926c7c96b3
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '317'
+ht-degree: 0%
 
 ---
 
@@ -18,21 +21,21 @@ Quando si implementa una soluzione blackout nel lettore, è possibile utilizzare
 
 * **PTMediaPlayer**
 
-   * `registerCurrentItemAsBackgroundItem` Salva la risorsa attualmente caricata come risorsa in background. Se `replaceCurrentItemWithPlayerItem` viene chiamato dopo questo metodo, TVSDK continua a scaricare il manifesto dell&#39;elemento in background finché non invoca `unregisterCurrentBackgroundItem` , `stop`o `reset` .
+   * `registerCurrentItemAsBackgroundItem` Salva la risorsa attualmente caricata come risorsa in background. Se `replaceCurrentItemWithPlayerItem` viene chiamato dopo questo metodo, TVSDK continua a scaricare il manifesto dell&#39;elemento in background finché non invoca `unregisterCurrentBackgroundItem` , `stop` o `reset` .
 
    * `unregisterCurrentBackgroundItem` Imposta l&#39;elemento di sfondo su nil e interrompe il recupero e l&#39;analisi del manifesto di sfondo.
 
-* **PTMetadata.PTBlackoutMetadata** Una classe specifica per i blackout `PTMetadata` .
+* **PTMetadata.** PTBlackoutMetadataUna  `PTMetadata` classe specifica per i blackout.
 
-   Questo consente di impostare intervalli non ricercabili (un array di `CMTimeRanges`) su TVSDK. TVSDK controlla questi intervalli ogni volta che l&#39;utente cerca. Se è impostato e l’utente cerca in un intervallo non ricercabile, TVSDK forza il visualizzatore alla fine dell’intervallo non ricercabile.
+   Questo consente di impostare intervalli non ricercabili (un array di `CMTimeRanges`) in TVSDK. TVSDK controlla questi intervalli ogni volta che l&#39;utente cerca. Se è impostato e l’utente cerca in un intervallo non ricercabile, TVSDK forza il visualizzatore alla fine dell’intervallo non ricercabile.
 
-* **AVVIA QUI SUCCESSIVO** **PTAdMetadata** Attiva o disattiva il pre-roll su un flusso live impostando `enableLivePreroll` su SÌ o NO. Se NO, TVSDK non effettua una chiamata ad-server esplicita per gli annunci pre-roll prima della riproduzione del contenuto, quindi non riproduce il pre-roll. Questo non ha alcun impatto sui rulli intermedi. Il valore predefinito è YES.
+* **START QUI** **** NEXTPTAdMetadataAbilitare o disabilitare il pre-roll su un flusso live impostando  `enableLivePreroll` su YES o NO. Se NO, TVSDK non effettua una chiamata ad-server esplicita per gli annunci pre-roll prima della riproduzione del contenuto, quindi non riproduce il pre-roll. Questo non ha alcun impatto sui rulli intermedi. Il valore predefinito è YES.
 
 * **Notifiche NSN**
 
-   * `PTTimedMetadataChangedInBackgroundNotification` - Pubblicato quando TVSDK rileva un tag con sottoscrizione nel manifesto di sfondo e ne prepara una nuova `PTTimedMetadata` istanza. L&#39;oggetto della notifica è l&#39; `PTMediaPlayerItem` istanza attualmente in fase di riproduzione. Potete recuperare l&#39; `PTTimedMetadata` istanza dal `userInfo` dizionario della notifica utilizzando la `PTTimedMetadataKey` chiave.
+   * `PTTimedMetadataChangedInBackgroundNotification` - Pubblicato quando TVSDK rileva un tag con sottoscrizione nel manifesto di sfondo e ne prepara una nuova  `PTTimedMetadata` istanza. L&#39;oggetto della notifica è l&#39;istanza `PTMediaPlayerItem` attualmente in fase di riproduzione. È possibile recuperare l&#39;istanza `PTTimedMetadata` dal dizionario `userInfo` della notifica utilizzando la chiave `PTTimedMetadataKey`.
 
-   * `PTBackgroundManifestErrorNotification` - Pubblicato quando il lettore multimediale non riesce completamente a caricare il manifesto di sfondo, ovvero tutti gli URL del flusso restituiscono un errore o una risposta non valida. L&#39;oggetto della notifica è l&#39; `PTMediaPlayerItem` istanza attualmente in fase di riproduzione.
+   * `PTBackgroundManifestErrorNotification` - Pubblicato quando il lettore multimediale non riesce completamente a caricare il manifesto di sfondo, ovvero tutti gli URL del flusso restituiscono un errore o una risposta non valida. L&#39;oggetto della notifica è l&#39;istanza `PTMediaPlayerItem` attualmente in fase di riproduzione.
 
 * **PTNotificazione**
 
@@ -41,6 +44,6 @@ Quando si implementa una soluzione blackout nel lettore, è possibile utilizzare
       * Codice: 204000
       * Tipo: Avviso
       * Errore nel download del manifesto in background.
-   * `INVALID_SEEK_WARNING` Inviato quando si tenta di eseguire una ricerca in un intervallo non ricercabile (in `nonSeekableRanges` set in `PTBlackoutMetadata`).
+   * `INVALID_SEEK_WARNING` Inviato quando un tentativo di ricerca viene eseguito in un intervallo non ricercabile ( `nonSeekableRanges` impostato in  `PTBlackoutMetadata`).
 
 
