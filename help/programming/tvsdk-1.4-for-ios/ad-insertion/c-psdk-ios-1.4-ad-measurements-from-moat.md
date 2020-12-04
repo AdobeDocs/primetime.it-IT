@@ -6,11 +6,14 @@ title: Misurazioni di annunci da Moat
 uuid: 76fa9ca0-58bd-44fe-82ce-72fdf6fcc28c
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '292'
+ht-degree: 0%
 
 ---
 
 
-# Misurazioni di annunci da Moat{#ad-measurements-from-moat}
+# Aggiungi misurazioni da Moat{#ad-measurements-from-moat}
 
 TVSDK prende informazioni da FreeWheel e altri server adserver che forniscono risposte VAST. FreeWheel fornisce, all&#39;interno delle risposte VAST, informazioni dal servizio Moat. Il servizio Moat conta gli annunci con una precisione che mostra meglio che i creativi catturano o trascurano gli interessi del pubblico.
 
@@ -47,4 +50,4 @@ La ruota libera può anche impostare la proprietà id nell&#39;elemento Ad, come
 <Ad id="118566" sequence="1">
 ```
 
-Fate riferimento alla documentazione API per la classe `PTNetworkAdInfo` in `PTAdAsset`.
+Fare riferimento alla documentazione API per la classe `PTNetworkAdInfo` in `PTAdAsset`.
