@@ -6,6 +6,9 @@ title: Considerazioni sulla sicurezza
 uuid: 78edf2b0-363c-4ab6-b588-ab4748ee6096
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '246'
+ht-degree: 0%
 
 ---
 
@@ -14,11 +17,11 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
 
 Esistono alcune considerazioni di sicurezza da tenere presenti per l&#39;SDK per browser.
 
-* **Adobe Flash Player**
+* **Flash Player Adobe**
 
-   * Flash Player non consente l&#39;accesso ai dati che risiedono al di fuori del dominio da cui è stato originato il file SWF.
+   * Il Flash Player non consente l&#39;accesso ai dati che risiedono al di fuori del dominio da cui è stato originato il file SWF.
 
-      Per consentire l&#39;accesso, ospitare un file di criteri per i domini con le autorizzazioni appropriate nella directory principale del server in cui sono ospitati i dati. In modalità Flash Fallback nel browser TVSDK (Flash Player versione 23 e successive), è necessario il token di autorizzazione per il dominio. Per generare il token, contattate il rappresentante Adobe.
+      Per consentire l&#39;accesso, ospitare un file di criteri per i domini con le autorizzazioni appropriate nella directory principale del server in cui sono ospitati i dati. In modalità Fallback di Flash in Browser TVSDK (versione di Flash Player 23 e successiva), è necessario il token di autorizzazione per il dominio. Per generare il token, contattate il rappresentante del Adobe .
 
 * **JavaScript**
 
