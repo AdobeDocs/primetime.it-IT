@@ -6,6 +6,9 @@ title: Ordine degli eventi di riproduzione
 uuid: 259a9a2d-3d28-4240-b392-cc81f5c3f0cf
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '121'
+ht-degree: 0%
 
 ---
 
@@ -20,14 +23,14 @@ Gli esempi seguenti mostrano l&#39;ordine di alcuni eventi che includono eventi 
 
 * Quando si carica correttamente una risorsa multimediale tramite `replaceCurrentResource`, l&#39;ordine degli eventi è:
 
-   * `AdobePSDK.MediaPlayerStatusChangeEvent` con `event.status =`
+   * `AdobePSDK.MediaPlayerStatusChangeEvent` con  `event.status =`
 
       * `MediaPlayerStatus.INITIALIZING`
       * `MediaPlayerStatus.INITIALIZED`
 
 * Durante la preparazione per la riproduzione tramite `MediaPlayer.prepareToPlay`, l&#39;ordine degli eventi è:
 
-   * `AdobePSDK.MediaPlayerStatusChangeEvent` con `event.status =`
+   * `AdobePSDK.MediaPlayerStatusChangeEvent` con  `event.status =`
 
       * `MediaPlayerStatus.PREPARING`
       * `MediaPlayerStatus.PREPARED`
