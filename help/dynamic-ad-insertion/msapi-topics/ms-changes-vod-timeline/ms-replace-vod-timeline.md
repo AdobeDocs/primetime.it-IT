@@ -6,6 +6,9 @@ title: Modifiche al VOD
 uuid: e734aacd-b42e-4c8e-a16a-c7a0739a0492
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '163'
+ht-degree: 0%
 
 ---
 
@@ -21,4 +24,4 @@ Le situazioni in cui si desidera sostituire una timeline VOD includono:
 * Sostituisci dinamicamente vecchi annunci C3 con annunci più recenti di maggiore durata.
 * Inserite un numero inferiore di annunci o nessuno.
 
-Potete sostituire la timeline dell’annuncio inviando una nuova richiesta di inserimento annunci con il file M3U8 originale e un valore diverso del parametro di `pttimeline` query.
+Potete sostituire la timeline dell&#39;annuncio inviando una nuova richiesta di inserimento annunci con il file M3U8 originale e un valore diverso del parametro di query `pttimeline`.
