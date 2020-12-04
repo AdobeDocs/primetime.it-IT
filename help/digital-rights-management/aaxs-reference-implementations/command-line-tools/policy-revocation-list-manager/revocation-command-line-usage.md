@@ -4,6 +4,9 @@ title: Utilizzo della riga di comando
 uuid: 273e9d3b-efeb-46fa-a4b1-f13247b4e498
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '296'
+ht-degree: 0%
 
 ---
 
@@ -52,7 +55,7 @@ La tabella seguente contiene le descrizioni delle opzioni della riga di comando 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-e data</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">(Facoltativo) Data di scadenza dell'elenco di revoche. Utilizzate il formato <span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd</span> o <span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd-h24:min:sec</span> (ad esempio, 2009-01-31-14:30:00 rappresenta il 31 gennaio alle 2:30 PM). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">(Facoltativo) Data di scadenza dell'elenco di revoche. Utilizzare il formato <span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd</span> o <span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd-h24:min:sec</span> (ad esempio, 2009-01-31-14:30:00 rappresenta il 31 gennaio alle 2:30 PM). </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">-f nomefile[certfile]</span> </td> 
@@ -68,7 +71,7 @@ La tabella seguente contiene le descrizioni delle opzioni della riga di comando 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">-r issuersName serialNumber revocaDate</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Revoca il certificato identificato da <span class="codeph"> issuersName</span> e <span class="codeph"> serialNumber</span> alla data specificata. Il <span class="codeph"> nome</span> emittente deve seguire il formato 509 (ad esempio, <span class="codeph"> CN=12345,O=Adobe Systems Incorporated,C=US</span>). Specificare i numeri di serie in formato esadecimale. Specificare la data di revoca come <span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd</span> o <span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd-h24:min:sec</span>, ad esempio 2008-12-1 o 2008-12-1-00:00:00 per la mezzanotte del 1° dicembre 2008. Se la data di revoca non è specificata, viene utilizzata la data corrente. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Revoca il certificato identificato da <span class="codeph"> issuersName</span> e <span class="codeph"> serialNumber</span> alla data specificata. Il nome <span class="codeph"> issuersName</span> deve seguire il formato 509 (ad esempio, <span class="codeph"> CN=12345,O=Adobe Systems Incorporated,C=US</span>). Specificare i numeri di serie in formato esadecimale. Specificare la data di revoca come <span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd</span> o <span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd-h24:min:sec</span>, ad esempio 2008-12-1 o 2008-12-1-00:00:00 per la mezzanotte del 1, 2222220000000000000000000000000000000000000000000000000000000000000000000000 008. Se la data di revoca non è specificata, viene utilizzata la data corrente. </p> </td> 
   </tr> 
  </tbody> 
 </table>
