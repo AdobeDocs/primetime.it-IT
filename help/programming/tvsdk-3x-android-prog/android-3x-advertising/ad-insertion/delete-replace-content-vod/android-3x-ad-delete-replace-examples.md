@@ -6,11 +6,14 @@ title: Esempi per eliminare e sostituire gli annunci
 uuid: 6bf9d71a-73fe-4033-b97a-6b0cff8687f2
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '68'
+ht-degree: 0%
 
 ---
 
 
-# Esempi per eliminare e sostituire gli annunci {#examples-to-delete-and-replace-ads}
+# Esempi per eliminare e sostituire annunci {#examples-to-delete-and-replace-ads}
 
 Di seguito sono riportati alcuni esempi del processo di eliminazione e sostituzione degli annunci.
 
