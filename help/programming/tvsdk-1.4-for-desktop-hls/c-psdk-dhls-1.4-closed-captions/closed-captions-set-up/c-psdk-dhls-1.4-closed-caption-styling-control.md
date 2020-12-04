@@ -6,6 +6,9 @@ title: Controllo dello stile dei sottotitoli codificati
 uuid: 506c06d3-8fe0-46c9-9ed6-5b35d21c021c
 translation-type: tm+mt
 source-git-commit: b67a9dcb0abb07f4fdff4e03d9d6c0b07ff45127
+workflow-type: tm+mt
+source-wordcount: '594'
+ht-degree: 0%
 
 ---
 
@@ -14,17 +17,17 @@ source-git-commit: b67a9dcb0abb07f4fdff4e03d9d6c0b07ff45127
 
 Potete fornire informazioni sullo stile per le tracce di sottotitoli codificati utilizzando la classe ClosedCaptionStyles. Questo imposta lo stile per tutte le didascalie visualizzate dal lettore.
 
-Questa classe racchiude informazioni sullo stile dei sottotitoli codificati quali tipo di font, dimensione, colore e opacità dello sfondo. Una classe helper associata `ClosedCaptionStylesBuilder`facilita l&#39;utilizzo delle impostazioni di stile dei sottotitoli codificati.
+Questa classe racchiude informazioni sullo stile dei sottotitoli codificati quali tipo di font, dimensione, colore e opacità dello sfondo. Una classe helper associata, `ClosedCaptionStylesBuilder`, facilita l&#39;utilizzo delle impostazioni di stile dei sottotitoli codificati.
 
-## Impostare gli stili di didascalia {#section_DAE84659D1964DB1B518F91B59AF29D9}
+## Impostare gli stili di sottotitoli codificati {#section_DAE84659D1964DB1B518F91B59AF29D9}
 
 Potete formattare il testo dei sottotitoli codificati con i metodi TVSDK.
 
-1. Attendere che MediaPlayer disponga almeno dello stato PREPARATO (vedere [Attendere uno stato](../../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)valido).
+1. Attendete che MediaPlayer disponga almeno dello stato PREPARATO (vedere [Attendere uno stato valido](../../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)).
 1. Per modificare le impostazioni di stile, effettuate una delle seguenti operazioni:
 
-   * Utilizzate la classe `ClosedCaptionStylesBuilder` helper (attiva `ClosedCaptionStyles` dietro le quinte).
-   * Utilizzate direttamente la `ClosedCaptionStyles` classe.
+   * Utilizzate la classe helper `ClosedCaptionStylesBuilder` (che funziona su `ClosedCaptionStyles` dietro le quinte).
+   * Utilizzate direttamente la classe `ClosedCaptionStyles`.
 
 >[!NOTE]
 >
@@ -32,7 +35,7 @@ Potete formattare il testo dei sottotitoli codificati con i metodi TVSDK.
 
 ## Opzioni di stile dei sottotitoli codificati {#section_D28F50B98C0D48CF89C4FB6DC81C5185}
 
-È possibile fornire informazioni sullo stile per le tracce di sottotitoli codificati utilizzando la `ClosedCaptionStyles` classe. Questo imposta lo stile per tutte le didascalie visualizzate dal lettore.
+Potete fornire informazioni sullo stile per le tracce di sottotitoli codificati utilizzando la classe `ClosedCaptionStyles`. Questo imposta lo stile per tutte le didascalie visualizzate dal lettore.
 
 ```
 public function TextFormat( 
@@ -78,17 +81,17 @@ public function TextFormat(
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Dimensioni </td> 
-   <td colname="2"> <p>Dimensione della didascalia. </p> <p> Può essere impostato solo su un valore definito dall'array <span class="codeph"> ClosedCaptionStyles.FONT_SIZE </span> : 
+   <td colname="2"> <p>Dimensione della didascalia. </p> <p> È possibile impostare solo un valore definito dall'array <span class="codeph"> ClosedCaptionStyles.FONT_SIZE </span>: 
      <ul compact="yes" id="ul_544BFC7A46474A74839477108F1AB1E9"> 
-      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDIUM </span> - Dimensione standard </li> 
-      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> GRANDE </span> - Circa il 30% più grande del medio </li> 
-      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> PICCOLO </span> - Circa il 30% inferiore a medio </li> 
-      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> PREDEFINITO </span> - La dimensione predefinita della didascalia; come media </li> 
-     </ul> </p> <p>Suggerimento:  È possibile modificare la dimensione del font delle didascalie WebVTT modificando il parametro della dimensione per la <span class="codeph"> funzione di impostazione </span> DefaultMediaPlayer.ccStyles. </p> </td> 
+      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDIUM  </span> - Dimensione standard </li> 
+      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> GRANDE  </span> - Circa il 30% più grande del medio </li> 
+      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> PICCOLA  </span> - Circa il 30% inferiore al medio </li> 
+      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> PREDEFINITO  </span> - La dimensione predefinita della didascalia; come media </li> 
+     </ul> </p> <p>Suggerimento:  È possibile modificare la dimensione del font delle didascalie WebVTT modificando il parametro della dimensione per la funzione <span class="codeph"> DefaultMediaPlayer.ccStyles setter </span>. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Bordo font </td> 
-   <td colname="2"> <p>Effetto usato per il bordo del font, ad esempio sollevato o nessuno. </p> <p>Può essere impostato solo su un valore definito dall'array <span class="codeph"> ClosedCaptionStyles.FONT_EDGE </span> . 
+   <td colname="2"> <p>Effetto usato per il bordo del font, ad esempio sollevato o nessuno. </p> <p>Può essere impostato solo su un valore definito dall'array <span class="codeph"> ClosedCaptionStyles.FONT_EDGE </span>. 
      <code class="syntax actionscript">
        public&nbsp;static&nbsp;const&nbsp;FONT_EDGE&nbsp;:Array&nbsp;=&nbsp;[ 
       &nbsp;&nbsp;&nbsp;&nbsp;AVCaptionStyle.DEFAULT, 
@@ -103,7 +106,7 @@ public function TextFormat(
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Colore font </td> 
-   <td colname="2"> <p>Il colore del font. </p> <p>Può essere impostato solo su un valore definito dall'array <span class="codeph"> ClosedCaptionStyles.COLOR </span> . 
+   <td colname="2"> <p>Il colore del font. </p> <p>Può essere impostato solo su un valore definito dall'array <span class="codeph"> ClosedCaptionStyles.COLOR </span>. 
      <code class="syntax actionscript">
        public&nbsp;static&nbsp;const&nbsp;COLOR&nbsp;:Array&nbsp;=&nbsp;[ 
       &nbsp;&nbsp;&nbsp;&nbsp;AVCaptionStyle.DEFAULT, 
@@ -145,24 +148,24 @@ public function TextFormat(
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Opacità del font </td> 
-   <td colname="2"> <p>Opacità del testo. </p> <p>Espressa come percentuale da 0 (completamente trasparente) a 100 (completamente opaca). <span class="codeph"> DEFAULT_OPACITY </span> per il font è 100. </p> </td> 
+   <td colname="2"> <p>Opacità del testo. </p> <p>Espressa come percentuale da 0 (completamente trasparente) a 100 (completamente opaca). <span class="codeph"> DEFAULT_OPACITY  </span> per il font è 100. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Opacità di sfondo </td> 
-   <td colname="2"> <p>Opacità della cella del carattere di sfondo. </p> <p>Espressa come percentuale da 0 (completamente trasparente) a 100 (completamente opaca). <span class="codeph"> DEFAULT_OPACITY </span> per lo sfondo è 100. </p> </td> 
+   <td colname="2"> <p>Opacità della cella del carattere di sfondo. </p> <p>Espressa come percentuale da 0 (completamente trasparente) a 100 (completamente opaca). <span class="codeph"> DEFAULT_OPACITY  </span> per lo sfondo è 100. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Opacità riempimento </td> 
-   <td colname="2"> <p>Opacità dello sfondo della finestra della didascalia. </p> <p>Espressa come percentuale da 0 (completamente trasparente) a 100 (completamente opaca). <span class="codeph"> DEFAULT_OPACITY </span> per il riempimento è 0. </p> </td> 
+   <td colname="2"> <p>Opacità dello sfondo della finestra della didascalia. </p> <p>Espressa come percentuale da 0 (completamente trasparente) a 100 (completamente opaca). <span class="codeph"> DEFAULT_OPACITY  </span> per il riempimento è 0. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-## Esempi: Formattazione delle didascalie {#section_63E33840B7A14D26990046E2ACF2ECA1}
+## Esempi: Formattazione didascalia {#section_63E33840B7A14D26990046E2ACF2ECA1}
 
 È possibile specificare la formattazione dei sottotitoli codificati.
 
-## Esempio 1: Specificare in modo esplicito i valori di formato {#section_BD7B48F3B66D4E9290E1CB2F464E08E4}
+## Esempio 1: Specificare i valori di formato in modo esplicito {#section_BD7B48F3B66D4E9290E1CB2F464E08E4}
 
 ```
 private function onStatusChanged(event:MediaPlayerStatusChangeEvent):void { 
