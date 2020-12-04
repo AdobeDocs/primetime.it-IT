@@ -6,15 +6,18 @@ title: Segna intervalli
 uuid: 994a8f07-0951-47ec-b21a-d74c9eeefd74
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '188'
+ht-degree: 0%
 
 ---
 
 
 # Segna intervalli{#mark-ranges}
 
-Per implementare `PTTimeRangeCollection` e contrassegnare gli intervalli di contenuti come annunci:
-1. Preparate il `PTTimeRangeCollection`video.
-1. Impostare il tipo di `PTTimeRangeCollection` oggetto su `PTTimeRangeCollectionTypeMarkRanges`.
+Per implementare i `PTTimeRangeCollection` e contrassegnare gli intervalli di contenuti come annunci:
+1. Preparare la `PTTimeRangeCollection`.
+1. Impostare il tipo di `PTTimeRangeCollection` su `PTTimeRangeCollectionTypeMarkRanges`.
 
    Questo passaggio notifica a TVSDK che gli intervalli personalizzati devono essere gestiti come annunci.
 
@@ -35,7 +38,7 @@ Per implementare `PTTimeRangeCollection` e contrassegnare gli intervalli di cont
        type:PTTimeRangeCollectionTypeMarkRanges];
    ```
 
-1. Create il file `PTAdMetadata` e impostate il `PTTimeRangeCollection`.
+1. Create la `PTAdMetadata` e impostate la `PTTimeRangeCollection`.
 
    ```
    // Create the PTPlayerItem metadata 
@@ -70,8 +73,8 @@ Per implementare `PTTimeRangeCollection` e contrassegnare gli intervalli di cont
 ## Sostituire gli intervalli{#replace-ranges}
 
 Per implementare `PTTimeRangeCollection` ed eliminare gli intervalli di contenuti come annunci:
-1. Preparati `PTTimeRangeCollection`.
-1. Impostare il tipo di `PTTimeRangeCollection` oggetto su `PTTimeRangeCollectionTypeReplaceRanges`.
+1. Preparare `PTTimeRangeCollection`.
+1. Impostare il tipo di `PTTimeRangeCollection` su `PTTimeRangeCollectionTypeReplaceRanges`.
 
    Questo passaggio notifica a TVSDK che gli intervalli forniti devono essere sostituiti con contenuto alternativo (annunci).
 
@@ -94,9 +97,9 @@ Per implementare `PTTimeRangeCollection` ed eliminare gli intervalli di contenut
 
    >[!TIP]
    >
-   >L&#39;argomento `replacementDuration` è facoltativo. Se non è definito, `AdServer` determina la durata dell&#39;interruzione dell&#39;annuncio.
+   >L&#39;argomento `replacementDuration` è facoltativo. Se non è definito, la `AdServer` determina la durata dell&#39;interruzione di annuncio.
 
-1. Create il file `PTAdMetadata` e impostate il `PTTimeRangeCollection`.
+1. Create la `PTAdMetadata` e impostate la `PTTimeRangeCollection`.
 
    ```
    //Create the PTPlayerItem metadata 
@@ -120,7 +123,7 @@ Per implementare `PTTimeRangeCollection` ed eliminare gli intervalli di contenut
 
    >[!TIP]
    >
-   >Anche se `signalingMode` è impostato come `PTAdSignalingModeCustomRanges`, questa modalità di segnalazione degli annunci viene impostata automaticamente quando si imposta il `PTTimeRangeCollection` tipo `PTTimeRangeCollectionTypeReplace`.
+   >Sebbene `signalingMode` sia impostato come `PTAdSignalingModeCustomRanges`, questa modalità di segnalazione degli annunci viene impostata automaticamente quando si imposta `PTTimeRangeCollection` di tipo `PTTimeRangeCollectionTypeReplace`.
 
 1. Creare il lettore e avviare la riproduzione.
 
@@ -138,8 +141,8 @@ Per implementare `PTTimeRangeCollection` ed eliminare gli intervalli di contenut
 ## Elimina intervalli {#delete-ranges}
 
 Per implementare `PTTimeRangeCollection` ed eliminare gli intervalli di contenuti come annunci:
-1. Preparate il `PTTimeRangeCollection`video.
-1. Impostate il tipo di oggetto `PTTimeRangeCollection` su `PTTimeRangeCollectionTypeDeleteRanges`, per notificare a TVSDK la necessità di eliminare gli intervalli forniti.
+1. Preparare la `PTTimeRangeCollection`.
+1. Impostate il tipo di `PTTimeRangeCollection` su `PTTimeRangeCollectionTypeDeleteRanges`, per notificare a TVSDK la necessità di eliminare gli intervalli forniti.
 
    ```
    #define PSDK_TIMESCALE 100000 
@@ -156,7 +159,7 @@ Per implementare `PTTimeRangeCollection` ed eliminare gli intervalli di contenut
                                               type:PTTimeRangeCollectionTypeDeleteRanges];
    ```
 
-1. Create il file `PTAdMetadata` e impostate il `PTTimeRangeCollection`.
+1. Create la `PTAdMetadata` e impostate la `PTTimeRangeCollection`.
 
    ```
    //Create the PTPlayerItem metadata 
@@ -180,7 +183,7 @@ Per implementare `PTTimeRangeCollection` ed eliminare gli intervalli di contenut
 
    >[!TIP]
    >
-   >L&#39;inserimento dell&#39;annuncio si verifica dopo l&#39;eliminazione degli intervalli personalizzati in base al `PTAdMetadata` e alla versione corrente `PTAdSignalingMode`.
+   >L&#39;inserimento dell&#39;annuncio si verifica dopo l&#39;eliminazione degli intervalli personalizzati basati su `PTAdMetadata` e sulla `PTAdSignalingMode` corrente.
 
 1. Creare il lettore e avviare la riproduzione.
 
