@@ -13,10 +13,10 @@ ht-degree: 15%
 ---
 
 
-# Note sulla versione di Primetime {#release-notes}
+# Note sulla versione di Primetime  {#release-notes}
 
 + [Panoramica sulle note sulla versione](home.md)
-+ Primetime  Ad Insertion {#ptai}
++ Ad Insertion  Primetime {#ptai}
    + [Note sulla versione di PTAI 20.10.1](ptai-20x-release-notes.md)
    + [Note sulla versione PTAI 19.11.1](ptai-19x-release-notes.md)
 + TVSDK per iOS {#tvsdk-ios}
