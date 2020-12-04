@@ -26,25 +26,25 @@ Potete apportare i seguenti tipi di modifiche:
 
 * Colore di primo piano dei pulsanti e del testo
 
-   Tutti i controlli in primo piano utilizzano la `vid-skin-fgcolor` classe. Per modificare il primo piano di tutti i controlli, ripetete tutti gli elementi con la `vid-skin-fgcolor` classe e specificate il colore desiderato.
+   Tutti i controlli in primo piano utilizzano la classe `vid-skin-fgcolor`. Per modificare il primo piano di tutti i controlli, ripetete tutti gli elementi con la classe `vid-skin-fgcolor` e specificate il colore desiderato.
 * Colore di sfondo dei pulsanti e del testo
 
-   Tutti i controlli con un primo piano utilizzano la `vid-skin-bgcolor` classe. Per modificare il primo piano di tutti i controlli, ripetete tutti gli elementi con `vid-skin-bgcolor` classe e specificate il colore desiderato.
+   Tutti i controlli in primo piano utilizzano la classe `vid-skin-bgcolor`. Per modificare il primo piano di tutti i controlli, ripetete tutti gli elementi con la classe `vid-skin-bgcolor` e specificate il colore desiderato.
 * Forma della testina di gioco
 
-   La testa di gioco può essere quadrata o rotonda. Per cambiare l&#39;indicatore di riproduzione, aggiungete `square` o `round` la classe all&#39; `playhead` elemento.
+   La testa di gioco può essere quadrata o rotonda. Per modificare l&#39;indicatore di riproduzione, aggiungere la classe `square` o `round` all&#39;elemento `playhead`.
 * Stile dei filetti di tamponamento
 
    Il lettore di riferimento fornisce i seguenti stili di filetti che possono essere visualizzati come contenuto buffer del lettore:
 
-   * Sovrapposizione testo ( `overlay-text`)
+   * Testo sovrapposto ( `overlay-text`)
    * Spinner rettangolare ( `spinner`)
    * Segnale ( `signal`)
    * Barre verticali ( `vertical`)
 
       >[!TIP]
       >
-      >Per utilizzare uno dei filatori di buffering, è necessario aggiungere la classe nell’elemento buffering-overlay. Ad esempio, per utilizzare `overlay-text`, aggiungere le righe seguenti nel `BufferOverlay.js` file:
+      >Per utilizzare uno dei filatori di buffering, è necessario aggiungere la classe nell’elemento buffering-overlay. Ad esempio, per utilizzare `overlay-text`, aggiungere le righe seguenti nel file `BufferOverlay.js`:
       >
       >
       ```js
