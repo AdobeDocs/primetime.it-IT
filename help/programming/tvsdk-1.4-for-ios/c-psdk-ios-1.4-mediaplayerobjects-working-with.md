@@ -6,6 +6,9 @@ title: Operazioni con gli oggetti MediaPlayer
 uuid: eba26ad7-8c9a-4703-af32-1dfb928f6b67
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '469'
+ht-degree: 0%
 
 ---
 
@@ -16,19 +19,19 @@ L&#39;oggetto PTMediaPlayer rappresenta il lettore multimediale. Un PTMediaPlaye
 
 ## Informazioni sulla classe MediaPlayerItem {#section_B6F36C0462644F5C932C8AA2F6827071}
 
-Dopo che una risorsa multimediale è stata caricata correttamente, TVSDK crea un&#39;istanza della `PTMediaPlayerItem` classe per fornire l&#39;accesso a tale risorsa.
+Dopo che una risorsa multimediale è stata caricata correttamente, TVSDK crea un&#39;istanza della classe `PTMediaPlayerItem` per fornire l&#39;accesso a tale risorsa.
 
-Consente di `PTMediaPlayer` risolvere la risorsa multimediale, caricare il file manifesto associato e analizzare il manifesto. Questa è la parte asincrona del processo di caricamento delle risorse. L’ `PTMediaPlayerItem` istanza viene prodotta dopo che la risorsa è stata risolta e questa è una versione risolta di una risorsa multimediale. TVSDK consente di accedere all’ `PTMediaPlayerItem` istanza appena creata tramite `PTMediaPlayer.currentItem`.
+La `PTMediaPlayer` risolve la risorsa multimediale, carica il file manifesto associato e analizza il manifesto. Questa è la parte asincrona del processo di caricamento delle risorse. L&#39;istanza `PTMediaPlayerItem` viene prodotta dopo che la risorsa è stata risolta e questa è una versione risolta di una risorsa multimediale. TVSDK consente di accedere all&#39;istanza appena creata `PTMediaPlayerItem` tramite `PTMediaPlayer.currentItem`.
 
 >[!TIP]
 >
 >È necessario attendere che la risorsa venga caricata correttamente prima di accedere all&#39;elemento del lettore multimediale.
 
-## ciclo di vita dell’oggetto MediaPlayer {#section_D87EF7FBC7B442BDBE825156DC2C1CCF}
+## Ciclo di vita dell&#39;oggetto MediaPlayer {#section_D87EF7FBC7B442BDBE825156DC2C1CCF}
 
-Dal momento in cui create l’ `PTMediaPlayer` istanza al momento in cui viene terminata (riutilizzata o rimossa), questa istanza completa una serie di transizioni da uno stato all’altro.
+Dal momento in cui create l&#39;istanza `PTMediaPlayer` al momento in cui viene terminata (riutilizzata o rimossa), questa istanza completa una serie di transizioni da uno stato all&#39;altro.
 
-Alcune operazioni sono consentite solo quando il lettore si trova in uno stato particolare. Ad esempio, la chiamata `play` in `PTMediaPlayerStatusCreated` non è consentita. È possibile richiamare questo stato solo dopo che il lettore ha raggiunto lo `PTMediaPlayerStatusReady` stato.
+Alcune operazioni sono consentite solo quando il lettore si trova in uno stato particolare. Ad esempio, non è consentito chiamare `play` in `PTMediaPlayerStatusCreated`. È possibile richiamare questo stato solo dopo che il lettore ha raggiunto lo stato `PTMediaPlayerStatusReady`.
 
 Per utilizzare gli stati:
 
@@ -52,11 +55,11 @@ La tabella seguente fornisce ulteriori dettagli:
  <tbody> 
   <tr> 
    <td colname="col1"> <p><span class="codeph"> PTMediaPlayerStatusCreate</span> </p> </td> 
-   <td colname="col2"> <p>L’applicazione ha richiesto un nuovo lettore multimediale chiamando <span class="codeph"> playerWithMediaPlayerItem</span>. Il nuovo lettore creato è in attesa di specificare un elemento del lettore multimediale. Questo è lo stato iniziale del lettore multimediale. </p> </td> 
+   <td colname="col2"> <p>L'applicazione ha richiesto un nuovo lettore multimediale chiamando <span class="codeph"> playerWithMediaPlayerItem</span>. Il nuovo lettore creato è in attesa di specificare un elemento del lettore multimediale. Questo è lo stato iniziale del lettore multimediale. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> PTMediaPlayerStatusInitializing</span> </p> </td> 
-   <td colname="col2"> <p>L’applicazione chiama <span class="codeph"> PTMediaPlayer.replaceCurrentItemWithPlayerItem</span>e il lettore multimediale è in fase di caricamento. </p> </td> 
+   <td colname="col2"> <p>L'applicazione chiama <span class="codeph"> PTMediaPlayer.replaceCurrentItemWithPlayerItem</span> e il lettore multimediale è in fase di caricamento. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p><span class="codeph"> PTMediaPlayerStatusInitialized</span> </p> </td> 
@@ -68,11 +71,11 @@ La tabella seguente fornisce ulteriori dettagli:
   </tr> 
   <tr> 
    <td colname="col1"> <p><span class="codeph"> PTMediaPlayerStatusPlay</span> </p> </td> 
-   <td colname="col2"> <p>L’applicazione ha chiamato <span class="codeph"> play</span>, pertanto TVSDK sta tentando di riprodurre il video. Prima della riproduzione del video potrebbe verificarsi un buffering. </p> </td> 
+   <td colname="col2"> <p>Poiché l'applicazione ha chiamato <span class="codeph"> play</span>, TVSDK sta tentando di riprodurre il video. Prima della riproduzione del video potrebbe verificarsi un buffering. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p><span class="codeph"> PTMediaPlayerStatusPaused</span> </p> </td> 
-   <td colname="col2"> <p>Durante la riproduzione e la pausa dell’applicazione, il lettore multimediale si sposta tra questo stato e <span class="codeph"> PTMediaPlayerStatusPlaying</span>. </p> </td> 
+   <td colname="col2"> <p>Durante la riproduzione e la pausa dell'applicazione, il lettore multimediale si sposta tra questo stato e <span class="codeph"> PTMediaPlayerStatusPlaying</span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p><span class="codeph"> PTMediaPlayerStatusCompleted</span> </p> </td> 
