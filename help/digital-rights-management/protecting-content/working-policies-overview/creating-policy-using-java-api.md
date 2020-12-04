@@ -4,6 +4,9 @@ title: Creazione di un criterio DRM con l'API Java
 uuid: 1672a6d0-e38c-4330-97b0-02147f99db47
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '102'
+ht-degree: 0%
 
 ---
 
@@ -12,8 +15,8 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 Per creare un criterio DRM con l&#39;API Java:
 
-1. Configurate l&#39;ambiente di sviluppo e includete nel progetto tutti i file JAR elencati in [Configurare l&#39;ambiente di sviluppo.](../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
-1. Create un `com.adobe.flashaccess.sdk.policy.Policy` oggetto e specificatene le proprietà, inclusi i diritti, la durata del caching delle licenze e la data di fine del criterio DRM.
+1. Configurare l&#39;ambiente di sviluppo e includere nel progetto tutti i file JAR elencati in [Configurare l&#39;ambiente di sviluppo.](../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
+1. Create un oggetto `com.adobe.flashaccess.sdk.policy.Policy` e specificatene le proprietà, inclusi i diritti, la durata del caching delle licenze e la data di fine del criterio DRM.
 
    ```java
    // Create a new DRM policy object.  
@@ -48,7 +51,7 @@ Per creare un criterio DRM con l&#39;API Java:
    } 
    ```
 
-1. Serializzare l&#39; `Policy` oggetto DRM e archiviarlo in un file o in un database.
+1. Serializzare l&#39;oggetto DRM `Policy` e archiviarlo in un file o in un database.
 
    ```java
    // Serialize the DRM policy  
@@ -62,4 +65,4 @@ Per creare un criterio DRM con l&#39;API Java:
    out.close(); 
    ```
 
-Consultate [!DNL com.adobe.flashaccess.samples.policy.CreatePolicy] nella directory Strumenti della riga di comando Implementazione di riferimento [!DNL samples] l’origine completa di questo codice di esempio.
+Vedere [!DNL com.adobe.flashaccess.samples.policy.CreatePolicy] nella directory Strumenti della riga di comando di implementazione di riferimento [!DNL samples] per l&#39;origine completa di questo codice di esempio.
