@@ -6,6 +6,9 @@ title: Buffering
 uuid: da9498ee-c736-4093-97a2-250d3ad56d49
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '69'
+ht-degree: 2%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 Potete configurare gli elementi visivi per notificare all’utente il buffering del contenuto.
 
-Ascoltare `AdobePSDK.PSDKEventType.BUFFERING_BEGIN` ed `AdobePSDK.PSDKEventType.BUFFERING_END` eventi. Ad esempio:
+Ascoltare gli eventi `AdobePSDK.PSDKEventType.BUFFERING_BEGIN` e `AdobePSDK.PSDKEventType.BUFFERING_END`. Ad esempio:
 
 ```js
 player.addEventListener(AdobePSDK.PSDKEventType.BUFFERING_BEGIN,  
