@@ -6,11 +6,14 @@ title: Reimpostare o riutilizzare un'istanza di MediaPlayer
 uuid: 72cc4511-8ab0-44e5-b93c-b36f0321bba8
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '300'
+ht-degree: 0%
 
 ---
 
 
-# Reimpostare, riutilizzare o rimuovere un’istanza di MediaPlayer {#reset-or-reuse-a-mediaplayer-instance}
+# Reimpostare, riutilizzare o rimuovere un&#39;istanza di MediaPlayer {#reset-or-reuse-a-mediaplayer-instance}
 
 È possibile ripristinare, riutilizzare o rilasciare un&#39;istanza di MediaPlayer non più necessaria.
 
@@ -18,17 +21,17 @@ Quando reimpostate un’istanza di MediaPlayer, viene riportato al relativo stat
 
 Questa operazione è utile nei casi seguenti:
 
-* Per riutilizzare un’ `MediaPlayer` istanza occorre caricarne una nuova `MediaResource` (contenuto video) e sostituire l’istanza precedente.
+* Per riutilizzare un&#39;istanza `MediaPlayer` è necessario caricare una nuova `MediaResource` (contenuto video) e sostituire l&#39;istanza precedente.
 
-   La reimpostazione consente di riutilizzare l’ `MediaPlayer` istanza senza sovraccaricare le risorse, ricreare l’istanza `MediaPlayer`e riallocare le risorse.
+   La reimpostazione consente di riutilizzare l&#39;istanza `MediaPlayer` senza sovraccaricare le risorse, ricreare l&#39;istanza `MediaPlayer` e riallocare le risorse.
 
-* Quando lo stato `MediaPlayer` è ERROR e deve essere cancellato.
+* Quando il `MediaPlayer` è in stato di errore e deve essere cancellato.
 
    >[!IMPORTANT]
    >
    >Questo è l&#39;unico modo per recuperare dallo stato ERROR.
 
-1. Chiamata `reset` per restituire l’ `MediaPlayer` istanza allo stato non inizializzato:
+1. Chiamare `reset` per restituire l&#39;istanza `MediaPlayer` allo stato non inizializzato:
 
    ```java
    void reset() throws IllegalStateException; 
@@ -40,24 +43,24 @@ Questa operazione è utile nei casi seguenti:
    >
    >Per cancellare un errore, caricate lo stesso `MediaResource`.
 
-1. Quando ricevete il callback dell’ `STATUS_CHANGED` evento con lo stato PREPARATO, avviate la riproduzione.
+1. Quando ricevete il callback dell&#39;evento `STATUS_CHANGED` con stato PREPARATO, avviate la riproduzione.
 
-## Rilasciare un’istanza e le risorse di MediaPlayer{#release-a-mediaplayer-instance-and-resources}
+## Rilasciare un&#39;istanza e risorse di MediaPlayer{#release-a-mediaplayer-instance-and-resources}
 
 Rilasciare un’istanza e risorse di MediaPlayer quando non è più necessario disporre di MediaResource.
 
-Quando si rilascia un `MediaPlayer` oggetto, le risorse hardware sottostanti associate a tale `MediaPlayer` oggetto vengono deallocate.
+Quando si rilascia un oggetto `MediaPlayer`, le risorse hardware sottostanti associate a questo oggetto `MediaPlayer` vengono deallocate.
 
 Di seguito sono riportati alcuni motivi per rilasciare un MediaPlayer:
 
 * L&#39;utilizzo di risorse non necessarie può influire sulle prestazioni.
-* Lasciare un oggetto inutile `MediaPlayer` può comportare un consumo continuo di batterie per i dispositivi mobili.
+* Lasciare un oggetto `MediaPlayer` inutile può comportare un consumo continuo di batterie per i dispositivi mobili.
 * Se più istanze dello stesso codec video non sono supportate su un dispositivo, potrebbe verificarsi un errore di riproduzione per altre applicazioni.
 
-1. Rilasciate il `MediaPlayer`.
+1. Rilasciare la `MediaPlayer`.
 
    ```java
    void release() throws IllegalStateException;
    ```
 
-Una volta rilasciata l&#39; `MediaPlayer` istanza, non sarà più possibile utilizzarla. Se dopo il rilascio viene chiamato un metodo dell’ `MediaPlayer` interfaccia, viene `IllegalStateException` generato un messaggio.
+Dopo il rilascio dell&#39;istanza `MediaPlayer`, non è più possibile utilizzarla. Se dopo il rilascio viene chiamato un metodo dell&#39;interfaccia `MediaPlayer`, viene restituito un `IllegalStateException`.
