@@ -6,6 +6,9 @@ title: Implementazione rapida in avanti e indietro
 uuid: 070a3331-43a3-4517-9cd9-06d817ffcfbd
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
@@ -16,11 +19,11 @@ Quando gli utenti avanzano velocemente o riavvolgono rapidamente i supporti, si 
 
 Per cambiare la velocità, è necessario impostare un valore.
 
-1. Passa dalla modalità di riproduzione normale (1x) alla modalità di riproduzione ingannevole impostando la frequenza sulla modalità `MediaPlayer` a un valore consentito.
+1. Passa dalla modalità di riproduzione normale (1x) alla modalità di riproduzione ingannevole impostando la velocità su `MediaPlayer` su un valore consentito.
 
-       Ricorda le informazioni seguenti:
+       Ricorda le seguenti informazioni:
    
-   * La `MediaPlayerItem` classe definisce le frequenze di riproduzione consentite.
+   * La classe `MediaPlayerItem` definisce le frequenze di riproduzione consentite.
    * TVSDK seleziona la tariffa più vicina consentita se la frequenza specificata non è consentita.
 
       L&#39;esempio seguente imposta la frequenza di riproduzione interna del lettore sulla frequenza richiesta:
@@ -53,7 +56,7 @@ Per cambiare la velocità, è necessario impostare un valore.
 
        TVSDK invia gli eventi seguenti relativi al trucco:
    
-   * `MediaPlayerEvent.RATE_SELECTED`, quando il `rate` valore cambia in un altro valore.
+   * `MediaPlayerEvent.RATE_SELECTED`, quando il  `rate` valore cambia in un altro valore.
 
    * `MediaPlayerEvent.RATE_PLAYING`, quando la riproduzione riprende alla velocità selezionata.
 
