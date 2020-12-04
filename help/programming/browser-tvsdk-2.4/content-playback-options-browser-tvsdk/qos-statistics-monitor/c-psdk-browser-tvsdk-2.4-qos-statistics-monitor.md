@@ -6,22 +6,25 @@ title: Qualità delle statistiche di servizio
 uuid: e4bb2617-d8a7-4da7-b669-d6ffab2864bb
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 1%
 
 ---
 
 
-# Qualità delle statistiche di servizio{#quality-of-service-statistics}
+# Statistiche sulla qualità del servizio{#quality-of-service-statistics}
 
 Quality of Service (QoS) offre una visualizzazione dettagliata delle prestazioni del motore video. Browser TVSDK fornisce statistiche dettagliate su riproduzione, buffering e dispositivi.
 
-## Lettura delle statistiche relative a riproduzione, buffering e dispositivo QOS {#read-qos-playback-buffering-and-device-statistics}
+## Leggi le statistiche relative a riproduzione, buffering e dispositivo QOS {#read-qos-playback-buffering-and-device-statistics}
 
 Dalla classe QOSProvider è possibile leggere le statistiche relative a riproduzione, buffering e dispositivo.
 
-La `QOSProvider` classe fornisce diverse statistiche, tra cui informazioni sul buffering, i bit rate, i frame rate, i dati temporali e così via.
+La classe `QOSProvider` fornisce diverse statistiche, tra cui informazioni sul buffering, i bit rate, i frame rate, i dati temporali e così via.
 
 1. Creare un&#39;istanza di un lettore multimediale.
-1. Creare un `QOSProvider` oggetto e associarlo al lettore multimediale.
+1. Create un oggetto `QOSProvider` e collegatelo al lettore multimediale.
 
    ```js
    // Create Media Player.qosProvider =  
