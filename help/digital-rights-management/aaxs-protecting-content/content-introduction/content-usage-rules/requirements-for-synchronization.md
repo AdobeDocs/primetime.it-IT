@@ -23,5 +23,5 @@ Il comportamento di sincronizzazione è definito utilizzando i seguenti parametr
 
 >[!NOTE]
 >
->Questa regola di utilizzo è supportata dai client di accesso  Adobe versione 3.0 e successive. Il comportamento dei client meno recenti dipende dalla versione client minima supportata dal server licenze. Vedere, Versione [client](../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md)minima.
+>Questa regola di utilizzo è supportata  client di accesso al Adobe versione 3.0 e successive. Il comportamento dei client meno recenti dipende dalla versione client minima supportata dal server licenze. Vedere [Versione minima del client](../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md).
 
