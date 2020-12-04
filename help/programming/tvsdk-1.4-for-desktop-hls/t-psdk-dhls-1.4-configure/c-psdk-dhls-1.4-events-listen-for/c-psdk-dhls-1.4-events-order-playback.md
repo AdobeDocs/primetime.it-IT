@@ -6,6 +6,9 @@ title: Ordine degli eventi di riproduzione
 uuid: 4a9ea66b-a383-46ff-9ab8-983b1dd7f935
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '153'
+ht-degree: 0%
 
 ---
 
@@ -20,17 +23,17 @@ Gli esempi seguenti mostrano l&#39;ordine di alcuni eventi che includono eventi 
 
 * Quando si carica correttamente una risorsa multimediale tramite `MediaPlayer.replaceCurrentResource`, l&#39;ordine degli eventi è:
 
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` con stato `MediaPlayerStatus.INITIALIZING`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` con stato  `MediaPlayerStatus.INITIALIZING`
 
    * `MediaPlayerItemEvent.ITEM_CREATED`
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` con stato `MediaPlayerStatus.INITIALIZED`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` con stato  `MediaPlayerStatus.INITIALIZED`
 
 * Durante la preparazione per la riproduzione tramite `MediaPlayer.prepareToPlay`, l&#39;ordine degli eventi è:
 
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` con stato `MediaPlayerStatus.PREPARING`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` con stato  `MediaPlayerStatus.PREPARING`
 
    * `TimelineEvent.TIMELINE_UPDATED` se sono stati inseriti degli annunci
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` con stato `MediaPlayerStatus.PREPARED`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` con stato  `MediaPlayerStatus.PREPARED`
 
 * Per i flussi live/lineari, durante la riproduzione con l&#39;avanzare della finestra di riproduzione e la risoluzione di ulteriori opportunità, l&#39;ordine degli eventi è:
 
