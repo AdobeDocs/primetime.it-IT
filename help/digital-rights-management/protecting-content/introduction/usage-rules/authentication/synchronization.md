@@ -17,9 +17,9 @@ I requisiti per la sincronizzazione specificano la frequenza con cui il client s
 
 Il comportamento di sincronizzazione è definito utilizzando i seguenti parametri:
 
-* **Intervallo** di inizio - Specifica per quanto tempo attendere dopo l’ultima sincronizzazione per avviare un’altra richiesta di sincronizzazione.
-* **Intervallo** di arresto rigido - (facoltativo). Disattiva la riproduzione se la sincronizzazione non ha avuto esito positivo nel tempo specificato.
-* **Forza probabilità** sincronizzazione - (facoltativo). Probabilità con cui il client deve inviare un messaggio di sincronizzazione prima del successivo intervallo di inizio.
+* **Intervallo**  di inizio - Specifica per quanto tempo attendere dopo l’ultima sincronizzazione per avviare un’altra richiesta di sincronizzazione.
+* **Intervallo**  di arresto rigido - (facoltativo). Disattiva la riproduzione se la sincronizzazione non ha avuto esito positivo nel tempo specificato.
+* **Forza probabilità**  sincronizzazione - (facoltativo). Probabilità con cui il client deve inviare un messaggio di sincronizzazione prima del successivo intervallo di inizio.
 
 >[!NOTE]
 >
