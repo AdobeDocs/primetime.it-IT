@@ -13,14 +13,14 @@ ht-degree: 0%
 ---
 
 
-# Dati banner complementari{#companion-banner-data}
+# Dati del banner della compagnia{#companion-banner-data}
 
 Il contenuto di un AdBannerAsset descrive un banner complementare.
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-L&#39; `AdobePSDK.PSDKEventType.AD_STARTED` evento restituisce un&#39; `Ad` istanza che contiene una `companionAssets` proprietà ( `Array<AdBannerAsset>`).
-Ciascuno `AdBannerAsset` fornisce informazioni sulla visualizzazione della risorsa.
+L&#39;evento `AdobePSDK.PSDKEventType.AD_STARTED` restituisce un&#39;istanza `Ad` che contiene una proprietà `companionAssets` ( `Array<AdBannerAsset>`).
+Ogni `AdBannerAsset` fornisce informazioni sulla visualizzazione della risorsa.
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
  <thead> 
