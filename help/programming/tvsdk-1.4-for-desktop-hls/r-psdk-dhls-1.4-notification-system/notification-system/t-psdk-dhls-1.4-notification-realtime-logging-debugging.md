@@ -6,6 +6,9 @@ title: Aggiunta di registrazioni e debugging in tempo reale
 uuid: 568ea2e7-963b-427e-9cb2-e261e4423902
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '254'
+ht-degree: 0%
 
 ---
 
@@ -34,4 +37,4 @@ Di seguito è riportato un esempio di come recuperare le notifiche.
    Il server remoto potrebbe quindi visualizzare graficamente i dati forniti in tempo reale.
 1. Per rilevare la perdita di eventi di notifica, cercate gli spazi vuoti nella sequenza di valori di indice dell&#39;evento.
 
-   Ogni evento di notifica ha un valore di indice che viene incrementato automaticamente dalla `NotificationHistory` classe.
+   Ogni evento di notifica ha un valore di indice che viene incrementato automaticamente dalla classe `NotificationHistory`.
