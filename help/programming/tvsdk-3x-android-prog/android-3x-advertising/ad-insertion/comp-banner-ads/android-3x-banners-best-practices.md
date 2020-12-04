@@ -6,6 +6,9 @@ title: Procedure ottimali per gli annunci banner pubblicitari associati
 uuid: 0e4c98cd-5e16-4c84-848f-02bc6f1b0d6e
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '160'
+ht-degree: 0%
 
 ---
 
