@@ -13,9 +13,9 @@ ht-degree: 0%
 ---
 
 
-# Preparare le password tramite Java{#prepare-passwords-using-java}
+# Preparare le password utilizzando Java{#prepare-passwords-using-java}
 
-Eseguite l&#39; `ScrambleUtil.class` operazione con Java:
+Eseguire `ScrambleUtil.class` con Java:
 
 1. Passa a `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl/scrambler/ refimpl/scrambler/`
 1. Dalla riga di comando, digitare:
