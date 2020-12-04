@@ -6,11 +6,14 @@ title: Classi pubblicitarie nella timeline
 uuid: 4e6ca9fb-9e68-4625-a24b-386a50333862
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '584'
+ht-degree: 0%
 
 ---
 
 
-# Classi pubblicitarie nella timeline{#timeline-advertising-classes}
+# Classi pubblicitarie della timeline{#timeline-advertising-classes}
 
 Queste classi forniscono informazioni sugli annunci che si verificano all&#39;interno di una cronologia.
 
@@ -20,7 +23,7 @@ Pacchetto: [com.adobe.mediacore.timeline.advertising.auditude](https://help.adob
 
 | Nome | Descrizione |
 |--- |--- |
-| [Annuncio](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/Ad.html) | Classe che definisce l&#39;astrazione degli annunci e contiene tutte le informazioni sugli annunci. È definito da un ID univoco, una durata e un `MediaResource`. L&#39; `MediaResource` URL contiene l&#39;URL in cui risiede il contenuto effettivo dell&#39;annuncio. |
+| [Annuncio](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/Ad.html) | Classe che definisce l&#39;astrazione degli annunci e contiene tutte le informazioni sugli annunci. È definito da un ID univoco, una durata e un `MediaResource`. L&#39; `MediaResource` contiene l&#39;URL in cui risiede il contenuto effettivo dell&#39;annuncio. |
 | [AdAsset](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdAsset.html) | Classe che rappresenta una risorsa da visualizzare. Classe che rappresenta una risorsa annuncio. |
 | [AdBreak](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdBreak.html) | Classe che offre una visualizzazione unificata su diversi annunci che verranno riprodotti in un determinato momento durante la riproduzione. |
 | [AdBreakPlacement](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdBreakPlacement.html) | Classe dell&#39;operazione di posizionamento dell&#39;interruzione dell&#39;annuncio. |
