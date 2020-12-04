@@ -6,6 +6,9 @@ title: Richieste di inserimento annunci
 uuid: e42b3228-bff7-4202-86ed-7f631f3016ae
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '251'
+ht-degree: 0%
 
 ---
 
@@ -16,14 +19,14 @@ Tutte le richieste di inserimento di annunci utilizzano la stessa struttura URL 
 
 | Parametro | Descrizione |
 |--- |--- |
-| u | L’ID risorsa è un hash MD5 di ad_request_id proveniente da Adobe Primetime e dai metadati di decisione. Fornito dal vostro Adobe Technical Account Manager. |
-| z | L’ID di zona per la risorsa che deve essere fornita ad Auditude. Fornito dal vostro Adobe Technical Account Manager. |
+| u | L’ID risorsa è un hash MD5 dell’ID ad_request_id dall’Adobe Primetime  e dai metadati di decisione. Fornito dal responsabile dell&#39;account tecnico  Adobe. |
+| z | L’ID di zona per la risorsa che deve essere fornita ad Auditude. Fornito dal responsabile dell&#39;account tecnico  Adobe. |
 | `__sid__` | Un ID univoco che il server manifesto utilizzerà per generare l’ID sessione. |
 
 >[!NOTE]
 >
->Il `__sid__` parametro è circondato da due caratteri di sottolineatura.
+>Il parametro `__sid__` è circondato da caratteri di sottolineatura doppi.
 
-Il server manifesto mantiene le sessioni per singoli client o gruppi di client per assicurare che le sequenze di interazioni API per i diversi client rimangano separate. L&#39; `__sid__` invio da parte del client dell&#39;URL di avvio al server manifesto deve essere univoco all&#39;interno del relativo ambiente. Il server manifesto lo utilizza per creare un ID univoco globale, che restituisce al client.
+Il server manifesto mantiene le sessioni per singoli client o gruppi di client per assicurare che le sequenze di interazioni API per i diversi client rimangano separate. La `__sid__` che il client invia nell&#39;URL di avvio al server manifesto deve essere univoca all&#39;interno del relativo ambiente. Il server manifesto lo utilizza per creare un ID univoco globale, che restituisce al client.
 
 I restanti parametri di query riguardano client e situazioni diversi.
