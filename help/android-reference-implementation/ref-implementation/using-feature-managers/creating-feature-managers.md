@@ -6,6 +6,9 @@ title: Creazione di feature manager trasmettendo le informazioni di configurazio
 uuid: 106ececd-a670-4360-b000-a31fec65233c
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '251'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ Le funzioni TVSDK sono guidate dalla configurazione e implementate tramite Media
 
 Ciascuna funzione dispone di un&#39;interfaccia di configurazione corrispondente. Ad esempio, `CCManager` utilizza `ICCConfig` per recuperare la configurazione. `ICCConfig` contiene metodi per ottenere le informazioni di configurazione relative solo ai sottotitoli codificati.
 
-L&#39;esempio seguente mostra il [!DNL ICCConfig.java] file configurato per ricevere informazioni sulla visibilità delle didascalie, lo stile del font e il bordo del font da `MediaPlayer`:
+L&#39;esempio seguente mostra il file [!DNL ICCConfig.java] configurato per ricevere informazioni sulla visibilità delle didascalie, lo stile del font e il bordo del font dal percorso `MediaPlayer`:
 
 ```java
 // Constructor of CCManager 
@@ -64,7 +67,7 @@ L&#39;esempio seguente mostra il [!DNL ICCConfig.java] file configurato per rice
 }
 ```
 
-Un’applicazione che utilizza una funzione TVSDK può creare il proprio feature manager con un provider di configurazione e un `MediaPlayer` oggetto. Ad esempio:
+Un&#39;applicazione che utilizza una funzione TVSDK può creare il proprio feature manager con un provider di configurazione e un oggetto `MediaPlayer`. Ad esempio:
 
 ```java
 // This application needs to use the advertising workflow feature 
