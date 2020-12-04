@@ -6,6 +6,9 @@ title: Personalizzare rilevatori di opportunità e risolutori di contenuti
 uuid: 7bd04c8f-6f04-4321-88e8-9bb93251d940
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '254'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ TVSDK include rilevatori di opportunità predefiniti:
 
 TVSDK include anche un risolutore di contenuto predefinito che fornisce il contenuto da inserire in base alla chiave di metadati nell&#39;elemento del lettore:
 
-* `AuditudeResolver`, in grado di comunicare con i server Adobe Primetime ad hoc per la gestione degli annunci (precedentemente noti come Auditude) e di restituire le interruzioni pubblicitarie da inserire.
+* `AuditudeResolver`, in grado di comunicare con  server di annunci pubblicitari Adobe Primetime (precedentemente noti come Auditude) e di restituire interruzioni pubblicitarie da inserire.
 
 Potete ignorare i rilevatori di opportunità e i risolutori di contenuti predefiniti per personalizzare il flusso di lavoro pubblicitario nei seguenti modi:
 
