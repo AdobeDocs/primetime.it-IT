@@ -6,6 +6,9 @@ title: Aggiunta di listener per le notifiche di metadati temporizzate
 uuid: dcd1bd92-0617-4eab-8b06-7301aaff42f3
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '206'
+ht-degree: 0%
 
 ---
 
@@ -16,17 +19,17 @@ Per ricevere notifiche sui tag nel manifesto, implementa i listener di notifica 
 
 Potete monitorare i metadati temporizzati ascoltando i seguenti eventi, che notificano all’applicazione le relative attività:
 
-* `PTTimedMetadataChangedNotification`: Ogni volta che viene identificato un tag di sottoscrizione univoco durante l&#39;analisi del contenuto, TVSDK prepara un nuovo `PTTimedMetadata` oggetto e invia questa notifica.
+* `PTTimedMetadataChangedNotification`: Ogni volta che viene identificato un tag di sottoscrizione univoco durante l&#39;analisi del contenuto, TVSDK prepara un nuovo  `PTTimedMetadata` oggetto e invia questa notifica.
 
    L&#39;oggetto contiene il nome del tag a cui avete effettuato la sottoscrizione, l&#39;ora locale nella riproduzione in cui apparirà il tag e altri dati.
 
-* `PTMediaPlayerTimeChangeNotification` : Per i flussi live/lineari in cui il manifest/playlist viene aggiornato periodicamente, è possibile che nella playlist/nel manifesto aggiornato vengano visualizzati tag personalizzati aggiuntivi, per cui è possibile aggiungere `TimedMetadata` oggetti aggiuntivi alla `MediaPlayerItem.timedMetadata` proprietà.
+* `PTMediaPlayerTimeChangeNotification` : Per i flussi live/lineari in cui il manifest/playlist viene aggiornato periodicamente, è possibile che nella playlist/nel manifesto aggiornato vengano visualizzati tag personalizzati aggiuntivi, per cui è possibile aggiungere  `TimedMetadata` oggetti aggiuntivi alla  `MediaPlayerItem.timedMetadata` proprietà.
 
    Questo evento notifica l’applicazione in caso di evento.
 
    Recuperate i metadati temporizzati in uno dei modi seguenti.
 
-   * Impostate l&#39;applicazione per aggiungersi come listener alla `PTTimedMetadataChangedNotification` notifica e recuperate l&#39;oggetto utilizzando `PTTimedMetadataKey`.
+   * Impostate l&#39;applicazione in modo che si aggiunga come listener alla notifica `PTTimedMetadataChangedNotification` e recuperate l&#39;oggetto utilizzando `PTTimedMetadataKey`.
 
       ```
       [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onTimedMetadataChanged:)  
@@ -38,5 +41,5 @@ Potete monitorare i metadati temporizzati ascoltando i seguenti eventi, che noti
       }
       ```
 
-   * Accedere alla `timedMetadataCollection` proprietà di `PTMediaPlayerItem`, costituita da tutti gli `PTTimedMetadata` oggetti notificati finora.
+   * Accedere alla proprietà `timedMetadataCollection` di `PTMediaPlayerItem`, costituita da tutti gli oggetti `PTTimedMetadata` notificati finora.
 
