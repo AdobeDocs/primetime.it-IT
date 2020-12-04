@@ -6,6 +6,9 @@ title: Formato catalogo
 uuid: 6e1a526f-c0bb-403d-a792-666caf5479a5
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '644'
+ht-degree: 0%
 
 ---
 
@@ -75,7 +78,7 @@ Ogni voce di feed è un oggetto JSON con un set specifico di attributi:
 | `thumbnails` | Un array di oggetti JSON con URL per diverse dimensioni di miniature. Gli attributi dell&#39;oggetto JSON sono definiti di seguito. |
 | `metadata` | Un oggetto JSON che definisce i metadati per il contenuto. Attualmente questi metadati sono limitati ai metadati correlati agli annunci. L&#39;oggetto metadata è definito di seguito. |
 
-Il seguente blocco di codice definisce gli oggetti JSON che formano l&#39;array di oggetti **di** contenuto:
+Il seguente blocco di codice definisce gli oggetti JSON che formano l&#39;array di **oggetti di contenuto**:
 
 ```
 "content":  [
@@ -94,7 +97,7 @@ Il seguente blocco di codice definisce gli oggetti JSON che formano l&#39;array 
 | format | Deve essere in formato m3u8 per Android. |
 | url | URL del flusso video per il formato specificato. |
 
-Il seguente blocco di codice definisce gli oggetti JSON che formano l&#39;array di oggetti **** miniatura:
+Il seguente blocco di codice definisce gli oggetti JSON che formano l&#39;array di **oggetti miniatura**:
 
 ```
 "thumbnails": [
@@ -120,7 +123,7 @@ Il seguente blocco di codice definisce gli oggetti JSON che formano l&#39;array 
 | width | Larghezza della miniatura. Nell’applicazione di riferimento, la miniatura con altezza e larghezza più piccole viene restituita come miniatura piccola e quella con larghezza e altezza maggiori viene restituita come miniatura grande. |
 | url | URL del file della miniatura. |
 
-Il seguente blocco di codice definisce l&#39;oggetto **** metadata:
+Il seguente blocco di codice definisce l&#39;oggetto **metadata**:
 
 ```
 "metadata" : {
@@ -141,5 +144,5 @@ Il seguente blocco di codice definisce l&#39;oggetto **** metadata:
 | type | Il valore può essere Annunci Primetime, Interruzioni Annunci Dirette o Marcatori Annunci Personalizzati. <br/><br/>PSDK fornisce supporto integrato per i seguenti tipi di metadati: Metadati relativi all&#39;audience per Primetime Ad Serving (Primetime Ads), interruzioni pubblicitarie dirette con URL di annunci (Direct Ad Breaks) e marcatori di annunci personalizzati che forniscono l&#39;TimeRange per ciascun indicatore di annunci (Custom Ad Markers). Ciascun tipo dispone di un AdProvider integrato nel PSDK che elabora i metadati.  <br/><br/>Il formato JSON per ciascuno di questi è stato definito di seguito. |
 | details | Include gli attributi dei metadati degli annunci. Entrambi i tipi di metadati di annunci dispongono di un proprio set di attributi definiti di seguito. Per i tipi incorporati, gli attributi inclusi definiscono i dati previsti dal PSDK per quel tipo. |
 | entitlement | Metadati relativi all&#39;adesione |
-| id | ID risorsa multimediale utilizzata per le richieste di autorizzazione per il servizio pass TV a pagamento di Adobe Primetime. L’ID può essere una stringa di testo o una stringa mRSS con codifica HTML. Qualsiasi contenuto multimediale che richiede l&#39;autorizzazione deve contenere un ID risorsa valido. |
+| id | ID risorsa multimediale utilizzata per le richieste di autorizzazione per il servizio di pass  Adobe Primetime pay-TV. L’ID può essere una stringa di testo o una stringa mRSS con codifica HTML. Qualsiasi contenuto multimediale che richiede l&#39;autorizzazione deve contenere un ID risorsa valido. |
 
