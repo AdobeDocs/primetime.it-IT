@@ -3,6 +3,9 @@ title: Codici di errore PSDK
 description: Informazioni su vari codici di errore, avvisi e codici di errore nativi.
 translation-type: tm+mt
 source-git-commit: eddc327087411a6214cfd8dafef66b850a603f97
+workflow-type: tm+mt
+source-wordcount: '1897'
+ht-degree: 6%
 
 ---
 
@@ -38,7 +41,7 @@ La tabella seguente fornisce informazioni dettagliate sulle notifiche di tipo ER
   </tr>
   <tr>
     <td>ILLEGAL_STATE</td>
-    <td>3</td>
+    <td>1</td>
     <td>L'operazione non è supportata nello stato corrente del lettore.</td>
   </tr>
   <tr>
@@ -129,7 +132,7 @@ La tabella seguente fornisce informazioni dettagliate sulle notifiche di tipo ER
   <tr>
     <td>PLAYBACK_NOT_AUTHORIZED</td>
     <td>57</td>
-    <td>La riproduzione HLS non è stata abilitata in Flash Player. Consulta AuthorizedFeatures.enableMediaPlayerHLSPlayback().</td>
+    <td>La riproduzione HLS non è stata abilitata nel Flash Player. Consulta AuthorizedFeatures.enableMediaPlayerHLSPlayback().</td>
   </tr>
   <tr>
     <td>NETWORK_TIMEOUT</td>
@@ -223,7 +226,7 @@ L&#39;interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione 
   </tr>
   <tr>
     <td>DECODER_FAILED</td>
-    <td>3</td>
+    <td>1</td>
     <td>Il decodificatore non è riuscito in fase di esecuzione.</td>
   </tr>
   <tr>
@@ -494,7 +497,7 @@ L&#39;interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione 
   <tr>  
     <td>PLAYBACK_NOT_AUTHORIZED</td>
     <td>57</td>
-    <td>La riproduzione HLS non è stata abilitata in Flash Player. Consulta AuthorizedFeatures.enableHLSPlayback.</td>
+    <td>La riproduzione HLS non è stata abilitata nel Flash Player. Consulta AuthorizedFeatures.enableHLSPlayback.</td>
   </tr>
   <tr>
     <td>BAD_MEDIA_SAMPLE_FOUND</td>
@@ -513,7 +516,7 @@ L&#39;interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione 
   </tr>
   <tr>
     <td>INTERNAL_ERROR</td>
-    <td>61</td>
+    <td>81</td>
     <td>Una questione molto rara che non dovrebbe mai accadere.</td>
   </tr>
   <tr>  
