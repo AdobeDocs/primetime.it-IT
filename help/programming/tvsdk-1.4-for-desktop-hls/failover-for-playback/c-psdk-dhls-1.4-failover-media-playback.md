@@ -6,6 +6,9 @@ title: Riproduzione e failover dei supporti
 uuid: 197a6ee0-f1ff-40ac-bd49-eafeae6167d4
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '703'
+ht-degree: 0%
 
 ---
 
@@ -20,9 +23,9 @@ Quando manca un&#39;intera playlist, ad esempio, quando il file M3U8 specificato
 
 Se la playlist associata al bitrate a risoluzione media non è presente, TVSDK cerca una playlist di variante alla stessa risoluzione. Se trova la stessa risoluzione, inizia a scaricare la sequenza di riproduzione della variante e i segmenti dalla posizione corrispondente. Se TVSDK non trova la stessa playlist di risoluzione, tenterà di scorrere altre playlist con bitrate e le loro varianti. Un bitrate immediatamente inferiore è la prima scelta, quindi la relativa variante e così via. Se tutte le playlist con bitrate inferiore e le relative varianti sono esaurite nel tentativo di trovare una playlist valida, TVSDK passa al bitrate superiore e conta in basso da lì. Se non è possibile trovare una playlist valida, il processo non riesce e il lettore passa allo stato ERROR.
 
-L&#39;applicazione può determinare come gestire questa situazione. Ad esempio, potrebbe essere utile chiudere l&#39;attività del lettore e indirizzare l&#39;utente all&#39;attività del catalogo. L’evento di interesse è l’ `STATUS_CHANGED` evento e il callback corrispondente è il `onStatusChange` metodo. Di seguito è riportato il codice che controlla se il lettore modifica il proprio stato interno in ERRORE:
+L&#39;applicazione può determinare come gestire questa situazione. Ad esempio, potrebbe essere utile chiudere l&#39;attività del lettore e indirizzare l&#39;utente all&#39;attività del catalogo. L&#39;evento di interesse è l&#39;evento `STATUS_CHANGED` e il callback corrispondente è il metodo `onStatusChange`. Di seguito è riportato il codice che controlla se il lettore modifica il proprio stato interno in ERRORE:
 
-Per ulteriori informazioni, vedere il `PSDKDemo` file. I listener di eventi sono collegati all&#39;istanza MediaPlayer.
+Per ulteriori informazioni, vedere il file `PSDKDemo`. I listener di eventi sono collegati all&#39;istanza MediaPlayer.
 
 ```
 case MediaPlayerStatus.ERROR: 
@@ -59,9 +62,9 @@ Se sul server manca un segmento perché, ad esempio, il file manifesto non è pr
 1. Scorri ogni bitrate disponibile in ogni variante disponibile.
 1. Salta il segmento ed emette un avviso.
 
-Quando TVSDK non è in grado di ottenere un segmento alternativo, attiva una notifica `CONTENT_ERROR` di errore. Questa notifica contiene una notifica interna con il `DOWNLOAD_ERROR` codice. Se lo streaming con il problema è una traccia audio alternativa, TVSDK genera la notifica di `AUDIO_TRACK_ERROR` errore.
+Quando TVSDK non riesce a ottenere un segmento alternativo, attiva una notifica di errore `CONTENT_ERROR`. Questa notifica contiene una notifica interna con il codice `DOWNLOAD_ERROR`. Se il flusso con il problema è una traccia audio alternativa, TVSDK genera la notifica di errore `AUDIO_TRACK_ERROR`.
 
-Se il motore video non è in grado di ottenere i segmenti in modo continuo, limita l’salita continua a 5, dopo di che la riproduzione viene arrestata e TVSDK emette un errore `NATIVE_ERROR` con il codice 5.
+Se il motore video non è in grado di ottenere i segmenti in modo continuo, limita l’salita continua al 5, dopo il quale la riproduzione viene arrestata e TVSDK rilascia un `NATIVE_ERROR` con il codice 5.
 
 >[!NOTE]
 >
