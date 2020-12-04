@@ -6,17 +6,20 @@ title: Esposizione di sottotitoli codificati
 uuid: 7057014a-b14a-4790-8f7f-37d7a1fb8194
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '143'
+ht-degree: 0%
 
 ---
 
 
-# Esposizione di sottotitoli codificati {#expose-closed-captions}
+# Esporre i sottotitoli codificati {#expose-closed-captions}
 
 Per rendere i sottotitoli codificati disponibili al lettore client, è necessario attivarli. È possibile attivare o disattivare i sottotitoli e selezionare la formattazione desiderata.
 
 Per esporre i sottotitoli codificati:
 
-1. In `PTMediaPlayer` object, impostare la `closedCaptionDisplayEnabled` proprietà.
+1. In `PTMediaPlayer`, impostare la proprietà `closedCaptionDisplayEnabled`.
 
    Se l&#39;utente ha attivato le didascalie, questo passaggio visualizza il testo.
 
@@ -26,4 +29,4 @@ Per esporre i sottotitoli codificati:
 
    >[!NOTE]
    >
-   >`closedCaptionDisplayEnabled` è obsoleto. Utilizzare `subtitlesOptions` proprietà di `PTMediaPlayerItem`. Consultate [Esporre i sottotitoli](../../../tvsdk-3x-ios-prog/c-ios-closed-captioning-and-subtitles-ios/c-ios-closed-captioning-and-subtitles-reqts-ios/t-ios-subtitles-exposing-ios.md) per utilizzare i sottotitoli codificati.
+   >`closedCaptionDisplayEnabled` è obsoleto. Utilizzare la proprietà `subtitlesOptions` di `PTMediaPlayerItem`. Per utilizzare i sottotitoli codificati, vedere [Esposizione dei sottotitoli](../../../tvsdk-3x-ios-prog/c-ios-closed-captioning-and-subtitles-ios/c-ios-closed-captioning-and-subtitles-reqts-ios/t-ios-subtitles-exposing-ios.md).
