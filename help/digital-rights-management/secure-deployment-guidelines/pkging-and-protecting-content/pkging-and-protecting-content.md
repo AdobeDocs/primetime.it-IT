@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Creazione di pacchetti e protezione dei contenuti {#packaging-protecting-content}
+# Creazione di pacchetti e protezione di contenuti {#packaging-protecting-content}
 
 Le informazioni sulla creazione di pacchetti e sulla protezione dei contenuti consentono di proteggere i contenuti.
 
@@ -21,15 +21,15 @@ Le informazioni sulla creazione di pacchetti e sulla protezione dei contenuti co
 
 È necessario proteggere fisicamente il computer in cui si verifica la gestione dei criteri e la creazione di pacchetti di contenuti.
 
-Per ulteriori informazioni, vedere Sicurezza [fisica e accesso](../../secure-deployment-guidelines/physical-sec-and-access.md).
+Per ulteriori informazioni, vedere [Sicurezza fisica e accesso](../../secure-deployment-guidelines/physical-sec-and-access.md).
 
-Se l&#39;implementazione della creazione di pacchetti di contenuto richiede connettività di rete, è necessario rendere più rigido il sistema operativo e implementare una soluzione firewall appropriata. Per ulteriori informazioni, vedere Topologia [di](../../secure-deployment-guidelines/overview/network-topology.md)rete.
+Se l&#39;implementazione della creazione di pacchetti di contenuto richiede connettività di rete, è necessario rendere più rigido il sistema operativo e implementare una soluzione firewall appropriata. Per ulteriori informazioni, vedere [Topologia di rete](../../secure-deployment-guidelines/overview/network-topology.md).
 
-## Creazione sicura di contenuti {#securely-packaging-content}
+## Creazione sicura di pacchetti di contenuto {#securely-packaging-content}
 
 Il file di configurazione per lo strumento della riga di comando  Adobe Primetime DRM Media Packager richiede una credenziale PKCS12 utilizzata durante la creazione del pacchetto.
 
-Negli strumenti della riga di comando Implementazione di riferimento, la password per il file di credenziali PKCS12 viene memorizzata nel `flashaccess.properties` file in testo non visibile. Per questo motivo, prestare maggiore attenzione quando si protegge il computer che ospita questo file e assicurarsi che il computer si trovi in un ambiente protetto. Per ulteriori informazioni, vedere Sicurezza [fisica e accesso](../../secure-deployment-guidelines/physical-sec-and-access.md).
+Negli strumenti della riga di comando Implementazione di riferimento, la password per il file di credenziali PKCS12 viene memorizzata nel file `flashaccess.properties` in testo non visibile. Per questo motivo, prestare maggiore attenzione quando si protegge il computer che ospita questo file e assicurarsi che il computer si trovi in un ambiente protetto. Per ulteriori informazioni, vedere [Sicurezza fisica e accesso](../../secure-deployment-guidelines/physical-sec-and-access.md).
 
 Il packager utilizza anche i certificati License Server e License Server Transport e l&#39;integrità e la riservatezza di tali informazioni devono essere protette. Solo le entità autorizzate devono poter utilizzare il packager. Se le chiavi private sono compromesse, informa immediatamente Adobe Systems Incorporated in modo che il certificato possa essere revocato.
 
@@ -47,7 +47,7 @@ Se il contenuto è incluso in un pacchetto utilizzando un criterio con attributi
 
 Quando il pacchetto è completo, il codice di imballaggio viene raccolto e non viene esplicitamente distrutto. Di conseguenza, il codice di imballaggio rimane presente in memoria per un certo periodo di tempo. È necessario evitare l&#39;accesso non autorizzato alla macchina e assicurarsi di non esporre i file, come i cassetti di base, che potrebbero rivelare queste informazioni.
 
-## Criteri di memorizzazione sicura {#securely-storing-policies}
+## Memorizzazione sicura dei criteri {#securely-storing-policies}
 
 L’SDK  Adobe Primetime DRM consente di sviluppare applicazioni che possono essere utilizzate per la creazione di pacchetti di contenuti e la creazione di criteri.
 
@@ -55,13 +55,13 @@ Quando create queste applicazioni, potete consentire ad alcuni utenti di creare 
 
 I criteri non vengono firmati o protetti da modifiche finché non vengono utilizzati nella creazione dei pacchetti. Se siete preoccupati che gli utenti di strumenti di imballaggio possano modificare i criteri, firmate i criteri in modo da impedire che i criteri possano essere modificati.
 
-Per ulteriori informazioni sulla creazione di applicazioni con l&#39;SDK, vedi API DRM di Primetime sui riferimenti [API Primetime](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References)API.
+Per ulteriori informazioni sulla creazione di applicazioni con l&#39;SDK, vedi Primetime DRM APIs in [API Primetime API References](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References).
 
-## Cifratura delle chiavi asimmetriche {#asymmetric-key-encryption}
+## Cifratura chiave asimmetrica {#asymmetric-key-encryption}
 
 La crittografia delle chiavi asimmetriche, detta anche crittografia delle chiavi pubbliche, utilizza coppie di chiavi. Una chiave è per la crittografia, l&#39;altra è per la decrittazione.
 
-La chiave di decrittazione, o la *`private key`*, è tenuta segreta; la chiave di crittografia, o la chiave, *`public key`* viene messa a disposizione di chiunque sia autorizzato a cifrare il contenuto. Chiunque abbia accesso alla chiave pubblica può cifrare il contenuto. Tuttavia, solo gli utenti con accesso alla chiave privata possono decrittografare il contenuto. Impossibile ricostruire la chiave privata dalla chiave pubblica.
+Il tasto di decrittazione, o il tasto *`private key`*, è tenuto segreto; la chiave di crittografia, o *`public key`*, viene messa a disposizione di chiunque sia autorizzato a crittografare il contenuto. Chiunque abbia accesso alla chiave pubblica può cifrare il contenuto. Tuttavia, solo gli utenti con accesso alla chiave privata possono decrittografare il contenuto. Impossibile ricostruire la chiave privata dalla chiave pubblica.
 
 Quando si crea un pacchetto di contenuto, la chiave pubblica del server licenze viene utilizzata per crittografare la chiave di crittografia del contenuto (CEK) nei metadati DRM. È necessario assicurarsi che solo il server licenze abbia accesso alla chiave privata del server licenze. Se qualcun altro ha la chiave, può decifrare e visualizzare il contenuto.
 
@@ -69,4 +69,4 @@ Quando si crea un pacchetto di contenuto, la chiave pubblica del server licenze 
 >
 >Accertatevi di ottenere il certificato del server licenze che include la chiave pubblica da un&#39;origine affidabile. In questo modo, potete assicurarvi che si tratti della chiave del server licenze e non di una chiave pubblica fuorviante. Se gli aggressori sostituissero la chiave pubblica del server licenze, potrebbero decifrare il contenuto.
 
-Per ulteriori informazioni su come creare pacchetti di contenuto, consultate [Utilizzo dell&#39;SDK DRM di Adobe Primetime  per la protezione dei contenuti](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_protecting_content.pdf).
+Per ulteriori informazioni su come creare pacchetti di contenuto, consultate [Utilizzo dell&#39;SDK  Adobe Primetime DRM per la protezione dei contenuti](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_protecting_content.pdf).
