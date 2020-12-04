@@ -6,6 +6,9 @@ title: Impostazione della gestione degli errori
 uuid: 7c122830-6259-4e95-882e-fb1700454e6e
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '103'
+ht-degree: 1%
 
 ---
 
@@ -16,11 +19,11 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 1. Implementare una funzione di callback dell&#39;evento per `MediaPlayerEvent.STATUS_CHANGED`.
 
-   TVSDK trasmette le informazioni sull&#39;evento, ad esempio un `MediaPlayerStatusChangeEvent` oggetto.
+   TVSDK trasmette le informazioni sull&#39;evento, ad esempio un oggetto `MediaPlayerStatusChangeEvent`.
 1. Nel callback, quando lo stato restituito è `MediaPlayerStatus.ERROR`, fornire logica per gestire tutti gli errori.
-1. Una volta gestito l&#39;errore, reimpostare l&#39; `MediaPlayer` oggetto o caricare una nuova risorsa multimediale.
+1. Una volta gestito l&#39;errore, reimpostare l&#39;oggetto `MediaPlayer` o caricare una nuova risorsa multimediale.
 
-   Quando l&#39; `MediaPlayer` oggetto si trova nello stato di errore, rimane nello stato finché non viene reimpostato utilizzando il `MediaPlayer.reset` metodo.
+   Quando l&#39;oggetto `MediaPlayer` è nello stato di errore, rimane nello stato finché non viene reimpostato utilizzando il metodo `MediaPlayer.reset`.
 
 <!--<a id="example_E74BB605ED08450295B8902F1E4BB8F5"></a>-->
 
