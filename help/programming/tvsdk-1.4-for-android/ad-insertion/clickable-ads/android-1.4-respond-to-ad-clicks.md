@@ -6,11 +6,14 @@ title: Rispondi ai clic sugli annunci
 uuid: 31852f01-c900-48e3-ae23-7fb131c22594
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '319'
+ht-degree: 0%
 
 ---
 
 
-# Rispondi ai clic sugli annunci{#respond-to-clicks-on-ads}
+# Rispondi ai clic su annunci{#respond-to-clicks-on-ads}
 
 Quando un utente fa clic su un annuncio o su un pulsante correlato, l&#39;applicazione deve rispondere. TVSDK fornisce informazioni sull’URL di destinazione per il clic.
 
@@ -18,12 +21,12 @@ Quando un utente fa clic su un annuncio o su un pulsante correlato, l&#39;applic
 
    Quando un utente fa clic su un annuncio o su un pulsante correlato, TVSDK invia la notifica, incluse le informazioni sulla destinazione del clic.
 1. Monitora le interazioni degli utenti sugli annunci cliccabili.
-1. Quando l’utente tocca o fa clic sull’annuncio o sul pulsante, per inviare una notifica a TVSDK, chiama `notifyClick` l’ `MediaPlayerView`.
-1. Ascoltare l’ `onAdClick(AdClickEvent event)` evento da TVSDK.
-1. Per recuperare l’URL click-through e le relative informazioni, utilizzate i metodi getter per l’ `AdClickEvent` istanza.
+1. Quando l&#39;utente tocca o fa clic sull&#39;annuncio o sul pulsante, per inviare una notifica a TVSDK, chiama `notifyClick` sull&#39; `MediaPlayerView`.
+1. Ascoltare l&#39;evento `onAdClick(AdClickEvent event)` da TVSDK.
+1. Per recuperare l&#39;URL click-through e le relative informazioni, utilizzate i metodi getter per l&#39;istanza `AdClickEvent`.
 1. Metti in pausa il video.
 
-   Per ulteriori informazioni sull’interruzione del video, consultate [Sospendere e riprendere la riproduzione.](../../ad-insertion/clickable-ads/android-1.4-pausing-resuming-playback.md).
+   Per ulteriori informazioni sull&#39;interruzione del video, vedere [Sospendi e riprendi riproduzione.](../../ad-insertion/clickable-ads/android-1.4-pausing-resuming-playback.md).
 1. Utilizzate le informazioni di click-through per visualizzare l&#39;URL di click-through dell&#39;annuncio e le relative informazioni.
 
        Ad esempio, potete visualizzare le informazioni in uno dei seguenti modi:
