@@ -1,20 +1,23 @@
 ---
-description: Utilizzate il comando HTTP GET per interagire con il server manifesto.
-seo-description: Utilizzate il comando HTTP GET per interagire con il server manifesto.
+description: Utilizzare il comando GET HTTP per interagire con il server manifesto.
+seo-description: Utilizzare il comando GET HTTP per interagire con il server manifesto.
 seo-title: Invio di un comando al server manifesto
 title: Invio di un comando al server manifesto
 uuid: e9680563-d268-406d-87ce-1521a677e9ec
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '253'
+ht-degree: 0%
 
 ---
 
 
-# Invio di un comando al server manifesto {#send-a-command-to-the-manifest-server}
+# Inviare un comando al server manifesto {#send-a-command-to-the-manifest-server}
 
-Utilizzate il comando HTTP GET per interagire con il server manifesto.
+Utilizzare il comando GET HTTP per interagire con il server manifesto.
 
-1. Inviate una `HTTP GET` richiesta per un URL del programma di avvio automatico costruito con il seguente pattern:
+1. Inviate una richiesta `HTTP GET` per un URL del programma di avvio automatico creato con il seguente pattern:
 
    ```
    https://{manifest-server:port}/auditude/variant/
@@ -22,11 +25,11 @@ Utilizzate il comando HTTP GET per interagire con il server manifesto.
     ?{query parameters}
    ```
 
-* **PublisherAssetID** obbligatorio. ID univoco dell&#39;editore per il contenuto specifico.
+* **** PublisherAssetIDRequred. ID univoco dell&#39;editore per il contenuto specifico.
 
-* **URL** contenuto richiesto. URL del contenuto del file M3U8, con codifica Base64 per garantire la sicurezza all&#39;interno dell&#39;URL del server manifesto. L&#39;URL del contenuto deve puntare a una variante del file M3U8, anche se è presente un solo flusso di bit rate.
+* **Content** URLRequred. URL del contenuto del file M3U8, con codifica Base64 per garantire la sicurezza all&#39;interno dell&#39;URL del server manifesto. L&#39;URL del contenuto deve puntare a una variante del file M3U8, anche se è presente un solo flusso di bit rate.
 
-* **Parametri** query Alcuni sono obbligatori, altri facoltativi. Queste costituiscono la parte più variegata della richiesta. Indica al server di manifesto quale tipo di client sta effettuando la richiesta e cosa desidera che esegua il server di manifesto.
+* **Parametri** di query: alcuni sono obbligatori, altri facoltativi. Queste costituiscono la parte più variegata della richiesta. Indica al server di manifesto quale tipo di client sta effettuando la richiesta e cosa desidera che esegua il server di manifesto.
 
    Ad esempio:
 
