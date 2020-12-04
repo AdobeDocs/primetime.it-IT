@@ -6,6 +6,9 @@ title: Riproduzione e failover
 uuid: 5d75e55d-9c01-4a36-9bdf-891289821c6b
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '496'
+ht-degree: 0%
 
 ---
 
