@@ -8,12 +8,12 @@ translation-type: tm+mt
 source-git-commit: fac84687085f289e984c189665bfe775337592b3
 workflow-type: tm+mt
 source-wordcount: '250'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
 
-# Primetime Ad Insertion Help {#ad-insertion}
+# Guida a Ad Insertion di Primetime  {#ad-insertion}
 
 + [Primetime  Ad Insertion](home.md)
 + Introduzione a Primetime  Ad Insertion{#get-started}
@@ -40,7 +40,7 @@ ht-degree: 9%
       + [Flussi bitrate multipli](msapi-topics/ms-insert-ads/ms-api-mbr-streams.md)
       + [Inserimento interruzione annuncio parziale](msapi-topics/ms-insert-ads/partial-ad-break-insetion.md)
       + [Supporto CDN multiplo per la distribuzione di annunci CRS](msapi-topics/ms-insert-ads/ms-api-multi-cdns-for-crs.md)
-   + Sostituisci timeline VOD {#replace-vod}
+   + Sostituire le timeline VOD {#replace-vod}
       + [Modifiche al VOD](msapi-topics/ms-changes-vod-timeline/ms-replace-vod-timeline.md)
       + [Formato della timeline VOD](msapi-topics/ms-changes-vod-timeline/ms-api-timeline-format.md)
       + [Sostituire una timeline VOD](msapi-topics/ms-changes-vod-timeline/t-ms-replace-vod-timeline.md)
