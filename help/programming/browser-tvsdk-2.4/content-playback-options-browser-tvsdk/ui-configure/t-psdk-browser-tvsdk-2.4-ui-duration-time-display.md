@@ -6,16 +6,19 @@ title: Visualizzare la durata, l’ora corrente e il tempo rimanente del video
 uuid: 58341c5f-1d53-4f65-92c8-5bde22f61519
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '319'
+ht-degree: 0%
 
 ---
 
 
-# Visualizzare la durata, l’ora corrente e il tempo rimanente del video{#display-the-duration-current-time-and-remaining-time-of-the-video}
+# Visualizza la durata, l&#39;ora corrente e il tempo rimanente del video{#display-the-duration-current-time-and-remaining-time-of-the-video}
 
 Potete usare l’SDK per browser per recuperare informazioni sui file multimediali che potete visualizzare sulla barra di ricerca.
 
 1. Aspettate che il lettore sia almeno nello stato PREPARATO.
-1. Recuperate il tempo corrente dell&#39;indicatore di riproduzione utilizzando l&#39; `MediaPlayer.currentTime` attributo.
+1. Recuperate il tempo corrente dell&#39;indicatore di riproduzione utilizzando l&#39;attributo `MediaPlayer.currentTime`.
 
    Questo attributo restituisce la posizione corrente dell&#39;indicatore di riproduzione sulla timeline virtuale, in millisecondi. L&#39;ora viene calcolata in relazione al flusso risolto che potrebbe contenere più istanze di contenuto alternativo, ad esempio più annunci pubblicitari o interruzioni di annunci nel flusso principale. Per i flussi live/lineari, il tempo restituito è sempre compreso nell&#39;intervallo della finestra di riproduzione.
 
@@ -24,7 +27,7 @@ Potete usare l’SDK per browser per recuperare informazioni sui file multimedia
    ```
 
 1. Recuperate l’intervallo di riproduzione del flusso e stabilite la durata.
-   1. Utilizzare la `mediaPlayer.playbackRange` proprietà per ottenere l&#39;intervallo di tempo della cronologia virtuale.
+   1. Utilizzare la proprietà `mediaPlayer.playbackRange` per ottenere l&#39;intervallo di tempo della cronologia virtuale.
 
    1. Per determinare la durata, sottraete l’inizio dalla fine dell’intervallo.
 
