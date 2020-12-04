@@ -4,13 +4,16 @@ title: Aggiornare il file WAR del server licenze
 uuid: 0cde53d6-185d-4bf2-84fc-0c31d17904a8
 translation-type: tm+mt
 source-git-commit: 1547eb3dd220fafc08df923f40504736c16a866c
+workflow-type: tm+mt
+source-wordcount: '166'
+ht-degree: 0%
 
 ---
 
 
 # Aggiornare il file WAR del server licenze{#update-the-license-server-war-file}
 
-Per supportare i client che sono stati individualizzati tramite un server On Premises Individualization, è necessario aggiornare il livello principale di affidabilità del certificato del server licenze per includere la credenziale Individualization CA appena acquisita. Uno script Python ( [!DNL addIndivCert.py]) è incluso nella [!DNL update_license_server] cartella.
+Per supportare i client che sono stati individualizzati tramite un server On Premises Individualization, è necessario aggiornare il livello principale di affidabilità del certificato del server licenze per includere la credenziale Individualization CA appena acquisita. Uno script Python ( [!DNL addIndivCert.py]) è incluso nella cartella [!DNL update_license_server].
 
 Per aggiornare il server licenze, effettuate le seguenti operazioni:
 
@@ -22,6 +25,7 @@ Per aggiornare il server licenze, effettuate le seguenti operazioni:
 
    * `cert`: File PKCS12 contenente il certificato CA per l&#39;individuazione delle persone
    * `war`: File WAR da aggiornare
+
    Il file di output è un file WAR aggiornato.
 
    ```
