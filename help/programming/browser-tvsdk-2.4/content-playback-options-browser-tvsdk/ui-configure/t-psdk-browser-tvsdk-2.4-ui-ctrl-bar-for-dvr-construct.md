@@ -6,11 +6,14 @@ title: Costruire una barra di controllo migliorata per il DVR
 uuid: 83c56def-a454-4f26-bdfc-2ef2497ef9bd
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '253'
+ht-degree: 0%
 
 ---
 
 
-# Costruire una barra di controllo migliorata per il DVR{#construct-a-control-bar-enhanced-for-dvr}
+# Costruire una barra di controllo migliorata per DVR{#construct-a-control-bar-enhanced-for-dvr}
 
 È possibile implementare una barra di controllo con supporto DVR per VOD e streaming dal vivo. Il supporto DVR include il concetto di una finestra ricercabile e il punto attivo del cliente.
 
