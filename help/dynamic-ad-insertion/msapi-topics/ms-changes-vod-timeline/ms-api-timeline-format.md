@@ -6,6 +6,9 @@ title: Formato della timeline VOD
 uuid: 6daaf605-e5ee-48dc-a222-a5973b3d915a
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '189'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,10 @@ B,duration,maximum_number_of_ads,position
 ```
 
 La durata è in secondi, con precisione di 0,001 (millisecondi); il numero di annunci è un numero intero. La posizione è una delle seguenti:
-* **n** None — no ad* **p** Pre-roll — prima del contenuto* **m** mid-roll — nel contenuto* **t** Post-roll — dopo il contenuto
+* **n** Nessuno — no ad
+* **p** Pre-roll — prima del contenuto
+* **m** Mid-roll — all&#39;interno del contenuto
+* **t** Post-roll — dopo il contenuto
 
 Ad esempio, `B,60,2,p` rappresenta un&#39;interruzione di un minuto per un massimo di 2 annunci prima del contenuto.
 
