@@ -6,11 +6,14 @@ title: Richiesta/risposta token licenza Widevine
 uuid: a3522422-7075-49a7-bc55-137ef84ee430
 translation-type: tm+mt
 source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+workflow-type: tm+mt
+source-wordcount: '873'
+ht-degree: 5%
 
 ---
 
 
-# Richiesta/risposta token licenza Widevine {#widevine-license-token-request-response}
+# Richiesta token di licenza Widevine / risposta {#widevine-license-token-request-response}
 
 L&#39;interfaccia del token di licenza Widevine fornisce servizi di produzione e test.
 
@@ -51,13 +54,13 @@ Questa richiesta HTTP restituisce un token che può essere rimborsato per una li
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> customerAuthenticator </span> </td> 
+   <td> <span class="codeph"> customerAuthenticator  </span> </td> 
    <td> <p>Questa è la chiave API del cliente, una per ogni ambiente di produzione e di test. Potete trovarlo nella scheda ExpressPlay Admin Dashboard. </p> </td> 
    <td> Yes </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> errorFormat </span> </td> 
-   <td> Sia <span class="codeph"> html </span> che <span class="codeph"> json </span>. <p>Se <span class="codeph"> html </span> (impostazione predefinita), viene fornita una rappresentazione HTML di eventuali errori nel corpo dell'entità della risposta. Se <span class="codeph"> json </span> viene specificato, viene restituita una risposta strutturata in formato JSON. Per informazioni dettagliate, consultate Errori <a href="https://www.expressplay.com/developer/restapi/#json-errors" format="html" scope="external"> JSON </a> . </p> <p>Il tipo mime della risposta è <span class="codeph"> text/uri-list </span> in caso di esito positivo, <span class="codeph"> text/html </span> in caso di formato <span class="codeph"> html </span> errore o <span class="codeph"> application/json </span> in caso di formato <span class="codeph"> json </span> errore. </p> </td> 
+   <td> <span class="codeph"> errorFormat  </span> </td> 
+   <td> <span class="codeph"> html </span> o <span class="codeph"> json </span>. <p>Se <span class="codeph"> html </span> (il valore predefinito) viene fornita una rappresentazione HTML di eventuali errori nel corpo dell'entità della risposta. Se si specifica <span class="codeph"> json </span>, viene restituita una risposta strutturata in formato JSON. Per ulteriori informazioni, vedere <a href="https://www.expressplay.com/developer/restapi/#json-errors" format="html" scope="external"> Errori JSON </a>. </p> <p>Il tipo mime della risposta è <span class="codeph"> text/uri-list </span> in caso di esito positivo, <span class="codeph"> text/html </span> per il formato di errore <span class="codeph"> html </span> o <span class="codeph"> application/json </span> per il formato di errore <span class="codeph"> json </span>. </p> </td> 
    <td> No </td> 
   </tr> 
  </tbody> 
@@ -69,22 +72,22 @@ Questa richiesta HTTP restituisce un token che può essere rimborsato per una li
 |--- |--- |--- |
 | `generalFlags` | Una stringa esadecimale a 4 byte che rappresenta i flag di licenza. &quot;0000&quot; è l&#39;unico valore consentito | No |
 | `kek` | Chiave di crittografia chiave (KEK). Le chiavi vengono memorizzate crittografate con un KEK che utilizza un algoritmo di wrapping delle chiavi (AES Key Wrap, RFC3394). | No |
-| `kid` | Una rappresentazione stringa esadecimale a 16 byte della chiave di crittografia del contenuto o di una stringa `^somestring'`. La lunghezza della stringa seguita da `^` non può essere maggiore di 64 caratteri. Per un esempio, consultate la nota riportata di seguito. | Yes |
+| `kid` | Una stringa esadecimale a 16 byte che rappresenta la chiave di crittografia del contenuto o una stringa `^somestring'`. La lunghezza della stringa seguita da `^` non può essere maggiore di 64 caratteri. Per un esempio, consultate la nota riportata di seguito. | Yes |
 | `ek` | Una rappresentazione stringa esadecimale della chiave di contenuto crittografata. | No |
-| `contentKey` | Una rappresentazione di stringa esadecimale a 16 byte della chiave di crittografia del contenuto | Sì, a meno che `kek` e `ek` o `kid` |
+| `contentKey` | Una rappresentazione di stringa esadecimale a 16 byte della chiave di crittografia del contenuto | Sì, a meno che non siano forniti `kek` e `ek` o `kid` |
 | `contentId` | Id Contenuto | No |
 | `securityLevel` | I valori consentiti sono compresi tra 1 e 5. <ul><li>1 = `SW_SECURE_CRYPTO`</li><li> 2 = `SW_SECURE_DECODE` </li><li> 3 = `HW_SECURE_CRYPTO` </li><li> 4 = `HW_SECURE_DECODE` </li><li> 5 = `HW_SECURE_ALL`</li></ul> | Yes |
 | `hdcpOutputControl` | I valori consentiti sono 0, 1, 2. <ul><li>0 = `HDCP_NONE` </li><li> 1 = `HDCP_V1` </li><li> 2 = `HDCP_V2`</li></ul> | Yes |
 | `licenseDuration` * | Durata della licenza in secondi. Se non viene fornito, indica che non esiste alcun limite alla durata. Per informazioni dettagliate, consultare la nota sottostante. | No |
 | `wvExtension` | Un formato breve che racchiude extensionType e extensionPayload, come una stringa separata da virgole. Vedere il formato seguente. Esempio: `…&wvExtension=wudo,AAAAAA==&…` | No, è possibile utilizzare qualsiasi numero |
 
-Informazioni `licenseDuration`: <ol><li> La riproduzione si interrompe `licenseDuration` secondi dopo l’inizio della riproduzione. </li><li> Per consentire l’arresto o la ripresa della riproduzione per un periodo di tempo illimitato, omettete `licenseDuration` (per impostazione predefinita viene impostato su infinito). In caso contrario, specificate il tempo durante il quale gli utenti finali dovrebbero poter usufruire del flusso. </li></ol>
+Informazioni su `licenseDuration`: <ol><li> La riproduzione si interrompe `licenseDuration` secondi dopo l&#39;inizio della riproduzione. </li><li> Per consentire l&#39;arresto o la ripresa della riproduzione per un periodo di tempo illimitato, omettere `licenseDuration` (per impostazione predefinita, è infinito). In caso contrario, specificate il tempo durante il quale gli utenti finali dovrebbero poter usufruire del flusso. </li></ol>
 
 **Tabella 15: Parametri query limitazioni token**
 
 | Parametro query | Descrizione | Obbligatorio |
 |--- |--- |--- |
-| `expirationTime` | Tempo di scadenza del token. Questo valore DEVE essere una stringa nel formato data/ora [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) nel designatore di zona &quot;Z&quot; (&quot;ora Zulu&quot;), o un numero intero preceduto da un segno +. Un esempio di data/ora RFC 3339 è 2006-04-14T12:01:10Z. <br> Se il valore è una stringa in formato data/ora [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) , rappresenta una data/ora di scadenza assoluta per il token. Se il valore è un numero intero preceduto da un segno +, viene interpretato come un numero relativo di secondi, a partire dall&#39;emissione, che il token è valido. Ad esempio, `+60` specifica un minuto. <br> La durata massima e predefinita del token (se non specificata) è 30 giorni. | No |
+| `expirationTime` | Tempo di scadenza del token. Questo valore DEVE essere una stringa in formato [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) data/ora nel designatore di zona &quot;Z&quot; (&quot;Zulu time&quot;), o un numero intero preceduto da un segno +. Un esempio di data/ora RFC 3339 è 2006-04-14T12:01:10Z. <br> Se il valore è una stringa in formato  [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) data/ora, rappresenta una data/ora di scadenza assoluta per il token. Se il valore è un numero intero preceduto da un segno +, viene interpretato come un numero relativo di secondi, a partire dall&#39;emissione, che il token è valido. Ad esempio, `+60` specifica un minuto. <br> La durata massima e predefinita del token (se non specificata) è 30 giorni. | No |
 
 **Tabella 16: Parametri query di correlazione**
 
@@ -99,10 +102,10 @@ Informazioni `licenseDuration`: <ol><li> La riproduzione si interrompe `licenseD
 | **Codice di stato HTTP** | **Descrizione** | **Content-Type** | **Il corpo dell&#39;entità contiene** |
 |---|---|---|---|
 | `200 OK` | Nessun errore. | `text/uri-list` | URL acquisizione licenza + token |
-| `400 Bad Request` | Argomenti non validi | `text/html` os `application/json` | Descrizione errore |
-| `401 Unauthorized` | Autenticazione non riuscita | `text/html` os `application/json` | Descrizione errore |
-| `404 Not found` | URL non valido | `text/html` os `application/json` | Descrizione errore |
-| `50x Server Error` | Errore del server | `text/html` o `application/json` | Descrizione errore |
+| `400 Bad Request` | Argomenti non validi | `text/html` o  `application/json` | Descrizione errore |
+| `401 Unauthorized` | Autenticazione non riuscita | `text/html` o  `application/json` | Descrizione errore |
+| `404 Not found` | URL non valido | `text/html` o  `application/json` | Descrizione errore |
+| `50x Server Error` | Errore del server | `text/html` o  `application/json` | Descrizione errore |
 
 **Tabella 18: Codici di errore evento**
 
@@ -188,7 +191,7 @@ Informazioni `licenseDuration`: <ol><li> La riproduzione si interrompe `licenseD
   </tr> 
   <tr> 
    <td> -2040 </td> 
-   <td> <span class="codeph"> OutputControlFlag </span> deve essere codificato di 4 byte </td> 
+   <td> <span class="codeph"> OutputControlFlag  </span> deve essere codificato 4 byte </td> 
   </tr> 
   <tr> 
    <td> -3004 </td> 
@@ -204,7 +207,7 @@ Informazioni `licenseDuration`: <ol><li> La riproduzione si interrompe `licenseD
   </tr> 
   <tr> 
    <td> -4018 </td> 
-   <td> Figlio <span class="filepath"> scomparso </span> </td> 
+   <td> Elemento <span class="filepath"> secondario mancante </span> </td> 
   </tr> 
   <tr> 
    <td> -4019 </td> 
@@ -212,19 +215,19 @@ Informazioni `licenseDuration`: <ol><li> La riproduzione si interrompe `licenseD
   </tr> 
   <tr> 
    <td> -4020 </td> 
-   <td> <span class="codeph"> il ragazzo </span> deve essere composto da 32 caratteri esadecimali </td> 
+   <td> <span class="codeph"> il ragazzo  </span> deve avere 32 caratteri esadecimali di lunghezza </td> 
   </tr> 
   <tr> 
    <td> -4021 </td> 
-   <td> <span class="codeph"> il ragazzo </span> deve avere 64 caratteri dopo il simbolo '^' </td> 
+   <td> <span class="codeph"> il ragazzo  </span> deve avere 64 caratteri dopo il simbolo '^' </td> 
   </tr> 
   <tr> 
    <td> -4022 </td> 
-   <td> Elemento <span class="codeph"> figlio non valido </span> </td> 
+   <td> Livello <span class="codeph"> </span> non valido </td> 
   </tr> 
   <tr> 
    <td> -4024 </td> 
-   <td> Chiave o <span class="codeph"> chiave crittografata non valida </span> </td> 
+   <td> Chiave crittografata non valida o chiave <span class="codeph"> </span> </td> 
   </tr> 
   <tr> 
    <td> -5003 </td> 
@@ -264,7 +267,7 @@ Informazioni `licenseDuration`: <ol><li> La riproduzione si interrompe `licenseD
   </tr> 
   <tr> 
    <td> -7009 </td> 
-   <td> Parametri <span class="codeph"> WVExension </span> specificati non validi </td> 
+   <td> Parametri <span class="codeph"> WVExtax </span> non validi </td> 
   </tr> 
   <tr> 
    <td> -7011 </td> 
