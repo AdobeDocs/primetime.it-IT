@@ -6,6 +6,9 @@ title: Panoramica del tracciamento lato client non TVSDK
 uuid: fb23be01-3327-443d-82c4-fb0993e7fec1
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '762'
+ht-degree: 0%
 
 ---
 
@@ -21,14 +24,14 @@ Il server manifest fornisce un&#39;API per consentire ai lettori personalizzati 
 * Stato del contenitore annuncio
 * Avanzamento del contenitore Contenuto
 
-L&#39;API del server manifesto presuppone che qualsiasi lettore video che lo utilizza soddisfi i requisiti minimi. Per ulteriori informazioni, consultate Requisiti [del lettore](../../msapi-topics/ms-player-req.md) video.
+L&#39;API del server manifesto presuppone che qualsiasi lettore video che lo utilizza soddisfi i requisiti minimi. Per ulteriori informazioni, vedere [Requisiti del lettore video](../../msapi-topics/ms-player-req.md).
 
 ## Flusso di lavoro di tracciamento lato client {#section_cst_flow}
 
 ![](assets/pt_ssai_notvsdk_csat_ai-workflow.png)
 
 1. Player ottiene un URL del server manifesto dall’editore.
-1. Player aggiunge parametri di query specifici ai relativi requisiti di inserimento annunci e invia una richiesta HTTP GET all&#39;URL Bootstrap risultante. L’URL di avvio contiene la sintassi seguente:
+1. Player aggiunge parametri di query specifici ai relativi requisiti di inserimento annunci e invia una richiesta di GET HTTP all&#39;URL di Bootstrap risultante. L&#39;URL Bootstrap ha la sintassi seguente:
 
    ```
    http{s}://{manifest-server:port}/auditude/variant/{PublisherAssetID}/{urlSafeBase64({Content URL})}.m3u8?{query parameters}
@@ -39,7 +42,7 @@ L&#39;API del server manifesto presuppone che qualsiasi lettore video che lo uti
    u=9a2893fd893cab27da24059ff034b78d&z=173475&pttrackingmode=simple&pttrackingversion=v2&__sid__=docExample02
    ```
 
-   L’URL include gli elementi descritti in [Invia un comando al server](../../msapi-topics/ms-getting-started/ms-sending-cmd.md)manifesto.
+   L&#39;URL include gli elementi descritti in [Invia un comando al server manifesto](../../msapi-topics/ms-getting-started/ms-sending-cmd.md).
 
 1. Il server manifesto stabilisce una sessione per quel lettore e genera un ID sessione univoco. Crea una nuova variante dell&#39;URL della playlist M3U8, che ritorna al lettore come risposta JSON. Il JSON ha la sintassi seguente:
 
@@ -114,7 +117,7 @@ L&#39;API del server manifesto presuppone che qualsiasi lettore video che lo uti
 
    >[!NOTE]
    >
-   >Il lettore seleziona l&#39;URL della playlist a livello di flusso per ottenere il flusso di contenuto. Il server manifesto recupera la playlist originale dalla rete CDN. Alcuni codificatori possono inserire ulteriori dettagli nell’attributo `#EXTINF` title, ad esempio:
+   >Il lettore seleziona l&#39;URL della playlist a livello di flusso per ottenere il flusso di contenuto. Il server manifesto recupera la playlist originale dalla rete CDN. Alcuni codificatori possono inserire ulteriori dettagli nell&#39;attributo del titolo `#EXTINF`, ad esempio:
    >
    >
    ```
@@ -139,7 +142,7 @@ L&#39;API del server manifesto presuppone che qualsiasi lettore video che lo uti
 
    >[!NOTE]
    >
-   >Il server manifesto genera l’oggetto di tracciamento degli annunci in base al `pttrackingversion` valore nell’URL di avvio. Se il `pttrackingversion` file viene omesso o ha un valore non valido, il server manifesto compilerà automaticamente le informazioni di tracciamento degli annunci nei `#EXT-X-MARKER` tag presenti in ciascuna playlist a livello di flusso richiesta. Per [ulteriori dettagli](../../msapi-topics/ms-at-effectiveness/ms-api-playlists.md), consulta.
+   >Il server manifesto genera l&#39;oggetto di tracciamento degli annunci in base al valore `pttrackingversion` nell&#39;URL di Bootstrap. Se `pttrackingversion` viene omesso o ha un valore non valido, il server manifesto compila automaticamente le informazioni di tracciamento annunci nei tag `#EXT-X-MARKER` in ogni playlist a livello di flusso richiesta. Vedere [per ulteriori dettagli](../../msapi-topics/ms-at-effectiveness/ms-api-playlists.md).
 
 1. Il lettore richiede ogni URL di tracciamento annunci per ogni evento di tracciamento annunci al momento opportuno.
 
