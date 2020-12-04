@@ -4,6 +4,9 @@ title: Installare gli strumenti della riga di comando
 uuid: 42fe7d55-7b8e-4f44-8714-ddae6c086d6a
 translation-type: tm+mt
 source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+workflow-type: tm+mt
+source-wordcount: '81'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
 
    * [!DNL flashaccesstools.properties] - Il file di configurazione predefinito per gli strumenti della riga di comando.
    * [!DNL libs/] - Contiene i file JAR degli strumenti della riga di comando
-   * [!DNL samples/] - Contiene lo script di compilazione delle formiche ( [!DNL build-samples.xml]) e i file sorgente Java.
+   * [!DNL samples/] - Contiene lo script di compilazione delle formiche (  [!DNL build-samples.xml]) e i file sorgente Java.
 
       >[!NOTE]
       >
