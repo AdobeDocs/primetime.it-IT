@@ -6,6 +6,9 @@ title: Creare un lettore compatibile con browserify utilizzando l'interfaccia ut
 uuid: 544fd872-5ca1-417d-8aab-69613caada0e
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '152'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ Esempio di file di ricerca inclusi in TVSDK:
 * [!DNL [...]/samples/browserify/ui-framework/examples/sample.html]
 * [!DNL [...]/samples/browserify/ui-framework/examples/sample.js]
 
-Per creare un&#39;app compatibile con Browserify utilizzando l&#39;interfaccia utente Framework, nel codice dell&#39;app dovete includere `require` i due moduli Browserify (forniti da Browser TVSDK):
+Per creare un&#39;app compatibile con Browserify utilizzando l&#39;interfaccia utente Framework, è necessario `require` i due moduli Browserify (forniti da Browser TVSDK) nel codice dell&#39;app:
 
 1. Richiedi moduli di ricerca:
 
