@@ -6,11 +6,14 @@ title: Inserimento e posizionamento di annunci
 uuid: 1d4d6364-1c49-402b-9b72-8c185b1c94e1
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '290'
+ht-degree: 0%
 
 ---
 
 
-# Inserimento e posizionamento di annunci{#ad-insertion-and-placement}
+# Inserimento annunci e posizionamento{#ad-insertion-and-placement}
 
 Esistono alcuni modi per determinare l&#39;inserimento e il posizionamento degli annunci.
 
@@ -22,7 +25,7 @@ Di seguito viene fornita una panoramica del processo utilizzato per determinare 
 1. **Risoluzione** annuncio: TVSDK comunica con un server di annunci per recuperare gli annunci da unire nel contenuto.
 1. **Posizionamento** annuncio: Il TVSDK carica gli annunci specificati e li inserisce nella cronologia del contenuto nelle posizioni specificate e ricalcola la timeline virtuale, se necessario.
 
-## Aggiunta di annunci {#section_B9D63F7409A2447F9FF209289BE5D3D5}
+## Posizionamento annunci {#section_B9D63F7409A2447F9FF209289BE5D3D5}
 
 TVSDK può ottenere posizioni per possibili inserimenti pubblicitari dalle seguenti origini:
 
