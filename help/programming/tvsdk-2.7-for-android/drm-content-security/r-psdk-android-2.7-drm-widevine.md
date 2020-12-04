@@ -6,6 +6,9 @@ title: DRM Widevine
 uuid: ceb2f18f-9e53-47d6-9d4b-7004ac1d22c9
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '85'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ public static void setProtectionData(
 
 Argomenti:
 
-* `drm` - `"com.widevine.alpha"` per Widevine.
+* `drm` -  `"com.widevine.alpha"` per Widevine.
 
 * `licenseServerURL` - L&#39;URL del server licenze Widevine che riceve le richieste di licenza.
 * `requestProperties` - Contiene intestazioni aggiuntive da includere nella richiesta di licenza in uscita.
