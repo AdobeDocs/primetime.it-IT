@@ -6,11 +6,14 @@ title: Costruire una barra di controllo migliorata per il DVR
 uuid: 08f943e8-90da-4860-92dd-dd289fd68cba
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '357'
+ht-degree: 0%
 
 ---
 
 
-# Costruire una barra di controllo migliorata per il DVR{#construct-a-control-bar-enhanced-for-dvr}
+# Costruire una barra di controllo migliorata per DVR{#construct-a-control-bar-enhanced-for-dvr}
 
 È possibile implementare una barra di controllo con supporto DVR per VOD e streaming dal vivo. Il supporto DVR include il concetto di una finestra ricercabile e il punto attivo del cliente.
 
@@ -34,7 +37,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
       Per una barra di controllo:
    1. Aggiungete una sovrapposizione alla barra di controllo che rappresenta l’intervallo di riproduzione.
-   1. Quando l&#39;utente inizia a cercare, controllate se la posizione di ricerca desiderata si trova all&#39;interno dell&#39;intervallo ricercabile utilizzando la `MediaPlayer.seekableRange` proprietà.
+   1. Quando l&#39;utente inizia a cercare, controlla se la posizione di ricerca desiderata si trova all&#39;interno dell&#39;intervallo ricercabile utilizzando la proprietà `MediaPlayer.seekableRange`.
 
       Ad esempio:
 
@@ -49,7 +52,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
       }
       ```
 
-      È inoltre possibile scegliere di cercare il punto attivo del client utilizzando la `MediaPlayer.LIVE_POINT` costante.
+      È inoltre possibile scegliere di cercare il punto attivo del client utilizzando la costante `MediaPlayer.LIVE_POINT`.
 
       ```
       private function onSeekToLiveClick(event:MouseEvent):void { 
