@@ -4,13 +4,16 @@ title: Panoramica
 uuid: effb6c5e-afce-4a96-8c95-041b2f183690
 translation-type: tm+mt
 source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+workflow-type: tm+mt
+source-wordcount: '97'
+ht-degree: 0%
 
 ---
 
 
 # Panoramica {#overview}
 
-Gli strumenti della riga di comando delle implementazioni di riferimento DRM di Adobe Primetime consentono di eseguire diverse attività relative a DRM direttamente dalla riga di comando.
+Gli strumenti della riga di comando  implementazioni di riferimento Adobe Primetime DRM consentono di eseguire diverse attività relative a DRM direttamente dalla riga di comando.
 
 L&#39;implementazione di riferimento DRM di Primetime include i seguenti strumenti della riga di comando:
 
