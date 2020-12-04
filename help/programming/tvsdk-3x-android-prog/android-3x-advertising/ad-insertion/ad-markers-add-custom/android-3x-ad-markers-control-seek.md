@@ -6,11 +6,14 @@ title: Controllare il comportamento di riproduzione per la ricerca su indicatori
 uuid: ec95a22f-0143-4c80-826f-d6b40e77cf26
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '149'
+ht-degree: 0%
 
 ---
 
 
-# Controllare il comportamento di riproduzione per la ricerca su indicatori di annunci personalizzati {#control-playback-behavior-for-seeking-over-custom-ad-markers}
+# Controllare il comportamento di riproduzione per la ricerca di indicatori di annunci personalizzati {#control-playback-behavior-for-seeking-over-custom-ad-markers}
 
 Puoi ignorare il comportamento predefinito per il modo in cui TVSDK gestisce le ricerche sugli annunci quando utilizzi indicatori di annunci personalizzati.
 
@@ -22,7 +25,7 @@ Per impostazione predefinita, quando un utente cerca o passa sezioni di annunci 
    customRangeMetadata.setAdjustSeekPosition (true);
    ```
 
-1. Utilizzate `customRangeMetadata` in `MediaPlayerItemConfig`.
+1. Utilizzare `customRangeMetadata` in `MediaPlayerItemConfig`.
 
    ```java
    // Set customRangeMetadata 
