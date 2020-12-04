@@ -15,14 +15,14 @@ ht-degree: 0%
 
 # Preparare le password per i file delle proprietà del server{#prepare-passwords-for-the-server-properties-files}
 
-L&#39;implementazione di riferimento fornisce `ScrambleUtil.class`, una classe che garantisce la sicurezza della password delle credenziali.
+L&#39;implementazione del riferimento fornisce `ScrambleUtil.class`, una classe che garantisce la sicurezza della password delle credenziali.
 
-Utilizzare questo strumento per cifrare la password prima di includerla nel [!DNL flashaccess-refimpl.properties] file.
+Utilizzare questo strumento per cifrare la password prima di includerla nel file [!DNL flashaccess-refimpl.properties].
 
 Per eseguire lo strumento, è possibile utilizzare uno script Ant o Java.
 
-L&#39;utilità genera la password crittografata, che è necessario copiare nel [!DNL flashaccess-refimpl.properties] file.
+L&#39;utilità genera la password crittografata, che è necessario copiare nel file [!DNL flashaccess-refimpl.properties].
 
 >[!NOTE]
 >
->Le password che sono state codificate con l&#39;implementazione di riferimento `ScrambleUtil.class` fornita non funzionano con il server DRM Primetime per lo streaming protetto.
+>Le password codificate con il `ScrambleUtil.class` fornito con l&#39;implementazione di riferimento non funzionano con il server DRM di Primetime per lo streaming protetto.
