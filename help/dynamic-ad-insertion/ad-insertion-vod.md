@@ -10,7 +10,7 @@ ht-degree: 0%
 ---
 
 
-# Usa  Ad Insertion per VOD {#ad-insertion-vod}
+# Usare  Ad Insertion per VOD {#ad-insertion-vod}
 
 Primetime  Ad Insertion supporta l&#39;inserimento di annunci in più risorse VOD, utilizzando i formati standard VAST 3.0+ o VMAP 1.0+.
 
@@ -24,6 +24,6 @@ Primetime  Ad Insertion supporta l&#39;inserimento VOD con annunci inseriti prim
 
 ## Riproduzione eventi completa (VOD con  Ad Decisioning Cue) {#full-event-replay}
 
-Primetime  Ad Insertion supporta anche risorse VOD specializzate che contengono segnali nel flusso di contenuti stesso, come ad esempio la riproduzione di eventi live registrati in precedenza. Per ulteriori informazioni sui tipi di suggerimenti per le decisioni di annunci (o di formati di cue point) supportati, consulta [Utilizzo  Ad Insertion in Live/Linear](ad-insertion-live-linear-stream.md).
+Primetime  Ad Insertion supporta anche risorse VOD specializzate che contengono segnali nel flusso di contenuti stesso, come ad esempio la riproduzione di eventi live registrati in precedenza. Per ulteriori informazioni sui tipi di segnali di decisione degli annunci (o di formati di cue point) supportati, vedere [Utilizzo  Ad Insertion in Live/Linear](ad-insertion-live-linear-stream.md).
 
-Supportiamo sia scenari di richiesta di annunci singoli che scenari di richieste di annunci paralleli per risorse VOD contenenti più di un’interruzione di annuncio. Per ulteriori informazioni, consultate `ptmulticall` Parametro in Descrizione [](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md)parametro. Sia i formati VAST che VMAP sono supportati per segnali in streaming.
+Supportiamo sia scenari di richiesta di annunci singoli che scenari di richieste di annunci paralleli per risorse VOD contenenti più di un’interruzione di annuncio. Per ulteriori informazioni, vedere il parametro `ptmulticall` in [Descrizione parametro](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md). Sia i formati VAST che VMAP sono supportati per segnali in streaming.
