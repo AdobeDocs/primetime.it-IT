@@ -6,18 +6,21 @@ title: Impostare gli stili di didascalia
 uuid: 906ed22c-e673-4211-a14b-d95d176aad21
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '178'
+ht-degree: 0%
 
 ---
 
 
-# Impostare gli stili di didascalia{#set-closed-caption-styles}
+# Imposta stili di sottotitoli codificati{#set-closed-caption-styles}
 
 Potete impostare il formato, ad esempio font, dimensioni, colore, bordo e opacità per il testo delle didascalie.
 
-1. Attendete che lo stato `MediaPlayer` sia almeno PREPARATO.
+1. Attendere che `MediaPlayer` sia almeno nello stato PREPARATO.
 
-   Per ulteriori informazioni sugli stati, vedere [Attendere uno stato](../../../content-playback-options-browser-tvsdk/ui-configure/t-psdk-browser-tvsdk-2.4-ui-state-prepared-wait-for.md)valido.
-1. Create un&#39; `TextFormat` istanza.
+   Per ulteriori informazioni sugli stati, vedere [Attendere uno stato valido](../../../content-playback-options-browser-tvsdk/ui-configure/t-psdk-browser-tvsdk-2.4-ui-state-prepared-wait-for.md).
+1. Create un&#39;istanza `TextFormat`.
 
    Potete fornire ora tutti i parametri di stile per i sottotitoli codificati o impostarli successivamente.
 
@@ -39,7 +42,7 @@ Potete impostare il formato, ad esempio font, dimensioni, colore, bordo e opacit
 
 1. (Facoltativo) Ottenete le impostazioni di stile correnti per i sottotitoli codificati con `MediaPlayer.ccStyle`.
 
-   Il valore restituito è un&#39;istanza dell&#39; `TextFormat` interfaccia.
+   Il valore restituito è un&#39;istanza dell&#39;interfaccia `TextFormat`.
 
    Se non è stato precedentemente impostato alcuno stile, restituisce un oggetto TextFormat con valori predefiniti per ciascun attributo:
 
@@ -47,7 +50,7 @@ Potete impostare il formato, ad esempio font, dimensioni, colore, bordo e opacit
    ccStyle :AdobePSDK.TextFormat
    ```
 
-1. Per modificare le impostazioni di stile, utilizzare `MediaPlayer.ccStyle`, passando un&#39;istanza dell&#39; `TextFormat` interfaccia.
+1. Per modificare le impostazioni di stile, utilizzare `MediaPlayer.ccStyle`, passando un&#39;istanza dell&#39;interfaccia `TextFormat`.
 
    È possibile utilizzare questo metodo anche se il flusso multimediale corrente non contiene didascalie.
 
