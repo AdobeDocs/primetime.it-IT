@@ -5,6 +5,9 @@ seo-title: Riproduzione offline con Android
 title: Riproduzione offline con Android
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '110'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ boolean NetworkConfiguration::getOfflinePlayback()
 
 È possibile abilitare questa impostazione e ignorare la connettività di rete.
 
-Impostato `com.adobe.mediacore.system.NetworkConfiguration::setOfflinePlayback` su true. Il valore predefinito per un valore booleano è false.
+Impostate `com.adobe.mediacore.system.NetworkConfiguration::setOfflinePlayback` su true. Il valore predefinito per un valore booleano è false.
 
 ```
 // example of NetworkConfiguration
