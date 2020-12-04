@@ -4,11 +4,14 @@ title: Parte iniziale del contenuto nel modulo di eliminazione
 uuid: a535a980-dfd2-4a34-830e-26dac55993c7
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '113'
+ht-degree: 0%
 
 ---
 
 
-# Parte iniziale del contenuto nel modulo di eliminazione{#initial-portion-of-content-in-the-clear}
+# Parte iniziale del contenuto nel campo clear{#initial-portion-of-content-in-the-clear}
 
 Questo parametro opzionale specifica un periodo di tempo (in secondi) dall&#39;inizio del contenuto che rimarrà non crittografato.
 
