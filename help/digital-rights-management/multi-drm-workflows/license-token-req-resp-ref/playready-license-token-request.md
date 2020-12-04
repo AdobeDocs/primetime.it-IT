@@ -6,11 +6,14 @@ title: Richiesta/risposta token licenza PlayReady
 uuid: 20ebd582-ebb9-4716-8c1e-df3e58d6ec14
 translation-type: tm+mt
 source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+workflow-type: tm+mt
+source-wordcount: '913'
+ht-degree: 3%
 
 ---
 
 
-# Richiesta/risposta token licenza PlayReady {#playready-license-token-request-response}
+# Richiesta token di licenza PlayReady / risposta {#playready-license-token-request-response}
 
 L&#39;interfaccia del token di licenza PlayReady fornisce servizi di produzione e test.
 
@@ -68,7 +71,7 @@ Questa richiesta HTTP restituisce un token che può essere rimborsato per una li
   </tr> 
   <tr> 
    <td><span class="codeph"> errorFormat</span> </td> 
-   <td>html <span class="codeph"> o</span> json <span class="codeph"></span>. Se <span class="codeph"> html</span> (impostazione predefinita), viene fornita una rappresentazione HTML di eventuali errori nel corpo dell'entità della risposta. <p>Se <span class="codeph"> è specificato json</span> , viene restituita una risposta strutturata in formato JSON. Consulta Errori <a href="https://www.expressplay.com/developer/restapi/#json-errors" format="html" scope="external"></a> JSON per informazioni dettagliate. </p> <p>Il tipo mime della risposta è <span class="codeph"> text/uri-list</span> in caso di esito positivo, <span class="codeph"> text/html</span> in caso di formato di errore HTML o <span class="codeph"> application/json</span> in caso di formato di errore JSON. </p> </td> 
+   <td><span class="codeph"> html</span> o <span class="codeph"> json</span>. Se <span class="codeph"> html</span> (il valore predefinito) viene fornita una rappresentazione HTML di eventuali errori nel corpo dell'entità della risposta. <p>Se è specificato <span class="codeph"> json</span>, viene restituita una risposta strutturata in formato JSON. Per ulteriori informazioni, vedere <a href="https://www.expressplay.com/developer/restapi/#json-errors" format="html" scope="external"> JSON Errors</a>. </p> <p>Il tipo mime della risposta è <span class="codeph"> text/uri-list</span> in caso di esito positivo, <span class="codeph"> text/html</span> in caso di formato di errore HTML oppure <span class="codeph"> application/json</span> in caso di formato di errore JSON. </p> </td> 
    <td> No </td> 
   </tr> 
  </tbody> 
@@ -97,7 +100,7 @@ Questa richiesta HTTP restituisce un token che può essere rimborsato per una li
   </tr> 
   <tr> 
    <td><span class="codeph"> ragazzo</span> </td> 
-   <td>Una stringa esadecimale da 16 byte che rappresenta la chiave di crittografia del contenuto o una stringa <span class="codeph"> ^somestring'</span>. La lunghezza della stringa seguita da '^' non può essere maggiore di 64 caratteri. </td> 
+   <td>Una stringa esadecimale a 16 byte che rappresenta la chiave di crittografia del contenuto o una stringa <span class="codeph"> ^somestring'</span>. La lunghezza della stringa seguita da '^' non può essere maggiore di 64 caratteri. </td> 
    <td> Yes </td> 
   </tr> 
   <tr> 
@@ -108,21 +111,21 @@ Questa richiesta HTTP restituisce un token che può essere rimborsato per una li
   <tr> 
    <td><span class="codeph"> contentKey</span> </td> 
    <td> Una rappresentazione di stringa esadecimale a 16 byte della chiave di crittografia del contenuto </td> 
-   <td>Sì, a meno che <span class="codeph"> kek</span> e <span class="codeph"> ek</span> o <span class="codeph"> ragazzo</span> non siano forniti </td> 
+   <td>Sì, a meno che non siano forniti <span class="codeph"> kek</span> e <span class="codeph"> ek</span> o <span class="codeph"> child</span> </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> rightsType</span> </td> 
-   <td>Specifica il tipo di diritti. Deve essere <span class="codeph"> Comprato</span> o <span class="codeph"> Affitto</span>. </td> 
+   <td>Specifica il tipo di diritti. Deve essere <span class="codeph"> BuyToOwn</span> o <span class="codeph"> Affitto</span>. </td> 
    <td> Yes </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> canonizzazione.periodEndTime</span> </td> 
-   <td>Data di fine affitto. Questo valore DEVE essere in formato "RFC 3339" _ data/ora nel formato "Z" zone designator ("Zulu time"), oppure un numero intero preceduto dal segno "+". <p>Se il valore è un formato data/ora <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339</a> , rappresenta una data/ora di scadenza assoluta per la licenza. Un esempio di data/ora RFC 3339 è 2006-04-14T12:01:10Z. </p> <p> Se il valore è un numero intero preceduto dal segno "+", viene considerato come numero relativo di secondi dal momento in cui viene emesso il token. Il contenuto non può essere riprodotto dopo questo periodo di tempo. Valido solo se <span class="codeph"> rightsType</span> è <span class="codeph"> Affitto</span>. </p> </td> 
+   <td>Data di fine affitto. Questo valore DEVE essere in formato "RFC 3339" _ data/ora nel formato "Z" zone designator ("Zulu time"), oppure un numero intero preceduto dal segno "+". <p>Se il valore è un formato data/ora <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339</a>, allora rappresenta una data/ora di scadenza assoluta per la licenza. Un esempio di data/ora RFC 3339 è 2006-04-14T12:01:10Z. </p> <p> Se il valore è un numero intero preceduto dal segno "+", viene considerato come numero relativo di secondi dal momento in cui viene emesso il token. Il contenuto non può essere riprodotto dopo questo periodo di tempo. Valido solo se <span class="codeph"> rightsType</span> è <span class="codeph"> Affitto</span>. </p> </td> 
    <td>Sì, quando <span class="codeph"> rightsType</span> è <span class="codeph"> Affitto</span>. </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> noleggio.playDuration</span> </td> 
-   <td>Tempo, in secondi, per la riproduzione del contenuto dopo l’avvio della riproduzione. Valido solo se <span class="codeph"> rightsType</span> è Affitto. </td> 
+   <td>Tempo, in secondi, per la riproduzione del contenuto dopo l’avvio della riproduzione. Valido solo se <span class="codeph"> rightsType</span> è in affitto. </td> 
    <td> No </td> 
   </tr> 
   <tr> 
@@ -152,7 +155,7 @@ Questa richiesta HTTP restituisce un token che può essere rimborsato per una li
   </tr> 
   <tr> 
    <td><span class="codeph"> unknownOutputBehavior</span> </td> 
-   <td>Comportamento richiesto quando l'output è sconosciuto. Valori consentiti: <span class="codeph"> Consenti</span>, <span class="codeph"> Non consentire</span> o <span class="codeph"> solo SDO</span> </td> 
+   <td>Comportamento richiesto quando l'output è sconosciuto. Valori consentiti: <span class="codeph"> Consenti</span>, <span class="codeph"> Non consentire</span> o <span class="codeph"> SDOnly</span> </td> 
    <td> No </td> 
   </tr> 
   <tr> 
@@ -162,13 +165,13 @@ Questa richiesta HTTP restituisce un token che può essere rimborsato per una li
   </tr> 
   <tr> 
    <td><span class="codeph"> extensionType</span> </td> 
-   <td>Una parola arbitraria di 4 lettere che rappresenta un identificatore a 32 bit per un’estensione. Ogni codice ASCII a 8 bit di lettera corrisponde alla porzione di byte 8 bit corrispondente dell'identificatore. Ad esempio, il valore dell'identificatore 0x61626364 (esadecimale) viene scritto "<span class="codeph"> abcd</span>", perché il codice ASCII per "a" è 0x61, ecc. </td> 
+   <td>Una parola arbitraria di 4 lettere che rappresenta un identificatore a 32 bit per un’estensione. Ogni codice ASCII a 8 bit di lettera corrisponde alla porzione di byte 8 bit corrispondente dell'identificatore. Ad esempio, il valore dell'identificatore 0x61626364 (esadecimale) verrebbe scritto ‘<span class="codeph"> abcd</span>’, perché il codice ASCII per ‘a’ è 0x61, ecc. </td> 
    <td> No </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> extensionPayload</span> </td> 
    <td> Stringa codificata base64 dell’estensione. </td> 
-   <td>Sì, quando <span class="codeph"> extensionType</span> è specificato. </td> 
+   <td>Sì, quando è specificato <span class="codeph"> extensionType</span>. </td> 
   </tr> 
  </tbody> 
 </table>
@@ -180,10 +183,10 @@ Questa richiesta HTTP restituisce un token che può essere rimborsato per una li
 | **Codice di stato HTTP** | **Descrizione** | **Content-Type** | **Il corpo dell&#39;entità contiene** |
 |---|---|---|---|
 | `200 OK` | Nessun errore. | `text/uri-list` | URL e token di acquisizione della licenza |
-| `400 Bad Request` | Argomenti non validi | `text/html` o `application/json` | Descrizione errore |
-| `401 Unauthorized` | Autenticazione non riuscita | `text/html` os `application/json` | Descrizione errore |
-| `404 Not found` | URL non valido | `text/html` os `application/json` | Descrizione errore |
-| `50x Server Error` | Errore del server | `text/html` os `application/json` | Descrizione errore |
+| `400 Bad Request` | Argomenti non validi | `text/html` o  `application/json` | Descrizione errore |
+| `401 Unauthorized` | Autenticazione non riuscita | `text/html` o  `application/json` | Descrizione errore |
+| `404 Not found` | URL non valido | `text/html` o  `application/json` | Descrizione errore |
+| `50x Server Error` | Errore del server | `text/html` o  `application/json` | Descrizione errore |
 
 **Tabella 12: Codici di errore evento**
 
@@ -217,7 +220,7 @@ Questa richiesta HTTP restituisce un token che può essere rimborsato per una li
   </tr> 
   <tr> 
    <td> -2018 </td> 
-   <td>Token di autenticazione non valido: &lt;details&gt; <p>Nota:  Ciò può accadere se l'autenticatore è errato o quando accede all'API test su *.test.espressplay.com utilizzando l'autenticatore di produzione e viceversa. </p> <p importance="high">Nota: L’SDK di test e lo strumento di test avanzato (ATT) funzionano solo con <span class="filepath"> *.test.espressplay.com</span>, mentre i dispositivi di produzione devono utilizzare <span class="filepath"> *.service.espressplay.com</span>. </p> </td> 
+   <td>Token di autenticazione non valido: &lt;details&gt; <p>Nota:  Ciò può accadere se l'autenticatore è errato o quando accede all'API test su *.test.espressplay.com utilizzando l'autenticatore di produzione e viceversa. </p> <p importance="high">Nota: L'SDK test e lo strumento di test avanzato (ATT) funzionano solo con <span class="filepath"> *.test.espressplay.com</span>, mentre i dispositivi di produzione devono utilizzare <span class="filepath"> *.service.espressplay.com</span>. </p> </td> 
   </tr> 
   <tr> 
    <td> -2019 </td> 
@@ -277,7 +280,7 @@ Questa richiesta HTTP restituisce un token che può essere rimborsato per una li
   </tr> 
   <tr> 
    <td> -2040 </td> 
-   <td><span class="codeph"> OutputControlFlag</span> deve essere codificato di 4 byte </td> 
+   <td><span class="codeph"> </span> OutputControlFlagdeve essere codificato 4 byte </td> 
   </tr> 
   <tr> 
    <td> -3004 </td> 
@@ -289,7 +292,7 @@ Questa richiesta HTTP restituisce un token che può essere rimborsato per una li
   </tr> 
   <tr> 
    <td> -4018 </td> 
-   <td>Figlio <span class="codeph"> scomparso</span> </td> 
+   <td><span class="codeph"> child</span> mancante </td> 
   </tr> 
   <tr> 
    <td> -4019 </td> 
@@ -297,19 +300,19 @@ Questa richiesta HTTP restituisce un token che può essere rimborsato per una li
   </tr> 
   <tr> 
    <td> -4020 </td> 
-   <td><span class="codeph"> il ragazzo</span> deve essere composto da 32 caratteri esadecimali </td> 
+   <td><span class="codeph"> Il </span> figlio deve essere composto da 32 caratteri esadecimali di lunghezza </td> 
   </tr> 
   <tr> 
    <td> -4021 </td> 
-   <td><span class="codeph"> Il bambino</span> deve essere composto di 64 caratteri dopo il ^ </td> 
+   <td><span class="codeph"> Il </span> bambino deve avere 64 caratteri dopo il ^ </td> 
   </tr> 
   <tr> 
    <td> -4022 </td> 
-   <td>Elemento <span class="codeph"> figlio non valido</span> </td> 
+   <td><span class="codeph"> child</span> non valido </td> 
   </tr> 
   <tr> 
    <td> -4024 </td> 
-   <td>Chiave <span class="codeph"></span> o chiave crittografata non valida </td> 
+   <td>Chiave <span class="codeph"> crittografata </span> o chiave non valida </td> 
   </tr> 
   <tr> 
    <td> -5001 </td> 
@@ -337,7 +340,7 @@ Questa richiesta HTTP restituisce un token che può essere rimborsato per una li
   </tr> 
   <tr> 
    <td> -5007 </td> 
-   <td>È possibile specificare solo una chiave <span class="codeph"> kek</span> o <span class="codeph"> contentKey</span> </td> 
+   <td>È possibile specificare solo una delle <span class="codeph"> kek</span> o <span class="codeph"> contentKey</span> </td> 
   </tr> 
  </tbody> 
 </table>
