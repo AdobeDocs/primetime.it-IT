@@ -4,6 +4,9 @@ title: Configurare e implementare il server per lo streaming protetto
 uuid: 300a1b63-0bf0-48a8-977d-212563025c19
 translation-type: tm+mt
 source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+workflow-type: tm+mt
+source-wordcount: '172'
+ht-degree: 0%
 
 ---
 
@@ -13,15 +16,15 @@ source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
 1. Impostate la cartella di configurazione sul DVD DRM Primetime:
 
    `\Adobe Access Server for Protected Streaming\configs\`
-1. Copiate la cartella di esempio `configs` nella cartella `<Tomcat_installation_dir>` e rinominatela in `licenseserver`.
+1. Copiate la cartella di esempio `configs` nella cartella `<Tomcat_installation_dir>` e rinominate la cartella copiata in `licenseserver`.
 
-   Il percorso della cartella configs deve ora essere `<Tomcat_install_dir>\licenseserver\`.
-1. Eseguire `Scrambler.bat` per ottenere le password crittografate per i file PFX del server di trasporto e licenza nella directory DRM `<DVD>` di Primetime `\Adobe Access Server for Protected Streaming\` :
+   Il percorso della cartella configs ora deve essere `<Tomcat_install_dir>\licenseserver\`.
+1. Eseguire `Scrambler.bat` per ottenere le password crittografate per i file PFX del server di trasporto e licenza nella directory Primetime DRM `<DVD>` `\Adobe Access Server for Protected Streaming\`:
 
    * `Scrambler.bat <Adobe-provided transport credential password>`
    * `Scrambler.bat <Adobe-provided license server credential password>`
 
-1. Copiate i file PFX nella `<TomcatInstallDir>\licenseserver\flashaccessserver\tenants\<tenant-name>\` directory.
+1. Copiate i file PFX nella directory `<TomcatInstallDir>\licenseserver\flashaccessserver\tenants\<tenant-name>\`.
 1. Modificate la configurazione tenant corrispondente in `<TomcatInstallDir>\licenseserver\flashaccessserver\tenants\sampletenant\flashaccess-tenant.xml`, con le seguenti impostazioni:
 
    ```
@@ -31,13 +34,13 @@ source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
    Configuration|Tenant|Credentials|LicenseServerCredential|File|password=<scrambled-license-servercredential-password>
    ```
 
-1. Eseguire l&#39; `Validator.bat` utility per verificare la validità della configurazione:
+1. Eseguire l&#39;utility `Validator.bat` per verificare la validità della configurazione:
 
    ```
    Validator.bat -g -r <absolute-path-to TomcatInstallDir\licenseserver>
    ```
 
-1. Copiare il `flashaccessserver.war` file dal CD alla `<TomcatInstallDir>\webapps\` directory.
+1. Copiare il file `flashaccessserver.war` dal CD alla directory `<TomcatInstallDir>\webapps\`.
 1. Se Tomcat è in esecuzione, arrestare l&#39;istanza Tomcat in esecuzione premendo `<CTRL-C>` nella finestra del comando (se è stata avviata dalla finestra del comando). È inoltre possibile arrestare il server dall&#39;applicazione Windows Services se Tomcat è stato installato come servizio Windows.
 1. Per avviare Tomcat, immettete il comando seguente:
 
