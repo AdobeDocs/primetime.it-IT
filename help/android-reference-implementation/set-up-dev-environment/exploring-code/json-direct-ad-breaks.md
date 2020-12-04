@@ -6,6 +6,9 @@ description: Specifica l'oggetto JSON quando il valore del tipo è direct ad bre
 seo-description: Specifica l'oggetto JSON quando il valore del tipo è direct ad break
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '182'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
 
 Il seguente blocco di codice definisce l&#39;oggetto JSON dei dettagli quando il valore del tipo è direct ad break.
 
-Il `MetadataNode` valore restituito da `IFeedItemAdapter:getStreamMetadata()` contiene una voce con chiave di tipo `com.adobe.mediacore.metadata.DefaultMetadataKeys.JSON_METADATA_KEY` e valore di una rappresentazione in formato stringa del valore dell&#39;oggetto JSON di dettaglio riportato di seguito.
+La `MetadataNode` restituita da `IFeedItemAdapter:getStreamMetadata()` contiene una voce con chiave di tipo `com.adobe.mediacore.metadata.DefaultMetadataKeys.JSON_METADATA_KEY` e valore di una rappresentazione in formato stringa del valore dell&#39;oggetto JSON di dettaglio riportato di seguito.
 
 ```
 “metadata”: { 
@@ -50,10 +53,10 @@ Il `MetadataNode` valore restituito da `IFeedItemAdapter:getStreamMetadata()` co
 
 | Proprietà | Descrizione |
 |---|---|
-| `tag` | Una stringa che viene mappata sul campo del tag in `com.adobe.mediacore.timeline.advertising.AdBreak`. |
+| `tag` | Una stringa che viene mappata sul campo tag in `com.adobe.mediacore.timeline.advertising.AdBreak`. |
 | `time` | Indica l&#39;ora di inizio per l&#39;interruzione dell&#39;annuncio, viene mappata sul campo ora in `com.adobe.mediacore.timeline.advertising.AdBreak`. Il valore 0 indica un annuncio pre-roll. |
-| `replace` | Indica la durata della sostituzione dell&#39;interruzione dell&#39;annuncio, che viene mappata sul `replaceDuration` campo in `com.adobe.mediacore.timeline.advertising.AdBreak`. |
-| `ad-list` | Un elenco di annunci da riprodurre durante l&#39;interruzione dell&#39;annuncio viene mappato sul `List<Ad>` campo in `com.adobe.mediacore.timeline.advertising.AdBreak`. |
+| `replace` | Indica la durata della sostituzione dell&#39;interruzione dell&#39;annuncio, viene mappata sul campo `replaceDuration` in `com.adobe.mediacore.timeline.advertising.AdBreak`. |
+| `ad-list` | Un elenco di annunci da riprodurre durante l&#39;interruzione dell&#39;annuncio, viene mappato sul campo `List<Ad>` in `com.adobe.mediacore.timeline.advertising.AdBreak`. |
 
 Il seguente blocco di codice definisce l&#39;oggetto JSON per l&#39;array ad elenco.
 
@@ -75,6 +78,6 @@ Il seguente blocco di codice definisce l&#39;oggetto JSON per l&#39;array ad ele
 | Proprietà | Descrizione |
 |---|---|
 | `url` | L&#39;URL del contenuto dell&#39;annuncio viene mappato sul campo url in `com.adobe.mediacore.timeline.advertising.Ad`. |
-| `duration` | La durata dell&#39;annuncio viene mappata sul campo della durata in `com.adobe.mediacore.timeline.advertising.Ad`. |
+| `duration` | La durata dell&#39;annuncio viene mappata sul campo durata in `com.adobe.mediacore.timeline.advertising.Ad`. |
 | `tag` | Una stringa di descrizione. |
 
