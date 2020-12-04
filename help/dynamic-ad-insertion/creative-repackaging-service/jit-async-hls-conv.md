@@ -1,20 +1,23 @@
 ---
-description: Il CRS fornisce un pacchetto JIT (Just-in-time) e asincrono e la conversione HLS-to-HLS. Il risultato della ricompilazione è una versione HLS formattata dell'annuncio pubblicitario originale. CRS posiziona la versione formattata HLS sul server CDN (content delivery network, rete di distribuzione dei contenuti) da utilizzare quando necessario.
-seo-description: Il CRS fornisce un pacchetto JIT (Just-in-time) e asincrono e la conversione HLS-to-HLS. Il risultato della ricompilazione è una versione HLS formattata dell'annuncio pubblicitario originale. CRS posiziona la versione formattata HLS sul server CDN (content delivery network, rete di distribuzione dei contenuti) da utilizzare quando necessario.
+description: Il CRS fornisce un pacchetto JIT (Just-in-time) e asincrono e la conversione HLS-to-HLS. Il risultato della ricompilazione è una versione HLS formattata dell'annuncio pubblicitario originale. CRS posiziona la versione formattata HLS sul server CDN (content delivery network, rete di distribuzione dei contenuti) per l'utilizzo quando necessario.
+seo-description: Il CRS fornisce un pacchetto JIT (Just-in-time) e asincrono e la conversione HLS-to-HLS. Il risultato della ricompilazione è una versione HLS formattata dell'annuncio pubblicitario originale. CRS posiziona la versione formattata HLS sul server CDN (content delivery network, rete di distribuzione dei contenuti) per l'utilizzo quando necessario.
 seo-title: Principali utilizzi del CRS
 title: Principali utilizzi del CRS
 uuid: df2caa67-bc94-4146-9b93-14edc060c3d5
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '396'
+ht-degree: 0%
 
 ---
 
 
-# Principali utilizzi del CRS {#main-uses-of-crs}
+# Principali utilizzi di CRS {#main-uses-of-crs}
 
-Il CRS fornisce un pacchetto JIT (Just-in-time) e asincrono e conversione HLS-to-HLS. Il risultato della ricompilazione è una versione HLS formattata dell&#39;annuncio pubblicitario originale. CRS posiziona la versione formattata HLS sul server CDN (content delivery network, rete di distribuzione dei contenuti) da utilizzare quando necessario.
+Il CRS fornisce un pacchetto JIT (Just-in-time) e asincrono e la conversione HLS-to-HLS. Il risultato della ricompilazione è una versione HLS formattata dell&#39;annuncio pubblicitario originale. CRS posiziona la versione formattata HLS sul server CDN (content delivery network, rete di distribuzione dei contenuti) per l&#39;utilizzo quando necessario.
 
-In JIT, la ricompilazione di Adobe Primetime e l&#39;inserimento di annunci inizia il processo di ricompilazione quando incontra per la prima volta un annuncio pubblicitario non HLS. Ciò comporta in genere la perdita di opportunità di eseguire l&#39;annuncio durante il processo di reimballaggio.
+In JIT, il reimballaggio  Adobe Primetime e l&#39;inserimento degli annunci inizia il processo di ricompilazione quando incontra per la prima volta un annuncio pubblicitario non HLS. Ciò comporta in genere la perdita di opportunità di eseguire l&#39;annuncio durante il processo di reimballaggio.
 
 Nella ricompilazione asincrona, l&#39;annuncio creativo viene transcodificato e memorizzato prima che sia necessario, il che può eliminare quelle opportunità perdute.
 
@@ -34,7 +37,7 @@ La sequenza per il reimballaggio JIT è la seguente:
 
 Potete utilizzare l&#39;API descritta in [Repackage API](../creative-repackaging-service/api-repackage.md) per precodificare un creativo non HLS al fine di ridurre al minimo la perdita di impression e massimizzare la monetizzazione.
 
-## Conversione HLS-HLS {#section_877A0E7E8FAF4C2DB086A31C24D53435}
+## Conversione HLS-in-HLS {#section_877A0E7E8FAF4C2DB086A31C24D53435}
 
 Per evitare il buffering e il ritardo, un client scarica un video in piccoli blocchi. Se le dimensioni dei blocchi non sono coerenti, la riproduzione potrebbe risultare instabile. La conversione da HLS a HLS assicura che i blocchi di dati abbiano tutti la stessa durata (ad esempio, 6 secondi).
 
