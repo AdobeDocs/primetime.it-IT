@@ -6,6 +6,9 @@ title: Ignora interruzioni annuncio per un periodo di tempo
 uuid: f8a5c1e3-e97f-421f-ac98-79de94a82955
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '322'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +35,7 @@ Per ignorare il comportamento predefinito di TVSDK e interruzione, potete estend
 
    >[!NOTE]
    >
-   >Il criterio di `REMOVE` interruzione annuncio è impostato come obsoleto. Adobe consiglia di utilizzare il criterio di `SKIP` interruzione annuncio al posto di `REMOVE`.
+   >Il criterio `REMOVE` per l&#39;interruzione dell&#39;annuncio è dichiarato obsoleto.  Adobe consiglia di utilizzare il criterio `SKIP` di interruzione annuncio al posto di `REMOVE`.
 
 L&#39;esempio seguente di un selettore di criteri di pubblicità personalizzato salta gli annunci nei prossimi cinque minuti (ora dell&#39;orologio a muro) dopo che un utente ha visto un&#39;interruzione di annuncio.
 
