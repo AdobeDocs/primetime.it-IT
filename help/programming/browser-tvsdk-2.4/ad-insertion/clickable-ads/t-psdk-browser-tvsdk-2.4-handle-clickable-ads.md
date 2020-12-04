@@ -6,11 +6,14 @@ title: Gestire gli annunci cliccabili
 uuid: 5d3c9d36-60d7-4272-a523-7d1fe0e1615f
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '253'
+ht-degree: 0%
 
 ---
 
 
-# Gestire gli annunci cliccabili {#handle-clickable-ads}
+# Gestire annunci cliccabili {#handle-clickable-ads}
 
 MediaPlayer fornisce una funzione notificationClick() che invia eventi correlati agli annunci durante la riproduzione di un annuncio selezionabile. Questi eventi forniscono informazioni su annunci e interruzioni pubblicitarie che l&#39;app può utilizzare per fornire funzionalità di click-through.
 
@@ -20,7 +23,7 @@ MediaPlayer attiva i seguenti eventi quando viene riprodotto un annuncio selezio
 * `AdobePSDK.PSDKEventType.AD_CLICKED`
 * `AdobePSDK.PSDKEventType.AD_COMPLETED`
 
-L&#39; `AdClickedEvent` elenco contiene le informazioni necessarie per elaborare la funzione click-through.
+Il `AdClickedEvent` contiene le informazioni necessarie per elaborare la funzione click-through.
 
 1. Consente agli utenti di fare clic sugli annunci cliccabili per controllare il lettore.
 
@@ -36,7 +39,7 @@ L&#39; `AdClickedEvent` elenco contiene le informazioni necessarie per elaborare
 
 1. Aggiungete un gestore per l&#39;evento click dell&#39;utente.
 
-   Questo gestore deve richiedere a MediaPlayer di attivare l&#39; `AdClicked` evento.
+   Questo gestore deve richiedere a MediaPlayer di attivare l&#39;evento `AdClicked`.
 
    ```
    onAdClick = function (event) { 
