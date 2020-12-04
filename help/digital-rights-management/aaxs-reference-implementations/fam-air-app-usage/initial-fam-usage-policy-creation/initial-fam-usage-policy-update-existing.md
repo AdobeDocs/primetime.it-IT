@@ -15,9 +15,9 @@ ht-degree: 0%
 
 Per aggiornare un criterio esistente, scegliete il nome del file dall&#39;elenco a discesa e fate clic su **[!UICONTROL Open]**. Modificate eventuali attributi del criterio desiderato. Tutti gli attributi possono essere modificati, ad eccezione di quelli relativi all&#39;autenticazione e alla concatenazione delle licenze.
 
-Al termine, fate clic **[!UICONTROL Save]**. Il file dei criteri nella [!DNL Resource] directory verrà sostituito con la versione aggiornata.
+Al termine, fare clic su **[!UICONTROL Save]**. Il file dei criteri nella directory [!DNL Resource] verrà sostituito con la versione aggiornata.
 
 >[!NOTE]
 >
->Anche se il nome del criterio viene modificato, il nome del file nella [!DNL Resource] directory non verrà modificato.
+>Anche se il nome del criterio viene modificato, il nome del file nella directory [!DNL Resource] non verrà modificato.
 
