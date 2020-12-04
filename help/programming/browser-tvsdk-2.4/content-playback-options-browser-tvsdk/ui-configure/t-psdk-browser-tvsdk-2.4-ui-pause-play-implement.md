@@ -6,6 +6,9 @@ title: Riproduzione e pausa di un video
 uuid: 4053ea9e-6b74-41e9-ad04-087ad13e3698
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '127'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ Potete aggiungere il comportamento TVSDK del browser per mettere in pausa e ripr
       void pause() throws IllegalStateException;
       ```
 
-1. Ascoltare l’ `AdobePSDK.MediaPlayerStatusChangeEvent` evento per verificare la presenza di errori o per eseguire altre azioni appropriate.
+1. Ascoltare l&#39;evento `AdobePSDK.MediaPlayerStatusChangeEvent` per verificare la presenza di errori o per eseguire altre azioni appropriate.
 
    Il browser TVSDK attiva questo evento quando i metodi pause o play vengono chiamati e trasmette informazioni sull&#39;oggetto evento, incluso il nuovo stato, ad esempio `MediaPlayerStatus.PLAYING` o `MediaPlayerStatus.PAUSED`.
 
