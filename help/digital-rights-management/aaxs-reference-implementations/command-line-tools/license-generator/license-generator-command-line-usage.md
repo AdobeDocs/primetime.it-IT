@@ -4,6 +4,9 @@ title: Utilizzo della riga di comando
 uuid: b3a995de-653e-491a-9262-86dc56b9ce31
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '280'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Per generare una licenza, utilizzate la sintassi seguente:
 </i class="+ topic>
 ```
 
-`metadata` è un file .metadata contenente i metadati DRM di Adobe Access. Questo file può essere ottenuto dal contenuto protetto tramite l&#39; `-d -m` opzione di Media Packager.
+`metadata` è un file .metadata contenente i metadati DRM di accesso al Adobe . Questo file può essere ottenuto dal contenuto protetto utilizzando l&#39;opzione `-d -m` di Media Packager.
 
 Per visualizzare una licenza generata in precedenza, utilizzate la sintassi seguente:
 
@@ -33,7 +36,7 @@ Per visualizzare una licenza generata in precedenza, utilizzate la sintassi segu
 </i class="+ topic>
 ```
 
-`license` è un file contenente una licenza Adobe Access generata dal Generator delle licenze.
+`license` è un file contenente una licenza di accesso al Adobe  generata dal Generatore di licenze.
 
 Nella tabella seguente sono descritte le opzioni della riga di comando che è possibile specificare insieme alla sintassi di cui sopra:
 
@@ -63,7 +66,7 @@ Nella tabella seguente sono descritte le opzioni della riga di comando che è po
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> -noprompt</span> </td> 
-   <td colname="2" class="- topic/entry ">Non chiedere se il file di destinazione deve essere sovrascritto. Se il file di destinazione esiste già e <span class="codeph"> -o</span> non è impostato, viene restituito un errore. </td> 
+   <td colname="2" class="- topic/entry ">Non chiedere se il file di destinazione deve essere sovrascritto. Se il file di destinazione esiste già e <span class="codeph"> -o</span> non è impostato, verrà restituito un errore. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> -o</span> </td> 
@@ -75,7 +78,7 @@ Nella tabella seguente sono descritte le opzioni della riga di comando che è po
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-r certificato destinatario</span> </td> 
-   <td colname="2" class="- topic/entry ">Genera una licenza per il destinatario specificato. È possibile utilizzare un certificato di dispositivo o dominio. Per creare una licenza per più destinatari è possibile specificare più <span class="+ topic/ph pr-d/codeph codeph"> opzioni </span>-r. </td> 
+   <td colname="2" class="- topic/entry ">Genera una licenza per il destinatario specificato. È possibile utilizzare un certificato di dispositivo o dominio. È possibile specificare più opzioni <span class="+ topic/ph pr-d/codeph codeph"> -r </span>per creare una licenza per più destinatari. </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-root-root-filename</span> </td> 
