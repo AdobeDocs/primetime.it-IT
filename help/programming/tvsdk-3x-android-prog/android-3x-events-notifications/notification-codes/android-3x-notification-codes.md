@@ -6,6 +6,9 @@ title: Codici di notifica
 uuid: 6babb203-b6d4-4b11-9fae-41e7db7fd570
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '241'
+ht-degree: 0%
 
 ---
 
