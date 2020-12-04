@@ -6,17 +6,20 @@ title: Utilizzare i metadati temporizzati
 uuid: 9bbdaefa-4ac5-4e08-92b4-15ebe5c46864
 translation-type: tm+mt
 source-git-commit: 25a0dfef12ecf10ba939500c4ba539468c41ee1b
+workflow-type: tm+mt
+source-wordcount: '116'
+ht-degree: 1%
 
 ---
 
 
-# Utilizzare i metadati temporizzati{#use-timed-metadata}
+# Usa metadati temporizzati{#use-timed-metadata}
 
 Potete usare TimedMetadata quando l’ora di riproduzione corrente corrisponde all’ora di inizio.
 
-Per utilizzare questi `PTTimedMetadata` oggetti salvati durante la riproduzione, utilizzare il dizionario salvato dagli oggetti metadati temporizzati [Store durante l&#39;invio](../../../tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-timed-metadata-store.md).
+Per utilizzare questi oggetti `PTTimedMetadata` salvati durante la riproduzione, utilizzare il dizionario salvato da [Memorizzare gli oggetti metadati temporizzati durante l&#39;invio](../../../tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-timed-metadata-store.md).
 
-1. Estrarre e aggiornare il tempo di riproduzione corrente da questa notifica e individuare tutti gli `PTTimedMetadata` oggetti con orari di inizio che corrispondono al tempo di riproduzione corrente.
+1. Estrarre e aggiornare il tempo di riproduzione corrente da questa notifica e individuare tutti gli oggetti `PTTimedMetadata` con orari di inizio che corrispondono al tempo di riproduzione corrente.
 
    È possibile utilizzare questi oggetti per completare diverse azioni.
 
@@ -57,4 +60,4 @@ Per utilizzare questi `PTTimedMetadata` oggetti salvati durante la riproduzione,
    }
    ```
 
-1. Svuotare periodicamente `PTTimedMetadata` le istanze non aggiornate dall&#39;elenco per evitare che la memoria cresca continuamente.
+1. Svuotare periodicamente le istanze `PTTimedMetadata` stantate dall&#39;elenco per evitare la crescita continua della memoria.
