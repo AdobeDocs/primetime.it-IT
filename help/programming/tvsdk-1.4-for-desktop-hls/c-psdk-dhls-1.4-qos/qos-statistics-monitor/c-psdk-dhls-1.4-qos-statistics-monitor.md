@@ -6,11 +6,14 @@ title: Qualità delle statistiche di servizio
 uuid: 5c9d09a9-0e0b-44f2-98ca-2eeb8a830ec6
 translation-type: tm+mt
 source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+workflow-type: tm+mt
+source-wordcount: '446'
+ht-degree: 0%
 
 ---
 
 
-# Qualità delle statistiche di servizio {#quality-of-service-statistics}
+# Statistiche sulla qualità del servizio {#quality-of-service-statistics}
 
 Quality of Service (QoS) offre una visualizzazione dettagliata delle prestazioni del motore video. TVSDK fornisce statistiche dettagliate su riproduzione, buffering e dispositivi.
 
@@ -20,11 +23,11 @@ TVSDK fornisce inoltre informazioni sulle seguenti risorse scaricate:
 * Frammenti di file
 * Informazioni di tracciamento per i file
 
-## Tenere traccia a livello di frammento utilizzando le informazioni sul caricamento {#track-at-the-fragment-level-using-load-information}
+## Tenere traccia a livello di frammento utilizzando le informazioni di caricamento {#track-at-the-fragment-level-using-load-information}
 
 Dalla classe LoadInformation è possibile leggere informazioni sulla qualità del servizio (QoS) relative alle risorse scaricate, come frammenti e tracce.
 
-1. Implementa il listener di eventi di `onLoadInformationAvailable` callback.
+1. Implementare il listener di eventi di callback `onLoadInformationAvailable`.
 
    ```
    private function onLoadInformationAvailable(event:LoadInformationEvent):void { 
@@ -40,7 +43,7 @@ Dalla classe LoadInformation è possibile leggere informazioni sulla qualità de
                                     onLoadInformationAvailable);
    ```
 
-1. Leggere i dati di interesse dal callback `LoadInformation` passato.
+1. Leggere i dati di interesse dal `LoadInformation` passato al callback.
 
    <table id="table_75E61A2EB25E435DB631166A7FF64757"> 
    <thead> 
@@ -52,37 +55,37 @@ Dalla classe LoadInformation è possibile leggere informazioni sulla qualità de
    </thead>
    <tbody> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> downloadDuration </span> </td> 
+      <td colname="col01"> <span class="codeph"> downloadDuration  </span> </td> 
       <td colname="col1"> <p>Numero </p> </td> 
       <td colname="col2"> <p>Durata del download, in millisecondi. </p> <p>TVSDK non fa distinzione tra il tempo impiegato dal client per connettersi al server e il tempo impiegato per scaricare l'intero frammento. Ad esempio, se il download di un segmento da 10 MB richiede 8 secondi, TVSDK fornisce tali informazioni, ma non indica che sono necessari 4 secondi prima del primo byte e altri 4 secondi per scaricare l’intero frammento. </p> </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> mediaDuration </span> </td> 
+      <td colname="col01"> <span class="codeph"> mediaDuration  </span> </td> 
       <td colname="col1"> <p>Numero </p> </td> 
       <td colname="col2"> Durata media dei frammenti scaricati, in millisecondi. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> size </span> </td> 
+      <td colname="col01"> <span class="codeph"> size  </span> </td> 
       <td colname="col1"> <p>Numero </p> </td> 
       <td colname="col2"> La dimensione della risorsa scaricata, in byte. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> trackIndex </span> </td> 
+      <td colname="col01"> <span class="codeph"> trackIndex  </span> </td> 
       <td colname="col1"> <p>int </p> </td> 
       <td colname="col2"> l’indice del binario corrispondente, se noto; altrimenti, 0. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> trackName </span> </td> 
+      <td colname="col01"> <span class="codeph"> trackName  </span> </td> 
       <td colname="col1"> <p>Stringa </p> </td> 
       <td colname="col2"> il nome del binario corrispondente, se noto; altrimenti, null. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> trackType </span> </td> 
+      <td colname="col01"> <span class="codeph"> trackType  </span> </td> 
       <td colname="col1"> <p>Stringa </p> </td> 
       <td colname="col2"> il tipo del binario corrispondente, se noto; altrimenti, null. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> type </span> </td> 
+      <td colname="col01"> <span class="codeph"> type  </span> </td> 
       <td colname="col1"> <p>Stringa </p> </td> 
       <td colname="col2"> Download di TVSDK. Una delle seguenti opzioni: 
       <ul id="ul_FA02F42D109344F4866073908CA4E835"> 
@@ -92,23 +95,23 @@ Dalla classe LoadInformation è possibile leggere informazioni sulla qualità de
       </ul> A volte potrebbe non essere possibile rilevare il tipo di risorsa. In questo caso, viene restituito FILE. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> url </span> </td> 
+      <td colname="col01"> <span class="codeph"> url  </span> </td> 
       <td colname="col1"> <p>Stringa </p> </td> 
       <td colname="col2"> L’URL che fa riferimento alla risorsa scaricata. </td> 
    </tr> 
    </tbody> 
    </table>
 
-## Lettura delle statistiche relative a riproduzione, buffering e dispositivo QOS {#read-qos-playback-buffering-and-device-statistics}
+## Leggi le statistiche relative a riproduzione, buffering e dispositivo QOS {#read-qos-playback-buffering-and-device-statistics}
 
 Dalla classe QOSProvider è possibile leggere le statistiche relative a riproduzione, buffering e dispositivo.
 
-La `QOSProvider` classe fornisce diverse statistiche, tra cui informazioni sul buffering, i bit rate, i frame rate, i dati temporali e così via.
+La classe `QOSProvider` fornisce diverse statistiche, tra cui informazioni sul buffering, i bit rate, i frame rate, i dati temporali e così via.
 
 Fornisce inoltre informazioni sul dispositivo, come il produttore, il modello, il sistema operativo, la versione SDK e la dimensione/densità dello schermo.
 
 1. Creare un&#39;istanza di un lettore multimediale.
-1. Creare un `QOSProvider` oggetto e associarlo al lettore multimediale.
+1. Create un oggetto `QOSProvider` e collegatelo al lettore multimediale.
 
    ```
    // Create Media Player. 
