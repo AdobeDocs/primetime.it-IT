@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-#  Elenco Bloccati di client DRM con restrizioni all&#39;accesso al contenuto protetto {#blocklist-of-drm-clients-restricted-from-accessing-protected-content}
+#  Elenco Bloccati di client DRM non autorizzati ad accedere al contenuto protetto {#blocklist-of-drm-clients-restricted-from-accessing-protected-content}
 
 Questo elenco Bloccati  specifica i client DRM Primetime che non possono accedere al contenuto protetto.  client di elenco Bloccati per versione client e piattaforma.
 
@@ -27,7 +27,7 @@ Una versione client DRM Primetime può essere identificata dagli attributi speci
 | OS | `“Win”, “Mac”, “Linux”, “Android”, “iOS”, "ChromeOS"` | Corrispondenza esatta | Piattaforma |
 | Architettura | `“32”, “64”` | Corrispondenza esatta | 32 bit o 64 bit |
 | Tipo di schermo | `“PC”, “Mobile”, “TV”` | Corrispondenza esatta |  |
-| Versione runtime | Un numero di versione valido. Ad esempio `“2.0.0”, "3.0", "4.0", "11.0"`, ecc. | Corrisponde se la versione client è minore o uguale alla versione specificata. | Il numero di versione è specificato come combinazione di numeri e punti (&quot;.&quot;) di qualsiasi lunghezza. |
+| Versione runtime | Un numero di versione valido. Ad esempio, `“2.0.0”, "3.0", "4.0", "11.0"`, ecc. | Corrisponde se la versione client è minore o uguale alla versione specificata. | Il numero di versione è specificato come combinazione di numeri e punti (&quot;.&quot;) di qualsiasi lunghezza. |
 | Versione libreria DRM di Primetime | Un numero di versione valido. Ad esempio, `“2.0.0”`. | Corrisponde se la versione client è minore o uguale alla versione specificata. | Il numero di versione è specificato come combinazione di numeri e punti (&quot;.&quot;) di qualsiasi lunghezza. |
 | Fornitore OEM | Stringa Fornitore OEM che può essere individuata nel certificato Runtime emesso per un cliente che ha portato DRM Primetime a un dispositivo. | Corrispondenza esatta | Stringa di identificazione del fornitore OEM per il dispositivo che utilizza il kit di porta. |
 | Modello | Stringa del modello che può essere individuata nel certificato Runtime emesso per un cliente che ha trasferito Primetime DRM a un dispositivo. Ad esempio: `"iOS_Mobile", "Android_Mobile", "Chrome", "ChromeOS_ARM", "WindowsOnARM", "AVE"` | Corrispondenza esatta | Stringa di identificazione del modello di dispositivo per il dispositivo che utilizza il kit di portamento. |
