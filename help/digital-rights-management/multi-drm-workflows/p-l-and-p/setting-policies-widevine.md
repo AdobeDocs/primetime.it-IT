@@ -4,6 +4,9 @@ title: Utilizzo dei criteri di protezione dell'output
 uuid: f00d2a97-0036-41a6-ab44-391cc40b146e
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '183'
+ht-degree: 0%
 
 ---
 
@@ -21,6 +24,6 @@ Expressplay attualmente non supporta l&#39;associazione di restrizioni all&#39;u
 
 **Criteri di protezione dell&#39;output di PlayReady**
 
-PlayReady supporta inoltre in modo nativo le restrizioni di protezione dell&#39;uscita analogica e digitale. I valori del livello di protezione dell&#39;output che è possibile impostare. La pagina Livelli [di protezione dell&#39;](https://msdn.microsoft.com/en-us/library/dn468831.aspx) output documenta i valori che è possibile impostare e il comportamento previsto del cliente.
+PlayReady supporta inoltre in modo nativo le restrizioni di protezione dell&#39;uscita analogica e digitale. I valori del livello di protezione dell&#39;output che è possibile impostare. La pagina [Livelli di protezione dell&#39;output](https://msdn.microsoft.com/en-us/library/dn468831.aspx) documenta i valori che è possibile impostare e il comportamento previsto del client.
 
-Se si utilizza Expressplay, allegare valori di livello di protezione dell&#39;output al momento della generazione del token tramite i formati compressoDigitalAudioOPL, non compressoDigitalAudioOPL, compressoDigitalVideoOPL, non compressoDigitalVideoOPL e il flag unknownOutputBehavior. Questi sono documentati in [PlayReady License Token Request](https://www.expressplay.com/developer/restapi/#playready-license-token-request)
+Se si utilizza Expressplay, allegare valori di livello di protezione dell&#39;output al momento della generazione del token tramite i formati compressoDigitalAudioOPL, non compressoDigitalAudioOPL, compressoDigitalVideoOPL, non compressoDigitalVideoOPL e il flag unknownOutputBehavior. Questi sono documentati in [Richiesta token di licenza PlayReady](https://www.expressplay.com/developer/restapi/#playready-license-token-request)
