@@ -27,7 +27,7 @@ Per attivare questa funzione opzionale CRS, contattate il rappresentante del Ado
 >
 >Per i clienti CRS versione 3.0 (e versioni precedenti), a partire dalla versione 3.1 di CRS, le seguenti modifiche hanno migliorato la sicurezza e le prestazioni:
 >
->* CRS 3.1 continua con `https:` se il contenuto in fase di reimballaggio utilizza `https:`. Questo riduce il potenziale di alcuni lettori per presentare contenuto non sicuro.
+>* CRS 3.1 continua con `https:` se il contenuto in fase di reinserimento utilizza `https:`. Questo riduce il potenziale di alcuni lettori per presentare contenuto non sicuro.
    >
    >
 * CRS 3.1 riduce notevolmente le chiamate di rete, migliorando i tempi di avvio del video.
@@ -36,9 +36,9 @@ Per attivare questa funzione opzionale CRS, contattate il rappresentante del Ado
 
 
 
-Per ulteriori informazioni su CRS, consultate [Creative Packaging Service (CRS)](../../../../../dynamic-ad-insertion/creative-repackaging-service/crs-overview.md).
+Per ulteriori informazioni sui CRS, vedere [Creative Packaging Service (CRS)](../../../../../dynamic-ad-insertion/creative-repackaging-service/crs-overview.md).
 
-## Abilitare CRS nelle applicazioni TVSDK {#enable-crs-in-tvsdk-applications}
+## Attivare CRS nelle applicazioni TVSDK {#enable-crs-in-tvsdk-applications}
 
 Per abilitare CRS nelle applicazioni TVSDK, nelle impostazioni di Auditude devi impostare le seguenti informazioni:
 
