@@ -6,22 +6,26 @@ title: Ottenere informazioni sul commutatore di profilo
 uuid: e26ad9fb-6c54-450e-ab62-784d9033d214
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '328'
+ht-degree: 0%
 
 ---
 
 
-# Ottenere informazioni sul commutatore di profilo{#get-information-about-profile-switch}
+# Ottenere informazioni sull&#39;interruttore del profilo{#get-information-about-profile-switch}
 
 Quando il lettore multimediale imposta il profilo corrente su un nuovo profilo, è possibile recuperare informazioni sullo switch, ad esempio quando è stato attivato, informazioni su larghezza e altezza o perché è stato utilizzato un bitrate diverso.
 
-1. Ascoltare l&#39; `ProfileEvent.PROFILE_CHANGED` evento.
+1. Ascoltare l&#39;evento `ProfileEvent.PROFILE_CHANGED`.
 
    Il lettore multimediale TVSDK invia questo evento quando l&#39;algoritmo di commutazione del bitrate adattivo passa a un altro profilo a causa delle condizioni della rete o del computer. (Quando cambia il bitrate o il periodo).
 1. Quando si verifica l&#39;evento, controllare le seguenti proprietà per informazioni sullo switch:
 
    * `profile`: Identificatore per il nuovo profilo in uso.
    * `time`: Tempo di flusso in cui si è verificato l&#39;interruttore.
-   * `description`: Descrizione testuale del motivo di una modifica del bitrate, sotto forma di una stringa di coppie chiave/valore separate da punto e virgola. Include un massimo di uno `Reason` e uno `Bitrate`. Se le informazioni non sono disponibili o il bitrate non è stato modificato, la stringa è vuota.
+   * `description`: Descrizione testuale del motivo di una modifica del bitrate, sotto forma di una stringa di coppie chiave/valore separate da punto e virgola. Include un massimo di `Reason` e uno `Bitrate`. Se le informazioni non sono disponibili o il bitrate non è stato modificato, la stringa è vuota.
+
    <table id="table_E400FD9C57FF40CBAC14AF6847CD8301"> 
     <thead> 
       <tr> 
@@ -31,7 +35,7 @@ Quando il lettore multimediale imposta il profilo corrente su un nuovo profilo, 
     </thead>
     <tbody> 
       <tr> 
-      <td colname="col1"> <span class="codeph"> Motivo </span> </td> 
+      <td colname="col1"> <span class="codeph"> Motivo  </span> </td> 
       <td colname="col2"> 
        <ul id="ul_37DDE3F297634ED6B47DF5D73F969369"> 
        <li id="li_E374B029E1AF40689D70A9D30E057C5B">Adattamento di rete </li> 
@@ -41,11 +45,11 @@ Quando il lettore multimediale imposta il profilo corrente su un nuovo profilo, 
        </ul> </td> 
       </tr> 
       <tr> 
-      <td colname="col1"> <span class="codeph"> Bitrate </span> </td> 
+      <td colname="col1"> <span class="codeph"> Bitrate  </span> </td> 
       <td colname="col2"> 
        <ul id="ul_1B49BD90A91147359712E1AFD8877E23"> 
-       <li id="li_1C8E593C65D34742B14A8D0EAD43E0A9"> <span class="codeph"> up </span>: Bitrate aumentato </li> 
-       <li id="li_B1A00E3985A849B6855E15CF70D79BB8"> <span class="codeph"> down </span>: Il bit rate è diminuito </li> 
+       <li id="li_1C8E593C65D34742B14A8D0EAD43E0A9"> <span class="codeph"> up  </span>: Bitrate aumentato </li> 
+       <li id="li_B1A00E3985A849B6855E15CF70D79BB8"> <span class="codeph"> down  </span>: Il bit rate è diminuito </li> 
        </ul> </td> 
       </tr> 
     </tbody>
