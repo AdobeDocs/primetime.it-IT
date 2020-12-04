@@ -4,6 +4,9 @@ title: Aggiornamento di un criterio DRM con l'API Java
 uuid: ec21351c-900e-48f5-845a-c0b430c210d7
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '113'
+ht-degree: 0%
 
 ---
 
@@ -12,14 +15,14 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 Per aggiornare un criterio DRM con l&#39;API Java:
 
-1. Configurate l&#39;ambiente di sviluppo e includete nel progetto tutti i file JAR elencati in [Impostazione dell&#39;ambiente](../../protecting-content/setting-up-the-sdk/setup-dev-env.md)di sviluppo.
-1. Create un&#39; `Policy` istanza DRM e leggete il criterio DRM da un file o un database.
+1. Configurate l&#39;ambiente di sviluppo e includete nel progetto tutti i file JAR elencati in [Impostazione dell&#39;ambiente di sviluppo](../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
+1. Create un&#39;istanza DRM `Policy` e leggete il criterio DRM da un file o un database.
 
    ```
    Policy policy = new Policy(policyBytes);
    ```
 
-1. Aggiornare l&#39; `Policy` oggetto DRM impostandone le proprietà, ad esempio il nome e le regole di utilizzo.
+1. Aggiornare l&#39;oggetto DRM `Policy` impostandone le proprietà, ad esempio il nome e le regole di utilizzo.
 
    ```java
    // Change the DRM policy name.  
@@ -44,7 +47,7 @@ Per aggiornare un criterio DRM con l&#39;API Java:
    }
    ```
 
-1. Serializzare l&#39; `Policy` oggetto DRM aggiornato e archiviarlo in un file o in un database.
+1. Serializzare l&#39;oggetto DRM aggiornato `Policy` e archiviarlo in un file o in un database.
 
    ```java
    // Serialize the DRM policy.  
@@ -58,4 +61,4 @@ Per aggiornare un criterio DRM con l&#39;API Java:
    out.close();
    ```
 
-Consultate `com.adobe.flashaccess.samples.policy.UpdatePolicy` nella directory Strumenti della riga di comando Implementazione di riferimento [!DNL samples] l&#39;origine di questo codice di esempio.
+Vedere `com.adobe.flashaccess.samples.policy.UpdatePolicy` nella directory Strumenti della riga di comando di implementazione di riferimento [!DNL samples] per l&#39;origine di questo codice di esempio.
