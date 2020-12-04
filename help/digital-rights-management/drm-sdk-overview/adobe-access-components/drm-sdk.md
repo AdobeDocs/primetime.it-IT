@@ -1,16 +1,19 @@
 ---
-description: I componenti principali di Primetime DRM sono costituiti da un Java SDK e dagli ambienti runtime client Flash Player e Adobe AIR.
-seo-description: I componenti principali di Primetime DRM sono costituiti da un Java SDK e dagli ambienti runtime client Flash Player e Adobe AIR.
-seo-title: Java SDK, Flash Player e il client Adobe AIR
-title: Java SDK, Flash Player e il client Adobe AIR
+description: I componenti principali di Primetime DRM sono costituiti da un SDK Java e dagli ambienti runtime client Adobe AIR Flash Player e .
+seo-description: I componenti principali di Primetime DRM sono costituiti da un SDK Java e dagli ambienti runtime client Adobe AIR Flash Player e .
+seo-title: 'Java SDK, Flash Player e client Adobe AIR '
+title: 'Java SDK, Flash Player e client Adobe AIR '
 uuid: e6daed27-3803-4ef7-ba25-4a180af7502f
 translation-type: tm+mt
 source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+workflow-type: tm+mt
+source-wordcount: '462'
+ht-degree: 0%
 
 ---
 
 
-# SDK DRM di Adobe Primetime {#section_522E57DFEEFF4794978FF2D366B83690}
+#  Adobe Primetime DRM SDK {#section_522E57DFEEFF4794978FF2D366B83690}
 
 Primetime DRM viene distribuito come SDK Java che fornisce i blocchi costitutivi dai quali è possibile creare un&#39;implementazione del server. Con l’SDK puoi creare una soluzione DRM Primetime adatta al modello aziendale dell’organizzazione.
 
@@ -46,10 +49,10 @@ Queste API vengono utilizzate quando un client richiede una licenza dal server. 
 
    L&#39;API di generazione e acquisizione della licenza viene utilizzata per generare una licenza per l&#39;utente.
 
-* Supporto per client e contenuti Adobe AIR versione 1.5
+* Supporto per  client e contenuti Adobe AIR versione 1.5
 
    Ai fini della compatibilità con le versioni precedenti, l’SDK dispone di API per gestire le richieste delle applicazioni AIR create per l’uso con i client AIR versione 1.5 e versioni precedenti e il contenuto protetto.
 
 ## Implementazione di riferimento {#reference-implementation}
 
-L’SDK include un’implementazione di riferimento, una semplice implementazione DRM di Adobe Primetime che illustra come utilizzare le API Java. L&#39;implementazione di riferimento fornisce un server licenze, un pacchetto cartelle esaminate, un&#39;applicazione AIR DRM Manager Primetime e strumenti della riga di comando per la creazione di pacchetti di contenuto e la gestione dei criteri basati sulle API Java. Per ulteriori informazioni sull&#39;implementazione di riferimento DRM di Primetime, consulta Protezione dei contenuti.
+L&#39;SDK include un&#39;implementazione di riferimento, una semplice implementazione DRM  Adobe Primetime che illustra come utilizzare le API Java. L&#39;implementazione di riferimento fornisce un server licenze, un pacchetto cartelle esaminate, un&#39;applicazione AIR DRM Manager Primetime e strumenti della riga di comando per la creazione di pacchetti di contenuto e la gestione dei criteri basati sulle API Java. Per ulteriori informazioni sull&#39;implementazione di riferimento DRM di Primetime, consulta Protezione dei contenuti.
