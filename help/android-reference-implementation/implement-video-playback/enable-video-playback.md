@@ -6,6 +6,9 @@ title: Abilita riproduzione video
 uuid: ddc0defa-c40f-4ee6-a69f-d5eeca6c2fce
 translation-type: tm+mt
 source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+workflow-type: tm+mt
+source-wordcount: '185'
+ht-degree: 0%
 
 ---
 
@@ -30,7 +33,7 @@ Create un PlaybackManager che gestisca la configurazione del flusso HLS e l&#39;
    playbackManager = ManagerFactory.getPlaybackManager(config, mediaPlayer);
    ```
 
-1. Implementate l&#39; `PlaybackManagerEventListener` elemento in per gestire `PlayerFragment` gli eventi di riproduzione:
+1. Implementate la `PlaybackManagerEventListener` nella `PlayerFragment` per gestire gli eventi di riproduzione:
 
    ```java
    private final PlaybackManagerEventListener playbackManagerEventListener =  
@@ -49,7 +52,7 @@ Create un PlaybackManager che gestisca la configurazione del flusso HLS e l&#39;
    playbackManager.setupVideo(url, adsManager); 
    ```
 
-1. Configurate le operazioni della barra di controllo in `PlayerFragment`:
+1. Configurare le operazioni della barra di controllo in `PlayerFragment`:
 
    ```
    controlBar.pressPlay() { 
