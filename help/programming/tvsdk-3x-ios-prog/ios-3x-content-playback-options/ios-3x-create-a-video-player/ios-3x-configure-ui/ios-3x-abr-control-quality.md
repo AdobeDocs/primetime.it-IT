@@ -6,6 +6,9 @@ title: Bitrate adattivo (ABR) per la qualità video
 uuid: a9b9a6a8-4098-4952-90e7-684e64800b3f
 translation-type: tm+mt
 source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+workflow-type: tm+mt
+source-wordcount: '580'
+ht-degree: 0%
 
 ---
 
@@ -54,7 +57,7 @@ Se specificate un intervallo da 300000 a 2000000, TVSDK considera solo i profili
 
 Per configurare i parametri di bitrate adattivo TVSDK:
 
-1. Configurate un’istanza di `PTABRControlParameters` per impostare le impostazioni di bitrate iniziale, minima e massima.
+1. Configurate un&#39;istanza di `PTABRControlParameters` per impostare il bitrate iniziale, minimo e massimo.
 
    I valori predefiniti sono visualizzati nello snippet di codice seguente, ma l&#39;applicazione può impostare qualsiasi valore intero per ciascuno di questi parametri.
 
@@ -72,7 +75,7 @@ Per configurare i parametri di bitrate adattivo TVSDK:
    abrMetaData.maxBitRate = INT_MAX;
    ```
 
-1. Aggiornate l&#39; `PTMediaPlayer` istanza con l&#39; `PTABRControlParameters` istanza configurata.
+1. Aggiornate l&#39;istanza `PTMediaPlayer` con l&#39;istanza `PTABRControlParameters` configurata.
 
    ```
    // assuming self.player is the PTMediaPlayer instance 
@@ -81,9 +84,9 @@ Per configurare i parametri di bitrate adattivo TVSDK:
 
 Ricorda quanto segue:
 
-* L&#39;applicazione deve impostare la `abrControlParameters` proprietà su `PTMediaPlayer` prima di configurare un&#39; `PTMediaPlayerItem` istanza affinché le impostazioni bitrate iniziali e minime diventino attive.
+* L&#39;applicazione deve impostare la proprietà `abrControlParameters` su `PTMediaPlayer` prima di configurare un&#39;istanza `PTMediaPlayerItem` affinché le impostazioni del bitrate iniziale e minima abbiano effetto.
 
    Dopo l’avvio della riproduzione del contenuto, l’impostazione di una nuova istanza influisce solo sull’impostazione del bitrate massimo.
 
-* Per aggiornare l’impostazione del bitrate massimo durante la riproduzione, create una nuova `PTABRControlParameters` istanza e impostatela sull’istanza del lettore.
-* Potete aggiornare l&#39;impostazione del bitrate massimo durante la riproduzione solo su iOS 8.0 e versioni successive. Per le versioni precedenti, viene utilizzato il `maxBitrate` valore impostato prima dell&#39;avvio della riproduzione del contenuto.
+* Per aggiornare l&#39;impostazione del bitrate massimo durante la riproduzione, create una nuova istanza `PTABRControlParameters` e impostatela sull&#39;istanza del lettore.
+* Potete aggiornare l&#39;impostazione del bitrate massimo durante la riproduzione solo su iOS 8.0 e versioni successive. Per le versioni precedenti, viene utilizzato il valore `maxBitrate` impostato prima dell&#39;avvio della riproduzione del contenuto.
