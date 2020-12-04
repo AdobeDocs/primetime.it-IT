@@ -6,6 +6,9 @@ title: Requisiti software
 uuid: 9faa229b-1abf-4b55-b293-247777bcb1db
 translation-type: tm+mt
 source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+workflow-type: tm+mt
+source-wordcount: '166'
+ht-degree: 0%
 
 ---
 
@@ -15,9 +18,9 @@ source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
 * Tomcat 6
 * JDK 1.8
 
-## Consegna del codice / Contenuto del pacchetto{#code-delivery-package-contents}
+## Consegna codice / Contenuti pacchetto{#code-delivery-package-contents}
 
-Il pacchetto Adobe Primetime DRM On Premises Individualization Server contiene quanto segue:
+Il pacchetto  Adobe Primetime DRM On Premises Individualization Server contiene quanto segue:
 
 * [!DNL flashaccess.war] - Il server di individuazione
 * [!DNL flashaccess-kgs.war] - Server di generazione chiavi opzionale
@@ -32,7 +35,7 @@ Il pacchetto Adobe Primetime DRM On Premises Individualization Server contiene q
    * [!DNL jsafe.dll] (Windows)
 
 * [!DNL adobe-flashaccess-i15n-setup.jar] - Utility per la crittografia delle password delle credenziali del server
-* [!DNL ROOT] - contiene un [!DNL crossdomain.xml] file
+* [!DNL ROOT] - contiene un  [!DNL crossdomain.xml] file
 
 * File cache ECI - Precedentemente scaricati
 * [!DNL addIndivCert.py] - Uno script per l&#39;aggiornamento del livello principale di affidabilità di un server licenze per il supporto delle individualizzazioni in locale
@@ -44,8 +47,8 @@ Il pacchetto Adobe Primetime DRM On Premises Individualization Server contiene q
 
 Per utilizzare On Premises Individualization Server, è innanzitutto necessario ottenere due credenziali digitali (certificati):
 
-* *Individuazione delle credenziali* di trasporto - rilasciata da Adobe
-* *Credenziale* CA per l&#39;individuazione - rilasciata da Symantec (VeriSign)
+* *Individuazione dei crediti*  di trasporto - emessi dal Adobe
+* *Credenziale*  CA per l&#39;individuazione - rilasciata da Symantec (VeriSign)
 
 Per ottenere questi certificati, inviare una richiesta tramite biglietto Zendesk a: [https://adobeprimetime.zendesk.com](https://adobeprimetime.zendesk.com)
 
