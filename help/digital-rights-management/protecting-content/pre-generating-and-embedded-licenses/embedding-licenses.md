@@ -15,9 +15,9 @@ ht-degree: 0%
 
 Una volta crittografato il contenuto e pregenerata una licenza, la licenza può essere incorporata nel contenuto crittografato.
 
-Se si desidera incorporare una licenza, è necessario ottenere un&#39;istanza di `com.adobe.flashaccess.sdk.media.drm.contentupdate.MediaKeyMetaDataUpdater`. Se si conosce il tipo di contenuto crittografato, utilizzare il costruttore per `FLVKeyMetaDataUpdater` o `F4VKeyMetaDataUpdater`; in caso contrario, utilizzare `MediaProcessorFactory.getMediaProcessor()` per restituire un&#39;istanza in base al tipo di file rilevato. Quindi devi costruire un `KeyMetaDataCallback` e invocare `modifyKeyMetaData()`. L&#39;implementazione di callback viene quindi richiamata quando i metadati DRM si trovano nel contenuto crittografato. In base ai metadati trovati, potete scegliere una licenza da incorporare e impostare la licenza utilizzando `EmbedLicenseKeyMetaData.setEmbeddedLicenses()`.
+Per incorporare una licenza, è necessario ottenere un&#39;istanza di `com.adobe.flashaccess.sdk.media.drm.contentupdate.MediaKeyMetaDataUpdater`. Se si conosce il tipo di contenuto crittografato, utilizzare il costruttore per `FLVKeyMetaDataUpdater` o `F4VKeyMetaDataUpdater`; in caso contrario, utilizzare `MediaProcessorFactory.getMediaProcessor()` per restituire un&#39;istanza in base al tipo di file rilevato. Quindi è necessario creare un `KeyMetaDataCallback` e richiamare `modifyKeyMetaData()`. L&#39;implementazione di callback viene quindi richiamata quando i metadati DRM si trovano nel contenuto crittografato. In base ai metadati trovati, potete scegliere una licenza per incorporare e impostare la licenza utilizzando `EmbedLicenseKeyMetaData.setEmbeddedLicenses()`.
 
-Per un esempio di codice che illustra le licenze incorporate, vedere `com.adobe.flashaccess.samples.licenseembedder.EmbedLicense` nella directory Strumenti della riga di comando Implementazione di riferimento [!DNL Samples] .
+Vedere `com.adobe.flashaccess.samples.licenseembedder.EmbedLicense` nella directory Strumenti della riga di comando di implementazione di riferimento [!DNL Samples] per un esempio di codice che illustra le licenze incorporate.
 
 >[!NOTE]
 >
