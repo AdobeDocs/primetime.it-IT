@@ -6,6 +6,9 @@ title: Riproduzione e pausa di un video
 uuid: 66fefead-7f1d-46ed-a23e-381f25697978
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '123'
+ht-degree: 0%
 
 ---
 
@@ -16,13 +19,13 @@ Potete aggiungere i pulsanti Pausa e Riproduci per mettere in pausa o riprodurre
 
 1. Per creare un pulsante di pausa o di riproduzione:
    1. Aspettate che il lettore sia almeno nello stato preparato.
-   1. Per avviare la riproduzione, chiamate il `play` metodo:
+   1. Per avviare la riproduzione, chiamare il metodo `play`:
 
       ```java
       void play() throws MediaPlayerException;
       ```
 
-   1. Per mettere in pausa la riproduzione, chiamate il `pause()` metodo:
+   1. Per mettere in pausa la riproduzione, chiamate il metodo `pause()`:
 
       ```java
       void pause() throws MediaPlayerException;
@@ -30,5 +33,5 @@ Potete aggiungere i pulsanti Pausa e Riproduci per mettere in pausa o riprodurre
 
 1. Utilizzate il callback dell&#39;evento modificato di stato per verificare la presenza di errori o per eseguire altre azioni appropriate.
 
-   TVSDK chiama questo callback `pause()` o `play()` trasmette informazioni sulla modifica dello stato, incluso il nuovo stato, ad esempio in pausa o in riproduzione.
+   TVSDK chiama questo callback per `pause()` o `play()` e trasmette informazioni sulla modifica dello stato, incluso il nuovo stato, ad esempio in pausa o in riproduzione.
 
