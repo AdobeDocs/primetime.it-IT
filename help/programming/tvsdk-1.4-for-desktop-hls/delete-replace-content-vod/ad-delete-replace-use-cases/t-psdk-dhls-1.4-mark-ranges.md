@@ -6,13 +6,16 @@ title: Segna intervalli
 uuid: d98efb92-701e-4ee2-b574-823c1e5d5149
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '26'
+ht-degree: 0%
 
 ---
 
 
 # Segna intervalli{#mark-ranges}
 
-Contrassegnate `TimeRanges` tra l’ `begin` e `end` l’ingresso `localTime` come `AdBreak` un elemento della timeline. Le altre impostazioni degli annunci vengono ignorate.
+Contrassegnare `TimeRanges` tra `begin` e `end` in `localTime` come `AdBreak` dalla timeline. Le altre impostazioni degli annunci vengono ignorate.
 
 1. Contrassegna intervalli di tempo.
 
