@@ -6,6 +6,9 @@ title: Selezionare una traccia di didascalia corrente tra le tracce disponibili
 uuid: ee2bda5e-e398-4d09-bc5c-5a6adbf5f603
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '251'
+ht-degree: 1%
 
 ---
 
@@ -14,10 +17,10 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 Potete selezionare una traccia da un elenco di tracce di sottotitoli attualmente disponibili. Questa diventa la traccia corrente, che viene visualizzata quando la visibilità è attivata. Alcuni brani potrebbero non essere disponibili inizialmente, quindi ascoltare l&#39;evento che indica che sono diventati disponibili altri brani.
 
-1. Attendete che il lettore multimediale sia almeno nello `PREPARED` stato.
+1. Attendete che il lettore multimediale sia almeno nello stato `PREPARED`.
 1. Ascoltare i seguenti eventi:
 
-   * `MediaPlayerEvent.STATUS_CHANGED` con stato `MediaPlayerStatus.INITIALIZED`: È disponibile l’elenco iniziale di tracce di sottotitoli codificati.
+   * `MediaPlayerEvent.STATUS_CHANGED` con stato  `MediaPlayerStatus.INITIALIZED`: È disponibile l’elenco iniziale di tracce di sottotitoli codificati.
 
 1. Ottenete un elenco di tutte le tracce di sottotitoli codificati attualmente disponibili.
 
