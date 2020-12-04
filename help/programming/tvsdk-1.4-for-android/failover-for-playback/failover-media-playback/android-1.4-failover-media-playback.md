@@ -6,6 +6,9 @@ title: Riproduzione e failover dei supporti
 uuid: 03707e16-5f99-4337-9910-92cb05255a23
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '147'
+ht-degree: 0%
 
 ---
 
