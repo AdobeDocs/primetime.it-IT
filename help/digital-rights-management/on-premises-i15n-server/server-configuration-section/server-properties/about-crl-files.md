@@ -4,6 +4,9 @@ title: Informazioni sui file CRL
 uuid: 672c3ca0-5c5d-4ec7-83b1-f0f8e34c8d09
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '305'
+ht-degree: 0%
 
 ---
 
@@ -44,10 +47,10 @@ Di seguito sono riportati i CRL con hosting esterno utilizzati solo dai server l
 * File: [!DNL http___individualization-crl.primetime.adobe.com_FlashAccessIndividualizationCA.crl]
 * Validità: Buona per circa 3 mesi dalla creazione
 
-* URL: [!DNL <ht<span></span>tps://individualization-crl.s3-website-us-east-1.amazonaws.com/FlashAccessIndividualizationCA.crl]>
+* URL: [!DNL <ht<span></span>tps://individualization-crl.s3-website-us-east-1.amazonaws.com/FlashAccessIndividualizationCA.crl]
 * File: [!DNL http___individualization-crl.s3-website-us-east-1.amazonaws.com_FlashAccessIndividualizationCA.crl]
 * Validità: Buona per circa 3 mesi dalla creazione
 
-Oltre ai CRL di cui sopra, è necessario creare e mantenere un CRL aggiuntivo. Si tratta del CRL CA di Individualizzazione, come specificato nella sezione [Create Individualization CA CRL](../../../on-premises-i15n-server/server-configuration-section/server-properties/create-i15n-ca-crl.md) di questo documento.
+Oltre ai CRL di cui sopra, è necessario creare e mantenere un CRL aggiuntivo. Si tratta del CRL CA Individualizzazione, come specificato nella sezione [Crea identità CA CRL](../../../on-premises-i15n-server/server-configuration-section/server-properties/create-i15n-ca-crl.md) del presente documento.
 
 È previsto l&#39;aggiornamento dei CRL 45 giorni prima della scadenza. Questo dovrebbe consentire di ottenere e installare CRL generati di recente da Internet. È necessario aggiornare i file CRL prima che siano scaduti.
