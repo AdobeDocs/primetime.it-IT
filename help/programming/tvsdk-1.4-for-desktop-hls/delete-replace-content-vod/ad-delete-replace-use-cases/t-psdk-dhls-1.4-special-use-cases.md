@@ -6,17 +6,20 @@ title: Casi di utilizzo speciali
 uuid: 066bc256-4fdf-4083-b23e-0a916b3b532f
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '88'
+ht-degree: 0%
 
 ---
 
 
 # Casi di utilizzo speciali{#special-use-cases}
 
-TVSDK privilegia le impostazioni dell&#39;intervallo personalizzate rispetto alle impostazioni dell&#39;annuncio standard. Ad esempio, se gli intervalli MARK sono definiti, le impostazioni di inserimento dell&#39;annuncio vengono ignorate. Se gli intervalli REPLACE sono definiti, TVSDK utilizza automaticamente la modalità di `CustomRanges` segnalazione.
+TVSDK privilegia le impostazioni dell&#39;intervallo personalizzate rispetto alle impostazioni dell&#39;annuncio standard. Ad esempio, se gli intervalli MARK sono definiti, le impostazioni di inserimento dell&#39;annuncio vengono ignorate. Se gli intervalli REPLACE sono definiti, TVSDK utilizza automaticamente la modalità di segnalazione `CustomRanges`.
 
 1. `ReplaceRange` senza durata di sostituzione
 
-   Se manca la durata della sostituzione, la durata effettiva della sostituzione è determinata dal server. Il numero di annunci inseriti in questo `AdBreak` è determinato anche dal server.
+   Se manca la durata della sostituzione, la durata effettiva della sostituzione è determinata dal server. Il numero di annunci inseriti in questo `AdBreak` è anche determinato dal server.
 
    ```
    {
