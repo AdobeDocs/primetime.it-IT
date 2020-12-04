@@ -6,18 +6,21 @@ title: Implementazione di un risolutore di contenuti personalizzato
 uuid: 1714fcd9-45e0-48be-97f3-f702265128a4
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '186'
+ht-degree: 2%
 
 ---
 
 
-# Implementazione di un risolutore di contenuti personalizzato{#implement-a-custom-content-resolver}
+# Implementazione di un risolutore di contenuto personalizzato{#implement-a-custom-content-resolver}
 
 Potete implementare dei risolutori di contenuti personalizzati in base ai risolutori predefiniti.
 
-Quando TVSDK rileva una nuova opportunità, esegue un&#39;iterazione attraverso i risolutori di contenuto registrati alla ricerca di una che sia in grado di risolvere tale opportunità utilizzando il `canResolve` metodo . Il primo che restituisce true è selezionato per la risoluzione dell&#39;opportunità. Se non è in grado di risolvere il problema, tale opportunità viene ignorata. Poiché il processo di risoluzione del contenuto è in genere asincrono, il risolutore del contenuto è responsabile della notifica a TVSDK al termine del processo.
+Quando TVSDK rileva una nuova opportunità, esegue un&#39;iterazione attraverso i risolutori di contenuto registrati alla ricerca di una in grado di risolvere tale opportunità utilizzando il metodo `canResolve` . Il primo che restituisce true è selezionato per la risoluzione dell&#39;opportunità. Se non è in grado di risolvere il problema, tale opportunità viene ignorata. Poiché il processo di risoluzione del contenuto è in genere asincrono, il risolutore del contenuto è responsabile della notifica a TVSDK al termine del processo.
 
-* Il risolutore dei contenuti richiama `client.place` per specificare quale operazione timeline deve essere eseguita TVSDK (in genere un posizionamento di interruzione annuncio).
-* Il risolutore del contenuto chiama `client.notifyCompleted` se il processo di risoluzione ha esito positivo o `client.notifyFailed` se il processo ha esito negativo.
+* Il risolutore del contenuto chiama `client.place` per specificare quale operazione timeline deve essere eseguita TVSDK (in genere un posizionamento di interruzione annuncio).
+* Il risolutore del contenuto chiama `client.notifyCompleted` se il processo di risoluzione ha esito positivo oppure `client.notifyFailed` se il processo ha esito negativo.
 
 1. Crea un risolutore di opportunità personalizzato.
 
