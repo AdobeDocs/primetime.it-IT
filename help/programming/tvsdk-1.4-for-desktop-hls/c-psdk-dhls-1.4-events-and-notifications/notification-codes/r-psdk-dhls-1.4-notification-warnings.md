@@ -6,11 +6,14 @@ title: Codici di notifica di AVVISO
 uuid: 1ce5be07-f5bf-443c-b907-9768633e1300
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '284'
+ht-degree: 2%
 
 ---
 
 
-# Codici di notifica di AVVISO{#warning-notification-codes}
+# CODICI di notifica AVVERTENZA{#warning-notification-codes}
 
 Questa tabella dimostra informazioni dettagliate sulla WARN. notifiche di tipo.
 
@@ -37,23 +40,23 @@ La maggior parte degli avvisi contiene metadati rilevanti, ad esempio l’URL de
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 200000 </span> </td> 
-   <td colname="2"><span class="codeph"> PLAYBACK_OPERATION_FAIL </span> </td> 
-   <td colname="3"><span class="codeph"> AUDIO_TRACK_ERROR </span><span class="codeph"> SEEK_ERROR </span> </td> 
-   <td colname="4"><span class="codeph"> DESCRIPTION </span> </td> 
+   <td colname="1"><span class="codeph"> 200000  </span> </td> 
+   <td colname="2"><span class="codeph"> PLAYBACK_OPERATION_FAIL  </span> </td> 
+   <td colname="3"><span class="codeph"> AUDIO_TRACK_ERROR  </span><span class="codeph"> SEEK_ERROR  </span> </td> 
+   <td colname="4"><span class="codeph"> DESCRIPTION  </span> </td> 
    <td colname="5"> <p>Un'operazione relativa alla riproduzione non è riuscita, ma la riproduzione potrebbe continuare. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><b>Risoluzione annunci </b> </td> 
+   <td colname="1"><b>Risoluzione annunci  </b> </td> 
    <td colname="2"> </td> 
    <td colname="3"> </td> 
    <td colname="4"> </td> 
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 201000 </span> </td> 
-   <td colname="2"><span class="codeph"> AD_RESOLVER_FAIL </span> </td> 
-   <td colname="3"><span class="codeph"> AD_RESOLVER_RESOLVE_FAIL </span><span class="codeph"> RESOURCE_PLACEMENT_ FAILED </span><span class="codeph"> AD_RESOLVER_METADATA_INVALID </span> </td> 
+   <td colname="1"><span class="codeph"> 201000  </span> </td> 
+   <td colname="2"><span class="codeph"> AD_RESOLVER_FAIL  </span> </td> 
+   <td colname="3"><span class="codeph"> AD_RESOLVER_RESOLVE_FAIL  </span><span class="codeph"> RESOURCE_PLACEMENT_ FAILED  </span><span class="codeph"> AD_RESOLVER_METADATA_INVALID  </span> </td> 
    <td colname="4"> <p>None </p> </td> 
    <td colname="5"> <p>Il risolutore annunci non è riuscito a risolvere/inserire il contenuto dell'annuncio. La riproduzione potrebbe continuare. </p> </td> 
   </tr> 
@@ -65,14 +68,14 @@ La maggior parte degli avvisi contiene metadati rilevanti, ad esempio l’URL de
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 204000 </span> </td> 
+   <td colname="1"><span class="codeph"> 204000  </span> </td> 
    <td colname="2"><span class="codeph"> BACKGROUND_MANIFEST_WARNING</span> </td> 
    <td colname="3"> <p>None </p> </td> 
-   <td colname="4"><span class="codeph"> BACKGROUND_MANIFEST_WARNING_ERROR</span><span class="codeph"> BACKGROUND_MANIFEST_WARNING_NAME</span><span class="codeph"> DESCRIPTION</span> </td> 
+   <td colname="4"><span class="codeph"> BACKGROUND_MANIFEST_WARNING_</span> <span class="codeph"> ERRORBACKGROUND_MANIFEST_WARNING_</span> <span class="codeph"> NAMEDESCRIPTION</span> </td> 
    <td colname="5"> <p> Errore nel download del manifesto in background. Eventuali problemi durante l'aggiornamento del manifesto di sfondo vengono inviati come avviso TVSDK e non causano l'arresto della riproduzione. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 204001 </span> </td> 
+   <td colname="1"><span class="codeph"> 204001  </span> </td> 
    <td colname="2"><span class="codeph"> INVALID_SEEK_WARNING</span> </td> 
    <td colname="3"> <p>None </p> </td> 
    <td colname="4"><span class="codeph"> DESCRIPTION</span> </td> 
@@ -86,15 +89,15 @@ La maggior parte degli avvisi contiene metadati rilevanti, ad esempio l’URL de
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1" morerows="1"><span class="codeph"> 209100 </span> </td> 
-   <td colname="2" morerows="1"><span class="codeph"> NATIVE_WARNING </span> </td> 
+   <td colname="1" morerows="1"><span class="codeph"> 209100  </span> </td> 
+   <td colname="2" morerows="1"><span class="codeph"> NATIVE_WARNING  </span> </td> 
    <td colname="3" morerows="1"> <p>None </p> </td> 
-   <td colname="4"><b>AVE</b> <p><span class="codeph"> DESCRIZIONE NATIVE_ERROR_CODE </span><span class="codeph"> NATIVE_ERROR_NAME </span><span class="codeph"></span> </p> </td> 
-   <td colname="5"> <p>Errore della libreria AVE di basso livello. </p> <p>Consultate <a href="../../c-psdk-dhls-1.4-events-and-notifications/notification-codes/c-psdk-dhls-1.4-native-error-summary.md" format="html" scope="external"> Dettagli per le notifiche</a> NATIVE_ERROR per informazioni dettagliate sui valori di questi campi di metadati. </p> </td> 
+   <td colname="4"><b>AVE</b> <p><span class="codeph"> NATIVE_ERROR_CODE  </span><span class="codeph"> NATIVE_ERROR_NAME  </span><span class="codeph"> DESCRIPTION  </span> </p> </td> 
+   <td colname="5"> <p>Errore della libreria AVE di basso livello. </p> <p>Per informazioni dettagliate sui valori di questi campi di metadati, consultate <a href="../../c-psdk-dhls-1.4-events-and-notifications/notification-codes/c-psdk-dhls-1.4-native-error-summary.md" format="html" scope="external"> Dettagli per le notifiche NATIVE_ERROR</a>. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="4"><b>DRM</b> <p><span class="codeph"> NATIVE_SUBERROR_CODE</span> <span class="codeph"> DRM_ERROR_STRING</span> </p> </td> 
-   <td colname="5">Codice di errore secondario DRM e stringa di errore del server DRM. Consultate <a href="../../c-psdk-dhls-1.4-events-and-notifications/notification-codes/c-psdk-dhls-1.4-native-error-summary.md" format="html" scope="external"> Dettagli per le notifiche</a> NATIVE_ERROR per informazioni dettagliate sui valori di questi campi di metadati.
+   <td colname="4"><b>DRM</b> <p><span class="codeph"> NATIVE_SUBERROR_</span> <span class="codeph"> CODEDRM_ERROR_STRING</span> </p> </td> 
+   <td colname="5">Codice di errore secondario DRM e stringa di errore del server DRM. Per informazioni dettagliate sui valori di questi campi di metadati, consultate <a href="../../c-psdk-dhls-1.4-events-and-notifications/notification-codes/c-psdk-dhls-1.4-native-error-summary.md" format="html" scope="external"> Dettagli per le notifiche NATIVE_ERROR</a>.
    </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -105,8 +108,8 @@ La maggior parte degli avvisi contiene metadati rilevanti, ad esempio l’URL de
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="0"> 
-   <td colname="1"><span class="codeph"> 299999 </span> </td> 
-   <td colname="2"><span class="codeph"> GENERIC_WARNING </span> </td> 
+   <td colname="1"><span class="codeph"> 299999  </span> </td> 
+   <td colname="2"><span class="codeph"> GENERIC_WARNING  </span> </td> 
    <td colname="3"> <p>None </p> </td> 
    <td colname="4"> <p>None </p> </td> 
    <td colname="5"> <p>Contrassegna un evento di avviso generico. Non emesso da TVSDK. È solo un indicatore per la fine dell'intervallo di codici numerici corrispondenti agli eventi di avviso. </p> </td> 
