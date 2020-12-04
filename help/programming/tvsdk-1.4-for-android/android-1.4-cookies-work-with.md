@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Operazioni con i cookie{#work-with-cookies}
+# Utilizzare i cookie{#work-with-cookies}
 
 Potete utilizzare TVSDK per inviare dati arbitrari nelle intestazioni dei cookie per la gestione delle sessioni, l&#39;accesso ai gate e così via.
 
@@ -26,7 +26,7 @@ Di seguito è riportato un esempio con alcuni tipi di autenticazione durante l&#
 
 Per lavorare con i cookie:
 
-1. Create un cookie `cookieManager` e aggiungete i cookie per gli URI al vostro `cookieStore`.
+1. Create un `cookieManager` e aggiungete i cookie per gli URI al `cookieStore`.
 
    Ad esempio:
 
@@ -46,7 +46,7 @@ Per lavorare con i cookie:
 
    TVSDK esegue una query a questo cookieManager in fase di esecuzione, verifica se sono presenti cookie associati all&#39;URL e li utilizza automaticamente.
 
-   Un&#39;altra opzione consiste nell&#39;utilizzare `cookieHeaders` in `NetworkConfiguration` per impostare una stringa di intestazione cookie arbitraria da utilizzare per le richieste. Per impostazione predefinita, questa intestazione del cookie viene inviata solo con richieste di chiave. Per inviare l’intestazione del cookie a tutte le richieste, utilizzate il `NetworkConfiguration` metodo `setUseCookieHeadersForAllRequests`:
+   Un&#39;altra opzione consiste nell&#39;utilizzare `cookieHeaders` in `NetworkConfiguration` per impostare una stringa di intestazione cookie arbitraria da utilizzare per le richieste. Per impostazione predefinita, questa intestazione del cookie viene inviata solo con richieste di chiave. Per inviare l&#39;intestazione del cookie a tutte le richieste, utilizzate il metodo `NetworkConfiguration` `setUseCookieHeadersForAllRequests`:
 
 ```java
    NetworkConfiguration networkConfiguration = new NetworkConfiguration(); 
