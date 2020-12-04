@@ -6,6 +6,9 @@ title: Metodi della classe di configurazione per i tag
 uuid: f2758085-8e49-4eaf-82bb-4a2e4dd8accb
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '219'
+ht-degree: 0%
 
 ---
 
@@ -25,23 +28,23 @@ TVSDK applica automaticamente la configurazione globale a qualsiasi flusso multi
    <td colname="col2"> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public final String[] getSubscribedTags() </span> </td> 
+   <td colname="col1"> <span class="codeph"> public final String[] getSubscribedTags()  </span> </td> 
    <td colname="col2"> Recupera l'elenco corrente di tag sottoscritti. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public final void setSubscribedTags(String[] tags); </span> </td> 
-   <td colname="col2"> Imposta l'elenco dei tag sottoscritti che verranno esposti all'applicazione. <p>L’applicazione viene inoltre sottoscritta automaticamente a tutti i tag trasmessi tramite <span class="codeph"> setAdTags </span>. </p> </td> 
+   <td colname="col1"> <span class="codeph"> public final void setSubscribedTags(String[] tags);  </span> </td> 
+   <td colname="col2"> Imposta l'elenco dei tag sottoscritti che verranno esposti all'applicazione. <p>L'applicazione viene inoltre sottoscritta automaticamente a tutti i tag trasmessi tramite <span class="codeph"> setAdTags </span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <b>Personalizzare i tag degli annunci utilizzati dal rilevatore di opportunità predefinito</b> </td> 
    <td colname="col2"> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public final String[] getAdTags(); </span> </td> 
+   <td colname="col1"> <span class="codeph"> public final String[] getAdTags();  </span> </td> 
    <td colname="col2"> Recupera l'elenco corrente di tag degli annunci. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public final void setAdTags(String[] tags); </span> </td> 
+   <td colname="col1"> <span class="codeph"> public final void setAdTags(String[] tags);  </span> </td> 
    <td colname="col2"> Imposta l'elenco dei tag degli annunci che verranno utilizzati dal generatore di opportunità predefinito. </td> 
   </tr> 
  </tbody> 
