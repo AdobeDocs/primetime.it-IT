@@ -6,6 +6,9 @@ title: Audio alternativo
 uuid: 9dc3bec6-2135-4083-8db2-50a492e6bd67
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '279'
+ht-degree: 0%
 
 ---
 
@@ -16,11 +19,11 @@ L’audio alternativo o in fase di rilegatura successiva consente di passare dal
 
 <!--<a id="section_E4F9DC28A2944BD08B4190A7F98A8365"></a>-->
 
-Quando TVSDK crea l’ `MediaPlayerItem` istanza per il video corrente, crea un `AudioTrack` elemento per ogni traccia audio disponibile. L&#39;elemento contiene una `name` proprietà, una stringa che in genere contiene una descrizione riconoscibile dall&#39;utente della lingua del brano. L&#39;elemento contiene anche informazioni sull&#39;utilizzo di tale traccia per impostazione predefinita.
+Quando TVSDK crea l&#39;istanza `MediaPlayerItem` per il video corrente, crea un elemento `AudioTrack` per ogni traccia audio disponibile. L&#39;elemento contiene una proprietà `name`, una stringa che in genere contiene una descrizione riconoscibile dall&#39;utente della lingua del brano. L&#39;elemento contiene anche informazioni sull&#39;utilizzo di tale traccia per impostazione predefinita.
 
 Quando è il momento di riprodurre il video, potete richiedere un elenco delle tracce audio disponibili, lasciare che l&#39;utente ne scelga una e impostare il video in modo che venga riprodotto con la traccia selezionata.
 
-Anche se raramente, se dopo la creazione della traccia audio diventa disponibile una traccia audio aggiuntiva, TVSDK attiva un `MediaPlayerItem``MediaPlayerItem.AUDIO_UPDATED` evento.
+Anche se raramente, se dopo la creazione della `MediaPlayerItem` diventa disponibile una traccia audio aggiuntiva, TVSDK attiva un evento `MediaPlayerItem.AUDIO_UPDATED`.
 
 ## API aggiunte {#section_87C42C30BA8C4F58A2DAB7CE07FCD3DE}
 
@@ -37,7 +40,7 @@ bool MediaPlayerItemImpl::hasAlternateAudio() const
 }
 ```
 
-** `getAudioTracks`**
+** `getAudioTracks`*
 
 Questa funzione restituisce l&#39;elenco di tutte le tracce audio disponibili correnti in un supporto specificato.
 
