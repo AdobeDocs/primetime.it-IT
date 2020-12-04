@@ -6,11 +6,14 @@ title: ID3, tag
 uuid: 3fa199cd-668d-4d26-928f-074b6114b84c
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '283'
+ht-degree: 0%
 
 ---
 
 
-# ID3, tag {#id-tags}
+# Tag ID3 {#id-tags}
 
 I tag ID3 forniscono informazioni su un file audio o video, ad esempio il titolo del file o il nome dell’artista. TVSDK rileva i tag ID3 a livello di segmento del flusso di trasporto (TS) nei flussi HLS e invia un evento. L&#39;applicazione può estrarre dati dal tag .
 
@@ -23,13 +26,13 @@ Quando TVSDK rileva i metadati ID3, invia una notifica con i seguenti dati:
 * TYPE = ID3
 * NAME = ID3
 
-1. Implementare un listener di eventi per `MediaPlayer.TimedMetadataEventListener#onTimedMetadata(TimeMetadata timeMetadata)` e registrarlo con l&#39; `MediaPlayer` oggetto.
+1. Implementare un listener di eventi per `MediaPlayer.TimedMetadataEventListener#onTimedMetadata(TimeMetadata timeMetadata)` e registrarlo con l&#39;oggetto `MediaPlayer`.
 
-   TVSDK chiama questo listener quando rileva `ID3` i metadati.
+   TVSDK chiama questo listener quando rileva i metadati `ID3`.
 
    >[!TIP]
    >
-   >I suggerimenti per gli annunci personalizzati utilizzano lo stesso `onTimedMetadata` evento per indicare il rilevamento di un nuovo tag. Ciò non deve creare confusione perché vengono rilevati segnali pubblicitari personalizzati a livello di manifesto e i tag ID3 sono incorporati nel flusso. Per ulteriori informazioni, vedere [Tag](../../tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/c-psdk-android-2.7-custom-tags-configure.md)personalizzati.
+   >I suggerimenti per gli annunci personalizzati utilizzano lo stesso evento `onTimedMetadata` per indicare il rilevamento di un nuovo tag. Ciò non deve creare confusione perché vengono rilevati segnali pubblicitari personalizzati a livello di manifesto e i tag ID3 sono incorporati nel flusso. Per ulteriori informazioni, vedere [Tag personalizzati](../../tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/c-psdk-android-2.7-custom-tags-configure.md).
 
 
 1. Recuperate i metadati.
