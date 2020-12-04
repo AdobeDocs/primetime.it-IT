@@ -6,6 +6,9 @@ title: Inserimento pubblicitario e failover per VOD
 uuid: 33f7aad5-fc4f-459d-8c29-01ba1353dfcc
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '719'
+ht-degree: 0%
 
 ---
 
@@ -14,18 +17,18 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 Il processo di inserimento video on-demand (VOD) consiste nelle fasi di risoluzione degli annunci, inserimento di annunci e riproduzione di annunci. Per il tracciamento degli annunci, Browser TVSDK deve informare un server di tracciamento remoto sull&#39;avanzamento della riproduzione di ciascun annuncio. In caso di situazioni impreviste, l&#39;utente adotta le misure appropriate.
 
-## Fase di risoluzione degli annunci {#section_F562CD6D0EF04AA9A0A3C0176A4EC340}
+## Fase di risoluzione annunci {#section_F562CD6D0EF04AA9A0A3C0176A4EC340}
 
-Il browser TVSDK contatta un servizio di distribuzione di annunci, come Adobe Primetime ad Decioning, e tenta di ottenere il file playlist principale che corrisponde al flusso video per l&#39;annuncio. Durante la fase di risoluzione degli annunci, Browser TVSDK effettua una chiamata HTTP al server remoto di consegna degli annunci e analizza la risposta del server.
+Il browser TVSDK contatta un servizio di distribuzione di annunci, come  Adobe Primetime ad Decision, e tenta di ottenere il file playlist principale che corrisponde al flusso video per l&#39;annuncio. Durante la fase di risoluzione degli annunci, Browser TVSDK effettua una chiamata HTTP al server remoto di consegna degli annunci e analizza la risposta del server.
 
 Browser TVSDK supporta i seguenti tipi di provider di annunci:
 
 * Metadati e provider
 
    I dati dell&#39;annuncio vengono codificati in file JSON in testo normale.
-* Adobe Primetime e fornitore di annunci per le decisioni pubblicitarie
+*  Adobe Primetime e fornitore di annunci pubblicitari
 
-   Browser TVSDK invia una richiesta, comprendente un insieme di parametri di targeting e un numero di identificazione della risorsa, ad Adobe Primetime e al server back-end di decisione. Adobe Primetime ad esempio risponde a un documento SMIL (lingua di integrazione multimediale sincronizzata) che contiene le informazioni richieste per l&#39;annuncio.
+   Browser TVSDK invia una richiesta, inclusa una serie di parametri di targeting e un numero di identificazione della risorsa, all&#39;Adobe Primetime  e al server back-end decisionale.  Adobe Primetime ad Decioning risponde con un documento SMIL (lingua di integrazione multimediale sincronizzata) contenente le informazioni richieste per l&#39;annuncio.
 
    Durante questa fase può verificarsi una delle seguenti situazioni di failover:
 
@@ -45,7 +48,7 @@ Il failover può verificarsi in questa fase con conflitti che potrebbero verific
 
 Il browser TVSDK invia una notifica di avviso relativa all&#39;errore e continua l&#39;elaborazione.
 
-## Fase ad-riproduzione {#section_7B0073BE9A744C74929263182C1243FC}
+## Fase di riproduzione annunci {#section_7B0073BE9A744C74929263182C1243FC}
 
 Il browser TVSDK scarica i segmenti di annunci e li visualizza sullo schermo del dispositivo.
 
