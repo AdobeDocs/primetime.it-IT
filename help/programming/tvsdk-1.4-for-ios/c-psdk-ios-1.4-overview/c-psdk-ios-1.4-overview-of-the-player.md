@@ -6,6 +6,9 @@ title: Funzioni Primetime TVSDK
 uuid: 838d407c-84e1-4818-bec2-4abd7cbf5308
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '206'
+ht-degree: 0%
 
 ---
 
@@ -44,7 +47,7 @@ TVSDK per iOS include una serie di funzionalità e offre le seguenti funzionalit
 
    * Tracciamento evento QoS
    * Notifiche che aiutano TVSDK e la tua applicazione a comunicare in modo asincrono lo stato di video, annunci pubblicitari e altri elementi, nonché l&#39;attività di registro
-   * Integrazione con Adobe Analytics e supporto heartbeat
+   * Integrazione con  Adobe Analytics e supporto heartbeat
 
 * Registrazione
 
