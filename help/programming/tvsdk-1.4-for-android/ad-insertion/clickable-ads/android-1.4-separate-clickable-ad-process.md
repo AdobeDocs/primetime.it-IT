@@ -6,17 +6,20 @@ title: Separare il processo di annunci cliccabili
 uuid: 00537191-8997-418d-add2-8e86d818c76e
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '175'
+ht-degree: 0%
 
 ---
 
 
-# Separare il processo di annunci cliccabili{#separate-the-clickable-ad-process}
+# Separa il processo annuncio cliccabile{#separate-the-clickable-ad-process}
 
 Separare la logica dell&#39;interfaccia utente del lettore dal processo che gestisce i clic degli annunci. Un modo per farlo è implementare più frammenti per un&#39;attività.
 
-1. Implementate un frammento in modo da contenere il contenuto `MediaPlayer` e che sarà responsabile della riproduzione video.
+1. Implementate un frammento in modo che contenga il simbolo `MediaPlayer` e che sarà responsabile della riproduzione video.
 
-   Il frammento deve essere chiamato `notifyClick`.
+   Questo frammento deve chiamare `notifyClick`.
 
    ```java
    public class PlayerFragment extends SherlockFragment { 
@@ -28,7 +31,7 @@ Separare la logica dell&#39;interfaccia utente del lettore dal processo che gest
    } 
    ```
 
-1. Implementare un frammento diverso per visualizzare un elemento dell&#39;interfaccia utente che indica che un annuncio può essere cliccato, monitorare tale elemento dell&#39;interfaccia utente e comunicare i clic dell&#39;utente al frammento che contiene `MediaPlayer`.
+1. Implementate un frammento diverso per visualizzare un elemento dell&#39;interfaccia utente che indica che è possibile fare clic su un annuncio, monitorare tale elemento dell&#39;interfaccia utente e comunicare i clic dell&#39;utente al frammento contenente il simbolo `MediaPlayer`.
 
    Questo frammento deve dichiarare un&#39;interfaccia per la comunicazione dei frammenti. Il frammento acquisisce l&#39;implementazione dell&#39;interfaccia durante il metodo onAttach lifecycle e può chiamare i metodi dell&#39;interfaccia per comunicare con l&#39;attività.
 
