@@ -6,24 +6,27 @@ title: Iscriviti ai tag personalizzati
 uuid: 43480265-4951-466a-a347-6debfb6935ee
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '287'
+ht-degree: 0%
 
 ---
 
 
-# Iscriviti ai tag personalizzati{#subscribe-to-custom-tags}
+# Iscriviti a tag personalizzati{#subscribe-to-custom-tags}
 
 TVSDK prepara gli oggetti TimedMetadata per i tag sottoscritti ogni volta che questi oggetti vengono incontrati nel manifesto del contenuto.
 
 Prima di avviare la riproduzione, è necessario effettuare la sottoscrizione ai tag.
-Per sottoscrivere un’iscrizione ai tag, assegnate alla `subscribedTags` proprietà un vettore contenente i nomi dei tag personalizzati. Per modificare anche i tag degli annunci utilizzati dal generatore di opportunità predefinito, assegnate alla `adTags` proprietà un vettore che contiene i nomi dei tag degli annunci personalizzati.
+Per sottoscrivere un&#39;iscrizione ai tag, assegnate un vettore contenente i nomi dei tag personalizzati alla proprietà `subscribedTags`. Per modificare anche i tag degli annunci utilizzati dal generatore di opportunità predefinito, assegnate un vettore che contiene i nomi dei tag degli annunci personalizzati alla proprietà `adTags`.
 
 Per ricevere notifiche sui tag personalizzati nei manifesti HLS:
 
-1. Impostate i nomi dei tag degli annunci personalizzati a livello globale assegnando un vettore che contiene i tag personalizzati a `subscribeTags` in `MediaPlayerItemConfig`.
+1. Impostate i nomi dei tag di annunci personalizzati a livello globale assegnando un vettore che contiene i tag personalizzati a `subscribeTags` in `MediaPlayerItemConfig`.
 
    >[!IMPORTANT]
    >
-   >È necessario includere il `#` prefisso quando si utilizzano i flussi HLS.
+   >È necessario includere il prefisso `#` quando si utilizzano i flussi HLS.
 
    Ad esempio:
 
@@ -34,7 +37,7 @@ Per ricevere notifiche sui tag personalizzati nei manifesti HLS:
    PSDKConfig.subscribedTags = subscribedTags;
    ```
 
-1. Per modificare globalmente i tag degli annunci utilizzati dal generatore di opportunità predefinito, assegnate un vettore che contiene i nomi dei tag degli annunci personalizzati alla `adTags` proprietà in `PSDKConfig`.
+1. Per modificare globalmente i tag degli annunci utilizzati dal generatore di opportunità predefinito, assegnate un vettore che contiene i nomi dei tag degli annunci personalizzati alla proprietà `adTags` in `PSDKConfig`.
 
    ```
    var adTags:Vector.<String> = new Vector.<String>(); 
@@ -55,7 +58,7 @@ Per ricevere notifiche sui tag personalizzati nei manifesti HLS:
       >
       >Il modo più semplice è quello di creare una configurazione di elemento del lettore multimediale predefinita.
 
-   1. Assegnate un vettore contenente i tag personalizzati in `subscribeTags` in `MediaPlayerItemConfig`.
+   1. Assegnare un vettore contenente i tag personalizzati a `subscribeTags` in `MediaPlayerItemConfig`.
 
    ```
    var mediaPlayerItemConfig:MediaPlayerItemConfig =  
@@ -67,7 +70,7 @@ Per ricevere notifiche sui tag personalizzati nei manifesti HLS:
    mediaPlayerItemConfig.subscribeTags = subscribedTags;
    ```
 
-1. Per modificare i tag degli annunci utilizzati dal generatore di opportunità predefinito nel flusso specificato, assegna un vettore che contiene i nomi dei tag degli annunci personalizzati alla `adTags` proprietà in `mediaPlayerItemConfig`
+1. Per modificare i tag degli annunci utilizzati dal generatore di opportunità predefinito nel flusso specificato, assegnate un vettore che contiene i nomi dei tag degli annunci personalizzati alla proprietà `adTags` in `mediaPlayerItemConfig`
 
    ```
    var adTags:Vector.<String> = new Vector.<String>(); 
