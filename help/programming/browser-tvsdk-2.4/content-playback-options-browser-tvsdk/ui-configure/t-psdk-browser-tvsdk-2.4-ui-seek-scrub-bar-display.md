@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Gestire la ricerca quando si utilizza la barra di ricerca{#handle-seek-when-using-the-seek-bar}
+# Ricerca manuale quando si utilizza la barra di ricerca{#handle-seek-when-using-the-seek-bar}
 
 Nel browser TVSDK, puoi cercare una posizione specifica (tempo) in un flusso. Un flusso può essere una playlist con finestra scorrevole o un contenuto video su richiesta (VOD).
 
@@ -25,9 +25,9 @@ Nel browser TVSDK, puoi cercare una posizione specifica (tempo) in un flusso. Un
 
    Gli stati validi sono PREPARATI, COMPLETI, SOSPESI E RIPRODUZIONE. Lo stato valido assicura che la risorsa multimediale sia stata caricata correttamente. Se il lettore non è in uno stato ricercabile valido, il tentativo di chiamare i seguenti metodi genera un `IllegalStateException`.
 
-   Ad esempio, è possibile attendere l&#39;attivazione di Browser TVSDK `AdobePSDK.MediaPlayerStatusChangeEvent` con un `event.status` componente `AdobePSDK.MediaPlayerStatus.PREPARED`.
+   Ad esempio, è possibile attendere che il browser TVSDK attivi `AdobePSDK.MediaPlayerStatusChangeEvent` con un `event.status` di `AdobePSDK.MediaPlayerStatus.PREPARED`.
 
-1. Passa la posizione di ricerca richiesta al `MediaPlayer.seek` metodo come parametro, in millisecondi.
+1. Passa la posizione di ricerca richiesta al metodo `MediaPlayer.seek` come parametro, in millisecondi.
 
    In questo modo la testina di riproduzione si sposta in una posizione diversa nello streaming.
 
@@ -39,7 +39,7 @@ Nel browser TVSDK, puoi cercare una posizione specifica (tempo) in un flusso. Un
    void seek(long position) throws IllegalStateException;
    ```
 
-1. Attendete che l&#39;SDK del browser attivi l&#39; `AdobePSDK.PSDKEventType.SEEK_END` evento, che restituisce la posizione corretta nell&#39; `actualPosition` attributo dell&#39;evento:
+1. Attendete che l&#39;SDK del browser attivi l&#39;evento `AdobePSDK.PSDKEventType.SEEK_END`, che restituisce la posizione corretta nell&#39;attributo `actualPosition` dell&#39;evento:
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.SEEK_END, onSeekComplete); 
@@ -53,7 +53,7 @@ Nel browser TVSDK, puoi cercare una posizione specifica (tempo) in un flusso. Un
    * Il comportamento di riproduzione è interessato dal fatto che una ricerca, o un altro riposizionamento, termina al centro di un&#39;interruzione dell&#39;annuncio o salta le interruzioni dell&#39;annuncio.
    * Potete effettuare ricerche solo nella durata della risorsa. Per il VOD, ossia da 0 alla durata della risorsa.
 
-1. Per la barra di ricerca creata nell’esempio precedente, controllate `setPositionChangeListener()` quando l’utente esegue il trascinamento:
+1. Per la barra di ricerca creata nell&#39;esempio precedente, ascoltate `setPositionChangeListener()` per vedere quando l&#39;utente sta eseguendo il trascinamento:
 
    ```js
    seekBar.setPositionChangeListener(function (pos) { 
