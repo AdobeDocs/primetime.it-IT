@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Consegna chiavi iOS locale e remota{#remote-and-local-ios-key-delivery}
+# Consegna chiavi iOS remota e locale{#remote-and-local-ios-key-delivery}
 
  Adobe Primetime supporta due opzioni per la consegna delle chiavi ai client iOS:
 
@@ -24,4 +24,4 @@ La distribuzione delle chiavi remote è abilitata tramite il criterio utilizzato
 >
 >La selezione della consegna chiave interessa solo i client iOS. Tutti gli altri dispositivi che utilizzano contenuto HLS utilizzeranno sempre la chiave &quot;Local&quot;, anche se è stato specificato &quot;Remote&quot;.
 
-Per ulteriori informazioni, vedere *Uso del server* chiavi di accesso al Adobe .
+Per ulteriori informazioni, vedere *Utilizzo del server chiavi di accesso al Adobe*.
