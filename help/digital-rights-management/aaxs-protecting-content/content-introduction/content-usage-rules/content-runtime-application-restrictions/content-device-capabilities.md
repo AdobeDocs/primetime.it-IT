@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Funzionalità del dispositivo necessarie per riprodurre contenuto protetto {#device-capabilities-required-to-play-protected-content}
+# Funzionalità dispositivo necessarie per riprodurre contenuto protetto {#device-capabilities-required-to-play-protected-content}
 
 Specifica le funzionalità hardware necessarie per accedere al contenuto. Le informazioni sulle funzionalità hardware sono disponibili per i dispositivi che utilizzano il kit di supporto.
 
@@ -42,5 +42,5 @@ Le funzionalità del dispositivo possono essere identificate dagli attributi spe
 
 >[!NOTE]
 >
->Questa regola di utilizzo è supportata  client di accesso al Adobe versione 2.0.2 e successive. Il comportamento dei client meno recenti dipende dalla versione client minima supportata dal server licenze. Vedere, Versione [client](../../../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md)minima.
+>Questa regola di utilizzo è supportata  client di accesso al Adobe versione 2.0.2 e successive. Il comportamento dei client meno recenti dipende dalla versione client minima supportata dal server licenze. Vedere [Versione minima del client](../../../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md).
 
