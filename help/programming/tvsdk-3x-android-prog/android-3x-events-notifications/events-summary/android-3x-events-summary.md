@@ -6,11 +6,14 @@ title: Riepilogo degli eventi del lettore Primetime
 uuid: b2ff74f2-c373-42da-a717-2f0550cbcb7f
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '598'
+ht-degree: 0%
 
 ---
 
 
-# Riepilogo degli eventi del lettore Primetime {#primetime-player-events-summary}
+# Riepilogo eventi del lettore Primetime {#primetime-player-events-summary}
 
 L’applicazione può monitorare l’attività nel lettore e lo stato di modifica del lettore ascoltando gli eventi inviati da TVSDK.
 
@@ -20,283 +23,283 @@ TVSDK avvisa quando si verificano eventi ai quali l’applicazione deve risponde
 
 >[!TIP]
 >
->I codici evento sono le costanti dell&#39; `MediaPlayerEvent` enum.
+>I codici evento sono le costanti dell&#39;enum `MediaPlayerEvent`.
 
 `AdBreakCompletedEventListener`
 
-* **Significato** La riproduzione dell&#39;interruzione dell&#39;annuncio è completa.
+* **** Significato: la riproduzione dell’interruzione dell’annuncio è completa.
 
-* **Callback per l&#39;implementazione**`onAdBreakCompleted(AdBreakPlaybackEvent event)`
+* **Callback per l&#39;implementazione** `onAdBreakCompleted(AdBreakPlaybackEvent event)`
 
-* **Codice** evento `AD_BREAK_COMPLETE`
+* **Codice evento** `AD_BREAK_COMPLETE`
 
 `AdBreakSkippedEventListener`
 
-* **Significato** Un&#39;interruzione annuncio è stata saltata durante la riproduzione.
+* **Significato:** durante la riproduzione è stata saltata un&#39;interruzione annuncio.
 
-* **Callback per l&#39;implementazione**`onAdBreakSkipped(AdBreakPlaybackEvent event)`
+* **Callback per l&#39;implementazione** `onAdBreakSkipped(AdBreakPlaybackEvent event)`
 
-* **Codice** evento `AD_BREAK_SKIPPED`
+* **Codice evento** `AD_BREAK_SKIPPED`
 
 `AdBreakStartedEventListener`
 
-* **Significato** La riproduzione dell&#39;interruzione annuncio è iniziata.
+* **Significato:** la riproduzione dell’interruzione annuncio è iniziata.
 
-* **Callback per l&#39;implementazione**`onAdBreakStarted(AdBreakPlaybackEvent event)`
+* **Callback per l&#39;implementazione** `onAdBreakStarted(AdBreakPlaybackEvent event)`
 
-* **Codice** evento `AD_BREAK_START`
+* **Codice evento** `AD_BREAK_START`
 
 `AdClickedEventListener`
 
-* **Significato** È stato fatto clic su un annuncio durante la riproduzione.
+* **Significato:** durante la riproduzione è stato fatto clic su un annuncio.
 
-* **Callback per l&#39;implementazione**`onAdClicked(AdClickEvent event)`
-* **Codice** evento `AD_CLICK`
+* **Callback per l&#39;implementazione** `onAdClicked(AdClickEvent event)`
+* **Codice evento** `AD_CLICK`
 
 `AdCompletedEventListener`
 
-* **Significato** La riproduzione dell&#39;annuncio è completa.
+* **** Significato: la riproduzione dell’annuncio è completa.
 
-* **Callback per l&#39;implementazione**`onAdCompleted(AdPlaybackEvent event)`
+* **Callback per l&#39;implementazione** `onAdCompleted(AdPlaybackEvent event)`
 
-* **Codice** evento `AD_COMPLETE`
+* **Codice evento** `AD_COMPLETE`
 
 `AdProgressEventListener`
 
-* **Significato** Segnalazione dell&#39;avanzamento durante la riproduzione.
+* **Significato:** Segnalazione dell’avanzamento durante la riproduzione.
 
-* **Callback per l&#39;implementazione**`onAdProgress(AdPlaybackEvent event)`
+* **Callback per l&#39;implementazione** `onAdProgress(AdPlaybackEvent event)`
 
-* **Codice** evento `AD_PROGRESS`
+* **Codice evento** `AD_PROGRESS`
 
 `AdResolutionCompleteEventListener`
 
-* **Significato** : risoluzione completa di annunci pubblicitari Primetime. Questo evento è applicabile solo al contenuto VOD.
+* **Significato: risoluzione** annunci Primetime e risoluzione completa. Questo evento è applicabile solo al contenuto VOD.
 
-* **Callback per l&#39;implementazione**`onAdResolutionComplete()`
+* **Callback per l&#39;implementazione** `onAdResolutionComplete()`
 
-* **Codice** evento `AD_RESOLUTION_COMPLETE`
+* **Codice evento** `AD_RESOLUTION_COMPLETE`
 
 `AdStartedEventListener`{#section_A4339C48F82640A8AF4AF09CB3B33188}
 
-* **Significato** La riproduzione dell&#39;annuncio è iniziata.
+* **** Significato: la riproduzione dell’annuncio è iniziata.
 
-* **Callback per l&#39;implementazione**`onAdStarted(AdPlaybackEvent event)`
+* **Callback per l&#39;implementazione** `onAdStarted(AdPlaybackEvent event)`
 
-* **Codice** evento `AD_START`
+* **Codice evento** `AD_START`
 
 `AudioUpdatedEventListener`
 
-* **Significato** È stata rilevata una nuova traccia audio.
+* **** Significato: è stata rilevata una nuova traccia audio.
 
-* **Callback per l&#39;implementazione**`onAudioUpdated(MediaPlayerItemEvent event)`
+* **Callback per l&#39;implementazione** `onAudioUpdated(MediaPlayerItemEvent event)`
 
-* **Codice** evento `AUDIO_TRACK_UPDATED`
+* **Codice evento** `AUDIO_TRACK_UPDATED`
 
 `BufferingBeginEventListener`
 
-* **Significato** Il giocatore ha iniziato a bufferizzare.
+* **** Significato: Il giocatore ha iniziato a bufferizzare.
 
-* **Callback per l&#39;implementazione**`onBufferingBegin(BufferEvent event)`
+* **Callback per l&#39;implementazione** `onBufferingBegin(BufferEvent event)`
 
-* **Codice** evento `BUFFERING_BEGIN`
+* **Codice evento** `BUFFERING_BEGIN`
 
 `BufferingEndEventListener`
 
-* **Significato** Il giocatore ha smesso di bufferizzare.
+* **** Significato: il lettore ha interrotto la bufferizzazione.
 
-* **Callback per l&#39;implementazione**`onBufferingEnd(BufferEvent event)`
+* **Callback per l&#39;implementazione** `onBufferingEnd(BufferEvent event)`
 
-* **Codice** evento `BUFFERING_END`
+* **Codice evento** `BUFFERING_END`
 
 &quot;BufferPreparedEventListener&quot;
 
-* **Significato** Il buffer è preparato.
+* **Significato:** Il buffer è preparato.
 
-* **Callback per l&#39;implementazione**`onBufferPrepared()`
+* **Callback per l&#39;implementazione** `onBufferPrepared()`
 
-* **Codice** evento `BUFFER_PREPARED`
+* **Codice evento** `BUFFER_PREPARED`
 
 `CaptionsUpdatedEventListener`
 
-* **Significato** È stata rilevata una nuova traccia di didascalia.
+* **** Significato: è stata rilevata una nuova traccia di didascalia.
 
-* **Callback per l&#39;implementazione**`onCaptionsUpdated(MediaPlayerItemEvent event)`
+* **Callback per l&#39;implementazione** `onCaptionsUpdated(MediaPlayerItemEvent event)`
 
-* **Codice** evento `CAPTIONS_UPDATED`
+* **Codice evento** `CAPTIONS_UPDATED`
 
 `DRMMetadataInfoEventListener`
 
-* **Significato** Nel flusso multimediale è stato rilevato un nuovo metadati DRM.
+* **** Significato: nel flusso multimediale è stato rilevato un nuovo metadati DRM.
 
-* **Callback per l&#39;implementazione**`onDRMMetadataInfo(DRMMetadataInfoEvent event)`
+* **Callback per l&#39;implementazione** `onDRMMetadataInfo(DRMMetadataInfoEvent event)`
 
-* **Codice** evento `DRM_METADATA`
+* **Codice evento** `DRM_METADATA`
 
 `ItemCreatedEventListener`
 
-* **Significato** È stato creato un nuovo elemento del lettore multimediale.
+* **** Significato: è stato creato un nuovo elemento del lettore multimediale.
 
-* **Callback per l&#39;implementazione**`onItemCreated(MediaPlayerItemEvent event)`
+* **Callback per l&#39;implementazione** `onItemCreated(MediaPlayerItemEvent event)`
 
-* **Codice** evento `ITEM_CREATED`
+* **Codice evento** `ITEM_CREATED`
 
 `ItemLoadCompleteEventListener`
 
-* **Significato** Nuove informazioni di caricamento create per l&#39;elemento corrente.
+* **** Significato: sono state create nuove informazioni sul caricamento per l’elemento corrente.
 
-* **Callback per l&#39;implementazione**`onLoadComplete(MediaPlayerItemEvent event)`
+* **Callback per l&#39;implementazione** `onLoadComplete(MediaPlayerItemEvent event)`
 
-* **Codice** evento `ITEM_UPDATED`
+* **Codice evento** `ITEM_UPDATED`
 
 `LoadInformationEventListener`
 
-* **Significato** È stato caricato un nuovo segmento.
+* **** Significato: è stato caricato un nuovo segmento.
 
-* **Callback per l&#39;implementazione**`onLoadInformation(LoadInformationEvent event)`
+* **Callback per l&#39;implementazione** `onLoadInformation(LoadInformationEvent event)`
 
-* **Codice** evento `LOAD_INFORMATION_AVAILABLE`
+* **Codice evento** `LOAD_INFORMATION_AVAILABLE`
 
 `MainManifestUpdatedEventListener`
 
-* **Significato** Il manifesto principale o la playlist è stata aggiornata.
+* **** Significato: il manifesto o la playlist principale è stato aggiornato.
 
-* **Callback per l&#39;implementazione**`onMainManifestUpdated(MediaPlayerItemEvent event)`
+* **Callback per l&#39;implementazione** `onMainManifestUpdated(MediaPlayerItemEvent event)`
 
-* **Codice** evento `MANIFEST_UPDATED`
+* **Codice evento** `MANIFEST_UPDATED`
 
 `NotificationEventListener`
 
-* **Significato** Operazione non riuscita.
+* **** Significato: operazione non riuscita.
 
-* **Callback per l&#39;implementazione**`onNotification(NotificationEvent event)`
+* **Callback per l&#39;implementazione** `onNotification(NotificationEvent event)`
 
-* **Codice** evento `OPERATION_FAILED`
+* **Codice evento** `OPERATION_FAILED`
 
 `PlaybackRangeUpdatedEventListener`
 
-* **Significato** L&#39;intervallo di riproduzione è stato aggiornato.
+* **** Significato: l’intervallo di riproduzione è stato aggiornato.
 
-* **Callback per l&#39;implementazione**`onPlaybackRangeUpdated(MediaPlayerItemEvent event)`
+* **Callback per l&#39;implementazione** `onPlaybackRangeUpdated(MediaPlayerItemEvent event)`
 
-* **Codice** evento `PLAYBACK_RANGE_UPDATED`
+* **Codice evento** `PLAYBACK_RANGE_UPDATED`
 
 `PlaybackRatePlayingEventListener`
 
-* **Significato** Una nuova frequenza di riproduzione è visibile sullo schermo.
+* **Significato:** sullo schermo è visibile una nuova frequenza di riproduzione.
 
-* **Callback per l&#39;implementazione**`onRatePlaying(PlaybackRateEvent event)`
+* **Callback per l&#39;implementazione** `onRatePlaying(PlaybackRateEvent event)`
 
-* **Codice** evento `RATE_PLAYING`
+* **Codice evento** `RATE_PLAYING`
 
 `PlaybackRateSelectedEventListener`
 
-* **Significato** L&#39;attributo rate di MediaPlayer è stato impostato.
+* **** Significato: l&#39;attributo rate di MediaPlayer è stato impostato.
 
-* **Callback per l&#39;implementazione**`onRateSelected(PlaybackRateEvent event)`
+* **Callback per l&#39;implementazione** `onRateSelected(PlaybackRateEvent event)`
 
-* **Codice** evento `RATE_SELECTED`
+* **Codice evento** `RATE_SELECTED`
 
 `PlayStartEventListener`
 
-* **Significato** La riproduzione è iniziata.
+* **Significato:** la riproduzione è iniziata.
 
-* **Callback per l&#39;implementazione**`onPlayStart()`
+* **Callback per l&#39;implementazione** `onPlayStart()`
 
-* **Codice** evento `PLAY_START`
+* **Codice evento** `PLAY_START`
 
 `ProfileChangeEventListener`
 
-* **Significato** Il profilo corrente di MediaPlayer è cambiato.
+* **** Significato: il profilo corrente di MediaPlayer è cambiato.
 
-* **Callback per l&#39;implementazione**`onProfileChanged(ProfileEvent event)`
+* **Callback per l&#39;implementazione** `onProfileChanged(ProfileEvent event)`
 
-* **Codice** evento `PROFILE_CHANGED`
+* **Codice evento** `PROFILE_CHANGED`
 
 `ReservationReachedEventListener`
 
-* **Significato** : la riproduzione ha raggiunto una prenotazione della timeline.
+* **** SignificatoRiproduzione ha raggiunto una prenotazione della timeline.
 
-* **Callback per l&#39;implementazione**`onReservationReached(ReservationEvent event)`
+* **Callback per l&#39;implementazione** `onReservationReached(ReservationEvent event)`
 
-* **Codice** evento `RESERVATION_REACHED`
+* **Codice evento** `RESERVATION_REACHED`
 
 `SeekBeginEventListener`
 
-* **Significato** Operazione di ricerca avviata.
+* **Operazione** MeaningSeek avviata.
 
-* **Callback per l&#39;implementazione**`onSeekBegin(SeekEvent event)`
+* **Callback per l&#39;implementazione** `onSeekBegin(SeekEvent event)`
 
-* **Codice** evento `SEEK_BEGIN`
+* **Codice evento** `SEEK_BEGIN`
 
 `SeekEndEventListener`
 
-* **Significato** Operazione di ricerca completata.
+* **** Significato: operazione di ricerca completata.
 
-* **Callback per l&#39;implementazione**`onSeekEnd(SeekEvent event)`
+* **Callback per l&#39;implementazione** `onSeekEnd(SeekEvent event)`
 
-* **Codice** evento `SEEK_END`
+* **Codice evento** `SEEK_END`
 
 `SeekPositionAdjustedEventListener`
 
-* **Significato** La posizione di ricerca è stata modificata a causa delle regole di riproduzione interne o delle regole aziendali esterne.
+* **Significato:** la posizione di ricerca è stata regolata a causa di regole di riproduzione interne o regole aziendali esterne.
 
-* **Callback per l&#39;implementazione**`onPositionAdjusted(SeekEvent event)`
+* **Callback per l&#39;implementazione** `onPositionAdjusted(SeekEvent event)`
 
-* **Codice** evento `SEEK_POSITION_ADJUSTED`
+* **Codice evento** `SEEK_POSITION_ADJUSTED`
 
 `SizeAvailableEventListener`
 
-* **Significato** Le dimensioni del supporto sono disponibili.
+* **** SignificatoLe dimensioni del supporto sono disponibili.
 
-* **Callback per l&#39;implementazione**`onSizeAvailable(SizeAvailableEvent event)`
+* **Callback per l&#39;implementazione** `onSizeAvailable(SizeAvailableEvent event)`
 
-* **Codice** evento `SIZE_AVAILABLE`
+* **Codice evento** `SIZE_AVAILABLE`
 
 `StatusChangeEventListener`
 
-* **Significato** Lo stato di MediaPlayer è cambiato.
+* **** Significato: lo stato di MediaPlayer è cambiato.
 
-* **Callback per l&#39;implementazione**`onStatusChanged(MediaPlayerStatusChangeEvent event)`
+* **Callback per l&#39;implementazione** `onStatusChanged(MediaPlayerStatusChangeEvent event)`
 
-* **Codice** evento `STATUS_CHANGED`
+* **Codice evento** `STATUS_CHANGED`
 
 `TimeChangeEventListener`
 
-* **Significato** La testina di riproduzione è cambiata.
+* **Significato:** La testina di riproduzione è cambiata.
 
-* **Callback per l&#39;implementazione**`onTimeChanged(TimeChangeEvent event)`
+* **Callback per l&#39;implementazione** `onTimeChanged(TimeChangeEvent event)`
 
-* **Codice** evento `TIME_CHANGED`
+* **Codice evento** `TIME_CHANGED`
 
 `TimedEventEventListener`
 
-* **Significato** L&#39;operazione è completa con il tempo necessario per l&#39;operazione.
+* **** SignificatoL&#39;operazione è completa con il tempo necessario per l&#39;operazione.
 
-* **Callback per l&#39;implementazione**`onTimedEvent(TimedEventEvent event)`
+* **Callback per l&#39;implementazione** `onTimedEvent(TimedEventEvent event)`
 
-* **Codice** evento `TIMED_EVENT`
+* **Codice evento** `TIMED_EVENT`
 
 `TimelineMetadataAddedInBackgroundEventListener`
 
-* **Significato** Un nuovo metadati temporizzato è stato aggiunto a un elemento in background.
+* **** Significato: a un elemento in background sono stati aggiunti nuovi metadati temporizzati.
 
-* **Callback per l&#39;implementazione**`onTimedMetadata(TimedMetadataEvent event)`
+* **Callback per l&#39;implementazione** `onTimedMetadata(TimedMetadataEvent event)`
 
-* **Codice** evento `TIMED_METADATA_ADDED_IN_BACKGROUND`
+* **Codice evento** `TIMED_METADATA_ADDED_IN_BACKGROUND`
 
 `TimedMetadataEventListener`
 
-* **Significato** Nel flusso multimediale è stato rilevato un nuovo metadati temporizzato.
+* **** Significato: nel flusso multimediale sono stati rilevati nuovi metadati temporizzati.
 
-* **Callback per l&#39;implementazione**`onTimedMetadata(TimedMetadataEvent event)`
+* **Callback per l&#39;implementazione** `onTimedMetadata(TimedMetadataEvent event)`
 
-* **Codice** evento `TIMED_METADATA_AVAILABLE`
+* **Codice evento** `TIMED_METADATA_AVAILABLE`
 
 `TimelineUpdatedEventListener`
 
-* **Significato** La timeline è stata modificata. Gli annunci potrebbero essere stati aggiunti o rimossi dalla timeline.
+* **** Significato: la timeline è stata modificata. Gli annunci potrebbero essere stati aggiunti o rimossi dalla timeline.
 
-* **Callback per l&#39;implementazione**`onTimelineUpdated(TimelineEvent event)`
+* **Callback per l&#39;implementazione** `onTimelineUpdated(TimelineEvent event)`
 
-* **Codice** evento `TIMELINE_UPDATED`
+* **Codice evento** `TIMELINE_UPDATED`
