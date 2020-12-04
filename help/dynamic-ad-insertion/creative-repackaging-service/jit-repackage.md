@@ -6,6 +6,9 @@ title: Flussi di lavoro dettagliati per il reimballaggio JIT
 uuid: 11b6eb3c-f6aa-4018-9b20-ab6f5910508b
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '553'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ Il flusso di lavoro per la ricompilazione JIT sul lato server manifesto è il se
 
    >[!NOTE]
    >
-   >In una configurazione multi-CDN, il server manifesto utilizza il `ptcdn` parametro nell’URL di avvio per identificare il server CDN.
+   >In una configurazione multi-CDN, il server manifesto utilizza il parametro `ptcdn` nell’URL di avvio per identificare il server CDN.
 
 1. Il server manifesto controlla la risposta:
 
@@ -54,7 +57,7 @@ Un client basato su TVSDK o con funzionalità simili può interagire con CRS per
 
       >[!NOTE]
       >
-      >In una configurazione multi-CDN, il server manifesto utilizza il `ptcdn` parametro nell’URL di avvio per identificare il server CDN.
+      >In una configurazione multi-CDN, il server manifesto utilizza il parametro `ptcdn` nell’URL di avvio per identificare il server CDN.
 
 1. Il client controlla la risposta dal server CDN.
 
@@ -64,7 +67,7 @@ Un client basato su TVSDK o con funzionalità simili può interagire con CRS per
 1. Il server annunci richiede che l’annuncio non-HLS venga transcodificato in HLS.
 1. CRS crea una versione HLS e la carica sul server CDN per un utilizzo futuro.
 
-## Priorità e cronologia del formato annuncio {#section_A74DE37A57BF45D7B6D09E3DE40F8E61}
+## Priorità formato annuncio e cronologia {#section_A74DE37A57BF45D7B6D09E3DE40F8E61}
 
 Il server manifesto e il client utilizzano la stessa logica di selezione per determinare le priorità per la riproduzione degli annunci disponibili. Gli annunci in formato HLS sono la prima priorità, seguiti da MP4, FLV e infine WebM.
 
