@@ -6,6 +6,9 @@ title: Caricamento di una risorsa multimediale tramite MediaPlayerItemLoader
 uuid: b2311ddc-f059-4775-8553-fc354ec2636b
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '255'
+ht-degree: 0%
 
 ---
 
@@ -14,9 +17,9 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 Un altro modo per risolvere una risorsa multimediale è con MediaPlayerItemLoader. Questa funzione è utile per ottenere informazioni su un particolare flusso multimediale senza creare un&#39;istanza di MediaPlayer.
 
-Attraverso la `MediaPlayerItemLoader` classe, potete scambiare una risorsa multimediale per la risorsa corrispondente `MediaPlayerItem` senza allegare una vista a un&#39; `MediaPlayer` istanza, il che comporterebbe l&#39;allocazione delle risorse hardware di decodifica video. Il processo di ottenimento dell&#39; `MediaPlayerItem` istanza è asincrono.
+Attraverso la classe `MediaPlayerItemLoader`, potete scambiare una risorsa multimediale per la `MediaPlayerItem` corrispondente senza collegare una vista a un&#39;istanza `MediaPlayer`, il che comporterebbe l&#39;allocazione delle risorse hardware di decodifica video. Il processo per ottenere l&#39;istanza `MediaPlayerItem` è asincrono.
 
-1. Implementa l’interfaccia di `MediaPlayerItemLoader.LoaderListener` callback.
+1. Implementa l&#39;interfaccia di callback `MediaPlayerItemLoader.LoaderListener`.
 
        Questa interfaccia definisce due metodi:
    
@@ -26,12 +29,12 @@ Attraverso la `MediaPlayerItemLoader` classe, potete scambiare una risorsa multi
 
    * `LoaderListener.onError` funzione di callback
 
-      TVSDK utilizza questo metodo per informare l’applicazione che le informazioni richieste sono disponibili sotto forma di `MediaPlayerItem` istanza che viene passata come parametro al callback.
+      TVSDK utilizza questo metodo per informare l’applicazione che le informazioni richieste sono disponibili sotto forma di istanza `MediaPlayerItem` che viene passata come parametro al callback.
 
 1. Registra questa istanza in TVSDK trasmettendola come parametro al costruttore del `MediaPlayerItemLoader`.
-1. Chiamata `MediaPlayerItemLoader.load`, passaggio di un&#39;istanza di un `MediaResource` oggetto.
+1. Chiamare `MediaPlayerItemLoader.load`, passando un&#39;istanza di un oggetto `MediaResource`.
 
-   L&#39;URL dell&#39; `MediaResource` oggetto deve puntare al flusso per il quale si desidera ottenere informazioni. Ad esempio:
+   L&#39;URL dell&#39;oggetto `MediaResource` deve puntare al flusso per il quale si desidera ottenere informazioni. Ad esempio:
 
    ```java
    // instantiate the listener interface 
