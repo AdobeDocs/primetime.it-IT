@@ -6,6 +6,9 @@ title: Grammatica RBOP
 uuid: d9064e39-593a-4767-b835-287640b4c94a
 translation-type: tm+mt
 source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+workflow-type: tm+mt
+source-wordcount: '486'
+ht-degree: 0%
 
 ---
 
@@ -66,7 +69,7 @@ AnotherRule ::=
    }
    ```
 
-   l&#39;istanza seguente non è valida, perché all&#39;interno dello stesso oggetto sono presenti due `foo` coppie:
+   l&#39;istanza seguente non è valida, perché all&#39;interno dello stesso oggetto sono presenti due coppie `foo`:
 
    ```
    { 
@@ -98,13 +101,13 @@ AnotherRule ::=
 
    è valido, in quanto sono istanze indipendenti dello stesso oggetto.
 
-1. Per le definizioni in cui è possibile scegliere una o più sequenze di stringhe, trattare le stringhe come un insieme, in cui le voci duplicate vengono trattate come una singola voce. Ad esempio, `["foo", "bar", "foo", "baz"]` è equivalente a `["foo", "bar", "baz"]`
+1. Per le definizioni in cui è possibile scegliere una o più sequenze di stringhe, trattare le stringhe come un insieme, in cui le voci duplicate vengono trattate come una singola voce. Ad esempio, `["foo", "bar", "foo", "baz"]` equivale a `["foo", "bar", "baz"]`
 
-1. Per la definizione dei numeri, viene utilizzato uno spazio tra le regole (ad esempio, `Digit Digits`), ma non deve essere utilizzato tale spazio quando si applica la regola.
+1. Per la definizione dei numeri, viene utilizzato uno spazio tra le regole (ad esempio, `Digit Digits`), ma non deve essere utilizzato alcuno spazio per l&#39;applicazione della regola.
 
-   Ad esempio, se esprimiamo il numero *123* per la regola NonZeroInteger, dovrebbe essere espresso come `123` anziché `1 2 3`, anche se la regola contiene uno spazio tra NonZeroDigit e Cifre.
+   Ad esempio, se esprimiamo il numero *centoventitré* per la regola NonZeroInteger, deve essere espresso come `123` anziché come `1 2 3`, anche se la regola contiene uno spazio tra NonZeroDigit e Cifre.
 
-1. Alcune delle regole consentono più moduli. In questi casi, i diversi moduli sono separati dal `'|'` carattere.
+1. Alcune delle regole consentono più moduli. In questi casi, i diversi moduli sono separati dal carattere `'|'`.
 
    Ad esempio, questa regola:
 
@@ -114,7 +117,7 @@ AnotherRule ::=
 
    significa che un&#39;istanza di `Foo` può essere sostituita con &quot;A&quot;, &quot;B&quot; o &quot;C&quot;. Ciò non deve essere confuso con un modulo che si espande su più righe; si tratta di una funzione che consente di rendere più leggibili i moduli più lunghi.
 
-## La grammatica {#section_52189FD66B1A46BA9F8FDDE1D7C8E8E8}
+## Grammatica {#section_52189FD66B1A46BA9F8FDDE1D7C8E8E8}
 
 ```
 PixelBasedOPConfig ::= 
@@ -235,7 +238,7 @@ NonZeroDigit ::=
 
 ## Semantica: Configurazioni legali ma non valide {#section_709BE240FF0041D4A1B0A0A7544E4966}
 
-L&#39;argomento Configurazione *protezione output di* esempio presentava una configurazione valida con il relativo significato semantico. La sezione precedente in *questo* argomento presentava le regole grammaticali per le configurazioni. Mentre la grammatica aiuta a garantire la correttezza sintattica, ci sono configurazioni sintattiche legali che non sono semanticamente corrette (cioè, non sono logiche). Questa sezione presenta configurazioni *sintatticamente* legali, ma *semanticamente* errate. Tenere presente che gli esempi di questa sezione sono stati ridotti alla struttura minima necessaria per illustrare lo scenario in discussione.
+L&#39;argomento *Configurazione della protezione dell&#39;output di esempio* presentava una configurazione valida con il relativo significato semantico. La sezione precedente dell&#39;argomento *this* presentava le regole grammaticali per le configurazioni. Mentre la grammatica aiuta a garantire la correttezza sintattica, ci sono configurazioni sintattiche legali che non sono semanticamente corrette (cioè, non sono logiche). Questa sezione presenta configurazioni *sintatticamente* legali, ma *semanticamente* non corrette. Tenere presente che gli esempi di questa sezione sono stati ridotti alla struttura minima necessaria per illustrare lo scenario in discussione.
 
 * Non è possibile definire più vincoli di pixel con lo stesso numero di pixel.
 
