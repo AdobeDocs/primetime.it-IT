@@ -6,6 +6,9 @@ title: Implementare la gestione della blackout
 uuid: db7f831c-5069-4426-bfe3-5fc51fec7930
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '171'
+ht-degree: 0%
 
 ---
 
@@ -75,7 +78,7 @@ Per implementare la gestione della blackout, compresa l&#39;indicazione di conte
    }; 
    ```
 
-1. Gestire `TimedMetadata` gli oggetti durante l&#39; `MediaPlayer` esecuzione del tempo.
+1. Gestire gli oggetti `TimedMetadata` durante l&#39;esecuzione di `MediaPlayer`.
 
    ```java
    _playbackClockEventListener = new Clock.ClockEventListener() { 
@@ -183,7 +186,7 @@ Per implementare la gestione della blackout, compresa l&#39;indicazione di conte
 
    >[!NOTE]
    >
-   >Attualmente, per flussi live con bitrate multiplo, i profili ABR (bit rate regolabile) possono non essere sincronizzati. Questo causa la duplicazione `timedMetadata` di oggetti per lo stesso tag con sottoscrizione. Per evitare calcoli non corretti, si consiglia vivamente di verificare la sovrapposizione di intervalli non ricercabili dopo i calcoli, ad esempio nell&#39;esempio seguente:
+   >Attualmente, per flussi live con bitrate multiplo, i profili ABR (bit rate regolabile) possono non essere sincronizzati. Questo causa la duplicazione di oggetti `timedMetadata` per lo stesso tag con sottoscrizione. Per evitare calcoli non corretti, si consiglia vivamente di verificare la sovrapposizione di intervalli non ricercabili dopo i calcoli, ad esempio nell&#39;esempio seguente:
 
    ```java
    List<TimeRange> rangesToRemove = new ArrayList<TimeRange>(); 
