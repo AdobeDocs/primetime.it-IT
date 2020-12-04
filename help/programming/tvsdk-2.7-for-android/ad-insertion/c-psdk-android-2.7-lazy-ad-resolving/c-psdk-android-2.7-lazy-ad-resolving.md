@@ -30,7 +30,7 @@ La risoluzione degli annunci e il caricamento degli annunci possono causare un r
 
    1. TVSDK scarica una playlist e *risolve* tutti gli annunci.
    1. TVSDK *carica* annunci pre-roll, sposta il lettore nello stato PREPARATO e inizia la riproduzione del contenuto.
-   1. TVSDK *carica* gli annunci rimanenti e li inserisce nella timeline durante la riproduzione.
+   1. TVSDK *carica* gli annunci rimanenti e li inserisce sulla timeline durante la riproduzione.
 
    Questa funzione migliora il processo di base mettendo il lettore nello stato PREPARATO prima che tutti gli annunci vengano caricati.
 
@@ -51,12 +51,12 @@ La risoluzione degli annunci e il caricamento degli annunci possono causare un r
 
    >
    >    
-   * Il lettore deve attendere l&#39; `kEventAdResolutionComplete` evento prima di consentire la ricerca o il gioco di trucco.
-   >    * Se l’utente tenta di eseguire operazioni di ricerca o di riproduzione ingannevole durante la risoluzione degli annunci, TVSDK genera l’ `kECLazyAdResolutionInProgress` errore.
-   >    * Se necessario, il lettore deve aggiornare la barra di scorrimento, *dopo* la ricezione dell’ `kEventAdResolutionComplete` evento.
+   * Il lettore deve attendere l&#39;evento `kEventAdResolutionComplete` prima di consentire la ricerca o la riproduzione ingannevole.
+   >    * Se l&#39;utente tenta di eseguire operazioni di ricerca o di riproduzione ingannevole durante la risoluzione degli annunci, TVSDK genera l&#39;errore `kECLazyAdResolutionInProgress`.
+   >    * Se necessario, il lettore deve aggiornare la barra di scorrimento, *dopo la ricezione dell&#39;evento `kEventAdResolutionComplete`.*
 >
 >* Lazy Ad Resolving è solo per VOD. Non funzionerà con i flussi LIVE.
->* Lazy Ad Resolving è incompatibile con la funzione *Instant On* .
+>* Lazy Ad Resolving è incompatibile con la funzione *Instant On*.
 
 >
 >  
