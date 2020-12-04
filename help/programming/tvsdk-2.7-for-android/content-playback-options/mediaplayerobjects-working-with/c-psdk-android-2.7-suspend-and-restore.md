@@ -7,6 +7,9 @@ title: Sospendi e ripristina MediaPlayer
 uuid: 7777af91-547c-4f7a-8818-3d46dccee7d6
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '180'
+ht-degree: 0%
 
 ---
 
@@ -15,11 +18,11 @@ source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
 
 La sospensione e il ripristino di TVSDK MediaPlayer quando lo schermo di un dispositivo è disattivato e attivato deve essere gestito dall’applicazione.
 
-È possibile gestire le operazioni di sospensione e ripristino `MediaPlayer` all&#39;interno del ricevitore di trasmissione di Android per l&#39;attivazione/disattivazione dello schermo.
+È possibile gestire le operazioni di sospensione e ripristino su `MediaPlayer` all&#39;interno del ricevitore di trasmissione di Android per l&#39;attivazione/disattivazione dello schermo.
 
-TVSDK non è in grado di determinare quando un frammento (o un&#39;attività) è in background o in primo piano. Inoltre, Android `SurfaceView` non viene distrutto quando la schermata del dispositivo è disattivata (ma l&#39;attività è in pausa). Tuttavia, `SurfaceView` viene ** distrutto quando il dispositivo mette l&#39;applicazione in background. TVSDK non è in grado di rilevare nessuna di queste modifiche, pertanto devono essere gestite dall&#39;applicazione.
+TVSDK non è in grado di determinare quando un frammento (o un&#39;attività) è in background o in primo piano. Inoltre, l&#39;Android `SurfaceView` non viene distrutto quando la schermata del dispositivo è disattivata (ma l&#39;attività è in pausa). Tuttavia, `SurfaceView` *fa* viene distrutto quando il dispositivo mette l&#39;applicazione in background. TVSDK non è in grado di rilevare nessuna di queste modifiche, pertanto devono essere gestite dall&#39;applicazione.
 
-Il seguente codice di esempio illustra come l’applicazione può gestire la sospensione e il ripristino `MediaPlayer` quando lo schermo del dispositivo è attivato e disattivato a livello di applicazione:
+Il seguente codice di esempio illustra come l&#39;applicazione può gestire la sospensione e il ripristino della `MediaPlayer` quando lo schermo del dispositivo è acceso e disattivato a livello di applicazione:
 
 ```java
 // Track the state of a fragment to determine if it is PAUSED or RESUMED 
