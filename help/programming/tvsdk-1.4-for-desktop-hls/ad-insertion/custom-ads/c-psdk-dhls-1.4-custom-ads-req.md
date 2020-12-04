@@ -6,6 +6,9 @@ title: Requisiti annunci personalizzati
 uuid: 6d4ba87b-ffe5-467d-8ab5-9795928c2f69
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '353'
+ht-degree: 0%
 
 ---
 
@@ -22,9 +25,9 @@ TVSDK supporta le seguenti funzionalità:
 
 * Versioni 1.0 e 2.0 della specifica VPAID
 * Annunci VPAID lineari su contenuti video su richiesta (VOD)
-* Annunci Flash VPAID
+* Annunci VPAID Flash
 
-   Gli annunci VPAID devono essere basati su Flash e la risposta dell&#39;annuncio deve identificare il tipo di supporto dell&#39;annuncio VPAID come `application/x-shockwave-flash`.
+   Gli annunci VPAID devono essere basati sul Flash e la risposta dell&#39;annuncio deve identificare il tipo di supporto dell&#39;annuncio VPAID come `application/x-shockwave-flash`.
 
 Le seguenti funzionalità non sono supportate:
 
@@ -33,7 +36,7 @@ Le seguenti funzionalità non sono supportate:
 * Annunci VPAID nel contenuto live
 * Annunci VPAID JavaScript
 
-## Stato del caricamento {#section_5F55C0101CD44A65BCFE1D124CBDF239}
+## Stato di caricamento {#section_5F55C0101CD44A65BCFE1D124CBDF239}
 
 TVSDK invia gli eventi seguenti:
 
@@ -43,14 +46,14 @@ TVSDK invia gli eventi seguenti:
 * `AdPlaying`
 * `AdStopped`
 
-Dopo l’ `AdStopped` evento, TVSDK riprende il contenuto video.
+Dopo l&#39;evento `AdStopped`, TVSDK riprende il contenuto video.
 
 >[!TIP]
 >
 >Se specificate un valore pari a zero, TVSDK tenta di caricare l&#39;annuncio fino al suo caricamento o si è verificato un errore.
 
-## Annunci di Ignorning {#section_3EA452F420884335AE90DF23C17E416A}
+## Annunci ignoranti {#section_3EA452F420884335AE90DF23C17E416A}
 
 Se il caricamento dell’annuncio richiede troppo tempo o si verificano errori nell’annuncio, TVSDK può ignorare l’annuncio e l’annuncio successivo nel contenitore dell’annuncio viene riprodotto automaticamente.
 
-Se l’ `AuditudeSettings.customAdLoadTimeout` impostazione specifica un numero di secondi maggiore di zero, TVSDK tenta di caricare l’annuncio per la durata specificata. Se non è in grado di caricare l’annuncio, l’annuncio viene ignorato. Ad esempio, se configurate `AuditudeSettings.customAdLoadTimeout:5`, TVSDK tenta di caricare l’annuncio per un massimo di 5 secondi. Se l&#39;annuncio non viene ancora caricato, viene ignorato.
+Se l&#39;impostazione `AuditudeSettings.customAdLoadTimeout` specifica un numero di secondi maggiore di zero, TVSDK tenta di caricare l&#39;annuncio alla durata specificata. Se non è in grado di caricare l’annuncio, l’annuncio viene ignorato. Ad esempio, se configurate `AuditudeSettings.customAdLoadTimeout:5`, TVSDK tenta di caricare l&#39;annuncio per un massimo di 5 secondi. Se l&#39;annuncio non viene ancora caricato, viene ignorato.
