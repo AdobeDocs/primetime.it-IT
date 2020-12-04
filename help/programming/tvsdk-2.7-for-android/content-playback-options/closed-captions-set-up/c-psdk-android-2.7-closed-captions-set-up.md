@@ -6,6 +6,9 @@ title: Utilizzo dei sottotitoli codificati
 uuid: 6e105316-a166-45c1-b6b0-70c89c97c297
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '240'
+ht-degree: 0%
 
 ---
 
@@ -26,8 +29,8 @@ TVSDK supporta il rendering di questi formati:
 Potete effettuare le seguenti operazioni:
 
 * Selezionate una traccia di didascalia disponibile come traccia corrente e ascoltate gli eventi che indicano tracce aggiuntive disponibili.
-* Attivate (visibile) o disattivate (non visibile) i sottotitoli codificati mediante l’ `MediaPlayer` interfaccia.
+* Attivate (visibile) o disattivate (non visibile) i sottotitoli codificati mediante l&#39;interfaccia `MediaPlayer`.
 * Selezionate le opzioni di stile che determinano il rendering dei sottotitoli codificati da parte del motore video sottostante.
 
-   Utilizzare l&#39; `MediaPlayerItem` interfaccia per selezionare formati quali il font o il colore del font.
+   Utilizzare l&#39;interfaccia `MediaPlayerItem` per selezionare formati quali il font o il colore del font.
 
