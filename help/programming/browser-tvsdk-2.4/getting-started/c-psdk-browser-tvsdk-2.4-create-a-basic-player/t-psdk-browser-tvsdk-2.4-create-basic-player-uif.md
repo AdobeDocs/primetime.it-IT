@@ -6,15 +6,18 @@ title: Creazione di un lettore di base con il framework dell'interfaccia utente
 uuid: d1a82dbb-1c05-4d0c-b6bc-e07cbede93cb
 translation-type: tm+mt
 source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
+workflow-type: tm+mt
+source-wordcount: '136'
+ht-degree: 1%
 
 ---
 
 
-# Creazione di un lettore di base con il framework dell&#39;interfaccia utente{#create-a-basic-player-using-the-ui-framework}
+# Creare un lettore di base utilizzando l&#39;interfaccia Framework{#create-a-basic-player-using-the-ui-framework}
 
 Per creare un lettore di base utilizzando il framework dell&#39;interfaccia utente:
 
-1. Creare un’ `<div>` istanza del lettore.
+1. Create un `<div>` per l&#39;istanza del lettore.
 
    Ad esempio:
 
@@ -33,7 +36,7 @@ Per creare un lettore di base utilizzando il framework dell&#39;interfaccia uten
    </script>
    ```
 
-   Quando viene creato il lettore, all&#39; `<div>` elemento specificato viene assegnata una classe CSS di `ptp-main-video-div-style`. Il DOM risultante è simile al seguente:
+   Quando viene creato il lettore, all&#39;elemento `<div>` specificato viene assegnata una classe CSS di `ptp-main-video-div-style`. Il DOM risultante è simile al seguente:
 
    ```
    <div id="video1" class="ptp-main-video-div-style"> 
