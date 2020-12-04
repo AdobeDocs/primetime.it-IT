@@ -6,6 +6,9 @@ title: Riproduzione e pausa di un video
 uuid: 24b26364-5cb8-4a95-9574-cc52ddfa876b
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '126'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ Potete aggiungere il comportamento TVSDK per mettere in pausa e riprodurre i pul
       void pause() throws IllegalStateException;
       ```
 
-1. Utilizzate il `MediaPlayer.PlaybackEventListener.onStateChanged` callback per verificare la presenza di errori o per eseguire altre azioni appropriate.
+1. Utilizzate il callback `MediaPlayer.PlaybackEventListener.onStateChanged` per verificare la presenza di errori o per eseguire altre azioni appropriate.
 
    TVSDK chiama questo callback quando viene chiamato il metodo pause o play. TVSDK trasmette informazioni sulla modifica dello stato nel callback, incluso il nuovo stato, ad esempio PAUSED o PLAYING.
 
