@@ -6,6 +6,9 @@ title: Tracce audio alternative nella playlist
 uuid: 68f01375-9d57-4839-a1c0-7e022b374012
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '346'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ I seguenti requisiti si applicano se utilizzate tracce audio alternative e incor
 * Se il contenuto principale contiene tracce audio alternative, gli annunci devono avere almeno un flusso solo audio.
 * Ogni durata del segmento del flusso solo audio di un annuncio deve essere uguale alla durata del segmento del flusso video di un annuncio.
 
-La traccia audio principale è inclusa nella raccolta delle tracce audio con l&#39; `default` etichetta. I metadati per i flussi audio alternativi sono inclusi nella playlist nei `#EXT-X-MEDIA` tag con `TYPE=AUDIO`.
+La traccia audio principale è inclusa nella raccolta di tracce audio con l&#39;etichetta `default`. I metadati per i flussi audio alternativi sono inclusi nella playlist nei tag `#EXT-X-MEDIA` con `TYPE=AUDIO`.
 
 Ad esempio, un manifesto M3U8 che specifica più flussi audio alternativi potrebbe essere simile al seguente:
 
