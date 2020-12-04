@@ -6,6 +6,9 @@ title: Implementare listener e callback di eventi
 uuid: 6b7859a4-55f9-48b1-b1f1-7b79bc92610a
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '585'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ I gestori di eventi consentono a TVSDK di rispondere agli eventi.
 
 Quando si verifica un evento, il meccanismo eventi di TVSDK chiama il gestore eventi registrato e trasmette le informazioni sull&#39;evento al gestore.
 
-TVSDK definisce i listener come interfacce interne pubbliche nell&#39; `MediaPlayer` interfaccia.
+TVSDK definisce i listener come interfacce interne pubbliche nell&#39;interfaccia `MediaPlayer`.
 
 L&#39;applicazione deve implementare i listener di eventi per gli eventi TVSDK che interessano l&#39;applicazione.
 
@@ -47,7 +50,7 @@ Per un elenco completo degli eventi per l’analisi video, consultate Tracciare 
     MediaPlayer.PlayerState state, MediaPlayerNotification notification)
    ```
 
-1. Registra i listener di callback con l&#39; `MediaPlayer` oggetto utilizzando `MediaPlayer.addEventListener`.
+1. Registrare i listener di callback con l&#39;oggetto `MediaPlayer` utilizzando `MediaPlayer.addEventListener`.
 
    ```
    mediaPlayer.addEventListener(MediaPlayer.Event.PLAYBACK, 
@@ -67,20 +70,20 @@ Gli esempi seguenti mostrano l&#39;ordine di alcuni eventi che includono eventi 
 
 * Quando si carica correttamente una risorsa multimediale tramite `MediaPlayer.replaceCurrentResource`, l&#39;ordine degli eventi è:
 
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` con stato `MediaPlayer.PlayerState.INITIALIZING`
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` con stato  `MediaPlayer.PlayerState.INITIALIZING`
 
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` con stato `MediaPlayer.PlayerState.INITIALIZED`
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` con stato  `MediaPlayer.PlayerState.INITIALIZED`
 
 >[!TIP]
 >
->Caricate la risorsa multimediale sul thread principale. Se carichi una risorsa multimediale su un thread in background, questa operazione o le successive operazioni TVSDK, o entrambe, potrebbero generare un errore (ad esempio, `IllegalStateException`) e uscire.
+>Caricate la risorsa multimediale sul thread principale. Se carichi una risorsa multimediale su un thread in background, questa operazione o successive operazioni TVSDK, o entrambe, potrebbero generare un errore (ad esempio, `IllegalStateException`) e uscire.
 
 * Durante la preparazione per la riproduzione tramite `MediaPlayer.prepareToPlay`, l&#39;ordine degli eventi è:
 
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` con stato `MediaPlayerStatus.PREPARING`
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` con stato  `MediaPlayerStatus.PREPARING`
 
 1. `MediaPlayer.PlaybackEventListener.onTimelineUpdated` se sono stati inseriti degli annunci.
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` con stato `MediaPlayerStatus.PREPARED`
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` con stato  `MediaPlayerStatus.PREPARED`
 
 * Per i flussi live/lineari, durante la riproduzione con l&#39;avanzare della finestra di riproduzione e la risoluzione di ulteriori opportunità, l&#39;ordine degli eventi è:
 
@@ -209,7 +212,7 @@ mediaPlayer.addEventListener(MediaPlayer.Event.QOS,
 
 TVSDK invia eventi DRM (Digital Rights Management) in risposta a operazioni DRM correlate, ad esempio quando diventano disponibili nuovi metadati DRM. Il lettore può implementare delle azioni in risposta a questi eventi.
 
-Per ricevere notifiche su tutti gli eventi relativi a DRM, ascolta `onDRMMetadata(DRMMetadataInfo drmMetadataInfo)`. TVSDK invia eventi DRM aggiuntivi attraverso la `DRMManager` classe.
+Per ricevere notifiche su tutti gli eventi relativi a DRM, ascoltare `onDRMMetadata(DRMMetadataInfo drmMetadataInfo)`. TVSDK invia eventi DRM aggiuntivi tramite la classe `DRMManager`.
 
 L’esempio seguente mostra una progressione tipica:
 
