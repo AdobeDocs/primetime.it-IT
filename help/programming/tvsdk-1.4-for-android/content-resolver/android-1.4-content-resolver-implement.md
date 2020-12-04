@@ -6,17 +6,20 @@ title: Implementazione di un risolutore di contenuti personalizzato
 uuid: 88627fdc-3b68-4a9f-847e-a490ea8e3034
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '258'
+ht-degree: 1%
 
 ---
 
 
-# Implementazione di un risolutore di contenuti personalizzato {#implement-a-custom-content-resolver}
+# Implementazione di un risolutore di contenuto personalizzato {#implement-a-custom-content-resolver}
 
 Potete implementare dei risolutori di contenuti personalizzati in base ai risolutori predefiniti.
 
 Quando TVSDK rileva una nuova opportunità, esegue un&#39;iterazione attraverso i risolutori di contenuti registrati alla ricerca di una in grado di risolvere tale opportunità. Il primo che restituisce true è selezionato per la risoluzione dell&#39;opportunità. Se non è in grado di risolvere il problema, tale opportunità viene ignorata. Poiché il processo di risoluzione del contenuto è in genere asincrono, il risolutore del contenuto è responsabile della notifica del completamento del processo.
 
-1. Create un&#39; `AdvertisingFactory` istanza personalizzata e sovrascrivete `createContentResolver`.
+1. Create un&#39;istanza `AdvertisingFactory` personalizzata ed eseguite l&#39;override di `createContentResolver`.
 
    Ad esempio:
 
@@ -43,7 +46,7 @@ Quando TVSDK rileva una nuova opportunità, esegue un&#39;iterazione attraverso 
    }
    ```
 
-1. Registra l&#39;annuncio client factory nell&#39; `MediaPlayer`.
+1. Registra il produttore del client di annunci in `MediaPlayer`.
 
    Ad esempio:
 
@@ -53,9 +56,9 @@ Quando TVSDK rileva una nuova opportunità, esegue un&#39;iterazione attraverso 
    mediaPlayer.registerAdClientFactory(advertisingFactory);
    ```
 
-1. Passate un `AdvertisingMetadata` oggetto a TVSDK come segue:
-   1. Creare un `AdvertisingMetadata` oggetto e un `MetadataNode` oggetto.
-   1. Salvare l&#39; `AdvertisingMetadata` oggetto in `MetadataNode`.
+1. Trasmettere un oggetto `AdvertisingMetadata` a TVSDK nel modo seguente:
+   1. Creare un oggetto `AdvertisingMetadata` e un oggetto `MetadataNode`.
+   1. Salvare l&#39;oggetto `AdvertisingMetadata` in `MetadataNode`.
 
    ```java
    MetadataNode result = new MetadataNode(); 
@@ -63,7 +66,7 @@ Quando TVSDK rileva una nuova opportunità, esegue un&#39;iterazione attraverso 
                   advertisingMetadata);
    ```
 
-1. Create una classe ad resolver personalizzata che estenda la `ContentResolver` classe.
+1. Create una classe ad resolver personalizzata che estenda la classe `ContentResolver`.
    1. Nel risolutore annunci personalizzato, ignora questa funzione protetta:
 
       ```java
@@ -71,7 +74,7 @@ Quando TVSDK rileva una nuova opportunità, esegue un&#39;iterazione attraverso 
                         PlacementOpportunity placementOpportunity)
       ```
 
-      I metadati contengono i `AdvertisingMetada`dati. Utilizzatelo per la generazione `TimelineOperation` vettoriale seguente.
+      I metadati contengono il `AdvertisingMetada`. Utilizzatelo per la generazione di vettore `TimelineOperation` seguente.
 
    1. Per ogni opportunità di posizionamento, create un `Vector<TimelineOperation>`.
 
@@ -94,6 +97,7 @@ Quando TVSDK rileva una nuova opportunità, esegue un&#39;iterazione attraverso 
 
       * Se la risoluzione dell&#39;annuncio ha esito positivo: `notifyResolveComplete(Vector<TimelineOperation> proposals)`
       * Se la risoluzione dell&#39;annuncio non riesce: `notifyResolveError(Error error)`
+
       Ad esempio, se non riesce:
 
       ```java
