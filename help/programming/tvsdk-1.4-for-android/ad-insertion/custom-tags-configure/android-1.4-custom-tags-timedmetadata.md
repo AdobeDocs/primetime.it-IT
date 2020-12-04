@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Classe di metadati temporizzati{#timed-metadata-class}
+# Classe metadati temporizzati{#timed-metadata-class}
 
 Quando TVSDK rileva un tag con iscrizione nella playlist o nel manifesto, il lettore tenta automaticamente di elaborare il tag ed esporlo sotto forma di oggetto TimedMetadata.
 
@@ -29,29 +29,29 @@ La classe fornisce gli elementi seguenti:
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> id </span> </td> 
+   <td colname="col1"> <span class="codeph"> id  </span> </td> 
    <td colname="col02"> long </td> 
-   <td colname="col2"> Identificatore univoco dei metadati temporizzati. Questo valore viene in genere estratto dall’attributo cue/tag ID. In caso contrario, viene fornito un valore casuale univoco. Utilizzate <span class="codeph"> getId </span>. </td> 
+   <td colname="col2"> Identificatore univoco dei metadati temporizzati. Questo valore viene in genere estratto dall’attributo cue/tag ID. In caso contrario, viene fornito un valore casuale univoco. Utilizzare <span class="codeph"> getId </span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> metadata </span> </td> 
+   <td colname="col1"> <span class="codeph"> metadata  </span> </td> 
    <td colname="col02"> Metadati </td> 
-   <td colname="col2"> Informazioni elaborate/estratte dal tag personalizzato playlist/manifest. Utilizzate <span class="codeph"> getMetadata </span>. </td> 
+   <td colname="col2"> Informazioni elaborate/estratte dal tag personalizzato playlist/manifest. Utilizzare <span class="codeph"> getMetadata </span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> name </span> </td> 
    <td colname="col02"> Stringa </td> 
-   <td colname="col2"> Nome dei metadati temporizzati. Se il tipo è <span class="codeph"> TAG </span>, il valore rappresenta il nome del cue/tag. Se il tipo è <span class="codeph"> ID3 </span>, è null. Utilizzate <span class="codeph"> getName </span>. </td> 
+   <td colname="col2"> Nome dei metadati temporizzati. Se il tipo è <span class="codeph"> TAG </span>, il valore rappresenta il nome del cue/tag. Se il tipo è <span class="codeph"> ID3 </span>, è null. Utilizzare <span class="codeph"> getName </span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> time </span> </td> 
+   <td colname="col1"> <span class="codeph"> time  </span> </td> 
    <td colname="col02"> long </td> 
-   <td colname="col2"> La posizione temporale, in millisecondi, rispetto all'inizio del contenuto principale in cui sono presenti i metadati temporizzati nel flusso. Usa <span class="codeph"> getTime </span>. </td> 
+   <td colname="col2"> La posizione temporale, in millisecondi, rispetto all'inizio del contenuto principale in cui sono presenti i metadati temporizzati nel flusso. Utilizzare <span class="codeph"> getTime </span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> type </span> </td> 
+   <td colname="col1"> <span class="codeph"> type  </span> </td> 
    <td colname="col02"> Tipo </td> 
-   <td colname="col2"> Il tipo di metadati temporizzati. Usa <span class="codeph"> getType </span>. 
+   <td colname="col2"> Il tipo di metadati temporizzati. Utilizzare <span class="codeph"> getType </span>. 
     <ul id="ul_70FBFB33E9F846D8B38592560CCE9560"> 
      <li id="li_739D30561BFB4D9B97DF212E4880BA2C">TAG - indica che i metadati temporizzati sono stati creati da un tag nella playlist o nel manifesto. </li> 
      <li id="li_E785E1DEF1CC4D9DBE7764E5D05EFAFC">ID3 - indica che i metadati temporizzati sono stati creati da un tag ID3 nel flusso multimediale. </li> 
