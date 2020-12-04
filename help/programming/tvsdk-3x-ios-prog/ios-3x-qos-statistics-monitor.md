@@ -6,30 +6,33 @@ title: Qualità delle statistiche di servizio
 uuid: c08c1031-616a-4776-92e2-1c405467689b
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '225'
+ht-degree: 0%
 
 ---
 
 
-# Qualità delle statistiche di servizio {#quality-of-service-statistics}
+# Statistiche sulla qualità del servizio {#quality-of-service-statistics}
 
 Quality of Service (QoS) offre una visualizzazione dettagliata delle prestazioni del motore video. TVSDK fornisce statistiche dettagliate su riproduzione, buffering e dispositivi.
 
-## Lettura delle statistiche relative a riproduzione, buffering e dispositivo QOS {#section_9996406E2D814FA382B77E3041CB02BC}
+## Leggi le statistiche relative a riproduzione, buffering e dispositivo QOS {#section_9996406E2D814FA382B77E3041CB02BC}
 
-Dalla `PTQOSProvider` classe è possibile leggere le statistiche relative a riproduzione, buffering e dispositivo.
+È possibile leggere le statistiche relative a riproduzione, buffering e dispositivo dalla classe `PTQOSProvider`.
 
-La `PTQOSProvider` classe fornisce diverse statistiche, tra cui informazioni sul buffering, i bit rate, i frame rate, i dati temporali e così via.
+La classe `PTQOSProvider` fornisce diverse statistiche, tra cui informazioni sul buffering, i bit rate, i frame rate, i dati temporali e così via.
 
 Fornisce inoltre informazioni sul dispositivo, ad esempio il modello, il sistema operativo e l&#39;ID dispositivo del produttore.
 
 >[!TIP]
 >
->Non è possibile modificare la dimensione del buffer di riproduzione, ma è possibile monitorare lo stato della dimensione del buffer per il debug o l&#39;analisi. `PTPlaybackInformation` include proprietà quali `playbackBufferFull` e `playbackLikelyToKeepUp`.
+>Non è possibile modificare la dimensione del buffer di riproduzione, ma è possibile monitorare lo stato della dimensione del buffer per il debug o l&#39;analisi. `PTPlaybackInformation` include proprietà quali  `playbackBufferFull` e  `playbackLikelyToKeepUp`.
 
 1. Creare un&#39;istanza di un lettore multimediale.
-1. Creare un `PTQOSProvider` oggetto e associarlo al lettore multimediale.
+1. Create un oggetto `PTQOSProvider` e collegatelo al lettore multimediale.
 
-   Il `PTQOSProvider` costruttore prende il contesto di un lettore in modo che possa recuperare informazioni specifiche per il dispositivo.
+   Il costruttore `PTQOSProvider` prende il contesto di un lettore in modo che possa recuperare informazioni specifiche per il dispositivo.
 
    ```
    qosProvider = [[PTQOSProvider alloc]initWithPlayer:self.player]; 
