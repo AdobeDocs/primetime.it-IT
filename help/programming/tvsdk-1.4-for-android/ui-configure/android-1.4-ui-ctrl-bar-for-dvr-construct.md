@@ -6,11 +6,14 @@ title: Costruire una barra di controllo migliorata per il DVR
 uuid: c9c86383-379f-452c-b35d-447ac8691fa0
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '355'
+ht-degree: 0%
 
 ---
 
 
-# Costruire una barra di controllo migliorata per il DVR{#construct-a-control-bar-enhanced-for-dvr}
+# Costruire una barra di controllo migliorata per DVR{#construct-a-control-bar-enhanced-for-dvr}
 
 È possibile implementare una barra di controllo con supporto DVR per VOD e streaming dal vivo. Il supporto DVR include il concetto di una finestra ricercabile e il punto attivo del cliente.
 
@@ -45,7 +48,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
       }
       ```
 
-      È inoltre possibile scegliere di cercare il punto attivo del client utilizzando la `MediaPlayer.LIVE_POINT` costante.
+      È inoltre possibile scegliere di cercare il punto attivo del client utilizzando la costante `MediaPlayer.LIVE_POINT`.
 
       ```
       mediaPlayer.seek(MediaPlayer.LIVE_POINT);
