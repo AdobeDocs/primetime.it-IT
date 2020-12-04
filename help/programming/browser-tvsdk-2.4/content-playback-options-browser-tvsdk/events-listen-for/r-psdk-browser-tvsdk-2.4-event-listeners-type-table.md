@@ -6,6 +6,9 @@ title: Tipi di eventi e classi per le callback
 uuid: 13d7e939-ff45-4a52-bcbe-70abb56ac205
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '254'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Quando registrate i listener di eventi con l&#39;SDK del browser, specificate un
  <thead> 
   <tr rowsep="1"> 
    <th colname="2" class="entry"> Quando si ascolta il nome dell’evento (AdobePSDK.EventType) </th> 
-   <th class="entry">frasi/nome-browser-tvsdk passa un evento al callback di questo tipo di oggetto (<span class="codeph"> AdobePSDK.Event</span>) </th> 
+   <th class="entry">frasi/browser-tvsdk-name passa un evento al callback di questo tipo di oggetto (<span class="codeph"> AdobePSDK.Event</span>) </th> 
   </tr> 
  </thead>
  <tbody> 
