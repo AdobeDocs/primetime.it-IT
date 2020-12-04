@@ -6,6 +6,9 @@ title: Configurare PTMediaPlayer
 uuid: 78549406-7e33-4bca-a25e-1e433f6a75d7
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '198'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Utilizzate gli strumenti della piattaforma per creare un lettore e collegarlo al
 
 L&#39;interfaccia PTMediaPlayer racchiude le funzionalità e il comportamento di un oggetto Media Player.
 
-Per configurare il `PTMediaPlayer`:
+Per impostare il `PTMediaPlayer`:
 
 1. Recuperate l&#39;URL del file multimediale dall&#39;interfaccia utente, ad esempio in un campo di testo.
 
@@ -26,15 +29,15 @@ Per configurare il `PTMediaPlayer`:
    NSURL *url = [NSURL URLWithString:textFieldURL.text];
    ```
 
-1. Crea `PTMetadata`.
+1. Creare `PTMetadata`.
 
-   Supponete che il metodo `createMetada` prepari i metadati (consultate [Pubblicità](../ad-insertion/r-psdk-ios-1.4-advertising-requirements.md)).
+   Si supponga che il metodo `createMetada` prepari i metadati (vedere [Annuncio](../ad-insertion/r-psdk-ios-1.4-advertising-requirements.md)).
 
    ```
    PTMetadata *metadata = [self createMetadata]
    ```
 
-1. Crea `PTMediaPlayerItem` utilizzando la tua `PTMetadata` istanza.
+1. Creare `PTMediaPlayerItem` utilizzando l&#39;istanza `PTMetadata`.
 
    ```
    PTMediaPlayerItem *item = [[[PTMediaPlayerItem alloc] 
@@ -47,7 +50,7 @@ Per configurare il `PTMediaPlayer`:
    [self addObservers]
    ```
 
-1. Crea `PTMediaPlayer` utilizzando il nuovo `PTMediaPlayerItem`.
+1. Crea `PTMediaPlayer` utilizzando la nuova `PTMediaPlayerItem`.
 
    ```
    PTMediaPlayer *player = [PTMediaPlayer playerWithMediaPlayerItem:item];
@@ -55,7 +58,7 @@ Per configurare il `PTMediaPlayer`:
 
 1. Impostare le proprietà sul lettore.
 
-   Di seguito sono elencate alcune delle `PTMediaPlayer` proprietà disponibili:
+   Di seguito sono elencate alcune delle proprietà `PTMediaPlayer` disponibili:
 
    ```
    player.autoPlay                    = YES;  
@@ -77,14 +80,14 @@ Per configurare il `PTMediaPlayer`:
          ( UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight )];
    ```
 
-1. Aggiungere la visualizzazione del lettore nella visualizzazione secondaria corrente.
+1. Aggiungete la vista del lettore nella vista secondaria della vista corrente.
 
    ```
    [self.adPlayerView  setAutoresizesSubviews:YES];  
    [self.adPlayerView addSubview:(UIView *)player.view];
    ```
 
-1. Chiamata `play` per avviare la riproduzione del contenuto multimediale.
+1. Chiamate `play` per avviare la riproduzione multimediale.
 
    ```
    [player play];
