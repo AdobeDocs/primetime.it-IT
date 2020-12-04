@@ -4,23 +4,26 @@ title: Informazioni sui file ECI
 uuid: 124d8ab1-933b-4a1b-992a-919f3d799460
 translation-type: tm+mt
 source-git-commit: d8e4c39c297d69b154baf0b4d67cf09b5cf0a9d4
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
 
-# Informazioni sui file ECI{#about-eci-files}
+# Informazioni su file ECI{#about-eci-files}
 
-Oltre ai CRL, è inoltre necessario aggiornare periodicamente i file dell&#39;interfaccia comune incorporata (ECI). Ogni volta che Adobe aggiunge il supporto per una nuova piattaforma client DRM Primetime (ad esempio: iOS, Android, Windows Flash Player, ecc.), viene creato un nuovo record ECI. Per supportare l&#39;individualizzazione di questo client, è necessario che sul server di individuazione sia presente un record ECI corrispondente.
+Oltre ai CRL, è inoltre necessario aggiornare periodicamente i file dell&#39;interfaccia comune incorporata (ECI). Ogni volta che  Adobe aggiunge il supporto per una nuova piattaforma client Primetime DRM (ad esempio: iOS, Android, Windows Flash Player, ecc.), viene creato un nuovo record ECI. Per supportare l&#39;individualizzazione di questo client, è necessario che sul server di individuazione sia presente un record ECI corrispondente.
 
-Poiché il rilascio di nuovi client DRM Primetime non è molto frequente, Adobe rilascerà i dati ECI aggiornati in base alle esigenze. Periodicamente, Adobe raccoglierà i file ECI e li invierà nella posizione seguente per la distribuzione:
+Poiché il rilascio di nuovi client Primetime DRM non è molto frequente,  Adobe rilascerà i dati ECI aggiornati in base alle esigenze. Periodicamente,  Adobe raccoglierà i file ECI e li ospiterà nella posizione seguente per la distribuzione:
 
 ```
 http://cdmdownload.adobe.com/indiv/onprem/eci/Latest.txt
 ```
 
-Il [!DNL Latest.txt] file conterrà l&#39;URL del file di distribuzione CRL più recente.
+Il file [!DNL Latest.txt] conterrà l&#39;URL del file di distribuzione CRL più recente.
 
-Adobe creerà il file zip ECI nel modo descritto di seguito:
+ Adobe creerà il file zip ECI nel modo descritto di seguito:
 
 Struttura cartella:
 
@@ -59,7 +62,7 @@ Eseguire il seguente processo per l&#39;installazione dopo il download:
 1. Osservate il riassunto SHA-256 e ricalcolatelo utilizzando OpenSSL o uno strumento equivalente.
 1. Confrontarlo con quello specificato nel nome del file.
 1. Rinominare il file in [!DNL ECI.zip].
-1. Decomprimete la [!DNL ECI] directory.
+1. Decomprimete la directory [!DNL ECI].
 1. Sostituire la vecchia directory ECI con quella nuova.
 1. Riavviate il server di individuazione.
 
