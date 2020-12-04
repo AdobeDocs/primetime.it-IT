@@ -6,17 +6,20 @@ title: Separare il processo di annunci cliccabili
 uuid: c37f5916-eb25-41ec-b5f4-efb82ec56371
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '173'
+ht-degree: 0%
 
 ---
 
 
-# Separare il processo di annunci cliccabili {#separate-the-clickable-ad-process}
+# Separare il processo annuncio cliccabile {#separate-the-clickable-ad-process}
 
 Separare la logica dell&#39;interfaccia utente del lettore dal processo che gestisce i clic degli annunci. Un modo per farlo è implementare più frammenti per un&#39;attività.
 
-1. Implementare un frammento per contenere l&#39; `MediaPlayer`.
+1. Implementare un frammento in modo che contenga il simbolo `MediaPlayer`.
 
-   Questo frammento deve essere chiamato `notifyClick()` e deve essere responsabile della riproduzione video.
+   Questo frammento deve chiamare `notifyClick()` e deve essere responsabile della riproduzione video.
 
    ```java
    public class PlayerFragment extends SherlockFragment { 
@@ -28,9 +31,9 @@ Separare la logica dell&#39;interfaccia utente del lettore dal processo che gest
    } 
    ```
 
-1. Implementare un frammento diverso per visualizzare un elemento dell&#39;interfaccia utente che indica che un annuncio può essere cliccato, monitorare tale elemento dell&#39;interfaccia utente e comunicare i clic dell&#39;utente al frammento che contiene `MediaPlayer`.
+1. Implementate un frammento diverso per visualizzare un elemento dell&#39;interfaccia utente che indica che è possibile fare clic su un annuncio, monitorare tale elemento dell&#39;interfaccia utente e comunicare i clic dell&#39;utente al frammento contenente il simbolo `MediaPlayer`.
 
-   Questo frammento deve dichiarare un&#39;interfaccia per la comunicazione dei frammenti. Il frammento acquisisce l&#39;implementazione dell&#39;interfaccia durante il metodo `onAttach()` lifecycle e può chiamare i metodi dell&#39;interfaccia per comunicare con l&#39;attività.
+   Questo frammento deve dichiarare un&#39;interfaccia per la comunicazione dei frammenti. Il frammento acquisisce l&#39;implementazione dell&#39;interfaccia durante il suo `onAttach()` metodo lifecycle e può chiamare i metodi dell&#39;interfaccia per comunicare con l&#39;attività.
 
    ```java
    public class PlayerClickableAdFragment extends SherlockFragment { 
