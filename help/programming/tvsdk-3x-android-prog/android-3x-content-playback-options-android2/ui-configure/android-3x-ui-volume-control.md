@@ -6,11 +6,14 @@ title: Controllo del volume
 uuid: c87fe656-0329-4c9c-b65b-43be48c77062
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '116'
+ht-degree: 1%
 
 ---
 
 
-# Controllo del volume {#provide-volume-control}
+# Controllo volume {#provide-volume-control}
 
 Potete impostare un controllo dell’interfaccia utente per regolare il volume del video.
 
@@ -20,7 +23,7 @@ Potete impostare un controllo dell’interfaccia utente per regolare il volume d
    >
    >Qualsiasi stato, tranne RELEASED, è valido.
 
-1. Chiamata `setVolume` per impostare il volume audio.
+1. Chiamate `setVolume` per impostare il volume audio.
 
    Ad esempio:
 
@@ -28,4 +31,4 @@ Potete impostare un controllo dell’interfaccia utente per regolare il volume d
    void setVolume(int volume) throws MediaPlayerException;
    ```
 
-   Il valore per il volume rappresenta il volume richiesto espresso in proporzione al volume massimo, dove `0` è silenzioso e `1` corrisponde al volume massimo.
+   Il valore per il volume rappresenta il volume richiesto espresso in proporzione al volume massimo, dove `0` è silenzioso e `1` è il volume massimo.
