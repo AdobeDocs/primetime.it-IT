@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Guida alla programmazione di Primetime {#programming}
+# Guida alla programmazione di Primetime  {#programming}
 
 + [Panoramica sulla programmazione](home.md)
 + TVSDK 3x per Android {#tvsdk-3x-android-prog}
@@ -22,20 +22,20 @@ ht-degree: 0%
       + [Funzioni Primetime TVSDK](tvsdk-3x-android-prog/android-3x-introduction/overview-prod-audience-guide/android-3x-overview-of-the-player.md)
       + [Considerazioni e procedure ottimali](tvsdk-3x-android-prog/android-3x-introduction/overview-prod-audience-guide/android-3x-considerations.md)
       + [Requisiti](tvsdk-3x-android-prog/android-3x-introduction/android-3x-requirements.md)
-   + Opzioni di riproduzione del contenuto {#content-playback-options}
+   + Opzioni di riproduzione dei contenuti {#content-playback-options}
       + [Configurare il lettore multimediale](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/android-3x-mediaplayer-set-up-android.md)
       + Operazioni con gli oggetti MediaPlayer {#work-with-media-player-objects}
          + [Informazioni sulla classe MediaPlayerItem](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-mediaplayeritem-class-about.md)
          + [Ciclo di vita e stati dell&#39;oggetto MediaPlayer](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-mediaplayer-object-lifecycle-states.md)
          + [Metodi MediaPlayerItem per accedere alle informazioni MediaResource](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-mediaplayeritem-accessing-mediaresource.md)
          + [Riutilizzare o rimuovere un&#39;istanza di MediaPlayer](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-mediaplayer-reuse-or-remove.md)
-         + [Inspect la timeline di riproduzione](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-timeline-inspect-playback.md)
+         + [ Inspect la timeline di riproduzione](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-timeline-inspect-playback.md)
          + [Sospendi e ripristina MediaPlayer](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-suspend-and-restore.md)
       + Ascoltare gli eventi di Primetime Player {#listen-primetime-player-events}
          + [Panoramica](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/events-listen-for/android-3x-events-listen-for.md)
          + [Implementare listener e callback di eventi](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/events-listen-for/android-3x-event-listeners-implement.md)
       + [Impostazione della gestione degli errori](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/android-3x-error-handling-set-up.md)
-      + Configurare l’interfaccia utente del lettore {#configure-player-user-interface}
+      + Configurare l&#39;interfaccia utente del lettore {#configure-player-user-interface}
          + [Attendi uno stato valido](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-state-prepared-wait-for.md)
          + [Riproduzione e pausa di un video](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-pause-play-implement.md)
          + [Identificare se il contenuto è live o VOD](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-content-live-vod-identify.md)
@@ -48,14 +48,14 @@ ht-degree: 0%
          + [Creazione di una risorsa multimediale](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-create.md)
          + [Caricare una risorsa multimediale nel lettore multimediale](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-load.md)
          + [Caricamento di una risorsa multimediale tramite MediaPlayerItemLoader](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-mediaplayeritemloader.md)
-      + Implementazione rapida in avanti e indietro {#implement-fast-forward}
+      + Implementazione rapida in avanti e riavvolgimento {#implement-fast-forward}
          + [Panoramica](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/trick-play-implement/android-3x-trick-play-implement.md)
          + [Elementi API Rate-change](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/trick-play-implement/android-3x-trick-play-apis.md)
          + [Limitazioni e comportamento per il gioco di trucchi](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/trick-play-implement/android-3x-trick-play-limitations.md)
          + [Operazioni di gioco con i trucchi più semplici](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/trick-play-implement/android-3x-trick-play-smooth.md)
       + [Ottimizzazione reindirizzamento HTTP 302](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/android-3x-302-redirect-overview.md)
       + [Operazioni con i cookie](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/android-3x-cookies-work-with.md)
-      + Utilizzo dei sottotitoli codificati {#work-closed-captions}
+      + Utilizzare i sottotitoli codificati {#work-closed-captions}
          + [Panoramica](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/closed-captions-set-up/android-3x-closed-captions-set-up.md)
          + [Selezionare una traccia di didascalia corrente tra le tracce disponibili](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/closed-captions-set-up/android-3x-closed-caption-available.md)
          + [Controllo della visibilità dei sottotitoli](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/closed-captions-set-up/closed-caption-visibility-control/android-3x-closed-caption-visibility-control.md)
@@ -84,7 +84,7 @@ ht-degree: 0%
       + [Consegna protetta tramite HTTPS](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/android-3x-secure-delivery.md)
    + Pubblicità {#advertising}
       + [Pubblicità e relative esigenze](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/android-3x-ad-insertion.md)
-      + Inserire annunci {#insert-ads}
+      + Inserisci annunci {#insert-ads}
          + [Panoramica](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-about/android-3x-ad-insertion-about.md)
          + [Risolvere e inserire annunci VOD](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-about/android-3x-ad-resolving-client-vod.md)
          + [Risolvere e inserire annunci live/lineari](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-about/android-3x-ad-resolving-client-live-linear.md)
@@ -93,23 +93,23 @@ ht-degree: 0%
          + [Gestione errori client per VMAP interrotto](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-about/android-3x-broken-vmap-error.md)
          + [Protezione del caricamento di annunci tramite HTTPS](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-about/android-3x-secure-ad-loading.md)
          + [Comportamento di riproduzione predefinito e personalizzato con gli annunci](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/android-3x-playback-post.md)
-      + Personalizzare la riproduzione con gli annunci {#customize-playback}
+      + Personalizzare la riproduzione con annunci {#customize-playback}
          + [Panoramica](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/playback-customize/android-3x-playback-customize.md)
          + [Elementi API per la riproduzione di annunci](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/playback-customize/android-3x-playback-ad-custom-elements.md)
          + [Utilizzare il comportamento di riproduzione predefinito](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/playback-customize/android-3x-playback-use-default.md)
          + [Ignora interruzioni annuncio per un periodo di tempo](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/playback-customize/android-3x-playback-skip-breaks.md)
          + [Salvate la posizione del video e riprendete più tardi](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/playback-customize/android-3x-playback-save-position.md)
          + [Inserimento interruzione annuncio parziale](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/playback-customize/android-3x-partial-ad-break-insertion.md)
-      + Risoluzione degli annunci nel tempo {#just-in-time}
+      + Risoluzione annunci giusti nel tempo {#just-in-time}
          + [Panoramica](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/c-lazy-ad-resolving/c-lazy-ad-resolving.md)
          + [Abilita risoluzione annunci pigri](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/c-lazy-ad-resolving/t-enable-lazy-ad-resolving.md)
          + [Aggiornamento da 2.7.x Lazy Ad Resolving a 3.x Lazy Ad Resolving (modifiche API/Flusso di lavoro)](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/t-upgrade-to-3x.md)
-      + Aggiungi metadati di inserimento {#ad-insertion-metadata}
+      + Metadati di inserimento annunci {#ad-insertion-metadata}
          + [Panoramica](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/android-3x-ad-insertion-metadata.md)
          + [Impostare e inserire i metadati](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/android-3x-ad-insertion-metadata-set-up.md)
          + [Abilitare gli annunci nella riproduzione a tutti gli eventi](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/ad-full-event-replay/android-3x-ad-full-event-replay.md)
          + [Modalità di segnalazione annunci](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/ad-full-event-replay/android-3x-ad-signaling-mode.md)
-      + Annunci per banner {#companion-banner-ads}
+      + Annunci per banner completi {#companion-banner-ads}
          + [Procedure ottimali per gli annunci banner pubblicitari associati](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/comp-banner-ads/android-3x-banners-best-practices.md)
          + [Dati banner complementari](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/comp-banner-ads/android-3x-companion-banner-data.md)
          + [Visualizza annunci banner](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/comp-banner-ads/android-3x-companion-banner-ads-display.md)
@@ -118,7 +118,7 @@ ht-degree: 0%
          + [Separare il processo di annunci cliccabili](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/clickable-ads/android-3x-separate-clickable-ad-process.md)
          + [Sospendi e riprendi riproduzione](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/clickable-ads/android-3x-pausing-resuming-playback.md)
       + [Repackage di annunci incompatibili con  Adobe CRS overview](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-transcoding/android-3x-ad-transcoding.md)
-      + Abbandono annunci pubblicitari per annunci VAST e VMAP {#ad-fallback}
+      + Annuncio fallback per annunci VAST e VMAP {#ad-fallback}
          + [Panoramica](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-fallback/android-3x-ad-fallback.md)
          + [Definizione del comportamento fallback ad annunci in linea VMAP](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-fallback/android-3x-ad-fallback-set-up.md)
          + [Comportamento di fallback annunci per VAST e VMAP](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-fallback/android-3x-ad-fallback-behavior.md)
@@ -130,11 +130,11 @@ ht-degree: 0%
          + [Iscriviti ai tag personalizzati](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-custom-tags-subscribe.md)
          + [Aggiunta di listener per le notifiche di metadati temporizzate](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-custom-tags-receive-notifications.md)
          + [Archiviare gli oggetti metadati temporizzati durante l&#39;invio](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-timed-metadata-store.md)
-      + Supporto per VPAID 2.0 ad {#vpaid-ad-support}
+      + Supporto di annunci VPAID 2.0 {#vpaid-ad-support}
          + [Panoramica](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/vpaid-ads/android-3x-vpaid-ads.md)
          + [Implementare l&#39;integrazione VPAID 2.0](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/vpaid-ads/android-3x-include-vpaid-support.md)
       + [Misurazioni di annunci da Moat](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/android-3x-ad-measurements-from-moat.md)
-      + Aggiunta di indicatori di annunci personalizzati {#add-custom-ad}
+      + Aggiungi marcatori annunci personalizzati {#add-custom-ad}
          + [Panoramica](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-markers-add-custom/android-3x-ad-markers-add-custom.md)
          + [Classe TimeRange](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-markers-add-custom/android-3x-timerange-class.md)
          + [Classi MediaPlayer e MediaResource](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-markers-add-custom/android-3x-mediaplayer-mediaresource-classes.md)
@@ -192,10 +192,10 @@ ht-degree: 0%
       + [Funzioni Primetime TVSDK](tvsdk-3x-ios-prog/ios-3x-introduction/ios-3x-overview/ios-3x-overview-of-the-player.md)
       + [Considerazioni e procedure ottimali](tvsdk-3x-ios-prog/ios-3x-introduction/ios-3x-overview/ios-3x-considerations.md)
       + [Requisiti](tvsdk-3x-ios-prog/ios-3x-introduction/ios-3x-requirements.md)
-   + Opzioni di riproduzione del contenuto {#content-playback-options}
+   + Opzioni di riproduzione dei contenuti {#content-playback-options}
       + [Configurare PTMediaPlayer](tvsdk-3x-ios-prog/ios-3x-content-playback-options/ios-3x-create-a-video-player/ios-3x-mediaplayer-set-up-ios.md)
       + [Impostazione delle notifiche](tvsdk-3x-ios-prog/ios-3x-content-playback-options/ios-3x-create-a-video-player/ios-3x-notification.md)
-   + Configurare l’interfaccia utente del lettore {#configure-interface}
+   + Configurare l&#39;interfaccia utente del lettore {#configure-interface}
       + [Panoramica](tvsdk-3x-ios-prog/ios-3x-content-playback-options/ios-3x-create-a-video-player/ios-3x-configure-ui/ios-3x-configure-ui.md)
       + [Attendere uno stato valido](tvsdk-3x-ios-prog/ios-3x-content-playback-options/ios-3x-create-a-video-player/ios-3x-configure-ui/ios-3x-ui-state-prepared-wait-for.md)
       + [Implementare un pulsante di riproduzione/pausa](tvsdk-3x-ios-prog/ios-3x-content-playback-options/ios-3x-create-a-video-player/ios-3x-configure-ui/ios-3x-implement-pause-play.md)
@@ -214,7 +214,7 @@ ht-degree: 0%
       + [Comportamento di riproduzione predefinito e personalizzato con gli annunci](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-playback-post1.2.md)
       + [Personalizzare la riproduzione con gli annunci](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-playback-customize.md)
       + [Soluzione di annunci Just-in-Time](tvsdk-3x-ios-prog/ios-3x-advertising/c-ios-lazy-ad-resolving.md)
-   + Metdata Primetime e server {#ad-server-metadata}
+   + Metdata Primetime ad server {#ad-server-metadata}
       + [Configurare i metadati Primetime e del server](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md)
       + [Abilitare gli annunci nella riproduzione a tutti gli eventi](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-full-event-replay.md)
       + [Modalità di segnalazione annunci](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-ad-signaling-mode.md)
@@ -241,7 +241,7 @@ ht-degree: 0%
       + [Esempi di regole di selezione creativa](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-updating-rules/ios-3x-sample-rule-files.md)
       + [Applica regole di selezione creative](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-updating-rules/ios-3x-how-tvsdk-applies-csr.md)
    + [Flussi di segmenti con token](tvsdk-3x-ios-prog/ios-3x-tokenized-segment-streams.md)
-   + Personalizzare rilevatori di opportunità e risolutori di contenuti {#customize-content-resolvers}
+   + Personalizzare i rilevatori di opportunità e i risolutori di contenuti {#customize-content-resolvers}
       + [Generatori di opportunità e risolutori di contenuti](tvsdk-3x-ios-prog/ios-3x-content-resolver/ios-3x-content-resolver-about.md)
       + [Implementare un risolutore di contenuti/opportunità personalizzato](tvsdk-3x-ios-prog/ios-3x-content-resolver/ios-3x-content-resolver-implement-ios.md)
    + Eliminare e sostituire gli annunci nei flussi VOD {#delete-replace-content-vod}
@@ -270,7 +270,7 @@ ht-degree: 0%
    + Protezione dei contenuti {#content-protection}
       + [Panoramica dell&#39;interfaccia DRM di Primetime](tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-drm-interface.md)
       + [Apple FairPlay nelle applicazioni TVSDK](tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md)
-      + [Elenco consentiti dell&#39;applicazione iOS](tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-allowlist-your-ios-application.md)
+      + [ Elenco consentiti dell&#39;applicazione iOS](tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-allowlist-your-ios-application.md)
    + [Notifiche per lo stato del lettore, l&#39;attività, gli errori e i registri](tvsdk-3x-ios-prog/ios-3x-notification-system/ios-3x-notification-content.md)
    + [Registrazione personalizzata](tvsdk-3x-ios-prog/ios-3x-customized-logging/c-ios-customized-logging/c-ios-customized-logging.md)
    + [Failover](tvsdk-3x-ios-prog/ios-3x-understanding-failover.md)
@@ -297,20 +297,20 @@ ht-degree: 0%
       + [Funzioni Primetime TVSDK](tvsdk-2.7-for-android/overview-prod-audience-guide/c-psdk-android-2.7-overview-of-the-player.md)
       + [Considerazioni e procedure ottimali](tvsdk-2.7-for-android/overview-prod-audience-guide/c-psdk-android-2.7-considerations.md)
       + [Requisiti](tvsdk-2.7-for-android/c-psdk-android-2.7-requirements.md)
-   + Opzioni di riproduzione del contenuto {#content-playback-options}
+   + Opzioni di riproduzione dei contenuti {#content-playback-options}
       + [Configurare MediaPlayer](tvsdk-2.7-for-android/content-playback-options/t-psdk-android-2.7-mediaplayer-set-up-android.md)
       + Operazioni con gli oggetti MediaPlayer {#work-with-mediaplayer-objects}
          + [Informazioni sulla classe MediaPlayerItem](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/c-psdk-android-2.7-mediaplayeritem-class-about.md)
          + [Ciclo di vita e stati dell&#39;oggetto MediaPlayer](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/c-psdk-android-2.7-mediaplayer-object-lifecycle-states.md)
          + [Metodi MediaPlayerItem per accedere alle informazioni MediaResource](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/r-psdk-android-2.7-mediaplayeritem-methods-for-accessing-mediaresource.md)
          + [Riutilizzare o rimuovere un&#39;istanza di MediaPlayer](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/c-psdk-android-2.7-mediaplayer-reuse-or-remove.md)
-         + [Inspect la timeline di riproduzione](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/t-psdk-android-2.7-timeline-inspect-playback.md)
+         + [ Inspect la timeline di riproduzione](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/t-psdk-android-2.7-timeline-inspect-playback.md)
          + [Sospendi e ripristina MediaPlayer](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/c-psdk-android-2.7-suspend-and-restore.md)
       + Ascoltare gli eventi di Primetime Player   {#listen-primetime-player-events}
          + [Panoramica](tvsdk-2.7-for-android/content-playback-options/c-psdk-android-2.7-events-listen-for.md)
          + [Implementare listener e callback di eventi](tvsdk-2.7-for-android/content-playback-options/t-psdk-android-2.7-event-listeners-implement.md)
       + [Impostazione della gestione degli errori](tvsdk-2.7-for-android/content-playback-options/t-psdk-android-2.7-error-handling-set-up.md)
-      + Configurare l’interfaccia utente del lettore {#configure-user-interface}
+      + Configurare l&#39;interfaccia utente del lettore {#configure-user-interface}
          + [Attendi uno stato valido](tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-state-prepared-wait-for.md)
          + [Riproduzione e pausa di un video](tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-pause-play-implement.md)
          + [Identificare se il contenuto è live o VOD](tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-content-live-vod-identify.md)
@@ -323,17 +323,17 @@ ht-degree: 0%
          + [Creazione di una risorsa multimediale](tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-create.md)
          + [Caricare una risorsa multimediale nel lettore multimediale](tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load.md)
          + [Caricamento di una risorsa multimediale tramite MediaPlayerItemLoader](tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load-using-mediaplayeritemloader.md)
-      + Implementazione rapida in avanti e indietro {#implement-fast-forward}
+      + Implementazione rapida in avanti e riavvolgimento {#implement-fast-forward}
          + [Panoramica](tvsdk-2.7-for-android/content-playback-options/trick-play-implement/t-psdk-android-2.7-trick-play-implement.md)
          + [Elementi API Rate-change](tvsdk-2.7-for-android/content-playback-options/trick-play-implement/r-psdk-android-2.7-trick-play-apis.md)
          + [Limitazioni e comportamento per il gioco di trucchi](tvsdk-2.7-for-android/content-playback-options/trick-play-implement/c-psdk-android-2.7-trick-play-limitations.md)
          + [Operazioni di gioco con i trucchi più semplici](tvsdk-2.7-for-android/content-playback-options/trick-play-implement/c-psdk-android-2.7-trick-play-smooth.md)
       + [Ottimizzazione reindirizzamento HTTP 302](tvsdk-2.7-for-android/content-playback-options/c-psdk-android-2.7-302-redirect-overview.md)
       + [Operazioni con i cookie](tvsdk-2.7-for-android/content-playback-options/t-psdk-android-2.7-cookies-work-with.md)
-      + Utilizzo dei sottotitoli codificati {#closed-captions}
+      + Utilizzare i sottotitoli codificati {#closed-captions}
          + [Panoramica](tvsdk-2.7-for-android/content-playback-options/closed-captions-set-up/c-psdk-android-2.7-closed-captions-set-up.md)
          + [Selezionare una traccia di didascalia corrente tra le tracce disponibili](tvsdk-2.7-for-android/content-playback-options/closed-captions-set-up/t-psdk-android-2.7-closed-caption-available-current.md)
-         + Controllo della visibilità dei sottotitoli {#control-visibility}
+         + Controllare la visibilità dei sottotitoli codificati {#control-visibility}
             + [Panoramica](tvsdk-2.7-for-android/content-playback-options/closed-captions-set-up/closed-caption-visibility-control/t-psdk-android-2.7-closed-caption-visibility-control.md)
             + [Consenti agli utenti di modificare la traccia della didascalia](tvsdk-2.7-for-android/content-playback-options/closed-captions-set-up/closed-caption-visibility-control/t-psdk-android-2.7-closed-caption-track-allow-user-to-change.md)
          + [Controllo dello stile dei sottotitoli codificati](tvsdk-2.7-for-android/content-playback-options/closed-captions-set-up/c-psdk-android-2.7-closed-caption-styling-control.md)
@@ -358,7 +358,7 @@ ht-degree: 0%
          + [Inserimento pubblicitario e failover per VOD](tvsdk-2.7-for-android/content-playback-options/failover-for-playback/c-psdk-android-2.7-failover-ad-insertion-for-vod.md)
    + Pubblicità {#advertising}
       + [Pubblicità e relative esigenze](tvsdk-2.7-for-android/ad-insertion/c-psdk-android-2.7-ad-insertion.md)
-      + Inserire annunci {#insert-ads}
+      + Inserisci annunci {#insert-ads}
          + [Panoramica](tvsdk-2.7-for-android/ad-insertion/ad-insertion-about/c-psdk-android-2.7-ad-insertion-about.md)
          + [Risolvere e inserire annunci VOD](tvsdk-2.7-for-android/ad-insertion/ad-insertion-about/c-psdk-android-2.7-ad-resolving-client-vod.md)
          + [Risolvere e inserire annunci live/lineari](tvsdk-2.7-for-android/ad-insertion/ad-insertion-about/c-psdk-android-2.7-ad-resolving-client-live-linear.md)
@@ -367,22 +367,22 @@ ht-degree: 0%
          + [Gestione errori client per VMAP interrotto](tvsdk-2.7-for-android/ad-insertion/ad-insertion-about/c-psdk-android-2.7-broken-vmap-error.md)
          + [Protezione del caricamento di annunci tramite HTTPS](tvsdk-2.7-for-android/ad-insertion/ad-insertion-about/c-psdk-android-2.7-secure-ad-loading.md)
          + [Comportamento di riproduzione predefinito e personalizzato con gli annunci](tvsdk-2.7-for-android/ad-insertion/c-psdk-android-2.7-playback-post1.2.md)
-      + Personalizzare la riproduzione con gli annunci {#customize-playback}
+      + Personalizzare la riproduzione con annunci {#customize-playback}
          + [Panoramica](tvsdk-2.7-for-android/ad-insertion/playback-customize/c-psdk-android-2.7-playback-customize.md)
          + [Elementi API per la riproduzione di annunci](tvsdk-2.7-for-android/ad-insertion/playback-customize/c-psdk-android-2.7-playback-ad-custom-elements.md)
          + [Utilizzare il comportamento di riproduzione predefinito](tvsdk-2.7-for-android/ad-insertion/playback-customize/t-psdk-android-2.7-playback-use-default.md)
          + [Ignora interruzioni annuncio per un periodo di tempo](tvsdk-2.7-for-android/ad-insertion/playback-customize/t-psdk-android-2.7-playback-skip-breaks.md)
          + [Salvate la posizione del video e riprendete più tardi](tvsdk-2.7-for-android/ad-insertion/playback-customize/t-psdk-android-2.7-playback-save-position.md)
          + [Inserimento interruzione annuncio parziale](tvsdk-2.7-for-android/ad-insertion/playback-customize/c-psdk-android-2.7-partial-ad-break-insertion.md)
-      + Lazy e risoluzione {#lazy-ad-resolving}
+      + Risoluzione annunci pigri {#lazy-ad-resolving}
          + [Panoramica](tvsdk-2.7-for-android/ad-insertion/c-psdk-android-2.7-lazy-ad-resolving/c-psdk-android-2.7-lazy-ad-resolving.md)
          + [Abilita risoluzione annunci pigri](tvsdk-2.7-for-android/ad-insertion/c-psdk-android-2.7-lazy-ad-resolving/t-psdk-android-2.7-enable-lazy-ad-resolving.md)
-      + Aggiungi metadati di inserimento {#ad-insertion-metadata}
+      + Metadati di inserimento annunci {#ad-insertion-metadata}
          + [Panoramica](tvsdk-2.7-for-android/ad-insertion/ad-insertion-metadata/c-psdk-android-2.7-ad-insertion-metadata.md)
          + [Impostare e inserire i metadati](tvsdk-2.7-for-android/ad-insertion/ad-insertion-metadata/t-psdk-android-2.7-ad-insertion-metadata-set-up.md)
          + [Abilitare gli annunci nella riproduzione a tutti gli eventi](tvsdk-2.7-for-android/ad-insertion/ad-insertion-metadata/ad-full-event-replay/t-psdk-android-2.7-ad-full-event-replay.md)
          + [Modalità di segnalazione annunci](tvsdk-2.7-for-android/ad-insertion/ad-insertion-metadata/ad-full-event-replay/r-psdk-android-2.7-ad-signaling-mode.md)
-      + Annunci per banner {#companion-banner-ads}
+      + Annunci per banner completi {#companion-banner-ads}
          + [Procedure ottimali per gli annunci banner pubblicitari associati](tvsdk-2.7-for-android/ad-insertion/comp-banner-ads/c-psdk-android-2.7-companion-banners-best-practices.md)
          + [Dati banner complementari](tvsdk-2.7-for-android/ad-insertion/comp-banner-ads/r-psdk-android-2.7-companion-banner-data.md)
          + [Visualizza annunci banner](tvsdk-2.7-for-android/ad-insertion/comp-banner-ads/t-psdk-android-2.7-companion-banner-ads-display.md)
@@ -391,7 +391,7 @@ ht-degree: 0%
          + [Separare il processo di annunci cliccabili](tvsdk-2.7-for-android/ad-insertion/clickable-ads/t-psdk-android-2.7-separate-clickable-ad-process.md)
          + [Sospendi e riprendi riproduzione](tvsdk-2.7-for-android/ad-insertion/clickable-ads/t-psdk-android-2.7-pausing-resuming-playback.md)
       + [Reimballaggio di annunci incompatibili con  Adobe Creative Repackaging Service (CRS)](tvsdk-2.7-for-android/ad-insertion/ad-transcoding/c-psdk-android-2.7-ad-transcoding.md)
-      + Abbandono annunci pubblicitari per annunci VAST e VMAP {#ad-fallback}
+      + Annuncio fallback per annunci VAST e VMAP {#ad-fallback}
          + [Panoramica](tvsdk-2.7-for-android/ad-insertion/ad-fallback/c-psdk-android-2.7-ad-fallback.md)
          + [Definizione del comportamento fallback ad annunci in linea VMAP](tvsdk-2.7-for-android/ad-insertion/ad-fallback/t-psdk-android-2.7-ad-fallback-set-up.md)
          + [Comportamento di fallback annunci per VAST e VMAP](tvsdk-2.7-for-android/ad-insertion/ad-fallback/r-psdk-android-2.7-ad-fallback-behavior.md)
@@ -403,11 +403,11 @@ ht-degree: 0%
          + [Iscriviti ai tag personalizzati](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/t-psdk-android-2.7-custom-tags-subscribe.md)
          + [Aggiunta di listener per le notifiche di metadati temporizzate](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/t-psdk-android-2.7-custom-tags-receive-notifications.md)
          + [Archiviare gli oggetti metadati temporizzati durante l&#39;invio](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/t-psdk-android-2.7-timed-metadata-store.md)
-      + Supporto per VPAID 2.0 ad {#vpaid-ad-support}
+      + Supporto di annunci VPAID 2.0 {#vpaid-ad-support}
          + [Panoramica](tvsdk-2.7-for-android/ad-insertion/vpaid-2.0-ads/c-psdk-android-2.7-vpaid-2.0-ads.md)
          + [Implementare l&#39;integrazione VPAID 2.0](tvsdk-2.7-for-android/ad-insertion/vpaid-2.0-ads/t-psdk-android-2.7-include-vpaid20-support.md)
       + [Misurazioni di annunci da Moat](tvsdk-2.7-for-android/ad-insertion/c-psdk-android-2.7-ad-measurements-from-moat.md)
-      + Aggiunta di indicatori di annunci personalizzati {#add-custom-markers}
+      + Aggiungi marcatori annunci personalizzati {#add-custom-markers}
          + [Panoramica](tvsdk-2.7-for-android/ad-insertion/ad-markers-add-custom/c-psdk-android-2.7-ad-markers-add-custom.md)
          + [Classe TimeRange](tvsdk-2.7-for-android/ad-insertion/ad-markers-add-custom/r-psdk-android-2.7-timerange-class.md)
          + [Classi MediaPlayer e MediaResource](tvsdk-2.7-for-android/ad-insertion/ad-markers-add-custom/r-psdk-android-2.7-mediaplayer-mediaresource-classes.md)
@@ -429,7 +429,7 @@ ht-degree: 0%
             + [Sostituire gli intervalli di tempo con un annuncio](tvsdk-2.7-for-android/ad-insertion/delete-replace-content-vod/ad-delete-replace-use-cases/t-psdk-android-2.7-replace-ranges-with-aud-ad-android.md)
             + [Elimina intervalli](tvsdk-2.7-for-android/ad-insertion/delete-replace-content-vod/ad-delete-replace-use-cases/t-psdk-android-2.7-delete-ranges-with-aud-ad-android.md)
          + [Esempi per eliminare e sostituire gli annunci](tvsdk-2.7-for-android/ad-insertion/delete-replace-content-vod/c-psdk-android-2.7-ad-delete-replace-examples.md)
-         + Gestione degli errori di aggiunta ed eliminazione {#ad-deletion-and-replacement}
+         + Gestione degli errori di eliminazione e sostituzione degli annunci {#ad-deletion-and-replacement}
             + [Panoramica](tvsdk-2.7-for-android/ad-insertion/delete-replace-content-vod/ad-delete-replace-error-handling/c-psdk-android-2.7-ad-delete-replace-error-handling.md)
             + [Esempi di errori nell&#39;intervallo di tempo](tvsdk-2.7-for-android/ad-insertion/delete-replace-content-vod/ad-delete-replace-error-handling/c-psdk-android-2.7-timerange-error-examples-dhls.md)
       + Aggiorna regole di selezione creativa {#update-ad-rules}
@@ -472,7 +472,7 @@ ht-degree: 0%
       + [Panoramica](tvsdk-1.4-for-android/android-1.4-primetime-player-events/events-listen-for/android-1.4-events-listen-for.md)
       + [Implementare listener e callback di eventi](tvsdk-1.4-for-android/android-1.4-primetime-player-events/events-listen-for/android-1.4-event-listeners-implement.md)
    + [Impostazione della gestione degli errori](tvsdk-1.4-for-android/android-1.4-error-handling-set-up.md)
-   + Configurare l’interfaccia utente del lettore {#configure-user-interface}
+   + Configurare l&#39;interfaccia utente del lettore {#configure-user-interface}
       + [Attendere uno stato valido](tvsdk-1.4-for-android/ui-configure/android-1.4-ui-state-prepared-wait-for.md)
       + [Riproduzione e pausa di un video](tvsdk-1.4-for-android/ui-configure/android-1.4-ui-pause-play-implement.md)
       + [Identificare se il contenuto è live o VOD](tvsdk-1.4-for-android/ui-configure/android-1.4-ui-content-live-vod-identify.md)
@@ -480,7 +480,7 @@ ht-degree: 0%
       + [Visualizzare la durata, l’ora corrente e il tempo rimanente del video](tvsdk-1.4-for-android/ui-configure/android-1.4-ui-duration-time-display.md)
       + [Visualizzare una barra di scorrimento della ricerca con la posizione di riproduzione corrente](tvsdk-1.4-for-android/ui-configure/android-1.4-ui-seek-scrub-bar-display.md)
       + [Costruire una barra di controllo migliorata per il DVR](tvsdk-1.4-for-android/ui-configure/android-1.4-ui-ctrl-bar-for-dvr-construct.md)
-      + Implementazione rapida in avanti e indietro {#implement-fast-forward-rewind}
+      + Implementazione rapida in avanti e riavvolgimento {#implement-fast-forward-rewind}
          + [Panoramica](tvsdk-1.4-for-android/ui-configure/trick-play-implement/android-1.4-trick-play-implement.md)
          + [Elementi API Rate-change](tvsdk-1.4-for-android/ui-configure/trick-play-implement/android-1.4-trick-play-apis.md)
          + [Limitazioni e comportamento per il gioco di trucchi](tvsdk-1.4-for-android/ui-configure/trick-play-implement/android-1.4-trick-play-limitations.md)
@@ -493,7 +493,7 @@ ht-degree: 0%
          + [Creazione di una risorsa multimediale](tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-resource-create.md)
          + [Caricamento di una risorsa multimediale in MediaPlayer](tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-resource-load.md)
          + [Caricamento di una risorsa multimediale tramite MediaPlayerItemLoader](tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-mediaplayeritemloader.md)
-      + Qualità delle statistiche di servizio {#qos-statistics}
+      + Statistiche sulla qualità del servizio {#qos-statistics}
          + [Tenere traccia a livello di frammento utilizzando le informazioni sul caricamento](tvsdk-1.4-for-android/qos-statistics-monitor/android-1.4-qos-fragment-tracking.md)
          + [Lettura delle statistiche relative a riproduzione, buffering e dispositivo QOS](tvsdk-1.4-for-android/qos-statistics-monitor/android-1.4-qos-stats-read.md)
       + [Operazioni con i cookie](tvsdk-1.4-for-android/android-1.4-cookies-work-with.md)
@@ -503,13 +503,13 @@ ht-degree: 0%
          + [Ciclo di vita dell&#39;oggetto MediaPlayer](tvsdk-1.4-for-android/mediaplayerobjects-working-with/android-1.4-mediaplayer-object-lifecycle-states.md)
          + [Metodi MediaPlayer per accedere alle informazioni MediaResource](tvsdk-1.4-for-android/mediaplayerobjects-working-with/android-1.4-mediaplayer-mediaresource.md)
          + [Reimpostare, riutilizzare o rimuovere un’istanza di MediaPlayer](tvsdk-1.4-for-android/mediaplayerobjects-working-with/mediaplayer-reuse-or-remove/android-1.4-mediaplayer-reset-reuse-instance.md)
-         + [Inspect la timeline di riproduzione](tvsdk-1.4-for-android/mediaplayerobjects-working-with/android-1.4-timeline-inspect-playback.md)
+         + [ Inspect la timeline di riproduzione](tvsdk-1.4-for-android/mediaplayerobjects-working-with/android-1.4-timeline-inspect-playback.md)
       + [ID3, tag](tvsdk-1.4-for-android/notification-system/android-1.4-id3-metadata-retrieve.md)
       + [Buffering](tvsdk-1.4-for-android/buffering-configuration/android-1.4-buffering-times-set.md)
       + [Instant on](tvsdk-1.4-for-android/buffering-configuration/instant-on/android-1.4-instant-on.md)
       + Pubblicità {#advertising}
          + [Requisiti di pubblicità](tvsdk-1.4-for-android/ad-insertion/android-1.4-advertising-requirements.md)
-      + Inserire annunci {#inserting-ads}
+      + Inserisci annunci {#inserting-ads}
          + [Panoramica](tvsdk-1.4-for-android/ad-insertion/ad-insertion-about/android-1.4-ad-insertion-about.md)
          + [Inserimento e posizionamento di annunci](tvsdk-1.4-for-android/ad-insertion/ad-insertion-about/android-1.4-ad-loc-ad-placer.md)
          + [VOD e risoluzione e inserimento](tvsdk-1.4-for-android/ad-insertion/ad-insertion-about/android-1.4-ad-resolving-client-vod.md)
@@ -520,7 +520,7 @@ ht-degree: 0%
          + [Protezione del caricamento di annunci tramite HTTPS](tvsdk-1.4-for-android/ad-insertion/ad-insertion-about/android-1.4-secure-ad-loading.md)
          + [Disattivazione degli annunci pre-roll](tvsdk-1.4-for-android/ad-insertion/ad-insertion-about/android-1.4-disable-preroll-ads.md)
       + [Comportamento di riproduzione predefinito e personalizzato con gli annunci](tvsdk-1.4-for-android/ad-insertion/android-1.4-playback-post1.2.md)
-      + Personalizzare la riproduzione con gli annunci {#customize-playback}
+      + Personalizzare la riproduzione con annunci {#customize-playback}
          + [Panoramica](tvsdk-1.4-for-android/ad-insertion/playback-customize/android-1.4-playback-customize.md)
          + [Elementi API per la riproduzione di annunci](tvsdk-1.4-for-android/ad-insertion/playback-customize/android-1.4-playback-ad-custom-elements.md)
          + [Utilizzare il comportamento di riproduzione predefinito](tvsdk-1.4-for-android/ad-insertion/playback-customize/android-1.4-playback-use-default.md)
@@ -528,7 +528,7 @@ ht-degree: 0%
          + [Ignora interruzioni annuncio per un periodo di tempo](tvsdk-1.4-for-android/ad-insertion/playback-customize/android-1.4-playback-skip-breaks.md)
          + [Salvate la posizione del video e riprendete più tardi](tvsdk-1.4-for-android/ad-insertion/playback-customize/android-1.4-playback-save-position.md)
          + [Inserimento interruzione annuncio parziale](tvsdk-1.4-for-android/ad-insertion/playback-customize/android-1.4-partial-adbreak-insertion.md)
-      + Aggiungi metadati di inserimento {#ad-insertion-metadata}
+      + Metadati di inserimento annunci {#ad-insertion-metadata}
          + [Panoramica](tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-insertion-metadata.md)
          + [Impostare e inserire i metadati](tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-insertion-metadata-set-up.md)
          + [Abilitare gli annunci nella riproduzione a tutti gli eventi](tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-full-event-replay.md)
@@ -551,20 +551,20 @@ ht-degree: 0%
          + [Aggiunta di listener per le notifiche di metadati temporizzate](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-custom-tags-receive-notifications.md)
          + [Archiviare gli oggetti metadati temporizzati durante l&#39;invio](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-timed-metadata-store.md)
          + [Utilizzare i metadati temporizzati](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-timed-metadata-use.md)
-      + Aggiunta di indicatori di annunci personalizzati {#ad-markers}
+      + Aggiungi marcatori annunci personalizzati {#ad-markers}
          + [Panoramica](tvsdk-1.4-for-android/ad-insertion/ad-markers-add-custom/android-1.4-ad-markers-add-custom.md)
          + [Classe TimeRange](tvsdk-1.4-for-android/ad-insertion/ad-markers-add-custom/android-1.4-timerange-class.md)
          + [Classi MediaPlayer e MediaResource](tvsdk-1.4-for-android/ad-insertion/ad-markers-add-custom/android-1.4-mediaplayer-mediaresource-classes.md)
          + [TimeRangeCollection, classe](tvsdk-1.4-for-android/ad-insertion/ad-markers-add-custom/android-1.4-timerangecollection-class.md)
          + [Inserite i marcatori TimeRange nella timeline](tvsdk-1.4-for-android/ad-insertion/ad-markers-add-custom/android-1.4-timerange-markers-timeline.md)
          + [Controllare il comportamento di riproduzione per la ricerca su indicatori di annunci personalizzati](tvsdk-1.4-for-android/ad-insertion/ad-markers-add-custom/android-1.4-ad-markers-control-seek.md)
-      + Aggiornamento delle regole di selezione di annunci pubblicitari {#updating-ad-rules}
+      + Aggiornamento delle regole di selezione creativa {#updating-ad-rules}
          + [Panoramica](tvsdk-1.4-for-android/ad-insertion/android-1.4-updating-rules/android-1.4-updating-rules.md)
          + [Regole di priorità](tvsdk-1.4-for-android/ad-insertion/android-1.4-updating-rules/android-1.4-priority-rule.md)
          + [Normalizza regole](tvsdk-1.4-for-android/ad-insertion/android-1.4-updating-rules/android-1.4-normalize-rule.md)
          + [Esempi di regole di selezione creativa](tvsdk-1.4-for-android/ad-insertion/android-1.4-updating-rules/android-1.4-sample-rule-files.md)
          + [Applicazione delle regole di selezione creativa](tvsdk-1.4-for-android/ad-insertion/android-1.4-updating-rules/android-1.4-how-tvsdk-applies-csr.md)
-      + Personalizzare rilevatori di opportunità e risolutori di contenuti {#customize-opportunity-detectors}
+      + Personalizzare i rilevatori di opportunità e i risolutori di contenuti {#customize-opportunity-detectors}
          + [Generatori di opportunità e risolutori di contenuti](tvsdk-1.4-for-android/content-resolver/android-1.4-content-resolver-about.md)
          + [Implementare un rilevatore di opportunità personalizzato](tvsdk-1.4-for-android/content-resolver/android-1.4-opp-detector-impl.md)
          + [Implementazione di un risolutore di contenuti personalizzato](tvsdk-1.4-for-android/content-resolver/android-1.4-content-resolver-implement.md)
@@ -583,10 +583,10 @@ ht-degree: 0%
       + Gestione dei blackout nei flussi live {#handle-blackouts}
          + [Elementi API Blackout](tvsdk-1.4-for-android/blackouts-handle/android-1.4-blackout-apis.md)
          + [Implementare la gestione della blackout](tvsdk-1.4-for-android/blackouts-handle/android-1.4-blackouts-implement-handling.md)
-      + Utilizzo dei sottotitoli codificati {#closed-captions}
+      + Utilizzare i sottotitoli codificati {#closed-captions}
          + [Panoramica](tvsdk-1.4-for-android/closed-captions-set-up/android-1.4-closed-caption-overview.md)
          + [Selezionare una traccia di didascalia corrente tra le tracce disponibili](tvsdk-1.4-for-android/closed-captions-set-up/android-1.4-closed-caption-available.md)
-         + Controllo della visibilità dei sottotitoli {#control-visibility}
+         + Controllare la visibilità dei sottotitoli codificati {#control-visibility}
             + [Panoramica](tvsdk-1.4-for-android/closed-captions-set-up/closed-caption-visibility-control/android-1.4-closed-caption-visibility-control.md)
             + [Consenti agli utenti di modificare la traccia della didascalia](tvsdk-1.4-for-android/closed-captions-set-up/closed-caption-visibility-control/android-1.4-closed-caption-allow-user-change.md)
          + [Controllo dello stile dei sottotitoli codificati](tvsdk-1.4-for-android/closed-captions-set-up/closed-caption-styling-control/android-1.4-closed-caption-styling.md)
@@ -603,7 +603,7 @@ ht-degree: 0%
          + [Configurare i rapporti di analisi video sul lato server](tvsdk-1.4-for-android/android-1.4-integrating-adobe-analytics/va-integration-overview/android-1.4-va-server-side-set-up.md)
          + [Accesso ai report di analisi video](tvsdk-1.4-for-android/android-1.4-integrating-adobe-analytics/va-integration-overview/android-1.4-va-reports-access.md)
       + Protezione dei contenuti {#content-protection}
-         + Interfaccia DRM di Primetime {#drm-interface}
+         + Interfaccia DRM Primetime {#drm-interface}
             + [Panoramica](tvsdk-1.4-for-android/drm-content-security/drm-interface/android-1.4-drm-interface.md)
             + [Autenticazione DRM prima della riproduzione](tvsdk-1.4-for-android/drm-content-security/drm-interface/android-1.4-drm-auth-before-playback.md)
             + [Autenticazione DRM durante la riproduzione](tvsdk-1.4-for-android/drm-content-security/drm-interface/android-1.4-drm-auth-during-playback.md)
@@ -619,7 +619,7 @@ ht-degree: 0%
          + [Fase di risoluzione degli annunci](tvsdk-1.4-for-android/failover-for-playback/failover-ad-insertion-for-vod/android-1.4-failover-ad-resolving-phase.md)
          + [Fase di inserimento annunci](tvsdk-1.4-for-android/failover-for-playback/failover-ad-insertion-for-vod/android-1.4-failover-ad-insertion-phase.md)
          + [Fase ad-riproduzione](tvsdk-1.4-for-android/failover-for-playback/failover-ad-insertion-for-vod/android-1.4-failover-ad-playback-phase.md)
-      + Riepilogo degli eventi del lettore Primetime {#primetime-player-events-summary}
+      + Riepilogo eventi del lettore Primetime {#primetime-player-events-summary}
          + [Eventi di riproduzione](tvsdk-1.4-for-android/android-1.4-events-notifications/events-summary/android-1.4-event-listener-mediaplayer-playback.md)
          + [Eventi di riproduzione annunci](tvsdk-1.4-for-android/android-1.4-events-notifications/events-summary/android-1.4-event-listener-mediaplayer.md)
          + [Eventi QoS](tvsdk-1.4-for-android/android-1.4-events-notifications/events-summary/android-1.4-event-listener-mediaplayer-qos.md)
@@ -649,10 +649,10 @@ ht-degree: 0%
       + [Funzioni Primetime Player TVSDK](tvsdk-1.4-for-ios/c-psdk-ios-1.4-overview/c-psdk-ios-1.4-overview-of-the-player.md)
       + [Considerazioni e procedure ottimali](tvsdk-1.4-for-ios/c-psdk-ios-1.4-overview/c-psdk-ios-1.4-considerations.md)
       + [Requisiti](tvsdk-1.4-for-ios/c-psdk-ios-1.4-overview/c-psdk-ios-1.4-requirements.md)
-   + Opzioni di riproduzione del contenuto {#content-playback-options}
+   + Opzioni di riproduzione dei contenuti {#content-playback-options}
       + [Configurare PTMediaPlayer](tvsdk-1.4-for-ios/t-psdk-ios-1.4-create-a-video-player/t-psdk-ios-1.4-mediaplayer-set-up-ios.md)
       + [Impostazione delle notifiche](tvsdk-1.4-for-ios/t-psdk-ios-1.4-create-a-video-player/c-psdk-ios-1.4-notification.md)
-   + Configurare l’interfaccia utente del lettore {#configure}
+   + Configurare l&#39;interfaccia utente del lettore {#configure}
       + [Panoramica](tvsdk-1.4-for-ios/t-psdk-ios-1.4-create-a-video-player/c-psdk-ios-1.4-configure-ui/c-psdk-ios-1.4-configure-ui.md)
       + [Attendere uno stato valido](tvsdk-1.4-for-ios/t-psdk-ios-1.4-create-a-video-player/c-psdk-ios-1.4-configure-ui/t-psdk-ios-1.4-ui-state-prepared-wait-for.md)
       + [Implementare un pulsante di riproduzione/pausa](tvsdk-1.4-for-ios/t-psdk-ios-1.4-create-a-video-player/c-psdk-ios-1.4-configure-ui/t-psdk-ios-1.4-implement-pause-play.md)
@@ -669,7 +669,7 @@ ht-degree: 0%
       + [Inserire annunci](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-ad-insertion-about.md)
       + [Comportamento di riproduzione predefinito e personalizzato con gli annunci](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-playback-post1.2.md)
       + [Personalizzare la riproduzione con gli annunci](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-playback-customize.md)
-   + Metdata Primetime e server {#ad-server-metadata}
+   + Metdata Primetime ad server {#ad-server-metadata}
       + [Panoramica](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-primetime-ad-serving-metadata/c-psdk-ios-1.4-primetime-ad-serving-metadata.md)
       + [Modalità di segnalazione annunci](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-primetime-ad-serving-metadata/r-psdk-ios-1.4-ad-signaling-mode.md)
    + [Annunci per banner](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-companion-banner-ads/c-psdk-ios-1.4-companion-banner-ads.md)
@@ -695,7 +695,7 @@ ht-degree: 0%
       + [Esempi di regole di selezione creativa](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-updating-rules/r-psdk-ios-1.4-sample-rule-files.md)
       + [Applica regole di selezione creative](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-updating-rules/c-psdk-ios-1.4-how-tvsdk-applies-csr.md)
    + [Flussi di segmenti con token](tvsdk-1.4-for-ios/c-psdk-ios-1.4-tokenized-segment-streams.md)
-   + Personalizzare rilevatori di opportunità e risolutori di contenuti {#customize-opportunity-content}
+   + Personalizzare i rilevatori di opportunità e i risolutori di contenuti {#customize-opportunity-content}
       + [Generatori di opportunità e risolutori di contenuti](tvsdk-1.4-for-ios/c-psdk-ios-1.4-content-resolver/c-psdk-ios-1.4-content-resolver-about.md)
       + [Implementare un risolutore di contenuti/opportunità personalizzato](tvsdk-1.4-for-ios/c-psdk-ios-1.4-content-resolver/t-psdk-ios-1.4-content-resolver-implement-ios.md)
    + Eliminare e sostituire gli annunci nei flussi VOD {#delete-replace-content-vod}
@@ -724,8 +724,8 @@ ht-degree: 0%
    + Protezione dei contenuti {#content-protection}
       + [Panoramica dell&#39;interfaccia DRM di Primetime](tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/r-psdk-ios-1.4-drm-interface.md)
       + [Apple FairPlay nelle applicazioni TVSDK](tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/c-psdk-ios-1.4-apple-fairplay-tvsdk/c-psdk-ios-1.4-apple-fairplay-tvsdk.md)
-      + [Elenco consentiti dell&#39;applicazione iOS](tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/t-psdk-ios-1.4-allowlist-your-ios-application.md)
-   + [Notifica per lo stato, l&#39;attività, gli errori e i registri del lettore ](tvsdk-1.4-for-ios/c-psdk-ios-1.4-notification-system/c-psdk-ios-1.4-notification-system.md)
+      + [ Elenco consentiti dell&#39;applicazione iOS](tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/t-psdk-ios-1.4-allowlist-your-ios-application.md)
+   + [Notifica per lo stato, l&#39;attività, gli errori e i registri del lettore  ](tvsdk-1.4-for-ios/c-psdk-ios-1.4-notification-system/c-psdk-ios-1.4-notification-system.md)
    + [Registrazione personalizzata](tvsdk-1.4-for-ios/c-psdk-ios-1.4-customized-logging/c-psdk-ios-1.4-customized-logging.md)
    + [Failover](tvsdk-1.4-for-ios/c-psdk-ios-1.4-understanding-failover.md)
    + [Metriche di fatturazione](tvsdk-1.4-for-ios/c-psdk-ios-1.4-billing/c-psdk-ios-1.4-billing.md)
@@ -753,18 +753,18 @@ ht-degree: 0%
          + [Requisiti di sistema e software](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/requirements/r-psdk-dhls-1.4-requirements-system.md)
          + [Requisiti di contenuto e manifesto](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/requirements/r-psdk-dhls-1.4-requirements-content.md)
          + [#EXT-X-VERSION requirements](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/requirements/r-psdk-dhls-1.4-requirements-ext-x-version.md)
-         + Funzioni e limitazioni di StageVideo {#stagevideo}
+         + Funzioni e limitazioni per StageVideo {#stagevideo}
             + [Panoramica](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/requirements/stagevideo-capabilities/c-psdk-dhls-1.4-stagevideo-capabilities.md)
             + [Verificare la disponibilità di StageVideo](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/requirements/stagevideo-capabilities/t-psdk-dhls-1.4-stage-video-available.md)
             + [Supporto Flash 15 per StageVideo](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/requirements/stagevideo-capabilities/c-psdk-dhls-1.4-stage-video-flash15-support.md)
             + [Requisiti minimi di StageVideo](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/requirements/stagevideo-capabilities/r-psdk-dhls-1.4-requirements-stage-video.md)
             + [Sovrapposizioni StageVideo e HTML](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/requirements/stagevideo-capabilities/c-psdk-dhls-1.4-stage-video-and-overlays.md)
-   + Opzioni di riproduzione del contenuto {#content-playback-options}
+   + Opzioni di riproduzione dei contenuti {#content-playback-options}
       + [Configurare MediaPlayer](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/t-psdk-dhls-1.4-mediaplayer-set-up.md)
       + [Carica il token firmato](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/t-psdk-dhls-1.4-get-signed-token.md)
    + Ascoltare gli eventi di Primetime Player {#listen}
       + [Panoramica](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-events-listen-for/c-psdk-dhls-1.4-events-listen-for.md)
-      + Implementare listener e callback di eventi {#implement}
+      + Implementare listener di eventi e callback {#implement}
          + [Panoramica](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-events-listen-for/c-psdk-dhls-1.4-events-listeners-overview.md)
          + [Ordine degli eventi di riproduzione](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-events-listen-for/c-psdk-dhls-1.4-events-order-playback.md)
          + [Ordine degli eventi pubblicitari](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-events-listen-for/c-psdk-dhls-1.4-events-order-ad-playback.md)
@@ -773,7 +773,7 @@ ht-degree: 0%
          + [Eventi di caricamento](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-events-listen-for/c-psdk-dhls-1.4-events-order-loader.md)
          + [Eventi di metadati temporizzati](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-events-listen-for/c-psdk-dhls-1.4-events-order-timed-metadata.md)
       + [Impostazione della gestione degli errori](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/t-psdk-dhls-1.4-error-handling-set-up.md)
-      + Configurare l’interfaccia utente del lettore {#configure-interface}
+      + Configurare l&#39;interfaccia utente del lettore {#configure-interface}
          + [Attendere uno stato valido](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)
          + [Riproduzione e pausa di un video](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-pause-play-implement.md)
          + [Identificare se il contenuto è live o VOD](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-content-live-vod-identify.md)
@@ -799,14 +799,14 @@ ht-degree: 0%
       + Riutilizzare o rimuovere un&#39;istanza di MediaPlayer {#reuse-or-remove-mediaplayer}
          + [Reimpostare o riutilizzare un&#39;istanza di MediaPlayer](tvsdk-1.4-for-desktop-hls/mediaplayerobjects-working-with/mediaplayer-reuse-or-remove/t-psdk-dhls-1.4-mediaplayer-reset-reuse-instance.md)
          + [Rilasciare un’istanza e le risorse di MediaPlayer](tvsdk-1.4-for-desktop-hls/mediaplayerobjects-working-with/mediaplayer-reuse-or-remove/t-psdk-dhls-1.4-mediaplayer-release-instance.md)
-      + [Inspect la timeline di riproduzione](tvsdk-1.4-for-desktop-hls/mediaplayerobjects-working-with/t-psdk-dhls-1.4-timeline-inspect-playback.md)
+      + [ Inspect la timeline di riproduzione](tvsdk-1.4-for-desktop-hls/mediaplayerobjects-working-with/t-psdk-dhls-1.4-timeline-inspect-playback.md)
    + Buffering {#buffering}
       + [Criteri tempo di buffer](tvsdk-1.4-for-desktop-hls/buffering-configuration/buffering-policies/c-psdk-dhls-1.4-buffering-policies.md)
       + [Impostare i tempi di buffering](tvsdk-1.4-for-desktop-hls/buffering-configuration/buffering-policies/t-psdk-dhls-1.4-buffering-times-set.md)
    + [Nascondere una visualizzazione video](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-video-view-hiding.md)
    + Pubblicità {#advertising}
       + [Requisiti di pubblicità](tvsdk-1.4-for-desktop-hls/ad-insertion/r-psdk-dhls-1.4-advertising-requirements.md)
-      + Inserire annunci {#inserting-ads}
+      + Inserisci annunci {#inserting-ads}
          + [Panoramica](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-insertion-about/c-psdk-dhls-1.4-ad-insertion-about.md)
          + [VOD e risoluzione e inserimento](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-insertion-about/c-psdk-dhls-1.4-ad-resolving-client-vod.md)
          + [Risoluzione e inserimento di annunci live/lineari](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-insertion-about/c-psdk-dhls-1.4-ad-resolving-client-live-linear.md)
@@ -814,7 +814,7 @@ ht-degree: 0%
          + [Tracciamento annunci client](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-insertion-about/c-psdk-dhls-1.4-ad-tracking-client.md)
       + [Abilitare il caricamento di annunci pigri](tvsdk-1.4-for-desktop-hls/ad-insertion/t-psdk-dhls-1.4-ad-delay-enable.md)
       + [Comportamento di riproduzione predefinito e personalizzato con gli annunci](tvsdk-1.4-for-desktop-hls/ad-insertion/c-psdk-dhls-1.4-playback-post1.2.md)
-      + Personalizzare la riproduzione con gli annunci {#customize-playback-with-ads}
+      + Personalizzare la riproduzione con annunci {#customize-playback-with-ads}
          + [Panoramica](tvsdk-1.4-for-desktop-hls/ad-insertion/playback-customize/c-psdk-dhls-1.4-playback-customize.md)
          + [Elementi API per la riproduzione di annunci](tvsdk-1.4-for-desktop-hls/ad-insertion/playback-customize/c-psdk-dhls-1.4-playback-ad-custom-elements.md)
          + [Utilizzare il comportamento di riproduzione predefinito](tvsdk-1.4-for-desktop-hls/ad-insertion/playback-customize/t-psdk-dhls-1.4-playback-use-default.md)
@@ -838,20 +838,20 @@ ht-degree: 0%
          + [Requisiti annunci personalizzati](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-ads/c-psdk-dhls-1.4-custom-ads-req.md)
          + [Eventi annunci personalizzati](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-ads/r-psdk-dhls-1.4-custom-ad-events.md)
          + [Visualizzare annunci VPAID lineari in un&#39;interruzione annuncio](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-ads/t-psdk-dhls-1.4-display-linear-vpaid-ads.md)
-      + Aggiunta di indicatori di annunci personalizzati {#add-markers}
+      + Aggiungi marcatori annunci personalizzati {#add-markers}
          + [Panoramica](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-markers-add-custom/c-psdk-dhls-1.4-ad-markers-add-custom.md)
          + [Classe TimeRange](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-markers-add-custom/r-psdk-dhls-1.4-timerange-class.md)
          + [Classi MediaPlayer e MediaResource](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-markers-add-custom/r-psdk-dhls-1.4-mediaplayer-mediaresource-classes.md)
          + [TimeRangeCollection, classe](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-markers-add-custom/r-psdk-dhls-1.4-timerangecollection-class.md)
          + [Inserite i marcatori TimeRange nella timeline](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-markers-add-custom/t-psdk-dhls-1.4-timerange-markers-on-timeline.md)
          + [Controllare il comportamento di riproduzione per la ricerca su indicatori di annunci personalizzati](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-markers-add-custom/t-psdk-dhls-1.4-ad-markers-control-seek.md)
-      + Aggiornamento delle regole di selezione di annunci pubblicitari {#updating-ad-rules}
+      + Aggiornamento delle regole di selezione creativa {#updating-ad-rules}
          + [Panoramica](tvsdk-1.4-for-desktop-hls/ad-insertion/c-psdk-dhls-1.4-updating-rules/c-psdk-dhls-1.4-updating-rules.md)
          + [Regole di priorità](tvsdk-1.4-for-desktop-hls/ad-insertion/c-psdk-dhls-1.4-updating-rules/r-psdk-dhls-1.4-priority-rule.md)
          + [Normalizza regole](tvsdk-1.4-for-desktop-hls/ad-insertion/c-psdk-dhls-1.4-updating-rules/r-psdk-dhls-1.4-normalize-rule.md)
          + [Esempi di regole di selezione creativa](tvsdk-1.4-for-desktop-hls/ad-insertion/c-psdk-dhls-1.4-updating-rules/r-psdk-dhls-1.4-sample-rule-files.md)
          + [Applicazione delle regole di selezione creativa](tvsdk-1.4-for-desktop-hls/ad-insertion/c-psdk-dhls-1.4-updating-rules/c-psdk-dhls-1.4-how-tvsdk-applies-csr.md)
-   + Personalizzare rilevatori di opportunità e risolutori di contenuti {#customize-opportunities}
+   + Personalizzare i rilevatori di opportunità e i risolutori di contenuti {#customize-opportunities}
       + [Panoramica](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-opportunity-detector/content-resolver/c-psdk-dhls-1.4-content-resolver.md)
       + [Generatori di opportunità e risolutori di contenuti](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-opportunity-detector/content-resolver/c-psdk-dhls-1.4-content-resolver-about.md)
       + [Implementare un rilevatore di opportunità personalizzato](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-opportunity-detector/content-resolver/t-psdk-dhls-1.4-opp-detector-impl.md)
@@ -864,7 +864,7 @@ ht-degree: 0%
          + [Modalità di segnalazione e intervallo di tempo](tvsdk-1.4-for-desktop-hls/delete-replace-content-vod/custom-time-range-ops/c-psdk-dhls-1.4-signalmode-timerange-combos.md)
       + Casi di utilizzo per eliminare e sostituire gli annunci {#use-cases}
          + [Segna intervalli](tvsdk-1.4-for-desktop-hls/delete-replace-content-vod/ad-delete-replace-use-cases/t-psdk-dhls-1.4-mark-ranges.md)
-         + [Sostituire gli intervalli di tempo con un annuncio pubblicitario Adobe Primetime](tvsdk-1.4-for-desktop-hls/delete-replace-content-vod/ad-delete-replace-use-cases/t-psdk-dhls-1.4-replace-ranges-with-aud-ad.md)
+         + [Sostituire gli intervalli di tempo con un annuncio pubblicitario Adobe Primetime ](tvsdk-1.4-for-desktop-hls/delete-replace-content-vod/ad-delete-replace-use-cases/t-psdk-dhls-1.4-replace-ranges-with-aud-ad.md)
          + [Elimina intervalli con annunci pubblicitari con Primetime](tvsdk-1.4-for-desktop-hls/delete-replace-content-vod/ad-delete-replace-use-cases/t-psdk-dhls-1.4-delete-ranges-with-aud-ad.md)
          + [Casi di utilizzo speciali](tvsdk-1.4-for-desktop-hls/delete-replace-content-vod/ad-delete-replace-use-cases/t-psdk-dhls-1.4-special-use-cases.md)
       + [Gestione degli errori di aggiunta ed eliminazione](tvsdk-1.4-for-desktop-hls/delete-replace-content-vod/ad-delete-replace-error-handling/c-psdk-dhls-1.4-ad-delete-replace-error-handling.md)
@@ -893,7 +893,7 @@ ht-degree: 0%
       + [Sistemi DRM supportati](tvsdk-1.4-for-desktop-hls/drm-content-security/t-psdk-dhls-1.4-drm-support.md)
       + [Panoramica dell&#39;interfaccia DRM di Primetime](tvsdk-1.4-for-desktop-hls/drm-content-security/r-psdk-dhls-1.4-drm-interface.md)
       + [Implementazione di DRM Primetime in un&#39;applicazione TSVDK](tvsdk-1.4-for-desktop-hls/drm-content-security/c-psdk-dhls-1.4-tvsdk-drm-workflow.md)
-   + Notifiche per lo stato, l&#39;attività, gli errori e la registrazione del lettore {#notifications}
+   + Notifiche per stato del lettore, attività, errori e registrazione {#notifications}
       + [Panoramica](tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/c-psdk-dhls-1.4-notification-system.md)
       + [Contenuto notifica](tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/c-psdk-dhls-1.4-notification-content.md)
       + [Configurare il sistema di notifica](tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/t-psdk-dhls-1.4-notification-setup.md)
@@ -906,7 +906,7 @@ ht-degree: 0%
       + [Inserimento pubblicitario e failover per VOD](tvsdk-1.4-for-desktop-hls/failover-for-playback/c-psdk-dhls-1.4-failover-ad-insertion-for-vod.md)
       + [Aggiornamento Live Master-manifest](tvsdk-1.4-for-desktop-hls/failover-for-playback/c-psdk-dhls-1.4-manifest-update-intro.md)
       + [Ottenere informazioni sul commutatore di profilo](tvsdk-1.4-for-desktop-hls/failover-for-playback/t-psdk-dhls-1.4-profile-switch-info.md)
-   + Riepilogo degli eventi del lettore Primetime {#events-summary}
+   + Riepilogo eventi del lettore Primetime {#events-summary}
       + [Eventi di riproduzione](tvsdk-1.4-for-desktop-hls/events-summary/r-psdk-dhls-1.4-event-listener-mediaplayer-playback.md)
       + [Eventi di riproduzione annunci](tvsdk-1.4-for-desktop-hls/events-summary/r-psdk-dhls-1.4-event-listener-mediaplayer-adplayback.md)
       + [Eventi di trasmissione/visualizzazione di metadati temporizzati](tvsdk-1.4-for-desktop-hls/events-summary/r-psdk-dhls-1.4-event-listener-mediaplayer-adserving.md)
@@ -979,7 +979,7 @@ ht-degree: 0%
    + Framework interfaccia utente {#user-interface-framework}
       + [Framework interfaccia utente](browser-tvsdk-2.4/c-psdk-browser-2.4-userinterface/c-psdk-browser-tvsdk-2.4-ui-framework.md)
       + [Skinning del lettore](browser-tvsdk-2.4/c-psdk-browser-2.4-userinterface/c-psdk-browser-tvsdk-2.4-skin-the-player.md)
-   + Opzioni di riproduzione del contenuto {#content-playback-options}
+   + Opzioni di riproduzione dei contenuti {#content-playback-options}
       + [Failover Flash](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/c-psdk-browser-tvsdk-2.4-flash-failover.md)
       + [Configurare MediaPlayer](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/t-psdk-browser-tvsdk-2.4-mediaplayer-set-up.md)
       + Inizializzare il lettore multimediale per un video specifico {#initialize-specific-video}
@@ -1002,7 +1002,7 @@ ht-degree: 0%
       + Bitrate adattivo (ABR) per la qualità video {#abr-video-quality}
          + [Panoramica](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/abr-control-quality/c-psdk-browser-tvsdk-2.4-abr-control-quality.md)
          + [Configurare i bitrate adattivi mediante ABRControlParameters](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/abr-control-quality/t-psdk-browser-tvsdk-2.4-abr-set-using-abrparameters.md)
-      + Configurare l’interfaccia utente del lettore {#configure-ui}
+      + Configurare l&#39;interfaccia utente del lettore {#configure-ui}
          + [Attendere uno stato valido](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/ui-configure/t-psdk-browser-tvsdk-2.4-ui-state-prepared-wait-for.md)
          + [Riproduzione e pausa di un video](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/ui-configure/t-psdk-browser-tvsdk-2.4-ui-pause-play-implement.md)
          + [Identificare se il contenuto è live o VOD](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/ui-configure/t-psdk-browser-tvsdk-2.4-ui-content-live-vod-identify.md)
@@ -1019,9 +1019,9 @@ ht-degree: 0%
          + [Ciclo di vita e stati dell&#39;oggetto MediaPlayer](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/c-psdk-browser-tvsdk-2.4-mediaplayer-object-lifecycle-states.md)
          + [Attributi di MediaPlayer per accedere alle informazioni di MediaResource](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/r-psdk-browser-tvsdk-2.4-mediaplayer-methods-for-accessing-mediaresource.md)
          + [Riutilizzare o rimuovere un&#39;istanza di MediaPlayer](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/c-psdk-browser-tvsdk-2.4-mediaplayer-reuse-or-remove.md)
-         + [Inspect la timeline di riproduzione](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/t-psdk-browser-tvsdk-2.4-timeline-inspect-playback.md)
+         + [ Inspect la timeline di riproduzione](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/t-psdk-browser-tvsdk-2.4-timeline-inspect-playback.md)
          + [Aggiunta di listener per TimelineUpdatedEvent](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/t-psdk-browser-tvsdk-2.4-timeline-update-add-listener.md)
-      + Utilizzo dei sottotitoli codificati {#closed-captions}
+      + Utilizzare i sottotitoli codificati {#closed-captions}
          + [Panoramica](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/closed-captions-set-up/c-psdk-browser-tvsdk-2.4-closed-captions-set-up.md)
          + [Controllo della visibilità dei sottotitoli](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/closed-captions-set-up/t-psdk-browser-tvsdk-2.4-closed-caption-visibility-control.md)
          + [Consentire all&#39;utente di cambiare il tracciamento](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/closed-captions-set-up/t-psdk-browser-tvsdk-2.4-closed-caption-track-allow-user-to-change.md)
@@ -1051,7 +1051,7 @@ ht-degree: 0%
          + [Notifiche per i tag manifest](browser-tvsdk-2.4/ad-insertion/custom-tags/r-psdk-browser-tvsdk-2.4-manifest-tag-notifications.md)
          + [Iscriviti ai tag pubblicitari personalizzati](browser-tvsdk-2.4/ad-insertion/custom-tags/t-psdk-browser-tvsdk-2.4-custom-tags-subscribe.md)
          + [Aggiunta di listener per le notifiche di metadati temporizzati](browser-tvsdk-2.4/ad-insertion/custom-tags/t-psdk-browser-tvsdk-2.4-custom-tags-receive-notifications.md)
-      + Personalizzare rilevatori di opportunità e risolutori di contenuti {#customize}
+      + Personalizzare i rilevatori di opportunità e i risolutori di contenuti {#customize}
          + [Panoramica](browser-tvsdk-2.4/ad-insertion/opp-det-cont-resolve/c-psdk-browser-tvsdk-2.4-content-resolver.md)
          + [Generatori di opportunità e risolutori di contenuti](browser-tvsdk-2.4/ad-insertion/opp-det-cont-resolve/c-psdk-browser-tvsdk-2.4-content-resolver-about.md)
          + [Implementazione di un generatore di opportunità personalizzato](browser-tvsdk-2.4/ad-insertion/opp-det-cont-resolve/t-psdk-browser-tvsdk-2.4-opp-detector-impl.md)
@@ -1059,13 +1059,13 @@ ht-degree: 0%
       + [Misurazione annunci da Moat](browser-tvsdk-2.4/ad-insertion/c-psdk-browser-tvsdk-moat.md)
       + [Repackage (transcodificare annunci incompatibili)](browser-tvsdk-2.4/ad-insertion/c-psdk-browser-tvsdk-2.4-ad-transcoding.md)
       + [Comportamento di riproduzione predefinito e personalizzato con gli annunci](browser-tvsdk-2.4/ad-insertion/c-psdk-browser-tvsdk-2.4-playback-post1.2.md)
-      + Aggiungi metadati di inserimento {#ad-insertion-metadata}
+      + Metadati di inserimento annunci {#ad-insertion-metadata}
          + [Panoramica](browser-tvsdk-2.4/ad-insertion/ad-insertion-metadata/c-psdk-browser-tvsdk-2.4-ad-insertion-metadata.md)
          + [Impostare e inserire i metadati](browser-tvsdk-2.4/ad-insertion/ad-insertion-metadata/t-psdk-browser-tvsdk-2.4-ad-insertion-metadata-set-up.md)
          + [Personalizzare i metadati di inserimento annunci](browser-tvsdk-2.4/ad-insertion/ad-insertion-metadata/t-psdk-browser-tvsdk-2.4-cust-ad-metadata.md)
          + [Tipi mime validi](browser-tvsdk-2.4/ad-insertion/ad-insertion-metadata/r-psdk-browser-tvsdk-2.4-valid-mime-types.md)
          + [Informazioni sul targeting](browser-tvsdk-2.4/ad-insertion/ad-insertion-metadata/r-psdk-browser-tvsdk-2.4-targeting-info.md)
-      + Annunci per banner {#companion}
+      + Annunci per banner completi {#companion}
          + [Panoramica](browser-tvsdk-2.4/ad-insertion/companion-banner-ads/c-psdk-browser-tvsdk-2.4-companion-banner-ads.md)
          + [Dati banner complementari](browser-tvsdk-2.4/ad-insertion/companion-banner-ads/r-psdk-browser-tvsdk-2.4-companion-banner-data.md)
          + [Visualizza annunci banner](browser-tvsdk-2.4/ad-insertion/companion-banner-ads/t-psdk-browser-tvsdk-2.4-companion-banner-ads-display.md)
@@ -1095,5 +1095,5 @@ ht-degree: 0%
       + [Panoramica](browser-tvsdk-2.4/billing/c-psdk-browser-tvsdk-2.4-billing.md)
       + [Configurare le metriche di fatturazione](browser-tvsdk-2.4/billing/t-psdk-browser-tvsdk-2.4-billing-config.md)
       + [Trasmissione delle metriche di fatturazione](browser-tvsdk-2.4/billing/r-psdk-browser-tvsdk-2.4-billing-data-format.md)
-   + [API utili per il Flash Player di Adobi](browser-tvsdk-2.4/r-psdk-browser-tvsdk-2.4-helpful-apis.md)
+   + [API utili per il Flash Player di Adobi ](browser-tvsdk-2.4/r-psdk-browser-tvsdk-2.4-helpful-apis.md)
    + [Riepilogo delle classi di lettori Primetime](browser-tvsdk-2.4/c-psdk-browser-tvsdk-2.4-class-summary.md)
