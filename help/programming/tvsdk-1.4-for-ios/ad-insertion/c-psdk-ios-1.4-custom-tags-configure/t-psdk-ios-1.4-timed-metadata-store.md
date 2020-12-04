@@ -6,6 +6,9 @@ title: Archiviare gli oggetti metadati temporizzati durante l'invio
 uuid: d26ed49e-fb29-4765-86e9-9ebbe5fa0a2b
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '219'
+ht-degree: 0%
 
 ---
 
@@ -14,20 +17,20 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 L’applicazione deve utilizzare gli oggetti PTTimedMetadata appropriati nei momenti opportuni.
 
-Durante l’analisi del contenuto, che avviene prima della riproduzione, TVSDK identifica i tag sottoscritti e comunica all’applicazione questi tag. L’ora associata a ciascuna `PTTimedMetadata` è l’ora assoluta nella timeline di riproduzione.
+Durante l’analisi del contenuto, che avviene prima della riproduzione, TVSDK identifica i tag sottoscritti e comunica all’applicazione questi tag. Il tempo associato a ciascun `PTTimedMetadata` è il tempo assoluto nella timeline di riproduzione.
 
 L&#39;applicazione deve completare le seguenti attività:
 
 1. Tenere traccia del tempo di riproduzione corrente.
-1. Associare il tempo di riproduzione corrente agli `PTTimedMetadata` oggetti inviati.
+1. Corrisponde il tempo di riproduzione corrente agli oggetti `PTTimedMetadata` inviati.
 
-1. Utilizzate il `PTTimedMetadata` punto in cui l&#39;ora di inizio è uguale al tempo di riproduzione corrente.
+1. Utilizzate `PTTimedMetadata` dove l&#39;ora di inizio è uguale a quella corrente di riproduzione.
 
    >[!NOTE]
    >
-   >Il codice seguente presuppone che esista una sola `PTTimedMetadata` istanza alla volta. In presenza di più istanze, l&#39;applicazione deve salvarle in modo appropriato in un dizionario. Un metodo consiste nel creare un array in un dato momento e memorizzare tutte le istanze nell&#39;array.
+   >Il codice seguente presuppone che sia presente una sola istanza `PTTimedMetadata` alla volta. In presenza di più istanze, l&#39;applicazione deve salvarle in modo appropriato in un dizionario. Un metodo consiste nel creare un array in un dato momento e memorizzare tutte le istanze nell&#39;array.
 
-   L&#39;esempio seguente mostra come salvare `PTTimedMetadata` gli oggetti in un `NSMutableDictionary (timedMetadataCollection)` tasto per l&#39;ora iniziale di ogni `timedMetadata`.
+   Nell&#39;esempio seguente viene illustrato come salvare gli oggetti `PTTimedMetadata` in un `NSMutableDictionary (timedMetadataCollection)` con un tasto per l&#39;ora iniziale di ogni `timedMetadata`.
 
    ```
    NSMutableDictionary *timedMetadataCollection; 
@@ -54,7 +57,7 @@ L&#39;applicazione deve completare le seguenti attività:
 
 ## Analisi dei tag Nielsen ID3 {#example_3B51E9D4AF2449FAA8E804206F873ECF}
 
-Per estrarre il tag ID3 per l&#39;analisi, utilizzare quanto segue sul `onMediaPlayerSubscribedTagIdentified` metodo:
+Per estrarre il tag ID3 per l&#39;analisi, utilizzare quanto segue sul metodo `onMediaPlayerSubscribedTagIdentified`:
 
 ```
 (void)onMediaPlayerSubscribedTagIdentified:(NSNotification *)notification 
