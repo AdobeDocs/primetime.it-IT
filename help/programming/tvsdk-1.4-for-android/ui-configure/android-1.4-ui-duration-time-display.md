@@ -6,16 +6,19 @@ title: Visualizzare la durata, l’ora corrente e il tempo rimanente del video
 uuid: afb43169-2d82-4137-ba38-27caef3d8c21
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '409'
+ht-degree: 0%
 
 ---
 
 
-# Visualizzare la durata, l’ora corrente e il tempo rimanente del video{#display-the-duration-current-time-and-remaining-time-of-the-video}
+# Visualizza la durata, l&#39;ora corrente e il tempo rimanente del video{#display-the-duration-current-time-and-remaining-time-of-the-video}
 
 Potete usare TVSDK per recuperare informazioni sui file multimediali che potete visualizzare sulla barra di ricerca.
 
 1. Aspettate che il lettore sia nello stato PREPARATO.
-1. Recuperare il tempo corrente dell&#39;indicatore di riproduzione utilizzando il `MediaPlayer.getCurrentTime` metodo .
+1. Recuperare il tempo corrente dell&#39;indicatore di riproduzione utilizzando il metodo `MediaPlayer.getCurrentTime`.
 
    Questo restituisce la posizione corrente dell&#39;indicatore di riproduzione sulla timeline virtuale, in millisecondi. L&#39;ora viene calcolata in relazione al flusso risolto che potrebbe contenere più istanze di contenuto alternativo, ad esempio più annunci pubblicitari o interruzioni di annunci nel flusso principale. Per i flussi live/lineari, il tempo restituito è sempre compreso nell&#39;intervallo della finestra di riproduzione.
 
@@ -24,7 +27,7 @@ Potete usare TVSDK per recuperare informazioni sui file multimediali che potete 
    ```
 
 1. Recuperate l’intervallo di riproduzione del flusso e stabilite la durata.
-   1. Utilizzare il `mediaPlayer.getPlaybackRange` metodo per ottenere l&#39;intervallo di tempo della cronologia virtuale.
+   1. Utilizzare il metodo `mediaPlayer.getPlaybackRange` per ottenere l&#39;intervallo di tempo della cronologia virtuale.
 
       ```java
       TimeRange getPlaybackRange() throws IllegalStateException;
@@ -39,11 +42,11 @@ Potete usare TVSDK per recuperare informazioni sui file multimediali che potete 
 
       Per una risorsa lineare/live, l&#39;intervallo rappresenta l&#39;intervallo della finestra di riproduzione e questo intervallo cambia durante la riproduzione.
 
-      TVSDK chiama il `onUpdated` callback per indicare che l’elemento multimediale è stato aggiornato e che i relativi attributi (incluso l’intervallo di riproduzione) sono stati aggiornati.
+      TVSDK chiama il callback `onUpdated` per indicare che l&#39;elemento multimediale è stato aggiornato e che i relativi attributi (incluso l&#39;intervallo di riproduzione) sono stati aggiornati.
 
-1. Utilizzate i metodi disponibili nell’SDK per Android `MediaPlayer` e nella `SeekBar` classe che sono disponibili pubblicamente per impostare i parametri della barra di ricerca.
+1. Utilizzate i metodi disponibili nella classe `MediaPlayer` e nella classe `SeekBar` pubblicamente disponibili nell&#39;SDK per Android per impostare i parametri della barra di ricerca.
 
-   Ad esempio, di seguito è riportato un layout possibile che contiene gli `SeekBar` e due `TextView` elementi.
+   Ad esempio, di seguito è riportato un layout possibile che contiene gli elementi `SeekBar` e due `TextView`.
 
    ```xml
    <LinearLayout 
@@ -77,7 +80,7 @@ Potete usare TVSDK per recuperare informazioni sui file multimediali che potete 
 
 1. Utilizzare un timer per recuperare periodicamente l&#39;ora corrente e aggiornare SeekBar.
 
-   L&#39;esempio seguente utilizza la classe `Clock.java` helper come timer, disponibile nel lettore di riferimento PrimetimeReference. Questa classe imposta un listener di eventi e attiva un `onTick` evento ogni secondo, o un altro valore di timeout che è possibile specificare.
+   L&#39;esempio seguente utilizza la classe helper `Clock.java` come timer, disponibile nel lettore di riferimento PrimetimeReference. Questa classe imposta un listener di eventi e attiva un evento `onTick` ogni secondo, o un altro valore di timeout che è possibile specificare.
 
    ```java
    playbackClock = new Clock(PLAYBACK_CLOCK, CLOCK_TIMER); 
@@ -90,7 +93,7 @@ Potete usare TVSDK per recuperare informazioni sui file multimediali che potete 
    playbackClock.addClockEventListener(playbackClockEventListener);
    ```
 
-   Su ogni tasto di clock, questo esempio recupera la posizione corrente del lettore multimediale e aggiorna SeekBar. Utilizza i due elementi TextView per contrassegnare l&#39;ora corrente e la posizione finale dell&#39;intervallo di riproduzione come valori numerici.
+   Ad ogni clic dell&#39;orologio, questo esempio recupera la posizione corrente del lettore multimediale e aggiorna SeekBar. Utilizza i due elementi TextView per contrassegnare l&#39;ora corrente e la posizione finale dell&#39;intervallo di riproduzione come valori numerici.
 
    ```java
    @Override 
