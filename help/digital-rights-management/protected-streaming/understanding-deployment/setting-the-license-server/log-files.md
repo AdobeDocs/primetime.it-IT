@@ -21,7 +21,7 @@ I file di registro generati dal server DRM  Adobe Primetime per l&#39;applicazio
 >
 >Se i file di registro correnti vengono eliminati o spostati durante l&#39;esecuzione del server, il file di registro potrebbe non essere ricreato. È pertanto possibile eliminare alcune informazioni di registro.
 
-## Struttura delle directory di registro {#section_F490A483D60145ADBC21038914C39203}
+## Struttura directory di registro {#section_F490A483D60145ADBC21038914C39203}
 
 Le directory di registro sono strutturate per semplificare l&#39;utilizzo. La directory di registro ha la struttura seguente:
 
@@ -46,7 +46,7 @@ Il file di registro globale, `flashaccess-global.log`, si trova in *LicenseServe
 
 ## File di registro delle partizioni {#section_5660137CD6AA40519E72A4315534846B}
 
-Il file di registro della partizione, `flashaccess-partition.log`, si trova nella `<LicenseServer.LogRoot>/flashaccesserver` directory. Include i messaggi di registro generati durante l&#39;elaborazione di una richiesta di licenza.
+Il file di registro della partizione, `flashaccess-partition.log`, si trova nella directory `<LicenseServer.LogRoot>/flashaccesserver`. Include i messaggi di registro generati durante l&#39;elaborazione di una richiesta di licenza.
 
 ## File di registro tenant {#section_F0257CC0831647F18A746B4F02E3E910}
 
