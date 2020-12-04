@@ -6,6 +6,9 @@ title: Ottimizzazione reindirizzamento HTTP 302
 uuid: d3009c6c-320a-4c0f-b6ba-bf6473049823
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '169'
+ht-degree: 1%
 
 ---
 
@@ -18,11 +21,11 @@ Se una richiesta di manifesto principale viene reindirizzata e l’ottimizzazion
 
 >[!IMPORTANT]
 >
->Questa funzione è supportata solo nei browser certificati che supportano la `responseURL` proprietà nell&#39; `XMLHttpRequest` oggetto.
+>Questa funzione è supportata solo nei browser certificati che supportano la proprietà `responseURL` nell&#39;oggetto `XMLHttpRequest`.
 
-Per la funzione di riserva Flash, ricordate le informazioni seguenti:
+Ad Flash, riserva le seguenti informazioni:
 
-* Gli utenti finali devono avere installato Adobe Flash Player versione 23 o successiva.
+* Gli utenti finali devono avere installato  Flash Player Adobe versione 23 o successiva.
 * Se l&#39;integrità del flusso è disabilitata, il reindirizzamento 302 è supportato solo sui browser certificati.
 
 ## Disattivazione dell&#39;ottimizzazione di reindirizzamento 302 {#disabling-redirect-optimization}
