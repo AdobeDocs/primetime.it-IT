@@ -6,19 +6,22 @@ title: Implementazione di un risolutore di contenuti personalizzato
 uuid: cf85dd90-242e-4f9e-9785-158ca0fc9465
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '208'
+ht-degree: 0%
 
 ---
 
 
-# Implementazione di un risolutore di contenuti personalizzato{#implement-a-custom-content-resolver}
+# Implementazione di un risolutore di contenuto personalizzato{#implement-a-custom-content-resolver}
 
 Potete implementare dei risolutori di contenuti personalizzati in base ai risolutori predefiniti.
 
-Quando Browser TVSDK rileva una nuova opportunità, esegue un&#39;iterazione attraverso i risolutori di contenuti registrati alla ricerca di una in grado di risolvere tale opportunità utilizzando il `canResolve` metodo. Il primo che restituisce true è selezionato per la risoluzione dell&#39;opportunità. Se non è in grado di risolvere il problema, tale opportunità viene ignorata. Poiché il processo di risoluzione del contenuto è in genere asincrono, il risolutore del contenuto è responsabile della notifica a Browser TVSDK al termine del processo.
+Quando l&#39;SDK per browser rileva una nuova opportunità, esegue un&#39;iterazione attraverso i risolutori di contenuti registrati alla ricerca di una in grado di risolvere tale opportunità utilizzando il metodo `canResolve`. Il primo che restituisce true è selezionato per la risoluzione dell&#39;opportunità. Se non è in grado di risolvere il problema, tale opportunità viene ignorata. Poiché il processo di risoluzione del contenuto è in genere asincrono, il risolutore del contenuto è responsabile della notifica a Browser TVSDK al termine del processo.
 
-Ricorda le informazioni seguenti:
+Ricorda le seguenti informazioni:
 
-* Il risolutore dei contenuti richiama `client.process` per specificare quale operazione timeline deve essere eseguita da TVSDK.
+* Il risolutore del contenuto chiama `client.process` per specificare quale operazione timeline deve essere eseguita da TVSDK.
 
    In genere si tratta di un posizionamento di interruzione annuncio.
 
