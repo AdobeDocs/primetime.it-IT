@@ -4,6 +4,9 @@ title: Come utilizzare l'implementazione di riferimento Primetime
 uuid: 9eb262c4-d987-493a-92a4-311118c5f01e
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '204'
+ht-degree: 0%
 
 ---
 
@@ -19,6 +22,6 @@ Puoi utilizzare l’implementazione dei riferimenti nei seguenti modi:
 * Scegliete e scegliete le funzioni applicabili all&#39;applicazione disattivando le funzioni non utilizzate.
 * Personalizzare i componenti dell’interfaccia utente senza apportare alcuna modifica alle funzioni.
 
-Forniamo l’implementazione di riferimento Primetime per aiutarti a comprendere il TVSDK e a modificare facilmente i manager delle funzioni per personalizzare il lettore. Tuttavia, per informazioni dettagliate sulla libreria TVSDK, fate riferimento alla Guida [per programmatori Android](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_android.pdf) TVSDK 1.4.
+Forniamo l’implementazione di riferimento Primetime per aiutarti a comprendere il TVSDK e a modificare facilmente i manager delle funzioni per personalizzare il lettore. Tuttavia, per informazioni dettagliate sulla libreria TVSDK, fare riferimento alla [TVSDK 1.4 for Android Programmer&#39;s Guide](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_android.pdf).
 
-Per accedere facilmente alla documentazione API di implementazione di riferimento in formato Javadoc, fai clic [qui](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/index.html).
+Per accedere facilmente alla documentazione API di implementazione di riferimento in formato Javadoc, fai clic su [qui](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/index.html).
