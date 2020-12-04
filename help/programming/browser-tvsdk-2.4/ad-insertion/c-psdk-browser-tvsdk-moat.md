@@ -6,6 +6,9 @@ title: Misurazione annunci da Moat
 uuid: a29c1e74-df15-47d2-9bd6-1d366c5cdf37
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '212'
+ht-degree: 0%
 
 ---
 
