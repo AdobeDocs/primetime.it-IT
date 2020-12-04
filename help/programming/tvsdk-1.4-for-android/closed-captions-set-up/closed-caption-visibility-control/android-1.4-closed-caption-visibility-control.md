@@ -23,7 +23,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->I valori di visibilità per le didascalie chiuse sono definiti in `MediaPlayer.Visibility`.
+>I valori di visibilità per i sottotitoli codificati sono definiti in `MediaPlayer.Visibility`.
 >
 >
 ```java
@@ -33,7 +33,7 @@ ht-degree: 0%
 >}
 >```
 
-1. Attendere che MediaPlayer disponga almeno dello stato PREPARATO (vedere [Attendere uno stato](../../../tvsdk-1.4-for-android/ui-configure/android-1.4-ui-state-prepared-wait-for.md)valido).
+1. Attendete che MediaPlayer disponga almeno dello stato PREPARATO (vedere [Attendere uno stato valido](../../../tvsdk-1.4-for-android/ui-configure/android-1.4-ui-state-prepared-wait-for.md)).
 1. Per ottenere l’impostazione di visibilità corrente per i sottotitoli codificati, utilizzate il metodo getter in MediaPlayer, che restituisce un valore di visibilità.
 
    ```java
