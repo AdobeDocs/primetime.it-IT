@@ -6,11 +6,14 @@ title: Considerazioni e procedure ottimali
 uuid: b37a5710-e811-4c3e-be8c-7c34ee5944e5
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '409'
+ht-degree: 0%
 
 ---
 
 
-# Considerazioni e procedure ottimali{#considerations-and-best-practices}
+# Considerazioni e best practice{#considerations-and-best-practices}
 
 Per utilizzare TVSDK nel modo più efficace, è necessario prendere in considerazione alcuni dettagli del suo funzionamento e seguire alcune best practice.
 
@@ -18,7 +21,7 @@ Per utilizzare TVSDK nel modo più efficace, è necessario prendere in considera
 
 Ricorda le seguenti informazioni quando utilizzi TVSDK:
 
-* Adobe Primetime non funziona sui simulatori iOS.
+*  Adobe Primetime non funziona sui simulatori iOS.
 
    Per eseguire il test dovete utilizzare dei dispositivi reali.
 * La riproduzione è supportata solo per il contenuto HTTP Live Streaming (HLS).
@@ -42,9 +45,9 @@ Seguono alcune pratiche consigliate per TVSDK:
 
 * Utilizzate HLS versione 3.0 o successiva per il contenuto del programma.
 * Utilizzate lo strumento MediaReamvalidator di Apple per convalidare i flussi VOD.
-* La `PTSDKConfig` classe fornisce metodi per applicare SSL alle richieste effettuate ai server Primetime ad alsazietà, DRM e Video Analytics.
+* La classe `PTSDKConfig` fornisce metodi per applicare SSL alle richieste effettuate ai server Primetime ad Decioning, DRM e Video Analytics.
 
-   Per ulteriori informazioni, vedere `forceHTTPS` e `isForcingHTTPS` metodi in questa classe.
+   Per ulteriori informazioni, vedere i metodi `forceHTTPS` e `isForcingHTTPS` in questa classe.
 
    >[!IMPORTANT]
    >
