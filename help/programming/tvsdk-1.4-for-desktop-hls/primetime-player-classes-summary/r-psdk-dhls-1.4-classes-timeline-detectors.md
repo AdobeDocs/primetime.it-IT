@@ -6,6 +6,9 @@ title: Classi di rilevatori della timeline
 uuid: 73452e8a-5f33-4004-b93a-e77a09a66add
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '114'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
 
 Queste classi consentono di rilevare le opportunità di annunci nella cronologia.
 
-Pacchetto: [com.adobe.mediacore.timeline.detectors](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/detectors/package-detail.html)
+Pacchetto: [com.adobe.mediacore.timeline.detector](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/detectors/package-detail.html)
 
 | Nome | Descrizione |
 |---|---|
