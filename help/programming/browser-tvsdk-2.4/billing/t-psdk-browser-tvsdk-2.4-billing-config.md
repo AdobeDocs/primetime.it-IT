@@ -1,18 +1,21 @@
 ---
-description: Se utilizzi la configurazione predefinita, non è necessario fare altro per abilitare o configurare la fatturazione. Se avete ottenuto diversi parametri di configurazione dal rappresentante Adobe Enablement, utilizzate la classe BillingMetricsConfiguration per impostare questi parametri prima di inizializzare il lettore multimediale.
-seo-description: Se utilizzi la configurazione predefinita, non è necessario fare altro per abilitare o configurare la fatturazione. Se avete ottenuto diversi parametri di configurazione dal rappresentante Adobe Enablement, utilizzate la classe BillingMetricsConfiguration per impostare questi parametri prima di inizializzare il lettore multimediale.
+description: Se utilizzi la configurazione predefinita, non è necessario fare altro per abilitare o configurare la fatturazione. Se avete ottenuto diversi parametri di configurazione dal rappresentante di abilitazione  Adobe, utilizzate la classe BillingMetricsConfiguration per impostare questi parametri prima di inizializzare il lettore multimediale.
+seo-description: Se utilizzi la configurazione predefinita, non è necessario fare altro per abilitare o configurare la fatturazione. Se avete ottenuto diversi parametri di configurazione dal rappresentante di abilitazione  Adobe, utilizzate la classe BillingMetricsConfiguration per impostare questi parametri prima di inizializzare il lettore multimediale.
 seo-title: Configurare le metriche di fatturazione
 title: Configurare le metriche di fatturazione
 uuid: 04d3b53e-f08c-49d0-ba42-5375f1307d2e
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '192'
+ht-degree: 0%
 
 ---
 
 
 # Configurare le metriche di fatturazione{#configure-billing-metrics}
 
-Se utilizzi la configurazione predefinita, non è necessario fare altro per abilitare o configurare la fatturazione. Se avete ottenuto diversi parametri di configurazione dal rappresentante Adobe Enablement, utilizzate la classe BillingMetricsConfiguration per impostare questi parametri prima di inizializzare il lettore multimediale.
+Se utilizzi la configurazione predefinita, non è necessario fare altro per abilitare o configurare la fatturazione. Se avete ottenuto diversi parametri di configurazione dal rappresentante di abilitazione  Adobe, utilizzate la classe BillingMetricsConfiguration per impostare questi parametri prima di inizializzare il lettore multimediale.
 
 La maggior parte dei clienti deve utilizzare la configurazione predefinita.
 
