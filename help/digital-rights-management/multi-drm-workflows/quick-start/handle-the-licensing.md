@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Licenze{#licensing}
+# Licensing{#licensing}
 
 La licenza è il meccanismo principale mediante il quale gli utenti possono o meno riprodurre contenuti video protetti. A un utente legittimo (autorizzato) può essere rilasciata una licenza (una chiave) per decifrare e riprodurre uno specifico elemento del contenuto crittografato del suo fornitore di contenuti.
 
@@ -30,7 +30,7 @@ L&#39;adesione o il server di storefront richiederà un token di licenza dal ser
 
 1. Eseguite la richiesta del token di licenza.
 
-   Per uno scenario di avvio rapido, in cui vuoi solo essere certo che i vari componenti coinvolti funzionino insieme, potresti voler usare qualcosa come [!DNL curl] per fare la tua richiesta di token di licenza, (invece di ottenere inizialmente un&#39;app attiva e in esecuzione e testare le chiamate da lì). Ad esempio:
+   Per uno scenario di avvio rapido, in cui si desidera solo assicurarsi che i vari componenti coinvolti stiano funzionando insieme, è possibile utilizzare qualcosa come [!DNL curl] per effettuare la richiesta di token di licenza, (invece di ottenere inizialmente un&#39;app attiva e in esecuzione e testare le chiamate da lì). Ad esempio:
 
    * Widevine:
 
