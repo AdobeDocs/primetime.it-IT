@@ -15,9 +15,9 @@ ht-degree: 0%
 
 Utilizzate la scheda Pacchetto multimediale per creare pacchetti di contenuto. Nella sezione Proprietà di Packager sono visualizzate le impostazioni di Packager immesse nella scheda Preferenze. Per modificare queste impostazioni, passate alla scheda Preferenze, modificate le impostazioni e selezionate Salva.
 
-Se desiderate creare un pacchetto per un singolo file FLV o F4V, scegliete l&#39; **[!UICONTROL Select Single File]** opzione e immettete il percorso completo del file sorgente e il percorso completo in cui salvare il file crittografato.
+Se desiderate creare un pacchetto per un singolo file FLV o F4V, scegliete l&#39;opzione **[!UICONTROL Select Single File]** e immettete il percorso completo del file di origine e il percorso completo in cui salvare il file crittografato.
 
-Se desiderate creare un pacchetto per tutti i file di una cartella, scegliete l’ **[!UICONTROL Select Single Folder]** opzione. Specificate la cartella che contiene i file sorgente. Solo i file nella cartella di input che corrispondono ai **[!UICONTROL Input Media File Selection]** criteri verranno inclusi in un pacchetto (i file nelle sottocartelle non vengono inclusi nel pacchetto). Scegliere se cifrare [!DNL .flv] file, [!DNL .f4v] file o immettere un&#39;espressione regolare personalizzata (ad esempio &quot;.*&quot; codifica tutti i file nella cartella). I file crittografati verranno salvati nella cartella di output specificata, utilizzando lo stesso nome file del file originale.
+Se desiderate creare un pacchetto per tutti i file in una cartella, scegliete l&#39;opzione **[!UICONTROL Select Single Folder]**. Specificate la cartella che contiene i file sorgente. Solo i file nella cartella di input che corrispondono ai criteri **[!UICONTROL Input Media File Selection]** saranno inclusi nel pacchetto (i file nelle sottocartelle non vengono inclusi nel pacchetto). Scegliere di cifrare [!DNL .flv] file, [!DNL .f4v] file o immettere un&#39;espressione regolare personalizzata (ad esempio &quot;.*&quot; codifica tutti i file nella cartella). I file crittografati verranno salvati nella cartella di output specificata, utilizzando lo stesso nome file del file originale.
 
 >[!NOTE]
 >
@@ -35,4 +35,4 @@ Nella tabella seguente sono descritte le preferenze per i file multimediali pacc
 | Crittografa script | Selezionare questa casella di controllo per cifrare i dati di script (solo FLV) |
 | Proprietà personalizzate | Specificate le proprietà personalizzate da includere nel contenuto del pacchetto. Queste proprietà saranno disponibili per il server licenze al momento del rilascio di una licenza. (Facoltativo) |
 
-Dopo aver selezionato le opzioni di package, fate clic sul **[!UICONTROL Package Media]** pulsante per iniziare a creare il package dei file.
+Dopo aver selezionato le opzioni di pacchetto, fate clic sul pulsante **[!UICONTROL Package Media]** per iniziare a creare il pacchetto dei file.
