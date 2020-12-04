@@ -6,15 +6,18 @@ title: Classe di metadati temporizzati
 uuid: 3f276618-5f61-4b41-bd2d-78e7f32178d9
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '257'
+ht-degree: 0%
 
 ---
 
 
-# Classe di metadati temporizzati{#timed-metadata-class}
+# Classe metadati temporizzati{#timed-metadata-class}
 
 Quando Browser TVSDK rileva un tag con iscrizione nella playlist o nel manifesto, il lettore tenta automaticamente di elaborare il tag ed esporlo come oggetto TimedMetadata.
 
-La `TimedMetadata` classe fornisce gli elementi seguenti:
+La classe `TimedMetadata` fornisce gli elementi seguenti:
 
 <table id="table_5827A0626EDC45F68DC3E7644F3EFF69"> 
  <thead> 
