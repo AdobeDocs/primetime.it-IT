@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Domande frequenti sull&#39;utilizzo della protezione dell&#39;output basata su risoluzione.
 
-* **D.** *Quando si definisce un requisito di output digitale per un vincolo di pixel, si verificano errori di analisi/formattazione quando si esce dalla versione HDCP, ma non sono presenti requisiti HDCP. Come posso configurare il mio requisito di output digitale in questo caso?* **A.** Poiché al momento il controllo della versione HDCP non è supportato nel client,  Adobe consiglia di impostare la versione HDCP su `1.0`. Questo garantisce che la configurazione sia formattata correttamente ed è semanticamente coerente in futuro quando sarà supportato il controllo della versione HDCP. Lo snippet di codice seguente illustra una configurazione con questo valore HDCP.
+* **D.** *Quando si definisce un requisito di output digitale per un vincolo di pixel, si verificano errori di analisi/formattazione quando si esce dalla versione HDCP, ma non si hanno requisiti HDCP. Come posso configurare il mio requisito di output digitale in questo caso?* **A.** Poiché al momento il controllo della versione HDCP non è supportato nel client,  Adobe consiglia di impostare la versione HDCP su  `1.0`. Questo garantisce che la configurazione sia formattata correttamente ed è semanticamente coerente in futuro quando sarà supportato il controllo della versione HDCP. Lo snippet di codice seguente illustra una configurazione con questo valore HDCP.
 
    ```
    { "pixelConstraints":  
@@ -33,7 +33,7 @@ Domande frequenti sull&#39;utilizzo della protezione dell&#39;output basata su r
    }
    ```
 
-* **D.** *I vincoli di pixel RBOP sono discreti o basati su intervalli?* **A.** I vincoli di pixel RBOP sono basati su intervalli. Ogni conteggio di pixel definisce i requisiti per tutti i conteggi di pixel inferiori o uguali al conteggio specificato o fino al conteggio più grande inferiore a tale valore, se esistono più vincoli di pixel. In altre parole, i valori vengono applicati come soglie massime per ciascun conteggio pixel verticale.
+* **D.** *I vincoli di pixel RBOP sono discreti o basati su intervalli?* **I vincoli di pixel A.** RBOP sono basati su intervalli. Ogni conteggio di pixel definisce i requisiti per tutti i conteggi di pixel inferiori o uguali al conteggio specificato o fino al conteggio più grande inferiore a tale valore, se esistono più vincoli di pixel. In altre parole, i valori vengono applicati come soglie massime per ciascun conteggio pixel verticale.
 
    Supponiamo che un flusso MBR con risoluzioni verticali di 240, 480, 600, 720 e 1080 venga trasmesso al lettore con le seguenti impostazioni RBOP.
 
@@ -51,9 +51,9 @@ Domande frequenti sull&#39;utilizzo della protezione dell&#39;output basata su r
    * 1080: > 720; il flusso è elencato come blocco (restituito dall&#39;errore) in quanto non è presente nelle regole sopra riportate.
 
 
-* **D.** Su alcuni dispositivi Android, le limitazioni del numero di pixel definite non vengono applicate esattamente come sono definite. Cosa sta succedendo?
+* **D.** Su alcuni dispositivi Android, le limitazioni del numero di pixel definite non vengono applicate esattamente come definite. Cosa sta succedendo?
 
-   **A.** Alcuni dispositivi Android riportano dimensioni dei fotogrammi leggermente superiori a quelle normali. Per ovviare a questa situazione, regolate le dimensioni dei fotogrammi ( `maxPixel` e `pixelCount` le impostazioni) verso l’alto di 20 pixel. Ad esempio, regolate le impostazioni delle dimensioni del fotogramma verso l’alto, da:
+   **A.** Alcuni dispositivi Android riportano dimensioni dei fotogrammi leggermente superiori a quelle normali. Per ovviare a questa situazione, regolare le dimensioni dei fotogrammi ( `maxPixel` e `pixelCount` impostazioni) verso l&#39;alto di 20 pixel. Ad esempio, regolate le impostazioni delle dimensioni del fotogramma verso l’alto, da:
 
    ```
    { 
@@ -79,5 +79,5 @@ Domande frequenti sull&#39;utilizzo della protezione dell&#39;output basata su r
    ... 
    ```
 
-   , per tutte le istanze di `maxPixel` e `pixelCount`.
+   in tutte le istanze di `maxPixel` e `pixelCount`.
 
