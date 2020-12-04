@@ -6,6 +6,9 @@ title: Implementare la gestione della blackout
 uuid: 38a78a57-b641-439a-a7d8-da571a0902e4
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '143'
+ht-degree: 1%
 
 ---
 
@@ -37,7 +40,7 @@ Per implementare la gestione della blackout e fornire contenuto alternativo dura
    }
    ```
 
-1. Implementare un metodo listener per `PTTimedMetadata` gli oggetti in primo piano.
+1. Implementare un metodo listener per gli oggetti `PTTimedMetadata` in primo piano.
 
    Ad esempio:
 
@@ -61,7 +64,7 @@ Per implementare la gestione della blackout e fornire contenuto alternativo dura
    }
    ```
 
-1. Gestione `TimedMetadata` degli oggetti con aggiornamenti costanti durante la riproduzione.
+1. Gestire gli oggetti `TimedMetadata` con aggiornamenti costanti durante la riproduzione.
 
    ```
    - (void)onMediaPlayerTimeChange:(NSNotification *)notification 
@@ -82,7 +85,7 @@ Per implementare la gestione della blackout e fornire contenuto alternativo dura
    }
    ```
 
-1. Aggiungete il `PTTimedMetadata` gestore per passare al contenuto alternativo e tornare al contenuto principale come indicato dall&#39; `PTTimedMetadata` oggetto e il relativo tempo di riproduzione.
+1. Aggiungete il gestore `PTTimedMetadata` per passare al contenuto alternativo e tornare al contenuto principale come indicato dall&#39;oggetto `PTTimedMetadata` e il relativo tempo di riproduzione.
 
    ```
    - (void)handleCollectionAtTime:(int)currentTime 
@@ -197,7 +200,7 @@ Per implementare la gestione della blackout e fornire contenuto alternativo dura
    }
    ```
 
-1. Implementare un metodo listener per `PTTimedMetadata` gli oggetti in background.
+1. Implementare un metodo listener per gli oggetti `PTTimedMetadata` in background.
 
    ```
    - (void)onSubscribedTagInBackground:(NSNotification *)notification 
