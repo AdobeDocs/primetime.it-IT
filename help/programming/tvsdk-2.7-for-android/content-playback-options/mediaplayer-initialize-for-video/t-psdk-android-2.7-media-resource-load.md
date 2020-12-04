@@ -6,6 +6,9 @@ title: Caricare una risorsa multimediale nel lettore multimediale
 uuid: 0334fa69-1d92-44d8-8891-2bc90a1ea498
 translation-type: tm+mt
 source-git-commit: 67975894814fbed8cfc49764a54b80d123032a49
+workflow-type: tm+mt
+source-wordcount: '221'
+ht-degree: 0%
 
 ---
 
@@ -16,21 +19,22 @@ Caricate una risorsa creando direttamente un&#39;istanza di MediaResource e cari
 
 1. Impostare il lettore multimediale per riprodurre la nuova risorsa.
 
-   Sostituisce l’elemento attualmente riproducibile chiamando `MediaPlayer.replaceCurrentResource()` e passando un’ `MediaResource` istanza esistente.
+   Sostituire l&#39;elemento attualmente riproducibile chiamando `MediaPlayer.replaceCurrentResource()` e passando un&#39;istanza `MediaResource` esistente.
 
    Viene avviato il processo di caricamento delle risorse.
 
-1. Registra l’ `MediaPlayerEvent.STATUS_CHANGED` evento con l’ `MediaPlayer` istanza. Nella callback, verificate che siano presenti almeno i seguenti valori di stato:
+1. Registra l&#39;evento `MediaPlayerEvent.STATUS_CHANGED` con l&#39;istanza `MediaPlayer`. Nella callback, verificate che siano presenti almeno i seguenti valori di stato:
 
    * `MediaPlayerStatus.PREPARED`
    * `MediaPlayerStatus.INITIALIZED`
    * `MediaPlayerStatus.ERROR`
-   Attraverso questi eventi, l&#39; `MediaPlayer` oggetto notifica all&#39;applicazione se ha caricato correttamente la risorsa multimediale.
-1. Quando lo stato del lettore multimediale cambia in `INITIALIZED`, potete chiamare `MediaPlayer.prepareToPlay()`.
 
-   Questo stato indica che il supporto è stato caricato correttamente. Il nuovo `MediaPlayerItem` è pronto per la riproduzione. La chiamata `prepareToPlay()` avvia il processo di risoluzione e posizionamento pubblicitario, se presente.
+   Attraverso questi eventi, l&#39;oggetto `MediaPlayer` invia una notifica all&#39;applicazione quando questa ha caricato correttamente la risorsa multimediale.
+1. Quando lo stato del lettore multimediale cambia in `INITIALIZED`, è possibile chiamare `MediaPlayer.prepareToPlay()`.
 
-Se si verifica un errore, il lettore multimediale passa allo `ERROR` stato.
+   Questo stato indica che il supporto è stato caricato correttamente. Il nuovo `MediaPlayerItem` è pronto per la riproduzione. La chiamata di `prepareToPlay()` avvia la risoluzione e il processo di posizionamento della pubblicità, se presente.
+
+Se si verifica un errore, il lettore multimediale passa allo stato `ERROR`.
 
 Il seguente codice di esempio semplificato illustra il processo di caricamento di una risorsa multimediale:
 
