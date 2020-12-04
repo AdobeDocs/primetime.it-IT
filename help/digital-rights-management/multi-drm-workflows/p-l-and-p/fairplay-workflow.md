@@ -33,10 +33,10 @@ Attenetevi a questa procedura per abilitare il servizio ExpressPlay per la prote
    >
    >Selezionare **[!UICONTROL Content Provider]** per il ruolo principale.
 
-   Una volta approvata la richiesta, Apple invierà un pacchetto *di distribuzione* FairPlay Streaming.
+   Una volta approvata la richiesta, Apple invierà un *pacchetto di distribuzione di streaming FairPlay*.
 1. Generare una richiesta di firma dei certificati.
 
-   È possibile utilizzare [!DNL openssl] per generare la coppia chiave pubblica/privata e la richiesta di firma del certificato (CSR).
+   È possibile utilizzare [!DNL openssl] per generare la coppia di chiavi pubblica/privata e la richiesta di firma del certificato (CSR).
 
    1. Genera la tua coppia di chiavi.
 
@@ -53,20 +53,20 @@ Attenetevi a questa procedura per abilitare il servizio ExpressPlay per la prote
 
       >[!NOTE]
       >
-      >Le istruzioni per questo passaggio si trovano nel pacchetto *di distribuzione* FairPlay Streaming, ma sono incluse qui per comodità. In caso di problemi con questa parte del processo, controllate le istruzioni in *FairPlayCertificateCreation.pdf* (nel pacchetto di distribuzione).
+      >Le istruzioni per questo passaggio si trovano nel *pacchetto di distribuzione di streaming di FairPlay*, ma sono incluse qui per comodità. In caso di problemi con questa parte del processo, controllate le istruzioni in *FairPlayCertificateCreation.pdf* (nel pacchetto di distribuzione).
 
 1. Caricate il CSR tramite il portale per sviluppatori Apple.
-   1. L&#39;agente del team di sviluppo deve effettuare l&#39;accesso [!DNL developer.apple.com/account].
-   1. Fare clic su **[!UICONTROL Certificates, Identifiers & Profiles]**, quindi selezionare l&#39; **[!UICONTROL iOS, tvOS, watchOS]** elenco a discesa in alto a sinistra della pagina, quindi fare clic **[!UICONTROL Certificates->Production]** sulla sinistra della pagina.
-   1. Fate clic sul **[!UICONTROL +]** pulsante in alto a destra della pagina per richiedere un nuovo certificato. Selezionare l&#39; **[!UICONTROL FairPlay Streaming Certificate]** opzione in **[!UICONTROL Production]**.
+   1. L&#39;agente team del team di sviluppo deve accedere a [!DNL developer.apple.com/account].
+   1. Fare clic su **[!UICONTROL Certificates, Identifiers & Profiles]**, quindi selezionare il menu a discesa **[!UICONTROL iOS, tvOS, watchOS]** in alto a sinistra della pagina, quindi fare clic su **[!UICONTROL Certificates->Production]** a sinistra della pagina.
+   1. Fate clic sul pulsante **[!UICONTROL +]** in alto a destra della pagina per richiedere un nuovo certificato. Selezionare l&#39;opzione **[!UICONTROL FairPlay Streaming Certificate]** in **[!UICONTROL Production]**.
 
-      Viene visualizzata la finestra di dialogo *Aggiungi certificato* iOS.
-   1. In *Aggiungi certificato* iOS, caricate il file CSR generato al passaggio 2.b e fate clic su **[!UICONTROL Generate]**.
+      Viene visualizzata la finestra di dialogo *Aggiungi certificato iOS*.
+   1. In *Aggiungi certificato iOS*, caricate il file CSR generato al passaggio 2.b, quindi fate clic su **[!UICONTROL Generate]**.
 
       La chiave ASK (Application Secret Key) viene visualizzata nella stessa finestra di dialogo.
    1. Prendete nota della vostra domanda e archiviatela in una posizione sicura.
-   1. Per completare la generazione del certificato, fai clic su **[!UICONTROL Continue]**.
-   1. Dopo aver verificato di aver salvato la richiesta, fate clic **[!UICONTROL Generate]** per continuare.
+   1. Per completare la generazione del certificato, digitare nell&#39;ASK e fare clic su **[!UICONTROL Continue]**.
+   1. Dopo aver verificato di aver salvato il file ASK, fate clic su **[!UICONTROL Generate]** per continuare.
 
       >[!NOTE]
       >
@@ -77,37 +77,37 @@ Attenetevi a questa procedura per abilitare il servizio ExpressPlay per la prote
       Accertatevi di salvare una copia di backup della chiave privata (dal passaggio 2.a.) e della chiave pubblica (il certificato FPS scaricato in questo passaggio) in un luogo sicuro.
 1. Configurate il vostro account ExpressPlay con le vostre credenziali FairPlay.
    1. Diciamo il nome del certificato che hai scaricato al punto 3.h. è [!DNL fairplay.cer].
-   1. Aprite il [!DNL fairplay.cer] file con l&#39;utility Apple Keychain Access.
+   1. Aprite il file [!DNL fairplay.cer] con l&#39;utility Apple Keychain Access.
    1. Filtrate i numerosi certificati immettendo &quot; `fairplay`&quot; nel campo di ricerca situato in alto a destra.
    1. Identifica il certificato FairPlay della tua azienda.
 
       Il nome della società deve essere associato al certificato rilasciato da Apple.
    1. Espandi il certificato selezionando la freccia di espansione e facendo clic con il pulsante destro del mouse sulla chiave privata.
-   1. Selezionare **[!UICONTROL Export "Your Company Name"]** e salvare il [!DNL .p12] file.
+   1. Selezionare **[!UICONTROL Export "Your Company Name"]** e salvare il file [!DNL .p12].
 
       Vi verrà chiesto di assegnare una password per proteggere il file. Prendete nota di questa password, in quanto dovrete inviarla con il pacchetto di credenziali.
-   1. Accedete al vostro account su [www.expressplay.com](https://www.expressplay.com).
-   1. Fare clic **[!UICONTROL DRM SERVICES]** in alto a sinistra, quindi selezionare la **[!UICONTROL FairPlay]** scheda.
+   1. Accedi al tuo account su [www.expressplay.com](https://www.expressplay.com).
+   1. Fare clic su **[!UICONTROL DRM SERVICES]** in alto a sinistra, quindi selezionare la scheda **[!UICONTROL FairPlay]**.
    1. Carica le tue credenziali FairPlay nel tuo account ExpressPlay.
 
-      1. Create un file di testo che contenga il valore ASK (ad esempio, 32 caratteri): `1234567890abcdef1234567890abcdef`) e selezionate questo file per il caricamento.
+      1. Create un file di testo che contenga il valore ASK (ad esempio, 32 caratteri): `1234567890abcdef1234567890abcdef`), quindi selezionate il file per il caricamento.
       1. Selezionate il file PKCS12 dal passaggio 4.f. per il caricamento.
       1. Immettete la password del file PKCS12 dal passaggio 4.f.
       1. Fate clic sul pulsante Carica.
 
-Ora potete creare applicazioni iOS o pagine HTML5 con la protezione del contenuto FairPlay insieme al vostro [!DNL fairplay.cer] certificato utilizzando il servizio ExpressPlay per FairPlay.
+Ora potete creare applicazioni iOS o pagine HTML5 con la protezione dei contenuti FairPlay insieme al vostro certificato [!DNL fairplay.cer] utilizzando il servizio ExpressPlay per FairPlay.
 
 <!--<a id="fig_sjr_2pn_sv"></a>-->
 
 ![](assets/multi_drm_expressplay_drm_services_web.png)
 
-### Creazione di pacchetti di contenuti per FairPlay {#package-your-content-for-fairplay}
+### Creazione di pacchetti per FairPlay {#package-your-content-for-fairplay}
 
 Per creare pacchetti di contenuti, potete utilizzare  Adobe Offline Packager o altri strumenti come ExpressPlay&#39;s Bento4 packager.
 
 I Packager preparano il video per la riproduzione (ad esempio, frammentando il file originale e inserendolo in un manifesto) e proteggono il video con la soluzione DRM scelta (in questo caso FairPlay):
 
-* [Adobe Offline Packager per FairPlay DRM](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=21)
+* [ Adobe Offline Packager per FairPlay DRM](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=21)
 * [Pacchetti ExpressPlay - Bento4 per HLS](https://www.bento4.com/developers/hls/)
 
 <!--<a id="fig_jbn_fw5_xw"></a>-->
@@ -116,7 +116,7 @@ I Packager preparano il video per la riproduzione (ad esempio, frammentando il f
 
 1. Create pacchetti per il contenuto.
 
-   Di seguito è riportato un esempio di package con  Adobe Offline Packager. Il Packager utilizza un file di configurazione (ad esempio, [!DNL fairplay.xml]) simile al seguente:
+   Di seguito è riportato un esempio di package con  Adobe Offline Packager. Il Packager utilizza un file di configurazione (ad es. [!DNL fairplay.xml]) simile al seguente:
 
    ```
    <config>
@@ -142,10 +142,10 @@ I Packager preparano il video per la riproduzione (ad esempio, frammentando il f
    * `target_dur` - La durata di destinazione per l&#39;output HLS.
    * `key_file_path` - Si tratta della posizione del file di licenza nel computer in uso che funge da chiave di crittografia del contenuto (CEK). Si tratta di una stringa esadecimale con codifica Base-64 a 16 byte.
    * `iv_file_path` - Questa è la posizione del file IV sul computer di imballaggio.
-   * `key_url` - Il parametro URI del `EXT-X-KEY` tag del [!DNL .m3u8] file.
+   * `key_url` - Il parametro URI del  `EXT-X-KEY` tag del  [!DNL .m3u8] file.
    * `content_id` - Valore predefinito.
 
-   Come indicato nella documentazione [di](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=7)Packager, &quot;Come procedura ottimale, create un file di configurazione che contenga le opzioni comuni che desiderate utilizzare per generare gli output. Quindi, create l&#39;output fornendo opzioni specifiche come argomento della riga di comando.&quot;
+   Come indicato nella [Documentazione di Packager](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=7), &quot;Come procedura ottimale, create un file di configurazione che contiene le opzioni comuni che desiderate utilizzare per generare gli output. Quindi, create l&#39;output fornendo opzioni specifiche come argomento della riga di comando.&quot;
 
    ```
    java -jar OfflinePackager.jar -in_path sample.mp4 -out_type hls 
@@ -153,7 +153,7 @@ I Packager preparano il video per la riproduzione (ad esempio, frammentando il f
    -key_url "user_provided_value"
    ```
 
-   Il file M3U8 generato ha un `EXT-X-KEY` attributo che viene visualizzato come segue:
+   Il file M3U8 generato ha un attributo `EXT-X-KEY` che viene visualizzato come segue:
 
    ```
    #EXT-X-KEY:METHOD=SAMPLE-AES,URI="user_provided_value",​
@@ -164,7 +164,7 @@ I Packager preparano il video per la riproduzione (ad esempio, frammentando il f
 
 Potete impostare criteri per il contenuto protetto da FairPlay utilizzando un server di adesione. Potete configurare un server di adesione di esempio personalizzato o utilizzare un server di adesione di Adobe .
 
- Adobe fornisce un server di adesione ExpressPlay (SEES) di esempio che mostra come eseguire l&#39;adesione in base all&#39; *ora* e il binding *del* dispositivo. Questo server di adesione di esempio è basato sui servizi ExpressPlay.
+ Adobe fornisce un server di adesione ExpressPlay (SEES) di esempio che mostra come eseguire l&#39;adesione *basata su tempo* e *il binding dei dispositivi*. Questo server di adesione di esempio è basato sui servizi ExpressPlay.
 
 [Server di riferimento: Sample ExpressPlay Entitlement Server (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md)
 
@@ -175,7 +175,7 @@ Potete impostare criteri per il contenuto protetto da FairPlay utilizzando un se
 
 La licenza e la riproduzione di contenuti protetti da FairPlay richiedono lo scambio di schemi URL tra lo schema utilizzato nel file manifesto video (skd:) e quello utilizzato nelle richieste di token ExpressPlay (https:).
 
-Le istruzioni per implementare la licenza e la riproduzione da un client TVSDK iOS sono disponibili qui: [Abilita Apple FairPlay nelle applicazioni](../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md)TVSDK. È inoltre possibile implementare la riproduzione offline e la rotazione della licenza per FairPlay.
+Le istruzioni per implementare la licenza e la riproduzione da un client TVSDK iOS sono disponibili qui: [Abilita Apple FairPlay nelle applicazioni TVSDK](../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md). È inoltre possibile implementare la riproduzione offline e la rotazione della licenza per FairPlay.
 
 ## HLS offline con FairPlay {#section_047A05D1E3B64883858BC601CFC8F759}
 
@@ -186,15 +186,15 @@ Prima di iniziare questa attività, scaricate e leggete il documento Apple **&qu
 Implementa la riproduzione offline per FairPlay con il seguente flusso di lavoro:
 
 1. Scaricate il segmento HLS TS.
-1. Richiedete la licenza di affitto permanente dal server FairPlay (consultate **&quot;FairPlay Persistent Rental Policy&quot;**).
-1. Salva il `persistentContentKey`.
+1. Richiedi una licenza di affitto permanente dal server FairPlay (vedere **&quot;FairPlay Persistent Rental Policy&quot;**).
+1. Salvare il file `persistentContentKey`.
 1. Riproduci il contenuto FairPlay offline.
 
 >[!NOTE]
 >
 >FairPlay Streaming sul client non avvia la decrittografia se la chiave di contenuto persistente è scaduta. Tuttavia, se la chiave di contenuto scade durante la riproduzione, l’utente continuerà a utilizzare la chiave.
 >
->Per ulteriori informazioni, consultate [Utilizzo del documento HTTP Live Streaming](https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/MediaPlaybackGuide/Contents/Resources/en.lproj/HTTPLiveStreaming/HTTPLiveStreaming.html#//apple_ref/doc/uid/TP40016757-CH11-SW3) .
+>Per ulteriori informazioni, consultare il documento [Utilizzo di HTTP Live Streaming](https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/MediaPlaybackGuide/Contents/Resources/en.lproj/HTTPLiveStreaming/HTTPLiveStreaming.html#//apple_ref/doc/uid/TP40016757-CH11-SW3).
 
 ### Rotazione licenza FairPlay {#section_D32AA08C61474B4F876AC2A5F18CB879}
 
