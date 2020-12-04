@@ -22,7 +22,7 @@ Browser TVSDK supporta una serie di funzioni MP3 e MP4 che potete implementare p
 
 >[!TIP]
 >
->Nelle tabelle delle matrici di feature riportate di seguito, l&#39;icona ![](assets/supported15.png) supportata indica che la funzione è supportata nella versione corrente.
+>Nelle tabelle della matrice di funzioni riportate di seguito, l&#39;icona ![supportata](assets/supported15.png) indica che la funzione è supportata nella versione corrente.
 
 ## Caratteristiche audio MP3 {#section_C900C301291A40529D02EACC3CD4D55A}
 
