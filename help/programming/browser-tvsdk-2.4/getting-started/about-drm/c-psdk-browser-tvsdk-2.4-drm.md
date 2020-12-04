@@ -1,20 +1,23 @@
 ---
-description: Potete completare flussi di lavoro specifici di Digital Rights Management (DRM).
-seo-description: Potete completare flussi di lavoro specifici di Digital Rights Management (DRM).
+description: Potete completare flussi di lavoro specifici per Digital Rights Management (DRM).
+seo-description: Potete completare flussi di lavoro specifici per Digital Rights Management (DRM).
 seo-title: Digital Rights Management
 title: Digital Rights Management
 uuid: 011605c7-50c4-4ad5-9961-8cd92d0e6fd8
 translation-type: tm+mt
 source-git-commit: 5a786d8001326f874a51d65b8e8badca44f46e96
+workflow-type: tm+mt
+source-wordcount: '114'
+ht-degree: 0%
 
 ---
 
 
 # Digital Rights Management {#digital-rights-management}
 
-Potete completare flussi di lavoro specifici di Digital Rights Management (DRM).
+Potete completare flussi di lavoro specifici per Digital Rights Management (DRM).
 
-Potete ascoltare l&#39; `AdobePSDK.DRMMetadataInfoEvent` evento per gestire i flussi di lavoro DRM:
+Potete ascoltare l&#39;evento `AdobePSDK.DRMMetadataInfoEvent` per gestire i flussi di lavoro DRM:
 
 ```js
 ... 
@@ -24,13 +27,13 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
 
 ## Aggiungi Digital Rights Management {#add-digital-rights-management}
 
-1. Aggiungete il `DRMMetadataInfoAvailableEvent` prodotto per ottenere il `DRMMetadata`.
+1. Aggiungete il simbolo `DRMMetadataInfoAvailableEvent` per ottenere il simbolo `DRMMetadata`.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onDRMMetadataInfoAvaialble);
    ```
 
-1. Implementare la `onDRMMetadataInfoAvailable` sezione sopra la riga al punto 1.
+1. Implementare la sezione `onDRMMetadataInfoAvailable` sopra la riga al punto 1.
 
    ```js
    var onDRMMetadataInfoAvaialble = function(event) { 
