@@ -6,15 +6,18 @@ title: Esempi di errori nell'intervallo di tempo
 uuid: 25ac5985-a844-452e-ac95-5006fdf413e6
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '136'
+ht-degree: 0%
 
 ---
 
 
-# Esempi di errori nell&#39;intervallo di tempo {#time-range-error-examples}
+# Esempi di errori dell&#39;intervallo di tempo {#time-range-error-examples}
 
 TVSDK risponde a specifiche errate dell&#39;intervallo di tempo unendo o sostituendo gli intervalli di tempo come appropriato.
 
-**DELETE intervallo di tempo**
+**Intervallo di tempo DELETE**
 
 Nell&#39;esempio seguente sono definiti quattro intervalli di tempo DELETE intersecanti. TVSDK unisce i quattro intervalli di tempo in uno, in modo che l&#39;intervallo di eliminazione effettivo sia compreso tra 0 e 50.
 
