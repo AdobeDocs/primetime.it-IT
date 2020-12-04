@@ -6,6 +6,9 @@ title: Annunci cliccabili
 uuid: dc02cba7-34ad-4c74-9ceb-2fc1050d54aa
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '361'
+ht-degree: 0%
 
 ---
 
@@ -27,9 +30,9 @@ Quando un utente fa clic su un annuncio, un banner pubblicitario complementare o
    >Quando un utente fa clic su un annuncio, un banner pubblicitario complementare o un pulsante correlato, TVSDK invia la notifica, incluse le informazioni sulla destinazione del clic.
 
 1. Monitora le interazioni degli utenti sugli annunci cliccabili.
-1. Quando l’utente tocca o fa clic sull’annuncio o sul pulsante, per inviare una notifica a TVSDK, utilizza `[_player notifyClick:_currentAd.primaryAsset];`.
-1. Ascoltare l’ `PTMediaPlayerAdClickNotification` evento da TVSDK.
-1. Per recuperare l’URL di click-through e le relative informazioni, utilizzare l’ `PTMediaPlayerAdClickURLKey` oggetto.
+1. Quando l&#39;utente tocca o fa clic sull&#39;annuncio o sul pulsante, per inviare una notifica a TVSDK, utilizza `[_player notifyClick:_currentAd.primaryAsset];`.
+1. Ascoltare l&#39;evento `PTMediaPlayerAdClickNotification` da TVSDK.
+1. Per recuperare l&#39;URL di click-through e le relative informazioni, utilizzare l&#39;oggetto `PTMediaPlayerAdClickURLKey`.
 1. Metti in pausa il video.
 1. Utilizzate le informazioni di click-through per visualizzare l&#39;URL di click-through dell&#39;annuncio e le relative informazioni.
 
