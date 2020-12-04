@@ -1,18 +1,21 @@
 ---
-description: Per impostazione predefinita, all’avvio della riproduzione, i contenuti multimediali VOD iniziano a 0 e i contenuti multimediali live iniziano a partire dal punto di vista del client (MediaPlayer.LIVE_POINT). Potete ignorare il comportamento predefinito.
-seo-description: Per impostazione predefinita, all’avvio della riproduzione, i contenuti multimediali VOD iniziano a 0 e i contenuti multimediali live iniziano a partire dal punto di vista del client (MediaPlayer.LIVE_POINT). Potete ignorare il comportamento predefinito.
+description: Per impostazione predefinita, all’avvio della riproduzione, il supporto VOD inizia a 0 e il supporto live inizia dal punto di vista del client (MediaPlayer.LIVE_POINT). Potete ignorare il comportamento predefinito.
+seo-description: Per impostazione predefinita, all’avvio della riproduzione, il supporto VOD inizia a 0 e il supporto live inizia dal punto di vista del client (MediaPlayer.LIVE_POINT). Potete ignorare il comportamento predefinito.
 seo-title: Inserire un flusso in un momento specifico
 title: Inserire un flusso in un momento specifico
 uuid: 5db73b50-0629-4fb1-8f12-6c88e4cd7109
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '136'
+ht-degree: 1%
 
 ---
 
 
-# Inserire un flusso in un momento specifico{#enter-a-stream-at-a-specific-time}
+# Immettere un flusso in un momento specifico{#enter-a-stream-at-a-specific-time}
 
-Per impostazione predefinita, all’avvio della riproduzione, i contenuti multimediali VOD iniziano a 0 e i contenuti multimediali live iniziano a partire dal punto di vista del client (MediaPlayer.LIVE_POINT). Potete ignorare il comportamento predefinito.
+Per impostazione predefinita, all’avvio della riproduzione, il supporto VOD inizia a 0 e il supporto live inizia dal punto di vista del client (MediaPlayer.LIVE_POINT). Potete ignorare il comportamento predefinito.
 
 1. Passa una posizione a `MediaPlayer.prepareToPlay`.
 1. Il browser TVSDK utilizza questa posizione come punto di partenza per la risorsa.
