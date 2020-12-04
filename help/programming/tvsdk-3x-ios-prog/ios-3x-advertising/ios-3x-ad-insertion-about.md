@@ -13,11 +13,11 @@ ht-degree: 0%
 ---
 
 
-# Inserire annunci {#insert-ads}
+# Inserisci annunci {#insert-ads}
 
 L&#39;inserimento di annunci risolve gli annunci per video-on-demand (VOD), per lo streaming live e per lo streaming lineare con il tracciamento e la riproduzione di annunci. TVSDK effettua le richieste necessarie al server di annunci, riceve informazioni sugli annunci per il contenuto specificato e inserisce gli annunci nel contenuto in più fasi.
 
-Un messaggio *`ad break`* contiene uno o più annunci che vengono riprodotti in sequenza. TVSDK inserisce gli annunci nel contenuto principale come membri di una o più interruzioni pubblicitarie.
+Un *`ad break`* contiene uno o più annunci che vengono riprodotti in sequenza. TVSDK inserisce gli annunci nel contenuto principale come membri di una o più interruzioni pubblicitarie.
 
 >[!TIP]
 >
@@ -47,13 +47,13 @@ TVSDK risolve gli annunci e inserisce gli annunci quando viene rilevato un cue p
 * # EXT-X-CUE
 * # EXT-X-CUE-OUT
 
-Questi marcatori richiedono il valore `DURATION` in secondi del campo di metadati e l’ID univoco del cue point. Ad esempio:
+Questi marcatori richiedono l&#39;indicazione `DURATION` in secondi del campo di metadati e l&#39;ID univoco del cue point. Ad esempio:
 
 ```
 #EXT-X-CUE DURATION=27 ID=identiferForThisCue ... 
 ```
 
-Per ulteriori informazioni su suggerimenti aggiuntivi, consultate [Iscriviti ai tag](../../tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-custom-tags-subscribe.md)personalizzati.
+Per ulteriori informazioni sui suggerimenti aggiuntivi, vedere [Iscriviti ai tag personalizzati](../../tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-custom-tags-subscribe.md).
 
 ## Track client ad {#section_12355C7A35F14C15A2A18AAC90FEC2F5}
 
@@ -61,7 +61,7 @@ TVSDK monitora automaticamente gli annunci per VOD e lo streaming live/lineare.
 
 Le notifiche vengono utilizzate per informare l&#39;applicazione sull&#39;avanzamento di un annuncio pubblicitario, incluse informazioni su quando inizia e quando termina.
 
-## Implementazione di un ritorno a capo rapido {#section_EEB9FE62CA7E4790B58D3CA906F43DCF}
+## Implementazione di un ritorno anticipato all&#39;interruzione dell&#39;annuncio {#section_EEB9FE62CA7E4790B58D3CA906F43DCF}
 
 Per l&#39;inserimento di annunci in streaming dal vivo, potrebbe essere necessario uscire da un&#39;interruzione di annuncio prima che tutti gli annunci nell&#39;interruzione siano riprodotti al completamento.
 
@@ -74,7 +74,7 @@ Di seguito sono riportati alcuni esempi di restituzione anticipata delle interru
 
 La possibilità di uscire dall&#39;inizio di un&#39;interruzione dell&#39;annuncio è identificata tramite un tag personalizzato nel manifesto noto come plug-in o tag di cue-in. TVSDK consente all’applicazione di sottoscrivere questi tag di collegamento per fornire un’opportunità di accesso facilitato.
 
-* Per utilizzare il `#EXT-X-CUE-IN` tag come opportunità di collegamento e implementare un ritorno iniziale all’interruzione dell’annuncio:
+* Per utilizzare il tag `#EXT-X-CUE-IN` come opportunità di inclusione e implementare un ritorno a capo rapido all&#39;interruzione dell&#39;annuncio:
 
    1. Iscriviti al tag .
 
@@ -94,11 +94,11 @@ La possibilità di uscire dall&#39;inizio di un&#39;interruzione dell&#39;annunc
 
 * Per condividere lo stesso tag per le giunzioni a capo e a capo:
 
-1. Se l’applicazione sta condividendo lo stesso cue point per indicare cue out/splice-out e cue-in/splice-in, estendere `PTDefaultAdOpportunityResolver` e implementare il `preparePlacementOpportunity` metodo.
+1. Se l&#39;applicazione condivide lo stesso cue point per indicare cue out/splice-out e cue-in/splice-in, estendere `PTDefaultAdOpportunityResolver` e implementare il metodo `preparePlacementOpportunity`.
 
    >[!TIP]
    >
-   >Il codice seguente presuppone che l&#39;app disponga di un&#39;implementazione per il `isCueInOpportunity` metodo.
+   >Il codice seguente presuppone che l&#39;app disponga di un&#39;implementazione per il metodo `isCueInOpportunity`.
 
    ```
    - (PTPlacementOpportunity *)preparePlacementOpportunity:(PTTimedMetadata *)timedMetadata 
@@ -114,7 +114,7 @@ La possibilità di uscire dall&#39;inizio di un&#39;interruzione dell&#39;annunc
    }
    ```
 
-1. Registra il risolutore di opportunità esteso nell&#39; `PTDefaultMediaPlayerClientFactory` istanza.
+1. Registra il risolutore di opportunità esteso nell&#39;istanza `PTDefaultMediaPlayerClientFactory`.
 
 ```
    // self.player is the PTMediaPlayer instance created for content and ad playback 
