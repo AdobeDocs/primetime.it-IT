@@ -6,6 +6,9 @@ title: Riutilizzare o rimuovere un'istanza di MediaPlayer
 uuid: 0b9a06b0-ece7-4e18-9221-a4528bcbc141
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '308'
+ht-degree: 0%
 
 ---
 
@@ -16,50 +19,50 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 ## Reimpostare o riutilizzare un&#39;istanza di MediaPlayer {#section_C183E6164C184C3CBC5321FC6A2528EA}
 
-Potete ripristinare un’ `MediaPlayer` istanza per riportarla allo stato IDLE non inizializzato come definito in `MediaPlayerStatus`. È inoltre possibile sostituire l&#39;elemento multimediale corrente o impostarne uno nuovo utilizzando una risorsa multimediale precedentemente caricata.
+È possibile reimpostare un&#39;istanza `MediaPlayer` per riportarla allo stato IDLE non inizializzato come definito in `MediaPlayerStatus`. È inoltre possibile sostituire l&#39;elemento multimediale corrente o impostarne uno nuovo utilizzando una risorsa multimediale precedentemente caricata.
 
 Questa operazione è utile nei casi seguenti:
 
-* Per riutilizzare un’ `MediaPlayer` istanza occorre caricarne una nuova `MediaResource` (contenuto video) e sostituire l’istanza precedente.
+* Per riutilizzare un&#39;istanza `MediaPlayer` è necessario caricare una nuova `MediaResource` (contenuto video) e sostituire l&#39;istanza precedente.
 
-   La reimpostazione consente di riutilizzare l’ `MediaPlayer` istanza senza sovraccaricare le risorse, ricreare l’istanza `MediaPlayer`e riallocare le risorse. Il `replaceCurrentItem` metodo esegue automaticamente questi passaggi.
+   La reimpostazione consente di riutilizzare l&#39;istanza `MediaPlayer` senza sovraccaricare le risorse, ricreare l&#39;istanza `MediaPlayer` e riallocare le risorse. Il metodo `replaceCurrentItem` esegue automaticamente questi passaggi.
 
-* Quando lo stato `MediaPlayer` è ERROR e deve essere cancellato.
+* Quando il `MediaPlayer` è in stato di errore e deve essere cancellato.
 
    >[!IMPORTANT]
    >
    >Questo è l&#39;unico modo per recuperare dallo stato ERROR.
 
-1. Chiamata `MediaPlayer.reset()` per restituire l’ `MediaPlayer` istanza allo stato non inizializzato:
+1. Chiamare `MediaPlayer.reset()` per restituire l&#39;istanza `MediaPlayer` allo stato non inizializzato:
 
    ```js
    reset(); // returns AdobePSDK.PSDKErrorCode.SUCCESS 
             // on successful reset
    ```
 
-1. Chiamata `MediaPlayer.replaceCurrentItem()` per caricare un altro `MediaResource`
+1. Chiamare `MediaPlayer.replaceCurrentItem()` per caricare un altro `MediaResource`
 
    >[!TIP]
    >
    >Per cancellare un errore, caricate lo stesso `MediaResource`.
 
-1. Chiama il `prepareToPlay()` metodo.
+1. Chiamate il metodo `prepareToPlay()`.
 
    >[!NOTE]
    >
-   >Quando ricevete l’ `MediaPlaybackStatusChangeEvent.STATUS_CHANGED` evento con lo stato PREPARATO, potete avviare la riproduzione.
+   >Quando ricevete l&#39;evento `MediaPlaybackStatusChangeEvent.STATUS_CHANGED` con lo stato PREPARATO, potete avviare la riproduzione.
 
-## Rilasciare un’istanza e le risorse di MediaPlayer {#section_2D159975C82245098E7078FE0B1578CE}
+## Rilasciare un&#39;istanza di MediaPlayer e le risorse {#section_2D159975C82245098E7078FE0B1578CE}
 
-È necessario rilasciare un&#39; `MediaPlayer` istanza e risorse quando non è più necessario disporre di MediaResource.
+Rilasciare un&#39;istanza e risorse `MediaPlayer` quando non è più necessario MediaResource.
 
 Di seguito sono riportati alcuni motivi per rilasciare un `MediaPlayer`:
 
 * L&#39;utilizzo di risorse non necessarie può influire sulle prestazioni.
-* Lasciare un oggetto inutile `MediaPlayer` può comportare un consumo continuo di batterie per i dispositivi mobili.
+* Lasciare un oggetto `MediaPlayer` inutile può comportare un consumo continuo di batterie per i dispositivi mobili.
 * Se più istanze dello stesso codec video non sono supportate su un dispositivo, potrebbe verificarsi un errore di riproduzione per altre applicazioni.
 
-* Rilasciate il `MediaPlayer`.
+* Rilasciare la `MediaPlayer`.
 
    ```js
    void release()
@@ -67,5 +70,5 @@ Di seguito sono riportati alcuni motivi per rilasciare un `MediaPlayer`:
 
    >[!NOTE]
    >
-   >Una volta rilasciata l&#39; `MediaPlayer` istanza, non sarà più possibile utilizzarla. Se dopo il rilascio viene chiamato un metodo dell’ `MediaPlayer` interfaccia, viene `IllegalStateException` generato un messaggio.
+   >Dopo il rilascio dell&#39;istanza `MediaPlayer`, non è più possibile utilizzarla. Se dopo il rilascio viene chiamato un metodo dell&#39;interfaccia `MediaPlayer`, viene restituito un `IllegalStateException`.
 
