@@ -6,11 +6,14 @@ title: Utilizzo dei sottotitoli codificati
 uuid: bc069e04-3ea3-4cdf-a8a6-d8aef91ece91
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '241'
+ht-degree: 0%
 
 ---
 
 
-# Utilizzo dei sottotitoli codificati{#work-with-closed-captions}
+# Utilizzare i sottotitoli codificati{#work-with-closed-captions}
 
 I sottotitoli codificati visualizzano la parte audio di un video come testo sullo schermo quando l&#39;audio non è udibile o l&#39;utente non è udibile.
 
@@ -24,6 +27,6 @@ Il browser TVSDK supporta il rendering di questi formati:
 È possibile:
 
 * Selezionate una traccia di didascalia disponibile come traccia corrente e ascoltate gli eventi che indicano tracce aggiuntive disponibili.
-* Attivate o disattivate i sottotitoli (visibili o non visibili) utilizzando l&#39; `MediaPlayer` interfaccia.
-* Selezionate le opzioni di stile che determinano il rendering dei sottotitoli codificati da parte del motore video sottostante. Utilizzare l&#39; `MediaPlayerItem` interfaccia per selezionare formati quali il font o il colore del font.
+* Attivate o disattivate i sottotitoli (visibili o non visibili) utilizzando l&#39;interfaccia `MediaPlayer`.
+* Selezionate le opzioni di stile che determinano il rendering dei sottotitoli codificati da parte del motore video sottostante. Utilizzare l&#39;interfaccia `MediaPlayerItem` per selezionare formati quali il font o il colore del font.
 
