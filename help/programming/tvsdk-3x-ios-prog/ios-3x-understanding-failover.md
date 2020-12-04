@@ -6,6 +6,9 @@ title: Failover
 uuid: 064886ab-afa2-4afc-b795-d094b31934b8
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '250'
+ht-degree: 0%
 
 ---
 
