@@ -6,6 +6,9 @@ title: Elementi API Blackout
 uuid: 65e1668c-6a19-4910-83a2-46d364e94e5f
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '257'
+ht-degree: 0%
 
 ---
 
@@ -18,15 +21,15 @@ Quando si implementa una soluzione blackout nel lettore, è possibile utilizzare
 
 * **MediaPlayer**
 
-   * `registerCurrentItemAsBackgroundItem` Salva la risorsa attualmente caricata come risorsa in background. Se `replaceCurrentResource` viene chiamato dopo questo metodo, TVSDK continua a scaricare il manifesto dell&#39;elemento in background fino alla chiamata `unregisterCurrentBackgroundItem`.
+   * `registerCurrentItemAsBackgroundItem` Salva la risorsa attualmente caricata come risorsa in background. Se `replaceCurrentResource` viene chiamato dopo questo metodo, TVSDK continua a scaricare il manifesto dell&#39;elemento in background finché non chiami `unregisterCurrentBackgroundItem`.
 
    * `unregisterCurrentBackgroundItem`  Cancella la risorsa di sfondo attualmente impostata e interrompe il recupero e l&#39;analisi del manifesto di sfondo.
 
-* **BlackoutMetadata** Un tipo di metadati specifico delle blackout.
+* **** BlackoutMetadataUn tipo di metadati specifico per i blackout.
 
-   Questo consente di impostare intervalli non ricercabili (un `TimeRange` attributo aggiuntivo denominato `nonseekableRange`) su TVSDK. TVSDK verifica la presenza di questi intervalli (se la posizione di ricerca desiderata rientra in una `nonseekableRange`) ogni volta che l&#39;utente cerca. Se è impostato e l’utente cerca in un intervallo non ricercabile, TVSDK forza il visualizzatore all’ora finale del `seekableRange`.
+   Questo consente di impostare intervalli non ricercabili (un attributo aggiuntivo `TimeRange` denominato `nonseekableRange`) in TVSDK. TVSDK controlla questi intervalli (se la posizione di ricerca desiderata rientra in un `nonseekableRange`) ogni volta che l&#39;utente cerca. Se è impostato e l’utente cerca in un intervallo non ricercabile, TVSDK forza il visualizzatore all’ora di fine del `seekableRange`.
 
-* **AVVIA QUI SUCCESSIVO** **DefaultMetadataKeys** Abilitare o disabilitare il preroll su un flusso live impostando `ENABLE_LIVE_PREROLL` su true o false. Se è false, TVSDK non effettua una chiamata ad-server esplicita per gli annunci pre-roll prima della riproduzione del contenuto, quindi non riproduce il pre-roll. Questo non ha alcun impatto sui rulli intermedi. Il valore predefinito è true.
+* **START HERE** **** NEXTDefaultMetadataKeysAbilitare o disabilitare il preroll su un flusso live impostando  `ENABLE_LIVE_PREROLL` su true o false. Se è false, TVSDK non esegue una chiamata ad un server per annunci pre-roll prima della riproduzione del contenuto, pertanto non riproduce il pre-roll. Questo non ha alcun impatto sui rulli intermedi. Il valore predefinito è true.
 
 * **TimedMetadataEvent**
 
