@@ -6,6 +6,9 @@ title: Inserimento interruzione annuncio parziale
 uuid: 296a9b6a-9e9f-4ca7-ab8a-c8cbc98fb9af
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '349'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ Ad esempio, se un utente si unisce al centro di un annuncio pubblicitario di 90 
 * Il secondo annuncio viene riprodotto per la durata rimanente (20 sec) seguita dal terzo annuncio.
 * I tracciatori di annunci per l&#39;annuncio parzialmente riprodotto (il secondo annuncio) non vengono attivati. Viene attivato solo il tracciatore del terzo annuncio.
 
-Questo comportamento non è attivato per impostazione predefinita. Per abilitare questa funzione nell&#39;app, effettua le seguenti operazioni:
+Questo comportamento non è attivato per impostazione predefinita. Per abilitare questa funzionalità nell&#39;app, effettua le seguenti operazioni.
 
 1. Disattivate i primi dinamici utilizzando il metodo setEnableLivePreroll della classe AdvertisingMetadata.
 
