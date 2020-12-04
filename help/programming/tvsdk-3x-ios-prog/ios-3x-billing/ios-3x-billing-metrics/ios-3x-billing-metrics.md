@@ -1,20 +1,23 @@
 ---
-description: Per consentire ai clienti che desiderano pagare solo ciò che utilizzano, anziché un tasso fisso indipendentemente dall'uso effettivo, Adobe raccoglie le metriche di utilizzo e utilizza queste metriche per determinare quanto addebitare ai clienti.
-seo-description: Per consentire ai clienti che desiderano pagare solo ciò che utilizzano, anziché un tasso fisso indipendentemente dall'uso effettivo, Adobe raccoglie le metriche di utilizzo e utilizza queste metriche per determinare quanto addebitare ai clienti.
+description: Per ospitare i clienti che desiderano pagare solo per ciò che utilizzano, piuttosto che per un tasso fisso, indipendentemente dall'uso effettivo,  Adobe raccoglie le metriche di utilizzo e utilizza queste metriche per determinare quanto addebitare ai clienti.
+seo-description: Per ospitare i clienti che desiderano pagare solo per ciò che utilizzano, piuttosto che per un tasso fisso, indipendentemente dall'uso effettivo,  Adobe raccoglie le metriche di utilizzo e utilizza queste metriche per determinare quanto addebitare ai clienti.
 seo-title: Metriche di utilizzo fatturazione
 title: Metriche di utilizzo fatturazione
 uuid: e792cc72-b1ae-42ce-8b71-f9f9f1de0614
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '395'
+ht-degree: 0%
 
 ---
 
 
 # Metriche di fatturazione {#billing-metrics}
 
-Per consentire ai clienti che desiderano pagare solo ciò che utilizzano, anziché un tasso fisso indipendentemente dall&#39;uso effettivo, Adobe raccoglie le metriche di utilizzo e utilizza queste metriche per determinare quanto addebitare ai clienti.
+Per ospitare i clienti che desiderano pagare solo per ciò che utilizzano, piuttosto che per un tasso fisso, indipendentemente dall&#39;uso effettivo,  Adobe raccoglie le metriche di utilizzo e utilizza queste metriche per determinare quanto addebitare ai clienti.
 
-Ogni volta che il lettore genera un evento di avvio del flusso, TVSDK inizia a inviare periodicamente messaggi HTTP al sistema di fatturazione di Adobe. Il periodo, noto come durata fatturabile, può essere diverso per VOD standard, pro VOD (annunci mid-roll abilitati) e contenuti live. La durata predefinita di ciascun tipo di contenuto è di 30 minuti, ma il contratto con Adobe determina i valori effettivi.
+Ogni volta che il lettore genera un evento di avvio del flusso, TVSDK inizia a inviare messaggi HTTP periodicamente  Adobe  sistema di fatturazione. Il periodo, noto come durata fatturabile, può essere diverso per VOD standard, pro VOD (annunci mid-roll abilitati) e contenuti live. La durata predefinita di ciascun tipo di contenuto è di 30 minuti, ma il contratto con  Adobe determina i valori effettivi.
 
 I messaggi contengono le informazioni seguenti:
 
@@ -25,13 +28,13 @@ I messaggi contengono le informazioni seguenti:
 * Se il flusso è protetto da DRM
 * La versione e la piattaforma TVSDK
 
-Adobe preconfigura questa disposizione, ma se desideri modificarla, collabora con il tuo rappresentante Adobe Enablement.
+ Adobe preconfigura questa disposizione, ma se desiderate modificare la disposizione, collaborate con il rappresentante di abilitazione  Adobe.
 
-Per monitorare le statistiche inviate da TVSDK ad Adobe, ottenere l’URL dal rappresentante Adobe Enablement e utilizzare uno strumento di acquisizione di rete, ad esempio Charles, per visualizzare i dati.
+Per monitorare le statistiche inviate da TVSDK a  Adobe, ottenere l&#39;URL dal rappresentante di abilitazione  Adobe e utilizzare uno strumento di acquisizione di rete, ad esempio Charles, per visualizzare i dati.
 
 ## Configurare le metriche di fatturazione {#configure-billing-metrics}
 
-Se utilizzi la configurazione predefinita, non è necessario fare altro per abilitare o configurare la fatturazione. Se avete ottenuto diversi parametri di configurazione dal rappresentante Adobe Enablement, utilizzate la classe PTBillingMetricsConfiguration per impostare questi parametri prima di inizializzare il lettore multimediale.
+Se utilizzi la configurazione predefinita, non è necessario fare altro per abilitare o configurare la fatturazione. Se avete ottenuto diversi parametri di configurazione dal rappresentante di abilitazione  Adobe, utilizzate la classe PTBillingMetricsConfiguration per impostare questi parametri prima di inizializzare il lettore multimediale.
 
 La maggior parte dei clienti deve utilizzare la configurazione predefinita.
 
@@ -56,11 +59,11 @@ billingConfig.liveBillableDurationMinutes = 15.0;
 
 ## Trasmissione delle metriche di fatturazione {#transmit-billing-metrics}
 
-TVSDK invia le metriche di fatturazione ad Adobe in un formato XML.
+TVSDK invia le metriche di fatturazione a  Adobe in formato XML.
 
 <!--<a id="example_13ABDB1CC0B549968A534765378DA3A0"></a>-->
 
-Se utilizzi uno strumento di acquisizione di rete per monitorare le statistiche trasmesse da TVSDK ad Adobe, dovresti vedere le unità come segue:
+Se utilizzate uno strumento di acquisizione di rete per monitorare le statistiche trasmesse da TVSDK a  Adobe, dovreste visualizzare le unità come segue:
 
 ```
 <request> 
@@ -86,4 +89,4 @@ Se utilizzi uno strumento di acquisizione di rete per monitorare le statistiche 
 </request>
 ```
 
-Le proprietà booleane `drmProtected`, `adsEnabled`, e `midrollEnabled` vengono visualizzate solo se sono vere.
+Le proprietà booleane `drmProtected`, `adsEnabled` e `midrollEnabled` vengono visualizzate solo se sono vere.
