@@ -6,11 +6,14 @@ title: Contenuto notifica
 uuid: d42d2e89-1bdd-4be0-8a69-821fec6bbc75
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '456'
+ht-degree: 0%
 
 ---
 
 
-# Notifiche per lo stato, l&#39;attività, gli errori e la registrazione del lettore {#notifications-player-status-activity-errors-logging}
+# Notifiche per stato del lettore, attività, errori e registrazione {#notifications-player-status-activity-errors-logging}
 
 `PTNotification` gli oggetti forniscono informazioni sulle modifiche allo stato del lettore, sulle avvertenze e sugli errori. Gli errori che arrestano la riproduzione del video provocano anche una modifica dello stato del lettore.
 
@@ -18,17 +21,17 @@ L&#39;applicazione può recuperare le informazioni relative alla notifica e allo
 
 >[!NOTE]
 >
->TVSDK utilizza anche *`notification`* per fare riferimento a `NSNotifications` ( `PTMediaPlayer` notifiche) *`event`* notifiche, inviate per fornire informazioni sull&#39;attività del lettore.
+>TVSDK utilizza anche *`notification`* per fare riferimento alle `NSNotifications` notifiche `PTMediaPlayer` *`event`*, inviate per fornire informazioni sull&#39;attività del lettore.
 
-TVSDK si verifica anche `PTMediaPlayerNewNotificationItemEntryNotification` quando si verifica un problema `PTNotification`.
+TVSDK inoltre rilascia `PTMediaPlayerNewNotificationItemEntryNotification` quando rilascia `PTNotification`.
 
-È possibile implementare i listener di eventi per acquisire e rispondere agli eventi. Molti eventi forniscono notifiche `PTNotification` sullo stato.
+È possibile implementare i listener di eventi per acquisire e rispondere agli eventi. Molti eventi forniscono notifiche di stato `PTNotification`.
 
 ## Contenuto notifica {#notification-content}
 
 `PTNotification` fornisce informazioni relative allo stato del lettore.
 
-TVSDK fornisce un elenco cronologico delle `PTNotification` notifiche. Ogni notifica contiene le informazioni seguenti:
+TVSDK fornisce un elenco cronologico delle notifiche `PTNotification`. Ogni notifica contiene le informazioni seguenti:
 
 * Timestamp
 * Metadati diagnostici costituiti dai seguenti elementi:
@@ -38,7 +41,7 @@ TVSDK fornisce un elenco cronologico delle `PTNotification` notifiche. Ogni noti
    * `name`: Descrizione leggibile della notifica, ad esempio SEEK_ERROR
    * `metadata`: Coppie chiave/valore contenenti informazioni rilevanti sulla notifica. Ad esempio, una chiave denominata `URL` fornisce un valore che è un URL correlato alla notifica.
 
-   * `innerNotification`: Un riferimento a un altro `PTNotification` oggetto che influisce direttamente su questa notifica.
+   * `innerNotification`: Un riferimento a un altro  `PTNotification` oggetto che influisce direttamente su questa notifica.
 
 Potete archiviare queste informazioni localmente per un&#39;analisi successiva o inviarle a un server remoto per la registrazione e la rappresentazione grafica.
 
@@ -46,12 +49,12 @@ Potete archiviare queste informazioni localmente per un&#39;analisi successiva o
 
 TVSDK imposta il lettore per le notifiche di base, anche se devi completare la stessa configurazione per le notifiche personalizzate.
 
-Sono disponibili due implementazioni per `PTNotification`:
+Esistono due implementazioni per `PTNotification`:
 
 * Per ascoltare
 * Per aggiungere notifiche personalizzate a `PTNotificationHistory`
 
-Per ascoltare le notifiche, TVSDK crea un&#39;istanza della `PTNotification` classe e la associa a un&#39;istanza del `PTMediaPlayerItem`, che è associata a un&#39;istanza PTMediaPlayer. C&#39;è solo un&#39; `PTNotificationHistory` istanza per `PTMediaPlayer`.
+Per ascoltare le notifiche, TVSDK crea un&#39;istanza della classe `PTNotification` e la associa a un&#39;istanza della classe `PTMediaPlayerItem`, che è associata a un&#39;istanza PTMediaPlayer. Esiste una sola istanza `PTNotificationHistory` per `PTMediaPlayer`.
 
 >[!IMPORTANT]
 >
@@ -59,9 +62,9 @@ Per ascoltare le notifiche, TVSDK crea un&#39;istanza della `PTNotification` cla
 
 ## Ascolto delle notifiche {#listen-to-notifications}
 
-Esistono due modi per ascoltare la `PTNotification` notifica nella `PTMediaPlayer`:
+Esistono due modi per ascoltare la notifica `PTNotification` nella cartella `PTMediaPlayer`:
 
-1. Controllare manualmente la `PTNotificationHistory` funzione del `PTMediaPlayerItem` timer e controllare le differenze:
+1. Controllare manualmente la `PTNotificationHistory` del `PTMediaPlayerItem` con un timer e verificare le differenze:
 
    ```
    //Access to the PTMediaPlayerItem  
@@ -72,8 +75,8 @@ Esistono due modi per ascoltare la `PTNotification` notifica nella `PTMediaPlaye
    NSArray *notifications = notificationHistory.notificationItems;
    ```
 
-1. Utilizzare la notifica [NSNotification](https://developer.apple.com/library/mac/%23documentation/Cocoa/Reference/Foundation/Classes/NSNotification_Class/Reference/Reference.html) postata del `PTMediaPlayerPTMediaPlayerNewNotificationEntryAddedNotification`.
-1. Effettuate la registrazione `NSNotification` utilizzando l&#39;istanza del `PTMediaPlayer` modulo dal quale desiderate ottenere le notifiche:
+1. Utilizzare la [NSNotification](https://developer.apple.com/library/mac/%23documentation/Cocoa/Reference/Foundation/Classes/NSNotification_Class/Reference/Reference.html) inserita del `PTMediaPlayerPTMediaPlayerNewNotificationEntryAddedNotification`.
+1. Effettuate la registrazione alla `NSNotification` utilizzando l&#39;istanza della `PTMediaPlayer` da cui desiderate ottenere le notifiche:
 
    ```
    //Register to the NSNotification 
@@ -86,7 +89,7 @@ Esistono due modi per ascoltare la `PTNotification` notifica nella `PTMediaPlaye
 
 Potete implementare le callback di notifica.
 
-Implementate il callback di notifica ottenendo i dati `PTNotification` dalle informazioni `NSNotification` utente e leggendo i relativi valori utilizzando `PTMediaPlayerNotificationKey`:
+Implementate il callback di notifica ottenendo la `PTNotification` dalle informazioni utente di `NSNotification` e leggendo i relativi valori utilizzando `PTMediaPlayerNotificationKey`:
 
 ```
 - (void) onMediaPlayerNotification:(NSNotification *) nsnotification { 
@@ -98,7 +101,7 @@ Implementate il callback di notifica ottenendo i dati `PTNotification` dalle inf
 ## Aggiunta di notifiche personalizzate {#add-custom-notifications}
 
 Per aggiungere una notifica personalizzata:
-Crea un nuovo `PTNotification` e aggiungilo al `PTNotificationHistory` visitatore utilizzando il `PTMediaPlayerItem`:
+Create un nuovo `PTNotification` e aggiungetelo al `PTNotificationHistory` utilizzando il `PTMediaPlayerItem` corrente:
 
 ```
 //Access to the PTMediaPlayerItem  
