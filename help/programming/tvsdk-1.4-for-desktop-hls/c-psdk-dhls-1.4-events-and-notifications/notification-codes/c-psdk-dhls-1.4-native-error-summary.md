@@ -24,7 +24,7 @@ Quando TVSDK gestisce un errore nativo, imposta alcuni o tutti i seguenti valori
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> RUNTIME_CODE </span> </td> 
+   <td colname="col1"> <span class="codeph"> RUNTIME_CODE  </span> </td> 
    <td colname="col2"> 
     <pre>
       Codice di errore nativo dal Flash Player. 
@@ -36,31 +36,31 @@ Quando TVSDK gestisce un errore nativo, imposta alcuni o tutti i seguenti valori
     </ul> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> RUNTIME_CODE_MESSAGE </span> </td> 
+   <td colname="col1"> <span class="codeph"> RUNTIME_CODE_MESSAGE  </span> </td> 
    <td colname="col2"> Una stringa che contiene il nome dell'errore; ad esempio, <span class="codeph"> AAXS_InvalidVoucher </span> o <span class="codeph"> DECODER_FAILED </span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> RUNTIME_SUBERROR_CODE </span> </td> 
-   <td colname="col2"> Per gli errori DRM, vengono restituiti anche i codici di errore secondari. Questi codici corrispondono al codice <span class="codeph"> suberrore DRMErrorEvents </span> restituito dal Flash Player. Quando si segnalano errori  Adobe, includete questo valore numerico per l'assistenza nella risoluzione dei problemi. </td> 
+   <td colname="col1"> <span class="codeph"> RUNTIME_SUBERROR_CODE  </span> </td> 
+   <td colname="col2"> Per gli errori DRM, vengono restituiti anche i codici di errore secondari. Questi codici corrispondono al codice suberror <span class="codeph"> DRMErrorEvents </span> restituito dal Flash Player. Quando si segnalano errori  Adobe, includete questo valore numerico per l'assistenza nella risoluzione dei problemi. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> DRM_ERROR_STRING </span> </td> 
+   <td colname="col1"> <span class="codeph"> DRM_ERROR_STRING  </span> </td> 
    <td colname="col2"> Per DRM, si tratta della stringa di errore personalizzata dalla distribuzione del server DRM, se ne avete definito una. Includetelo anche quando segnalate gli errori al  Adobe. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> DESCRIPTION </span> </td> 
+   <td colname="col1"> <span class="codeph"> DESCRIPTION  </span> </td> 
    <td colname="col2"> Descrizione stringa dell'errore. Solitamente l’URL del supporto. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> RESOURCE_URL </span> </td> 
+   <td colname="col1"> <span class="codeph"> RESOURCE_URL  </span> </td> 
    <td colname="col2"> URL del file multimediale. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> RESOURCE_TYPE </span> </td> 
+   <td colname="col1"> <span class="codeph"> RESOURCE_TYPE  </span> </td> 
    <td colname="col2"> Tipo di supporto (HLS). </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> RESOURCE_ID </span> </td> 
+   <td colname="col1"> <span class="codeph"> RESOURCE_ID  </span> </td> 
    <td colname="col2"> ID del supporto. </td> 
   </tr> 
  </tbody> 
@@ -70,4 +70,4 @@ TVSDK riceve questi codici di errore e stringhe dal motore video.
 
 >[!IMPORTANT]
 >
->Per un elenco completo dei codici di errore del client DRM di  Adobe Primetime, vedere [DRM Client Error Message Reference](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_client_error_message_reference.pdf).
+>Per un elenco completo dei codici di errore  client DRM Adobe Primetime, vedere [DRM Client Error Message Reference](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_client_error_message_reference.pdf).
