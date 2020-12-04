@@ -4,19 +4,22 @@ title: Preparazione delle password per i file delle proprietà del server
 uuid: 2d876eb0-b1a5-4c30-ae96-0a22f6a03910
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '137'
+ht-degree: 0%
 
 ---
 
 
 # Preparazione delle password per i file delle proprietà del server {#preparing-passwords-for-the-server-properties-files}
 
-Per garantire la sicurezza della password della credenziale, viene fornito uno strumento per cifrare la password prima di inserirla nel [!DNL flashaccess-refimpl.properties] file o [!DNL flashaccess-refimpl-packager.properties] .
+Per garantire la sicurezza della password della credenziale, viene fornito uno strumento per cifrare la password prima di inserirla nel file [!DNL flashaccess-refimpl.properties] o [!DNL flashaccess-refimpl-packager.properties].
 
 Per eseguire lo strumento utilizzando lo script ANT fornito:
 
-* Vai a *`<Reference Implementation Server Path>`*[!DNL \refimpl]
+* Vai a *`<Reference Implementation Server Path>`* [!DNL \refimpl]
 
-* Assicurati che la `sdkdir` proprietà sia indicata in [!DNL build-refimpl.xml] punti alla directory contenente l’SDK di Adobe Access
+* Assicurarsi che la proprietà `sdkdir` in [!DNL build-refimpl.xml] punti alla directory contenente l&#39;SDK di accesso al Adobe 
 * Eseguite il comando seguente utilizzando ANT:
 
    ```
