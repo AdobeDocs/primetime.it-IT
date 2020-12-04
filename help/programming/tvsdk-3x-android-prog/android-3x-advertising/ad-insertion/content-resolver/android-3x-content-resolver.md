@@ -6,6 +6,9 @@ title: Personalizzare i generatori di opportunità e i risolutori di contenuti
 uuid: 0d4fb0b2-98f3-4245-9bf1-4e968c5d0f36
 translation-type: tm+mt
 source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+workflow-type: tm+mt
+source-wordcount: '259'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Un generatore di opportunità identifica le opportunità di posizionamento trami
 
 TVSDK include i seguenti generatori di opportunità predefiniti:
 
-* `ManifestCuesOpportunityGenerator` genera opportunità dai segnali di annunci predefiniti ( `#EXT-X-CUE`).
+* `ManifestCuesOpportunityGenerator` genera opportunità dai segnali di annunci predefiniti (  `#EXT-X-CUE`).
 
 * `AdSignalingModeOpportunityGenerator` genera un&#39;opportunità iniziale per la modalità di segnalazione annunci specificata. In questo modo vengono ignorati eventuali suggerimenti o informazioni sui metadati temporizzati.
 * `CustomMarkerOpportunityGenerator` genera opportunità per sostituire gli annunci C3 con un pacchetto.
@@ -30,6 +33,6 @@ TVSDK include anche i risolutori di contenuto predefiniti:
 
 Potete ignorare i generatori di opportunità e i risolutori di contenuti predefiniti per personalizzare il flusso di lavoro pubblicitario in modi quali:
 
-* Riconosci tag personalizzati per l&#39;inserimento di annunci. Per ulteriori informazioni, consultate [Personalizzare i generatori di opportunità e i risolutori](../../../../tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/content-resolver/android-3x-content-resolver.md)di contenuti.
-* Crea un fornitore di annunci personalizzato.
+* Riconosci tag personalizzati per l&#39;inserimento di annunci. Per ulteriori informazioni, consultate [Personalizzare i generatori di opportunità e i risolutori di contenuti](../../../../tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/content-resolver/android-3x-content-resolver.md).
+* Crea un provider di annunci personalizzato.
 * Escludere il contenuto.
