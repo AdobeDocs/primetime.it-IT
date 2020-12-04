@@ -16,7 +16,7 @@ Le note sulla versione di Primetime  Ad Insertion 20.10.1 descrivono le novità 
 
 ## Novità di PTAI 20.10.1
 
-**Quando:** Martedì 13 ottobre 2020 dalle 03:00 alle 07:00 ora orientale
+**Quando:** martedì 13 ottobre 2020 dalle 03:00 alle 07:00 ora orientale
 
 **Modifiche**
 
@@ -26,7 +26,7 @@ Le note sulla versione di Primetime  Ad Insertion 20.10.1 descrivono le novità 
 
 #### Versione 20.9.3
 
-**Quando:** Mercoledì 30 settembre 2020 alle 3:30 AM alle 6:30 Ora orientale
+**Quando:** Mercoledì 30 Settembre 2020 alle 3:30 AM alle 6:30 Ora orientale
 
 **Modifiche**
 
@@ -34,11 +34,11 @@ Le note sulla versione di Primetime  Ad Insertion 20.10.1 descrivono le novità 
 
 #### Versione 20.9.2
 
-**Quando:** Martedì 15 settembre 2020 dalle 3:30 alle 6:30 Ora orientale
+**Quando:** martedì 15 settembre 2020 dalle 3:30 alle 6:30 ora orientale
 
 **Miglioramenti**
 
-* È stato fornito il supporto per l&#39;inclusione di tipi di annunci non lineari tramite `EXT-X-MARKER` tag.
+* È stato fornito il supporto per l&#39;inclusione di tipi di annunci non lineari utilizzando i tag `EXT-X-MARKER`.
 Per ulteriori informazioni o per attivare questa funzione, contattate il rappresentante di assistenza tecnica.
 
 * È stato fornito il supporto necessario per limitare il tempo complessivo di risoluzione degli annunci, se i fornitori richiedono troppo tempo per rispondere. Per abilitare la limitazione, impostate il parametro API di avvio `ptadtimeout` su un valore in millisecondi.
@@ -49,7 +49,7 @@ Per ulteriori informazioni o per attivare questa funzione, contattate il rappres
 
 #### Versione 20.9.1
 
-**Quando:** Martedì 1 settembre 2020 dalle 3:30 alle 7:30 Ora orientale
+**Quando:** martedì 1 settembre 2020 dalle 3:30 alle 7:30 ora orientale
 
 **Modifiche**
 
@@ -57,7 +57,7 @@ Per ulteriori informazioni o per attivare questa funzione, contattate il rappres
 
 #### Versione 20.8.4
 
-**Quando:** Mercoledì 19 agosto 2020 dalle 03:30 alle 07:30 Ora orientale
+**Quando:** mercoledì 19 agosto 2020 dalle 03:30 alle 07:30 Ora orientale
 
 **Miglioramenti e correzioni**
 
@@ -65,7 +65,7 @@ Aggiornamenti di manutenzione.
 
 #### Versione 20.8.1
 
-**Quando:** Martedì 4 agosto 2020 dalle 3:00 alle 6:00 Ora orientale
+**Quando:** Martedì 4 Agosto 2020 dalle 3:00 AM alle 6:00 Ora orientale
 
 **Miglioramenti e correzioni**
 
@@ -73,7 +73,7 @@ Aggiornamenti di manutenzione.
 
 #### Versione 20.7.1
 
-**Quando:** Giovedì 9 luglio 2020 dalle 03:00 alle 05:00 Ora orientale
+**Quando:** giovedì 9 luglio 2020 dalle 03:00 alle 05:00 ora orientale
 
 **Nuove funzioni e miglioramenti**
 
@@ -87,15 +87,15 @@ Aggiornamenti di manutenzione.
 
 #### Versione 20.6.2
 
-**Quando:** Giovedì 18 giugno 2020 dalle 03:00 alle 04:00 Ora orientale
+**Quando:** giovedì 18 giugno 2020 dalle 03:00 alle 04:00 ora orientale
 
 **Miglioramenti**
 
-Migliorata la sincronizzazione del flusso per i client video che richiedono una precisione in millisecondi. Contattate  supporto Adobe per abilitare la precisione in millisecondi per `#EXT-X-PROGRAM-DATE-TIME tags`.
+Migliorata la sincronizzazione del flusso per i client video che richiedono una precisione in millisecondi. Contattate  Adobe Support per abilitare la precisione in millisecondi per `#EXT-X-PROGRAM-DATE-TIME tags`.
 
 #### Versione 20.6.1
 
-**Quando:** Martedì 2 giugno 2020 dalle 03:00 alle 05:00 Ora orientale
+**Quando:** martedì 2 giugno 2020 dalle 03:00 alle 05:00 ora orientale
 
 **Nuove funzioni**
 
@@ -113,7 +113,7 @@ Contattate il supporto  Adobe per abilitare le seguenti nuove funzionalità tram
 
 #### Versione 20.5.1
 
-**Quando:** Martedì 5 maggio 2020 dalle 04:00 AM alle 05:00 Ora orientale
+**Quando:** martedì 5 maggio 2020 dalle 04:00 alle 05:00 ora orientale
 
 * È stato risolto un problema per garantire che le intestazioni CORS corrette vengano fornite quando vengono inviate le intestazioni If-Modified-Since.
 
@@ -123,7 +123,7 @@ Contattate il supporto  Adobe per abilitare le seguenti nuove funzionalità tram
 
 #### Versione 20.3.4
 
-**Quando:** Mercoledì, 1 aprile 2020 dalle 03:00 AM alle 04:00 AM Ora orientale
+**Quando:** mercoledì 1 aprile 2020 dalle 03:00 alle 04:00 ora orientale
 
 * È stato risolto un problema che causava la mancata sincronizzazione dei sottotitoli dopo l&#39;inserimento di annunci in VOD/WebVTT.
 
@@ -131,7 +131,7 @@ Contattate il supporto  Adobe per abilitare le seguenti nuove funzionalità tram
 
 #### Versione 20.3.3
 
-**Quando:** Giovedì 26 marzo 2020 dalle 03:00 AM alle 04:00 Ora orientale
+**Quando:** giovedì 26 marzo 2020 dalle 03:00 alle 04:00 ora orientale
 
 * Le risposte SSAI 4XX e 5XX ora forniscono correttamente le intestazioni relative a CORS, consentendo ai client di visualizzazione Web javascript tra domini di leggere con successo le risposte agli errori.
 
@@ -141,7 +141,7 @@ Contattate il supporto  Adobe per abilitare le seguenti nuove funzionalità tram
 
 #### Versione 20.3.2
 
-**Quando:** Mercoledì 11 marzo 2020 dalle 05:30 AM alle 07:00 AM Ora orientale
+**Quando:** mercoledì 11 marzo 2020 dalle 05:30 alle 07:00 ora orientale
 
 * Miglioramenti alla gestione del segnale SCTE35.
 
@@ -168,11 +168,11 @@ Contattate il supporto  Adobe per abilitare le seguenti nuove funzionalità tram
 
 #### Versione 20.1.3
 
-**Quando:** Martedì 28 gennaio 2020 dalle 2:00 alle 03:00 Ora orientale
+**Quando:** martedì 28 gennaio 2020 dalle 2:00 alle 03:00 ora orientale
 
 * **VMAP con supporto FER per nbc CueFormat**
 
-   Convertire segnali dal flusso FER in param di sostituzione della timeline FW, quando `ptcueformat=nbc` viene utilizzato e il flusso è un flusso VOD con segnali in-manifest e annunci al forno.
+   Convertire segnali dal flusso FER in param di sostituzione della timeline FW, quando si utilizza `ptcueformat=nbc` e il flusso è un flusso VOD con segnali in-manifest e annunci al forno.
 
 * Inserite il campo agente utente in Intestazione HTTP prima di inviarlo a fornitori di annunci/CDN di terze parti.
 
@@ -182,13 +182,13 @@ Contattate il supporto  Adobe per abilitare le seguenti nuove funzionalità tram
 
 #### Versione 20.1.2 (Hotfix)
 
-**Quando:** Lunedì, gennaio 20, 2020 dalle 02:00 AM alle 03:00 Ora orientale
+**Quando:** lunedì, 20 gennaio 2020 dalle 02:00 alle 03:00 Ora orientale
 
 * Aggiornamenti di manutenzione.
 
 #### Versione 20.1.1
 
-**Quando:** Mercoledì 15 gennaio 2020 dalle 04:00 alle 05:00 Ora orientale
+**Quando:** mercoledì 15 gennaio 2020 dalle 04:00 alle 05:00 ora orientale
 
 * Creative Repackaging Service offre ora un inserimento più rapido degli annunci tramite l&#39;inserimento automatico di un elenco di creativi malformati.
 
