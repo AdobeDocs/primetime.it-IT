@@ -6,11 +6,14 @@ title: Implementare un risolutore di contenuti/opportunità personalizzato
 uuid: bfc14318-ca4b-46cc-8128-e3743af06d9a
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '344'
+ht-degree: 0%
 
 ---
 
 
-# Implementare un risolutore di contenuti/opportunità personalizzato{#implement-a-custom-opportunity-content-resolver}
+# Implementare un risolutore di opportunità/contenuti personalizzato{#implement-a-custom-opportunity-content-resolver}
 
 È possibile implementare i risolutori in base ai risolutori predefiniti.
 
@@ -18,13 +21,13 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 ![](assets/ios_psdk_content_resolver.png)
 
-1. Sviluppare un risolutore di annunci personalizzato estendendo la classe `PTContentResolver` astratta.
+1. Sviluppare un risolutore di annunci personalizzato estendendo la classe astratta `PTContentResolver`.
 
    `PTContentResolver` è un&#39;interfaccia che deve essere implementata da una classe di content resolver. È inoltre disponibile una classe astratta con lo stesso nome e gestisce automaticamente la configurazione (ottenendo il delegato).
 
    >[!TIP]
    >
-   >`PTContentResolver` è esposto attraverso la `PTDefaultMediaPlayerClientFactory` classe. I client possono registrare un nuovo risolutore di contenuto estendendo la classe `PTContentResolver` astratta. Per impostazione predefinita, e a meno che non venga espressamente rimosso, `PTDefaultAdContentResolver` viene registrato nel `PTDefaultMediaPlayerClientFactory`.
+   >`PTContentResolver` è esposto attraverso la  `PTDefaultMediaPlayerClientFactory` classe. I client possono registrare un nuovo risolutore di contenuto estendendo la classe astratta `PTContentResolver`. Per impostazione predefinita, e a meno che non venga espressamente rimosso, in `PTDefaultMediaPlayerClientFactory` viene registrato un `PTDefaultAdContentResolver`.
 
    ```
    @protocol PTContentResolver <NSObject> 
@@ -52,27 +55,28 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    @end
    ```
 
-1. Implementa `shouldResolveOpportunity` e restituisce `YES` se deve gestire i dati ricevuti `PTPlacementOpportunity`.
-1. Implementazione `resolvePlacementOpportunity`, che inizia a caricare il contenuto alternativo o gli annunci.
-1. Una volta caricati gli annunci, preparate un `PTTimeline` file con le informazioni sul contenuto da inserire.
+1. Implementare `shouldResolveOpportunity` e restituire `YES` se deve gestire la `PTPlacementOpportunity` ricevuta.
+1. Implementa `resolvePlacementOpportunity`, che inizia a caricare il contenuto alternativo o gli annunci.
+1. Una volta caricati gli annunci, preparate un `PTTimeline` con le informazioni sul contenuto da inserire.
 
        Seguono alcune informazioni utili sulle timeline:
    
-   * Possono essere disponibili più tipi `PTAdBreak`di pre-roll, mid-roll e post-roll.
+   * Possono essere presenti più tipi `PTAdBreak`di pre-roll, mid-roll e post-roll.
 
-      * A `PTAdBreak` dispone dei seguenti elementi:
+      * A `PTAdBreak` è presente quanto segue:
 
-         * Una `CMTimeRange` con l&#39;ora di inizio e la durata dell&#39;interruzione.
+         * A `CMTimeRange` con l&#39;ora di inizio e la durata dell&#39;interruzione.
 
-            Viene impostata come proprietà range di `PTAdBreak`.
+            Questo valore viene impostato come proprietà intervallo di `PTAdBreak`.
 
-         * `NSArray` di `PTAd`s.
+         * `NSArray` di  `PTAd`s.
 
             Viene impostata come proprietà ads di `PTAdBreak`.
-   * A `PTAd` rappresenta l’annuncio e `PTAd` ha i seguenti elementi:
+   * A `PTAd` rappresenta l&#39;annuncio, e ogni `PTAd` ha i seguenti elementi:
 
-      * Un `PTAdHLSAsset` set come proprietà della risorsa principale dell’annuncio.
-      * Possibili più `PTAdAsset` istanze come annunci cliccabili o banner pubblicitari.
+      * Un `PTAdHLSAsset` impostato come proprietà della risorsa principale dell&#39;annuncio.
+      * Possibili più istanze `PTAdAsset` come annunci cliccabili o banner pubblicitari.
+
    Ad esempio:
 
    ```
@@ -102,7 +106,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    _timeline.adBreaks = ptBreaks;
    ```
 
-1. Chiamata `didFinishResolvingPlacementOpportunity`, che fornisce il `PTTimeline`.
+1. Chiama `didFinishResolvingPlacementOpportunity`, che fornisce il `PTTimeline`.
 1. Registra il tuo risolutore di contenuti/annunci personalizzato nella fabbrica predefinita del lettore multimediale chiamando `registerContentResolver`.
 
    ```
