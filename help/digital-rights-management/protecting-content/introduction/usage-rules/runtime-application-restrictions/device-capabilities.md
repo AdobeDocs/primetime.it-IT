@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Funzionalità del dispositivo necessarie per riprodurre contenuto protetto {#device-capabilities-required-to-play-protected-content}
+# Funzionalità dispositivo necessarie per riprodurre contenuto protetto {#device-capabilities-required-to-play-protected-content}
 
 Le funzionalità del dispositivo richieste specificano le funzionalità hardware necessarie per accedere ai contenuti. Le informazioni sulle funzionalità hardware sono disponibili per i dispositivi che utilizzano il kit di supporto.
 
@@ -46,5 +46,5 @@ I seguenti attributi possono identificare le funzionalità del dispositivo:
 >
 >Questa regola di utilizzo è supportata  client Adobe Primetime DRM versione 2.0.2 e successive. Il comportamento dei client meno recenti dipende dalla versione client minima supportata dal server licenze.
 >
->Consultate Versione [client](../../../../protecting-content/setting-up-the-sdk/setup-dev-env.md)minima.
+>Vedere [Versione minima del client](../../../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
 
