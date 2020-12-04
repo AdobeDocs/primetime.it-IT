@@ -1,18 +1,21 @@
 ---
-description: Puoi inserire annunci nel tuo VOD e contenuti live/lineari utilizzando l'interfaccia di decisione di Adobe Primetime.
-seo-description: Puoi inserire annunci nel tuo VOD e contenuti live/lineari utilizzando l'interfaccia di decisione di Adobe Primetime.
+description: Puoi inserire annunci nel tuo VOD e contenuti live/lineari utilizzando l'interfaccia  Adobe Primetime e decisionali.
+seo-description: Puoi inserire annunci nel tuo VOD e contenuti live/lineari utilizzando l'interfaccia  Adobe Primetime e decisionali.
 seo-title: Pubblicità
 title: Pubblicità
 uuid: 9fb020ab-f146-40e6-bd82-9f7cfe86d35b
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '133'
+ht-degree: 0%
 
 ---
 
 
-# Pubblicità e relative esigenze {#advertising-requirements}
+# Pubblicità e relativi requisiti {#advertising-requirements}
 
-Puoi inserire annunci nel tuo VOD e contenuti live/lineari utilizzando l&#39;interfaccia di decisione di Adobe Primetime.
+Puoi inserire annunci nel tuo VOD e contenuti live/lineari utilizzando l&#39;interfaccia  Adobe Primetime e decisionali.
 
 Primetime Ad Decision funziona con TVSDK per identificare opportunità di annunci, risolvere annunci e inserire annunci risolti nei flussi video.
 
