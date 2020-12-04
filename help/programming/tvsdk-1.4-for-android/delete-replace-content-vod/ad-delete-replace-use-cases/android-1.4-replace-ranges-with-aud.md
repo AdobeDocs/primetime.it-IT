@@ -6,6 +6,9 @@ title: Sostituire gli intervalli di tempo con un annuncio
 uuid: 50cdcc06-7df5-414b-95d4-c684bc68dce3
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '107'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 Potete inserire annunci nel contenuto VOD.
 
-In questo caso, `TimeRanges` tra `begin` e `end` in `localTime` vengono rimossi dalla timeline. Sono sostituiti da un `AdBreak` di `begin` a `begin+replaceDuration`. Se la durata della sostituzione non esiste come parametro, il server determina l&#39;entità dell&#39;interruzione adbreak restituita.
+In questo caso, `TimeRanges` tra `begin` e `end` in `localTime` vengono rimossi dalla timeline. Sono sostituiti da un `AdBreak` di `begin` in `begin+replaceDuration`. Se la durata della sostituzione non esiste come parametro, il server determina l&#39;entità dell&#39;interruzione adbreak restituita.
 
 >[!NOTE]
 >
