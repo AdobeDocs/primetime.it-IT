@@ -6,6 +6,9 @@ title: Personalizzare la riproduzione con gli annunci
 uuid: 20b5bfb2-83d8-4517-b821-8c542afa387d
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '253'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Quando la riproduzione raggiunge un’interruzione di annuncio, passa un’inter
 
 >[!TIP]
 >
->È possibile ignorare il comportamento predefinito utilizzando la `AdBreakPolicySelector` classe.
+>È possibile ignorare il comportamento predefinito utilizzando la classe `AdBreakPolicySelector`.
 
 Il comportamento predefinito varia a seconda che l’utente superi o meno l’interruzione dell’annuncio durante la riproduzione normale o che desideri inserirla in un video o riposizionarla con avanzamento rapido o riavvolgimento (riproduzione con trucco).
 
