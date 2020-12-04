@@ -6,11 +6,14 @@ title: Inserimento interruzione annuncio parziale
 uuid: a81295b8-77fe-4475-a472-080ee7804d7a
 translation-type: tm+mt
 source-git-commit: fe9d7d1b2b23a70eb4e212de3d9bda47fc11d8f1
+workflow-type: tm+mt
+source-wordcount: '216'
+ht-degree: 0%
 
 ---
 
 
-# Inserimento Parziale Ad-break {#partial-ad-break-insertion}
+# Inserimento ad-break parziale {#partial-ad-break-insertion}
 
 Potete abilitare un&#39;esperienza simile a quella televisiva per partecipare nel mezzo di un annuncio, in streaming live. La funzione di interruzione annuncio parziale consente di simulare un&#39;esperienza simile a quella di un televisore in cui, se il cliente avvia un flusso live all&#39;interno di un midroll, questo verrà avviato all&#39;interno di tale midrol. È simile al passaggio a un canale TV e la pubblicità funziona senza problemi.
 
@@ -21,7 +24,7 @@ Ad esempio, se un utente si unisce al centro di un annuncio pubblicitario di 90 
 
 Questo comportamento non è attivato per impostazione predefinita. Per abilitare questa funzione nell&#39;app, effettua le seguenti operazioni:
 
-Attivate la preferenza per l&#39;inserimento di interruzioni pubblicitarie parziali. Utilizzate il nuovo metodo `setPartialAdBreakPref` nell’interfaccia di MediaPlayer per attivare questa funzione. Utilizzare `getPartialAdBreakPref` il metodo per trovare lo stato corrente di questa preferenza.
+Attivate la preferenza per l&#39;inserimento di interruzioni pubblicitarie parziali. Utilizzate il nuovo metodo `setPartialAdBreakPref` nell&#39;interfaccia di MediaPlayer per attivare questa funzione. Utilizzare il metodo `getPartialAdBreakPref` per trovare lo stato corrente di questa preferenza.
 
 ```
     MediaPlayer mediaPlayer = new MediaPlayer(getActivity(). getApplicationContext()); 
