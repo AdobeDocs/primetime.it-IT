@@ -6,6 +6,9 @@ title: Utilizzo di CRS per inserire tag di metadati temporizzati ID3
 uuid: 491bbb9e-15de-4871-baa1-f7bb0ea0dde2
 translation-type: tm+mt
 source-git-commit: c2216a5089d23ca1fcbb77c87b4a01a6fa1807ff
+workflow-type: tm+mt
+source-wordcount: '165'
+ht-degree: 0%
 
 ---
 
@@ -22,8 +25,8 @@ Il lettore client legge i metadati ID3 per abilitare il tracciamento degli annun
 
 ## Flusso di lavoro per CRS per l&#39;iniezione ID3 {#workflow-for-crs-for-id3-injection}
 
-Il flusso di lavoro per l’iniezione ID3 è lo stesso di quello dei flussi di lavoro [dettagliati per il reimballaggio JIT.](../creative-repackaging-service/jit-repackage.md) Se il server di manifesto riceve il `ptplayer=ios-mobileweb` parametro, dice ai CRS di inserire i pacchetti ID3 nel codice pubblicitario transcodificato prima di caricarlo nel server CDN.
+Il flusso di lavoro per l&#39;iniezione ID3 è lo stesso di [Flussi di lavoro dettagliati per il reimballaggio JIT.](../creative-repackaging-service/jit-repackage.md) Se il server di manifesto riceve il  `ptplayer=ios-mobileweb` parametro, dice ai CRS di inserire i pacchetti ID3 nel codice pubblicitario transcodificato prima di caricarlo nel server CDN.
 
 >[!NOTE]
 >
->In una configurazione multi-CDN, il server manifesto utilizza il `ptcdn` parametro nell’URL di avvio per identificare il server CDN per caricare l’annuncio creativo.
+>In una configurazione multi-CDN, il server manifesto utilizza il parametro `ptcdn` nell’URL di avvio per identificare il server CDN per caricare l’annuncio creativo.
