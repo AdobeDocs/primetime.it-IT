@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Controlli di protezione dell&#39;uscita{#output-protection-controls}
+# Controlli di protezione dell&#39;output{#output-protection-controls}
 
 La protezione dell&#39;output controlla il parametro che controlla se l&#39;output su dispositivi di rendering esterni è protetto. Potete specificare restrizioni per le uscite analogiche e digitali in modo indipendente.
 
@@ -27,11 +27,11 @@ Sono disponibili le seguenti opzioni/livelli di applicazione:
 |---|---|---|
 | **Obbligatorio** — La protezione dell&#39;uscita analogica per la copia (ACP) o il sistema di gestione della generazione di copie (CGMS-A) deve essere attivata per poter riprodurre il contenuto su un dispositivo esterno. I client DRM Primetime devono abilitare la protezione dell&#39;output tramite ACP o CGMS-A. Sui dispositivi che supportano entrambi, i client Primetime DRM 3.0 tentano di abilitare entrambi. Tuttavia, per riprodurre il contenuto è necessario abilitare solo uno. | SÌ | SÌ |
 | **ACP richiesto** — È richiesta la protezione dell&#39;output ACP. La riproduzione non è consentita su CGMS-A. I client Primetime DRM 2.0 non supportano questa opzione. Se impostato, un client Primetime DRM 2.0 si comporta come se fosse stata specificata l&#39;opzione &quot;Nessuna riproduzione&quot;. | SÌ | - |
-| **Usa se disponibile** : Cercate di abilitare la protezione dell&#39;output ACP e CGMS-A se disponibile e di consentire la riproduzione se non disponibile. I client Primetime DRM 3.0 tentano di abilitare sia ACP che CGMS-A, se possibile. I client Primetime DRM 2.0 cercano solo di abilitare ACP o CGMS-A. Ad esempio, il client DRM Primetime tenta di abilitare ACP o CGMS-A. Se il tentativo ha esito positivo, l&#39;altra opzione non può essere abilitata. Se il tentativo non riesce, viene effettuato un secondo tentativo per attivare l’altra opzione. Anche se entrambi i tentativi non riescono, il contenuto viene riprodotto comunque. | SÌ | SÌ |
+| **Usa se disponibile** : Se disponibili, provare a abilitare la protezione dell&#39;output ACP e CGMS-A e consentire la riproduzione se non disponibile. I client Primetime DRM 3.0 tentano di abilitare sia ACP che CGMS-A, se possibile. I client Primetime DRM 2.0 cercano solo di abilitare ACP o CGMS-A. Ad esempio, il client DRM Primetime tenta di abilitare ACP o CGMS-A. Se il tentativo ha esito positivo, l&#39;altra opzione non può essere abilitata. Se il tentativo non riesce, viene effettuato un secondo tentativo per attivare l’altra opzione. Anche se entrambi i tentativi non riescono, il contenuto viene riprodotto comunque. | SÌ | SÌ |
 | **Usa ACP se disponibile** — Se disponibile, provate a abilitare la protezione dell&#39;output ACP, ma consentite la riproduzione se non disponibile. La protezione non è disponibile su CGMS-A. I client Primetime DRM 2.0 non supportano questa opzione. Se impostato, un client Primetime DRM 2.0 si comporta come se fosse stata specificata l&#39;opzione &quot;Nessuna protezione&quot;. | SÌ | - |
 | **Utilizzare CGMS-A se disponibile **— Tentate di abilitare la protezione dell&#39;output CGMS-A se disponibile, ma consentite la riproduzione se non disponibile. La protezione non è disponibile sugli ACP. I client Primetime DRM 2.0 non supportano questa opzione. Se impostato, un client Primetime DRM 2.0 si comporta come se fosse stata specificata l&#39;opzione &quot;Nessuna protezione&quot;. | SÌ | - |
-| **Nessuna protezione** — Per le uscite analogiche e digitali non viene applicata alcuna abilitazione alla protezione dell&#39;uscita. | SÌ | SÌ |
-| **Nessuna riproduzione** — Non consentire la riproduzione su dispositivi esterni per le uscite analogiche e digitali. | SÌ | SÌ |
+| **Nessuna protezione** : Per le uscite analogiche e digitali non viene applicata alcuna abilitazione alla protezione dell&#39;uscita. | SÌ | SÌ |
+| **Nessuna riproduzione** : Non consentire la riproduzione su dispositivi esterni per le uscite analogiche e digitali. | SÌ | SÌ |
 
 >[!NOTE]
 >
