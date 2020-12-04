@@ -6,6 +6,9 @@ title: Metodi della classe di configurazione per i tag
 uuid: 1d3651a0-3b70-4d3a-8ced-663a9dad7205
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '184'
+ht-degree: 0%
 
 ---
 
