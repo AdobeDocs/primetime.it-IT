@@ -6,6 +6,9 @@ title: Disabilitare o abilitare l'ottimizzazione di reindirizzamento 302
 uuid: 7561839f-aec6-4a59-a07a-7e4fa043fdc2
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '126'
+ht-degree: 1%
 
 ---
 
@@ -20,7 +23,7 @@ Questa funzione è attivata per impostazione predefinita e potete modificare que
 
 ## Disabilitare o abilitare l&#39;ottimizzazione di reindirizzamento 302{#disable-or-enable-redirect-optimization}
 
-Utilizzare la `useRedirectedUrl` proprietà per attivare (true) o disattivare (false) il reindirizzamento 302.
+Utilizzare la proprietà `useRedirectedUrl` per attivare (true) o disattivare (false) il reindirizzamento 302.
 Ad esempio:
 
 ```java
