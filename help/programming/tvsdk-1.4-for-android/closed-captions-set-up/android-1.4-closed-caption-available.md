@@ -19,7 +19,7 @@ Potete selezionare una traccia da un elenco di tracce di sottotitoli attualmente
 
 >[!TIP]
 >
->I sottotitoli codificati sono sempre attivati. Vengono considerate presenti tutte le tracce predefinite dei sottotitoli. Le tracce predefinite (come CC1-CC4, CS1-CS6) sono enumerate in `ClosedCaptionsTrack.DefaultCCTypes`. All’inizio della riproduzione, TVSDK cerca l’attività su uno di questi canali. Se trova l&#39;attività, imposta il `isActive` metodo per tale tracciamento e invia l&#39; `MediaPlayer.PlaybackEventListener.onUpdated` evento.
+>I sottotitoli codificati sono sempre attivati. Vengono considerate presenti tutte le tracce predefinite dei sottotitoli. Le tracce predefinite (come CC1-CC4, CS1-CS6) sono enumerate in `ClosedCaptionsTrack.DefaultCCTypes`. All’inizio della riproduzione, TVSDK cerca l’attività su uno di questi canali. Se trova attività, imposta il metodo `isActive` per tale traccia e invia l&#39;evento `MediaPlayer.PlaybackEventListener.onUpdated`.
 
 1. Attendete che il lettore multimediale sia almeno nello stato PREPARATO.
 1. Ascoltare i seguenti eventi:
