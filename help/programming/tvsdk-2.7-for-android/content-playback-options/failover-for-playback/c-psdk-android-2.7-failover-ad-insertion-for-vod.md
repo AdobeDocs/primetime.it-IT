@@ -6,6 +6,9 @@ title: Inserimento pubblicitario e failover per VOD
 uuid: 1f813065-9310-4495-9fbb-d90eda8ac8bd
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '736'
+ht-degree: 0%
 
 ---
 
@@ -14,9 +17,9 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
 Il processo di inserimento video on-demand (VOD) consiste nelle fasi di risoluzione degli annunci, inserimento di annunci e riproduzione di annunci. Per il tracciamento degli annunci, TVSDK deve informare un server di tracciamento remoto dell&#39;avanzamento della riproduzione di ciascun annuncio. In caso di situazioni impreviste, TVSDK esegue le azioni appropriate.
 
-## Fase di risoluzione degli annunci {#section_5DD3A7DA79E946298BFF829A60202E1C}
+## Fase di risoluzione annunci {#section_5DD3A7DA79E946298BFF829A60202E1C}
 
-TVSDK contatta un servizio di distribuzione di annunci, come Adobe Primetime ad Decioning, e tenta di ottenere il file playlist principale che corrisponde al flusso video per l&#39;annuncio. Durante la fase di risoluzione degli annunci, TVSDK effettua una chiamata HTTP al server remoto di distribuzione degli annunci e analizza la risposta del server.
+TVSDK contatta un servizio di distribuzione di annunci, ad esempio  decisione di annunci Adobe Primetime, e tenta di ottenere il file playlist principale che corrisponde al flusso video per l&#39;annuncio. Durante la fase di risoluzione degli annunci, TVSDK effettua una chiamata HTTP al server remoto di distribuzione degli annunci e analizza la risposta del server.
 
 TVSDK supporta i seguenti tipi di provider di annunci:
 
@@ -49,7 +52,7 @@ Il failover può verificarsi in questa fase con conflitti che potrebbero verific
 
 TVSDK invia una notifica di avviso relativa all&#39;errore e continua l&#39;elaborazione.
 
-## Fase ad-riproduzione {#section_DA816F88AF8A4A5A8FD0DE2D54A86031}
+## Fase di riproduzione annunci {#section_DA816F88AF8A4A5A8FD0DE2D54A86031}
 
 TVSDK scarica i segmenti di annunci e li visualizza sullo schermo del dispositivo.
 
