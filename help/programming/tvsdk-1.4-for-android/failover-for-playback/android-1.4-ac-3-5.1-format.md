@@ -6,6 +6,9 @@ title: Formato AC-3 5.1
 uuid: d5e77bb5-ed51-4f9f-b34f-e9082f5ee4de
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '558'
+ht-degree: 0%
 
 ---
 
@@ -18,11 +21,11 @@ Primetime non è in grado di proteggere da guasti come un&#39;interruzione dell&
 
 Il codec audio 3 (AC-3, noto anche come formato Dolby Digital®) 5.1, consente ai fornitori di contenuti di comprimere le dimensioni dei file audio multicanale senza compromettere la qualità audio. L&#39;AC-3 è un formato 5.1, che offre cinque canali a larghezza di banda completa per un&#39;esperienza utente più completa.
 
-Per ulteriori informazioni, consulta [Dolby Digital 5.1](https://www.dolby.com/us/en/technologies/dolby-digital.html).
+Per ulteriori informazioni, vedere [Dolby Digital 5.1](https://www.dolby.com/us/en/technologies/dolby-digital.html).
 
 >[!IMPORTANT]
 >
->La versione 1.4 di TVSDK supporta il formato AC-3 5.1 solo su Amazon FireTV.
+>La versione 1.4 di TVSDK supporta il formato AC-3 5.1 solo su  Amazon FireTV.
 
 TVSDK supporta le seguenti funzionalità AC-3 5.1:
 
@@ -35,14 +38,14 @@ TVSDK supporta le seguenti funzionalità AC-3 5.1:
 
    In modalità passthrough, invece di decodificare il supporto dal formato AC-3 5.1 a un formato PCM (Multi-hannel pulse-code modulation), il TVSDK viene modificato o non modificato (a seconda del dispositivo) dal decoder. Questo supporto viene inviato al dispositivo audio (altoparlante o ricevitore) in modo che il dispositivo audio possa decodificare e riprodurre il flusso Dolby surround.
 
-TVSDK supporta le funzionalità AC-3 5.1 solo sul dispositivo Amazon Fire TV di prima generazione.
+TVSDK supporta le funzioni AC-3 5.1 solo sul dispositivo  Amazon Fire TV di prima generazione.
 
 Le seguenti funzioni AC-3 5.1 non sono supportate:
 
 * Audio AAC multicanale
 * ABR tra diversi codec (AAC - AC3)
 
-## Selezione dei supporti supportati {#section_E1DFA1F472EA4BDE846C71A3343E275A}
+## Selezione di supporti supportati {#section_E1DFA1F472EA4BDE846C71A3343E275A}
 
 Di seguito è riportato il flusso di lavoro tipico che si verifica quando TVSDK trova un manifesto con supporti AC-3 e AAC:
 
