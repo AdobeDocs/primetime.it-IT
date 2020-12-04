@@ -6,6 +6,9 @@ title: Tracciamento annunci client
 uuid: 09a3a2b5-8c73-4070-a47b-b7ab490b1139
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '61'
+ht-degree: 0%
 
 ---
 
