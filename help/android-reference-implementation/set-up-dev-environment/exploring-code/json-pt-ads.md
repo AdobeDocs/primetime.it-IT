@@ -6,6 +6,9 @@ description: Il blocco di codice riportato di seguito definisce l'oggetto JSON d
 seo-description: Il blocco di codice riportato di seguito definisce l'oggetto JSON dei dettagli quando il valore del tipo è Primetime ads.
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 0%
 
 ---
 
@@ -40,4 +43,4 @@ Il blocco di codice riportato di seguito definisce l&#39;oggetto JSON dei dettag
 | zoneid | Primetime ads zoneid. Per ulteriori informazioni, consulta la documentazione relativa agli annunci Primetime. |
 | targeting | Un array di coppie chiave/valore utilizzate per il targeting di annunci specifici per il contenuto. |
 
-Per ulteriori informazioni sul valore di questi attributi, consultate [com.adobe.mediacore.metadata.AuditudeSettings](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/com/adobe/mediacore/metadata/AuditudeSettings.html) .
+Per ulteriori informazioni sul valore di questi attributi, vedere [com.adobe.mediacore.metadata.AuditudeSettings](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/com/adobe/mediacore/metadata/AuditudeSettings.html).
