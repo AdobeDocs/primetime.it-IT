@@ -6,6 +6,9 @@ title: Ottimizzazione reindirizzamento HTTP 302
 uuid: 58593d5f-a639-4d87-9589-dba6b2dbba38
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '205'
+ht-degree: 0%
 
 ---
 
@@ -18,10 +21,10 @@ Se una richiesta di manifesto principale viene reindirizzata e l’ottimizzazion
 
 Questa funzione è disattivata per impostazione predefinita e potete modificare questa impostazione.
 
-Se attivate questa funzione, funziona correttamente solo se *tutte* le seguenti condizioni sono soddisfatte; in caso contrario, non si verifica alcuna ottimizzazione di reindirizzamento e continuano a verificarsi 302 risposte:
+Se si abilita questa funzione, funziona correttamente solo se *all* delle seguenti condizioni è vero; in caso contrario, non si verifica alcuna ottimizzazione di reindirizzamento e continuano a verificarsi 302 risposte:
 
-* L’applicazione è stata compilata per Adobe Flash Player 11.8, con `-swf-version` 21 o versione successiva.
-* Gli utenti finali dispongono di Adobe Flash Player 11.8 o versione successiva installato.
+* L&#39;applicazione è stata compilata per  Adobe 11.8, utilizzando `-swf-version` 21 o versione successiva.
+* Gli utenti finali hanno installato  Adobe 11.8 o successivo.
 
 >[!IMPORTANT]
 >
@@ -29,7 +32,7 @@ Se attivate questa funzione, funziona correttamente solo se *tutte* le seguenti 
 
 ## Disabilitare o abilitare l&#39;ottimizzazione di reindirizzamento 302 {#section_D6687FC44C61446F878008B629A5FA19}
 
-Utilizzare la `useRedirectedUrl` proprietà per attivare (true) o disattivare (false) il reindirizzamento 302.
+Utilizzare la proprietà `useRedirectedUrl` per attivare (true) o disattivare (false) il reindirizzamento 302.
 
 <!--<a id="example_B886777252B745AAB48B1FCC42C97A25"></a>-->
 
