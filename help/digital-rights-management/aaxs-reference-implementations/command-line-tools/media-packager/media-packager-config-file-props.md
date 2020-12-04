@@ -4,6 +4,9 @@ title: Proprietà del file di configurazione
 uuid: f0d36240-e5fa-4bf9-9a82-7e963d03cdd0
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '630'
+ht-degree: 0%
 
 ---
 
@@ -30,11 +33,11 @@ Prima di eseguire Media Packager, specificate i valori per le proprietà di Medi
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.contents.script</span> </td> 
-   <td colname="2" class="- topic/entry ">Indica se crittografare i dati di script in FLV. <i class="+ topic/ph hi-d/i ">i tag dati di script onMetaData</i> e <i class="+ topic/ph hi-d/i ">onXMP</i> non vengono mai crittografati, anche se questa opzione è abilitata. </td> 
+   <td colname="2" class="- topic/entry ">Indica se crittografare i dati di script in FLV. <i class="+ topic/ph hi-d/i ">I tag di dati </i> onMetaDataand  <i class="+ topic/ph hi-d/i "></i> onXMPscript non vengono mai crittografati, anche se questa opzione è abilitata. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.contents.video.level</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Indica il livello di cifratura del video. Per cifrare tutto il contenuto video viene utilizzato un valore elevato, mentre per cifrare porzioni del contenuto video per i file F4V contenenti contenuto H.264 vengono utilizzati valori medi e bassi. </p> <p class="- topic/p ">value = <span class="codeph"> high| medium| low</span> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Indica il livello di cifratura del video. Per cifrare tutto il contenuto video viene utilizzato un valore elevato, mentre per cifrare porzioni del contenuto video per i file F4V contenenti contenuto H.264 vengono utilizzati valori medi e bassi. </p> <p class="- topic/p ">value = <span class="codeph"> high | medium | low</span> </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.contents.SecondiNon crittografato</span> </td> 
@@ -42,11 +45,11 @@ Prima di eseguire Media Packager, specificate i valori per le proprietà di Medi
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.keys.asymmetric.certfile</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Il file del certificato del server licenze utilizzato per crittografare la chiave. La proprietà <span class="codeph"> encrypt.keys.asymmetric.certfile</span> specifica un file che contiene solo il certificato (il formato PEM o DER è accettabile). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Il file del certificato del server licenze utilizzato per crittografare la chiave. La proprietà <span class="codeph"> encrypt.keys.asymMetric.certfile</span> specifica un file che contiene solo il certificato (il formato PEM o DER è accettabile). </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">encrypt.keys.policyFile.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Questa proprietà viene utilizzata ripetutamente per creare un elenco di criteri da applicare al contenuto. <span class="codeph"> n</span> è un numero intero il cui valore è uguale o superiore a 1. Per impostazione predefinita, il client utilizza la prima istanza. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Questa proprietà viene utilizzata ripetutamente per creare un elenco di criteri da applicare al contenuto. <span class="codeph"> </span> è un numero intero il cui valore è uguale o superiore a 1. Per impostazione predefinita, il client utilizza la prima istanza. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.license.serverurl</span> </td> 
@@ -54,7 +57,7 @@ Prima di eseguire Media Packager, specificate i valori per le proprietà di Medi
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.license.servercert</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Il certificato di trasporto per il server licenze. Questa proprietà specifica un file <span class="filepath"> .cer</span> che contiene solo il certificato (è accettabile sia il formato PEM che DER). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Il certificato di trasporto per il server licenze. Questa proprietà specifica un file <span class="filepath"> .cer</span> che contiene solo il certificato (il formato PEM o DER è accettabile). </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.sign.certfile</span> </td> 
@@ -66,7 +69,7 @@ Prima di eseguire Media Packager, specificate i valori per le proprietà di Medi
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.license.minServerVersion</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Imposta la versione server minima necessaria per rilasciare licenze per il contenuto in fase di creazione del pacchetto. Specificate x (Adobe Access x.0) dove x = il numero di rilascio principale. I server precedenti ad Adobe Access 3.0 non supportano questa impostazione. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Imposta la versione server minima necessaria per rilasciare licenze per il contenuto in fase di creazione del pacchetto. Specificate x (accesso  Adobe x.0) dove x = il numero di rilascio principale. I server antecedenti  Adobe Access 3.0 non supportano questa impostazione. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">encrypt.keys.policyFile.n.domain.transportcert</span> </td> 
@@ -78,11 +81,11 @@ Prima di eseguire Media Packager, specificate i valori per le proprietà di Medi
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.keys.rotation.enable</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Specifica se la rotazione della chiave è abilitata. Se è impostata su false (impostazione predefinita), la rotazione delle chiavi è disabilitata e la CEK master verrà utilizzata per crittografare tutti i campioni nel contenuto. </p> <p class="- topic/p ">Se è impostato su true, la rotazione delle chiavi verrà abilitata e sarà possibile utilizzare chiavi diverse per cifrare parti del contenuto. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Specifica se la rotazione della chiave è abilitata. Se è impostata su false (impostazione predefinita), la rotazione della chiave è disabilitata e la CEK principale verrà utilizzata per crittografare tutti i campioni nel contenuto. </p> <p class="- topic/p ">Se è impostato su true, la rotazione delle chiavi verrà abilitata e sarà possibile utilizzare chiavi diverse per cifrare parti del contenuto. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">encrypt.keys.rotation.key.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Sequenza di chiavi ruotate utilizzate per cifrare il contenuto quando è abilitata la rotazione delle chiavi. Se non vengono specificate chiavi, le chiavi verranno generate in modo casuale. Le chiavi devono avere una lunghezza di 16 byte e devono essere specificate come valori esadecimali. </p> <p class="- topic/p ">Lo spazio vuoto tra i valori esadecimali è facoltativo. <i class="+ topic/ph hi-d/i ">A partire da 1,</i> deve essere in aumento monotonico. Quando vengono specificati più tasti, i tasti vengono sottoposti a ciclo continuo nell'ordine indicato. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Sequenza di chiavi ruotate utilizzate per cifrare il contenuto quando è abilitata la rotazione delle chiavi. Se non vengono specificate chiavi, le chiavi verranno generate in modo casuale. Le chiavi devono avere una lunghezza di 16 byte e devono essere specificate come valori esadecimali. </p> <p class="- topic/p ">Lo spazio vuoto tra i valori esadecimali è facoltativo. <i class="+ topic/ph hi-d/i ">Non </i> deve aumentare monotonicamente, a partire da 1. Quando vengono specificati più tasti, i tasti vengono sottoposti a ciclo continuo nell'ordine indicato. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.keys.rotation.interval</span> </td> 
