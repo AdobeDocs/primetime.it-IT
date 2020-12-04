@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Scrambler password {#password-scrambler}
+# Scorrimento password {#password-scrambler}
 
 L&#39;utility Password Scrambler crittografa una password per i file di configurazione Adobe Primetime DRM Server per lo streaming protetto .
 
@@ -44,7 +44,7 @@ Encrypted password:
 </i class="+ topic>
 ```
 
-Tutte le password specificate nei [!DNL flashaccess-global.xml] file e [!DNL flashaccess-tenant.xml] devono essere crittografate.
+Tutte le password specificate nei file [!DNL flashaccess-global.xml] e [!DNL flashaccess-tenant.xml] devono essere crittografate.
 
 >[!NOTE]
 >
