@@ -21,4 +21,4 @@ Esempio di utilizzo: Utilizzate questa regola per limitare la riproduzione a una
 
 >[!NOTE]
 >
->Se utilizzate  Flash Builder di Adobe per creare applicazioni protette, dovete assicurarvi di non distribuire l&#39;applicazione in modalità Debug. Quando distribuite un&#39;applicazione in modalità Debug, l&#39;Flash Builder aggiunge `.debug` all&#39;ID applicazione AIR, il che causa il comportamento imprevisto della funzionalità del elenco consentiti  in DRM di Primetime.
+>Se utilizzate  Flash Builder di Adobe per creare applicazioni protette, dovete assicurarvi di non distribuire l&#39;applicazione in modalità Debug. Quando distribuite un&#39;applicazione in modalità Debug, l&#39;Flash Builder aggiunge `.debug` all&#39;ID applicazione AIR, causando quindi un funzionamento imprevisto della funzionalità del elenco consentiti  in DRM di Primetime.
