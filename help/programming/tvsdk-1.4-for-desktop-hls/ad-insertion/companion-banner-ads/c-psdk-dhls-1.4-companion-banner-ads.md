@@ -6,11 +6,14 @@ title: Annunci per banner
 uuid: 388a1683-342c-4f3b-97c8-cfcb6c5cfee1
 translation-type: tm+mt
 source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+workflow-type: tm+mt
+source-wordcount: '650'
+ht-degree: 0%
 
 ---
 
 
-# Annunci per banner {#companion-banner-ads}
+# Annunci per banner completi {#companion-banner-ads}
 
 TVSDK supporta i banner pubblicitari di compagnia, che sono annunci che accompagnano un annuncio lineare e spesso rimangono sulla pagina dopo la fine dell&#39;annuncio lineare. La vostra applicazione è responsabile della visualizzazione dei banner associati forniti con un annuncio lineare.
 
@@ -29,14 +32,14 @@ Quando visualizzate annunci di accompagnamento, attenetevi alle seguenti raccoma
 
    Lo standard prevede la visualizzazione di ciascun banner complementare fino a quando non si dispone di una sostituzione per questo banner.
 
-## Dati banner complementari {#companion-banner-data}
+## Dati del banner della compagnia {#companion-banner-data}
 
 Il contenuto di un AdBannerAsset descrive un banner complementare.
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-L&#39; `AdPlaybackEvent.AD_STARTED` evento restituisce un&#39; `Ad` istanza che contiene una `companionAssets` proprietà ( `Vector.<AdAsset>`).
-Ciascuno `AdAsset` fornisce informazioni sulla visualizzazione della risorsa.
+L&#39;evento `AdPlaybackEvent.AD_STARTED` restituisce un&#39;istanza `Ad` che contiene una proprietà `companionAssets` ( `Vector.<AdAsset>`).
+Ogni `AdAsset` fornisce informazioni sulla visualizzazione della risorsa.
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
  <thead> 
@@ -68,7 +71,7 @@ Ciascuno `AdAsset` fornisce informazioni sulla visualizzazione della risorsa.
   </tr> 
   <tr> 
    <td colname="col1"> URL statico </td> 
-   <td colname="col2"> <p>A volte, il banner ausiliario ha anche un URL statico che è un URL diretto per l’immagine o per un <span class="filepath"> .swf</span> (banner Flash). </p> <p>Se non desiderate utilizzare html o iframe, potete usare un URL diretto a un’immagine o un file SWF per visualizzare il banner nell’area di visualizzazione Flash. In questo caso, potete utilizzare staticURL per visualizzare il banner. </p> <p>Importante:  È necessario verificare se l'URL statico è una stringa valida, perché questa proprietà potrebbe non essere sempre disponibile. </p> </td> 
+   <td colname="col2"> <p>A volte, il banner ausiliario ha anche un URL statico che è un URL diretto per l'immagine o per un <span class="filepath"> .swf</span> (banner Flash). </p> <p>Se non desiderate utilizzare html o iframe, potete utilizzare un URL diretto a un’immagine o un file SWF per visualizzare invece il banner nell’area di visualizzazione dell’Flash. In questo caso, potete utilizzare staticURL per visualizzare il banner. </p> <p>Importante:  È necessario verificare se l'URL statico è una stringa valida, perché questa proprietà potrebbe non essere sempre disponibile. </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -77,33 +80,33 @@ Ciascuno `AdAsset` fornisce informazioni sulla visualizzazione della risorsa.
 
 Per visualizzare gli annunci per banner, dovete creare istanze di banner e consentire a TVSDK di ascoltare gli eventi relativi agli annunci.
 
-TVSDK fornisce un elenco di banner pubblicitari associati a un annuncio lineare attraverso l&#39;evento `AdPlaybackEvent.AD_STARTED` event.
+TVSDK fornisce un elenco di banner pubblicitari associati a un annuncio lineare tramite l&#39;evento `AdPlaybackEvent.AD_STARTED`.
 
 I manifesti possono specificare annunci banner complementari per:
 
 * Snippet HTML
 * URL di una pagina iFrame
-* URL di un’immagine statica o di un file SWF Adobe Flash
+* URL di un’immagine statica o di un file SWF di Flash di Adobi 
 
 Per ogni annuncio aggiuntivo complementare, TVSDK indica quali tipi sono disponibili per l’applicazione.
 
-Aggiungete un listener per l&#39; `AdPlaybackEvent.AD_STARTED` evento che esegue le seguenti operazioni:
+Aggiungete un listener per l&#39;evento `AdPlaybackEvent.AD_STARTED` che esegue le seguenti operazioni:
 
 1. Cancella gli annunci esistenti nell&#39;istanza del banner.
 
-1. Ottiene l&#39;elenco degli annunci di accompagnamento da `Ad.companionAssets`.
+1. Ottiene l&#39;elenco degli annunci complementari da `Ad.companionAssets`.
 
 1. Se l&#39;elenco degli annunci complementari non è vuoto, ripetete l&#39;operazione sull&#39;elenco per le istanze del banner.
 
-   Ogni istanza del banner ( an `AdBannerAsset`) contiene informazioni quali larghezza, altezza, tipo di risorsa (html, iframe o statico) e dati necessari per visualizzare il banner ausiliario.
+   Ogni istanza del banner ( un `AdBannerAsset`) contiene informazioni quali larghezza, altezza, tipo di risorsa (html, iframe o statico) e dati necessari per visualizzare il banner ausiliario.
 
 1. Se un annuncio video non contiene annunci pubblicitari associati, l’elenco delle risorse ausiliarie non contiene dati per tale annuncio video.
 
    Per visualizzare un annuncio di visualizzazione indipendente, aggiungete la logica allo script per eseguire un tag di annuncio di visualizzazione normale DFP (DoubleClick for Publishers) nell&#39;istanza di banner appropriata.
 
-1. Invia le informazioni del banner a una funzione sulla pagina, in genere JavaScript, utilizzando `ExternalInterface`che visualizza i banner in una posizione appropriata.
+1. Invia le informazioni sul banner a una funzione sulla pagina, in genere JavaScript, utilizzando `ExternalInterface`, che visualizza i banner in una posizione appropriata.
 
-   In genere si tratta di un `div`, e la funzione utilizza il `div ID` per visualizzare il banner. Ad esempio:
+   In genere si tratta di un `div` e la funzione utilizza il `div ID` per visualizzare il banner. Ad esempio:
 
    Aggiungete il listener di eventi:
 
