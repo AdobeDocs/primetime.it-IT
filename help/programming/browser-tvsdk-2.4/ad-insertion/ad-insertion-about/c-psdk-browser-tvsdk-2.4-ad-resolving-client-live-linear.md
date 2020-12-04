@@ -6,6 +6,9 @@ title: Risoluzione e inserimento di annunci live/lineari
 uuid: 18c6733a-e827-4b1c-9cd5-796d57cbdb05
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '302'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ Il browser TVSDK inserisce gli annunci nei seguenti modi:
 
 * **Pre-roll**, che si trova all&#39;inizio del contenuto.
 
-Browser TVSDK accetta l&#39;interruzione dell&#39;annuncio anche se la durata è maggiore o inferiore alla durata di sostituzione del cue point. Per impostazione predefinita, Browser TVSDK supporta il `#EXT-X-CUE` cue point come indicatore pubblicitario valido per la risoluzione e il posizionamento degli annunci. Questo marcatore richiede il campo di metadati `DURATION` in secondi e l&#39;ID univoco del cue point. Ad esempio:
+Browser TVSDK accetta l&#39;interruzione dell&#39;annuncio anche se la durata è maggiore o inferiore alla durata di sostituzione del cue point. Per impostazione predefinita, Browser TVSDK supporta il cue `#EXT-X-CUE` come indicatore pubblicitario valido per la risoluzione e il posizionamento degli annunci. Questo marcatore richiede il campo di metadati `DURATION` in secondi e l&#39;ID univoco del cue point. Ad esempio:
 
 ```
 #EXT-X-CUE:DURATION=27,ID="..."
@@ -28,7 +31,7 @@ Browser TVSDK accetta l&#39;interruzione dell&#39;annuncio anche se la durata è
 
 Puoi definire e iscriverti ad altri suggerimenti (tag).
 
-Dopo l’avvio della riproduzione, il motore video aggiorna periodicamente il file manifesto. Browser TVSDK risolve eventuali nuovi annunci e inserisce gli annunci quando viene rilevato un cue point nel flusso live o lineare definito nel manifesto. Una volta risolti e inseriti gli annunci, Browser TVSDK calcola di nuovo la timeline virtuale e invia un `AdobePSDK.PSDKEventType.TIMELINE_UPDATED` evento.
+Dopo l’avvio della riproduzione, il motore video aggiorna periodicamente il file manifesto. Browser TVSDK risolve eventuali nuovi annunci e inserisce gli annunci quando viene rilevato un cue point nel flusso live o lineare definito nel manifesto. Una volta risolti e inseriti gli annunci, Browser TVSDK calcola di nuovo la timeline virtuale e invia un evento `AdobePSDK.PSDKEventType.TIMELINE_UPDATED`.
 
 >[!TIP]
 >
