@@ -6,11 +6,14 @@ title: Controllo della visibilità dei sottotitoli
 uuid: b161a729-73f3-4019-a95e-013b42779842
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '143'
+ht-degree: 0%
 
 ---
 
 
-# Controllo della visibilità dei sottotitoli{#control-closed-caption-visibility}
+# Controllare la visibilità dei sottotitoli codificati{#control-closed-caption-visibility}
 
 È possibile controllare la visibilità dei sottotitoli codificati. Quando la visibilità è attivata, viene visualizzata la traccia attualmente selezionata.
 
@@ -24,5 +27,5 @@ Se il testo della didascalia chiusa viene visualizzato quando il lettore entra n
 >
 >I valori di visibilità per i sottotitoli codificati sono controllati da `MediaPlayer.VISIBLE` e `MediaPlayer.INVISIBLE`.
 
-1. Utilizzare la `MediaPlayer.ccVisibility` proprietà per accedere all&#39;impostazione di visibilità corrente per i sottotitoli codificati.
+1. Utilizzare la proprietà `MediaPlayer.ccVisibility` per accedere all&#39;impostazione di visibilità corrente per i sottotitoli codificati.
 
