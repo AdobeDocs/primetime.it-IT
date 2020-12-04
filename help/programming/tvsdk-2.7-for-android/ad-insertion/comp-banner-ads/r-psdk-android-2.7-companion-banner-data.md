@@ -6,17 +6,20 @@ title: Dati banner complementari
 uuid: 4a5d78e1-5abe-45a8-b50f-14f73fdcc879
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '172'
+ht-degree: 0%
 
 ---
 
 
-# Dati banner complementari {#companion-banner-data}
+# Dati del banner della compagnia {#companion-banner-data}
 
 Il contenuto di una AdAsset descrive un banner complementare.
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-Ciascuno `AdAsset` fornisce informazioni sulla visualizzazione della risorsa.
+Ogni `AdAsset` fornisce informazioni sulla visualizzazione della risorsa.
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
  <thead> 
@@ -44,7 +47,7 @@ Ciascuno `AdAsset` fornisce informazioni sulla visualizzazione della risorsa.
   </tr> 
   <tr> 
    <td colname="col1"> URL statico </td> 
-   <td colname="col2"> <p>A volte, il banner ausiliario ha anche un <span class="codeph"> URL</span> statico che è un URL diretto per l’immagine o per un <span class="codeph"> .swf</span> (banner Flash). </p> <p>Se non desiderate utilizzare html o iframe, potete usare un URL diretto a un’immagine o un file SWF per visualizzare il banner nell’area di visualizzazione Flash. In questo caso, potete utilizzare <span class="codeph"> staticURL</span> per visualizzare il banner. </p> <p>Importante:  È necessario verificare se l'URL statico è una stringa valida, perché questa proprietà potrebbe non essere sempre disponibile. </p> </td> 
+   <td colname="col2"> <p>A volte, il banner ausiliario ha anche un <span class="codeph"> staticURL</span> che è un URL diretto per l'immagine o per un <span class="codeph"> .swf</span> (banner Flash). </p> <p>Se non desiderate utilizzare html o iframe, potete utilizzare un URL diretto a un’immagine o un file SWF per visualizzare invece il banner nell’area di visualizzazione dell’Flash. In questo caso, potete utilizzare <span class="codeph"> staticURL</span> per visualizzare il banner. </p> <p>Importante:  È necessario verificare se l'URL statico è una stringa valida, perché questa proprietà potrebbe non essere sempre disponibile. </p> </td> 
   </tr> 
  </tbody> 
 </table>
