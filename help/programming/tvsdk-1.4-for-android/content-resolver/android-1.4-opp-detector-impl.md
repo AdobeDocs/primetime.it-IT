@@ -6,6 +6,9 @@ title: Implementare un rilevatore di opportunità personalizzato
 uuid: 012527c5-4ef0-4cd6-a9df-2fb861078a7e
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '152'
+ht-degree: 2%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 Puoi implementare i tuoi rilevatori di opportunità implementando l’interfaccia PlacementOpportunityDetector.
 
-1. Create un&#39; `AdvertisingFactory` istanza personalizzata e sovrascrivete `createOpportunityDetector`. Ad esempio:
+1. Create un&#39;istanza `AdvertisingFactory` personalizzata ed eseguite l&#39;override di `createOpportunityDetector`. Ad esempio:
 
    ```java
    new AdvertisingFactory() { 
@@ -27,7 +30,7 @@ Puoi implementare i tuoi rilevatori di opportunità implementando l’interfacci
    }
    ```
 
-1. Registra l&#39;annuncio client factory nell&#39; `MediaPlayer`. Ad esempio:
+1. Registra il produttore del client di annunci in `MediaPlayer`. Ad esempio:
 
    ```java
    // register the custom advertising factory with media player 
@@ -35,14 +38,14 @@ Puoi implementare i tuoi rilevatori di opportunità implementando l’interfacci
    mediaPlayer.registerAdClientFactory(advertisingFactory);
    ```
 
-1. Create una classe di rilevamento opportunità personalizzata che estenda la `PlacementOpportunityDetector` classe.
+1. Create una classe di rilevamento opportunità personalizzata che estenda la classe `PlacementOpportunityDetector`.
    1. Nel rilevatore di opportunità personalizzato, sostituisci questa funzione:
 
       ```java
       public List<PlacementOpportunity> process(List<TimedMetadata> timedMetadataList, Metadata metadata)
       ```
 
-      L&#39; `timedMetadataList` elenco contiene l&#39;elenco di disponibili `TimedMetadata`, ordinato. I metadati contengono i parametri di targeting e i parametri personalizzati da inviare al provider di annunci.
+      Il `timedMetadataList` contiene l&#39;elenco di `TimedMetadata` disponibili, ordinato. I metadati contengono i parametri di targeting e i parametri personalizzati da inviare al provider di annunci.
 
    1. Per ogni `TimedMetadata`, create un `List<PlacementOpportunity>`. L&#39;elenco può essere vuoto, ma non nullo. `PlacementOpportunity` devono avere i seguenti attributi:
 
@@ -54,7 +57,7 @@ Puoi implementare i tuoi rilevatori di opportunità implementando l’interfacci
       )
       ```
 
-   1. Dopo aver creato opportunità di posizionamento per tutti gli oggetti metadati temporizzati rilevati, è sufficiente restituire l&#39; `PlacementOpportunity` elenco.
+   1. Dopo aver creato opportunità di posizionamento per tutti gli oggetti metadati temporizzati rilevati, è sufficiente restituire l&#39;elenco `PlacementOpportunity`.
 
 Questo è un esempio di rilevatore di opportunità di posizionamento personalizzato:
 
