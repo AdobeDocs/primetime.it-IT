@@ -6,6 +6,9 @@ title: Costruire una barra di controllo migliorata per il DVR
 uuid: 988dcaf5-896d-4da1-8b78-5acf5a317aa3
 translation-type: tm+mt
 source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+workflow-type: tm+mt
+source-wordcount: '360'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +20,7 @@ source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
 * Per VOD, la lunghezza della finestra ricercabile corrisponde alla durata dell’intera risorsa.
 * Per lo streaming dal vivo, la lunghezza della finestra DVR (ricercabile) è definita come l&#39;intervallo di tempo che inizia dalla finestra di riproduzione dal vivo e termina al punto dal vivo del client.
 
-   Ricorda le informazioni seguenti:
+   Ricorda le seguenti informazioni:
 
    * Il punto attivo del client viene calcolato sottraendo la lunghezza del buffer dall&#39;estremità della finestra dal vivo.
 
@@ -49,7 +52,7 @@ source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
       }
       ```
 
-      È inoltre possibile scegliere di cercare il punto attivo del client utilizzando la `MediaPlayer.LIVE_POINT` costante.
+      È inoltre possibile scegliere di cercare il punto attivo del client utilizzando la costante `MediaPlayer.LIVE_POINT`.
 
       ```
       mediaPlayer.seek(MediaPlayer.LIVE_POINT);
