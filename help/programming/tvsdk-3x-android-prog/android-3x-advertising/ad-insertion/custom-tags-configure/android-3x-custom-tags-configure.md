@@ -23,7 +23,7 @@ I flussi di file multimediali possono includere metadati aggiuntivi sotto forma 
 >
 >Questa funzione non è disponibile per Safari sui computer Apple, perché TVSDK utilizza il tag video, anziché Flash o MSE, per riprodurre il contenuto HLS.
 
-TVSDK fornisce supporto out-of-the-box per specifici tag `#EXT` pubblicitari. L&#39;applicazione può utilizzare tag personalizzati per migliorare il flusso di lavoro pubblicitario o per supportare scenari di blackout. Per supportare flussi di lavoro avanzati, TVSDK consente di specificare e sottoscrivere altri tag nel manifesto. Potete ricevere una notifica quando questi tag vengono visualizzati nel file manifesto.
+TVSDK fornisce supporto out-of-the-box per specifici tag pubblicitari `#EXT`. L&#39;applicazione può utilizzare tag personalizzati per migliorare il flusso di lavoro pubblicitario o per supportare scenari di blackout. Per supportare flussi di lavoro avanzati, TVSDK consente di specificare e sottoscrivere altri tag nel manifesto. Potete ricevere una notifica quando questi tag vengono visualizzati nel file manifesto.
 
 >[!TIP]
 >
@@ -67,8 +67,8 @@ seg5.ts
 
 L’applicazione può configurare i seguenti scenari:
 
-* Una notifica relativa all&#39;esistenza nel file di `#EXT-X-ASSET` tag o altri set di nomi di tag personalizzati sottoscritti.
-* Inserite annunci quando un `#EXT-X-AD` tag, o qualsiasi altro nome di tag personalizzato, viene trovato nel flusso.
+* Una notifica quando nel file sono presenti tag `#EXT-X-ASSET` o qualsiasi altro set di nomi di tag personalizzati a cui hai effettuato la sottoscrizione.
+* Inserite annunci quando nel flusso è presente un tag `#EXT-X-AD` o qualsiasi altro nome di tag personalizzato.
 
 Potete abbonarvi a uno dei seguenti tag come tag personalizzati:
 
@@ -78,6 +78,6 @@ Potete abbonarvi a uno dei seguenti tag come tag personalizzati:
 * `EXT-X-CUE`
 * `EXT-X-ENDLIST`
 
-L&#39;utente verrà informato di un `TimedMetadata` evento durante l&#39;analisi dei file manifest.
+Durante l&#39;analisi dei file manifest riceverai una notifica con un evento `TimedMetadata`.
 
-Alcuni tag pubblicitari, ad esempio `EXT-X-CUE`, a cui siete già iscritti. Questi tag vengono utilizzati anche dal generatore di opportunità predefinito. Puoi specificare quali tag pubblicitari utilizzare il generatore di opportunità predefinito impostando la `adTags` proprietà.
+Esistono tag pubblicitari, ad esempio `EXT-X-CUE`, ai quali si è già abbonati. Questi tag vengono utilizzati anche dal generatore di opportunità predefinito. Per specificare quali tag pubblicitari utilizzare il generatore di opportunità predefinito, è possibile impostare la proprietà `adTags`.
