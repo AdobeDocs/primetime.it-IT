@@ -6,6 +6,9 @@ title: Iscriviti ai tag personalizzati
 uuid: f1a934bd-772e-435f-84b5-cb48db23c06e
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '112'
+ht-degree: 1%
 
 ---
 
@@ -16,11 +19,11 @@ TVSDK prepara gli oggetti TimedMetadata per i tag sottoscritti ogni volta che qu
 
 Prima di avviare la riproduzione, è necessario effettuare la sottoscrizione ai tag. Per ricevere notifiche sui tag personalizzati nei manifesti HLS:
 
-1. Imposta i nomi dei tag personalizzati dell&#39;annuncio a livello globale passando un array che contiene i tag personalizzati in `setSubscribedTags` in `MediaPlayerItemConfig`.
+1. Impostate i nomi dei tag degli annunci personalizzati a livello globale passando un array che contiene i tag personalizzati a `setSubscribedTags` in `MediaPlayerItemConfig`.
 
    >[!IMPORTANT]
    >
-   >È necessario includere il `#` prefisso quando si utilizzano i flussi HLS.
+   >È necessario includere il prefisso `#` quando si utilizzano i flussi HLS.
 
    Ad esempio:
 
