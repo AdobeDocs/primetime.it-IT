@@ -6,11 +6,14 @@ title: Visualizza il tempo corrente e rimanente
 uuid: b96ade8b-1c81-4367-ba37-fc41a92d7cbc
 translation-type: tm+mt
 source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+workflow-type: tm+mt
+source-wordcount: '106'
+ht-degree: 0%
 
 ---
 
 
-# Visualizza il tempo corrente e rimanente {#display-the-current-time-and-remaining-time}
+# Visualizza l&#39;ora corrente e l&#39;ora rimanente {#display-the-current-time-and-remaining-time}
 
 Potete visualizzare il tempo corrente e rimanente del contenuto in corso di riproduzione.
 
