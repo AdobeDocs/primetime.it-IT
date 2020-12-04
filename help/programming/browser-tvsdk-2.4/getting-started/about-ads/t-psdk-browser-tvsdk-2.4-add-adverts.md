@@ -6,11 +6,14 @@ title: Aggiungi pubblicità
 uuid: 7762506f-b55e-445d-b8a2-c1208358a370
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '51'
+ht-degree: 0%
 
 ---
 
 
-# Aggiungi pubblicità {#add-advertising}
+# Aggiungi annuncio {#add-advertising}
 
 1. Definite i metadati pubblicitari.
 
@@ -36,8 +39,8 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
    config.advertisingFactory = new ExtCueOutContentFactory(auditudeSettings);
    ```
 
-1. Aggiungete la risorsa `ExtCueOutContentFactory` alla sezione libreria.
-1. Scaricate il file `ExtCueOutContentFactory.js` dalla sezione libreria e inseritelo nella cartella di lavoro.
+1. Aggiungete il simbolo `ExtCueOutContentFactory` alla sezione della libreria.
+1. Scaricate la `ExtCueOutContentFactory.js` dalla sezione libreria e inseritela nella cartella di lavoro.
 
    ```js
    <script src= "frameworks/player/dash.min.js"></script> 
