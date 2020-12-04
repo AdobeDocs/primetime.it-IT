@@ -6,6 +6,9 @@ title: Inizializzare e configurare l'analisi video
 uuid: 4a582b35-ae92-4557-806d-e174fc878cc5
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '703'
+ht-degree: 0%
 
 ---
 
@@ -16,17 +19,17 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 Prima di attivare il tracciamento video (heartbeat video), accertatevi di disporre dei seguenti elementi:
 
-* Informazioni di inizializzazione TVSDK per la configurazione e il browser - Contatta il tuo rappresentante Adobe per ottenere informazioni specifiche sull’account per il tracciamento video:
+* Informazioni di inizializzazione TVSDK per la configurazione e il browser - Contatta il rappresentante del Adobe  per informazioni specifiche sull’account per il tracciamento video:
 
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84">
  <tbody>
   <tr>
    <td colname="col1"> Endpoint del server di tracciamento AppMeasurement </td>
-   <td colname="col2"> L'URL dell'endpoint della raccolta back-end di Adobe Analytics (ex SiteCatalyst). </td>
+   <td colname="col2"> L'URL dell'endpoint della raccolta back-end di Adobe Analytics  (precedentemente SiteCatalyst). </td>
   </tr>
   <tr>
    <td colname="col1"> Endpoint del server di tracciamento analisi video </td>
-   <td colname="col2"> URL dell'endpoint della raccolta back-end di analisi video. Qui vengono inviate tutte le chiamate di tracciamento heartbeat video. <p>Suggerimento:  L’URL del server di tracciamento dei visitatori è lo stesso dell’URL del server di tracciamento delle analisi. Per informazioni sull’implementazione del servizio ID visitatori, consulta <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementazione del servizio ID </a>. </p> </td>
+   <td colname="col2"> URL dell'endpoint della raccolta back-end di analisi video. Qui vengono inviate tutte le chiamate di tracciamento heartbeat video. <p>Suggerimento:  L’URL del server di tracciamento dei visitatori è lo stesso dell’URL del server di tracciamento delle analisi. Per informazioni sull'implementazione del servizio ID visitatori, vedi <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementare il servizio ID </a>. </p> </td>
   </tr>
   <tr>
    <td colname="col1"> Nome account </td>
@@ -42,7 +45,7 @@ Prima di attivare il tracciamento video (heartbeat video), accertatevi di dispor
   </tr>
   <tr>
    <td colname="col1"> Editore </td>
-   <td colname="col2"> Si tratta dell'ID editore, fornito ai clienti dal loro rappresentante Adobe. <p>Suggerimento:  Questo ID non è solo una stringa con il nome del marchio o del televisore. </p> </td>
+   <td colname="col2"> Si tratta dell'ID editore, fornito ai clienti dal rappresentante del Adobe . <p>Suggerimento:  Questo ID non è solo una stringa con il nome del marchio o del televisore. </p> </td>
   </tr>
  </tbody>
 </table>
@@ -53,13 +56,13 @@ Per configurare il tracciamento video nel lettore:
 
        Tenete presenti le seguenti informazioni:
    
-   * L&#39;istanza richiede un parametro di input ID organizzazione Marketing Cloud fornito da Adobe.
+   * L&#39;istanza richiede un parametro di input ID organizzazione Marketing Cloud fornito da  Adobe.
 
       Si tratta di un valore di stringa.
    * L&#39;unica opzione di configurazione per la libreria VisitorAPI è l&#39;URL dell&#39;endpoint back-end che fornisce l&#39;identificatore univoco per l&#39;utente corrente.
    * L’URL del server di tracciamento dei visitatori è lo stesso dell’URL del server di tracciamento delle analisi.
 
-      Per informazioni sull’implementazione del servizio ID visitatori, vedi Implementazione [del servizio ID](https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html)visitatori.
+      Per informazioni sull&#39;implementazione del servizio ID visitatori, vedi [Implementazione del servizio ID visitatori](https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html).
 
    ```js
    var_visitor = new Visitor("MARKETING_CLOUD_ORG_ID");
@@ -68,7 +71,7 @@ Per configurare il tracciamento video nel lettore:
 
 2. Creare un&#39;istanza e configurare il componente AppMeasurement.
 
-   L’istanza AppMeasurement presenta diverse opzioni di configurazione. Per ulteriori informazioni, consulta la documentazione per gli sviluppatori [di](https://microsite.omniture.com/t2/help/en_US/reference/#Developer) Adobe Analytics. Le opzioni nel seguente codice di esempio ( `account`, `visitorNamespace`e `trackingServer`) sono obbligatorie e i valori sono forniti da Adobe.
+   L’istanza AppMeasurement presenta diverse opzioni di configurazione. Per ulteriori informazioni, consultare la [ documentazione Adobe Analytics Developer](https://microsite.omniture.com/t2/help/en_US/reference/#Developer). Le opzioni nel seguente codice di esempio ( `account`, `visitorNamespace` e `trackingServer`) sono obbligatorie e i valori sono forniti da  Adobe.
 
    >[!IMPORTANT]
    >
@@ -86,7 +89,7 @@ Per configurare il tracciamento video nel lettore:
 
    >[!IMPORTANT]
    >
-   >Nell’applicazione, accertatevi che `appMeasurementObject.visitor` venga popolato prima di avviare il flusso di analisi video, oppure che non si ottengano risultati di tracciamento. Questi risultati sono indicati dai messaggi presenti nel registro. Potete aggiungere una chiamata di tracciamento vuota ( `appMeasurementObject.track`), eseguire il polling della `visitor` proprietà finché non viene compilata e avviare l’analisi video.
+   >Nell&#39;applicazione, assicurarsi che `appMeasurementObject.visitor` sia popolato prima di avviare il flusso di analisi video, oppure che non si ottengano risultati di tracciamento. Questi risultati sono indicati dai messaggi presenti nel registro. Potete aggiungere una chiamata di tracciamento vuota ( `appMeasurementObject.track`), eseguire il polling della proprietà `visitor` finché non viene compilata e avviare l&#39;analisi dei video.
 
 3. Inizializzare e configurare i metadati di tracciamento heartbeat video.
 
