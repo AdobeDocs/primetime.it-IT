@@ -11,17 +11,17 @@ ht-degree: 0%
 ---
 
 
-# Panoramica sulla distribuzione di Adobe Access Server per lo streaming protetto {#deploying-the-adobe-access-server-for-protected-streaming-overview}
+# Implementazione di Adobe Access Server per lo streaming protetto {#deploying-the-adobe-access-server-for-protected-streaming-overview}
 
 Prima di distribuire Adobe Access Server per lo streaming protetto, accertatevi di aver installato le versioni di Java e Tomcat elencate nella sezione Requisiti.
 
-Il pacchetto Adobe Access Server per lo streaming protetto include [!DNL flashaccesserver.war]. Per distribuire questo file WAR, copiatelo nella [!DNL webapps] directory di Tomcat. Se avete già distribuito il file WAR in precedenza, potrebbe essere necessario eliminare manualmente la directory WAR non imballata ( [!DNL flashaccessserver] nella directory di Tomcat [!DNL webapps] ). Per impedire a Tomcat di disfare i file WAR, modificare il [!DNL server.xml] file nella [!DNL conf] directory di Tomcat e impostare l&#39; `unpackWARs` attributo su `false`.
+Il pacchetto Adobe Access Server per lo streaming protetto include [!DNL flashaccesserver.war]. Per distribuire questo file WAR, copiatelo nella directory [!DNL webapps] di Tomcat. Se in precedenza avete distribuito il file WAR, potrebbe essere necessario eliminare manualmente la directory WAR non imballata ( [!DNL flashaccessserver] nella directory [!DNL webapps] di Tomcat). Per impedire a Tomcat di disfare i file WAR, modificate il file [!DNL server.xml] nella directory [!DNL conf] di Tomcat e impostate l&#39;attributo `unpackWARs` su `false`.
 
 >[!NOTE]
 >
->Se avete configurato Tomcat per l&#39;inclusione [!DNL commons-logging.jar] nel percorso di classe di sistema (non richiesto per Adobe Access Server per lo streaming protetto), la registrazione commons deve essere configurata per l&#39;utilizzo di Log4J.
+>Se avete configurato Tomcat per includere [!DNL commons-logging.jar] nel percorso di classe di sistema (non richiesto per Adobe Access Server per lo streaming protetto), la registrazione comune deve essere configurata per utilizzare Log4J.
 
-Il server utilizza facoltativamente una libreria specifica per la piattaforma ( [!DNL jsafe.dll] in Microsoft Windows o [!DNL libjsafe.so] in Linux) per ottenere prestazioni ottimali. Copiate la libreria appropriata per la piattaforma dalla [!DNL thirdparty/cryptoj/]*piattaforma *alla posizione specificata dalla variabile di`PATH`ambiente (o`LD_LIBRARY_PATH`su Linux).
+Il server utilizza facoltativamente una libreria specifica per la piattaforma ( [!DNL jsafe.dll] in Microsoft Windows o [!DNL libjsafe.so] in Linux) per ottenere prestazioni ottimali. Copiate la libreria appropriata per la piattaforma da [!DNL thirdparty/cryptoj/]*platform* in una posizione specificata dalla variabile di ambiente `PATH` (o `LD_LIBRARY_PATH` in Linux).
 
 >[!NOTE]
 >
