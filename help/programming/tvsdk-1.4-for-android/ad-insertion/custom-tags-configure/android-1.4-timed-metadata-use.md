@@ -17,18 +17,18 @@ ht-degree: 1%
 
 Potete usare TimedMetadata quando l’ora di riproduzione corrente corrisponde all’ora di inizio.
 
-Per utilizzare questi `TimedMetadata` oggetti salvati durante la riproduzione, utilizzare gli oggetti salvati `ArrayList` dagli oggetti metadati temporizzati [Store durante l&#39;invio](../../ad-insertion/custom-tags-configure/android-1.4-timed-metadata-store.md).
+Per utilizzare questi oggetti `TimedMetadata` salvati durante la riproduzione, utilizzare gli oggetti `ArrayList` salvati da [Memorizzare gli oggetti con metadati temporizzati durante l&#39;invio](../../ad-insertion/custom-tags-configure/android-1.4-timed-metadata-store.md).
 
 1. Eseguire un timer ed eseguire ripetutamente una query sul tempo di riproduzione corrente.
-1. Trovare tutti gli `TimedMetadata` oggetti con orari di inizio che corrispondono al tempo di riproduzione corrente.
+1. Trovate tutti gli oggetti `TimedMetadata` con orari di inizio che corrispondano al tempo di riproduzione corrente.
 
    È possibile utilizzare questi oggetti per completare diverse azioni.
 
    >[!IMPORTANT]
    >
-   >Quando si verifica che il tempo di riproduzione corrente corrisponda a qualsiasi `TimedMetadata` oggetto, includere `shouldTriggerSubscribedTagEvent` come condizione.
+   >Quando si verifica che il tempo di riproduzione corrente corrisponda a qualsiasi oggetto `TimedMetadata`, includere `shouldTriggerSubscribedTagEvent` come condizione.
 
-   La timeline potrebbe cambiare a seguito di vari comportamenti di annunci. Ad esempio, una o più interruzioni pubblicitarie potrebbero essere spostate dalle posizioni originali sulla timeline, ma `shouldTriggerSubscribedTagEvent` garantiscono che l&#39;ora di inizio dell&#39; `TimeMetadata` oggetto corrisponda al tempo di riproduzione corrente.
+   La timeline potrebbe cambiare a seguito di vari comportamenti di annunci. Ad esempio, una o più interruzioni pubblicitarie potrebbero essere spostate dalle posizioni originali nella timeline, ma `shouldTriggerSubscribedTagEvent` garantisce che l&#39;ora di inizio dell&#39;oggetto `TimeMetadata` corrisponda al tempo di riproduzione corrente.
 
    Ad esempio:
 
@@ -62,4 +62,4 @@ Per utilizzare questi `TimedMetadata` oggetti salvati durante la riproduzione, u
    _playbackClock.addClockEventListener(_playbackClockEventListener);
    ```
 
-1. Svuotare periodicamente `TimedMetadata` le istanze non aggiornate dall&#39;elenco per evitare che la memoria cresca continuamente.
+1. Svuotare periodicamente le istanze `TimedMetadata` stantate dall&#39;elenco per evitare la crescita continua della memoria.
