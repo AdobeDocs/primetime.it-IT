@@ -6,6 +6,9 @@ title: Metodi della classe di configurazione per i tag
 uuid: b75aebac-4b94-4c42-bed4-3c17ad989cd1
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '202'
+ht-degree: 0%
 
 ---
 
@@ -37,7 +40,7 @@ Ricorda quanto segue:
 * I metodi setter non consentono al parametro tags di contenere valori null.
 
    Se rilevato, TVSDK genera un `IllegalArgumentException`.
-* Il nome del tag personalizzato deve contenere il `#` prefisso .
+* Il nome del tag personalizzato deve contenere il prefisso `#`.
 
    Ad esempio, `#EXT-X-ASSET` è un nome di tag personalizzato corretto, ma `EXT-X-ASSET` non è corretto.
 
