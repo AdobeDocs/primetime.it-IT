@@ -6,6 +6,9 @@ title: Bitrate adattivo (ABR) per la qualità video
 uuid: 4c34fb7b-1bbd-4fa9-8929-d50e85a17396
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '482'
+ht-degree: 1%
 
 ---
 
@@ -22,22 +25,22 @@ Potete impostare i criteri di commutazione ABR (Bitrate adattivo) e i bitrate in
  <tbody> 
   <tr> 
    <td colname="col01"> Bitrate iniziale </td> 
-   <td colname="col2">Bitrate di riproduzione desiderato (in bit al secondo) per il primo segmento. All’avvio della riproduzione, per il primo segmento viene utilizzato il profilo più vicino, pari o superiore al bitrate iniziale. <p> Se viene definito un bitrate minimo e il bitrate iniziale è inferiore al bitrate minimo, Browser TVSDK seleziona il profilo con il bitrate più basso al di sopra del bitrate minimo. Se la frequenza iniziale è superiore alla velocità massima, Browser TVSDK seleziona la frequenza massima al di sotto della velocità massima. </p> <p>Se il bitrate iniziale è zero o undefined, il bitrate iniziale è determinato dal criterio ABR. </p> <p><span class="codeph"> initialBitRate</span> restituisce un valore intero che rappresenta il profilo byte per secondo. </p> </td> 
+   <td colname="col2">Bitrate di riproduzione desiderato (in bit al secondo) per il primo segmento. All’avvio della riproduzione, per il primo segmento viene utilizzato il profilo più vicino, pari o superiore al bitrate iniziale. <p> Se viene definito un bitrate minimo e il bitrate iniziale è inferiore al bitrate minimo, Browser TVSDK seleziona il profilo con il bitrate più basso al di sopra del bitrate minimo. Se la frequenza iniziale è superiore alla velocità massima, Browser TVSDK seleziona la frequenza massima al di sotto della velocità massima. </p> <p>Se il bitrate iniziale è zero o undefined, il bitrate iniziale è determinato dal criterio ABR. </p> <p><span class="codeph"> initialBitRateretisce un valore intero che rappresenta il profilo byte per secondo. </span>  </p> </td> 
   </tr> 
   <tr> 
    <td colname="col01"> Bitrate minimo </td> 
-   <td colname="col2">Bitrate più basso consentito a cui può passare l'ABR. La commutazione ABR ignora i profili con un bitrate inferiore a tale bitrate. <p><span class="codeph"> minBitRate</span> restituisce un valore intero che rappresenta il profilo bit per secondo. </p> </td> 
+   <td colname="col2">Bitrate più basso consentito a cui può passare l'ABR. La commutazione ABR ignora i profili con un bitrate inferiore a tale bitrate. <p><span class="codeph"> </span> minBitRateretra un valore intero che rappresenta il profilo bit per secondo. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col01"> Bitrate massimo </td> 
-   <td colname="col2">Bitrate massimo consentito a cui può passare l'ABR. La commutazione ABR ignora i profili con bitrate maggiore di questo valore. <p><span class="codeph"> maxBitRate</span> restituisce un valore intero che rappresenta il profilo bit per secondo. </p> </td> 
+   <td colname="col2">Bitrate massimo consentito a cui può passare l'ABR. La commutazione ABR ignora i profili con bitrate maggiore di questo valore. <p><span class="codeph"> </span> maxBitRateretrica un valore intero che rappresenta il profilo bit per secondo. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 Tenete presenti le seguenti informazioni:
 
-* Quando il bitrate cambia, Browser TVSDK invia `AdobePSDK.ProfileEvent` con il tipo `AdobePSDK.PSDKEventType.PROFILE_CHANGED`.
+* Quando il bit rate cambia, Browser TVSDK invia `AdobePSDK.ProfileEvent` con il tipo `AdobePSDK.PSDKEventType.PROFILE_CHANGED`.
 
 * È possibile modificare le impostazioni ABR in qualsiasi momento, e il lettore utilizza il profilo che meglio corrisponde alle impostazioni più recenti.
 
@@ -53,5 +56,5 @@ Se specificate un intervallo da 300000 a 2000000, l’SDK per browser considera 
 
 Per impostare i parametri di controllo ABR:
 
-* Impostate i parametri sulla `ABRControlParameters` classe.
+* Impostate i parametri sulla classe `ABRControlParameters`.
 
