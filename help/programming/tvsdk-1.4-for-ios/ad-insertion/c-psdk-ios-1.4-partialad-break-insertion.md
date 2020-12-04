@@ -6,11 +6,14 @@ title: Inserimento parziale degli annunci
 uuid: b6ee62da-c4d1-42f2-b03d-f73247f8e585
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '258'
+ht-degree: 0%
 
 ---
 
 
-# Inserimento parziale degli annunci{#partial-ad-break-insertion}
+# Inserimento parziale ad-break{#partial-ad-break-insertion}
 
 TVSDK fornisce un&#39;esperienza simile a quella della TV per partecipare nel mezzo di un annuncio, in streaming live.
 
