@@ -6,15 +6,18 @@ title: Eventi di trasmissione/visualizzazione di metadati temporizzati
 uuid: fd50a937-0c9b-4c47-acb2-1ffc0592ad54
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '189'
+ht-degree: 0%
 
 ---
 
 
-# Eventi di trasmissione/visualizzazione di metadati temporizzati{#ad-serving-timed-metadata-events}
+# Eventi di trasmissione/temporizzazione dei metadati{#ad-serving-timed-metadata-events}
 
 TVSDK invia eventi di trasmissione di annunci in risposta a operazioni di metadati temporizzate.
 
-Per ricevere notifiche su tutti questi eventi correlati, registrare i listener di eventi con l&#39; `MediaPlayer` oggetto per gli eventi seguenti.
+Per ricevere notifiche su tutti questi eventi correlati, registrare i listener di eventi con l&#39;oggetto `MediaPlayer` per gli eventi seguenti.
 
 | Evento | Significato |
 |---|---|
