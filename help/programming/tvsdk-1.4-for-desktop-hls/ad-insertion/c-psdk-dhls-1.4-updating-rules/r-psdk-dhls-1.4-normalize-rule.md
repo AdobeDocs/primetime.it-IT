@@ -7,6 +7,9 @@ title: Normalizza regole
 uuid: b3ca2c8e-133a-4630-8109-17bf0a91843d
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '184'
+ht-degree: 1%
 
 ---
 
@@ -31,13 +34,13 @@ La regola normalizza definisce una trasformazione URL da applicare a un URL crea
    <td><span class="codeph"> type</span></td> 
    <td><span class="codeph"> Stringa</span></td> 
    <td><span class="codeph"> normalizzare</span></td> 
-   <td>Il valore deve sempre essere <span class="codeph"> normalizzato</span>.</td> 
+   <td>Il valore deve sempre essere <span class="codeph"> normalize</span>.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> item</span></td> 
    <td><span class="codeph"> Stringa</span></td> 
    <td><span class="codeph"> host</span></td> 
-   <td>Attualmente è supportato solo <span class="codeph"> l'host</span> . Questo attributo deve essere presente quando <span class="codeph"> corrisponde</span> agli attributi <span class="codeph"> e i valori</span> sono definiti.</td> 
+   <td>Attualmente è supportato solo <span class="codeph"> host</span>. Questo attributo deve essere presente quando gli attributi <span class="codeph"> corrispondono agli attributi </span> e <span class="codeph"> ai valori</span> sono definiti.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> matches</span></td> 
@@ -45,19 +48,19 @@ La regola normalizza definisce una trasformazione URL da applicare a un URL crea
    <td></td> 
    <td>Valori possibili:
     <ul id="ul_tnf_2hx_hz"> 
-     <li><span class="codeph"> eq</span> - è uguale a</li> 
+     <li><span class="codeph"> eq</span> - equals</li> 
      <li><span class="codeph"> ne</span> - not equals (non uguale a)</li> 
-     <li><span class="codeph"> co</span> - contiene</li> 
-     <li><span class="codeph"> nc</span> - non contiene</li> 
-     <li><span class="codeph"> sw</span> - inizia con</li> 
-     <li><span class="codeph"> ew</span> - end con</li> 
+     <li><span class="codeph"> co</span> -contiene</li> 
+     <li><span class="codeph"> nc</span> - not contains</li> 
+     <li><span class="codeph"> sw</span>  - inizia con</li> 
+     <li><span class="codeph"> ew</span> -end con</li> 
     </ul></td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> values</span></td> 
    <td><span class="codeph"> Matrice</span></td> 
    <td></td> 
-   <td>TVSDK utilizzerà l'attributo <span class="codeph"> matches</span> sull' <span class="codeph"> elemento</span> del creativo di origine e si confronterà con i valori definiti in questa matrice.</td> 
+   <td>TVSDK utilizzerà l'attributo <span class="codeph"> corrisponde</span> sull'elemento <span class="codeph"></span> del creativo di origine e si confronta con i valori definiti in questa matrice.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> find</span></td> 
