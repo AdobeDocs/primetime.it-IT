@@ -6,13 +6,16 @@ title: Requisiti di pubblicità
 uuid: 60e299df-4f42-455a-8983-8964f7a197e1
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '211'
+ht-degree: 0%
 
 ---
 
 
 # Requisiti di pubblicità {#advertising-requirements}
 
-Puoi inserire annunci nel tuo VOD e contenuti live/lineari utilizzando l&#39;interfaccia di decisione di Adobe Primetime.
+Puoi inserire annunci nel tuo VOD e contenuti live/lineari utilizzando l&#39;interfaccia  Adobe Primetime e decisionali.
 
 Primetime ad Decioning funziona con TVSDK per identificare opportunità di annunci, risolvere annunci e inserire annunci risolti nei flussi video.
 
