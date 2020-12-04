@@ -6,6 +6,9 @@ title: Annunci
 uuid: 9a5e8c83-18ce-41e8-9cb1-fdc9da903faf
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '120'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
 
 Durante la riproduzione del contenuto, Browser TVSDK può visualizzare annunci e trasmettere informazioni sugli annunci durante la creazione dell&#39;oggetto MediaResource.
 
-È possibile chiamare la `prepareToPlay` funzione dopo aver ricevuto `AdobePSDK.MediaPlayerStatus.INITIALIZED`.
+È possibile chiamare la funzione `prepareToPlay` dopo aver ricevuto `AdobePSDK.MediaPlayerStatus.INITIALIZED`.
 
 ```js
 function onStatusChange (event) { 
@@ -68,4 +71,4 @@ var playerWrapper = ptp.videoPlayer('.videoDiv', {
 }; 
 ```
 
-Per ulteriori informazioni sui metadati richiesti `AuditudeSettings`, consultate [Metadati](../../ad-insertion/ad-insertion-metadata/c-psdk-browser-tvsdk-2.4-ad-insertion-metadata.md)di inserimento annunci.
+Per ulteriori informazioni sulla `AuditudeSettings` richiesta, vedere [Aggiungi metadati di inserimento](../../ad-insertion/ad-insertion-metadata/c-psdk-browser-tvsdk-2.4-ad-insertion-metadata.md).
