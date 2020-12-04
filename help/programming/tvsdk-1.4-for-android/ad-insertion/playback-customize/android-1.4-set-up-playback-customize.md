@@ -19,10 +19,11 @@ Puoi personalizzare o ignorare il comportamento degli annunci registrando l&#39;
 
 Per personalizzare i comportamenti degli annunci, effettuate una delle seguenti operazioni:
 
-* Implementare l&#39; `AdPolicySelector` interfaccia e tutti i relativi metodi.
+* Implementare l&#39;interfaccia `AdPolicySelector` e tutti i relativi metodi.
 Questa opzione è consigliata se dovete sovrascrivere tutti i comportamenti di annunci predefiniti.
 
-* Estendete la `DefaultAdPolicySelector` classe e fornite implementazioni solo per quei comportamenti che richiedono la personalizzazione.
+* Estendi la classe `DefaultAdPolicySelector` e fornisci implementazioni solo per quei comportamenti che richiedono
+personalizzazione.
 Questa opzione è consigliata se dovete ignorare solo alcuni dei comportamenti predefiniti.
 
 Per entrambe le opzioni, completare le seguenti attività:
