@@ -6,11 +6,14 @@ title: Visualizzare la durata del video
 uuid: 02042070-9c55-4cbb-9dc1-49987451eb8f
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '122'
+ht-degree: 0%
 
 ---
 
 
-# Visualizzare la durata del video {#display-the-duration-of-the-video}
+# Visualizza la durata del video {#display-the-duration-of-the-video}
 
 Potete visualizzare la durata del contenuto attualmente attivo.
 
