@@ -6,6 +6,9 @@ title: App Google Cast per browser TVSDK
 uuid: 018143e2-143a-4f88-97c6-4b10a2083f9e
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '439'
+ht-degree: 0%
 
 ---
 
@@ -39,7 +42,7 @@ Di seguito viene fornita una panoramica del processo:
 1. L&#39;app mittente invia all&#39;app ricevente messaggi per il controllo della riproduzione quali riproduzione, pausa, ricerca, avanzamento rapido, riavvolgimento rapido, riavvolgimento, modifica del volume e così via.
 1. L&#39;app ricevente reagisce a questi messaggi.
 
-## Formato messaggio {#section_1624159DD51D4C87B3E5803DEEBCB6B7}
+## Formato del messaggio {#section_1624159DD51D4C87B3E5803DEEBCB6B7}
 
 È necessario definire i messaggi in modo che il mittente e il destinatario possano capire. Esempio di messaggio di ricerca:
 
@@ -87,7 +90,7 @@ Per inviare messaggi al destinatario, consulta la documentazione relativa alla p
 
 >[!IMPORTANT]
 >
->È necessario includere lo spazio dei nomi dei messaggi personalizzato, `MSG_NAMESPACE` in tutti i messaggi.
+>È necessario includere lo spazio dei nomi personalizzato `MSG_NAMESPACE` in tutti i messaggi.
 
 Per l&#39;app ricevente, segui la documentazione relativa alle API del ricevitore cast.
 
