@@ -6,6 +6,9 @@ title: Ascoltare gli eventi di Primetime Player
 uuid: 3aa0979c-6141-4098-9f19-d5fe23192827
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '292'
+ht-degree: 0%
 
 ---
 
