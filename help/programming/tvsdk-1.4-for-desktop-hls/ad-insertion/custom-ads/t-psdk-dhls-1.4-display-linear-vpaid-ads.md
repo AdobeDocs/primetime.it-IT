@@ -13,11 +13,11 @@ ht-degree: 0%
 ---
 
 
-# Visualizzare annunci VPAID lineari in un&#39;interruzione annuncio{#display-linear-vpaid-ads-in-an-ad-break}
+# Visualizza annunci VPAID lineari in un&#39;interruzione di annuncio{#display-linear-vpaid-ads-in-an-ad-break}
 
 TVSDK supporta la visualizzazione di annunci VPAID (Video Player-Ad Interface Definition) lineari in un&#39;interruzione di pubblicità. VPAID versione 1.0 richiede Flash, mentre la versione 2.0 funziona anche con Browser TVSDK e JavaScript.
 
-Per visualizzare correttamente gli annunci VPAID, devi fornire un contenitore di annunci ( `AdContainerView`) all&#39;interno dell&#39; `MediaPlayerContext` istanza.
+Per visualizzare correttamente gli annunci VPAID, è necessario fornire un contenitore di annunci ( `AdContainerView`) all&#39;interno dell&#39;istanza `MediaPlayerContext`.
 
 Limitazioni per gli annunci VPAID:
 
