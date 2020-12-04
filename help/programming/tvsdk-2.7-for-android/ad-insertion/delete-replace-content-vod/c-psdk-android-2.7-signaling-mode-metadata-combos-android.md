@@ -6,11 +6,14 @@ title: Effetto sull’inserimento e l’eliminazione di annunci dalla modalità 
 uuid: 7b2a5588-110d-4ce5-aa9c-706d357f211d
 translation-type: tm+mt
 source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
+workflow-type: tm+mt
+source-wordcount: '480'
+ht-degree: 0%
 
 ---
 
 
-# Effetto sull’inserimento e l’eliminazione di annunci dalla modalità di segnalazione e dalle combinazioni di metadati degli annunci {#effect-on-ad-insertion-and-deletion-from-ad-signaling-mode-and-ad-metadata-combinations}
+# Effetto sull&#39;inserimento e l&#39;eliminazione di annunci dalla modalità di segnalazione e dalle combinazioni di metadati degli annunci {#effect-on-ad-insertion-and-deletion-from-ad-signaling-mode-and-ad-metadata-combinations}
 
 Potete contrassegnare, eliminare e sostituire gli intervalli di tempo nei flussi VOD utilizzando diverse combinazioni di metadati e modalità di segnalazione annunci. Diverse combinazioni di modalità di segnalazione e metadati determinano comportamenti diversi.
 
@@ -26,7 +29,7 @@ Nella tabella seguente sono riportati i dettagli relativi alla modalità di segn
    <th class="entry"> Modalità di segnalazione annunci </th> 
    <th class="entry"> Aggiungi metadati </th> 
    <th class="entry"> Risolutori creati </th> 
-   <th class="entry"><span class="codeph"> PlacementInformation</span> create </th> 
+   <th class="entry"><span class="codeph"> PlacementInformation</span> screated </th> 
    <th class="entry"> Comportamento risultante </th> 
   </tr> 
  </thead>
@@ -51,7 +54,7 @@ Nella tabella seguente sono riportati i dettagli relativi alla modalità di segn
    <td> Elimina, Auditude </td> 
    <td> 
     <ul id="ul_E0A2F885E93B4D23A486C37B305E17D8"> 
-     <li id="li_D977B398D3904A44AFEC4B05AB0E3340"><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), </span> </li> 
+     <li id="li_D977B398D3904A44AFEC4B05AB0E3340"><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE),  </span> </li> 
      <li id="li_439886CB38AA46239C2E40352443888A"><span class="codeph"> PlacementInfo (Type.SERVER_MAP, Mode.INSERT)</span> </li> 
     </ul> </td> 
    <td> Intervalli eliminati, Annunci inseriti </td> 
