@@ -6,22 +6,25 @@ title: Dati banner complementari
 uuid: f54aecea-5e11-45dd-97d0-5774ca631a4d
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '172'
+ht-degree: 0%
 
 ---
 
 
-# Dati banner complementari {#companion-banner-data}
+# Dati del banner della compagnia {#companion-banner-data}
 
 Il contenuto di una AdAsset descrive un banner complementare.
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-Ciascuno `AdAsset` fornisce informazioni sulla visualizzazione della risorsa.
+Ogni `AdAsset` fornisce informazioni sulla visualizzazione della risorsa.
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
  <thead> 
   <tr> 
-   <th colname="col1" class="entry"> <b>Informazioni disponibili </b></th> 
+   <th colname="col1" class="entry"> <b>Informazioni disponibili  </b></th> 
    <th colname="col2" class="entry"> <b>Descrizione</b> </th> 
   </tr> 
  </thead>
@@ -44,7 +47,7 @@ Ciascuno `AdAsset` fornisce informazioni sulla visualizzazione della risorsa.
   </tr> 
   <tr> 
    <td colname="col1"> URL statico </td> 
-   <td colname="col2"> <p>A volte, il banner ausiliario ha anche un <span class="codeph"> URL</span> statico che è un URL diretto per l’immagine o per un <span class="codeph"> .swf</span> (banner Flash). </p> <p>Se non desiderate utilizzare html o iframe, potete usare un URL diretto a un’immagine o un file SWF per visualizzare il banner nell’area di visualizzazione Flash. In questo caso, potete utilizzare <span class="codeph"> staticURL</span> per visualizzare il banner. </p> <p>Importante:  È necessario verificare se l'URL statico è una stringa valida, perché questa proprietà potrebbe non essere sempre disponibile. </p> </td> 
+   <td colname="col2"> <p>A volte, il banner ausiliario ha anche un <span class="codeph"> staticURL</span> che è un URL diretto per l'immagine o per un <span class="codeph"> .swf</span> (banner Flash). </p> <p>Se non desiderate utilizzare html o iframe, potete utilizzare un URL diretto a un’immagine o un file SWF per visualizzare invece il banner nell’area di visualizzazione dell’Flash. In questo caso, potete utilizzare <span class="codeph"> staticURL</span> per visualizzare il banner. </p> <p>Importante:  È necessario verificare se l'URL statico è una stringa valida, perché questa proprietà potrebbe non essere sempre disponibile. </p> </td> 
   </tr> 
  </tbody> 
 </table>
