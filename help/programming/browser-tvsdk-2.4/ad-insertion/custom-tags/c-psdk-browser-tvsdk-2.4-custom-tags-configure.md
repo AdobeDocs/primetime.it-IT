@@ -65,12 +65,12 @@ seg5.ts
 
 L’applicazione può configurare i seguenti scenari:
 
-* Una notifica relativa all&#39;esistenza nel file di `#EXT-X-ASSET` tag o altri set di nomi di tag personalizzati sottoscritti.
-* Inserite annunci quando un `#EXT-X-AD` tag, o qualsiasi altro nome di tag personalizzato, viene trovato nel flusso.
+* Una notifica quando nel file sono presenti tag `#EXT-X-ASSET` o qualsiasi altro set di nomi di tag personalizzati a cui hai effettuato la sottoscrizione.
+* Inserite annunci quando nel flusso è presente un tag `#EXT-X-AD` o qualsiasi altro nome di tag personalizzato.
 
-Potete abbonarvi a uno dei seguenti tag come tag personalizzati: `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`. L&#39;utente riceve una notifica con un `TimedMetadata` evento durante l&#39;analisi dei file manifest.
+Potete abbonarvi a uno dei seguenti tag come tag personalizzati: `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`. L&#39;utente riceve una notifica con un evento `TimedMetadata` durante l&#39;analisi dei file manifest.
 
-Alcuni tag pubblicitari, ad esempio `EXT-X-CUE`, a cui siete già iscritti. Questi tag vengono utilizzati anche dal generatore di opportunità predefinito. Puoi specificare quali tag pubblicitari utilizzare il generatore di opportunità predefinito impostando la `adTags` proprietà.
+Esistono tag pubblicitari, ad esempio `EXT-X-CUE`, ai quali si è già abbonati. Questi tag vengono utilizzati anche dal generatore di opportunità predefinito. Per specificare quali tag pubblicitari utilizzare il generatore di opportunità predefinito, è possibile impostare la proprietà `adTags`.
 
 ## Tag contenuto DASH {#section_967A952319BE4048B4C6612FFF7ADA6E}
 
@@ -83,4 +83,4 @@ DASH offre due modi per segnalare gli eventi:
 
    Gli eventi in banda vengono moltiplicati con le rappresentazioni aggiungendo i messaggi dell&#39;evento come parte dei segmenti. Una rappresentazione è un elenco di segmenti video e audio riprodotti in sequenza. I dati dell&#39;evento in banda sono incorporati in questi segmenti.
 
-Questi eventi vengono notificati come `TimedMetadata` eventi all&#39;applicazione non appena vengono analizzati da Browser TVSDK. Una volta che un evento viene notificato, non verrà più visualizzato un messaggio di notifica.
+Questi eventi vengono notificati come eventi `TimedMetadata` all&#39;applicazione non appena vengono analizzati dal browser TVSDK. Una volta che un evento viene notificato, non verrà più visualizzato un messaggio di notifica.
