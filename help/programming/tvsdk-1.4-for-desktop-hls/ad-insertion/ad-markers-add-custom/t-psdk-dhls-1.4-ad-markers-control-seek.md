@@ -6,6 +6,9 @@ title: Controllare il comportamento di riproduzione per la ricerca su indicatori
 uuid: 926299c6-9c23-457d-b836-08432e4e169e
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '181'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Per impostazione predefinita, quando un utente cerca o passa sezioni di annunci 
 
 Potete indicare a TVSDK di riposizionare l&#39;indicatore di riproduzione all&#39;inizio dell&#39;annuncio personalizzato saltato più di recente quando l&#39;utente cerca oltre uno o più annunci personalizzati.
 
-1. Configurate un’istanza di metadati con l’ `DefaultMetadataKeys.METADATA_KEY_ADJUST_SEEK_ENABLED` enumerazione impostata sul valore stringa &quot;true&quot; (non come booleano `true`).
+1. Configurate un&#39;istanza di metadati con l&#39;enumerazione `DefaultMetadataKeys.METADATA_KEY_ADJUST_SEEK_ENABLED` impostata sul valore stringa &quot;true&quot; (non come booleano `true`).
 
-1. Create e configurate un&#39; `MediaResource` istanza, passando le opzioni di configurazione aggiuntive a `TimeRangeCollection.toMetadata`. Questo metodo riceve opzioni di configurazione aggiuntive tramite un’altra struttura di metadati generica.
+1. Create e configurate un&#39;istanza `MediaResource`, passando le opzioni di configurazione aggiuntive a `TimeRangeCollection.toMetadata`. Questo metodo riceve opzioni di configurazione aggiuntive tramite un’altra struttura di metadati generica.
 
