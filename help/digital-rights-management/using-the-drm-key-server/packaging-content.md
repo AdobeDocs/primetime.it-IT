@@ -4,6 +4,9 @@ title: Creazione di pacchetti di contenuto
 uuid: 366c8470-b7ef-4a39-83c2-151ba9be9a32
 translation-type: tm+mt
 source-git-commit: 1547eb3dd220fafc08df923f40504736c16a866c
+workflow-type: tm+mt
+source-wordcount: '135'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Quando si crea il pacchetto per la consegna di chiavi remote, utilizzare un crit
 https://key-server-host:port/faxsks/tenant-name/key
 ```
 
-Ad esempio, per il nome host del server di chiavi in ascolto sulla porta 443 e per un tenant denominato [!DNL mykeyserver.com] `tenant1`, l&#39;URL del server di chiavi da specificare in M3U8 è:
+Ad esempio, per il nome host del server chiavi [!DNL mykeyserver.com] in ascolto sulla porta 443 e un tenant denominato `tenant1`, l&#39;URL del server chiave da specificare in M3U8 è:
 
 ```
 https://mykeyserver.com:443/faxsks/tenant1/key
