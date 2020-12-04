@@ -11,10 +11,10 @@ ht-degree: 0%
 ---
 
 
-# Implementazione del riferimento API {#deploy-the-bees-reference-implementation}
+# Implementazione dei riferimenti API {#deploy-the-bees-reference-implementation}
 
 1. Configurate il server applicazione Tomcat. (Consulta la documentazione Tomcat.)
-1. Copiate il `[!DNL bees.war]` file nella [!DNL webapps/] cartella di Tomcat.
+1. Copiate il file `[!DNL bees.war]` nella cartella [!DNL webapps/] di Tomcat.
 1. Invia una richiesta a `https://localhost:8080/bees`.
 
    Se viene visualizzato un messaggio &quot;BEES is operative&quot;, la distribuzione viene completata correttamente.
