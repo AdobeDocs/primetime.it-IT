@@ -6,11 +6,14 @@ title: Supporto per VPAID 2.0 ad
 uuid: b688d244-c5ac-4832-b5c2-cb25bc80ce8b
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '362'
+ht-degree: 0%
 
 ---
 
 
-# Supporto per VPAID 2.0 ad {#vpaid-ad-support}
+# Supporto di annunci VPAID 2.0 {#vpaid-ad-support}
 
 Video Player Ad-Serving Interface Definition (VPAID) 2.0 fornisce un&#39;interfaccia comune per riprodurre annunci video. Offre agli utenti un’esperienza multimediale completa e consente agli editori di eseguire il targeting degli annunci, tenere traccia delle impressioni degli annunci e monetizzare i contenuti video.
 
@@ -18,7 +21,7 @@ Sono supportate le seguenti funzionalità:
 
 * Versione 2.0 della specifica VPAID
 
-   Per ulteriori informazioni, consultare [IAB VPAID 2.0](https://www.iab.com/wp-content/uploads/2015/06/VPAID_2_0_Final_04-10-2012.pdf).
+   Per ulteriori informazioni, fare riferimento a [IAB VPAID 2.0](https://www.iab.com/wp-content/uploads/2015/06/VPAID_2_0_Final_04-10-2012.pdf).
 * Annunci VPAID lineari su contenuti video su richiesta (VOD)
 * Annunci VPAID JavaScript
 
@@ -31,14 +34,14 @@ Le seguenti funzionalità non sono supportate:
 * Annunci non lineari come annunci overlay, annunci companistici dinamici, annunci minimizzabili, annunci compressi e annunci espandibili
 * Precaricamento degli annunci VPAID
 * Annunci VPAID nel contenuto live
-* Annunci Flash VPAID
+* Annunci VPAID Flash
 * Annuncio VPAID post-roll
 
 ## Modifiche API {#section_D62F3E059C6C493592D34534B0BFC150}
 
 Sono state apportate le seguenti modifiche all&#39;API:
 
-* `PTAuditudeMetadata` dispone di una `customAdLoadTimeout` proprietà per modificare il timeout predefinito nel processo di caricamento VPAID.
+* `PTAuditudeMetadata` dispone di una  `customAdLoadTimeout` proprietà per modificare il timeout predefinito nel processo di caricamento VPAID.
 
    Il valore di timeout predefinito è 10 secondi.
 
@@ -49,7 +52,7 @@ Sono state apportate le seguenti modifiche all&#39;API:
 Durante la riproduzione dell&#39;annuncio VPAID:
 
 * L&#39;annuncio VPAID viene visualizzato in un contenitore di visualizzazione sopra la vista del lettore, in modo che il codice che si basa sui tocchi degli utenti nella vista del lettore non funzioni.
-* Il lettore del contenuto principale viene messo in pausa e le chiamate a `pause` e `play` sull&#39;istanza del lettore vengono utilizzate per mettere in pausa e riprendere l&#39;annuncio VPAID.
+* Il lettore del contenuto principale viene messo in pausa e le chiamate a `pause` e `play` nell&#39;istanza del lettore vengono utilizzate per mettere in pausa e riprendere l&#39;annuncio VPAID.
 
 * Gli annunci VPAID non hanno una durata predefinita, perché l&#39;annuncio può essere interattivo.
 
