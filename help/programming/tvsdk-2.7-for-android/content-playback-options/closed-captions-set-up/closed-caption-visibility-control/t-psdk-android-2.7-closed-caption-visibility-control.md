@@ -21,7 +21,7 @@ ht-degree: 0%
 >
 >Se il testo della didascalia chiusa viene visualizzato quando il lettore attiva la modalità di ricerca, il testo non viene più visualizzato al termine della ricerca. Al contrario, dopo alcuni secondi, TVSDK visualizza il testo della didascalia successiva nel video dopo la posizione di ricerca finale.
 >
->I valori di visibilità per le didascalie chiuse sono definiti in `MediaPlayer.Visibility`.
+>I valori di visibilità per i sottotitoli codificati sono definiti in `MediaPlayer.Visibility`.
 >
 >
 ```java
@@ -34,7 +34,7 @@ ht-degree: 0%
 1. Attendete che lo stato `MediaPlayer` sia almeno PREPARATO.
 
    Per ulteriori informazioni, consulta Pronto-attesa-stato-ui.
-1. Per ottenere l’impostazione di visibilità corrente per i sottotitoli codificati, utilizzate il metodo getter in `MediaPlayer`, che restituisce un valore di visibilità.
+1. Per ottenere l&#39;impostazione di visibilità corrente per i sottotitoli codificati, utilizzate il metodo getter in `MediaPlayer`, che restituisce un valore di visibilità.
 
    ```java
    MediaPlayer.Visibility getCCVisibility() throws MediaPlayerException;
