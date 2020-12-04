@@ -6,6 +6,9 @@ title: Autenticazione DRM prima della riproduzione
 uuid: 326ef93d-53b0-4e3a-b16d-f3b886837cc0
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '360'
+ht-degree: 1%
 
 ---
 
@@ -16,12 +19,12 @@ Quando i metadati DRM di un video sono separati dal flusso multimediale, eseguit
 
 A una risorsa video può essere associato un file di metadati DRM. Ad esempio:
 
-* &quot;url&quot;: &quot;<span></span>https://www.domain.com/asset.m3u8&quot;
-* &quot;drmMetadata&quot;: &quot;<span></span>https://www.domain.com/asset.metadata&quot;
+* &quot;url&quot;: &quot;ht<span></span>tps://www.domain.com/asset.m3u8&quot;
+* &quot;drmMetadata&quot;: &quot;ht<span></span>tps://www.domain.com/asset.metadata&quot;
 
-In questo caso, utilizzate `DRMHelper` metodi per scaricare il contenuto del file di metadati DRM, analizzarlo e verificare se è necessaria l&#39;autenticazione DRM.
+In questo caso, utilizzate i metodi `DRMHelper` per scaricare il contenuto del file di metadati DRM, analizzarlo e verificare se è necessaria l&#39;autenticazione DRM.
 
-1. Utilizzate `loadDRMMetadata` per caricare il contenuto dell&#39;URL di metadati e analizzare i byte scaricati in un `DRMMetadata`.
+1. Utilizzate `loadDRMMetadata` per caricare il contenuto dell&#39;URL dei metadati e analizzare i byte scaricati in un `DRMMetadata`.
 
    Come qualsiasi altra operazione di rete, questo metodo è asincrono e crea un proprio thread.
 
@@ -39,7 +42,7 @@ In questo caso, utilizzate `DRMHelper` metodi per scaricare il contenuto del fil
    ```
 
 1. Poiché l&#39;operazione è asincrona, è consigliabile renderla consapevole. In caso contrario, si chiederà perché la sua riproduzione non è iniziata. Ad esempio, visualizzate una ruota di selezione mentre i metadati DRM vengono scaricati e analizzati.
-1. Implementa le callback nel `DRMLoadMetadataListener`. Questi eventi vengono `loadDRMMetadata` richiamati dai gestori di eventi (che inviano tali eventi).
+1. Implementa le callback in `DRMLoadMetadataListener`. La `loadDRMMetadata` richiama questi gestori eventi (invia questi eventi).
 
    ```java
    public interface  
@@ -62,7 +65,7 @@ In questo caso, utilizzate `DRMHelper` metodi per scaricare il contenuto del fil
    * `onLoadMetadataUrlComplete` rileva il termine del caricamento dell’URL dei metadati.
    * `onLoadMetadataUrlError` indica che il caricamento dei metadati non è riuscito.
 
-1. Al termine del caricamento, ispezionare l&#39; `DRMMetadata` oggetto per verificare se è necessaria l&#39;autenticazione DRM.
+1. Al termine del caricamento, ispezionate l&#39;oggetto `DRMMetadata` per verificare se è necessaria l&#39;autenticazione DRM.
 
    ```java
    public static boolean <b>isAuthNeeded</b>(DRMMetadata drmMetadata);
