@@ -6,11 +6,14 @@ title: Gestione dei blackout
 uuid: 00b6f204-6ba4-4245-9028-6f7c392e9275
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '347'
+ht-degree: 0%
 
 ---
 
 
-# Gestione dei blackout {#handle-blackouts}
+# Gestire i blackout {#handle-blackouts}
 
 TVSDK gestisce i blackout nei flussi video live e fornisce contenuto alternativo durante un blackout.
 
@@ -23,17 +26,17 @@ Per implementare la soluzione per questo caso di utilizzo:
    TVSDK non è direttamente a conoscenza dei tag di blackout, ma consente all&#39;app di abbonarsi alle notifiche quando vengono riscontrati tag specifici durante l&#39;analisi dei file manifest.
 1. Aggiungete un listener di notifica per `PTTimedMetadataChangedNotification`.
 
-   Questa notifica viene inviata ogni volta che un tag sottoscritto viene analizzato nel manifesto e da esso `PTTimedMetadata` viene preparato un nuovo tag.
+   Questa notifica viene inviata ogni volta che un tag sottoscritto viene analizzato nel manifesto e da esso viene preparato un nuovo `PTTimedMetadata`.
 
-1. Implementare un metodo listener, ad esempio `onMediaPlayerSubscribedTagIdentified`, per `PTTimedMetadata` gli oggetti in primo piano.
+1. Implementare un metodo listener, ad esempio `onMediaPlayerSubscribedTagIdentified`, per gli oggetti `PTTimedMetadata` in primo piano.
 
-1. Ogni volta che si verifica un aggiornamento durante la riproduzione, utilizzare il `PTMediaPlayerTimeChangeNotification` listener per gestire `PTTimedMetadata` gli oggetti.
+1. Ogni volta che si verifica un aggiornamento durante la riproduzione, utilizzare il listener `PTMediaPlayerTimeChangeNotification` per gestire gli oggetti `PTTimedMetadata`.
 
-1. Aggiungete il `PTTimedMetadata` gestore.
+1. Aggiungete il gestore `PTTimedMetadata`.
 
-   Questo gestore consente di passare al contenuto alternativo e di tornare al contenuto principale come indicato dall&#39; `PTTimedMetadata` oggetto e dal relativo tempo di riproduzione.
+   Questo gestore consente di passare al contenuto alternativo e tornare al contenuto principale come indicato dall&#39;oggetto `PTTimedMetadata` e il relativo tempo di riproduzione.
 
-1. Utilizzare `onSubscribedTagInBackground` per implementare il metodo listener per `PTTimedMetadata` gli oggetti in background.
+1. Utilizzare `onSubscribedTagInBackground` per implementare il metodo listener per gli oggetti `PTTimedMetadata` in background.
 
    Questo metodo controlla il tempo nel flusso di sfondo, consentendo di determinare quando passare dal contenuto alternativo al contenuto principale.
 
