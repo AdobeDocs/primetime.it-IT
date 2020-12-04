@@ -10,7 +10,7 @@ ht-degree: 0%
 ---
 
 
-# Guida introduttiva  Adobe Primetime  Ad Insertion {#ptai-get-started}
+# Guida introduttiva  Ad Insertion Adobe Primetime  {#ptai-get-started}
 
 Primetime  Ad Insertion coordina i sistemi che forniscono contenuti e annunci per creare esperienze pubblicitarie personalizzate e in streaming, quindi monitora la riproduzione degli annunci per i tuoi inserzionisti.
 
@@ -18,7 +18,7 @@ Primetime  Ad Insertion interagisce con le applicazioni client per la distribuzi
 
 Una volta configurato correttamente il sistema, il flusso di lavoro tipico potrebbe essere il seguente:
 
-1. L&#39;applicazione client genera un URL [di](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md) Bootstrap con informazioni sul flusso video e invia una richiesta di GET a Primetime  Ad Insertion.
+1. L&#39;applicazione client genera un [URL di Bootstrap](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md) con informazioni sul flusso video e invia una richiesta di GET a Primetime  Ad Insertion.
 
 1. Primetime  Ad Insertion risponde inviando il manifesto di contenuto dalla CDN dell&#39;editore all&#39;applicazione client.
 
@@ -32,6 +32,6 @@ Una volta configurato correttamente il sistema, il flusso di lavoro tipico potre
 
 1. Primetime  Ad Insertion consegna i manifesti cuciti finali, inclusi gli annunci pubblicitari, all&#39;applicazione client per la riproduzione.
 
-1. La distribuzione e la visibilità degli annunci possono essere misurate tramite il monitoraggio degli annunci lato client o lato server, consultate [Impostazione del tracciamento](set-up-ad-tracking.md)degli annunci.
+1. La distribuzione e la visualizzabilità degli annunci possono essere misurate tramite il monitoraggio degli annunci lato client o lato server. Consultate [Setting up Ad Tracking](set-up-ad-tracking.md) (Impostazione del tracciamento degli annunci).
 
 Primetime  Ad Insertion supporta la maggior parte delle configurazioni client per HLS/DASH.
