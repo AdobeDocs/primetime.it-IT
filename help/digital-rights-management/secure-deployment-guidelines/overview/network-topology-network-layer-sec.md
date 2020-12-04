@@ -6,11 +6,14 @@ title: Protezione dei livelli di rete
 uuid: c750c595-a784-47ce-be0b-17b8d60c5753
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '309'
+ht-degree: 0%
 
 ---
 
 
-# Protezione dei livelli di rete{#network-layer-security}
+# Protezione del livello di rete{#network-layer-security}
 
 Le vulnerabilità di sicurezza della rete sono tra le prime minacce a qualsiasi server applicazioni rivolto a Internet o Intranet e devi rendere più rigidi gli host presenti sulla rete rispetto a tali vulnerabilità.
 
@@ -26,7 +29,7 @@ Di seguito sono riportate alcune tecniche comuni per ridurre le vulnerabilità d
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Zone demilitarizzate (DMZ) </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">La segmentazione deve esistere in almeno due livelli con il server applicazione utilizzato per eseguire Adobe Primetime DRM quando Primetime DRM è protetto da un firewall interno. È necessario separare la rete esterna dalla rete perimetrale che include i server Web e i server Web devono essere separati dalla rete interna. Potete usare i firewall per implementare questi livelli di separazione. </p> <p>Potete classificare e controllare il traffico che passa attraverso ciascun livello di rete per garantire che sia consentito solo il minimo assoluto di dati richiesti. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">La segmentazione deve esistere in almeno due livelli con il server applicazione utilizzato per eseguire  Adobe Primetime DRM quando Primetime DRM è protetto da un firewall interno. È necessario separare la rete esterna dalla rete perimetrale che include i server Web e i server Web devono essere separati dalla rete interna. Potete usare i firewall per implementare questi livelli di separazione. </p> <p>Potete classificare e controllare il traffico che passa attraverso ciascun livello di rete per garantire che sia consentito solo il minimo assoluto di dati richiesti. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Indirizzi IP privati </p> </td> 
