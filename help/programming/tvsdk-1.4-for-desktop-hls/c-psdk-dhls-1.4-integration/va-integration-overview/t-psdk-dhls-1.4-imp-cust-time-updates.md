@@ -6,11 +6,14 @@ title: Implementazione di aggiornamenti temporali personalizzati
 uuid: 2b46eca9-3815-4c44-ab5e-21678c35f410
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '181'
+ht-degree: 0%
 
 ---
 
 
-# Implementazione di aggiornamenti temporali personalizzati{#implement-custom-time-updates}
+# Implementa aggiornamenti temporali personalizzati{#implement-custom-time-updates}
 
 In alcune implementazioni di analisi, l&#39;applicazione client potrebbe voler fornire una posizione di playhead diversa da quella segnalata dal valore localeTime di TVSDK. Ad esempio, durante la riproduzione di un flusso LINEAR, è possibile fornire la testina di riproduzione di ogni programma in relazione all&#39;ora di inizio.
 
