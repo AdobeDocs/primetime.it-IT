@@ -23,7 +23,7 @@ Quando manca un&#39;intera playlist, ad esempio, quando il file M3U8 specificato
 
 Se la playlist associata al bitrate a risoluzione media non è presente, TVSDK cerca una playlist di variante alla stessa risoluzione. Se trova la stessa risoluzione, TVSDK avvia il download della playlist di varianti e dei segmenti dalla posizione corrispondente. Se il lettore non trova la stessa playlist di risoluzione, cercherà di scorrere altre playlist con bitrate e le loro varianti. Un bitrate immediatamente inferiore è la prima scelta, quindi la relativa variante e così via. Se tutte le playlist con bitrate inferiore e le relative varianti sono esaurite nel tentativo di trovare una playlist valida, TVSDK passa al bitrate superiore e conta in basso da lì. Se non è possibile trovare una playlist valida, il processo non riesce e il lettore passa allo stato ERROR.
 
-L&#39;applicazione può determinare come gestire questa situazione. Ad esempio, potrebbe essere utile chiudere l&#39;attività del lettore e indirizzare l&#39;utente all&#39;attività del catalogo. L’evento di interesse è l’ `STATUS_CHANGED` evento e il callback corrispondente è il `onStatusChanged` metodo. Di seguito è riportato il codice che controlla se il lettore modifica il suo stato interno in `ERROR`:
+L&#39;applicazione può determinare come gestire questa situazione. Ad esempio, potrebbe essere utile chiudere l&#39;attività del lettore e indirizzare l&#39;utente all&#39;attività del catalogo. L&#39;evento di interesse è l&#39;evento `STATUS_CHANGED` e il callback corrispondente è il metodo `onStatusChanged`. Di seguito è riportato il codice che controlla se il lettore modifica il proprio stato interno in `ERROR`:
 
 ```java
 ... 
@@ -44,9 +44,9 @@ Se un segmento non è presente sul server perché, ad esempio, il file manifesto
 1. Scorri ogni bitrate disponibile in ogni variante disponibile.
 1. Salta il segmento ed emette un avviso.
 
-Quando TVSDK non è in grado di ottenere un segmento alternativo, attiva una notifica `CONTENT_ERROR` di errore. Questa notifica contiene una notifica interna con il `DOWNLOAD_ERROR` codice. Se lo streaming con il problema è una traccia audio alternativa, TVSDK genera la notifica di `AUDIO_TRACK_ERROR` errore.
+Quando TVSDK non riesce a ottenere un segmento alternativo, attiva una notifica di errore `CONTENT_ERROR`. Questa notifica contiene una notifica interna con il codice `DOWNLOAD_ERROR`. Se il flusso con il problema è una traccia audio alternativa, TVSDK genera la notifica di errore `AUDIO_TRACK_ERROR`.
 
-Se il motore video non è in grado di ottenere i segmenti in modo continuo, limita l’salita continua a 5, dopo di che la riproduzione viene arrestata e TVSDK emette un errore `NATIVE_ERROR` con il codice 5.
+Se il motore video non è in grado di ottenere i segmenti in modo continuo, limita l’salita continua al 5, dopo il quale la riproduzione viene arrestata e TVSDK rilascia un `NATIVE_ERROR` con il codice 5.
 
 >[!NOTE]
 >
