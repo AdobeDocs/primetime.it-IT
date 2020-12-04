@@ -6,11 +6,14 @@ title: Risoluzione dei problemi di avvio rapido
 uuid: 42256aa0-2efc-4602-aefc-3bab2dc58ec0
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '465'
+ht-degree: 0%
 
 ---
 
 
-# Risoluzione dei problemi di avvio rapido{#troubleshooting-your-quick-start}
+# Risoluzione dei problemi relativi all&#39;avvio rapido{#troubleshooting-your-quick-start}
 
 I problemi più comuni durante il test riguardano spesso gli autenticatori ExpressPlay, i protocolli di trasporto e i parametri di richiesta del servizio richiesti.
 
@@ -22,9 +25,9 @@ Se la generazione del token ha avuto esito positivo e la redenzione non ha avuto
 
 Inoltre:
 
-* Verifica di utilizzare l&#39;Autenticatore cliente corretto nelle richieste di assistenza. È facile utilizzare accidentalmente l&#39;autenticatore di produzione quando si intendeva utilizzare l&#39;autenticatore di prova. Inoltre, accertatevi di utilizzare *l&#39;autenticatore* . Ad esempio, durante il test potresti prendere in prestito il `curl` comando di qualcun altro e dimenticare di sostituire l&#39;autenticatore con il proprio.
+* Verifica di utilizzare l&#39;Autenticatore cliente corretto nelle richieste di assistenza. È facile utilizzare accidentalmente l&#39;autenticatore di produzione quando si intendeva utilizzare l&#39;autenticatore di prova. Inoltre, accertarsi di utilizzare l&#39;autenticazione *di*. Ad esempio, durante il test potresti prendere in prestito il comando `curl` di qualcun altro e dimenticare di sostituire l&#39;autenticatore con il proprio.
 
-* Controlla di utilizzare il protocollo di trasporto corretto nelle tue richieste o nei tuoi manifesti ( `https://` contro `https://`, o nel caso di FairPlay, `skd://` contro `https://` contro `https://`.
+* Verificare di utilizzare il protocollo di trasporto corretto nelle richieste o nei manifesti ( `https://` contro `https://`, oppure nel caso di FairPlay, `skd://` contro `https://` contro `https://`.
 
 * Accertatevi di includere tutti i parametri di query richiesti per la soluzione DRM con cui state lavorando. È facile confondersi tra PlayReady e Widevine, ad esempio, perché entrambi lavorano con DASH, ma i parametri di richiesta e le configurazioni di imballaggio richiesti sono diversi.
 * Confermate che il vostro account ExpressPlay disponga di crediti token sufficienti e che non sia stato esaurito.
@@ -35,7 +38,7 @@ Inoltre:
 * Il supporto per AndroidTV PlayReady è intermittente a causa dei limiti del produttore del dispositivo. Per fornire esempi,
 
    * il dispositivo Razer Forge ha dei problemi con il contenuto PlayReady
-   * Amazon FireTV non può utilizzare contenuto DASH con traccia audio crittografata
+   *  Amazon FireTV non può utilizzare contenuto DASH con traccia audio crittografata
 
 * A partire da TVSDK 2.4, solo i dispositivi AndroidTV in genere supportano entrambi i DRM PlayReady e Widevine. Tutti gli altri dispositivi Android in genere supportano solo Widevine.
 * A partire da TVSDK 2.4, Android TVSDK attualmente richiede che la casella PSSH sia nel manifesto .mpd. Ciò è contrario allo standard DASH, che specifica che la casella PSSH può essere ovunque, come nel contenuto stesso, e non solo nel .mpd.
