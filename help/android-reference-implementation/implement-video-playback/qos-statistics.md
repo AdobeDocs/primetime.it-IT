@@ -7,23 +7,23 @@ uuid: 8fc45a2f-03d4-4fa0-979b-eb816419c4f7
 translation-type: tm+mt
 source-git-commit: e1c6ab1d50f9262aaf70aef34854cf293fb4f30d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '365'
 ht-degree: 0%
 
 ---
 
 
-# Visualizzare le statistiche sulla riproduzione e sul dispositivo QoS {#display-qos-playback-and-device-statistics}
+# Visualizza le statistiche relative a riproduzione e dispositivo QoS {#display-qos-playback-and-device-statistics}
 
 È possibile impostare il lettore in modo che legga le statistiche relative a riproduzione e dispositivo dal QoSProvider ogni volta che necessario.
 
-La `QoSProvider` classe fornisce diverse statistiche, tra cui il frame rate, il bit rate del profilo, il tempo totale impiegato nel buffering, il numero di tentativi di buffering, il tempo necessario per ottenere il primo byte dal primo frammento video, il tempo necessario per eseguire il rendering del primo fotogramma, la lunghezza attualmente memorizzata nel buffer e il tempo di buffer.
+La classe `QoSProvider` fornisce diverse statistiche, tra cui il frame rate, il bit rate del profilo, il tempo totale trascorso nel buffering, il numero di tentativi di buffering, il tempo necessario per ottenere il primo byte dal primo frammento video, il tempo necessario per eseguire il rendering del primo fotogramma, la lunghezza attualmente memorizzata nel buffer e il tempo di buffer.
 
-L&#39;implementazione del riferimento fornisce una `QoSManager` classe in cui è possibile attivare la visualizzazione della sovrapposizione QoS. Potete inoltre abilitare la visibilità QoS nell&#39;interfaccia utente Impostazioni:
+L&#39;implementazione di riferimento fornisce una classe `QoSManager` in cui è possibile attivare la visualizzazione della sovrapposizione QoS. Potete inoltre abilitare la visibilità QoS nell&#39;interfaccia utente Impostazioni:
 
 ![](assets/qos-configuration.jpg)
 
-Le `QoSManager` statistiche QoS vengono monitorate ottenendo informazioni sul dispositivo, collegando al lettore multimediale e aggiornando con le informazioni QoS più recenti.
+Il `QoSManager` tiene traccia delle statistiche QoS ottenendo informazioni sul dispositivo, collegandosi al lettore multimediale e aggiornandosi con le informazioni QoS più recenti.
 
 **Attivare o disattivare la generazione di rapporti sulle statistiche di QoS**
 
@@ -41,7 +41,7 @@ Le `QoSManager` statistiche QoS vengono monitorate ottenendo informazioni sul di
 
    >[!NOTE]
    >
-   >Se si modifica il valore booleano in `false` modo da disattivare la generazione di rapporti QoS.
+   >Modificando il valore booleano in `false` viene disattivata la generazione di rapporti QoS.
 
 2. Aggiungete i listener di eventi:
 
