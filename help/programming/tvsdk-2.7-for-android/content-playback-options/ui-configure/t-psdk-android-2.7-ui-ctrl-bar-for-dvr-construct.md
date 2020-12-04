@@ -6,6 +6,9 @@ title: Costruire una barra di controllo migliorata per il DVR
 uuid: 71bfceef-baf0-40ad-a7a0-fa2e22d24e31
 translation-type: tm+mt
 source-git-commit: fd686391df0fa711bba99bc1bc312c9ef619f184
+workflow-type: tm+mt
+source-wordcount: '360'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +20,7 @@ source-git-commit: fd686391df0fa711bba99bc1bc312c9ef619f184
 * Per VOD, la lunghezza della finestra ricercabile corrisponde alla durata dell’intera risorsa.
 * Per lo streaming dal vivo, la lunghezza della finestra DVR (ricercabile) è definita come l&#39;intervallo di tempo che inizia dalla finestra di riproduzione dal vivo e termina al punto dal vivo del client.
 
-   Ricorda le informazioni seguenti:
+   Ricorda le seguenti informazioni:
 
    * Il punto attivo del client viene calcolato sottraendo la lunghezza del buffer dall&#39;estremità della finestra dal vivo.
 
@@ -29,7 +32,7 @@ source-git-commit: fd686391df0fa711bba99bc1bc312c9ef619f184
 
 ![](assets/dvr-window.PNG){width=&quot;684&quot;}
 
-1. Per implementare una barra di controllo con supporto DVR, seguite i passaggi descritti in [Visualizzare una barra di scorrimento con la posizione di riproduzione corrente.](../../../tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-seek-scrub-bar-display.md) con le seguenti differenze:
+1. Per implementare una barra di controllo con supporto DVR, seguire i passaggi descritti in [Visualizzare una barra di scorrimento con la posizione di riproduzione corrente...](../../../tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-seek-scrub-bar-display.md) con le seguenti differenze:
 
    * È possibile implementare una barra di controllo mappata solo per l’intervallo ricercabile invece che per l’intervallo di riproduzione.
 
@@ -49,7 +52,7 @@ source-git-commit: fd686391df0fa711bba99bc1bc312c9ef619f184
       }
       ```
 
-      È inoltre possibile scegliere di cercare il punto attivo del client utilizzando la `MediaPlayer.LIVE_POINT` costante.
+      È inoltre possibile scegliere di cercare il punto attivo del client utilizzando la costante `MediaPlayer.LIVE_POINT`.
 
       ```
       mediaPlayer.seek(MediaPlayer.LIVE_POINT);
