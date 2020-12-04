@@ -21,7 +21,7 @@ Adobe Access Server for Protected Streaming supporta le seguenti regole di utili
 *  limitazioni delle applicazioni Adobe® AIR®, SWF, iOS e Android
 * Limitazioni per i moduli DRM e Runtime
 * Applicazione del rilevamento Jailbreak (sulle piattaforme di accesso  Adobe che supportano il rilevamento Jailbreak)
-* La memorizzazione della cache delle licenze è disabilitata per impostazione predefinita. Il caching delle licenze può essere attivato specificando la data di fine del caching o un numero di cache di tempo consentito (a partire dal momento in cui viene rilasciata la licenza).
+* La memorizzazione della cache delle licenze è disabilitata per impostazione predefinita. Il caching delle licenze può essere attivato specificando la data di fine del caching o un periodo di tempo consentito (a partire dal momento del rilascio della licenza).
 * Più diritti di riproduzione, che consentono di specificare diverse combinazioni di Protezione output, Restrizioni applicazione e Limitazioni DRM/Runtime. Ad esempio, è possibile specificare diversi requisiti di protezione dell&#39;output per ogni piattaforma client utilizzando la limitazione del modulo DRM con Protezione dell&#39;output.
 
 >[!NOTE]
