@@ -6,11 +6,14 @@ title: Limitazioni e comportamento per il gioco di trucchi
 uuid: 5b947075-eba0-45de-82d0-50b193f1ac83
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '287'
+ht-degree: 0%
 
 ---
 
 
-# Limitazioni e comportamento per il gioco di trucchi {#limitations-and-behavior-for-trick-play}
+# Limitazioni e comportamento per il gioco trucco {#limitations-and-behavior-for-trick-play}
 
 <!--<a id="section_2BC43539C5C142E085D06A7E35C76726"></a>-->
 
@@ -30,11 +33,11 @@ Limiti per la modalità di gioco trucco:
    * Il valore temporale corrente passa in avanti (in avanti veloce) o indietro (in riavvolgimento rapido) con la durata dell’interruzione annuncio saltata.
 
       Questo comportamento di salto per il tempo corrente consente di mantenere invariata la durata del flusso durante la riproduzione del trucco. Il lettore può tenere traccia della durata solo rispetto al contenuto principale. Non viene eseguito alcun salto di ora sui valori restituiti per l&#39;ora locale quando si salta un annuncio.
-   * L&#39; `MediaPlayerEvent.AD_BREAK_SKIPPED` evento viene inviato immediatamente prima che un&#39;interruzione pubblicitaria stia per essere saltata.
+   * L&#39;evento `MediaPlayerEvent.AD_BREAK_SKIPPED` viene inviato immediatamente prima che un&#39;interruzione pubblicitaria stia per essere ignorata.
 
       Il lettore può utilizzare questo evento per implementare la logica personalizzata relativa alle interruzioni pubblicitarie saltate.
 
    * L’uscita dalla riproduzione trucco richiama lo stesso criterio di riproduzione degli annunci applicato all’uscita dalla ricerca.
 
-      Come per la ricerca, il comportamento dipende dal fatto che il criterio di riproduzione dell&#39;applicazione sia diverso da quello predefinito. L&#39;impostazione predefinita prevede che l&#39;ultima interruzione pubblicitaria saltata venga riprodotta nel punto in cui si esce fuori dal gioco di trucco.
+      Come per la ricerca, il comportamento dipende dal fatto che il criterio di riproduzione dell&#39;applicazione sia diverso da quello predefinito. L&#39;impostazione predefinita prevede che l&#39;ultima interruzione annuncio saltata venga riprodotta nel punto in cui si esce dal gioco di trucco.
 
