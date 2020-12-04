@@ -26,8 +26,8 @@ Prima di attivare il tracciamento video (heartbeat video), accertatevi di dispor
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json </span> </td> 
-   <td colname="col2"> <p>Importante:  Il nome del file di configurazione JSON deve restare <span class="filepath"> ADBMobileConfig.json </span>. Impossibile modificare il nome e il percorso di questo file di configurazione. Il percorso di questo file deve essere <span class="filepath"> &lt;source root&gt;/assets </span>. </p> </td> 
+   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json  </span> </td> 
+   <td colname="col2"> <p>Importante:  Il nome del file di configurazione JSON deve rimanere <span class="filepath"> ADBMobileConfig.json </span>. Impossibile modificare il nome e il percorso di questo file di configurazione. Il percorso di questo file deve essere <span class="filepath"> &lt;source root&gt;/assets </span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Endpoint del server di tracciamento AppMeasurement </td> 
@@ -35,7 +35,7 @@ Prima di attivare il tracciamento video (heartbeat video), accertatevi di dispor
   </tr> 
   <tr> 
    <td colname="col1"> Endpoint del server di tracciamento analisi video </td> 
-   <td colname="col2"> URL dell'endpoint della raccolta back-end di analisi video. Qui vengono inviate tutte le chiamate di tracciamento heartbeat video. <p>Suggerimento:  L’URL del server di tracciamento dei visitatori è lo stesso dell’URL del server di tracciamento delle analisi. Per informazioni sull’implementazione del servizio ID visitatori, consulta <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementazione del servizio ID </a>. </p> </td> 
+   <td colname="col2"> URL dell'endpoint della raccolta back-end di analisi video. Qui vengono inviate tutte le chiamate di tracciamento heartbeat video. <p>Suggerimento:  L’URL del server di tracciamento dei visitatori è lo stesso dell’URL del server di tracciamento delle analisi. Per informazioni sull'implementazione del servizio ID visitatori, vedi <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementare il servizio ID </a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Nome account </td> 
@@ -50,7 +50,7 @@ Prima di attivare il tracciamento video (heartbeat video), accertatevi di dispor
 
 Per configurare il tracciamento video nel lettore:
 
-1. Verificate che le opzioni di caricamento nel file della `ADBMobileConfig.json` risorsa siano corrette.
+1. Verificare che le opzioni relative al tempo di caricamento nel file di risorse `ADBMobileConfig.json` siano corrette.
 
    ```
    { 
@@ -84,15 +84,15 @@ Per configurare il tracciamento video nel lettore:
    Per configurare le opzioni di caricamento:
 
 
-   1. Verificate che il `ADBMobileConfig.json` file contenga i valori appropriati (forniti dal Adobe ).
-   1. Verificate che il file si trovi nella `assets/` cartella.
+   1. Verificate che il file `ADBMobileConfig.json` contenga i valori appropriati (forniti dal Adobe ).
+   1. Verificate che il file si trovi nella cartella `assets/`.
 
       Questa cartella deve trovarsi nella radice della struttura di origine dell&#39;applicazione.
 
    1. Compilate e create l&#39;applicazione.
    1. Implementare ed eseguire l&#39;applicazione fornita in bundle.
 
-      Per ulteriori informazioni su queste impostazioni AppMeasurement, vedi [Misurazione dei video in  Adobe Analytics](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/video/).
+      Per ulteriori informazioni su queste impostazioni AppMeasurement, vedere [Misurazione del video in  Adobe Analytics](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/video/).
 
 1. Inizializzare e configurare i metadati di tracciamento heartbeat video.
 
@@ -135,13 +135,13 @@ Per configurare il tracciamento video nel lettore:
       VideoAnalyticsProvider videoAnalyticsProvider = new VideoAnalyticsProvider(appContext); 
       ```
 
-   1. Impostate i metadati Video Analytics sull’ `videoAnalyticsProvider` istanza.
+   1. Impostate i metadati Video Analytics sull&#39;istanza `videoAnalyticsProvider`.
 
       ```java
       videoAnalyticsProvider.setVideoAnalyticsMetadata(vaMetadata);
       ```
 
-   1. Allegare l’istanza del lettore multimediale all’ `videoAnalyticsProvider` istanza:
+   1. Allegare l&#39;istanza del lettore multimediale all&#39;istanza `videoAnalyticsProvider`:
 
       ```java
       videoAnalyticsProvider.attachMediaPlayer(mediaPlayer); 
