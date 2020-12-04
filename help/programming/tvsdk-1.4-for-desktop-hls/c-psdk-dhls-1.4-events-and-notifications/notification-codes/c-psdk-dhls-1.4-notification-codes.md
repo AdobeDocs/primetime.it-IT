@@ -40,7 +40,8 @@ Gli oggetti di notifica forniscono informazioni relative allo stato del lettore.
      <li id="li_6D3EA03845294DC2BAD1ACF507639E51">Eventi di notifica delle informazioni, da 300000 a 399999 </li> 
     </ul> <p>Ciascun intervallo di livello principale, ad esempio errori, è suddiviso in sottointervalli, ad esempio da 101000 a 101999 che rappresentano errori di riproduzione. </p>
     <pre>
-     L'enumerazione <span class="codeph"> mediacore.PSDKErrorCode</span> elenca i valori possibili.
+     Enumerazione 
+     <span class="codeph"> mediacore.PSDKErrorCode</span> elenca i valori possibili.
     </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -49,11 +50,11 @@ Gli oggetti di notifica forniscono informazioni relative allo stato del lettore.
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> metadata </td> 
-   <td colname="2">Coppie chiave/valore che contengono ulteriori informazioni rilevanti sulla notifica. Ad esempio, una chiave denominata <span class="codeph"> URL</span> verrebbe associata a un valore che è un URL correlato alla notifica, ad esempio un URL non valido che ha causato un errore. </td> 
+   <td colname="2">Coppie chiave/valore che contengono ulteriori informazioni rilevanti sulla notifica. Ad esempio, a una chiave denominata <span class="codeph"> URL</span> verrebbe associato un valore che è un URL correlato alla notifica, ad esempio un URL non valido che ha causato un errore. </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"> innerNotification </td> 
-   <td colname="2">Un riferimento a un altro oggetto <span class="codeph"> MediaPlayerNotification</span> che ha interessato direttamente questa notifica. Un esempio potrebbe essere una notifica di un errore di inserimento di annunci che corrisponde direttamente a un conflitto di inserimento della riga temporale. Non tutte le notifiche forniscono una notifica interna. </td> 
+   <td colname="2">Un riferimento a un altro oggetto <span class="codeph"> MediaPlayerNotification</span> direttamente interessato da questa notifica. Un esempio potrebbe essere una notifica di un errore di inserimento di annunci che corrisponde direttamente a un conflitto di inserimento della riga temporale. Non tutte le notifiche forniscono una notifica interna. </td> 
   </tr> 
  </tbody> 
 </table>
