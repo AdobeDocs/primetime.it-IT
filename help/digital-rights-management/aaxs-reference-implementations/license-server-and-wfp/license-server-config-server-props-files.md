@@ -39,4 +39,4 @@ Per preparare correttamente la password della credenziale:
 >
 >Nell&#39;esempio precedente viene utilizzato il punto e virgola (;) come delimitatore. Per piattaforme diverse da Microsoft Windows, utilizzate due punti (:) come delimitatore.
 
-L&#39;utilità genera la password crittografata, che è necessario copiare nel [!DNL .properties] file.
+L&#39;utilità genera la password crittografata, che è necessario copiare nel file [!DNL .properties].
