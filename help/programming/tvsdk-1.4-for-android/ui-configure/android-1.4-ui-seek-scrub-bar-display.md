@@ -6,6 +6,9 @@ title: Visualizzare una barra di scorrimento della ricerca con la posizione di r
 uuid: a9f4dd6c-78cf-455c-8c31-b2f7b740d84a
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '284'
+ht-degree: 0%
 
 ---
 
@@ -30,12 +33,12 @@ TVSDK supporta la ricerca di una posizione (ora) specifica in cui il flusso è u
 
    Gli stati validi sono PREPARATI, COMPLETI, SOSPESI E RIPRODUZIONE.
 
-1. Utilizzate SeekBar nativo per impostare `OnSeekBarChangeListener` in modo da visualizzare il momento in cui l&#39;utente sta eseguendo il trascinamento.
+1. Utilizzate la barra di ricerca nativa per impostare `OnSeekBarChangeListener` in modo da visualizzare quando l&#39;utente sta eseguendo il trascinamento.
 1. Ascoltare `QOSEventListener.onOperationFailed` e intraprendere le azioni appropriate.
 
    Questo evento supera l&#39;avviso appropriato. L’applicazione determina come procedere, ad esempio, provando di nuovo la ricerca o continuando la riproduzione dalla posizione precedente.
 
-1. Attendi che TVSDK chiami il `QOSEventListener.onSeekComplete` callback.
+1. Attendi che TVSDK chiami il callback `QOSEventListener.onSeekComplete`.
 1. Recuperate la posizione di riproduzione rettificata finale utilizzando il parametro di posizione del callback.
 
    Questo è importante perché la posizione iniziale effettiva dopo la ricerca può essere diversa dalla posizione richiesta. Il comportamento di riproduzione potrebbe essere interessato se una ricerca o un altro riposizionamento termina al centro di un&#39;interruzione di annuncio o salta le interruzioni di annuncio.
