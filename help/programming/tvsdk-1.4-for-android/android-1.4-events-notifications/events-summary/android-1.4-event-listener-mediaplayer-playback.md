@@ -6,6 +6,9 @@ title: Eventi di riproduzione
 uuid: 809a8e0e-f4d8-4013-b04a-49fb93d7ca8a
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '548'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 TVSDK invia eventi di riproduzione quando si verificano operazioni di riproduzione per contenuti multimediali, ad esempio un video che inizia la riproduzione.
 
-Per ricevere notifiche su tutti gli eventi relativi alla riproduzione, registrate un&#39;implementazione di `MediaPlayer.PlaybackEventListener`, compresi i seguenti callback di evento.
+Per ricevere notifiche su tutti gli eventi relativi alla riproduzione, registrate un&#39;implementazione di `MediaPlayer.PlaybackEventListener`, compresi i callback di evento seguenti.
 
 <table frame="all" colsep="1" rowsep="1"> 
  <thead> 
@@ -37,11 +40,11 @@ Per ricevere notifiche su tutti gli eventi relativi alla riproduzione, registrat
    <td colname="2"> La riproduzione di un'origine multimediale è iniziata. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onRateSelected%28float%29" format="html" scope="external"> onRateSelected</a> (velocità mobile) </td> 
+   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onRateSelected%28float%29" format="html" scope="external"> onRateSelected</a> (rate mobile) </td> 
    <td colname="2"> L’utente o TVSDK ha selezionato una nuova frequenza di riproduzione, ad esempio avanzamento rapido, riavvolgimento o ripresa della riproduzione a una velocità normale. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onRatePlaying%28float%29" format="html" scope="external"> onRatePlaying</a> (velocità float) </td> 
+   <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onRatePlaying%28float%29" format="html" scope="external"> onRatePlaying</a> (rate mobile) </td> 
    <td colname="2"> Sullo schermo è visibile una nuova frequenza di riproduzione. </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -61,12 +64,12 @@ Per ricevere notifiche su tutti gli eventi relativi alla riproduzione, registrat
    <td colname="col2"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onStateChanged%28com.adobe.mediacore.MediaPlayer.PlayerState,com.adobe.mediacore.MediaPlayerNotification%29" format="html" scope="external"> onStateChanged</a> (stato<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlayerState.html" format="html" scope="external"> MediaPlayer.PlayerState</a> , notifica <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayerNotification.html" format="html" scope="external"> MediaPlayerNotification</a> ) </td> 
+   <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onStateChanged%28com.adobe.mediacore.MediaPlayer.PlayerState,com.adobe.mediacore.MediaPlayerNotification%29" format="html" scope="external"> onStateChanged</a> (<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlayerState.html" format="html" scope="external"> MediaPlayer.</a> PlayerState,  <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayerNotification.html" format="html" scope="external"> </a> MediaPlayerNotificationnotification) </td> 
    <td colname="2"> Lo stato del lettore multimediale è cambiato. L’applicazione deve gestire gli errori in questo callback. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onProfileChanged%28long,%20long%29" format="html" scope="external"> onProfileChanged</a> (profilo lungo, tempo lungo) </td> 
-   <td colname="2"> Il profilo corrente del lettore multimediale è cambiato. Utilizzare la proprietà <span class="codeph"> Profilo</span> per ottenere il nuovo profilo in fase di riproduzione. Utilizzare la proprietà <span class="codeph"> time</span> per ottenere l'ora in cui si è verificato l'evento. </td> 
+   <td colname="2"> Il profilo corrente del lettore multimediale è cambiato. Utilizzare la proprietà <span class="codeph"> Profile</span> per ottenere il nuovo profilo in fase di riproduzione. Utilizzare la proprietà <span class="codeph"> time</span> per ottenere l'ora in cui si è verificato l'evento. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="col1"><b>MediaplayerItem</b> </td> 
@@ -85,7 +88,7 @@ Per ricevere notifiche su tutti gli eventi relativi alla riproduzione, registrat
    <td colname="col2"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onTimedMetadata%28com.adobe.mediacore.metadata.TimedMetadata%29" format="html" scope="external"> onTimedMetadata</a> (<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/metadata/TimedMetadata.html" format="html" scope="external"> TimedMetadata</a> timedMetadata) </td> 
+   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onTimedMetadata%28com.adobe.mediacore.metadata.TimedMetadata%29" format="html" scope="external"> onTimedMetadata</a> (<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/metadata/TimedMetadata.html" format="html" scope="external"> </a> TimedMetadatimedMetadata) </td> 
    <td colname="2"> Nel file manifesto vengono rilevati nuovi metadati temporizzati. </td> 
   </tr> 
   <tr rowsep="0"> 
