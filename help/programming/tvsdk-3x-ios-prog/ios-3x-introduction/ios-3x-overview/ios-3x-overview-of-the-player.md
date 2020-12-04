@@ -6,6 +6,9 @@ title: Funzioni Primetime TVSDK
 uuid: 6e26c09c-2858-47d1-80e8-1d7c6a468b86
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '246'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Funzionalità TVSDK:
    * Supporto per la riproduzione a tutti gli eventi
    * Sottotitoli codificati (608, 708, WebVTT) e moduli audio alternativi per una maggiore accessibilità
    * Controlli per lo stile del testo nelle didascalie
-   * Funzionalità DVR, avanzamento rapido e riavvolgimento rapido (le ultime due sono note come modalità ** trucco)
+   * Funzionalità DVR, avanzamento rapido e riavvolgimento rapido (gli ultimi due sono noti come *modalità &quot;trucco-play&quot;*)
    * Logica di bitrate adattivo (ABR) e configurazione iniziale dei controlli ABR
    * Supporto del failover del manifesto in diretta
    * Buffer di riproduzione regolabili
