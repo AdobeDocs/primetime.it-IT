@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Creazione di pacchetti di contenuto{#packaging-content}
 
-Quando create il pacchetto di contenuto, è necessario specificare l&#39;URL del server licenze. L&#39;URL di Adobe Access Server ha il formato seguente:
+Quando create il pacchetto di contenuto, è necessario specificare l&#39;URL del server licenze. L’URL Adobe Access Server ha il formato seguente:
 
 ```
 http(s):// license-server-host:port/flashaccessserver/tenant-name
