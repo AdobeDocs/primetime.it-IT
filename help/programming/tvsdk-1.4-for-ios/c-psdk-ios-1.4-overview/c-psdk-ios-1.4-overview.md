@@ -1,27 +1,30 @@
 ---
-description: Adobe Primetime Software Development Kit (TVSDK) è un toolkit che consente di aggiungere funzionalità avanzate di riproduzione video alle applicazioni.
-seo-description: Adobe Primetime Software Development Kit (TVSDK) è un toolkit che consente di aggiungere funzionalità avanzate di riproduzione video alle applicazioni.
+description: ' Adobe Primetime Software Development Kit (TVSDK) è un toolkit che consente di aggiungere funzionalità di riproduzione video avanzate alle applicazioni.'
+seo-description: ' Adobe Primetime Software Development Kit (TVSDK) è un toolkit che consente di aggiungere funzionalità di riproduzione video avanzate alle applicazioni.'
 seo-title: Panoramica
 title: Panoramica
 uuid: 0b3fb26c-f3d1-4cf2-9859-89b052501eb3
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
 
 # Panoramica {#overview}
 
-Adobe Primetime Software Development Kit (TVSDK) è un toolkit che consente di aggiungere funzionalità avanzate di riproduzione video alle applicazioni.
+ Adobe Primetime Software Development Kit (TVSDK) è un toolkit che consente di aggiungere funzionalità di riproduzione video avanzate alle applicazioni.
 
-* Per un elenco delle funzioni supportate da TVSDK, consultate Funzioni [TVSDK per lettore](../c-psdk-ios-1.4-overview/c-psdk-ios-1.4-overview-of-the-player.md)Primetime.
-* Per requisiti hardware e software specifici per l’utilizzo di TVSDK, consulta [Requisiti](../c-psdk-ios-1.4-overview/c-psdk-ios-1.4-requirements.md).
+* Per un elenco delle funzioni supportate da TVSDK, consultate [Primetime Player TVSDK features](../c-psdk-ios-1.4-overview/c-psdk-ios-1.4-overview-of-the-player.md).
+* Per i requisiti hardware e software specifici per l&#39;utilizzo di TVSDK, vedere [Requirements](../c-psdk-ios-1.4-overview/c-psdk-ios-1.4-requirements.md).
 
 ## Panoramica del prodotto {#section_3C0C7E7FEF1F41BD9C65392C6C5E8D8E}
 
 TVSDK include descrizioni delle API ed esempi di codice che consentono di integrare funzionalità video avanzate, protezione dei contenuti e funzioni pubblicitarie nel lettore. Per creare un’interfaccia utente per un lettore video, utilizzate Objective-C. TVSDK consente di collegare l’interfaccia utente al relativo lettore multimediale. Questo consente di riprodurre video e pubblicità basati su manifesti multimediali. Potete anche utilizzare TVSDK per recuperare informazioni sul video, gestire la sicurezza e controllare e monitorare la riproduzione.
 
-Per requisiti hardware e software specifici per l’utilizzo di TVSDK, consulta [Requisiti](../c-psdk-ios-1.4-overview/c-psdk-ios-1.4-requirements.md).
+Per i requisiti hardware e software specifici per l&#39;utilizzo di TVSDK, vedere [Requirements](../c-psdk-ios-1.4-overview/c-psdk-ios-1.4-requirements.md).
 
 ## Pubblico {#section_527860B373734D3BA89FCF5EC1F6DC37}
 
