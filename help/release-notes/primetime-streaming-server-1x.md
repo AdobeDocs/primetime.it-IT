@@ -16,11 +16,11 @@ ht-degree: 0%
 ---
 
 
-# Versioni di Primetime Streaming Server {#primetime-streaming-server-x-releases}
+# Rilasci di Primetime Streaming Server {#primetime-streaming-server-x-releases}
 
 Novità delle release Primetime Streaming Server 1.3 e 1.4.
 
-## Novità di Primetime Streaming Server 1.4 (release di dicembre) {#what-s-new-in-primetime-streaming-server-december-release}
+## Novità in Primetime Streaming Server 1.4 (release di dicembre) {#what-s-new-in-primetime-streaming-server-december-release}
 
 **Offline Packager**
 
@@ -73,7 +73,7 @@ La versione 1.3.1 fa riferimento all’hotfix. I seguenti miglioramenti lo rendo
 
 * 3718598 - Quando Origin Server è configurato per la trasmissione di contenuti protetti con accesso HSM abilitato, il client LunaSA back-end effettua una comunicazione frequente con il modulo HSM
 
-## Novità di Primetime Streaming Server 1.3 (versione APRIL) {#what-s-new-in-primetime-streaming-server-april-release}
+## Novità di Primetime Streaming Server 1.3 (release APRIL) {#what-s-new-in-primetime-streaming-server-april-release}
 
 Primetime 1.3 offre diverse nuove funzioni per lo streaming dei contenuti, una migliore usabilità e sicurezza.
 
@@ -121,7 +121,7 @@ Sono stati incorporati diversi miglioramenti delle prestazioni per migliorare il
 
 Diversi miglioramenti in termini di prestazioni sono stati integrati nelle funzionalità di creazione di pacchetti JIT di Primetime Origin per gestire le richieste degli utenti per una grande libreria di risorse VOD.
 
-## Adobe Primetime Streaming Server 1.4 {#adobe-primetime-streaming-server}
+##  Adobe Primetime Streaming Server 1.4 {#adobe-primetime-streaming-server}
 
 ### Requisiti minimi di sistema {#minimum-system-requirements}
 
@@ -146,14 +146,14 @@ Diversi miglioramenti in termini di prestazioni sono stati integrati nelle funzi
 
 **Requisiti software**
 
-* Oracle Java JRE 1.7 (consigliato: Sun/Oracle Hotspot JVM). JDK è richiesto per l&#39;accesso JConsole alle API JMX
+*  Oracle Java JRE 1.7 (consigliato: Sun/ Oracle Hotspot JVM). JDK è richiesto per l&#39;accesso JConsole alle API JMX
 
-### Installare e configurare Primetime Streaming Server {#install-and-configure-primetime-streaming-server}
+### Installazione e configurazione di Primetime Streaming Server {#install-and-configure-primetime-streaming-server}
 
 **Installare il server di streaming**
 
-1. Scaricare il software Java SE e JDK dal sito [](https://www.oracle.com/technetwork/java/javase/downloads/index.html) Oracle e seguire le istruzioni di installazione.
-2. Estrarre il file di archivio di Adobe Primetime-Streaming Server 1.4 `Primetime- StreamingServer-1-4-0-b206-12042014.zip` sul disco.
+1. Scaricate il software Java SE e JDK dal [ sito Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) e seguite le istruzioni di installazione.
+2. Estrarre il  file di archivio di Adobe Primetime-Streaming Server 1.4, `Primetime- StreamingServer-1-4-0-b206-12042014.zip` sul disco.
 
 **Avviare Primetime Streaming Server**
 
@@ -223,7 +223,7 @@ Questa sezione si applica quando Primetime Streaming Server non viene utilizzato
 
 **Requisiti software**
 
-* Oracle Java JRE 1.7 (consigliato: Sun/Oracle Hotspot JVM). JDK è richiesto per l&#39;accesso JConsole alle API JMX
+*  Oracle Java JRE 1.7 (consigliato: Sun/ Oracle Hotspot JVM). JDK è richiesto per l&#39;accesso JConsole alle API JMX
 
 I requisiti minimi di sistema indicati sopra sono validi sia per Origin Server che per Live Packager.
 
@@ -231,15 +231,15 @@ I requisiti minimi di sistema indicati sopra sono validi sia per Origin Server c
 
 **Installazione di Live Packager**
 
-1. Scaricare il software Java SE e JDK dal sito [](https://www.oracle.com/technetwork/java/javase/downloads/index.html) Oracle e seguire le istruzioni di installazione.
-1. Estrarre il file di archivio di Adobe Primetime - Live Packager 1.4 `Primetime-LivePackager-1-4-0-b206-12042014.zip` sul disco.
+1. Scaricate il software Java SE e JDK dal [ sito Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) e seguite le istruzioni di installazione.
+1. Estrarre il file di archivio  Adobe Primetime - Live Packager 1.4 `Primetime-LivePackager-1-4-0-b206-12042014.zip` sul disco.
 
 **Installazione del server di origine HTTP**
 
-1. Scaricare il software Java JRE e JDK dal sito [](https://www.oracle.com/technetwork/java/javase/downloads/index.html) Oracle e seguire le istruzioni di installazione.
-1. Estrarre il file di archivio Adobe Primetime - HTTP Origin Server 1.4 `Primetime-HttpOrigin-1-4-0-b206-12042014.zip`, sul disco.
+1. Scaricate il software Java JRE e JDK dal [ sito Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) e seguite le istruzioni di installazione.
+1. Estrarre il file di archivio  Adobe Primetime - HTTP Origin Server 1.4, `Primetime-HttpOrigin-1-4-0-b206-12042014.zip`, sul disco.
 
-**Per avviare Live Packager** Per avviare il packager, eseguite il seguente comando dalla directory principale del packager:\
+**Per avviare Live** PackagerPer avviare il packager, eseguite il seguente comando dalla directory principale del packager:\
 `$packager_start.sh`
 
 **Per avviare il server di origine HTTP**
@@ -271,7 +271,7 @@ Per riavviare il server di origine HTTP, arrestate e avviate il server di origin
 
 Il file di distribuzione contiene una configurazione di esempio che può essere utilizzata per testare il packager.
 
-Dopo aver estratto l&#39;archivio Adobe Primetime - Live Packager 1.4, modificate le directory nella directory del packager ed eseguite lo script packager_start.sh. La configurazione di esempio ascolta l&#39;indirizzo multicast 239.235.0.3:14000 ed esegue il server di origine locale sulla porta 8080. L&#39;output è configurato per essere scritto nel `packager/webroot/_default_/_default_/ directory`.
+Dopo aver estratto l&#39;archivio  Adobe Primetime - Live Packager 1.4, modificate le directory nella directory del packager ed eseguite lo script packager_start.sh. La configurazione di esempio ascolta l&#39;indirizzo multicast 239.235.0.3:14000 ed esegue il server di origine locale sulla porta 8080. L&#39;output è configurato per essere scritto in `packager/webroot/_default_/_default_/ directory`.
 
 <!-- 
 
@@ -293,7 +293,7 @@ Per disinstallare il packager, arrestate il packager e rimuovete la directory de
 
 Per disinstallare il server di origine HTTP, arrestate il server di origine HTTP e rimuovete la directory di origine HTTP del server di origine HTTP nella directory Primetime.
 
-## Adobe Primetime Offline Packager 1.4 {#adobe-primetime-offline-packager}
+##  Adobe Primetime Offline Packager 1.4 {#adobe-primetime-offline-packager}
 
 ### Requisiti minimi di sistema {#minimum-system-requirements-2}
 
@@ -314,17 +314,17 @@ Per disinstallare il server di origine HTTP, arrestate il server di origine HTTP
 
 **Requisiti software**
 
-* Oracle Java JRE 1.7 o versione successiva.
+*  Oracle Java JRE 1.7 o versione successiva.
 
-### Installare e configurare Offline Packager {#install-and-configure-offline-packager}
+### Installazione e configurazione di Offline Packager {#install-and-configure-offline-packager}
 
 Per installare Offline Packager, effettuate le seguenti operazioni:
 
-1. Scaricare il software Java SE dal sito [](https://www.oracle.com/technetwork/java/javase/downloads/index.html) Oracle e seguire le istruzioni di installazione.
-1. Estraete il file di archivio di Adobe Primetime - Offline Packager 1.4 `Primetime- OfflinePackager-1-4-0-b206-12042014.zip`, sul disco.
+1. Scaricate il software Java SE dal [ sito Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) e seguite le istruzioni di installazione.
+1. Estrarre il file di archivio  Adobe Primetime - Offline Packager 1.4, `Primetime- OfflinePackager-1-4-0-b206-12042014.zip`, sul disco.
 
-Per i dettagli di configurazione disponibili [qui](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html), consultate la documentazione introduttiva di Primetime Offline Packager.
+Per i dettagli di configurazione disponibili in [qui](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html), consultare la Guida introduttiva di Primetime Offline Packager.
 
 ## Risorse utili {#helpful-resources}
 
-* Consulta la documentazione completa della guida nella pagina Informazioni e supporto [di](https://helpx.adobe.com/support/primetime.html) Adobe Primetime.
+* Consulta la documentazione completa della guida in linea alla pagina [ Informazioni e supporto per Adobe Primetime](https://helpx.adobe.com/support/primetime.html).
