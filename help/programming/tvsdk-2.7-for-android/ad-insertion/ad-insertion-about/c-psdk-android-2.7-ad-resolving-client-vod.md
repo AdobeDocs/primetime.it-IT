@@ -6,6 +6,9 @@ title: Risolvere e inserire annuncio VOD
 uuid: 69853c16-e252-472e-b33a-7a0e0c4b95dd
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '186'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
 Per il contenuto video-on-demand (VOD), TVSDK inserisce e interrompe le inserzioni mediante l&#39;applicazione di una giunzione nel contenuto principale, in modo che la durata della timeline aumenti.
 
-Prima della riproduzione, TVSDK risolve gli annunci noti, inserisce e interrompe il contenuto principale come descritto da una timeline che viene restituita da Adobe Primetime ad Decioning e, se necessario, ricalcola la timeline virtuale.
+Prima della riproduzione, TVSDK risolve gli annunci noti, inserisce e interrompe il contenuto principale come descritto da una timeline che viene restituita da  Adobe Primetime ad Decisionioning e, se necessario, ricalcola la timeline virtuale.
 
 TVSDK inserisce gli annunci nei seguenti modi:
 
