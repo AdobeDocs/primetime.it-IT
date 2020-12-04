@@ -19,7 +19,7 @@ Il server di implementazione di riferimento può essere utile per creare un serv
 
 In questa implementazione, gli utenti vengono autenticati in base alle voci degli utenti in un database. Il server include logica aziendale dimostrativa per il rilascio delle licenze e fornisce supporto per la compatibilità con Flash Media Rights Management Server 1.0 e 1.5.
 
-## Requisiti del server di licenze {#license-server-requirements}
+## Requisiti del server licenze {#license-server-requirements}
 
 Requisiti del server licenze:
 
@@ -36,21 +36,21 @@ Dopo aver installato Tomcat e MySQL, contattate  Adobe per il set di credenziali
 >
 >La creazione del server licenze è necessaria solo se si intende modificare il codice sorgente. A scopo di valutazione, è possibile semplicemente utilizzare i file WAR come spedito.
 
-Il server licenze di implementazione di riferimento include tutto il codice sorgente del server licenze ( `([DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\src/`), insieme a uno script di creazione Ant ( `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl/build-refimpl.xml`) con cui è possibile personalizzare il server licenze in base alle proprie esigenze aziendali.
+Il server licenze di implementazione di riferimento include tutto il codice sorgente del server licenze ( `([DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\src/`), insieme a uno script di build Ant ( `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl/build-refimpl.xml`) con cui è possibile personalizzare il server licenze in base alle proprie esigenze aziendali.
 
 1. Modificate lo script di build Ant per specificare le posizioni dell&#39;SDK DRM Primetime, Tomcat, MySQL e Log4J.
 
-   Aprite il [!DNL build-refimpl.xml] file in un editor di testo e impostate i seguenti valori di proprietà:
+   Aprite il file [!DNL build-refimpl.xml] in un editor di testo e impostate i seguenti valori di proprietà:
 
    * `sdkdir`
    * `tomcatdir`
    * `mysqldir`
    * `log4jdir`
 
-1. Eseguire lo script Ant build con la `all` proprietà, nella directory in cui si trova lo script Ant build.
+1. Eseguire lo script Ant build con la proprietà `all`, nella directory in cui si trova lo script Ant build.
 
    ```
    ant -f build-refimpl.xml all
    ```
 
-   Lo script Ant build crea una [!DNL refimpl-build/wars] directory che include i file WAR del server.
+   Lo script Ant build crea una directory [!DNL refimpl-build/wars] che include i file WAR del server.
