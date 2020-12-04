@@ -31,7 +31,8 @@ I seguenti elementi API sono utili per personalizzare la riproduzione:
    <td colname="col1"><span class="codeph"> AdvertisingMetadata</span> </td> 
    <td colname="col2">Controllate se un'interruzione annuncio deve essere contrassegnata come osservata da un visualizzatore e, in caso affermativo, quando contrassegnarla. Imposta e ottieni il criterio controllato utilizzando 
     <pre>
-     la proprietà <span class="codeph"> adBreakAsWatched</span> .
+     , 
+     <span class="codeph"> proprietà adBreakAsWatched</span>.
     </pre> </td> 
   </tr> 
   <tr> 
