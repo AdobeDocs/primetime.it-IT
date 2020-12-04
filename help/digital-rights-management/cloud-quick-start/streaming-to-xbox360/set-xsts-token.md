@@ -6,13 +6,16 @@ title: Impostare il token XSTS nel lettore
 uuid: 8995e029-deee-4e23-9cda-a50de8c4f2c0
 translation-type: tm+mt
 source-git-commit: b7f52b71bde1d7bf59ef51d4f6f90dfaa07e347b
+workflow-type: tm+mt
+source-wordcount: '66'
+ht-degree: 0%
 
 ---
 
 
 # Impostare il token XSTS nel lettore{#set-the-xsts-token-in-your-player}
 
-In Xbox360, il token viene impostato in modo asincrono in risposta all&#39; `MediaPlayer.RequestKeyAttribute` evento.
+In Xbox360, il token viene impostato in modo asincrono in risposta all&#39;evento `MediaPlayer.RequestKeyAttribute`.
 
 Impostate il token XSTS.
 
