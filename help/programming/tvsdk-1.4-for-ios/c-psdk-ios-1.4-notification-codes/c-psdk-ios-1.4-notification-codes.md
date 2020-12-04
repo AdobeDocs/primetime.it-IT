@@ -49,7 +49,7 @@ Gli oggetti di notifica forniscono informazioni relative allo stato del lettore.
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> metadata</span> </td> 
-   <td colname="2">Coppie chiave/valore che contengono ulteriori informazioni rilevanti sulla notifica. Ad esempio, una chiave denominata <span class="codeph"> URL</span> verrebbe associata a un valore che è un URL correlato alla notifica, ad esempio un URL non valido che ha causato un errore. </td> 
+   <td colname="2">Coppie chiave/valore che contengono ulteriori informazioni rilevanti sulla notifica. Ad esempio, a una chiave denominata <span class="codeph"> URL</span> verrebbe associato un valore che è un URL correlato alla notifica, ad esempio un URL non valido che ha causato un errore. </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><span class="codeph"> innerNotification</span></td> 
