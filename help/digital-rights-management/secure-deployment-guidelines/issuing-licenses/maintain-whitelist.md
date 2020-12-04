@@ -17,6 +17,6 @@ ht-degree: 0%
 
 Un elenco consentiti  è un elenco di entità affidabili.
 
-Per i pacchetti di contenuti, le entità sono organizzazioni considerate attendibili dal proprietario del contenuto per creare pacchetti (o cifrare) di file video e creare contenuto protetto DRM. Durante l&#39;implementazione di Adobe Primetime DRM, è necessario mantenere un elenco consentiti  di pacchetti di contenuti affidabili. Prima di rilasciare una licenza, è inoltre necessario verificare l&#39;identità di Content Packager nei metadati DRM di un file protetto DRM.
+Per i pacchetti di contenuti, le entità sono organizzazioni considerate attendibili dal proprietario del contenuto per creare pacchetti (o cifrare) di file video e creare contenuto protetto DRM. Durante la distribuzione  Adobe Primetime DRM, è necessario mantenere un elenco consentiti  di pacchetti di contenuti affidabili. Prima di rilasciare una licenza, è inoltre necessario verificare l&#39;identità di Content Packager nei metadati DRM di un file protetto DRM.
 
-Per informazioni su come ottenere informazioni sull&#39;entità che crea il pacchetto del contenuto, consultate [V2ContentMetaData.getPackagerInfo()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/media/drm/keys/v2/V2ContentMetaData.html#getPackagerInfo()).
+Per informazioni su come ottenere informazioni sull&#39;entità che ha creato il pacchetto del contenuto, vedere [V2ContentMetaData.getPackagerInfo()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/media/drm/keys/v2/V2ContentMetaData.html#getPackagerInfo()).
