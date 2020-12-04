@@ -6,6 +6,9 @@ title: Aggiunta di listener per TimelineUpdatedEvent
 uuid: 7d742e15-5a55-4155-93a7-7b79f21c1472
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '62'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 Per ricevere notifiche sugli aggiornamenti della cronologia, registrate i listener di eventi appropriati.
 
-Ogni volta che la timeline si aggiorna, `MediaPlayer` viene inviato `AdobePSDK.TimelineEvent` con il tipo `AdobePSDK.PSDKEventType.TIMELINE_UPDATED`.
+Ogni volta che la timeline viene aggiornata, `MediaPlayer` invia `AdobePSDK.TimelineEvent` con il tipo `AdobePSDK.PSDKEventType.TIMELINE_UPDATED`.
 1. Implementa i listener appropriati.
 
    ```js
