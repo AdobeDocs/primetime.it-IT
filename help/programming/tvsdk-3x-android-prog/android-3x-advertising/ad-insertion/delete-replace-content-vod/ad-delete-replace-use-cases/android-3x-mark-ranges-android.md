@@ -6,19 +6,22 @@ title: Segna intervalli
 uuid: fa6047dc-9a12-42fa-9e58-8ee3a55fa866
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '94'
+ht-degree: 0%
 
 ---
 
 
-# Segna intervalli {#mark-ranges}
+# Intervalli di caratteri {#mark-ranges}
 
 Potete specificare intervalli di tempo nel contenuto VOD come interruzioni di annuncio.
 
-L’ `TimeRanges` intervallo tra `begin` e `end` in `localTime` viene contrassegnato come `AdBreak` nella timeline. Le altre impostazioni degli annunci vengono ignorate.
+La `TimeRanges` tra `begin` e `end` in `localTime` verrà contrassegnata come `AdBreak` nella timeline. Le altre impostazioni degli annunci vengono ignorate.
 
 >[!TIP]
 >
->Se desiderate contrassegnare solo alcuni intervalli nel contenuto come annunci, senza inserimento dinamico di annunci, create un&#39; `CustomRangeMetadata` istanza e specificate il tipo come `MARK` operazione con gli intervalli personalizzati definiti.
+>Se desiderate contrassegnare solo alcuni intervalli nel contenuto come annunci, senza inserimento dinamico di annunci, create un&#39;istanza `CustomRangeMetadata` e specificate il tipo come operazione `MARK` con gli intervalli personalizzati definiti.
 
 1. Tp contrassegna gli intervalli:
 
