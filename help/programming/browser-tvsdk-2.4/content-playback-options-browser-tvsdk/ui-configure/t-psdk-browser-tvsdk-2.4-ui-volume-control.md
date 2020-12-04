@@ -6,18 +6,21 @@ title: Controllo del volume
 uuid: 5f2f69cc-3969-4ca2-8ab9-5713fdf5cdb8
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '101'
+ht-degree: 0%
 
 ---
 
 
-# Controllo del volume{#provide-volume-control}
+# Controllo volume{#provide-volume-control}
 
 È possibile impostare un controllo dell&#39;interfaccia utente per il volume del suono.
 
-1. Attendete che lo stato dell&#39; `MediaPlayer` istanza sia valido per questo comando.
+1. Attendere che l&#39;istanza `MediaPlayer` sia in uno stato valido per questo comando.
 
    Qualsiasi stato tranne RELEASE o ERROR è valido.
-1. Impostate l&#39;attributo volume sull&#39; `MediaPlayer` istanza per impostare il volume audio.
+1. Impostate l&#39;attributo volume sull&#39;istanza `MediaPlayer` per impostare il volume audio.
 
    ```js
    player.volume = ...
