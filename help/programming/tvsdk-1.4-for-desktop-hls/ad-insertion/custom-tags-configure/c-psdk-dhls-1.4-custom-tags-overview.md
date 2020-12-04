@@ -4,6 +4,9 @@ title: Esempio di una risorsa VOD personalizzata
 uuid: 599054c3-d6ef-4f85-9a0f-39c7e4f6ab24
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '72'
+ht-degree: 0%
 
 ---
 
@@ -40,6 +43,6 @@ seg5.ts
 
 L&#39;applicazione potrebbe configurare i seguenti scenari:
 
-* Una notifica relativa all&#39;esistenza nel file di `#EXT-X-ASSET` tag o altri set di nomi di tag personalizzati sottoscritti.
-* Inserite annunci quando un `#EXT-X-AD` tag, o qualsiasi altro nome di tag personalizzato, viene trovato nel flusso.
+* Una notifica quando nel file sono presenti tag `#EXT-X-ASSET` o qualsiasi altro set di nomi di tag personalizzati a cui hai effettuato la sottoscrizione.
+* Inserite annunci quando nel flusso è presente un tag `#EXT-X-AD` o qualsiasi altro nome di tag personalizzato.
 
