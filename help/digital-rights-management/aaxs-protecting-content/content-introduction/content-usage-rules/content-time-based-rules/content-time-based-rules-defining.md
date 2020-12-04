@@ -11,14 +11,14 @@ ht-degree: 0%
 ---
 
 
-# Definizione di regole basate sul tempo {#defining-time-based-rules}
+# Definizione di regole temporizzate {#defining-time-based-rules}
 
- Adobe Access utilizza l&#39;applicazione non restrittiva delle restrizioni di licenza basate su tempo. Se un diritto di Adobe scade durante la riproduzione di un video, il comportamento predefinito di Accesso  non limita la riproduzione fino alla successiva creazione dello streaming video (mediante chiamata `Netstream.stop()` e `Netstream.play()`).
+ Adobe Access utilizza l&#39;applicazione non restrittiva delle restrizioni di licenza basate su tempo. Se un diritto di ora scade durante la riproduzione di un video, il comportamento predefinito di  Accesso Adobe consiste nel non limitare la riproduzione fino alla successiva creazione dello streaming video (chiamando `Netstream.stop()` e `Netstream.play()`).
 
 Anche se l&#39;imposizione non restrittiva è il comportamento predefinito, potete anche abilitare l&#39;imposizione forzata eseguendo una delle seguenti operazioni:
 
-* Accertatevi che il lettore video controlli periodicamente la licenza per verificare che nessuna delle limitazioni di tempo sia scaduta. È possibile eseguire questa operazione chiamando `DRMManager.loadVoucher(LOCAL_ONLY).`Un codice di errore indica che la licenza memorizzata localmente non è più valida.
-* Ogni volta che l’utente fa clic sul pulsante Pausa, è possibile registrare la marca temporale del video corrente e chiamare `Netstream.stop().`Quando l’utente fa clic sul pulsante Riproduci, è possibile cercare la posizione registrata e quindi chiamare `Netstream.play()`.
+* Accertatevi che il lettore video controlli periodicamente la licenza per verificare che nessuna delle limitazioni di tempo sia scaduta. Questo può essere ottenuto chiamando `DRMManager.loadVoucher(LOCAL_ONLY).`Un codice di errore indica che la licenza memorizzata localmente non è più valida.
+* Ogni volta che l&#39;utente fa clic sul pulsante Pausa, è possibile registrare la marca temporale del video corrente e chiamare `Netstream.stop().`Quando l&#39;utente fa clic sul pulsante Riproduci, è possibile cercare la posizione registrata e quindi chiamare `Netstream.play()`.
 
 ## Data di inizio {#start-date}
 
@@ -64,4 +64,4 @@ Il comportamento di sincronizzazione è definito utilizzando i seguenti parametr
 
 >[!NOTE]
 >
->Questa regola di utilizzo è supportata dai client di accesso  Adobe versione 3.0 e successive. Il comportamento dei client meno recenti dipende dalla versione client minima supportata dal server licenze. Vedere, Versione [client](../../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md)minima.
+>Questa regola di utilizzo è supportata  client di accesso al Adobe versione 3.0 e successive. Il comportamento dei client meno recenti dipende dalla versione client minima supportata dal server licenze. Vedere [Versione minima del client](../../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md).
