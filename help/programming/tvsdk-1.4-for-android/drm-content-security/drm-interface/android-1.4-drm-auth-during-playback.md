@@ -6,6 +6,9 @@ title: Autenticazione DRM durante la riproduzione
 uuid: a1a63e3e-be34-49e1-96c4-ae266003b3d1
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '207'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 Quando i metadati DRM di un video sono inclusi nel flusso multimediale, eseguite l&#39;autenticazione durante la riproduzione.
 
-Considerate la funzione di rotazione della licenza, in cui una risorsa viene crittografata con più licenze DRM. Ogni volta che vengono scoperti nuovi metadati DRM, utilizzate `DRMHelper` metodi per verificare se i metadati DRM richiedono l&#39;autenticazione DRM.
+Considerate la funzione di rotazione della licenza, in cui una risorsa viene crittografata con più licenze DRM. Ogni volta che vengono individuati nuovi metadati DRM, utilizzate i metodi `DRMHelper` per verificare se i metadati DRM richiedono l&#39;autenticazione DRM.
 
 >[!NOTE]
 >
@@ -34,7 +37,7 @@ Considerate la funzione di rotazione della licenza, in cui una risorsa viene cri
    };
    ```
 
-1. Utilizzate l&#39;icona `DRMMetadata` per verificare se è necessaria l&#39;autenticazione. In caso contrario, non fare nulla; la riproduzione continua senza interruzioni.
+1. Utilizzate `DRMMetadata` per verificare se l&#39;autenticazione è necessaria. In caso contrario, non fare nulla; la riproduzione continua senza interruzioni.
 1. In caso contrario, eseguite l&#39;autenticazione DRM. Poiché questa operazione è asincrona e viene gestita in un thread diverso, non ha alcun impatto sull&#39;interfaccia utente né sulla riproduzione video.
 1. Se l’autenticazione non riesce, l’utente non può continuare a visualizzare il video e la riproduzione non riesce. In caso contrario, la riproduzione continuerà ininterrottamente.
 
