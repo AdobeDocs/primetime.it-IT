@@ -6,6 +6,9 @@ title: Failover playlist mancante
 uuid: 91a537f3-3e69-4669-8f84-0292c19ac209
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '372'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Quando manca un&#39;intera playlist, ad esempio, quando il file M3U8 specificato
 
 Se la playlist associata al bitrate a risoluzione media non è presente, TVSDK cerca una playlist di variante alla stessa risoluzione. Se trova la stessa risoluzione, inizia a scaricare la sequenza di riproduzione della variante e i segmenti dalla posizione corrispondente. Se TVSDK non trova la stessa playlist di risoluzione, tenterà di scorrere altre playlist con bitrate e le loro varianti. Un bitrate immediatamente inferiore è la prima scelta, quindi la relativa variante e così via. Se tutte le playlist con bitrate inferiore e le relative varianti sono esaurite nel tentativo di trovare una playlist valida, TVSDK passa al bitrate superiore e conta in basso da lì. Se non è possibile trovare una playlist valida, il processo non riesce e il lettore passa allo stato ERROR.
 
-L&#39;applicazione può determinare come gestire questa situazione. Ad esempio, potrebbe essere utile chiudere l&#39;attività del lettore e indirizzare l&#39;utente all&#39;attività del catalogo. L’evento di interesse è l’ `STATE_CHANGED` evento e il callback corrispondente è il `onStateChanged` metodo. Di seguito è riportato il codice che controlla se il lettore modifica il proprio stato interno in ERRORE:
+L&#39;applicazione può determinare come gestire questa situazione. Ad esempio, potrebbe essere utile chiudere l&#39;attività del lettore e indirizzare l&#39;utente all&#39;attività del catalogo. L&#39;evento di interesse è l&#39;evento `STATE_CHANGED` e il callback corrispondente è il metodo `onStateChanged`. Di seguito è riportato il codice che controlla se il lettore modifica il proprio stato interno in ERRORE:
 
 ```java
 case ERROR: 
@@ -24,7 +27,7 @@ case ERROR:
     break;
 ```
 
-Per ulteriori informazioni, consulta il [!DNL PlayerFragment.java] file nell’SDK:
+Per ulteriori informazioni, vedi il file [!DNL PlayerFragment.java] nell&#39;SDK:
 
 ```
 […]/samples/PrimetimeReference/src/PrimetimeReference/src/com/adobe/primetime/reference/ui/player/
