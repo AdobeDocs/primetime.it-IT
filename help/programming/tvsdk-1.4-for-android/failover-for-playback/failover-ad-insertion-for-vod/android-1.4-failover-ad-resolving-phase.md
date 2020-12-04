@@ -1,18 +1,21 @@
 ---
-description: TVSDK contatta un servizio di distribuzione di annunci, come Adobe Primetime ad Decioning, e tenta di ottenere il file playlist principale che corrisponde al flusso video per l'annuncio. Durante la fase di risoluzione degli annunci, TVSDK effettua una chiamata HTTP al server remoto di distribuzione degli annunci e analizza la risposta del server.
-seo-description: TVSDK contatta un servizio di distribuzione di annunci, come Adobe Primetime ad Decioning, e tenta di ottenere il file playlist principale che corrisponde al flusso video per l'annuncio. Durante la fase di risoluzione degli annunci, TVSDK effettua una chiamata HTTP al server remoto di distribuzione degli annunci e analizza la risposta del server.
+description: TVSDK contatta un servizio di distribuzione di annunci, ad esempio  decisione di annunci Adobe Primetime, e tenta di ottenere il file playlist principale che corrisponde al flusso video per l'annuncio. Durante la fase di risoluzione degli annunci, TVSDK effettua una chiamata HTTP al server remoto di distribuzione degli annunci e analizza la risposta del server.
+seo-description: TVSDK contatta un servizio di distribuzione di annunci, ad esempio  decisione di annunci Adobe Primetime, e tenta di ottenere il file playlist principale che corrisponde al flusso video per l'annuncio. Durante la fase di risoluzione degli annunci, TVSDK effettua una chiamata HTTP al server remoto di distribuzione degli annunci e analizza la risposta del server.
 seo-title: Fase di risoluzione degli annunci
 title: Fase di risoluzione degli annunci
 uuid: b3e62a57-7e62-4e4e-8fa6-0d416785db67
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '341'
+ht-degree: 0%
 
 ---
 
 
-# Fase di risoluzione degli annunci{#ad-resolving-phase}
+# Fase di risoluzione annunci{#ad-resolving-phase}
 
-TVSDK contatta un servizio di distribuzione di annunci, come Adobe Primetime ad Decioning, e tenta di ottenere il file playlist principale che corrisponde al flusso video per l&#39;annuncio. Durante la fase di risoluzione degli annunci, TVSDK effettua una chiamata HTTP al server remoto di distribuzione degli annunci e analizza la risposta del server.
+TVSDK contatta un servizio di distribuzione di annunci, ad esempio  decisione di annunci Adobe Primetime, e tenta di ottenere il file playlist principale che corrisponde al flusso video per l&#39;annuncio. Durante la fase di risoluzione degli annunci, TVSDK effettua una chiamata HTTP al server remoto di distribuzione degli annunci e analizza la risposta del server.
 
 TVSDK supporta i seguenti tipi di provider di annunci:
 
@@ -21,7 +24,7 @@ TVSDK supporta i seguenti tipi di provider di annunci:
    I dati dell&#39;annuncio vengono codificati in file JSON in testo normale.
 * Primetime e fornitore di annunci pubblicitari con decisione
 
-   TVSDK invia una richiesta, inclusa una serie di parametri di targeting e un numero di identificazione della risorsa, al server back-end di Primetime e di decisione. Primetime e il processo decisionale degli annunci risponde con un documento SMIL (lingua di integrazione multimediale sincronizzata) che contiene le informazioni sugli annunci richieste.
+   TVSDK invia una richiesta, inclusa una serie di parametri di targeting e un numero di identificazione della risorsa, al server back-end di Primetime e di decisione. Primetime e la decisione degli annunci risponde con un documento SMIL (lingua di integrazione multimediale sincronizzata) che contiene le informazioni sugli annunci richieste.
 * Fornitore di indicatori di annunci personalizzati
 
    Gestisce la situazione in cui gli annunci vengono masterizzati nel flusso, dal lato server. TVSDK non esegue l&#39;inserimento effettivo degli annunci, ma deve tenere traccia degli annunci inseriti sul lato server. Questo provider imposta i marcatori di annunci utilizzati da TVSDK per eseguire il tracciamento degli annunci.
