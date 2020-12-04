@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Cifratura dei dati di script{#encrypting-script-data}
+# Cifratura dati script{#encrypting-script-data}
 
 Specifica se i dati di script incorporati nel contenuto sono crittografati.
 
