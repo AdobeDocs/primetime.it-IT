@@ -6,11 +6,14 @@ title: Disattivazione degli annunci pre-roll
 uuid: 2e307a58-49f2-43d6-908b-97684ad6e3d3
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '45'
+ht-degree: 0%
 
 ---
 
 
-# Disattivazione degli annunci pre-roll{#disable-pre-roll-ads}
+# Disattiva annunci pre-roll{#disable-pre-roll-ads}
 
 Per disattivare il pre-roll, modificate i generatori di opportunità predefiniti in modo da non effettuare la chiamata pre-roll. I generatori di opportunità predefiniti sono:
 
