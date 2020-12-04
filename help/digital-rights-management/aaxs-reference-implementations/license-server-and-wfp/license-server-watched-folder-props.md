@@ -4,11 +4,14 @@ title: Proprietà delle cartelle esaminate
 uuid: fc204bb4-033a-46fe-8642-737f6a4cd1f1
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '163'
+ht-degree: 0%
 
 ---
 
 
-# Proprietà delle cartelle esaminate {#watched-folder-properties}
+# Proprietà cartella esaminata {#watched-folder-properties}
 
 Ogni cartella esaminata contiene un file denominato [!DNL properties/watchfolder.properties]. Questo file contiene le opzioni di package per il contenuto inserito in questa cartella, compresi gli elementi da cifrare e i criteri da applicare. Eventuali modifiche apportate ai valori nel file delle proprietà avranno effetto alla successiva esecuzione del packager delle cartelle esaminate (non è necessario riavviare il server).
 
