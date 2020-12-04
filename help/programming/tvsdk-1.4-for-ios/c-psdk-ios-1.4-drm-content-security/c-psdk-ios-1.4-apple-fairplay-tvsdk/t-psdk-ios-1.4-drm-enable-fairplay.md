@@ -13,25 +13,25 @@ ht-degree: 0%
 ---
 
 
-# Abilitare Apple FairPlay nelle applicazioni TVSDK{#enable-apple-fairplay-in-tvsdk-applications}
+# Abilita Apple FairPlay nelle applicazioni TVSDK{#enable-apple-fairplay-in-tvsdk-applications}
 
 Potete implementare Apple FairPlay Streaming, che è la soluzione DRM di Apple, nelle vostre applicazioni TVSDK.
 
 1. Crea il caricatore di risorse cliente FairPlay implementando `PTAVAssetResourceLoaderDelegate`.
 
-   Per ulteriori informazioni, consultate [Apple FairPlay nelle applicazioni](../../c-psdk-ios-1.4-drm-content-security/c-psdk-ios-1.4-apple-fairplay-tvsdk/c-psdk-ios-1.4-apple-fairplay-tvsdk.md)TVSDK.
+   Per ulteriori informazioni, consultate [Apple FairPlay in applicazioni TVSDK](../../c-psdk-ios-1.4-drm-content-security/c-psdk-ios-1.4-apple-fairplay-tvsdk/c-psdk-ios-1.4-apple-fairplay-tvsdk.md).
 
    >[!NOTE]
    >
-   >Accertatevi di seguire le istruzioni riportate nella guida *al programma* FairPlay Streaming ( *FairPlayStreaming_PG.pdf*), inclusa nell’SDK per server [FairPlay per lo sviluppo di un’app](https://developer.apple.com/services-account/download?path=/Developer_Tools/FairPlay_Streaming_SDK/FairPlay_Streaming_Server_SDK.zip)in base a FPS.
+   >Assicurati di seguire le istruzioni riportate nella *Guida al programma di streaming FairPlay* ( *FairPlayStreaming_PG.pdf*), inclusa in [FairPlay Server SDK per lo sviluppo di un&#39;app in base a FPS](https://developer.apple.com/services-account/download?path=/Developer_Tools/FairPlay_Streaming_SDK/FairPlay_Streaming_Server_SDK.zip)).
 
-   Il `resourceLoader:shouldWaitForLoadingOfRequestedResource` metodo è equivalente a quello presente in `AVAssetResourceLoaderDelegate`.
+   Il metodo `resourceLoader:shouldWaitForLoadingOfRequestedResource` equivale a quello presente in `AVAssetResourceLoaderDelegate`.
 
    >[!IMPORTANT]
    >
-   >Nello scenario del server licenze ExpressPlay, per riprodurre contenuto, modificate lo schema URL nell’URL della richiesta di licenza del server ExpressPlay FairPlay da `skd://` a `https://` (o `https://`).
+   >Nello scenario del server licenze ExpressPlay, per riprodurre contenuto, modificate lo schema URL nell&#39;URL della richiesta di licenza del server ExpressPlay FairPlay da `skd://` a `https://` (o `https://`).
 
-1. Registra il caricatore di risorse cliente *FairPlay* con `registerPTAVAssetResourceLoader`.
+1. Registrare il caricatore di risorse cliente *FairPlay* con `registerPTAVAssetResourceLoader`.
 
    ```
    PTFairPlayResourceLoader *resourceLoader =  
