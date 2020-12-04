@@ -21,18 +21,18 @@ TVSDK supporta la risoluzione e l&#39;inserimento di annunci per VOD e flussi li
 
 Prima di includere la pubblicità nei contenuti video, fornite le seguenti informazioni sui metadati:
 
-* A `mediaID`, che identifica il contenuto specifico da riprodurre.
-* Il vostro `zoneID`, che identifica la vostra società o il vostro sito Web.
+* Un `mediaID` che identifica il contenuto specifico da riprodurre.
+* `zoneID`, che identifica la società o il sito Web.
 * Il dominio del server di annunci, che specifica il dominio del server di annunci assegnato.
 * Altri parametri di targeting.
 
-## Configurare i metadati Primetime e del server {#section_86C4A3B2DF124770B9B7FD2511394313}
+## Impostare i metadati di Primetime ad server {#section_86C4A3B2DF124770B9B7FD2511394313}
 
-L’applicazione deve fornire a TVSDK le `PTAuditudeMetadata` informazioni necessarie per connettersi al server degli annunci.
+L&#39;applicazione deve fornire a TVSDK le informazioni `PTAuditudeMetadata` necessarie per connettersi al server di annunci.
 
 Per impostare i metadati del server di annunci:
 
-1. Create un’istanza di [PTAuditudeMetadata](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAuditudeMetadata.html) e impostatene le proprietà.
+1. Create un&#39;istanza di [PTAuditudeMetadata](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAuditudeMetadata.html) e impostatene le proprietà.
 
    ```
    PTAuditudeMetadata *adMetadata = [[PTAuditudeMetadata alloc] init];  
@@ -42,7 +42,7 @@ Per impostare i metadati del server di annunci:
    adMetadata.userAgent = @"INSERT_AGENT_NAME_HERE; 
    ```
 
-1. Impostate l&#39; `PTAuditudeMetadata` istanza come metadati per i `PTMediaPlayerItem` metadati correnti utilizzando `PTAdResolvingMetadataKey`.
+1. Impostate l&#39;istanza `PTAuditudeMetadata` come metadati per i metadati correnti `PTMediaPlayerItem` utilizzando `PTAdResolvingMetadataKey`.
 
    ```
    // Metadata is an instance of PTMetadata that is used to create the PTMediaPlayerItem 
