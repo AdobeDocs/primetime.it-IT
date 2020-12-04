@@ -6,6 +6,9 @@ title: Classi Timeline
 uuid: 4acbe2f8-9552-491d-8043-2e0557b66a23
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '100'
+ht-degree: 0%
 
 ---
 
