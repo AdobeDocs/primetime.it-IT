@@ -6,6 +6,9 @@ title: Codici di notifica
 uuid: 24476204-5c35-4ff9-810d-77698ea18b53
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '240'
+ht-degree: 0%
 
 ---
 
