@@ -6,6 +6,9 @@ title: Configurare il sistema di notifica
 uuid: 2d1876c7-4ce6-491c-880b-dd94697d4feb
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '139'
+ht-degree: 0%
 
 ---
 
@@ -24,9 +27,9 @@ Per ricevere le notifiche:
 * Aggiunta di notifiche alla cronologia delle notifiche
 
 1. Ascoltare le modifiche allo stato.
-1. Implementare il listener di `MediaPlayer.StatusChangeEvent.STATUS_CHANGED` eventi.
-1. TVSDK passa un&#39; `MediaPlayer.StatusChangeEvent` istanza al listener di eventi, che contiene due parametri:
+1. Implementare il listener di eventi `MediaPlayer.StatusChangeEvent.STATUS_CHANGED`.
+1. TVSDK passa un&#39;istanza `MediaPlayer.StatusChangeEvent` al listener di eventi, che contiene due parametri:
 
-   * Nuovo stato ( `MediaPlayer.Status`)
-   * Un `MediaPlayerNotification` oggetto
+   * Il nuovo stato ( `MediaPlayer.Status`)
+   * Oggetto `MediaPlayerNotification`
 
