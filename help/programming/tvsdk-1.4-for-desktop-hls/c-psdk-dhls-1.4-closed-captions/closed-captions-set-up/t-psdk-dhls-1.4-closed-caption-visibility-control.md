@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Controllo della visibilità dei sottotitoli{#control-closed-caption-visibility}
+# Controllare la visibilità dei sottotitoli codificati{#control-closed-caption-visibility}
 
 È possibile controllare la visibilità dei sottotitoli codificati. Quando la visibilità è attivata, viene visualizzata la traccia attualmente selezionata. Se modificate la traccia corrente, l’impostazione di visibilità rimane la stessa.
 
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->I valori di visibilità per le didascalie chiuse sono definiti in `ClosedCaptionsVisibility`.
+>I valori di visibilità per i sottotitoli codificati sono definiti in `ClosedCaptionsVisibility`.
 >
 >
 ```
@@ -31,8 +31,8 @@ ht-degree: 0%
 >public static const VISIBLE:String = visible;
 >```
 
-1. Attendere che lo stato `MediaPlayer` di PREPARAZIONE sia almeno pari a PREPARATO (vedere [Attendere uno stato](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)valido).
-1. Per ottenere l’impostazione di visibilità corrente per i sottotitoli codificati, utilizzate il metodo getter in `MediaPlayer`, che restituisce un valore di visibilità.
+1. Attendere che il `MediaPlayer` disponga almeno dello stato PREPARATO (vedere [Attendere che uno stato valido](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)).
+1. Per ottenere l&#39;impostazione di visibilità corrente per i sottotitoli codificati, utilizzate il metodo getter in `MediaPlayer`, che restituisce un valore di visibilità.
 
    ```
    public function get ccVisibility():String
