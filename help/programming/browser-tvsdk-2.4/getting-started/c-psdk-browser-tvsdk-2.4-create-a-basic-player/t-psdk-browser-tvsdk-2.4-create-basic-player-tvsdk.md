@@ -6,17 +6,20 @@ title: Creazione di un lettore di base con TVSDK
 uuid: ec15cf53-197f-4190-a6b2-600a57815390
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '225'
+ht-degree: 0%
 
 ---
 
 
-# Creazione di un lettore di base con TVSDK{#create-a-basic-player-using-tvsdk}
+# Creare un lettore di base con TVSDK{#create-a-basic-player-using-tvsdk}
 
 Per creare un lettore di base utilizzando il browser TVSDK, completare i seguenti passaggi.
 
 1. Create una nuova directory in cui scaricare i file compressi per l&#39;SDK del browser.
 1. Scaricate Browser TVSDK da Zendesk, decomprimete i file e inserite la cartella framework nella nuova directory.
-1. Create un semplice standard HTML per il codice con un `div` contenuto.
+1. Create un semplice standard HTML per il codice con un `div` in esso contenuto.
 1. Inserite questo standard in un file HTML nella directory creata al punto 1.
 
    ```
@@ -42,14 +45,14 @@ Per creare un lettore di base utilizzando il browser TVSDK, completare i seguent
    <script src= "frameworks/player/primetimeei.min.js"></script>
    ```
 
-1. Per il tag body, aggiungete la `onLoad` sezione .
+1. Per il tag body, aggiungete la sezione `onLoad`.
 
    ```
    <body onload="startVideo()">
    ```
 
-1. Iniziate ad implementare la `startVideo` funzione.
-1. Aggiungete un tag script e create la `startVideo` funzione nel tag .
+1. Avviare l&#39;implementazione della funzione `startVideo`.
+1. Aggiungete un tag script e create la funzione `startVideo` nel tag .
 
    Questo dovrebbe essere nella sezione head della pagina.
 
@@ -60,17 +63,17 @@ Per creare un lettore di base utilizzando il browser TVSDK, completare i seguent
    </script>
    ```
 
-1. Create il `Adobe.MediaPlayer`.
+1. Create la cartella `Adobe.MediaPlayer`.
 
    ```js
    var player = new AdobePSDK.MediaPlayer();
    ```
 
-1. Create il `MediaPlayerView`.
+1. Create la cartella `MediaPlayerView`.
 
    >[!TIP]
    >
-   >Qui vengono utilizzati i `div` dati creati in precedenza.
+   >Qui si utilizza la `div` creata in precedenza.
 
    ```js
    var view = new AdobePSDK.MediaPlayerView( 
@@ -157,7 +160,7 @@ Per creare un lettore di base utilizzando il browser TVSDK, completare i seguent
    player.replaceCurrentResource(mediaResource, config);
    ```
 
-1. Quando il lettore è nello stato INITIALIZED, chiama `prepareToPlay`.
+1. Quando il lettore è nello stato INITIALIZED, chiamare `prepareToPlay`.
 
    ```js
    case INITIALIZED: 
@@ -165,7 +168,7 @@ Per creare un lettore di base utilizzando il browser TVSDK, completare i seguent
     break;
    ```
 
-1. Dopo che il lettore è nello stato PREPARATO, chiama `play`.
+1. Una volta che il lettore è nello stato PREPARATO, chiamare `play`.
 
    ```js
    case PREPARED: 
