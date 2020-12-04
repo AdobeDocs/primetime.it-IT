@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-#  Elenco Bloccati di client DRM con restrizioni all&#39;accesso al contenuto protetto {#blocklist-of-drm-clients-restricted-from-accessing-protected-content}
+#  Elenco Bloccati di client DRM non autorizzati ad accedere al contenuto protetto {#blocklist-of-drm-clients-restricted-from-accessing-protected-content}
 
 **versioni del modulo DRM di accesso al Adobe non consentivano l&#39;accesso al contenuto protetto.**
 
@@ -25,7 +25,7 @@ Una versione client DRM può essere identificata dagli attributi specificati nel
 |---|---|---|---|
 | Ambiente | &quot;PC&quot;, &quot;PortingKit&quot; | Corrispondenza esatta | Identifica se il client è in esecuzione su un desktop o su un altro dispositivo. |
 | OS | &quot;Win&quot;, &quot;Mac&quot;, &quot;Linux&quot;, &quot;Android&quot;, &quot;iOS&quot;, &quot;ChromeOS&quot; | Corrispondenza esatta | Piattaforma |
-| Architettura | “32”, “64” | Corrispondenza esatta | 32 bit o 64 bit |
+| Architettura | &quot;32&quot;, &quot;64&quot; | Corrispondenza esatta | 32 bit o 64 bit |
 | Tipo di schermo | &quot;PC&quot;, &quot;Mobile&quot;, &quot;TV&quot; | Corrispondenza esatta |  |
 | Versione runtime | Un numero di versione valido. Ad esempio, &quot;2.0.0&quot;, &quot;3.0&quot;, &quot;4.0&quot;, &quot;11.0&quot;, ecc. | Corrisponde se la versione client è minore o uguale alla versione specificata. | Il numero di versione è specificato come combinazione di numeri e punti (&quot;.&quot;) di qualsiasi lunghezza. |
 | Versione libreria DRM | Un numero di versione valido. Ad esempio, &quot;2.0.0&quot;. | Corrisponde se la versione client è minore o uguale alla versione specificata. | Il numero di versione è specificato come combinazione di numeri e punti (&quot;.&quot;) di qualsiasi lunghezza. |
