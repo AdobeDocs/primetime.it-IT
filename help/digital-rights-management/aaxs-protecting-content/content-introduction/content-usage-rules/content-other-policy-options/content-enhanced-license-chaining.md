@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Concatenamento delle licenze migliorato {#enhanced-license-chaining}
+# Concatenamento licenze migliorato {#enhanced-license-chaining}
 
 Consente di aggiornare una licenza utilizzando una licenza principale padre per l&#39;aggiornamento batch delle licenze.
 
