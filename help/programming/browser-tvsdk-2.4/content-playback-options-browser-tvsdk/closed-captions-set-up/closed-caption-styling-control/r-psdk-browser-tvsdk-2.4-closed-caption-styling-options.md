@@ -6,6 +6,9 @@ title: Opzioni di stile dei sottotitoli codificati
 uuid: 0e2fd9f3-e569-4b5d-9b78-86f8ee6230ee
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '371'
+ht-degree: 0%
 
 ---
 
@@ -44,21 +47,21 @@ new TextFormat(
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> Font </td> 
-   <td colname="2"> <p>Il tipo di carattere. </p> <p>Può essere impostato solo su un valore definito dall'enumerazione <span class="codeph"> TextFormat.Font </span> e rappresenta, ad esempio, una spaziatura con o senza serifi. </p> <p>Suggerimento:  I font effettivamente disponibili su un dispositivo possono variare e, se necessario, vengono utilizzate delle sostituzioni. Il monospazio con i serifi viene in genere utilizzato come sostituto, anche se questa sostituzione può essere specifica del sistema. </p> </td> 
+   <td colname="2"> <p>Il tipo di carattere. </p> <p>Può essere impostato solo su un valore definito dall'enumerazione <span class="codeph"> TextFormat.Font </span> e rappresenta, ad esempio, un'area di controllo con o senza serifi. </p> <p>Suggerimento:  I font effettivamente disponibili su un dispositivo possono variare e, se necessario, vengono utilizzate delle sostituzioni. Il monospazio con i serifi viene in genere utilizzato come sostituto, anche se questa sostituzione può essere specifica del sistema. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Dimensioni </td> 
-   <td colname="2"> <p>Dimensione della didascalia. </p> <p> Può essere impostato solo su un valore definito dall'enumerazione <span class="codeph"> TextFormat.Size </span> : 
+   <td colname="2"> <p>Dimensione della didascalia. </p> <p> È possibile impostare solo un valore definito dall'enumerazione <span class="codeph"> TextFormat.Size </span>: 
      <ul compact="yes" id="ul_544BFC7A46474A74839477108F1AB1E9"> 
-      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDIUM </span> - Dimensione standard </li> 
-      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> GRANDE </span> - Circa il 30% più grande del medio </li> 
-      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> PICCOLO </span> - Circa il 30% inferiore a medio </li> 
-      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> PREDEFINITO </span> - La dimensione predefinita della didascalia; come media </li> 
+      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDIUM  </span> - Dimensione standard </li> 
+      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> GRANDE  </span> - Circa il 30% più grande del medio </li> 
+      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> PICCOLA  </span> - Circa il 30% inferiore al medio </li> 
+      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> PREDEFINITO  </span> - La dimensione predefinita della didascalia; come media </li> 
      </ul> </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Colore font </td> 
-   <td colname="2"> <p>Il colore del font. </p> <p>Può essere impostato solo su un valore definito dall'enumerazione <span class="codeph"> TextFormat.Color </span> . </p> </td> 
+   <td colname="2"> <p>Il colore del font. </p> <p>Può essere impostato solo su un valore definito dall'enumerazione <span class="codeph"> TextFormat.Color </span>. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Colore di sfondo </td> 
@@ -66,7 +69,7 @@ new TextFormat(
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Opacità del font </td> 
-   <td colname="2"> <p>Opacità del testo. </p> <p>Espressa come percentuale da 0 (completamente trasparente) a 100 (completamente opaca). <span class="codeph"> DEFAULT_OPACITY </span> per il font è 100. </p> </td> 
+   <td colname="2"> <p>Opacità del testo. </p> <p>Espressa come percentuale da 0 (completamente trasparente) a 100 (completamente opaca). <span class="codeph"> DEFAULT_OPACITY  </span> per il font è 100. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Ingresso inferiore </td> 
