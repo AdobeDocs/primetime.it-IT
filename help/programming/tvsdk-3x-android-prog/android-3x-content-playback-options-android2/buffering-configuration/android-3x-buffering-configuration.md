@@ -6,6 +6,9 @@ title: Buffering
 uuid: c84b98ed-0070-4a86-a409-d7702e5be23c
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '520'
+ht-degree: 0%
 
 ---
 
@@ -14,11 +17,11 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 Per fornire un’esperienza di visualizzazione più fluida, TVSDK a volte carica il flusso video. È possibile configurare la modalità di buffer del lettore.
 
-TVSDK definisce un buffer di riproduzione di almeno 30 secondi e un tempo di buffer iniziale prima dell&#39;avvio della riproduzione del supporto, di almeno 2 secondi. Dopo le chiamate dell’applicazione `play`, ma prima dell’inizio della riproduzione, TVSDK esegue il buffer dei contenuti multimediali fino al tempo iniziale per dare un avvio corretto all’avvio effettivo della riproduzione.
+TVSDK definisce un buffer di riproduzione di almeno 30 secondi e un tempo di buffer iniziale prima dell&#39;avvio della riproduzione del supporto, di almeno 2 secondi. Dopo le chiamate dell&#39;applicazione `play`, ma prima dell&#39;inizio della riproduzione, TVSDK esegue il buffer dei supporti fino al tempo iniziale per dare un avvio corretto all&#39;avvio effettivo della riproduzione.
 
 È possibile modificare i tempi del buffer definendo nuovi criteri di buffering e modificare il momento in cui si verifica il buffering iniziale utilizzando immediatamente on.
 
-## Criteri tempo di buffer {#section_9B3407D52F1E4CB48E7A4836EBDA8F70}
+## Criteri tempo di buffering {#section_9B3407D52F1E4CB48E7A4836EBDA8F70}
 
 A seconda dell’ambiente (incluso il dispositivo, il sistema operativo o le condizioni di rete), è possibile impostare criteri di buffering diversi per il lettore, ad esempio modificare la durata minima del buffering iniziale e del buffering di riproduzione.
 
@@ -30,17 +33,17 @@ Durante il rendering del video, TVSDK continua a bufferizzare i nuovi frammenti 
 >
 >Se il valore iniziale del buffer è elevato, potrebbe fornire all&#39;utente un lungo tempo iniziale di buffering prima dell&#39;avvio. Ciò potrebbe fornire una riproduzione uniforme per un periodo di tempo più lungo; tuttavia, se le condizioni della rete non sono soddisfacenti, la riproduzione iniziale potrebbe essere ritardata.
 
-Se si attiva l&#39;accesso immediato chiamando `prepareBuffer`, il buffer iniziale inizia in quel momento, invece di aspettare `play`.
+Se si abilita l&#39;accesso immediato chiamando `prepareBuffer`, il buffering iniziale inizia in quel momento, invece di aspettare `play`.
 
 ## Impostare i tempi di buffering {#section_05CDD927869D47EBA1D2069B1416B2E4}
 
-Sono `MediaPlayer` disponibili metodi per impostare e ottenere il tempo di buffering iniziale e il tempo di buffering della riproduzione.
+`MediaPlayer` fornisce metodi per impostare e ottenere il tempo di buffering iniziale e il tempo di buffering di riproduzione.
 
 >[!TIP]
 >
 >Se non impostate i parametri di controllo del buffer prima dell&#39;inizio della riproduzione, il lettore multimediale utilizza per impostazione predefinita 2 secondi per il buffer iniziale e 30 secondi per il tempo del buffer di riproduzione in corso.
 
-1. Impostare l&#39; `BufferControlParameters` oggetto, che racchiude i parametri di tempo del buffer iniziale e di controllo del tempo del buffer di riproduzione.
+1. Impostare l&#39;oggetto `BufferControlParameters`, che racchiude i parametri iniziali di tempo buffer e di controllo del tempo buffer di riproduzione.
 
    Questa classe fornisce i seguenti metodi factory:
 
@@ -57,19 +60,19 @@ Sono `MediaPlayer` disponibili metodi per impostare e ottenere il tempo di buffe
         long initialBuffer,  
         long bufferTime)
       ```
-   Se i parametri non sono validi, questi metodi generano `MediaPlayerException` `PSDKErrorCode.INVALID_ARGUMENT`con codice di errore, ad esempio quando vengono soddisfatte le seguenti condizioni:
+   Se i parametri non sono validi, questi metodi generano `MediaPlayerException` con codice di errore `PSDKErrorCode.INVALID_ARGUMENT`, ad esempio quando vengono soddisfatte le seguenti condizioni:
 
    * Il tempo iniziale del buffer è inferiore a zero.
    * Il tempo iniziale del buffer è maggiore del tempo del buffer.
 
 
-1. Per impostare i valori dei parametri del buffer, utilizzare questo `MediaPlayer` metodo:
+1. Per impostare i valori dei parametri del buffer, utilizzare il seguente metodo `MediaPlayer`:
 
    ```java
    void setBufferControlParameters(BufferControlParameters params)
    ```
 
-1. Per ottenere i valori dei parametri del buffer correnti, utilizzate questo `MediaPlayer` metodo:
+1. Per ottenere i valori dei parametri del buffer correnti, utilizzate il seguente metodo `MediaPlayer`:
 
    ```java
       BufferControlParameters getBufferControlParameters()  
