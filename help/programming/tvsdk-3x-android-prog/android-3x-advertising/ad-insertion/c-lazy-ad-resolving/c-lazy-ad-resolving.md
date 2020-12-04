@@ -30,7 +30,7 @@ La risoluzione degli annunci e il caricamento degli annunci potrebbero causare u
 
    1. TVSDK scarica una playlist e *risolve* tutti gli annunci.
    1. TVSDK *carica* annunci pre-roll, sposta il lettore nello stato PREPARATO e inizia la riproduzione del contenuto.
-   1. TVSDK *carica* gli annunci rimanenti e li inserisce nella timeline durante la riproduzione.
+   1. TVSDK *carica* gli annunci rimanenti e li inserisce sulla timeline durante la riproduzione.
 
    Questa funzione migliora il processo di base mettendo il lettore nello stato PREPARATO prima che tutti gli annunci vengano caricati.
 
@@ -57,7 +57,7 @@ La risoluzione degli annunci e il caricamento degli annunci potrebbero causare u
 >* Con Lazy Ad Resolving, se più interruzioni pubblicitarie esistono contemporaneamente (VMAP), verranno risolte allo stesso tempo.
 >* Non è consigliabile ridurre il valore di *setDelayAdLoadingTolerance() *al di sotto del valore predefinito (5 secondi). In questo modo il lettore potrebbe creare un &quot;buffer&quot; inutilmente.
 >* Lazy Ad Resolving non influisce sugli annunci pre-roll.
->* Lazy Ad Resolving è attualmente supportato con Auditude-Plugin. È consigliabile non impostare ** setDelayAdLoadingsu true se si utilizza un risolutore personalizzato.
+>* Lazy Ad Resolving è attualmente supportato con Auditude-Plugin. È consigliabile non impostare *setDelayAdLoading* su true se si utilizza un risolutore personalizzato.
 
 >
 
