@@ -6,6 +6,9 @@ title: Audio alternativo
 uuid: 86aa5393-6a9e-49db-807b-7299e6b4ab2b
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '275'
+ht-degree: 0%
 
 ---
 
@@ -16,11 +19,11 @@ L&#39;audio alternativo consente di passare tra le tracce audio disponibili per 
 
 <!--<a id="section_E4F9DC28A2944BD08B4190A7F98A8365"></a>-->
 
-Quando TVSDK crea l’ `MediaPlayerItem` istanza per il video corrente, crea un `AudioTrack` elemento per ogni traccia audio disponibile. L&#39;elemento contiene una `name` proprietà, che è una stringa che in genere contiene una descrizione riconoscibile dall&#39;utente della lingua del brano. L&#39;elemento contiene anche informazioni sull&#39;utilizzo di tale traccia per impostazione predefinita. Quando è il momento di riprodurre il video, potete richiedere un elenco delle tracce audio disponibili, eventualmente consentire all’utente di selezionare una traccia e impostare il video in modo che venga riprodotto con la traccia selezionata.
+Quando TVSDK crea l&#39;istanza `MediaPlayerItem` per il video corrente, crea un elemento `AudioTrack` per ogni traccia audio disponibile. L&#39;elemento contiene una proprietà `name`, ovvero una stringa che in genere contiene una descrizione riconoscibile dall&#39;utente della lingua della traccia. L&#39;elemento contiene anche informazioni sull&#39;utilizzo di tale traccia per impostazione predefinita. Quando è il momento di riprodurre il video, potete richiedere un elenco delle tracce audio disponibili, eventualmente consentire all’utente di selezionare una traccia e impostare il video in modo che venga riprodotto con la traccia selezionata.
 
 >[!TIP]
 >
->Anche se raramente, se una traccia audio aggiuntiva diventa disponibile dopo che TVSDK ha creato l&#39; `MediaPlayerItem`, TVSDK attiva un `MediaPlayerItem.AUDIO_TRACK_UPDATED` evento.
+>Anche se raramente, se dopo la creazione di `MediaPlayerItem` da parte di TVSDK diventa disponibile una traccia audio aggiuntiva, TVSDK attiva un evento `MediaPlayerItem.AUDIO_TRACK_UPDATED`.
 
 ## API aggiunte {#section_87C42C30BA8C4F58A2DAB7CE07FCD3DE}
 
@@ -34,7 +37,7 @@ Se il supporto specificato dispone di una traccia audio alternativa, diversa dal
 boolean hasAlternateAudio();
 ```
 
-** `getAudioTracks`**
+** `getAudioTracks`*
 
 Questa funzione restituisce l&#39;elenco di tutte le tracce audio disponibili correnti in un supporto specificato.
 
