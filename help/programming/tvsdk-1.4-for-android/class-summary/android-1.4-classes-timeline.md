@@ -6,6 +6,9 @@ title: Classi Timeline
 uuid: dd4af4b4-215e-45cb-8bac-574a461ac1ce
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '244'
+ht-degree: 0%
 
 ---
 
@@ -33,11 +36,11 @@ Pacchetto: [com.adobe.mediacore.timeline](https://help.adobe.com/en_US/primetime
    <td colname="2"> Interfaccia che fornisce un iteratore per l’elaborazione dei marcatori timeline. Rappresenta la timeline del contenuto, comprese le interruzioni di annuncio. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/TimelineItem.html" format="html" scope="external"> TimelineItem</a></span> </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/TimelineItem.html" format="html" scope="external"> TimelineItem</a> </span> </td> 
    <td colname="2"> Classe. Rappresentazione immutabile generica di un elemento della cronologia. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/TimelineMarker.html" format="html" scope="external"> TimelineMarker</a></span> </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/TimelineMarker.html" format="html" scope="external"> TimelineMarker</a> </span> </td> 
    <td colname="2"> Interfaccia che rappresenta un marcatore sulla timeline. Indica un'area di interesse sulla timeline effettiva. Attualmente, le aree di interesse sono gli annunci, che potresti voler contrassegnare, ad esempio, con un colore diverso nell’interfaccia della barra di scorrimento. Ciascun indicatore è definito da una posizione e una durata (ciascuna espressa in millisecondi). </td> 
   </tr> 
   <tr rowsep="0"> 
