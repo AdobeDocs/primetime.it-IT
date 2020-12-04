@@ -6,6 +6,9 @@ title: Panoramica del prodotto, pubblico e questa guida
 uuid: dd281a3e-a85f-4470-a730-2c5e87d0e490
 translation-type: tm+mt
 source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+workflow-type: tm+mt
+source-wordcount: '282'
+ht-degree: 0%
 
 ---
 
@@ -16,9 +19,9 @@ Questa guida fornisce informazioni su come sviluppare applicazioni per lettori v
 
 <!--<a id="section_FC24E86A2E6442B8A3769160769BBDFA"></a>-->
 
-* Per un elenco delle funzioni supportate da TVSDK, consultate Funzioni [TVSDK di](../../../tvsdk-3x-android-prog/android-3x-introduction/overview-prod-audience-guide/android-3x-overview-of-the-player.md)Primetime.
-* Per requisiti hardware e software specifici per l’utilizzo di TVSDK, consulta [Requisiti](../../../tvsdk-3x-android-prog/android-3x-introduction/android-3x-requirements.md).
-* Per un elenco delle API disponibili, consultate [TVSDK Android API](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.5/index.html).
+* Per un elenco delle funzioni supportate da TVSDK, consultate [Primetime TVSDK features](../../../tvsdk-3x-android-prog/android-3x-introduction/overview-prod-audience-guide/android-3x-overview-of-the-player.md).
+* Per i requisiti hardware e software specifici per l&#39;utilizzo di TVSDK, vedere [Requirements](../../../tvsdk-3x-android-prog/android-3x-introduction/android-3x-requirements.md).
+* Per un elenco delle API disponibili, consultate [API Android TVSDK](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.5/index.html).
 
 ## Panoramica del prodotto {#section_9664959F25C948878F2F7EF3D360CA95}
 
@@ -36,6 +39,6 @@ Questa guida fornisce informazioni che consentono di includere funzionalità TVS
 
 >[!TIP]
 >
->Il prefisso dello spazio dei nomi dell’API TVSDK [!DNL com.adobe.mediacore] viene spesso omesso per ragioni di brevità.
+>Il prefisso dello spazio dei nomi dell&#39;API TVSDK [!DNL com.adobe.mediacore] viene spesso omesso per ragioni di brevità.
 >
 >Se il contesto è chiaro, molti elementi API vengono citati senza il relativo designatore di classe principale.
