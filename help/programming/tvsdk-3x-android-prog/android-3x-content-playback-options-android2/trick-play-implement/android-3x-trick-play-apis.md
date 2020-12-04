@@ -6,11 +6,14 @@ title: Elementi API Rate-change
 uuid: c2bcd20c-0641-4d75-802c-08098786d572
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '163'
+ht-degree: 2%
 
 ---
 
 
-# Elementi API Rate-change {#rate-change-api-elements}
+# Elementi API Rate Change {#rate-change-api-elements}
 
 TVSDK include metodi, proprietà ed eventi per determinare percentuali valide, tassi correnti, se è supportata la riproduzione di trucco e altre funzionalità correlate a avanzamento rapido e riavvolgimento.
 
@@ -27,6 +30,6 @@ Utilizzate i seguenti elementi API per modificare le percentuali di riproduzione
 | **Valore rate** | **Effetto sulla riproduzione** |
 |---|---|
 | 2.0, 4.0, 8.0, 16.0, 32.0, 64.0, 128.0 | Passa alla modalità di avanzamento rapido con il moltiplicatore specificato più veloce del normale (ad esempio, 4 è 4 volte più veloce del normale) |
-| -2.0, -4.0, -8.0, -16.0, -32.0, -64.0 , -128.0 | Passa alla modalità di riavvolgimento rapido |
-| 1.0 | Passa alla modalità di riproduzione normale (la chiamata `play` equivale a impostare la proprietà rate su 1.0) |
-| 0.0 | Pause (la chiamata `pause` è la stessa dell&#39;impostazione della proprietà rate su 0.0) |
+| -2,0, -4,0, -8,0, -16,0, -32,0, -64,0, -128,0 | Passa alla modalità di riavvolgimento rapido |
+| 1,0 | Passa alla modalità di riproduzione normale (la chiamata di `play` equivale a impostare la proprietà rate su 1.0) |
+| 0,0 | Pauses (la chiamata di `pause` equivale all&#39;impostazione della proprietà rate su 0.0) |
