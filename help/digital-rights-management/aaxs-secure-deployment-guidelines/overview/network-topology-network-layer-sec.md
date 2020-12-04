@@ -4,11 +4,14 @@ title: Protezione dei livelli di rete
 uuid: bd53bccf-1130-4189-97ec-4259bd25762f
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '265'
+ht-degree: 0%
 
 ---
 
 
-# Protezione dei livelli di rete{#network-layer-security}
+# Protezione del livello di rete{#network-layer-security}
 
 Le vulnerabilità di sicurezza della rete sono tra le prime minacce a qualsiasi server applicazioni rivolto a Internet o Intranet. Questa sezione descrive il processo di indurimento degli host sulla rete rispetto a tali vulnerabilità. Si occupa della segmentazione della rete, del protocollo di controllo della trasmissione/del protocollo Internet (TCP/IP) e dell&#39;uso di firewall per la protezione dell&#39;host.
 
@@ -24,11 +27,11 @@ Nella tabella seguente sono illustrate le tecniche più comuni per ridurre le vu
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Zone demilitarizzate (DMZ) </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">La segmentazione deve esistere in almeno due livelli con il server applicazione utilizzato per eseguire Adobe Access posto dietro il firewall interno. Separare la rete esterna dalla rete perimetrale che contiene i server Web, che a sua volta deve essere separata dalla rete interna. Usate i firewall per implementare i livelli di separazione. Categorizzare e controllare il traffico che passa attraverso ciascun livello di rete per garantire che sia consentito solo il minimo assoluto di dati richiesti. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">La segmentazione deve esistere in almeno due livelli con il server applicazione utilizzato per eseguire  Accesso Adobe posizionato dietro il firewall interno. Separare la rete esterna dalla rete perimetrale che contiene i server Web, che a sua volta deve essere separata dalla rete interna. Usate i firewall per implementare i livelli di separazione. Categorizzare e controllare il traffico che passa attraverso ciascun livello di rete per garantire che sia consentito solo il minimo assoluto di dati richiesti. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Indirizzi IP privati </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Utilizzate Network Address Translation (NAT) con indirizzi IP privati RFC 1918 sui server delle applicazioni Adobe Access. Assegnate indirizzi IP privati (10.0.0.0/8, 172.16.0.0/12 e 192.168.0.0/16) per rendere più difficile per un utente malintenzionato indirizzare il traffico da e verso un host interno NAT attraverso Internet. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Utilizzate Network Address Translation (NAT) con gli indirizzi IP privati RFC 1918 sui server dell'applicazione di accesso  Adobe. Assegnate indirizzi IP privati (10.0.0.0/8, 172.16.0.0/12 e 192.168.0.0/16) per rendere più difficile per un utente malintenzionato indirizzare il traffico da e verso un host interno NAT attraverso Internet. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Firewall </p> </td> 
