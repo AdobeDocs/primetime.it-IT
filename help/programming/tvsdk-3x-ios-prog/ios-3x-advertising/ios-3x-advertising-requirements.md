@@ -1,18 +1,21 @@
 ---
-description: Puoi inserire annunci nel tuo VOD e contenuti live/lineari utilizzando l'interfaccia di decisione di Adobe Primetime.
-seo-description: Puoi inserire annunci nel tuo VOD e contenuti live/lineari utilizzando l'interfaccia di decisione di Adobe Primetime.
+description: Puoi inserire annunci nel tuo VOD e contenuti live/lineari utilizzando l'interfaccia  Adobe Primetime e decisionali.
+seo-description: Puoi inserire annunci nel tuo VOD e contenuti live/lineari utilizzando l'interfaccia  Adobe Primetime e decisionali.
 seo-title: Requisiti di pubblicità
 title: Requisiti di pubblicità
 uuid: 0287f1e4-746f-42e5-b811-409064dd9b13
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '247'
+ht-degree: 0%
 
 ---
 
 
 # Requisiti di pubblicità {#advertising-requirements}
 
-Puoi inserire annunci nel tuo VOD e contenuti live/lineari utilizzando l&#39;interfaccia di decisione di Adobe Primetime.
+Puoi inserire annunci nel tuo VOD e contenuti live/lineari utilizzando l&#39;interfaccia  Adobe Primetime e decisionali.
 
 <!--<a id="section_A2966DC850E140FE9400A1D9E412F819"></a>-->
 
