@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Applicazione Jailbreak (richiede  Adobe Primetime) {#jailbreak-enforcement-requires-adobe-primetime}
 
-Sulle piattaforme che supportano il rilevamento delle interruzioni di chiamata (come dispositivi mobili Android e iOS), l&#39;attivazione dell&#39;imposizione delle interruzioni di chiamata non consente la riproduzione del contenuto se [!DNL jailbreak/root] è stato rilevato sul dispositivo.
+Sulle piattaforme che supportano il rilevamento delle interruzioni di chiamata (come dispositivi mobili Android e iOS), l&#39;attivazione dell&#39;imposizione delle interruzioni di chiamata non consente la riproduzione del contenuto se sul dispositivo è stato rilevato [!DNL jailbreak/root].
 
 >[!NOTE]
 >
