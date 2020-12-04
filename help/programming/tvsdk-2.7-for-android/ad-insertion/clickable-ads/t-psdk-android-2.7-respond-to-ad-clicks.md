@@ -6,6 +6,9 @@ title: Rispondi ai clic sugli annunci
 uuid: 58efaba5-d0f6-4ddd-9628-6bc065cc95d8
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '357'
+ht-degree: 0%
 
 ---
 
@@ -17,13 +20,13 @@ TVSDK fornisce informazioni utili per agire sugli annunci click-through. Durante
 Per TVSDK per Android, è possibile fare clic solo sugli annunci lineari.
 Quando un utente fa clic su un annuncio o su un pulsante correlato, l&#39;applicazione deve rispondere. TVSDK fornisce informazioni sull’URL di destinazione per il clic.
 
-1. Per impostare un listener di eventi per TVSDK e fornire le informazioni di click-through, registratevi `AdClickedEventListener.onAdClicked`.
+1. Per impostare un listener di eventi per TVSDK e fornire le informazioni relative al click-through, registrare `AdClickedEventListener.onAdClicked`.
 
    Quando un utente fa clic su un annuncio o su un pulsante correlato, TVSDK invia la notifica, incluse le informazioni sulla destinazione del clic.
 1. Monitora le interazioni degli utenti sugli annunci cliccabili.
-1. Quando l’utente tocca o fa clic sull’annuncio o sul pulsante, per inviare una notifica a TVSDK, chiama `notifyClick` l’ `MediaPlayerView`.
-1. Ascoltare l’ `onAdClick(AdClickEvent event)` evento da TVSDK.
-1. Per recuperare l’URL click-through e le relative informazioni, utilizzate i metodi getter per l’ `AdClickEvent` istanza.
+1. Quando l&#39;utente tocca o fa clic sull&#39;annuncio o sul pulsante, per inviare una notifica a TVSDK, chiama `notifyClick` sull&#39; `MediaPlayerView`.
+1. Ascoltare l&#39;evento `onAdClick(AdClickEvent event)` da TVSDK.
+1. Per recuperare l&#39;URL click-through e le relative informazioni, utilizzate i metodi getter per l&#39;istanza `AdClickEvent`.
 1. Metti in pausa il video.
 
    Per ulteriori informazioni sull’interruzione del video, consultate messa in pausa-ripresa-riproduzione.
