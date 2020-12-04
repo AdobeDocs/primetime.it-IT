@@ -6,6 +6,9 @@ title: Inizializzare e configurare l'analisi video
 uuid: d1dc9425-e67c-4e13-aee7-302149352506
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '631'
+ht-degree: 0%
 
 ---
 
@@ -17,21 +20,21 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 Prima di attivare il tracciamento video (heartbeat video), accertatevi di disporre dei seguenti elementi:
 
 * TVSDK per iOS
-* Informazioni su configurazione/inizializzazione - Contattate il rappresentante Adobe per ottenere informazioni specifiche sull’account di tracciamento video:
+* Informazioni di configurazione/inizializzazione - Contattate il rappresentante del Adobe  per informazioni specifiche sull’account di tracciamento video:
 
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json </span> </td> 
-   <td colname="col2"> <p>Importante:  Il nome del file di configurazione JSON deve restare <span class="codeph"> ADBMobileConfig.json </span>. Impossibile modificare il nome e il percorso di questo file di configurazione. Il percorso di questo file deve essere <span class="codeph"> &lt;source root&gt;/AdobeMobile </span>. </p> </td> 
+   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json  </span> </td> 
+   <td colname="col2"> <p>Importante:  Il nome del file di configurazione JSON deve rimanere <span class="codeph"> ADBMobileConfig.json </span>. Impossibile modificare il nome e il percorso di questo file di configurazione. Il percorso di questo file deve essere <span class="codeph"> &lt;source root&gt;/AdobeMobile </span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> Endpoint del server di tracciamento AppMeasurement </span> </td> 
-   <td colname="col2"> L'URL dell'endpoint della raccolta back-end di Adobe Analytics (ex SiteCatalyst). </td> 
+   <td colname="col1"> <span class="codeph"> Endpoint del server  </span> di tracciamento AppMeasurement </td> 
+   <td colname="col2"> L'URL dell'endpoint della raccolta back-end di Adobe Analytics  (precedentemente SiteCatalyst). </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Endpoint del server di tracciamento analisi video </td> 
-   <td colname="col2"> URL dell'endpoint della raccolta back-end di analisi video. Qui vengono inviate tutte le chiamate di tracciamento heartbeat video. <p>Suggerimento:  L’URL del server di tracciamento dei visitatori è lo stesso dell’URL del server di tracciamento delle analisi. Per informazioni sull’implementazione del servizio ID visitatori, consulta <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementazione del servizio ID </a>. </p> </td> 
+   <td colname="col2"> URL dell'endpoint della raccolta back-end di analisi video. Qui vengono inviate tutte le chiamate di tracciamento heartbeat video. <p>Suggerimento:  L’URL del server di tracciamento dei visitatori è lo stesso dell’URL del server di tracciamento delle analisi. Per informazioni sull'implementazione del servizio ID visitatori, vedi <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementare il servizio ID </a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Nome account </td> 
@@ -43,14 +46,14 @@ Prima di attivare il tracciamento video (heartbeat video), accertatevi di dispor
   </tr> 
   <tr> 
    <td colname="col1"> Editore </td> 
-   <td colname="col2"> Si tratta dell'ID editore, fornito ai clienti dal loro rappresentante Adobe. <p>Suggerimento:  Questo ID non è solo una stringa con il nome del marchio o del televisore. </p> </td> 
+   <td colname="col2"> Si tratta dell'ID editore, fornito ai clienti dal rappresentante del Adobe . <p>Suggerimento:  Questo ID non è solo una stringa con il nome del marchio o del televisore. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 Per configurare il tracciamento video nel lettore:
 
-1. Verificate che le opzioni di caricamento nel file della `ADBMobileConfig.json` risorsa siano corrette.
+1. Verificare che le opzioni relative al tempo di caricamento nel file di risorse `ADBMobileConfig.json` siano corrette.
 
    ```
    { 
@@ -83,14 +86,14 @@ Per configurare il tracciamento video nel lettore:
 
    Per configurare le opzioni di caricamento:
 
-   1. Verificate che il `ADBMobileConfig.json` file contenga i valori appropriati forniti da Adobe.
-   1. Verificate che il file si trovi nella `AdobeMobile` cartella.
+   1. Verificare che il file `ADBMobileConfig.json` contenga i valori appropriati forniti dal Adobe .
+   1. Verificate che il file si trovi nella cartella `AdobeMobile`.
 
       Questa cartella deve trovarsi nella radice della struttura di origine dell&#39;applicazione.
    1. Compilate e create l&#39;applicazione.
    1. Implementare ed eseguire l&#39;applicazione fornita in bundle.
 
-      Per ulteriori informazioni su queste impostazioni AppMeasurement, vedi [Misurazione dei video in Adobe Analytics](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/video/).
+      Per ulteriori informazioni su queste impostazioni AppMeasurement, vedere [Misurazione del video in  Adobe Analytics](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/video/).
 1. Inizializzare e configurare i metadati di tracciamento heartbeat video.
 
    >[!IMPORTANT]
