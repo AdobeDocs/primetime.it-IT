@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Memorizzazione delle credenziali{#storing-credentials}
 
-L’SDK supporta diversi metodi di memorizzazione delle credenziali (un certificato di chiave pubblica e la relativa chiave privata associata), incluso in un file HSM o PKCS12. Le credenziali vengono utilizzate quando è richiesta la chiave privata (ad esempio, per consentire al packager di firmare i metadati, o per consentire al server licenze di decrittografare i dati crittografati con la chiave pubblica License Server o Trasporto). Per garantire la sicurezza del contenuto e del server licenze, è necessario proteggere attentamente le chiavi private. PKCS12 è un formato standard per un file contenente una credenziale crittografata con una password. L&#39;estensione .pfx del file viene comunemente utilizzata per i file di questo formato.
+L’SDK supporta diversi metodi di memorizzazione delle credenziali (un certificato di chiave pubblica e la relativa chiave privata associata), incluso in un file HSM o PKCS12. Le credenziali vengono utilizzate quando è richiesta la chiave privata (ad esempio, per consentire al packager di firmare i metadati, o per consentire al server licenze di decrittografare i dati crittografati con la chiave pubblica License Server o Transport). Per garantire la sicurezza del contenuto e del server licenze, è necessario proteggere attentamente le chiavi private. PKCS12 è un formato standard per un file contenente una credenziale crittografata con una password. L&#39;estensione .pfx del file viene comunemente utilizzata per i file di questo formato.
 
 >[!NOTE]
 >
@@ -23,7 +23,7 @@ L’SDK supporta diversi metodi di memorizzazione delle credenziali (un certific
 >
 >A partire da Java1.7, Sun Java per Windows a 64 bit non supporta le interfacce PKCS11 che  Adobe Access DRM richiede per comunicare con i dispositivi HSM. Se intendete utilizzare un HSM, utilizzate una versione a 32 bit di Java o un JDK che supporti le interfacce PKCS11 complete.
 
-È possibile mantenere una chiave privata in un modulo di protezione hardware (HSM) e utilizzare l’SDK per trasmettere la credenziale ottenuta dall’HSM. Per utilizzare una credenziale memorizzata in un HSM, utilizzare un provider JCE in grado di comunicare con un HSM per ottenere una handle per la chiave privata. Trasmettete quindi l’handle della chiave privata, il nome del provider e il certificato contenente la chiave pubblica in `ServerCredentialFactory.getServerCredential()`.
+È possibile mantenere una chiave privata in un modulo di protezione hardware (HSM) e utilizzare l’SDK per trasmettere la credenziale ottenuta dall’HSM. Per utilizzare una credenziale memorizzata in un HSM, utilizzare un provider JCE in grado di comunicare con un HSM per ottenere una handle per la chiave privata. Trasmettete quindi l&#39;handle di chiave privata, il nome del provider e il certificato contenente la chiave pubblica su `ServerCredentialFactory.getServerCredential()`.
 
 Il provider SunPKCS11 è un esempio di provider JCE che può essere utilizzato per accedere a una chiave privata su un HSM (consultate la documentazione di Sun Java per istruzioni sull&#39;utilizzo di questo provider). Alcuni HSM dispongono anche di un SDK Java che include un provider JCE.
 
