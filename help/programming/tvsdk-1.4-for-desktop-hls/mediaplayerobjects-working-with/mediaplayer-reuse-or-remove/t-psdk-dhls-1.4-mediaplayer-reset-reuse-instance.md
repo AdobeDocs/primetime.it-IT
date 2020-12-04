@@ -6,6 +6,9 @@ title: Reimpostare o riutilizzare un'istanza di MediaPlayer
 uuid: b376096b-0aed-4ac2-96e5-e30a4eaf742e
 translation-type: tm+mt
 source-git-commit: c547002eb8946f8ccc5a79d0836f3f814e823b97
+workflow-type: tm+mt
+source-wordcount: '201'
+ht-degree: 0%
 
 ---
 
@@ -18,26 +21,26 @@ Quando reimpostate un’istanza di MediaPlayer, viene riportato al relativo stat
 
 Questa operazione è utile nei casi seguenti:
 
-* Per riutilizzare un’ `MediaPlayer` istanza occorre caricarne una nuova `MediaResource` (contenuto video) e sostituire l’istanza precedente.
+* Per riutilizzare un&#39;istanza `MediaPlayer` è necessario caricare una nuova `MediaResource` (contenuto video) e sostituire l&#39;istanza precedente.
 
-   La reimpostazione consente di riutilizzare l’ `MediaPlayer` istanza senza sovraccaricare le risorse, ricreare l’istanza `MediaPlayer`e riallocare le risorse. I metodi `replaceCurrentItem` e `replaceCurrentResource` i metodi eseguono automaticamente questi passaggi, senza dover chiamare il metodo reset.
+   La reimpostazione consente di riutilizzare l&#39;istanza `MediaPlayer` senza sovraccaricare le risorse, ricreare l&#39;istanza `MediaPlayer` e riallocare le risorse. I metodi `replaceCurrentItem` e `replaceCurrentResource` eseguono automaticamente questi passaggi senza dover chiamare il metodo reset.
 
-* Quando `MediaPlayer` ha uno stato di ERRORE e deve essere cancellato.
+* Quando il `MediaPlayer` ha uno stato di ERRORE e deve essere cancellato.
 
    >[!IMPORTANT]
    >
    >Questo è l&#39;unico modo per recuperare dallo stato di ERRORE.
 
-1. Chiamata `reset` per restituire l’ `MediaPlayer` istanza allo stato non inizializzato:
+1. Chiamare `reset` per restituire l&#39;istanza `MediaPlayer` allo stato non inizializzato:
 
    ```
    function reset():void; 
    ```
 
-1. Utilizzate `MediaPlayer.replaceCurrentItem` o `MediaPlayer.replaceCurrentResource` per caricare un altro `MediaResource`.
+1. Utilizzare `MediaPlayer.replaceCurrentItem` o `MediaPlayer.replaceCurrentResource` per caricare un&#39;altra `MediaResource`.
 
    >[!TIP]
    >
    >Per cancellare un errore, caricate lo stesso `MediaResource`.
 
-1. Quando ricevete il messaggio `MediaPlaybackStatusChangeEvent.STATUS_CHANGED` con lo `PREPARED` stato, avviate la riproduzione.
+1. Quando si riceve il `MediaPlaybackStatusChangeEvent.STATUS_CHANGED` con lo stato `PREPARED`, avviare la riproduzione.
