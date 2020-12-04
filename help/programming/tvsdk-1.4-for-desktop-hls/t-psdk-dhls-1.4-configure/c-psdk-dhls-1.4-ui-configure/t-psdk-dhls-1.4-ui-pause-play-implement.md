@@ -6,6 +6,9 @@ title: Riproduzione e pausa di un video
 uuid: 04b3b23f-5ef1-4cc4-a22f-f6ffa9cefce5
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '129'
+ht-degree: 0%
 
 ---
 
@@ -28,6 +31,6 @@ Potete aggiungere il comportamento TVSDK per mettere in pausa e riprodurre i pul
       function pause():void;
       ```
 
-1. Utilizzate il callback per l&#39; `MediaPlayerStatusChangeEvent.STATUS_CHANGED` evento per verificare la presenza di errori o per eseguire altre azioni appropriate.
+1. Utilizzare il callback per l&#39;evento `MediaPlayerStatusChangeEvent.STATUS_CHANGED` per verificare la presenza di errori o per eseguire altre azioni appropriate.
 
    TVSDK chiama questo callback quando viene chiamato il metodo pause o play. TVSDK trasmette informazioni sulla modifica dello stato nel callback, incluso il nuovo stato, ad esempio PAUSED o PLAYING.
