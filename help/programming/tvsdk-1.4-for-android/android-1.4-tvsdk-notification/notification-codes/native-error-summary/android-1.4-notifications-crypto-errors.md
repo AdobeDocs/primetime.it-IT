@@ -1,18 +1,21 @@
 ---
-description: Il modulo di crittografia del motore video Adobe restituisce queste notifiche nell'oggetto metadati NATIVE_ERROR.
-seo-description: Il modulo di crittografia del motore video Adobe restituisce queste notifiche nell'oggetto metadati NATIVE_ERROR.
+description: Il modulo di crittografia del motore video  Adobe restituisce queste notifiche nell'oggetto metadati NATIVE_ERROR.
+seo-description: Il modulo di crittografia del motore video  Adobe restituisce queste notifiche nell'oggetto metadati NATIVE_ERROR.
 seo-title: NATIVE_ERROR Crypto values
 title: NATIVE_ERROR Crypto values
 uuid: 5e86ba61-93e9-47cf-adad-8794957a1f7c
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '105'
+ht-degree: 6%
 
 ---
 
 
 # NATIVE_ERROR: Valori Crypto{#native-error-crypto-values}
 
-Il modulo di crittografia del motore video Adobe restituisce queste notifiche nell&#39;oggetto metadati NATIVE_ERROR.
+Il modulo di crittografia del motore video  Adobe restituisce queste notifiche nell&#39;oggetto metadati NATIVE_ERROR.
 
 | Valore per la chiave di metadati NATIVE_ERROR_CODE | Valore per la chiave di metadati NATIVE_ERROR_NAME | Significato |
 |---|---|---|
