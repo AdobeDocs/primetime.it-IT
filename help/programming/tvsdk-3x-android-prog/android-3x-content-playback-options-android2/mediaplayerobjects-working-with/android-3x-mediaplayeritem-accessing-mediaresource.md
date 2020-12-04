@@ -6,6 +6,9 @@ title: Metodi MediaPlayerItem per accedere alle informazioni MediaResource
 uuid: 46845583-0a76-4411-a8bc-0a16ebfe8e6e
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '462'
+ht-degree: 0%
 
 ---
 
