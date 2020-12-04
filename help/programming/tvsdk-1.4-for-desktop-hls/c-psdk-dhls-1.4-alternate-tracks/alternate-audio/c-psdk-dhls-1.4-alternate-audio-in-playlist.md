@@ -6,6 +6,9 @@ title: Tracce audio alternative nella playlist
 uuid: ec98cb6d-aa82-4473-83b6-f12c875f17cb
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '297'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ Le tracce audio alternative, o l&#39;audio con rilegatura successiva, consentono
 >
 >Affinché l’audio alternativo sia associato alla traccia video del supporto principale, le marche temporali della traccia alternativa devono corrispondere alle marche temporali dell’audio nella traccia principale.
 
-La traccia audio principale è inclusa nella raccolta delle tracce audio con l&#39; `default` etichetta. I metadati per i flussi audio alternativi sono inclusi nella playlist nei `#EXT-X-MEDIA` tag con `TYPE=AUDIO`.
+La traccia audio principale è inclusa nella raccolta di tracce audio con l&#39;etichetta `default`. I metadati per i flussi audio alternativi sono inclusi nella playlist nei tag `#EXT-X-MEDIA` con `TYPE=AUDIO`.
 
 Ad esempio, un manifesto M3U8 che specifica più flussi audio alternativi potrebbe essere simile al seguente:
 
