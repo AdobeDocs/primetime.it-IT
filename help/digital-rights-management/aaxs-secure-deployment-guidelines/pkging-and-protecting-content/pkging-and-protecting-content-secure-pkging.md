@@ -11,11 +11,11 @@ ht-degree: 0%
 ---
 
 
-# Creazione sicura di contenuti {#securely-packaging-content}
+# Creazione sicura di pacchetti di contenuto {#securely-packaging-content}
 
 Il file di configurazione per lo strumento della riga di comando  Access Media Packager richiede una credenziale PKCS12 utilizzata durante la creazione del pacchetto.
 
-Negli strumenti della riga di comando Implementazione di riferimento, la password per il file di credenziali PKCS12 viene memorizzata nel file flashaccess.properties in un testo libero. Per questo motivo, prestare maggiore attenzione quando si protegge il computer che ospita questo file, e assicurarsi che si trovi in un ambiente sicuro. (Vedere Sicurezza [fisica e accesso](../../aaxs-secure-deployment-guidelines/physical-sec-and-access.md)).
+Negli strumenti della riga di comando Implementazione di riferimento, la password per il file di credenziali PKCS12 viene memorizzata nel file flashaccess.properties in un testo libero. Per questo motivo, prestare maggiore attenzione quando si protegge il computer che ospita questo file, e assicurarsi che si trovi in un ambiente sicuro. (Vedere [Sicurezza fisica e accesso](../../aaxs-secure-deployment-guidelines/physical-sec-and-access.md)).
 
 Il packager utilizza anche i certificati License Server e License Server Transport. L&#39;integrità e la riservatezza di tali informazioni devono essere protette. Solo le entità autorizzate devono poter utilizzare il packager. Se una delle chiavi private è compromessa, informa immediatamente Adobe Systems Incorporated in modo che il certificato possa essere revocato.
 
