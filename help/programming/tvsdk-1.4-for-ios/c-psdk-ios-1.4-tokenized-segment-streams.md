@@ -6,15 +6,18 @@ title: Flussi di segmenti con token
 uuid: b17bb5bc-2029-4113-ac44-b1d30aa08ca6
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '198'
+ht-degree: 0%
 
 ---
 
 
-# Flussi di segmenti con token{#tokenized-segment-streams}
+# Flussi di segmenti token{#tokenized-segment-streams}
 
 I flussi HLS inviati tramite una rete CDN (Content Delivery Network) possono talvolta utilizzare token di autenticazione per le richieste di verifica del manifesto e del segmento. Questi token possono essere forniti come parametri URL o come intestazioni di cookie.
 
-I token forniti come cookie nella risposta del manifesto master (m3u8) non vengono condivisi con le richieste del segmento (ts) anche quando le richieste del segmento sono per lo stesso dominio. Per abilitare la condivisione di questi cookie in una richiesta di segmento, imposta la seguente proprietà sull’ `PTMetadata` istanza fornita all’elemento del lettore:
+I token forniti come cookie nella risposta del manifesto master (m3u8) non vengono condivisi con le richieste del segmento (ts) anche quando le richieste del segmento sono per lo stesso dominio. Per abilitare la condivisione di questi cookie in una richiesta di segmento, imposta la seguente proprietà sull&#39;istanza `PTMetadata` fornita all&#39;elemento del lettore: 
 
 ```
 PTMetadata *metadata = [[[PTMetadata alloc] init] autorelease]; 
