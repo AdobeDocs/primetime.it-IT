@@ -13,31 +13,31 @@ ht-degree: 0%
 ---
 
 
-# Implementazione di un ritorno rapido all&#39;interruzione dell&#39;annuncio{#implementing-an-early-ad-break-return}
+# Implementazione di un ritorno iniziale all&#39;interruzione dell&#39;annuncio{#implementing-an-early-ad-break-return}
 
 Per l&#39;inserimento di annunci in streaming dal vivo, potrebbe essere necessario uscire da un&#39;interruzione di annuncio prima che tutti gli annunci nell&#39;interruzione siano riprodotti al completamento.
 
 >[!NOTE]
 >
->È necessario iscriversi agli indicatori di annuncio in uscita/in della copia ( `#EXT-X-CUE-OUT`, `#EXT-X-CUE-IN`e `#EXT-X-CUE`).
+>È necessario abbonarsi ai marcatori di annunci in uscita/in di giunzione ( `#EXT-X-CUE-OUT`, `#EXT-X-CUE-IN` e `#EXT-X-CUE`).
 
 Di seguito sono riportati alcuni requisiti da tenere in considerazione:
 
-* Parse marker, ad esempio `EXT-X-CUE-IN` (o tag marker equivalente) che appaiono nei flussi lineari o FER.
+* Parse marker come `EXT-X-CUE-IN` (o tag marker equivalente) che appaiono nei flussi lineari o FER.
 
-   Registra i marcatori come marcatore per un punto di ritorno iniziale. Riproduci solo `adBreaks` fino alla posizione del marcatore durante la riproduzione, che supera la durata del `adBreak` marcatore `EXE-X-CUE-OUT` iniziale.
+   Registra i marcatori come marcatore per un punto di ritorno iniziale. Riproduci solo `adBreaks` fino alla posizione del marcatore durante la riproduzione, che supera la durata del `adBreak` contrassegnato dal marcatore `EXE-X-CUE-OUT` iniziale.
 
-* Se esistono due `EXT-X-CUE-IN` marcatori per lo stesso `EXT-X-CUE-OUT` marcatore, viene visualizzato il primo `EXT-X-CUE-IN` marcatore che viene conteggiato.
+* Se esistono due `EXT-X-CUE-IN` marcatori per lo stesso marcatore `EXT-X-CUE-OUT`, il primo marcatore `EXT-X-CUE-IN` visualizzato è quello che conta.
 
-* Se il `EXE-X-CUE-IN` marcatore compare nella timeline senza un `EXT-X-CUE-OUT` marcatore di interlinea, viene eliminato il `EXE-X-CUE-IN` marcatore.
+* Se il marcatore `EXE-X-CUE-IN` viene visualizzato nella timeline senza un marcatore `EXT-X-CUE-OUT` iniziale, il marcatore `EXE-X-CUE-IN` viene eliminato.
 
-   In uno streaming live, se il `EXT-X-CUE-OUT` marcatore di interlinea si è appena spostato fuori dalla finestra, TVSDK non vi risponderà.
+   In uno streaming live, se il marcatore `EXT-X-CUE-OUT` iniziale è appena stato spostato fuori dalla finestra, TVSDK non risponderà.
 
-* Quando si verifica un ritorno anticipato da un&#39;interruzione pubblicitaria, l&#39; `adBreak` esecuzione viene eseguita fino a quando l&#39;indicatore di riproduzione torna nella posizione originale quando l&#39;interruzione dell&#39;annuncio doveva terminare e riprendere la riproduzione del contenuto principale da tale posizione.
+* Quando si verifica un ritorno anticipato da un&#39;interruzione pubblicitaria, la riproduzione `adBreak` viene riprodotta fino al ritorno dell&#39;indicatore di riproduzione nella posizione originale quando l&#39;interruzione dell&#39;annuncio doveva terminare e riprendere la riproduzione del contenuto principale da tale posizione.
 
 ## SpliceOut e SpliceIn {#section_36DD55BA58084E21BD3DC039BB245C82}
 
-`SpliceOut` e `SpliceIn` i marcatori indicano l’inizio e la fine dell’interruzione dell’annuncio. La durata del `SpliceOut` tipo di `EXE-X-CUE` marcatore potrebbe essere zero e il `SpliceIn` tipo di `EXE-X-CUE` marcatore indica la fine dell’interruzione annuncio. Vengono visualizzati in un tag e differiscono per tipo.
+`SpliceOut` e  `SpliceIn` i marcatori indicano l’inizio e la fine dell’interruzione dell’annuncio. La durata del tipo `SpliceOut` del marcatore `EXE-X-CUE` potrebbe essere zero e il tipo `SpliceIn` del marcatore `EXE-X-CUE` indica la fine dell&#39;interruzione dell&#39;annuncio. Vengono visualizzati in un tag e differiscono per tipo.
 
 **Un marcatore con diversi tipi**
 
@@ -68,11 +68,11 @@ https://server-host/path/file57.ts
 https://server-host/path/file58.ts
 ```
 
-In un solo marcatore con tipi diversi, ad esempio, se la durata del `SpliceOut` tipo è zero, il `SpliceOut` e `SpliceIn` devono lavorare insieme per ogni interruzione di annuncio. Attualmente, un `SpliceOut` marcatore con una durata non pari a zero e che non necessita di `SpliceIn` marcatori di accoppiamento è più tipico.
+In un unico marcatore con tipi diversi, ad esempio, se la durata del tipo `SpliceOut` è zero, `SpliceOut` e `SpliceIn` devono funzionare insieme per ogni interruzione di annuncio. Attualmente, un marcatore `SpliceOut` con una durata diversa da zero e non richiede l&#39;associazione di marcatori `SpliceIn` è più tipico.
 
 **Due marcatori separati**
 
-Lo scenario più tipico è un `SpliceOut` marcatore con una durata diversa da zero e che non necessita dei `SpliceIn` marcatori di accoppiamento. In questo caso, un `SpliceIn` marcatore di accoppiamento indica la fine dell’interruzione dell’annuncio durante la riproduzione dell’interruzione dell’annuncio, ma l’interruzione dell’annuncio viene ridotta in corrispondenza della posizione del `SpliceIn` marcatore e la riproduzione del contenuto principale inizia da questa posizione.
+Lo scenario più tipico è un marcatore `SpliceOut` con una durata diversa da zero e che non necessita dei marcatori di accoppiamento `SpliceIn`. In questo caso, un indicatore di associazione `SpliceIn` indica la fine dell&#39;interruzione dell&#39;annuncio durante la riproduzione dell&#39;interruzione dell&#39;annuncio, ma l&#39;interruzione dell&#39;annuncio viene ridotta in corrispondenza della posizione del marcatore `SpliceIn` e il contenuto principale inizia a essere riprodotto in questa posizione.
 
 Ad esempio, di seguito sono riportati due marcatori separati:
 
