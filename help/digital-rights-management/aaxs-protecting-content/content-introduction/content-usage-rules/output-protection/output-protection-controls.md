@@ -44,7 +44,7 @@ Sono disponibili le seguenti opzioni/livelli di applicazione:
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">- </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Usa se disponibile</b> : Cercate di abilitare la protezione dell'output ACP e CGMS-A se disponibile e di consentire la riproduzione se non disponibile.  client Adobe Access 3.0 cercherà di abilitare sia ACP che CGMS-A, se possibile.  client Adobe Access 2.0 tenterà di abilitare solo ACP o CGMS-A. Ad esempio, il client di accesso al Adobe  tenterà di abilitare ACP o CGMS-A. Se il tentativo ha esito positivo, l'altra opzione non sarà abilitata. Se il tentativo non riesce, verrà effettuato un secondo tentativo per abilitare l'altra opzione. Anche se entrambi i tentativi non riescono, il contenuto verrà comunque riprodotto. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Usa se disponibile</b> : Se disponibili, provare a abilitare la protezione dell'output ACP e CGMS-A e consentire la riproduzione se non disponibile.  client Adobe Access 3.0 cercherà di abilitare sia ACP che CGMS-A, se possibile.  client Adobe Access 2.0 tenterà di abilitare solo ACP o CGMS-A. Ad esempio, il client di accesso al Adobe  tenterà di abilitare ACP o CGMS-A. Se il tentativo ha esito positivo, l'altra opzione non sarà abilitata. Se il tentativo non riesce, verrà effettuato un secondo tentativo per abilitare l'altra opzione. Anche se entrambi i tentativi non riescono, il contenuto verrà comunque riprodotto. </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">SÌ </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">SÌ </p> </td> 
   </tr> 
@@ -54,17 +54,17 @@ Sono disponibili le seguenti opzioni/livelli di applicazione:
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">- </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Usa CGMS-A se disponibile </b>— Tentate di abilitare la protezione dell'output CGMS-A se disponibile, ma consentite la riproduzione se non disponibile. La protezione non è disponibile sugli ACP.  client Access 2.0 di Adobe non supporta questa opzione. Se impostato, un client di accesso  Adobe 2.0 si comporta come se fosse stata specificata l'opzione "Nessuna protezione". </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Usa CGMS-A se disponibile  </b>— Tentate di abilitare la protezione dell'output CGMS-A se disponibile, ma consentite la riproduzione se non disponibile. La protezione non è disponibile sugli ACP.  client Access 2.0 di Adobe non supporta questa opzione. Se impostato, un client di accesso  Adobe 2.0 si comporta come se fosse stata specificata l'opzione "Nessuna protezione". </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">SÌ </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">- </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Nessuna protezione</b> — Per le uscite analogiche e digitali non viene applicata alcuna abilitazione alla protezione dell'uscita. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Nessuna protezione</b> : Per le uscite analogiche e digitali non viene applicata alcuna abilitazione alla protezione dell'uscita. </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">SÌ </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">SÌ </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Nessuna riproduzione</b> - Non consentire la riproduzione su dispositivi esterni per le uscite analogiche e digitali. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Nessuna riproduzione</b>  - Non consentire la riproduzione su dispositivi esterni per le uscite analogiche e digitali. </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">SÌ </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">SÌ </p> </td> 
   </tr> 
