@@ -4,6 +4,9 @@ title: Proprietà file di configurazione
 uuid: 13e158a6-c447-4e5e-884d-03fb4835c120
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '314'
+ht-degree: 0%
 
 ---
 
@@ -22,11 +25,11 @@ Prima di eseguire License Generator, specificate i valori per le proprietà Lice
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> licensegen.minClientVersion</span> </td> 
-   <td colname="2" class="- topic/entry "> Impostate la versione client minima supportata. Se non è impostato, per impostazione predefinita sono supportate tutte le versioni. Impostate questo valore per controllare in che modo i client meno recenti rispondono ai requisiti di licenza che non supportano. Specificate x (per Adobe Access x.0) dove x è il numero di rilascio principale. </td> 
+   <td colname="2" class="- topic/entry "> Impostate la versione client minima supportata. Se non è impostato, per impostazione predefinita sono supportate tutte le versioni. Impostate questo valore per controllare in che modo i client meno recenti rispondono ai requisiti di licenza che non supportano. Specificate x (per  Adobe Access x.0) dove x è il numero di rilascio principale. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> licensegen.keyServerCert</span> </td> 
-   <td colname="2" class="- topic/entry "> Certificato server chiavi (un certificato server licenze emesso da Adobe e utilizzato dal server chiavi). Questo certificato viene utilizzato solo se i metadati/criteri indicano che per la consegna delle chiavi ai dispositivi iOS è necessario un server chiavi. </td> 
+   <td colname="2" class="- topic/entry "> Certificato server chiavi (un certificato server licenze rilasciato  Adobe utilizzato dal server chiavi). Questo certificato viene utilizzato solo se i metadati/criteri indicano che per la consegna delle chiavi ai dispositivi iOS è necessario un server chiavi. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> licensegen.sign.certfile</span> </td> 
