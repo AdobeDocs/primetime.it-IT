@@ -9,6 +9,9 @@ topic-tags: release-notes
 products: SG_PRIMETIME
 translation-type: tm+mt
 source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+workflow-type: tm+mt
+source-wordcount: '543'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ Le note sulla versione di DRM 5.3.1 descrivono le nuove funzioni e i problemi no
 
 * **Arresto sicuro -** È possibile specificare se la riproduzione si arresta o continua alla fine di una finestra di riproduzione.
 * **Protezione dell&#39;output basata sulla risoluzione (RBOP) -** È possibile specificare i vincoli di output in base alle risoluzioni dei pixel.
-* **CDM Gating -** Per supportare HTML5, Adobe ha aggiornato il server delle licenze di implementazione di riferimento incluso con l’SDK Java Adobe Primetime DRM (già Adobe Access DRM) per poter utilizzare tutti i messaggi del protocollo DRM in un singolo endpoint URL. Questo consolidamento dei metodi URL HTTP è necessario per conformarsi alla specifica HTML5 EME (Encrypted Media Extension) richiesta a sua volta dai fornitori DRM CDM (Content Decryption Module). Precedentemente, questi erano gli unici endpoint URL esposti dal server licenze di implementazione di riferimento:
+* **CDM Gating -** Per supportare HTML5,  Adobe ha aggiornato il server delle licenze di implementazione di riferimento incluso con l’SDK Java  Adobe Primetime DRM (già  Adobe accesso  ad Access DRM) per poter utilizzare tutti i messaggi del protocollo DRM in un singolo endpoint URL. Questo consolidamento dei metodi URL HTTP è necessario per conformarsi alla specifica HTML5 EME (Encrypted Media Extension) richiesta a sua volta dai fornitori DRM CDM (Content Decryption Module). Precedentemente, questi erano gli unici endpoint URL esposti dal server licenze di implementazione di riferimento:
 
    * /flashaccess/i15n/v3 (Individualizzazione)
    * /flashaccess/license/v5 (richiesta di licenza)
@@ -36,9 +39,9 @@ Questa modifica è compatibile con le piattaforme non CDM, come Flash Player, An
 
 ## Problemi noti nella versione 5.3 {#known-issues}
 
-* `Hasher.bat (flashaccess-hasher.jar)` invia messaggi di registro a `flashaccess-global.log.`È necessario assicurarsi che il `flashaccess-global.log` file si trovi nella stessa directory con Hasher.bat.
+* `Hasher.bat (flashaccess-hasher.jar)` invia messaggi di registro a  `flashaccess-global.log.`È necessario assicurarsi che il  `flashaccess-global.log` file si trovi nella stessa directory con Hasher.bat.
 
-* L’output di alcune delle `toJSON()`chiamate restituiscono `Strings` che non sono completamente conformi a JSON o pienamente conformi in modo autonomo (ovvero, senza la composizione di strutture JSON).
+* L&#39;output di alcune delle `toJSON()`chiamate restituiscono `Strings` che non sono completamente conformi a JSON o pienamente conformi in modo autonomo (ovvero, senza la composizione di strutture JSON).
 
 * Il server chiavi Xbox accetta richieste chiave il cui valore di versione non è uguale a 1.
 
@@ -55,4 +58,4 @@ Diverse classi implementano un metodo toJSON() che dovrebbe restituire una rappr
 
 ## Risorse utili {#helpful-resources}
 
-* Consulta la documentazione completa della guida nella pagina Informazioni e supporto [di](https://helpx.adobe.com/support/primetime.html) Adobe Primetime.
+* Consulta la documentazione completa della guida in linea alla pagina [ Informazioni e supporto per Adobe Primetime](https://helpx.adobe.com/support/primetime.html).
