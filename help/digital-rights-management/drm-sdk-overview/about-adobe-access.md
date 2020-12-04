@@ -1,16 +1,19 @@
 ---
 description: Primetime DRM consente ai proprietari e ai distributori di contenuti di controllare come e dove possono essere distribuiti e sperimentati i loro contenuti, garantendo una protezione completa durante l'intero ciclo di vita dei contenuti. Crittografa i file video, che possono quindi essere trasmessi in streaming o scaricati sulle piattaforme Microsoft® Windows®, Apple® Mac OS®, Linux® e Android®, e applica modelli aziendali come il noleggio di video online. I consumatori possono godere di contenuti di alta qualità a proprio vantaggio, sia online che offline. Primetime DRM offre vantaggi chiave che i proprietari e i distributori di contenuti possono utilizzare per fornire rapidamente nuovi servizi che li distinguono dalla concorrenza.
 seo-description: Primetime DRM consente ai proprietari e ai distributori di contenuti di controllare come e dove possono essere distribuiti e sperimentati i loro contenuti, garantendo una protezione completa durante l'intero ciclo di vita dei contenuti. Crittografa i file video, che possono quindi essere trasmessi in streaming o scaricati sulle piattaforme Microsoft® Windows®, Apple® Mac OS®, Linux® e Android®, e applica modelli aziendali come il noleggio di video online. I consumatori possono godere di contenuti di alta qualità a proprio vantaggio, sia online che offline. Primetime DRM offre vantaggi chiave che i proprietari e i distributori di contenuti possono utilizzare per fornire rapidamente nuovi servizi che li distinguono dalla concorrenza.
-seo-title: Informazioni su Adobe Primetime DRM
-title: Informazioni su Adobe Primetime DRM
+seo-title: Informazioni su  Adobe Primetime DRM
+title: Informazioni su  Adobe Primetime DRM
 uuid: 4c445ccb-0a8e-490f-b840-8654fcaa106c
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '436'
+ht-degree: 0%
 
 ---
 
 
-# Informazioni su Adobe Primetime DRM{#about-adobe-primetime-drm}
+# Informazioni  Adobe Primetime DRM{#about-adobe-primetime-drm}
 
 Primetime DRM consente ai proprietari e ai distributori di contenuti di controllare come e dove possono essere distribuiti e sperimentati i loro contenuti, garantendo una protezione completa durante l&#39;intero ciclo di vita dei contenuti. Crittografa i file video, che possono quindi essere trasmessi in streaming o scaricati sulle piattaforme Microsoft® Windows®, Apple® Mac OS®, Linux® e Android®, e applica modelli aziendali come il noleggio di video online. I consumatori possono godere di contenuti di alta qualità a proprio vantaggio, sia online che offline. Primetime DRM offre vantaggi chiave che i proprietari e i distributori di contenuti possono utilizzare per fornire rapidamente nuovi servizi che li distinguono dalla concorrenza.
 
