@@ -17,7 +17,7 @@ ht-degree: 3%
 
 Potete visualizzare le didascalie durante la riproduzione del contenuto video.
 
-Per gestire le didascalie, è necessario aggiungere il listener di `AdobePSDK.PSDKEventType.CAPTIONS_UPDATED` eventi:
+Per gestire le didascalie, è necessario aggiungere il listener di eventi `AdobePSDK.PSDKEventType.CAPTIONS_UPDATED`:
 
 ```js
 ... 
