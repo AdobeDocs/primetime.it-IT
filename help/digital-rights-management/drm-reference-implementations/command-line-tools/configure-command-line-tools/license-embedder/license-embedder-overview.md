@@ -4,15 +4,18 @@ title: Panoramica
 uuid: 5487d1d3-7eb8-410d-a4b1-cde3e94c00a1
 translation-type: tm+mt
 source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+workflow-type: tm+mt
+source-wordcount: '180'
+ht-degree: 0%
 
 ---
 
 
 # Embedder delle licenze DRM {#license-embedder}
 
-Utilizzare [!DNL AdobeLicenseEmbedder.jar] per incorporare le licenze pregenerate nel contenuto protetto da Media Packager.
+Utilizzate [!DNL AdobeLicenseEmbedder.jar] per incorporare le licenze pregenerate nel contenuto protetto da Media Packager.
 
-## Utilizzo della riga di comando Incorpora licenza {#license-embedder-command-line-usage}
+## Utilizzo della riga di comando Embedder licenza {#license-embedder-command-line-usage}
 
 ```
 java -jar AdobeLicenseEmbedder.jar sourcefile destfile [options]
@@ -36,19 +39,19 @@ Nella tabella seguente sono descritte le opzioni della riga di comando che è po
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -l license-filename </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -l license-filename  </span> </td> 
    <td colname="2" class="- topic/entry "> Nome del file che include la licenza da incorporare. È possibile specificare più opzioni <span class="codeph"> -l </span> per incorporare più licenze. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -m metadata-nomefile </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -m metadata-nomefile  </span> </td> 
    <td colname="2" class="- topic/entry "> Specifica i metadati del contenuto per i quali è possibile generare una licenza. Questa opzione è necessaria per generare una licenza. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> -noprompt </span> </td> 
-   <td colname="2" class="- topic/entry "> Non chiedere se il file di destinazione deve essere sovrascritto. Se il file di destinazione esiste già e il <span class="codeph"> -o </span> non è stato applicato, si verifica un errore. </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> -noprompt  </span> </td> 
+   <td colname="2" class="- topic/entry "> Non chiedere se il file di destinazione deve essere sovrascritto. Se il file di destinazione esiste già e la <span class="codeph"> -o </span> non è stata applicata, si verifica un errore. </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> -o </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> -o  </span> </td> 
    <td colname="2" class="- topic/entry "> Se il file di destinazione esiste già, potete sovrascriverlo senza che venga richiesto. </td> 
   </tr> 
  </tbody> 
