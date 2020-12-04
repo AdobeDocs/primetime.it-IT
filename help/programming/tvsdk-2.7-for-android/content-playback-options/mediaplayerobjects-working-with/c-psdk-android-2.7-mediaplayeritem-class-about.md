@@ -6,6 +6,9 @@ title: Informazioni sulla classe MediaPlayerItem
 uuid: 2d37f358-d158-481b-81d5-27546e9c2e0e
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '176'
+ht-degree: 0%
 
 ---
 
@@ -16,9 +19,9 @@ L&#39;oggetto MediaPlayer rappresenta il lettore multimediale. Un elemento Media
 
 Dopo aver caricato correttamente l&#39;oggetto MediaResource, TVSDK crea un&#39;istanza della classe MediaPlayerItem per fornire l&#39;accesso a tale risorsa.
 
-Rappresenta `MediaResource` una richiesta emessa dal livello applicazione nell’ `MediaPlayer` istanza per caricare il contenuto.
+La `MediaResource` rappresenta una richiesta emessa dal livello applicazione nell&#39;istanza `MediaPlayer` per caricare il contenuto.
 
-Consente di `MediaPlayer` risolvere la risorsa multimediale, caricare il file manifesto associato e analizzare il manifesto. Questa è la parte asincrona del processo di caricamento delle risorse. L’ `MediaPlayerItem` istanza viene prodotta dopo che la risorsa è stata risolta e questa è una versione risolta di un `MediaResource`. TVSDK consente di accedere all’ `MediaPlayerItem` istanza appena creata tramite `MediaPlayer.CurrentItem`.
+La `MediaPlayer` risolve la risorsa multimediale, carica il file manifesto associato e analizza il manifesto. Questa è la parte asincrona del processo di caricamento delle risorse. L&#39;istanza `MediaPlayerItem` viene prodotta dopo che la risorsa è stata risolta e questa è una versione risolta di un `MediaResource`. TVSDK consente di accedere all&#39;istanza appena creata `MediaPlayerItem` tramite `MediaPlayer.CurrentItem`.
 
 >[!TIP]
 >
