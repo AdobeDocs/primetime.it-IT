@@ -6,6 +6,9 @@ title: Esempi di errori nell'intervallo di tempo
 uuid: 327b38dc-6aa3-49a7-b5e7-c343b704c5c3
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '130'
+ht-degree: 0%
 
 ---
 
