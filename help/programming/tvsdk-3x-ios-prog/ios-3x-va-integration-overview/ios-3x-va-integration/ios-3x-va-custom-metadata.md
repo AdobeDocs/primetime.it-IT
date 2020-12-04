@@ -6,11 +6,14 @@ title: Implementazione del supporto dei metadati personalizzato
 uuid: 229681f5-ff77-4321-8022-b8ccf2928fb3
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '94'
+ht-degree: 0%
 
 ---
 
 
-# Implementazione del supporto dei metadati personalizzato {#implement-custom-metadata-support}
+# Implementare il supporto dei metadati personalizzato {#implement-custom-metadata-support}
 
 Potete fornire metadati personalizzati su contenuto, annunci e chiamate di tracciamento dei capitoli utilizzando le funzioni di callback.
 
