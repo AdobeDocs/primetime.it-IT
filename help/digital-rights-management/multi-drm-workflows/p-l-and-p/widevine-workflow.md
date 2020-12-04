@@ -6,6 +6,9 @@ title: Flusso di lavoro Multi-DRM per Widevine e PlayReady
 uuid: 295a7024-353c-4ff5-a46a-927020834322
 translation-type: tm+mt
 source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+workflow-type: tm+mt
+source-wordcount: '379'
+ht-degree: 0%
 
 ---
 
@@ -20,9 +23,9 @@ Primetime TVSDK supporta la riproduzione di contenuto DASH crittografato con Wid
 >
 >Non è stato pianificato il backup su Android TVSDK 1.X per la riproduzione di contenuti DASH codificati con Widevine.
 
-## DASH Content e Common Encryption {#section_33A881158F724835B4B89AAE97302B17}
+## DASH Content and Common Encryption (Contenuto DASH e Cifratura comune){#section_33A881158F724835B4B89AAE97302B17}
 
-Il contenuto del trattino è costituito da un manifesto principale, scritto in xml, che punta a file video e audio per la riproduzione. Nell&#39;esempio sotto il manifesto DASH puntano a un URL per video, video/1080_30.mp4, e un URL audio, audio/1080_30.mp4, relativo all&#39;URL del manifesto.
+Il contenuto del trattino è costituito da un manifesto principale, scritto in xml, che punta a file video e audio per la riproduzione. Nell&#39;esempio sotto il manifesto DASH puntano a un URL per video, video/1080_30.mp4, e a un URL audio, audio/1080_30.mp4, relativo all&#39;URL del manifesto.
 
 ```
 <MPD xmlns="urn:mpeg:DASH:schema:MPD:2011" xmlns:cenc="urn:mpeg:cenc:2013" xmlns:scte35="urn:scte:scte35:2013" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"mediaPresentationDuration="PT30S" minBufferTime="PT8S" profiles="urn:mpeg:dash:profile:isoff-on-demand:2011" type="static" xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011 DASH-MPD.xsd">
@@ -44,7 +47,7 @@ Il contenuto del trattino è costituito da un manifesto principale, scritto in x
 </MPD>
 ```
 
-Di seguito è riportato un manifesto di esempio a cui è stata applicata la crittografia comune. Gli elementi XML di protezione del contenuto Widevine (i `<ContentProtection>` blocchi) nel manifesto contengono una casella pssh (Protection System Specific Header) con codifica base64. La casella pssh contiene i dati necessari per l&#39;inizializzazione della decrittazione del contenuto. Questi dati vengono incorporati anche nel contenuto video/audio a cui fa riferimento il manifesto. I contenuti DASH possono presentare più elementi di protezione dei contenuti, ad esempio 1 per PlayReady e 1 per Widevine.
+Di seguito è riportato un manifesto di esempio a cui è stata applicata la crittografia comune. Gli elementi XML di protezione del contenuto Widevine (i blocchi `<ContentProtection>`) nel manifesto contengono una casella pssh (Protection System Specific Header) con codifica base64. La casella pssh contiene i dati necessari per l&#39;inizializzazione della decrittazione del contenuto. Questi dati vengono incorporati anche nel contenuto video/audio a cui fa riferimento il manifesto. I contenuti DASH possono presentare più elementi di protezione dei contenuti, ad esempio 1 per PlayReady e 1 per Widevine.
 
 ```
 <?xml version="1.0" ?>
