@@ -4,13 +4,16 @@ title: Informazioni di sicurezza specifiche per il fornitore
 uuid: 23186770-c73a-4802-bc30-fa9e4b47d9ba
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '362'
+ht-degree: 0%
 
 ---
 
 
 # Informazioni di sicurezza specifiche per il fornitore{#vendor-specific-security-information}
 
-Questa sezione contiene informazioni relative alla sicurezza sui sistemi operativi e i server delle applicazioni incorporati nella soluzione Adobe Access.
+Questa sezione contiene informazioni relative alla sicurezza sui sistemi operativi e i server applicazione incorporati nella soluzione di accesso al Adobe .
 
 Utilizzare i collegamenti forniti in questa sezione per trovare informazioni di sicurezza specifiche per il fornitore per il sistema operativo e il server applicazioni in uso.
 
@@ -23,7 +26,7 @@ Durante la protezione del sistema operativo, implementate con attenzione le misu
 * Rimozione di servizi e applicazioni non necessari
 * Backup dei file
 
-Per informazioni sulla sicurezza dei sistemi operativi supportati da Adobe Access, vedere le risorse riportate nella tabella.
+Per informazioni di sicurezza sui sistemi operativi supportati da  Adobe Access, vedere le risorse in questa tabella.
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table-ugl-kjz-n4"> 
  <thead class="- topic/thead "> 
@@ -64,7 +67,7 @@ Nella tabella seguente sono descritti alcuni approcci potenziali per ridurre al 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Network Time Protocol (NTP) </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Sia per il corretto funzionamento che per l'analisi forense, dedicate tempo accurato ai server Adobe Access e ai pacchetti Adobe Access. Utilizzare una versione protetta di NTP per sincronizzare l'ora su tutti i sistemi connessi a Internet. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Sia per il corretto funzionamento che per l'analisi forense, mantenete un tempo preciso sui server di accesso  Adobe e sui pacchetti di accesso  Adobe. Utilizzare una versione protetta di NTP per sincronizzare l'ora su tutti i sistemi connessi a Internet. </p> </td> 
   </tr> 
  </tbody> 
 </table>
