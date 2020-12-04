@@ -6,8 +6,11 @@ title: Configurare l’interfaccia utente del lettore
 uuid: e8ffa4fc-d6bc-4db5-a4ef-2537b08b6e5d
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '85'
+ht-degree: 0%
 
 ---
 
 
-# Configurare l’interfaccia utente del lettore {#configure-the-player-user-interface}
+# Configurare l&#39;interfaccia utente del lettore {#configure-the-player-user-interface}
