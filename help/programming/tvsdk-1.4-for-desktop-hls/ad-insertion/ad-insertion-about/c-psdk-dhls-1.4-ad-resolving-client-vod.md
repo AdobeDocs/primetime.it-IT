@@ -6,11 +6,14 @@ title: VOD e risoluzione e inserimento
 uuid: c1017483-5b4f-4d71-9589-fb2327b4572b
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '222'
+ht-degree: 0%
 
 ---
 
 
-# VOD e risoluzione e inserimento{#vod-ad-resolving-and-insertion}
+# Risoluzione e inserimento di annunci VOD{#vod-ad-resolving-and-insertion}
 
 Per il contenuto video-on-demand (VOD), TVSDK inserisce e interrompe le inserzioni mediante l&#39;applicazione di una giunzione nel contenuto principale, in modo che la durata della timeline aumenti.
 
@@ -24,7 +27,7 @@ TVSDK inserisce gli annunci nei seguenti modi:
 
 >[!IMPORTANT]
 >
->Durante l&#39;implementazione di un&#39;applicazione personalizzata `AdPolicySelector`, è possibile assegnare un criterio diverso a ciascun tipo di `AdBreakTimelineItem` (preroll, rollio medio o post-roll) in `AdPolicyInfo`, in base al tipo di `AdBreakTimelineItem`. Ad esempio, potete mantenere il contenuto mid-roll dopo che è stato riprodotto ma rimuovere il contenuto pre-roll dopo che è stato riprodotto.
+>Durante l&#39;implementazione di un `AdPolicySelector` personalizzato, è possibile assegnare un criterio diverso a ciascun tipo di `AdBreakTimelineItem` (pre-roll, mid-roll o post-roll) in `AdPolicyInfo`, in base al tipo di `AdBreakTimelineItem`. Ad esempio, potete mantenere il contenuto mid-roll dopo che è stato riprodotto ma rimuovere il contenuto pre-roll dopo che è stato riprodotto.
 
 Dopo l&#39;avvio della riproduzione, non è possibile apportare modifiche aggiuntive al contenuto. Gli annunci non possono essere:
 
