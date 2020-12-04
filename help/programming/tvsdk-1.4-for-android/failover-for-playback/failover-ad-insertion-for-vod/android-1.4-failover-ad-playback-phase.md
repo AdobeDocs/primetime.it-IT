@@ -6,6 +6,9 @@ title: Fase ad-riproduzione
 uuid: 1bbcea08-3475-4a64-9f89-c455d5dd828e
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '198'
+ht-degree: 0%
 
 ---
 
@@ -30,4 +33,4 @@ Per tutte e tre le classi di errore, TVSDK inoltra all&#39;applicazione gli even
 
    La tua applicazione deve intraprendere l&#39;azione appropriata.
 
-Che si verifichino o meno errori, TVSDK chiama adAdBreakComplete per ogni `onAdBreakStart` e `onAdComplete` per ogni `onAdStart`. Tuttavia, se non è stato possibile scaricare i segmenti, potrebbero verificarsi degli spazi nella timeline. Quando gli spazi vuoti sono sufficientemente grandi, i valori nella posizione dell&#39;indicatore di riproduzione e l&#39;avanzamento degli annunci riportati potrebbero mostrare delle discontinuità.
+Che si verifichino o meno errori, TVSDK chiama adBreakComplete per ogni `onAdBreakStart` e `onAdComplete` ogni `onAdStart`. Tuttavia, se non è stato possibile scaricare i segmenti, potrebbero verificarsi degli spazi nella timeline. Quando gli spazi vuoti sono sufficientemente grandi, i valori nella posizione dell&#39;indicatore di riproduzione e l&#39;avanzamento degli annunci riportati potrebbero mostrare delle discontinuità.
