@@ -33,9 +33,9 @@ Prima di inviare un&#39;app iOS, dovete firmarla e pubblicarla su Apple.
 
 A causa della nuova firma, le informazioni di elenco consentite generate prima dell&#39;invio all&#39;Apple App Store non sono utilizzabili.
 
-Per utilizzare questo criterio di invio,  Adobe ha creato uno `machotools` strumento che imprime un&#39;impronta digitale all&#39;applicazione iOS per creare un valore digest, firmare questo valore e inserire questo valore nell&#39;applicazione iOS. Dopo aver eseguito l&#39;impronta digitale dell&#39;app iOS, potete inviare l&#39;app ad Apple App Store. Quando un utente esegue l&#39;app dall&#39;App Store, Primetime DRM esegue un calcolo runtime dell&#39;impronta digitale dell&#39;applicazione e lo conferma con il valore digest precedentemente immesso nell&#39;applicazione. Se l&#39;impronta digitale corrisponde, l&#39;app viene confermata come consentita nell&#39;elenco e il contenuto protetto può essere riprodotto.
+Per utilizzare questo criterio di invio,  Adobe ha creato uno strumento `machotools` che imprime un&#39;impronta digitale all&#39;applicazione iOS per creare un valore digest, firmare questo valore e inserire questo valore nell&#39;applicazione iOS. Dopo aver eseguito l&#39;impronta digitale dell&#39;app iOS, potete inviare l&#39;app ad Apple App Store. Quando un utente esegue l&#39;app dall&#39;App Store, Primetime DRM esegue un calcolo runtime dell&#39;impronta digitale dell&#39;applicazione e lo conferma con il valore digest precedentemente immesso nell&#39;applicazione. Se l&#39;impronta digitale corrisponde, l&#39;app viene confermata come consentita nell&#39;elenco e il contenuto protetto può essere riprodotto.
 
-Lo strumento  Adobe `machotools` è incluso nell’SDK iOS TVSDK, in [!DNL [...]/tools/DRM].
+Lo strumento  Adobe `machotools` è incluso nell&#39;SDK iOS TVSDK, in [!DNL [...]/tools/DRM].
 
 Per utilizzare `machotools`:
 
@@ -83,7 +83,7 @@ Per utilizzare `machotools`:
    Potete utilizzare il certificato autofirmato per firmare l&#39;app iOS.
 
 1. Aggiornare la posizione del file PFX e la password.
-1. Prima di creare l&#39;applicazione in Xcode, passare a **[!UICONTROL Build Phases]** > **[!UICONTROL Run Script]** e aggiungere il seguente comando allo script di esecuzione:
+1. Prima di creare l&#39;applicazione in Xcode, andare su **[!UICONTROL Build Phases]** > **[!UICONTROL Run Script]** e aggiungere il comando seguente allo script di esecuzione:
 
    ```shell
    mkdir -p "${PROJECT_DIR}/generatedRes" "${PROJECT_DIR}/machotools" sign  
@@ -100,7 +100,7 @@ Per utilizzare `machotools`:
    ```
 
 1. Create un nuovo criterio DRM o aggiornate il criterio esistente per includere il valore hash ID editore restituito.
-1. Utilizzando [!DNL AdobePolicyManager.jar], create un nuovo criterio DRM (aggiornate il criterio esistente) per includere nel [!DNL flashaccess-tools.properties] file incluso il valore hash ID editore restituito, un ID app facoltativo e gli attributi di versione min e max.
+1. Utilizzando [!DNL AdobePolicyManager.jar], create un nuovo criterio DRM (aggiornate il criterio esistente) per includere il valore hash ID editore restituito, un ID app facoltativo e gli attributi versione min e max nel file [!DNL flashaccess-tools.properties] incluso.
 
    ```shell
    java -jar libs/AdobePolicyManager.jar new app_allowlist.pol
