@@ -4,6 +4,9 @@ title: Creazione di un criterio tramite l'API Java
 uuid: c653548d-4abf-46b9-8669-d68b966da359
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '103'
+ht-degree: 0%
 
 ---
 
@@ -12,8 +15,8 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 Per creare un criterio utilizzando l&#39;API Java, effettuate le seguenti operazioni:
 
-1. Configurate l&#39;ambiente di sviluppo e includete tutti i file JAR menzionati in [Impostazione dell&#39;ambiente](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) di sviluppo all&#39;interno del progetto.
-1. Create un `com.adobe.flashaccess.sdk.policy.Policy` oggetto e specificatene le proprietà, ad esempio i diritti, la durata del caching delle licenze e la data di fine del criterio.
+1. Configurate l&#39;ambiente di sviluppo e includete tutti i file JAR menzionati in [Impostazione dell&#39;ambiente di sviluppo](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) all&#39;interno del progetto.
+1. Create un oggetto `com.adobe.flashaccess.sdk.policy.Policy` e specificatene le proprietà, quali i diritti, la durata del caching delle licenze e la data di fine del criterio.
 
    ```java
      // Create a new Policy object.  
@@ -49,7 +52,7 @@ Per creare un criterio utilizzando l&#39;API Java, effettuate le seguenti operaz
      }
    ```
 
-1. Serializzare l&#39; `Policy` oggetto e archiviarlo in un file o in un database.
+1. Serializzare l&#39;oggetto `Policy` e archiviarlo in un file o in un database.
 
    ```java
      // Serialize the policy  
@@ -63,4 +66,4 @@ Per creare un criterio utilizzando l&#39;API Java, effettuate le seguenti operaz
      out.close();
    ```
 
-Per l&#39;origine completa di questo codice di esempio, vedere *com.adobe.flashaccess.samples.policy.CreatePolicy* nella directory &quot; [!DNL samples]&quot; Strumenti della riga di comando di implementazione di riferimento.
+Per l&#39;origine completa di questo codice di esempio, vedere *com.adobe.flashaccess.samples.policy.CreatePolicy* nella directory Reference Implementation Command Line Tools &quot;[!DNL samples]&quot;.
