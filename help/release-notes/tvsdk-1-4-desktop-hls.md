@@ -60,7 +60,7 @@ In questa versione, questa funzione non è supportata in Apple Safari e Mozilla 
 
 * **Ad Fallback, Daisy concatenamento nella logica di selezione degli annunci (Zendesk #3103)** Per annunci VAST (creativi) con la regola di fallback abilitata, TVSDK tratta un annuncio con un tipo MIME non valido come annuncio vuoto e tenta di utilizzare gli annunci di fallback al suo posto. Potete configurare alcuni aspetti del comportamento di fallback.
 
-Per ulteriori informazioni, vedi [Fallback annunci per annunci](../programming/tvsdk-1.4-for-android/ad-insertion/ad-fallback/android-1.4-ad-fallback.md)VAST e VMAP.
+Per ulteriori informazioni, consultate [Ad fallback for VAST and VMAP ads](../programming/tvsdk-1.4-for-android/ad-insertion/ad-fallback/android-1.4-ad-fallback.md) (Annunci di fallback per VAST e VMAP annunci).
 
 **1.4.8**
 
@@ -91,9 +91,9 @@ Supporto per le installazioni locali del  Adobe Individualization Server per per
 
 **1.4.0**
 
-* **Segnalazione di blackout con sostituzione** di contenuti alternativi Nel quadro dell’aggiornamento TVSDK 1.4, TVSDK ora supporta anche l’accesso e la restituzione dai blackout regionali rispetto ai contenuti lineari. Il TVSDK ora può elaborare due file manifest in parallelo, principale e alternativo, per monitorare i segnali di blackout anche quando la programmazione alternativa viene mostrata al posto della programmazione originale.
+* **Segnalazione di blackout con** sostituzione di contenuti alternativiCome parte dell’aggiornamento TVSDK 1.4, TVSDK ora supporta anche l’accesso e la restituzione dai blackout regionali rispetto ai contenuti lineari. Il TVSDK ora può elaborare due file manifest in parallelo, principale e alternativo, per monitorare i segnali di blackout anche quando la programmazione alternativa viene mostrata al posto della programmazione originale.
 
-* **Rimuovi/Sostituisci annunci** C3 Ora, non è necessario alcun lavoro di preparazione aggiuntivo per inserire dinamicamente nuovi annunci nelle risorse video-on-demand (VOD) che escono dalla finestra C3. TVSDK fornisce ora un&#39;API per rimuovere intervalli di contenuto personalizzati e inserire nuovi annunci in modo dinamico. Questa nuova potente funzionalità è utile anche nei casi in cui i contenuti live/lineari vengono inviati in onda durante la trasmissione e immediatamente ridotti per essere utilizzati come contenuti on demand senza il tempo necessario per &quot;pulire&quot; la risorsa.
+* **Rimuovi/Sostituisci** Ads C3Now, non è necessario alcun lavoro di preparazione aggiuntivo per inserire dinamicamente nuovi annunci nelle risorse video-on-demand (VOD) che escono dalla finestra C3. TVSDK fornisce ora un&#39;API per rimuovere intervalli di contenuto personalizzati e inserire nuovi annunci in modo dinamico. Questa nuova potente funzionalità è utile anche nei casi in cui i contenuti live/lineari vengono inviati in onda durante la trasmissione e immediatamente ridotti per essere utilizzati come contenuti on demand senza il tempo necessario per &quot;pulire&quot; la risorsa.
 
 ## Problemi risolti {#resolved-issues}
 
@@ -358,7 +358,7 @@ In questa versione, è stato aggiunto il timeout globale per la richiesta di ann
 
 **Versione 1.4.21** (782)
 
-* Zendesk #19580 TVSDK attende il completamento del risolutore dei contenuti prima di inviare `PTTimedMetadataChangedNotification` le notifiche
+* Zendesk #19580 TVSDK attende il completamento del risolutore dei contenuti prima di inviare `PTTimedMetadataChangedNotification` notifiche
 
 **Nota**: Questo problema richiede il lettore Flash 21.0.0.182 o successivo.
 
@@ -658,7 +658,7 @@ Sono stati risolti dei problemi durante la ricerca del token del carattere jolly
 
 È stato corretto un Flash Player occasionale con Firefox su Mac quando un flusso, riprodotto su un monitor esterno, passava a un flusso bitrate più alto.(richiede l&#39;Flash Player 18.0.0.160)
 
-* Zendesk #3268 - Desktop: Il lettore video inizia lo sfarfallio dopo `+-` 40/50 secondi e inizia a scurire dopo `+-` 90 secondi
+* Zendesk #3268 - Desktop: Il lettore video inizia lo sfarfallio dopo `+-` 40/50 secondi e inizia a diventare nero dopo `+-` 90 secondi
 
 È stato risolto un problema su Mac Chrome a causa del quale il flusso iniziava a sfarfallare e alla fine diventava nero. (richiede l&#39;Flash Player 18.0.0.161)
 
@@ -711,8 +711,8 @@ i tipi mime per il formato HLS erano sensibili alla distinzione tra maiuscole e 
 
 **Versione 1.4.4**
 
-* Zendesk #1561 - Re: `[Adobe Primetime]` Aggiorna: Supporto del failover basato su client HLS per PROGRAM-DATE-TIME in PSDK desktop (richiede la versione di Flash Player 16.0.0.305 o successiva)
-* Zendesk #2197 - `[Ads]` Tracciamento ed errori
+* Zendesk #1561 - Re: `[Adobe Primetime]` Aggiornamento: Supporto del failover basato su client HLS per PROGRAM-DATE-TIME in PSDK desktop (richiede la versione di Flash Player 16.0.0.305 o successiva)
+* Zendesk #2197 - `[Ads]` Errori annuncio di tracciamento
 * Zendesk #2286 - Richieste di funzioni: Fornire informazioni sullo stato di caricamento degli annunci (VPAID)
 * Zendesk #2285 - Richiesta di funzioni: Ignora annuncio dopo una durata di timeout specificata
 * Bug #3921755 - Aggiornamento della libreria OpenSSL alla versione 1.0.1L nel Flash Player (richiede la versione di Flash Player 16.0.0.305 o successiva)
@@ -722,7 +722,7 @@ i tipi mime per il formato HLS erano sensibili alla distinzione tra maiuscole e 
 * Zendesk #1303 - Offset verticale per i sottotitoli codificati (richiede la versione di Flash Player 16.0.0.235 o successiva, data di rilascio prevista: dicembre 2014)
 * Zendesk #1870 - Sottotitoli codificati Accensione e disattivazione (richiede la versione di Flash Player 16.0.0.235 o successiva, data di rilascio prevista: dicembre 2014)
 * Zendesk #2110 - La riproduzione si blocca dopo aver provato ad entrare a schermo intero durante un annuncio VPAID (richiede la versione di Flash Player 16.0.0.235 o successiva, data di rilascio prevista: dicembre 2014)
-* Zendesk #2199 - Il giocatore non risponde quando `[VPAID]` cerca un annuncio pubblicitario passato
+* Zendesk #2199 - `[VPAID]` Il lettore non risponde quando cerca un&#39;interruzione pubblicitaria passata
 * Zendesk #2358 - Re: `[Analytics]` Dati capitolo errati
 
 **Versione 1.4.1**
@@ -740,7 +740,7 @@ i tipi mime per il formato HLS erano sensibili alla distinzione tra maiuscole e 
 * I sottotitoli codificati non funzionano con il contenuto solo audio, perché il sistema dei sottotitoli richiede il funzionamento del video.
 Senza video, non esiste una dimensione di visualizzazione e senza una dimensione di visualizzazione non è possibile visualizzare alcuna grafica per le didascalie.
 * L&#39;integrità del flusso è leggermente più lenta in Google Chrome a causa delle restrizioni sandbox Chrome.
-* In TVSDK 1.4, se disabilitate autoPlay, potrebbe verificarsi un errore DRM quando il lettore rimane inattivo per almeno un minuto. Per risolvere questo problema, quando disabilitate autoPlay ma precaricate le risorse, modificate `ReferenceCore.as` il contenuto di `onPlaybackManagerPrepared`:
+* In TVSDK 1.4, se disabilitate autoPlay, potrebbe verificarsi un errore DRM quando il lettore rimane inattivo per almeno un minuto. Per risolvere questo problema, quando disabilitate autoPlay ma precaricate le risorse, modificate `ReferenceCore.as` modificando il contenuto di `onPlaybackManagerPrepared`:
 
 ```
 if (_playbackManager.autoPlay) {
@@ -753,13 +753,13 @@ _playbackManager.pause();
 
 * **Versione 1.4.13** PTPLAY-8501 - Quando VMAP restituisce due annunci diretti MP4 non transcodificati, lo stesso fall back e lo stesso viene riprodotto due volte.
 
-* **Versione 1.4.2** Nella versione di Flash Player 16, un problema è stato identificato con la logica di &quot;switching down&quot; di ABR, dopo che il lettore si è trasformato in un evento di buffering vuoto. Il problema impedisce la disattivazione del bitrate in ambienti con larghezza di banda non corretta quando il lettore entra in uno stato di buffering. Per risolvere il problema, accertatevi che l&#39;app `BufferControlParameters.initialBufferTime` sia impostata come `BufferControlParameters.playbackBufferTime` temporaneamente durante lo stato di buffering (ovvero, su un `BufferEvent.BUFFERING_BEGIN` evento), quindi reimpostatela sui valori impostati per l&#39; `BufferEvent.BUFFERING_END` evento. La correzione di questo problema sarà disponibile nella prossima release della patch dell&#39;Flash Player 16.
+* **Versione 1.4.2** Nella versione di Flash Player 16, un problema è stato identificato con la logica di &quot;switching down&quot; di ABR, dopo che il lettore si è trasformato in un evento di buffering vuoto. Il problema impedisce la disattivazione del bitrate in ambienti con larghezza di banda non corretta quando il lettore entra in uno stato di buffering. Per risolvere il problema, accertatevi che l&#39;app abbia impostato il valore `BufferControlParameters.initialBufferTime` temporaneamente uguale a `BufferControlParameters.playbackBufferTime` durante lo stato di buffering (ovvero, in corrispondenza di un evento `BufferEvent.BUFFERING_BEGIN`), quindi reimpostarlo sui valori impostati per l&#39;evento `BufferEvent.BUFFERING_END`. La correzione di questo problema sarà disponibile nella prossima release della patch dell&#39;Flash Player 16.
 
 * **Versione 1.4.0**
 
    * PTPLAY-1634 - Lo stesso tag Subscribed ha marche temporali diverse in diverse finestre dal vivo. Quando le finestre attive si spostano, lo stesso tag in ognuna di esse deve avere le stesse marche temporali. Tuttavia, a volte gli stessi tag hanno marche temporali diverse.
    * PTPLAY-28: la timeline di MediaPlayer non include interruzioni vuote.
-   * Per l&#39;autorizzazione per lo streaming di contenuto da un dominio diverso è necessario un file di criteri per domini diversi (crossdomain.xml). [Impostazione di un file crossdomain.xml per lo streaming](https://www.adobe.com/devnet/adobe-media-server/articles/cross-domain-xml-for-streaming.html)HTTP.
+   * Per l&#39;autorizzazione per lo streaming di contenuto da un dominio diverso è necessario un file di criteri per domini diversi (crossdomain.xml). [Impostazione di un file crossdomain.xml per lo streaming](https://www.adobe.com/devnet/adobe-media-server/articles/cross-domain-xml-for-streaming.html) HTTP.
    * Bug #3694203 - In un flusso DVR, la ricerca dall&#39;interno di un mid-roll di riproduzione in un altro mid-roll ad cue può portare al blocco del browser
    * Bug #3753725 - selectPolicyForSeekIntoAd non prende in considerazione se l&#39;interruzione dell&#39;annuncio è stata osservata
    * Bug #3754529 - Gli annunci pre-roll non vengono rimossi dal flusso quando si cerca di nuovo in un flusso DVR live
@@ -769,4 +769,4 @@ _playbackManager.pause();
 
 ## Risorse utili {#helpful-resources}
 
-* Consulta la documentazione completa della guida [pagina Informazioni e supporto](https://helpx.adobe.com/support/primetime.html) di Adobe Primetime.
+* Consulta la documentazione completa della guida in linea alla pagina [ Informazioni e supporto per Adobe Primetime](https://helpx.adobe.com/support/primetime.html).
