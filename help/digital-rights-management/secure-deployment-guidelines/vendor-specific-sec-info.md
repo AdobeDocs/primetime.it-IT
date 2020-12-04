@@ -1,20 +1,23 @@
 ---
-description: I sistemi operativi e i server applicazioni sono inclusi nella soluzione Adobe Primetime DRM.
-seo-description: I sistemi operativi e i server applicazioni sono inclusi nella soluzione Adobe Primetime DRM.
+description: I sistemi operativi e i server applicazioni sono inclusi nella soluzione  Adobe Primetime DRM.
+seo-description: I sistemi operativi e i server applicazioni sono inclusi nella soluzione  Adobe Primetime DRM.
 seo-title: Informazioni di sicurezza specifiche per il fornitore
 title: Informazioni di sicurezza specifiche per il fornitore
 uuid: 331baa42-5e19-40a5-bc74-0b1a2cb9370e
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '387'
+ht-degree: 0%
 
 ---
 
 
 # Informazioni di sicurezza specifiche per il fornitore{#vendor-specific-security-information}
 
-I sistemi operativi e i server applicazioni sono inclusi nella soluzione Adobe Primetime DRM.
+I sistemi operativi e i server applicazioni sono inclusi nella soluzione  Adobe Primetime DRM.
 
-Per informazioni sulla sicurezza specifiche per il fornitore per il sistema operativo e il server applicazione in uso, vedere Utilizzo del server chiavi DRM di Adobe Primetime.
+Per informazioni sulla sicurezza specifiche per il fornitore per il sistema operativo e il server applicazione in uso, vedere Utilizzo del server chiavi  Adobe Primetime DRM.
 
 ## Informazioni sulla sicurezza del sistema operativo {#section_53CAD802FCA54C4D8CE0C4E1B3045E52}
 
@@ -27,7 +30,7 @@ Di seguito sono riportate alcune delle misure:
 * Rimozione di servizi e applicazioni non necessari
 * Backup dei file
 
-Seguono alcune informazioni sui sistemi operativi supportati da Adobe Primetime DRM:
+Seguono alcune informazioni sui sistemi operativi supportati da  Adobe Primetime DRM:
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_ugl_kjz_n4"> 
  <thead class="- topic/thead "> 
