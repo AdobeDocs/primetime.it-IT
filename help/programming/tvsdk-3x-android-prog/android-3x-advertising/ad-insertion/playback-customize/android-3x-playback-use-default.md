@@ -19,9 +19,9 @@ Puoi scegliere di utilizzare i comportamenti annunci predefiniti.
 
 1. Per utilizzare i comportamenti predefiniti, effettuare una delle seguenti operazioni:
 
-   * Se implementate la vostra `AdvertisingFactory` classe, restituite null per `createAdPolicySelector`.
+   * Se implementate la vostra classe `AdvertisingFactory`, restituite null per `createAdPolicySelector`.
 
-   * Se non disponete di un&#39;implementazione personalizzata per la `AdvertisingFactory` classe, TVSDK utilizza un selettore di criteri di annunci predefinito.
+   * Se non disponete di un&#39;implementazione personalizzata per la classe `AdvertisingFactory`, TVSDK utilizza un selettore di criteri di annunci predefinito.
 
 ## Configurare la riproduzione personalizzata {#set-up-customized-playback}
 
@@ -30,17 +30,17 @@ Potete personalizzare o ignorare i comportamenti degli annunci.
 Prima di poter personalizzare o ignorare i comportamenti degli annunci, registra l&#39;istanza dei criteri degli annunci con .
 Per personalizzare i comportamenti degli annunci, effettuate una delle seguenti operazioni:
 
-* Implementare l&#39; `AdPolicySelector` interfaccia e tutti i relativi metodi.
+* Implementare l&#39;interfaccia `AdPolicySelector` e tutti i relativi metodi.
 
-   Questa opzione è consigliata se avete la necessità di ignorare **tutti** i comportamenti di annunci predefiniti.
+   Questa opzione è consigliata se dovete ignorare **all** i comportamenti annunci predefiniti.
 
-* Estendete la `DefaultAdPolicySelector` classe e fornite implementazioni solo per quei comportamenti che richiedono la personalizzazione.
+* Estendete la classe `DefaultAdPolicySelector` e fornite implementazioni solo per quei comportamenti che richiedono la personalizzazione.
 
-   Questa opzione è consigliata se dovete ignorare solo **alcuni** comportamenti predefiniti.
+   Questa opzione è consigliata se è necessario ignorare solo **alcuni** dei comportamenti predefiniti.
 
 Per personalizzare i comportamenti degli annunci:
 
-1. Implementare l&#39; `AdPolicySelector` interfaccia e tutti i relativi metodi.
+1. Implementare l&#39;interfaccia `AdPolicySelector` e tutti i relativi metodi.
 1. Assegnate l&#39;istanza del criterio che deve essere utilizzata da TVSDK tramite il modulo pubblicitario.
 
    >[!NOTE]
