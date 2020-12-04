@@ -4,6 +4,9 @@ title: Utilizzo di Policy Manager
 uuid: 729aa6bc-8851-40e3-8b86-629a4786575b
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '58'
+ht-degree: 0%
 
 ---
 
