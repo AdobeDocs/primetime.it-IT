@@ -6,6 +6,9 @@ title: Notifiche per i tag manifest
 uuid: 87bee41b-b44e-4d12-afd2-7a63023f992c
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '231'
+ht-degree: 0%
 
 ---
 
@@ -16,9 +19,9 @@ La proprietà MediaPlayerItem.timedMetadata consente di accedere a tutti gli ogg
 
 Potete monitorare i metadati temporizzati ascoltando i seguenti eventi, che notificano all’applicazione le relative attività:
 
-* `MediaPlayerItemEvent.ITEM_CREATED`: L&#39;elenco iniziale di `TimedMetadata` oggetti è disponibile dopo la creazione `MediaPlayerItem` . Questo evento notifica l’applicazione in caso di evento.
+* `MediaPlayerItemEvent.ITEM_CREATED`: L&#39;elenco iniziale di  `TimedMetadata` oggetti è disponibile dopo la creazione dell&#39; `MediaPlayerItem` oggetto. Questo evento notifica l’applicazione in caso di evento.
 
-* `MediaPlayerItemEvent.ITEM_UPDATED`: Per i flussi live/lineari in cui il manifest/playlist viene aggiornato periodicamente, è possibile che nella playlist/nel manifesto aggiornato vengano visualizzati tag personalizzati aggiuntivi, pertanto è possibile aggiungere alla `MediaPlayerItem.timedMetadata` proprietà ulteriori oggetti TimedMetadata. Questo evento notifica l’applicazione in caso di evento.
+* `MediaPlayerItemEvent.ITEM_UPDATED`: Per i flussi live/lineari in cui il manifest/playlist viene aggiornato periodicamente, è possibile che nella playlist/nel manifesto aggiornato vengano visualizzati tag personalizzati aggiuntivi, pertanto è possibile aggiungere alla  `MediaPlayerItem.timedMetadata` proprietà ulteriori oggetti TimedMetadata. Questo evento notifica l’applicazione in caso di evento.
 
-* `TimedMetadataEvent.TIMED_METADATA_AVAILABLE`: Ogni volta che viene creato un nuovo `TimedMetadata` oggetto, questo evento viene inviato dall&#39; `MediaPlayer`. Questo evento non viene inviato per l&#39; `TimedMetadata` oggetto creato durante la fase di inizializzazione.
+* `TimedMetadataEvent.TIMED_METADATA_AVAILABLE`: Ogni volta che viene creato un nuovo  `TimedMetadata` oggetto, l&#39;evento viene inviato dall&#39;utente  `MediaPlayer`. Questo evento non viene inviato per l&#39;oggetto `TimedMetadata` creato durante la fase di inizializzazione.
 
