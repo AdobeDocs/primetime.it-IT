@@ -1,18 +1,21 @@
 ---
 description: 'null'
 seo-description: 'null'
-seo-title: Sostituire gli intervalli di tempo con un annuncio pubblicitario Adobe Primetime
-title: Sostituire gli intervalli di tempo con un annuncio pubblicitario Adobe Primetime
+seo-title: 'Sostituire gli intervalli di tempo con un annuncio pubblicitario Adobe Primetime '
+title: 'Sostituire gli intervalli di tempo con un annuncio pubblicitario Adobe Primetime '
 uuid: 101ac42d-5ba5-4487-af95-483a6594808a
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '54'
+ht-degree: 0%
 
 ---
 
 
-# Sostituire gli intervalli di tempo con un annuncio pubblicitario Adobe Primetime{#replace-time-ranges-with-an-adobe-primetime-ad-decisioning-ad}
+# Sostituire gli intervalli di tempo con un annuncio pubblicitario Adobe Primetime {#replace-time-ranges-with-an-adobe-primetime-ad-decisioning-ad}
 
-Rimuovi `TimeRanges` tra il `begin` e `end` il `localTime` contenuto dalla timeline. Sostituitelo con AdBreak of `begin` a `begin+replaceDuration`.
+Rimuovere `TimeRanges` tra `begin` e `end` in `localTime` dalla timeline. Sostituirlo con AdBreak di `begin` in `begin+replaceDuration`.
 
 Sostituisci gli intervalli con annunci pubblicitari con Primetime e con funzioni di decisione.
 
