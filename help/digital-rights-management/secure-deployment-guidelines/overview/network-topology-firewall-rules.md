@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Quando stabilite le regole del firewall, considerate i seguenti tipi di URL:
 
-## URL in entrata {#section_F111526A9DB844CBBF21A3CAE5F50880}
+## URL in arrivo {#section_F111526A9DB844CBBF21A3CAE5F50880}
 
 Potete configurare il firewall esterno in modo che esprima solo gli URL per la funzionalità dell’applicazione che desiderate fornire agli utenti finali.
 
