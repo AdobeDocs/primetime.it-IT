@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Classe di metadati temporizzati{#timed-metadata-class}
+# Classe metadati temporizzati{#timed-metadata-class}
 
 Quando TVSDK rileva un tag con iscrizione nella playlist o nel manifesto, il lettore tenta automaticamente di elaborare il tag ed esporlo sotto forma di oggetto TimedMetadata.
 
