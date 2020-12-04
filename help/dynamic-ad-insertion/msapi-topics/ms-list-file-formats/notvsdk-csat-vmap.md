@@ -6,13 +6,16 @@ title: Formato VMAP per il tracciamento degli URL
 uuid: e3173fad-caa2-49cb-9a65-631573812e52
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 0%
 
 ---
 
 
 # Formato VMAP per il tracciamento degli URL {#vmap-format-for-tracking-urls}
 
-Se il client richiede informazioni di tracciamento, il server manifesto invia di nuovo un file formattato. Il suo formato e il suo contenuto dipendono dal valore del parametro di query `pttrackingversion`
+Se il client richiede informazioni di tracciamento, il server manifesto invia di nuovo un file formattato. Il formato e il contenuto dipendono dal valore del parametro di query `pttrackingversion`
 
 ## Formato VMAP singolo {#vmap}
 
