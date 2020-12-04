@@ -26,7 +26,7 @@ Browser TVSDK supporta una serie di funzioni DASH che potete implementare per ag
 
 >[!TIP]
 >
->Nelle tabelle delle matrici di feature riportate di seguito,  ![](assets/supported15.png)
+>Nelle tabelle della matrice di funzioni riportate di seguito, ![](assets/supported15.png)
 >significa che la funzione è supportata nella versione corrente.
 
 Sono supportate le seguenti funzionalità:
@@ -90,7 +90,7 @@ Sono supportate le seguenti funzionalità:
 | Integrazioni | VOD + Live | Fatturazione | ![](assets/supported15.png) |
 | Integrazioni | VOD + Live | Browserify | ![](assets/supported15.png) |
 
-## Funzioni avanzate di inserimento annunci DASH (CSAI) {#dash-advanced-insertion-features}
+## Funzioni avanzate di inserimento di annunci DASH (CSAI) {#dash-advanced-insertion-features}
 
 | Categoria | Tipo di contenuto | Feature | HTML5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
@@ -98,7 +98,7 @@ Sono supportate le seguenti funzionalità:
 | Ad Insertion  | VOD | Parametri di targeting | Solo VOD |
 | Ad Insertion  | VOD | Parametri personalizzati | Solo VOD |
 | Ad Insertion  | VOD + Live | Criterio annunci personalizzato | Non supportato |
-| Ad Insertion  | VOD + Live | Lazy e caricamento | VOCE |
+| Ad Insertion  | VOD + Live | Lazy e caricamento | Non supportato |
 | Ad Insertion  | VOD | Annunci pubblicitari, banner pubblicitari e annunci cliccabili | Non supportato |
 | Ad Insertion  | VOD | VPAID 2.0 | Non supportato |
 
@@ -131,7 +131,7 @@ Sono supportate le seguenti funzionalità:
    <td colname="col1"> Protezione dei contenuti </td> 
    <td colname="col2"> VOD + Live </td> 
    <td colname="col3"> AES-128 </td> 
-   <td colname="col6"> VOCE </td>
+   <td colname="col6"> Non supportato </td>
   </tr> 
   <tr> 
    <td colname="col1"> Protezione dei contenuti </td> 
