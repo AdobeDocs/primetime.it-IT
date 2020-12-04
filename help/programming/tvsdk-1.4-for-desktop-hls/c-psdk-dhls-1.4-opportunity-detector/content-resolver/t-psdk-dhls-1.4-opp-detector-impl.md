@@ -6,15 +6,18 @@ title: Implementare un rilevatore di opportunità personalizzato
 uuid: 18fb431b-4585-4293-92a7-b77ab7f9b7db
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '172'
+ht-degree: 0%
 
 ---
 
 
-# Implementare un rilevatore di opportunità personalizzato{#implement-a-custom-opportunity-detector}
+# Implementa un rilevatore di opportunità personalizzato{#implement-a-custom-opportunity-detector}
 
 È possibile implementare rilevatori di opportunità personalizzati.
 
-* Se il generatore di opportunità è basato su `TimedMetadata` oggetti associati al flusso multimediale corrente, deve estendere il flusso `SpliceOutOpportunityGenerator` o `TimedMetadataOpportunityGenerator`.
+* Se il generatore di opportunità è basato su `TimedMetadata` oggetti associati al flusso multimediale corrente, deve estendere il `SpliceOutOpportunityGenerator` o `TimedMetadataOpportunityGenerator`.
 
 * Se il generatore di opportunità è basato su dati fuori banda forniti da un servizio esterno (ad esempio un CIS), è necessario estendere il `OpportunityGenerator`.
 
@@ -23,7 +26,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
        Se il generatore di opportunità personalizzato è basato su oggetti &quot;TimedMetadata&quot;, espandi il generatore `TimedMetadataOpportunityGenerator` e sostituisci i seguenti metodi:
    
    * `doConfigure` - Questo metodo viene chiamato dopo la creazione dell&#39;elemento del lettore multimediale e fornisce al generatore di opportunità di creare una serie iniziale di opportunità, se necessario
-   * `doProcess` - Questo metodo viene chiamato ogni volta che `TimedMetadata` viene rilevato un nuovo evento (ad esempio, per flussi live/lineari ogni volta che la playlist o gli aggiornamenti del manifesto)
+   * `doProcess` - Questo metodo viene chiamato ogni volta che  `TimedMetadata` viene rilevato un nuovo evento (ad esempio, per flussi live/lineari ogni volta che la playlist o gli aggiornamenti del manifesto)
 
    ```
    public class CustomOpportunityGenerator extends TimedMetadataOpportunityGenerator { 
