@@ -6,6 +6,9 @@ title: Annunci cliccabili
 uuid: 493c3199-b5ba-4809-86eb-e80f10eb957b
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '205'
+ht-degree: 0%
 
 ---
 
