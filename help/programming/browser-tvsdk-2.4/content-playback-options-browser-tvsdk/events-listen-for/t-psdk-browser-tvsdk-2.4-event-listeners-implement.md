@@ -6,6 +6,9 @@ title: Implementare listener e callback di eventi
 uuid: 63f62c60-505e-4f83-bc0d-58895d85a75a
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '184'
+ht-degree: 1%
 
 ---
 
@@ -28,7 +31,7 @@ L&#39;applicazione deve implementare i listener di eventi per gli eventi TVSDK d
 
    * **Altri eventi**: Facoltativo, a seconda dell’applicazione in uso.
 
-      Ad esempio, se si incorpora della pubblicità nella riproduzione, è possibile ascoltare tutti `AdBreakPlaybackEvent` gli `AdPlaybackEvent` eventi e gli eventi.
+      Ad esempio, se si incorpora della pubblicità nella riproduzione, ascoltare tutti gli eventi `AdBreakPlaybackEvent` e `AdPlaybackEvent`.
 
 1. Implementare i listener di eventi per ogni evento.
 
@@ -37,7 +40,7 @@ L&#39;applicazione deve implementare i listener di eventi per gli eventi TVSDK d
    Ad esempio:
 
    * Tipo evento: `AdobePSDK.PSDKEventType.STATUS_CHANGED`
-   * Proprietà Event: utilizzato `MediaPlayerStatus.<event>` come segue:
+   * Proprietà Event: `MediaPlayerStatus.<event>` utilizzato come segue:
 
 ```js
 player.addEventListener( 
@@ -52,7 +55,7 @@ onStatusChange = function (event) {
             break;
 ```
 
-1. Registra i listener di callback con l&#39; `MediaPlayer` oggetto utilizzando `MediaPlayer.addEventListener`.
+1. Registrare i listener di callback con l&#39;oggetto `MediaPlayer` utilizzando `MediaPlayer.addEventListener`.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED,  
