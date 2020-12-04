@@ -6,6 +6,9 @@ title: Carica annuncio per una finestra DVR
 uuid: 3ae1fbf6-deae-4f39-a17d-43d1fe3cb975
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '247'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ Quando un utente inizia a visualizzare il contenuto all&#39;inizio di un flusso 
 >
 >La risoluzione degli annunci dopo il punto attivo corrente è più rapida, ma se l&#39;utente cerca all&#39;indietro, questa opzione impedisce al lettore di riprodurre gli annunci visualizzati in precedenza.
 
-## Controllo e caricamento per una finestra DVR {#section_2D93E2E947644D66B6F6ED1DD6742C25}
+## Controllo e caricamento di una finestra DVR {#section_2D93E2E947644D66B6F6ED1DD6742C25}
 
 Per controllare e caricare una finestra DVR:
 
@@ -28,7 +31,7 @@ Per controllare e caricare una finestra DVR:
 
 >[!NOTE]
 >
->Il valore predefinito è `NO`, e questa opzione carica gli annunci solo dal punto attivo corrente.
+>Il valore predefinito è `NO` e questa opzione carica gli annunci solo dal punto attivo corrente.
 
 Ad esempio:
 
