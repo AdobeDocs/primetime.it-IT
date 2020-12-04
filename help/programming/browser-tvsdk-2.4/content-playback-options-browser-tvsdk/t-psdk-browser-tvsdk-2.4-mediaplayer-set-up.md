@@ -6,6 +6,9 @@ title: Configurare MediaPlayer
 uuid: 2279e388-6fbc-49a2-8560-218d3d31e1d6
 translation-type: tm+mt
 source-git-commit: af9b865bc1627a97bf8957b5460ff9b46052a7dc
+workflow-type: tm+mt
+source-wordcount: '107'
+ht-degree: 0%
 
 ---
 
@@ -14,19 +17,19 @@ source-git-commit: af9b865bc1627a97bf8957b5460ff9b46052a7dc
 
 Un oggetto MediaPlayer racchiude il comportamento e le funzionalità di un lettore multimediale.
 
-1. Create un&#39;istanza `MediaPlayer` utilizzando le seguenti opzioni:
+1. Create un&#39;istanza di `MediaPlayer` utilizzando quanto segue:
 
    ```js
    var player = new AdobePSDK.MediaPlayer();
    ```
 
-1. Create un&#39; `MediaPlayerView` istanza:
+1. Create un&#39;istanza `MediaPlayerView`:
 
    ```js
    var view = new AdobePSDK.MediaPlayerView(container);
    ```
 
-   dove `container` è l&#39; `div` elemento di destinazione che contiene l&#39; `HTMLMediaElement`utente.
+   dove `container` è l&#39;elemento `div` di destinazione che contiene l&#39;elemento `HTMLMediaElement`.
 
    Ad esempio, in una pagina HTML:
 
@@ -50,13 +53,13 @@ Un oggetto MediaPlayer racchiude il comportamento e le funzionalità di un letto
          document.getElementById("videoDiv"));  
    ```
 
-1. Associate l’ `MediaPlayerView` istanza all’ `MediaPlayer` istanza:
+1. Collegare l&#39;istanza `MediaPlayerView` all&#39;istanza `MediaPlayer`:
 
    ```js
    player.view = view;
    ```
 
-1. Associate l’ `div` elemento controlli personalizzati all’istanza di MediaPlayer.
+1. Collegare l&#39;elemento `div` dei controlli personalizzati all&#39;istanza MediaPlayer.
 
    Ad esempio, in HTML:
 
@@ -77,4 +80,4 @@ Un oggetto MediaPlayer racchiude il comportamento e le funzionalità di un letto
    }
    ```
 
-L&#39; `MediaPlayer` istanza è ora disponibile e configurata correttamente per visualizzare il contenuto video sullo schermo del dispositivo.
+L&#39;istanza `MediaPlayer` è ora disponibile e configurata correttamente per visualizzare il contenuto video sullo schermo del dispositivo.
