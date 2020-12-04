@@ -6,11 +6,14 @@ title: Associazione dispositivo
 uuid: 351fa33c-4226-4ed5-829c-56b563166fec
 translation-type: tm+mt
 source-git-commit: ed1430bdcb590a53fa69b324ef340ad636b2fa7c
+workflow-type: tm+mt
+source-wordcount: '364'
+ht-degree: 0%
 
 ---
 
 
-# Associazione dispositivo{#device-binding}
+# Binding dispositivo{#device-binding}
 
 In alcuni casi, potete impedire agli utenti finali di riprodurre contenuto su più dispositivi quando il contenuto viene acquistato o affittato. Se il cliente utilizza Expressplay, questo può essere fatto utilizzando le API di Expressplay per associare il token di Expressplay dell&#39;utente al computer dell&#39;utente.
 
@@ -22,8 +25,8 @@ Potete utilizzare le API nel modo seguente.
 
    Questa richiesta di licenza fittizia, in caso di esito positivo, associa il device_id dell&#39;utente (calcolato o generato dall&#39;implementazione DRM sul dispositivo dell&#39;utente) al cookie nel back-end di Expressplay. Questo cookie viene quindi utilizzato nel modo seguente:
 
-   * Al momento dell&#39;acquisto/affitto del contenuto, il codice invia una query al back-end di Expressplay per device_id dell&#39;utente inviando il cookie associato ( [https://www.expressplay.com/developer/restapi/#record-retrieval](https://www.expressplay.com/developer/restapi/#record-retrieval))
-   * Inviate una richiesta di generazione di token con la chiave (CEK), l&#39;ID chiave (CEKSID), i criteri e altre informazioni del contenuto acquistato, allegando rispettivamente il cookie e il device_id come parametro di `cookie` correlazione e parametro di restrizione `deviceid` token.
+   * Al momento dell&#39;acquisto/affitto del contenuto, il codice invia una query al back-end di Expressplay per il device_id dell&#39;utente inviando il cookie associato ( [https://www.expressplay.com/developer/restapi/#record-retrieval](https://www.expressplay.com/developer/restapi/#record-retrieval))
+   * Inviate una richiesta di generazione di token con la chiave (CEK), l&#39;ID chiave (CEKSID), i criteri e altre informazioni acquistati, allegando il cookie e device_id sopra rispettivamente al parametro di correlazione `cookie` e al parametro di restrizione token `deviceid`.
 
    * Fornite questo token all&#39;utente.
 
