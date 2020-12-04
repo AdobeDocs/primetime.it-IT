@@ -6,6 +6,9 @@ title: Accedere a tracce audio alternative
 uuid: c7060022-29ec-43c1-811b-41cca5f5356c
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '136'
+ht-degree: 0%
 
 ---
 
@@ -19,9 +22,9 @@ L&#39;audio con binding ritardato utilizza MediaPlayer per riprodurre un video s
 
    `MediaPlayer.PlaybackEventListener.onStateChanged with state MediaPlayer.PlayerState.INITIALIZED`: È disponibile l&#39;elenco iniziale delle tracce audio.
 
-1. Ottenete le tracce audio disponibili dall’ `MediaPlayerItem` istanza.
+1. Ottenete le tracce audio disponibili dall&#39;istanza `MediaPlayerItem`.
 
    `mediaPlayerItem.getAudioTracks()` 1. (Facoltativo) Presentare all’utente le tracce disponibili.
-1. Impostate la traccia audio selezionata sull’ `MediaPlayerItem` istanza.
+1. Impostate la traccia audio selezionata sull&#39;istanza `MediaPlayerItem`.
 
    `mediaPlayerItem.selectAudioTrack(audioTrack)`
