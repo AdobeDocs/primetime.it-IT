@@ -6,11 +6,14 @@ title: Lezioni di Media Player
 uuid: 6b59dcff-9722-4a84-9049-f6f10f7b3e82
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '432'
+ht-degree: 0%
 
 ---
 
 
-# Lezioni di Media Player {#media-player-classes}
+# Classi di lettori multimediali {#media-player-classes}
 
 È possibile utilizzare l&#39;API Objective-C di Lettore Primetime per personalizzare il comportamento del lettore.
 
@@ -33,7 +36,7 @@ Queste classi descrivono il lettore multimediale e le relative risorse.
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTDefaultMediaPlayerClientFactory.html" format="html" scope="external"> PTDefaultMediaPlayerClientFactory</a></span> </td> 
-   <td colname="2"> Implementazione predefinita di <span class="codeph"> PTMediaPlayerClientFactory</span> in TVSDK. Fornisce le istanze <span class="codeph"> PTOpportunityResolver</span>, <span class="codeph"> PTContentResolver</span>e <span class="codeph"> PTAdPolicySelector</span> disponibili. </td> 
+   <td colname="2"> Implementazione predefinita di <span class="codeph"> PTMediaPlayerClientFactory</span> in TVSDK. Fornisce le istanze <span class="codeph"> PTOpportunityResolver</span>, <span class="codeph"> PTContentResolver</span> e <span class="codeph"> PTAdPolicySelector</span> disponibili. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTMediaPlayer.html" format="html" scope="external"> PTMediaPlayer</a></span> </td> 
@@ -41,7 +44,7 @@ Queste classi descrivono il lettore multimediale e le relative risorse.
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTMediaPlayerClientFactory.html" format="html" scope="external"> PTMediaPlayerClientFactory</a></span> </td> 
-   <td colname="2"> Protocollo che descrive i metodi che un client client client Media Player personalizzato deve implementare per fornire le istanze PTOpportunityResolver <span class="codeph"> disponibili,</span> PTCContentResolver <span class="codeph"> e</span> PTAdPolicySelector <span class="codeph"></span> . </td> 
+   <td colname="2"> Protocollo che descrive i metodi che un client client per lettori multimediali personalizzato deve implementare per fornire le istanze <span class="codeph"> PTOpportunityResolver</span>, <span class="codeph"> PTContentResolver</span> e <span class="codeph"> PTAdPolicySelector</span> disponibili. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTMediaPlayerItem.html" format="html" scope="external"> PTMediaPlayerItem</a></span> </td> 
@@ -65,12 +68,12 @@ Queste classi descrivono il lettore multimediale e le relative risorse.
     </ul> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTOpportunityResolver.html" format="html" scope="external"> PTOpportunityResolver</a> , classe, protocollo </span> PTOpportunityResolver <span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTOpportunityResolver.html" format="html" scope="external"></a></span> </td> 
-   <td colname="2"> Classe utilizzata per l'elaborazione dei segnali in-manifest che verranno utilizzati come punti di riferimento per il processo di decisione degli annunci di Adobe Primetime. </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTOpportunityResolver.html" format="html" scope="external"> </a> </span> PTOpportunityResolverclass,  <span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTOpportunityResolver.html" format="html" scope="external"> </a> PTOpportunityResolverprotocol</span> </td> 
+   <td colname="2"> Classe utilizzata per l'elaborazione di segnali in-manifest che verranno utilizzati come punti di posizionamento per il processo di decisione  Adobe Primetime. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTOpportunityResolverDelegate.html" format="html" scope="external"> PTOpportunityResolverDelegate</a></span> </td> 
-   <td colname="2"> Protocollo che descrive i metodi che il risolutore di opportunità personalizzato ( <span class="codeph"> PTOpportunityResolver</span> ) dovrebbe utilizzare per comunicare al delegato lo stato della risoluzione dell'opportunità. </td> 
+   <td colname="2"> Protocollo che descrive i metodi che il risolutore di opportunità personalizzato ( <span class="codeph"> PTOpportunityResolver</span> ) deve utilizzare per comunicare al delegato lo stato della risoluzione dell'opportunità. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTSDK.html" format="html" scope="external"> PTSDK</a></span> </td> 
