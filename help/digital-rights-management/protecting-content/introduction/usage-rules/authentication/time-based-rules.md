@@ -4,18 +4,21 @@ title: Regole basate sul tempo
 uuid: 19a6ee7e-9580-48bb-a3a6-ff2cedcc796a
 translation-type: tm+mt
 source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+workflow-type: tm+mt
+source-wordcount: '523'
+ht-degree: 0%
 
 ---
 
 
-# Regole basate sul tempo {#time-based-rules}
+# Regole temporizzate {#time-based-rules}
 
-Primetime DRM utilizza l&#39;applicazione &quot;soft&quot; delle restrizioni di licenza basate sull&#39;ora. Se un diritto di ora scade durante la riproduzione di un video, il comportamento predefinito di Primetime DRM non limita la riproduzione fino alla successiva creazione dello streaming video (mediante chiamata `Netstream.stop()` e `Netstream.play()`).
+Primetime DRM utilizza l&#39;applicazione &quot;soft&quot; delle restrizioni di licenza basate sull&#39;ora. Se un diritto di ora scade durante la riproduzione di un video, il comportamento predefinito di Primetime DRM non limita la riproduzione fino alla successiva creazione dello streaming video (chiamando `Netstream.stop()` e `Netstream.play()`).
 
 Anche se l&#39;imposizione non restrittiva è il comportamento predefinito, potete anche abilitare l&#39;imposizione forzata eseguendo una delle seguenti operazioni:
 
-* Accertatevi che il lettore video controlli periodicamente la licenza per verificare che nessuna delle limitazioni di tempo sia scaduta. È possibile eseguire questa operazione chiamando `DRMManager.loadVoucher(LOCAL_ONLY).` Un codice di errore indica che la licenza memorizzata localmente non è più valida.
-* Ogni volta che l’utente fa clic **[!UICONTROL Pause]**, potete registrare la marca temporale del video corrente e quindi chiamare `Netstream.stop()`. Quando l&#39;utente fa clic sul pulsante Riproduci, potete cercare il percorso registrato e quindi chiamare `Netstream.play()`.
+* Accertatevi che il lettore video controlli periodicamente la licenza per verificare che nessuna delle limitazioni di tempo sia scaduta. Questo può essere ottenuto chiamando `DRMManager.loadVoucher(LOCAL_ONLY).` Un codice di errore indica che la licenza memorizzata localmente non è più valida.
+* Ogni volta che l&#39;utente fa clic su **[!UICONTROL Pause]**, è possibile registrare il timestamp video corrente e chiamare `Netstream.stop()`. Quando l&#39;utente fa clic sul pulsante Riproduci, è possibile cercare la posizione registrata e quindi chiamare `Netstream.play()`.
 
 ## Data di inizio {#start-date}
 
@@ -33,7 +36,7 @@ Esempio di utilizzo: Utilizzate una data di scadenza assoluta per riflettere la 
 
 La data di fine relativa specifica la data di scadenza della licenza, che viene espressa in relazione alla data dell&#39;imballaggio, non in relazione alla data di rilascio della licenza.
 
-Esempio di utilizzo: In un processo di creazione automatica del pacchetto, utilizzate un singolo criterio DRM Primetime con questa opzione per una serie di video, per impostare la data di scadenza su 30 giorni rispetto alla data del pacchetto.
+Esempio di utilizzo: In un processo di creazione del pacchetto automatizzato, utilizzate un singolo criterio DRM Primetime con questa opzione per una serie di video, per impostare la data di scadenza su 30 giorni rispetto alla data del pacchetto.
 
 ## Durata della cache delle licenze{#license-caching-duration}
 
@@ -49,7 +52,7 @@ La finestra di riproduzione specifica la durata della validità di una licenza d
 
 Esempio di utilizzo: Alcuni modelli aziendali consentono un periodo di noleggio di 30 giorni, ma, una volta avviata la riproduzione, la riproduzione deve essere completata in 48 ore. In questo caso, la durata di 48 ore della licenza corrisponde alla finestra di riproduzione.
 
-**Dalla versione 5.3 in avanti** - La finestra di riproduzione supporta anche l&#39;opzione di attivazione o disattivazione dell&#39;arresto rigido, che indica se il contesto di decrittazione per la riproduzione deve interrompersi alla scadenza della finestra di riproduzione (abilitata) o continuare nonostante la scadenza (disabilitata).
+**Dalla versione 5.3 in avanti**  - La finestra di riproduzione supporta anche l&#39;opzione di attivazione o disattivazione dell&#39;arresto rigido, che indica se il contesto di decrittazione per la riproduzione deve interrompersi alla scadenza della finestra di riproduzione (abilitata) o continuare nonostante la scadenza (disabilitata).
 
 >[!NOTE]
 >
