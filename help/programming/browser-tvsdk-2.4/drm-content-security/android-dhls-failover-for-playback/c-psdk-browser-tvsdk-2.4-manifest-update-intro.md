@@ -6,11 +6,14 @@ title: Aggiornamento Live Master-manifest
 uuid: 4b918a73-dacf-465a-82d6-404c6bdb01f2
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '245'
+ht-degree: 0%
 
 ---
 
 
-# Aggiornamento Live Master-manifest{#live-master-manifest-update}
+# Aggiornamento del manifesto master live{#live-master-manifest-update}
 
 Browser TVSDK è in grado di rilevare le modifiche delle informazioni di riproduzione nei manifesti master m3u8 per lo streaming live e aggiornare le informazioni di riproduzione durante la riproduzione del flusso. Browser TVSDK supporta un set dinamico di profili di bitrate man mano che i profili appaiono o scompaiono dal manifest principale, compresi i bitrate di profilo non sovrapposti tra gli aggiornamenti.
 
