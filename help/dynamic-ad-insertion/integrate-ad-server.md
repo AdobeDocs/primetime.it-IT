@@ -18,7 +18,7 @@ Per iniziare, ti verrà fornito un login per accedere alla console Ad Insertion 
 >
 >[IAB VAST Page](https://www.iab.com/guidelines/digital-video-ad-serving-template-vast)
 
-## Supporto delle macro {#macro-support}
+## Supporto macro {#macro-support}
 
 Primetime  Ad Insertion abilita le seguenti macro del server di annunci per tutti i flussi:
 
