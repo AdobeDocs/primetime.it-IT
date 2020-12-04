@@ -6,6 +6,9 @@ title: Annunci cliccabili
 uuid: edefbc66-2d30-441d-9c30-256588504463
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '397'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
 
 TVSDK fornisce informazioni utili per agire sugli annunci click-through. Durante la creazione dell’interfaccia utente del lettore, è necessario decidere come rispondere quando un utente fa clic su un annuncio selezionabile.
 
-Per TVSDK per Flash Runtime, è possibile fare clic solo sugli annunci lineari.
+Per TVSDK per Runtime Flash, è possibile fare clic solo sugli annunci lineari.
 
 ## Rispondi ai clic sugli annunci {#respond-to-clicks-on-ads}
 
@@ -35,7 +38,7 @@ In questo esempio viene illustrato un modo possibile per gestire i clic degli an
    </s:VGroup>
    ```
 
-1. Includete questa sovrapposizione nell’esempio del lettore multimediale [!DNL psdkdemo.xml].
+1. Includete questa sovrapposizione nell&#39;esempio di lettore multimediale [!DNL psdkdemo.xml].
 
    ```xml
       <psdk:ClickableAdsOverlay id="clickableAdsOverlay"  
@@ -45,7 +48,7 @@ In questo esempio viene illustrato un modo possibile per gestire i clic degli an
    </psdk:ClickableAdsOverlay
    ```
 
-1. Per rendere la visualizzazione visibile solo durante la riproduzione di un annuncio, ascoltare gli `onAdStart` eventi e `onAdComplete` gli eventi inviati da .
+1. Per rendere la visualizzazione visibile solo durante la riproduzione di un annuncio, ascoltare gli eventi `onAdStart` e `onAdComplete` inviati da .
 
    ```
    _player.addEventListener(AdPlaybackEvent.AD_STARTED, onAdStarted); 
@@ -64,7 +67,7 @@ In questo esempio viene illustrato un modo possibile per gestire i clic degli an
    }
    ```
 
-1. Monitora le interazioni degli utenti sugli annunci cliccabili. Quando l’utente tocca o fa clic sull’annuncio o sul pulsante, invia una notifica a TVSDK `notifyClick`.
+1. Monitora le interazioni degli utenti sugli annunci cliccabili. Quando l&#39;utente tocca o fa clic sull&#39;annuncio o sul pulsante, invia una notifica a TVSDK con `notifyClick`.
 
    ```
    private function onAdsOverlayClicked():void {     
@@ -72,9 +75,9 @@ In questo esempio viene illustrato un modo possibile per gestire i clic degli an
    }
    ```
 
-1. Ascoltare l&#39; `AdclickEvent.AD_CLICK` evento.
+1. Ascoltare l&#39;evento `AdclickEvent.AD_CLICK`.
 
-   Se viene riprodotto un annuncio, TVSDK invia l’ `AdClickEvent.AD_CLICK` evento dal quale è possibile recuperare l’URL click-through e le informazioni correlate.
+   Se viene riprodotto un annuncio, TVSDK invia l&#39;evento `AdClickEvent.AD_CLICK` dal quale è possibile recuperare l&#39;URL click-through e le informazioni correlate.
 
    ```
       _player.addEventListener(AdClickEvent.AD_CLICK, onAdClick);
