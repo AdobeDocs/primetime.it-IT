@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Controllo della visibilità dei sottotitoli {#control-closed-caption-visibility}
+# Controllare la visibilità dei sottotitoli codificati {#control-closed-caption-visibility}
 
 È possibile controllare la visibilità dei sottotitoli codificati. Quando la visibilità è attivata, viene visualizzata la traccia attualmente selezionata. Se modificate la traccia corrente, l’impostazione di visibilità rimane la stessa.
 
@@ -21,7 +21,7 @@ ht-degree: 0%
 >
 >Se il testo della didascalia chiusa viene visualizzato quando il lettore attiva la modalità di ricerca, il testo non viene più visualizzato al termine della ricerca. Al contrario, dopo alcuni secondi, TVSDK visualizza il testo della didascalia successiva nel video dopo la posizione di ricerca finale.
 >
->I valori di visibilità per le didascalie chiuse sono definiti in `MediaPlayer.Visibility`.
+>I valori di visibilità per i sottotitoli codificati sono definiti in `MediaPlayer.Visibility`.
 >
 >
 ```java
@@ -31,9 +31,9 @@ ht-degree: 0%
 >}
 >```
 
-1. Attendete che lo stato `MediaPlayer` sia almeno PREPARATO. Per ulteriori informazioni, vedere [Aspettare uno stato](../../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-state-prepared-wait-for.md)valido.
+1. Attendete che lo stato `MediaPlayer` sia almeno PREPARATO. Per ulteriori informazioni, vedere [Attendere uno stato valido](../../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-state-prepared-wait-for.md).
 
-1. Per ottenere l’impostazione di visibilità corrente per i sottotitoli codificati, utilizzate il metodo getter in `MediaPlayer`, che restituisce un valore di visibilità.
+1. Per ottenere l&#39;impostazione di visibilità corrente per i sottotitoli codificati, utilizzate il metodo getter in `MediaPlayer`, che restituisce un valore di visibilità.
 
    ```java
    MediaPlayer.Visibility getCCVisibility() throws MediaPlayerException;
