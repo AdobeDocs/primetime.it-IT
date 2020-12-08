@@ -1,16 +1,12 @@
 ---
-source-git-commit: cb347453d4a08b869842aaaaca61538095978c91
+source-git-commit: 8c828661016782f79257c11708bf7cac618853b7
 workflow-type: tm+mt
 translation-type: tm+mt
-source-wordcount: '460'
-ht-degree: 6%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 # Articolo di Contribute
-
-| EXL-PR | EXL | Anteprima | Activate | Pubblicato | Aiuto |
-|--- |--- |--- |--- |--- |--- |
-| [![Stato build](https://docs.ci.corp.adobe.com/view/exl-pr/job/primetime.en_pr-exl/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/primetime.en_pr-exl/lastBuild/) | [![Stato build](https://docs.ci.corp.adobe.com/view/exl-pr/job/primetime.en_exl/lastBuild/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/primetime.en_exl/lastBuild/lastBuild) | [URL anteprima](https://experienceleague.corp.adobe.com/docs/primetime/programming/home.html?lang=en) | [activate-exl](https://docs.ci.corp.adobe.com/job/activate-exl/build/) | [URL dal vivo](https://experienceleague.adobe.com/docs/primetime/programming/home.html?lang=en) | [Guida all’authoring](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en) |
 
 Accogliamo con favore i contributi della nostra comunità e di  dipendenti dei Adobi esterni ai team di documentazione.
 
@@ -20,13 +16,13 @@ Questo progetto ha adottato il [Codice di condotta di Adobe Open Source](code-of
 
 ## Informazioni sui contributi al contenuto  Adobe
 
-Consulta la [Adobe Docs Contributor Guide](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html).
+Vedere la [ Adobe Docs Contributor Guide](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html).
 
 Il tuo contributo dipende da chi sei e dal tipo di modifiche che vorresti apportare:
 
 ### Modifiche minori
 
-Se state contribuendo piccoli aggiornamenti dalla bontà del vostro cuore, visitate l&#39;articolo e fate clic sul collegamento **Modifica** nell&#39;articolo che va alla fonte GitHub per l&#39;articolo. Quindi, utilizzate l’interfaccia utente GitHub per effettuare gli aggiornamenti. Per ulteriori informazioni, consulta la guida [generale](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html) Adobe per i collaboratori.
+Se state contribuendo piccoli aggiornamenti dalla bontà del vostro cuore, visitate l&#39;articolo e fate clic sul collegamento **Edit** nell&#39;articolo che va alla fonte GitHub per l&#39;articolo. Quindi, utilizzate l’interfaccia utente GitHub per effettuare gli aggiornamenti. Per ulteriori informazioni, vedere la guida generale [ Adobe Docs contributor Guide](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html).
 
 Le correzioni minori o i chiarimenti inviati per la documentazione e gli esempi di codice in questo repo sono coperti dai termini di utilizzo  Adobe.
 
@@ -40,13 +36,13 @@ If you submit a pull request with significant changes to documentation and code 
 
 ### Modifiche principali apportate dai dipendenti  Adobe
 
-Se sei un autore tecnico, un responsabile di programma o uno sviluppatore del team di prodotti per una soluzione Adobe Experience Cloud e hai il compito di contribuire o creare articoli tecnici, devi usare l’archivio privato [https://git.corp.adobe.com/AdobeDocs](https://git.corp.adobe.com/AdobeDocs). <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
+Se sei un autore tecnico, un responsabile di programma o uno sviluppatore del team di prodotti per una soluzione Adobe Experience Cloud e hai il compito di contribuire o creare articoli tecnici, devi utilizzare il repository privato [https://git.corp.adobe.com/AdobeDocs](https://git.corp.adobe.com/AdobeDocs). <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
 ## Strumenti e configurazione
 
 I collaboratori della community possono utilizzare l’interfaccia utente di GitHub per effettuare modifiche di base o fork del repo per apportare importanti contributi.
 
-Per informazioni dettagliate, consulta la [Guida](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html) per i collaboratori del documento di Adobe.
+Per ulteriori informazioni, vedere la [ Adobe Docs Contributor Guide](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html).
 
 ## Come utilizzare la funzione di marketing per formattare l&#39;argomento
 
