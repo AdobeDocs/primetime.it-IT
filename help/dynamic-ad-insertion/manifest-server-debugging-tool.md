@@ -13,9 +13,9 @@ pagecreatedat: en
 pagelayout: video
 sidecolumn: left
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: 3efbd1113e82c4d5f84798997b6f744daf6f508e
 workflow-type: tm+mt
-source-wordcount: '2430'
+source-wordcount: '2437'
 ht-degree: 0%
 
 ---
@@ -309,7 +309,7 @@ Record di questo tipo di richieste di registro eseguite dal server manifesto per
 
 ### TRACE_WEBVTT_RESPONSE record {#trace-webvtt-response-records}
 
-Registra ``of ``questo ``type ``log ``responses ``il ``manifest ``server ``sends ``su ``clients ``in `` `answer` ``a ``requests `` `for` ``WEBVTT ``didascalie. I campi oltre TRACE_WEBVTT_RESPONSE &quot;vengono visualizzati nell&#39;ordine indicato nella tabella, con le `by`schede separate.
+Record di questo tipo di risposte del registro inviate dal server manifesto ai client in risposta alle richieste di didascalie `WEBVTT`. I campi oltre `TRACE_WEBVTT_RESPONSE` vengono visualizzati nell&#39;ordine indicato nella tabella, separati da tabulazioni.
 
 | Field | Tipo | Descrizione |
 |--- |--- |--- |
