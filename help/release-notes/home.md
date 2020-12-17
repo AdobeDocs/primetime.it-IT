@@ -4,10 +4,10 @@ seo-title: ' note sulla versione di Adobe Primetime'
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 6e4d29f3fb85410943b960b179147b2fc2f1e7c4
+source-git-commit: 4790c8ab25ca6ecf118adf3037fc2e4e4f451cb3
 workflow-type: tm+mt
-source-wordcount: '280'
-ht-degree: 38%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +18,7 @@ Benvenuti nelle  note sulla versione di Adobe Primetime. I documenti elencati ne
 
 ## Miglioramenti e correzioni in PTAI 20.12.1
 
-Il rilascio include un hotfix per risolvere i problemi di connettività dei client intermittenti.
+Il rilascio include un hotfix per risolvere problemi di connettività dei client intermittenti.
 
 ## Correzioni in TVSDK 3.12 Android
 
