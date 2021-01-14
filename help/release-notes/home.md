@@ -4,10 +4,10 @@ seo-title: ' note sulla versione di Adobe Primetime'
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 4790c8ab25ca6ecf118adf3037fc2e4e4f451cb3
+source-git-commit: c17145da29d148f3dbfe1bcd1011acfa7177bc25
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '280'
+ht-degree: 38%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 0%
 
 Benvenuti nelle  note sulla versione di Adobe Primetime. I documenti elencati nella navigazione a sinistra forniscono informazioni specifiche sulla versione, requisiti di sistema, limitazioni, problemi risolti e problemi noti.
 
-## Miglioramenti e correzioni in PTAI 20.12.1
+## Miglioramenti e correzioni in PTAI 21.1.1
 
-Il rilascio include un hotfix per risolvere problemi di connettività dei client intermittenti.
+Il rilascio include il supporto per le risorse di affiliazione per i formati cue basati su SCTE35.
 
 ## Correzioni in TVSDK 3.12 Android
 
@@ -36,12 +36,12 @@ Per ulteriori informazioni sulla versione rilasciata corrente per [iOS](../relea
 
 | Guida utente | Descrizione |
 |--- |--- |
-| [Guida alla programmazione di Primetime](/help/programming/home.md) | Consente di imparare a sviluppare applicazioni e lettori video utilizzando Java su dispositivi Android e Objective-C su dispositivi iOS. |
+| [Guida alla programmazione per Primetime](/help/programming/home.md) | Consente di imparare a sviluppare applicazioni e lettori video utilizzando Java su dispositivi Android e Objective-C su dispositivi iOS. |
 | [Aiuto su migrazione e conversione di Primetime](/help/migration-guides/home.md) | Illustra il processo di conversione e migrazione per passare dalla suite TVSDK Primetime esistente alla suite di nuova generazione. |
 | [Implementazione di riferimento](/help/android-reference-implementation/home.md) | Consente di comprendere il TVSDK e modificare i gestori delle funzioni per personalizzare il lettore personale. |
 | [Riferimenti API Primetime](/help/reference/api-references.md) | Fornisce informazioni dettagliate sulle funzioni TVSDK, le strutture di dati e altri costrutti di programmazione. |
 | [Digital Rights Management](/help/digital-rights-management/home.md) | Consente di ottenere ulteriori informazioni sui vari scenari utente nel Digital Rights Management (DRM) |
-| [Guida a Ad Insertion di Primetime](/help/dynamic-ad-insertion/home.md) | Spiega come monetizzare i contenuti inserendo sul server annunci dinamici mirati agli utenti e coinvolgendo il pubblico con annunci personalizzati. |
+| [Guida di Primetime Ad Insertion](/help/dynamic-ad-insertion/home.md) | Spiega come monetizzare i contenuti inserendo sul server annunci dinamici mirati agli utenti e coinvolgendo il pubblico con annunci personalizzati. |
 | [Archivi](https://helpx.adobe.com/primetime/archives.html) | Scaricate i PDF della documentazione archiviata. |
 
 ## Risorse utili
