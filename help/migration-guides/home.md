@@ -4,7 +4,7 @@ seo-title: Aiuto sulla migrazione  Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: fac84687085f289e984c189665bfe775337592b3
+source-git-commit: 242b5a2875ebc0e0020296ce9489dd54438b5ad0
 workflow-type: tm+mt
 source-wordcount: '211'
 ht-degree: 48%
@@ -21,9 +21,9 @@ Benvenuti nella guida Migrazione e Conversione di  Adobe Primetime. I documenti 
 | Guida utente | Descrizione |
 |--- |--- |
 | [Note sulla versione di Primetime](/help/release-notes/home.md) | Fornisce informazioni specifiche sulla versione, requisiti di sistema, limitazioni, problemi risolti e problemi noti. |
-| [Guida alla programmazione di Primetime](/help/programming/home.md) | Consente di imparare a sviluppare applicazioni e lettori video utilizzando Java su dispositivi Android e Objective-C su dispositivi iOS. |
+| [Guida alla programmazione per Primetime](/help/programming/home.md) | Consente di imparare a sviluppare applicazioni e lettori video utilizzando Java su dispositivi Android e Objective-C su dispositivi iOS. |
 | [Implementazione di riferimento](/help/android-reference-implementation/home.md) | Consente di comprendere il TVSDK e modificare i gestori delle funzioni per personalizzare il lettore personale. |
-| [Guida a Ad Insertion di Primetime](/help/dynamic-ad-insertion/home.md) | Spiega come monetizzare i contenuti inserendo sul server annunci dinamici mirati agli utenti e coinvolgendo il pubblico con annunci personalizzati. |
+| [Guida di Primetime Ad Insertion](/help/primetime-ad-insertion/home.md) | Spiega come monetizzare i contenuti inserendo sul server annunci dinamici mirati agli utenti e coinvolgendo il pubblico con annunci personalizzati. |
 | [Digital Rights Management](/help/digital-rights-management/home.md) | Consente di ottenere ulteriori informazioni sui vari scenari utente nel Digital Rights Management (DRM) |
 | [Riferimenti API Primetime](/help/reference/api-references.md) | Fornisce informazioni dettagliate sulle funzioni TVSDK, le strutture di dati e altri costrutti di programmazione. |
 | [Archivi](https://helpx.adobe.com/primetime/archives.html) | Scaricate i PDF della documentazione archiviata. |
