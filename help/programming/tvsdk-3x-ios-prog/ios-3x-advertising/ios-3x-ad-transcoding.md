@@ -5,9 +5,9 @@ seo-title: Reimballaggio di annunci incompatibili con  Adobe Creative Repackagin
 title: Reimballaggio di annunci incompatibili con  Adobe Creative Repackaging Service
 uuid: 56a2405d-b395-4fea-820d-343590be7c19
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: cecc559480b9b52c412fefff4361603d6f14caf7
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '497'
 ht-degree: 0%
 
 ---
@@ -22,8 +22,6 @@ Gli annunci inviati da varie terze parti, come un&#39;agenzia pubblicitaria serv
 Quando TVSDK incontra per la prima volta un annuncio incompatibile, il lettore ignora l&#39;annuncio e invia una richiesta al servizio di reimballaggio creativo (CRS), che fa parte del back end di inserimento annunci Primetime, per reassemblare l&#39;annuncio in un formato compatibile. CRS tenta di generare rappresentazioni M3U8 a bit rate multiplo dell’annuncio e memorizza tali rappresentazioni nella rete CDN (Primetime Content Delivery Network). Alla successiva ricezione di una risposta di annuncio da parte di TVSDK, il lettore utilizza la versione M3U8 compatibile con HLS dalla CDN.
 
 Per abilitare questa funzione opzionale, contattate il rappresentante del Adobe .
-
-Per ulteriori informazioni sui CRS, vedere [Creative Packaging Service (CRS)](../../../dynamic-ad-insertion/creative-repackaging-service/crs-overview.md).
 
 ## Supporto CDN multiplo per la distribuzione di annunci CRS {#section_900FDDA5454143718F1EB4C9732C8E1C}
 
