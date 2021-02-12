@@ -5,9 +5,9 @@ seo-title: Abbandono annunci pubblicitari per annunci VAST e VMAP
 title: Abbandono annunci pubblicitari per annunci VAST e VMAP
 uuid: 7b44abf9-50cf-4e39-b594-ceb52208a865
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: cecc559480b9b52c412fefff4361603d6f14caf7
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '558'
 ht-degree: 0%
 
 ---
@@ -18,8 +18,6 @@ ht-degree: 0%
 Per gli annunci (o creativi) Digital Video Ad Serving Template (VAST) con la regola di fallback abilitata, TVSDK tratta un annuncio con un tipo di supporto non valido come un annuncio vuoto e tenta di utilizzare gli annunci di fallback al suo posto. Potete configurare alcuni aspetti del comportamento di fallback.
 
 La specifica VAST/Digital Video Multiple Ad Playlist (VMAP) afferma che per gli annunci in cui è abilitato il fallback VAST, gli annunci vuoti attivano automaticamente l&#39;uso degli fallback pubblicitari. Quando un annuncio VAST è vuoto, TVSDK cerca un tipo di supporto HLS valido sostitutivo tra gli annunci di fallback. Quando un annuncio VAST in un wrapper ha un tipo di supporto non valido, TVSDK tratta l’annuncio come vuoto. Puoi configurare se TVSDK debba fare lo stesso per gli annunci in linea in un VMAP. Per ulteriori informazioni sulla funzione VAST `fallbackOnNoAd`, vedere [Digital Video Ad Serving Template (VAST) 3.0](https://www.iab.net/guidelines/508676/digitalvideo/vsuite/vast).
-
-Il back end di inserimento degli annunci Primetime mantiene una serie di priorità per consentirgli di scegliere tra diversi tipi di supporti nella stessa risposta VAST/VMAP. Per ulteriori informazioni su questo elenco di priorità e su come modificarlo, vedere [Panoramica di CRS](../../../../dynamic-ad-insertion/creative-repackaging-service/crs-overview.md).
 
 ## Definizione del comportamento fallback ad annunci in linea VMAP {#define-fallback-ad-behavior-for-vmap-inline-ads}
 
