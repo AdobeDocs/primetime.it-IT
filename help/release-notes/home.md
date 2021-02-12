@@ -4,7 +4,7 @@ seo-title: ' note sulla versione di Adobe Primetime'
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 22ed68a2aa5a85a37763186bd6802f980acfc9d8
+source-git-commit: ff723dd66ff4c576bf5c70f5fb061962d021e330
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 39%
@@ -41,7 +41,7 @@ Per ulteriori informazioni sulla versione rilasciata corrente per [iOS](../relea
 | [Implementazione di riferimento](/help/android-reference-implementation/home.md) | Consente di comprendere il TVSDK e modificare i gestori delle funzioni per personalizzare il lettore personale. |
 | [Riferimenti API Primetime](/help/reference/api-references.md) | Fornisce informazioni dettagliate sulle funzioni TVSDK, le strutture di dati e altri costrutti di programmazione. |
 | [Digital Rights Management](/help/digital-rights-management/home.md) | Consente di ottenere ulteriori informazioni sui vari scenari utente nel Digital Rights Management (DRM) |
-| [Guida di Primetime Ad Insertion](/help/dynamic-ad-insertion/home.md) | Spiega come monetizzare i contenuti inserendo sul server annunci dinamici mirati agli utenti e coinvolgendo il pubblico con annunci personalizzati. |
+| [Guida di Primetime Ad Insertion](/help/primetime-ad-insertion/home.md) | Spiega come monetizzare i contenuti inserendo sul server annunci dinamici mirati agli utenti e coinvolgendo il pubblico con annunci personalizzati. |
 | [Archivi](https://helpx.adobe.com/primetime/archives.html) | Scaricate i PDF della documentazione archiviata. |
 
 ## Risorse utili
