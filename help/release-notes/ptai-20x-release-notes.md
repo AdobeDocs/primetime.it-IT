@@ -2,9 +2,9 @@
 title: Note sulla versione di PTAI 20.12.1
 description: Le note sulla versione di PTAI descrivono le novità o le modifiche, i problemi risolti e noti in Primetime  Ad Insertion nel 2020.
 translation-type: tm+mt
-source-git-commit: 4790c8ab25ca6ecf118adf3037fc2e4e4f451cb3
+source-git-commit: 8133c35bed7fc72a6c642016a2a4b69204ad8f7a
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1081'
 ht-degree: 0%
 
 ---
@@ -22,9 +22,9 @@ Le note sulla versione di Primetime  Ad Insertion 20.12.1 descrivono le novità 
 
 * Include hotfix per risolvere problemi di connettività client intermittente (5xx) in Primetime  Ad Insertion rilevato il 30 novembre 2020.
 
-### Miglioramenti e correzioni nelle versioni precedenti
+## Miglioramenti e correzioni nelle versioni precedenti
 
-#### Versione 20.11.1
+### Versione 20.11.1
 
 **Quando:** giovedì 5 novembre 2020 dalle 2:00 alle 05:00 ora orientale
 
@@ -32,7 +32,7 @@ Le note sulla versione di Primetime  Ad Insertion 20.12.1 descrivono le novità 
 
 * Aggiornamenti di manutenzione.
 
-#### Versione 20.10.2
+### Versione 20.10.2
 
 **Quando:** Giovedì 29 ottobre 2020 dalle 12:01 AM alle 06:00 Ora orientale
 
@@ -40,7 +40,7 @@ Le note sulla versione di Primetime  Ad Insertion 20.12.1 descrivono le novità 
 
 * Aggiornamenti di manutenzione.
 
-#### Versione 20.10.1
+### Versione 20.10.1
 
 **Quando:** martedì 13 ottobre 2020 dalle 03:00 alle 07:00 ora orientale
 
@@ -48,7 +48,7 @@ Le note sulla versione di Primetime  Ad Insertion 20.12.1 descrivono le novità 
 
 * Aggiornamenti di manutenzione.
 
-#### Versione 20.9.3
+### Versione 20.9.3
 
 **Quando:** Mercoledì 30 Settembre 2020 alle 3:30 AM alle 6:30 Ora orientale
 
@@ -56,7 +56,7 @@ Le note sulla versione di Primetime  Ad Insertion 20.12.1 descrivono le novità 
 
 * È stato aggiunto il parametro API Bootstrap `ptparallelstream`. Questo consente ai clienti con lettori che richiedono flussi audio o video demussati CMAF in parallelo, per garantire che gli annunci nelle tracce audio e video siano coerenti. Impostate il valore del parametro su true per abilitare questa funzione o omettete di disattivarla.
 
-#### Versione 20.9.2
+### Versione 20.9.2
 
 **Quando:** martedì 15 settembre 2020 dalle 3:30 alle 6:30 ora orientale
 
@@ -71,7 +71,7 @@ Per ulteriori informazioni o per attivare questa funzione, contattate il rappres
    >
    >Questo timeout si applica solo alle richieste di annunci, non alle richieste di annunci creativi.
 
-#### Versione 20.9.1
+### Versione 20.9.1
 
 **Quando:** martedì 1 settembre 2020 dalle 3:30 alle 7:30 ora orientale
 
@@ -79,7 +79,7 @@ Per ulteriori informazioni o per attivare questa funzione, contattate il rappres
 
 * È stato risolto il problema per i clienti che utilizzano HLS/CMAF, a causa del quale talvolta i token CDN o i tag EXT-X-MAP mancavano a volte nella finestra DVR.
 
-#### Versione 20.8.4
+### Versione 20.8.4
 
 **Quando:** mercoledì 19 agosto 2020 dalle 03:30 alle 07:30 Ora orientale
 
@@ -87,7 +87,7 @@ Per ulteriori informazioni o per attivare questa funzione, contattate il rappres
 
 Aggiornamenti di manutenzione.
 
-#### Versione 20.8.1
+### Versione 20.8.1
 
 **Quando:** Martedì 4 Agosto 2020 dalle 3:00 AM alle 6:00 Ora orientale
 
@@ -95,7 +95,7 @@ Aggiornamenti di manutenzione.
 
 Aggiornamenti di manutenzione.
 
-#### Versione 20.7.1
+### Versione 20.7.1
 
 **Quando:** giovedì 9 luglio 2020 dalle 03:00 alle 05:00 ora orientale
 
@@ -109,7 +109,7 @@ Aggiornamenti di manutenzione.
 
 * Pannello Console SSAI ottimizzato per il pannello Stati sessione
 
-#### Versione 20.6.2
+### Versione 20.6.2
 
 **Quando:** giovedì 18 giugno 2020 dalle 03:00 alle 04:00 ora orientale
 
@@ -117,7 +117,7 @@ Aggiornamenti di manutenzione.
 
 Migliorata la sincronizzazione del flusso per i client video che richiedono una precisione in millisecondi. Contattate  Adobe Support per abilitare la precisione in millisecondi per `#EXT-X-PROGRAM-DATE-TIME tags`.
 
-#### Versione 20.6.1
+### Versione 20.6.1
 
 **Quando:** martedì 2 giugno 2020 dalle 03:00 alle 05:00 ora orientale
 
@@ -135,7 +135,7 @@ Contattate il supporto  Adobe per abilitare le seguenti nuove funzionalità tram
 
 * È stato risolto un problema per il quale i tag EXT-X-DISCONTINUITY venivano rimossi dalla parte superiore della playlist quando si passava dagli annunci ai contenuti. Per abilitare questa correzione, contattate  Adobe.
 
-#### Versione 20.5.1
+### Versione 20.5.1
 
 **Quando:** martedì 5 maggio 2020 dalle 04:00 alle 05:00 ora orientale
 
@@ -145,7 +145,7 @@ Contattate il supporto  Adobe per abilitare le seguenti nuove funzionalità tram
 
 * Aggiornamenti di manutenzione.
 
-#### Versione 20.3.4
+### Versione 20.3.4
 
 **Quando:** mercoledì 1 aprile 2020 dalle 03:00 alle 04:00 ora orientale
 
@@ -153,7 +153,7 @@ Contattate il supporto  Adobe per abilitare le seguenti nuove funzionalità tram
 
 * Aggiornamenti di protezione.
 
-#### Versione 20.3.3
+### Versione 20.3.3
 
 **Quando:** giovedì 26 marzo 2020 dalle 03:00 alle 04:00 ora orientale
 
@@ -163,7 +163,7 @@ Contattate il supporto  Adobe per abilitare le seguenti nuove funzionalità tram
 
 * È stato risolto un problema con i flussi audio CMAF/demuxed, a causa del quale in alcuni scenari i numeri EXT-X-MEDIA-SEQUENCE aumentavano in modo errato.
 
-#### Versione 20.3.2
+### Versione 20.3.2
 
 **Quando:** mercoledì 11 marzo 2020 dalle 05:30 alle 07:00 ora orientale
 
@@ -171,7 +171,7 @@ Contattate il supporto  Adobe per abilitare le seguenti nuove funzionalità tram
 
 * Aggiornamenti di manutenzione.
 
-#### Versione 20.3.1
+### Versione 20.3.1
 
 **Quando:** Giovedì 05 marzo 2020 dalle 02:30 alle 04:30 Ora orientale
 
@@ -183,14 +183,14 @@ Contattate il supporto  Adobe per abilitare le seguenti nuove funzionalità tram
 
 * Correzioni di sicurezza e manutenzione.
 
-#### Versione 20.2.1
+### Versione 20.2.1
 
 **Quando:** Giovedì 13 febbraio 2020 dalle 04:30 alle 05:30 Ora orientale
 
 * È stato aggiunto il supporto per l’unione di risorse pubblicitarie contenenti più flussi solo audio in base al linguaggio/codec/bitrate.
 * Piccoli miglioramenti delle prestazioni e aggiornamenti di manutenzione.
 
-#### Versione 20.1.3
+### Versione 20.1.3
 
 **Quando:** martedì 28 gennaio 2020 dalle 2:00 alle 03:00 ora orientale
 
@@ -204,13 +204,13 @@ Contattate il supporto  Adobe per abilitare le seguenti nuove funzionalità tram
 
 * Rimuovere vecchi oggetti V1 dai gruppi NetStorage per mantenere il conteggio degli oggetti entro i limiti di sicurezza di Akamai.
 
-#### Versione 20.1.2 (Hotfix)
+### Versione 20.1.2 (Hotfix)
 
 **Quando:** lunedì, 20 gennaio 2020 dalle 02:00 alle 03:00 Ora orientale
 
 * Aggiornamenti di manutenzione.
 
-#### Versione 20.1.1
+### Versione 20.1.1
 
 **Quando:** mercoledì 15 gennaio 2020 dalle 04:00 alle 05:00 ora orientale
 
