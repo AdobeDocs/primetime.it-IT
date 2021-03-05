@@ -5,7 +5,7 @@ audience: end-user
 user-guide-title: Note sulla versione di Primetime
 user-guide-description: Fornisce informazioni specifiche sulla versione, requisiti di sistema, limitazioni, problemi risolti e problemi noti.
 translation-type: tm+mt
-source-git-commit: 61a6c039685c3c6a937e2c98ffa3baf51455507b
+source-git-commit: a42c5b4478967822c920d96b05d5f04a6dec8c25
 workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 14%
@@ -24,7 +24,7 @@ ht-degree: 14%
    + [Note sulla versione di TVSDK 3.12 per iOS](tvsdk-3x-ios.md)
    + [Note sulla versione di TVSDK 1.4 per iOS](tvsdk-1-4-ios.md)
 + TVSDK per Android {#tvsdk-android}
-   + [Note sulla versione di TVSDK 3.12 per Android](tvsdk-3x-android.md)
+   + [Note sulla versione di TVSDK 3.13 per Android](tvsdk-3x-android.md)
    + [Note sulla versione di TVSDK 2.7 per Android](tvsdk-27-android.md)
    + [Note sulla versione di TVSDK 2.4.1 per Android](tvsdk-24-android.md)
    + [Note sulla versione di TVSDK 1.4 per Android](tvsdk-1-4-android.md)
