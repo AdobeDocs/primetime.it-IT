@@ -1,47 +1,44 @@
 ---
-description: Esistono alcuni modi per determinare l'inserimento e il posizionamento degli annunci.
-seo-description: Esistono alcuni modi per determinare l'inserimento e il posizionamento degli annunci.
-seo-title: Inserimento e posizionamento di annunci
+description: Esistono alcuni modi per determinare l’inserimento degli annunci e il posizionamento degli annunci.
 title: Inserimento e posizionamento di annunci
-uuid: 1d4d6364-1c49-402b-9b72-8c185b1c94e1
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '274'
 ht-degree: 0%
 
 ---
 
 
-# Inserimento annunci e posizionamento{#ad-insertion-and-placement}
+# Inserimento e posizionamento di annunci{#ad-insertion-and-placement}
 
-Esistono alcuni modi per determinare l&#39;inserimento e il posizionamento degli annunci.
+Esistono alcuni modi per determinare l’inserimento degli annunci e il posizionamento degli annunci.
 
-## Inserimento annunci {#section_1F7581B987704E318E064082190E8243}
+## Inserimento annuncio {#section_1F7581B987704E318E064082190E8243}
 
-Di seguito viene fornita una panoramica del processo utilizzato per determinare l&#39;inserimento di annunci:
+Ecco una panoramica del processo utilizzato per determinare l&#39;inserimento di annunci:
 
-1. **Rilevamento** opportunità: TVSDK utilizza le informazioni sul flusso per rilevare le posizioni possibili e desiderate per gli annunci.
-1. **Risoluzione** annuncio: TVSDK comunica con un server di annunci per recuperare gli annunci da unire nel contenuto.
-1. **Posizionamento** annuncio: Il TVSDK carica gli annunci specificati e li inserisce nella cronologia del contenuto nelle posizioni specificate e ricalcola la timeline virtuale, se necessario.
+1. **Rilevamento** opportunità: Il TVSDK utilizza le informazioni di flusso per rilevare le posizioni possibili e desiderate per gli annunci.
+1. **Risoluzione** annunci: Il TVSDK comunica con un server di annunci per recuperare gli annunci da unire nel contenuto.
+1. **Posizionamento** dell’annuncio: Il TVSDK carica gli annunci specificati e li inserisce nella timeline del contenuto nelle posizioni specificate e, se necessario, ricalcola la timeline virtuale.
 
-## Posizionamento annunci {#section_B9D63F7409A2447F9FF209289BE5D3D5}
+## Posizionamento annuncio {#section_B9D63F7409A2447F9FF209289BE5D3D5}
 
-TVSDK può ottenere posizioni per possibili inserimenti pubblicitari dalle seguenti origini:
+Il TVSDK può ottenere le posizioni per un possibile posizionamento di annunci dalle seguenti sorgenti:
 
-* **Manifesto di metadati/suggerimenti**
+* **Metadati/suggerimenti manifesto**
 
-   Il TVSDK rileva i segnali, estrae le informazioni necessarie da questi suggerimenti e comunica con un server pubblicitario per ottenere gli annunci corrispondenti. Questa fonte è comune per i flussi live/lineari.
+   Il TVSDK rileva i suggerimenti, estrae le informazioni necessarie da questi suggerimenti e comunica con un server pubblicitario per ottenere gli annunci corrispondenti. Questa sorgente è comune per i flussi live/lineari.
 
-   TVSDK sostituisce di solito il contenuto principale con gli annunci nella posizione indicata dai metadati/suggerimenti; in caso contrario, il client cadrebbe sempre di più dietro il punto attivo effettivo.
+   Il TVSDK di solito sostituisce il contenuto principale con gli annunci nella posizione indicata dai metadati/suggerimenti; in caso contrario, il cliente scenderebbe sempre di più dietro l&#39;effettivo live point.
 
-* **La mappa del server pubblicitario**
+* **Mappa del server pubblicitario**
 
-   Solitamente, i metadati relativi a questi flussi vengono registrati nel server pubblicitario prima della riproduzione. TVSDK recupera la cronologia degli annunci e gli annunci corrispondenti dal server. Questa fonte è comune per i flussi VOD.
+   Di solito, i metadati relativi a questi flussi vengono registrati nel server pubblicitario prima della riproduzione. Il TVSDK recupera la timeline dell’annuncio e gli annunci corrispondenti dal server. Questa fonte è comune per i flussi VOD.
 
-   TVSDK in genere inserisce gli annunci risolti nel contenuto principale come indicato dalla mappa del server.
+   TVSDK di solito inserisce gli annunci risolti nel contenuto principale come indicato dalla mappa del server.
 
 >[!NOTE]
 >
->Per impostazione predefinita, TVSDK utilizza segnali manifest per flussi live/lineari e mappe del server pubblicitario per flussi VOD. Tuttavia, per supportare la riproduzione completa degli eventi per gli eventi in diretta, l&#39;applicazione deve effettuare ulteriori passi.
+>Per impostazione predefinita, il TVSDK utilizza segnali manifest per flussi live/lineari e mappe del server pubblicitario per flussi VOD. Tuttavia, per supportare la riproduzione completa degli eventi per gli eventi live, l’applicazione deve intraprendere ulteriori passi.
 
