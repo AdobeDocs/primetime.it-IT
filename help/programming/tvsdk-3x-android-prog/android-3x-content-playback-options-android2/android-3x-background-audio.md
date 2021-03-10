@@ -1,9 +1,9 @@
 ---
-seo-title: Abilitare l'audio in background
-title: Abilitare l'audio in background
-uuid: aa6dc934-e85c-4db1-901b-9777f47106e6
+title: Abilita audio in background
+description: Abilita audio in background
+copied-description: true
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '63'
 ht-degree: 0%
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 # Abilita audio in background {#enable-background-audio}
 
-Per abilitare la riproduzione audio quando l&#39;app è in background, l&#39;app deve chiamare `enableAudioPlaybackInBackground` API di MediaPlayer con true come argomento quando il lettore è in stato PREPARATO.
+Per abilitare la riproduzione audio quando l’app è in background, l’app deve chiamare l’API `enableAudioPlaybackInBackground` di MediaPlayer con true come argomento quando il lettore è in stato PREPARATO.
 
 ```
 _mediaPlayer.enableAudioPlaybackInBackground(true);
 ```
 
-L&#39;app deve mettere in pausa la riproduzione quando perde il blocco dell&#39;audio attivo durante eventi come la risposta al telefono, ecc. Il frammento di codice seguente illustra come implementare la `OnAudioFocusChangeListener`:
+L&#39;app dovrebbe mettere in pausa la riproduzione quando perde il blocco dell&#39;audio durante eventi come la risposta al telefono, ecc. Il seguente frammento di codice illustra come implementare il `OnAudioFocusChangeListener`:
 
 ```
 /** 
