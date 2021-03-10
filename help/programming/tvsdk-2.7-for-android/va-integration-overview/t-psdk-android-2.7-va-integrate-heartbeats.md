@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Inizializzare e configurare l'analisi video
-title: Inizializzare e configurare l'analisi video
-uuid: 98017a20-4997-42f7-9b03-fd9c4b6ccd92
+title: Inizializzare e configurare l’analisi video
+description: Inizializzare e configurare l’analisi video
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1985694f99c548284aad6e6b4e070bece230bdf4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '573'
 ht-degree: 0%
 
 ---
@@ -15,42 +13,42 @@ ht-degree: 0%
 
 # Inizializzare e configurare l&#39;analisi video {#initialize-and-configure-video-analytics}
 
-È possibile configurare il lettore per tenere traccia e analizzare l’utilizzo del video.
-Prima di attivare il tracciamento video (heartbeat video), accertatevi di disporre dei seguenti elementi:
+Puoi configurare il lettore per tenere traccia e analizzare l’utilizzo dei video.
+Prima di attivare il tracciamento video (heartbeat video), assicurati di disporre dei seguenti elementi:
 
 * TVSDK 2.5 per Android.
 * Informazioni di configurazione/inizializzazione
 
-   Per informazioni specifiche sull’account di tracciamento video, contattate il rappresentante del Adobe :
+   Contatta il tuo rappresentante di Adobe per ottenere informazioni specifiche sul tuo account di tracciamento video:
 
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
   <tr> 
    <td colname="col1"> <span class="filepath"> ADBMobileConfig.json  </span> </td> 
-   <td colname="col2"> <p>Importante:  Il nome del file di configurazione JSON deve rimanere <span class="filepath"> ADBMobileConfig.json </span>. Impossibile modificare il nome e il percorso di questo file di configurazione. Il percorso di questo file deve essere <span class="filepath"> &lt;source root&gt;/assets </span>. </p> </td> 
+   <td colname="col2"> <p>Importante:  Il nome del file di configurazione JSON deve rimanere <span class="filepath"> ADBMobileConfig.json </span>. Impossibile modificare il nome e il percorso del file di configurazione. Il percorso di questo file deve essere <span class="filepath"> &lt;source root&gt;/assets </span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> Endpoint del server di tracciamento AppMeasurement </td> 
-   <td colname="col2"> L'URL dell'endpoint della raccolta back-end di Adobe Analytics  (precedentemente SiteCatalyst). </td> 
+   <td colname="col1"> Endpoint server di tracciamento AppMeasurement </td> 
+   <td colname="col2"> URL dell'endpoint di raccolta back-end Adobe Analytics (precedentemente SiteCatalyst). </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> Endpoint del server di tracciamento analisi video </td> 
-   <td colname="col2"> URL dell'endpoint della raccolta back-end di analisi video. Qui vengono inviate tutte le chiamate di tracciamento heartbeat video. <p>Suggerimento:  L’URL del server di tracciamento dei visitatori è lo stesso dell’URL del server di tracciamento delle analisi. Per informazioni sull'implementazione del servizio ID visitatori, vedi <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementare il servizio ID </a>. </p> </td> 
+   <td colname="col1"> Endpoint server di tracciamento analisi video </td> 
+   <td colname="col2"> URL dell’endpoint di raccolta back-end di analisi video. Qui vengono inviate tutte le chiamate di tracciamento heartbeat video. <p>Suggerimento:  L’URL del server di tracciamento dei visitatori è lo stesso dell’URL del server di tracciamento di Analytics. Per informazioni sull’implementazione del servizio ID visitatori, consulta <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementare il servizio ID </a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Nome account </td> 
-   <td colname="col2"> Noto anche come ID Suite di rapporti (RSID). </td> 
+   <td colname="col2"> Noto anche come ID della suite di rapporti (RSID). </td> 
   </tr> 
   <tr> 
    <td colname="col1"> ID organizzazione Marketing Cloud </td> 
-   <td colname="col2"> Un valore stringa richiesto per creare un'istanza del componente Visitatore. </td> 
+   <td colname="col2"> Valore stringa necessario per creare un'istanza del componente Visitatore. </td> 
   </tr> 
  </tbody> 
 </table>
 
 Per configurare il tracciamento video nel lettore:
 
-1. Verificare che le opzioni relative al tempo di caricamento nel file di risorse `ADBMobileConfig.json` siano corrette.
+1. Conferma che le opzioni di caricamento nel file di risorse `ADBMobileConfig.json` siano corrette.
 
    ```
    { 
@@ -79,28 +77,28 @@ Per configurare il tracciamento video nel lettore:
    }
    ```
 
-   Questo file di configurazione JSON viene fornito come risorsa con TVSDK. Il lettore legge questi valori solo al momento del caricamento e i valori rimangono costanti durante l&#39;esecuzione dell&#39;applicazione.
+   Questo file di configurazione in formato JSON è incluso come risorsa con TVSDK. Il lettore legge questi valori solo al momento del caricamento e i valori rimangono costanti durante l&#39;esecuzione dell&#39;applicazione.
 
    Per configurare le opzioni di caricamento:
 
 
-   1. Verificate che il file `ADBMobileConfig.json` contenga i valori appropriati (forniti dal Adobe ).
-   1. Verificate che il file si trovi nella cartella `assets/`.
+   1. Verifica che il file `ADBMobileConfig.json` contenga i valori appropriati (forniti dall’Adobe).
+   1. Conferma che il file si trovi nella cartella `assets/` .
 
-      Questa cartella deve trovarsi nella radice della struttura di origine dell&#39;applicazione.
+      Questa cartella deve trovarsi nella directory principale della struttura di origine dell&#39;applicazione.
 
-   1. Compilate e create l&#39;applicazione.
-   1. Implementare ed eseguire l&#39;applicazione fornita in bundle.
+   1. Compilare e creare l&#39;applicazione.
+   1. Distribuisci ed esegui l&#39;applicazione in bundle.
 
-      Per ulteriori informazioni su queste impostazioni AppMeasurement, vedere [Misurazione del video in  Adobe Analytics](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/video/).
+      Per ulteriori informazioni su queste impostazioni di AppMeasurement, consulta [Misurazione di video in Adobe Analytics](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/video/).
 
 1. Inizializzare e configurare i metadati di tracciamento heartbeat video.
 
    >[!IMPORTANT]
    >
-   >Potete arrestare il flusso midstream del modulo di analisi video e reinizializzarlo secondo necessità. Prima che il modulo venga reinizializzato, accertatevi che anche i metadati di analisi video vengano aggiornati ai metadati di contenuto corretti. Per ricreare i metadati, ripetete i primi due passaggi seguenti (passaggi secondari **a** e **b**).
+   >È possibile arrestare il flusso midstream del modulo di analisi video e reinizializzarlo in base alle esigenze. Prima di reinizializzare il modulo, assicurati che i metadati di analisi video siano aggiornati anche ai metadati del contenuto corretti. Per ricreare i metadati, ripeti i primi due passaggi seguenti (passaggi secondari **a** e **b**).
 
-   1. Create un’istanza dei metadati di analisi video.
+   1. Crea un&#39;istanza dei metadati di Video Analytics.
 
       Questa istanza contiene tutte le informazioni di configurazione necessarie per abilitare il tracciamento heartbeat video. Ad esempio:
 
@@ -123,33 +121,33 @@ Per configurare il tracciamento video nel lettore:
       }
       ```
 
-   1. Inizializzare il fornitore di analisi video.
+   1. Inizializzare il provider di Video Analytics.
 
-      Dopo aver creato un&#39;istanza del lettore multimediale, dovete creare un&#39;istanza del fornitore di Video Analytics e fornire il contesto dell&#39;applicazione a tale istanza.
+      Dopo aver creato un&#39;istanza del lettore multimediale, devi creare un&#39;istanza del provider Video Analytics e fornirgli il contesto dell&#39;applicazione.
 
       >[!TIP]
       >
-      >Create sempre una nuova istanza del fornitore per ogni sessione di riproduzione del contenuto e rimuovete il riferimento precedente dopo aver scollegato l&#39;istanza del lettore multimediale.
+      >Crea sempre una nuova istanza del provider per ogni sessione di riproduzione dei contenuti e rimuovi il riferimento precedente dopo aver scollegato l&#39;istanza del lettore multimediale.
 
       ```java
       VideoAnalyticsProvider videoAnalyticsProvider = new VideoAnalyticsProvider(appContext); 
       ```
 
-   1. Impostate i metadati Video Analytics sull&#39;istanza `videoAnalyticsProvider`.
+   1. Imposta i metadati di Video Analytics sull&#39;istanza `videoAnalyticsProvider`.
 
       ```java
       videoAnalyticsProvider.setVideoAnalyticsMetadata(vaMetadata);
       ```
 
-   1. Allegare l&#39;istanza del lettore multimediale all&#39;istanza `videoAnalyticsProvider`:
+   1. Allega l&#39;istanza del lettore multimediale all&#39;istanza `videoAnalyticsProvider`:
 
       ```java
       videoAnalyticsProvider.attachMediaPlayer(mediaPlayer); 
       ```
 
-   1. Distruggete il fornitore di analisi video.
+   1. Distruggi il provider di Video Analytics.
 
-      Prima di iniziare una nuova sessione di riproduzione del contenuto, eliminate l’istanza precedente del fornitore video. Dopo aver ricevuto l’evento di completamento del contenuto (o notifica), attendete alcuni minuti prima di distruggere l’istanza del fornitore di analisi video. La distruzione immediata dell’istanza potrebbe interferire con la capacità del fornitore di Analytics Video di inviare un ping &quot;video completato&quot;.
+      Prima di iniziare una nuova sessione di riproduzione dei contenuti, elimina l’istanza precedente del provider video. Dopo aver ricevuto l’evento di completamento del contenuto (o notifica), attendi alcuni minuti prima di eliminare l’istanza del provider di video analytics. La distruzione immediata dell’istanza potrebbe interferire con la capacità del provider di Video Analytics di inviare un ping &quot;video complete&quot;.
 
       ```java
       if (videoAnalyticsProvider) { 
@@ -158,9 +156,9 @@ Per configurare il tracciamento video nel lettore:
       }
       ```
 
-   1. Contrassegna manualmente il flusso Live/Linear come completato.
+   1. Contrassegna manualmente il flusso Live/Lineare come completato.
 
-      Se disponete di vari episodi in uno streaming live, potete contrassegnare manualmente un episodio come completo utilizzando l&#39;API complete. In questo modo viene terminata la sessione di tracciamento video per l’episodio video corrente e potete avviare una nuova sessione di tracciamento per l’episodio successivo.
+      Se hai vari episodi su uno streaming live, puoi contrassegnare manualmente un episodio come completo utilizzando l&#39;API completa. Questo termina la sessione di tracciamento video per l&#39;episodio video corrente e puoi avviare una nuova sessione di tracciamento per l&#39;episodio successivo.
 
       >[!TIP]
       >
