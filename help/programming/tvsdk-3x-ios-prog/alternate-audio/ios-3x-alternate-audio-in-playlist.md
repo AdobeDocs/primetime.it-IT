@@ -1,13 +1,10 @@
 ---
-description: L’audio alternativo o in fase di rilegatura successiva consente di passare dalle tracce audio disponibili per una traccia video. In questo modo, gli utenti possono selezionare una traccia della lingua durante la riproduzione del video.
-seo-description: L’audio alternativo o in fase di rilegatura successiva consente di passare dalle tracce audio disponibili per una traccia video. In questo modo, gli utenti possono selezionare una traccia della lingua durante la riproduzione del video.
-seo-title: Tracce audio alternative nella playlist
+description: L'audio alternativo o in ritardo consente di passare da una traccia audio all'altra per una traccia video. In questo modo, gli utenti possono selezionare una traccia della lingua durante la riproduzione del video.
 title: Tracce audio alternative nella playlist
-uuid: 6241d3e4-6e07-44fb-bc0e-5d49d1a76824
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '271'
 ht-degree: 0%
 
 ---
@@ -15,22 +12,22 @@ ht-degree: 0%
 
 # Tracce audio alternative nella playlist {#section_BC8C1C74A5A24A8CA68C1E7E721EE742}
 
-La playlist di un video può specificare un numero illimitato di tracce audio alternative per il contenuto video principale. Ad esempio, potrebbe essere utile aggiungere lingue diverse al contenuto video o consentire all&#39;utente di passare da un&#39;altra traccia del dispositivo all&#39;altra durante la riproduzione del contenuto.
+La playlist di un video può specificare un numero illimitato di tracce audio alternative per il contenuto video principale. Ad esempio, potresti voler aggiungere lingue diverse al contenuto video o consentire all’utente di passare da un brano all’altro del dispositivo durante la riproduzione del contenuto.
 
-Le tracce audio alternative, o l&#39;audio con rilegatura successiva, consentono agli utenti di passare da una traccia video HTTP all&#39;altra in più lingue (dal vivo/lineare e dal VOD) e non è necessario modificare, duplicare o riassemblare il video per ciascuna traccia audio. Potete fornire tracce in più lingue per una risorsa video prima o dopo la creazione del pacchetto iniziale della risorsa.
+Le tracce audio alternative, o l&#39;audio in ritardo, consentono agli utenti di passare da più tracce in lingua per flussi video HTTP (in tempo reale/lineare e VOD) e non è necessario modificare, duplicare o riassemblare il video per ciascuna traccia audio. È possibile fornire tracce in più lingue per una risorsa video prima o dopo la creazione del pacchetto iniziale della risorsa.
 
 >[!TIP]
 >
->Affinché l’audio alternativo sia associato alla traccia video del supporto principale, le marche temporali della traccia alternativa devono corrispondere alle marche temporali dell’audio nella traccia principale.
+>Affinché l’audio alternativo sia unito alla traccia video del supporto principale, le marche temporali della traccia alternativa devono corrispondere alle marche temporali dell’audio nella traccia principale.
 
-I seguenti requisiti si applicano se utilizzate tracce audio alternative e incorporate pubblicità:
+Se si utilizzano tracce audio alternative e si incorpora la pubblicità, si applicano i seguenti requisiti:
 
-* Se il contenuto principale contiene tracce audio alternative, gli annunci devono avere almeno un flusso solo audio.
-* Ogni durata del segmento del flusso solo audio di un annuncio deve essere uguale alla durata del segmento del flusso video di un annuncio.
+* Se il contenuto principale dispone di tracce audio alternative, gli annunci devono avere almeno un flusso solo audio.
+* La durata di ciascun segmento dello streaming di solo audio di un annuncio deve essere uguale alla durata del segmento dello streaming video di un annuncio.
 
 La traccia audio principale è inclusa nella raccolta di tracce audio con l&#39;etichetta `default`. I metadati per i flussi audio alternativi sono inclusi nella playlist nei tag `#EXT-X-MEDIA` con `TYPE=AUDIO`.
 
-Ad esempio, un manifesto M3U8 che specifica più flussi audio alternativi potrebbe essere simile al seguente:
+Ad esempio, un manifesto M3U8 che specifica più flussi audio alternativi potrebbe avere un aspetto simile al seguente:
 
 ```
 #EXTM3U 
