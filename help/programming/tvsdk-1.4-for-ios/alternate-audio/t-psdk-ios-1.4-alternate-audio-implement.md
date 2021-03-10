@@ -1,13 +1,10 @@
 ---
-description: L'audio con associazione tardiva utilizza PTMediaPlayer per riprodurre un video specificato in una playlist HLS M3U8 e che può contenere diversi flussi audio alternativi.
-seo-description: L'audio con associazione tardiva utilizza PTMediaPlayer per riprodurre un video specificato in una playlist HLS M3U8 e che può contenere diversi flussi audio alternativi.
-seo-title: Accedere a tracce audio alternative
+description: L'audio in ritardo utilizza PTMediaPlayer per riprodurre un video specificato in una playlist HLS M3U8 e che può contenere diversi flussi audio alternativi.
 title: Accedere a tracce audio alternative
-uuid: 77e39633-bf17-4a06-a2a1-93fdaadedd17
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '106'
 ht-degree: 0%
 
 ---
@@ -15,10 +12,10 @@ ht-degree: 0%
 
 # Accedere a tracce audio alternative{#access-alternate-audio-tracks}
 
-L&#39;audio con associazione tardiva utilizza PTMediaPlayer per riprodurre un video specificato in una playlist HLS M3U8 e che può contenere diversi flussi audio alternativi.
+L&#39;audio in ritardo utilizza PTMediaPlayer per riprodurre un video specificato in una playlist HLS M3U8 e che può contenere diversi flussi audio alternativi.
 
-1. Attendete che MediaPlayer sia almeno nello stato `PTMediaPlayerStatusReady`.
-1. Ascoltare l&#39;evento:
+1. Attendi che MediaPlayer sia almeno nello stato `PTMediaPlayerStatusReady` .
+1. Ascolta questo evento:
 
    notifica `PTMediaPlayerItemMediaSelectionOptionsAvailable`: È disponibile l&#39;elenco iniziale delle tracce audio.
 
@@ -29,7 +26,7 @@ L&#39;audio con associazione tardiva utilizza PTMediaPlayer per riprodurre un vi
         object:self.player];
    ```
 
-1. Ottenete le tracce audio disponibili dall&#39;istanza `PTMediaPlayerItem`.
+1. Ottieni le tracce audio disponibili dall&#39;istanza `PTMediaPlayerItem`.
 
    ```
    - (void) onMediaPlayerItemMediaSelectionOptionsAvailable:(NSNotification *) notification { 
@@ -38,5 +35,5 @@ L&#39;audio con associazione tardiva utilizza PTMediaPlayer per riprodurre un vi
    }
    ```
 
-1. (Facoltativo) Presentare all’utente le tracce disponibili.
-1. Impostate la traccia audio selezionata sull&#39;istanza `PTMediaPlayerItem`.
+1. (Facoltativo) Presentare all&#39;utente le tracce disponibili.
+1. Imposta la traccia audio selezionata sull&#39;istanza `PTMediaPlayerItem`.
