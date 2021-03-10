@@ -1,13 +1,10 @@
 ---
-description: Browser TVSDK supporta i banner pubblicitari complementari, che sono annunci che accompagnano un annuncio lineare e spesso rimangono sulla pagina dopo la fine dell'annuncio lineare. La vostra applicazione è responsabile della visualizzazione dei banner associati forniti con un annuncio lineare.
-seo-description: Browser TVSDK supporta i banner pubblicitari complementari, che sono annunci che accompagnano un annuncio lineare e spesso rimangono sulla pagina dopo la fine dell'annuncio lineare. La vostra applicazione è responsabile della visualizzazione dei banner associati forniti con un annuncio lineare.
-seo-title: Annunci per banner
-title: Annunci per banner
-uuid: 5655c348-268d-42d6-92c2-f5de39ff666f
+description: Il browser TVSDK supporta annunci per banner complementari, che sono annunci che accompagnano un annuncio lineare e spesso rimangono sulla pagina dopo la fine dell’annuncio lineare. La tua applicazione è responsabile della visualizzazione dei banner complementari che sono forniti con un annuncio lineare.
+title: Annunci banner
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '187'
 ht-degree: 0%
 
 ---
@@ -15,20 +12,20 @@ ht-degree: 0%
 
 # Panoramica {#companion-banner-ads-overview}
 
-Browser TVSDK supporta i banner pubblicitari complementari, che sono annunci che accompagnano un annuncio lineare e spesso rimangono sulla pagina dopo la fine dell&#39;annuncio lineare. La vostra applicazione è responsabile della visualizzazione dei banner associati forniti con un annuncio lineare.
+Il browser TVSDK supporta annunci per banner complementari, che sono annunci che accompagnano un annuncio lineare e spesso rimangono sulla pagina dopo la fine dell’annuncio lineare. La tua applicazione è responsabile della visualizzazione dei banner complementari che sono forniti con un annuncio lineare.
 
-Quando visualizzate annunci di accompagnamento, attenetevi alle seguenti raccomandazioni:
+Quando si visualizzano gli annunci companion, attenersi alle seguenti raccomandazioni:
 
-* Tentate di presentare tutti gli annunci di banner pubblicitari associati a un video pubblicitari che si adattano al layout del vostro lettore.
-* Presentate un banner complementare solo se la posizione corrisponde all’altezza e alla larghezza specificate del banner ausiliario.
+* Tenta di presentare il numero di annunci banner di un annuncio video come si adatterà al layout del tuo giocatore.
+* Presentare un banner di accompagnamento solo se si dispone di una posizione che corrisponde all&#39;altezza e alla larghezza specificate del banner di accompagnamento.
 
    >[!TIP]
    >
-   >Non ridimensionate il banner.
+   >Non ridimensionare il banner.
 
-* Presentate i banner di accompagnamento il prima possibile dopo l’inizio dell’annuncio.
-* Non sovrapponete il contenitore di annunci/video principale con i banner complementari.
-* Continuate a visualizzare i banner complementari dopo la fine dell’annuncio.
+* Presenta i banner associati il prima possibile dopo l’inizio dell’annuncio.
+* Non sovrapporre il contenitore principale annuncio/video con banner complementari.
+* Continua a visualizzare i banner complementari dopo la fine dell’annuncio.
 
-   Lo standard prevede la visualizzazione di ciascun banner complementare fino a quando non si dispone di una sostituzione per questo banner.
+   Lo standard è quello di visualizzare ogni banner associato fino a quando non si dispone di una sostituzione per questo banner.
 
