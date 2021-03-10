@@ -1,25 +1,22 @@
 ---
-description: Le nuove API seguenti consentono di definire callback DRM.
-seo-description: Le nuove API seguenti consentono di definire callback DRM.
-seo-title: Implementazione di callback DRM
-title: Implementazione di callback DRM
-uuid: a54c5ec2-299f-47b0-b65b-eed5656ab6aa
+description: Le seguenti nuove API ti consentono di definire callback DRM.
+title: Implementazione dei callback DRM
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '168'
 ht-degree: 0%
 
 ---
 
 
-# Implementazione di callback DRM{#implementing-drm-callbacks}
+# Implementazione dei callback DRM{#implementing-drm-callbacks}
 
-Le nuove API seguenti consentono di definire callback DRM.
+Le seguenti nuove API ti consentono di definire callback DRM.
 
 <!--<a id="section_1090BFDB2C1D4EA4AAC9F9A6EC9DCD51"></a>-->
 
-È possibile definire una funzione di richiamata (ad esempio, `parseContentIdCallback`) per analizzare l&#39;ID del contenuto e impostarlo su `drmManager` utilizzando l&#39;API `setParseContentIdCallback`.
+Puoi definire una funzione di chiamata di ritorno (ad esempio, `parseContentIdCallback`) per analizzare l’ID del contenuto e impostarlo su `drmManager` utilizzando l’ API `setParseContentIdCallback`.
 
 ```js
 var arrayToString = function (array) { 
@@ -42,7 +39,7 @@ drmManager.setParseContentIdCallback(parseContentIdCallback);
 
 <!--<a id="section_1E082B428EA74D9CA11C052158A83947"></a>-->
 
-È possibile definire una funzione di richiamata (ad esempio, `onCertificateResponseCallback`) per elaborare una risposta del certificato di testo e impostare la funzione su `drmManager` utilizzando l&#39;API `setCertificateResponseCallback`. È possibile impostare `setCertificateResponseCallback` per ignorare il comportamento predefinito. Ad esempio, se si dispone di un `certificateResponseType` diverso da `ArrayBuffer`, è possibile utilizzare questo callback per convertire la risposta del certificato nel tipo `ArrayBuffer`.
+È possibile definire una funzione di chiamata di ritorno (ad esempio, `onCertificateResponseCallback`) per elaborare una risposta a un certificato di testo e impostare la funzione su `drmManager` utilizzando l&#39;API `setCertificateResponseCallback`. È possibile impostare `setCertificateResponseCallback` per ignorare il comportamento predefinito. Ad esempio, se disponi di un `certificateResponseType` diverso da `ArrayBuffer`, puoi utilizzare questo callback per convertire la risposta del certificato nel tipo `ArrayBuffer`.
 
 ```js
 var base64DecodeUint8Array = function (input) { 
@@ -69,7 +66,7 @@ drmManager.setCertificateResponseCallback(onCertificateResponseCallback);
 
 <!--<a id="section_4DCC1B3ABCED484EB5340A558C9A770A"></a>-->
 
-È possibile definire le funzioni di callback per analizzare il messaggio di licenza e la risposta di licenza e trasmetterle in una chiamata a `drmManager.acquireLicense`. `onLicenseResponseCallback` è un nuovo parametro nell&#39; `acquireLicense` API.
+Puoi definire le funzioni di callback per analizzare il messaggio di licenza e la risposta della licenza e trasmetterle in una chiamata a `drmManager.acquireLicense`. `onLicenseResponseCallback` è un nuovo parametro nell’ `acquireLicense` API.
 
 ```js
 var base64EncodeUint8Array = function (input) { 
@@ -124,7 +121,7 @@ var base64EncodeUint8Array = function (input) {
 drmManager.acquireLicense(drmMetadata, null, acquireLicenseListener, onLicenseMessageCallback, onLicenseResponseCallback);
 ```
 
-Nei dati di protezione, il nuovo campo **[!UICONTROL certificateResponseType]** viene utilizzato per impostare il tipo di risposta del certificato. Esempio di dati di protezione:
+Nei dati di protezione, il nuovo campo **[!UICONTROL certificateResponseType]** viene utilizzato per impostare il tipo di risposta del certificato. Ecco un esempio di dati di protezione:
 
 ```js
 { 
@@ -140,4 +137,4 @@ Nei dati di protezione, il nuovo campo **[!UICONTROL certificateResponseType]** 
 }
 ```
 
-L&#39;utilizzo del campo `certificateResponseType` è facoltativo. Se non viene utilizzato, si presume che il valore sia `ArrayBuffer`.
+L’utilizzo del campo `certificateResponseType` è facoltativo. Se non viene utilizzato, si presume che il valore sia `ArrayBuffer`.
