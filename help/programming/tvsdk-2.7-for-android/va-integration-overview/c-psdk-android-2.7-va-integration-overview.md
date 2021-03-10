@@ -1,13 +1,10 @@
 ---
-description: Potete tenere traccia dell’utilizzo dei video integrando TVSDK con  Adobe Analytics.
-seo-description: Potete tenere traccia dell’utilizzo dei video integrando TVSDK con  Adobe Analytics.
-seo-title: Analisi video
+description: Puoi tenere traccia dell’utilizzo dei video integrando TVSDK con Adobe Analytics.
 title: Analisi video
-uuid: 94e73128-532c-4981-abcb-2692d801c971
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '121'
 ht-degree: 0%
 
 ---
@@ -15,13 +12,13 @@ ht-degree: 0%
 
 # Panoramica {#video-analytics-overview}
 
-Potete tenere traccia dell’utilizzo dei video integrando TVSDK con  Adobe Analytics.
+Puoi tenere traccia dell’utilizzo dei video integrando TVSDK con Adobe Analytics.
 
-Il tracciamento video in TVSDK utilizza il servizio **Adobe Analytics Video Essentials**, che fornisce metriche di coinvolgimento video, come visualizzazioni video, completamenti video, impressioni sugli annunci, tempo trascorso sul video e così via. Per ulteriori informazioni su questo servizio, contattate il rappresentante  Adobe.
+Il tracciamento video in TVSDK utilizza il servizio **Adobe Analytics Video Essentials**, che fornisce metriche di coinvolgimento video, come visualizzazioni video, visualizzazioni complete di video, impressioni di annunci, tempo trascorso sul video e così via. Per ulteriori informazioni su questo servizio, contatta il tuo rappresentante di Adobe.
 
 La procedura seguente riassume i passaggi per attivare il tracciamento video nel lettore:
 
-1. Inizializzate e/o configurate i seguenti componenti di tracciamento video:
+1. Inizializzare e/o configurare i seguenti componenti di tracciamento video:
 
    >[!TIP]
    >
@@ -31,5 +28,5 @@ La procedura seguente riassume i passaggi per attivare il tracciamento video nel
    * Oggetto metadati analisi video
    * Oggetto metadati globale
 
-1. Configurate i rapporti di analisi video sul lato server utilizzando  Adobe Analytics Admin Tools.
+1. Imposta i rapporti di analisi video sul lato server utilizzando gli strumenti di amministrazione di Adobe Analytics.
 
