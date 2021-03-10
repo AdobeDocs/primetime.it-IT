@@ -1,9 +1,9 @@
 ---
-seo-title: Download
-title: Download
-uuid: 4dd73299-722d-4b0d-ad3d-5d83e5377fd4
+title: Scarica da solo
+description: Scarica da solo
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 0%
@@ -11,6 +11,6 @@ ht-degree: 0%
 ---
 
 
-# Download {#download-to-own}
+# Scarica da solo {#download-to-own}
 
-Con il modello di utilizzo Download-To-Own (DTO), un utente può scaricare il contenuto per utilizzarlo online o offline e ottenere una licenza permanente per il contenuto. Quando si richiede una licenza, l&#39;utente deve autenticarsi in modo che il server possa verificare che l&#39;utente abbia acquistato il contenuto.
+Con il modello di utilizzo Download-To-own (DTO), un utente può scaricare il contenuto per l&#39;utilizzo online o offline e riceve una licenza permanente per il contenuto. Quando si richiede una licenza, l’utente deve effettuare l’autenticazione in modo che il server possa verificare che l’utente abbia acquistato il contenuto.
