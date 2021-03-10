@@ -1,13 +1,10 @@
 ---
-description: Potete utilizzare TVSDK per inviare dati arbitrari nelle intestazioni dei cookie per la gestione delle sessioni, l'accesso ai gate e così via.
-seo-description: Potete utilizzare TVSDK per inviare dati arbitrari nelle intestazioni dei cookie per la gestione delle sessioni, l'accesso ai gate e così via.
-seo-title: Operazioni con i cookie
-title: Operazioni con i cookie
-uuid: 618bc59a-032d-445e-a867-ed2bf260570d
+description: Puoi utilizzare TVSDK per inviare dati arbitrari nelle intestazioni dei cookie per la gestione delle sessioni, l'accesso ai gate e così via.
+title: Utilizzare i cookie
 translation-type: tm+mt
-source-git-commit: 5ada8632a7a5e3cb5d795dc42110844244656095
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '380'
 ht-degree: 0%
 
 ---
@@ -15,22 +12,22 @@ ht-degree: 0%
 
 # Utilizzare i cookie {#work-with-cookies}
 
-Potete utilizzare TVSDK per inviare dati arbitrari nelle intestazioni dei cookie per la gestione delle sessioni, l&#39;accesso ai gate e così via.
+Puoi utilizzare TVSDK per inviare dati arbitrari nelle intestazioni dei cookie per la gestione delle sessioni, l&#39;accesso ai gate e così via.
 
-Esempio di richiesta al server chiavi con autenticazione:
+Di seguito è riportato un esempio di richiesta al server chiave con alcune autenticazioni:
 
-1. Il cliente effettua l’accesso al sito Web in un browser e il suo accesso mostra che il cliente è autorizzato a visualizzare il contenuto.
-1. In base a quanto previsto dal server licenze, l&#39;applicazione genera un token di autenticazione.
+1. Il tuo cliente accede al tuo sito web in un browser e il suo accesso mostra che il cliente è autorizzato a visualizzare il contenuto.
+1. In base a quanto previsto dal server licenze, l’applicazione genera un token di autenticazione.
 
    Questo valore viene passato a TVSDK.
 1. TVSDK imposta questo valore nell’intestazione del cookie.
-1. Quando TVSDK richiede al server di chiavi di ottenere una chiave per decifrare il contenuto, la richiesta contiene il valore di autenticazione nell&#39;intestazione del cookie.
+1. Quando TVSDK effettua una richiesta al server chiavi per ottenere una chiave per decrittografare il contenuto, la richiesta contiene il valore di autenticazione nell’intestazione del cookie.
 
-   Il server chiavi è a conoscenza della validità della richiesta.
+   Il server chiavi sa che la richiesta è valida.
 
 Per lavorare con i cookie:
 
-1. Create un `cookieManager` e aggiungete i cookie per gli URI al cookieStore.
+1. Crea un `cookieManager` e aggiungi i cookie per gli URI al tuo cookieStore.
 
    Ad esempio:
 
@@ -46,21 +43,21 @@ Per lavorare con i cookie:
 
    >[!TIP]
    >
-   >Quando il reindirizzamento 302 è abilitato, la richiesta di annuncio può essere reindirizzata a un dominio diverso da quello al quale il cookie appartiene.
+   >Quando è abilitato il reindirizzamento 302, la richiesta di annuncio può essere reindirizzata a un dominio diverso da quello a cui appartiene il cookie.
 
-   TVSDK esegue una query su questo `cookieManager` in fase di esecuzione, verifica se sono presenti cookie associati all&#39;URL e utilizza automaticamente tali cookie.
+   TVSDK invia query a questo `cookieManager` in fase di runtime, verifica se sono presenti cookie associati all’URL e utilizza automaticamente tali cookie.
 
-   Se i cookie devono essere aggiornati nell&#39;applicazione durante la riproduzione, non utilizzate l&#39;API `networkConfiguration.setCookieHeaders` in quanto l&#39;aggiornamento si verificherà nell&#39;archivio dei cookie JAVA.
+   Se è necessario aggiornare i cookie nell’applicazione durante la riproduzione, non utilizzare l’API `networkConfiguration.setCookieHeaders` in quanto l’aggiornamento verrà eseguito nell’archivio dei cookie JAVA.
 
-   `networkConfiguration.setCookieHeaders` L&#39;API imposta i cookie su C++ CookieStore di TVSDK.
+   `networkConfiguration.setCookieHeaders` API imposta i cookie su C++ CookieStore di TVSDK.
 
-   Quando utilizzate i cookie JAVA e li condividete tra Application e TVSDK, utilizzate JAVA CookieStore per gestire i cookie esclusivamente.
+   Quando utilizzi i cookie JAVA e li condividi tra Application e TVSDK, utilizza JAVA CookieStore per gestire solo i cookie.
 
-   Prima che la riproduzione venga inizializzata, impostate i cookie su CookieStore utilizzando Cookie Manager come indicato sopra.
+   Prima di inizializzare la riproduzione, impostare i cookie su CookieStore utilizzando Cookie Manager come indicato sopra.
 
-   Il cookie memorizzato in CookieStore verrà prelevato automaticamente da TVSDK.
+   Il cookie memorizzato in CookieStore verrà automaticamente raccolto da TVSDK.
 
-   Se è necessario aggiornare il valore di un cookie in un secondo momento durante la riproduzione, chiamare lo stesso metodo add di CookieStore con la stessa chiave e un nuovo campo valore.
+   Se è necessario aggiornare un valore cookie in un secondo momento durante la riproduzione, invoca lo stesso metodo di aggiunta di CookieStore con la stessa chiave e un nuovo campo valore.
 
    Anche impostato
    `networkConfiguration.setReadSetCookieHeader`(false) prima della chiamata
@@ -68,10 +65,10 @@ Per lavorare con i cookie:
 
    >[!NOTE]
    >
-   >Dopo aver impostato &#39;setReadSetCookieHeader&#39; su false, impostate i cookie per le richieste di chiave utilizzando il gestore di cookie JAVA.
+   >Dopo aver impostato su false &#39;setReadSetCookieHeader&#39;, imposta i cookie per le richieste di chiave utilizzando il gestore di cookie JAVA.
 
    `onCookiesUpdated(CookiesUpdatedEvent cookiesUpdatedEvent)`
-Questa API di callback verrà attivata ogni volta che si verifica un aggiornamento nei cookie C++ (cookie provenienti dalla risposta http). L&#39;applicazione deve ascoltare questo callback e può aggiornare il loro JAVA CookieStore di conseguenza in modo che le chiamate di rete in JAVA possano utilizzare i cookie come segue:
+Questa API di callback verrà attivata ogni volta che si verifica un aggiornamento nei cookie C++ (cookie provenienti dalla risposta http). L&#39;applicazione deve ascoltare questo callback e può aggiornare di conseguenza il proprio JAVA CookieStore in modo che le loro chiamate di rete in JAVA possano utilizzare i cookie come segue:
 
    ```
    private final CookiesUpdatedEventListener cookiesUpdatedEventListener = new CookiesUpdatedEventListener() {
