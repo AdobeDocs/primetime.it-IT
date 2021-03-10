@@ -1,23 +1,20 @@
 ---
-description: Puoi implementare i tuoi rilevatori di opportunità implementando l’interfaccia PlacementOpportunityDetector.
-seo-description: Puoi implementare i tuoi rilevatori di opportunità implementando l’interfaccia PlacementOpportunityDetector.
-seo-title: Implementare un rilevatore di opportunità personalizzato
+description: Puoi implementare i tuoi rilevatori di opportunità implementando l'interfaccia PlacementOpportunityDetector (Rilevatore opportunità).
 title: Implementare un rilevatore di opportunità personalizzato
-uuid: 012527c5-4ef0-4cd6-a9df-2fb861078a7e
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '152'
+source-wordcount: '135'
 ht-degree: 2%
 
 ---
 
 
-# Implementare un rilevatore di opportunità personalizzato {#implement-a-custom-opportunity-detector}
+# Implementa un rilevatore di opportunità personalizzato {#implement-a-custom-opportunity-detector}
 
-Puoi implementare i tuoi rilevatori di opportunità implementando l’interfaccia PlacementOpportunityDetector.
+Puoi implementare i tuoi rilevatori di opportunità implementando l&#39;interfaccia PlacementOpportunityDetector (Rilevatore opportunità).
 
-1. Create un&#39;istanza `AdvertisingFactory` personalizzata ed eseguite l&#39;override di `createOpportunityDetector`. Ad esempio:
+1. Crea un&#39;istanza `AdvertisingFactory` personalizzata e sovrascrivi `createOpportunityDetector`. Ad esempio:
 
    ```java
    new AdvertisingFactory() { 
@@ -30,7 +27,7 @@ Puoi implementare i tuoi rilevatori di opportunità implementando l’interfacci
    }
    ```
 
-1. Registra il produttore del client di annunci in `MediaPlayer`. Ad esempio:
+1. Registra la Ad Client Factory in `MediaPlayer`. Ad esempio:
 
    ```java
    // register the custom advertising factory with media player 
@@ -38,16 +35,16 @@ Puoi implementare i tuoi rilevatori di opportunità implementando l’interfacci
    mediaPlayer.registerAdClientFactory(advertisingFactory);
    ```
 
-1. Create una classe di rilevamento opportunità personalizzata che estenda la classe `PlacementOpportunityDetector`.
-   1. Nel rilevatore di opportunità personalizzato, sostituisci questa funzione:
+1. Crea una classe di rilevatore di opportunità personalizzata che estende la classe `PlacementOpportunityDetector` .
+   1. Nel rilevatore di opportunità personalizzato, sovrascrivi questa funzione:
 
       ```java
       public List<PlacementOpportunity> process(List<TimedMetadata> timedMetadataList, Metadata metadata)
       ```
 
-      Il `timedMetadataList` contiene l&#39;elenco di `TimedMetadata` disponibili, ordinato. I metadati contengono i parametri di targeting e i parametri personalizzati da inviare al provider di annunci.
+      Il `timedMetadataList` contiene l&#39;elenco di disponibili `TimedMetadata`, ordinato. I metadati contengono i parametri di targeting e i parametri personalizzati da inviare al provider di annunci.
 
-   1. Per ogni `TimedMetadata`, create un `List<PlacementOpportunity>`. L&#39;elenco può essere vuoto, ma non nullo. `PlacementOpportunity` devono avere i seguenti attributi:
+   1. Per ogni `TimedMetadata`, crea un `List<PlacementOpportunity>`. L’elenco può essere vuoto, ma non nullo. `PlacementOpportunity` devono avere i seguenti attributi:
 
       ```java
       PlacementOpportunity( 
@@ -57,7 +54,7 @@ Puoi implementare i tuoi rilevatori di opportunità implementando l’interfacci
       )
       ```
 
-   1. Dopo aver creato opportunità di posizionamento per tutti gli oggetti metadati temporizzati rilevati, è sufficiente restituire l&#39;elenco `PlacementOpportunity`.
+   1. Dopo aver creato opportunità di posizionamento per tutti gli oggetti metadati temporizzati rilevati, è sufficiente restituire l&#39; `PlacementOpportunity` elenco.
 
 Questo è un esempio di rilevatore di opportunità di posizionamento personalizzato:
 
