@@ -1,20 +1,19 @@
 ---
 title: Note sulla versione di Primetime
-seo-title: Note sulla versione di Adobe Primetime
-description: 'null'
-seo-description: 'null'
+description: Note sulla versione di Primetime
+copied-description: true
 translation-type: tm+mt
-source-git-commit: a42c5b4478967822c920d96b05d5f04a6dec8c25
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '345'
-ht-degree: 31%
+source-wordcount: '342'
+ht-degree: 32%
 
 ---
 
 
 # Note sulla versione di Primetime
 
-Benvenuto nelle note sulla versione di Adobe Primetime . I documenti elencati nella navigazione a sinistra forniscono informazioni specifiche sulla versione, requisiti di sistema, limitazioni, problemi risolti e problemi noti.
+Benvenuto nelle note sulla versione di Adobe Primetime. I documenti elencati nella navigazione a sinistra forniscono informazioni specifiche sulla versione, requisiti di sistema, limitazioni, problemi risolti e problemi noti.
 
 ## Miglioramenti e correzioni in PTAI 21.2.2
 
