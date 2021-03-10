@@ -1,9 +1,9 @@
 ---
-seo-title: Panoramica del server licenze
 title: Panoramica del server licenze
-uuid: 8c62376b-b159-4297-9322-75d62947e84e
+description: Panoramica del server licenze
+copied-description: true
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%
@@ -13,17 +13,17 @@ ht-degree: 0%
 
 # Panoramica {#license-server-overview}
 
-Prima di rilasciare licenze ai client, è necessario distribuire un server licenze Adobe Primetime DRM . Il server licenze utilizza l&#39;SDK DRM di Primetime per eseguire una serie di attività.
+Prima di poter rilasciare licenze ai clienti, devi distribuire un server di licenze Adobe Primetime DRM. Il server di licenze utilizza l&#39;SDK DRM di Primetime per eseguire diverse attività.
 
 Per implementare un server licenze:
 
-* Elabora le richieste di autenticazione, se è supportata l&#39;autenticazione tramite nome utente e password.
-* Elabora richieste di licenza
+* Elabora le richieste di autenticazione, se è supportata l’autenticazione con nome utente e password.
+* Richieste di licenza del processo
 * Elabora richieste Get Server Version: tutti i server devono implementare il supporto per questo tipo di richiesta.
 * Elabora richieste di registrazione del dominio - Necessario solo se si implementa un server di dominio.
 * Elabora richieste di cancellazione del dominio - Necessario solo se si implementa un server di dominio.
-* Sincronizzazione dei processi: necessaria solo se le licenze specificano i requisiti di sincronizzazione.
+* Sincronizzazione del processo: necessaria solo se le licenze specificano i requisiti di sincronizzazione.
 
-Inoltre, il server deve fornire una logica aziendale per l&#39;autenticazione degli utenti, determinare se gli utenti sono autorizzati a visualizzare il contenuto e, facoltativamente, monitorare l&#39;utilizzo delle licenze.
+Inoltre, il server deve fornire una logica di business per l’autenticazione degli utenti, determinare se gli utenti sono autorizzati a visualizzare il contenuto e, facoltativamente, tenere traccia dell’utilizzo della licenza.
 
-Per informazioni dettagliate sull&#39;API Java, consultate *Adobe Primetime DRM API Reference*.
+Per informazioni dettagliate sull&#39;API Java, consulta *Riferimento API DRM di Adobe Primetime* .
