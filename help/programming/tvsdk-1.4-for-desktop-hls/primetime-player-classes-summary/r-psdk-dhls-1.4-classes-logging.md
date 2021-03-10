@@ -1,13 +1,10 @@
 ---
 description: Queste classi consentono di personalizzare la registrazione.
-seo-description: Queste classi consentono di personalizzare la registrazione.
-seo-title: Classi di registrazione
 title: Classi di registrazione
-uuid: 947f3ec8-c5fe-4a55-b306-f338205ab4e6
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '172'
+source-wordcount: '163'
 ht-degree: 0%
 
 ---
@@ -33,19 +30,19 @@ Pacchetto: [com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/DefaultLogger.html" format="html" scope="external"> DefaultLogger</a></span> </td> 
-   <td colname="2"> Classe. Il logger predefinito invia tutti i messaggi in arrivo al tracciamento. </td> 
+   <td colname="2"> Classe. Il logger predefinito invia tutti i messaggi in arrivo da tracciare. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/Log.html" format="html" scope="external"> Log</a></span> </td> 
-   <td colname="2"> Classe. Fornisce l'accesso al sistema di log. </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/Log.html" format="html" scope="external"> Registro</a></span> </td> 
+   <td colname="2"> Classe. Consente l'accesso al sistema di log. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/LogFactory.html" format="html" scope="external"> LogFactory</a></span> </td> 
-   <td colname="2"> Classe. Modulo di registrazione predefinito.</td> 
+   <td colname="2"> Classe. Impostazioni di registrazione predefinite.</td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/Logger.html" format="html" scope="external"> Registratore</a></span> </td> 
-   <td colname="2">Interfaccia. Metodi necessari per implementare un logger personalizzato per la Frase. </td> 
+   <td colname="2">Interfaccia. I metodi necessari per implementare un logger personalizzato per la frase. </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/NullLogger.html" format="html" scope="external"> NullLogger</a></span> </td> 
