@@ -1,29 +1,26 @@
 ---
-description: Configurate un'unica posizione per gestire gli errori.
-seo-description: Configurate un'unica posizione per gestire gli errori.
-seo-title: Impostazione della gestione degli errori
-title: Impostazione della gestione degli errori
-uuid: a3182fce-85ac-4dad-bdb3-f9bfbdb2c62d
+description: Imposta un'unica posizione per gestire gli errori.
+title: Configurare la gestione degli errori
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '100'
+source-wordcount: '88'
 ht-degree: 2%
 
 ---
 
 
-# Impostazione della gestione degli errori{#set-up-error-handling}
+# Imposta la gestione degli errori{#set-up-error-handling}
 
-Configurate un&#39;unica posizione per gestire gli errori.
+Imposta un&#39;unica posizione per gestire gli errori.
 
-1. Implementare una funzione di callback dell&#39;evento per `MediaPlayerEvent.STATUS_CHANGED`.
+1. Implementa una funzione di callback di un evento per `MediaPlayerEvent.STATUS_CHANGED`.
 
-   TVSDK trasmette le informazioni sull&#39;evento, ad esempio un oggetto `MediaPlayerStatusChangeEvent`.
-1. Nel callback, quando lo stato restituito è `MediaPlayerState.ERROR`, fornire logica per gestire tutti gli errori.
-1. Una volta gestito l&#39;errore, reimpostare l&#39;oggetto `MediaPlayer` o caricare una nuova risorsa multimediale.
+   TVSDK trasmette le informazioni sull’evento, ad esempio un oggetto `MediaPlayerStatusChangeEvent` .
+1. Nel callback, quando lo stato restituito è `MediaPlayerState.ERROR`, fornisci logica per gestire tutti gli errori.
+1. Dopo aver gestito l&#39;errore, reimpostare l&#39;oggetto `MediaPlayer` o caricare una nuova risorsa multimediale.
 
-   Quando l&#39;oggetto `MediaPlayer` è in stato di errore, rimane in tale stato finché non viene reimpostato utilizzando il metodo `MediaPlayer.reset`.
+   Quando l&#39;oggetto `MediaPlayer` si trova nello stato di errore, rimane in tale stato finché non viene reimpostato utilizzando il metodo `MediaPlayer.reset` .
 
 <!--<a id="example_49FF225E92EA494AA06B2E5F26101F4C"></a>-->
 
