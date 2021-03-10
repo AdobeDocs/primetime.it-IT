@@ -1,9 +1,9 @@
 ---
-seo-title: Terminologia e concetti fondamentali
 title: Terminologia e concetti fondamentali
-uuid: 89a9e4b0-f5e1-4dc2-9cf8-0c8d7e9b7d62
+description: Terminologia e concetti fondamentali
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '672'
 ht-degree: 0%
@@ -15,66 +15,66 @@ ht-degree: 0%
 
 In questo documento vengono utilizzati i seguenti termini e concetti:
 
-**Consumer**
+**Consumatore**
 
-L&#39;utente *consumer* è l&#39;utente finale che scarica o invia in streaming il contenuto.
+Il *consumer* è l&#39;utente finale che scarica o invia in streaming i contenuti.
 
 **Contenuto**
 
-*Il* contenuto è costituito da file audio o video digitali.
+** Il contenuto è costituito da file audio o video digitali.
 
 **Chiave di crittografia del contenuto**
 
-La *chiave di crittografia del contenuto* (CEK) è una chiave di crittografia utilizzata per cifrare il contenuto.
+La *Chiave di crittografia del contenuto* (CEK) è una chiave di crittografia utilizzata per crittografare il contenuto.
 
-**Proprietari di contenuti**
+**Proprietari dei contenuti**
 
-*I* proprietari dei contenuti sono le entità aziendali proprietarie dei diritti d&#39;autore sui contenuti. Possono essere studi cinematografici di grandi dimensioni o piccoli produttori indipendenti di film o altri contenuti audiovisivi.
+*I* proprietari dei contenuti sono le entità aziendali proprietarie dei diritti d&#39;autore sui contenuti. Possono essere grandi studi cinematografici, o piccoli produttori indipendenti di film o di altri contenuti audiovisivi.
 
 **Pacchetti di contenuti**
 
-*I* pacchetti di contenuto sono organizzazioni che creano pacchetti di contenuto da utilizzare con  accesso al Adobe. I proprietari dei contenuti o i distributori possono scegliere di creare pacchetti di contenuti personalizzati, oppure possono includere i servizi di terzi per creare pacchetti di contenuti e distribuirli elettronicamente tramite Internet.
+*I pacchetti* di contenuti sono organizzazioni che creano pacchetti di contenuti da utilizzare con Adobe Access. I proprietari dei contenuti o i distributori possono scegliere di creare un pacchetto dei propri contenuti o possono inserire i servizi di terzi per creare pacchetti dei contenuti e distribuirli elettronicamente tramite Internet.
 
 **Certificato digitale**
 
-*I certificati*  digitali (denominati anche  *certificati*) associano un&#39;entità, ad esempio un singolo, un&#39;organizzazione o un sistema, a una coppia di chiavi pubblica e privata specifica. I certificati digitali possono essere considerati come credenziali elettroniche per la verifica dell&#39;identità di un singolo, sistema o organizzazione.
+*I certificati digitali*  (denominati anche  *certificati*) associano un’entità, ad esempio una singola, organizzazione o sistema, a una coppia di chiavi pubblica e privata specifica. I certificati digitali possono essere considerati credenziali elettroniche che verificano l&#39;identità di una persona, di un sistema o di un&#39;organizzazione.
 
 **Firma digitale**
 
-Una *firma digitale* vincola l&#39;identità dell&#39;editore al contenuto pubblicato e fornisce un meccanismo per rilevare eventuali manomissioni. Gli algoritmi di firma digitale utilizzano funzioni hash crittografiche e algoritmi di cifratura asimmetrici (o coppia di chiavi pubblica/privata). Alcune firme digitali sfruttano inoltre i certificati digitali e l&#39;infrastruttura a chiave pubblica (PKI) per legare le chiavi pubbliche alle identità dei proprietari o distributori di contenuti.
+Una *firma digitale* associa l&#39;identità dell&#39;editore al contenuto pubblicato e fornisce un meccanismo per rilevare le manomissioni. Gli algoritmi di firma digitale utilizzano funzioni hash di crittografia e algoritmi di cifratura asimmetrici (o a chiave pubblica/privata). Alcune firme digitali sfruttano inoltre i certificati digitali e l’infrastruttura a chiave pubblica (PKI) per associare le chiavi pubbliche alle identità dei proprietari o distributori di contenuti.
 
 **Distributore**
 
-*I distributori*  (denominati anche  *distributori* di contenuti o rivenditori**) sono entità aziendali che garantiscono i diritti di distribuzione ai proprietari dei contenuti per pubblicare e divulgare i contenuti ai consumatori. In alcuni casi, la stessa entità è sia il proprietario del contenuto che il distributore di contenuti.
+*I distributori*  (anche denominati  ** distributori di contenuti o* rivenditori*) sono entità aziendali che garantiscono i diritti di distribuzione ai proprietari dei contenuti per pubblicare e diffondere i contenuti ai consumatori. In alcuni casi, la stessa entità è sia il proprietario del contenuto che il distributore di contenuti.
 
 **Metadati DRM**
 
-Informazioni inviate dal client (ossia  client Adobe® Flash® Player, runtime  Adobe® AIR® e client Primetime) per identificare il contenuto richiesto.
+Informazioni inviate dal client (ovvero Adobe® Flash® Player, runtime Adobe® AIR® e client Primetime) per identificare il contenuto richiesto.
 
 **Licenza**
 
-Una *licenza *è una struttura di dati che contiene una chiave crittografata utilizzata per decifrare il contenuto associato a un criterio. La licenza viene generata da  Accesso Adobe quando il consumatore richiede il contenuto ed è associato al computer del consumatore. Utilizzando un criterio come riferimento, la licenza definisce i diritti disponibili per il consumatore che scarica il contenuto. Per visualizzare il contenuto, il consumatore deve ottenere una licenza.
+Una *licenza *è una struttura di dati che contiene una chiave crittografata utilizzata per decrittografare il contenuto associato a un criterio. La licenza viene generata da Adobe Access quando il consumatore richiede il contenuto ed è associata al computer del consumatore. Utilizzando un criterio come riferimento, la licenza definisce i diritti disponibili per il consumatore che scarica il contenuto. Per visualizzare il contenuto, il consumatore deve ottenere una licenza.
 
 **Acquisizione licenza**
 
-*L&#39;* acquisizione di licenze è il processo di acquisizione di una licenza che consente al consumatore di decrittografare e visualizzare il contenuto protetto in base a una serie di regole di utilizzo. L&#39;acquisizione della licenza si verifica quando un client invia al server licenze informazioni che identificano il contenuto richiesto (i *metadati DRM*) e il certificato del computer (che identifica il computer del consumatore) (vedi sotto).
+*L’* acquisizione di licenze è il processo di acquisizione di una licenza che consente al consumatore di decrittografare e visualizzare il contenuto protetto in base a una serie di regole di utilizzo. L&#39;acquisizione della licenza si verifica quando un client invia al server licenze informazioni che identificano il contenuto richiesto (i *metadati DRM*) e il certificato del computer (che identifica il computer del consumatore) (vedi sotto).
 
 **Server licenze**
 
-Il* License Server *può essere integrato nei sistemi di fatturazione e autenticazione del distributore o del fornitore di servizi e può contenere logica aziendale per verificare che il consumatore che richiede contenuto protetto sia autorizzato a visualizzare il contenuto. Se l&#39;utente è autorizzato ad accedere al contenuto, il server licenze rilascia una licenza che consente al client runtime di decifrare e riprodurre il contenuto in base al criterio e ai diritti associati all&#39;account del consumatore.
+Il* License Server *può essere integrato nei sistemi di fatturazione e autenticazione del distributore o del fornitore di servizi e può contenere logica di business per verificare che il consumatore che richiede contenuto protetto sia autorizzato a visualizzare il contenuto. Se l’utente è autorizzato ad accedere al contenuto, License Server rilascia una licenza che consente al client runtime di decrittografare e riprodurre il contenuto in base ai criteri e ai diritti associati all’account del consumatore.
 
-È necessario creare e distribuire un server licenze utilizzando l&#39;SDK di accesso al Adobe .
+È necessario creare e distribuire un server licenze utilizzando Adobe Access SDK.
 
-**Policy**
+**Criterio**
 
-Un *policy* è un contenitore per le regole di utilizzo che determinano in che modo i consumatori possono utilizzare il contenuto protetto. I criteri vengono definiti indipendentemente dal contenuto protetto. Un criterio non applica i diritti finché non viene associato al contenuto tramite la licenza. Un criterio elenca l&#39;insieme di regole di utilizzo, ossia le autorizzazioni o i &quot;diritti&quot; che i consumatori hanno per il contenuto acquisito. Ad esempio, i proprietari dei contenuti possono creare un criterio che garantisca che i contenuti protetti siano accessibili solo ai consumatori per un periodo di tempo specifico. Tale criterio viene quindi applicato a tutto il contenuto per il quale il proprietario del contenuto desidera applicare questa restrizione.
+Un *policy* è un contenitore per le regole di utilizzo che determinano come i consumatori possono utilizzare i contenuti protetti. I criteri sono definiti indipendentemente dal contenuto protetto. Un criterio non applica i diritti finché non è associato al contenuto tramite la licenza. Un criterio elenca l’insieme di regole di utilizzo, ovvero le autorizzazioni o i &quot;diritti&quot; che i consumatori hanno per i contenuti che acquisiscono. Ad esempio, i proprietari dei contenuti possono creare un criterio che garantisca che i contenuti protetti siano accessibili solo dai consumatori per un periodo di tempo specifico. Questa policy viene quindi applicata a tutti i contenuti per i quali il proprietario del contenuto desidera applicare questa restrizione.
 
-I criteri vengono creati utilizzando  Adobe Access SDK.
+I criteri vengono creati utilizzando Adobe Access SDK.
 
 **Contenuto protetto**
 
-*Per contenuto*  protetto (altrimenti denominato contenuto ** incluso nel pacchetto) si intende il contenuto video FLV e F4V che è stato crittografato mediante  Adobe Access SDK o altri strumenti supportati.
+*Il contenuto*  protetto (detto anche contenuto  *incluso nel pacchetto*) si riferisce al contenuto video FLV e F4V che è stato crittografato utilizzando Adobe Access SDK o altri strumenti supportati.
 
 **Rivenditori**
 
-Vedere la voce relativa ai *distributori* precedenti in questa sezione.
+Vedi la voce relativa a *distributori* precedente in questa sezione.
