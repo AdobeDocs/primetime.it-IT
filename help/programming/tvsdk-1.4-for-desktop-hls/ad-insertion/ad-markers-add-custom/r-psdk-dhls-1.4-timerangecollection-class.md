@@ -1,21 +1,18 @@
 ---
-description: La classe di utilità TimeRangeCollection illustra il concetto di una raccolta ordinata di specifiche TimeRange e fornisce servizi per la conversione di se stessa in un'istanza di metadati.
-seo-description: La classe di utilità TimeRangeCollection illustra il concetto di una raccolta ordinata di specifiche TimeRange e fornisce servizi per la conversione di se stessa in un'istanza di metadati.
-seo-title: TimeRangeCollection, classe
-title: TimeRangeCollection, classe
-uuid: da781df4-6b19-47e1-8dc5-ea83c139f061
+description: La classe di utilità TimeRangeCollection astratta il concetto di una raccolta ordinata di specifiche TimeRange e fornisce servizi per tradursi in un'istanza Metadata.
+title: Classe TimeRangeCollection
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '96'
+source-wordcount: '70'
 ht-degree: 0%
 
 ---
 
 
-# TimeRangeCollection, classe{#timerangecollection-class}
+# Classe TimeRangeCollection{#timerangecollection-class}
 
-La classe di utilità TimeRangeCollection illustra il concetto di una raccolta ordinata di specifiche TimeRange e fornisce servizi per la conversione di se stessa in un&#39;istanza di metadati.
+La classe di utilità TimeRangeCollection astratta il concetto di una raccolta ordinata di specifiche TimeRange e fornisce servizi per tradursi in un&#39;istanza Metadata.
 
 <!--<a id="section_D87AA7BC628D458DAB12D5247AD34B41"></a>-->
 
@@ -29,4 +26,4 @@ public final class TimeRangeCollection {
 }
 ```
 
-Il valore definito per il tipo di raccolta è `MARK_RANGES`, `DELETE_RANGES` e `REPLACE_RANGES`. È possibile creare `TimeRangeCollection`s utilizzando questi tre tipi.
+Il valore definito per il tipo di raccolta è `MARK_RANGES`, `DELETE_RANGES` e `REPLACE_RANGES`. Puoi creare `TimeRangeCollection`s utilizzando questi tre tipi.
