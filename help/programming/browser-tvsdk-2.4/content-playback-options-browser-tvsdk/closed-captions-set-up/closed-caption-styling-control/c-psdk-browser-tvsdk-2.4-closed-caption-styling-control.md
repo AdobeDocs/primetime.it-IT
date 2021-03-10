@@ -1,13 +1,10 @@
 ---
-description: È possibile fornire informazioni sullo stile per le tracce di sottotitoli codificati utilizzando la classe TextFormat. Questo imposta lo stile per tutte le didascalie visualizzate dal lettore.
-seo-description: È possibile fornire informazioni sullo stile per le tracce di sottotitoli codificati utilizzando la classe TextFormat. Questo imposta lo stile per tutte le didascalie visualizzate dal lettore.
-seo-title: Controllo dello stile dei sottotitoli codificati
-title: Controllo dello stile dei sottotitoli codificati
-uuid: 85d9d6a6-5480-42ba-84ae-69121424f498
+description: È possibile fornire informazioni sullo stile per le tracce a didascalia chiusa utilizzando la classe TextFormat. Questo imposta lo stile dei sottotitoli codificati visualizzati dal lettore.
+title: Controllare lo stile dei sottotitoli
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '101'
+source-wordcount: '72'
 ht-degree: 0%
 
 ---
@@ -15,6 +12,6 @@ ht-degree: 0%
 
 # Panoramica {#control-closed-caption-styling-overview}
 
-È possibile fornire informazioni sullo stile per le tracce di sottotitoli codificati utilizzando la classe TextFormat. Questo imposta lo stile per tutte le didascalie visualizzate dal lettore.
+È possibile fornire informazioni sullo stile per le tracce a didascalia chiusa utilizzando la classe TextFormat. Questo imposta lo stile dei sottotitoli codificati visualizzati dal lettore.
 
-Questa classe racchiude informazioni sullo stile dei sottotitoli codificati quali tipo di font, dimensione, colore e opacità dello sfondo.
+Questa classe racchiude informazioni sullo stile dei sottotitoli, quali tipo di font, dimensioni, colore e opacità dello sfondo.
