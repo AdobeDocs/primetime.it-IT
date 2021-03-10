@@ -1,13 +1,10 @@
 ---
-description: Tutti i token di autenticazione generati dall’SDK  Adobe Primetime DRM dispongono di un intervallo di timeout per proteggere la sicurezza dell’applicazione.
-seo-description: Tutti i token di autenticazione generati dall’SDK  Adobe Primetime DRM dispongono di un intervallo di timeout per proteggere la sicurezza dell’applicazione.
-seo-title: Timeout per token di autenticazione
+description: Tutti i token di autenticazione generati dall’SDK DRM di Adobe Primetime hanno un intervallo di timeout per proteggere la sicurezza dell’applicazione.
 title: Timeout per token di autenticazione
-uuid: 2c2b0dad-0979-4d49-b109-2700ceb4d722
 translation-type: tm+mt
-source-git-commit: 5749142d42f7d7b36c96592955d1f71f6a7956fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '110'
 ht-degree: 0%
 
 ---
@@ -15,8 +12,8 @@ ht-degree: 0%
 
 # Timeout per token di autenticazione{#timeout-for-authentication-tokens}
 
-Tutti i token di autenticazione generati dall’SDK  Adobe Primetime DRM dispongono di un intervallo di timeout per proteggere la sicurezza dell’applicazione.
+Tutti i token di autenticazione generati dall’SDK DRM di Adobe Primetime hanno un intervallo di timeout per proteggere la sicurezza dell’applicazione.
 
-La scadenza per il token di autenticazione è specificata utilizza l&#39;SDK DRM di Primetime per gestire una richiesta di autenticazione. Una volta scaduto, il token non è più valido e l&#39;utente deve eseguire nuovamente l&#39;autenticazione con il server licenze.
+La scadenza per il token di autenticazione è specificata utilizza l’SDK DRM di Primetime quando gestisci una richiesta di autenticazione. Una volta scaduto, il token non è più valido e l’utente deve eseguire nuovamente l’autenticazione con il server licenze.
 
-Per ulteriori informazioni sulle richieste di autenticazione, vedere [AuthenticationHandler](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/protocol/authentication/AuthenticationHandler.html).
+Per ulteriori informazioni sulle richieste di autenticazione, consulta [AuthenticationHandler](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/protocol/authentication/AuthenticationHandler.html).
