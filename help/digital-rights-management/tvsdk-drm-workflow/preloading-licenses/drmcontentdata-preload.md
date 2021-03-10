@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Utilizzo di DRMContentData per precaricare le licenze
 title: Utilizzo di DRMContentData per precaricare le licenze
-uuid: 5cedd077-0613-4677-8fb0-81237d7ac61a
+description: Utilizzo di DRMContentData per precaricare le licenze
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '132'
+source-wordcount: '130'
 ht-degree: 0%
 
 ---
@@ -15,12 +13,12 @@ ht-degree: 0%
 
 # Utilizzo di DRMContentData per precaricare le licenze{#using-drmcontentdata-to-pre-load-licenses}
 
-Nei passaggi seguenti viene descritto il flusso di lavoro per il precaricamento della licenza per un file multimediale protetto tramite un oggetto `DRMContentData`.
+I passaggi seguenti descrivono il flusso di lavoro per il precaricamento della licenza per un file multimediale protetto utilizzando un oggetto `DRMContentData` .
 
-1. Ottenete i metadati DRM binari per il contenuto del pacchetto.
+1. Ottieni i metadati DRM binari per il contenuto incluso nel pacchetto.
 
-   Se utilizzate Primetime DRM Java Reference Implementation Packager, questo file di metadati viene generato automaticamente con un&#39;estensione [!DNL .metadata]. Ad esempio, potete scaricare questi metadati utilizzando la classe `URLLoader`. Se si utilizza contenuto HLS o HDS, i metadati vengono utilizzati come riferimento nel file manifesto del contenuto ( [!DNL .m3u8] o [!DNL .f4m]) oppure vengono inclusi *all&#39;interno di* il file manifesto come una stringa codificata Base64 (che deve essere decodificata Base64 prima del consumo).
-1. Create un oggetto `DRMContentData`, passando i metadati alla funzione di costruzione:
+   Se utilizzi Primetime DRM Java Reference Implementations Packager, questo file di metadati viene generato automaticamente con un&#39;estensione [!DNL .metadata]. Ad esempio, puoi scaricare i metadati utilizzando la classe `URLLoader` . Se si utilizza contenuto HLS o HDS, i metadati vengono referenziati nel file manifesto del contenuto ( [!DNL .m3u8] o [!DNL .f4m]) o inclusi *all&#39;interno* come stringa codificata Base64 (che deve essere decodificata Base64 prima del consumo).
+1. Creare un oggetto `DRMContentData`, passando i metadati alla funzione di costruzione:
 
    ```
    var drmData:DRMContentData = new DRMContentData( metadata );
