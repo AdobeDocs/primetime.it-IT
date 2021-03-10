@@ -1,13 +1,10 @@
 ---
-description: Potete usare l’SDK per browser per recuperare informazioni sui file multimediali che potete visualizzare sulla barra di ricerca.
-seo-description: Potete usare l’SDK per browser per recuperare informazioni sui file multimediali che potete visualizzare sulla barra di ricerca.
-seo-title: Visualizzare la durata, l’ora corrente e il tempo rimanente del video
-title: Visualizzare la durata, l’ora corrente e il tempo rimanente del video
-uuid: 58341c5f-1d53-4f65-92c8-5bde22f61519
+description: Puoi usare l’SDK per browser per recuperare informazioni sui file multimediali da visualizzare sulla barra di ricerca.
+title: Visualizza la durata, l'ora corrente e il tempo rimanente del video
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '289'
 ht-degree: 0%
 
 ---
@@ -15,31 +12,31 @@ ht-degree: 0%
 
 # Visualizza la durata, l&#39;ora corrente e il tempo rimanente del video{#display-the-duration-current-time-and-remaining-time-of-the-video}
 
-Potete usare l’SDK per browser per recuperare informazioni sui file multimediali che potete visualizzare sulla barra di ricerca.
+Puoi usare l’SDK per browser per recuperare informazioni sui file multimediali da visualizzare sulla barra di ricerca.
 
-1. Aspettate che il lettore sia almeno nello stato PREPARATO.
-1. Recuperate il tempo corrente dell&#39;indicatore di riproduzione utilizzando l&#39;attributo `MediaPlayer.currentTime`.
+1. Attendi che il lettore sia almeno nello stato PREPARATO.
+1. Recupera l&#39;ora corrente dell&#39;indicatore di riproduzione utilizzando l&#39;attributo `MediaPlayer.currentTime` .
 
-   Questo attributo restituisce la posizione corrente dell&#39;indicatore di riproduzione sulla timeline virtuale, in millisecondi. L&#39;ora viene calcolata in relazione al flusso risolto che potrebbe contenere più istanze di contenuto alternativo, ad esempio più annunci pubblicitari o interruzioni di annunci nel flusso principale. Per i flussi live/lineari, il tempo restituito è sempre compreso nell&#39;intervallo della finestra di riproduzione.
+   Questo attributo restituisce la posizione corrente dell&#39;indicatore di riproduzione sulla timeline virtuale, in millisecondi. Il tempo viene calcolato in base al flusso risolto che potrebbe contenere più istanze di contenuto alternativo, ad esempio più annunci o interruzioni pubblicitarie unite nel flusso principale. Per i flussi in tempo reale/lineare, il tempo restituito è sempre nell&#39;intervallo della finestra di riproduzione.
 
    ```js
    MediaPlayer.currentTime
    ```
 
-1. Recuperate l’intervallo di riproduzione del flusso e stabilite la durata.
-   1. Utilizzare la proprietà `mediaPlayer.playbackRange` per ottenere l&#39;intervallo di tempo della cronologia virtuale.
+1. Recupera l&#39;intervallo di riproduzione del flusso e determina la sua durata.
+   1. Utilizzare la proprietà `mediaPlayer.playbackRange` per ottenere l&#39;intervallo di tempo della timeline virtuale.
 
    1. Per determinare la durata, sottraete l’inizio dalla fine dell’intervallo.
 
       Ciò include la durata del contenuto aggiuntivo inserito nel flusso (annunci).
 
-      Per il VOD, l&#39;intervallo inizia sempre con zero e il valore finale è uguale alla somma della durata del contenuto principale e delle durate del contenuto aggiuntivo inserito nel flusso (annunci).
+      Per VOD, l’intervallo inizia sempre con zero e il valore finale è uguale alla somma della durata del contenuto principale e delle durate del contenuto aggiuntivo inserito nel flusso (annunci).
 
-      Per una risorsa lineare/live, l&#39;intervallo rappresenta l&#39;intervallo della finestra di riproduzione e questo intervallo cambia durante la riproduzione.
+      Per una risorsa lineare/live, l’intervallo rappresenta l’intervallo della finestra di riproduzione e questo intervallo cambia durante la riproduzione.
 
-1. Utilizzate i metodi disponibili negli elementi MediaPlayer e Browser TVSDK per impostare i parametri della barra di ricerca.
+1. Utilizza i metodi disponibili sugli elementi MediaPlayer e Browser TVSDK per impostare i parametri della barra di ricerca.
 
-   Ad esempio, di seguito è riportato un layout possibile per visualizzare la barra di ricerca in HTML.
+   Ad esempio, ecco un layout possibile per visualizzare la barra di ricerca in HTML.
 
    ```
    <div class="seekbar" id="seekbar"> 
@@ -53,7 +50,7 @@ Potete usare l’SDK per browser per recuperare informazioni sui file multimedia
      </div> 
    ```
 
-   Di seguito è riportato il css corrispondente:
+   Ecco il css corrispondente:
 
    ```
    #seekbar { 
@@ -151,7 +148,7 @@ Potete usare l’SDK per browser per recuperare informazioni sui file multimedia
    } 
    ```
 
-1. Ascoltare `AdobePSDK.TimeChangeEvent` e aggiornare di conseguenza la barra di ricerca.
+1. Ascolta `AdobePSDK.TimeChangeEvent` e aggiorna di conseguenza la barra di ricerca.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.TIME_CHANGED, onTimeChange); 
