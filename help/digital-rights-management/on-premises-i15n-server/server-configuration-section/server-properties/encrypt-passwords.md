@@ -1,9 +1,9 @@
 ---
-seo-title: Cifra password
 title: Cifra password
-uuid: 94dc7fe9-fe40-4779-912a-d84b58e4ee36
+description: Cifra password
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1547eb3dd220fafc08df923f40504736c16a866c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '54'
 ht-degree: 0%
@@ -13,12 +13,12 @@ ht-degree: 0%
 
 # Cifra password{#encrypt-passwords}
 
-I file delle proprietà includono diversi valori di password che non è necessario immettere come testo normale. Crittografare questi valori utilizzando il comando seguente:
+I file delle proprietà includono diversi valori di password che non devono essere immessi come testo normale. Crittografa questi valori utilizzando il seguente comando:
 
 `java -jar adobe-flashaccess-i15n-setup.jar password`
 
-Questo comando restituirà una password crittografata, che verrà quindi utilizzata nei file delle proprietà.
+Questo comando genera una password crittografata, che viene quindi utilizzata nei file delle proprietà.
 
 >[!NOTE]
->Questa non è l&#39;utility utilizzata per crittografare le password del server licenze.
+>Questa non è l&#39;utility utilizzata per la crittografia delle password di License Server.
 
