@@ -1,25 +1,22 @@
 ---
-description: TVSDK invia le metriche di fatturazione a  Adobe in formato XML.
-seo-description: TVSDK invia le metriche di fatturazione a  Adobe in formato XML.
-seo-title: Trasmissione delle metriche di fatturazione
-title: Trasmissione delle metriche di fatturazione
-uuid: c925800c-0fb7-4781-94e8-7e7ad94bb965
+description: TVSDK invia le metriche di fatturazione ad Adobe in un formato XML.
+title: Trasmettere le metriche di fatturazione
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '71'
+source-wordcount: '58'
 ht-degree: 0%
 
 ---
 
 
-# Trasmissione delle metriche di fatturazione {#transmit-billing-metrics}
+# Trasmettere le metriche di fatturazione {#transmit-billing-metrics}
 
-TVSDK invia le metriche di fatturazione a  Adobe in formato XML.
+TVSDK invia le metriche di fatturazione ad Adobe in un formato XML.
 
 <!--<a id="example_13ABDB1CC0B549968A534765378DA3A0"></a>-->
 
-Se utilizzate uno strumento di acquisizione di rete per monitorare le statistiche trasmesse da TVSDK a  Adobe, dovreste visualizzare le unità come segue:
+Se utilizzi uno strumento di acquisizione di rete per monitorare le statistiche trasmesse ad Adobe da TVSDK, dovresti vedere unità come le seguenti:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
