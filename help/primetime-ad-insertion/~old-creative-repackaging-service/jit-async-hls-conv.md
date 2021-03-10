@@ -1,13 +1,10 @@
 ---
-description: Il CRS fornisce un pacchetto JIT (Just-in-time) e asincrono e la conversione HLS-to-HLS. Il risultato della ricompilazione è una versione HLS formattata dell'annuncio pubblicitario originale. CRS posiziona la versione formattata HLS sul server CDN (content delivery network, rete di distribuzione dei contenuti) per l'utilizzo quando necessario.
-seo-description: Il CRS fornisce un pacchetto JIT (Just-in-time) e asincrono e la conversione HLS-to-HLS. Il risultato della ricompilazione è una versione HLS formattata dell'annuncio pubblicitario originale. CRS posiziona la versione formattata HLS sul server CDN (content delivery network, rete di distribuzione dei contenuti) per l'utilizzo quando necessario.
-seo-title: Principali utilizzi del CRS
-title: Principali utilizzi del CRS
-uuid: df2caa67-bc94-4146-9b93-14edc060c3d5
+description: CRS fornisce un pacchetto JIT (just-in-time) e asincrono e la conversione da HLS-a-HLS. Il risultato del riconfezionamento è una versione HLS formattata dell'annuncio originale creativo. CRS posiziona la versione formattata HLS sul server CDN (Content Delivery Network) per l’utilizzo quando necessario.
+title: Principali utilizzi di CRS
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '351'
 ht-degree: 0%
 
 ---
@@ -15,32 +12,32 @@ ht-degree: 0%
 
 # Principali utilizzi di CRS {#main-uses-of-crs}
 
-Il CRS fornisce un pacchetto JIT (Just-in-time) e asincrono e la conversione HLS-to-HLS. Il risultato della ricompilazione è una versione HLS formattata dell&#39;annuncio pubblicitario originale. CRS posiziona la versione formattata HLS sul server CDN (content delivery network, rete di distribuzione dei contenuti) per l&#39;utilizzo quando necessario.
+CRS fornisce un pacchetto JIT (just-in-time) e asincrono e la conversione da HLS-a-HLS. Il risultato del riconfezionamento è una versione HLS formattata dell&#39;annuncio originale creativo. CRS posiziona la versione formattata HLS sul server CDN (Content Delivery Network) per l’utilizzo quando necessario.
 
-In JIT, il reimballaggio  Adobe Primetime e l&#39;inserimento degli annunci inizia il processo di ricompilazione quando incontra per la prima volta un annuncio pubblicitario non HLS. Ciò comporta in genere la perdita di opportunità di eseguire l&#39;annuncio durante il processo di reimballaggio.
+In JIT repackaging Adobe Primetime inserzione inizia il processo di riconfezionamento quando incontra per la prima volta un annuncio non-HLS creativo. Questo di solito comporta la perdita di opportunità di eseguire l&#39;annuncio durante il processo di riconfezionamento.
 
-Nella ricompilazione asincrona, l&#39;annuncio creativo viene transcodificato e memorizzato prima che sia necessario, il che può eliminare quelle opportunità perdute.
+Nel repackaging asincrono, l’annuncio creativo viene codificato e memorizzato prima che sia necessario, il che può eliminare quelle opportunità perdute.
 
-Nella conversione HLS-a-HLS, il CRS riformatta un annuncio HLS creativo in blocchi di dimensioni appropriate per garantire una riproduzione coerente.
+Nella conversione HLS-to-HLS, il CRS riformatta un annuncio HLS creativo in blocchi di dimensioni appropriate per garantire una riproduzione coerente.
 
-## Reimballaggio in tempo reale {#section_1BA344F2300B49F291865A7461EDFEAE}
+## Repackaging just-in-time {#section_1BA344F2300B49F291865A7461EDFEAE}
 
-La sequenza per il reimballaggio JIT è la seguente:
+La sequenza per il riconfezionamento JIT è la seguente:
 
-1. Il server del manifesto recupera un annuncio.
+1. Il server manifest recupera un annuncio.
 1. Se il formato dell&#39;annuncio è HLS, il server manifesto inserisce l&#39;annuncio nel flusso di contenuto.
-1. Se il formato non è HLS (ad esempio, MP4, FLV o WebM), il server manifesto cerca una versione transcodificata sul server CDN. Se ne trova uno, inserisce l&#39;annuncio transcodificato nel flusso di contenuto.
-1. Se il formato non è HLS e il server CDN non dispone di una versione transcodificata, il server manifesto trasmette l’annuncio a CRS, che transcodifica l’annuncio creativo e memorizza il risultato sul server CDN per un utilizzo successivo.
-1. Il server manifesto restituisce il contenuto senza l’annuncio.
+1. Se il formato non è HLS (ad esempio, MP4, FLV o WebM), il server manifesto cerca una versione transcodificata sul server CDN. Se ne trova uno, inserisce l’annuncio transcodificato nel flusso di contenuto.
+1. Se il formato non è HLS e il server CDN non ha una versione transcodificata, il server manifest trasmette l&#39;annuncio a CRS, che transcodifica il creativo dell&#39;annuncio e memorizza il risultato sul server CDN per un uso successivo.
+1. Il server manifest restituisce il contenuto senza l&#39;annuncio.
 
-## Reimballaggio asincrono {#section_ACDFB43FDA4B445CB9F2A107FEB4F2F7}
+## Repackaging asincrono {#section_ACDFB43FDA4B445CB9F2A107FEB4F2F7}
 
-Potete utilizzare l&#39;API descritta in [Repackage API](../~old-creative-repackaging-service/api-repackage.md) per precodificare un creativo non HLS al fine di ridurre al minimo la perdita di impression e massimizzare la monetizzazione.
+Puoi utilizzare l&#39;API descritta in [Repackaging API](../~old-creative-repackaging-service/api-repackage.md) per precodificare un contenuto creativo non HLS per ridurre al minimo la perdita di impression e massimizzare la monetizzazione.
 
-## Conversione HLS-in-HLS {#section_877A0E7E8FAF4C2DB086A31C24D53435}
+## Conversione da HLS a HLS {#section_877A0E7E8FAF4C2DB086A31C24D53435}
 
-Per evitare il buffering e il ritardo, un client scarica un video in piccoli blocchi. Se le dimensioni dei blocchi non sono coerenti, la riproduzione potrebbe risultare instabile. La conversione da HLS a HLS assicura che i blocchi di dati abbiano tutti la stessa durata (ad esempio, 6 secondi).
+Per evitare buffering e ritardi, un client scarica un video in piccoli blocchi. Se le dimensioni dei blocchi sono incoerenti, la riproduzione potrebbe risultare instabile. La conversione da HLS a HLS assicura che i blocchi di dati abbiano la stessa durata (ad esempio, 6 secondi).
 
 >[!NOTE]
 >
->CRS produce la versione HLS 3, indipendentemente dalla versione HLS ricevuta.
+>CRS produce HLS versione 3, indipendentemente dalla versione HLS che riceve.
