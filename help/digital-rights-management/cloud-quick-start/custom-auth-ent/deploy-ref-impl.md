@@ -1,9 +1,9 @@
 ---
-seo-title: Implementazione del riferimento API
 title: Implementazione del riferimento API
-uuid: 5ee7b066-8ae8-48ba-a3f0-8cc14b19d5c5
+description: Implementazione del riferimento API
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 4f196bbd079edeb1a423afee6b4b7e249d380f40
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '53'
 ht-degree: 0%
@@ -11,11 +11,11 @@ ht-degree: 0%
 ---
 
 
-# Implementazione dei riferimenti API {#deploy-the-bees-reference-implementation}
+# Implementazione del riferimento API {#deploy-the-bees-reference-implementation}
 
-1. Configurate il server applicazione Tomcat. (Consulta la documentazione Tomcat.)
-1. Copiate il file `[!DNL bees.war]` nella cartella [!DNL webapps/] di Tomcat.
+1. Imposta il server dell&#39;applicazione Tomcat. (Vedi la tua documentazione Tomcat.)
+1. Copia il file `[!DNL bees.war]` nella cartella [!DNL webapps/] di Tomcat.
 1. Invia una richiesta a `https://localhost:8080/bees`.
 
-   Se viene visualizzato un messaggio &quot;BEES is operative&quot;, la distribuzione viene completata correttamente.
-1. Abilitate SSL sul server.
+   Se viene visualizzato il messaggio &quot;BEES is operative&quot; (L’API è operativa), la distribuzione viene completata correttamente.
+1. Abilita SSL sul server.
