@@ -1,13 +1,10 @@
 ---
-description: I metodi della classe MediaPlayerItem consentono di ottenere informazioni sul flusso di contenuto rappresentato da un oggetto MediaResource caricato.
-seo-description: I metodi della classe MediaPlayerItem consentono di ottenere informazioni sul flusso di contenuto rappresentato da un oggetto MediaResource caricato.
-seo-title: Attributi di MediaPlayer per accedere alle informazioni di MediaResource
+description: I metodi della classe MediaPlayerItem ti consentono di ottenere informazioni sul flusso di contenuto rappresentato da un MediaResource caricato.
 title: Attributi di MediaPlayer per accedere alle informazioni di MediaResource
-uuid: d26f39d6-0a6b-4072-b99a-8767a511a846
 translation-type: tm+mt
-source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Attributi di MediaPlayer per accedere alle informazioni di MediaResource{#mediaplayer-attributes-to-access-mediaresource-information}
 
-I metodi della classe MediaPlayerItem consentono di ottenere informazioni sul flusso di contenuto rappresentato da un oggetto MediaResource caricato.
+I metodi della classe MediaPlayerItem ti consentono di ottenere informazioni sul flusso di contenuto rappresentato da un MediaResource caricato.
 
 <table frame="all" colsep="1" rowsep="1" id="table_46225307CA5B4BB1869576E0B9141E38"> 
  <thead> 
@@ -34,15 +31,15 @@ I metodi della classe MediaPlayerItem consentono di ottenere informazioni sul fl
   <tr rowsep="1"> 
    <td colname="1" morerows="2"> Sottotitoli codificati </td> 
    <td colname="2"> <span class="codeph"> hasClosedCaptions  </span> </td> 
-   <td colname="3"> True se sono disponibili tracce di sottotitoli codificati. </td> 
+   <td colname="3"> True se sono disponibili tracce di sottotitoli. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> closedCaptionsTracks  </span> </td> 
-   <td colname="3"> Fornisce un elenco delle tracce di sottotitoli codificati disponibili. </td> 
+   <td colname="3"> Fornisce un elenco delle tracce di sottotitoli disponibili. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> selectedClosedCaptionsTrack  </span> </td> 
-   <td colname="3"> Recupera la traccia dei sottotitoli codificati selezionata con <span class="codeph"> selectClosedCaptionsTrack </span>. </td> 
+   <td colname="3"> Recupera la traccia della didascalia chiusa selezionata con <span class="codeph"> selectClosedCaptionsTrack </span>. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="2"> Audio alternativo </td> 
@@ -71,16 +68,16 @@ I metodi della classe MediaPlayerItem consentono di ottenere informazioni sul fl
    <td colname="3"> Fornisce un elenco degli oggetti metadati temporizzati associati al flusso. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1" morerows="1"> Profili multipli (bitrate) </td> 
-   <td colname="2" morerows="1"> <span class="codeph"> profili  </span> </td> 
+   <td colname="1" morerows="1"> Profili multipli (bit rate) </td> 
+   <td colname="2" morerows="1"> <span class="codeph"> profiles  </span> </td> 
    <td colname="3"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="3"> Fornisce un elenco dei profili di bitrate associati a questo flusso. <p>Nota:  Potete recuperare il bitrate per ciascun profilo e l’altezza e la larghezza del profilo. </p> </td> 
+   <td colname="3"> Fornisce un elenco dei profili di bit rate associati a questo flusso. <p>Nota:  Puoi recuperare il bit rate di ciascun profilo e l’altezza e la larghezza del profilo. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> Risorse multimediali </td> 
-   <td colname="2"> <span class="codeph"> resource  </span> </td> 
+   <td colname="1"> Risorsa multimediale </td> 
+   <td colname="2"> <span class="codeph"> risorsa  </span> </td> 
    <td colname="3"> Restituisce la risorsa multimediale associata all'elemento. </td> 
   </tr> 
  </tbody> 
