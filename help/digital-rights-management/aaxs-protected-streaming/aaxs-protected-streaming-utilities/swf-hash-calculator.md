@@ -1,9 +1,9 @@
 ---
-seo-title: SWF Hash Calculator
-title: SWF Hash Calculator
-uuid: c1823208-92d9-47c5-b550-f9cc370b543d
+title: Calcolatore hash SWF
+description: Calcolatore hash SWF
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 47b2ed65ff0ea4f54a210cf7627ed535782296b9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%
@@ -11,9 +11,9 @@ ht-degree: 0%
 ---
 
 
-# SWF Hash Calculator{#swf-hash-calculator}
+# Calcolatore hash SWF{#swf-hash-calculator}
 
-L&#39;utilità SWF Hash Calculator ha calcolato il riassunto di un&#39;applicazione SWF presente in un file. Per eseguire il programma di controllo, eseguire il comando:
+L&#39;utilità di calcolo hash SWF ha calcolato il digest di un&#39;applicazione SWF che si trova in un file. Per eseguire l&#39;applicazione, esegui il comando:
 
 ```
 Hasher.bat filename.swf
@@ -31,4 +31,4 @@ L&#39;utilità genera il seguente messaggio:
 SWF Hash: hash-of-swf
 ```
 
-Questo valore può essere utilizzato per specificare il riassunto SWF in [!DNL flashaccess-tenant.xml].
+Questo valore può essere utilizzato per specificare il digest SWF in [!DNL flashaccess-tenant.xml].
