@@ -1,33 +1,30 @@
 ---
-description: Utilizzate la classe helper AuditudeSettings per impostare  Adobe Primetime e i metadati di decisione.
-seo-description: Utilizzate la classe helper AuditudeSettings per impostare  Adobe Primetime e i metadati di decisione.
-seo-title: Impostare e inserire i metadati
-title: Impostare e inserire i metadati
-uuid: fc37e0ae-6acf-4a78-a468-f7b5b123b45e
+description: Utilizza la classe helper AuditudeSettings per configurare i metadati di Adobe Primetime ad decision ioning.
+title: Impostare i metadati di inserimento annunci
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '201'
 ht-degree: 0%
 
 ---
 
 
-# Impostazione e inserimento di metadati{#set-up-ad-insertion-metadata}
+# Impostare i metadati di inserimento annunci{#set-up-ad-insertion-metadata}
 
-Utilizzate la classe helper AuditudeSettings per impostare  Adobe Primetime e i metadati di decisione.
+Utilizza la classe helper AuditudeSettings per configurare i metadati di Adobe Primetime ad decision ioning.
 
 >[!TIP]
 >
-> Adobe Primetime e le decisioni erano precedentemente noti come Auditude .
+>Adobe Primetime ad Decioning era noto in precedenza come Auditude .
 
-1. Create l&#39;istanza `AuditudeSettings`.
+1. Crea l&#39;istanza `AuditudeSettings` .
 
    ```java
    AuditudeSettings auditudeSettings = new AuditudeSettings();
    ```
 
-1. Impostate i parametri mediaID, zoneID, dominio  Adobe Primetime e di decisione dell&#39;annuncio pubblicitario e i parametri di targeting facoltativi.
+1. Imposta mediaID, zoneID, dominio e i parametri di targeting facoltativi per Adobe Primetime ad decision.
 
    ```js
    auditudeSettings.domain = "yourdomain"; 
@@ -35,7 +32,7 @@ Utilizzate la classe helper AuditudeSettings per impostare  Adobe Primetime e i 
    auditudeSettings.zoneId = "zoneid";
    ```
 
-1. Create un&#39;istanza `MediaResource` utilizzando l&#39;URL del flusso multimediale e i metadati pubblicitari creati in precedenza.
+1. Crea un&#39;istanza `MediaResource` utilizzando l&#39;URL del flusso multimediale e i metadati pubblicitari creati in precedenza.
 
    ```js
    mediaResource = new AdobePSDK.MediaResource ( 
@@ -44,17 +41,17 @@ Utilizzate la classe helper AuditudeSettings per impostare  Adobe Primetime e i 
          auditudeSettings);
    ```
 
-1. Caricate l&#39;oggetto `MediaResource` tramite il metodo `MediaPlayer.replaceCurrentResource(resource)`.
+1. Caricare l&#39;oggetto `MediaResource` attraverso il metodo `MediaPlayer.replaceCurrentResource(resource)`.
 
-   `MediaPlayer` avvia il caricamento e l&#39;elaborazione del manifesto del flusso multimediale.
+   Il `MediaPlayer` inizia a caricare ed elaborare il manifesto del flusso multimediale.
 
-1. Quando la `MediaPlayer` passa allo stato INITIALIZED, ottenete le caratteristiche del flusso multimediale nella forma di un&#39;istanza `MediaPlayerItem` tramite l&#39;attributo `MediaPlayer.CurrentItem`.
-1. (Facoltativo) Eseguite una query sull&#39;istanza `MediaPlayerItem` per verificare se il flusso è live, indipendentemente dal fatto che contenga tracce audio alternative.
+1. Quando il `MediaPlayer` passa allo stato INITIALIZED, ottieni le caratteristiche del flusso multimediale sotto forma di un&#39;istanza `MediaPlayerItem` tramite l&#39;attributo `MediaPlayer.CurrentItem` .
+1. (Facoltativo) Esegui una query sull&#39;istanza `MediaPlayerItem` per verificare se il flusso è attivo, indipendentemente dal fatto che disponga di tracce audio alternative.
 
-   Queste informazioni sono utili per preparare l’interfaccia per la riproduzione. Ad esempio, se sai che esistono due tracce audio, puoi includere un controllo dell’interfaccia utente che alterni tali tracce.
+   Queste informazioni sono utili per preparare l’interfaccia utente per la riproduzione. Ad esempio, se sai che ci sono due tracce audio, puoi includere un controllo dell’interfaccia utente che passa da una traccia all’altra.
 
-1. Chiama `MediaPlayer.prepareToPlay` per avviare il flusso di lavoro della pubblicità.
+1. Chiama `MediaPlayer.prepareToPlay` per avviare il flusso di lavoro pubblicitario.
 
-   Dopo che gli annunci sono stati risolti e inseriti nella timeline, la transizione `  MediaPlayer ` allo stato PREPARATO.
-1. Chiamate `MediaPlayer.play` per avviare la riproduzione.
-Il browser TVSDK ora include annunci durante la riproduzione dei contenuti multimediali.
+   Una volta risolti e inseriti gli annunci nella timeline, lo stato `  MediaPlayer ` passa allo stato PREPARATO.
+1. Richiama `MediaPlayer.play` per avviare la riproduzione.
+Il browser TVSDK ora include gli annunci durante la riproduzione dei contenuti multimediali.
