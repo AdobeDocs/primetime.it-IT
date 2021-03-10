@@ -1,9 +1,9 @@
 ---
-seo-title: Configura Tomcat
 title: Configura Tomcat
-uuid: 5f23aa33-29d7-4b41-87a4-59dc5b433de4
+description: Configura Tomcat
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 0%
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 # Configura Tomcat{#configure-tomcat}
 
-Nel server di Individualizzazione, modificate il file [!DNL conf/server.xml] di Tomcat per includere ulteriori informazioni nel registro di accesso. Potete utilizzare queste informazioni a scopo di reporting.
+Sul server Individualization, modifica il file [!DNL conf/server.xml] di Tomcat per includere informazioni aggiuntive nel registro di accesso. Puoi utilizzare queste informazioni a scopo di reporting.
 
-1. Individuare la configurazione della `AccessLogValve` in [!DNL server.xml] e modificare il pattern come illustrato di seguito:
+1. Individua la configurazione per `AccessLogValve` in [!DNL server.xml] e modifica il pattern come mostrato di seguito:
 
    ```
    <Valve className="org.apache.catalina.valves.AccessLogValve" 
@@ -24,13 +24,13 @@ Nel server di Individualizzazione, modificate il file [!DNL conf/server.xml] di 
    %{request-id}r" resolveHosts="false"/>
    ```
 
-   `%{x-forwarded-for}i` registra il valore dell&#39; `x-forwarded-for` intestazione. Se utilizzate un proxy inverso Apache per inoltrare le richieste al server Tomcat, questa intestazione conterrà l&#39;indirizzo IP del client originale, mentre `%h` registrerà l&#39;indirizzo IP del server Apache. `%{request-id}r` registrerà l&#39;identificatore della richiesta, che corrisponde all&#39;ID della richiesta contenuto nel registro dell&#39;applicazione Individualizzazione.
+   `%{x-forwarded-for}i` registra il valore dell&#39; `x-forwarded-for` intestazione. Se utilizzi un proxy inverso Apache per inoltrare le richieste al server Tomcat, questa intestazione conterrà l’indirizzo IP del client originale, mentre `%h` registra l’indirizzo IP del server Apache. `%{request-id}r` registra l’identificatore della richiesta, corrispondente all’ID della richiesta contenuto nel registro dell’applicazione Individualization.
 
-1. Modificare [!DNL conf/server.xml] e impostare la proprietà `unpackwars` su false.
+1. Modifica [!DNL conf/server.xml] e imposta la proprietà `unpackwars` su false.
 
-   Sia per i server Individualization che per i server Key Generation, è consigliabile modificare [!DNL conf/server.xml] e impostare la proprietà `unpackwars` su `false`. In caso contrario, quando si aggiornano le WAR, potrebbe essere necessario pulire anche le cartelle WAR non imballate.
+   Per i server Individualization e Key Generation , è consigliabile modificare [!DNL conf/server.xml] e impostare la proprietà `unpackwars` su `false`. In caso contrario, quando si aggiornano le WAR, potrebbe essere necessario pulire anche le cartelle WAR scompattate.
 
 >[!NOTE]
 >
->I futuri client DRM dovranno abilitare e configurare il filtro CORS (Cross-Origin Resource Sharing) disponibile per Tomcat. Al momento, nessun client DRM ha questo requisito.
+>I futuri client DRM richiederanno di abilitare e configurare il filtro CORS (Cross-Origin Resource Sharing) disponibile per Tomcat. Attualmente, nessun cliente DRM ha questo requisito.
 
