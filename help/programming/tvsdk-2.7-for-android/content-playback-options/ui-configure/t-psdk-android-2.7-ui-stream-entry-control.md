@@ -1,13 +1,10 @@
 ---
-description: Per impostazione predefinita, quando si avvia la riproduzione, il supporto VOD inizia da 0 e il supporto live inizia dal punto di vista del client (MediaPlayer.LIVE_POINT). Potete ignorare il comportamento predefinito.
-seo-description: Per impostazione predefinita, quando si avvia la riproduzione, il supporto VOD inizia da 0 e il supporto live inizia dal punto di vista del client (MediaPlayer.LIVE_POINT). Potete ignorare il comportamento predefinito.
-seo-title: Inserire un flusso in un momento specifico
-title: Inserire un flusso in un momento specifico
-uuid: 65a19192-b890-4d69-9cb1-582a22988d2b
+description: Per impostazione predefinita, quando si avvia la riproduzione, il contenuto multimediale VOD inizia a 0 e il contenuto multimediale in tempo reale inizia dal punto live del client (MediaPlayer.LIVE_POINT). È possibile ignorare il comportamento predefinito.
+title: Immettere un flusso in un momento specifico
 translation-type: tm+mt
-source-git-commit: fd686391df0fa711bba99bc1bc312c9ef619f184
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '150'
+source-wordcount: '117'
 ht-degree: 1%
 
 ---
@@ -15,11 +12,11 @@ ht-degree: 1%
 
 # Immettere un flusso in un momento specifico {#enter-a-stream-at-a-specific-time}
 
-Per impostazione predefinita, quando si avvia la riproduzione, il supporto VOD inizia da 0 e il supporto live inizia dal punto di vista del client (MediaPlayer.LIVE_POINT). Potete ignorare il comportamento predefinito.
+Per impostazione predefinita, quando si avvia la riproduzione, il contenuto multimediale VOD inizia a 0 e il contenuto multimediale in tempo reale inizia dal punto live del client (MediaPlayer.LIVE_POINT). È possibile ignorare il comportamento predefinito.
 
 1. Passa una posizione a `MediaPlayer.prepareToPlay`.
 
-   TVSDK considera la posizione specificata come punto di partenza per la risorsa e non è richiesta alcuna operazione di ricerca. Se la posizione non è all’interno dell’intervallo ricercabile, TVSDK utilizza la posizione predefinita. Per ulteriori informazioni, vedere [Caricare una risorsa multimediale nel lettore multimediale](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load.md).
+   TVSDK considera la posizione specificata come punto iniziale della risorsa e non è necessaria alcuna operazione di ricerca. Se la posizione non è all’interno dell’intervallo ricercabile, TVSDK utilizza la posizione predefinita. Per ulteriori informazioni, consulta [Caricare una risorsa multimediale nel lettore multimediale](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load.md).
 
    Ad esempio:
 
