@@ -1,13 +1,10 @@
 ---
-description: Per ogni nuovo contenuto video, inizializzate un’istanza MediaResource con informazioni sul contenuto video e caricate la risorsa multimediale.
-seo-description: Per ogni nuovo contenuto video, inizializzate un’istanza MediaResource con informazioni sul contenuto video e caricate la risorsa multimediale.
-seo-title: Inizializzare il lettore multimediale per un video specifico
+description: Per ogni nuovo contenuto video, inizializza un’istanza MediaResource con informazioni sul contenuto video e carica la risorsa multimediale.
 title: Inizializzare il lettore multimediale per un video specifico
-uuid: aff3a71f-6e01-49af-9791-84db9f095238
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '64'
+source-wordcount: '36'
 ht-degree: 0%
 
 ---
