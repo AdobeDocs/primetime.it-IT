@@ -1,22 +1,20 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: elenco consentiti  per i file SWF  Adobe® Flash® Player
-title: elenco consentiti  per i file SWF  Adobe® Flash® Player
-uuid: 670d8ccf-5145-499f-a6e3-d5d89562291e
+title: Elenco consentiti per Adobe® Flash® Player SWF
+description: Elenco consentiti per Adobe® Flash® Player SWF
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '130'
+source-wordcount: '128'
 ht-degree: 0%
 
 ---
 
 
-# elenco consentiti  per  Adobe® Flash Flash® Player SWF{#allowlist-for-adobe-flash-player-swfs}
+# Elenco consentiti per Adobe® Flash® Player SWF{#allowlist-for-adobe-flash-player-swfs}
 
-Questo  elenco consentiti specifica i file SWF ai quali è consentito riprodurre contenuto.
+Questo elenco consentiti specifica i file SWF che possono riprodurre il contenuto.
 
-Specificate il file SWF con un URL SWF o un riassunto SHA-256 calcolato utilizzando il contenuto del file SWF. Se utilizzate il riassunto SHA-256, questa regola di utilizzo specifica anche il tempo massimo per consentire al client di scaricare e verificare il file SWF.
+Specificare il file SWF con un URL SWF o un riassunto SHA-256 calcolato utilizzando il contenuto del SWF. Se utilizzi il digest SHA-256, questa regola di utilizzo specifica anche il tempo massimo necessario per consentire al client di scaricare e verificare il file SWF.
 
-Esempio di utilizzo: Concettualmente equivalente alla verifica SWF nel caso di Flash Media Server, ma applicata sul lato client per limitare quali lettori video possono riprodurre il contenuto. Il comportamento DRM di Primetime è diverso per quanto riguarda l&#39;imposizione del file SWF secondario rispetto al file SWF principale.
+Esempio di utilizzo: Concettualmente equivalente alla verifica SWF nel caso di Flash Media Server, ma imposto sul lato client per limitare quali lettori video possono riprodurre il contenuto. Si noti che il comportamento DRM di Primetime differisce per quanto riguarda l&#39;applicazione del SWF figlio rispetto al SWF padre.
