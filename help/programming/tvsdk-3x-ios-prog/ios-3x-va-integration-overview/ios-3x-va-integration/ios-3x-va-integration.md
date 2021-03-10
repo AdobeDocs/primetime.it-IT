@@ -1,33 +1,30 @@
 ---
-description: Potete tenere traccia dell’utilizzo dei video integrando TVSDK con  Adobe Analytics.
-seo-description: Potete tenere traccia dell’utilizzo dei video integrando TVSDK con  Adobe Analytics.
-seo-title: Integrazione dell'analisi video
-title: Integrazione dell'analisi video
-uuid: 275d2c88-a15c-4645-9234-f29d32fc4a63
+description: Puoi tenere traccia dell’utilizzo dei video integrando TVSDK con Adobe Analytics.
+title: Integrazione di analisi video
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '142'
+source-wordcount: '128'
 ht-degree: 0%
 
 ---
 
 
-# Integrazione dell&#39;analisi video {#video-analytics-integration}
+# Integrazione di analisi video {#video-analytics-integration}
 
-Potete tenere traccia dell’utilizzo dei video integrando TVSDK con  Adobe Analytics.
+Puoi tenere traccia dell’utilizzo dei video integrando TVSDK con Adobe Analytics.
 
-Il tracciamento video in TVSDK utilizza il servizio **Adobe Analytics Video Essentials**, che fornisce metriche di coinvolgimento video, come visualizzazioni video, completamenti video, impressioni sugli annunci, tempo trascorso sul video e così via. Per ulteriori informazioni su questo servizio, contattate il rappresentante  Adobe.
+Il tracciamento video in TVSDK utilizza il servizio **Adobe Analytics Video Essentials**, che fornisce metriche di coinvolgimento video, come visualizzazioni video, visualizzazioni complete di video, impressioni di annunci, tempo trascorso sul video e così via. Per ulteriori informazioni su questo servizio, contatta il tuo rappresentante di Adobe.
 
 La procedura seguente riassume i passaggi per attivare il tracciamento video nel lettore:
 
-1. Inizializzate e/o configurate i seguenti componenti di tracciamento video:
+1. Inizializzare e/o configurare i seguenti componenti di tracciamento video:
 
    Su iOS, questi componenti fanno parte di TVSDK:
 
    * File di configurazione JSON
    * Oggetto metadati analisi video
    * Oggetto metadati globale
-   * Oggetto tracciatore analisi video
+   * Oggetto tracker di analisi video
 
-1. Configurate i rapporti di analisi video sul lato server utilizzando  Adobe Analytics Admin Tools.
+1. Imposta i rapporti di analisi video sul lato server utilizzando gli strumenti di amministrazione di Adobe Analytics.
