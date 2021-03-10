@@ -1,13 +1,10 @@
 ---
-description: Potete completare flussi di lavoro specifici per Digital Rights Management (DRM).
-seo-description: Potete completare flussi di lavoro specifici per Digital Rights Management (DRM).
-seo-title: Digital Rights Management
+description: Puoi completare flussi di lavoro specifici per Digital Rights Management (DRM).
 title: Digital Rights Management
-uuid: 011605c7-50c4-4ad5-9961-8cd92d0e6fd8
 translation-type: tm+mt
-source-git-commit: 5a786d8001326f874a51d65b8e8badca44f46e96
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '114'
+source-wordcount: '102'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # Digital Rights Management {#digital-rights-management}
 
-Potete completare flussi di lavoro specifici per Digital Rights Management (DRM).
+Puoi completare flussi di lavoro specifici per Digital Rights Management (DRM).
 
-Potete ascoltare l&#39;evento `AdobePSDK.DRMMetadataInfoEvent` per gestire i flussi di lavoro DRM:
+Puoi ascoltare l’evento `AdobePSDK.DRMMetadataInfoEvent` per gestire i flussi di lavoro DRM:
 
 ```js
 ... 
@@ -27,13 +24,13 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
 
 ## Aggiungi Digital Rights Management {#add-digital-rights-management}
 
-1. Aggiungete il simbolo `DRMMetadataInfoAvailableEvent` per ottenere il simbolo `DRMMetadata`.
+1. Aggiungi il `DRMMetadataInfoAvailableEvent` per ottenere il `DRMMetadata`.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onDRMMetadataInfoAvaialble);
    ```
 
-1. Implementare la sezione `onDRMMetadataInfoAvailable` sopra la riga al punto 1.
+1. Implementa la sezione `onDRMMetadataInfoAvailable` sopra la riga nel passaggio 1.
 
    ```js
    var onDRMMetadataInfoAvaialble = function(event) { 
@@ -48,13 +45,13 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
    };
    ```
 
-1. Create DRMManager nel metodo setupVideo.
+1. Crea il DRMManager nel metodo setupVideo .
 
    ```js
    var drmManager = player.drmManager;
    ```
 
-1. Create i dati di protezione per Widevine e PlayReady copiando il seguente esempio:
+1. Crea i dati di protezione per Widevine e PlayReady copiando il seguente esempio:
 
    ```js
    var protectionData = { 
@@ -78,15 +75,15 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
    drmManager.setProtectionData(protectionData);
    ```
 
-1. Modificate l’URL della risorsa in un flusso di prova DASH.
+1. Modifica l’URL della risorsa in un flusso di test DASH.
 
    >[!TIP]
    >
-   >Assicurarsi di aggiornare il tipo di risorsa, perché ora è DASH.
+   >Assicurati di aggiornare il tipo di risorsa, perché ora è DASH.
 
    ```js
    var resourceUrl = "https://ptdemos.com/videos/dashdrm/stream.mpd"; 
    var resourceType = AdobePSDK.MediaResourceType.DASH;
    ```
 
-1. Verificate la configurazione.
+1. Verifica la configurazione.
