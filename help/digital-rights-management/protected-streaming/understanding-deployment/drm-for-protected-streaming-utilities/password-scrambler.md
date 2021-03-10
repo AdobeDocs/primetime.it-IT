@@ -1,23 +1,20 @@
 ---
-description: L'utility Password Scrambler crittografa una password per i file di configurazione Adobe Primetime DRM Server per lo streaming protetto .
-seo-description: L'utility Password Scrambler crittografa una password per i file di configurazione Adobe Primetime DRM Server per lo streaming protetto .
-seo-title: Scrambler password
-title: Scrambler password
-uuid: 56df0f49-f3fd-464d-b4ba-25e1b497158a
+description: L'utility Password Scrambler crittografa una password per il server DRM di Adobe Primetime per i file di configurazione Protected Streaming.
+title: Scrambler di password
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '112'
+source-wordcount: '92'
 ht-degree: 0%
 
 ---
 
 
-# Scorrimento password {#password-scrambler}
+# Scrambler di password {#password-scrambler}
 
-L&#39;utility Password Scrambler crittografa una password per i file di configurazione Adobe Primetime DRM Server per lo streaming protetto .
+L&#39;utility Password Scrambler crittografa una password per il server DRM di Adobe Primetime per i file di configurazione Protected Streaming.
 
-Per eseguire lo scorrimento, digitare:
+Per eseguire lo scrambler, digitare:
 
 ```
 Scrambler.bat  
@@ -35,7 +32,7 @@ java -jar libs/flashaccess-scrambler.jar
 </i class="+ topic>
 ```
 
-L&#39;utilità visualizza il messaggio seguente:
+L&#39;utilità visualizza il seguente messaggio:
 
 ```
 Encrypted password:  
@@ -48,4 +45,4 @@ Tutte le password specificate nei file [!DNL flashaccess-global.xml] e [!DNL fla
 
 >[!NOTE]
 >
->L&#39;utility Password Scrambler nel server DRM di Primetime per lo streaming protetto non è intercambiabile con lo scanner fornito con il server delle licenze di implementazione di riferimento.
+>L&#39;utility Password Scrambler nel server DRM di Primetime per lo streaming protetto non è intercambiabile con lo scrambler fornito con il server delle licenze di implementazione di riferimento.
