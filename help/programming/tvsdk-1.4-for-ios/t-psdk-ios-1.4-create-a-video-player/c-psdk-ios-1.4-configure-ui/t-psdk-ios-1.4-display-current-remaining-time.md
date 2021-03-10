@@ -1,23 +1,20 @@
 ---
-description: Potete visualizzare il tempo corrente e rimanente del contenuto in corso di riproduzione.
-seo-description: Potete visualizzare il tempo corrente e rimanente del contenuto in corso di riproduzione.
-seo-title: Visualizza il tempo corrente e rimanente
-title: Visualizza il tempo corrente e rimanente
-uuid: 800996ff-afc0-4e17-9d70-5ec1e1fcfdc7
+description: È possibile visualizzare il tempo corrente e rimanente del contenuto in fase di riproduzione.
+title: Visualizza il tempo corrente e il tempo rimanente
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '106'
+source-wordcount: '84'
 ht-degree: 0%
 
 ---
 
 
-# Visualizza l&#39;ora corrente e l&#39;ora rimanente {#display-the-current-time-and-remaining-time}
+# Visualizza l&#39;ora corrente e il tempo rimanente {#display-the-current-time-and-remaining-time}
 
-Potete visualizzare il tempo corrente e rimanente del contenuto in corso di riproduzione.
+È possibile visualizzare il tempo corrente e rimanente del contenuto in fase di riproduzione.
 
-1. Per implementare una visualizzazione che mostri il tempo corrente e rimanente del contenuto attivo, utilizzate il seguente codice di esempio:
+1. Per implementare una visualizzazione che mostri il tempo corrente e rimanente del contenuto attivo, utilizza il seguente codice di esempio:
 
    ```
    // 1. Register for the PTMediaPlayerTimeChangeNotification 
@@ -70,7 +67,7 @@ Potete visualizzare il tempo corrente e rimanente del contenuto in corso di ripr
    } 
    ```
 
-1. Per implementare una visualizzazione che mostri l&#39;avanzamento di un annuncio pubblicitario e il tempo rimanente, utilizzate il seguente codice di esempio:
+1. Per implementare una visualizzazione che mostri l’avanzamento di un annuncio e il tempo rimanente, utilizza il seguente codice di esempio:
 
    ```
    double adBreakDurationLeft; 
