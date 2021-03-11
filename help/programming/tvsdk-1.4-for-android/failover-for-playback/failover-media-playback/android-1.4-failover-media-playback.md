@@ -1,18 +1,15 @@
 ---
-description: Per i contenuti multimediali live e video su richiesta (VOD), TVSDK avvia la riproduzione scaricando la playlist associata al bitrate a risoluzione intermedia e scaricando i segmenti di contenuti multimediali definiti da tale playlist. Seleziona rapidamente la playlist con bitrate ad alta risoluzione e i supporti associati e continua il processo di download.
-seo-description: Per i contenuti multimediali live e video su richiesta (VOD), TVSDK avvia la riproduzione scaricando la playlist associata al bitrate a risoluzione intermedia e scaricando i segmenti di contenuti multimediali definiti da tale playlist. Seleziona rapidamente la playlist con bitrate ad alta risoluzione e i supporti associati e continua il processo di download.
-seo-title: Riproduzione e failover dei supporti
-title: Riproduzione e failover dei supporti
-uuid: 03707e16-5f99-4337-9910-92cb05255a23
+description: Per i file multimediali in tempo reale e su richiesta (VOD), TVSDK avvia la riproduzione scaricando la playlist associata al bit rate in risoluzione media e scaricando i segmenti multimediali definiti da tale playlist. Seleziona rapidamente la playlist a bit rate ad alta risoluzione e i supporti associati e continua il processo di download.
+title: Riproduzione e failover dei file multimediali
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '98'
 ht-degree: 0%
 
 ---
 
 
-# Riproduzione e failover dei supporti {#media-playback-and-failover}
+# Riproduzione e failover dei file multimediali {#media-playback-and-failover}
 
-Per i contenuti multimediali live e video su richiesta (VOD), TVSDK avvia la riproduzione scaricando la playlist associata al bitrate a risoluzione intermedia e scaricando i segmenti di contenuti multimediali definiti da tale playlist. Seleziona rapidamente la playlist con bitrate ad alta risoluzione e i supporti associati e continua il processo di download.
+Per i file multimediali in tempo reale e su richiesta (VOD), TVSDK avvia la riproduzione scaricando la playlist associata al bit rate in risoluzione media e scaricando i segmenti multimediali definiti da tale playlist. Seleziona rapidamente la playlist a bit rate ad alta risoluzione e i supporti associati e continua il processo di download.
