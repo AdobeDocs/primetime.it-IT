@@ -1,13 +1,10 @@
 ---
-description: Queste classi forniscono informazioni utili per determinare il livello di prestazioni del lettore.
-seo-description: Queste classi forniscono informazioni utili per determinare il livello di prestazioni del lettore.
-seo-title: Classi QoS
+description: Queste classi forniscono informazioni utili per determinare le prestazioni del lettore.
 title: Classi QoS
-uuid: f145b744-6385-40df-aaee-ae9430d85895
 translation-type: tm+mt
-source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '197'
+source-wordcount: '180'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Classi QoS {#qos-classes}
 
-Queste classi forniscono informazioni utili per determinare il livello di prestazioni del lettore.
+Queste classi forniscono informazioni utili per determinare le prestazioni del lettore.
 
 <table frame="all" colsep="1" rowsep="1" id="table_2893EFF9755149159A4F94E781C76B6E"> 
  <thead> 
@@ -27,7 +24,7 @@ Queste classi forniscono informazioni utili per determinare il livello di presta
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTDeviceInformation.html" format="html" scope="external"> PTDeviceInformation</a> </td> 
-   <td colname="2">Fornisce informazioni sulla piattaforma e sul sistema operativo su cui viene eseguito TVSDK: 
+   <td colname="2">Fornisce informazioni sulla piattaforma e sul sistema operativo su cui viene eseguito il TVSDK: 
     <ul id="ul_0DE69F3B38E84964AB98DCCD11E5E123"> 
      <li id="li_19B2D1889FCA4B0F8FCB0EE8F87353B2">Versione del sistema operativo della piattaforma </li> 
      <li id="li_CA35F4A48FD34555AC7D7832D5997AD4">Numero di versione della libreria TVSDK </li> 
@@ -39,7 +36,7 @@ Queste classi forniscono informazioni utili per determinare il livello di presta
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTPlaybackInformation.html" format="html" scope="external"> PTPlaybackInformation</a> </td> 
-   <td colname="2"> Fornisce informazioni sulle prestazioni della riproduzione. Ciò include il frame rate, il bit rate del profilo, il tempo totale impiegato nel buffering, il numero di tentativi di buffering, il tempo necessario per ottenere il primo byte dal primo frammento video, il tempo necessario per eseguire il rendering del primo fotogramma, la lunghezza attualmente memorizzata nel buffer e il tempo di buffer. </td> 
+   <td colname="2"> Fornisce informazioni sulle prestazioni della riproduzione. Ciò include il frame rate, il bit rate del profilo, il tempo totale trascorso nel buffering, il numero di tentativi di buffering, il tempo necessario per ottenere il primo byte dal primo frammento video, il tempo necessario per eseguire il rendering del primo fotogramma, la lunghezza attualmente bufferizzata e il tempo di buffer. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTQoSProvider.html" format="html" scope="external"> PTQoSProvider</a> </td> 
@@ -48,7 +45,7 @@ Queste classi forniscono informazioni utili per determinare il livello di presta
       Fornisce metriche QoS essenziali sia per la riproduzione che per il dispositivo.
     </pre>
     <pre>
-      Classe provider di informazioni QOS.
+      Classe del provider di informazioni QOS.
     </pre> </td> 
   </tr> 
  </tbody> 
