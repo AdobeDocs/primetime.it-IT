@@ -1,13 +1,10 @@
 ---
-seo-title: Oggetto JSON per annunci Primetime
 title: Oggetto JSON per annunci Primetime
-uuid: acf968d2-9856-4ed6-a046-1ac17d176571
-description: Il blocco di codice riportato di seguito definisce l'oggetto JSON dei dettagli quando il valore del tipo è Primetime ads.
-seo-description: Il blocco di codice riportato di seguito definisce l'oggetto JSON dei dettagli quando il valore del tipo è Primetime ads.
+description: Il blocco di codice seguente definisce i dettagli dell'oggetto JSON quando il valore del tipo è Primetime ads.
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '120'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Oggetto JSON per annunci Primetime {#json-object-for-primetime-ads}
 
-Il blocco di codice riportato di seguito definisce l&#39;oggetto JSON dei dettagli quando il valore del tipo è Primetime ads.
+Il blocco di codice seguente definisce i dettagli dell&#39;oggetto JSON quando il valore del tipo è Primetime ads.
 
 ```
 “metadata”: {
@@ -38,9 +35,9 @@ Il blocco di codice riportato di seguito definisce l&#39;oggetto JSON dei dettag
 
 | Proprietà | Descrizione |
 |---|---|
-| domain | Il dominio degli annunci Primetime da utilizzare per le richieste di annunci. |
-| mediaid | Il valore mediaid configurato in annunci Primetime per questo contenuto. |
-| zoneid | Primetime ads zoneid. Per ulteriori informazioni, consulta la documentazione relativa agli annunci Primetime. |
-| targeting | Un array di coppie chiave/valore utilizzate per il targeting di annunci specifici per il contenuto. |
+| dominio | Dominio degli annunci Primetime da utilizzare per le richieste di annunci. |
+| mediana | Il mediaid configurato negli annunci Primetime per questo contenuto. |
+| zoneid | Primetime ads zoneid. Per ulteriori informazioni, consulta la documentazione sugli annunci Primetime . |
+| targeting | Array di coppie chiave/valore utilizzate per il targeting di annunci specifici per il contenuto. |
 
-Per ulteriori informazioni sul valore di questi attributi, vedere [com.adobe.mediacore.metadata.AuditudeSettings](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/com/adobe/mediacore/metadata/AuditudeSettings.html).
+Per ulteriori informazioni sul valore di questi attributi, consulta [com.adobe.mediacore.metadata.AuditudeSettings](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/com/adobe/mediacore/metadata/AuditudeSettings.html) .
