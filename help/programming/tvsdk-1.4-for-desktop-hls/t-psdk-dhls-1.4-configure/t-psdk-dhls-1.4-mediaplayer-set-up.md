@@ -1,13 +1,10 @@
 ---
-description: L’interfaccia di MediaPlayer racchiude le funzionalità e il comportamento di un lettore multimediale.
-seo-description: L’interfaccia di MediaPlayer racchiude le funzionalità e il comportamento di un lettore multimediale.
-seo-title: Configurare MediaPlayer
+description: L'interfaccia MediaPlayer incapsula le funzionalità e il comportamento di un lettore multimediale.
 title: Configurare MediaPlayer
-uuid: 4b27643c-9ccd-4abb-9793-475d06ee2a88
 translation-type: tm+mt
-source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '218'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
@@ -15,46 +12,46 @@ ht-degree: 0%
 
 # Configurare MediaPlayer {#set-up-the-mediaplayer}
 
-TVSDK fornisce strumenti per la creazione di un’applicazione per lettori video avanzata (il lettore Primetime), che potete integrare con altri componenti Primetime.
+TVSDK fornisce gli strumenti per la creazione di un’applicazione di lettore video avanzata (il lettore Primetime), che puoi integrare con altri componenti Primetime.
 
-Utilizzate gli strumenti della piattaforma per creare un lettore e collegarlo alla visualizzazione del lettore multimediale in TVSDK, che dispone di metodi per riprodurre e gestire i video. Ad esempio, TVSDK fornisce metodi di riproduzione e pausa. È possibile creare pulsanti dell’interfaccia utente sulla piattaforma e impostare i pulsanti per chiamare tali metodi TVSDK.L’interfaccia di MediaPlayer racchiude le funzionalità e il comportamento di un lettore multimediale.
+Utilizza gli strumenti della piattaforma per creare un lettore e collegarlo alla visualizzazione del lettore multimediale in TVSDK, che dispone di metodi per riprodurre e gestire i video. Ad esempio, TVSDK fornisce metodi di riproduzione e pausa. È possibile creare pulsanti dell&#39;interfaccia utente sulla piattaforma e impostare i pulsanti per chiamare tali metodi TVSDK.L&#39;interfaccia MediaPlayer incapsula le funzionalità e il comportamento di un lettore multimediale.
 
-TVSDK fornisce un&#39;unica implementazione dell&#39;interfaccia `MediaPlayer`: la classe DefaultMediaPlayer. Per utilizzare la funzionalità di riproduzione video, create un&#39;istanza `DefaultMediaPlayer`.
+TVSDK fornisce un’unica implementazione dell’interfaccia `MediaPlayer` : Classe DefaultMediaPlayer. Quando hai bisogno della funzionalità di riproduzione video, crea un&#39;istanza `DefaultMediaPlayer`.
 
 >[!NOTE]
 >
 >Interagisci con l&#39;istanza `DefaultMediaPlayer` solo con i metodi esposti dall&#39;interfaccia `MediaPlayer`.
 
-1. Creare un&#39;istanza `MediaPlayerContext` utilizzando l&#39;istanza `authorizedFeatures` caricata dall&#39;applicazione (vedere [Caricare il token firmato](../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/t-psdk-dhls-1.4-get-signed-token.md)).
+1. Crea un&#39;istanza `MediaPlayerContext` utilizzando l&#39;istanza `authorizedFeatures` caricata dall&#39;applicazione (consulta [Carica il token firmato](../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/t-psdk-dhls-1.4-get-signed-token.md)).
 
    ```
    var context:MediaPlayerContext =  
        new MediaPlayerContext(authorizedFeatures)
    ```
 
-1. Creare un&#39;istanza di un oggetto `MediaPlayer` utilizzando il metodo public create factory, passando un oggetto contestuale `MediaPlayerContext`:
+1. Creare un&#39;istanza di un oggetto `MediaPlayer` utilizzando il metodo create factory pubblico, passando un oggetto contestuale `MediaPlayerContext`:
 
    ```
    public static function create(context:Context):MediaPlayer
    ```
 
-   Questo restituisce un&#39;interfaccia `MediaPlayer` generica. 1. Create un&#39;istanza `MediaPlayerView` e specificate l&#39;istanza StageVideo da utilizzare:
+   Questo restituisce un&#39;interfaccia `MediaPlayer` generica. 1. Crea un&#39;istanza `MediaPlayerView` e specifica l&#39;istanza StageVideo da utilizzare:
 
    ```
    var view:MediaPlayerView =  
        MediaPlayerView.create(stage.stageVideos[0] )
    ```
 
-1. Associate l&#39;istanza `MediaPlayerView` alla vista appena creata:
+1. Associa l’istanza `MediaPlayerView` alla visualizzazione appena creata:
 
    ```
    mediaPlayer.view = view;
    ```
 
-1. Posizionare l&#39;istanza `MediaPlayerView` sullo schermo del dispositivo:
+1. Posiziona l’istanza `MediaPlayerView` sullo schermo del dispositivo:
 
    ```
    container.addChild(view)
    ```
 
-L&#39;istanza `MediaPlayer` è ora disponibile e configurata correttamente per visualizzare il contenuto video sullo schermo del dispositivo.
+L’istanza `MediaPlayer` è ora disponibile e configurata correttamente per visualizzare il contenuto video sullo schermo del dispositivo.
