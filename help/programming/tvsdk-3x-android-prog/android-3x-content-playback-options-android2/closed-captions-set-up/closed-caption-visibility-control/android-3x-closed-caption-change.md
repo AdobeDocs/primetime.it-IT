@@ -1,13 +1,10 @@
 ---
-description: Questa procedura è un esempio di come creare un pulsante che consente all'utente di selezionare una traccia di sottotitoli codificati.
-seo-description: Questa procedura è un esempio di come creare un pulsante che consente all'utente di selezionare una traccia di sottotitoli codificati.
-seo-title: Consenti agli utenti di modificare la traccia della didascalia
+description: Questa procedura è un esempio di come creare un pulsante che consente all’utente di selezionare una traccia di didascalia chiusa.
 title: Consenti agli utenti di modificare la traccia della didascalia
-uuid: 5a6d33f2-cece-48f6-8a68-fe76d9d2a950
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '113'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # Consenti agli utenti di modificare la traccia della didascalia {#allow-users-to-change-the-caption-track}
 
-Questa procedura è un esempio di come creare un pulsante che consente all&#39;utente di selezionare una traccia di sottotitoli codificati.
+Questa procedura è un esempio di come creare un pulsante che consente all’utente di selezionare una traccia di didascalia chiusa.
 
-1. Creare un pulsante per modificare la traccia dei sottotitoli codificati.
+1. Creare un pulsante per modificare la traccia della didascalia chiusa.
 
    ```xml
    <Button 
@@ -31,9 +28,9 @@ Questa procedura è un esempio di come creare un pulsante che consente all&#39;u
      android:text="CC" /> 
    ```
 
-1. Convertire l&#39;elenco delle tracce di didascalie chiuse disponibili in un array di stringhe.
+1. Convertire l&#39;elenco delle tracce di didascalia chiusa disponibili in una matrice di stringhe.
 
-   I brani dei sottotitoli codificati con attività, ovvero canali per i quali TVSDK ha rilevato dati, vengono contrassegnati di conseguenza.
+   Le tracce dei sottotitoli che hanno attività, ovvero canali per i quali TVSDK ha rilevato dati, vengono contrassegnate di conseguenza.
 
    ```java
    /** 
@@ -61,7 +58,7 @@ Questa procedura è un esempio di come creare un pulsante che consente all&#39;u
    } 
    ```
 
-1. Quando l&#39;utente fa clic sul pulsante, viene visualizzata una finestra di dialogo in cui sono elencate tutte le tracce predefinite delle didascalie.
+1. Quando l’utente fa clic sul pulsante, visualizza una finestra di dialogo in cui sono elencate tutte le tracce predefinite della didascalia chiusa.
 
    ```java
    public void selectClosedCaptioningClick(View view) { 
