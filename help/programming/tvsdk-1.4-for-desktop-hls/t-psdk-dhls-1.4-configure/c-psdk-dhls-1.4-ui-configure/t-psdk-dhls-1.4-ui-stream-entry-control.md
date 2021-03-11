@@ -1,25 +1,22 @@
 ---
-description: Per impostazione predefinita, quando si avvia la riproduzione, il supporto VOD inizia da 0 e il supporto live inizia dal punto di vista del client (DefaultMediaPlayer.LIVE_POINT).
-seo-description: Per impostazione predefinita, quando si avvia la riproduzione, il supporto VOD inizia da 0 e il supporto live inizia dal punto di vista del client (DefaultMediaPlayer.LIVE_POINT).
-seo-title: Inserire un flusso in un momento specifico
-title: Inserire un flusso in un momento specifico
-uuid: f58d908a-77b9-465f-b3a9-8fe63a249d39
+description: Per impostazione predefinita, quando si avvia la riproduzione, il contenuto multimediale VOD inizia a 0 e il contenuto multimediale in tempo reale inizia dal punto live del client (DefaultMediaPlayer.LIVE_POINT).
+title: Immettere un flusso in un momento specifico
 translation-type: tm+mt
-source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 1%
+source-wordcount: '91'
+ht-degree: 2%
 
 ---
 
 
 # Immettere un flusso in un momento specifico{#enter-a-stream-at-a-specific-time}
 
-Per impostazione predefinita, quando si avvia la riproduzione, il supporto VOD inizia da 0 e il supporto live inizia dal punto di vista del client (DefaultMediaPlayer.LIVE_POINT).
+Per impostazione predefinita, quando si avvia la riproduzione, il contenuto multimediale VOD inizia a 0 e il contenuto multimediale in tempo reale inizia dal punto live del client (DefaultMediaPlayer.LIVE_POINT).
 
 Passa una posizione a `MediaPlayer.prepareToPlay`.
 
-TVSDK considera la posizione specificata come punto di partenza per la risorsa. Non è richiesta alcuna operazione di ricerca. Se la posizione non è all’interno dell’intervallo ricercabile, utilizza la posizione predefinita.
+TVSDK considera la posizione specificata come punto iniziale della risorsa. Non è richiesta alcuna operazione di ricerca. Se la posizione non si trova all’interno dell’intervallo ricercabile, utilizza la posizione predefinita.
 
 Ad esempio:
 
