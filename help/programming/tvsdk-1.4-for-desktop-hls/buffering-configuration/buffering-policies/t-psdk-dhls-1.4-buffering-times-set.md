@@ -1,37 +1,34 @@
 ---
-description: MediaPlayer fornisce metodi per impostare e ottenere il tempo di buffering iniziale e il tempo di buffering di riproduzione.
-seo-description: MediaPlayer fornisce metodi per impostare e ottenere il tempo di buffering iniziale e il tempo di buffering di riproduzione.
-seo-title: Impostare i tempi di buffering
+description: MediaPlayer fornisce i metodi per impostare e ottenere il tempo di buffering iniziale e il tempo di buffering di riproduzione.
 title: Impostare i tempi di buffering
-uuid: 25142b01-5381-49c9-b89a-24c858faaf13
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '191'
 ht-degree: 0%
 
 ---
 
 
-# Impostare i tempi di buffering{#set-buffering-times}
+# Imposta i tempi di buffering{#set-buffering-times}
 
-MediaPlayer fornisce metodi per impostare e ottenere il tempo di buffering iniziale e il tempo di buffering di riproduzione.
+MediaPlayer fornisce i metodi per impostare e ottenere il tempo di buffering iniziale e il tempo di buffering di riproduzione.
 
 >[!TIP]
 >
->Se non impostate i parametri di controllo del buffer prima dell&#39;inizio della riproduzione, il lettore multimediale utilizza per impostazione predefinita 2 secondi per il buffer iniziale e 30 secondi per il tempo del buffer di riproduzione in corso.
+>Se non si impostano i parametri di controllo del buffer prima della riproduzione iniziale, il lettore multimediale utilizza per impostazione predefinita 2 secondi per il buffer iniziale e 30 secondi per il tempo di buffer di riproduzione in corso.
 
-1. Impostare l&#39;oggetto `BufferControlParameters`, che racchiude i parametri iniziali di tempo buffer e di controllo del tempo buffer di riproduzione:
+1. Impostare l&#39;oggetto `BufferControlParameters`, che incapsula il tempo di buffer iniziale e i parametri di controllo del tempo di buffer di riproduzione:
 
-       Questa classe fornisce i seguenti metodi factory:
+       Questa classe fornisce i seguenti metodi di fabbrica:
    
-   * Per impostare la durata iniziale del buffer uguale al tempo del buffer di riproduzione:
+   * Per impostare il tempo di buffer iniziale uguale al tempo del buffer di riproduzione:
 
       ```
       createSimple(bufferTime:uint):BufferControlParameters
       ```
 
-   * Per impostare sia i tempi iniziali che di riproduzione del buffer:
+   * Per impostare i tempi di buffer iniziali e di riproduzione:
 
       ```
       createDual(initialBufferTime:uint, playbackBufferTime:uint):BufferControlParameters 
@@ -39,16 +36,16 @@ MediaPlayer fornisce metodi per impostare e ottenere il tempo di buffering inizi
 
       Questi metodi generano un `IllegalArgumentException` se i parametri non sono validi, ad esempio quando:
 
-   * Il tempo iniziale del buffer è inferiore a zero.
-   * Il tempo iniziale del buffer è maggiore del tempo del buffer.
+   * Il tempo di buffer iniziale è inferiore a zero.
+   * Il tempo di buffer iniziale è maggiore del tempo di buffer.
 
-1. Per impostare i valori dei parametri del buffer, utilizzare il seguente metodo `MediaPlayer`:
+1. Per impostare i valori dei parametri del buffer, utilizzare questo metodo `MediaPlayer`:
 
    ```
    public function set bufferControlParameters(value:BufferControlParameters):void
    ```
 
-1. Per ottenere i valori dei parametri del buffer correnti, utilizzate il seguente metodo `MediaPlayer`:
+1. Per ottenere i valori dei parametri del buffer correnti, utilizza questo metodo `MediaPlayer`:
 
    ```
    public function get bufferControlParameters():BufferControlParameters
@@ -56,10 +53,10 @@ MediaPlayer fornisce metodi per impostare e ottenere il tempo di buffering inizi
 
 <!--<a id="example_B5C5004188574D8D8AB8525742767280"></a>-->
 
-Ad esempio, per impostare il buffer iniziale su 2 secondi e il tempo del buffer di riproduzione su 30 secondi:
+Ad esempio, per impostare il buffer iniziale a 2 secondi e il tempo del buffer di riproduzione a 30 secondi:
 
 ```
 mediaPlayer.bufferControlParameters = BufferControlParameters.createDual(2000, 30000); 
 ```
 
-La `psdkdemo` illustra questa funzione; utilizzare le impostazioni dell&#39;applicazione per impostare i valori del buffer.
+Questa funzione è illustrata in `psdkdemo` ; utilizzare le impostazioni dell&#39;applicazione per impostare i valori del buffer.
