@@ -1,13 +1,10 @@
 ---
 description: Se il client richiede informazioni di tracciamento in formato JSON, il server manifesto invia un file in uno dei formati JSON.
-seo-description: Se il client richiede informazioni di tracciamento in formato JSON, il server manifesto invia un file in uno dei formati JSON.
-seo-title: Formati JSON per il tracciamento degli URL
 title: Formati JSON per il tracciamento degli URL
-uuid: 4b17639b-c0de-4ef4-931b-aa7c4c036c0a
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '211'
 ht-degree: 0%
 
 ---
@@ -19,7 +16,7 @@ Se il client richiede informazioni di tracciamento in formato JSON, il server ma
 
 ## Formato JSON per il tracciamento della versione 1 {#json_v1}
 
-Il file JSON che il server di manifesto invia se `pttrackingversion=v1` ha il seguente formato generale:
+Il file JSON inviato dal server manifest se `pttrackingversion=v1` ha il seguente formato generale:
 
 ```
 { 
@@ -37,9 +34,9 @@ Il file JSON che il server di manifesto invia se `pttrackingversion=v1` ha il se
 
 ## Formato JSON per il tracciamento della versione 2 {#json_v2}
 
-Il file JSON che il server di manifesto invia se `pttrackingversion=v2` ha il formato del seguente esempio, che proviene da un blocco JSON tipico.
+Il file JSON che il server manifest invia se `pttrackingversion=v2` ha il formato del seguente esempio, che proviene da un tipico blocco JSON.
 
-È stato ridotto per evitare inutili ripetizioni, in modo che la struttura sia più chiara. Un puntino di sospensione (tre punti separati da spazi) indica informazioni omesse all’interno di alcuni URL e tra alcuni blocchi di codice. Gli URL non abbreviati vengono visualizzati su più righe, anche se appaiono su una sola riga nel file JSON.
+È stato accorciato per evitare inutili ripetizioni, in modo che la struttura sia più chiara. Un&#39;ellissi (tre punti, separati da spazi) indica le informazioni omesse all&#39;interno di alcuni URL e tra alcuni blocchi di codice. Gli URL non abbreviati vengono visualizzati su più righe, anche se compaiono su una singola riga nel file JSON.
 
 ```
 { 
@@ -367,11 +364,11 @@ Il file JSON che il server di manifesto invia se `pttrackingversion=v2` ha il fo
 
 >[!NOTE]
 >
->Il valore `offset` dell&#39;attributo `scte35` come estratto da `ad breaks` potrebbe essere negativo. Questo perché il sidecar JSON V2 contiene informazioni sulle interruzioni pubblicitarie che si trovano parzialmente nella finestra di riproduzione corrente. Pertanto, l&#39;attributo `scte35` contiene anche informazioni su tali interruzioni pubblicitarie.
+>Il valore `offset` dell&#39;attributo `scte35` estratto da `ad breaks` potrebbe essere negativo. Questo perché il sidecar JSON V2 contiene informazioni sulle interruzioni pubblicitarie che si trovano parzialmente nella finestra di riproduzione corrente. Pertanto, l&#39;attributo `scte35` contiene anche informazioni su tali interruzioni pubblicitarie.
 
 ## Formato JSON per il tracciamento della versione 3 {#json_v3}
 
-Il file JSON che il server di manifesto invia se `pttrackingversion=v3` ha il seguente formato generale:
+Il file JSON inviato dal server manifest se `pttrackingversion=v3` ha il seguente formato generale:
 
 ```
 { 
