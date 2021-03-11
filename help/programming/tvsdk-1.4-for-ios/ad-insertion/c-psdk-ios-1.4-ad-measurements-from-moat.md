@@ -1,25 +1,22 @@
 ---
-description: TVSDK prende informazioni da FreeWheel e altri server adserver che forniscono risposte VAST. FreeWheel fornisce, all'interno delle risposte VAST, informazioni dal servizio Moat. Il servizio Moat conta gli annunci con una precisione che mostra meglio che i creativi catturano o trascurano gli interessi del pubblico.
-seo-description: TVSDK prende informazioni da FreeWheel e altri server adserver che forniscono risposte VAST. FreeWheel fornisce, all'interno delle risposte VAST, informazioni dal servizio Moat. Il servizio Moat conta gli annunci con una precisione che mostra meglio che i creativi catturano o trascurano gli interessi del pubblico.
-seo-title: Misurazioni di annunci da Moat
+description: TVSDK prende informazioni da FreeWheel e da altri server di amministrazione che forniscono risposte VAST. FreeWheel fornisce, nelle risposte VAST, informazioni dal servizio Moat. Il servizio Moat conta le impressioni degli annunci con una precisione che dimostra meglio che i creativi catturano o trascurano gli interessi del pubblico.
 title: Misurazioni di annunci da Moat
-uuid: 76fa9ca0-58bd-44fe-82ce-72fdf6fcc28c
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '247'
 ht-degree: 0%
 
 ---
 
 
-# Aggiungi misurazioni da Moat{#ad-measurements-from-moat}
+# Misure annunci da Moat{#ad-measurements-from-moat}
 
-TVSDK prende informazioni da FreeWheel e altri server adserver che forniscono risposte VAST. FreeWheel fornisce, all&#39;interno delle risposte VAST, informazioni dal servizio Moat. Il servizio Moat conta gli annunci con una precisione che mostra meglio che i creativi catturano o trascurano gli interessi del pubblico.
+TVSDK prende informazioni da FreeWheel e da altri server di amministrazione che forniscono risposte VAST. FreeWheel fornisce, nelle risposte VAST, informazioni dal servizio Moat. Il servizio Moat conta le impressioni degli annunci con una precisione che dimostra meglio che i creativi catturano o trascurano gli interessi del pubblico.
 
-Moat è un servizio di misurazione e visualizzazione per molti usi, dai browser alle applicazioni interne. Moat genera dati di analisi di marketing in tempo reale su più piattaforme.
+Moat è un servizio che misura e visualizza in molti usi, dai browser all&#39;interno delle applicazioni. Moat genera dati di analisi di marketing in tempo reale su più piattaforme.
 
-L&#39;XML di risposta VAST ha una proprietà e un elemento che il codice può leggere, la proprietà ad id più esterna e l&#39;elemento di estensione più esterno. In entrambi i casi, il codice può utilizzare TVSDK per salvare sia le informazioni ID annuncio che le informazioni di estensione e organizzare le informazioni in una struttura ad albero. Con questa organizzazione, il codice può raccogliere i dati da qualsiasi livello e trasmetterli ovunque sia necessario. Il valore della proprietà ad id più esterno consente al codice di coordinare le informazioni della campagna associata.
+L&#39;XML di risposta VAST dispone di una proprietà e di un elemento leggibile dal codice, della proprietà dell&#39;ad id più esterno e dell&#39;elemento dell&#39;estensione più esterno. In entrambi i casi, il codice può utilizzare TVSDK per salvare sia le informazioni sull’id dell’annuncio che le informazioni sull’estensione e organizzare le informazioni in una struttura ad albero. Con questa organizzazione, il tuo codice può raccogliere i dati da qualsiasi livello e passarli ovunque debba andare. Il valore della proprietà id annuncio esterno consente al codice di coordinare le informazioni della campagna associata.
 
 Ad esempio, FreeWheel può restituire i dati in un elemento Extensions. Di seguito è riportato un elemento di esempio.
 
@@ -44,10 +41,10 @@ Ad esempio, FreeWheel può restituire i dati in un elemento Extensions. Di segui
 </Extensions>
 ```
 
-La ruota libera può anche impostare la proprietà id nell&#39;elemento Ad, come mostrato nell&#39;esempio seguente.
+La ruota libera può anche impostare la proprietà id nell’elemento Ad , come mostrato nell’esempio di seguito.
 
 ```
 <Ad id="118566" sequence="1">
 ```
 
-Fare riferimento alla documentazione API per la classe `PTNetworkAdInfo` in `PTAdAsset`.
+Fai riferimento alla documentazione API per la classe `PTNetworkAdInfo` in `PTAdAsset`.
