@@ -1,9 +1,9 @@
 ---
-seo-title: Proteggere il server
 title: Proteggere il server
-uuid: bbd3e6ba-670a-4bcc-b3d2-ea77108a841b
+description: Proteggere il server
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '56'
 ht-degree: 0%
@@ -15,4 +15,4 @@ ht-degree: 0%
 
 È necessario proteggere fisicamente il computer in cui si verifica la gestione dei criteri e la creazione di pacchetti di contenuti. (Vedere [Sicurezza fisica e accesso](../../aaxs-secure-deployment-guidelines/physical-sec-and-access.md).)
 
-Inoltre, se l&#39;implementazione della creazione di pacchetti di contenuto richiede connettività di rete, è necessario rendere più rigido il sistema operativo e implementare una soluzione firewall appropriata. Per informazioni, vedere [Topologia di rete](../../aaxs-secure-deployment-guidelines/overview/network-topology.md).
+Inoltre, se l’implementazione del pacchetto di contenuti richiede una connettività di rete, è necessario rendere più rigido il sistema operativo e implementare una soluzione firewall appropriata. Per informazioni, consulta [Topologia di rete](../../aaxs-secure-deployment-guidelines/overview/network-topology.md).
