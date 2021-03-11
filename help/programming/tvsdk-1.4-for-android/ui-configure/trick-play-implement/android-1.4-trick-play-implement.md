@@ -1,13 +1,10 @@
 ---
-description: Quando gli utenti avanzano velocemente o riavvolgono rapidamente i supporti, si trovano in modalità di riproduzione trucco. Per passare alla modalità di riproduzione a trucco, è necessario impostare la velocità di riproduzione di MediaPlayer su un valore diverso da 1.
-seo-description: Quando gli utenti avanzano velocemente o riavvolgono rapidamente i supporti, si trovano in modalità di riproduzione trucco. Per passare alla modalità di riproduzione a trucco, è necessario impostare la velocità di riproduzione di MediaPlayer su un valore diverso da 1.
-seo-title: Implementazione rapida in avanti e indietro
-title: Implementazione rapida in avanti e indietro
-uuid: 2e5d0fd0-0290-4f08-b9c6-c8ecde26abb8
+description: Quando gli utenti avanzano velocemente o riavvolgono velocemente i contenuti multimediali, si trovano in modalità di riproduzione a trucco. Per accedere alla modalità di riproduzione a trucco, è necessario impostare la velocità di riproduzione di MediaPlayer su un valore diverso da 1.
+title: Implementazione rapida in avanti e in riavvolgimento
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
@@ -15,16 +12,16 @@ ht-degree: 0%
 
 # Panoramica {#implement-fast-forward-and-rewind-overview}
 
-Quando gli utenti avanzano velocemente o riavvolgono rapidamente i supporti, si trovano in modalità di riproduzione trucco. Per passare alla modalità di riproduzione a trucco, è necessario impostare la velocità di riproduzione di MediaPlayer su un valore diverso da 1.
+Quando gli utenti avanzano velocemente o riavvolgono velocemente i contenuti multimediali, si trovano in modalità di riproduzione a trucco. Per accedere alla modalità di riproduzione a trucco, è necessario impostare la velocità di riproduzione di MediaPlayer su un valore diverso da 1.
 
 Per cambiare la velocità, è necessario impostare un valore.
 
-1. Passa dalla modalità di riproduzione normale (1x) alla modalità di riproduzione ingannevole impostando la velocità su `MediaPlayer` su un valore consentito.
+1. Passa dalla modalità di riproduzione normale (1x) alla modalità di riproduzione con trucco impostando la velocità su `MediaPlayer` su un valore consentito.
 
-   * La classe `MediaPlayerItem` definisce le frequenze di riproduzione consentite.
-   * TVSDK seleziona la tariffa più vicina consentita se la frequenza specificata non è consentita.
+   * La classe `MediaPlayerItem` definisce le velocità di riproduzione consentite.
+   * TVSDK seleziona la velocità consentita più vicina se la velocità specificata non è consentita.
 
-   In questo esempio, la frequenza di riproduzione interna del lettore viene impostata sulla frequenza richiesta.
+   In questo esempio la velocità di riproduzione interna del lettore viene impostata sulla velocità richiesta.
 
    ```java
    import com.adobe.mediacore.MediaPlayer; 
@@ -50,13 +47,13 @@ Per cambiare la velocità, è necessario impostare un valore.
    }
    ```
 
-1. Facoltativamente, puoi ascoltare gli eventi relativi ai cambiamenti di tasso, che ti permettono di sapere quando hai richiesto un cambiamento di tasso e quando un cambiamento di tasso si verifica effettivamente.
+1. Facoltativamente, puoi ascoltare gli eventi di cambio di tasso, che ti permettono di sapere quando hai richiesto un cambiamento di tasso e quando un cambiamento di tasso si verifica effettivamente.
 
-       TVSDK invia gli eventi seguenti relativi al trucco:
+       TVSDK invia i seguenti eventi relativi al trucco:
    
-   * `AdobePSDK.PSDKEventType.RATE_SELECTED` quando il  `rate` valore cambia in un altro valore.
+   * `AdobePSDK.PSDKEventType.RATE_SELECTED` quando il  `rate` valore cambia in un valore diverso.
 
-   * `AdobePSDK.PSDKEventType.RATE_PLAYING` quando la riproduzione riprende alla frequenza selezionata.
+   * `AdobePSDK.PSDKEventType.RATE_PLAYING` quando la riproduzione riprende alla velocità selezionata.
 
-      TVSDK invia entrambi questi eventi quando il lettore ritorna dalla modalità di riproduzione a quella normale.
+      TVSDK invia entrambi questi eventi quando il lettore ritorna dalla modalità di gioco-trucco alla modalità di riproduzione normale.
 
