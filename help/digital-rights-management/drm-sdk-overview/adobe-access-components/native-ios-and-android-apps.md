@@ -1,9 +1,9 @@
 ---
-seo-title: Applicazioni iOS e Android native
-title: Applicazioni iOS e Android native
-uuid: 03c4f6ba-5210-466e-a8fb-ee94d4bf3cfb
+title: Applicazioni native per iOS e Android
+description: Applicazioni native per iOS e Android
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
@@ -11,8 +11,8 @@ ht-degree: 0%
 ---
 
 
-# Applicazioni iOS e Android native{#native-ios-and-android-applications}
+# Applicazioni native per iOS e Android{#native-ios-and-android-applications}
 
-Applicazioni iOS e Android native Disponibile solo per  clienti Adobe Primetime,  Adobe Primetime DRM 4.0 e versioni successive può essere utilizzato per proteggere i video utilizzati nelle applicazioni native (non Flash) su dispositivi mobili. Affinché un&#39;applicazione utilizzi questo contenuto protetto, è necessario implementarlo utilizzando le librerie client Adobe Primetime .
+Le applicazioni native per iOS e Android disponibili solo per i clienti Adobe Primetime, Adobe Primetime DRM 4.0 e versioni successive possono essere utilizzate per proteggere i video che vengono utilizzati nelle applicazioni native (non di Flash) su dispositivi mobili. Affinché un&#39;applicazione utilizzi questo contenuto protetto, è necessario implementarlo utilizzando le librerie client di Adobe Primetime.
 
-Per maggiori informazioni su  Adobe Primetime, visita: [https://www.adobe.com/solutions/primetime.html](https://www.adobe.com/solutions/primetime.html)
+Per ulteriori informazioni su Adobe Primetime, visita: [https://www.adobe.com/solutions/primetime.html](https://www.adobe.com/solutions/primetime.html)
