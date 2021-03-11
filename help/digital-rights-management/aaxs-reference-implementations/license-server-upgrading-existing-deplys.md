@@ -1,9 +1,9 @@
 ---
-seo-title: Aggiornamento delle distribuzioni esistenti
 title: Aggiornamento delle distribuzioni esistenti
-uuid: 57e62a88-e541-435c-8274-7f1602548601
+description: Aggiornamento delle distribuzioni esistenti
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '123'
 ht-degree: 0%
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 # Aggiornamento delle distribuzioni esistenti {#upgrading-existing-deployments}
 
-Per aggiornare un server che esegue la versione 3.0 Reference Implementation License Server o Watched Folder Packager, sostituite i [!DNL .war] file distribuiti sul server applicazioni con i file inclusi  Adobe Access Reference Implementation Server.
+Per aggiornare un server che esegue la versione 3.0 Reference Implementation License Server o Watched Folder Packager, sostituire i file [!DNL .war] distribuiti sul server applicazioni con i file inclusi in Adobe Access Reference Implementation Server.
 
-Se si prevede di utilizzare la registrazione del dominio con il server delle licenze di implementazione di riferimento, sono necessarie diverse nuove tabelle di database. Per ricreare l&#39;intero database di implementazione dei riferimenti, eseguire `CreateSampleDB.sql`. Per conservare i record di database esistenti e aggiungere le nuove tabelle, aprire `CreateSampleDB.sql`ed eseguire solo i comandi per creare le tabelle seguenti:
+Se si prevede di utilizzare la registrazione del dominio con il server licenze di implementazione di riferimento, sono necessarie diverse nuove tabelle di database. Per ricreare l&#39;intero database di implementazione di riferimento, esegui `CreateSampleDB.sql`. Per conservare i record di database esistenti e aggiungere le nuove tabelle, aprire `CreateSampleDB.sql`ed eseguire solo i comandi per creare le tabelle seguenti:
 
 * `DomainServerInfo`
 * `DomainKeys`
@@ -23,7 +23,7 @@ Se si prevede di utilizzare la registrazione del dominio con il server delle lic
 * `UserDomainMembership`
 * `UserDomainRefCount`
 
-Per utilizzare il supporto del dominio, è necessario aggiungere le seguenti proprietà a flashaccess-refimpl.properties:
+Per utilizzare il supporto del dominio, è necessario aggiungere le seguenti proprietà a flashaccess-refimpl.properties :
 
 * `HandlerConfiguration.DomainCAs.n` o  `RefImpl.HSM.HandlerConfiguration.DomainCAs.Alias.n`
 
@@ -31,7 +31,7 @@ Per utilizzare il supporto del dominio, è necessario aggiungere le seguenti pro
 
 * `DomainRegistrationHandler.DomainServerUrl`
 
-Per supportare la distribuzione di chiavi remote ai client iOS, è necessario aggiungere le seguenti proprietà a [!DNL flashaccess-refimpl.properties]:
+Per supportare la consegna di chiavi remote ai client iOS, è necessario aggiungere le seguenti proprietà a [!DNL flashaccess-refimpl.properties] :
 
 * `HandlerConfiguration.KeyServerCertificate` o  `RefImpl.HSM.HandlerConfiguration.KeyServerCertificate.Alias`
 
