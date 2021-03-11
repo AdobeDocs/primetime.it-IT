@@ -1,9 +1,9 @@
 ---
-seo-title: Funzionalità del dispositivo necessarie per riprodurre contenuto protetto
-title: Funzionalità del dispositivo necessarie per riprodurre contenuto protetto
-uuid: 16ed73d9-e02f-4c86-bf15-2d3e7122bf5a
+title: Funzionalità del dispositivo necessarie per riprodurre contenuti protetti
+description: Funzionalità del dispositivo necessarie per riprodurre contenuti protetti
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Funzionalità dispositivo necessarie per riprodurre contenuto protetto {#device-capabilities-required-to-play-protected-content}
+# Funzionalità del dispositivo necessarie per riprodurre contenuto protetto {#device-capabilities-required-to-play-protected-content}
 
 Specifica le funzionalità hardware necessarie per accedere al contenuto. Le informazioni sulle funzionalità hardware sono disponibili per i dispositivi che utilizzano il kit di supporto.
 
@@ -32,15 +32,15 @@ Le funzionalità del dispositivo possono essere identificate dagli attributi spe
    <td colname="4" class="- topic/entry "> <p class="- topic/p ">Se true, il dispositivo non deve avere un bus accessibile dall'utente. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">Radice hardware dell'affidabilità </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">Radice hardware di affidabilità </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">"true" o "false" </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">Esatta </p> </td> 
-   <td colname="4" class="- topic/entry "> <p class="- topic/p ">Se true, il dispositivo deve avere una radice hardware di affidabilità. </p> </td> 
+   <td colname="4" class="- topic/entry "> <p class="- topic/p ">Se true, il dispositivo deve avere una radice hardware di attendibilità. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 >[!NOTE]
 >
->Questa regola di utilizzo è supportata  client di accesso al Adobe versione 2.0.2 e successive. Il comportamento dei client meno recenti dipende dalla versione client minima supportata dal server licenze. Vedere [Versione minima del client](../../../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md).
+>Questa regola di utilizzo è supportata dai client Adobe Access versione 2.0.2 e successive. Il comportamento dei client meno recenti dipende dalla versione client minima supportata dal server licenze. Vedere [Versione minima del client](../../../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md).
 
