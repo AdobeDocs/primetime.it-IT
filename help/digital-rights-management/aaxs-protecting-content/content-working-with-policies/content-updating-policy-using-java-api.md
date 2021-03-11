@@ -1,9 +1,9 @@
 ---
-seo-title: Aggiornamento di un criterio tramite l'API Java
-title: Aggiornamento di un criterio tramite l'API Java
-uuid: 23c50f05-799e-4f5a-869b-4b5e29a36ce1
+title: Aggiornamento di un criterio tramite l’API Java
+description: Aggiornamento di un criterio tramite l’API Java
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
@@ -11,18 +11,18 @@ ht-degree: 0%
 ---
 
 
-# Aggiornamento di un criterio tramite l&#39;API Java {#updating-a-policy-using-the-java-api}
+# Aggiornamento di un criterio tramite l’API Java {#updating-a-policy-using-the-java-api}
 
-Per aggiornare un criterio utilizzando l&#39;API Java, eseguire le operazioni seguenti:
+Per aggiornare un criterio utilizzando l’API Java, esegui i seguenti passaggi:
 
-1. Configurate l&#39;ambiente di sviluppo e includete tutti i file JAR menzionati in [Impostazione dell&#39;ambiente di sviluppo](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) all&#39;interno del progetto.
-1. Create un&#39;istanza `Policy` e leggete il criterio da un file o da un database.
+1. Configura l&#39;ambiente di sviluppo e includi tutti i file JAR menzionati in [Impostazione dell&#39;ambiente di sviluppo](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) all&#39;interno del progetto.
+1. Crea un&#39;istanza `Policy` e legge nel criterio da un file o da un database.
 
    ```
    Policy policy = new Policy(policyBytes);
    ```
 
-1. Aggiornare l&#39;oggetto `Policy` impostandone le proprietà, ad esempio il nome e le regole di utilizzo.
+1. Aggiornare l’oggetto `Policy` impostandone le proprietà, ad esempio il nome e le regole di utilizzo.
 
    ```java
      // Change the policy name.  
@@ -61,4 +61,4 @@ Per aggiornare un criterio utilizzando l&#39;API Java, eseguire le operazioni se
       out.close(); 
    ```
 
-Per l&#39;origine completa di questo codice di esempio, vedere `com.adobe.flashaccess.samples.policy.UpdatePolicy` nella directory &quot;samples&quot; degli strumenti della riga di comando per l&#39;implementazione di riferimento.
+Per l’origine completa di questo codice di esempio, vedi `com.adobe.flashaccess.samples.policy.UpdatePolicy` nella directory &quot;amples&quot; degli strumenti della riga di comando per l’implementazione di riferimento.
