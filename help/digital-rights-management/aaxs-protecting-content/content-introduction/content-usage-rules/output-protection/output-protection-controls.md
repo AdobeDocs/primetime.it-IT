@@ -1,9 +1,9 @@
 ---
-seo-title: Controlli di protezione dell'uscita
 title: Controlli di protezione dell'uscita
-uuid: 1f4cc617-7f14-4952-8e61-6acbdf01d10e
+description: Controlli di protezione dell'uscita
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '635'
 ht-degree: 0%
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 # Controlli di protezione dell&#39;uscita {#output-protection-controls}
 
-**Controllare se l&#39;output su dispositivi di rendering esterni è protetto. Specificare le uscite analogiche e digitali in modo indipendente.**
+**Controlla se l&#39;output su dispositivi di rendering esterni è protetto. Specificare in modo indipendente le uscite analogiche e digitali.**
 
-Controlla se l&#39;output su dispositivi di rendering esterni deve essere limitato. Per dispositivo esterno si intende qualsiasi dispositivo video o audio non incorporato nel computer. Nell&#39;elenco dei dispositivi esterni sono esclusi gli schermi integrati, ad esempio nei computer portatili. Le restrizioni relative all&#39;uscita analogica e digitale possono essere specificate in modo indipendente.
+Controlla se l&#39;output su dispositivi di rendering esterni deve essere limitato. Per dispositivo esterno si intende qualsiasi dispositivo video o audio non incorporato nel computer. L&#39;elenco dei dispositivi esterni esclude i display integrati, ad esempio nei computer portatili. Le limitazioni dell&#39;uscita analogica e digitale possono essere specificate in modo indipendente.
 
 Sono disponibili le seguenti opzioni/livelli di applicazione:
 
@@ -29,37 +29,37 @@ Sono disponibili le seguenti opzioni/livelli di applicazione:
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Obbligatorio</b> — La protezione dell'uscita analogica per la copia (ACP) o il sistema di gestione della generazione di copie (CGMS-A) deve essere attivata per poter riprodurre il contenuto su un dispositivo esterno.  client di accesso al Adobe devono abilitare la protezione dell'output utilizzando ACP o CGMS-A. Sui dispositivi che supportano entrambi, i client  Adobe Access 3.0 tenteranno di abilitare entrambi. Tuttavia, per riprodurre il contenuto è necessario abilitare solo uno. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Obbligatorio</b> : per riprodurre i contenuti su un dispositivo esterno, è necessario abilitare la protezione dall'uscita analogica (CGMS-A) o il sistema di gestione della generazione di copie analogiche (ACP). I client Adobe Access devono abilitare la protezione dell’output utilizzando ACP o CGMS-A. Sui dispositivi che supportano entrambi, i client Adobe Access 3.0 tenteranno di abilitare entrambi. Tuttavia, per riprodurre il contenuto è necessario abilitare solo uno. </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">SÌ </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">SÌ </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">ACP richiesto</b> — È richiesta la protezione dell'output ACP. La riproduzione non è consentita su CGMS-A.  client Access 2.0 di Adobe non supporta questa opzione. Se impostato, un client  Access 2.0 si comporta come se fosse stata specificata l'opzione "Nessuna riproduzione". </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">ACP Obbligatorio</b> : è necessaria la protezione della produzione ACP. Riproduzione non consentita su CGMS-A. I client di Adobe Access 2.0 non supportano questa opzione. Se impostato, un client Adobe Access 2.0 si comporta come se fosse stata specificata l'opzione "No Playback". </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">SÌ </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">- </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">CGMS-A richiesto</b> — È necessaria la protezione dell'uscita CGMS-A. La riproduzione non è consentita su ACP.  client Access 2.0 di Adobe non supporta questa opzione. Se impostato, un client  Access 2.0 si comporta come se fosse stata specificata l'opzione "Nessuna riproduzione". </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">CGMS-A Obbligatorio</b> : è richiesta la protezione dell'uscita CGMS-A. Riproduzione non consentita su ACP. I client di Adobe Access 2.0 non supportano questa opzione. Se impostato, un client Adobe Access 2.0 si comporta come se fosse stata specificata l'opzione "No Playback". </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">SÌ </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">- </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Usa se disponibile</b> : Se disponibili, provare a abilitare la protezione dell'output ACP e CGMS-A e consentire la riproduzione se non disponibile.  client Adobe Access 3.0 cercherà di abilitare sia ACP che CGMS-A, se possibile.  client Adobe Access 2.0 tenterà di abilitare solo ACP o CGMS-A. Ad esempio, il client di accesso al Adobe  tenterà di abilitare ACP o CGMS-A. Se il tentativo ha esito positivo, l'altra opzione non sarà abilitata. Se il tentativo non riesce, verrà effettuato un secondo tentativo per abilitare l'altra opzione. Anche se entrambi i tentativi non riescono, il contenuto verrà comunque riprodotto. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Usa se disponibile</b>  - Prova ad abilitare la protezione dell'output ACP e CGMS-A se disponibile e consenti la riproduzione se non disponibile. I client Adobe Access 3.0 tenteranno di abilitare sia ACP che CGMS-A, se possibile. I client Adobe Access 2.0 tentano solo di abilitare ACP o CGMS-A. Ad esempio, il client Adobe Access tenterà di abilitare ACP o CGMS-A. Se il tentativo ha esito positivo, l’altra opzione non sarà abilitata. Se il tentativo non riesce, verrà effettuato un secondo tentativo per abilitare l’altra opzione. Anche se entrambi i tentativi falliscono, il contenuto verrà comunque riprodotto. </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">SÌ </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">SÌ </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Usa ACP se disponibile</b> — Se disponibile, provate a abilitare la protezione dell'output ACP, ma consentite la riproduzione se non disponibile. La protezione non è disponibile su CGMS-A.  client Access 2.0 di Adobe non supporta questa opzione. Se impostato, un client di accesso  Adobe 2.0 si comporta come se fosse stata specificata l'opzione "Nessuna protezione". </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Utilizza ACP se disponibile</b>  - Prova ad abilitare la protezione dell'output ACP se disponibile, ma consenti la riproduzione se non disponibile. La protezione non è disponibile su CGMS-A. I client di Adobe Access 2.0 non supportano questa opzione. Se impostato, un client Adobe Access 2.0 si comporta come se fosse stata specificata l'opzione "Nessuna protezione". </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">SÌ </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">- </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Usa CGMS-A se disponibile  </b>— Tentate di abilitare la protezione dell'output CGMS-A se disponibile, ma consentite la riproduzione se non disponibile. La protezione non è disponibile sugli ACP.  client Access 2.0 di Adobe non supporta questa opzione. Se impostato, un client di accesso  Adobe 2.0 si comporta come se fosse stata specificata l'opzione "Nessuna protezione". </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Usa CGMS-A se disponibile  </b>— Prova ad abilitare la protezione dell'output CGMS-A se disponibile, ma consenti la riproduzione se non disponibile. La protezione non è disponibile su ACP. I client di Adobe Access 2.0 non supportano questa opzione. Se impostato, un client Adobe Access 2.0 si comporta come se fosse stata specificata l'opzione "Nessuna protezione". </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">SÌ </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">- </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Nessuna protezione</b> : Per le uscite analogiche e digitali non viene applicata alcuna abilitazione alla protezione dell'uscita. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Nessuna protezione</b> : nessuna abilitazione alla protezione dell'output viene applicata alle uscite analogiche e digitali. </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">SÌ </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">SÌ </p> </td> 
   </tr> 
@@ -73,10 +73,10 @@ Sono disponibili le seguenti opzioni/livelli di applicazione:
 
 >[!NOTE]
 >
->Sebbene queste regole siano applicate in modo coerente su tutte le piattaforme, al momento è possibile attivare la protezione dell&#39;output solo in modo sicuro sulle piattaforme Windows. Su altre piattaforme (come Macintosh e Linux) non sono disponibili funzioni del sistema operativo supportate per le applicazioni di terze parti.
+>Sebbene queste regole siano applicate in modo coerente in tutte le piattaforme, al momento è solo possibile attivare in modo sicuro la protezione dell&#39;output sulle piattaforme Windows. Su altre piattaforme (come Macintosh e Linux) non sono disponibili funzioni di supporto del sistema operativo per applicazioni di terze parti.
 
-Esempio di utilizzo: Alcuni contenuti possono applicare controlli di protezione dell&#39;output e il livello di protezione può essere impostato dal distributore dei contenuti. Se si specifica &quot;Obbligatorio&quot; e si tenta di riprodurre il contenuto su un Macintosh, il client non riproduce il contenuto su dispositivi esterni. Tuttavia, i contenuti verranno riprodotti sui monitor interni.
+Esempio di utilizzo: Alcuni contenuti possono applicare controlli di protezione dell&#39;output e il livello di protezione può essere impostato dal distributore dei contenuti. Se si specifica &quot;Obbligatorio&quot; e si tenta la riproduzione su un Macintosh, il client non riproduce il contenuto su dispositivi esterni. I contenuti verranno comunque riprodotti sui monitor interni.
 
-Se si specifica &quot;Obbligatorio&quot; e si tenta di riprodurre su Linux, il client non riproduce il contenuto su alcun dispositivo perché non è possibile distinguere tra dispositivi interni ed esterni.
+Se si specifica &quot;Obbligatorio&quot; e si tenta la riproduzione su Linux, il client non riproduce il contenuto su alcun dispositivo perché non è possibile distinguere tra dispositivi interni ed esterni.
 
-Se si specifica &quot;Usa se disponibile&quot;, la protezione dell&#39;output viene attivata laddove possibile. Ad esempio, sui computer Windows che supportano il protocollo COPP (Certified Output Protection Protocol), il contenuto viene trasmesso con protezione dell&#39;output a uno schermo esterno. Questo esempio è talvolta noto come &quot;controllo di output selezionabile&quot;.
+Se si specifica &quot;Usa se disponibile&quot;, la protezione dell&#39;output viene attivata laddove possibile. Ad esempio, nei computer Windows che supportano il protocollo di protezione dell&#39;output certificato (COPP), il contenuto viene trasmesso con protezione dell&#39;output a uno schermo esterno. Questo esempio è talvolta noto come &quot;controllo dell&#39;output selezionabile&quot;.
