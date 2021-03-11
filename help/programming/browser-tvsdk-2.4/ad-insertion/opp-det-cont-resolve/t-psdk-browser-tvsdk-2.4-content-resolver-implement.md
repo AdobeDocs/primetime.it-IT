@@ -1,31 +1,28 @@
 ---
-description: Potete implementare dei risolutori di contenuti personalizzati in base ai risolutori predefiniti.
-seo-description: Potete implementare dei risolutori di contenuti personalizzati in base ai risolutori predefiniti.
-seo-title: Implementazione di un risolutore di contenuti personalizzato
-title: Implementazione di un risolutore di contenuti personalizzato
-uuid: cf85dd90-242e-4f9e-9785-158ca0fc9465
+description: È possibile implementare i propri risolutori di contenuti in base ai risolutori predefiniti.
+title: Implementare un risolutore di contenuti personalizzato
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 0%
+source-wordcount: '191'
+ht-degree: 1%
 
 ---
 
 
-# Implementazione di un risolutore di contenuto personalizzato{#implement-a-custom-content-resolver}
+# Implementa un risolutore di contenuti personalizzato{#implement-a-custom-content-resolver}
 
-Potete implementare dei risolutori di contenuti personalizzati in base ai risolutori predefiniti.
+È possibile implementare i propri risolutori di contenuti in base ai risolutori predefiniti.
 
-Quando l&#39;SDK per browser rileva una nuova opportunità, esegue un&#39;iterazione attraverso i risolutori di contenuti registrati alla ricerca di una in grado di risolvere tale opportunità utilizzando il metodo `canResolve`. Il primo che restituisce true è selezionato per la risoluzione dell&#39;opportunità. Se non è in grado di risolvere il problema, tale opportunità viene ignorata. Poiché il processo di risoluzione del contenuto è in genere asincrono, il risolutore del contenuto è responsabile della notifica a Browser TVSDK al termine del processo.
+Quando il browser TVSDK rileva una nuova opportunità, esegue un&#39;iterazione attraverso i risolutori di contenuti registrati alla ricerca di una che sia in grado di risolvere tale opportunità utilizzando il metodo `canResolve` . Il primo che restituisce true viene selezionato per risolvere l&#39;opportunità. Se nessun risolutore di contenuti è in grado di farlo, questa opportunità viene ignorata. Poiché il processo di risoluzione dei contenuti è in genere asincrono, il risolutore dei contenuti è responsabile della notifica al browser TVSDK al termine del processo.
 
 Ricorda le seguenti informazioni:
 
-* Il risolutore del contenuto chiama `client.process` per specificare quale operazione timeline deve essere eseguita da TVSDK.
+* Il risolutore dei contenuti chiama `client.process` per specificare quale operazione timeline deve essere eseguita da TVSDK.
 
-   In genere si tratta di un posizionamento di interruzione annuncio.
+   L’operazione di solito è un posizionamento di interruzione annuncio.
 
-* Il risolutore del contenuto chiama `client.notifyCompleted` se il processo di risoluzione ha esito positivo o `client.notifyFailed` se il processo ha esito negativo.
+* Il risolutore dei contenuti chiama `client.notifyCompleted` se il processo di risoluzione ha esito positivo o `client.notifyFailed` se il processo non riesce.
 
 1. Crea un risolutore di opportunità personalizzato.
 
@@ -84,7 +81,7 @@ Ricorda le seguenti informazioni:
    }; 
    ```
 
-1. Create la content factory personalizzata, che utilizza il risolutore di contenuti personalizzato.
+1. Crea la content factory personalizzata che utilizza il risolutore di contenuti personalizzato.
 
    Ad esempio:
 
@@ -111,7 +108,7 @@ Ricorda le seguenti informazioni:
 
 1. Registra il content factory personalizzato per il flusso multimediale da riprodurre.
 
-   Nel lettore UI Framework, potete specificare una content factory personalizzata nel modo seguente:
+   Nel lettore di framework dell&#39;interfaccia utente, puoi specificare una directory di fabbrica del contenuto personalizzata come segue:
 
    ```js
    var advertisingFactory = new CustomContentFactory(); 
