@@ -1,13 +1,10 @@
 ---
-description: Lo streaming su Internet richiede una connessione costante e stabile per riprodurre un flusso da un server remoto. Tuttavia, la variabilità della connessione Internet o della riproduzione in streaming di un visualizzatore impedisce la riproduzione da remoto di contenuti multimediali riprodotti localmente.
-seo-description: Lo streaming su Internet richiede una connessione costante e stabile per riprodurre un flusso da un server remoto. Tuttavia, la variabilità della connessione Internet o della riproduzione in streaming di un visualizzatore impedisce la riproduzione da remoto di contenuti multimediali riprodotti localmente.
-seo-title: Riproduzione e failover
+description: Lo streaming via Internet richiede una connessione costante e stabile per riprodurre un flusso da un server remoto. Tuttavia, la variabilità della connessione Internet o della riproduzione in streaming di un visualizzatore impedisce la riproduzione remota di contenuti multimediali di qualità riprodotti localmente.
 title: Riproduzione e failover
-uuid: 7bbca3fe-88a3-4384-9a63-eb164c956a75
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '161'
 ht-degree: 0%
 
 ---
@@ -15,10 +12,10 @@ ht-degree: 0%
 
 # Panoramica {#playback-and-failover-overview}
 
-Lo streaming su Internet richiede una connessione costante e stabile per riprodurre un flusso da un server remoto. Tuttavia, la variabilità della connessione Internet o della riproduzione in streaming di un visualizzatore impedisce la riproduzione da remoto di contenuti multimediali riprodotti localmente.
+Lo streaming via Internet richiede una connessione costante e stabile per riprodurre un flusso da un server remoto. Tuttavia, la variabilità della connessione Internet o della riproduzione in streaming di un visualizzatore impedisce la riproduzione remota di contenuti multimediali di qualità riprodotti localmente.
 
 >[!IMPORTANT]
 >
 >Primetime non è in grado di proteggere da guasti come un&#39;interruzione dell&#39;ISP o una disconnessione del cavo.
 
-Lo streaming Primetime fornisce una protezione del failover per proteggere la riproduzione da alcuni guasti del server remoto o da errori operativi, migliorando l&#39;esperienza di visualizzazione. Nonostante i problemi di trasmissione, TVSDK implementa la protezione contro il failover per ridurre al minimo le interruzioni di riproduzione e ottenere una riproduzione perfetta. Il lettore video passa automaticamente a un set di supporti di backup quando le rappresentazioni o i frammenti interi non sono disponibili.
+Lo streaming di Primetime fornisce una protezione di failover per proteggere la riproduzione da alcuni guasti del server remoto o da guasti operativi, il che migliora l&#39;esperienza di visualizzazione. Nonostante i problemi di trasmissione, TVSDK implementa la protezione del failover per ridurre al minimo le interruzioni di riproduzione e ottenere una riproduzione senza soluzione di continuità. Il lettore video passa automaticamente a un set di file multimediali di backup quando non sono disponibili interi rendering o frammenti.
