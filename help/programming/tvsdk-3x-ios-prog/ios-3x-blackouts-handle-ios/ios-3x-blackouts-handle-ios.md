@@ -1,9 +1,9 @@
 ---
-seo-title: Gestione dei blackout nei flussi live
-title: Gestione dei blackout nei flussi live
-uuid: 717f0242-1a6e-4347-ba4c-ea0450a37874
+title: Gestire i blackout nei flussi live
+description: Gestire i blackout nei flussi live
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '15'
 ht-degree: 0%
@@ -11,4 +11,4 @@ ht-degree: 0%
 ---
 
 
-# Gestione dei blackout in flussi live{#handle-blackouts-in-live-streams}
+# Gestire i blackout nei flussi live{#handle-blackouts-in-live-streams}
