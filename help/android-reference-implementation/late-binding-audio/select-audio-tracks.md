@@ -1,9 +1,9 @@
 ---
-seo-title: Selezionare le tracce audio
 title: Selezionare le tracce audio
-uuid: a827f426-956b-4a5f-90ba-db12010aa7c7
+description: Selezionare le tracce audio
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '136'
 ht-degree: 0%
@@ -11,17 +11,17 @@ ht-degree: 0%
 ---
 
 
-# Selezionare le tracce audio{#select-the-audio-tracks}
+# Seleziona le tracce audio{#select-the-audio-tracks}
 
-Per selezionare le tracce audio per l&#39;esecuzione di un&#39;associazione successiva, implementate [IAAConfig](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/IAAConfig.html).
+Per selezionare le tracce audio per l&#39;audio in ritardo, implementa [IAAConfig](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/IAAConfig.html).
 
-| A... | Chiama... |
+| A... | Chiama.. |
 |---|---|
-| Ottenere un elenco delle tracce AA disponibili | [getAudioTracks()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#getAudioTracks()) |
-| Ottenere la traccia selezionata | [getSelectedAudioTrack()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#getSelectedAudioTrack()) |
+| Ottieni un elenco delle tracce AA disponibili | [getAudioTracks()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#getAudioTracks()) |
+| Ottieni il brano selezionato corrente | [getSelectedAudioTrack()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#getSelectedAudioTrack()) |
 | Selezionare una traccia AA | [selectAlternateAudioTrack()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#selectAlternateAudioTrack(int)) |
 
-L’esempio di codice seguente illustra come l’implementazione di riferimento ottiene le tracce audio dal TVSDK e assegna la traccia selezionata all’elemento multimediale associato:
+L&#39;esempio di codice seguente illustra come l&#39;implementazione di riferimento ottiene le tracce audio dal TVSDK e assegna la traccia selezionata all&#39;elemento multimediale associato:
 
 ```java
 /** 
