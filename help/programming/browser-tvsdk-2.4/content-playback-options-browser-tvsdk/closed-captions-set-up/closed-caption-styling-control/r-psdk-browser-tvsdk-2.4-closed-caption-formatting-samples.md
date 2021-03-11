@@ -1,13 +1,10 @@
 ---
-description: È possibile specificare la formattazione dei sottotitoli codificati.
-seo-description: È possibile specificare la formattazione dei sottotitoli codificati.
-seo-title: Esempi di formattazione delle didascalie
-title: Esempi di formattazione delle didascalie
-uuid: d55a506a-6662-4252-95f6-4073b2997f3b
+description: È possibile specificare la formattazione dei sottotitoli.
+title: Esempi Formattazione didascalia
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '41'
+source-wordcount: '33'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # Esempi: Formattazione didascalia{#examples-caption-formatting}
 
-È possibile specificare la formattazione dei sottotitoli codificati.
+È possibile specificare la formattazione dei sottotitoli.
 
-## Esempio 1: Specificare i valori di formato in modo esplicito {#section_BD7B48F3B66D4E9290E1CB2F464E08E4}
+## Esempio 1: Specificare esplicitamente i valori di formato {#section_BD7B48F3B66D4E9290E1CB2F464E08E4}
 
 ```js
 // Set CC style. 
@@ -37,5 +34,5 @@ var tf = new AdobePSDK.TextFormat(
 
 >[!IMPORTANT]
 >
->Il browser TVSDK non supporta l&#39;opacità del bordo del font, del colore di riempimento o del riempimento.
+>Il browser TVSDK non supporta il bordo del font, il colore di riempimento o l&#39;opacità del riempimento.
 
