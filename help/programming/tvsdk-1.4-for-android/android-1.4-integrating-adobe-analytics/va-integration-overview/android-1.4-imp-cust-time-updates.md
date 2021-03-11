@@ -1,27 +1,24 @@
 ---
-description: In alcune implementazioni di analisi, l'applicazione client potrebbe voler fornire una posizione di playhead diversa da quella indicata dal valore localeTime di TVSDK. Ad esempio, durante la riproduzione di un flusso lineare, è possibile fornire la testina di riproduzione di ogni programma in relazione al tempo di inizio.
-seo-description: In alcune implementazioni di analisi, l'applicazione client potrebbe voler fornire una posizione di playhead diversa da quella indicata dal valore localeTime di TVSDK. Ad esempio, durante la riproduzione di un flusso lineare, è possibile fornire la testina di riproduzione di ogni programma in relazione al tempo di inizio.
-seo-title: Implementazione di aggiornamenti temporali personalizzati
-title: Implementazione di aggiornamenti temporali personalizzati
-uuid: 7f5d46e5-eab6-4bdc-b015-ae27ddb609ce
+description: In alcune implementazioni di analytics, l'applicazione client potrebbe voler fornire una posizione di playhead diversa rispetto alla posizione segnalata dal valore localeTime TVSDK. Ad esempio, durante la riproduzione di un flusso lineare, la testina di riproduzione di ogni programma può essere fornita in base al tempo di inizio.
+title: Implementare aggiornamenti temporali personalizzati
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '135'
 ht-degree: 0%
 
 ---
 
 
-# Implementare gli aggiornamenti temporali personalizzati {#implement-custom-time-updates}
+# Implementare aggiornamenti ora personalizzati {#implement-custom-time-updates}
 
-In alcune implementazioni di analisi, l&#39;applicazione client potrebbe voler fornire una posizione di playhead diversa da quella indicata dal valore localeTime di TVSDK. Ad esempio, durante la riproduzione di un flusso lineare, è possibile fornire la testina di riproduzione di ogni programma in relazione al tempo di inizio.
+In alcune implementazioni di analytics, l&#39;applicazione client potrebbe voler fornire una posizione di playhead diversa rispetto alla posizione segnalata dal valore localeTime TVSDK. Ad esempio, durante la riproduzione di un flusso lineare, la testina di riproduzione di ogni programma può essere fornita in base al tempo di inizio.
 
 >[!TIP]
 >
->Ignora questo metodo solo se si desidera fornire una posizione dell&#39;indicatore di riproduzione diversa dalla posizione predefinita.
+>Ignorare questo metodo solo se si desidera fornire una posizione diversa da quella predefinita.
 
-Per ignorare la posizione predefinita dell&#39;indicatore di riproduzione:
+Per sovrascrivere la posizione predefinita della testina di riproduzione:
 
 ```java
 vaMetadata.setCurrentTimeUpdateBlock(new VideoAnalyticsMetadata.CurrentTimeUpdateBlock() { 
@@ -36,4 +33,4 @@ vaMetadata.setCurrentTimeUpdateBlock(new VideoAnalyticsMetadata.CurrentTimeUpdat
 
 >[!IMPORTANT]
 >
->I valori in questo frammento di codice sono solo esempi. È necessario utilizzare valori diversi per la posizione personalizzata dell&#39;indicatore di riproduzione.
+>I valori in questo frammento di codice sono solo esempi. È necessario utilizzare valori diversi per la posizione personalizzata della testina di riproduzione.
