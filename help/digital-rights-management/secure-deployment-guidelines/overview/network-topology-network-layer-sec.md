@@ -1,23 +1,20 @@
 ---
-description: Le vulnerabilità di sicurezza della rete sono tra le prime minacce a qualsiasi server applicazioni rivolto a Internet o Intranet e devi rendere più rigidi gli host presenti sulla rete rispetto a tali vulnerabilità.
-seo-description: Le vulnerabilità di sicurezza della rete sono tra le prime minacce a qualsiasi server applicazioni rivolto a Internet o Intranet e devi rendere più rigidi gli host presenti sulla rete rispetto a tali vulnerabilità.
-seo-title: Protezione dei livelli di rete
-title: Protezione dei livelli di rete
-uuid: c750c595-a784-47ce-be0b-17b8d60c5753
+description: Le vulnerabilità relative alla sicurezza della rete costituiscono una delle prime minacce per qualsiasi server applicativo rivolto a Internet o Intranet e devi inoltre proteggere gli host della rete da tali vulnerabilità.
+title: Sicurezza a livello di rete
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '280'
 ht-degree: 0%
 
 ---
 
 
-# Protezione del livello di rete{#network-layer-security}
+# Sicurezza a livello di rete{#network-layer-security}
 
-Le vulnerabilità di sicurezza della rete sono tra le prime minacce a qualsiasi server applicazioni rivolto a Internet o Intranet e devi rendere più rigidi gli host presenti sulla rete rispetto a tali vulnerabilità.
+Le vulnerabilità relative alla sicurezza della rete costituiscono una delle prime minacce per qualsiasi server applicativo rivolto a Internet o Intranet e devi inoltre proteggere gli host della rete da tali vulnerabilità.
 
-Di seguito sono riportate alcune tecniche comuni per ridurre le vulnerabilità di sicurezza della rete:
+Di seguito sono riportate alcune tecniche comuni che riducono le vulnerabilità relative alla sicurezza della rete:
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_djf_lhz_n4"> 
  <thead class="- topic/thead "> 
@@ -29,19 +26,19 @@ Di seguito sono riportate alcune tecniche comuni per ridurre le vulnerabilità d
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Zone demilitarizzate (DMZ) </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">La segmentazione deve esistere in almeno due livelli con il server applicazione utilizzato per eseguire  Adobe Primetime DRM quando Primetime DRM è protetto da un firewall interno. È necessario separare la rete esterna dalla rete perimetrale che include i server Web e i server Web devono essere separati dalla rete interna. Potete usare i firewall per implementare questi livelli di separazione. </p> <p>Potete classificare e controllare il traffico che passa attraverso ciascun livello di rete per garantire che sia consentito solo il minimo assoluto di dati richiesti. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">La segmentazione deve esistere in almeno due livelli con il server applicazioni utilizzato per eseguire Adobe Primetime DRM quando Primetime DRM è dietro il firewall interno. È necessario separare la rete esterna dalla rete DMZ che include i server web e i server web devono essere separati dalla rete interna. Potete usare i firewall per implementare questi livelli di separazione. </p> <p>Puoi classificare e controllare il traffico che passa attraverso ogni livello di rete per garantire che sia consentito solo il minimo assoluto di dati richiesti. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Indirizzi IP privati </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Utilizzate Network Address Translation (NAT) con indirizzi IP privati RFC 1918 sui server applicazione DRM di Primetime. Potete assegnare indirizzi IP privati (10.0.0.0/8, 172.16.0.0/12 e 192.168.0.0/16) per rendere più difficile per un utente malintenzionato indirizzare il traffico da e verso un host interno NAT attraverso Internet. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Utilizza NAT (Network Address Translation) con indirizzi IP privati RFC 1918 sui server di applicazioni DRM di Primetime. È possibile assegnare indirizzi IP privati (10.0.0.0/8, 172.16.0.0/12 e 192.168.0.0/16) per rendere più difficile per un aggressore indirizzare il traffico da e verso un host interno NAT attraverso Internet. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Firewall </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Di seguito sono riportati alcuni criteri da tenere in considerazione per la selezione di una soluzione firewall: </p> <p class="- topic/p "> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Di seguito sono riportati alcuni criteri da tenere in considerazione quando si seleziona una soluzione firewall: </p> <p class="- topic/p "> 
      <ul class="- topic/ul " id="ul_wjf_lhz_n4"> 
-      <li class="- topic/li " id="li_A620D0B635384590BA7804F9720D04D0">Implementate firewall che supportano server proxy e/o ispezione dello stato, invece di semplici soluzioni di filtraggio dei pacchetti. </li> 
-      <li class="- topic/li " id="li_3E4F814A30C047539185C23F4F57C282">Utilizzare un firewall che supporta un paradigma di protezione in cui è possibile negare tutti i servizi, ad eccezione dei servizi consentiti in modo esplicito. </li> 
-      <li class="- topic/li " id="li_96160B3F14C4425397F017AF93FABE32">Implementate una soluzione firewall che sia a due o più host. Questa architettura offre il massimo livello di protezione e impedisce agli utenti non autorizzati di aggirare la protezione del firewall. </li> 
+      <li class="- topic/li " id="li_A620D0B635384590BA7804F9720D04D0">Implementa firewall che supportano i server proxy e/o l’ispezione dello stato, invece di semplici soluzioni di filtraggio dei pacchetti. </li> 
+      <li class="- topic/li " id="li_3E4F814A30C047539185C23F4F57C282">Utilizzare un firewall che supporta un paradigma di sicurezza in cui è possibile negare tutti i servizi, ad eccezione dei servizi esplicitamente consentiti. </li> 
+      <li class="- topic/li " id="li_96160B3F14C4425397F017AF93FABE32">Implementa una soluzione firewall con doppio percorso o con più percorsi. Questa architettura fornisce il massimo livello di sicurezza e impedisce agli utenti non autorizzati di bypassare la protezione del firewall. </li> 
      </ul> </p> </td> 
   </tr> 
  </tbody> 
