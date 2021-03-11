@@ -1,13 +1,10 @@
 ---
-description: L'audio con binding ritardato utilizza MediaPlayer per riprodurre un video specificato in una playlist M3U8 HLS e che può contenere diversi flussi audio alternativi.
-seo-description: L'audio con binding ritardato utilizza MediaPlayer per riprodurre un video specificato in una playlist M3U8 HLS e che può contenere diversi flussi audio alternativi.
-seo-title: Accedere a tracce audio alternative
+description: L'audio in ritardo utilizza MediaPlayer per riprodurre un video specificato in una playlist M3U8 HLS e che può contenere diversi flussi audio alternativi.
 title: Accedere a tracce audio alternative
-uuid: 136b4f1b-e56f-4a8a-a961-05193434558c
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '110'
 ht-degree: 0%
 
 ---
@@ -15,14 +12,14 @@ ht-degree: 0%
 
 # Accedere a tracce audio alternative{#access-alternate-audio-tracks}
 
-L&#39;audio con binding ritardato utilizza MediaPlayer per riprodurre un video specificato in una playlist M3U8 HLS e che può contenere diversi flussi audio alternativi.
+L&#39;audio in ritardo utilizza MediaPlayer per riprodurre un video specificato in una playlist M3U8 HLS e che può contenere diversi flussi audio alternativi.
 
-1. Attendete che lo stato `MediaPlayer` sia almeno PREPARATO.
-1. Ascoltare i seguenti eventi:
+1. Attendi che lo stato `MediaPlayer` sia almeno PREPARATO.
+1. Ascolta questi eventi:
 
    * `MediaPlayerItemEvent.ITEM_CREATED`: È disponibile l&#39;elenco iniziale delle tracce audio.
    * `MediaPlayerItemEvent.AUDIO_UPDATED`: Tracce audio modificate durante la riproduzione
 
-1. Ottenete le tracce audio disponibili dall&#39;istanza `MediaPlayerItem`.
-1. (Facoltativo) Presentare all’utente le tracce disponibili.
-1. Impostate la traccia audio selezionata sull&#39;istanza `MediaPlayerItem`.
+1. Ottieni le tracce audio disponibili dall&#39;istanza `MediaPlayerItem`.
+1. (Facoltativo) Presentare all&#39;utente le tracce disponibili.
+1. Imposta la traccia audio selezionata sull&#39;istanza `MediaPlayerItem`.
