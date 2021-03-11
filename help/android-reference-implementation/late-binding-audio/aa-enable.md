@@ -1,21 +1,18 @@
 ---
-description: Potete integrare flussi audio alterni o di rilegatura tardiva nel lettore creando un gestore di funzioni audio alternativo.
-seo-description: Potete integrare flussi audio alterni o di rilegatura tardiva nel lettore creando un gestore di funzioni audio alternativo.
-seo-title: Integrare l'audio con binding ritardato
-title: Integrare l'audio con binding ritardato
-uuid: cd2e259a-2af4-4d7b-a856-79bd087e8ca6
+description: È possibile integrare flussi audio in ritardo o alternati nel lettore creando un gestore di funzioni audio alternativo.
+title: Integrare l’audio in ritardo
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '92'
+source-wordcount: '71'
 ht-degree: 0%
 
 ---
 
 
-# Integrare l&#39;audio con rilegatura successiva {#integrate-late-binding-audio}
+# Integrare l&#39;audio in ritardo {#integrate-late-binding-audio}
 
-Potete integrare flussi audio alterni o di rilegatura tardiva nel lettore creando un gestore di funzioni audio alternativo.
+È possibile integrare flussi audio in ritardo o alternati nel lettore creando un gestore di funzioni audio alternativo.
 
 * Per creare una gestione audio alternativa:
 
@@ -23,14 +20,14 @@ Potete integrare flussi audio alterni o di rilegatura tardiva nel lettore creand
    AAManager aaManager = new AAManagerOn(); 
    ```
 
-* Per utilizzare ManagerFactory per abilitare l&#39;audio alternativo, assicurarsi che la seguente riga di codice sia nel file `PlayerFragment.java`:
+* Per utilizzare ManagerFactory per abilitare l&#39;audio alternativo, assicurati che la seguente riga di codice sia nel file `PlayerFragment.java`:
 
    ```java
    aaManager = ManagerFactory.getAAManager( 
    <b>true</b>,config, mediaPlayer);
    ```
 
-   Per disattivare l&#39;audio alternativo:
+   Per disabilitare l&#39;audio alternativo:
 
    ```java
    aaManager = ManagerFactory.getAAManager( 
