@@ -1,27 +1,24 @@
 ---
-description: Per le risposte, l'implementazione di riferimento di Primetime utilizza un formato di feed basato su JSON. Questo formato viene analizzato utilizzando un'implementazione dell'interfaccia IFeedItemAdapter.
-seo-description: Per le risposte, l'implementazione di riferimento di Primetime utilizza un formato di feed basato su JSON. Questo formato viene analizzato utilizzando un'implementazione dell'interfaccia IFeedItemAdapter.
-seo-title: Formato catalogo
+description: L’implementazione di riferimento di Primetime utilizza un formato di feed basato su JSON per le risposte. Questo formato viene analizzato utilizzando un'implementazione dell'interfaccia IFeedItemAdapter.
 title: Formato catalogo
-uuid: 6e1a526f-c0bb-403d-a792-666caf5479a5
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '620'
 ht-degree: 0%
 
 ---
 
 
-# Formato catalogo {#catalog-format}
+# Formato del catalogo {#catalog-format}
 
-Per le risposte, l&#39;implementazione di riferimento di Primetime utilizza un formato di feed basato su JSON. Questo formato viene analizzato utilizzando un&#39;implementazione dell&#39;interfaccia IFeedItemAdapter.
+L’implementazione di riferimento di Primetime utilizza un formato di feed basato su JSON per le risposte. Questo formato viene analizzato utilizzando un&#39;implementazione dell&#39;interfaccia IFeedItemAdapter.
 
 >[!NOTE]
 >
->Questo formato di feed è il formato di esempio utilizzato dall&#39;implementazione di riferimento e serve da esempio per analizzare e mappare il formato all&#39;interfaccia del feed. Puoi usare il tuo formato di feed di input con le tue implementazioni di interfaccia di feed.
+>Questo formato di feed è il formato di esempio utilizzato dall’implementazione di riferimento e funge da esempio di come il formato può essere analizzato e mappato all’interfaccia di feed. Puoi utilizzare il tuo formato di feed di input con le tue implementazioni di interfaccia di feed.
 
-Ad alto livello, il formato è costituito da un array di voci di contenuto. Ogni voce rappresenta un contenuto video live o pubblicato con VOD:
+Ad alto livello, il formato è costituito da una matrice di voci di contenuto. Ogni voce rappresenta un contenuto video pubblicato in diretta o VOD:
 
 ```
 {
@@ -68,17 +65,17 @@ Ogni voce di feed è un oggetto JSON con un set specifico di attributi:
 
 | Proprietà | Descrizione |
 |---|---|
-| `id` | Un identificatore/guida univoco per il contenuto impostato dal sistema di pubblicazione dei feed. |
-| `title` | Titolo per il contenuto. |
+| `id` | Identificatore/guida univoco per il contenuto impostato dal sistema di pubblicazione dei feed. |
+| `title` | Un titolo per il contenuto. |
 | `description` | Una descrizione del contenuto. |
-| `categories` | Elenco di categorie con tag per il contenuto che può essere utilizzato dall&#39;applicazione per migliorare l&#39;esperienza dell&#39;utente. Leggere le proprietà per il contenuto. |
-| `keywords` | L&#39;applicazione può utilizzare un elenco di parole chiave separate da virgola per migliorare l&#39;esperienza dell&#39;utente. Leggere le proprietà per il contenuto. |
-| `isLive` | true o false, indicando se si tratta di un flusso Live o VOD. |
-| `content` | Un array di oggetti JSON con formati alternativi per il contenuto e gli URL corrispondenti. Ad esempio, potrebbero essere presenti URL per i formati f4m e m3u8. Gli attributi dell&#39;oggetto JSON sono descritti di seguito. |
-| `thumbnails` | Un array di oggetti JSON con URL per diverse dimensioni di miniature. Gli attributi dell&#39;oggetto JSON sono definiti di seguito. |
-| `metadata` | Un oggetto JSON che definisce i metadati per il contenuto. Attualmente questi metadati sono limitati ai metadati correlati agli annunci. L&#39;oggetto metadata è definito di seguito. |
+| `categories` | Un elenco di categorie con tag per il contenuto che può essere utilizzato dall&#39;applicazione per migliorare l&#39;esperienza dell&#39;utente. Leggi le proprietà del contenuto. |
+| `keywords` | L&#39;applicazione può utilizzare un elenco di parole chiave separate da virgola per migliorare l&#39;esperienza dell&#39;utente. Leggi le proprietà del contenuto. |
+| `isLive` | true o false, che indica se si tratta di un flusso Live o VOD. |
+| `content` | Matrice di oggetti JSON con formati alternativi per il contenuto e gli URL corrispondenti. Ad esempio, potrebbero esserci url per i formati f4m e m3u8. Gli attributi dell’oggetto JSON sono descritti più avanti di seguito. |
+| `thumbnails` | Un array di oggetti JSON con url per dimensioni diverse di miniature. Gli attributi dell’oggetto JSON sono definiti di seguito. |
+| `metadata` | Un oggetto JSON che definisce i metadati per il contenuto, attualmente questi sono limitati ai metadati correlati agli annunci. L&#39;oggetto metadati è definito di seguito. |
 
-Il seguente blocco di codice definisce gli oggetti JSON che formano l&#39;array di **oggetti di contenuto**:
+Il seguente blocco di codice definisce gli oggetti JSON che formano la matrice di **oggetti contenuto**:
 
 ```
 "content":  [
@@ -97,7 +94,7 @@ Il seguente blocco di codice definisce gli oggetti JSON che formano l&#39;array 
 | format | Deve essere in formato m3u8 per Android. |
 | url | URL del flusso video per il formato specificato. |
 
-Il seguente blocco di codice definisce gli oggetti JSON che formano l&#39;array di **oggetti miniatura**:
+Il seguente blocco di codice definisce gli oggetti JSON che formano la matrice di **oggetti miniatura**:
 
 ```
 "thumbnails": [
@@ -118,12 +115,12 @@ Il seguente blocco di codice definisce gli oggetti JSON che formano l&#39;array 
 
 | Proprietà | Descrizione |
 |---|---|
-| format | Una stringa che indica il formato del file della miniatura, ad esempio JPEG, PNG, ecc. |
-| height | Altezza della miniatura. Nell’applicazione di riferimento, la miniatura con altezza e larghezza più piccole viene restituita come miniatura piccola e quella con larghezza e altezza maggiori viene restituita come miniatura grande. |
-| width | Larghezza della miniatura. Nell’applicazione di riferimento, la miniatura con altezza e larghezza più piccole viene restituita come miniatura piccola e quella con larghezza e altezza maggiori viene restituita come miniatura grande. |
-| url | URL del file della miniatura. |
+| format | Una stringa che indica il formato del file di miniatura, ad esempio JPEG, PNG, ecc. |
+| altezza | Altezza della miniatura. Nell&#39;applicazione di riferimento, la miniatura con altezza e larghezza più piccole viene restituita come miniatura piccola e quella con larghezza e altezza maggiori viene restituita come miniatura grande. |
+| larghezza | Larghezza della miniatura. Nell&#39;applicazione di riferimento, la miniatura con altezza e larghezza più piccole viene restituita come miniatura piccola e quella con larghezza e altezza maggiori viene restituita come miniatura grande. |
+| url | URL del file di miniatura. |
 
-Il seguente blocco di codice definisce l&#39;oggetto **metadata**:
+Il seguente blocco di codice definisce l&#39; **oggetto metadati**:
 
 ```
 "metadata" : {
@@ -140,9 +137,9 @@ Il seguente blocco di codice definisce l&#39;oggetto **metadata**:
 
 | Proprietà | Descrizione |
 |--- |--- |
-| ad | Metadati relativi agli annunci. |
-| type | Il valore può essere Annunci Primetime, Interruzioni Annunci Dirette o Marcatori Annunci Personalizzati. <br/><br/>PSDK fornisce supporto integrato per i seguenti tipi di metadati: Metadati relativi all&#39;audience per Primetime Ad Serving (Primetime Ads), interruzioni pubblicitarie dirette con URL di annunci (Direct Ad Breaks) e marcatori di annunci personalizzati che forniscono l&#39;TimeRange per ciascun indicatore di annunci (Custom Ad Markers). Ciascun tipo dispone di un AdProvider integrato nel PSDK che elabora i metadati.  <br/><br/>Il formato JSON per ciascuno di questi è stato definito di seguito. |
-| details | Include gli attributi dei metadati degli annunci. Entrambi i tipi di metadati di annunci dispongono di un proprio set di attributi definiti di seguito. Per i tipi incorporati, gli attributi inclusi definiscono i dati previsti dal PSDK per quel tipo. |
-| entitlement | Metadati relativi all&#39;adesione |
-| id | ID risorsa multimediale utilizzata per le richieste di autorizzazione per il servizio di pass  Adobe Primetime pay-TV. L’ID può essere una stringa di testo o una stringa mRSS con codifica HTML. Qualsiasi contenuto multimediale che richiede l&#39;autorizzazione deve contenere un ID risorsa valido. |
+| annuncio | Metadati relativi agli annunci. |
+| type | Il valore può essere Annunci Primetime, Annunci diretti o Marcatori pubblicitari personalizzati. <br/><br/>Il PSDK fornisce supporto integrato per i seguenti tipi di metadati: Metadati relativi all’audience per Primetime Ad Serving (Primetime Ads), interruzioni pubblicitarie dirette con url degli annunci (Direct Ad Breaks) e marcatori pubblicitari personalizzati che forniscono l’Intervallo di tempo per ogni marcatore di annuncio (Custom Ad Markers). Ciascun tipo dispone di un AdProvider integrato nel PSDK che elabora i metadati.  <br/><br/>Di seguito è stato definito il formato JSON per ciascuno di questi. |
+| dettagli | Include gli attributi dei metadati dell&#39;annuncio. Entrambi i tipi di metadati di annunci presentano un proprio set di attributi definiti di seguito. Per i tipi incorporati, gli attributi inclusi definiscono i dati previsti dal PSDK per quel tipo. |
+| diritto | Metadati relativi all’autorizzazione |
+| id | ID risorsa multimediale utilizzato per le richieste di autorizzazione per il servizio pass Adobe Primetime pay-TV. L&#39;ID può essere una stringa di testo o una stringa mRSS con codifica HTML. Qualsiasi contenuto multimediale che richiede l’autorizzazione deve contenere un ID risorsa valido. |
 
