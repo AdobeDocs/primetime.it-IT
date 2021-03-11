@@ -1,13 +1,10 @@
 ---
 description: 'Adobe Access Server per lo streaming protetto richiede due tipi di file di configurazione: un file di configurazione globale (flashaccess-global.xml) e un file di configurazione tenant per ciascun tenant (flashaccess-tenant.xml).'
-seo-description: 'Adobe Access Server per lo streaming protetto richiede due tipi di file di configurazione: un file di configurazione globale (flashaccess-global.xml) e un file di configurazione tenant per ciascun tenant (flashaccess-tenant.xml).'
-seo-title: Struttura directory di configurazione
-title: Struttura directory di configurazione
-uuid: c6cfc734-6b7c-4502-9bdb-c7aaca156e0e
+title: Struttura della directory di configurazione
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '137'
 ht-degree: 0%
 
 ---
@@ -17,11 +14,11 @@ ht-degree: 0%
 
 Adobe Access Server per lo streaming protetto richiede due tipi di file di configurazione: un file di configurazione globale (flashaccess-global.xml) e un file di configurazione tenant per ciascun tenant (flashaccess-tenant.xml).
 
-Dopo aver modificato i file di configurazione,  Adobe consiglia di utilizzare le utility fornite con Adobe Access Server per lo streaming protetto per verificare che i file siano ben formati. Per ulteriori informazioni, vedere &quot;[Convalida della configurazione](../../aaxs-protected-streaming/aaxs-protected-streaming-utilities/configuration-validator.md)&quot;.
+Dopo aver modificato i file di configurazione, Adobe consiglia di utilizzare le utilità fornite con Adobe Access Server per lo streaming protetto per verificare che i file siano ben formati. Per ulteriori informazioni, consulta &quot;[Convalida della configurazione](../../aaxs-protected-streaming/aaxs-protected-streaming-utilities/configuration-validator.md)&quot;.
 
-Per evitare di rendere le password disponibili in testo chiaro nei file di configurazione, tutte le password specificate nei file di configurazione globali e tenant devono essere crittografate. Per ulteriori informazioni sulla cifratura delle password, vedere &quot;[Password Scrambler](../../aaxs-protected-streaming/aaxs-protected-streaming-utilities/password-scrambler.md)&quot;.
+Per evitare di rendere le password disponibili in testo libero nei file di configurazione, tutte le password specificate nei file di configurazione globale e tenant devono essere crittografate. Per ulteriori informazioni sulla crittografia delle password, vedere &quot;[Password Scrambler](../../aaxs-protected-streaming/aaxs-protected-streaming-utilities/password-scrambler.md)&quot;.
 
-Le directory di configurazione hanno la struttura seguente:
+Le directory di configurazione hanno la seguente struttura:
 
 ```
 <i class="+ topic ph hi-d="" i "="">
