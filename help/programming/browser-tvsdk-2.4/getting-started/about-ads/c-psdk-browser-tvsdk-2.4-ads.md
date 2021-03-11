@@ -1,13 +1,10 @@
 ---
-description: Durante la riproduzione del contenuto, Browser TVSDK può visualizzare annunci e trasmettere informazioni sugli annunci durante la creazione dell'oggetto MediaResource.
-seo-description: Durante la riproduzione del contenuto, Browser TVSDK può visualizzare annunci e trasmettere informazioni sugli annunci durante la creazione dell'oggetto MediaResource.
-seo-title: Annunci
+description: Durante la riproduzione del contenuto, il browser TVSDK può visualizzare gli annunci e trasmettere informazioni sugli annunci durante la creazione dell'oggetto MediaResource.
 title: Annunci
-uuid: 9a5e8c83-18ce-41e8-9cb1-fdc9da903faf
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '120'
+source-wordcount: '100'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # Panoramica {#ads-overview}
 
-Durante la riproduzione del contenuto, Browser TVSDK può visualizzare annunci e trasmettere informazioni sugli annunci durante la creazione dell&#39;oggetto MediaResource.
+Durante la riproduzione del contenuto, il browser TVSDK può visualizzare gli annunci e trasmettere informazioni sugli annunci durante la creazione dell&#39;oggetto MediaResource.
 
-È possibile chiamare la funzione `prepareToPlay` dopo aver ricevuto `AdobePSDK.MediaPlayerStatus.INITIALIZED`.
+Facoltativamente, puoi chiamare la funzione `prepareToPlay` dopo aver ricevuto `AdobePSDK.MediaPlayerStatus.INITIALIZED`.
 
 ```js
 function onStatusChange (event) { 
@@ -42,14 +39,14 @@ player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED, onStatusChange);
 var mediaResource = new AdobePSDK.MediaResource(resourceUrl, resourceType, auditudeSettings, false);
 ```
 
-Browser TVSDK fornisce inoltre i seguenti eventi ad-specific che potete utilizzare nei gestori degli eventi per impedire che il contenuto venga inoltrato rapidamente durante la riproduzione degli annunci:
+Il browser TVSDK fornisce anche i seguenti eventi specifici per gli annunci che è possibile utilizzare nei gestori di eventi per impedire l’inoltro rapido dei contenuti durante la riproduzione degli annunci:
 
 * `AdobePSDK.PSDKEventType.AD_BREAK_STARTED`
 * `AdobePSDK.PSDKEventType.AD_BREAK_COMPLETED`
 * `AdobePSDK.PSDKEventType.AD_STARTED`
 * `AdobePSDK.PSDKEventType.AD_COMPLETED`
 
-Per visualizzare questo funzionamento nel framework dell&#39;interfaccia utente, specificate le impostazioni di annuncio nella configurazione come segue:
+Per visualizzare questo funzionamento nel framework dell&#39;interfaccia utente, specifica le impostazioni degli annunci nella configurazione come segue:
 
 ```js
 // Using UI Framework 
@@ -71,4 +68,4 @@ var playerWrapper = ptp.videoPlayer('.videoDiv', {
 }; 
 ```
 
-Per ulteriori informazioni sulla `AuditudeSettings` richiesta, vedere [Aggiungi metadati di inserimento](../../ad-insertion/ad-insertion-metadata/c-psdk-browser-tvsdk-2.4-ad-insertion-metadata.md).
+Per ulteriori informazioni sul `AuditudeSettings` richiesto, consulta [Metadati di inserimento annunci](../../ad-insertion/ad-insertion-metadata/c-psdk-browser-tvsdk-2.4-ad-insertion-metadata.md).
