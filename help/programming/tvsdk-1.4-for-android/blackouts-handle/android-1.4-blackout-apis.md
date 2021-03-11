@@ -1,66 +1,63 @@
 ---
-description: Potete gestire i blackout nei flussi video live e fornire contenuto alternativo durante un blackout.
-seo-description: Potete gestire i blackout nei flussi video live e fornire contenuto alternativo durante un blackout.
-seo-title: Elementi API Blackout
-title: Elementi API Blackout
-uuid: 263a8987-0c85-493a-9352-9605c877ba65
+description: È possibile gestire i blackout nei flussi video in diretta e fornire contenuti alternativi durante una sospensione attività.
+title: Elementi dell’API Blackout
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
 
 
-# Elementi API Blackout{#blackout-api-elements}
+# Elementi API di sospensione attività{#blackout-api-elements}
 
-Potete gestire i blackout nei flussi video live e fornire contenuto alternativo durante un blackout.
+È possibile gestire i blackout nei flussi video in diretta e fornire contenuti alternativi durante una sospensione attività.
 
-Quando si verifica un blackout in un flusso live, il lettore utilizza i gestori eventi per rilevare il blackout e fornire contenuto alternativo agli utenti non idonei a guardare il flusso principale. Il lettore rileva l&#39;inizio e la fine del periodo di blackout, passa la riproduzione dal flusso principale a un flusso alternativo e ritorna al flusso principale al termine del periodo di blackout.
+Quando si verifica un blackout in un flusso live, il lettore utilizza gestori eventi per rilevare la blackout e fornire contenuti alternativi agli utenti che non sono idonei a guardare il flusso principale. Il lettore rileva l&#39;inizio e la fine del periodo di sospensione attività, passa la riproduzione dal flusso principale a un flusso alternativo e torna al flusso principale al termine del periodo di sospensione attività.
 
 Per gestire i blackout nei flussi live:
 
-1. Configurate l&#39;app per rilevare i tag di blackout iscrivendosi ai tag di blackout in un manifesto in streaming live.
+1. Imposta l’app per rilevare i tag di blackout mediante l’iscrizione ai tag di blackout in un manifesto in streaming live.
 
-   TVSDK non rileva tag blackout autonomamente; per ricevere la notifica quando i tag vengono rilevati durante l&#39;analisi del file manifesto, dovete abbonarvi ai tag blackout.
-1. Creare listener di eventi per i tag sottoscritti dal lettore (in questo caso, i tag PLAYBACK e BLACKOUTS).
+   TVSDK non rileva i tag di blackout da solo; devi abbonarti ai tag di blackout per ricevere la notifica quando i tag vengono rilevati durante l’analisi dei file manifest.
+1. Crea listener di eventi per i tag a cui il lettore è iscritto (in questo caso, i tag PLAYBACK e BLACKOUTS) .
 
-   Quando si verifica un tag a cui il lettore ha effettuato la sottoscrizione (ad esempio, un tag blackout) nei manifesti del flusso in primo piano (contenuto principale) o in background (contenuto alternativo), TVSDK invia un `TimedMetadataEvent` e crea un `TimedMetadataObject` per il `TimedMetadataEvent`.
+   Quando si verifica un tag a cui il lettore ha effettuato la sottoscrizione (ad esempio, un tag blackout) in primo piano (contenuto principale) o in background (contenuto alternativo), il TVSDK invia un `TimedMetadataEvent` e crea un `TimedMetadataObject` per il `TimedMetadataEvent`.
 
-1. Implementate i gestori per gli eventi di metadati temporizzati per i flussi in primo piano e in background.
+1. Implementa i gestori per gli eventi di metadati temporizzati sia per i flussi in primo piano che per quelli in background.
 
-   In questi gestori, ottenete l&#39;ora di inizio e di fine del periodo di sospensione dagli oggetti evento metadati temporizzati.
-1. Creare metodi per cambiare il contenuto all’inizio e alla fine del periodo di sospensione attività.
+   In questi gestori, ottieni gli orari di inizio e fine del periodo di sospensione attività dagli oggetti evento metadati temporizzati.
+1. Crea metodi per cambiare contenuto all’inizio e alla fine del periodo di sospensione attività.
 
-   All&#39;avvio del periodo di sospensione attività, passate il contenuto principale allo sfondo e passate il contenuto alternativo in modo che diventi il flusso principale. Continuare a recuperare e analizzare il manifesto originale in background e continuare a controllare il tag &quot;blackout end end&quot;, in modo che il lettore possa rientrare nel flusso originale al termine del blackout.
-1. Aggiornate gli intervalli non ricercabili se l&#39;intervallo di blackout è in DVR sul flusso di riproduzione.
+   All’avvio del periodo di sospensione attività, sposta il contenuto principale in background e cambia il contenuto alternativo in modo che diventi il flusso principale. Continua a recuperare e analizzare il manifesto originale in background e continua a controllare il tag &quot;blackout end end&quot;, in modo che il lettore possa ricongiungersi al flusso originale al termine del blackout.
+1. Aggiornare gli intervalli non ricercabili se l&#39;intervallo di blackout è in DVR sul flusso di riproduzione.
 
-   Tenere traccia e gestire la `TimedMetadata` nel flusso di sfondo, preparando e aggiornando gli intervalli non ricercabili.
+   Tieni traccia e gestisci i `TimedMetadata` nel flusso di background, preparando e aggiornando intervalli non ricercabili di blackout.
 
-TVSDK fornisce elementi API utili per l&#39;implementazione delle blackout, inclusi metodi, metadati e notifiche.
+TVSDK fornisce elementi API utili per l’implementazione delle blackout, inclusi metodi, metadati e notifiche.
 
 Quando si implementa una soluzione blackout nel lettore, è possibile utilizzare quanto segue.
 
 * **MediaPlayer**
 
-   * `registerCurrentItemAsBackgroundItem` Salva la risorsa attualmente caricata come risorsa in background. Se `replaceCurrentResource` viene chiamato dopo questo metodo, TVSDK continua a scaricare il manifesto dell&#39;elemento in background finché non invoca `unregisterCurrentBackgroundItem`, `release` o `reset`.
+   * `registerCurrentItemAsBackgroundItem` Salva la risorsa attualmente caricata come risorsa in background. Se `replaceCurrentResource` viene chiamato dopo questo metodo, TVSDK continua a scaricare il manifesto dell&#39;elemento in background fino a quando non chiami `unregisterCurrentBackgroundItem`, `release` o `reset`.
 
    * `unregisterCurrentBackgroundItem` Imposta l&#39;elemento di sfondo su null e interrompe il recupero e l&#39;analisi del manifesto di sfondo.
 
-* **BlackoutMetadata** -
+* **BlackoutMetadata**  -
 
-   Una classe di metadati specifica per i blackout.
+   Classe Metadata specifica per le blackout.
 
-   Questo consente di impostare intervalli non ricercabili (un array di `TimeRanges`) in TVSDK. TVSDK controlla questi intervalli ogni volta che l&#39;utente cerca. Se è impostato e l’utente cerca in un intervallo non ricercabile, TVSDK forza il visualizzatore alla fine dell’intervallo non ricercabile.
+   Questo consente di impostare intervalli non ricercabili (una matrice di `TimeRanges`) su TVSDK. TVSDK controlla questi intervalli ogni volta che l’utente cerca. Se è impostato e l’utente cerca in un intervallo non ricercabile, TVSDK forza il visualizzatore alla fine dell’intervallo non ricercabile.
 
-* **AVVIA QUI SUCCESSIVO** AnnuncioMetadatiAbilita o disabilita il preroll su un flusso live impostando  `enableLivePreroll` su true o false. Se è false, TVSDK non esegue una chiamata ad un server per annunci pre-roll prima della riproduzione del contenuto, pertanto non riproduce il pre-roll. Questo non ha alcun impatto sui rulli intermedi. Il valore predefinito è true.
+* **INIZIA QUI SUCCESSIVO** AdvertisingMetadataAttiva o disattiva il preroll su un flusso live impostando  `enableLivePreroll` su true o false. Se false, TVSDK non effettua una chiamata ad server esplicita per gli annunci pre-scorrimento prima della riproduzione del contenuto, e quindi non riproduce il pre-roll. Questo non ha alcun impatto sui rulli medi. Il valore predefinito è true.
 
 * **MediaPlayer.BlackoutsEventListener**
 
-   * `onTimedMetadataInBackgroundItem` - Inviato quando rileva un tag con sottoscrizione nel manifesto di sfondo e ne prepara una nuova  `TimedMetadata` istanza. L&#39;istanza `TimedMetadata` viene inviata come parametro.
+   * `onTimedMetadataInBackgroundItem` - Inviato quando rileva un tag di sottoscrizione nel manifesto di background e ne viene preparata una nuova  `TimedMetadata` istanza. L&#39;istanza `TimedMetadata` viene inviata come parametro.
 
-   * `onBackgroundManifestFailed` - Inviato quando il lettore multimediale non riesce completamente a caricare il manifesto di sfondo, ovvero tutti gli URL del flusso restituiscono un errore o una risposta non valida.
+   * `onBackgroundManifestFailed` - Inviato quando il lettore multimediale non riesce completamente a caricare il manifesto in background, ovvero tutti gli URL del flusso restituiscono un errore o una risposta non valida.
 
 * **Notifiche**
 
