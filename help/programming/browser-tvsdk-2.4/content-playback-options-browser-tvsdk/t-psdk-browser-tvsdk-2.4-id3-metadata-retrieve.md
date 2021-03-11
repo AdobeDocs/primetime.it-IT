@@ -1,23 +1,20 @@
 ---
-description: I tag ID3 forniscono informazioni su un file audio o video, ad esempio il titolo del file o il nome dell’artista. Browser TVSDK rileva i tag ID3 a livello di segmento del flusso di trasporto (TS) nei flussi HLS e invia un evento. L'applicazione può estrarre dati dal tag .
-seo-description: I tag ID3 forniscono informazioni su un file audio o video, ad esempio il titolo del file o il nome dell’artista. Browser TVSDK rileva i tag ID3 a livello di segmento del flusso di trasporto (TS) nei flussi HLS e invia un evento. L'applicazione può estrarre dati dal tag .
-seo-title: ID3, tag
-title: ID3, tag
-uuid: a47cd0cc-b11d-47df-b1fb-56918896ef4c
+description: I tag ID3 forniscono informazioni su un file audio o video, ad esempio il titolo del file o il nome dell’artista. Il browser TVSDK rileva i tag ID3 a livello di segmento del flusso di trasporto (TS) nei flussi HLS e invia un evento. L’applicazione può estrarre dati dal tag .
+title: Tag ID3
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '274'
 ht-degree: 0%
 
 ---
 
 
-# ID3 tags{#id-tags}
+# Tag ID3{#id-tags}
 
-I tag ID3 forniscono informazioni su un file audio o video, ad esempio il titolo del file o il nome dell’artista. Browser TVSDK rileva i tag ID3 a livello di segmento del flusso di trasporto (TS) nei flussi HLS e invia un evento. L&#39;applicazione può estrarre dati dal tag .
+I tag ID3 forniscono informazioni su un file audio o video, ad esempio il titolo del file o il nome dell’artista. Il browser TVSDK rileva i tag ID3 a livello di segmento del flusso di trasporto (TS) nei flussi HLS e invia un evento. L’applicazione può estrarre dati dal tag .
 
-Quando si trovano nuovi metadati ID3 nel flusso HLS sottostante, Browser TVSDK attiva un evento `AdobePSDK.TimedMetadataEvent`.
+Quando si trovano nuovi metadati ID3 nel flusso HLS sottostante, il browser TVSDK attiva un evento `AdobePSDK.TimedMetadataEvent` .
 
 L&#39;oggetto `TimedMetadata` per ID3 ha le seguenti proprietà:
 
@@ -39,7 +36,7 @@ L&#39;oggetto `TimedMetadata` per ID3 ha le seguenti proprietà:
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> id  </span> </p> </td> 
-   <td colname="col2"> <p>ID dell'oggetto <span class="codeph"> TimedMetadata </span>. </p> </td> 
+   <td colname="col2"> <p>ID dell'oggetto <span class="codeph"> TimedMetadata </span> . </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> name </span> </p> </td> 
@@ -47,18 +44,18 @@ L&#39;oggetto `TimedMetadata` per ID3 ha le seguenti proprietà:
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> content  </span> </p> </td> 
-   <td colname="col2"> <p>Il contenuto dei metadati temporizzati. Per i tag ID3, questo valore rappresenta l'array di byte serializzato. </p> </td> 
+   <td colname="col2"> <p>Contenuto dei metadati temporizzati. Per i tag ID3, questo valore rappresenta l'array di byte serializzati. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> metadata  </span> </p> </td> 
-   <td colname="col2"> <p> <span class="codeph"> TimedMetadata  </span> processed information, che è un’istanza di  <span class="codeph"> AdobePSDK.Metadata  </span> in cui sono memorizzati i fotogrammi ID3. </p> <p> <p>Nota:  Per il tag video Safari <span class="codeph"> video </span>, i dati del frame del tag ID3 sono esposti nel modulo di un oggetto tramite un oggetto <span class="codeph"> AdobePSDK.Metadata </span> mentre per altri browser i dati del frame del tag ID3 sono esposti sotto forma di array di byte tramite l'oggetto <span class="codeph"> AdobePSDK.Metadata </span>. </p> </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> metadati  </span> </p> </td> 
+   <td colname="col2"> <p> <span class="codeph"> Informazioni  </span> elaborate da TimedMetadata, un'istanza di  <span class="codeph"> AdobePSDK.Metadata  </span> in cui sono archiviati i frame ID3. </p> <p> <p>Nota:  Per il tag video Safari <span class="codeph"> </span> , i dati del frame del tag ID3 vengono esposti sotto forma di oggetto tramite un oggetto <span class="codeph"> AdobePSDK.Metadata </span> mentre per altri browser i dati del frame del tag ID3 vengono esposti sotto forma di array di byte tramite l'oggetto <span class="codeph"> AdobePSDK.Metadata </span> . </p> </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 &#x200B;
 
-I diversi tag ID3 memorizzati in `TimedMetadata` possono essere recuperati dall&#39;applicazione nei due modi seguenti:
+I vari tag ID3 memorizzati in `TimedMetadata` possono essere recuperati dall&#39;applicazione nei due modi seguenti:
 
 * Nel listener di eventi AdobePSDK.PSDKEventType.TIMED_METADATA_AVAILABLE.
 
@@ -117,7 +114,7 @@ I diversi tag ID3 memorizzati in `TimedMetadata` possono essere recuperati dall&
    }); 
    ```
 
-* Utilizzo della proprietà `MediaPlayerItem` `timedMetadata`.
+* Utilizzo della proprietà `MediaPlayerItem` di `timedMetadata` .
 
    ```
    var isSafari = function () { 
