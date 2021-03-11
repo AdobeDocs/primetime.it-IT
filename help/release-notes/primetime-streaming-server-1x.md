@@ -1,133 +1,129 @@
 ---
 title: Versioni di Primetime Streaming Server
-seo-title: Versioni Primetime Streaming Server 1.x
-description: Novità delle release Primetime Streaming Server 1.3 e 1.4.
-seo-description: Novità delle release Primetime Streaming Server 1.3 e 1.4.
-uuid: be05db6b-713f-4406-940d-9f3a805f967b
+description: Novità delle versioni Primetime Streaming Server 1.3 e 1.4.
 products: SG_PRIMETIME
 topic-tags: release-notes
-discoiquuid: baec714e-9d41-4e8b-b134-13a736885cbd
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '1929'
+source-wordcount: '1916'
 ht-degree: 0%
 
 ---
 
 
-# Rilasci di Primetime Streaming Server {#primetime-streaming-server-x-releases}
+# Versioni di Primetime Streaming Server {#primetime-streaming-server-x-releases}
 
-Novità delle release Primetime Streaming Server 1.3 e 1.4.
+Novità delle versioni Primetime Streaming Server 1.3 e 1.4.
 
-## Novità in Primetime Streaming Server 1.4 (release di dicembre) {#what-s-new-in-primetime-streaming-server-december-release}
+## Novità di Primetime Streaming Server 1.4 (versione di dicembre) {#what-s-new-in-primetime-streaming-server-december-release}
 
-**Offline Packager**
+**Pacchetto offline**
 
-* I flussi HLS di output ora contengono i metadati ID3 presenti in MPEG-2 TS
-* I flussi solo audio HLS possono ora avere un&#39;immagine statica associata
-* Supporto per fornire IV come input dell&#39;utente per i flussi di lavoro di crittografia HLS AES
-* Supporto per l&#39;output IV su un file quando IV viene generato dal packager offline
-* Playlist Creator ora supporta l&#39;associazione di gruppi audio multilingue e di sottotitoli WebVTT per più lingue ai flussi multimediali
+* I flussi HLS in uscita ora contengono i metadati ID3 presenti in MPEG-2 TS
+* I flussi di solo audio HLS possono ora avere un&#39;immagine statica associata
+* Supporto per fornire IV come input utente per i flussi di lavoro di crittografia HLS AES
+* Supporto dell&#39;output IV in un file quando IV viene generato dal packager offline
+* Playlist Creator ora supporta l’associazione di gruppi audio multilingue e di gruppi di sottotitoli WebVTT multilingue ai flussi multimediali
 
 **Server di origine**
 
-* La crittografia HLS AES è disponibile per i flussi di lavoro Live e VOD. Origin Primetime può solo in Time applicare la crittografia HLS AES ai flussi HLS in arrivo o ai file MP4.
-* Può anche applicare la cifratura JIT HLS AES quando viene utilizzata per convertire i flussi HDS in arrivo nei flussi HLS.
-* Primetime Origin ora supporta il formato SWF che consente l&#39;elencazione dei flussi PHLS. Precedentemente era supportato solo per i flussi PHDS
+* La crittografia HLS AES è disponibile per i flussi di lavoro Live e VOD. Primetime Origin può solo in tempo applicare la crittografia HLS AES ai flussi HLS in entrata o ai file MP4.
+* Può anche applicare la crittografia JIT HLS AES quando viene utilizzato per convertire i flussi HDS in ingresso nei flussi HLS.
+* Primetime Origin ora supporta l&#39;inserimento di file SWF nell&#39;elenco Consentiti per i flussi PHLS. In precedenza era supportato solo per i flussi PHDS
 
 **Primetime Live Packager**
 
 * Supporto per la generazione di flussi HLS AES-128 per flussi RTMP in ingresso e MPEG-2 TS
 
-I certificati PHDS/PHLS sono stati aggiornati. La nuova data di scadenza per lo stesso sarà 10/01/2016.
+I certificati PHDS/PHLS sono stati aggiornati. La nuova data di scadenza per lo stesso sarà il 10/01/2016.
 
-### **Correzioni di bug incluse nella release 1.4** {#bug-fixes-included-in-release}
+### **Correzioni di bug incluse nella versione 1.4** {#bug-fixes-included-in-release}
 
-* PTPUB-282 - Il manifesto a livello di set HLS creato da OfflinePackager 1.3.1 non dispone di informazioni sul codec e sulla risoluzione.
+* PTPUB-282- Il manifesto a livello di set HLS creato da OfflinePackager 1.3.1 non dispone di informazioni sul codec e sulla risoluzione.
 * PTPUB-353 - PlayListCreator non supporta l&#39;aggiunta di informazioni WebVTT nel manifesto del livello impostato
-* PTPUB-583 - Lo strumento PlaylistCreator antepone in modo imprevisto gli URI del gruppo con.
-* PTPUB-605 Playlist Creator che non elenca SUBTITLE Group in ogni flusso di variante
-* PTPUB-634 - Offline Packager aggiunge SpliceInsert al manifesto.
-* PTPUB-635 - Tag SpliceOut multipli inseriti per un singolo segnale pubblicitario.
+* PTPUB-583 - Lo strumento PlaylistCreator prepende in modo imprevisto gli URI del gruppo con.
+* PTPUB-605 Playlist Creator non elencare SUBTITLE Group in ogni flusso di variante
+* PTPUB-634 - Il Packager offline aggiunge SpliceInsert al manifesto.
+* PTPUB-635- Sono stati inseriti più tag SpliceOut per il cue di un singolo annuncio.
 
-### Problema noto nella release 1.4 {#known-issue-in-release}
+### Problema noto nella versione 1.4 {#known-issue-in-release}
 
-* La modalità PTPUB-645 DPISsimple viene forzata anche quando la modalità DPIScte35 viene specificata quando sia i segnali della riga di comando che i segnali in streaming sono entrambi forniti nella configurazione offline packager
+* PTPUB-645 DPISsimple Mode viene forzato anche quando viene specificata la modalità DPIScte35 quando sia i segnali della riga di comando che i segnali in-stream sono entrambi forniti nella configurazione del packager offline
 
-## Novità di Primetime Streaming Server 1.3.1 (release di maggio) {#what-s-new-in-primetime-streaming-server-may-release}
+## Novità di Primetime Streaming Server 1.3.1 (versione di maggio) {#what-s-new-in-primetime-streaming-server-may-release}
 
-La versione 1.3.1 fa riferimento all’hotfix. I seguenti miglioramenti lo rendono un aggiornamento consigliato per i clienti in quanto consiste in miglioramenti delle prestazioni chiave per i casi di utilizzo JIT MP4:
+La versione 1.3.1 fa riferimento all’hotfix. I seguenti miglioramenti lo rendono un aggiornamento consigliato per i clienti in quanto consiste in miglioramenti delle prestazioni chiave per i casi d’uso di JIT MP4:
 
-1. Correzione delle prestazioni per la generazione MP4 JIT m3u8 in origine con DRM, inclusa la rotazione delle chiavi
-1. Aggiunta una configurazione &quot;CopyQueryParamToJITFragmentURI&quot; per copiare i parametri di query dalla richiesta di manifesto JIT agli URI di frammento generati per la conversione MP4 JIT. Fate riferimento alla documentazione del server di origine HTTP per un esempio di utilizzo
-1. Consenti file MP4 senza estensione per conversione JIT, tramite configurazione Config/MP4Only aggiunta a vod.xml
+1. Correzione delle prestazioni per la generazione MP4 JIT m3u8 su Origin con DRM, inclusa la rotazione dei tasti
+1. È stata aggiunta la configurazione &quot;CopyQueryParamToJITFragmentURI&quot; per copiare i parametri di query dalla richiesta di manifesto JIT agli URI di frammento generati per la conversione MP4 JIT. Fai riferimento alla documentazione del server di origine HTTP per un esempio di utilizzo
+1. Consenti file MP4 senza estensione per la conversione JIT , tramite configurazione Config/MP4Only aggiunta a vod.xml
 
-### Correzioni di bug incluse nella release 1.3.1 {#bug-fixes-included-in-release-1}
+### Correzioni di bug incluse nella versione 1.3.1 {#bug-fixes-included-in-release-1}
 
-* 3759167 - Non tutti i segnali SCTE35 lo rendono visibile nel manifesto di output a causa di un&#39;anomalia nella marca temporale durante la creazione del pacchetto. Nel messaggio SCTE35, applicate pts_Adjustment su SpliceTime nel messaggio TimeSignal di SpliceInfoSection.
+* 3759167 - Non tutti i segnali SCTE35 lo rendono al manifesto di output a causa di anomalie di marca temporale durante il packaging. Applica pts_Adjustment sul messaggio SpliceTime nel TimeSignal di SpliceInfoSection nel messaggio SCTE35.
 
-### Problemi noti nella release 1.3.1 {#known-issues-in-release}
+### Problemi noti nella versione 1.3.1 {#known-issues-in-release}
 
-* 3717039 - Quando il packager è configurato per produrre segnali in modalità semplice DPI, dovrebbe davvero cercare tipi di segnale specifici, come l&#39;inserzione di giunzione o l&#39;opportunità di posizionamento, e convertire solo quelli in segnali in modalità semplice. Deve ignorare altri tipi di segnali come l&#39;avvio del programma, l&#39;avvio della rete, ecc.
+* 3717039 - Quando il packager è configurato per produrre segnali in modalità semplice DPI, dovrebbe davvero essere alla ricerca di tipi di segnale specifici, come l&#39;opportunità di inserimento o di posizionamento delle giunzioni, e convertire solo quelli in segnali in modalità semplice. Dovrebbe ignorare altri tipi di segnali, come l&#39;avvio del programma, l&#39;avvio della rete, ecc.
 
-* 3718598 - Quando Origin Server è configurato per la trasmissione di contenuti protetti con accesso HSM abilitato, il client LunaSA back-end effettua una comunicazione frequente con il modulo HSM
+* 3718598 - Quando Origin Server è configurato per il servizio di contenuti protetti con l&#39;accesso HSM abilitato, il client LunaSA back-end effettua una comunicazione frequente con il modulo HSM
 
-## Novità di Primetime Streaming Server 1.3 (release APRIL) {#what-s-new-in-primetime-streaming-server-april-release}
+## Novità di Primetime Streaming Server 1.3 (versione APRILE) {#what-s-new-in-primetime-streaming-server-april-release}
 
-Primetime 1.3 offre diverse nuove funzioni per lo streaming dei contenuti, una migliore usabilità e sicurezza.
+Primetime 1.3 introduce diverse nuove funzioni per lo streaming dei contenuti, una migliore usabilità e sicurezza.
 
-**Primetime Streaming Server come modulo unificato di Live Packager e Origin Server**
+**Primetime Streaming Server come forma unificata di Live Packager e Origin Server**
 
-Primetime Live Packager e Primetime Origin vengono messi insieme per funzionare come un singolo componente. Questo componente può essere utilizzato come Packager o come Origine oppure utilizzare le funzionalità combinate per creare pacchetti e ospitare un Live Stream.
+Primetime Live Packager e Primetime Origin vengono messi insieme per funzionare come un singolo componente. Questo componente può essere utilizzato come Packager o come Origin o utilizzare le funzionalità combinate per creare pacchetti e ospitare un flusso live.
 
-Questo fornisce un&#39;interfaccia di file unificata a questi server, facilitandone l&#39;esecuzione su un solo computer. Continua a fornire la flessibilità da configurare come Packager o Origin separato.
+Questo fornisce un&#39;interfaccia file unificata a questi server, facilitandone l&#39;esecuzione su un singolo computer. Continua a fornire la flessibilità da configurare come Packager o Origin separato.
 
-**Supporto per MPEG-DASH Beta**
+**Supporto MPEG-DASH beta**
 
-Primetime Streaming Server supporta la creazione di pacchetti MPEG-DASH per flussi di lavoro live e VOD. Il componente Live Packager converte i flussi RTMP o MPEG-2-TS in formato DASH. Il componente Origin accetta un flusso DASH.
+Primetime Streaming Server supporta il packaging MPEG-DASH per flussi di lavoro live e VOD. Il componente Live packager converte i flussi RTMP o MPEG-2-TS di acquisizione in formato DASH. Il componente Origine accetta un flusso DASH.
 
-Per i flussi di lavoro VOD, il componente Offline Packager converte le risorse MP4 e TS in formato MPEG-DASH ISOBFF.
+Per i flussi di lavoro VOD, il componente Packager offline converte le risorse MP4 e TS in formato MPEG-DASH ISOBFF.
 
-**Conversione dal vivo al VOD**
+**Conversione dal vivo a VOD**
 
-È ora disponibile un nuovo server di registrazione che supporta l&#39;acquisizione di un flusso live e l&#39;archiviazione per la riproduzione VOD. Supporta la creazione di riproduzioni di eventi complete e di clip/evidenziazioni per parte dell&#39;evento. Può essere configurato per registrare flussi di solo audio, rimuovere annunci pubblicitari o Slates nel contenuto live. Il server di registrazione funziona sia con Primetime Streaming Server che con origini di terze parti.
+È ora disponibile un nuovo server di registrazione componente che supporta l&#39;acquisizione di un flusso live e l&#39;archiviazione per la riproduzione VOD. Supporta la creazione di Riproduzioni eventi complete e di clip/elementi di rilievo per parte dell&#39;evento. Può essere configurato per registrare flussi solo audio, rimuovere annunci o annunci nel contenuto live. Il server di registrazione funziona con Primetime Streaming Server e con origini di terze parti.
 
 **Conversione da RTMP a HLS in Primetime Live Packager**
 
-Il componente Primetime Live Packager supporta la creazione di flussi HLS dai flussi RTMP. Consente inoltre di aggiungere DRM Primetime e Streaming protetto ai flussi HLS di output.
+Il componente Primetime Live Packager supporta la creazione di flussi HLS dai flussi RTMP. Consente inoltre di aggiungere DRM di Primetime e Streaming protetto ai flussi HLS di uscita.
 
-**Autenticazione per flussi RTMP in entrata in Primetime Live Packager**
+**Autenticazione per flussi RTMP in ingresso in Primetime Live packager**
 
-Un usermgmt.jar ora viene fornito con Primetime Live Packager per configurare l&#39;accesso con le credenziali affidabili quando si invia un flusso RTMP a Primetime Live Packager
+Un usermgmt.jar ora viene fornito con Primetime Live Packager per configurare l&#39;accesso con credenziali affidabili durante l&#39;invio di un flusso RTMP a Primetime Live Packager
 
-Ora è possibile configurare gli encoder in modo che utilizzino un nome utente o una password durante l&#39;invio dei flussi a Live Packager.
+Ora gli encoder possono essere configurati per utilizzare un nome utente/password durante l&#39;invio dei flussi a Live Packager.
 
-**PlaylistCreator Tool per creare manifesti di primo livello per HDS e HLS**
+**Strumento PlaylistCreator per creare manifesti di primo livello per HDS e HLS**
 
-PlaylistCreator.jar è ora disponibile con Primetime Offline Packager per creare facilmente file manifesto di primo livello per le risorse HDS e HLS.
+È ora disponibile un&#39;utility eccellente PlaylistCreator.jar con Primetime Offline Packager per creare facilmente file manifest di primo livello per le risorse HDS e HLS.
 
-**Funzionalità di sicurezza aggiuntiva per l&#39;incorporazione di un modulo di protezione hardware**
+**Funzionalità di sicurezza aggiuntive per incorporare un modulo di sicurezza hardware**
 
-Primetime Offline Packager ora supporta l&#39;accesso al certificato di credenziali Packager e alle chiavi comuni da un modulo di protezione hardware.
+Primetime Offline Packager ora supporta l&#39;accesso al certificato credenziali Packager e alle chiavi comuni da un modulo di sicurezza hardware.
 
-Un modulo di sicurezza hardware fornisce ulteriore protezione a queste risorse riservate.
+Un modulo di sicurezza hardware fornisce una protezione aggiuntiva per queste risorse riservate.
 
 **Prestazioni migliorate per il pacchetto VOD**
 
-Sono stati incorporati diversi miglioramenti delle prestazioni per migliorare il tempo di creazione del pacchetto per le risorse mezzanine in Primetime Offline Packager
+Sono stati incorporati diversi miglioramenti delle prestazioni per migliorare il tempo di creazione dei pacchetti per le risorse mezzanine in Primetime Offline Packager
 
-**Prestazioni migliorate per la creazione di pacchetti JIT MP4**
+**Prestazioni migliorate per il pacchetto JIT MP4**
 
-Diversi miglioramenti in termini di prestazioni sono stati integrati nelle funzionalità di creazione di pacchetti JIT di Primetime Origin per gestire le richieste degli utenti per una grande libreria di risorse VOD.
+Sono stati incorporati diversi miglioramenti delle prestazioni alle funzionalità di packaging JIT di Primetime Origin per gestire le richieste degli utenti per una grande libreria di risorse VOD.
 
-##  Adobe Primetime Streaming Server 1.4 {#adobe-primetime-streaming-server}
+## Adobe Primetime Streaming Server 1.4 {#adobe-primetime-streaming-server}
 
 ### Requisiti minimi di sistema {#minimum-system-requirements}
 
 **Requisiti di rete**
 
-* La rete deve essere abilitata per l&#39;invio di flussi MPEG-TS da un codificatore a Live Packager. Live Packager accetta anche un flusso RTMP da un codificatore che non richiede una rete multicast.
+* La rete deve essere abilitata per l&#39;invio di flussi MPEG-TS da un codificatore a Live Packager. Live Packager accetta anche un flusso RTMP da un encoder che non richiede una rete multicast.
 
 **Sistemi operativi supportati**
 
@@ -135,25 +131,25 @@ Diversi miglioramenti in termini di prestazioni sono stati integrati nelle funzi
 
 **Requisiti hardware**
 
-* Processore Intel® Pentium® 4 a 3,2 GHz (consigliato dual Intel Xeon® o più veloce)
-* Sistemi operativi a 64 bit: 4 GB di RAM (consigliati 8 GB)
+* Processore Intel® Pentium® 4 a 3,2 GHz (consigliato doppio processore Intel Xeon® o più veloce)
+* Sistemi operativi a 64 bit: 4 GB di RAM (8 GB consigliati)
 * Scheda Ethernet da 1 Gb consigliata (sono supportate più schede di rete e 10 Gb)
 * Disco:
 
    * (Disk-SAS): Almeno 10 GB con 7,5.000 rpm
-   * (Disk-SSD): Lettura/scrittura a 400 MBps
-   * (NAS): Collegamento dedicato da 1 GB
+   * (Disk-SSD) : Lettura/scrittura a 400 MBps
+   * (NAS) : Collegamento dedicato da 1 GB
 
 **Requisiti software**
 
-*  Oracle Java JRE 1.7 (consigliato: Sun/ Oracle Hotspot JVM). JDK è richiesto per l&#39;accesso JConsole alle API JMX
+* Oracle Java JRE 1.7 (Consiglia: Sun/Oracle Hotspot JVM). JDK è richiesto per l’accesso JConsole alle API JMX
 
-### Installazione e configurazione di Primetime Streaming Server {#install-and-configure-primetime-streaming-server}
+### Installare e configurare Primetime Streaming Server {#install-and-configure-primetime-streaming-server}
 
 **Installare il server di streaming**
 
-1. Scaricate il software Java SE e JDK dal [ sito Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) e seguite le istruzioni di installazione.
-2. Estrarre il  file di archivio di Adobe Primetime-Streaming Server 1.4, `Primetime- StreamingServer-1-4-0-b206-12042014.zip` sul disco.
+1. Scarica il software Java SE e JDK dal [sito di Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) e segui le istruzioni di installazione.
+2. Estrai il file di archivio Adobe Primetime-Streaming Server 1.4 `Primetime- StreamingServer-1-4-0-b206-12042014.zip` sul disco.
 
 **Avviare Primetime Streaming Server**
 
@@ -162,7 +158,7 @@ Per avviare il server di streaming, eseguire il comando seguente dalla riga di c
 
 **Configurare Primetime Streaming Server come Live Packager o HTTP Origin Server**
 
-Per configurare il server di streaming come Live Packager o il server di origine, aggiornate il file di configurazione pss.xml collocato nella directory conf della directory principale del server di streaming:
+Per configurare il server di streaming come Live Packager o Origin Server, aggiorna il file di configurazione pss.xml posizionato nella directory conf nella directory principale del server di streaming:
 
 ```
 <Config> 
@@ -178,7 +174,7 @@ Per configurare il server di streaming come Live Packager o il server di origine
 Per arrestare il server di streaming, eseguire il comando seguente nella directory principale del server di streaming:\
 `$./pss_stop.sh`
 
-**Riavviare Primetime Streaming Server**
+**Riavvia il server di streaming Primetime**
 
 Per riavviare il server di streaming, arrestare e avviare il server di streaming.
 
@@ -192,19 +188,19 @@ Refer the Primetime Streaming Server Getting Started document for the configurat
 
 -->
 
-**Disinstallazione di Primetime Streaming Server**
+**Disinstallazione del server di streaming Primetime**
 
 Per disinstallare il server di streaming, arrestare il server di streaming e rimuovere la directory pss del server di streaming nella directory Primetime
 
 ## Utilizzo di Live Packager e Origin Server 1.4 {#working-with-live-packager-and-origin-server}
 
-Questa sezione si applica quando Primetime Streaming Server non viene utilizzato e viene distribuito Primetime Live Packager AND/OR Primetime Origin Server
+Questa sezione si applica quando Primetime Streaming Server non viene utilizzato e viene implementato invece Primetime Live packager AND/OR Primetime Origin Server
 
 ### Requisiti minimi di sistema {#minimum-system-requirements-1}
 
 **Requisiti di rete**
 
-* La rete deve essere abilitata per l&#39;invio di flussi MPEG-TS da un codificatore a Live Packager. Live Packager accetta anche un flusso RTMP da un codificatore che non richiede una rete multicast.
+* La rete deve essere abilitata per l&#39;invio di flussi MPEG-TS da un codificatore a Live Packager. Live Packager accetta anche un flusso RTMP da un encoder che non richiede una rete multicast.
 
 **Sistemi operativi supportati**
 
@@ -212,66 +208,66 @@ Questa sezione si applica quando Primetime Streaming Server non viene utilizzato
 
 **Requisiti hardware**
 
-* Processore Intel® Pentium® 4 a 3,2 GHz (consigliato dual Intel Xeon® o più veloce)
-* Sistemi operativi a 64 bit: 4 GB di RAM (consigliati 8 GB)
+* Processore Intel® Pentium® 4 a 3,2 GHz (consigliato doppio processore Intel Xeon® o più veloce)
+* Sistemi operativi a 64 bit: 4 GB di RAM (8 GB consigliati)
 * Scheda Ethernet da 1 Gb consigliata (sono supportate più schede di rete e 10 Gb)
 * Disco:
 
    * (Disk-SAS): Almeno 10 GB con 7,5.000 rpm
-   * (Disk-SSD): Lettura/scrittura a 400 MBps
-   * (NAS): Collegamento dedicato da 1 GB
+   * (Disk-SSD) : Lettura/scrittura a 400 MBps
+   * (NAS) : Collegamento dedicato da 1 GB
 
 **Requisiti software**
 
-*  Oracle Java JRE 1.7 (consigliato: Sun/ Oracle Hotspot JVM). JDK è richiesto per l&#39;accesso JConsole alle API JMX
+* Oracle Java JRE 1.7 (Consiglia: Sun/Oracle Hotspot JVM). JDK è richiesto per l’accesso JConsole alle API JMX
 
 I requisiti minimi di sistema indicati sopra sono validi sia per Origin Server che per Live Packager.
 
-### Installare e configurare Live Packager {#install-and-configure-the-live-packager}
+### Installa e configura il Live Packager {#install-and-configure-the-live-packager}
 
 **Installazione di Live Packager**
 
-1. Scaricate il software Java SE e JDK dal [ sito Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) e seguite le istruzioni di installazione.
-1. Estrarre il file di archivio  Adobe Primetime - Live Packager 1.4 `Primetime-LivePackager-1-4-0-b206-12042014.zip` sul disco.
+1. Scarica il software Java SE e JDK dal [sito di Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) e segui le istruzioni di installazione.
+1. Estrai il file di archivio Adobe Primetime - Live Packager 1.4 `Primetime-LivePackager-1-4-0-b206-12042014.zip` sul tuo disco.
 
 **Installazione del server di origine HTTP**
 
-1. Scaricate il software Java JRE e JDK dal [ sito Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) e seguite le istruzioni di installazione.
-1. Estrarre il file di archivio  Adobe Primetime - HTTP Origin Server 1.4, `Primetime-HttpOrigin-1-4-0-b206-12042014.zip`, sul disco.
+1. Scarica il software Java JRE e JDK dal [sito di Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) e segui le istruzioni di installazione.
+1. Estrai il file di archivio Adobe Primetime - HTTP Origin Server 1.4 `Primetime-HttpOrigin-1-4-0-b206-12042014.zip` sul disco.
 
-**Per avviare Live** PackagerPer avviare il packager, eseguite il seguente comando dalla directory principale del packager:\
+**Per avviare Live** PackagerPer avviare il packager, eseguire il seguente comando dalla directory principale del packager:\
 `$packager_start.sh`
 
 **Per avviare il server di origine HTTP**
 
-Per avviare il server di origine HTTP, esegui il comando seguente dalla riga di comando nella directory principale del server di origine:\
+Per avviare il server di origine HTTP, esegui il seguente comando dalla riga di comando nella directory principale del server di origine:\
 `$./origin_start.sh`
 
-**Arrestare Live Packager**
+**Interrompi Live Packager**
 
-Per arrestare il packager, eseguite il comando seguente dalla directory principale del packager:\
+Per arrestare il packager, eseguire il seguente comando dalla directory principale del packager:\
 `$packager_stop.sh`
 
-**Arrestare il server di origine HTTP**
+**Arresta il server di origine HTTP**
 
-Per arrestare il server di origine HTTP, eseguite il comando seguente nella directory principale del server di origine:\
+Per arrestare il server di origine HTTP, esegui il seguente comando nella directory principale del server di origine:\
 `$./origin_stop.sh`
 
-**Riavviate Live Packager**
+**Riavvia il Live Packager**
 
-Per riavviare il packager, arrestate e avviate il packager.
+Per riavviare il packager, arrestare e avviare il packager.
 
-**Nota**: Quando viene avviato, il packager tenta di inizializzare le informazioni di avvio dal target del frammento nella directory temporanea. Se le informazioni di avvio vengono trovate nella destinazione del frammento, significa che il packager è stato riavviato. In caso di riavvio, il packager attende fino al limite successivo del frammento e quindi avvia il package. Il packager inserisce una voce gap nel bootstrap per indicare che mancano frammenti.
+**Nota**: All&#39;avvio del packager, tenta di inizializzare le informazioni di avvio dal target del frammento nella directory temporanea. Se le informazioni di avvio si trovano nella destinazione del frammento, significa che il packager è stato riavviato. In caso di riavvio, il imballatore attende fino al limite del frammento successivo e quindi avvia il packaging. Il packager inserisce una voce gap nel bootstrap per indicare che mancano frammenti.
 
 **Riavvia il server di origine HTTP**
 
-Per riavviare il server di origine HTTP, arrestate e avviate il server di origine HTTP.
+Per riavviare il server di origine HTTP, arrestare e avviare il server di origine HTTP.
 
 **Configurazione di Live Packager**
 
 Il file di distribuzione contiene una configurazione di esempio che può essere utilizzata per testare il packager.
 
-Dopo aver estratto l&#39;archivio  Adobe Primetime - Live Packager 1.4, modificate le directory nella directory del packager ed eseguite lo script packager_start.sh. La configurazione di esempio ascolta l&#39;indirizzo multicast 239.235.0.3:14000 ed esegue il server di origine locale sulla porta 8080. L&#39;output è configurato per essere scritto in `packager/webroot/_default_/_default_/ directory`.
+Dopo aver estratto l&#39;archivio Adobe Primetime - Live Packager 1.4, cambia le directory nella directory del packager ed esegui lo script packager_start.sh. La configurazione di esempio ascolta l&#39;indirizzo multicast 239.235.0.3:14000 ed esegue il server di origine locale sulla porta 8080. L&#39;output è configurato per essere scritto in `packager/webroot/_default_/_default_/ directory`.
 
 <!-- 
 
@@ -283,17 +279,17 @@ For more details about the configuration refer [the Primetime Live Packager docu
 
 **Configurazione del server di origine HTTP**
 
-Per i dettagli di configurazione disponibili qui, consultare la Guida introduttiva del server di origine HTTP Primetime.
+Consulta la Guida introduttiva di Primetime HTTP Origin Server per i dettagli di configurazione disponibili qui.
 
 **Disinstallazione di Live Packager**
 
-Per disinstallare il packager, arrestate il packager e rimuovete la directory del packager dalla directory Primetime.
+Per disinstallare il packager, arrestare il packager e rimuovere la directory packager dalla directory Primetime.
 
 **Disinstallazione del server di origine HTTP**
 
-Per disinstallare il server di origine HTTP, arrestate il server di origine HTTP e rimuovete la directory di origine HTTP del server di origine HTTP nella directory Primetime.
+Per disinstallare il server di origine HTTP, arresta il server di origine HTTP e rimuovi la directory httporigin del server di origine HTTP nella directory Primetime .
 
-##  Adobe Primetime Offline Packager 1.4 {#adobe-primetime-offline-packager}
+## Pacchetto offline Adobe Primetime 1.4 {#adobe-primetime-offline-packager}
 
 ### Requisiti minimi di sistema {#minimum-system-requirements-2}
 
@@ -303,28 +299,28 @@ Per disinstallare il server di origine HTTP, arrestate il server di origine HTTP
 
 **Requisiti hardware**
 
-* Processore Intel® Pentium® 4 a 3,2 GHz (consigliato dual Intel Xeon® o più veloce)
-* Sistemi operativi a 64 bit: 4 GB di RAM (consigliati 8 GB)
+* Processore Intel® Pentium® 4 a 3,2 GHz (consigliato doppio processore Intel Xeon® o più veloce)
+* Sistemi operativi a 64 bit: 4 GB di RAM (8 GB consigliati)
 * Scheda Ethernet da 1 Gb consigliata (sono supportate più schede di rete e 10 Gb)
 * Disco:
 
    * (Disk-SAS): Almeno 10 GB con 7,5.000 rpm
-   * (Disk-SSD): Lettura/scrittura a 400 MBps
-   * (NAS): Collegamento dedicato da 1 GB
+   * (Disk-SSD) : Lettura/scrittura a 400 MBps
+   * (NAS) : Collegamento dedicato da 1 GB
 
 **Requisiti software**
 
-*  Oracle Java JRE 1.7 o versione successiva.
+* Oracle Java JRE 1.7 o successivo.
 
-### Installazione e configurazione di Offline Packager {#install-and-configure-offline-packager}
+### Installa e configura il pacchetto offline {#install-and-configure-offline-packager}
 
-Per installare Offline Packager, effettuate le seguenti operazioni:
+Per installare il pacchetto offline, segui questi passaggi:
 
-1. Scaricate il software Java SE dal [ sito Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) e seguite le istruzioni di installazione.
-1. Estrarre il file di archivio  Adobe Primetime - Offline Packager 1.4, `Primetime- OfflinePackager-1-4-0-b206-12042014.zip`, sul disco.
+1. Scarica il software Java SE dal [sito di Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) e segui le istruzioni di installazione.
+1. Estrai il file di archivio Adobe Primetime - Offline Packager 1.4, `Primetime- OfflinePackager-1-4-0-b206-12042014.zip`, sul tuo disco.
 
-Per i dettagli di configurazione disponibili in [qui](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html), consultare la Guida introduttiva di Primetime Offline Packager.
+Consulta il documento Primetime Offline Packager Getting Started per i dettagli di configurazione disponibili [qui](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html).
 
 ## Risorse utili {#helpful-resources}
 
-* Consulta la documentazione completa della guida in linea alla pagina [ Informazioni e supporto per Adobe Primetime](https://helpx.adobe.com/support/primetime.html).
+* Consulta la documentazione completa della guida nella pagina [Informazioni e supporto per Adobe Primetime](https://helpx.adobe.com/support/primetime.html) .
