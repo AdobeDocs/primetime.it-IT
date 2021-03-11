@@ -1,13 +1,10 @@
 ---
-description: L'utility SWF Hash Calculator calcola il riassunto di un'applicazione SWF che si trova in un file.
-seo-description: L'utility SWF Hash Calculator calcola il riassunto di un'applicazione SWF che si trova in un file.
-seo-title: Calcolatore hash SWF
+description: L'utilità di calcolo hash SWF calcola il digest di un'applicazione SWF che si trova in un file.
 title: Calcolatore hash SWF
-uuid: 0cf972c1-4717-4d78-a594-b27178ece512
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '86'
+source-wordcount: '65'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # Calcolatore hash SWF{#swf-hash-calculator}
 
-L&#39;utility SWF Hash Calculator calcola il riassunto di un&#39;applicazione SWF che si trova in un file.
+L&#39;utilità di calcolo hash SWF calcola il digest di un&#39;applicazione SWF che si trova in un file.
 
-Per eseguire il carattere di hasher, digitare:
+Per eseguire il carattere di hasher, digita:
 
 ```
 Hasher.bat 
@@ -35,7 +32,7 @@ java -jar libs/flashaccess-hasher.jar
 </i class="+ topic>
 ```
 
-L&#39;utilità visualizza il messaggio seguente:
+L&#39;utilità visualizza il seguente messaggio:
 
 ```
 SWF Hash: 
@@ -44,4 +41,4 @@ SWF Hash:
 </i class="+ topic>
 ```
 
-È possibile utilizzare questo valore per specificare il riassunto SWF in [!DNL flashaccess-tenant.xml].
+È possibile utilizzare questo valore per specificare il digest SWF in [!DNL flashaccess-tenant.xml].
