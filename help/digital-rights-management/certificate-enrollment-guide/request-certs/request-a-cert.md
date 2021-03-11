@@ -1,9 +1,9 @@
 ---
-seo-title: Richiesta di un certificato (richiedente)
-title: Richiesta di un certificato (richiedente)
-uuid: f0d7f65d-681d-430f-b67b-3bdceb4b6d37
+title: Richiedi un certificato (Richiedente)
+description: Richiedi un certificato (Richiedente)
+copied-description: true
 translation-type: tm+mt
-source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 0%
@@ -11,28 +11,28 @@ ht-degree: 0%
 ---
 
 
-# Richiedi un certificato (richiedente){#request-a-certificate-requester}
+# Richiedi un certificato (Requester){#request-a-certificate-requester}
 
-1. Accedete al sito di registrazione certificati.
+1. Accedere al sito di registrazione certificati.
 
-   L&#39;utente che richiede un certificato deve essere un richiedente.
+   L’utente che richiede un certificato deve essere un richiedente.
 
-1. Nella scheda Richiesta, selezionate il tipo di certificato (License Server, Packager o Transport).
+1. Nella scheda Richiesta selezionare il tipo di certificato (License Server, Packager o Transport).
 
    >[!NOTE]
    >
-   >Questa opzione non viene visualizzata per le versioni SDK di valutazione e prova. Tali versioni SDK utilizzano un certificato.
+   >Questa opzione non viene visualizzata per le versioni SDK di valutazione e valutazione. Tali versioni SDK utilizzano un certificato.
 
-1. Effettuate una delle seguenti operazioni:
+1. Effettua una delle seguenti operazioni:
 
-   * Caricate il file CSR.
-   * Copiare le informazioni sulla CSR dal CSR e incollarle nel modulo.
+   * Carica il file CSR.
+   * Copiare le informazioni sulla CSR dalla CSR e incollarle nel modulo.
 
       >[!NOTE]
       >
-      >Per copiare le informazioni sul CSR, selezionate il testo compreso tra il tag iniziale `(-----BEGIN CERTIFICATE REQUEST-----)` e il tag finale `(-----END CERTIFICATE REQUEST-----)`, escluso.
+      >Per copiare le informazioni sulla CSR, seleziona il testo tra il tag iniziale `(-----BEGIN CERTIFICATE REQUEST-----)` e il tag finale `(-----END CERTIFICATE REQUEST-----)`, escluso.
 
-1. Fare clic sul pulsante **[!UICONTROL Submit Request]**.
+1. Fai clic sul pulsante **[!UICONTROL Submit Request]** .
 
-   Viene inviato un messaggio e-mail agli amministratori di account e secondari per la revisione. Il richiedente è Cc&#39;d.
+   Viene inviata un&#39;e-mail all&#39;account e agli amministratori secondari per la revisione. Il richiedente è Cc&#39;d.
 
