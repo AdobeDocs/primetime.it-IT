@@ -1,13 +1,10 @@
 ---
-description: Per utilizzare le interfacce personalizzate, è necessario scrivere la personalizzazione in modo simile a default-video-Controls.css e fare riferimento a questa nuova personalizzazione nel lettore.
-seo-description: Per utilizzare le interfacce personalizzate, è necessario scrivere la personalizzazione in modo simile a default-video-Controls.css e fare riferimento a questa nuova personalizzazione nel lettore.
-seo-title: Pelli personalizzate
+description: Per utilizzare gli skin personalizzati, è necessario scrivere la personalizzazione simile a default-video-Controls.css e fare riferimento a questa nuova personalizzazione nel lettore.
 title: Pelli personalizzate
-uuid: bc71926e-0dec-4628-8248-911224a7a6c2
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
@@ -15,27 +12,27 @@ ht-degree: 0%
 
 # Pelli personalizzate{#custom-skins}
 
-Per utilizzare le interfacce personalizzate, è necessario scrivere la personalizzazione in modo simile a default-video-Controls.css e fare riferimento a questa nuova personalizzazione nel lettore.
+Per utilizzare gli skin personalizzati, è necessario scrivere la personalizzazione simile a default-video-Controls.css e fare riferimento a questa nuova personalizzazione nel lettore.
 
-Ad esempio, potete utilizzare una delle seguenti opzioni:
+Ad esempio, puoi utilizzare una delle seguenti opzioni:
 
 * `<link rel="stylesheet" href="css/common_style.css">`
 * `<link rel="stylesheet" href="css/custom-video-controls1.css">`
 
-Potete apportare i seguenti tipi di modifiche:
+Puoi effettuare i seguenti tipi di modifiche:
 
 * Colore di primo piano dei pulsanti e del testo
 
-   Tutti i controlli in primo piano utilizzano la classe `vid-skin-fgcolor`. Per modificare il primo piano di tutti i controlli, ripetete tutti gli elementi con la classe `vid-skin-fgcolor` e specificate il colore desiderato.
+   Tutti i controlli in primo piano utilizzano la classe `vid-skin-fgcolor` . Per modificare il primo piano di tutti i controlli, eseguire l&#39;iterazione di tutti gli elementi con la classe `vid-skin-fgcolor` e specificare il colore desiderato.
 * Colore di sfondo dei pulsanti e del testo
 
-   Tutti i controlli in primo piano utilizzano la classe `vid-skin-bgcolor`. Per modificare il primo piano di tutti i controlli, ripetete tutti gli elementi con la classe `vid-skin-bgcolor` e specificate il colore desiderato.
+   Tutti i controlli in primo piano utilizzano la classe `vid-skin-bgcolor` . Per modificare il primo piano di tutti i controlli, eseguire iterazioni su tutti gli elementi con la classe `vid-skin-bgcolor` e specificare il colore desiderato.
 * Forma della testina di gioco
 
-   La testa di gioco può essere quadrata o rotonda. Per modificare l&#39;indicatore di riproduzione, aggiungere la classe `square` o `round` all&#39;elemento `playhead`.
-* Stile dei filetti di tamponamento
+   La testa di gioco può essere quadrata o rotonda. Per modificare la testina di riproduzione, aggiungere la classe `square` o `round` all&#39;elemento `playhead`.
+* Stile dei filetti di buffering
 
-   Il lettore di riferimento fornisce i seguenti stili di filetti che possono essere visualizzati come contenuto buffer del lettore:
+   Il lettore di riferimento fornisce i seguenti stili di spinaroli che possono essere visualizzati come contenuto del buffer del lettore:
 
    * Testo sovrapposto ( `overlay-text`)
    * Spinner rettangolare ( `spinner`)
@@ -44,7 +41,7 @@ Potete apportare i seguenti tipi di modifiche:
 
       >[!TIP]
       >
-      >Per utilizzare uno dei filatori di buffering, è necessario aggiungere la classe nell’elemento buffering-overlay. Ad esempio, per utilizzare `overlay-text`, aggiungere le righe seguenti nel file `BufferOverlay.js`:
+      >Per utilizzare uno qualsiasi degli spinatori di buffering, devi aggiungere la classe nell’elemento di buffering-overlay. Ad esempio, per utilizzare `overlay-text`, aggiungi le seguenti righe nel file `BufferOverlay.js` :
       >
       >
       ```js
