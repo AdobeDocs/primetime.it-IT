@@ -1,23 +1,20 @@
 ---
 description: Quando un utente fa clic su un annuncio, l'applicazione deve mettere in pausa la riproduzione del contenuto video principale.
-seo-description: Quando un utente fa clic su un annuncio, l'applicazione deve mettere in pausa la riproduzione del contenuto video principale.
-seo-title: Sospendi e riprendi riproduzione
-title: Sospendi e riprendi riproduzione
-uuid: 229e2499-e30e-458c-bd6d-d035588c21cf
+title: Sospendi e riavvia la riproduzione
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '66'
+source-wordcount: '46'
 ht-degree: 0%
 
 ---
 
 
-# Sospendi e riprendi riproduzione {#pause-and-resume-playback}
+# Sospendi e riprendi la riproduzione {#pause-and-resume-playback}
 
 Quando un utente fa clic su un annuncio, l&#39;applicazione deve mettere in pausa la riproduzione del contenuto video principale.
 
-1. Ignorate le `onPause` e `onResume` dall&#39;attività Android.
+1. Escludi le `onPause` e `onResume` dall’attività Android.
 
    ```java
    @Override 
