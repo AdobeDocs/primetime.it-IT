@@ -1,9 +1,9 @@
 ---
-seo-title: Concatenamento delle licenze migliorato
-title: Concatenamento delle licenze migliorato
-uuid: 5e4e825a-de84-4ab2-a652-02cc03153957
+title: Concatena di licenze migliorata
+description: Concatena di licenze migliorata
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '263'
 ht-degree: 0%
@@ -11,16 +11,16 @@ ht-degree: 0%
 ---
 
 
-# Concatenamento licenze migliorato {#enhanced-license-chaining}
+# Caching avanzato delle licenze {#enhanced-license-chaining}
 
-È possibile utilizzare il concatenamento avanzato delle licenze per aggiornare una licenza utilizzando una licenza principale padre per l&#39;aggiornamento batch delle licenze.
+È possibile utilizzare una catena di licenze avanzata per aggiornare una licenza utilizzando una licenza principale per l&#39;aggiornamento batch delle licenze.
 
-Primetime DRM 2.0 supporta la concatenazione delle licenze in cui sia le licenze foglia che le licenze radice sono associate a un computer specifico. Primetime DRM 3.0 e versioni successive supporta la concatenazione di licenze avanzata, in cui una foglia è associata a una licenza radice, e solo la licenza principale è associata a un computer o a un dominio specifico. Il concatenamento avanzato delle licenze supporta l&#39;incorporazione di una licenza foglia con il contenuto, e il client deve solo acquisire la licenza radice dal server licenze per utilizzare il contenuto protetto.
+Primetime DRM 2.0 supporta la concatenazione delle licenze in cui sia le licenze foglia che root sono legate a una macchina specifica. Primetime DRM 3.0 e versioni successive supporta il miglioramento della concatenazione delle licenze, in cui una foglia è associata a una licenza root e solo la licenza root è associata a una macchina o a un dominio specifico. La catena di licenze avanzata supporta l’incorporazione di una licenza foglia con il contenuto e il client deve solo acquisire la licenza radice dal server licenze per utilizzare il contenuto protetto.
 
-Se si desidera abilitare il concatenamento avanzato delle licenze, è necessario assegnare una chiave di crittografia principale a un criterio DRM di Primetime. La chiave di crittografia principale viene utilizzata per eseguire un binding crittografato della licenza foglia con la licenza radice.
+Se desideri abilitare il concatenamento di licenze avanzato, devi assegnare una chiave di crittografia principale a un criterio DRM di Primetime. La chiave di crittografia radice viene utilizzata per eseguire un binding crittografato della licenza foglia alla licenza radice.
 
 >[!NOTE]
 >
->Il concatenamento delle licenze migliorato è supportato dai client Primetime DRM versione 3.0 o successiva. Se un client meno recente richiede una licenza per il contenuto che supporta il concatenamento avanzato delle licenze, il server licenze può comunque rilasciare una licenza a questo client utilizzando il concatenamento delle licenze supportato da Primetime DRM 2.0.
+>La catena di licenze migliorata è supportata dai client DRM di Primetime versione 3.0 o successiva. Se un client precedente richiede una licenza per contenuti che supportano la catena di licenze avanzata, il server licenze può comunque rilasciare una licenza a questo client utilizzando la catena di licenze supportata da Primetime DRM 2.0.
 
-Esempio di utilizzo: Utilizzare questa opzione per aggiornare le licenze collegate scaricando una singola licenza radice. Ad esempio, implementate modelli di iscrizione in cui è possibile riprodurre il contenuto fino a quando l&#39;utente rinnova l&#39;iscrizione su base mensile. Il vantaggio di questo approccio è che gli utenti devono solo acquistare una singola licenza per aggiornare tutte le loro licenze di abbonamento.
+Esempio di utilizzo: Utilizza questa opzione per aggiornare tutte le licenze collegate scaricando una singola licenza root. Ad esempio, implementa modelli di abbonamento in cui è possibile riprodurre il contenuto finché l’utente rinnova l’abbonamento su base mensile. Il vantaggio di questo approccio è che gli utenti devono solo acquisire una singola licenza per aggiornare tutte le loro licenze di abbonamento.
