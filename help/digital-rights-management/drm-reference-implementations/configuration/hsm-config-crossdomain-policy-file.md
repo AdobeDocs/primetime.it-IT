@@ -1,18 +1,16 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: File dei criteri tra domini
-title: File dei criteri tra domini
-uuid: 5e813345-2cea-4c1a-a892-dfd95b6efc22
+title: File dei criteri tra domini diversi
+description: File dei criteri tra domini diversi
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '47'
+source-wordcount: '45'
 ht-degree: 0%
 
 ---
 
 
-# File di criteri per domini diversi{#cross-domain-policy-file}
+# File dei criteri tra domini{#cross-domain-policy-file}
 
-Se i client Runtime di Flash devono richiedere una licenza da un server licenze, è necessario un file di criteri DRM tra domini diversi. Per ulteriori informazioni sui criteri per domini diversi, consulta *Utilizzo di  Adobe Primetime DRM SDK per la protezione dei contenuti*.
+Se i client Flash Runtime devono richiedere una licenza da un server licenze, è necessario un file di criteri DRM tra più domini. Per ulteriori informazioni sui criteri tra più domini, consulta *Utilizzo dell&#39;SDK DRM di Adobe Primetime per la protezione dei contenuti*.
