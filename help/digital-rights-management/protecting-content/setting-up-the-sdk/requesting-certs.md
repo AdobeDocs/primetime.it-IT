@@ -1,9 +1,9 @@
 ---
-seo-title: Richiesta di certificati
 title: Richiesta di certificati
-uuid: e99be9a2-1edf-4bd9-8338-84284a23ca43
+description: Richiesta di certificati
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 0%
@@ -13,8 +13,8 @@ ht-degree: 0%
 
 # Richiesta di certificati{#requesting-certificates}
 
-L&#39;iscrizione è il processo di richiesta di un certificato da  Adobe. Potete generare le chiavi e creare una richiesta inviata al Adobe .  Adobe genera quindi il certificato e lo invia all&#39;utente.  Adobe non conosce il contenuto della chiave privata. Pertanto, è necessario eseguire il backup della chiave per ripristinarla in caso di guasto dell&#39;hardware.
+La registrazione è il processo di richiesta di un certificato da un Adobe. Puoi generare le chiavi e creare una richiesta inviata ad Adobe. Adobe genera quindi il certificato e lo invia a te. Adobe non conosce il contenuto della chiave privata. Pertanto, è necessario eseguire il backup della chiave per recuperarla in caso di guasto dell&#39;hardware.
 
-A differenza del certificato License Server, Packager o Transport,  Adobe non rilascia il certificato Domain CA. È possibile ottenere questo certificato da un&#39;autorità di certificazione o generare un certificato autofirmato.
+A differenza del certificato License Server, Packager o Transport, Adobe non rilascia il certificato Domain CA. Puoi ottenere questo certificato da un’autorità di certificazione oppure generare un certificato autofirmato.
 
-Vedere la * Guida all&#39;iscrizione al certificato DRM di Primetime* su come ottenere le credenziali DRM di Primetime.
+Consulta la * Guida all’iscrizione al certificato DRM di Primetime* su come ottenere le credenziali DRM di Primetime.
