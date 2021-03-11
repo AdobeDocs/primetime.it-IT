@@ -1,25 +1,23 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Casi di utilizzo speciali
-title: Casi di utilizzo speciali
-uuid: 066bc256-4fdf-4083-b23e-0a916b3b532f
+title: Casi d'uso speciali
+description: Casi d'uso speciali
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '88'
+source-wordcount: '86'
 ht-degree: 0%
 
 ---
 
 
-# Casi di utilizzo speciali{#special-use-cases}
+# Casi d&#39;uso speciali{#special-use-cases}
 
-TVSDK privilegia le impostazioni dell&#39;intervallo personalizzate rispetto alle impostazioni dell&#39;annuncio standard. Ad esempio, se gli intervalli MARK sono definiti, le impostazioni di inserimento dell&#39;annuncio vengono ignorate. Se gli intervalli REPLACE sono definiti, TVSDK utilizza automaticamente la modalità di segnalazione `CustomRanges`.
+TVSDK favorisce le impostazioni dell’intervallo personalizzate rispetto alle impostazioni degli annunci standard. Ad esempio, se gli intervalli MARK sono definiti, le impostazioni di inserimento dell’annuncio vengono ignorate. Se gli intervalli di SOSTITUZIONE sono definiti, TVSDK utilizza automaticamente la modalità di segnalazione `CustomRanges`.
 
 1. `ReplaceRange` senza durata di sostituzione
 
-   Se manca la durata della sostituzione, la durata effettiva della sostituzione è determinata dal server. Il numero di annunci inseriti in questo `AdBreak` è anche determinato dal server.
+   Se manca la durata della sostituzione, la durata effettiva della sostituzione è determinata dal server. Anche il numero di annunci inseriti in questo `AdBreak` è determinato dal server.
 
    ```
    {
@@ -65,4 +63,4 @@ TVSDK privilegia le impostazioni dell&#39;intervallo personalizzate rispetto all
 
 1. Intervalli MARK e DELETE con durata di sostituzione
 
-   La durata supplementare della sostituzione viene ignorata.
+   La durata di sostituzione aggiuntiva viene ignorata.
