@@ -1,27 +1,24 @@
 ---
-description: I marcatori di annunci personalizzati consentono di passare una serie di specifiche TimeRange che rappresentano i segmenti della timeline a TVSDK.
-seo-description: I marcatori di annunci personalizzati consentono di passare una serie di specifiche TimeRange che rappresentano i segmenti della timeline a TVSDK.
-seo-title: Classe TimeRange
+description: I marcatori di annunci personalizzati ti consentono di trasmettere a TVSDK un set di specifiche TimeRange che rappresentano i segmenti della timeline.
 title: Classe TimeRange
-uuid: adf4f1ad-6b3b-48ac-a388-ee1fd54f770b
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '116'
 ht-degree: 0%
 
 ---
 
 
-# TimeRange, classe{#timerange-class}
+# Classe TimeRange{#timerange-class}
 
-I marcatori di annunci personalizzati consentono di passare una serie di specifiche TimeRange che rappresentano i segmenti della timeline a TVSDK.
+I marcatori di annunci personalizzati ti consentono di trasmettere a TVSDK un set di specifiche TimeRange che rappresentano i segmenti della timeline.
 
 <!--<a id="section_42EB6D62627A424ABA250E3246EFEFC3"></a>-->
 
-Ogni specifica TimeRange nel set rappresenta un segmento nella timeline di riproduzione mantenuto internamente da TVSDK e che deve essere correttamente contrassegnato come periodo correlato agli annunci.
+Ogni specifica TimeRange nel set rappresenta un segmento nella timeline di riproduzione gestito internamente da TVSDK e che deve essere contrassegnato in modo appropriato come periodo correlato all’annuncio.
 
-La classe `TimeRange` è una semplice struttura di dati che espone la posizione iniziale e finale sulla timeline. Queste due proprietà di sola lettura riassumono l’idea di un intervallo di tempo nella timeline di riproduzione.
+La classe `TimeRange` è una semplice struttura di dati che espone la posizione iniziale e finale sulla timeline. Queste due proprietà di sola lettura astraggono l&#39;idea di un intervallo di tempo nella timeline di riproduzione.
 
 >[!TIP]
 >
