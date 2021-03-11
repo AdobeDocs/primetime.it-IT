@@ -1,13 +1,10 @@
 ---
-description: Questa versione include lettori e supporta un'ampia gamma di browser.
-seo-description: Questa versione include lettori e supporta un'ampia gamma di browser.
-seo-title: Requisiti
+description: Questa versione include lettori e supporta un’ampia gamma di browser.
 title: Requisiti
-uuid: 9726b083-f52a-410c-8ab4-47b4913d5172
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '114'
+source-wordcount: '102'
 ht-degree: 0%
 
 ---
@@ -24,7 +21,7 @@ La versione TVSDK per browser include i seguenti lettori:
 I lettori includono le seguenti API di riferimento:
 
 * `Primetime.js` Browser TVSDK
-* API JavaScript per la riproduzione di base
+* API JavaScript per la riproduzione core
 * Lettore Demo di riferimento
 
 **Piattaforme certificate:**
