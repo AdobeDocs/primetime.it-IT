@@ -1,13 +1,10 @@
 ---
 description: Questo argomento descrive considerazioni relative alle prestazioni. Qualsiasi impostazione nel file di configurazione globale denominato flashaccess-global.xml influisce sulle prestazioni.
-seo-description: Questo argomento descrive considerazioni relative alle prestazioni. Qualsiasi impostazione nel file di configurazione globale denominato flashaccess-global.xml influisce sulle prestazioni.
-seo-title: File di configurazione globale
 title: File di configurazione globale
-uuid: 254925b5-d441-4a35-ad6f-f99db5de7591
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
@@ -19,9 +16,9 @@ Questo argomento descrive considerazioni relative alle prestazioni. Qualsiasi im
 
 ## File di configurazione globale {#global-configuration-file}
 
-Il file di configurazione include i seguenti elementi di configurazione:
+Il file di configurazione include i seguenti elementi di impostazione:
 
-* `<Caching>` L&#39; `<Caching>` elemento controlla la memorizzazione nella cache dei file di configurazione. L&#39;elemento `<Caching>` supporta la sintassi seguente:
+* `<Caching>` L&#39; `<Caching>` elemento controlla la memorizzazione in cache dei file di configurazione nella memoria. L&#39;elemento `<Caching>` supporta la seguente sintassi:
 
 ```
   <Caching refreshDelaySeconds="..." numTenants="..."/>
@@ -29,18 +26,18 @@ Il file di configurazione include i seguenti elementi di configurazione:
 
 * `refreshDelaySeconds` Controlla la frequenza con cui il server verifica la presenza di aggiornamenti ai file di configurazione. Un valore basso per `refreshDelaySeconds` influisce negativamente sulle prestazioni, mentre un valore più alto può migliorare le prestazioni.
 
-   Vedere *Aggiornamento dei file di configurazione* per ulteriori informazioni su `refreshDelaySeconds`.
+   Consulta *Aggiornamento dei file di configurazione* per ulteriori informazioni su `refreshDelaySeconds`.
 
-* `numTenants` specifica il numero di tenant. Un valore inferiore al numero di tenant influisce sulle prestazioni perché le richieste ai tenant rimanenti causano errori nella cache. Una perdita della cache per qualsiasi dato di configurazione influisce negativamente sulle prestazioni. Si consiglia pertanto di impostare questo valore superiore al numero di tenant configurati per il server, a meno che non siano presenti limitazioni di memoria da tenere in considerazione.
+* `numTenants` specifica il numero di tenant. Un valore inferiore al numero di tenant influisce sulle prestazioni perché le richieste ai tenant rimanenti generano errori di cache. Una perdita di cache per qualsiasi dato di configurazione influisce negativamente sulle prestazioni. Pertanto, si consiglia di impostare questo valore superiore al numero di tenant configurati per il server, a meno che non siano presenti limitazioni di memoria da considerare.
 
-* `<Logging>` L’ `<Logging>` elemento specifica il livello di registrazione e la frequenza con cui vengono effettuati il rollout dei file di registro. L&#39;elemento `<Logging>` supporta la sintassi seguente:
+* `<Logging>` L&#39; `<Logging>` elemento specifica il livello di registrazione e la frequenza con cui vengono effettuati i rollup dei file di registro. L&#39;elemento `<Logging>` supporta la seguente sintassi:
 
    ```
    <Logging level="..." rollingFrequency="..."/>
    ```
 
-* `<level>`  `level` specifica i messaggi in un registro. Il valore `DEBUG` genera molti messaggi di registro che possono influire negativamente sulle prestazioni. Si consiglia di applicare un&#39;impostazione di `WARN` per ottenere prestazioni ottimali. Tuttavia, questo valore può causare la perdita di informazioni di runtime essenziali, come i controlli delle licenze. Per salvare le informazioni di registro con un impatto minimo sulle prestazioni, è necessario applicare un valore di `INFO`.
+* `<level>`  `level` specifica i messaggi in un registro. Il valore `DEBUG` genera molti messaggi di log che possono influire negativamente sulle prestazioni. Si consiglia di applicare un&#39;impostazione di `WARN` per ottenere prestazioni ottimali. Tuttavia, questo valore può causare la perdita di informazioni di runtime essenziali, come i controlli di licenza. Se desideri salvare le informazioni di registro con un impatto minimo sulle prestazioni, devi applicare un valore di `INFO`.
 
-* `<rollingFrequency>`  `rollingFrequency` specifica la frequenza con cui vengono  *eseguiti il rollout* dei file di registro. *`Rolling`* è un processo che designa qualsiasi nuovo file di registro come registro attivo. Pertanto, il file di registro attivo in precedenza non può più essere modificato ed è considerato *`rolled`*. È possibile impostare l&#39;intervallo di scorrimento su `MINUTELY`, `HOURLY`, `TWICE-DAILY`, `DAILY`, `WEEKLY`, `MONTHLY` o `NEVER`.
+* `<rollingFrequency>`  `rollingFrequency` specifica la frequenza con cui vengono  *eseguiti il rollup* dei file di registro. *`Rolling`* è un processo che designa qualsiasi nuovo file di registro come registro attivo. Pertanto il file di registro precedentemente attivo non può più essere modificato e viene considerato *`rolled`*. È possibile impostare l’intervallo di scorrimento su `MINUTELY`, `HOURLY`, `TWICE-DAILY`, `DAILY`, `WEEKLY`, `MONTHLY` o `NEVER`.
 
-Consultate *Utilizzo dell&#39;SDK  Adobe Primetime DRM per la protezione dei contenuti* per suggerimenti su come ottimizzare le prestazioni.
+Per suggerimenti su come ottimizzare le prestazioni, consulta *Utilizzo dell&#39;SDK DRM di Adobe Primetime per la protezione dei contenuti* .
