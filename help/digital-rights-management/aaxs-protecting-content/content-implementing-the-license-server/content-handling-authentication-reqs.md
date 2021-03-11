@@ -1,9 +1,9 @@
 ---
-seo-title: Gestione delle richieste di autenticazione
 title: Gestione delle richieste di autenticazione
-uuid: 036582d4-611c-4772-b247-81a3144fd5d6
+description: Gestione delle richieste di autenticazione
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '197'
 ht-degree: 0%
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 # Gestione delle richieste di autenticazione{#handling-authentication-requests}
 
-La classe `AuthenticationHandler` viene utilizzata per elaborare le richieste di autenticazione. Viene utilizzato solo per l’autenticazione tramite nome utente e password.
+La classe `AuthenticationHandler` viene utilizzata per elaborare le richieste di autenticazione. Viene utilizzato solo per l’autenticazione con nome utente e password.
 
-Durante la generazione del token di autenticazione, è necessario specificare la data di scadenza del token. Le proprietà personalizzate possono essere incluse anche nel token. Se impostata, tali proprietà saranno visibili al server quando il token di autenticazione viene inviato nelle richieste successive. Per informazioni sulla gestione dei token di autenticazione personalizzati, vedere [Gestione delle richieste di licenza](../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-handling-license-reqs.md).
+Quando si genera il token di autenticazione, è necessario specificare la data di scadenza del token. Nel token possono essere incluse anche le proprietà personalizzate. Se impostate, queste proprietà saranno visibili al server quando il token di autenticazione viene inviato nelle richieste successive. Per informazioni sulla gestione dei token di autenticazione personalizzati, consulta [Gestione delle richieste di licenza](../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-handling-license-reqs.md) .
 
 Il gestore legge una richiesta di autenticazione e analizza il messaggio di richiesta quando viene chiamato `parseRequest()`. L&#39;implementazione del server esamina le credenziali utente nella richiesta e, se le credenziali sono valide, genera un oggetto `AuthenticationToken` chiamando `getRequest().generateAuthToken()`. Se `AuthenticationRequestMessage.generateAuthToken()` non viene chiamato prima di `close()`, viene inviato un codice di errore di autenticazione.
 
-* La classe del gestore di richieste è `com.adobe.flashaccess.sdk.protocol.authentication.AuthenticationHandler`
+* La classe del gestore richieste è `com.adobe.flashaccess.sdk.protocol.authentication.AuthenticationHandler`
 * La classe del messaggio di richiesta è `com.adobe.flashaccess.sdk.protocol.authentication.AuthenticationRequestMessage`
-* Se client e server supportano entrambi il protocollo versione 5, l’URL della richiesta è &quot;URL server licenze nei metadati: + &quot;/flashaccess/authn/v4&quot;. Se il protocollo versione 3 è il massimo supportato dal client o dal server,  client Accesso Adobe invieranno le richieste di autenticazione a &quot;URL del server delle licenze nei metadati&quot; + &quot;/flashaccess/authn/v3&quot;. In caso contrario, le richieste di autenticazione vengono inviate a &quot;URL server licenze nei metadati&quot; + &quot;/flashaccess/authn/v1&quot;
+* Se il protocollo di supporto client e server versione 5, l’URL della richiesta è &quot;URL del server licenze nei metadati: + &quot;/flashaccess/authn/v4&quot;. Se il protocollo versione 3 è il massimo supportato dal client o dal server, i client di Adobe Access invieranno richieste di autenticazione a &quot;URL del server licenze nei metadati&quot; + &quot;/flashaccess/authn/v3&quot;. In caso contrario, le richieste di autenticazione vengono inviate a &quot;URL server licenze nei metadati&quot; + &quot;/flashaccess/authn/v1&quot;
 
