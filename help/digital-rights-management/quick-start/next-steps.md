@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Passaggi successivi
 title: Passaggi successivi
-uuid: 489060e8-5f5e-4fcb-a210-a0d0b797816a
+description: Passaggi successivi
+copied-description: true
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '79'
+source-wordcount: '77'
 ht-degree: 0%
 
 ---
@@ -17,8 +15,8 @@ ht-degree: 0%
 
 Puoi completare i seguenti passaggi facoltativi:
 1. Migliorare la robustezza utilizzando un modulo di sicurezza hardware (HSM).
-1. Configurate un server licenze di riferimento e modificate il codice sorgente in base alle vostre esigenze aziendali.
+1. Imposta un server licenze di riferimento e modifica il codice sorgente in base alle tue esigenze aziendali.
 
-   Per ulteriori informazioni, vedere *Utilizzo delle implementazioni di riferimento Adobe Primetime DRM .*
-1. Usate un Flash Media Server (FMS) per lo streaming dei contenuti.
-1. Utilizzate  Adobe Open Screen Media Framework per creare un lettore video abilitato per Primetime DRM per un&#39;esperienza utente più coinvolgente.
+   Per ulteriori informazioni, consulta *Utilizzo delle implementazioni di riferimento DRM di Adobe Primetime.*
+1. Utilizza un Flash Media Server (FMS) per lo streaming dei contenuti.
+1. Utilizza Adobe Open Screen Media Framework per creare un lettore video abilitato DRM di Primetime per un&#39;esperienza utente più coinvolgente.
