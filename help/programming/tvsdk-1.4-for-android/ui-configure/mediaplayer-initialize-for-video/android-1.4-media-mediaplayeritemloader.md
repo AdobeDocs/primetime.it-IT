@@ -1,40 +1,37 @@
 ---
-description: Un altro modo per risolvere una risorsa multimediale è con MediaPlayerItemLoader. Questa funzione è utile per ottenere informazioni su un particolare flusso multimediale senza creare un'istanza di MediaPlayer.
-seo-description: Un altro modo per risolvere una risorsa multimediale è con MediaPlayerItemLoader. Questa funzione è utile per ottenere informazioni su un particolare flusso multimediale senza creare un'istanza di MediaPlayer.
-seo-title: Caricamento di una risorsa multimediale tramite MediaPlayerItemLoader
-title: Caricamento di una risorsa multimediale tramite MediaPlayerItemLoader
-uuid: b2311ddc-f059-4775-8553-fc354ec2636b
+description: Un altro modo per risolvere una risorsa multimediale è con MediaPlayerItemLoader. Questa funzione è utile quando si desidera ottenere informazioni su un particolare flusso multimediale senza creare un'istanza MediaPlayer.
+title: Caricare una risorsa multimediale utilizzando MediaPlayerItemLoader
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '220'
 ht-degree: 0%
 
 ---
 
 
-# Caricamento di una risorsa multimediale tramite MediaPlayerItemLoader {#load-a-media-resource-using-mediaplayeritemloader}
+# Caricare una risorsa multimediale utilizzando MediaPlayerItemLoader {#load-a-media-resource-using-mediaplayeritemloader}
 
-Un altro modo per risolvere una risorsa multimediale è con MediaPlayerItemLoader. Questa funzione è utile per ottenere informazioni su un particolare flusso multimediale senza creare un&#39;istanza di MediaPlayer.
+Un altro modo per risolvere una risorsa multimediale è con MediaPlayerItemLoader. Questa funzione è utile quando si desidera ottenere informazioni su un particolare flusso multimediale senza creare un&#39;istanza MediaPlayer.
 
-Attraverso la classe `MediaPlayerItemLoader`, potete scambiare una risorsa multimediale per la `MediaPlayerItem` corrispondente senza collegare una vista a un&#39;istanza `MediaPlayer`, il che comporterebbe l&#39;allocazione delle risorse hardware di decodifica video. Il processo per ottenere l&#39;istanza `MediaPlayerItem` è asincrono.
+Attraverso la classe `MediaPlayerItemLoader` è possibile scambiare una risorsa multimediale per la corrispondente `MediaPlayerItem` senza allegare una visualizzazione a un&#39;istanza `MediaPlayer`, il che porterebbe all&#39;allocazione delle risorse hardware di decodifica video. Il processo di ottenimento dell&#39;istanza `MediaPlayerItem` è asincrono.
 
-1. Implementa l&#39;interfaccia di callback `MediaPlayerItemLoader.LoaderListener`.
+1. Implementa l’interfaccia di callback `MediaPlayerItemLoader.LoaderListener` .
 
        Questa interfaccia definisce due metodi:
    
    * `LoaderListener.onError` funzione di callback
 
-      TVSDK lo utilizza per informare l’applicazione che si è verificato un errore. TVSDK fornisce un codice di errore come parametri e una stringa di descrizione che contiene informazioni diagnostiche.
+      TVSDK lo utilizza per informare l&#39;applicazione che si è verificato un errore. TVSDK fornisce un codice di errore come parametri e una stringa di descrizione contenente informazioni di diagnostica.
 
    * `LoaderListener.onError` funzione di callback
 
-      TVSDK utilizza questo metodo per informare l’applicazione che le informazioni richieste sono disponibili sotto forma di istanza `MediaPlayerItem` che viene passata come parametro al callback.
+      TVSDK lo utilizza per informare l&#39;applicazione che le informazioni richieste sono disponibili sotto forma di un&#39;istanza `MediaPlayerItem` che viene passata come parametro al callback.
 
 1. Registra questa istanza in TVSDK trasmettendola come parametro al costruttore del `MediaPlayerItemLoader`.
-1. Chiamare `MediaPlayerItemLoader.load`, passando un&#39;istanza di un oggetto `MediaResource`.
+1. Chiama `MediaPlayerItemLoader.load`, passando un&#39;istanza di un oggetto `MediaResource`.
 
-   L&#39;URL dell&#39;oggetto `MediaResource` deve puntare al flusso per il quale si desidera ottenere informazioni. Ad esempio:
+   L&#39;URL dell&#39;oggetto `MediaResource` deve puntare al flusso di cui si desidera ottenere le informazioni. Ad esempio:
 
    ```java
    // instantiate the listener interface 
