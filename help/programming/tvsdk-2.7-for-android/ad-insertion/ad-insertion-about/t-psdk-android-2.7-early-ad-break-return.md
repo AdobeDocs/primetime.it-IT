@@ -1,30 +1,27 @@
 ---
-description: Per l'inserimento di annunci in streaming dal vivo, potrebbe essere necessario uscire da un'interruzione di annuncio prima che tutti gli annunci nell'interruzione siano riprodotti al completamento.
-seo-description: Per l'inserimento di annunci in streaming dal vivo, potrebbe essere necessario uscire da un'interruzione di annuncio prima che tutti gli annunci nell'interruzione siano riprodotti al completamento.
-seo-title: Implementazione di un ritorno a capo rapido
-title: Implementazione di un ritorno a capo rapido
-uuid: c67f2158-5df4-458c-a27a-6329c5d26638
+description: Per l'inserimento di annunci in streaming live, potrebbe essere necessario uscire da un'interruzione pubblicitaria prima che tutti gli annunci nell'interruzione siano riprodotti al completamento.
+title: Implementare un ritorno a capo rapido dell’annuncio
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 1%
+source-wordcount: '178'
+ht-degree: 2%
 
 ---
 
 
-# Implementazione di un ritorno anticipato all&#39;interruzione dell&#39;annuncio {#implement-an-early-ad-break-return}
+# Implementa un ritorno anticipato dell&#39;interruzione pubblicitaria {#implement-an-early-ad-break-return}
 
-Per l&#39;inserimento di annunci in streaming dal vivo, potrebbe essere necessario uscire da un&#39;interruzione di annuncio prima che tutti gli annunci nell&#39;interruzione siano riprodotti al completamento.
+Per l&#39;inserimento di annunci in streaming live, potrebbe essere necessario uscire da un&#39;interruzione pubblicitaria prima che tutti gli annunci nell&#39;interruzione siano riprodotti al completamento.
 
-Ad esempio, la durata dell&#39;interruzione dell&#39;annuncio in alcuni eventi sportivi potrebbe non essere nota prima dell&#39;inizio dell&#39;interruzione. TVSDK fornisce una durata predefinita, ma se il gioco riprende prima del termine dell&#39;interruzione, è necessario uscire dall&#39;interruzione dell&#39;annuncio. Un altro esempio è rappresentato da un segnale di emergenza durante un&#39;interruzione pubblicitaria in un flusso live.
+Ad esempio, la durata dell’interruzione pubblicitaria in alcuni eventi sportivi potrebbe non essere nota prima dell’inizio dell’interruzione. TVSDK fornisce una durata predefinita, ma se il gioco riprende prima del termine dell’interruzione, l’interruzione pubblicitaria deve essere chiusa. Un altro esempio è un segnale di emergenza durante una pausa pubblicitaria in un flusso live.
 
-1. Iscrivetevi a `#EXT-X-CUE-OUT`, `#EXT-X-CUE-IN` e `#EXT-X-CUE`, che rappresentano la giunzione in uscita/splice nei marcatori.
+1. Iscriviti a `#EXT-X-CUE-OUT`, `#EXT-X-CUE-IN` e `#EXT-X-CUE`, che rappresentano la giunzione in uscita/splice nei marcatori.
 
-   Per ulteriori informazioni su come unire marcatori di annunci in uscita/in, consultate [Generatori di opportunità e risolutori di contenuti](../../ad-insertion/content-resolver/c-psdk-android-2.7-content-resolver-about.md).
+   Per ulteriori informazioni su come applicare marcatori di annunci in uscita/in, consulta [Generatori di opportunità e risolutori di contenuti](../../ad-insertion/content-resolver/c-psdk-android-2.7-content-resolver-about.md).
 
-1. Utilizzate un `ContentFactory` personalizzato.
-1. In `retrieveGenerators`, utilizzare il simbolo `SpliceInPlacementOpportunityGenerator`.
+1. Utilizza un `ContentFactory` personalizzato.
+1. In `retrieveGenerators`, utilizza `SpliceInPlacementOpportunityGenerator`.
 
    Ad esempio:
 
@@ -36,9 +33,9 @@ Ad esempio, la durata dell&#39;interruzione dell&#39;annuncio in alcuni eventi s
    }
    ```
 
-   Per ulteriori informazioni sull&#39;utilizzo di un `ContentFactory` personalizzato, vedere il passaggio 1 in [Implementare un generatore di opportunità personalizzato](../../ad-insertion/content-resolver/t-psdk-android-2.7-opp-detector-impl-android.md).
+   Per ulteriori informazioni sull&#39;utilizzo di un `ContentFactory` personalizzato, consulta il passaggio 1 in [Implementare un generatore di opportunità personalizzato](../../ad-insertion/content-resolver/t-psdk-android-2.7-opp-detector-impl-android.md).
 
-1. Sulla stessa `ContentFactory` personalizzata, implementate `retrieveResolvers` e includete `AuditudeResolver` e `SpliceInCustomResolver`.
+1. Sullo stesso `ContentFactory` personalizzato, implementa `retrieveResolvers` e includi `AuditudeResolver` e `SpliceInCustomResolver`.
 
    Ad esempio:
 
