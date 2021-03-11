@@ -1,25 +1,22 @@
 ---
-description: TVSDK fornisce API e codice di esempio per la gestione dei periodi di blackout.
-seo-description: TVSDK fornisce API e codice di esempio per la gestione dei periodi di blackout.
-seo-title: Implementare la gestione della blackout
+description: TVSDK fornisce API e codice di esempio per la gestione dei periodi di sospensione attività.
 title: Implementare la gestione della blackout
-uuid: 3b4e3f53-0e27-4369-85f2-940380ed16ac
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '126'
+source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
 
-# Implementare la gestione della blackout{#implement-blackout-handling}
+# Implementa la gestione della blackout{#implement-blackout-handling}
 
-TVSDK fornisce API e codice di esempio per la gestione dei periodi di blackout.
+TVSDK fornisce API e codice di esempio per la gestione dei periodi di sospensione attività.
 
-Per implementare la gestione della blackout, compresa l&#39;indicazione di contenuto alternativo durante la blackout:
+Per implementare la gestione della sospensione attività, incluso fornire contenuto alternativo durante la sospensione attività:
 
-1. Configurate l&#39;app per rilevare i tag blackout in un manifesto del flusso live.
+1. Imposta l&#39;app per rilevare i tag di blackout in un manifesto del flusso live.
 
    ```
    private function startPlayback(resource:MediaResource):void { 
@@ -33,7 +30,7 @@ Per implementare la gestione della blackout, compresa l&#39;indicazione di conte
    }
    ```
 
-1. Creare listener di eventi per gli eventi di metadati temporizzati nei flussi in primo piano e in background.
+1. Crea listener di eventi per gli eventi di metadati temporizzati nei flussi in primo piano e in background.
 
    ```
    private function createMediaPlayer(context:MediaPlayerContext):void { 
@@ -45,7 +42,7 @@ Per implementare la gestione della blackout, compresa l&#39;indicazione di conte
    }
    ```
 
-1. Implementate i gestori di eventi di metadati temporizzati per i flussi in primo piano e in background.
+1. Implementa i gestori eventi di metadati temporizzati sia per i flussi in primo piano che per quelli in background.
 
    Primo piano:
 
@@ -64,7 +61,7 @@ Per implementare la gestione della blackout, compresa l&#39;indicazione di conte
    }
    ```
 
-   Sfondo:
+   Contesto:
 
    ```
    private function onTimedMetadataInBackground(event:TimedMetadataEvent):void { 
@@ -89,7 +86,7 @@ Per implementare la gestione della blackout, compresa l&#39;indicazione di conte
    }
    ```
 
-1. Preparare MediaPlayer per i blackout.
+1. Prepara MediaPlayer per i blackout.
 
    ```
    public function prepareBlackoutRanges(timedMetadata:Vector.<TimedMetadata>):void { 
@@ -127,7 +124,7 @@ Per implementare la gestione della blackout, compresa l&#39;indicazione di conte
    }
    ```
 
-1. Configurate un controllo dell&#39;elenco TimedMetadataObjects per ogni occorrenza di un aggiornamento alla posizione dell&#39;indicatore di riproduzione.
+1. Imposta un controllo dell&#39;elenco di TimedMetadataObjects per ogni occorrenza di un aggiornamento alla posizione del playhead.
 
    ```
    private function onTimeChange(event:TimeChangeEvent):void { 
@@ -160,7 +157,7 @@ Per implementare la gestione della blackout, compresa l&#39;indicazione di conte
    }
    ```
 
-1. Creare metodi per cambiare il contenuto all’inizio e alla fine del periodo di sospensione attività.
+1. Crea metodi per cambiare contenuto all’inizio e alla fine del periodo di sospensione attività.
 
    ```
    public function initiate(event:TimerEvent=null):void { 
