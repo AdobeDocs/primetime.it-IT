@@ -1,13 +1,10 @@
 ---
-description: Potete visualizzare le didascalie durante la riproduzione del contenuto video.
-seo-description: Potete visualizzare le didascalie durante la riproduzione del contenuto video.
-seo-title: Sottotitoli
+description: È possibile visualizzare le didascalie durante la riproduzione di contenuto video.
 title: Sottotitoli
-uuid: 4dedcedc-50e5-4983-bb09-3f316337117e
 translation-type: tm+mt
-source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '64'
+source-wordcount: '55'
 ht-degree: 3%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 3%
 
 # Sottotitoli{#captions}
 
-Potete visualizzare le didascalie durante la riproduzione del contenuto video.
+È possibile visualizzare le didascalie durante la riproduzione di contenuto video.
 
 Per gestire le didascalie, è necessario aggiungere il listener di eventi `AdobePSDK.PSDKEventType.CAPTIONS_UPDATED`:
 
@@ -37,7 +34,7 @@ function onCaptionsUpdateEvent (event) {
 </pre>
 ```
 
-Il framework dell&#39;interfaccia utente fornisce un&#39;implementazione predefinita dei comportamenti per le didascalie, che può essere modificata. I comportamenti dei sottotitoli codificati possono essere modificati anche estendendo i comportamenti predefiniti dei sottotitoli codificati. Ad esempio:
+Il framework dell&#39;interfaccia utente fornisce un&#39;implementazione predefinita dei comportamenti per le didascalie, che può essere modificata. I comportamenti dei sottotitoli codificati possono essere modificati anche estendendo i comportamenti predefiniti dei sottotitoli. Ad esempio:
 
 ```js
 // Using UI Framework 
