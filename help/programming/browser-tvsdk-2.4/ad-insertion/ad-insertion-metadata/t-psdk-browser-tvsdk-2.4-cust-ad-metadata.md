@@ -1,41 +1,38 @@
 ---
-description: Potete personalizzare i metadati di inserimento e inserimento.
-seo-description: Potete personalizzare i metadati di inserimento e inserimento.
-seo-title: Personalizzare i metadati di inserimento annunci
-title: Personalizzare i metadati di inserimento annunci
-uuid: 047470d3-45bd-48be-82ce-4e9d9fe6ea10
+description: Puoi personalizzare i metadati dell’inserimento di annunci.
+title: Personalizzare i metadati di inserimento degli annunci
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '103'
 ht-degree: 0%
 
 ---
 
 
-# Personalizzare i metadati di inserimento annunci{#customize-ad-insertion-metadata}
+# Personalizza metadati di inserimento annunci{#customize-ad-insertion-metadata}
 
-Potete personalizzare i metadati di inserimento e inserimento.
+Puoi personalizzare i metadati dell’inserimento di annunci.
 
-1. Impostate un timeout sui metadati della pubblicità per le opportunità non risolte.
+1. Imposta un timeout sui metadati pubblicitari per le opportunità non risolte.
 
    Il valore predefinito per questo timeout è 20 secondi.
-1. Per modificare il valore in 10 secondi, immettete quanto segue:
+1. Per modificare il valore in 10 secondi, immetti quanto segue:
 
    ```js
    auditudeSettings.timeout = 10000; //this value is specified in milliseconds
    ```
 
-   La proprietà `timeout` è definita nella classe `AdvertisingMetadata` e questo timeout può essere impostato per qualsiasi impostazione di annuncio personalizzata derivante dalla classe `AdvertisingMetadata`. Ad esempio, se gli utenti definiscono impostazioni personalizzate per un risolutore FreeWheel, possono impostare un timeout predefinito utilizzando questa impostazione.
+   La proprietà `timeout` è definita nella classe `AdvertisingMetadata` e questo timeout può essere impostato per tutte le impostazioni di annunci personalizzate derivanti dalla classe `AdvertisingMetadata` . Ad esempio, se gli utenti definiscono impostazioni personalizzate per un risolutore FreeWheel, possono impostare un timeout predefinito utilizzando questa impostazione.
 
-1. Crea `MediaPlayerItemConfig` con le impostazioni degli annunci nel passaggio 2.
+1. Crea `MediaPlayerItemConfig` con le impostazioni dell&#39;annuncio nel passaggio 2.
 
    ```js
    var config = new AdobePSDK.MediaPlayerItemConfig(); 
    config.advertisingMetadata = auditudeSettings;
    ```
 
-1. Utilizzare questa configurazione quando si chiama `replaceCurrentResource` su `MediaPlayer`.
+1. Utilizza questa configurazione per chiamare `replaceCurrentResource` su `MediaPlayer`.
 
    ```js
    player.replaceCurrentResource(mediaResource, config);
