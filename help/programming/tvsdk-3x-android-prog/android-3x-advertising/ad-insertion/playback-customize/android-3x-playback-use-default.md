@@ -1,13 +1,10 @@
 ---
-description: Puoi scegliere di utilizzare i comportamenti annunci predefiniti.
-seo-description: Puoi scegliere di utilizzare i comportamenti annunci predefiniti.
-seo-title: Utilizzare il comportamento di riproduzione predefinito
+description: Puoi scegliere di utilizzare i comportamenti degli annunci predefiniti.
 title: Utilizzare il comportamento di riproduzione predefinito
-uuid: 36f76c42-4c6c-4620-9b47-ec97519a642a
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '225'
 ht-degree: 0%
 
 ---
@@ -15,48 +12,48 @@ ht-degree: 0%
 
 # Utilizzare il comportamento di riproduzione predefinito {#use-the-default-playback-behavior}
 
-Puoi scegliere di utilizzare i comportamenti annunci predefiniti.
+Puoi scegliere di utilizzare i comportamenti degli annunci predefiniti.
 
-1. Per utilizzare i comportamenti predefiniti, effettuare una delle seguenti operazioni:
+1. Per utilizzare i comportamenti predefiniti, effettua una delle operazioni seguenti:
 
-   * Se implementate la vostra classe `AdvertisingFactory`, restituite null per `createAdPolicySelector`.
+   * Se implementi la tua classe `AdvertisingFactory`, restituisce null per `createAdPolicySelector`.
 
-   * Se non disponete di un&#39;implementazione personalizzata per la classe `AdvertisingFactory`, TVSDK utilizza un selettore di criteri di annunci predefinito.
+   * Se non disponi di un’implementazione personalizzata per la classe `AdvertisingFactory` , TVSDK utilizza un selettore predefinito di criteri per gli annunci.
 
-## Configurare la riproduzione personalizzata {#set-up-customized-playback}
+## Imposta riproduzione personalizzata {#set-up-customized-playback}
 
-Potete personalizzare o ignorare i comportamenti degli annunci.
+Puoi personalizzare o ignorare i comportamenti degli annunci.
 
-Prima di poter personalizzare o ignorare i comportamenti degli annunci, registra l&#39;istanza dei criteri degli annunci con .
-Per personalizzare i comportamenti degli annunci, effettuate una delle seguenti operazioni:
+Prima di personalizzare o ignorare i comportamenti degli annunci, registra l’istanza del criterio degli annunci con .
+Per personalizzare i comportamenti degli annunci, effettua una delle seguenti operazioni:
 
-* Implementare l&#39;interfaccia `AdPolicySelector` e tutti i relativi metodi.
+* Implementa l’interfaccia `AdPolicySelector` e tutti i relativi metodi.
 
-   Questa opzione è consigliata se dovete ignorare **all** i comportamenti annunci predefiniti.
+   Questa opzione è consigliata se devi sovrascrivere **all** i comportamenti di annunci predefiniti.
 
-* Estendete la classe `DefaultAdPolicySelector` e fornite implementazioni solo per quei comportamenti che richiedono la personalizzazione.
+* Estendi la classe `DefaultAdPolicySelector` e fornisci implementazioni solo per quei comportamenti che richiedono personalizzazione.
 
    Questa opzione è consigliata se è necessario ignorare solo **alcuni** dei comportamenti predefiniti.
 
 Per personalizzare i comportamenti degli annunci:
 
-1. Implementare l&#39;interfaccia `AdPolicySelector` e tutti i relativi metodi.
-1. Assegnate l&#39;istanza del criterio che deve essere utilizzata da TVSDK tramite il modulo pubblicitario.
+1. Implementa l&#39;interfaccia `AdPolicySelector` e tutti i relativi metodi.
+1. Assegna l’istanza dei criteri che deve essere utilizzata da TVSDK tramite advertising factory.
 
    >[!NOTE]
    >
-   >class CustomContentFactory estende ContentFactory &amp;lbrace;
+   >Classe CustomContentFactory estende ContentFactory &amp;lbrace;
    >...
    >@Override
-   >public AdPolicySelector retrieveAdPolicySelector>>(MediaPlayerItem mediaPlayerItem) &amp;lbrace;
+   >pubblico AdPolicySelector retrieveAdPolicySelector>>>(MediaPlayerItem mediaPlayerItem) &amp;parentesi graffa;
    >restituisce il nuovo CustomAdPolicySelector(mediaPlayerItem);
-   >&amp;rampa;
+   >&amp;parentesi graffa;
    >...
-   >&amp;rampa;
-   >// Registra il content factory personalizzato con il lettore multimediale
-   >Configurazione MediaPlayerItemConfig = new MediaPlayerItemConfig();
+   >&amp;parentesi graffa;
+   >// registra il content factory personalizzato con media player
+   >File di configurazione MediaPlayerItemConfig = new MediaPlayerItemConfig();
    >config.setAdvertisingFactory(new CustomContentFactory());
-   >// Questa configurazione verrà successivamente passata durante il caricamento > la risorsa
+   >// questa configurazione verrà successivamente trasmessa durante il caricamento >della risorsa
    >mediaPlayer.replaceCurrentResource(resource, config);
 
-1. Implementa le personalizzazioni.
+1. Implementa le tue personalizzazioni.
