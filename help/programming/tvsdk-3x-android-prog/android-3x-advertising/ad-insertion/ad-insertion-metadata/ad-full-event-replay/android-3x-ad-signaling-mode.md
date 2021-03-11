@@ -1,13 +1,10 @@
 ---
-description: La modalità di segnalazione degli annunci consente di specificare dove il flusso video deve ricevere informazioni pubblicitarie.
-seo-description: La modalità di segnalazione degli annunci consente di specificare dove il flusso video deve ricevere informazioni pubblicitarie.
-seo-title: Modalità di segnalazione annunci
-title: Modalità di segnalazione annunci
-uuid: 947544f9-667e-4d81-af83-155f0db7788e
+description: La modalità di segnalazione degli annunci specifica dove il flusso video deve ottenere le informazioni pubblicitarie.
+title: Modalità di segnalazione degli annunci
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '123'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Modalità di segnalazione annunci {#ad-signaling-mode}
 
-La modalità di segnalazione degli annunci consente di specificare dove il flusso video deve ricevere informazioni pubblicitarie.
+La modalità di segnalazione degli annunci specifica dove il flusso video deve ottenere le informazioni pubblicitarie.
 
 I valori validi sono `DEFAULT`, `SERVER_MAP` e `MANIFEST_CUES`.
 
@@ -27,7 +24,7 @@ La tabella seguente descrive l&#39;effetto dei valori `AdSignalingMode` per i va
    <th colname="1" class="entry"> </th> 
    <th colname="2" class="entry"> <b>Predefinito  </b></th> 
    <th colname="3" class="entry"><b> Manifesti</b> </th> 
-   <th colname="4" class="entry"> <b>Aggiungi mappa server  </b></th> 
+   <th colname="4" class="entry"> <b>Mappa del server annunci  </b></th> 
   </tr> 
  </thead>
  <tbody> 
@@ -36,25 +33,25 @@ La tabella seguente descrive l&#39;effetto dei valori `AdSignalingMode` per i va
    <td colname="2"> 
     <ul id="ul_E79DA79107364D0D8B46A1859CA75B5C"> 
      <li id="li_B259ED87743F463095071F58DC840E39"> Utilizza la mappa del server per il rilevamento del posizionamento </li> 
-     <li id="li_8957E4151466467BA6C954E5010E34EA"> Annunci inseriti </li> 
+     <li id="li_8957E4151466467BA6C954E5010E34EA"> Gli annunci vengono inseriti </li> 
     </ul> </td> 
    <td colname="3"> 
     <ul id="ul_D462C76717D94DE09915BDF6E9B3FB68"> 
      <li id="li_FB46108F4AD9457D99D2618ABEF7DBD1"> Utilizza segnali in-stream per il rilevamento del posizionamento </li> 
      <li id="li_C3F7FBB98F524CEF97D17318C292E9EA"> Gli annunci pre-roll vengono inseriti nel flusso principale </li> 
-     <li id="li_A56E1545F84840DFA6D065DA60E98C31"> Gli annunci intermedi sostituiscono il flusso principale </li> 
+     <li id="li_A56E1545F84840DFA6D065DA60E98C31"> Gli annunci a rulli medi sostituiscono il flusso principale </li> 
     </ul> </td> 
    <td colname="4"> 
     <ul id="ul_F10192B1B6F745CBB0D4C1A6D52A57B4"> 
      <li id="li_2ADACF71FA5F4A08A00A3399F5593420"> Utilizza la mappa del server per il rilevamento del posizionamento </li> 
-     <li id="li_1201085B9C554A4BBD471E7EB2E363AC"> Annunci inseriti </li> 
+     <li id="li_1201085B9C554A4BBD471E7EB2E363AC"> Gli annunci vengono inseriti </li> 
     </ul> </td> 
   </tr> 
   <tr rowsep="0"> 
-   <td colname="1"> Live/linear </td> 
+   <td colname="1"> Live/lineare </td> 
    <td colname="2"> 
     <ul id="ul_82AAC9EE056F49E999F809536A96C2F8"> 
-     <li id="li_73BAD2BAA95F4592808B77F8DA436237"> Utilizza segnali di manifesto per il rilevamento del posizionamento </li> 
+     <li id="li_73BAD2BAA95F4592808B77F8DA436237"> Utilizza segnali manifesti per il rilevamento del posizionamento </li> 
      <li id="li_A97B6F61078D4149A984B2412021E103"> Gli annunci sostituiscono il flusso principale </li> 
     </ul> </td> 
    <td colname="3"> 
