@@ -1,9 +1,9 @@
 ---
-seo-title: Informazioni sui certificati
 title: Informazioni sui certificati
-uuid: 0b7818b4-bd6a-4f2e-94c2-565e0d735bf8
+description: Informazioni sui certificati
+copied-description: true
 translation-type: tm+mt
-source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 0%
@@ -13,28 +13,28 @@ ht-degree: 0%
 
 # Informazioni sui certificati {#about-certificates}
 
-L’SDK Adobe Primetime DRM  è disponibile nelle seguenti configurazioni:
+L’SDK DRM di Adobe Primetime è disponibile nelle seguenti configurazioni:
 
-* Primetime DRM Production SDK
-* SDK valutazione DRM di Primetime
-* SDK di prova DRM Primetime
+* SDK per produzione DRM di Primetime
+* SDK di valutazione DRM di Primetime
+* SDK di prova DRM di Primetime
 
-Per utilizzare l&#39;SDK DRM di Primetime per creare un server di licenze, è necessario ottenere certificati digitali da  Adobe. I certificati digitali (denominati anche semplicemente certificati) associano un&#39;entità, ad esempio un singolo, un&#39;organizzazione o un sistema, a una coppia di chiavi pubblica e privata specifica. I certificati digitali possono essere considerati come credenziali elettroniche per la verifica dell&#39;identità di un singolo, sistema o organizzazione.
+Per utilizzare l&#39;SDK DRM di Primetime per creare un server di licenze, è necessario ottenere certificati digitali da Adobe. I certificati digitali (denominati anche semplicemente certificati) associano un’entità, ad esempio una singola, organizzazione o sistema, a una coppia di chiavi pubblica e privata specifica. I certificati digitali possono essere considerati credenziali elettroniche che verificano l&#39;identità di una persona, di un sistema o di un&#39;organizzazione.
 
 Per consentire la massima flessibilità e una maggiore sicurezza nelle opzioni di distribuzione, Primetime DRM SDK richiede quattro certificati:
 
 * Certificato del server licenze
 
    L’SDK utilizza questo certificato per firmare le licenze di contenuto rilasciate ai client.
-* Certificato Packager
+* Certificato del pacchetto
 
-   L’SDK utilizza questo certificato per generare metadati DRM durante la creazione di pacchetti di contenuto (cifratura).
+   L’SDK utilizza questo certificato per generare metadati DRM durante la creazione del pacchetto (crittografia) del contenuto.
 * Certificato di trasporto
 
-   L’SDK utilizza questo certificato per proteggere la comunicazione tra i client e il server delle licenze.
-* Certificato CA di dominio
+   L’SDK utilizza questo certificato per proteggere la comunicazione tra i client e il server licenze.
+* Certificato CA del dominio
 
-   I clienti che desiderano implementare un server di dominio necessitano del certificato Domain CA. A differenza degli altri certificati, il certificato Domain CA non è emesso dal Adobe .
+   I clienti che desiderano implementare un server di dominio devono disporre del certificato Domain CA. A differenza degli altri certificati, il certificato Domain CA non viene rilasciato dall’Adobe.
 
 >[!NOTE]
 >
