@@ -1,21 +1,18 @@
 ---
-description: Quando si configura un'architettura di rete protetta, sono necessari protocolli di rete per l'interazione tra  Adobe Primetime DRM e altri sistemi della rete aziendale.
-seo-description: Quando si configura un'architettura di rete protetta, sono necessari protocolli di rete per l'interazione tra  Adobe Primetime DRM e altri sistemi della rete aziendale.
-seo-title: ' protocolli di rete Adobe Primetime DRM'
-title: ' protocolli di rete Adobe Primetime DRM'
-uuid: 8954e33c-83ac-4b40-9e45-005d4954b44e
+description: Quando si configura un'architettura di rete sicura, sono necessari protocolli di rete per l'interazione tra Adobe Primetime DRM e altri sistemi della rete aziendale.
+title: Protocolli di rete Adobe Primetime DRM
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '226'
 ht-degree: 0%
 
 ---
 
 
-#  protocolli di rete Adobe Primetime DRM {#adobe-primetime-drm-network-protocols}
+# Protocolli di rete Adobe Primetime DRM {#adobe-primetime-drm-network-protocols}
 
-Quando si configura un&#39;architettura di rete protetta, sono necessari protocolli di rete per l&#39;interazione tra  Adobe Primetime DRM e altri sistemi della rete aziendale.
+Quando si configura un&#39;architettura di rete sicura, sono necessari protocolli di rete per l&#39;interazione tra Adobe Primetime DRM e altri sistemi della rete aziendale.
 
 Quando si configura un&#39;architettura di rete protetta, per questa interazione sono necessari i seguenti protocolli di rete:
 
@@ -23,29 +20,29 @@ Quando si configura un&#39;architettura di rete protetta, per questa interazione
  <thead class="- topic/thead "> 
   <tr rowsep="1" class="- topic/row "> 
    <th colname="1" class="- topic/entry entry"> <p class="- topic/p ">Protocollo </p> </th> 
-   <th colname="2" class="- topic/entry entry"> <p class="- topic/p ">Use </p> </th> 
+   <th colname="2" class="- topic/entry entry"> <p class="- topic/p ">Utilizzo </p> </th> 
   </tr> 
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">HTTP </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Flash Player,  client Adobe AIR® e  Adobe Primetime comunicano con Primetime DRM via HTTP. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">I client Flash Player, Adobe AIR® e Adobe Primetime comunicano con DRM di Primetime via HTTP. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">HTTPS (facoltativo) </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Flash Player,  client Adobe AIR e  Adobe Primetime possono utilizzare HTTPS per comunicare con Primetime DRM; HTTPS (SSL) è richiesto solo se si supportano i client FMRMS 1.x. Per ulteriori informazioni, consultate <a href="../../secure-deployment-guidelines/overview/network-topology-firewall-rules.md" format="dita" scope="local"> URL in arrivo </a> e Configurazione di SSL. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">I client Flash Player, Adobe AIR e Adobe Primetime possono utilizzare HTTPS per comunicare con Primetime DRM; HTTPS (SSL) è richiesto solo se sono supportati i client FMRMS 1.x. Per ulteriori informazioni, consulta <a href="../../secure-deployment-guidelines/overview/network-topology-firewall-rules.md" format="dita" scope="local"> URL in arrivo </a> e Configurazione di SSL. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-## Porte per i server applicazione {#ports-for-application-servers}
+## Porte per server applicazioni {#ports-for-application-servers}
 
-È possibile configurare  server licenze Adobe Primetime DRM in modo che utilizzi qualsiasi porta di rete.
+Puoi configurare il server di licenza Adobe Primetime DRM per l&#39;utilizzo di qualsiasi porta di rete.
 
-Queste porte devono essere abilitate o disattivate sul firewall interno, a seconda della funzionalità di rete che si desidera consentire ai client che si connettono al server applicazione che esegue Primetime DRM.
+Queste porte devono essere abilitate o disabilitate nel firewall interno, a seconda della funzionalità di rete che si desidera consentire ai client che si connettono al server applicazioni che esegue Primetime DRM.
 
 ## Configurazione di SSL {#configuring-ssl}
 
-Il Secure Sockets Layer (SSL) è necessario solo se è richiesto il supporto per client Flash Media Rights Management Server 1.x.
+Il Secure Sockets Layer (SSL) è necessario solo se è necessario il supporto per i client Flash Media Rights Management Server 1.x.
 
-SSL con autenticazione client è richiesto per il server chiavi  Adobe Primetime DRM. Per ulteriori informazioni, vedere [Utilizzo del server chiavi  Adobe Primetime DRM](../../using-the-drm-key-server/requirements.md).
+SSL con autenticazione client è necessario per il server chiavi DRM di Adobe Primetime. Per ulteriori informazioni, consulta [Utilizzo del server chiavi DRM di Adobe Primetime](../../using-the-drm-key-server/requirements.md).
