@@ -1,9 +1,9 @@
 ---
-seo-title: Protezione di ripetizione
-title: Protezione di ripetizione
-uuid: 5e6488e6-0834-4dcf-bc26-55019f5db320
+title: Protezione a ripetizione
+description: Protezione a ripetizione
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '92'
 ht-degree: 0%
@@ -11,8 +11,8 @@ ht-degree: 0%
 ---
 
 
-# Protezione riproduzione{#replay-protection}
+# Protezione di riproduzione{#replay-protection}
 
-La protezione contro la ripetizione impedisce a un aggressore di riprodurre un messaggio di richiesta di licenza e potrebbe causare un attacco di negazione del servizio (DoS) contro il client (A *negazione del servizio* è un tentativo da parte degli aggressori di impedire l&#39;uso di tale servizio da parte degli utenti legittimi.) Ad esempio, un attacco di ripetizione utilizzando il contatore di rollback potrebbe essere utilizzato per &quot;indurre&quot; il server licenze a pensare che il client DRM stia ripristinando il proprio stato, causando una sospensione dell&#39;account.
+La protezione di ripetizione impedisce a un autore dell&#39;attacco di riprodurre un messaggio di richiesta di licenza e potenzialmente causa un attacco Denial-of-Service (DoS) contro il client (L&#39;attacco A *denial-of-service* è un tentativo da parte degli aggressori di impedire agli utenti legittimi di un servizio di utilizzare quel servizio). Ad esempio, un attacco di ripetizione utilizzando il contatore di rollback potrebbe essere utilizzato per &quot;ingannare&quot; il server licenze a pensare che il client DRM stia riportando indietro lo stato, causando una sospensione dell&#39;account.
 
-Per ulteriori informazioni sulla protezione della riproduzione, vedere `AbstractRequestMessage.getMessageId()` il *Riferimento API di accesso ai Adobi*.
+Per ulteriori informazioni sulla protezione della riproduzione, consulta `AbstractRequestMessage.getMessageId()` il *Riferimento API di accesso agli Adobi*.
