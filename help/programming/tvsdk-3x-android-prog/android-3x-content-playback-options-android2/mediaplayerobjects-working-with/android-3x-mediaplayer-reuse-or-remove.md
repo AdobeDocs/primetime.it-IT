@@ -1,66 +1,63 @@
 ---
-description: È possibile ripristinare, riutilizzare o rilasciare un'istanza di MediaPlayer non più necessaria.
-seo-description: È possibile ripristinare, riutilizzare o rilasciare un'istanza di MediaPlayer non più necessaria.
-seo-title: Riutilizzare o rimuovere un'istanza di MediaPlayer
-title: Riutilizzare o rimuovere un'istanza di MediaPlayer
-uuid: 74a46689-1708-4d26-9a4e-a4cdb0e55451
+description: È possibile reimpostare, riutilizzare o rilasciare un'istanza MediaPlayer non più necessaria.
+title: Riutilizzare o rimuovere un'istanza MediaPlayer
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '272'
 ht-degree: 0%
 
 ---
 
 
-# Riutilizzare o rimuovere un&#39;istanza di MediaPlayer {#reuse-or-remove-a-mediaplayer-instance}
+# Riutilizzare o rimuovere un&#39;istanza MediaPlayer {#reuse-or-remove-a-mediaplayer-instance}
 
-È possibile ripristinare, riutilizzare o rilasciare un&#39;istanza di MediaPlayer non più necessaria.
+È possibile reimpostare, riutilizzare o rilasciare un&#39;istanza MediaPlayer non più necessaria.
 
 ## Reimpostare o riutilizzare un&#39;istanza di MediaPlayer {#section_E6A2446A2D0B4ACD9EA980685B2E57D9}
 
-Quando si reimposta un&#39;istanza `MediaPlayer`, viene riportato al relativo stato IDLE non inizializzato come definito in `MediaPlayerStatus`.
+Quando si reimposta un&#39;istanza `MediaPlayer`, viene restituito al relativo stato IDLE non inizializzato come definito in `MediaPlayerStatus`.
 
 Questa operazione è utile nei casi seguenti:
 
-* Per riutilizzare un&#39;istanza `MediaPlayer` è necessario caricare una nuova `MediaResource` (contenuto video) e sostituire l&#39;istanza precedente.
+* Desideri riutilizzare un&#39;istanza `MediaPlayer` ma devi caricare una nuova `MediaResource` (contenuto video) e sostituire l&#39;istanza precedente.
 
-   La reimpostazione consente di riutilizzare l&#39;istanza `MediaPlayer` senza sovraccaricare le risorse, ricreare l&#39;istanza `MediaPlayer` e riallocare le risorse.
+   La reimpostazione consente di riutilizzare l’istanza `MediaPlayer` senza sovraccaricare le risorse rilasciate, ricreare l’ `MediaPlayer` e riallocare le risorse.
 
-* Quando il `MediaPlayer` è in stato di ERRORE e deve essere cancellato.
+* Quando il `MediaPlayer` è nello stato ERROR e deve essere cancellato.
 
    >[!IMPORTANT]
    >
-   >Questo è l&#39;unico modo per recuperare dallo stato di ERRORE.
+   >Questo è l&#39;unico modo per recuperare dallo stato ERROR.
 
-   1. Chiamare `reset` per restituire l&#39;istanza `MediaPlayer` allo stato non inizializzato:
+   1. Invoca `reset` per restituire l&#39;istanza `MediaPlayer` al suo stato non inizializzato:
 
       ```java
       void reset() throws MediaPlayerException; 
       ```
 
-   1. Utilizzare `MediaPlayer.replaceCurrentResource()` per caricare un altro `MediaResource`.
+   1. Utilizza `MediaPlayer.replaceCurrentResource()` per caricare un altro `MediaResource`.
 
       >[!NOTE]
       >
-      >Per cancellare un errore, caricate lo stesso `MediaResource`.
+      >Per cancellare un errore, carica lo stesso `MediaResource`.
 
-   1. Quando ricevete il callback dell&#39;evento `STATUS_CHANGED` con lo stato `PREPARED`, avviate la riproduzione.
+   1. Quando ricevi il callback dell&#39;evento `STATUS_CHANGED` con stato `PREPARED`, avvia la riproduzione.
 
-## Rilasciare un&#39;istanza di MediaPlayer e le risorse {#section_13A0914AFF784943ABC343F7EB249C4E}
+## Rilascia un&#39;istanza e risorse MediaPlayer {#section_13A0914AFF784943ABC343F7EB249C4E}
 
-Rilasciare un&#39;istanza `MediaPlayer` e le risorse quando non è più necessario `MediaResource`.
+Rilasciare un&#39;istanza e risorse `MediaPlayer` quando non è più necessario `MediaResource`.
 
 Quando si rilascia un oggetto `MediaPlayer`, le risorse hardware sottostanti associate a questo oggetto `MediaPlayer` vengono deallocate.
 
 Di seguito sono riportati alcuni motivi per rilasciare un `MediaPlayer`:
 
 * L&#39;utilizzo di risorse non necessarie può influire sulle prestazioni.
-* Lasciare un oggetto `MediaPlayer` non necessario istanziato può comportare un consumo continuo della batteria per i dispositivi mobili.
-* Se più istanze
-Se uno stesso codec video non è supportato su un dispositivo, potrebbe verificarsi un errore di riproduzione per altre applicazioni.
+* Se si lascia un oggetto `MediaPlayer` non necessario, l&#39;istanza può comportare un consumo continuo di batterie per i dispositivi mobili.
+* Se sono presenti più istanze
+Se un dispositivo non supporta lo stesso codec video, potrebbe verificarsi un errore di riproduzione per altre applicazioni.
 
-* Rilasciare la `MediaPlayer`.
+* Rilascia il `MediaPlayer`.
 
    ```java
    void release() throws MediaPlayerException;
@@ -68,4 +65,4 @@ Se uno stesso codec video non è supportato su un dispositivo, potrebbe verifica
 
    >[!NOTE]
    >
-   >Dopo il rilascio dell&#39;istanza `MediaPlayer`, non è più possibile utilizzarla. Se dopo il rilascio viene chiamato un metodo dell&#39;interfaccia `MediaPlayer`, viene restituito un `MediaPlayerException`.
+   >Una volta rilasciata l’istanza `MediaPlayer`, non puoi più utilizzarla. Se dopo il rilascio viene chiamato un metodo dell&#39;interfaccia `MediaPlayer` , viene lanciato un `MediaPlayerException` .
