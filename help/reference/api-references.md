@@ -1,19 +1,17 @@
 ---
-title: ' riferimenti API Adobe Primetime'
-seo-title: ' riferimenti API Adobe Primetime'
-description: Le API consentono di creare un'applicazione o un'integrazione funzionale in modo rapido e semplice.
-seo-description: Le API consentono di creare un'applicazione o un'integrazione funzionale in modo rapido e semplice.
+title: Riferimenti API di Adobe Primetime
+description: Le API consentono di creare un’applicazione funzionale o un’integrazione rapida e semplice.
 topic-tags: API-references
 translation-type: tm+mt
-source-git-commit: 1841f64e6f7a839f997b0710661898fda0d69bd6
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '327'
 ht-degree: 0%
 
 ---
 
 
-#  riferimenti API Adobe Primetime {#api-references}
+# Riferimenti API di Adobe Primetime {#api-references}
 
 + TVSDK 3.12 {#tvsdk-312}
    + [TVSDK 3.12 per Android](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.12/index.html)
@@ -50,10 +48,10 @@ ht-degree: 0%
 + API DRM {#drm-apis}
    + [API client DRM per Android](https://help.adobe.com/en_US/primetime/api/drm-apis/client/android/index.html)
    + [API client DRM per iOS](https://help.adobe.com/en_US/primetime/api/drm-apis/client/ios/index.html)
-   + [API del server SDK DRM](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/)
+   + [API server SDK DRM](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/)
 
 + Varie {#miscellaneous}
    + [Video Heartbeat Library](https://help.adobe.com/en_US/primetime/api/psdk/vhl_tvsdk_ios/index.html)
    + [DHPK 2.0 C++](https://help.adobe.com/en_US/primetime/api/psdk/psdk_doxygen/index.html)
-   + [Framework dell&#39;interfaccia utente per l&#39;SDK del browser 2.4](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html)
+   + [Framework di interfaccia utente per TVSDK browser 2.4](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html)
    + [API pubbliche PSDK FlashRuntime](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls/)
