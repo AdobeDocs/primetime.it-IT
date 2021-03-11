@@ -1,13 +1,10 @@
 ---
-description: Caricate una risorsa creando direttamente un'istanza di MediaResource e caricando il contenuto video da riprodurre. Questo è uno dei modi per caricare una risorsa multimediale.
-seo-description: Caricate una risorsa creando direttamente un'istanza di MediaResource e caricando il contenuto video da riprodurre. Questo è uno dei modi per caricare una risorsa multimediale.
-seo-title: Caricamento di una risorsa multimediale in MediaPlayer
-title: Caricamento di una risorsa multimediale in MediaPlayer
-uuid: 6ee8032f-0728-423f-a1d2-5030aa7db14f
+description: Carica una risorsa creando direttamente un'istanza di MediaResource e caricando il contenuto video da riprodurre. Questo è un modo per caricare una risorsa multimediale.
+title: Caricare una risorsa multimediale in MediaPlayer
 translation-type: tm+mt
-source-git-commit: 4ef05be045334a2e723da4c7c6a7ee22fb0f776c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '220'
 ht-degree: 0%
 
 ---
@@ -15,26 +12,26 @@ ht-degree: 0%
 
 # Caricare una risorsa multimediale in MediaPlayer {#load-a-media-resource-in-the-mediaplayer}
 
-Caricate una risorsa creando direttamente un&#39;istanza di MediaResource e caricando il contenuto video da riprodurre. Questo è uno dei modi per caricare una risorsa multimediale.
+Carica una risorsa creando direttamente un&#39;istanza di MediaResource e caricando il contenuto video da riprodurre. Questo è un modo per caricare una risorsa multimediale.
 
-1. Imposta l’elemento riproducibile di MediaPlayer con la nuova risorsa da riprodurre.
+1. Imposta l&#39;elemento riproducibile di MediaPlayer con la nuova risorsa da riprodurre.
 
-   Sostituisci l&#39;elemento attualmente riproducibile di MediaPlayer esistente chiamando `MediaPlayer.replaceCurrentItem` e passando un&#39;istanza `MediaResource` esistente.
+   Sostituisci l&#39;elemento attualmente riproducibile di MediaPlayer chiamando `MediaPlayer.replaceCurrentItem` e passando un&#39;istanza `MediaResource` esistente.
 
-1. Registra un&#39;implementazione dell&#39;interfaccia `MediaPlayer.PlaybackEventListener` con l&#39;istanza `MediaPlayer`.
+1. Registra un&#39;implementazione dell&#39;interfaccia `MediaPlayer.PlaybackEventListener` con l&#39;istanza `MediaPlayer` .
 
    * `onPrepared`
-   * `onStateChanged`, e controllare se sono INITIALIZZATI e ERRORE.
+   * `onStateChanged`, quindi controlla INITIALIZED e ERROR.
 
-1. Quando lo stato del lettore multimediale diventa INITIALIZED, è possibile chiamare `MediaPlayer.prepareToPlay`
+1. Quando lo stato del lettore multimediale diventa INITIALIZED, puoi chiamare `MediaPlayer.prepareToPlay`
 
-   Lo stato INITIALIZED indica che il supporto è stato caricato correttamente. La chiamata di `prepareToPlay` avvia la risoluzione e il processo di posizionamento della pubblicità, se presente.
+   Lo stato INITIALIZED indica che il supporto è stato caricato correttamente. Una chiamata a `prepareToPlay` avvia il processo di risoluzione e posizionamento dei messaggi pubblicitari, se presente.
 
 1. Quando TVSDK chiama il callback `onPrepared`, il flusso multimediale è stato caricato correttamente ed è pronto per la riproduzione.
 
-   Quando viene caricato il flusso multimediale, viene creato un `MediaPlayerItem`.
+   Quando il flusso multimediale viene caricato, viene creato un `MediaPlayerItem`.
 
->Se si verifica un errore, lo stato `MediaPlayer` viene cambiato in ERROR. Inoltre, invia una notifica all&#39;applicazione chiamando il callback `PlaybackEventListener.onStateChanged`.
+>Se si verifica un errore, `MediaPlayer` passa allo stato ERROR. Invia inoltre notifica all&#39;applicazione chiamando il callback `PlaybackEventListener.onStateChanged`di .
 >
 >Questo passa diversi parametri:
 >* Un parametro `state` di tipo `MediaPlayer.PlayerState` con il valore di `MediaPlayer.PlayerState.ERROR`.
