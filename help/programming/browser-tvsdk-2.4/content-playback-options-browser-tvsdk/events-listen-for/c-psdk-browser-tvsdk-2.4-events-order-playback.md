@@ -1,13 +1,10 @@
 ---
-description: Il browser TVSDK invia eventi/notifiche nelle sequenze generalmente previste. Il lettore può implementare azioni basate su eventi nella sequenza prevista.
-seo-description: Il browser TVSDK invia eventi/notifiche nelle sequenze generalmente previste. Il lettore può implementare azioni basate su eventi nella sequenza prevista.
-seo-title: Ordine degli eventi di riproduzione
+description: Il browser TVSDK invia eventi/notifiche nelle sequenze generalmente previste. Il lettore può implementare azioni in base agli eventi nella sequenza prevista.
 title: Ordine degli eventi di riproduzione
-uuid: 259a9a2d-3d28-4240-b392-cc81f5c3f0cf
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '121'
+source-wordcount: '96'
 ht-degree: 0%
 
 ---
@@ -15,11 +12,11 @@ ht-degree: 0%
 
 # Ordine degli eventi di riproduzione{#order-of-playback-events}
 
-Il browser TVSDK invia eventi/notifiche nelle sequenze generalmente previste. Il lettore può implementare azioni basate su eventi nella sequenza prevista.
+Il browser TVSDK invia eventi/notifiche nelle sequenze generalmente previste. Il lettore può implementare azioni in base agli eventi nella sequenza prevista.
 
 <!--<a id="section_D247A5873A854A079EFA6AC2E80AB894"></a>-->
 
-Gli esempi seguenti mostrano l&#39;ordine di alcuni eventi che includono eventi di riproduzione.
+Gli esempi seguenti mostrano l’ordine di alcuni eventi che includono eventi di riproduzione.
 
 * Quando si carica correttamente una risorsa multimediale tramite `replaceCurrentResource`, l&#39;ordine degli eventi è:
 
@@ -28,7 +25,7 @@ Gli esempi seguenti mostrano l&#39;ordine di alcuni eventi che includono eventi 
       * `MediaPlayerStatus.INITIALIZING`
       * `MediaPlayerStatus.INITIALIZED`
 
-* Durante la preparazione per la riproduzione tramite `MediaPlayer.prepareToPlay`, l&#39;ordine degli eventi è:
+* Durante la preparazione della riproduzione tramite `MediaPlayer.prepareToPlay`, l&#39;ordine degli eventi è:
 
    * `AdobePSDK.MediaPlayerStatusChangeEvent` con  `event.status =`
 
@@ -37,7 +34,7 @@ Gli esempi seguenti mostrano l&#39;ordine di alcuni eventi che includono eventi 
 
 <!--<a id="section_76C13548AF934868B70757CA5489E516"></a>-->
 
-L&#39;esempio seguente mostra una progressione tipica degli eventi:
+L’esempio seguente mostra una progressione tipica degli eventi:
 
 ```js
 player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED,  
