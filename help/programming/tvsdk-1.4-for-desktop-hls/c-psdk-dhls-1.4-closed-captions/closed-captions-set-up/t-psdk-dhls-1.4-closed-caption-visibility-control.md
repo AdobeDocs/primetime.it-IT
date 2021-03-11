@@ -1,21 +1,18 @@
 ---
-description: È possibile controllare la visibilità dei sottotitoli codificati. Quando la visibilità è attivata, viene visualizzata la traccia attualmente selezionata. Se modificate la traccia corrente, l’impostazione di visibilità rimane la stessa.
-seo-description: È possibile controllare la visibilità dei sottotitoli codificati. Quando la visibilità è attivata, viene visualizzata la traccia attualmente selezionata. Se modificate la traccia corrente, l’impostazione di visibilità rimane la stessa.
-seo-title: Controllo della visibilità dei sottotitoli
+description: È possibile controllare la visibilità dei sottotitoli codificati. Quando la visibilità è attiva, viene visualizzata la traccia attualmente selezionata. Se modifichi la traccia corrente, l’impostazione di visibilità rimane la stessa.
 title: Controllo della visibilità dei sottotitoli
-uuid: 360d1158-67d9-40d9-b4b6-8ef46f9d73c0
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '209'
 ht-degree: 0%
 
 ---
 
 
-# Controllare la visibilità dei sottotitoli codificati{#control-closed-caption-visibility}
+# Controllare la visibilità dei sottotitoli{#control-closed-caption-visibility}
 
-È possibile controllare la visibilità dei sottotitoli codificati. Quando la visibilità è attivata, viene visualizzata la traccia attualmente selezionata. Se modificate la traccia corrente, l’impostazione di visibilità rimane la stessa.
+È possibile controllare la visibilità dei sottotitoli codificati. Quando la visibilità è attiva, viene visualizzata la traccia attualmente selezionata. Se modifichi la traccia corrente, l’impostazione di visibilità rimane la stessa.
 
 >[!TIP]
 >
@@ -23,7 +20,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->I valori di visibilità per i sottotitoli codificati sono definiti in `ClosedCaptionsVisibility`.
+>I valori di visibilità dei sottotitoli codificati sono definiti in `ClosedCaptionsVisibility`.
 >
 >
 ```
@@ -32,13 +29,13 @@ ht-degree: 0%
 >```
 
 1. Attendere che il `MediaPlayer` disponga almeno dello stato PREPARATO (vedere [Attendere che uno stato valido](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)).
-1. Per ottenere l&#39;impostazione di visibilità corrente per i sottotitoli codificati, utilizzate il metodo getter in `MediaPlayer`, che restituisce un valore di visibilità.
+1. Per ottenere l’impostazione di visibilità corrente per i sottotitoli codificati, utilizza il metodo getter in `MediaPlayer`, che restituisce un valore di visibilità.
 
    ```
    public function get ccVisibility():String
    ```
 
-1. Per modificare la visibilità dei sottotitoli codificati, utilizzate il metodo setter, passando un valore di visibilità da `ClosedCaptionsVisibility`.
+1. Per modificare la visibilità dei sottotitoli codificati, utilizzare il metodo setter, passando un valore di visibilità da `ClosedCaptionsVisibility`.
 
    Ad esempio:
 
@@ -55,14 +52,14 @@ ht-degree: 0%
                    prompt="CC"/>
    ```
 
-1. Definire un array associabile di tracce di didascalie chiuse.
+1. Definire una matrice associabile di tracce di didascalia chiusa.
 
    ```
    [Bindable] private var _ccTracks:ArrayCollection =  
      new ArrayCollection(); // active tracks 
    ```
 
-1. Configurate i listener.
+1. Imposta ascoltatori.
 
    ```
    player.addEventListener(MediaPlayerItemEvent.ITEM_CREATED, onItemCreated); 
@@ -76,7 +73,7 @@ ht-degree: 0%
    player.removeEventListener(MediaPlayerItemEvent.CAPTIONS_UPDATED, onCaptionUpdated);
    ```
 
-1. Create e aggiornate l’elenco quando un utente effettua una scelta dall’elenco.
+1. Crea e aggiorna l’elenco quando un utente effettua una scelta dall’elenco.
 
    ```
    private function onCCTrackChange(event:IndexChangeEvent):void { 
