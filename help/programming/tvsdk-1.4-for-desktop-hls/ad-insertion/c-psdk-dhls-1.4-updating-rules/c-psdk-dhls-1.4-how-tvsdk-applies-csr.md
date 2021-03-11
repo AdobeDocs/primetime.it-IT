@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Applicazione delle regole di selezione creativa
 title: Applicazione delle regole di selezione creativa
-uuid: 464c32db-1c96-4d91-97ce-f1d95e57c062
+description: Applicazione delle regole di selezione creativa
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '162'
 ht-degree: 0%
 
 ---
@@ -17,12 +15,12 @@ ht-degree: 0%
 
 TVSDK applica le regole di selezione creativa nei seguenti modi:
 
-* TVSDK applica prima tutte le regole `default`, seguite dalle regole specifiche per la zona.
-* TVSDK ignora eventuali regole non definite per l&#39;ID di zona corrente.
-* Una volta che TVSDK applica le regole predefinite, le regole specifiche per la zona possono cambiare ulteriormente le priorità creative in base alle corrispondenze `host` (dominio) sulla creatività selezionata dalle regole `default`.
+* TVSDK applica prima tutte le regole `default` , seguite dalle regole specifiche per la zona.
+* TVSDK ignora eventuali regole non definite per l’ID di zona corrente.
+* Una volta che TVSDK applica le regole predefinite, le regole specifiche per la zona possono modificare ulteriormente le priorità creative in base alle corrispondenze `host` (dominio) in base alla creatività selezionata dalle regole `default` .
 
-* Nel file di regole di area di esempio incluso con regole di area aggiuntive, una volta che TVSDK applica le regole `default`, se il dominio creativo M3U8 non contiene [!DNL my.domain.com] o [!DNL a.bcd.com] e l&#39;area annunci è `1234`, le creatività vengono riordinate e il creativo VPAID Flash viene riprodotto per primo, se disponibile. In caso contrario viene riprodotto un annuncio MP4 e così via fino a JavaScript.
+* Nel file di regole di esempio incluso con regole di zona aggiuntive, una volta che TVSDK applica le regole `default`, se il dominio creativo M3U8 non contiene [!DNL my.domain.com] o [!DNL a.bcd.com] e la zona annunci è `1234`, le creatività vengono riordinate e il creativo VPAID Flash viene riprodotto per primo, se disponibile. Altrimenti viene riprodotto un annuncio MP4 e così via fino a JavaScript.
 
-* Se è selezionato un annuncio creativo per il quale TVSDK non può essere riprodotto in modo nativo ( [!DNL .mp4], [!DNL .flv], ecc.), TVSDK invia una richiesta di ricompilazione.
+* Se è selezionata una creativa pubblicitaria che non può essere riprodotta in modo nativo da TVSDK ( [!DNL .mp4], [!DNL .flv], ecc.), TVSDK invia una richiesta di riconfezionamento.
 
 I tipi di annunci che possono essere gestiti da TVSDK sono ancora definiti tramite l&#39;impostazione `validMimeTypes` in `AuditudeSettings`.
