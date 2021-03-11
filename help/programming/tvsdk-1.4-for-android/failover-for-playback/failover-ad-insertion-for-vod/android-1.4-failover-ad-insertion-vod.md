@@ -1,13 +1,10 @@
 ---
-description: Il processo di inserimento video on-demand (VOD) consiste nelle fasi di risoluzione degli annunci, inserimento di annunci e riproduzione di annunci. Per il tracciamento degli annunci, TVSDK deve informare un server di tracciamento remoto dell'avanzamento della riproduzione di ciascun annuncio. In caso di situazioni impreviste, l'utente adotta le misure appropriate.
-seo-description: Il processo di inserimento video on-demand (VOD) consiste nelle fasi di risoluzione degli annunci, inserimento di annunci e riproduzione di annunci. Per il tracciamento degli annunci, TVSDK deve informare un server di tracciamento remoto dell'avanzamento della riproduzione di ciascun annuncio. In caso di situazioni impreviste, l'utente adotta le misure appropriate.
-seo-title: Inserimento pubblicitario e failover per VOD
-title: Inserimento pubblicitario e failover per VOD
-uuid: b7fbc3f9-9c38-4026-a54a-45ebc528c5f5
+description: Il processo di inserimento degli annunci video-on-demand (VOD) consiste nelle fasi di risoluzione degli annunci, inserimento degli annunci e riproduzione degli annunci. Per il tracciamento degli annunci, TVSDK deve informare un server di tracciamento remoto dell’avanzamento della riproduzione di ciascun annuncio. Quando si verificano situazioni impreviste, adotta le azioni appropriate.
+title: Inserimento e failover della pubblicità per VOD
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '89'
 ht-degree: 0%
 
 ---
@@ -15,4 +12,4 @@ ht-degree: 0%
 
 # Panoramica {#advertising-insertion-and-failover-for-vod-overview}
 
-Il processo di inserimento video on-demand (VOD) consiste nelle fasi di risoluzione degli annunci, inserimento di annunci e riproduzione di annunci. Per il tracciamento degli annunci, TVSDK deve informare un server di tracciamento remoto dell&#39;avanzamento della riproduzione di ciascun annuncio. In caso di situazioni impreviste, l&#39;utente adotta le misure appropriate.
+Il processo di inserimento degli annunci video-on-demand (VOD) consiste nelle fasi di risoluzione degli annunci, inserimento degli annunci e riproduzione degli annunci. Per il tracciamento degli annunci, TVSDK deve informare un server di tracciamento remoto dell’avanzamento della riproduzione di ciascun annuncio. Quando si verificano situazioni impreviste, adotta le azioni appropriate.
