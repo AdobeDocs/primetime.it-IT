@@ -1,25 +1,22 @@
 ---
-description: TVSDK risponde a specifiche errate dell'intervallo di tempo unendo o sostituendo gli intervalli di tempo come appropriato.
-seo-description: TVSDK risponde a specifiche errate dell'intervallo di tempo unendo o sostituendo gli intervalli di tempo come appropriato.
-seo-title: Esempi di errori nell'intervallo di tempo
-title: Esempi di errori nell'intervallo di tempo
-uuid: f6cc1e61-8f42-4559-b643-2134180a8c5e
+description: TVSDK risponde alle specifiche errate dell’intervallo di tempo unendo o sostituendo gli intervalli di tempo come appropriato.
+title: Esempi di errori nell’intervallo di tempo
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '116'
 ht-degree: 0%
 
 ---
 
 
-# Esempi di errori nell&#39;intervallo di tempo{#time-range-error-examples}
+# Esempi di errore nell&#39;intervallo di tempo{#time-range-error-examples}
 
-TVSDK risponde a specifiche errate dell&#39;intervallo di tempo unendo o sostituendo gli intervalli di tempo come appropriato.
+TVSDK risponde alle specifiche errate dell’intervallo di tempo unendo o sostituendo gli intervalli di tempo come appropriato.
 
 **Intervallo di tempo DELETE**
 
-Nell&#39;esempio seguente sono definiti quattro intervalli di tempo DELETE intersecanti. TVSDK unisce i quattro intervalli di tempo in uno, in modo che l&#39;intervallo di eliminazione effettivo sia compreso tra 0 e 50.
+Nell’esempio seguente vengono definiti quattro intervalli di tempo DELETE intersecanti. TVSDK unisce i quattro intervalli di tempo in uno, in modo che l’intervallo di eliminazione effettivo sia compreso tra 0 e 50.
 
 ```
 "time-ranges": {
@@ -47,7 +44,7 @@ Nell&#39;esempio seguente sono definiti quattro intervalli di tempo DELETE inter
 
 **Intervallo di tempo di sostituzione**
 
-Nell&#39;esempio seguente, quattro intervalli di tempo REPLACE sono definiti con intervalli di tempo in conflitto. In questo caso, TVSDK sostituisce 0-50 con 25 annunci. Viene usata la prima durata di sostituzione nell&#39;ordinamento, in quanto vi sono conflitti negli intervalli successivi.
+Nell&#39;esempio seguente, quattro intervalli di tempo SOSTITUISCI sono definiti con intervalli di tempo in conflitto. In questo caso, TVSDK sostituisce 0-50 con 25 annunci. Si abbina alla prima durata di sostituzione nell&#39;ordinamento, perché ci sono conflitti negli intervalli successivi.
 
 ```
 "time-ranges": {
