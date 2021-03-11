@@ -1,13 +1,10 @@
 ---
-description: È possibile implementare rilevatori di opportunità personalizzati.
-seo-description: È possibile implementare rilevatori di opportunità personalizzati.
-seo-title: Implementare un rilevatore di opportunità personalizzato
+description: Puoi implementare i tuoi rilevatori di opportunità.
 title: Implementare un rilevatore di opportunità personalizzato
-uuid: 18fb431b-4585-4293-92a7-b77ab7f9b7db
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '172'
+source-wordcount: '160'
 ht-degree: 0%
 
 ---
@@ -15,18 +12,18 @@ ht-degree: 0%
 
 # Implementa un rilevatore di opportunità personalizzato{#implement-a-custom-opportunity-detector}
 
-È possibile implementare rilevatori di opportunità personalizzati.
+Puoi implementare i tuoi rilevatori di opportunità.
 
-* Se il generatore di opportunità è basato su `TimedMetadata` oggetti associati al flusso multimediale corrente, deve estendere il `SpliceOutOpportunityGenerator` o `TimedMetadataOpportunityGenerator`.
+* Se il generatore di opportunità si basa su oggetti `TimedMetadata` associati al flusso multimediale corrente, deve estendere `SpliceOutOpportunityGenerator` o `TimedMetadataOpportunityGenerator`.
 
-* Se il generatore di opportunità è basato su dati fuori banda forniti da un servizio esterno (ad esempio un CIS), è necessario estendere il `OpportunityGenerator`.
+* Se il generatore di opportunità si basa su dati fuori banda forniti da un servizio esterno (ad esempio un CIS), deve estendere il `OpportunityGenerator`.
 
 1. Crea il generatore di opportunità personalizzato.
 
-       Se il generatore di opportunità personalizzato è basato su oggetti &quot;TimedMetadata&quot;, espandi il generatore `TimedMetadataOpportunityGenerator` e sostituisci i seguenti metodi:
+       Se il generatore di opportunità personalizzato si basa su oggetti &quot;TimedMetadata&quot;, estendere l&#39;oggetto &quot;TimedMetadataOpportunityGenerator&quot; e ignorare questi metodi:
    
-   * `doConfigure` - Questo metodo viene chiamato dopo la creazione dell&#39;elemento del lettore multimediale e fornisce al generatore di opportunità di creare una serie iniziale di opportunità, se necessario
-   * `doProcess` - Questo metodo viene chiamato ogni volta che  `TimedMetadata` viene rilevato un nuovo evento (ad esempio, per flussi live/lineari ogni volta che la playlist o gli aggiornamenti del manifesto)
+   * `doConfigure` - Questo metodo viene chiamato dopo la creazione dell&#39;elemento del lettore multimediale e fornisce al generatore di opportunità di creare un set iniziale di opportunità, se necessario
+   * `doProcess` - Questo metodo viene chiamato ogni volta che  `TimedMetadata` viene rilevato un nuovo metodo (ad esempio, per flussi live/lineari ogni volta che la playlist/aggiornamento del manifesto)
 
    ```
    public class CustomOpportunityGenerator extends TimedMetadataOpportunityGenerator { 
@@ -50,7 +47,7 @@ ht-degree: 0%
    }
    ```
 
-1. Create il content factory personalizzato, che utilizza il generatore di opportunità personalizzato.
+1. Crea la content factory personalizzata, che utilizza il generatore di opportunità personalizzato.
 
    ```
    public class CustomContentFactory extends DefaultContentFactory { 
