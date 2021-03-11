@@ -1,13 +1,10 @@
 ---
-description: Il giocatore può ascoltare una serie di eventi che indicano lo stato del giocatore.
-seo-description: Il giocatore può ascoltare una serie di eventi che indicano lo stato del giocatore.
-seo-title: Impostazione delle notifiche
-title: Impostazione delle notifiche
-uuid: b178b2eb-da40-456b-997a-46ae18d635fa
+description: Il lettore può ascoltare una serie di eventi che indicano lo stato del lettore.
+title: Impostare le notifiche
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '332'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # Impostare le notifiche {#set-up-notifications}
 
-Il giocatore può ascoltare una serie di eventi che indicano lo stato del giocatore.
+Il lettore può ascoltare una serie di eventi che indicano lo stato del lettore.
 
-Presupponendo che `PTMediaPlayer` sia una proprietà del lettore client, `self.player` nell&#39;esempio seguente rappresenta l&#39;istanza `PTMediaPlayer`. L&#39;esempio seguente implementa il metodo `addObservers` mostrato nelle istruzioni di configurazione di PTMediaPlayer e include la maggior parte delle notifiche:
+Supponendo che `PTMediaPlayer` sia una proprietà del lettore client, `self.player` nell&#39;esempio seguente rappresenta l&#39;istanza `PTMediaPlayer`. L&#39;esempio seguente implementa il metodo `addObservers` mostrato nelle istruzioni di configurazione di PTMediaPlayer e include la maggior parte delle notifiche:
 
 ```
 [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onMediaPlayerStatusChange:)  
@@ -48,7 +45,7 @@ Presupponendo che `PTMediaPlayer` sia una proprietà del lettore client, `self.p
 
 ## Notifiche iOS {#section_65D9B2DBF5574313BD3218AB02242BBB}
 
-`ThePTMediaPlayerNotifications` class elenca le notifiche che TVSDK invia al lettore.
+`ThePTMediaPlayerNotifications` in questa classe sono elencate le notifiche inviate dal TVSDK al lettore.
 
 <table frame="all" colsep="1" rowsep="1" id="table_ios_notifications"> 
  <tbody> 
@@ -58,7 +55,7 @@ Presupponendo che `PTMediaPlayer` sia una proprietà del lettore client, `self.p
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTMediaPlayerAdBreakCompletedNotification  </span> </td> 
-   <td colname="2"> Un annuncio è terminato. </td> 
+   <td colname="2"> Una pausa pubblicitaria è finita. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTMediaPlayerAdBreakStartedNotification  </span> </td> 
@@ -74,11 +71,11 @@ Presupponendo che `PTMediaPlayer` sia una proprietà del lettore client, `self.p
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTMediaPlayerAdProgressNotification  </span> </td> 
-   <td colname="2"> Un annuncio progredito; inviato costantemente durante la riproduzione di un annuncio. </td> 
+   <td colname="2"> Un annuncio progredito; inviato costantemente mentre un annuncio suona. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTMediaPlayerAdStartedNotification  </span> </td> 
-   <td colname="2"> Un singolo annuncio è iniziato. </td> 
+   <td colname="2"> Un annuncio individuale è iniziato. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTBackgroundManifestErrorNotification  </span> </td> 
@@ -94,7 +91,7 @@ Presupponendo che `PTMediaPlayer` sia una proprietà del lettore client, `self.p
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTAudioTrackChangeCompleted  </span> </td> 
-   <td colname="2"> È stata completata una modifica sulla traccia audio del file multimediale attualmente in riproduzione. </td> 
+   <td colname="2"> È stata completata una modifica alla traccia audio del file multimediale attualmente in riproduzione. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTAudioTrackChangeStarted  </span> </td> 
@@ -126,7 +123,7 @@ Presupponendo che `PTMediaPlayer` sia una proprietà del lettore client, `self.p
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTMediaPlayerSeekErrorNotification  </span> </td> 
-   <td colname="2"> Operazione di ricerca corrente non riuscita. </td> 
+   <td colname="2"> L'operazione di ricerca corrente non è riuscita. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTMediaPlayerSeekStartedNotification  </span> </td> 
@@ -140,8 +137,8 @@ Presupponendo che `PTMediaPlayer` sia una proprietà del lettore client, `self.p
    <td colname="1"> <span class="codeph"> PTMediaPlayerStatusNotification  </span> </td> 
    <td colname="2"> Lo stato del lettore è cambiato. I valori di stato possibili sono: 
     <ul id="ul_DDBE8CAD5D5A46D2AAA6B98F0754A881"> 
-     <li id="li_48F9AD580BCB4BB8A5C2DFED0DF9970F"> <p> <span class="codeph"> PTMediaPlayerStatusCreate  </span> </p> </li> 
-     <li id="li_EDFB0765CF14422A95C9119DA3394163"> <p> <span class="codeph"> PTMediaPlayerStatusInitializing  </span> </p> </li> 
+     <li id="li_48F9AD580BCB4BB8A5C2DFED0DF9970F"> <p> <span class="codeph"> PTMediaPlayerStatusCreated  </span> </p> </li> 
+     <li id="li_EDFB0765CF14422A95C9119DA3394163"> <p> <span class="codeph"> PTMediaPlayerStatusInizializzazione  </span> </p> </li> 
      <li id="li_06E1576D50C646C19E88F0F14912F2C0"> <p> <span class="codeph"> PTMediaPlayerStatusInitialized  </span> </p> </li> 
      <li id="li_E8B7157B5B234DFFABC2E5BEC241AB84"> <p> <span class="codeph"> PTMediaPlayerStatusReady  </span> </p> </li> 
      <li id="li_FF2E66B390154EAA8791B4D874CC62E1"> <p> <span class="codeph"> PTMediaPlayerStatusPlay  </span> </p> </li> 
@@ -161,20 +158,20 @@ Presupponendo che `PTMediaPlayer` sia una proprietà del lettore client, `self.p
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" colsep="1" rowsep="1"> <span class="codeph"> PTTimedMetadataChangedNotification  </span> </td> 
-   <td colname="2"> TVSDK ha rilevato la prima occorrenza di un tag con sottoscrizione. </td> 
+   <td colname="2"> TVSDK ha rilevato la prima occorrenza di un tag di sottoscrizione. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTTimedMetadataChangedInBackgroundNotification  </span> </td> 
-   <td colname="2"> <p>Un tag con sottoscrizione viene identificato sul manifesto di sfondo e da esso viene preparata una nuova istanza <span class="codeph"> PTTimedMetadata </span>. </p> </td> 
+   <td colname="2"> <p>Un tag di sottoscrizione viene identificato sul manifesto di background e ne viene preparata una nuova istanza <span class="codeph"> PTTimedMetadata </span>. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 ## Gestori di esempio per le notifiche {#section_D729C2403A234DD09596829D26882ADC}
 
-Gli snippet di codice riportati di seguito illustrano alcuni dei modi in cui è possibile utilizzare le notifiche.
+I frammenti di codice seguenti illustrano alcuni dei modi in cui è possibile utilizzare le notifiche.
 
-Recuperate l&#39;istanza `PTAdBreak` utilizzando `PTMediaPlayerAdBreakKey`:
+Recupera l&#39;istanza `PTAdBreak` utilizzando `PTMediaPlayerAdBreakKey`:
 
 ```
  - (void) onMediaPlayerAdBreakStarted:(NSNotification *) notification { 
@@ -185,7 +182,7 @@ Recuperate l&#39;istanza `PTAdBreak` utilizzando `PTMediaPlayerAdBreakKey`:
 } 
 ```
 
-Impostare `subtitlesOptions` e `audioOptions`:
+Imposta `subtitlesOptions` e `audioOptions`:
 
 ```
  - (void) onMediaPlayerItemMediaSelectionOptionsAvailable:(NSNotification \*) notification { 
@@ -197,7 +194,7 @@ Impostare `subtitlesOptions` e `audioOptions`:
 } 
 ```
 
-Recuperate l&#39;istanza `PTAd` utilizzando `PTMediaPlayerAdKey`:
+Recupera l&#39;istanza `PTAd` utilizzando `PTMediaPlayerAdKey`:
 
 ```
  - (void) onMediaPlayerAdPlayStarted:(NSNotification \*)  notification { 
