@@ -1,9 +1,9 @@
 ---
-seo-title: Richiesta della panoramica dei certificati
-title: Richiesta della panoramica dei certificati
-uuid: 3a4e79d7-1832-49d8-bcf2-a029b3729e6d
+title: Panoramica sui certificati di richiesta
+description: Panoramica sui certificati di richiesta
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
@@ -13,8 +13,8 @@ ht-degree: 0%
 
 # Panoramica {#request-certificates-overview}
 
-Per utilizzare  Adobe Primetime DRM Production SDK, ripetete i seguenti passaggi per richiedere ogni certificato (License Server, Packager e Transport). L’SDK di valutazione e l’SDK di prova utilizzano un unico certificato.
+Per utilizzare Adobe Primetime DRM Production SDK, ripeti i passaggi seguenti per richiedere ogni certificato (License Server, Packager e Transport). L’SDK di valutazione e l’SDK di prova utilizzano un singolo certificato.
 
 >[!NOTE]
 >
->Gli esempi forniti in questo documento utilizzano OpenSSL. Potete anche utilizzare altre utility. Utilizzare questi esempi solo per riferimento. Per informazioni sulla generazione di coppie di chiavi e sulla memorizzazione di chiavi e certificati nel modulo di sicurezza hardware (HSM), consultate la documentazione relativa all&#39;HSM.
+>Gli esempi forniti in questo documento utilizzano OpenSSL. Puoi anche utilizzare altre utilità. Utilizzare questi esempi solo per riferimento. Per informazioni sulla generazione di coppie chiave e sull&#39;archiviazione di chiavi e certificati nel modulo di sicurezza hardware (HSM), consulta la documentazione relativa al tuo HSM.
