@@ -1,13 +1,10 @@
 ---
-description: Puoi inserire annunci nel tuo VOD e contenuti live/lineari utilizzando l'interfaccia  Adobe Primetime e decisionali.
-seo-description: Puoi inserire annunci nel tuo VOD e contenuti live/lineari utilizzando l'interfaccia  Adobe Primetime e decisionali.
-seo-title: Pubblicità
+description: Puoi inserire annunci nel tuo VOD e contenuti live/lineari utilizzando l'interfaccia Adobe Primetime ad Decioning.
 title: Pubblicità
-uuid: 9fb020ab-f146-40e6-bd82-9f7cfe86d35b
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '133'
+source-wordcount: '113'
 ht-degree: 0%
 
 ---
@@ -15,11 +12,11 @@ ht-degree: 0%
 
 # Pubblicità e relativi requisiti {#advertising-requirements}
 
-Puoi inserire annunci nel tuo VOD e contenuti live/lineari utilizzando l&#39;interfaccia  Adobe Primetime e decisionali.
+Puoi inserire annunci nel tuo VOD e contenuti live/lineari utilizzando l&#39;interfaccia Adobe Primetime ad Decioning.
 
-Primetime Ad Decision funziona con TVSDK per identificare opportunità di annunci, risolvere annunci e inserire annunci risolti nei flussi video.
+Primetime ad decision funziona con TVSDK per identificare le opportunità degli annunci, risolvere gli annunci e inserire annunci risolti nei flussi video.
 
-Per includere annunci nel contenuto video, accertatevi che la pubblicità e il contenuto video principale soddisfino i seguenti requisiti:
+Per incorporare annunci nei contenuti video, accertati che il contenuto pubblicitario e video principale soddisfi i seguenti requisiti:
 
 * La versione HLS del contenuto pubblicitario non può essere superiore alla versione HLS del contenuto principale.
-* Gli annunci non devono essere multiplex (senza restrizioni), indipendentemente dal fatto che il contenuto principale sia multiplexato o meno.
+* Gli annunci non devono essere multiplex (senza restrizioni), indipendentemente dal fatto che il contenuto principale sia multiplexato.
