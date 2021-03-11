@@ -1,9 +1,9 @@
 ---
-seo-title: Revoca delle credenziali client
 title: Revoca delle credenziali client
-uuid: 47f1ec1a-bd8f-4f8c-bee3-bfbf6d9902e7
+description: Revoca delle credenziali client
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 0%
@@ -13,8 +13,8 @@ ht-degree: 0%
 
 # Revoca delle credenziali client{#revoking-client-credentials}
 
-A determinate condizioni è necessario revocare le credenziali di un cliente o verificare se un determinato insieme di credenziali è già stato revocato. Le credenziali possono essere revocate se compromesse. In questo caso, le licenze non verranno più rilasciate ai client compromessi.
+A determinate condizioni è necessario revocare le credenziali di un cliente o verificare se un determinato insieme di credenziali è già stato revocato. Le credenziali possono essere revocate se sono compromesse. In questo caso, le licenze non verranno più rilasciate ai clienti compromessi.
 
- Adobe mantiene elenchi di revoca certificati (CRL) per la revoca di client compromessi. Tali CRL vengono applicati automaticamente dall&#39;SDK. I server delle licenze possono limitare ulteriormente i client impedendo particolari credenziali del computer o versioni particolari di DRM e credenziali runtime. È possibile creare un `RevocationList` e trasmetterlo nell&#39;SDK per revocare le credenziali del computer. È possibile revocare determinate versioni DRM/runtime sia a livello di criterio (impostando le restrizioni del modulo nel diritto di riproduzione) che a livello globale (impostando le restrizioni del modulo in `HandlerConfiguration`).
+Adobe gestisce elenchi di revoche di certificati (CRL, Certificate Revocation List) per la revoca di client compromessi. Questi CRL vengono applicati automaticamente dall’SDK. I server di licenza possono limitare ulteriormente i client impedendo particolari credenziali del computer o particolari versioni di DRM e credenziali di runtime. Per revocare le credenziali del computer, è possibile creare e trasmettere un elemento `RevocationList` nell’SDK. Particolari versioni DRM/runtime possono essere revocate a livello di criterio (impostando le restrizioni del modulo nel diritto di riproduzione) o globalmente (impostando le restrizioni del modulo nel `HandlerConfiguration`).
 
-La discussione in questo capitolo sarà incentrata sulla revoca delle credenziali del client.
+La discussione in questo capitolo sarà incentrata sulla revoca delle credenziali dei clienti.
