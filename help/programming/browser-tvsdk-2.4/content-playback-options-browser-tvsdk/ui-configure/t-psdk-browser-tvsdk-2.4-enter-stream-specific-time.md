@@ -1,13 +1,10 @@
 ---
-description: Per impostazione predefinita, all’avvio della riproduzione, il supporto VOD inizia a 0 e il supporto live inizia dal punto di vista del client (MediaPlayer.LIVE_POINT). Potete ignorare il comportamento predefinito.
-seo-description: Per impostazione predefinita, all’avvio della riproduzione, il supporto VOD inizia a 0 e il supporto live inizia dal punto di vista del client (MediaPlayer.LIVE_POINT). Potete ignorare il comportamento predefinito.
-seo-title: Inserire un flusso in un momento specifico
-title: Inserire un flusso in un momento specifico
-uuid: 5db73b50-0629-4fb1-8f12-6c88e4cd7109
+description: Per impostazione predefinita, all'avvio della riproduzione, il contenuto multimediale VOD inizia a 0 e il contenuto multimediale in tempo reale inizia dal punto live del client (MediaPlayer.LIVE_POINT). È possibile ignorare il comportamento predefinito.
+title: Immettere un flusso in un momento specifico
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '103'
 ht-degree: 1%
 
 ---
@@ -15,16 +12,16 @@ ht-degree: 1%
 
 # Immettere un flusso in un momento specifico{#enter-a-stream-at-a-specific-time}
 
-Per impostazione predefinita, all’avvio della riproduzione, il supporto VOD inizia a 0 e il supporto live inizia dal punto di vista del client (MediaPlayer.LIVE_POINT). Potete ignorare il comportamento predefinito.
+Per impostazione predefinita, all&#39;avvio della riproduzione, il contenuto multimediale VOD inizia a 0 e il contenuto multimediale in tempo reale inizia dal punto live del client (MediaPlayer.LIVE_POINT). È possibile ignorare il comportamento predefinito.
 
 1. Passa una posizione a `MediaPlayer.prepareToPlay`.
-1. Il browser TVSDK utilizza questa posizione come punto di partenza per la risorsa.
+1. Il browser TVSDK utilizza questa posizione come punto iniziale della risorsa.
 
    >[!NOTE]
    >
    >Non è richiesta alcuna operazione di ricerca.
 
-1. Se la posizione non è all’interno dell’intervallo ricercabile, vengono utilizzate le posizioni predefinite.
+1. Se la posizione non si trova all’interno dell’intervallo ricercabile, vengono utilizzate le posizioni predefinite.
 
    Ad esempio:
 
