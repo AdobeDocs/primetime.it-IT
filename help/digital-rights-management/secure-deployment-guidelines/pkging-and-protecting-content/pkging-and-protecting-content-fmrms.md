@@ -1,35 +1,32 @@
 ---
-description: Flash Media Rights Management Server 1.x e  Adobe Primetime DRM utilizzano metadati diversi per creare pacchetti di contenuto e richiedere licenze. Affinché DRM di Primetime utilizzi il contenuto FMRMS versione 1.x, i metadati devono essere convertiti.
-seo-description: Flash Media Rights Management Server 1.x e  Adobe Primetime DRM utilizzano metadati diversi per creare pacchetti di contenuto e richiedere licenze. Affinché DRM di Primetime utilizzi il contenuto FMRMS versione 1.x, i metadati devono essere convertiti.
-seo-title: Garanzia di compatibilità con Flash Media Rights Management Server 1.x
-title: Garanzia di compatibilità con Flash Media Rights Management Server 1.x
-uuid: dd70941e-9015-4fb0-b265-557b6252e051
+description: Flash Media Rights Management Server 1.x e Adobe Primetime DRM utilizzano metadati diversi per creare pacchetti di contenuti e richiedere licenze. Affinché Primetime DRM possa utilizzare il contenuto FMRMS versione 1.x, i metadati devono essere convertiti.
+title: Compatibilità con Flash Media Rights Management Server 1.x
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '363'
 ht-degree: 0%
 
 ---
 
 
-# Garanzia di compatibilità con Flash Media Rights Management Server 1.x {#ensuring-compatibility-with-flash-media-rights-management-server-x}
+# Compatibilità con Flash Media Rights Management Server 1.x {#ensuring-compatibility-with-flash-media-rights-management-server-x}
 
-Flash Media Rights Management Server 1.x e  Adobe Primetime DRM utilizzano metadati diversi per creare pacchetti di contenuto e richiedere licenze. Affinché DRM di Primetime utilizzi il contenuto FMRMS versione 1.x, i metadati devono essere convertiti.
+Flash Media Rights Management Server 1.x e Adobe Primetime DRM utilizzano metadati diversi per creare pacchetti di contenuti e richiedere licenze. Affinché Primetime DRM possa utilizzare il contenuto FMRMS versione 1.x, i metadati devono essere convertiti.
 
-L’SDK DRM di Primetime supporta le seguenti opzioni per la conversione dei metadati:
+L&#39;SDK DRM di Primetime supporta le seguenti opzioni per la conversione dei metadati:
 
 * Offline (consigliato)
 
-   Generate i metadati DRM di Primetime in un processo offline e memorizzate i metadati finché non vengono richiesti da un client. Se i metadati vengono generati offline, il server delle licenze non ha bisogno di accedere ai CEK 1.x o alle credenziali del packager. La conversione offline offre prestazioni migliori perché il server licenze non deve generare i metadati in tempo reale.
-* Su richiesta
+   Genera i metadati DRM di Primetime in un processo offline e archivia i metadati finché non vengono richiesti da un cliente. Se i metadati vengono generati offline, il server di licenza non ha bisogno dell&#39;accesso ai CEK 1.x o alle credenziali del packager. La conversione offline offre prestazioni migliori perché il server licenze non deve generare i metadati in tempo reale.
+* On-demand
 
-   I metadati DRM di Primetime vengono generati quando i metadati vengono richiesti da un client. Quando un client DRM Primetime scarica il contenuto della versione 1.x, il client invia i metadati DRM all&#39;SDK DRM di Primetime. L’SDK converte i metadati DRM nel formato corrente, codifica e incorpora la chiave di crittografia del contenuto (CEK) nei metadati e invia nuovamente il contenuto al client DRM Primetime.
+   I metadati DRM di Primetime vengono generati quando i metadati sono richiesti da un client. Quando un client DRM di Primetime scarica il contenuto della versione 1.x, il client invia i metadati DRM all&#39;SDK DRM di Primetime. L’SDK converte i metadati DRM nel formato corrente, crittografa e incorpora la chiave di crittografia del contenuto (CEK) nei metadati e invia di nuovo il contenuto al client DRM di Primetime.
 
    >[!NOTE]
    >
    >I metadati DRM 1.x di Primetime non includono la CEK.
 
-   Per convertire i metadati, Primetime DRM richiede l&#39;accesso alle chiavi di crittografia del contenuto DRM 1.x di Primetime. Quando eseguite la migrazione da Media Rights Management Server 1.x di Flash, potete continuare a memorizzare le chiavi di crittografia del contenuto nel database LiveCycle ES di  o implementare una soluzione personalizzata per memorizzare in modo sicuro le chiavi di crittografia del contenuto in un&#39;altra posizione. Se decidete di memorizzare le chiavi di crittografia del contenuto nel database di LiveCycle ES, seguite le raccomandazioni descritte in *Protezione dell&#39;accesso al contenuto sensibile nel database* in **Protezione e protezione per LiveCycle® ES2**.
+   Per convertire i metadati, Primetime DRM richiede l&#39;accesso alle chiavi di crittografia dei contenuti DRM 1.x di Primetime. Quando esegui la migrazione da Flash Media Rights Management Server 1.x, puoi continuare a memorizzare le chiavi di crittografia del contenuto nel database di LiveCycle ES o implementare una soluzione personalizzata per memorizzare in modo sicuro le chiavi di crittografia del contenuto in un&#39;altra posizione. Se decidi di memorizzare le chiavi di crittografia del contenuto nel database LiveCycle ES, segui le raccomandazioni descritte in *Protezione dell&#39;accesso a contenuti sensibili nel database* in **Hardening and Security for LiveCycle® ES2**.
 
-Per ulteriori informazioni su come garantire la compatibilità con il contenuto incluso nel pacchetto utilizzando Flash Media Rights Management Server 1.x, consultate  API DRM Adobe Primetime su [ Adobe Primetime API References](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References).
+Per ulteriori informazioni su come garantire la compatibilità con i contenuti inclusi nel pacchetto utilizzando Flash Media Rights Management Server 1.x, consulta API DRM di Adobe Primetime in [Riferimenti API di Adobe Primetime](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References).
