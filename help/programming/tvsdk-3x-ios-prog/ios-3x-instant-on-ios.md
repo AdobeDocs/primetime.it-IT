@@ -1,13 +1,10 @@
 ---
-description: Consente di precaricare istantaneamente parti del supporto su uno o più canali. Dopo che un utente seleziona o commuta i canali, il contenuto inizia prima perché alcuni dei buffering sono già stati completati.
-seo-description: Consente di precaricare istantaneamente parti del supporto su uno o più canali. Dopo che un utente seleziona o commuta i canali, il contenuto inizia prima perché alcuni dei buffering sono già stati completati.
-seo-title: Instant-on
-title: Instant-on
-uuid: 98a5ef79-51e4-474e-a6e8-ca449c430b5e
+description: L'accesso immediato precarica parti del contenuto multimediale su uno o più canali. Dopo che un utente seleziona o commuta i canali, il contenuto viene avviato prima perché alcuni dei buffering sono già stati completati.
+title: Immediato
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
@@ -15,13 +12,13 @@ ht-degree: 0%
 
 # Instant-on {#instant-on}
 
-Consente di precaricare istantaneamente parti del supporto su uno o più canali. Dopo che un utente seleziona o commuta i canali, il contenuto inizia prima perché alcuni dei buffering sono già stati completati.
+L&#39;accesso immediato precarica parti del contenuto multimediale su uno o più canali. Dopo che un utente seleziona o commuta i canali, il contenuto viene avviato prima perché alcuni dei buffering sono già stati completati.
 
-Quando il lettore è nello stato `PTMediaPlayerStatusReady`, chiamare `prepareToPlay` per precaricare ed elaborare parte del contenuto per la riproduzione successiva.
+Quando il lettore è nello stato `PTMediaPlayerStatusReady`, chiama `prepareToPlay` per precaricare ed elaborare parte del contenuto per una riproduzione successiva.
 
 >[!TIP]
 >
->Se non si chiama `prepareToPlay`, chiamare `play` automaticamente chiama `prepareToPlay` prima. Al momento il precaricamento e l&#39;elaborazione sono completati.
+>Se non chiami `prepareToPlay`, la chiamata a `play` chiama automaticamente `prepareToPlay`. Al momento il precaricamento e l’elaborazione vengono completati.
 
 TVSDK completa alcune o tutte le seguenti attività per `prepareToPlay`:
 
@@ -31,6 +28,6 @@ TVSDK completa alcune o tutte le seguenti attività per `prepareToPlay`:
 
 >[!TIP]
 >
->I metodi `PTMediaPlayer` e `PTMediaPlayerItem` `prepareToPlay` sono uguali. Per evitare di creare un&#39;istanza `PTMediaPlayer` separata per ciascuna risorsa, utilizzate il metodo `PTMediaPlayerItem`.
+>I metodi `PTMediaPlayer` e `PTMediaPlayerItem` `prepareToPlay` sono uguali. Per evitare di creare un&#39;istanza `PTMediaPlayer` separata per ciascuna risorsa, utilizza il metodo `PTMediaPlayerItem` .
 
-L&#39;accesso istantaneo consente di avviare più istanze di lettori multimediali o di caricatori di elementi per lettori multimediali contemporaneamente in background e di creare un buffer dei flussi video in tutte queste istanze. Quando un utente cambia il canale e il flusso si trova correttamente nel buffer, la chiamata di `play` sul nuovo canale avvia la riproduzione prima.
+L&#39;accesso istantaneo consente di avviare più istanze del lettore multimediale, o istanze del caricatore di elementi multimediali, simultaneamente in background e in buffer i flussi video in tutte queste istanze. Quando un utente cambia il canale e il flusso è stato bufferizzato correttamente, la chiamata di `play` sul nuovo canale avvia la riproduzione prima.
