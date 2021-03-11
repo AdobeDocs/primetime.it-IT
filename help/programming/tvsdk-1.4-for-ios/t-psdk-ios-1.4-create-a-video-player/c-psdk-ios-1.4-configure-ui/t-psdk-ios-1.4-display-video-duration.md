@@ -1,13 +1,10 @@
 ---
-description: Potete visualizzare la durata del contenuto attualmente attivo.
-seo-description: Potete visualizzare la durata del contenuto attualmente attivo.
-seo-title: Visualizzare la durata del video
-title: Visualizzare la durata del video
-uuid: 02042070-9c55-4cbb-9dc1-49987451eb8f
+description: È possibile visualizzare la durata del contenuto attualmente attivo.
+title: Visualizza la durata del video
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '122'
+source-wordcount: '106'
 ht-degree: 0%
 
 ---
@@ -15,16 +12,16 @@ ht-degree: 0%
 
 # Visualizza la durata del video {#display-the-duration-of-the-video}
 
-Potete visualizzare la durata del contenuto attualmente attivo.
+È possibile visualizzare la durata del contenuto attualmente attivo.
 
-Implementate una visualizzazione della durata del video utilizzando il seguente codice di esempio:
+Implementa una visualizzazione a durata video utilizzando il seguente codice di esempio:
 
-    La proprietà &quot;PTMediaPlayer&quot;, [searchRange](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTMediaPlayer.html#//api/name/seekableRange), contiene l&#39;intervallo di finestre ricercabili corrente:
+    La proprietà &quot;PTMediaPlayer&quot;, [searchableRange](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTMediaPlayer.html#//api/name/seekableRange), contiene l&#39;intervallo di finestre ricercabili corrente:
     
-    * Per VOD, questo intervallo corrisponde all&#39;intero intervallo di contenuti VOD, inclusi gli annunci.
-    * Per live/lineari, questo intervallo rappresenta la finestra ricercabile.
+    * Per VOD, questo intervallo è l&#39;intero intervallo di contenuti VOD, inclusi gli annunci.
+    * Per le funzioni live/lineari, questo intervallo rappresenta la finestra ricercabile.
     
-    Per ulteriori informazioni sull&#39;API, consultate [TVSDK 1.4 for iOS API Reference](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/index.html)
+    Per ulteriori informazioni sull’API, consulta [Riferimento API TVSDK 1.4 per iOS](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/index.html)
 
 <!--<a id="example_A153BE3AC03F43C6BF3A156316A08CD3"></a>-->
 
