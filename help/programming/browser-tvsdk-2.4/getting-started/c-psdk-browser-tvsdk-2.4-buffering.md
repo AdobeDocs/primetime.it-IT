@@ -1,23 +1,20 @@
 ---
-description: Potete configurare gli elementi visivi per notificare all’utente il buffering del contenuto.
-seo-description: Potete configurare gli elementi visivi per notificare all’utente il buffering del contenuto.
-seo-title: Buffering
+description: Puoi configurare gli elementi visivi per informare l’utente che il contenuto sta effettuando il buffering.
 title: Buffering
-uuid: da9498ee-c736-4093-97a2-250d3ad56d49
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '69'
-ht-degree: 2%
+source-wordcount: '56'
+ht-degree: 3%
 
 ---
 
 
 # Buffering{#buffering}
 
-Potete configurare gli elementi visivi per notificare all’utente il buffering del contenuto.
+Puoi configurare gli elementi visivi per informare l’utente che il contenuto sta effettuando il buffering.
 
-Ascoltare gli eventi `AdobePSDK.PSDKEventType.BUFFERING_BEGIN` e `AdobePSDK.PSDKEventType.BUFFERING_END`. Ad esempio:
+Ascolta gli eventi `AdobePSDK.PSDKEventType.BUFFERING_BEGIN` e `AdobePSDK.PSDKEventType.BUFFERING_END`. Ad esempio:
 
 ```js
 player.addEventListener(AdobePSDK.PSDKEventType.BUFFERING_BEGIN,  
@@ -33,7 +30,7 @@ player.addEventListener(AdobePSDK.PSDKEventType.BUFFERING_END,
                         });
 ```
 
-Il framework dell&#39;interfaccia utente fornisce l&#39;implementazione predefinita del comportamento di buffering sovrapposto, che può essere esteso come illustrato di seguito:
+Il framework dell&#39;interfaccia utente fornisce l&#39;implementazione predefinita del comportamento di sovrapposizione buffering, che può essere esteso come mostrato di seguito:
 
 ```js
 // Using UI Framework 
@@ -52,7 +49,7 @@ var playerWrapper = ptp.videoPlayer('.videoDiv', {
 }); 
 ```
 
-Esempio di DOM risultato:
+Ecco come si presenta il DOM risultato:
 
 ```
 <div id=" videoDiv" class="ptp-root-element"> 
