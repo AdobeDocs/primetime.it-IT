@@ -1,9 +1,9 @@
 ---
-seo-title: Informazioni sui ruoli di iscrizione ai certificati
-title: Informazioni sui ruoli di iscrizione ai certificati
-uuid: 100776c2-6622-4b94-bc9b-5d4a04fd3260
+title: Informazioni sui ruoli di registrazione certificati
+description: Informazioni sui ruoli di registrazione certificati
+copied-description: true
 translation-type: tm+mt
-source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '166'
 ht-degree: 0%
@@ -11,32 +11,32 @@ ht-degree: 0%
 ---
 
 
-# Ruoli di iscrizione ai certificati {#about-certificate-enrollment-roles}
+# Informazioni sui ruoli di registrazione dei certificati {#about-certificate-enrollment-roles}
 
-Il processo di iscrizione al certificato richiede almeno due dipendenti: un amministratore e un richiedente. Il licenziatario dell&#39;SDK Primetime DRM nomina un amministratore di account. Può essere presente un solo amministratore di account. L&#39;amministratore di account può designare un amministratore secondario.
+Il processo di registrazione dei certificati richiede almeno due dipendenti: un amministratore e un richiedente. Il licenziatario dell’SDK DRM di Primetime nomina un amministratore dell’account. Può essere presente un solo amministratore account. L&#39;amministratore account può designare un amministratore secondario.
 
-Gli amministratori possono designare fino a cinque richiedenti. I richiedenti sono dipendenti della società che richiedono e distribuiscono certificati. Gli amministratori approvano le richieste dei certificati. Ciascun account Adobe ID  può avere un solo ruolo.
+Gli amministratori possono designare fino a cinque richiedenti. I richiedenti sono dipendenti della tua azienda che richiedono e distribuiscono certificati. Gli amministratori approvano le richieste dei certificati. Ogni account Adobe ID può avere un solo ruolo.
 
-Di seguito sono riportate le capacità di ciascun ruolo:
+Di seguito sono riportate le capacità di ogni ruolo:
 
-* Amministratore account
+* Amministratore dell&#39;account
 
    * Un amministratore account per licenza
-   * Aggiungi richiedente
-   * Aggiungere un amministratore secondario
-   * Modificare le informazioni telefoniche e la frase di sfida della società richiedente
-   * Rimuovi richiedenti e amministratori secondari
-   * Approvare o rifiutare le richieste di certificati
-   * Revoca certificati rilasciati
+   * Aggiungi richiedenti
+   * Aggiungi un amministratore secondario
+   * Modificare le informazioni telefoniche e la frase di sfida dell&#39;azienda richiedente
+   * Rimuovere i richiedenti e gli amministratori secondari
+   * Approvare o rifiutare le richieste di certificato
+   * Revoca dei certificati rilasciati
 
 * Amministratore secondario
 
    * Un amministratore secondario per licenza
-   * Aggiungi richiedente
-   * Modificare le informazioni telefoniche e la frase di sfida della società richiedente
+   * Aggiungi richiedenti
+   * Modificare le informazioni telefoniche e la frase di sfida dell&#39;azienda richiedente
    * Rimuovi richiedenti
-   * Approvare o rifiutare le richieste di certificati
-   * Revoca certificati rilasciati
+   * Approvare o rifiutare le richieste di certificato
+   * Revoca dei certificati rilasciati
 
 * Richiedente
 
