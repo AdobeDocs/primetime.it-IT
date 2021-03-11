@@ -1,13 +1,10 @@
 ---
-description: Con TVSDK, potete controllare l'esperienza di riproduzione di base per video live e video on demand (VOD). Invece di configurare il lettore, TVSDK fornisce metodi e proprietà sull'istanza del lettore che è possibile utilizzare per configurare l'interfaccia utente del lettore.
-seo-description: Con TVSDK, potete controllare l'esperienza di riproduzione di base per video live e video on demand (VOD). Invece di configurare il lettore, TVSDK fornisce metodi e proprietà sull'istanza del lettore che è possibile utilizzare per configurare l'interfaccia utente del lettore.
-seo-title: Configurare l’interfaccia utente del lettore
+description: Con il TVSDK, è possibile controllare l'esperienza di riproduzione di base per live e video on demand (VOD). Invece di configurare il lettore, TVSDK fornisce i metodi e le proprietà sull'istanza del lettore che è possibile utilizzare per configurare l'interfaccia utente del lettore.
 title: Configurare l’interfaccia utente del lettore
-uuid: d71d3a53-c2a4-4192-b16a-988d538b42e3
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '140'
+source-wordcount: '92'
 ht-degree: 0%
 
 ---
@@ -15,4 +12,4 @@ ht-degree: 0%
 
 # Panoramica {#configure-the-player-user-interface-overview}
 
-Con TVSDK, potete controllare l&#39;esperienza di riproduzione di base per video live e video on demand (VOD). Invece di configurare il lettore, TVSDK fornisce metodi e proprietà sull&#39;istanza del lettore che è possibile utilizzare per configurare l&#39;interfaccia utente del lettore.
+Con il TVSDK, è possibile controllare l&#39;esperienza di riproduzione di base per live e video on demand (VOD). Invece di configurare il lettore, TVSDK fornisce i metodi e le proprietà sull&#39;istanza del lettore che è possibile utilizzare per configurare l&#39;interfaccia utente del lettore.
