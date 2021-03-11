@@ -1,25 +1,23 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Impostare il token XSTS nel lettore
-title: Impostare il token XSTS nel lettore
-uuid: 8995e029-deee-4e23-9cda-a50de8c4f2c0
+title: Imposta il token XSTS nel lettore
+description: Imposta il token XSTS nel lettore
+copied-description: true
 translation-type: tm+mt
-source-git-commit: b7f52b71bde1d7bf59ef51d4f6f90dfaa07e347b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '66'
+source-wordcount: '64'
 ht-degree: 0%
 
 ---
 
 
-# Impostare il token XSTS nel lettore{#set-the-xsts-token-in-your-player}
+# Imposta il token XSTS nel lettore{#set-the-xsts-token-in-your-player}
 
-In Xbox360, il token viene impostato in modo asincrono in risposta all&#39;evento `MediaPlayer.RequestKeyAttribute`.
+In Xbox360, imposti il token in modo asincrono in risposta all&#39;evento `MediaPlayer.RequestKeyAttribute` .
 
-Impostate il token XSTS.
+Imposta il token XSTS.
 
-L&#39;app di esempio fornita con il software mostra come impostare il token XSTS nel lettore. Segue il frammento di codice relativo al lettore di esempio:
+L’app di esempio abbinata al software mostra come impostare il token XSTS nel lettore. Di seguito è riportato lo snippet di codice relativo dal sample player:
 
 ```
    MediaPlayer mMediaPlayer;  
