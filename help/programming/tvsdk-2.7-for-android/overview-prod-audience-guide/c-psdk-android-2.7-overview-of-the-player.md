@@ -1,58 +1,55 @@
 ---
-description: TVSDK per Android 2.5 include una serie di funzionalità che puoi implementare nei lettori.
-seo-description: TVSDK per Android 2.5 include una serie di funzionalità che puoi implementare nei lettori.
-seo-title: Funzioni Primetime TVSDK
-title: Funzioni Primetime TVSDK
-uuid: 20ef9abf-1a33-4afc-bb2e-4910e3398a7a
+description: TVSDK per Android 2.5 include una varietà di funzioni che puoi implementare nei tuoi lettori.
+title: Funzioni TVSDK di Primetime
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
 
 
-# Funzioni Primetime TVSDK {#primetime-tvsdk-features}
+# Funzioni TVSDK di Primetime {#primetime-tvsdk-features}
 
-TVSDK per Android 2.7 include una serie di funzionalità che puoi implementare nei lettori.
+TVSDK per Android 2.7 include una varietà di funzioni che puoi implementare nei tuoi lettori.
 
 Funzionalità TVSDK:
 
-* **VOD e riproduzione live/lineare**
+* **Riproduzione VOD e live/lineare**
 
    * Gestione della finestra di riproduzione, compresi i metodi che riproducono, fermano, mettono in pausa, cercano e recuperano la posizione della testina di riproduzione
-   * Supporto per la riproduzione a tutti gli eventi
+   * Supporto per la riproduzione a eventi completi
    * Sottotitoli codificati (608, 708, WebVTT) e moduli audio alternativi per una maggiore accessibilità
    * Controlli per lo stile del testo nelle didascalie
-   * Funzionalità DVR, avanzamento rapido e riavvolgimento rapido (gli ultimi due sono noti come *modalità &quot;trucco-play&quot;*)
-   * Logica di bitrate adattivo (ABR) e configurazione iniziale dei controlli ABR
-   * Supporto del failover del manifesto in diretta
+   * Funzionalità DVR, avanzamento rapido e riavvolgimento rapido (le ultime due sono note come *modalità di riproduzione a trucco*)
+   * Logica del bit rate adattivo (ABR) e configurazione iniziale dei controlli ABR
+   * Supporto del failover del manifesto in tempo reale
    * Buffer di riproduzione regolabili
-   * Supporto per il tracciamento della durata, delle dimensioni e del tempo di scaricamento dei frammenti
+   * Supporto per il tracciamento di tempi e dimensioni dei frammenti e del tempo necessario per il download
 
 * **Pubblicità**
 
    * VPAID 2.0
-   * Cuciture lato client
+   * Unione di annunci lato client
 
-      * Inserimento di annunci senza problemi, compreso il supporto per VAST/VMAP
-      * Supporto per i tag cue personalizzati per gli annunci
-      * Supporto per la marcatura, la sostituzione e l&#39;eliminazione di annunci C3
-      * Flusso di lavoro personalizzabile per l’inserimento di contenuti/annunci, compresa la segnalazione di blackout
+      * Inserimento senza problemi di annunci, compreso il supporto per VAST/VMAP
+      * Supporto per tag cue personalizzati per gli annunci
+      * Supporto per la marcatura, la sostituzione e l’eliminazione degli annunci C3
+      * Flusso di lavoro di inserimento di contenuti/annunci personalizzabili, inclusa la segnaletica di blackout
 
 * **Protezione dei contenuti**
 
    * Accesso ai servizi relativi alla gestione dei diritti digitali (DRM)
-   * Riproduzione di flussi HLS non crittografati o con lo streaming HTTP Live protetto (PHLS)
-   * Controllo dell&#39;output basato sulla risoluzione, basato su criteri DRM
+   * Riproduzione di flussi HLS non crittografati o con HTTP Live Streaming (PHLS) protetto
+   * Controllo dell&#39;uscita basato su risoluzione, basato su criteri DRM
 
-* **Tracciamento di video e annunci**
+* **Tracciamento video e annunci**
 
-   * Tracciamento evento QoS
-   * Notifiche che aiutano TVSDK e la tua applicazione a comunicare in modo asincrono lo stato di video, annunci pubblicitari e altri elementi. Notifiche anche attività di registro.
+   * Tracciamento degli eventi QoS
+   * Notifiche che aiutano TVSDK e la tua applicazione a comunicare in modo asincrono lo stato di video, annunci pubblicitari e altri elementi. Le notifiche registrano anche l’attività .
 
 * **Registrazione**
 
    * Debug logging
-   * Supporto per il monitoraggio di durata, dimensioni e tempo di download dei frammenti.
+   * Supporto per il tracciamento di durata, dimensioni e tempo di download dei frammenti.
