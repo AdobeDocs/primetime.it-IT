@@ -1,13 +1,10 @@
 ---
-description: TVSDK invia eventi di metadati temporizzati e genera metadati temporizzati ogni volta che si incontrano tag predefiniti o personalizzati o quando una playlist cambia in un manifesto. Gli eventi vengono inviati nell’ordine in cui appaiono nel manifest.
-seo-description: TVSDK invia eventi di metadati temporizzati e genera metadati temporizzati ogni volta che si incontrano tag predefiniti o personalizzati o quando una playlist cambia in un manifesto. Gli eventi vengono inviati nell’ordine in cui appaiono nel manifest.
-seo-title: Eventi di metadati temporizzati
+description: TVSDK invia eventi di metadati temporizzati e genera metadati temporizzati ogni volta che si incontrano tag predefiniti o personalizzati o quando una playlist cambia in un manifesto. Gli eventi vengono inviati nell'ordine in cui compaiono nel manifesto.
 title: Eventi di metadati temporizzati
-uuid: 69c43701-6ffa-45fe-a104-fe81391222e7
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '108'
 ht-degree: 0%
 
 ---
@@ -15,10 +12,10 @@ ht-degree: 0%
 
 # Eventi metadati temporizzati{#timed-metadata-events}
 
-TVSDK invia eventi di metadati temporizzati e genera metadati temporizzati ogni volta che si incontrano tag predefiniti o personalizzati o quando una playlist cambia in un manifesto. Gli eventi vengono inviati nell’ordine in cui appaiono nel manifest.
+TVSDK invia eventi di metadati temporizzati e genera metadati temporizzati ogni volta che si incontrano tag predefiniti o personalizzati o quando una playlist cambia in un manifesto. Gli eventi vengono inviati nell&#39;ordine in cui compaiono nel manifesto.
 
-Il lettore implementa le azioni in base ai seguenti eventi:
+Il lettore implementa azioni basate sui seguenti eventi:
 
-* `TimedMetadataEvent.TIMED_METADATA_ID3_ADDED`: Inviato quando vengono elaborati metadati ID3 temporizzati.
-* `TimedMetadataEvent.TIMED_METADATA_SKIPPED`: Inviato quando i metadati temporizzati venivano elaborati e non veniva rilevata alcuna opportunità.
+* `TimedMetadataEvent.TIMED_METADATA_ID3_ADDED`: Inviato quando sono stati elaborati i metadati temporizzati ID3.
+* `TimedMetadataEvent.TIMED_METADATA_SKIPPED`: Inviato quando i metadati temporizzati sono stati elaborati e non è stata rilevata alcuna opportunità.
 
