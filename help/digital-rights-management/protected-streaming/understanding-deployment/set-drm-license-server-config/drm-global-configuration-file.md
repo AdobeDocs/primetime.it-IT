@@ -1,13 +1,10 @@
 ---
-description: Il file di configurazione flashaccess-global.xml include impostazioni valide per tutti i tenant del server licenze.
-seo-description: Il file di configurazione flashaccess-global.xml include impostazioni valide per tutti i tenant del server licenze.
-seo-title: File di configurazione globale
+description: Il file di configurazione flashaccess-global.xml include impostazioni che si applicano a tutti gli tenant del server licenze.
 title: File di configurazione globale
-uuid: 294d6cff-be07-4b4b-8aa6-943044a1c56f
 translation-type: tm+mt
-source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '129'
 ht-degree: 0%
 
 ---
@@ -15,18 +12,18 @@ ht-degree: 0%
 
 # File di configurazione globale{#global-configuration-file}
 
-Il file di configurazione flashaccess-global.xml include impostazioni valide per tutti i tenant del server licenze.
+Il file di configurazione flashaccess-global.xml include impostazioni che si applicano a tutti gli tenant del server licenze.
 
 È necessario inserire il file di configurazione nella directory [!DNL LicenseServer.ConfigRoot].
 
-Vedere la directory [!DNL configs] per un esempio di file di configurazione globale.
+Per un esempio di file di configurazione globale, consulta la directory [!DNL configs] .
 
 Il file di configurazione globale include:
 
-* Caching Controlla la memorizzazione nella cache dei file di configurazione.
+* Memorizzazione in cache — controlla il caching dei file di configurazione nella memoria.
 
-   Per informazioni sulle impostazioni di memorizzazione nella cache, vedere *Aggiornamento dei file di configurazione*.
-* Registrazione — Specifica il livello di registrazione e la frequenza con cui viene eseguito il rollout dei file di registro.
-* password HSM — Obbligatorio solo se viene utilizzato un HSM per memorizzare le credenziali del server.
+   Per informazioni sulle impostazioni di memorizzazione in cache, consulta *Aggiornamento dei file di configurazione* .
+* Logging - Specifica il livello di registrazione e la frequenza di scorrimento dei file di registro.
+* Password HSM — necessaria solo se viene utilizzato un HSM per memorizzare le credenziali del server.
 
-Per ulteriori informazioni, vedere i commenti nel file di configurazione globale di esempio che si trova in DRM `<DVD>`\ Adobe Primetime DRM Server for Protected Streaming\configs.
+Per ulteriori informazioni, vedere i commenti nel file di configurazione globale di esempio che si trova in DRM `<DVD>`\Adobe Primetime DRM Server for Protected Streaming\configs.
