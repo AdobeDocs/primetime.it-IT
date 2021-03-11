@@ -1,23 +1,20 @@
 ---
-description: Controlla le limitazioni e i requisiti per flussi e playlist (manifesti), comprese le chiavi di crittografia DRM.
-seo-description: Controlla le limitazioni e i requisiti per flussi e playlist (manifesti), comprese le chiavi di crittografia DRM.
-seo-title: Requisiti di contenuto e manifesto
-title: Requisiti di contenuto e manifesto
-uuid: 53cc570a-be33-4488-95e8-43f91b559b13
+description: Controlla le restrizioni e i requisiti per i flussi e le playlist (manifesti), incluse le chiavi di crittografia DRM.
+title: Requisiti relativi al contenuto e al manifesto
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '117'
+source-wordcount: '99'
 ht-degree: 0%
 
 ---
 
 
-# Requisiti di contenuto e manifesto {#content-and-manifest-requirements}
+# Requisiti relativi al contenuto e al manifesto {#content-and-manifest-requirements}
 
-Controlla le limitazioni e i requisiti per flussi e playlist (manifesti), comprese le chiavi di crittografia DRM.
+Controlla le restrizioni e i requisiti per i flussi e le playlist (manifesti), incluse le chiavi di crittografia DRM.
 
-| Includere e impostare la proprietà `RESOLUTION` per ogni flusso ABR nel file manifesto. È necessario utilizzare l&#39;Flash Player 14 o successivo. |
+| Includi e imposta la proprietà `RESOLUTION` per ogni flusso ABR nel file manifesto. È necessario utilizzare il Flash Player 14 o versione successiva. |
 |---|
-| Se il flusso protetto da DRM è a bitrate multiplo (MBR), la chiave di crittografia DRM utilizzata per l&#39;MBR deve essere la stessa utilizzata per tutti i flussi di bitrate. |
-| Devono avere le stesse rappresentazioni bitrate delle rappresentazioni del contenuto principale. |
+| Se il flusso protetto da DRM è a bit rate multiplo (MBR), la chiave di crittografia DRM utilizzata per l&#39;MBR deve essere la stessa della chiave utilizzata in tutti i flussi a bit rate. |
+| Deve avere le stesse rappresentazioni a bit rate delle rappresentazioni del contenuto principale. |
