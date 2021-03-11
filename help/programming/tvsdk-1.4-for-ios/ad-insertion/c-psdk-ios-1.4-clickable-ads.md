@@ -1,13 +1,10 @@
 ---
-description: TVSDK fornisce informazioni utili per agire sugli annunci click-through. Durante la creazione dell’interfaccia utente del lettore, è necessario decidere come rispondere quando un utente fa clic su un annuncio selezionabile.
-seo-description: TVSDK fornisce informazioni utili per agire sugli annunci click-through. Durante la creazione dell’interfaccia utente del lettore, è necessario decidere come rispondere quando un utente fa clic su un annuncio selezionabile.
-seo-title: Annunci cliccabili
+description: TVSDK fornisce informazioni utili per intervenire sugli annunci click-through. Quando crei la tua interfaccia utente del lettore, devi decidere come rispondere quando un utente fa clic su un annuncio cliccabile.
 title: Annunci cliccabili
-uuid: dc02cba7-34ad-4c74-9ceb-2fc1050d54aa
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '326'
 ht-degree: 0%
 
 ---
@@ -15,39 +12,39 @@ ht-degree: 0%
 
 # Annunci cliccabili{#clickable-ads}
 
-TVSDK fornisce informazioni utili per agire sugli annunci click-through. Durante la creazione dell’interfaccia utente del lettore, è necessario decidere come rispondere quando un utente fa clic su un annuncio selezionabile.
+TVSDK fornisce informazioni utili per intervenire sugli annunci click-through. Quando crei la tua interfaccia utente del lettore, devi decidere come rispondere quando un utente fa clic su un annuncio cliccabile.
 
 In TVSDK per iOS, è possibile fare clic solo sugli annunci lineari.
 
 ## Rispondi ai clic sugli annunci {#section_537AF2593FDB4257B81AAE2103B0C719}
 
-Quando un utente fa clic su un annuncio, un banner pubblicitario complementare o un pulsante correlato, l&#39;applicazione deve rispondere. TVSDK fornisce informazioni sull’URL di destinazione per il clic.
+Quando un utente fa clic su un annuncio, su un annuncio pubblicitario correlato o su un pulsante correlato, l&#39;applicazione deve rispondere. TVSDK fornisce informazioni sull’URL di destinazione per il clic.
 
-1. Per impostare un listener di eventi per TVSDK e fornire le informazioni relative al click-through, aggiungere un osservatore per `PTMediaPlayerAdClickNotification`.
+1. Per impostare un listener di eventi per TVSDK e fornire le informazioni sul click-through, aggiungi un osservatore per `PTMediaPlayerAdClickNotification`.
 
    >[!NOTE]
    >
-   >Quando un utente fa clic su un annuncio, un banner pubblicitario complementare o un pulsante correlato, TVSDK invia la notifica, incluse le informazioni sulla destinazione del clic.
+   >Quando un utente fa clic su un annuncio, un annuncio pubblicitario correlato o un pulsante correlato, TVSDK invia questa notifica, incluse le informazioni sulla destinazione del clic.
 
 1. Monitora le interazioni degli utenti sugli annunci cliccabili.
-1. Quando l&#39;utente tocca o fa clic sull&#39;annuncio o sul pulsante, per inviare una notifica a TVSDK, utilizza `[_player notifyClick:_currentAd.primaryAsset];`.
-1. Ascoltare l&#39;evento `PTMediaPlayerAdClickNotification` da TVSDK.
-1. Per recuperare l&#39;URL di click-through e le relative informazioni, utilizzare l&#39;oggetto `PTMediaPlayerAdClickURLKey`.
-1. Metti in pausa il video.
-1. Utilizzate le informazioni di click-through per visualizzare l&#39;URL di click-through dell&#39;annuncio e le relative informazioni.
+1. Quando l’utente tocca o fa clic sull’annuncio o sul pulsante, per inviare una notifica a TVSDK, utilizza `[_player notifyClick:_currentAd.primaryAsset];`.
+1. Ascolta l’evento `PTMediaPlayerAdClickNotification` da TVSDK.
+1. Per recuperare l’URL di click-through e le relative informazioni, utilizzare l’oggetto `PTMediaPlayerAdClickURLKey` .
+1. Mette in pausa il video.
+1. Utilizza le informazioni di click-through per visualizzare l’URL di click-through dell’annuncio e le relative informazioni.
 
    >[!NOTE]
    >
-   >Ad esempio, potete visualizzare le informazioni in uno dei seguenti modi:
+   >Ad esempio, puoi visualizzare le informazioni in uno dei seguenti modi:
 
    * Nell’applicazione aprendo l’URL di click-through in un browser.
 
-      Sulle piattaforme desktop, l’area di riproduzione dell’annuncio video viene utilizzata per richiamare gli URL di click-through ai clic dell’utente.
-   * Reindirizzare gli utenti al browser Web esterno per dispositivi mobili.
+      Sulle piattaforme desktop, l’area di riproduzione degli annunci video viene utilizzata per richiamare URL click-through ai clic dell’utente.
+   * Reindirizza gli utenti al browser web per dispositivi mobili esterno.
 
-      Sui dispositivi mobili, l’area di riproduzione video e video è utilizzata per altre funzioni, come nascondere e mostrare i controlli, mettere in pausa la riproduzione, espandere la visualizzazione a schermo intero e così via. Su questi dispositivi, per avviare l’URL di click-through viene utilizzata una visualizzazione separata, ad esempio un pulsante di sponsorizzazione.
+      Sui dispositivi mobili, l’area di riproduzione degli annunci video viene utilizzata per altre funzioni, ad esempio per nascondere e visualizzare i controlli, mettere in pausa la riproduzione, espandere a schermo intero e così via. Su questi dispositivi viene utilizzata una visualizzazione separata, ad esempio un pulsante di sponsorizzazione, per avviare l’URL di click-through.
 
-1. Chiudete la finestra del browser in cui vengono visualizzate le informazioni di click-through e riavviate la riproduzione del video.
+1. Chiudi la finestra del browser in cui vengono visualizzate le informazioni relative al click-through e riprende la riproduzione del video.
 
    Ad esempio:
 
