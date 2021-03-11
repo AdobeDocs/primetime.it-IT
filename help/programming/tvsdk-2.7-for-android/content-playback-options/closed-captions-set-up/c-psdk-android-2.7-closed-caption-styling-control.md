@@ -1,34 +1,31 @@
 ---
-description: È possibile fornire informazioni sullo stile per le tracce di sottotitoli codificati utilizzando la classe TextFormat, che imposta lo stile per le didascalie chiuse visualizzate dal lettore.
-seo-description: È possibile fornire informazioni sullo stile per le tracce di sottotitoli codificati utilizzando la classe TextFormat, che imposta lo stile per le didascalie chiuse visualizzate dal lettore.
-seo-title: Controllo dello stile dei sottotitoli codificati
-title: Controllo dello stile dei sottotitoli codificati
-uuid: fa4f637f-f13c-465d-8eee-5e66a6dd9db2
+description: È possibile fornire informazioni sullo stile per le tracce di didascalia chiusa utilizzando la classe TextFormat, che imposta lo stile per le didascalie chiuse visualizzate dal lettore.
+title: Controllare lo stile dei sottotitoli
 translation-type: tm+mt
-source-git-commit: b02dfafdc78ca209da5ba0ed855342952be4288f
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '853'
 ht-degree: 0%
 
 ---
 
 
-# Controllo dello stile dei sottotitoli codificati {#control-closed-caption-styling}
+# Controllare lo stile dei sottotitoli {#control-closed-caption-styling}
 
-È possibile fornire informazioni sullo stile per le tracce di sottotitoli codificati utilizzando la classe TextFormat, che imposta lo stile per le didascalie chiuse visualizzate dal lettore.
+È possibile fornire informazioni sullo stile per le tracce di didascalia chiusa utilizzando la classe TextFormat, che imposta lo stile per le didascalie chiuse visualizzate dal lettore.
 
-Questa classe racchiude informazioni sullo stile dei sottotitoli codificati quali tipo di font, dimensione, colore e opacità dello sfondo.
+Questa classe racchiude informazioni sullo stile dei sottotitoli codificati quali tipo di font, dimensioni, colore e opacità dello sfondo.
 
-## Impostare gli stili di sottotitoli codificati {#section_C9B5E75C70DD42E59DC4DD0F308C8216}
+## Impostare gli stili di sottotitoli {#section_C9B5E75C70DD42E59DC4DD0F308C8216}
 
-Potete formattare il testo dei sottotitoli codificati con i metodi TVSDK.
+È possibile personalizzare lo stile del testo a didascalia chiusa con i metodi TVSDK.
 
-1. Attendete che il lettore multimediale sia almeno nello stato `PREPARED`.
-1. Create un&#39;istanza `TextFormatBuilder`.
+1. Attendi che il lettore multimediale sia almeno nello stato `PREPARED`.
+1. Crea un&#39;istanza `TextFormatBuilder`.
 
-   Potete fornire ora tutti i parametri di stile per i sottotitoli codificati o impostarli successivamente.
+   Ora puoi fornire tutti i parametri di stile dei sottotitoli o impostarli in un secondo momento.
 
-   TVSDK racchiude informazioni sullo stile dei sottotitoli codificati nell&#39;interfaccia `TextFormat`. La classe `TextFormatBuilder` crea oggetti che implementano questa interfaccia.
+   TVSDK incapsula le informazioni sullo stile dei sottotitoli nell&#39;interfaccia `TextFormat`. La classe `TextFormatBuilder` crea oggetti che implementano questa interfaccia.
 
    ```java
    public TextFormatBuilder( 
@@ -46,19 +43,19 @@ Potete formattare il testo dei sottotitoli codificati con i metodi TVSDK.
       java.lang.String safeArea)
    ```
 
-1. Per ottenere un riferimento a un oggetto che implementa l&#39;interfaccia `TextFormat`, chiamare il metodo pubblico `TextFormatBuilder.toTextFormat`.
+1. Per ottenere un riferimento a un oggetto che implementa l&#39;interfaccia `TextFormat`, chiamare il metodo pubblico `TextFormatBuilder.toTextFormat` .
 
    >[!NOTE]
    >
-   >Questo restituisce un oggetto `TextFormat` che può essere applicato al lettore multimediale.
+   >Restituisce un oggetto `TextFormat` che può essere applicato al lettore multimediale.
 
    ```java
    public TextFormat toTextFormat()
    ```
 
-1. Facoltativamente, per ottenere le impostazioni correnti per lo stile dei sottotitoli codificati, effettuate una delle seguenti operazioni:
+1. Facoltativamente, ottenere le impostazioni correnti dello stile dei sottotitoli codificati eseguendo una delle operazioni seguenti:
 
-   * Ottenere tutte le impostazioni di stile con `MediaPlayer.getCCStyle` Il valore restituito è un&#39;istanza dell&#39;interfaccia `TextFormat`.
+   * Ottieni tutte le impostazioni di stile con `MediaPlayer.getCCStyle` Il valore restituito è un&#39;istanza dell&#39;interfaccia `TextFormat`.
 
       ```java
       /** 
@@ -70,7 +67,7 @@ Potete formattare il testo dei sottotitoli codificati con i metodi TVSDK.
       public TextFormat getCCStyle() throws MediaPlayerException;
       ```
 
-   * Ottenete le impostazioni una alla volta tramite i metodi getter dell&#39;interfaccia `TextFormat`.
+   * Ottieni le impostazioni una alla volta tramite i metodi getter dell&#39;interfaccia `TextFormat` .
 
       ```java
       public java.lang.String getFontColor(); 
@@ -86,7 +83,7 @@ Potete formattare il testo dei sottotitoli codificati con i metodi TVSDK.
       public java.lang.String getSafeArea(java.lang.String sa);
       ```
 
-1. Per modificare le impostazioni di stile, effettuare una delle seguenti operazioni:
+1. Per modificare le impostazioni dello stile, effettuare una delle seguenti operazioni:
 
    * Utilizzare il metodo setter `MediaPlayer.setCCStyle`, passando un&#39;istanza dell&#39;interfaccia `TextFormat`:
 
@@ -104,9 +101,9 @@ Potete formattare il testo dei sottotitoli codificati con i metodi TVSDK.
       public void setCCStyle(TextFormat textFormat) throws MediaPlayerException;
       ```
 
-   * Utilizzare la classe `TextFormatBuilder`, che definisce i singoli metodi setter.
+   * Utilizzare la classe `TextFormatBuilder`, che definisce i singoli metodi di setter.
 
-      L&#39;interfaccia `TextFormat` definisce un oggetto immutabile, pertanto esistono solo metodi getter e nessun setter. È possibile impostare i parametri di stile dei sottotitoli codificati solo con la classe `TextFormatBuilder`:
+      L&#39;interfaccia `TextFormat` definisce un oggetto immutabile in modo che esistano solo metodi getter e senza setter. È possibile impostare i parametri di stile dei sottotitoli solo con la classe `TextFormatBuilder` :
 
       ```java
       // set font type 
@@ -131,18 +128,18 @@ Potete formattare il testo dei sottotitoli codificati con i metodi TVSDK.
 
       >[!IMPORTANT]
       >
-      >**Impostazioni colore:** In Android TVSDK 2.X, è stato migliorato lo stile dei colori dei sottotitoli codificati. Questa funzione consente di impostare i colori dei sottotitoli codificati utilizzando una stringa esadecimale che rappresenta i valori di colore RGB. La rappresentazione del colore esadecimale RGB è la nota stringa a 6 byte utilizzata in applicazioni come Photoshop:
+      >**Impostazioni colore:** in Android TVSDK 2.X, è stato migliorato lo stile del colore dei sottotitoli codificati. Il miglioramento consente di impostare i colori dei sottotitoli utilizzando una stringa esadecimale che rappresenta i valori di colore RGB. La rappresentazione del colore esadecimale RGB è la nota stringa a 6 byte utilizzata in applicazioni come Photoshop:
       >
-      >* FFFF = Nero
+      >* FFFF = nero
       >* 000000 = Bianco
-      >* FF0000 = Rosso
+      >* FF0000 = rosso
       >* 00FF00 = Verde
       >* 0000FF = Blu
 
       >
       >e così via.
       >
-      >Nell&#39;applicazione, ogni volta che trasmettete le informazioni sullo stile del colore a `TextFormatBuilder`, utilizzate comunque l&#39;enumerazione `Color` come precedente, ma ora dovete aggiungere `getValue()` al colore per ottenere il valore come stringa. Ad esempio:
+      >Nell&#39;applicazione, ogni volta che trasmetti informazioni sullo stile del colore a `TextFormatBuilder`, utilizzi comunque l&#39;enumerazione `Color` come prima, ma ora devi aggiungere `getValue()` al colore per ottenere il valore come stringa. Ad esempio:
       >
       >
       ```
@@ -152,11 +149,11 @@ Potete formattare il testo dei sottotitoli codificati con i metodi TVSDK.
 
 
 
-L&#39;impostazione dello stile dei sottotitoli codificati è un&#39;operazione asincrona, pertanto la visualizzazione delle modifiche sullo schermo potrebbe richiedere alcuni secondi.
+L’impostazione dello stile dei sottotitoli è un’operazione asincrona, pertanto potrebbero essere necessari fino a pochi secondi affinché le modifiche vengano visualizzate sullo schermo.
 
-## Opzioni di stile dei sottotitoli codificati {#section_6D685EC2D58C42A2BDDD574EDFCCC2A0}
+## Opzioni per lo stile dei sottotitoli {#section_6D685EC2D58C42A2BDDD574EDFCCC2A0}
 
-È possibile specificare diverse opzioni di stile delle didascalie, che sostituiscono le opzioni di stile nelle didascalie originali.
+È possibile specificare diverse opzioni di stile per le didascalie e queste opzioni sostituiscono le opzioni di stile nelle didascalie originali.
 
 ```java
 public TextFormatBuilder( 
@@ -176,7 +173,7 @@ public TextFormatBuilder(
 
 >[!TIP]
 >
->Nelle opzioni che definiscono i valori predefiniti (ad esempio, `DEFAULT`), tale valore si riferisce a ciò che era l&#39;impostazione quando la didascalia era originariamente specificata.
+>Nelle opzioni che definiscono i valori predefiniti (ad esempio, `DEFAULT`), tale valore si riferisce all’impostazione quando la didascalia è stata originariamente specificata.
 
 <table frame="all" colsep="1" rowsep="1" id="table_87205DEFEE384AF4AF83952B15E18A42"> 
  <thead> 
@@ -188,21 +185,21 @@ public TextFormatBuilder(
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> Font </td> 
-   <td colname="2"> <p>Il tipo di carattere. </p> <p>Può essere impostato solo su un valore definito dall'enumerazione <span class="codeph"> TextFormat.Font </span> e rappresenta, ad esempio, un'area di controllo con o senza serifi. </p> <p>Suggerimento:  I font effettivamente disponibili su un dispositivo possono variare e, se necessario, vengono utilizzate delle sostituzioni. Il monospazio con i serifi viene in genere utilizzato come sostituto, anche se questa sostituzione può essere specifica del sistema. </p> </td> 
+   <td colname="2"> <p>Tipo di carattere. </p> <p>Può essere impostato solo su un valore definito dall'enumerazione <span class="codeph"> TextFormat.Font </span> e che rappresenta, ad esempio, la spaziatura con o senza serifs. </p> <p>Suggerimento:  I font effettivi disponibili su un dispositivo possono variare e vengono utilizzati sostituzioni quando necessario. Monospazio con i sieri viene generalmente utilizzato come sostituto, anche se questa sostituzione può essere specifica del sistema. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> Dimensioni </td> 
-   <td colname="2"> <p>Dimensione della didascalia. </p> <p> È possibile impostare solo un valore definito dall'enumerazione <span class="codeph"> TextFormat.Size </span>: 
+   <td colname="1"> Dimensione </td> 
+   <td colname="2"> <p>Dimensione della didascalia. </p> <p> Può essere impostato solo su un valore definito dall'enumerazione <span class="codeph"> TextFormat.Size </span> : 
      <ul compact="yes" id="ul_544BFC7A46474A74839477108F1AB1E9"> 
-      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDIUM  </span> - Dimensione standard </li> 
+      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDIA  </span> - Dimensione standard </li> 
       <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> GRANDE  </span> - Circa il 30% più grande del medio </li> 
-      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> PICCOLA  </span> - Circa il 30% inferiore al medio </li> 
-      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> PREDEFINITO  </span> - La dimensione predefinita della didascalia; come media </li> 
+      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> PICCOLO  </span> - Circa il 30% inferiore rispetto al medio </li> 
+      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> PREDEFINITO  </span> - Dimensione predefinita della didascalia; uguale al mezzo </li> 
      </ul> </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Bordo font </td> 
-   <td colname="2"> <p>Effetto usato per il bordo del font, ad esempio sollevato o nessuno. </p> <p>Può essere impostato solo su un valore definito dall'enumerazione <span class="codeph"> TextFormat.FontEdge </span>. </p> </td> 
+   <td colname="2"> <p>Effetto utilizzato per lo spigolo del font, ad esempio sollevato o nessuno. </p> <p>Può essere impostato solo su un valore definito dall'enumerazione <span class="codeph"> TextFormat.FontEdge </span>. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Colore font </td> 
@@ -210,35 +207,35 @@ public TextFormatBuilder(
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Colore bordo </td> 
-   <td colname="2"> <p>Colore dell’effetto bordo. </p> <p>Può essere impostato su uno qualsiasi dei valori disponibili per il colore del font. </p> </td> 
+   <td colname="2"> <p>Colore dell'effetto bordo. </p> <p>Può essere impostato su uno qualsiasi dei valori disponibili per il colore del font. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Colore di sfondo </td> 
-   <td colname="2"> <p>Colore della cella del carattere di sfondo. </p> <p>Può essere impostato solo su valori disponibili per il colore del font. </p> </td> 
+   <td colname="2"> <p>Colore della cella del carattere di sfondo. </p> <p>Può essere impostato solo sui valori disponibili per il colore del font. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Colore riempimento </td> 
    <td colname="2"> <p>Colore dello sfondo della finestra in cui si trova il testo. </p> <p>Può essere impostato su uno qualsiasi dei valori disponibili per il colore del font. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> Opacità del font </td> 
-   <td colname="2"> <p>Opacità del testo. </p> <p>Espressa come percentuale da 0 (completamente trasparente) a 100 (completamente opaca). <span class="codeph"> DEFAULT_OPACITY  </span> per il font è 100. </p> </td> 
+   <td colname="1"> opacità del carattere </td> 
+   <td colname="2"> <p>opacità del testo. </p> <p>Espresso in percentuale da 0 (completamente trasparente) a 100 (completamente opaco). <span class="codeph"> DEFAULT_OPACITY  </span> per il font è 100. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Opacità di sfondo </td> 
-   <td colname="2"> <p>Opacità della cella del carattere di sfondo. </p> <p>Espressa come percentuale da 0 (completamente trasparente) a 100 (completamente opaca). <span class="codeph"> DEFAULT_OPACITY  </span> per lo sfondo è 100. </p> </td> 
+   <td colname="2"> <p>opacità della cella del carattere di sfondo. </p> <p>Espresso in percentuale da 0 (completamente trasparente) a 100 (completamente opaco). <span class="codeph"> DEFAULT_OPACITY  </span> per lo sfondo è 100. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> Opacità riempimento </td> 
-   <td colname="2"> <p>Opacità dello sfondo della finestra della didascalia. </p> <p>Espressa come percentuale da 0 (completamente trasparente) a 100 (completamente opaca). <span class="codeph"> DEFAULT_OPACITY  </span> per il riempimento è 0. </p> </td> 
+   <td colname="1"> Opacità di riempimento </td> 
+   <td colname="2"> <p>opacità dello sfondo della finestra della didascalia. </p> <p>Espresso in percentuale da 0 (completamente trasparente) a 100 (completamente opaco). <span class="codeph"> DEFAULT_OPACITY  </span> per il riempimento è 0. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> Margine inferiore </td> 
-   <td colname="2"> <p>Distanza verticale dalla parte inferiore della finestra della didascalia per evitare la comparsa di didascalie. </p> <p>Espressa come percentuale dell'altezza della finestra della didascalia (ad esempio, "20%") o come numero di pixel (ad esempio, "20"). </p> </td> 
+   <td colname="1"> Ingresso inferiore </td> 
+   <td colname="2"> <p>Distanza verticale dalla parte inferiore della finestra della didascalia per evitare didascalie. </p> <p>Espresso come percentuale dell’altezza della finestra della didascalia (ad esempio, "20%") o come numero di pixel (ad esempio, "20"). </p> </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"> Area di sicurezza </td> 
-   <td colname="2"> <p>Un'area intorno al bordo dello schermo compresa tra 0% e 25% in cui le didascalie non verranno visualizzate. </p> <p>Per impostazione predefinita, l'area di sicurezza per WebVTT è 0%. Questa impostazione consente all'applicazione di ignorare tale impostazione predefinita. Se vengono forniti due valori, ad esempio la stringa "10%,20%", il primo valore è l'area di sicurezza orizzontale e il secondo valore è l'area di sicurezza verticale. Se viene fornito un valore, ad esempio la stringa "15%", sia gli assi verticali che orizzontali utilizzano l'area di sicurezza specificata. </p> </td> 
+   <td colname="2"> <p>Area intorno al bordo dello schermo compresa tra 0% e 25% in cui i sottotitoli non verranno visualizzati. </p> <p>Per impostazione predefinita, l’area di sicurezza per WebVTT è 0%. Questa impostazione consente all’applicazione di ignorare tale impostazione predefinita. Se vengono forniti due valori, ad esempio la stringa "10%,20%", il primo valore è l'area di sicurezza orizzontale e il secondo valore è l'area di sicurezza verticale. Se viene fornito un valore, ad esempio la stringa "15%", sia gli assi verticali che orizzontali utilizzano l'area di sicurezza specificata. </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -247,7 +244,7 @@ public TextFormatBuilder(
 
 Di seguito sono riportati alcuni esempi che mostrano come specificare la formattazione dei sottotitoli codificati.
 
-**Esempio 1: Specificare in modo esplicito i valori di formato**
+**Esempio 1: Specificare esplicitamente i valori di formato**
 
 ```java
 private final MediaPlayer.PlaybackEventListener _playbackEventListener = 
