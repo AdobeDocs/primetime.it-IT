@@ -1,9 +1,9 @@
 ---
-seo-title: Ad-funding
-title: Ad-funding
-uuid: 5cbef309-3dc0-4403-abe1-78a9f80804fd
+title: Finanziato con annunci
+description: Finanziato con annunci
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '25'
 ht-degree: 0%
@@ -11,6 +11,6 @@ ht-degree: 0%
 ---
 
 
-# Ad-funding {#ad-funded}
+# Finanziato con annunci {#ad-funded}
 
-I contenuti vengono monetizzati includendo la pubblicità come parte dell&#39;esperienza. Con questo modello, il contenuto può essere distribuito senza richiedere l&#39;autenticazione dell&#39;utente.
+I contenuti vengono monetizzati includendo la pubblicità come parte dell’esperienza. Con questo modello, il contenuto può essere distribuito senza richiedere l’autenticazione dell’utente.
