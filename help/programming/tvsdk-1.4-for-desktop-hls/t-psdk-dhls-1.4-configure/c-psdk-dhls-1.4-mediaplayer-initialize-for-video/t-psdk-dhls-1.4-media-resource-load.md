@@ -1,13 +1,10 @@
 ---
-description: Caricate una risorsa creando direttamente un'istanza di MediaResource e caricando il contenuto video da riprodurre. Questo è uno dei modi per caricare una risorsa multimediale.
-seo-description: Caricate una risorsa creando direttamente un'istanza di MediaResource e caricando il contenuto video da riprodurre. Questo è uno dei modi per caricare una risorsa multimediale.
-seo-title: Caricamento di una risorsa multimediale in MediaPlayer
-title: Caricamento di una risorsa multimediale in MediaPlayer
-uuid: 8af3e8d1-359d-483c-b394-b95054f7265a
+description: Carica una risorsa creando direttamente un'istanza di MediaResource e caricando il contenuto video da riprodurre. Questo è un modo per caricare una risorsa multimediale.
+title: Caricare una risorsa multimediale in MediaPlayer
 translation-type: tm+mt
-source-git-commit: 84924d84bfa436a8807c2e8d74d1dc268d457051
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '276'
+source-wordcount: '244'
 ht-degree: 0%
 
 ---
@@ -15,13 +12,13 @@ ht-degree: 0%
 
 # Carica una risorsa multimediale in MediaPlayer{#load-a-media-resource-in-the-mediaplayer}
 
-Caricate una risorsa creando direttamente un&#39;istanza di MediaResource e caricando il contenuto video da riprodurre. Questo è uno dei modi per caricare una risorsa multimediale.
+Carica una risorsa creando direttamente un&#39;istanza di MediaResource e caricando il contenuto video da riprodurre. Questo è un modo per caricare una risorsa multimediale.
 
-1. Impostate l&#39;elemento riproducibile dell&#39;oggetto `MediaPlayer` con la nuova risorsa da riprodurre.
+1. Imposta l&#39;elemento riproducibile dell&#39;oggetto `MediaPlayer` con la nuova risorsa da riprodurre.
 
-   Sostituisci l&#39;elemento attualmente riproducibile di MediaPlayer esistente chiamando `MediaPlayer.replaceCurrentResource` e passando un&#39;istanza `MediaResource` esistente.
+   Sostituisci l&#39;elemento attualmente riproducibile di MediaPlayer chiamando `MediaPlayer.replaceCurrentResource` e passando un&#39;istanza `MediaResource` esistente.
 
-1. Verificare almeno le seguenti modifiche:
+1. Verifica almeno le seguenti modifiche:
 
    * INIZIALIZZATO
    * PREPARATO
@@ -29,13 +26,13 @@ Caricate una risorsa creando direttamente un&#39;istanza di MediaResource e cari
 
       Attraverso questi eventi, l&#39;oggetto `MediaPlayer` può inviare una notifica all&#39;applicazione quando la risorsa multimediale viene caricata correttamente.
 
-1. Quando lo stato del lettore multimediale diventa INITIALIZED, è possibile chiamare `MediaPlayer.prepareToPlay`
+1. Quando lo stato del lettore multimediale diventa INITIALIZED, puoi chiamare `MediaPlayer.prepareToPlay`
 
-   Lo stato INITIALIZED indica che il supporto è stato caricato correttamente. La chiamata di `prepareToPlay` avvia la risoluzione e il processo di posizionamento della pubblicità, se presente.
+   Lo stato INITIALIZED indica che il supporto è stato caricato correttamente. Una chiamata a `prepareToPlay` avvia il processo di risoluzione e posizionamento dei messaggi pubblicitari, se presente.
 
-1. Quando lo stato del lettore multimediale cambia in PREPARATO, il flusso multimediale è stato caricato correttamente ed è pronto per la riproduzione.
+1. Quando lo stato del lettore multimediale cambia in PREPARED, il flusso multimediale è stato caricato correttamente ed è pronto per la riproduzione.
 
-   Quando viene caricato il flusso multimediale, viene creato un `MediaPlayerItem`.
+   Quando il flusso multimediale viene caricato, viene creato un `MediaPlayerItem`.
 
 Se si verifica un errore, MediaPlayer passa allo stato ERROR. Invia inoltre una notifica all&#39;applicazione inviando l&#39;evento `STATUS_CHANGED` al callback `MediaPlayerStatusChangeEvent`.
 
