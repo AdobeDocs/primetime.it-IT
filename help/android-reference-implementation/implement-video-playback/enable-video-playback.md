@@ -1,13 +1,10 @@
 ---
-description: Create un PlaybackManager che gestisca la configurazione del flusso HLS e l'operazione di riproduzione. Non è richiesta alcuna altra configurazione.
-seo-description: Create un PlaybackManager che gestisca la configurazione del flusso HLS e l'operazione di riproduzione. Non è richiesta alcuna altra configurazione.
-seo-title: Abilita riproduzione video
+description: Creare un PlaybackManager che gestisce l'impostazione del flusso HLS e l'operazione di riproduzione. Non è richiesta alcuna altra configurazione.
 title: Abilita riproduzione video
-uuid: ddc0defa-c40f-4ee6-a69f-d5eeca6c2fce
 translation-type: tm+mt
-source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '165'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # Abilita riproduzione video {#enable-video-playback}
 
-Create un PlaybackManager che gestisca la configurazione del flusso HLS e l&#39;operazione di riproduzione. Non è richiesta alcuna altra configurazione.
+Creare un PlaybackManager che gestisce l&#39;impostazione del flusso HLS e l&#39;operazione di riproduzione. Non è richiesta alcuna altra configurazione.
 
-1. Creare l&#39;oggetto Media Player verificando che il codice seguente sia presente in [!DNL PlayerFragment.java]:
+1. Crea l&#39;oggetto media player assicurandoti che il seguente codice esista in [!DNL PlayerFragment.java]:
 
    ```java
    private MediaPlayer createMediaPlayer() { 
@@ -27,13 +24,13 @@ Create un PlaybackManager che gestisca la configurazione del flusso HLS e l&#39;
 
    <!-- I've duplicated this information. It also exists in the PlayerFragment section, just before the Feature manager section. I figured that I should have it here as well, in case they jump directly to this section.-->
 
-1. Create il manager di riproduzione tramite `ManagerFactory`:
+1. Crea il gestore di riproduzione attraverso `ManagerFactory`:
 
    ```java
    playbackManager = ManagerFactory.getPlaybackManager(config, mediaPlayer);
    ```
 
-1. Implementate la `PlaybackManagerEventListener` nella `PlayerFragment` per gestire gli eventi di riproduzione:
+1. Implementa `PlaybackManagerEventListener` in `PlayerFragment` per gestire gli eventi di riproduzione:
 
    ```java
    private final PlaybackManagerEventListener playbackManagerEventListener =  
@@ -46,13 +43,13 @@ Create un PlaybackManager che gestisca la configurazione del flusso HLS e l&#39;
    playbackManager.addEventListener(playbackManagerEventListener);
    ```
 
-1. Impostare la risorsa video:
+1. Imposta la risorsa video:
 
    ```
    playbackManager.setupVideo(url, adsManager); 
    ```
 
-1. Configurare le operazioni della barra di controllo in `PlayerFragment`:
+1. Impostare le operazioni della barra di controllo in `PlayerFragment`:
 
    ```
    controlBar.pressPlay() { 
@@ -62,7 +59,7 @@ Create un PlaybackManager che gestisca la configurazione del flusso HLS e l&#39;
 
 ## Documentazione API correlata {#related-api-documentation}
 
-* [Class PlaybackManager](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/PlaybackManager.html)
+* [PlaybackManager classe](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/PlaybackManager.html)
 * [PlaybackManagerEventListener](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/PlaybackManager.PlaybackManagerEventListener.html)
 * [mediacore.utils.TimeRange](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/com/adobe/mediacore/utils/TimeRange.html)
 * [mediacore.BufferControlParameters](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/com/adobe/mediacore/BufferControlParameters.html)
