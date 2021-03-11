@@ -1,39 +1,36 @@
 ---
-description: Quando la riproduzione raggiunge un’interruzione di annuncio, passa un’interruzione di annuncio o termina in un’interruzione di annuncio, TVSDK definisce alcuni comportamenti predefiniti per il posizionamento dell’indicatore di riproduzione corrente.
-seo-description: Quando la riproduzione raggiunge un’interruzione di annuncio, passa un’interruzione di annuncio o termina in un’interruzione di annuncio, TVSDK definisce alcuni comportamenti predefiniti per il posizionamento dell’indicatore di riproduzione corrente.
-seo-title: Personalizzare la riproduzione con gli annunci
+description: Quando la riproduzione raggiunge un'interruzione pubblicitaria, passa un'interruzione pubblicitaria o termina in un'interruzione pubblicitaria, TVSDK definisce un comportamento predefinito per il posizionamento della testina di riproduzione corrente.
 title: Personalizzare la riproduzione con gli annunci
-uuid: 58002ec2-65ab-4e3b-8e3b-f755ced5cb5a
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '990'
 ht-degree: 0%
 
 ---
 
 
-# Personalizza riproduzione con annunci{#customize-playback-with-ads}
+# Personalizza la riproduzione con gli annunci{#customize-playback-with-ads}
 
-Quando la riproduzione raggiunge un’interruzione di annuncio, passa un’interruzione di annuncio o termina in un’interruzione di annuncio, TVSDK definisce alcuni comportamenti predefiniti per il posizionamento dell’indicatore di riproduzione corrente.
+Quando la riproduzione raggiunge un&#39;interruzione pubblicitaria, passa un&#39;interruzione pubblicitaria o termina in un&#39;interruzione pubblicitaria, TVSDK definisce un comportamento predefinito per il posizionamento della testina di riproduzione corrente.
 
 >[!TIP]
 >
->È possibile ignorare il comportamento predefinito utilizzando la classe `PTAdPolicySelector`.
+>È possibile ignorare il comportamento predefinito utilizzando la classe `PTAdPolicySelector` .
 
-Il comportamento predefinito varia a seconda che l&#39;utente superi o meno l&#39;interruzione dell&#39;annuncio durante la riproduzione normale o ricercando in un video.
+Il comportamento predefinito varia a seconda che l’utente passi l’interruzione pubblicitaria durante la riproduzione normale o la ricerca in un video.
 
-Potete personalizzare il comportamento di riproduzione e riproduzione nei seguenti modi:
+Puoi personalizzare il comportamento della riproduzione di annunci nei seguenti modi:
 
-* Salvate la posizione in cui l’utente ha smesso di guardare il video e ha ripreso la riproduzione nella stessa posizione in una sessione futura.
-* Se un&#39;interruzione di annuncio viene presentata all&#39;utente, non vengono visualizzati annunci aggiuntivi per un certo numero di minuti, anche se l&#39;utente cerca di trovare una nuova posizione.
-* Se il contenuto non viene riprodotto dopo alcuni minuti, riavviate il flusso o eseguite il failover su un&#39;altra origine per lo stesso contenuto.
+* Salvare la posizione in cui l’utente ha interrotto la visualizzazione del video e riprendere la riproduzione nella stessa posizione in una sessione futura.
+* Se all’utente viene presentata un’interruzione pubblicitaria, non vengono visualizzati annunci aggiuntivi per un numero di minuti, anche se l’utente cerca una nuova posizione.
+* Se la riproduzione del contenuto non riesce dopo alcuni minuti, riavviare il flusso o eseguire il failover su un&#39;altra origine per lo stesso contenuto.
 
-   Nella sessione di riproduzione del failover, per consentire all&#39;utente di saltare gli annunci e riprendere la posizione precedente, è possibile disattivare gli annunci pre-roll e/o mid-roll. TVSDK fornisce metodi per abilitare la disattivazione degli annunci pre-roll e mid-roll.
+   Nella sessione di riproduzione del failover, per consentire all&#39;utente di saltare gli annunci e riprendere la precedente posizione di errore, è possibile disabilitare gli annunci pre-roll e/o mid-roll. TVSDK fornisce metodi per abilitare l’eliminazione degli annunci pre-roll e mid-roll.
 
 ## Elementi API per la riproduzione di annunci {#section_296ADE00CFEA40CBA1B46142720D13A5}
 
-TVSDK fornisce classi e metodi che possono essere utilizzati per personalizzare il comportamento di riproduzione del contenuto che contiene annunci pubblicitari.
+TVSDK fornisce classi e metodi che è possibile utilizzare per personalizzare il comportamento di riproduzione dei contenuti che contengono annunci pubblicitari.
 I seguenti elementi API sono utili per personalizzare la riproduzione:
 
 <table id="table_B07E373B9D2B425AB36466B1D42411AD"> 
@@ -46,7 +43,7 @@ I seguenti elementi API sono utili per personalizzare la riproduzione:
  <tbody> 
   <tr> 
    <td colname="col1"> <span class="codeph"> PTAdMetadata  </span> </td> 
-   <td colname="col2"> Controllate se un'interruzione annuncio deve essere contrassegnata come osservata da un visualizzatore e, in caso affermativo, quando contrassegnarla. Impostare e ottenere il criterio controllato utilizzando la proprietà <span class="codeph"> adBreakAsWatched </span>. </td> 
+   <td colname="col2"> Controlla se un'interruzione pubblicitaria deve essere contrassegnata come osservata da un visualizzatore e, in caso affermativo, quando contrassegnarla. Imposta e ottieni il criterio controllato utilizzando la proprietà <span class="codeph"> adBreakAsWatched </span> . </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> PTAdPolicySelector  </span> </td> 
@@ -60,9 +57,9 @@ I seguenti elementi API sono utili per personalizzare la riproduzione:
    <td colname="col1"> <span class="codeph"> PTMediaPlayer  </span> </td> 
    <td colname="col2"> 
     <ul id="ul_37700A741403448A8760FDDA68B099AA"> 
-     <li id="li_B465170D449E49489C5924572BEEB4A5"> <span class="codeph"> localTime  </span>. <p>Ora locale della riproduzione, ad eccezione delle interruzioni pubblicitarie inserite. </p> </li> 
-     <li id="li_D9D68CF428904BB2B84E1BCE828A90DC"> <span class="codeph"> searchToLocalTime  </span> . <p>In questo caso, la ricerca si verifica in relazione a un'ora locale nel flusso. </p> </li> 
-     <li id="li_9DBCA75537DC4824AA66B53A3FA28812"> <span class="codeph"> getTimeline.convertToLocalTime  </span>. <p>La posizione virtuale sulla timeline viene convertita nella posizione locale. </p> </li> 
+     <li id="li_B465170D449E49489C5924572BEEB4A5"> <span class="codeph"> localeTime  </span>. <p>Ora locale della riproduzione, escluse le interruzioni pubblicitarie inserite. </p> </li> 
+     <li id="li_D9D68CF428904BB2B84E1BCE828A90DC"> <span class="codeph"> cercaToLocalTime  </span> . <p>In questo caso, la ricerca si verifica in relazione a un’ora locale nel flusso. </p> </li> 
+     <li id="li_9DBCA75537DC4824AA66B53A3FA28812"> <span class="codeph"> getTimeline.convertToLocalTime  </span>. <p>La posizione virtuale nella timeline viene convertita nella posizione locale. </p> </li> 
     </ul> </td> 
   </tr> 
   <tr> 
@@ -72,27 +69,27 @@ I seguenti elementi API sono utili per personalizzare la riproduzione:
  </tbody> 
 </table>
 
-## Configurare la riproduzione personalizzata {#section_8209BAACC7814C9399988DC7DE9CF4CA}
+## Imposta riproduzione personalizzata {#section_8209BAACC7814C9399988DC7DE9CF4CA}
 
-Prima di poter personalizzare o ignorare i comportamenti degli annunci, registra l’istanza dei criteri degli annunci con TVSDK.
+Prima di poter personalizzare o sovrascrivere i comportamenti degli annunci, registra l’istanza del criterio degli annunci con TVSDK.
 
-Per personalizzare i comportamenti degli annunci, effettuate una delle seguenti operazioni:
+Per personalizzare i comportamenti degli annunci, effettua una delle seguenti operazioni:
 
 * Conformarsi al protocollo `PTAdPolicySelector` e implementare tutti i metodi di selezione dei criteri richiesti.
 
-   Questa opzione è consigliata se dovete ignorare **all** i comportamenti annunci predefiniti.
+   Questa opzione è consigliata se devi sovrascrivere **all** i comportamenti di annunci predefiniti.
 
-* Ignorate la classe `PTDefaultAdPolicySelector` e fornite implementazioni solo per quei comportamenti che richiedono la personalizzazione.
+* Ignora la classe `PTDefaultAdPolicySelector` e fornisci implementazioni solo per quei comportamenti che richiedono personalizzazione.
 
    Questa opzione è consigliata se è necessario ignorare solo **alcuni** dei comportamenti predefiniti.
 
-Per entrambe le opzioni, completare le seguenti attività:
+Per entrambe le opzioni, completa le attività seguenti:
 
-1. Registra l’istanza del criterio che deve essere utilizzata da TVSDK tramite client factory.
+1. Registra l&#39;istanza dei criteri che deve essere utilizzata da TVSDK attraverso il client factory.
 
    >[!NOTE]
    >
-   >I criteri di annunci personalizzati registrati all&#39;inizio della riproduzione vengono cancellati quando l&#39;istanza `PTMediaPlayer` viene deallocata. L&#39;applicazione deve registrare un&#39;istanza del selettore criteri ogni volta che viene creata una nuova sessione di riproduzione.
+   >I criteri degli annunci personalizzati registrati all&#39;inizio della riproduzione vengono cancellati quando l&#39;istanza `PTMediaPlayer` viene deallocata. L&#39;applicazione deve registrare un&#39;istanza del selettore dei criteri ogni volta che viene creata una nuova sessione di riproduzione.
 
    Ad esempio:
 
@@ -105,19 +102,19 @@ Per entrambe le opzioni, completare le seguenti attività:
    [[PTDefaultMediaPlayerClientFactory defaultFactory] registerAdPolicySelector:adPolicySelector];
    ```
 
-1. Implementa le personalizzazioni.
+1. Implementa le tue personalizzazioni.
 
-## Ignora interruzioni annuncio per un periodo di tempo {#section_99809BE4D9BB4DEEBBF596C746CA428A}
+## Ignora interruzioni pubblicitarie per un periodo di tempo {#section_99809BE4D9BB4DEEBBF596C746CA428A}
 
-Per impostazione predefinita, TVSDK forza la riproduzione di un&#39;interruzione di annuncio quando l&#39;utente cerca su un&#39;interruzione di annuncio. Potete personalizzare il comportamento per saltare un&#39;interruzione annuncio se il tempo trascorso da un completamento interruzione precedente è compreso entro un certo numero di minuti.
+Per impostazione predefinita, TVSDK forza la riproduzione di un’interruzione pubblicitaria quando l’utente cerca tramite un’interruzione pubblicitaria. Puoi personalizzare il comportamento per saltare un’interruzione pubblicitaria se il tempo trascorso da un precedente completamento dell’interruzione si trova entro un certo numero di minuti.
 
 >[!IMPORTANT]
 >
->Quando viene eseguito un tentativo interno di saltare un annuncio, potrebbe verificarsi una leggera pausa nella riproduzione.
+>Quando si verifica una ricerca interna per saltare un annuncio, potrebbe verificarsi una leggera pausa nella riproduzione.
 
-L&#39;esempio seguente di un selettore di criteri di pubblicità personalizzato salta gli annunci nei prossimi cinque minuti (ora dell&#39;orologio a muro) dopo che un utente ha visto un&#39;interruzione di annuncio.
+L&#39;esempio seguente di un selettore di criteri di annunci personalizzati salta gli annunci nei cinque minuti successivi (tempo di clock della bacheca) dopo che un utente ha guardato un&#39;interruzione di pubblicità.
 
-1. Registra l’istanza del criterio che deve essere utilizzata da TVSDK tramite client factory.
+1. Registra l&#39;istanza dei criteri che deve essere utilizzata da TVSDK attraverso il client factory.
 
    ```
    // Create an instance of the custom policy selector 
@@ -128,7 +125,7 @@ L&#39;esempio seguente di un selettore di criteri di pubblicità personalizzato 
    [[PTDefaultMediaPlayerClientFactory defaultFactory] registerAdPolicySelector:adPolicySelector];
    ```
 
-1. Implementate la personalizzazione.
+1. Implementa la tua personalizzazione.
 
 **PTS5MinuteSkipBreakPolicySelector.h**
 
@@ -250,25 +247,25 @@ double MIN_BREAK_INTERVAL  = 60 * 5; // 5 minutes
 @end
 ```
 
-## Salvate la posizione del video e riprendete più tardi {#section_FAE252E38CED48D4BDD38BAA4A6A20A4}
+## Salva la posizione del video e riprendi più tardi {#section_FAE252E38CED48D4BDD38BAA4A6A20A4}
 
-Potete salvare la posizione di riproduzione corrente in un video e riprendere la riproduzione nella stessa posizione in una sessione futura.
+È possibile salvare la posizione di riproduzione corrente in un video e riprendere la riproduzione nella stessa posizione in una sessione futura.
 
-Gli annunci inseriti dinamicamente differiscono tra le sessioni utente, pertanto il salvataggio della posizione **con** annunci con giunzione a coppie fa riferimento a una posizione diversa in una sessione futura. TVSDK fornisce metodi per recuperare la posizione di riproduzione ignorando gli annunci in sequenza.
+Gli annunci inseriti in modo dinamico differiscono tra le sessioni utente, pertanto il salvataggio della posizione **con** annunci uniti fa riferimento a una posizione diversa in una sessione futura. TVSDK fornisce metodi per recuperare la posizione di riproduzione ignorando gli annunci in sequenza.
 
-1. Quando l’utente esce da un video, l’applicazione recupera e salva la posizione nel video.
+1. Quando l&#39;utente chiude un video, l&#39;applicazione recupera e salva la posizione nel video.
 
    >[!TIP]
    >
    >Le durate degli annunci non sono incluse.
 
-   Le interruzioni di annuncio possono variare in ogni sessione a causa di pattern di annunci, limiti di frequenza e così via. L’ora corrente del video in una sessione potrebbe essere diversa in una sessione futura. Quando si salva una posizione nel video, l&#39;applicazione recupera l&#39;ora locale . Utilizzare la proprietà `localTime` per leggere questa posizione, che è possibile salvare sul dispositivo o in un database sul server.
+   Le interruzioni di annunci possono variare in ogni sessione a causa di pattern di annunci, limiti di frequenza e così via. L&#39;ora corrente del video in una sessione potrebbe essere diversa in una sessione futura. Quando si salva una posizione nel video, l&#39;applicazione recupera l&#39;ora locale . Utilizza la proprietà `localTime` per leggere questa posizione , che puoi salvare sul dispositivo o in un database sul server.
 
-   Ad esempio, se l&#39;utente si trova al 20° minuto del video e questa posizione include cinque minuti di annunci, `currentTime` sarà di 1200 secondi, mentre `localTime` in questa posizione sarà di 900 secondi.
+   Ad esempio, se l’utente si trova al 20° minuto del video e questa posizione include cinque minuti di annunci, `currentTime` sarà di 1200 secondi, mentre `localTime` in questa posizione sarà di 900 secondi.
 
    >[!IMPORTANT]
    >
-   >L&#39;ora locale e l&#39;ora corrente sono uguali per i flussi live/lineari. In questo caso, `convertToLocalTime` non ha alcun effetto. Per VOD, l&#39;ora locale rimane invariata mentre gli annunci suonano.
+   >L&#39;ora locale e l&#39;ora attuale sono gli stessi per i flussi live/lineari. In questo caso, `convertToLocalTime` non ha alcun effetto. Per VOD, l&#39;ora locale rimane immutata mentre gli annunci suonano.
 
    ```
    - (void) onMediaPlayerTimeChange:(NSNotification *)notification { 
@@ -283,15 +280,15 @@ Gli annunci inseriti dinamicamente differiscono tra le sessioni utente, pertanto
    }
    ```
 
-1. Per riprendere il video nella stessa posizione: Per riprendere la riproduzione del video dalla posizione salvata da una sessione precedente, utilizzate `seekToLocalTime`
+1. Per riprendere il video nella stessa posizione: Per riprendere la riproduzione del video dalla posizione salvata da una sessione precedente, utilizza `seekToLocalTime`
 
    >[!TIP]
    >
-   >Questo metodo viene chiamato solo con valori di ora locali. Se il metodo viene chiamato con i risultati dell&#39;ora corrente, si verifica un comportamento non corretto.
+   >Questo metodo viene chiamato solo con valori di ora locali. Se il metodo viene chiamato con i risultati dell&#39;ora corrente, si verifica un comportamento errato.
 
-   Per cercare l&#39;ora corrente, utilizzare `seekToTime`.
+   Per cercare l&#39;ora corrente, utilizza `seekToTime`.
 
-1. Quando l&#39;applicazione riceve l&#39;evento di modifica dello stato `PTMediaPlayerStatusReady`, cercare l&#39;ora locale salvata.
+1. Quando l&#39;applicazione riceve l&#39;evento di modifica dello stato `PTMediaPlayerStatusReady`, cerca l&#39;ora locale salvata.
 
    ```
    [self.player seekToLocalTime:CMTimeMake(900, 1) completionHandler:^(BOOL finished) { 
@@ -299,11 +296,11 @@ Gli annunci inseriti dinamicamente differiscono tra le sessioni utente, pertanto
    }];
    ```
 
-1. Specifica le interruzioni di annuncio come specificato nell&#39;interfaccia dei criteri di annuncio.
+1. Fornisci le interruzioni pubblicitarie come specificato nell&#39;interfaccia dei criteri per gli annunci.
 1. Implementa un selettore di criteri di annunci personalizzato estendendo il selettore di criteri di annunci predefinito.
 1. Fornire le interruzioni pubblicitarie che devono essere presentate all&#39;utente implementando `selectAdBreaksToPlay`
 
    >[!NOTE]
    >
-   >Questo metodo include un&#39;interruzione annuncio pre-roll e le interruzioni annuncio mid-roll prima della posizione dell&#39;ora locale. L&#39;applicazione può decidere di riprodurre un&#39;interruzione di annuncio pre-roll e riprendere fino all&#39;ora locale specificata, di riprodurre un&#39;interruzione di annuncio mid-roll e riprendere fino all&#39;ora locale specificata, o di non riprodurre interruzioni di annuncio.
+   >Questo metodo include un&#39;interruzione pubblicitaria pre-roll e le interruzioni pubblicitarie mid-roll prima della posizione dell&#39;ora locale. L&#39;applicazione può decidere di riprodurre un annuncio pre-roll e riprendere all&#39;ora locale specificata, riprodurre un&#39;interruzione pubblicitaria mid-roll e riprendere all&#39;ora locale specificata, o riprodurre senza interruzioni pubblicitarie.
 
