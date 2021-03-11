@@ -1,23 +1,20 @@
 ---
-description: In  annunci pubblicitari Adobe Primetime, puoi eseguire il targeting degli annunci su coppie chiave-valore.
-seo-description: In  annunci pubblicitari Adobe Primetime, puoi eseguire il targeting degli annunci su coppie chiave-valore.
-seo-title: Informazioni sul targeting
-title: Informazioni sul targeting
-uuid: 72114bef-36a1-4f2d-92e8-59f4885d70d2
+description: In Adobe Primetime ad Decioning puoi eseguire il targeting degli annunci su coppie chiave-valore.
+title: Informazioni di targeting
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '51'
+source-wordcount: '37'
 ht-degree: 0%
 
 ---
 
 
-# Informazioni sul targeting{#targeting-information}
+# Informazioni di targeting{#targeting-information}
 
-In  annunci pubblicitari Adobe Primetime, puoi eseguire il targeting degli annunci su coppie chiave-valore.
+In Adobe Primetime ad Decioning puoi eseguire il targeting degli annunci su coppie chiave-valore.
 
-Per trasmettere queste coppie di valori chiave a Browser TVSDK:
+Per trasmettere queste coppie di valori chiave al browser TVSDK:
 
 ```js
 var auditudeSettings = new AdobePSDK.AuditudeSettings(); 
