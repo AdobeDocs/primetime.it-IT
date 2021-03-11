@@ -1,13 +1,10 @@
 ---
-description: Dopo aver utilizzato una visualizzazione MediaPlayer per riprodurre il video, potete nasconderlo e visualizzarlo nuovamente utilizzando un metodo TVSDK o manualmente.
-seo-description: Dopo aver utilizzato una visualizzazione MediaPlayer per riprodurre il video, potete nasconderlo e visualizzarlo nuovamente utilizzando un metodo TVSDK o manualmente.
-seo-title: Nascondere una visualizzazione video
+description: Dopo aver utilizzato una visualizzazione MediaPlayer per riprodurre il video, è possibile nasconderlo e visualizzarlo nuovamente utilizzando un metodo TVSDK o manualmente.
 title: Nascondere una visualizzazione video
-uuid: 7cc02bf4-41ee-4af0-98ba-df070b50b88d
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '156'
 ht-degree: 1%
 
 ---
@@ -15,20 +12,20 @@ ht-degree: 1%
 
 # Nascondere una visualizzazione video{#hide-a-video-view}
 
-Dopo aver utilizzato una visualizzazione MediaPlayer per riprodurre il video, potete nasconderlo e visualizzarlo nuovamente utilizzando un metodo TVSDK o manualmente.
+Dopo aver utilizzato una visualizzazione MediaPlayer per riprodurre il video, è possibile nasconderlo e visualizzarlo nuovamente utilizzando un metodo TVSDK o manualmente.
 
 È necessario mettere in pausa un video prima di cancellarlo o spostarlo dal display.
-* Opzione 1: Cancella il fotogramma video con `MediaPlayer.clearVideo` &#x200B; e sostituisci il fotogramma in un secondo momento.
-   * Metti in pausa il video che vuoi nascondere.
-   * Rimuovete il fotogramma video visualizzato chiamando `MediaPlayer.clearVideo`.
-   * Per ripristinare la `MediaPlayer` in modo che possa essere riprodotta, chiamare `replaceCurrentResource` o `replaceCurrentItem`.
-* Opzione 2: Spostate la `MediaPlayer` vista fuori dallo schermo e riportatela in un secondo momento senza dover sostituire la vista.
-   * Metti in pausa il video che vuoi nascondere.
-   * Spostate la vista fuori dall’area di visualizzazione. Ad esempio:
+* Opzione 1: Cancella il fotogramma video con `MediaPlayer.clearVideo` &#x200B; e sostituiscilo successivamente.
+   * Sospendi il video che desideri nascondere.
+   * Rimuovi il fotogramma video visualizzato chiamando `MediaPlayer.clearVideo`.
+   * Per reimpostare il `MediaPlayer` in modo che possa essere riprodotto, chiamare `replaceCurrentResource` o `replaceCurrentItem`.
+* Opzione 2: Spostare la visualizzazione `MediaPlayer` dallo schermo e riportarla in un secondo momento senza sostituirla.
+   * Sospendi il video che desideri nascondere.
+   * Spostare la vista fuori dal palco. Ad esempio:
 
       ```
       view.x = -300; 
       view.y = -300;
       ```
 
-   * Per visualizzare nuovamente il video, spostate di nuovo la visualizzazione nell’area di visualizzazione.
+   * Per visualizzare nuovamente il video, sposta nuovamente la visualizzazione nell’area di visualizzazione.
