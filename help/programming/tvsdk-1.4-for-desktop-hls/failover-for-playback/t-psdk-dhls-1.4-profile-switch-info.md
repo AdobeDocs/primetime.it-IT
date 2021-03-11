@@ -1,30 +1,27 @@
 ---
-description: Quando il lettore multimediale imposta il profilo corrente su un nuovo profilo, è possibile recuperare informazioni sullo switch, ad esempio quando è stato attivato, informazioni su larghezza e altezza o perché è stato utilizzato un bitrate diverso.
-seo-description: Quando il lettore multimediale imposta il profilo corrente su un nuovo profilo, è possibile recuperare informazioni sullo switch, ad esempio quando è stato attivato, informazioni su larghezza e altezza o perché è stato utilizzato un bitrate diverso.
-seo-title: Ottenere informazioni sul commutatore di profilo
-title: Ottenere informazioni sul commutatore di profilo
-uuid: e26ad9fb-6c54-450e-ab62-784d9033d214
+description: Quando il lettore multimediale passa il profilo corrente a un nuovo profilo, è possibile recuperare informazioni sullo switch, tra cui quando è stato commutato, informazioni su larghezza e altezza, o perché è stato utilizzato un bit rate diverso.
+title: Ottieni informazioni sul commutatore del profilo
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '288'
 ht-degree: 0%
 
 ---
 
 
-# Ottenere informazioni sull&#39;interruttore del profilo{#get-information-about-profile-switch}
+# Ottieni informazioni sull&#39;interruttore del profilo{#get-information-about-profile-switch}
 
-Quando il lettore multimediale imposta il profilo corrente su un nuovo profilo, è possibile recuperare informazioni sullo switch, ad esempio quando è stato attivato, informazioni su larghezza e altezza o perché è stato utilizzato un bitrate diverso.
+Quando il lettore multimediale passa il profilo corrente a un nuovo profilo, è possibile recuperare informazioni sullo switch, tra cui quando è stato commutato, informazioni su larghezza e altezza, o perché è stato utilizzato un bit rate diverso.
 
 1. Ascoltare l&#39;evento `ProfileEvent.PROFILE_CHANGED`.
 
-   Il lettore multimediale TVSDK invia questo evento quando l&#39;algoritmo di commutazione del bitrate adattivo passa a un altro profilo a causa delle condizioni della rete o del computer. (Quando cambia il bitrate o il periodo).
-1. Quando si verifica l&#39;evento, controllare le seguenti proprietà per informazioni sullo switch:
+   Il lettore multimediale TVSDK invia questo evento quando l&#39;algoritmo di commutazione del bit rate adattivo passa a un altro profilo a causa di condizioni di rete o di macchina. (Quando cambia il bit rate o il periodo).
+1. Quando si verifica l&#39;evento, controlla le seguenti proprietà per informazioni sullo switch:
 
    * `profile`: Identificatore per il nuovo profilo in uso.
    * `time`: Tempo di flusso in cui si è verificato l&#39;interruttore.
-   * `description`: Descrizione testuale del motivo di una modifica del bitrate, sotto forma di una stringa di coppie chiave/valore separate da punto e virgola. Include un massimo di `Reason` e uno `Bitrate`. Se le informazioni non sono disponibili o il bitrate non è stato modificato, la stringa è vuota.
+   * `description`: Descrizione testuale del motivo di un cambiamento del bit rate, come stringa di coppie chiave/valore separate da punto e virgola. Include un massimo di un `Reason` e un `Bitrate`. Se le informazioni non sono disponibili o il bit rate non è stato modificato, questa stringa è vuota.
 
    <table id="table_E400FD9C57FF40CBAC14AF6847CD8301"> 
     <thead> 
@@ -48,27 +45,27 @@ Quando il lettore multimediale imposta il profilo corrente su un nuovo profilo, 
       <td colname="col1"> <span class="codeph"> Bitrate  </span> </td> 
       <td colname="col2"> 
        <ul id="ul_1B49BD90A91147359712E1AFD8877E23"> 
-       <li id="li_1C8E593C65D34742B14A8D0EAD43E0A9"> <span class="codeph"> up  </span>: Bitrate aumentato </li> 
-       <li id="li_B1A00E3985A849B6855E15CF70D79BB8"> <span class="codeph"> down  </span>: Il bit rate è diminuito </li> 
+       <li id="li_1C8E593C65D34742B14A8D0EAD43E0A9"> <span class="codeph"> up  </span>: Il bit rate è aumentato </li> 
+       <li id="li_B1A00E3985A849B6855E15CF70D79BB8"> <span class="codeph"> giù  </span>: Il bit rate è diminuito </li> 
        </ul> </td> 
       </tr> 
     </tbody>
 </table>
 
-    Di seguito sono riportati alcuni esempi di stringhe `description` restituite:
+    Di seguito sono riportati alcuni esempi di stringhe &quot;description&quot; restituite: 
     
     &quot;
-    &quot;Bitrate::=up;Motivo::=Adattamento di rete;&quot;
+    &quot;Bitrate::=up;Motivo:=Adattamento rete;&quot;
     
-    &quot;Bitrate::=down;Motivo:=Failover;&quot;
+    &quot;Bitrate:=down;Motivo::=Failover;&quot;
     &quot;
     
-    * `width`: Numero intero che indica la larghezza in pixel.
-    * `height`: Numero intero che indica l&#39;altezza in pixel.
+    * `width`: Intero che indica la larghezza in pixel.
+    * `height`: Numero intero che indica l’altezza in pixel.
     
     >[!NOTE]
     >
-    >I dati di larghezza e altezza sono disponibili solo se sono inclusi nel tag &quot;SOLUZIONI&quot; nel manifesto M3U8. Se le informazioni non sono incluse in M3U8, le proprietà width e height sono impostate su 0, in quanto non fanno parte delle informazioni del profilo.
+    >I dati di larghezza e altezza sono disponibili solo quando sono inclusi nel tag `RESOK` nel manifesto M3U8. Se le informazioni non sono incluse nell&#39;M3U8, le proprietà larghezza e altezza sono impostate su 0, in quanto non fanno parte delle informazioni sul profilo.
 
 <!--<a id="example_A713D420AE2E4E3CB7B78C6BC732BE90"></a>-->
 
