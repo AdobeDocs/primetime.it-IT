@@ -1,9 +1,9 @@
 ---
-seo-title: Protezione dei livelli di rete
-title: Protezione dei livelli di rete
-uuid: bd53bccf-1130-4189-97ec-4259bd25762f
+title: Sicurezza a livello di rete
+description: Sicurezza a livello di rete
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 0%
@@ -11,11 +11,11 @@ ht-degree: 0%
 ---
 
 
-# Protezione del livello di rete{#network-layer-security}
+# Sicurezza a livello di rete{#network-layer-security}
 
-Le vulnerabilità di sicurezza della rete sono tra le prime minacce a qualsiasi server applicazioni rivolto a Internet o Intranet. Questa sezione descrive il processo di indurimento degli host sulla rete rispetto a tali vulnerabilità. Si occupa della segmentazione della rete, del protocollo di controllo della trasmissione/del protocollo Internet (TCP/IP) e dell&#39;uso di firewall per la protezione dell&#39;host.
+Le vulnerabilità relative alla sicurezza della rete costituiscono una delle prime minacce per qualsiasi server applicativo rivolto a Internet o Intranet. Questa sezione descrive il processo di indurimento degli host sulla rete rispetto a queste vulnerabilità. Si occupa della segmentazione della rete, dell&#39;indurimento dello stack del protocollo di controllo della trasmissione/protocollo Internet (TCP/IP) e dell&#39;uso di firewall per la protezione dell&#39;host.
 
-Nella tabella seguente sono illustrate le tecniche più comuni per ridurre le vulnerabilità di sicurezza della rete.
+Questa tabella descrive le tecniche comuni che riducono le vulnerabilità relative alla sicurezza della rete.
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table-djf-lhz-n4"> 
  <thead class="- topic/thead "> 
@@ -27,19 +27,19 @@ Nella tabella seguente sono illustrate le tecniche più comuni per ridurre le vu
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Zone demilitarizzate (DMZ) </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">La segmentazione deve esistere in almeno due livelli con il server applicazione utilizzato per eseguire  Accesso Adobe posizionato dietro il firewall interno. Separare la rete esterna dalla rete perimetrale che contiene i server Web, che a sua volta deve essere separata dalla rete interna. Usate i firewall per implementare i livelli di separazione. Categorizzare e controllare il traffico che passa attraverso ciascun livello di rete per garantire che sia consentito solo il minimo assoluto di dati richiesti. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">La segmentazione deve esistere in almeno due livelli con l'application server utilizzato per eseguire Adobe Access posizionato dietro il firewall interno. Separare la rete esterna dalla rete DMZ che contiene i server web, che a loro volta devono essere separati dalla rete interna. Usa i firewall per implementare i livelli di separazione. Dividi in categorie e controlla il traffico che passa attraverso ciascun livello di rete per garantire che sia consentito solo il minimo assoluto di dati richiesti. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Indirizzi IP privati </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Utilizzate Network Address Translation (NAT) con gli indirizzi IP privati RFC 1918 sui server dell'applicazione di accesso  Adobe. Assegnate indirizzi IP privati (10.0.0.0/8, 172.16.0.0/12 e 192.168.0.0/16) per rendere più difficile per un utente malintenzionato indirizzare il traffico da e verso un host interno NAT attraverso Internet. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Utilizza NAT (Network Address Translation) con indirizzi IP privati RFC 1918 sui server delle applicazioni Adobe Access. Assegna indirizzi IP privati (10.0.0.0/8, 172.16.0.0/12 e 192.168.0.0/16) per rendere più difficile per un aggressore indirizzare il traffico da e verso un host interno NAT attraverso Internet. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Firewall </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Utilizzate i seguenti criteri per selezionare una soluzione firewall: </p> <p class="- topic/p "> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Utilizza i seguenti criteri per selezionare una soluzione firewall: </p> <p class="- topic/p "> 
      <ul class="- topic/ul " id="ul-wjf-lhz-n4"> 
-      <li class="- topic/li " id="li-8031632160F44037B092988183139202"> <p class="- topic/p ">Implementate firewall che supportano server proxy e/o ispezione dello stato invece di semplici soluzioni di filtraggio dei pacchetti. </p> </li> 
-      <li class="- topic/li " id="li-B65CBB92113E4503B79EB194C34FCA50"> <p class="- topic/p ">Utilizzare un firewall che supporta un paradigma di protezione in cui è possibile negare tutti i servizi tranne quelli consentiti in modo esplicito. </p> </li> 
-      <li class="- topic/li " id="li-5CE4C7B65D84410DB4BE966FD8922993"> <p class="- topic/p ">Implementate una soluzione firewall che sia a due o più host. Questa architettura fornisce il massimo livello di protezione e aiuta a impedire che utenti non autorizzati scavalchino la protezione del firewall. </p> </li> 
+      <li class="- topic/li " id="li-8031632160F44037B092988183139202"> <p class="- topic/p ">Implementa firewall che supportano i server proxy e/o l’ispezione dello stato invece di semplici soluzioni di filtraggio dei pacchetti. </p> </li> 
+      <li class="- topic/li " id="li-B65CBB92113E4503B79EB194C34FCA50"> <p class="- topic/p ">Utilizzare un firewall che supporta un paradigma di sicurezza in cui è possibile negare tutti i servizi, tranne quelli esplicitamente consentiti. </p> </li> 
+      <li class="- topic/li " id="li-5CE4C7B65D84410DB4BE966FD8922993"> <p class="- topic/p ">Implementa una soluzione firewall con doppio percorso o con più percorsi. Questa architettura fornisce il massimo livello di sicurezza e aiuta a evitare che utenti non autorizzati bypassino la sicurezza del firewall. </p> </li> 
      </ul> </p> </td> 
   </tr> 
  </tbody> 
