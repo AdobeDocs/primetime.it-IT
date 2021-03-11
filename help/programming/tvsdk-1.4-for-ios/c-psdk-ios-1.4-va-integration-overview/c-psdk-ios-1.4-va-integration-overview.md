@@ -1,33 +1,30 @@
 ---
-description: Potete tenere traccia dell’utilizzo dei video integrando TVSDK con  Adobe Analytics.
-seo-description: Potete tenere traccia dell’utilizzo dei video integrando TVSDK con  Adobe Analytics.
-seo-title: Analisi video
+description: Puoi tenere traccia dell’utilizzo dei video integrando TVSDK con Adobe Analytics.
 title: Analisi video
-uuid: 8f297316-f95e-4896-b489-a2d6b36e6b40
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '140'
+source-wordcount: '127'
 ht-degree: 0%
 
 ---
 
 
-# Integrazione dell&#39;analisi video {#video-analytics-integration}
+# Integrazione di analisi video {#video-analytics-integration}
 
-Potete tenere traccia dell’utilizzo dei video integrando TVSDK con  Adobe Analytics.
+Puoi tenere traccia dell’utilizzo dei video integrando TVSDK con Adobe Analytics.
 
-Il tracciamento video in TVSDK utilizza il servizio **Adobe Analytics Video Essentials**, che fornisce metriche di coinvolgimento video, come visualizzazioni video, completamenti video, impressioni sugli annunci, tempo trascorso sul video e così via. Per ulteriori informazioni su questo servizio, contattate il rappresentante  Adobe.
+Il tracciamento video in TVSDK utilizza il servizio **Adobe Analytics Video Essentials**, che fornisce metriche di coinvolgimento video, come visualizzazioni video, visualizzazioni complete di video, impressioni di annunci, tempo trascorso sul video e così via. Per ulteriori informazioni su questo servizio, contatta il tuo rappresentante di Adobe.
 
 La procedura seguente riassume i passaggi per attivare il tracciamento video nel lettore:
 
-1. Inizializzate e/o configurate i seguenti componenti di tracciamento video:
+1. Inizializzare e/o configurare i seguenti componenti di tracciamento video:
 
    Su iOS, questi componenti fanno parte di TVSDK:
 
    * File di configurazione JSON
    * Oggetto metadati analisi video
    * Oggetto metadati globale
-   * Oggetto tracciatore analisi video
+   * Oggetto tracker di analisi video
 
-1. Configurate i rapporti di analisi video sul lato server utilizzando  Adobe Analytics Admin Tools.
+1. Imposta i rapporti di analisi video sul lato server utilizzando gli strumenti di amministrazione di Adobe Analytics.
