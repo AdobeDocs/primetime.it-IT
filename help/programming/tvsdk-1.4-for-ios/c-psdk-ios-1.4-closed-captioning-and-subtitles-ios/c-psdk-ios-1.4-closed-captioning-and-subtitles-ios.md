@@ -1,35 +1,32 @@
 ---
 description: I sottotitoli e i sottotitoli codificati presentano differenze univoche e possono essere attivati in modi diversi.
-seo-description: I sottotitoli e i sottotitoli codificati presentano differenze univoche e possono essere attivati in modi diversi.
-seo-title: Sottotitoli e didascalie
-title: Sottotitoli e didascalie
-uuid: 91daf0be-087a-4be5-86c2-f8b83da43a8f
+title: Sottotitoli e sottotitoli
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '224'
 ht-degree: 0%
 
 ---
 
 
-# Requisiti per sottotitoli e didascalie {#requirements-for-subtitles-and-closed-captions}
+# Requisiti per sottotitoli e sottotitoli {#requirements-for-subtitles-and-closed-captions}
 
 I sottotitoli e i sottotitoli codificati presentano differenze univoche e possono essere attivati in modi diversi.
 
 I flussi di sottotitoli vengono eseguiti in parallelo con il contenuto principale. I sottotitoli codificati fanno parte dei pacchetti di dati dei flussi video MPEG-2.
 
-Per i sottotitoli e i sottotitoli codificati, tenete presente quanto segue:
+Per i sottotitoli e i sottotitoli codificati, tenere presente quanto segue:
 
 * **Sottotitoli codificati**
 
-   * I sottotitoli codificati sono generalmente nella stessa lingua dell&#39;audio e rappresentano anche l&#39;audio in background come testo.
+   * I sottotitoli codificati si trovano in genere nella stessa lingua dell’audio e rappresentano anche i suoni in background come testo.
    * I sottotitoli codificati fanno parte dei pacchetti di dati dei flussi video MPEG-2 nel flusso di trasmissione video.
    * I sottotitoli codificati sono supportati nella misura fornita dal framework AV Foundation.
 
 * **Sottotitoli**
 
-   * I sottotitoli sono in genere in una lingua diversa e non includono i suoni in background.
+   * I sottotitoli si trovano in una lingua diversa e non includono i suoni in background.
    * I sottotitoli si trovano in flussi che vengono eseguiti in parallelo con il contenuto principale.
 
       Il `PTMediaPlayer` riproduce il contenuto principale e gli annunci, dove il contenuto principale potrebbe essere live/lineare o VOD, e gli annunci potrebbero essere pre-roll, mid-roll o post-roll.
@@ -37,7 +34,7 @@ Per i sottotitoli e i sottotitoli codificati, tenete presente quanto segue:
 
    * Per le marche temporali, il valore `X-TIMESTAMP-MAP`, specificato nella sezione di intestazione del file `WebVTT`, deve corrispondere alla marca temporale del video.
 
-   * Per il sistema, devi usare iOS 6.1 o versione successiva.
+   * Per il sistema, devi utilizzare iOS 6.1 o versione successiva.
 
 
 >[!IMPORTANT]
