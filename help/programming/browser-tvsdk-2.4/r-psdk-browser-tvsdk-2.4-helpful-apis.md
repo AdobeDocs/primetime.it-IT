@@ -1,21 +1,18 @@
 ---
-description: Esistono delle API che possono aiutarti a utilizzare l'Flash Player di Adobi .
-seo-description: Esistono delle API che possono aiutarti a utilizzare l'Flash Player di Adobi .
-seo-title: 'API utili per il Flash Player di Adobi '
-title: 'API utili per il Flash Player di Adobi '
-uuid: eae314c0-fd9e-480f-ae1c-9b5f3eb4db4b
+description: Esistono alcune API che possono aiutarti a utilizzare il Flash Player Adobe.
+title: API utili per il Flash Player di Adobi
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '84'
+source-wordcount: '64'
 ht-degree: 0%
 
 ---
 
 
-# API utili per il Flash Player di Adobi {#helpful-apis-for-the-adobe-flash-player}
+# API utili per il Flash Player di Adobe{#helpful-apis-for-the-adobe-flash-player}
 
-Esistono delle API che possono aiutarti a utilizzare l&#39;Flash Player di Adobi .
+Esistono alcune API che possono aiutarti a utilizzare il Flash Player Adobe.
 
 ## AdobePSDK.MediaResource {#section_8C339FA1386D4B1A926A1459B2619E5E}
 
@@ -23,7 +20,7 @@ Esistono delle API che possono aiutarti a utilizzare l&#39;Flash Player di Adobi
 new MediaResource(url, type, metadata, forceFlash)
 ```
 
-Se supportato, potete utilizzare il parametro `forceFlash` per ignorare la sequenza di determinazione della tecnologia di riproduzione e forzare l&#39;implementazione a utilizzare il Flash Player.
+Se supportato, è possibile utilizzare il parametro `forceFlash` per ignorare la sequenza di determinazione della tecnologia di riproduzione e forzare l&#39;implementazione a utilizzare il Flash Player.
 
 <!--<a id="section_FEE3205B532446498771F7DD55B5E79F"></a>-->
 
