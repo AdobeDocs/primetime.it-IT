@@ -1,21 +1,18 @@
 ---
-description: Potete implementare il vostro generatore di opportunità estendendo l'interfaccia OpportunityGenerator.
-seo-description: Potete implementare il vostro generatore di opportunità estendendo l'interfaccia OpportunityGenerator.
-seo-title: Implementazione di un generatore di opportunità personalizzato
-title: Implementazione di un generatore di opportunità personalizzato
-uuid: b80da2da-32d5-41f7-86ca-936d6f25b015
+description: Puoi implementare il generatore di opportunità estendendo l’interfaccia OpportunityGenerator.
+title: Implementare un generatore di opportunità personalizzato
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '95'
-ht-degree: 4%
+source-wordcount: '78'
+ht-degree: 5%
 
 ---
 
 
-# Implementare un generatore di opportunità personalizzato{#implement-a-custom-opportunity-generator}
+# Implementa un generatore di opportunità personalizzato{#implement-a-custom-opportunity-generator}
 
-Potete implementare il vostro generatore di opportunità estendendo l&#39;interfaccia OpportunityGenerator.
+Puoi implementare il generatore di opportunità estendendo l’interfaccia OpportunityGenerator.
 
 1. Crea il generatore di opportunità personalizzato.
 
@@ -47,7 +44,7 @@ Potete implementare il vostro generatore di opportunità estendendo l&#39;interf
    }; 
    ```
 
-1. Create il content factory personalizzato, che utilizza il generatore di opportunità personalizzato.
+1. Crea la content factory personalizzata, che utilizza il generatore di opportunità personalizzato.
 
    Ad esempio:
 
@@ -71,7 +68,7 @@ Potete implementare il vostro generatore di opportunità estendendo l&#39;interf
 
 1. Registra il content factory personalizzato per il flusso multimediale da riprodurre.
 
-   In UI Framework Player è possibile specificare una content factory personalizzata nel modo seguente:
+   In UI Framework Player è possibile specificare una content factory personalizzata come segue:
 
    ```js
    var advertisingFactory = new CustomContentFactory(); 
