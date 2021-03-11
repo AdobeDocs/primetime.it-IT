@@ -1,30 +1,27 @@
 ---
-description: È possibile impostare un controllo dell'interfaccia utente per il volume del suono.
-seo-description: È possibile impostare un controllo dell'interfaccia utente per il volume del suono.
-seo-title: Controllo del volume
+description: È possibile impostare un controllo dell'interfaccia utente per il volume sonoro.
 title: Controllo del volume
-uuid: 5f2f69cc-3969-4ca2-8ab9-5713fdf5cdb8
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '101'
+source-wordcount: '87'
 ht-degree: 0%
 
 ---
 
 
-# Controllo volume{#provide-volume-control}
+# Fornire il controllo del volume{#provide-volume-control}
 
-È possibile impostare un controllo dell&#39;interfaccia utente per il volume del suono.
+È possibile impostare un controllo dell&#39;interfaccia utente per il volume sonoro.
 
-1. Attendere che l&#39;istanza `MediaPlayer` sia in uno stato valido per questo comando.
+1. Attendi che l&#39;istanza `MediaPlayer` sia in uno stato valido per questo comando.
 
-   Qualsiasi stato tranne RELEASE o ERROR è valido.
-1. Impostate l&#39;attributo volume sull&#39;istanza `MediaPlayer` per impostare il volume audio.
+   Qualsiasi stato tranne RELEASED o ERROR è valido.
+1. Imposta l&#39;attributo del volume sull&#39;istanza `MediaPlayer` per impostare il volume audio.
 
    ```js
    player.volume = ...
    ```
 
-   Il valore per il volume rappresenta il volume richiesto espresso in proporzione al volume massimo, dove 0 è invisibile ed è il volume massimo.
+   Il valore per il volume rappresenta il volume richiesto espresso in proporzione al volume massimo, dove 0 è silenzioso ed è il volume massimo.
 
