@@ -1,23 +1,21 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Implementare il supporto dei capitoli
-title: Implementare il supporto dei capitoli
-uuid: 70f10621-febe-4443-84e7-ce95bec53377
+title: Implementare il supporto per i capitoli
+description: Implementare il supporto per i capitoli
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '86'
+source-wordcount: '84'
 ht-degree: 0%
 
 ---
 
 
-# Implementare il supporto dei capitoli{#implement-chapter-support}
+# Implementa il supporto per i capitoli{#implement-chapter-support}
 
-Un capitolo è definito come il tempo tra ciascuna interruzione di annuncio. Ad esempio, l’intervallo tra un annuncio pre-roll e il primo mid-roll è definito come il primo capitolo. Potete definire e tenere traccia dei capitoli per il tracciamento video in un’applicazione basata su browser TVSDK utilizzando capitoli personalizzati. I capitoli personalizzati sono gestiti dall&#39;applicazione e si basano sui dati CMS o su un altro modo utilizzato dall&#39;applicazione per definire i capitoli.
+Un capitolo è definito come il tempo tra ciascuna interruzione pubblicitaria. Ad esempio, il tempo tra un annuncio pre-roll e il primo mid-roll è definito come il primo capitolo. Puoi definire e monitorare i capitoli per il tracciamento video in un’applicazione basata su browser TVSDK utilizzando capitoli personalizzati. I capitoli personalizzati sono gestiti dall&#39;applicazione e si basano sui dati CMS o su un altro modo che l&#39;applicazione utilizza per definire i capitoli.
 
-1. Definizione e tracciamento di capitoli personalizzati.
+1. Definire e tenere traccia dei capitoli personalizzati.
 
    ```js
    vaObj.enableChapterTracking = true; 
