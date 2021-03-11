@@ -1,9 +1,9 @@
 ---
-seo-title: Aggiornamento di un criterio DRM con l'API Java
-title: Aggiornamento di un criterio DRM con l'API Java
-uuid: ec21351c-900e-48f5-845a-c0b430c210d7
+title: Aggiornamento di un criterio DRM con l’API Java
+description: Aggiornamento di un criterio DRM con l’API Java
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
@@ -11,18 +11,18 @@ ht-degree: 0%
 ---
 
 
-# Aggiornamento di un criterio DRM con l&#39;API Java {#updating-a-drm-policy-with-the-java-api}
+# Aggiornamento di un criterio DRM con API Java {#updating-a-drm-policy-with-the-java-api}
 
-Per aggiornare un criterio DRM con l&#39;API Java:
+Per aggiornare un criterio DRM con l’API Java:
 
-1. Configurate l&#39;ambiente di sviluppo e includete nel progetto tutti i file JAR elencati in [Impostazione dell&#39;ambiente di sviluppo](../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
-1. Create un&#39;istanza DRM `Policy` e leggete il criterio DRM da un file o un database.
+1. Imposta l&#39;ambiente di sviluppo e includi nel progetto tutti i file JAR elencati in [Impostazione dell&#39;ambiente di sviluppo](../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
+1. Crea un&#39;istanza DRM `Policy` e leggi i criteri DRM da un file o da un database.
 
    ```
    Policy policy = new Policy(policyBytes);
    ```
 
-1. Aggiornare l&#39;oggetto DRM `Policy` impostandone le proprietà, ad esempio il nome e le regole di utilizzo.
+1. Aggiornare l’oggetto DRM `Policy` impostandone le proprietà, ad esempio il nome e le regole di utilizzo.
 
    ```java
    // Change the DRM policy name.  
@@ -61,4 +61,4 @@ Per aggiornare un criterio DRM con l&#39;API Java:
    out.close();
    ```
 
-Vedere `com.adobe.flashaccess.samples.policy.UpdatePolicy` nella directory Strumenti della riga di comando di implementazione di riferimento [!DNL samples] per l&#39;origine di questo codice di esempio.
+Per l’origine di questo codice di esempio, vedi `com.adobe.flashaccess.samples.policy.UpdatePolicy` nella directory Strumenti della riga di comando per l’implementazione di riferimento [!DNL samples] .
