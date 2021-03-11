@@ -1,14 +1,11 @@
 ---
-description: Potete attivare o disattivare la funzione Lazy Ad Resolving utilizzando il meccanismo di caricamento Lazy Ad esistente (Lazy Ad Resolving è attivato per impostazione predefinita).
-keywords: Lazy;Ad resolving;Ad loading;delayLoading
-seo-description: Potete attivare o disattivare la funzione Lazy Ad Resolving utilizzando il meccanismo di caricamento Lazy Ad esistente (Lazy Ad Resolving è attivato per impostazione predefinita).
-seo-title: Abilita risoluzione annunci pigri
+description: Puoi abilitare o disabilitare la funzione Lazy Ad Resolving utilizzando il meccanismo esistente Lazy Ad Loading (Lazy Ad Resolving è abilitato per impostazione predefinita).
+keywords: Pigro;risoluzione annunci;Caricamento annunci;ritardoLoading
 title: Abilita risoluzione annunci pigri
-uuid: a084ee0b-53af-4600-91f6-d30ccc89699d
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '327'
 ht-degree: 0%
 
 ---
@@ -16,15 +13,15 @@ ht-degree: 0%
 
 # Abilita risoluzione annunci pigri {#enable-lazy-ad-resolving}
 
-Potete attivare o disattivare la funzione Lazy Ad Resolving utilizzando il meccanismo di caricamento Lazy Ad esistente (Lazy Ad Resolving è attivato per impostazione predefinita).
+Puoi abilitare o disabilitare la funzione Lazy Ad Resolving utilizzando il meccanismo esistente Lazy Ad Loading (Lazy Ad Resolving è abilitato per impostazione predefinita).
 
-Potete abilitare o disabilitare la risoluzione degli annunci pigri chiamando [AdvertisingMetadata.setDelayLoading](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.4/com/adobe/mediacore/metadata/AdvertisingMetadata.html#setDelayAdLoading-boolean-) con `true` o `false`.
+Puoi abilitare o disabilitare Lazy Ad Resolving richiamando [AdvertisingMetadata.setDelayLoading](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.4/com/adobe/mediacore/metadata/AdvertisingMetadata.html#setDelayAdLoading-boolean-) con `true` o `false`.
 
-1. Utilizzate i metodi booleani `hasDelayAdLoading` e `setDelayAdLoading` in `AdvertisingMetadata` per controllare la tempistica della risoluzione degli annunci e il posizionamento degli annunci sulla timeline:
+1. Utilizza i metodi booleani `hasDelayAdLoading` e `setDelayAdLoading` in `AdvertisingMetadata` per controllare la tempistica della risoluzione degli annunci e il posizionamento degli annunci sulla timeline:
 
-   * Se `hasDelayAdLoading` restituisce false, TVSDK attende che tutti gli annunci vengano risolti e inseriti prima di passare allo stato PREPARATO.
-   * Se `hasDelayAdLoading` restituisce true, TVSDK risolve solo gli annunci e le transizioni iniziali allo stato PREPARATO. Gli altri annunci vengono risolti e inseriti durante la riproduzione.
-   * Quando `hasPreroll` o `hasLivePreroll` restituisce false, TVSDK presuppone che non sia presente alcun annuncio preliminare e avvia immediatamente la riproduzione del contenuto. Il valore predefinito è true.
+   * Se `hasDelayAdLoading` restituisce false, TVSDK attende che tutti gli annunci vengano risolti e inseriti prima di passare allo stato PREPARED.
+   * Se `hasDelayAdLoading` restituisce true, TVSDK risolve solo gli annunci e le transizioni iniziali allo stato PREPARATO. Gli annunci rimanenti vengono risolti e inseriti durante la riproduzione.
+   * Quando `hasPreroll` o `hasLivePreroll` restituisce false, TVSDK presuppone che non sia presente alcun annuncio preliminare e avvia immediatamente la riproduzione del contenuto. Questi valori predefiniti sono true.
 
       API rilevanti per la risoluzione degli annunci pigri:
 
@@ -43,11 +40,11 @@ Potete abilitare o disabilitare la risoluzione degli annunci pigri chiamando [Ad
       […]
       ```
 
-1. Per riflettere con precisione gli annunci come segnali su una barra di scorrimento, ascoltate l&#39;evento `TimelineEvent` e ridisegnate la barra di scorrimento ogni volta che ricevete questo evento.
+1. Per riflettere con precisione gli annunci come indizi su una barra di scorrimento, ascolta l’evento `TimelineEvent` e ridisegna la barra di scorrimento ogni volta che ricevi questo evento.
 
-   Quando Lazy Ad Resolving è abilitato per i flussi VOD, non tutti gli annunci vengono inseriti nella timeline quando il lettore entra nello stato PREPARATO, pertanto il lettore deve ridisegnare esplicitamente la barra di scorrimento.
+   Quando Lazy Ad Resolving è abilitato per flussi VOD, non tutti gli annunci vengono inseriti sulla timeline quando il lettore entra nello stato PREPARATO, in modo che il lettore debba ridisegnare esplicitamente la barra di scorrimento.
 
-   TVSDK ottimizza l&#39;invio di questo evento per ridurre al minimo il numero di volte che è necessario ridisegnare la barra di scorrimento; pertanto, il numero di eventi della timeline non è correlato al numero di interruzioni pubblicitarie da inserire nella timeline. Ad esempio, se hai cinque interruzioni pubblicitarie, potresti non ricevere esattamente cinque eventi.
+   TVSDK ottimizza l’invio di questo evento per ridurre al minimo il numero di volte in cui è necessario ridisegnare la barra di scorrimento; pertanto, il numero di eventi della timeline non è correlato al numero di interruzioni pubblicitarie da inserire nella timeline. Ad esempio, in presenza di cinque interruzioni pubblicitarie, potresti non ricevere esattamente cinque eventi.
 
    ```java
    mediaPlayer.addEventListener 
@@ -63,5 +60,5 @@ Potete abilitare o disabilitare la risoluzione degli annunci pigri chiamando [Ad
    } 
    ```
 
->Per verificare se la funzione Lazy Ad Resolving è abilitata o disabilitata, chiamate `AdvertisingMetadata.hasDelayAdLoading`. Un valore restituito di `true` indica che Lazy Ad Resolving è abilitato; `false` indica che la funzione è disabilitata.
+>Per verificare se la funzione Lazy Ad Resolving è abilitata o disabilitata, chiama `AdvertisingMetadata.hasDelayAdLoading`. Un valore restituito di `true` indica che Lazy Ad Resolving è abilitato; `false` indica che la funzione è disabilitata.
 
