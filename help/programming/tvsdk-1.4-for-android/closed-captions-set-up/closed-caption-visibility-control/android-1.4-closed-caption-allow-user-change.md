@@ -1,13 +1,10 @@
 ---
-description: Questo è un esempio di come creare un pulsante che consente all'utente di selezionare una traccia di sottotitoli codificati.
-seo-description: Questo è un esempio di come creare un pulsante che consente all'utente di selezionare una traccia di sottotitoli codificati.
-seo-title: Esempio Consente agli utenti di modificare la traccia della didascalia
-title: Esempio Consente agli utenti di modificare la traccia della didascalia
-uuid: 4b69d569-0d6e-4388-9fe3-488e2a4d762d
+description: Questo è un esempio di come creare un pulsante che consente all’utente di selezionare una traccia a didascalia chiusa.
+title: Esempio Consenti agli utenti di modificare la traccia della didascalia
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '107'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # Esempio: Consenti agli utenti di modificare la traccia della didascalia{#example-allow-users-to-change-the-caption-track}
 
-Questo è un esempio di come creare un pulsante che consente all&#39;utente di selezionare una traccia di sottotitoli codificati.
+Questo è un esempio di come creare un pulsante che consente all’utente di selezionare una traccia a didascalia chiusa.
 
-1. Create un pulsante semplice per modificare la traccia dei sottotitoli codificati.
+1. Crea un pulsante semplice per modificare la traccia dei sottotitoli.
 
    ```xml
       <Button 
@@ -31,7 +28,7 @@ Questo è un esempio di come creare un pulsante che consente all&#39;utente di s
      android:text="CC" /> 
    ```
 
-1. Convertire l&#39;elenco delle tracce di didascalie chiuse disponibili in un array di stringhe. Le tracce di sottotitoli codificati con attività, ovvero canali per i quali TVSDK ha rilevato dati, vengono contrassegnate di conseguenza:
+1. Convertire l&#39;elenco delle tracce di didascalia chiusa disponibili in una matrice di stringhe. Le tracce a sottotitoli contenenti attività, ovvero canali per i quali TVSDK ha rilevato dati, vengono contrassegnate di conseguenza:
 
    ```java
    /** 
@@ -57,7 +54,7 @@ Questo è un esempio di come creare un pulsante che consente all&#39;utente di s
    } 
    ```
 
-1. Quando l&#39;utente fa clic sul pulsante, viene visualizzata una finestra di dialogo in cui sono elencate tutte le tracce CC predefinite.
+1. Quando l&#39;utente fa clic sul pulsante, visualizza una finestra di dialogo in cui sono elencate tutte le tracce CC predefinite.
 
    ```java
       public void selectClosedCaptioningClick(View view) { 
