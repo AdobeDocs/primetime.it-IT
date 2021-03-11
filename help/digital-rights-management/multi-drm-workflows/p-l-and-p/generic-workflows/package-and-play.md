@@ -1,46 +1,43 @@
 ---
-description: Potete utilizzare il packager Bento4 di ExpressPlay per preparare i contenuti per qualsiasi soluzione DRM supportata da Primetime Cloud DRM, basata su ExpressPlay.
-seo-description: Potete utilizzare il packager Bento4 di ExpressPlay per preparare i contenuti per qualsiasi soluzione DRM supportata da Primetime Cloud DRM, basata su ExpressPlay.
-seo-title: ExpressPlay Packager / Cloud DRM / TVSDK
-title: ExpressPlay Packager / Cloud DRM / TVSDK
-uuid: 0d2f5a8d-15c4-42ba-acb8-1dc8d5bc62de
+description: È possibile utilizzare il packager Bento4 di ExpressPlay per preparare i contenuti per qualsiasi soluzione DRM supportata da Primetime Cloud DRM, con tecnologia ExpressPlay.
+title: Pacchetto ExpressPlay / Cloud DRM / TVSDK
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '505'
+source-wordcount: '477'
 ht-degree: 0%
 
 ---
 
 
-# ExpressPlay Packager / Cloud DRM / TVSDK {#expressplay-packager-cloud-drm-tvsdk}
+# Pacchetto ExpressPlay / Cloud DRM / TVSDK {#expressplay-packager-cloud-drm-tvsdk}
 
-Potete utilizzare il packager Bento4 di ExpressPlay per preparare i contenuti per qualsiasi soluzione DRM supportata da Primetime Cloud DRM, basata su ExpressPlay.
+È possibile utilizzare il packager Bento4 di ExpressPlay per preparare i contenuti per qualsiasi soluzione DRM supportata da Primetime Cloud DRM, con tecnologia ExpressPlay.
 
-Questa attività descrive come utilizzare uno strumento di terze parti per preparare i contenuti protetti, in questo caso *ExpressPlay Bento4 Tools*, da utilizzare con diverse soluzioni DRM. Per ulteriori informazioni, consultare la documentazione *Bento4 tools* sul sito Web [ExpressPlay](https://www.expressplay.com/developer/).
-1. Acquisisci un account ExpressPlay e ottieni le informazioni sull&#39;autenticazione del cliente ExpressPlay.
+Questa attività descrive come utilizzare uno strumento di terze parti per preparare contenuti protetti, in questo caso *Strumenti ExpressPlay Bento4*, da utilizzare con diverse soluzioni DRM. Per ulteriori informazioni, consulta la documentazione *Bento4 tools* sul sito web [ExpressPlay](https://www.expressplay.com/developer/).
+1. Acquisisci un account ExpressPlay e ottieni le informazioni sull’Autenticatore del cliente ExpressPlay.
 
-   Consultate [Primetime DRM Cloud Quick start.](../../quick-start/quick-overview.md)
-1. Se state crittografando il contenuto per Primetime Access, acquisite l&#39;SDK Primetime  Adobe Access dal Adobe  insieme ai certificati richiesti (certificati di licenza, trasporto e creazione di pacchetti).
-1. Fornite una chiave di crittografia dei contenuti (CEK) e un ID di memorizzazione della chiave di crittografia dei contenuti (CEKSID) da utilizzare nei sistemi DRM. (Potete generarli in modo casuale utilizzando OpenSSL o simili.)
+   Consulta [Avvio rapido di Primetime DRM Cloud.](../../quick-start/quick-overview.md)
+1. Se stai crittografando il contenuto per Primetime Access , acquisisci l&#39;SDK di Primetime Adobe Access dall&#39;Adobe, insieme ai certificati richiesti (certificati di licenza, trasporto e pacchetto).
+1. Fornire una chiave di crittografia del contenuto (CEK) e un ID di archiviazione della chiave di crittografia del contenuto (CEKSID) per l&#39;utilizzo in tutti i sistemi DRM. (Puoi generarli in modo casuale utilizzando OpenSSL o simili.)
 
-   CEK è la chiave che utilizzate per cifrare i file video. È possibile archiviarlo in modo sicuro sul proprio server nel proprio sistema di gestione delle chiavi, oppure utilizzare la [soluzione di storage ](https://www.expressplay.com/developer/key-storage/) di ExpressPlay.
+   CEK è la chiave effettiva utilizzata per crittografare i file video. È possibile archiviarlo in modo sicuro sul proprio server nel proprio sistema di gestione delle chiavi, oppure utilizzare la [soluzione di storage principale di ExpressPlay](https://www.expressplay.com/developer/key-storage/).
 
-   Un CEKSID è l’identificatore di un CEK specifico. In genere non trasmettete la chiave di crittografia. Ad esempio, quando si richiede un token di licenza, è necessario fornire il CEKSID.
+   Un CEKSID è l&#39;identificatore di un CEK specifico. In genere non trasmetti la chiave di crittografia. Ad esempio, quando richiedi un token di licenza, fornisci il CEKSID.
 
-1. Se state codificando il contenuto per Access, utilizzate CEK per creare metadati Primetime Access associati al contenuto.
+1. Se stai crittografando i contenuti per Access, utilizza CEK per creare metadati di Primetime Access associati al contenuto.
 
-1. Frammenti il contenuto per prepararlo allo strumento *Bento4 MP4DASH*.
+1. Frammenta il contenuto per prepararlo allo strumento *Bento4 MP4DASH* .
 
-   Per questo passaggio è possibile utilizzare lo strumento *MP4FRAGMENT*. È necessario frammentare il contenuto una sola volta. Ad esempio:
+   Per questo passaggio puoi utilizzare lo strumento *MP4FRAGMENT* . È sufficiente frammentare il contenuto una sola volta. Ad esempio:
 
    ```
    ./mp4fragment Unfragmented.mp4 Fragmented.mp4
    ```
 
-1. Utilizzare lo strumento *Bento4 MPDASH* per &quot;DASH-ify&quot; e cifrare il contenuto frammentato.
+1. Utilizza lo strumento *Bento4 MPDASH* per &quot;DASH-ify&quot; e crittografare il contenuto frammentato.
 
-   Utilizzate questo comando per specificare tutti i sistemi DRM che utilizzerete e per trasmettere i metadati di accesso Primetime generati dai passaggi precedenti. Ad esempio:
+   Utilizzare questo comando per specificare tutti i sistemi DRM che si utilizzeranno e trasmettere i metadati di accesso Primetime generati dai passaggi precedenti. Ad esempio:
 
    ```
    /mp4dash -f  
@@ -55,19 +52,19 @@ Questa attività descrive come utilizzare uno strumento di terze parti per prepa
     Fragmented.mp4 -o DASH_OUTPUT
    ```
 
-1. Creare un &quot;server storefront&quot;.
+1. Crea un &quot;server di vetrina&quot;.
 
-       Il server deve gestire le seguenti operazioni:
+       Questo server deve gestire le seguenti operazioni:
    
-   1. Selezione del contenuto da parte del cliente. Questa implementazione deve includere un endpoint per i client per richiedere un token contenuto per un ID contenuto specifico.
-   1. Adesione cliente
-   1. Richieste di token di licenza (ExpressPlay) dal client ( [Richiesta token di licenza ExpressPlay / riferimento risposta](../../license-token-req-resp-ref/license-req-resp-overview.md))
+   1. Selezione del contenuto da parte del cliente. Questa implementazione deve includere un endpoint per i client per richiedere un token di contenuto per un ID di contenuto specifico.
+   1. Adesione del cliente
+   1. Richieste di token di licenza (ExpressPlay) dal client ( [richiesta di token di licenza ExpressPlay / riferimento di risposta](../../license-token-req-resp-ref/license-req-resp-overview.md))
 
 1. Crea il tuo client.
 
-   Il client deve includere una chiamata al server di storefront.  Adobe consiglia al client di chiamare lo storefront dopo che l&#39;utente ha selezionato del contenuto e dopo che l&#39;utente è stato autenticato. Quindi, passare il token restituito da ExpressPlay al lettore per utilizzarlo per le richieste di licenza. Presentazioni per l&#39;implementazione del componente DRM dei lettori sono:
+   Il client deve includere una chiamata al server di vetrina. L’Adobe consiglia al client di chiamare la vetrina dopo che l’utente ha selezionato del contenuto e dopo che l’utente è autenticato. Quindi, passa il token restituito da ExpressPlay al tuo lettore per utilizzare per le richieste di licenza. Le presentazioni per l&#39;implementazione del componente DRM dei tuoi giocatori sono qui:
 
    * Browser TVSDK per HTML5
    * [iOS](../../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md)
 
-1. Con il token di licenza in mano, il client ora può derivare l&#39;URL della richiesta dal token, effettuare la richiesta di licenza per ExpressPlay, quindi riprodurre il contenuto protetto selezionato per l&#39;utente.
+1. Con il token di licenza in mano, il client ora può derivare l’URL della richiesta dal token ed effettuare la richiesta di licenza a ExpressPlay, quindi riprodurre il contenuto protetto selezionato per l’utente.
