@@ -1,13 +1,10 @@
 ---
-description: Questo fornisce informazioni sull'attività Digital Rights Management (DRM).
-seo-description: Questo fornisce informazioni sull'attività Digital Rights Management (DRM).
-seo-title: classi di Digital Rights Management
-title: classi di Digital Rights Management
-uuid: 6ed54e4b-47c7-4e49-8d11-00fc346b43f8
+description: Questo fornisce informazioni sull’attività del Digital Rights Management (DRM).
+title: Classi di Digital Rights Management
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '58'
+source-wordcount: '45'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Classi di Digital Rights Management {#digital-rights-management-classes}
 
-Questo fornisce informazioni sull&#39;attività Digital Rights Management (DRM).
+Questo fornisce informazioni sull’attività del Digital Rights Management (DRM).
 
 | **Classe** | **Descrizione** |
 |---|---|
