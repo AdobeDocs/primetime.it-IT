@@ -1,9 +1,9 @@
 ---
-seo-title: Generazione di numeri casuali
 title: Generazione di numeri casuali
-uuid: 3ea25c48-1dbe-4039-8091-36c289702f78
+description: Generazione di numeri casuali
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 0%
@@ -13,4 +13,4 @@ ht-degree: 0%
 
 # Generazione di numeri casuali{#generating-random-numbers}
 
-I generatori di numeri casuali hardware possono essere utilizzati sui server Linux per garantire che venga generata un&#39;entropia sufficiente. Se il computer non riesce a generare abbastanza entropia,  operazioni di accesso al Adobe che richiedono un&#39;origine di casualità si bloccheranno in attesa dei dati da `/dev/random`.
+I generatori di numeri casuali hardware possono essere utilizzati sui server Linux per garantire che venga generata un&#39;entropia sufficiente. Se la macchina non è in grado di generare abbastanza entropia, le operazioni di accesso Adobe che richiedono un&#39;origine di casualità verranno bloccate in attesa dei dati da `/dev/random`.
