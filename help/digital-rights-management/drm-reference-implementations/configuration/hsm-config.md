@@ -1,13 +1,10 @@
 ---
-description: Potete configurare l’implementazione di riferimento con il provider Sun PKCS#11 che supporta HSM. Anche se l'uso di un HSM non è richiesto, è consigliato.
-seo-description: Potete configurare l’implementazione di riferimento con il provider Sun PKCS#11 che supporta HSM. Anche se l'uso di un HSM non è richiesto, è consigliato.
-seo-title: Configurazione HSM
+description: È possibile configurare l'implementazione di riferimento con il provider Sun PKCS#11 che supporta HSM. Anche se l’utilizzo di un HSM non è necessario, è consigliabile.
 title: Configurazione HSM
-uuid: 2741ac40-aa42-4aa7-9864-037f3ed3dee2
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '183'
 ht-degree: 0%
 
 ---
@@ -15,20 +12,20 @@ ht-degree: 0%
 
 # Configurazione HSM{#hsm-configuration}
 
-Potete configurare l’implementazione di riferimento con il provider Sun PKCS#11 che supporta HSM. Anche se l&#39;uso di un HSM non è richiesto, è consigliato.
+È possibile configurare l&#39;implementazione di riferimento con il provider Sun PKCS#11 che supporta HSM. Anche se l’utilizzo di un HSM non è necessario, è consigliabile.
 
-Per utilizzare una credenziale su un HSM, è necessario creare un file di configurazione per il provider Sun PKCS#11. Per ulteriori informazioni, vedere la [Guida di riferimento di Java PCKS#11](https://docs.oracle.com/javase/1.5.0/docs/guide/security/p11guide.html).
+Per utilizzare una credenziale su un HSM, è necessario creare un file di configurazione per il provider Sun PKCS#11. Per ulteriori informazioni, consulta la [Guida di riferimento di Java PCKS#11](https://docs.oracle.com/javase/1.5.0/docs/guide/security/p11guide.html).
 
-Per verificare che il file di configurazione HSM e Sun PKCS#11 sia configurato, digitare il comando seguente utilizzando lo strumento chiave installato con Java JDK:
+Per verificare che il file di configurazione HSM e Sun PKCS#11 sia configurato, digitare il comando seguente utilizzando il keytool installato con Java JDK:
 
 ```
 keytool -keystore NONE -storetype PKCS11 -providerClass sun.security.pkcs11.SunPKCS11 
   -providerArg pkcs11.cfg -list
 ```
 
-L&#39;HSM è stato configurato correttamente se è possibile visualizzare le credenziali nell&#39;elenco.
+Hai configurato correttamente l’HSM se puoi visualizzare le tue credenziali nell’elenco.
 
 >[!NOTE]
 >
->A partire da Java 1.7, Sun Java per Windows a 64 bit non supporta più le interfacce PKCS#11 che  Adobe Primetime DRM richiede di comunicare con i dispositivi HSM. Se intendete utilizzare un HSM, assicuratevi di utilizzare una versione a 32 bit di Java o un JDK che supporti le interfacce PKCS#11 complete.
+>A partire da Java 1.7, Sun Java per Windows a 64 bit non supporta più le interfacce PKCS#11 che Adobe Primetime DRM richiede per comunicare con i dispositivi HSM. Se prevedi di utilizzare un HSM, assicurati di utilizzare una versione a 32 bit di Java o di utilizzare un JDK che supporti l’interfaccia PKCS#11 completa.
 
