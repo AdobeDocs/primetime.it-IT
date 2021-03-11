@@ -1,13 +1,10 @@
 ---
-description: Il Secure Sockets Layer (SSL) è necessario solo se è richiesto il supporto per client Flash Media Rights Management Server 1.x.
-seo-description: Il Secure Sockets Layer (SSL) è necessario solo se è richiesto il supporto per client Flash Media Rights Management Server 1.x.
-seo-title: Configurazione di SSL
+description: Il Secure Sockets Layer (SSL) è necessario solo se è necessario il supporto per i client Flash Media Rights Management Server 1.x.
 title: Configurazione di SSL
-uuid: be547eac-f589-48ba-af14-8a7bec0e7431
 translation-type: tm+mt
-source-git-commit: ecb234a18d9e87359caeaab437f43ea2cd5ab499
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '90'
+source-wordcount: '68'
 ht-degree: 0%
 
 ---
@@ -15,6 +12,6 @@ ht-degree: 0%
 
 # Configurazione di SSL {#configuring-ssl}
 
-Il Secure Sockets Layer (SSL) è necessario solo se è richiesto il supporto per client Flash Media Rights Management Server 1.x.
+Il Secure Sockets Layer (SSL) è necessario solo se è necessario il supporto per i client Flash Media Rights Management Server 1.x.
 
-SSL con autenticazione client è richiesto per il server chiavi  Adobe Primetime DRM. Per ulteriori informazioni, vedere [Utilizzo del server chiavi  Adobe Primetime DRM](../../using-the-drm-key-server/requirements.md).
+SSL con autenticazione client è necessario per il server chiavi DRM di Adobe Primetime. Per ulteriori informazioni, consulta [Utilizzo del server chiavi DRM di Adobe Primetime](../../using-the-drm-key-server/requirements.md).
