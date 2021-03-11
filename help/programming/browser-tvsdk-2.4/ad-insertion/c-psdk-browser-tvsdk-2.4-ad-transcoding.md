@@ -1,20 +1,17 @@
 ---
-description: Alcuni annunci (o creativi) di terze parti non possono essere inseriti nello streaming di contenuto HTTP Live Streaming (HLS)/Dynamic Adaptive Streaming via HTTP (DASH) perché il loro formato video è incompatibile con HLS/DASH.  Adobe Primetime ad inserzione e Browser TVSDK possono tentare di creare un pacchetto (transcodificare) di video incompatibili in video m3u8/mpd compatibili.
-seo-description: Alcuni annunci (o creativi) di terze parti non possono essere inseriti nello streaming di contenuto HTTP Live Streaming (HLS)/Dynamic Adaptive Streaming via HTTP (DASH) perché il loro formato video è incompatibile con HLS/DASH.  Adobe Primetime ad inserzione e Browser TVSDK possono tentare di creare un pacchetto (transcodificare) di video incompatibili in video m3u8/mpd compatibili.
-seo-title: Repackage (transcodificare annunci incompatibili)
-title: Repackage (transcodificare annunci incompatibili)
-uuid: f414d133-2d04-462c-ae2c-75158a577fc5
+description: Alcuni annunci (o creativi) di terze parti non possono essere inseriti nello streaming di contenuti HTTP Live Streaming (HLS)/Dynamic Adaptive Streaming su HTTP (DASH) perché il loro formato video è incompatibile con HLS/DASH. L'inserimento di annunci Adobe Primetime e il browser TVSDK possono tentare facoltativamente di ricompattare (transcodificare) video incompatibili in video m3u8/mpd compatibili.
+title: Repackage (transcode) annunci incompatibili
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '197'
+source-wordcount: '141'
 ht-degree: 0%
 
 ---
 
 
-# Repackage (transcodificare) di annunci incompatibili{#repackage-transcode-incompatible-ads}
+# Ricompila (transcodifica) annunci incompatibili{#repackage-transcode-incompatible-ads}
 
-Alcuni annunci (o creativi) di terze parti non possono essere inseriti nello streaming di contenuto HTTP Live Streaming (HLS)/Dynamic Adaptive Streaming via HTTP (DASH) perché il loro formato video è incompatibile con HLS/DASH.  Adobe Primetime ad inserzione e Browser TVSDK possono tentare di creare un pacchetto (transcodificare) di video incompatibili in video m3u8/mpd compatibili.
+Alcuni annunci (o creativi) di terze parti non possono essere inseriti nello streaming di contenuti HTTP Live Streaming (HLS)/Dynamic Adaptive Streaming su HTTP (DASH) perché il loro formato video è incompatibile con HLS/DASH. L&#39;inserimento di annunci Adobe Primetime e il browser TVSDK possono tentare facoltativamente di ricompattare (transcodificare) video incompatibili in video m3u8/mpd compatibili.
 
-Gli annunci inviati da varie terze parti, come un&#39;agenzia pubblicitaria server, il partner di magazzino o una rete di annunci, vengono spesso consegnati in formati incompatibili, come ad esempio il file MP4 per lo scaricamento progressivo.
+Gli annunci forniti da varie terze parti, come un agenzia ad server, il tuo partner di inventario o una rete pubblicitaria, vengono spesso consegnati in formati incompatibili, come ad esempio il progressivo download MP4.
