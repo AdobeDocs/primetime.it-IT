@@ -1,25 +1,22 @@
 ---
-description: Potete implementare dei risolutori di contenuti personalizzati in base ai risolutori predefiniti.
-seo-description: Potete implementare dei risolutori di contenuti personalizzati in base ai risolutori predefiniti.
-seo-title: Implementazione di un risolutore di contenuti personalizzato
-title: Implementazione di un risolutore di contenuti personalizzato
-uuid: 5f63cc1e-3f4b-460c-9151-2b9d364800e2
+description: È possibile implementare i propri risolutori di contenuti in base ai risolutori predefiniti.
+title: Implementare un risolutore di contenuti personalizzato
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '209'
 ht-degree: 2%
 
 ---
 
 
-# Implementazione di un risolutore di contenuto personalizzato {#implement-a-custom-content-resolver}
+# Implementa un risolutore di contenuti personalizzato {#implement-a-custom-content-resolver}
 
-Potete implementare dei risolutori di contenuti personalizzati in base ai risolutori predefiniti.
+È possibile implementare i propri risolutori di contenuti in base ai risolutori predefiniti.
 
-Quando TVSDK genera una nuova opportunità, esegue un&#39;iterazione attraverso i risolutori di contenuti registrati alla ricerca di una in grado di risolvere tale opportunità. Il primo che restituisce `true` è selezionato per risolvere l&#39;opportunità. Se non è in grado di risolvere il problema, tale opportunità viene ignorata. Poiché il processo di risoluzione del contenuto è in genere asincrono, il risolutore del contenuto è responsabile della notifica a TVSDK al termine del processo.
+Quando TVSDK genera una nuova opportunità, esegue un’iterazione attraverso i risolutori di contenuti registrati alla ricerca di una in grado di risolvere tale opportunità. Il primo che restituisce `true` viene selezionato per risolvere l&#39;opportunità. Se nessun risolutore di contenuti è in grado, tale opportunità viene ignorata. Poiché il processo di risoluzione dei contenuti è in genere asincrono, il risolutore dei contenuti è responsabile della notifica a TVSDK al termine del processo.
 
-1. Implementa la tua `ContentFactory` personalizzata, estendendo l&#39;interfaccia `ContentFactory` e sostituendo `retrieveResolvers`.
+1. Implementa il tuo `ContentFactory` personalizzato, estendendo l&#39;interfaccia `ContentFactory` e ignorando `retrieveResolvers`.
 
    Ad esempio:
 
@@ -54,7 +51,7 @@ Quando TVSDK genera una nuova opportunità, esegue un&#39;iterazione attraverso 
    } 
    ```
 
-1. Registrare la `ContentFactory` nella cartella `MediaPlayer`.
+1. Registra il `ContentFactory` nel `MediaPlayer`.
 
    Ad esempio:
 
@@ -71,9 +68,9 @@ Quando TVSDK genera una nuova opportunità, esegue un&#39;iterazione attraverso 
    itemLoader.load(resource, id, config);
    ```
 
-1. Trasmettere un oggetto `AdvertisingMetadata` a TVSDK nel modo seguente:
+1. Passa un oggetto `AdvertisingMetadata` a TVSDK come segue:
    1. Creare un oggetto `AdvertisingMetadata`.
-   1. Salvare l&#39;oggetto `AdvertisingMetadata` in `MediaPlayerItemConfig`.
+   1. Salvare l’oggetto `AdvertisingMetadata` su `MediaPlayerItemConfig`.
 
       ```java
       AdvertisingMetadata advertisingMetadata = new AdvertisingMetadata(); 
@@ -84,8 +81,8 @@ Quando TVSDK genera una nuova opportunità, esegue un&#39;iterazione attraverso 
       mediaPlayerItemConfig.setAdvertisingMetadata(advertisingMetadata); 
       ```
 
-1. Create una classe ad resolver personalizzata che estenda la classe `ContentResolver`.
-   1. Nel risolutore annunci personalizzato, ignorare `doConfigure`, `doCanResolve`, `doResolve`, `doCleanup`:
+1. Crea una classe ad resolver personalizzata che estende la classe `ContentResolver` .
+   1. Nel risolutore di annunci personalizzato, sovrascrivi `doConfigure`, `doCanResolve`, `doResolve`, `doCleanup`:
 
       ```java
       void doConfigure(MediaPlayerItem item); 
@@ -94,7 +91,7 @@ Quando TVSDK genera una nuova opportunità, esegue un&#39;iterazione attraverso 
       void doCleanup();
       ```
 
-      Il `advertisingMetadata` viene ottenuto dall&#39;elemento passato in `doConfigure`:
+      Ottieni il tuo `advertisingMetadata` dall&#39;elemento trasmesso in `doConfigure`:
 
       ```java
       MediaPlayerItemConfig itemConfig = item.getConfig(); 
@@ -103,7 +100,7 @@ Quando TVSDK genera una nuova opportunità, esegue un&#39;iterazione attraverso 
         mediaPlayerItemConfig.getAdvertisingMetadata(); 
       ```
 
-   1. Per ogni opportunità di posizionamento, create un `List<TimelineOperation>`.
+   1. Per ogni opportunità di posizionamento, crea un `List<TimelineOperation>`.
 
       Questo esempio `TimelineOperation` fornisce una struttura per `AdBreakPlacement`:
 
@@ -116,16 +113,16 @@ Quando TVSDK genera una nuova opportunità, esegue un&#39;iterazione attraverso 
       ); 
       ```
 
-   1. Dopo la risoluzione degli annunci, chiama una delle seguenti funzioni:
+   1. Una volta risolti gli annunci, chiama una delle seguenti funzioni:
 
-      * Se la risoluzione dell&#39;annuncio ha esito positivo, chiama `process(List<TimelineOperation> proposals)` e `notifyCompleted(Opportunity opportunity)` in`ContentResolverClient`
+      * Se la risoluzione dell&#39;annuncio ha esito positivo, chiama `process(List<TimelineOperation> proposals)` e `notifyCompleted(Opportunity opportunity)` sul`ContentResolverClient`
 
          ```java
          _client.process(timelineOperations); 
          _client.notifyCompleted(opportunity); 
          ```
 
-      * Se la risoluzione dell&#39;annuncio non riesce, chiamate `notifyResolveError` in `ContentResolverClient`
+      * Se la risoluzione dell&#39;annuncio non riesce, chiama `notifyResolveError` su `ContentResolverClient`
 
          ```java
          _client.notifyFailed(Opportunity opportunity, PSDKErrorCode error);
@@ -139,7 +136,7 @@ Quando TVSDK genera una nuova opportunità, esegue un&#39;iterazione attraverso 
 
 <!--<a id="example_463B718749504A978F0B887786844C39"></a>-->
 
-Questo esempio di risolutore di annunci personalizzato risolve un&#39;opportunità e fornisce un annuncio semplice:
+Questo ad resolver personalizzato di esempio risolve un&#39;opportunità e fornisce un annuncio semplice:
 
 ```java
 public class CustomContentResolver extends ContentResolver { 
