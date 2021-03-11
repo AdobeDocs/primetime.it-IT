@@ -1,20 +1,17 @@
 ---
-description: È possibile configurare  server licenze Adobe Primetime DRM in modo che utilizzi qualsiasi porta di rete.
-seo-description: È possibile configurare  server licenze Adobe Primetime DRM in modo che utilizzi qualsiasi porta di rete.
-seo-title: Porte per i server applicazioni
-title: Porte per i server applicazioni
-uuid: 3df7d29f-aa1b-4cf3-9f28-a9df6b013999
+description: Puoi configurare il server di licenza Adobe Primetime DRM per l'utilizzo di qualsiasi porta di rete.
+title: Porte per server applicazioni
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '87'
+source-wordcount: '69'
 ht-degree: 0%
 
 ---
 
 
-# Porte per server applicazione{#ports-for-application-servers}
+# Porte per server applicazioni{#ports-for-application-servers}
 
-È possibile configurare  server licenze Adobe Primetime DRM in modo che utilizzi qualsiasi porta di rete.
+Puoi configurare il server di licenza Adobe Primetime DRM per l&#39;utilizzo di qualsiasi porta di rete.
 
-Queste porte devono essere abilitate o disattivate sul firewall interno, a seconda della funzionalità di rete che si desidera consentire ai client che si connettono al server applicazione che esegue Primetime DRM.
+Queste porte devono essere abilitate o disabilitate nel firewall interno, a seconda della funzionalità di rete che si desidera consentire ai client che si connettono al server applicazioni che esegue Primetime DRM.
