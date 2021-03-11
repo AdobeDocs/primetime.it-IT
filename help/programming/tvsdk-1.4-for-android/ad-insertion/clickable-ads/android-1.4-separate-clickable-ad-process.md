@@ -1,23 +1,20 @@
 ---
-description: Separare la logica dell'interfaccia utente del lettore dal processo che gestisce i clic degli annunci. Un modo per farlo è implementare più frammenti per un'attività.
-seo-description: Separare la logica dell'interfaccia utente del lettore dal processo che gestisce i clic degli annunci. Un modo per farlo è implementare più frammenti per un'attività.
-seo-title: Separare il processo di annunci cliccabili
-title: Separare il processo di annunci cliccabili
-uuid: 00537191-8997-418d-add2-8e86d818c76e
+description: Separa la logica dell’interfaccia utente del lettore dal processo che gestisce i clic degli annunci. Un modo per farlo è quello di implementare più frammenti per un’attività.
+title: Separa il processo degli annunci cliccabili
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '143'
 ht-degree: 0%
 
 ---
 
 
-# Separa il processo annuncio cliccabile{#separate-the-clickable-ad-process}
+# Separa il processo degli annunci cliccabili{#separate-the-clickable-ad-process}
 
-Separare la logica dell&#39;interfaccia utente del lettore dal processo che gestisce i clic degli annunci. Un modo per farlo è implementare più frammenti per un&#39;attività.
+Separa la logica dell’interfaccia utente del lettore dal processo che gestisce i clic degli annunci. Un modo per farlo è quello di implementare più frammenti per un’attività.
 
-1. Implementate un frammento in modo che contenga il simbolo `MediaPlayer` e che sarà responsabile della riproduzione video.
+1. Implementa un frammento contenente il `MediaPlayer` responsabile della riproduzione video.
 
    Questo frammento deve chiamare `notifyClick`.
 
@@ -31,9 +28,9 @@ Separare la logica dell&#39;interfaccia utente del lettore dal processo che gest
    } 
    ```
 
-1. Implementate un frammento diverso per visualizzare un elemento dell&#39;interfaccia utente che indica che è possibile fare clic su un annuncio, monitorare tale elemento dell&#39;interfaccia utente e comunicare i clic dell&#39;utente al frammento contenente il simbolo `MediaPlayer`.
+1. Implementa un frammento diverso per visualizzare un elemento dell’interfaccia utente che indica che un annuncio è cliccabile, monitora tale elemento dell’interfaccia utente e comunica i clic dell’utente al frammento che contiene `MediaPlayer`.
 
-   Questo frammento deve dichiarare un&#39;interfaccia per la comunicazione dei frammenti. Il frammento acquisisce l&#39;implementazione dell&#39;interfaccia durante il metodo onAttach lifecycle e può chiamare i metodi dell&#39;interfaccia per comunicare con l&#39;attività.
+   Questo frammento deve dichiarare un&#39;interfaccia per la comunicazione dei frammenti. Il frammento acquisisce l&#39;implementazione dell&#39;interfaccia durante il relativo metodo onAttach lifecycle e può chiamare i metodi dell&#39;interfaccia per comunicare con l&#39;attività.
 
    ```java
    public class PlayerClickableAdFragment extends SherlockFragment { 
