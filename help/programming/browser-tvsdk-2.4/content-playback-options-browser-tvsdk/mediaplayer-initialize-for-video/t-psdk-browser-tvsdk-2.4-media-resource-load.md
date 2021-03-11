@@ -1,13 +1,10 @@
 ---
-description: Caricate una risorsa creando direttamente un'istanza di MediaResource e caricando il contenuto video da riprodurre.
-seo-description: Caricate una risorsa creando direttamente un'istanza di MediaResource e caricando il contenuto video da riprodurre.
-seo-title: Caricamento di una risorsa multimediale in MediaPlayer
-title: Caricamento di una risorsa multimediale in MediaPlayer
-uuid: ac31ccfe-161d-41a2-9a6e-38fae11ceab5
+description: Carica una risorsa creando direttamente un'istanza di MediaResource e caricando il contenuto video da riprodurre.
+title: Caricare una risorsa multimediale in MediaPlayer
 translation-type: tm+mt
-source-git-commit: 7d61a6cd8cb2c381f85a19d9ccac3d235ffceaf1
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '187'
 ht-degree: 0%
 
 ---
@@ -15,28 +12,28 @@ ht-degree: 0%
 
 # Caricare una risorsa multimediale in MediaPlayer {#load-a-media-resource-in-the-mediaplayer}
 
-Caricate una risorsa creando direttamente un&#39;istanza di MediaResource e caricando il contenuto video da riprodurre.
+Carica una risorsa creando direttamente un&#39;istanza di MediaResource e caricando il contenuto video da riprodurre.
 
-1. Impostate l&#39;elemento riproducibile dell&#39;oggetto `MediaPlayer` con la nuova risorsa da riprodurre.
+1. Imposta l&#39;elemento riproducibile dell&#39;oggetto `MediaPlayer` con la nuova risorsa da riprodurre.
 
-   Sostituisci l&#39;elemento `MediaPlayer` attualmente riproducibile dell&#39;oggetto esistente chiamando `replaceCurrentResource` e passando un&#39;istanza `MediaResource` esistente.
+   Sostituisci l&#39;elemento attualmente riproducibile dell&#39;oggetto `MediaPlayer` esistente chiamando `replaceCurrentResource` e passando un&#39;istanza `MediaResource` esistente.
 
-1. Attendete che l&#39;SDK per browser TVSDK invii `AdobePSDK.MediaPlayerStatusChangeEvent` con `event.status` uguale a uno dei seguenti elementi:
+1. Attendi che il browser TVSDK invii `AdobePSDK.MediaPlayerStatusChangeEvent` con `event.status` che è uguale a uno dei seguenti:
 
    * `MediaPlayerStatus.INITIALIZED`
    * `MediaPlayerStatus.PREPARED`
    * `MediaPlayerStatus.ERROR`
 
-      Attraverso questi eventi, l&#39;oggetto MediaPlayer comunica all&#39;applicazione se la risorsa multimediale è stata caricata correttamente.
+      Attraverso questi eventi, l&#39;oggetto MediaPlayer notifica all&#39;applicazione se la risorsa multimediale è stata caricata correttamente.
 
-1. Quando lo stato del lettore multimediale diventa `MediaPlayerStatus.INITIALIZED`, è possibile chiamare `MediaPlayer.prepareToPlay`.
+1. Quando lo stato del lettore multimediale cambia in `MediaPlayerStatus.INITIALIZED`, puoi chiamare `MediaPlayer.prepareToPlay`.
 
-   Lo stato INITIALIZED indica che il supporto è stato caricato correttamente. La chiamata di `prepareToPlay` avvia la risoluzione e il processo di posizionamento della pubblicità, se presente.
-1. Quando Browser TVSDK invia l&#39;evento `MediaPlayerStatus.PREPARED` il flusso multimediale è stato caricato correttamente (viene creato un oggetto MediaPlayerItem) ed è pronto per la riproduzione.
+   Lo stato INITIALIZED indica che il supporto è stato caricato correttamente. Una chiamata a `prepareToPlay` avvia il processo di risoluzione e posizionamento dei messaggi pubblicitari, se presente.
+1. Quando il browser TVSDK invia l&#39;evento `MediaPlayerStatus.PREPARED` il flusso multimediale è stato caricato correttamente (viene creato un MediaPlayerItem) ed è pronto per la riproduzione.
 
-Se si verifica un errore, `MediaPlayer` passa alla `MediaPlayerStatus.ERROR`.
+Se si verifica un errore, il `MediaPlayer` passa al `MediaPlayerStatus.ERROR`.
 
-Inoltre, invia una notifica all&#39;applicazione inviando l&#39;evento `MediaPlayerStatus.ERROR`.
+Invia inoltre una notifica all&#39;applicazione inviando l&#39;evento `MediaPlayerStatus.ERROR` .
 
 ><!--<a id="example_3774607C6F08473282CF0CB7F3D82373"></a>-->
 
