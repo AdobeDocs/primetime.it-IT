@@ -1,23 +1,21 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Esecuzione di Jailbreak (richiede  Adobe Primetime DRM)
-title: Esecuzione di Jailbreak (richiede  Adobe Primetime DRM)
-uuid: 5cf8ebbc-17de-44cc-90d2-0857ea62c4a4
+title: Applicazione Jailbreak (richiede Adobe Primetime DRM)
+description: Applicazione Jailbreak (richiede Adobe Primetime DRM)
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '92'
+source-wordcount: '90'
 ht-degree: 0%
 
 ---
 
 
-# Applicazione della sospensione (richiede  Adobe Primetime DRM){#jailbreak-enforcement-requires-adobe-primetime-drm}
+# Applicazione Jailbreak (richiede Adobe Primetime DRM){#jailbreak-enforcement-requires-adobe-primetime-drm}
 
-Sulle piattaforme che supportano il rilevamento delle interruzioni di chiamata, come dispositivi mobili Android e iOS, è possibile abilitare l&#39;imposizione delle interruzioni di chiamata per impedire la riproduzione del contenuto se [!DNL jailbreak/root] è stato rilevato sul dispositivo.
+Sulle piattaforme che supportano il rilevamento di jailbreak, come Android e iOS per dispositivi mobili, puoi abilitare l’imposizione jailbreak per impedire la riproduzione di contenuto se [!DNL jailbreak/root] è stato rilevato sul dispositivo.
 
 >[!NOTE]
 >
->Questa regola di utilizzo è supportata  client Adobe Primetime DRM versione 4.0 o successiva. Tuttavia, non ha alcun effetto sulle piattaforme che non supportano il rilevamento delle interruzioni di chiamata. Il comportamento dei client meno recenti dipende dalla versione client minima supportata dal server licenze.
+>Questa regola di utilizzo è supportata dal client Adobe Primetime DRM versione 4.0 o successiva. Tuttavia, non ha alcun effetto sulle piattaforme che non supportano il rilevamento jailbreak. Il comportamento dei client meno recenti dipende dalla versione client minima supportata dal server licenze.
 
