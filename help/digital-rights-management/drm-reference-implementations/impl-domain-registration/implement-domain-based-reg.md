@@ -1,9 +1,9 @@
 ---
-seo-title: Implementazione della registrazione del dominio basata sull'identità
 title: Implementazione della registrazione del dominio basata sull'identità
-uuid: 4a71b2e0-d1a2-4d63-9cbd-980a292774ab
+description: Implementazione della registrazione del dominio basata sull'identità
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '47'
 ht-degree: 0%
@@ -11,10 +11,10 @@ ht-degree: 0%
 ---
 
 
-# Implementazione della registrazione del dominio basata sull&#39;identità{#implement-identity-based-domain-registration}
+# Implementa la registrazione del dominio basato su identità{#implement-identity-based-domain-registration}
 
-1. Crea un criterio DRM con registrazione di dominio obbligatoria.
-1. Specificate l&#39;host e la porta del server per l&#39;URL del server di dominio.
+1. Crea un criterio DRM con registrazione obbligatoria del dominio.
+1. Specifica l&#39;host e la porta del server per l&#39;URL del server di dominio.
 
    Nel file [!DNL .properties], imposta:
 
@@ -22,7 +22,7 @@ ht-degree: 0%
    policy.domain.url=https://[server:port] 
    ```
 
-1. Rendere obbligatoria l&#39;autenticazione con un nome utente e una password.
+1. Rendi obbligatoria l’autenticazione con nome utente e password.
 
    Nel file [!DNL .properties], imposta:
 
