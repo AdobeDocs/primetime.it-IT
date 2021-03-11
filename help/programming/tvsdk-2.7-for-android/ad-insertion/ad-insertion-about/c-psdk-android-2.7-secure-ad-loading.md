@@ -1,23 +1,21 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Protezione del caricamento di annunci tramite HTTPS
-title: Protezione del caricamento di annunci tramite HTTPS
-uuid: 72ab94d3-ee0c-4f02-adf2-c186ae6aec26
+title: Caricamento dell'annuncio protetto su HTTPS
+description: Caricamento dell'annuncio protetto su HTTPS
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '52'
+source-wordcount: '50'
 ht-degree: 0%
 
 ---
 
 
-# Caricamento annunci protetti tramite HTTPS {#secure-ad-loading-over-https}
+# Caricamento dell&#39;annuncio protetto su HTTPS {#secure-ad-loading-over-https}
 
- Adobe Primetime fornisce un&#39;opzione per richiedere la prima chiamata al server per gli annunci Primetime e alle chiamate relative ai CRS attraverso il protocollo HTTPS.
+Adobe Primetime fornisce un&#39;opzione per richiedere la prima chiamata al server ad Primetime e alle chiamate relative a CRS su HTTPS.
 
-Per impostazione predefinita, la funzione non è abilitata. Utilizzate quanto segue per abilitare il caricamento sicuro degli annunci.
+La funzione non è abilitata per impostazione predefinita. Utilizza quanto segue per abilitare il caricamento sicuro degli annunci.
 
 ```
 AuditudeSettings auditudeSettings = new AuditudeSettings(); 
