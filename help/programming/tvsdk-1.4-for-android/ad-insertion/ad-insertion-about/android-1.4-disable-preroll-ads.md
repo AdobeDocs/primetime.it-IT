@@ -1,21 +1,19 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Disattivazione degli annunci pre-roll
-title: Disattivazione degli annunci pre-roll
-uuid: 2e307a58-49f2-43d6-908b-97684ad6e3d3
+title: Disattiva gli annunci pre-roll
+description: Disattiva gli annunci pre-roll
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '45'
+source-wordcount: '43'
 ht-degree: 0%
 
 ---
 
 
-# Disattiva annunci pre-roll{#disable-pre-roll-ads}
+# Disattiva gli annunci pre-roll{#disable-pre-roll-ads}
 
-Per disattivare il pre-roll, modificate i generatori di opportunità predefiniti in modo da non effettuare la chiamata pre-roll. I generatori di opportunità predefiniti sono:
+Per disattivare il pre-roll, modifica i generatori di opportunità predefiniti in modo da non effettuare la chiamata pre-roll. I generatori di opportunità predefiniti sono:
 
 ```
 @inheritDoc 
@@ -28,7 +26,7 @@ return result;
 }
 ```
 
-Per disattivare il pre-roll sui flussi live, modificare quanto sopra in modo da includere solo SpliceOutOpportunityGenerator:
+Per disabilitare il pre-roll sui flussi live, modifica quanto sopra in modo da includere solo il SpliceOutOpportunityGenerator:
 
 ```
 @inheritDoc 
