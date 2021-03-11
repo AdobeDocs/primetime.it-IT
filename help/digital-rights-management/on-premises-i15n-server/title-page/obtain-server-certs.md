@@ -1,9 +1,9 @@
 ---
-seo-title: Ottenere i certificati del server di individuazione
-title: Ottenere i certificati del server di individuazione
-uuid: ae1e848e-0a19-4ec3-8419-ce5fd783c279
+title: Ottenere i certificati del server di Individualization
+description: Ottenere i certificati del server di Individualization
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 0%
@@ -11,14 +11,14 @@ ht-degree: 0%
 ---
 
 
-# Ottenere i certificati del server di individuazione{#obtain-individualization-server-certificates}
+# Recuperare i certificati del server di individuazione{#obtain-individualization-server-certificates}
 
-Per utilizzare On Premises Individualization Server, è innanzitutto necessario ottenere due credenziali digitali (certificati):
+Per utilizzare il server di Individualizzazione locale on, è innanzitutto necessario ottenere due credenziali digitali (certificati):
 
-* *Individuazione dei crediti*  di trasporto - emessi dal Adobe
-* *Credenziale*  CA per l&#39;individuazione - rilasciata da Symantec (VeriSign)
+* *Individualizzazione Crediti*  di trasporto - emessi da Adobe
+* *Individualization CA Credential*  - rilasciato da Symantec (VeriSign)
 
 Per ottenere questi certificati:
 
-1. Si prega di inviare una richiesta via biglietto Zendesk a: [https://adobeprimetime.zendesk.com](https://adobeprimetime.zendesk.com)
-Queste credenziali si sommano alle credenziali richieste per l&#39;utilizzo di un server licenze DRM di Primetime.
+1. Invia una richiesta tramite biglietto Zendesk a: [https://adobeprimetime.zendesk.com](https://adobeprimetime.zendesk.com)
+Tieni presente che queste credenziali si aggiungono alle credenziali necessarie per l’utilizzo di un server licenze DRM di Primetime.
