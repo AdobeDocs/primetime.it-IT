@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Requisiti software
 title: Requisiti software
-uuid: 9faa229b-1abf-4b55-b293-247777bcb1db
+description: Requisiti software
+copied-description: true
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '166'
+source-wordcount: '164'
 ht-degree: 0%
 
 ---
@@ -18,16 +16,16 @@ ht-degree: 0%
 * Tomcat 6
 * JDK 1.8
 
-## Consegna codice / Contenuti pacchetto{#code-delivery-package-contents}
+## Consegna del codice / Contenuto del pacchetto{#code-delivery-package-contents}
 
-Il pacchetto  Adobe Primetime DRM On Premises Individualization Server contiene quanto segue:
+Il pacchetto Adobe Primetime DRM On Premises Individualization Server contiene quanto segue:
 
 * [!DNL flashaccess.war] - Il server di individuazione
 * [!DNL flashaccess-kgs.war] - Server di generazione chiavi opzionale
 * [!DNL /shared] - Contiene:
 
    * [!DNL adobe-flashaccess-certs.jar]
-   * [!DNL AdobeInitial.properties] - Esempio di file di proprietà
+   * [!DNL AdobeInitial.properties] - File delle proprietà di esempio
 
 * [!DNL thirdparty/] - Include il supporto Crypto-J come librerie native:
 
@@ -37,19 +35,19 @@ Il pacchetto  Adobe Primetime DRM On Premises Individualization Server contiene 
 * [!DNL adobe-flashaccess-i15n-setup.jar] - Utility per la crittografia delle password delle credenziali del server
 * [!DNL ROOT] - contiene un  [!DNL crossdomain.xml] file
 
-* File cache ECI - Precedentemente scaricati
-* [!DNL addIndivCert.py] - Uno script per l&#39;aggiornamento del livello principale di affidabilità di un server licenze per il supporto delle individualizzazioni in locale
+* File di cache ECI - File prescaricati
+* [!DNL addIndivCert.py] - Script per l’aggiornamento della directory principale di affidabilità di un server licenze per supportare le individualizzazioni in base ai prerequisiti
 * [!DNL CreateMetadata.jar] - Utility per la creazione di metadati DRM in locale
-* [!DNL client_sample/] - Una cartella con uno snippet di codice client
-* Note sulla versione - Per eventuali aggiunte dell&#39;ultimo minuto alla documentazione
+* [!DNL client_sample/] - Cartella con frammento di codice client
+* Note sulla versione - Per eventuali aggiunte alla documentazione dell’ultimo minuto
 
-## Ottenere i certificati del server di individuazione{#obtain-individualization-server-certificates}
+## Recuperare i certificati del server di individuazione{#obtain-individualization-server-certificates}
 
-Per utilizzare On Premises Individualization Server, è innanzitutto necessario ottenere due credenziali digitali (certificati):
+Per utilizzare il server di Individualizzazione locale on, è innanzitutto necessario ottenere due credenziali digitali (certificati):
 
-* *Individuazione dei crediti*  di trasporto - emessi dal Adobe
-* *Credenziale*  CA per l&#39;individuazione - rilasciata da Symantec (VeriSign)
+* *Individualizzazione Crediti*  di trasporto - emessi da Adobe
+* *Individualization CA Credential*  - rilasciato da Symantec (VeriSign)
 
-Per ottenere questi certificati, inviare una richiesta tramite biglietto Zendesk a: [https://adobeprimetime.zendesk.com](https://adobeprimetime.zendesk.com)
+Per ottenere questi certificati, invia una richiesta tramite biglietto Zendesk al seguente indirizzo: [https://adobeprimetime.zendesk.com](https://adobeprimetime.zendesk.com)
 
-Queste credenziali si sommano alle credenziali richieste per l&#39;utilizzo di un server licenze DRM di Primetime.
+Tieni presente che queste credenziali si aggiungono alle credenziali necessarie per l’utilizzo di un server licenze DRM di Primetime.
