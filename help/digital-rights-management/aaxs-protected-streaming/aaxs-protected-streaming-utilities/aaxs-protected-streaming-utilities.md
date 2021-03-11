@@ -1,9 +1,9 @@
 ---
-seo-title: Adobe Access Server per le utility di streaming protetto
-title: Adobe Access Server per le utility di streaming protetto
-uuid: 85e268b6-4621-4cdd-b654-e8dcd180958a
+title: Adobe Access Server per le utility di streaming protette
+description: Adobe Access Server per le utility di streaming protette
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '21'
 ht-degree: 0%
@@ -11,5 +11,5 @@ ht-degree: 0%
 ---
 
 
-# Adobe Access Server per le utility di streaming protetto{#adobe-access-server-for-protected-streaming-utilities}
+# Adobe Access Server per utilità di streaming protette{#adobe-access-server-for-protected-streaming-utilities}
 
