@@ -1,13 +1,10 @@
 ---
-description: Il comportamento della riproduzione dei contenuti multimediali dipende dalla ricerca, la messa in pausa, l'avanzamento rapido o il riavvolgimento (modalità di riproduzione ingannevole) e l'inclusione di contenuti pubblicitari.
-seo-description: Il comportamento della riproduzione dei contenuti multimediali dipende dalla ricerca, la messa in pausa, l'avanzamento rapido o il riavvolgimento (modalità di riproduzione ingannevole) e l'inclusione di contenuti pubblicitari.
-seo-title: Comportamento di riproduzione predefinito e personalizzato con gli annunci
-title: Comportamento di riproduzione predefinito e personalizzato con gli annunci
-uuid: b977d7b5-bbae-4af4-92a7-0fdbffb08785
+description: Il comportamento della riproduzione dei contenuti multimediali è influenzato dalla ricerca, dalla sospensione, dall'avanzamento rapido o dal riavvolgimento (modalità di riproduzione a trucco) e dall'inclusione della pubblicità.
+title: Comportamento di riproduzione predefinito e personalizzato con annunci pubblicitari
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: '668'
 ht-degree: 0%
 
 ---
@@ -15,24 +12,24 @@ ht-degree: 0%
 
 # Comportamento di riproduzione predefinito e personalizzato con annunci {#default-and-customized-playback-behavior-with-ads}
 
-Il comportamento della riproduzione dei contenuti multimediali dipende dalla ricerca, la messa in pausa, l&#39;avanzamento rapido o il riavvolgimento (modalità di riproduzione ingannevole) e l&#39;inclusione di contenuti pubblicitari.
+Il comportamento della riproduzione dei contenuti multimediali è influenzato dalla ricerca, dalla sospensione, dall&#39;avanzamento rapido o dal riavvolgimento (modalità di riproduzione a trucco) e dall&#39;inclusione della pubblicità.
 
-Per ignorare il comportamento predefinito, utilizzare `AdBreakPolicySelector`.
+Per ignorare il comportamento predefinito, utilizza `AdBreakPolicySelector`.
 
 >[!IMPORTANT]
 >
->TVSDK non fornisce un modo per disabilitare la ricerca durante gli annunci.  Adobe consiglia di configurare l&#39;applicazione per disabilitare la ricerca durante gli annunci.
+>TVSDK non fornisce un modo per disabilitare la ricerca durante gli annunci. Adobe consiglia di configurare l&#39;applicazione per disabilitare la ricerca durante gli annunci.
 
-Di seguito è riportato il comportamento di riproduzione per i contenuti live/lineari:
+Ecco il comportamento di riproduzione per i contenuti live/lineari:
 
-* La ripresa della riproduzione dopo una pausa comporta la riproduzione del contenuto memorizzato nel buffer al momento della pausa.
+* La ripresa della riproduzione dopo una pausa comporta la riproduzione del contenuto bufferizzato al momento della pausa.
 
-   Se la posizione di ripresa è ancora compresa nell’intervallo di riproduzione, la riproduzione deve essere continua. In caso contrario, TVSDK passa al nuovo punto attivo. È inoltre possibile eseguire un&#39;operazione di ricerca e selezionare un altro punto di riproduzione.
-* TVSDK risolve gli annunci tra suggerimenti dopo la posizione in cui l&#39;applicazione entra in riproduzione dal vivo.
+   Se la posizione di ripresa è ancora compresa nell&#39;intervallo di riproduzione, la riproduzione dovrebbe essere continua. In caso contrario, TVSDK passa al nuovo punto attivo. È inoltre possibile eseguire un&#39;operazione di ricerca e selezionare un punto di riproduzione diverso.
+* TVSDK risolve gli annunci tra i segnali dopo la posizione in cui l’applicazione entra in riproduzione live.
 
-   La riproduzione inizia dopo la risoluzione del primo cue point. Il valore predefinito per l’immissione della riproduzione in diretta è il punto di attivazione del client, ma potete scegliere una posizione diversa. Tutti i suggerimenti prima della posizione iniziale vengono risolti dopo che l&#39;applicazione esegue una ricerca nella finestra DVR.
+   La riproduzione inizia dopo la risoluzione del primo cue. Il valore predefinito per l’immissione della riproduzione in diretta è il punto attivo del client, ma è possibile scegliere una posizione diversa. Tutti i suggerimenti prima della posizione iniziale vengono risolti dopo che l&#39;applicazione esegue una ricerca nella finestra DVR.
 
-La tabella seguente descrive come TVSDK gestisce gli annunci e le interruzioni di annunci durante la riproduzione:
+La tabella seguente descrive come TVSDK gestisce gli annunci e le interruzioni pubblicitarie durante la riproduzione:
 
 <table id="table_466538B1C2A646B89EB4F9AA111203BE"> 
  <thead> 
@@ -44,51 +41,51 @@ La tabella seguente descrive come TVSDK gestisce gli annunci e le interruzioni d
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> Durante la riproduzione normale, viene rilevata un'interruzione di annuncio. </td> 
+   <td colname="col1"> Durante la riproduzione normale, si verifica un'interruzione pubblicitaria. </td> 
    <td colname="col2"> 
     <ul id="ul_10D2638676EA4ADDA718E61BD4FDC1D2"> 
-     <li id="li_D5CC30F063934C738971E2E8AF00C137"> Per live/linear, riproduce l'interruzione dell'annuncio, anche se l'interruzione dell'annuncio è già stata osservata. </li> 
-     <li id="li_D962C0938DA74186AE99D117E5A74E38">Per VOD, riproduce l'interruzione dell'annuncio e contrassegna l'interruzione dell'annuncio come osservata. </li> 
+     <li id="li_D5CC30F063934C738971E2E8AF00C137"> Per live/lineari, riproduce l'interruzione pubblicitaria, anche se l'interruzione pubblicitaria è già stata osservata. </li> 
+     <li id="li_D962C0938DA74186AE99D117E5A74E38">Per VOD, riproduce la pausa pubblicitaria e contrassegna la pausa pubblicitaria come guardato. </li> 
     </ul> </td> 
-   <td colname="col3">Specificate un criterio diverso per l'interruzione dell'annuncio utilizzando <span class="codeph"> selectPolicyForAdBreak</span>. </td> 
+   <td colname="col3">Specifica un criterio diverso per l'interruzione pubblicitaria utilizzando <span class="codeph"> selectPolicyForAdBreak</span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> L'applicazione cerca in avanti gli annunci nel contenuto principale. </td> 
-   <td colname="col2"> Riproduce l’ultima interruzione non osservata saltata e riprende la riproduzione nella posizione di ricerca desiderata al termine della riproduzione delle interruzioni. </td> 
+   <td colname="col1"> L'applicazione cerca in avanti e suddivide i contenuti principali. </td> 
+   <td colname="col2"> Riproduce l'ultima interruzione pubblicitaria non osservata saltata e riprende la riproduzione nella posizione di ricerca desiderata al termine della riproduzione delle interruzioni. </td> 
    <td colname="col3">Selezionare l'interruzione saltata da riprodurre utilizzando <span class="codeph"> selectAdBreaksToPlay</span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> L'applicazione cerca all'indietro le interruzioni pubblicitarie nel contenuto principale. </td> 
-   <td colname="col2"> Consente di saltare la posizione di ricerca desiderata senza la riproduzione di annunci pubblicitari interrotti. </td> 
+   <td colname="col2"> Salta alla posizione di ricerca desiderata senza giocare ad break. </td> 
    <td colname="col3">Selezionare l'interruzione saltata da riprodurre utilizzando <span class="codeph"> selectAdBreaksToPlay</span>.                      </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> La tua applicazione cerca di andare avanti in un'interruzione pubblicitaria. </td> 
-   <td colname="col2"> Viene riprodotto dall’inizio dell’annuncio nel quale la ricerca è terminata. </td> 
-   <td colname="col3">Specificate un altro criterio di annuncio per l'interruzione dell'annuncio e per l'annuncio specifico a cui è terminata la ricerca utilizzando <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
+   <td colname="col1"> La tua applicazione cerca in avanti in un annuncio break. </td> 
+   <td colname="col2"> Riproduce dall’inizio dell’annuncio in cui la ricerca è terminata. </td> 
+   <td colname="col3">Specifica un diverso criterio di annunci per l'interruzione pubblicitaria e per l'annuncio specifico in cui la ricerca è terminata utilizzando <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> L'applicazione cerca all'indietro in un'interruzione di annuncio. </td> 
-   <td colname="col2"> Viene riprodotto dall’inizio dell’annuncio nel quale la ricerca è terminata. </td> 
-   <td colname="col3">Specificate un altro criterio di annuncio per l'interruzione di annuncio e per l'annuncio specifico in cui la ricerca è terminata utilizzando <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
+   <td colname="col1"> L'applicazione cerca all'indietro in un'interruzione pubblicitaria. </td> 
+   <td colname="col2"> Riproduce dall’inizio dell’annuncio in cui la ricerca è terminata. </td> 
+   <td colname="col3">Specifica un diverso criterio per l'interruzione pubblicitaria e per l'annuncio specifico in cui la ricerca è terminata utilizzando <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> L'applicazione cerca in avanti o all'indietro gli annunci controllati nel contenuto principale. </td> 
-   <td colname="col2"> Se l’ultima interruzione annuncio è già stata osservata, passa alla posizione di ricerca selezionata dall’utente. </td> 
-   <td colname="col3">Selezionare una delle interruzioni ignorate da riprodurre con <span class="codeph"> selectAdBreaksToPlay</span> e determinare quali interruzioni sono già state osservate utilizzando <span class="codeph"> AdBreak.isWatched</span>. <p>Importante:  Per impostazione predefinita, TVSDK contrassegna un'interruzione di annuncio come visualizzata subito dopo l'immissione del primo annuncio nell'interruzione di annuncio. </p> </td> 
+   <td colname="col1"> L'applicazione cerca in avanti o all'indietro gli annunci osservati e li suddivide in contenuti principali. </td> 
+   <td colname="col2"> Se l’ultima interruzione pubblicitaria è già stata osservata, passa alla posizione di ricerca selezionata dall’utente. </td> 
+   <td colname="col3">Seleziona quale delle interruzioni saltate da riprodurre utilizzando <span class="codeph"> selectAdBreaksToPlay</span> e determina quali interruzioni sono già state controllate utilizzando <span class="codeph"> AdBreak.isWatched</span>. <p>Importante:  Per impostazione predefinita, TVSDK contrassegna un’interruzione pubblicitaria come osservata immediatamente dopo l’accesso al primo annuncio nell’interruzione pubblicitaria. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> L'applicazione cerca in avanti o indietro su uno o più annunci pubblicitari si interrompe e cade in un'interruzione pubblicitaria controllata. </td> 
-   <td colname="col2"> Consente di saltare l'interruzione dell'annuncio e di cercare la posizione immediatamente dopo l'interruzione dell'annuncio. </td> 
-   <td colname="col3">Specificate un altro criterio di annuncio per l'interruzione dell'annuncio (con lo stato guardato impostato su true) e per l'annuncio specifico a cui è terminata la ricerca utilizzando <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
+   <td colname="col1"> L'applicazione cerca in avanti o all'indietro su uno o più annunci break e drops in un annuncio break guardato. </td> 
+   <td colname="col2"> Ignora l’interruzione pubblicitaria e cerca la posizione immediatamente dopo l’interruzione pubblicitaria. </td> 
+   <td colname="col3">Specifica un diverso criterio di annunci per l'interruzione pubblicitaria (con lo stato guardato impostato su true) e per l'annuncio specifico in cui la ricerca è terminata utilizzando <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> L'applicazione entra in modalità "trucco-play" (DVR). La velocità di riproduzione può essere negativa (riavvolgimento) o maggiore di 1 (avanzamento rapido). </td> 
-   <td colname="col2"> Consente di saltare tutti gli annunci durante l'avanzamento rapido o il riavvolgimento, di riprodurre l'ultima interruzione saltata dopo la fine del gioco del trucco e di passare alla posizione di riproduzione del trucco selezionata dall'utente al termine della riproduzione. </td> 
-   <td colname="col3">Selezionare una delle interruzioni saltate da riprodurre al termine della riproduzione del trucco utilizzando <span class="codeph"> selectAdBreaksToPlay</span>. </td> 
+   <td colname="col1"> L'applicazione entra nel gioco-trucco (modalità DVR). La velocità di riproduzione può essere negativa (riavvolgimento) o superiore a 1 (avanzamento rapido). </td> 
+   <td colname="col2"> Ignora tutti gli annunci durante avanzamento rapido o riavvolgimento, riproduce l'ultima interruzione saltata dopo le fine del gioco di trucco e salta alla posizione di gioco di trucco selezionata dall'utente quando quella interruzione termina la riproduzione. </td> 
+   <td colname="col3">Seleziona quale delle interruzioni saltate da riprodurre dopo il termine della riproduzione del trucco con <span class="codeph"> selectAdBreaksToPlay</span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> L'applicazione cerca in avanti rispetto agli annunci che sono stati inseriti utilizzando indicatori di annunci personalizzati. </td> 
+   <td colname="col1"> L’applicazione cerca in avanti rispetto agli annunci inseriti utilizzando marcatori di annunci personalizzati. </td> 
    <td colname="col2"> Passa alla posizione di ricerca selezionata dall’utente. </td> 
    <td colname="col3">Per ulteriori informazioni, vedere <a href="../../tvsdk-1.4-for-android/ui-configure/android-1.4-ui-seek-scrub-bar-display.md">Visualizzare una barra di scorrimento con la posizione di riproduzione corrente</a>. </td> 
   </tr> 
