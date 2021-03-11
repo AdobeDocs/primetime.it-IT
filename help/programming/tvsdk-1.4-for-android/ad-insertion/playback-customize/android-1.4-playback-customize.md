@@ -1,13 +1,10 @@
 ---
-description: Quando la riproduzione raggiunge un’interruzione di annuncio, passa un’interruzione di annuncio o termina in un’interruzione di annuncio, TVSDK definisce alcuni comportamenti predefiniti per il posizionamento dell’indicatore di riproduzione corrente.
-seo-description: Quando la riproduzione raggiunge un’interruzione di annuncio, passa un’interruzione di annuncio o termina in un’interruzione di annuncio, TVSDK definisce alcuni comportamenti predefiniti per il posizionamento dell’indicatore di riproduzione corrente.
-seo-title: Personalizzare la riproduzione con gli annunci
+description: Quando la riproduzione raggiunge un'interruzione pubblicitaria, passa un'interruzione pubblicitaria o termina in un'interruzione pubblicitaria, TVSDK definisce un comportamento predefinito per il posizionamento della testina di riproduzione corrente.
 title: Personalizzare la riproduzione con gli annunci
-uuid: 9cbf0bcf-7932-409e-a690-e79f284eaf74
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '222'
 ht-degree: 0%
 
 ---
@@ -15,18 +12,18 @@ ht-degree: 0%
 
 # Panoramica {#customize-playback-with-ads-overview}
 
-Quando la riproduzione raggiunge un’interruzione di annuncio, passa un’interruzione di annuncio o termina in un’interruzione di annuncio, TVSDK definisce alcuni comportamenti predefiniti per il posizionamento dell’indicatore di riproduzione corrente.
+Quando la riproduzione raggiunge un&#39;interruzione pubblicitaria, passa un&#39;interruzione pubblicitaria o termina in un&#39;interruzione pubblicitaria, TVSDK definisce un comportamento predefinito per il posizionamento della testina di riproduzione corrente.
 
 >[!TIP]
 >
->È possibile ignorare il comportamento predefinito utilizzando la classe `AdBreakPolicySelector`.
+>È possibile ignorare il comportamento predefinito utilizzando la classe `AdBreakPolicySelector` .
 
-Il comportamento predefinito varia a seconda che l’utente superi o meno l’interruzione dell’annuncio durante la riproduzione normale o che desideri inserirla in un video o riposizionarla con avanzamento rapido o riavvolgimento (riproduzione con trucco).
+Il comportamento predefinito varia a seconda che l’utente passi l’interruzione dell’annuncio durante la riproduzione normale o ricercando in un video o riposizionandolo con avanzamento rapido o riavvolgimento (riproduzione a trucco).
 
-Potete personalizzare il comportamento di riproduzione e riproduzione nei seguenti modi:
+Puoi personalizzare il comportamento della riproduzione di annunci nei seguenti modi:
 
-* Salvate la posizione in cui l’utente ha smesso di guardare il video e ha ripreso la riproduzione nella stessa posizione in una sessione futura.
-* Se un&#39;interruzione di annuncio viene presentata all&#39;utente, non vengono visualizzati annunci aggiuntivi per un certo numero di minuti, anche se l&#39;utente cerca di trovare una nuova posizione.
-* Se il contenuto non viene riprodotto dopo alcuni minuti, riavviate il flusso o eseguite il failover su un&#39;altra origine per lo stesso contenuto.
+* Salvare la posizione in cui l’utente ha interrotto la visualizzazione del video e riprendere la riproduzione nella stessa posizione in una sessione futura.
+* Se all’utente viene presentata un’interruzione pubblicitaria, non vengono visualizzati annunci aggiuntivi per un numero di minuti, anche se l’utente cerca una nuova posizione.
+* Se la riproduzione del contenuto non riesce dopo alcuni minuti, riavviare il flusso o eseguire il failover su un&#39;altra origine per lo stesso contenuto.
 
-   Nella sessione di riproduzione del failover, per consentire all&#39;utente di saltare gli annunci e riprendere la posizione precedente, è possibile disattivare gli annunci pre-roll e/o mid-roll. TVSDK fornisce metodi per abilitare la disattivazione degli annunci pre-roll e mid-roll.
+   Nella sessione di riproduzione del failover, per consentire all&#39;utente di saltare gli annunci e riprendere la precedente posizione di errore, è possibile disabilitare gli annunci pre-roll e/o mid-roll. TVSDK fornisce metodi per abilitare l’eliminazione degli annunci pre-roll e mid-roll.
