@@ -1,13 +1,10 @@
 ---
-description: Il file di configurazione flashaccess-tenant.xml include impostazioni valide per un tenant specifico del server licenze.
-seo-description: Il file di configurazione flashaccess-tenant.xml include impostazioni valide per un tenant specifico del server licenze.
-seo-title: File di configurazione tenant
+description: Il file di configurazione flashaccess-tenant.xml include impostazioni che si applicano a un tenant specifico del server licenze.
 title: File di configurazione tenant
-uuid: bc9ee4a1-63b6-4362-9929-3e9fe8251075
 translation-type: tm+mt
-source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '773'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # File di configurazione tenant{#tenant-configuration-file}
 
-Il file di configurazione flashaccess-tenant.xml include impostazioni valide per un tenant specifico del server licenze.
+Il file di configurazione flashaccess-tenant.xml include impostazioni che si applicano a un tenant specifico del server licenze.
 
 Ogni tenant supporta la propria istanza di questo file di configurazione che si trova in `<LicenseServer.ConfigRoot>/flashaccessserver/tenants/<tenantname>`. Vedere la directory `configs/flashaccessserver/tenants/sampletenant` per un file di configurazione tenant di esempio.
 
@@ -23,40 +20,40 @@ Ogni tenant supporta la propria istanza di questo file di configurazione che si 
 
 Il file di configurazione del tenant include:
 
-* *Credenziali*  di trasporto Specifica una o più credenziali di trasporto (certificato e chiave privata) emesse dal Adobe . Può essere specificato come percorso di un file [!DNL .pfx] e una password, oppure come alias per una credenziale memorizzata in un HSM. Diverse credenziali possono essere specificate qui, come percorsi di file, alias chiave, o entrambi.
+* *Credenziale*  di trasporto: specifica una o più credenziali di trasporto (certificato e chiave privata) emesse dall&#39;Adobe. Può essere specificato come percorso di un file [!DNL .pfx] e di una password oppure come alias di una credenziale memorizzata in un HSM. Diverse credenziali possono essere specificate qui, come percorsi di file, alias di chiave, o entrambi.
 
-   Per ulteriori informazioni sui casi in cui sono necessarie credenziali aggiuntive, vedere *Gestione degli aggiornamenti dei certificati* in *Utilizzo dell&#39;SDK  Adobe Primetime DRM per la protezione dei contenuti*.
+   Per ulteriori informazioni su quando sono necessarie credenziali aggiuntive, consulta *Gestione degli aggiornamenti dei certificati* in *Utilizzo dell’SDK DRM di Adobe Primetime per la protezione dei contenuti* .
 
-* *Credenziali*  server licenze Specifica una o più credenziali del server licenze (certificato e chiave privata) rilasciate  Adobe. Potete specificare le credenziali del server di licenze come percorso di un file [!DNL .pfx] e una password, oppure un alias per una credenziale memorizzata in un HSM. Diverse credenziali possono essere specificate qui, come percorsi di file, alias chiave, o entrambi.
+* *Credenziale server licenze* : specifica una o più credenziali del server licenze (certificato e chiave privata) rilasciate dall&#39;Adobe. È possibile specificare le credenziali del server di licenza come percorso di un file [!DNL .pfx] e una password, oppure come alias di una credenziale memorizzata in un HSM. Diverse credenziali possono essere specificate qui, come percorsi di file, alias di chiave, o entrambi.
 
-   Per ulteriori informazioni sui casi in cui sono necessarie credenziali aggiuntive, vedere *Gestione degli aggiornamenti dei certificati* in *Utilizzo dell&#39;SDK  Adobe Primetime DRM per la protezione dei contenuti*.
+   Per ulteriori informazioni su quando sono necessarie credenziali aggiuntive, consulta *Gestione degli aggiornamenti dei certificati* in *Utilizzo dell’SDK DRM di Adobe Primetime per la protezione dei contenuti* .
 
-* *Certificati*  server chiave Se necessario, specifica il certificato Server licenze del server chiavi emesso  Adobe. È possibile specificare il certificato Server licenze del server chiavi come percorso di un file [!DNL .cer] o come alias di un certificato memorizzato in un HSM. Questa opzione deve essere specificata per rilasciare licenze per il contenuto fornito con un criterio DRM che richiede la consegna di chiavi remote per i dispositivi iOS.
+* *Certificati server chiavi* : specifica facoltativamente il certificato server licenze del server chiavi rilasciato da Adobe. È possibile specificare il certificato del server licenze del server chiavi come percorso di un file [!DNL .cer] o un alias di un certificato memorizzato in un HSM. Questa opzione deve essere specificata per il rilascio di licenze per contenuti che vengono assemblati con un criterio DRM che richiede la consegna di chiavi remote per i dispositivi iOS.
 
-* *Autori*  personalizzati Facoltativamente, specifica le classi di authorizer personalizzate da richiamare per ogni richiesta di licenza. Se vengono specificati più autori, questi vengono richiamati nell’ordine elencato.
-* *Elenco di pacchetti*  autorizzati— Facoltativamente, specifica i certificati che identificano le entità autorizzate a creare pacchetti di contenuto per questo server licenze. Se non vengono specificati certificati packager, il server rilascia licenze per il contenuto incluso in un pacchetto di qualsiasi packager. Se il server riceve una richiesta di licenza da un packager non autorizzato, la richiesta viene rifiutata.
-* *Versione client minima supportataConsultate Utilizzo dell’SDK DRM di Adobe Primetime  per la protezione dei contenuti.* 
+* *Autorizzatori personalizzati* : specifica facoltativamente le classi di authoring personalizzate da richiamare per ogni richiesta di licenza. Se sono specificati più autori, questi vengono richiamati nell’ordine elencato.
+* *Elenco di pacchetti autorizzati* : specifica facoltativamente i certificati che identificano le entità autorizzate a creare pacchetti di contenuto per questo server licenze. Se non viene specificato alcun certificato di packager, il server rilascia licenze per il contenuto imballato da qualsiasi imballatore. Se il server riceve una richiesta di licenza da un imballatore non autorizzato, la richiesta viene negata.
+* *Versione client minima supportata* Consulta Utilizzo dell’SDK DRM di Adobe Primetime per la protezione dei contenuti.
 
 * *Regole di utilizzo*
 
-   * *Cache*  licenza Facoltativamente, specifica per quanto tempo è possibile memorizzare la licenza sul client. Per impostazione predefinita, il caching delle licenze è disattivato. Se si desidera abilitare il caching delle licenze per un periodo di tempo limitato, è necessario impostare la data di fine o il numero di secondi per i quali memorizzare la licenza (a partire dal momento in cui viene rilasciata). Impostando il numero di secondi su 0, il caching delle licenze viene disattivato.
+   * *Memorizzazione in cache della licenza* : specifica facoltativamente per quanto tempo è possibile memorizzare la licenza sul client. Per impostazione predefinita, il caching delle licenze è disattivato. Se si desidera abilitare il caching delle licenze per un periodo di tempo limitato, è necessario impostare la data di fine o il numero di secondi per i quali memorizzare la licenza (a partire dal momento in cui viene rilasciata la licenza). Impostando il numero di secondi su 0, si disabilita il caching delle licenze.
 
       >[!NOTE]
       >
-      >Tutte le licenze rilasciate da Server for Protected Streaming includono un periodo di scadenza di 24 ore (86400 secondi). Questo valore si applica implicitamente come limite superiore a qualsiasi data o durata di fine sia impostata anche per il caching delle licenze, con un valore massimo di 86400 secondi, anche se lo schema applica limiti superiori.
+      >Tutte le licenze rilasciate dal Server per lo streaming protetto includono un periodo di scadenza di 24 ore (86400 secondi). Questo valore si applica implicitamente come limite superiore a qualsiasi data o durata di fine impostata anche per il caching delle licenze, con un valore massimo di 86400 secondi, anche se lo schema applica limiti più elevati.
 
-   * *Gioca a destra* — È necessario specificare almeno un diritto. Se specificate più diritti, il client utilizza il primo diritto che soddisfa tutti i requisiti.
+   * *Gioca a destra* : è necessario specificare almeno un diritto. Se specifichi più diritti, il cliente utilizza il primo diritto che soddisfa tutti i requisiti.
 
-      * *Protezione*  dell&#39;uscita Controlla se l&#39;output su dispositivi di rendering esterni deve essere protetto.
-      * *Restrizioni*  per applicazioni AIR e SWF Elenco consentiti  facoltativo di applicazioni SWF e AIR che possono riprodurre il contenuto (ad esempio, sono consentite solo le applicazioni specificate). Le applicazioni SWF sono identificate da un URL o dal riassunto del file SWF e dal tempo massimo per consentire il download e la verifica del riassunto.
+      * *Protezione*  output: controlla se l&#39;output su dispositivi di rendering esterni deve essere protetto.
+      * *Restrizioni per applicazioni AIR e SWF* : elenco consentiti facoltativo di applicazioni SWF e AIR che possono riprodurre il contenuto (ad esempio, sono consentite solo le applicazioni specificate). Le applicazioni SWF sono identificate da un URL o dal riassunto del SWF e dal tempo massimo per consentire il download e la verifica del riassunto.
 
-         Per informazioni su come calcolare il riassunto SWF, vedere *SWF Hash Calculator*.
+         Per informazioni su come calcolare il digest SWF, vedere *Calcolatore hash SWF*.
 
-         L&#39;ID editore e l&#39;ID applicazione opzionale, la versione minima e la versione massima identificano le applicazioni AIR e iOS. Se non specificate alcuna limitazione per l’applicazione, qualsiasi applicazione SWF o AIR può riprodurre il contenuto.
+         Un ID editore e un ID applicazione opzionale, la versione minima e la versione massima identificano le applicazioni AIR e iOS. Se non si specificano limitazioni dell’applicazione, qualsiasi applicazione SWF o AIR può riprodurre il contenuto.
 
-      * *Limitazioni*  per i moduli DRM e Runtime Specifica il livello di protezione minimo richiesto per il modulo DRM/Runtime. Facoltativamente, include un  elenco Bloccati di versioni non consentite per riprodurre il contenuto. Le versioni dei moduli sono identificate da attributi, ad esempio sistema operativo e/o numero di versione.
+      * *Restrizioni*  al modulo DRM e Runtime: specifica il livello di sicurezza minimo richiesto per il modulo DRM/Runtime. Facoltativamente include un elenco Bloccati di versioni che non sono autorizzate a riprodurre il contenuto. Le versioni del modulo sono identificate da attributi quali il sistema operativo e/o un numero di versione.
 
-         Limitazioni del modulo DRM e limitazioni del modulo runtime ora supportano i seguenti attributi aggiuntivi:
+         Restrizioni al modulo DRM e restrizioni al modulo runtime ora supportano i seguenti attributi aggiuntivi:
 
          * `oemVendor`
          * `model`
@@ -66,9 +63,9 @@ Il file di configurazione del tenant include:
 
          * `osVersion`
          * `version`
-      * *Requisiti*  di funzionalità del dispositivo Facoltativamente, specifica le funzionalità hardware necessarie per accedere al contenuto.
-      * *Requisiti*  per il rilevamento di eventuali rotture Facoltativamente, specifica che la riproduzione non è consentita per i dispositivi sui quali viene rilevata un&#39;interruzione di connessione.
+      * *Requisiti*  di funzionalità del dispositivo: specifica facoltativamente le funzionalità hardware necessarie per accedere ai contenuti.
+      * *Requisiti*  di rilevamento jailbreak: indica facoltativamente che la riproduzione non è consentita per i dispositivi in cui viene rilevato jailbreak.
 
 
 
-Per ulteriori dettagli, vedere i commenti nel file di configurazione del tenant di esempio.
+Per ulteriori informazioni, consulta i commenti nel file di configurazione del tenant di esempio.
