@@ -1,13 +1,10 @@
 ---
-description: Potete utilizzare 'autenticazione Adobe Primetime per gestire l'adesione degli utenti nel lettore.
-seo-description: Potete utilizzare 'autenticazione Adobe Primetime per gestire l'adesione degli utenti nel lettore.
-seo-title: Panoramica
+description: Puoi utilizzare l’autenticazione Adobe Primetime per gestire l’adesione degli utenti nel lettore.
 title: Panoramica
-uuid: defd718d-849b-4e79-8e0f-114c43c5bcf7
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '99'
 ht-degree: 0%
 
 ---
@@ -15,10 +12,10 @@ ht-degree: 0%
 
 # Panoramica {#overview}
 
-Potete utilizzare &#39;autenticazione Adobe Primetime per gestire l&#39;adesione degli utenti nel lettore.
+Puoi utilizzare l’autenticazione Adobe Primetime per gestire l’adesione degli utenti nel lettore.
 
-Il gestore di funzioni che racchiude i flussi di adesione dell&#39;autenticazione Primetime è il `EntitlementManager`. Questa classe racchiude la logica di adesione durante la delega dell&#39;interfaccia utente a un&#39;altra area.
+Il gestore di funzioni che incapsula i flussi di adesione all&#39;autenticazione Primetime è il `EntitlementManager`. Questa classe incapsula la logica di adesione durante la delega dell&#39;interfaccia utente ad altre aree.
 
-Questa implementazione di riferimento per Android utilizza la libreria AccessEnabler di autenticazione Primetime versione 1.7.3. Gran parte dell&#39;implementazione è molto simile all&#39;applicazione demo esistente fornita con la libreria AccessEnabler.
+Questa implementazione di riferimento per Android utilizza la libreria AccessEnabler di Primetime Authentication versione 1.7.3. Gran parte dell&#39;implementazione è molto simile all&#39;applicazione demo esistente fornita con la libreria AccessEnabler.
 
-Per ulteriori informazioni sull&#39;autenticazione Primetime, consultare la documentazione all&#39;indirizzo [Introduzione all&#39;integrazione del programmatore](https://tve.helpdocsonline.com/introduction-to-programmer-integration).
+Per ulteriori informazioni sull&#39;autenticazione Primetime, consulta la documentazione in [Introduzione all&#39;integrazione del programmatore](https://tve.helpdocsonline.com/introduction-to-programmer-integration).
