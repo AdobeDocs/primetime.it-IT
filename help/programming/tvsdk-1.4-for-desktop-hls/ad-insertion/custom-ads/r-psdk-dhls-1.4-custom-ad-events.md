@@ -1,21 +1,18 @@
 ---
-description: Il lettore TVSDK invia eventi per visualizzare lo stato di caricamento personalizzato degli annunci o per ignorare un annuncio pubblicitario che richiede troppo tempo per essere caricato o presenta errori. Questi eventi sono definiti in events.CustomAdEvents.
-seo-description: Il lettore TVSDK invia eventi per visualizzare lo stato di caricamento personalizzato degli annunci o per ignorare un annuncio pubblicitario che richiede troppo tempo per essere caricato o presenta errori. Questi eventi sono definiti in events.CustomAdEvents.
-seo-title: Eventi annunci personalizzati
-title: Eventi annunci personalizzati
-uuid: 78e2ccf4-5943-4c60-84be-623182d9a300
+description: Il lettore TVSDK invia eventi per visualizzare lo stato di caricamento degli annunci personalizzati o per ignorare un annuncio che richiede troppo tempo per essere caricato o presenta errori. Questi eventi sono definiti in events.CustomAdEvents.
+title: Eventi di annunci personalizzati
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '175'
 ht-degree: 0%
 
 ---
 
 
-# Eventi annunci personalizzati{#custom-ad-events}
+# Eventi di annunci personalizzati{#custom-ad-events}
 
-Il lettore TVSDK invia eventi per visualizzare lo stato di caricamento personalizzato degli annunci o per ignorare un annuncio pubblicitario che richiede troppo tempo per essere caricato o presenta errori. Questi eventi sono definiti in events.CustomAdEvents.
+Il lettore TVSDK invia eventi per visualizzare lo stato di caricamento degli annunci personalizzati o per ignorare un annuncio che richiede troppo tempo per essere caricato o presenta errori. Questi eventi sono definiti in events.CustomAdEvents.
 
 <table id="table_718700E0F0B042F882ED131F79E01D4E"> 
  <thead> 
@@ -31,7 +28,7 @@ Il lettore TVSDK invia eventi per visualizzare lo stato di caricamento personali
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> AdError  </span> </td> 
-   <td colname="col2"> Si è verificato un errore con l'annuncio personalizzato. </td> 
+   <td colname="col2"> Errore nell'annuncio personalizzato. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> AdLoaded  </span> </td> 
@@ -39,7 +36,7 @@ Il lettore TVSDK invia eventi per visualizzare lo stato di caricamento personali
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> AdLoading  </span> </td> 
-   <td colname="col2"> Caricamento dell'annuncio personalizzato in corso. </td> 
+   <td colname="col2"> L'annuncio personalizzato è in fase di caricamento. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> AdPaused  </span> </td> 
@@ -47,19 +44,19 @@ Il lettore TVSDK invia eventi per visualizzare lo stato di caricamento personali
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> AdResumed  </span> </td> 
-   <td colname="col2"> L'annuncio personalizzato è stato riprodotto dopo una pausa. </td> 
+   <td colname="col2"> L’annuncio personalizzato ha continuato a essere riprodotto dopo una pausa. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> AdPlay  </span> </td> 
-   <td colname="col2"> Viene riprodotto l'annuncio personalizzato. </td> 
+   <td colname="col2"> È in corso la riproduzione dell’annuncio personalizzato. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> AdProgress  </span> </td> 
-   <td colname="col2"> <p>Il lettore annunci personalizzato notifica al lettore TVSDK l'avanzamento dell'annuncio personalizzato. &amp;nbsp; </p> <p>Il <span class="codeph"> currentTime </span> e <span class="codeph"> totalTime </span> dell'annuncio vengono passati con questo evento. </p> </td> 
+   <td colname="col2"> <p>Il lettore di annunci personalizzato notifica al lettore TVSDK l’avanzamento dell’annuncio personalizzato. &amp;nbsp; </p> <p>Questo evento trasmette <span class="codeph"> currentTime </span> e <span class="codeph"> totalTime </span> dell'annuncio. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> AdStarted </td> 
-   <td colname="col2"> La riproduzione dell'annuncio personalizzato è iniziata e viene visualizzata al visualizzatore.  </td> 
+   <td colname="col2"> L’annuncio personalizzato ha iniziato la riproduzione e viene visualizzato al visualizzatore.  </td> 
   </tr> 
   <tr> 
    <td colname="col1"> AdStopped </td> 
