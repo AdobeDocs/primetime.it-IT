@@ -1,13 +1,10 @@
 ---
-description: Potete usare TimedMetadata quando l’ora di riproduzione corrente corrisponde all’ora di inizio.
-seo-description: Potete usare TimedMetadata quando l’ora di riproduzione corrente corrisponde all’ora di inizio.
-seo-title: Utilizzare i metadati temporizzati
+description: È possibile utilizzare TimedMetadata quando il tempo di riproduzione corrente corrisponde all'ora di inizio.
 title: Utilizzare i metadati temporizzati
-uuid: 98bb8c08-2794-42d6-b5c3-b1047ac804fe
 translation-type: tm+mt
-source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '168'
+source-wordcount: '152'
 ht-degree: 1%
 
 ---
@@ -15,20 +12,20 @@ ht-degree: 1%
 
 # Utilizzare i metadati temporizzati {#use-timed-metadata}
 
-Potete usare TimedMetadata quando l’ora di riproduzione corrente corrisponde all’ora di inizio.
+È possibile utilizzare TimedMetadata quando il tempo di riproduzione corrente corrisponde all&#39;ora di inizio.
 
-Per utilizzare questi oggetti `TimedMetadata` salvati durante la riproduzione, utilizzare gli oggetti `ArrayList` salvati da [Memorizzare gli oggetti con metadati temporizzati durante l&#39;invio](../../ad-insertion/custom-tags-configure/android-1.4-timed-metadata-store.md).
+Per utilizzare questi oggetti salvati `TimedMetadata` durante la riproduzione, utilizzare i `ArrayList` salvati da [Memorizzare gli oggetti con metadati temporizzati durante l&#39;invio](../../ad-insertion/custom-tags-configure/android-1.4-timed-metadata-store.md).
 
 1. Eseguire un timer ed eseguire ripetutamente una query sul tempo di riproduzione corrente.
-1. Trovate tutti gli oggetti `TimedMetadata` con orari di inizio che corrispondano al tempo di riproduzione corrente.
+1. Trova tutti gli oggetti `TimedMetadata` con tempi di avvio corrispondenti al tempo di riproduzione corrente.
 
-   È possibile utilizzare questi oggetti per completare diverse azioni.
+   È possibile utilizzare questi oggetti per completare varie azioni.
 
    >[!IMPORTANT]
    >
-   >Quando si verifica che il tempo di riproduzione corrente corrisponda a qualsiasi oggetto `TimedMetadata`, includere `shouldTriggerSubscribedTagEvent` come condizione.
+   >Quando si controlla se il tempo di riproduzione corrente corrisponde a qualsiasi oggetto `TimedMetadata`, includere `shouldTriggerSubscribedTagEvent` come condizione.
 
-   La timeline potrebbe cambiare a seguito di vari comportamenti di annunci. Ad esempio, una o più interruzioni pubblicitarie potrebbero essere spostate dalle posizioni originali nella timeline, ma `shouldTriggerSubscribedTagEvent` garantisce che l&#39;ora di inizio dell&#39;oggetto `TimeMetadata` corrisponda al tempo di riproduzione corrente.
+   La timeline potrebbe cambiare come risultato di vari comportamenti di annunci. Ad esempio, una o più interruzioni pubblicitarie potrebbero essere spostate dalle posizioni originali nella timeline, ma `shouldTriggerSubscribedTagEvent` assicura che l&#39;ora di inizio dell&#39;oggetto `TimeMetadata` corrisponda al tempo di riproduzione corrente.
 
    Ad esempio:
 
@@ -62,4 +59,4 @@ Per utilizzare questi oggetti `TimedMetadata` salvati durante la riproduzione, u
    _playbackClock.addClockEventListener(_playbackClockEventListener);
    ```
 
-1. Svuotare periodicamente le istanze `TimedMetadata` stantate dall&#39;elenco per evitare la crescita continua della memoria.
+1. Svuotare periodicamente le istanze obsolete `TimedMetadata` dall&#39;elenco per evitare che la memoria cresca continuamente.
