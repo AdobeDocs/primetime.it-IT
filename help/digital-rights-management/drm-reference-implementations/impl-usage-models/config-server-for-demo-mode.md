@@ -1,32 +1,30 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Configurare la modalità demo del modello di utilizzo
 title: Configurare la modalità demo del modello di utilizzo
-uuid: f818c7fc-e88f-4fa4-926e-08a1337b28d3
+description: Configurare la modalità demo del modello di utilizzo
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '121'
+source-wordcount: '119'
 ht-degree: 0%
 
 ---
 
 
-# Configurare la modalità demo del modello di utilizzo{#configure-usage-model-demo-mode}
+# Configura la modalità demo del modello di utilizzo{#configure-usage-model-demo-mode}
 
-Prima che il server di implementazione di riferimento possa rilasciare licenze per la demo del modello di utilizzo, devi configurare il server per specificare in che modo vengono generate le licenze per ciascuno dei quattro modelli di utilizzo. Ciò significa che è necessario specificare un criterio DRM per ciascun modello di utilizzo. L&#39;implementazione di riferimento include i seguenti criteri DRM di esempio nella directory [!DNL Reference Implementation/Server/Reference Implementation Server/resources/]:
+Prima che il server di implementazione di riferimento possa rilasciare licenze per la demo del modello di utilizzo, devi configurare il server per specificare come vengono generate le licenze per ciascuno dei quattro modelli di utilizzo. Ciò significa che devi specificare un criterio DRM per ciascun modello di utilizzo. L’implementazione di riferimento include i seguenti criteri DRM di esempio nella directory [!DNL Reference Implementation/Server/Reference Implementation Server/resources/] :
 
-* `dto-policy.pol` - (Download-In-Proprio)
+* `dto-policy.pol` - (Download-To-own)
 * `vod-policy.pol` - (Affitto/Video-On-Demand)
-* `sub-policy.pol` - (Iscrizione)
-* `ad-policy.pol` - (Ad-funding)
+* `sub-policy.pol` - (abbonamento)
+* `ad-policy.pol` - (con finanziamento pubblicitario)
 
 >[!NOTE]
 >
->Potete sostituire questi criteri di esempio con criteri DRM personalizzati.
+>È possibile sostituire questi criteri di esempio con i propri criteri DRM.
 
-1. Impostate queste proprietà in [!DNL flashaccess-refimpl.properties] per specificare il criterio DRM che prevedete di applicare a ciascun modello di utilizzo:
+1. Imposta queste proprietà in [!DNL flashaccess-refimpl.properties] per specificare il criterio DRM che intendi applicare a ogni modello di utilizzo:
 
    ```
    # DRM Policy file name for Download To Own usage 
@@ -39,4 +37,4 @@ Prima che il server di implementazione di riferimento possa rilasciare licenze p
    RefImpl.UsageModelDemo.Policy.Free=ad-policy.pol
    ```
 
-1. Copiate i file dei criteri di esempio nella directory specificata nella proprietà `config.resourcesDirectory` in [!DNL flashaccess-refimpl.properties].
+1. Copia i file dei criteri di esempio nella directory specificata nella proprietà `config.resourcesDirectory` in [!DNL flashaccess-refimpl.properties].
