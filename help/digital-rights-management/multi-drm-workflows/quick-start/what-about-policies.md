@@ -1,27 +1,24 @@
 ---
-description: L'impostazione dei criteri è il processo che consente di specificare le condizioni per la riproduzione di contenuto video protetto da parte dell'utente.
-seo-description: L'impostazione dei criteri è il processo che consente di specificare le condizioni per la riproduzione di contenuto video protetto da parte dell'utente.
-seo-title: Impostazione dei criteri
+description: L'impostazione dei criteri è il processo di specificazione delle condizioni per quando e come un utente può riprodurre contenuti video protetti.
 title: Impostazione dei criteri
-uuid: 2d2672ce-5ed4-4868-aa5e-0a9e21a809b3
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '163'
 ht-degree: 0%
 
 ---
 
 
-# Impostazione criteri{#setting-policies}
+# Impostazione dei criteri{#setting-policies}
 
-L&#39;impostazione dei criteri è il processo che consente di specificare le condizioni per la riproduzione di contenuto video protetto da parte dell&#39;utente.
+L&#39;impostazione dei criteri è il processo di specificazione delle condizioni per quando e come un utente può riprodurre contenuti video protetti.
 
-La creazione dei criteri avviene come parte della richiesta di token di licenza. (vedere [https://www.expressplay.com/developer/restapi/#widevine-license-token-request](https://www.expressplay.com/developer/restapi/#widevine-license-token-request) per un esempio che utilizza Widevine).
+La creazione dei criteri avviene come parte della richiesta del token di licenza. (Per un esempio che utilizza Widevine, consulta [https://www.expressplay.com/developer/restapi/#widevine-license-token-request](https://www.expressplay.com/developer/restapi/#widevine-license-token-request) .
 
-Una volta determinato che il codice lato server del cliente rilascerà una licenza (in base a controlli di adesione, geolocalizzazione o qualsiasi altra informazione richiesta), il cliente richiede un token e *nel token* specifica i `securityLevel`, `hdcpOutputControl` e `licenseDuration` richiesti. Queste sono le opzioni lato client per un criterio Widevine. Altre soluzioni DRM offrono approcci simili, ma i dettagli sono diversi in ogni caso, e sono elaborati nei singoli flussi di lavoro.
+Una volta che il codice lato server del cliente ha stabilito che rilascerà una licenza (in base ai controlli di idoneità, alla geolocalizzazione o a qualsiasi altra informazione richiesta), richiede un token e *nel token* specifica i `securityLevel`, `hdcpOutputControl` e `licenseDuration` richiesti. Queste sono le opzioni lato client per una politica Widevine. Altre soluzioni DRM offrono approcci simili, ma i dettagli sono diversi in ogni caso e sono elaborati nei singoli flussi di lavoro.
 
 >[!NOTE]
 >
-> Adobe fornisce un server di riferimento di esempio che mostra come implementare un proprio server di adesione / storefront: [Server di riferimento: Esempio di ExpressPlay Entitlement Server (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md)
+>Adobe fornisce un esempio di server di riferimento che mostra come implementare il server di adesione o la vetrina: [Server di riferimento: Sample ExpressPlay Entitlement Server (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md)
 
