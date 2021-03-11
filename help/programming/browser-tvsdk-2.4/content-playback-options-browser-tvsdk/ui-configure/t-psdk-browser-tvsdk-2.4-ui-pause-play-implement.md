@@ -1,37 +1,34 @@
 ---
-description: Potete aggiungere il comportamento TVSDK del browser per mettere in pausa e riprodurre i pulsanti.
-seo-description: Potete aggiungere il comportamento TVSDK del browser per mettere in pausa e riprodurre i pulsanti.
-seo-title: Riproduzione e pausa di un video
-title: Riproduzione e pausa di un video
-uuid: 4053ea9e-6b74-41e9-ad04-087ad13e3698
+description: È possibile aggiungere il comportamento TVSDK del browser per mettere in pausa e riprodurre i pulsanti.
+title: Riprodurre e mettere in pausa un video
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '127'
+source-wordcount: '111'
 ht-degree: 0%
 
 ---
 
 
-# Riproduzione e pausa di un video{#play-and-pause-a-video}
+# Riprodurre e mettere in pausa un video{#play-and-pause-a-video}
 
-Potete aggiungere il comportamento TVSDK del browser per mettere in pausa e riprodurre i pulsanti.
+È possibile aggiungere il comportamento TVSDK del browser per mettere in pausa e riprodurre i pulsanti.
 
-1. Create un pulsante Pausa/Riproduci che esegua le seguenti operazioni.
-   1. Aspettate che il lettore sia almeno nello stato PREPARATO.
+1. Crea un pulsante di pausa/riproduzione che esegue le seguenti operazioni.
+   1. Attendi che il lettore sia almeno nello stato PREPARATO.
    1. Per avviare la riproduzione, chiama il metodo di riproduzione TVSDK del browser:
 
       ```js
       play() → {AdobePSDK.PSDKErrorCode.SUCCESS}
       ```
 
-   1. Per mettere in pausa la riproduzione, chiamate il metodo Pausa TVSDK del browser:
+   1. Per mettere in pausa la riproduzione, chiama il metodo di pausa Browser TVSDK:
 
       ```java
       void pause() throws IllegalStateException;
       ```
 
-1. Ascoltare l&#39;evento `AdobePSDK.MediaPlayerStatusChangeEvent` per verificare la presenza di errori o per eseguire altre azioni appropriate.
+1. Ascolta l’evento `AdobePSDK.MediaPlayerStatusChangeEvent` per verificare la presenza di errori o per intraprendere altre azioni appropriate.
 
-   Il browser TVSDK attiva questo evento quando i metodi pause o play vengono chiamati e trasmette informazioni sull&#39;oggetto evento, incluso il nuovo stato, ad esempio `MediaPlayerStatus.PLAYING` o `MediaPlayerStatus.PAUSED`.
+   Il browser TVSDK attiva questo evento quando vengono chiamati i metodi di pausa o di riproduzione e trasmette informazioni sull&#39;oggetto evento, incluso il nuovo stato, ad esempio `MediaPlayerStatus.PLAYING` o `MediaPlayerStatus.PAUSED`.
 
