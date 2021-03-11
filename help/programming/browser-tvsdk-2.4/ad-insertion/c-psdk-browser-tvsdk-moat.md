@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Misurazione annunci da Moat
-title: Misurazione annunci da Moat
-uuid: a29c1e74-df15-47d2-9bd6-1d366c5cdf37
+title: Misurazione degli annunci da Moat
+description: Misurazione degli annunci da Moat
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '212'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
@@ -15,11 +13,11 @@ ht-degree: 0%
 
 # Misurazione annunci da Moat {#ad-measurement-from-moat}
 
-TVSDK prende informazioni da FreeWheel e altri server adserver che forniscono risposte VAST. FreeWheel fornisce, all&#39;interno delle risposte VAST, informazioni dal servizio Moat. Il servizio Moat conta gli annunci con una precisione che mostra meglio che i creativi catturano o trascurano gli interessi del pubblico.
+TVSDK prende informazioni da FreeWheel e da altri server di amministrazione che forniscono risposte VAST. FreeWheel fornisce, nelle risposte VAST, informazioni dal servizio Moat. Il servizio Moat conta le impressioni degli annunci con una precisione che dimostra meglio che i creativi catturano o trascurano gli interessi del pubblico.
 
-Moat è un servizio di misurazione e visualizzazione per molti usi, dai browser alle applicazioni interne. Moat genera dati di analisi di marketing in tempo reale su più piattaforme.
+Moat è un servizio che misura e visualizza in molti usi, dai browser all&#39;interno delle applicazioni. Moat genera dati di analisi di marketing in tempo reale su più piattaforme.
 
-L&#39;XML di risposta VAST ha una proprietà e un elemento che il codice può leggere, la proprietà ad id più esterna e l&#39;elemento di estensione più esterno. In entrambi i casi, il codice può utilizzare TVSDK per salvare sia le informazioni ID annuncio che le informazioni di estensione e organizzare le informazioni in una struttura ad albero. Con questa organizzazione, il codice può raccogliere i dati da qualsiasi livello e trasmetterli ovunque sia necessario. Il valore della proprietà ad id più esterno consente al codice di coordinare le informazioni della campagna associata.
+L&#39;XML di risposta VAST dispone di una proprietà e di un elemento leggibile dal codice, della proprietà dell&#39;ad id più esterno e dell&#39;elemento dell&#39;estensione più esterno. In entrambi i casi, il codice può utilizzare TVSDK per salvare sia le informazioni sull’id dell’annuncio che le informazioni sull’estensione e organizzare le informazioni in una struttura ad albero. Con questa organizzazione, il tuo codice può raccogliere i dati da qualsiasi livello e passarli ovunque debba andare. Il valore della proprietà id annuncio esterno consente al codice di coordinare le informazioni della campagna associata.
 
 Ad esempio, FreeWheel può restituire i dati in un elemento Extensions. Di seguito è riportato un elemento di esempio.
 
@@ -39,10 +37,10 @@ Ad esempio, FreeWheel può restituire i dati in un elemento Extensions. Di segui
     </Extensions> 
 ```
 
-La ruota libera può anche impostare la proprietà id nell&#39;elemento Ad, come mostrato nell&#39;esempio seguente.
+La ruota libera può anche impostare la proprietà id nell’elemento Ad , come mostrato nell’esempio di seguito.
 
 ```
 <Ad id="118566" sequence="1">
 ```
 
-Fate riferimento alla documentazione API per la classe AdobePSDK.NetworkAdInfo.
+Consulta la documentazione API per la classe AdobePSDK.NetworkAdInfo.
