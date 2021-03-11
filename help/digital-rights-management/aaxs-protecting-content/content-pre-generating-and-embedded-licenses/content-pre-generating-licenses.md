@@ -1,9 +1,9 @@
 ---
-seo-title: Licenze di pre-generazione
-title: Licenze di pre-generazione
-uuid: 31430753-11f1-4ce5-b402-cf4279119a05
+title: Licenze di pregenerazione
+description: Licenze di pregenerazione
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '402'
 ht-degree: 0%
@@ -13,22 +13,22 @@ ht-degree: 0%
 
 # Licenze di pre-generazione{#pre-generating-licenses}
 
-Per pre-generare le licenze, utilizzare `com.adobe.flashaccess.sdk.license.pregen.LicenseFactory.getInstance()` per ottenere un&#39;istanza di `LicenseFactory`. Per firmare le licenze generate da questo factory, è necessario specificare una credenziale Server licenze. Questa classe supporta la generazione di licenze Leaf senza concatenamento di licenze e licenze Leaf e Root con il sistema di concatenamento [licenze Enhanced](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-other-policy-options/content-enhanced-license-chaining.md).
+Per pregenerare le licenze, utilizza `com.adobe.flashaccess.sdk.license.pregen.LicenseFactory.getInstance()` per ottenere un&#39;istanza di `LicenseFactory`. È necessario specificare una credenziale del server licenze per firmare le licenze generate da questo factory. Questa classe supporta la generazione di licenze per foglia senza concatenamento licenze e licenze per foglia e radice con la [catena di licenze ottimizzata](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-other-policy-options/content-enhanced-license-chaining.md).
 
-Durante la generazione di una licenza Leaf, i metadati del contenuto devono essere specificati utilizzando `initContentInfo()`. Se i metadati includono più criteri, o se desiderate utilizzare un criterio che non era presente nei metadati, utilizzate `setSelectedPolicy()` per specificare il criterio da utilizzare per generare la licenza. Se utilizzate un elenco di aggiornamento criteri per tenere traccia degli aggiornamenti ai criteri, potete fornire l&#39;elenco di aggiornamento criteri al License Factory prima di inizializzare i metadati utilizzando `setPolicyUpdateList()`.
+Quando si genera una licenza foglia, i metadati del contenuto devono essere specificati utilizzando `initContentInfo()`. Se i metadati includono più criteri o se desideri utilizzare un criterio non presente nei metadati, utilizza `setSelectedPolicy()` per specificare il criterio da utilizzare per generare la licenza. Se utilizzi un elenco di aggiornamento dei criteri per tenere traccia degli aggiornamenti dei criteri, puoi fornire l’elenco di aggiornamento dei criteri alla Fabbrica delle licenze prima di inizializzare i metadati utilizzando `setPolicyUpdateList()`.
 
-Quando si genera una licenza Root, i metadati del contenuto possono essere specificati come descritto sopra. In alternativa, è possibile generare una licenza radice utilizzando un criterio ( `setSelectedPolicy()`) e l&#39;URL del server della licenza ( `setLicenseServerURL()`) invece dei metadati.
+Quando si genera una licenza Root, è possibile specificare i metadati del contenuto come descritto sopra. In alternativa, è possibile generare una licenza Root utilizzando un criterio ( `setSelectedPolicy()`) e l’URL del server di licenza ( `setLicenseServerURL()`) invece dei metadati.
 
 >[!NOTE]
 >
->È necessario un URL del server licenze anche se non è presente  server licenze di accesso Adobe dal quale i client possono richiedere una licenza. In questo caso, l&#39;URL del server licenze deve specificare un URL che identifica l&#39;emittente della licenza.
+>È necessario un URL del server licenze anche se non esiste un server licenze di accesso Adobe da cui i client possono richiedere una licenza. In questo caso, l’URL del server licenze deve specificare un URL che identifichi l’emittente della licenza.
 
-Se il criterio utilizza il concatenamento delle licenze avanzato, è necessario specificare una credenziale del server delle licenze per decrittografare la chiave di crittografia principale nel criterio ( `setRootKeyRetrievalInfo()`).
+Se il criterio utilizza il concatenamento licenze avanzato, è necessario specificare una credenziale del server licenze per decrittografare la chiave di crittografia radice nel criterio ( `setRootKeyRetrievalInfo()`).
 
-Se il criterio richiede una licenza associata a un dominio, utilizzare `setDomainCAs()` per specificare gli emittenti di dominio da cui il server licenze accetterà i token di dominio. Per convalidare il destinatario della licenza, è necessario specificare uno o più certificati CA di dominio.
+Se il criterio richiede una licenza associata a un dominio, utilizza `setDomainCAs()` per specificare gli emittenti di dominio da cui il server licenze accetterà i token di dominio. Per convalidare il destinatario della licenza, è necessario fornire uno o più certificati CA di dominio.
 
-Se il criterio richiede la consegna di chiavi remote per i dispositivi iOS, il certificato Server chiavi deve essere fornito utilizzando `setKeyServerCertificate()`, a meno che non venga generata una foglia concatenata.
+Se il criterio richiede la consegna di chiavi remote per i dispositivi iOS, è necessario fornire il certificato del server chiavi utilizzando `setKeyServerCertificate()`, a meno che non venga generata una foglia concatenata.
 
-Per generare una licenza, richiamare `generateLicense()` e specificare il tipo di licenza (Leaf o Root) e uno o più certificati del destinatario. Il certificato destinatario sarà un certificato computer o un certificato di dominio, a seconda dei requisiti specificati nel criterio. Se si genera una foglia concatenata, il destinatario non è obbligatorio. Una volta generata la licenza, è possibile ignorare le regole di utilizzo specificate nel criterio. Infine, chiamare `signLicense()` per firmare la licenza e ottenere un&#39;istanza di `PreGeneratedLicense`. È ora possibile salvare la licenza in un file (utilizzare `getBytes()` per recuperare la licenza serializzata) o incorporarla in contenuto crittografato. Vedere [Incorporazione di licenze](../../aaxs-protecting-content/content-pre-generating-and-embedded-licenses/content-embedding-licenses.md).
+Per generare una licenza, richiamare `generateLicense()` e specificare il tipo di licenza (foglia o radice) e uno o più certificati dei destinatari. Il certificato destinatario sarà un certificato computer o un certificato di dominio, a seconda dei requisiti specificati nel criterio. Se si genera una foglia concatenata, un destinatario non è obbligatorio. Dopo la generazione della licenza, è possibile ignorare le regole di utilizzo specificate nel criterio. Infine, richiamare `signLicense()` per firmare la licenza e ottenere un&#39;istanza di `PreGeneratedLicense`. È ora possibile salvare la licenza in un file (utilizzare `getBytes()` per recuperare la licenza serializzata) o incorporarla in contenuto crittografato. Consulta [Incorporazione di licenze](../../aaxs-protecting-content/content-pre-generating-and-embedded-licenses/content-embedding-licenses.md).
 
-Per un esempio di codice che illustra le licenze pregenerate, vedere `com.adobe.flashaccess.samples.licensegen.GenerateLicense` nella directory &quot;samples&quot; degli strumenti della riga di comando per l&#39;implementazione di riferimento.
+Per un esempio di codice che illustra le licenze pregenerate, vedi `com.adobe.flashaccess.samples.licensegen.GenerateLicense` nella directory &quot;amples&quot; degli strumenti della riga di comando per l’implementazione di riferimento.
