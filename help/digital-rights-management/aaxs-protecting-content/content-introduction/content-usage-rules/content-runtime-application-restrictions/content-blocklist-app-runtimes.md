@@ -1,9 +1,9 @@
 ---
-seo-title: ' Elenco Bloccati di runtime dell''applicazione non è consentito l''accesso al contenuto protetto'
-title: ' Elenco Bloccati di runtime dell''applicazione non è consentito l''accesso al contenuto protetto'
-uuid: 462a2c09-b335-4768-bd0e-1359db169d69
+title: Elenco Bloccati di runtime di applicazioni con restrizioni all’accesso a contenuti protetti
+description: Elenco Bloccati di runtime di applicazioni con restrizioni all’accesso a contenuti protetti
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%
@@ -11,13 +11,13 @@ ht-degree: 0%
 ---
 
 
-#  Elenco Bloccati di runtime dell&#39;applicazione non è consentito l&#39;accesso al contenuto protetto {#blocklist-of-application-runtimes-restricted-from-accessing-protected-content}
+# Elenco Bloccati di runtime di applicazioni con restrizioni all’accesso a contenuti protetti {#blocklist-of-application-runtimes-restricted-from-accessing-protected-content}
 
-Specifica la versione del runtime Primetime o Flash che non può accedere al contenuto. Specificate runtime (Flash Player, AIR o iOS), piattaforma e versione con restrizioni.
+Specifica la versione di Primetime o Flash Runtime che non può accedere al contenuto. Specifica il runtime limitato (Flash Player, AIR o iOS), la piattaforma e la versione.
 
-Esempio di utilizzo: Analogamente al elenco Bloccati di  DRM Client, l&#39;ultima versione dei runtime Flash Player, AIR o iOS può essere specificata come versione minima richiesta per l&#39;acquisizione della licenza e la riproduzione del contenuto.
+Esempio di utilizzo: Analogamente all’elenco Bloccati client DRM, è possibile specificare come versione minima necessaria per l’acquisizione della licenza e la riproduzione di contenuti la versione più recente dei tempi di esecuzione di Flash Player, AIR o iOS.
 
-Il runtime dell&#39;applicazione può essere identificato da uno degli attributi supportati per le versioni client DRM, oltre ai seguenti attributi:
+Il runtime dell’applicazione può essere identificato da uno qualsiasi degli attributi supportati per le versioni client DRM, oltre ai seguenti attributi:
 
 | **Attributo** | **Valori supportati** | **Criteri di corrispondenza** | **Descrizione** |
 |---|---|---|---|
