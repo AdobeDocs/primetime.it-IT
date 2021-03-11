@@ -1,9 +1,9 @@
 ---
-seo-title: Aggiornare un criterio esistente
 title: Aggiornare un criterio esistente
-uuid: 081e5dab-e735-4ae9-bcfd-15dd9819bef3
+description: Aggiornare un criterio esistente
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 0%
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 # Aggiornare un criterio esistente {#update-an-existing-policy}
 
-Per aggiornare un criterio esistente, scegliete il nome del file dall&#39;elenco a discesa e fate clic su **[!UICONTROL Open]**. Modificate eventuali attributi del criterio desiderato. Tutti gli attributi possono essere modificati, ad eccezione di quelli relativi all&#39;autenticazione e alla concatenazione delle licenze.
+Per aggiornare un criterio esistente, scegli il nome del file dall’elenco a discesa e fai clic su **[!UICONTROL Open]**. Modifica gli attributi di criterio desiderati. È possibile modificare tutti gli attributi eccetto quelli relativi all&#39;autenticazione e alla concatenazione di licenze.
 
-Al termine, fare clic su **[!UICONTROL Save]**. Il file dei criteri nella directory [!DNL Resource] verrà sostituito con la versione aggiornata.
+Al termine, fai clic su **[!UICONTROL Save]**. Il file dei criteri nella directory [!DNL Resource] verrà sostituito con la versione aggiornata.
 
 >[!NOTE]
 >
