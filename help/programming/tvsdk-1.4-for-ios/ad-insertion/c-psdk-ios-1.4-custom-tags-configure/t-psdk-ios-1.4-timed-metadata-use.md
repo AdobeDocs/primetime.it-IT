@@ -1,27 +1,24 @@
 ---
-description: Potete usare TimedMetadata quando l’ora di riproduzione corrente corrisponde all’ora di inizio.
-seo-description: Potete usare TimedMetadata quando l’ora di riproduzione corrente corrisponde all’ora di inizio.
-seo-title: Utilizzare i metadati temporizzati
+description: È possibile utilizzare TimedMetadata quando il tempo di riproduzione corrente corrisponde all'ora di inizio.
 title: Utilizzare i metadati temporizzati
-uuid: 9bbdaefa-4ac5-4e08-92b4-15ebe5c46864
 translation-type: tm+mt
-source-git-commit: 25a0dfef12ecf10ba939500c4ba539468c41ee1b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 1%
+source-wordcount: '100'
+ht-degree: 2%
 
 ---
 
 
 # Usa metadati temporizzati{#use-timed-metadata}
 
-Potete usare TimedMetadata quando l’ora di riproduzione corrente corrisponde all’ora di inizio.
+È possibile utilizzare TimedMetadata quando il tempo di riproduzione corrente corrisponde all&#39;ora di inizio.
 
-Per utilizzare questi oggetti `PTTimedMetadata` salvati durante la riproduzione, utilizzare il dizionario salvato da [Memorizzare gli oggetti metadati temporizzati durante l&#39;invio](../../../tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-timed-metadata-store.md).
+Per utilizzare questi oggetti salvati `PTTimedMetadata` durante la riproduzione, utilizzare il dizionario salvato da [Memorizzare gli oggetti con metadati temporizzati durante l&#39;invio](../../../tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-timed-metadata-store.md).
 
-1. Estrarre e aggiornare il tempo di riproduzione corrente da questa notifica e individuare tutti gli oggetti `PTTimedMetadata` con orari di inizio che corrispondono al tempo di riproduzione corrente.
+1. Estrai e aggiorna il tempo di riproduzione corrente da questa notifica e trova tutti gli oggetti `PTTimedMetadata` con orari di avvio che corrispondono al tempo di riproduzione corrente.
 
-   È possibile utilizzare questi oggetti per completare diverse azioni.
+   È possibile utilizzare questi oggetti per completare varie azioni.
 
    Ad esempio:
 
@@ -60,4 +57,4 @@ Per utilizzare questi oggetti `PTTimedMetadata` salvati durante la riproduzione,
    }
    ```
 
-1. Svuotare periodicamente le istanze `PTTimedMetadata` stantate dall&#39;elenco per evitare la crescita continua della memoria.
+1. Svuotare periodicamente le istanze obsolete `PTTimedMetadata` dall&#39;elenco per evitare che la memoria cresca continuamente.
