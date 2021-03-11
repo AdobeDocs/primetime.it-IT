@@ -1,36 +1,33 @@
 ---
-description: La licenza è il meccanismo principale mediante il quale gli utenti possono o meno riprodurre contenuti video protetti. A un utente legittimo (autorizzato) può essere rilasciata una licenza (una chiave) per decifrare e riprodurre uno specifico elemento del contenuto crittografato del suo fornitore di contenuti.
-seo-description: La licenza è il meccanismo principale mediante il quale gli utenti possono o meno riprodurre contenuti video protetti. A un utente legittimo (autorizzato) può essere rilasciata una licenza (una chiave) per decifrare e riprodurre uno specifico elemento del contenuto crittografato del suo fornitore di contenuti.
-seo-title: Licenze
+description: La concessione di licenze è il meccanismo principale tramite il quale gli utenti possono o meno riprodurre contenuti video protetti. A un utente legittimo (autorizzato) può essere rilasciata una licenza (una chiave) per decrittografare e riprodurre un elemento specifico del contenuto crittografato del proprio fornitore di contenuti.
 title: Licenze
-uuid: 9f433d62-5609-4d88-95fd-c1e7c0f6aa75
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '346'
 ht-degree: 0%
 
 ---
 
 
-# Licensing{#licensing}
+# Licenze{#licensing}
 
-La licenza è il meccanismo principale mediante il quale gli utenti possono o meno riprodurre contenuti video protetti. A un utente legittimo (autorizzato) può essere rilasciata una licenza (una chiave) per decifrare e riprodurre uno specifico elemento del contenuto crittografato del suo fornitore di contenuti.
+La concessione di licenze è il meccanismo principale tramite il quale gli utenti possono o meno riprodurre contenuti video protetti. A un utente legittimo (autorizzato) può essere rilasciata una licenza (una chiave) per decrittografare e riprodurre un elemento specifico del contenuto crittografato del proprio fornitore di contenuti.
 
-Prima che l&#39;app o la pagina Web sul dispositivo dell&#39;utente finale possa riprodurre contenuto protetto da DRM, l&#39;app deve acquisire un token da un server di adesione o storefront che l&#39;utente, il cliente, utilizza.  Adobe fornisce un server di riferimento di esempio a tal fine: [Server di riferimento: Esempio di ExpressPlay Entitlement Server (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md).
+Prima che l&#39;app o la pagina web sul dispositivo di un utente finale possa riprodurre contenuto protetto da DRM, deve acquisire un token da un server di adesione o vetrina utilizzato dal cliente. Adobe fornisce un esempio di server di riferimento a questo scopo: [Server di riferimento: Esempio di ExpressPlay Entitlement Server (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md).
 
-L&#39;adesione o il server di storefront richiederà un token di licenza dal server ExpressPlay interessato, solo dopo aver verificato con i propri sistemi back-end se l&#39;utente specifico ha diritto di visualizzare il contenuto richiesto. La risposta restituita dalla richiesta di token di licenza è un URL pronto per l’uso per il server licenze oppure contiene l’URL in una struttura JSON, a seconda della soluzione DRM con cui state lavorando.
+L&#39;adesione o il server di vetrina richiederà un token di licenza al relativo server ExpressPlay Server, solo dopo aver verificato con i propri sistemi back-end se l&#39;utente specifico è autorizzato a guardare il contenuto richiesto. La risposta restituita dalla richiesta di token di licenza è un URL pronto all’uso per il server licenze o la risposta contiene l’URL in una struttura JSON, a seconda della soluzione DRM con cui stai lavorando.
 
 >[!NOTE]
 >
->Impossibile eseguire la richiesta del token di licenza dal client stesso:
->1. Le autorizzazioni devono essere verificate in un ambiente affidabile; e
+>Impossibile effettuare la richiesta del token di licenza dal client stesso:
+>1. I diritti devono essere controllati in un ambiente affidabile; e
 >1. L&#39;autenticatore del cliente deve essere tenuto segreto.
 
 
-1. Eseguite la richiesta del token di licenza.
+1. Effettua la richiesta del token di licenza.
 
-   Per uno scenario di avvio rapido, in cui si desidera solo assicurarsi che i vari componenti coinvolti stiano funzionando insieme, è possibile utilizzare qualcosa come [!DNL curl] per effettuare la richiesta di token di licenza, (invece di ottenere inizialmente un&#39;app attiva e in esecuzione e testare le chiamate da lì). Ad esempio:
+   Per uno scenario di avvio rapido, in cui desideri semplicemente assicurarti che i vari componenti coinvolti lavorino insieme, puoi utilizzare qualcosa come [!DNL curl] per effettuare la richiesta del token di licenza (invece di ottenere inizialmente un&#39;app attiva e in esecuzione e testare le chiamate da lì). Ad esempio:
 
    * Widevine:
 
@@ -60,7 +57,7 @@ L&#39;adesione o il server di storefront richiederà un token di licenza dal ser
       &<Any additional licensing attributes desired>" >>WidevineToken 
    ```
 
-   Token di test Widevine di esempio:
+   Token di prova Widevine di esempio:
 
    ```
    https://wv.test.expressplay.com/widevine/RightsManager.asmx?ExpressPlayToken= 
@@ -69,7 +66,7 @@ L&#39;adesione o il server di storefront richiederà un token di licenza dal ser
       O1PqRkx59Q2q1s2cFNrqfml8Y3RQ 
    ```
 
-   La risposta Widevine è una stringa URL &quot;pronta per l’uso&quot;.
+   La risposta Widevine è una stringa URL &quot;pronta all’uso&quot;.
 
    * PlayReady:
 
@@ -99,7 +96,7 @@ L&#39;adesione o il server di storefront richiederà un token di licenza dal ser
       &<Any additional licensing attributes desired>" >>playreadyToken
    ```
 
-   Token di test PlayReady di esempio:
+   Token di prova PlayReady di esempio:
 
    ```
    {"licenseAcquisitionUrl":"https://pr.test.expressplay.com/playready/RightsManager.asmx", 
@@ -138,7 +135,7 @@ L&#39;adesione o il server di storefront richiederà un token di licenza dal ser
     &<Any additional licensing attributes desired>"
    ```
 
-   Token test FairPlay di esempio:
+   Token di test FairPlay di esempio:
 
    ```
    https://{expressplay_test_domain_license_url}/?ExpressPlayToken= 
@@ -147,4 +144,4 @@ L&#39;adesione o il server di storefront richiederà un token di licenza dal ser
    O1PqRkx59Q2q1s2cFNrqfml8Y3RQ
    ```
 
-   La risposta FairPlay è una stringa URL &quot;pronta per l’uso&quot;.
+   La risposta FairPlay è una stringa URL &quot;pronta all’uso&quot;.
