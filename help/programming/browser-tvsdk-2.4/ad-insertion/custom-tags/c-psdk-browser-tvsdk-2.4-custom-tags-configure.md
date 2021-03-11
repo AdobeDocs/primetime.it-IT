@@ -1,13 +1,10 @@
 ---
-description: I flussi di file multimediali possono contenere metadati aggiuntivi sotto forma di tag nel file MPD (Media Presentation Description), che indica il posizionamento della pubblicità. Potete specificare nomi di tag personalizzati e ricevere una notifica quando determinati tag vengono visualizzati nel file manifesto.
-seo-description: I flussi di file multimediali possono contenere metadati aggiuntivi sotto forma di tag nel file MPD (Media Presentation Description), che indica il posizionamento della pubblicità. Potete specificare nomi di tag personalizzati e ricevere una notifica quando determinati tag vengono visualizzati nel file manifesto.
-seo-title: Tag personalizzati
+description: I flussi multimediali possono includere metadati aggiuntivi sotto forma di tag nel file MPD (Media Presentation Description), e questo file indica il posizionamento della pubblicità. Puoi specificare nomi di tag personalizzati da avvisare quando alcuni tag compaiono nel file manifesto.
 title: Tag personalizzati
-uuid: d1e34288-545b-440f-a262-2fb853f0e3c4
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '441'
 ht-degree: 0%
 
 ---
@@ -15,27 +12,27 @@ ht-degree: 0%
 
 # Panoramica {#custom-tags-overview}
 
-I flussi di file multimediali possono contenere metadati aggiuntivi sotto forma di tag nel file MPD (Media Presentation Description), che indica il posizionamento della pubblicità. Potete specificare nomi di tag personalizzati e ricevere una notifica quando determinati tag vengono visualizzati nel file manifesto.
+I flussi multimediali possono includere metadati aggiuntivi sotto forma di tag nel file MPD (Media Presentation Description), e questo file indica il posizionamento della pubblicità. Puoi specificare nomi di tag personalizzati da avvisare quando alcuni tag compaiono nel file manifesto.
 
-## Tag contenuto HLS {#section_E99299152089418FBA56F5F09FC547B0}
+## Tag del contenuto HLS {#section_E99299152089418FBA56F5F09FC547B0}
 
 >[!IMPORTANT]
 >
->Questa funzione non è disponibile per Safari sui computer Apple, perché per riprodurre il contenuto HLS il browser TVSDK utilizza il tag video, anziché Flash o MSE.
+>Questa funzione non è disponibile per Safari nei computer Apple, perché per riprodurre il contenuto HLS il browser TVSDK utilizza il tag video, anziché il Flash o MSE.
 
-Browser TVSDK fornisce supporto out-of-the-box per tag pubblicitari #EXT specifici. L&#39;applicazione può utilizzare tag personalizzati per migliorare il flusso di lavoro pubblicitario o per supportare scenari di blackout. Per supportare flussi di lavoro avanzati, Browser TVSDK consente di specificare e sottoscrivere altri tag nel manifesto. Potete ricevere una notifica quando questi tag vengono visualizzati nel file manifesto.
+Il browser TVSDK fornisce il supporto predefinito per tag pubblicitari #EXT specifici. L&#39;applicazione può utilizzare tag personalizzati per migliorare il flusso di lavoro pubblicitario o per supportare scenari di blackout. Per supportare flussi di lavoro avanzati, il browser TVSDK consente di specificare e sottoscrivere tag aggiuntivi nel manifesto. Puoi ricevere notifiche quando questi tag compaiono nel file manifesto.
 
 >[!TIP]
 >
->È possibile abbonarsi a tag personalizzati sia per i flussi VOD che live/lineari.
+>Puoi abbonarti a tag personalizzati sia per i flussi VOD che per quelli live/lineari.
 
 >[!NOTE]
 >
->Quando HLS viene riprodotto utilizzando il tag Video in Safari e non utilizzando il Flash Fallback, questa funzione non sarà disponibile in Safari.
+>Quando HLS viene riprodotto utilizzando il tag Video in Safari e non utilizzando Flash Fallback, questa funzione non sarà disponibile in Safari.
 
 ## Utilizzo di tag HLS personalizzati {#section_AD032318AEF5418393D2B1DF36B0BABB}
 
-Esempio di una risorsa VOD personalizzata:
+Ecco un esempio di risorsa VOD personalizzata:
 
 ```
 #EXTM3U
@@ -63,24 +60,24 @@ seg5.ts
 #EXT-X-ENDLIST
 ```
 
-L’applicazione può configurare i seguenti scenari:
+L&#39;applicazione può impostare i seguenti scenari:
 
-* Una notifica quando nel file sono presenti tag `#EXT-X-ASSET` o qualsiasi altro set di nomi di tag personalizzati a cui hai effettuato la sottoscrizione.
-* Inserite annunci quando nel flusso è presente un tag `#EXT-X-AD` o qualsiasi altro nome di tag personalizzato.
+* Nel file è presente una notifica quando sono presenti tag `#EXT-X-ASSET` o qualsiasi altro set di nomi di tag personalizzati a cui hai effettuato la sottoscrizione.
+* Inserisci annunci quando nel flusso è presente un tag `#EXT-X-AD` o qualsiasi altro nome di tag personalizzato.
 
-Potete abbonarvi a uno dei seguenti tag come tag personalizzati: `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`. L&#39;utente riceve una notifica con un evento `TimedMetadata` durante l&#39;analisi dei file manifest.
+Puoi abbonarti a uno dei seguenti tag come tag personalizzati: `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`. Ricevi una notifica con un evento `TimedMetadata` durante l&#39;analisi dei file manifest.
 
-Esistono tag pubblicitari, ad esempio `EXT-X-CUE`, ai quali si è già abbonati. Questi tag vengono utilizzati anche dal generatore di opportunità predefinito. Per specificare quali tag pubblicitari utilizzare il generatore di opportunità predefinito, è possibile impostare la proprietà `adTags`.
+Esistono alcuni tag pubblicitari, ad esempio `EXT-X-CUE`, ai quali sei già iscritto. Questi tag ad vengono utilizzati anche dal generatore di opportunità predefinito. Puoi specificare quali tag di annunci vengono utilizzati dal generatore di opportunità predefinito impostando la proprietà `adTags` .
 
-## Tag contenuto DASH {#section_967A952319BE4048B4C6612FFF7ADA6E}
+## Tag del contenuto DASH {#section_967A952319BE4048B4C6612FFF7ADA6E}
 
 DASH offre due modi per segnalare gli eventi:
 
 * Nel file MPD.
 
    Questo file è simile al file M3U8 nel contenuto HLS e gli eventi MPD esistono nel file .mpd.
-* Banda nella rappresentazione
+* Inbanda nella rappresentazione
 
-   Gli eventi in banda vengono moltiplicati con le rappresentazioni aggiungendo i messaggi dell&#39;evento come parte dei segmenti. Una rappresentazione è un elenco di segmenti video e audio riprodotti in sequenza. I dati dell&#39;evento in banda sono incorporati in questi segmenti.
+   Gli eventi in banda vengono moltiplicati con le rappresentazioni aggiungendo i messaggi evento come parte dei segmenti. Una rappresentazione è un elenco di segmenti video e audio riprodotti in sequenza. I dati dell’evento in banda sono incorporati in questi segmenti.
 
-Questi eventi vengono notificati come eventi `TimedMetadata` all&#39;applicazione non appena vengono analizzati dal browser TVSDK. Una volta che un evento viene notificato, non verrà più visualizzato un messaggio di notifica.
+Questi eventi vengono notificati come eventi `TimedMetadata` all&#39;applicazione non appena vengono analizzati dal browser TVSDK. Una volta che un evento viene notificato, non verrà più inviato un nuovo avviso.
