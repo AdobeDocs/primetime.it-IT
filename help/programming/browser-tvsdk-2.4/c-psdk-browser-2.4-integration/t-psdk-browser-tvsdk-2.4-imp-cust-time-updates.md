@@ -1,13 +1,10 @@
 ---
-description: In alcune implementazioni di analisi, l'applicazione client potrebbe voler fornire una posizione di playhead diversa da quella indicata dal valore localTime di TVSDK del browser.
-seo-description: In alcune implementazioni di analisi, l'applicazione client potrebbe voler fornire una posizione di playhead diversa da quella indicata dal valore localTime di TVSDK del browser.
-seo-title: Implementazione di aggiornamenti temporali personalizzati
-title: Implementazione di aggiornamenti temporali personalizzati
-uuid: 26a0592c-a47b-4d65-b984-5e51533dcddc
+description: In alcune implementazioni di Analytics, l'applicazione client potrebbe voler fornire una posizione di playhead diversa rispetto alla posizione segnalata dal valore localTime del browser TVSDK.
+title: Implementare aggiornamenti temporali personalizzati
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '119'
 ht-degree: 0%
 
 ---
@@ -15,15 +12,15 @@ ht-degree: 0%
 
 # Implementa aggiornamenti temporali personalizzati{#implement-custom-time-updates}
 
-In alcune implementazioni di analisi, l&#39;applicazione client potrebbe voler fornire una posizione di playhead diversa da quella indicata dal valore localTime di TVSDK del browser.
+In alcune implementazioni di Analytics, l&#39;applicazione client potrebbe voler fornire una posizione di playhead diversa rispetto alla posizione segnalata dal valore localTime del browser TVSDK.
 
-Ad esempio, durante la riproduzione di un flusso lineare, è possibile fornire la testina di riproduzione di ogni programma in relazione al tempo di inizio.
+Ad esempio, durante la riproduzione di un flusso lineare, la testina di riproduzione di ogni programma può essere fornita in base al tempo di inizio.
 
 >[!TIP]
 >
->Ignora questo metodo solo se si desidera fornire una posizione dell&#39;indicatore di riproduzione diversa dalla posizione predefinita.
+>Ignorare questo metodo solo se si desidera fornire una posizione diversa da quella predefinita.
 
-Per ignorare la posizione predefinita dell&#39;indicatore di riproduzione:
+Per sovrascrivere la posizione predefinita della testina di riproduzione:
 
 ```js
 vaMetadata.currentTimeUpdateBlock = function() { 
@@ -33,5 +30,5 @@ vaMetadata.currentTimeUpdateBlock = function() {
 
 >[!IMPORTANT]
 >
->I valori in questo frammento di codice sono solo esempi. È necessario utilizzare valori diversi per la posizione personalizzata dell&#39;indicatore di riproduzione.
+>I valori in questo frammento di codice sono solo esempi. È necessario utilizzare valori diversi per la posizione personalizzata della testina di riproduzione.
 
