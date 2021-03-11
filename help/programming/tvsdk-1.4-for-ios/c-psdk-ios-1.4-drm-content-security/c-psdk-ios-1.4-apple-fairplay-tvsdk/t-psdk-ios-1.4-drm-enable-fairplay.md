@@ -1,13 +1,10 @@
 ---
-description: Potete implementare Apple FairPlay Streaming, che è la soluzione DRM di Apple, nelle vostre applicazioni TVSDK.
-seo-description: Potete implementare Apple FairPlay Streaming, che è la soluzione DRM di Apple, nelle vostre applicazioni TVSDK.
-seo-title: Abilitare Apple FairPlay nelle applicazioni TVSDK
+description: È possibile implementare Apple FairPlay Streaming, che è la soluzione DRM di Apple, nelle applicazioni TVSDK.
 title: Abilitare Apple FairPlay nelle applicazioni TVSDK
-uuid: fafffdb9-09f9-45fb-9957-3c6e95ed55f9
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '193'
+source-wordcount: '172'
 ht-degree: 0%
 
 ---
@@ -15,23 +12,23 @@ ht-degree: 0%
 
 # Abilita Apple FairPlay nelle applicazioni TVSDK{#enable-apple-fairplay-in-tvsdk-applications}
 
-Potete implementare Apple FairPlay Streaming, che è la soluzione DRM di Apple, nelle vostre applicazioni TVSDK.
+È possibile implementare Apple FairPlay Streaming, che è la soluzione DRM di Apple, nelle applicazioni TVSDK.
 
-1. Crea il caricatore di risorse cliente FairPlay implementando `PTAVAssetResourceLoaderDelegate`.
+1. Crea il tuo programma di caricamento risorse del cliente FairPlay implementando `PTAVAssetResourceLoaderDelegate`.
 
-   Per ulteriori informazioni, consultate [Apple FairPlay in applicazioni TVSDK](../../c-psdk-ios-1.4-drm-content-security/c-psdk-ios-1.4-apple-fairplay-tvsdk/c-psdk-ios-1.4-apple-fairplay-tvsdk.md).
+   Per ulteriori informazioni, consulta [Apple FairPlay nelle applicazioni TVSDK](../../c-psdk-ios-1.4-drm-content-security/c-psdk-ios-1.4-apple-fairplay-tvsdk/c-psdk-ios-1.4-apple-fairplay-tvsdk.md).
 
    >[!NOTE]
    >
-   >Assicurati di seguire le istruzioni riportate nella *Guida al programma di streaming FairPlay* ( *FairPlayStreaming_PG.pdf*), inclusa in [FairPlay Server SDK per lo sviluppo di un&#39;app in base a FPS](https://developer.apple.com/services-account/download?path=/Developer_Tools/FairPlay_Streaming_SDK/FairPlay_Streaming_Server_SDK.zip)).
+   >Assicurati di seguire le istruzioni contenute nella *Guida al programma FairPlay Streaming* ( *FairPlayStreaming_PG.pdf*), inclusa in [FairPlay Server SDK per lo sviluppo di un&#39;app FPS-Aware](https://developer.apple.com/services-account/download?path=/Developer_Tools/FairPlay_Streaming_SDK/FairPlay_Streaming_Server_SDK.zip)).
 
-   Il metodo `resourceLoader:shouldWaitForLoadingOfRequestedResource` equivale a quello presente in `AVAssetResourceLoaderDelegate`.
+   Il metodo `resourceLoader:shouldWaitForLoadingOfRequestedResource` equivale a quello in `AVAssetResourceLoaderDelegate`.
 
    >[!IMPORTANT]
    >
-   >Nello scenario del server licenze ExpressPlay, per riprodurre contenuto, modificate lo schema URL nell&#39;URL della richiesta di licenza del server ExpressPlay FairPlay da `skd://` a `https://` (o `https://`).
+   >Nello scenario del server licenze ExpressPlay, per riprodurre il contenuto, modifica lo schema URL nell’URL della richiesta di licenza del server ExpressPlay FairPlay da `skd://` a `https://` (o `https://`).
 
-1. Registrare il caricatore di risorse cliente *FairPlay* con `registerPTAVAssetResourceLoader`.
+1. Registra il *FairPlay* Customer Resource Loader con `registerPTAVAssetResourceLoader`.
 
    ```
    PTFairPlayResourceLoader *resourceLoader =  
@@ -40,4 +37,4 @@ Potete implementare Apple FairPlay Streaming, che è la soluzione DRM di Apple, 
      registerPTAVAssetResourceLoader:resourceLoader];
    ```
 
-Se avete scritto il vostro server licenze FairPlay o state utilizzando un server licenze FairPlay di terze parti, consultate il fornitore del server licenze per determinare l’URL del server licenze, la formattazione e altri requisiti.
+Se hai scritto il tuo server licenze FairPlay o stai utilizzando un server licenze FairPlay di terze parti, consulta il fornitore del server licenze per determinare l&#39;URL del server licenze, la formattazione e altri requisiti.
