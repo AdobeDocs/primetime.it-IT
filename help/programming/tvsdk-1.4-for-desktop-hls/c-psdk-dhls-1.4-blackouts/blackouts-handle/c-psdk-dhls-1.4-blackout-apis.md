@@ -1,39 +1,36 @@
 ---
-description: TVSDK fornisce elementi API utili per l'implementazione delle blackout, inclusi metodi, metadati e notifiche.
-seo-description: TVSDK fornisce elementi API utili per l'implementazione delle blackout, inclusi metodi, metadati e notifiche.
-seo-title: Elementi API Blackout
-title: Elementi API Blackout
-uuid: 65e1668c-6a19-4910-83a2-46d364e94e5f
+description: TVSDK fornisce elementi API utili per l’implementazione delle blackout, inclusi metodi, metadati e notifiche.
+title: Elementi dell’API Blackout
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
 
 
-# Elementi API Blackout{#blackout-api-elements}
+# Elementi API di sospensione attività{#blackout-api-elements}
 
-TVSDK fornisce elementi API utili per l&#39;implementazione delle blackout, inclusi metodi, metadati e notifiche.
+TVSDK fornisce elementi API utili per l’implementazione delle blackout, inclusi metodi, metadati e notifiche.
 
 Quando si implementa una soluzione blackout nel lettore, è possibile utilizzare quanto segue.
 
 * **MediaPlayer**
 
-   * `registerCurrentItemAsBackgroundItem` Salva la risorsa attualmente caricata come risorsa in background. Se `replaceCurrentResource` viene chiamato dopo questo metodo, TVSDK continua a scaricare il manifesto dell&#39;elemento in background finché non chiami `unregisterCurrentBackgroundItem`.
+   * `registerCurrentItemAsBackgroundItem` Salva la risorsa attualmente caricata come risorsa in background. Se `replaceCurrentResource` viene chiamato dopo questo metodo, TVSDK continua a scaricare il manifesto dell&#39;elemento in background fino a quando non chiami `unregisterCurrentBackgroundItem`.
 
-   * `unregisterCurrentBackgroundItem`  Cancella la risorsa di sfondo attualmente impostata e interrompe il recupero e l&#39;analisi del manifesto di sfondo.
+   * `unregisterCurrentBackgroundItem`  Cancella la risorsa in background attualmente impostata e interrompe il recupero e l&#39;analisi del manifesto in background.
 
-* **** BlackoutMetadataUn tipo di metadati specifico per i blackout.
+* **** BlackoutMetadataUn tipo di metadati specifico per le blackout.
 
-   Questo consente di impostare intervalli non ricercabili (un attributo aggiuntivo `TimeRange` denominato `nonseekableRange`) in TVSDK. TVSDK controlla questi intervalli (se la posizione di ricerca desiderata rientra in un `nonseekableRange`) ogni volta che l&#39;utente cerca. Se è impostato e l’utente cerca in un intervallo non ricercabile, TVSDK forza il visualizzatore all’ora di fine del `seekableRange`.
+   Questo consente di impostare intervalli non ricercabili (un attributo aggiuntivo `TimeRange` denominato `nonseekableRange`) su TVSDK. TVSDK controlla questi intervalli (se la posizione di ricerca desiderata rientra in un `nonseekableRange`) ogni volta che l’utente cerca. Se è impostato e l’utente cerca in un intervallo non ricercabile, TVSDK forza il visualizzatore all’ora di fine del `seekableRange`.
 
-* **START HERE** **** NEXTDefaultMetadataKeysAbilitare o disabilitare il preroll su un flusso live impostando  `ENABLE_LIVE_PREROLL` su true o false. Se è false, TVSDK non esegue una chiamata ad un server per annunci pre-roll prima della riproduzione del contenuto, pertanto non riproduce il pre-roll. Questo non ha alcun impatto sui rulli intermedi. Il valore predefinito è true.
+* **AVVIA QUI** **** NEXTDefaultMetadataKeysAttiva o disattiva la preroll su un flusso live impostando  `ENABLE_LIVE_PREROLL` su true o false. Se false, TVSDK non effettua una chiamata ad server esplicita per gli annunci pre-scorrimento prima della riproduzione del contenuto, e quindi non riproduce il pre-roll. Questo non ha alcun impatto sui rulli medi. Il valore predefinito è true.
 
 * **TimedMetadataEvent**
 
-   * `TIMED_METADATA_IN_BACKGROUND_AVAILABLE` sottotipo evento - Inviato quando TVSDK rileva un tag con sottoscrizione nel manifesto di sfondo.
+   * `TIMED_METADATA_IN_BACKGROUND_AVAILABLE` sottotipo evento : inviato quando TVSDK rileva un tag con sottoscrizione nel manifesto di background.
 
 * **Notifiche**
 
@@ -42,6 +39,6 @@ Quando si implementa una soluzione blackout nel lettore, è possibile utilizzare
       * Codice: 204000
       * Tipo: Avviso
       * Errore nel download del manifesto in background.
-   * `SeekEvent.SEEK_POSITION_ADJUSTED` Inviato quando si tenta di eseguire una ricerca in un intervallo non ricercabile.
+   * `SeekEvent.SEEK_POSITION_ADJUSTED` Inviato quando si tenta una ricerca in un intervallo non ricercabile.
 
 
