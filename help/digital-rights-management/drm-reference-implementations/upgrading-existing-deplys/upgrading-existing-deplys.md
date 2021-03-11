@@ -1,13 +1,10 @@
 ---
-description: Per aggiornare un server che supporta la versione 3.0 Reference Implementation License Server o Watched Folder Packager, è necessario sostituire i file .war distribuiti su un server applicazioni con i file inclusi con  Adobe Primetime DRM Reference Implementation Server.
-seo-description: Per aggiornare un server che supporta la versione 3.0 Reference Implementation License Server o Watched Folder Packager, è necessario sostituire i file .war distribuiti su un server applicazioni con i file inclusi con  Adobe Primetime DRM Reference Implementation Server.
-seo-title: Aggiornamento delle distribuzioni esistenti
-title: Aggiornamento delle distribuzioni esistenti
-uuid: 1a40aae9-f639-41fa-b42d-cf8cdfcde694
+description: Per aggiornare un server che supporta la versione 3.0 Reference Implementation License Server o Watched Folder Packager, è necessario sostituire i file .war distribuiti su un Application Server con i file inclusi con Adobe Primetime DRM Reference Implementation Server.
+title: Aggiornare le distribuzioni esistenti
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '165'
 ht-degree: 0%
 
 ---
@@ -15,13 +12,13 @@ ht-degree: 0%
 
 # Panoramica {#upgrade-existing-deployments-overview}
 
-Per aggiornare un server che supporta la versione 3.0 Reference Implementation License Server o Watched Folder Packager, è necessario sostituire i file .war distribuiti su un server applicazioni con i file inclusi con  Adobe Primetime DRM Reference Implementation Server.
+Per aggiornare un server che supporta la versione 3.0 Reference Implementation License Server o Watched Folder Packager, è necessario sostituire i file .war distribuiti su un Application Server con i file inclusi con Adobe Primetime DRM Reference Implementation Server.
 
-Per utilizzare la registrazione del dominio con il server delle licenze di implementazione di riferimento, sono necessarie diverse nuove tabelle di database. È necessario ricreare l&#39;intero database di implementazione dei riferimenti ed eseguire `CreateSampleDB.sql`.
+Per utilizzare la registrazione del dominio con il server licenze di implementazione di riferimento, sono necessarie diverse nuove tabelle di database. È necessario ricreare l&#39;intero database di implementazione di riferimento ed eseguire `CreateSampleDB.sql`.
 
 Per conservare i record del database e aggiungere nuove tabelle:
 
-1. Aprire `CreateSampleDB.sql` ed eseguire comandi che creano le tabelle seguenti:
+1. Aprire `CreateSampleDB.sql` ed eseguire i comandi che creano le tabelle seguenti:
 
    * `DomainServerInfo`
    * `DomainKeys`
@@ -29,14 +26,14 @@ Per conservare i record del database e aggiungere nuove tabelle:
    * `UserDomainMembership`
    * `UserDomainRefCount`
 
-1. Aggiungete le seguenti proprietà a [!DNL flashaccess-refimpl.properties] per utilizzare il supporto del dominio:
+1. Aggiungi le seguenti proprietà a [!DNL flashaccess-refimpl.properties] per utilizzare il supporto del dominio:
 
    * `HandlerConfiguration.DomainCAs.n` o  `RefImpl.HSM.HandlerConfiguration.DomainCAs.Alias.n`
 
-   * `Domain RegistrationHandler.ServerCredential` e  `DomainRegistrationHandler.ServerCredential.password` oppure  `RefImpl.HSM.DomainRegistrationHandler.ServerCredential.Alias`
+   * `Domain RegistrationHandler.ServerCredential` e  `DomainRegistrationHandler.ServerCredential.password` o  `RefImpl.HSM.DomainRegistrationHandler.ServerCredential.Alias`
 
    * `DomainRegistrationHandler.DomainServerUrl`
 
-1. Aggiungete le seguenti proprietà a [!DNL flashaccess-refimpl.properties] per supportare la distribuzione di chiavi remote ai client iOS:
+1. Aggiungi le seguenti proprietà a [!DNL flashaccess-refimpl.properties] per supportare la consegna di chiavi remote ai client iOS:
 
    * `HandlerConfiguration.KeyServerCertificate` o  `RefImpl.HSM.HandlerConfiguration.KeyServerCertificate.Alias`
