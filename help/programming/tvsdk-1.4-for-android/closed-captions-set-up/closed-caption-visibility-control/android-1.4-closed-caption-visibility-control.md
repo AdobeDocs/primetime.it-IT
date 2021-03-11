@@ -1,21 +1,18 @@
 ---
-description: È possibile controllare la visibilità dei sottotitoli codificati. Quando la visibilità è attivata, viene visualizzata la traccia attualmente selezionata. Se modificate la traccia corrente, l’impostazione di visibilità rimane la stessa.
-seo-description: È possibile controllare la visibilità dei sottotitoli codificati. Quando la visibilità è attivata, viene visualizzata la traccia attualmente selezionata. Se modificate la traccia corrente, l’impostazione di visibilità rimane la stessa.
-seo-title: Controllo della visibilità dei sottotitoli
+description: È possibile controllare la visibilità dei sottotitoli codificati. Quando la visibilità è attiva, viene visualizzata la traccia attualmente selezionata. Se modifichi la traccia corrente, l’impostazione di visibilità rimane la stessa.
 title: Controllo della visibilità dei sottotitoli
-uuid: 42913347-8158-474e-aa3c-ba4d38baba12
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '206'
-ht-degree: 0%
+source-wordcount: '172'
+ht-degree: 1%
 
 ---
 
 
 # Panoramica {#control-closed-caption-visibility}
 
-È possibile controllare la visibilità dei sottotitoli codificati. Quando la visibilità è attivata, viene visualizzata la traccia attualmente selezionata. Se modificate la traccia corrente, l’impostazione di visibilità rimane la stessa.
+È possibile controllare la visibilità dei sottotitoli codificati. Quando la visibilità è attiva, viene visualizzata la traccia attualmente selezionata. Se modifichi la traccia corrente, l’impostazione di visibilità rimane la stessa.
 
 >[!TIP]
 >
@@ -23,7 +20,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->I valori di visibilità per i sottotitoli codificati sono definiti in `MediaPlayer.Visibility`.
+>I valori di visibilità dei sottotitoli codificati sono definiti in `MediaPlayer.Visibility`.
 >
 >
 ```java
@@ -33,14 +30,14 @@ ht-degree: 0%
 >}
 >```
 
-1. Attendete che MediaPlayer disponga almeno dello stato PREPARATO (vedere [Attendere uno stato valido](../../../tvsdk-1.4-for-android/ui-configure/android-1.4-ui-state-prepared-wait-for.md)).
-1. Per ottenere l’impostazione di visibilità corrente per i sottotitoli codificati, utilizzate il metodo getter in MediaPlayer, che restituisce un valore di visibilità.
+1. Attendi che MediaPlayer disponga almeno dello stato PREPARATO (vedi [Attendi uno stato valido](../../../tvsdk-1.4-for-android/ui-configure/android-1.4-ui-state-prepared-wait-for.md)).
+1. Per ottenere l&#39;impostazione di visibilità corrente per i sottotitoli codificati, utilizza il metodo getter in MediaPlayer, che restituisce un valore di visibilità.
 
    ```java
    Visibility getCCVisibility() throws IllegalStateException;
    ```
 
-1. Per modificare la visibilità dei sottotitoli codificati, utilizzate il metodo setter, passando un valore di visibilità da `MediaPlayer.Visibility`.
+1. Per modificare la visibilità dei sottotitoli codificati, utilizzare il metodo setter, passando un valore di visibilità da `MediaPlayer.Visibility`.
 
    Ad esempio:
 
