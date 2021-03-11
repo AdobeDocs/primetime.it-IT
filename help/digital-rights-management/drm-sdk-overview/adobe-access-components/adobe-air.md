@@ -1,9 +1,9 @@
 ---
-seo-title: ' Adobe AIR'
-title: ' Adobe AIR'
-uuid: fc50e34b-2d0b-4e36-b77e-870dce20dc0d
+title: Adobe AIR
+description: Adobe AIR
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 0%
@@ -11,10 +11,10 @@ ht-degree: 0%
 ---
 
 
-#  Adobe AIR{#adobe-air}
+# Adobe AIR{#adobe-air}
 
- Adobe AIR è un runtime basato su sistemi operativi diversi che consente ai produttori di contenuti di estendere gli investimenti esistenti sul Web al desktop progettando applicazioni multimediali personalizzate. Basato su tecnologie collaudate e aperte, offre alle aziende un modo affidabile e semplificato di sviluppare e implementare applicazioni personalizzate che possono essere affidabili per offrire un&#39;esperienza utente più sicura e piacevole.  Adobe AIR consente alle aziende di integrare facilmente i contenuti multimediali per creare un&#39;esperienza utente interattiva e coinvolgente. Consente agli sviluppatori di utilizzare strumenti familiari come HTML, JavaScript, Flash o  software Flex® Adobe® per distribuire la combinazione unica di applicazioni Internet avanzate a Windows, Macintosh o Linux.
+Adobe AIR è un runtime di sistema interoperativo che consente ai produttori di contenuti di estendere i loro investimenti esistenti nel web al desktop progettando applicazioni multimediali personalizzate. Basato su tecnologie aperte e comprovate, offre alle aziende un modo affidabile e semplificato di sviluppare e distribuire applicazioni personalizzate che possono essere affidabili per offrire un&#39;esperienza utente più sicura e piacevole. Adobe AIR consente alle aziende di integrare facilmente i rich media per creare un’esperienza utente più coinvolgente e interattiva. Consente agli sviluppatori di utilizzare strumenti familiari come HTML, JavaScript, Flash o il software Adobe® Flex® per implementare la combinazione unica di applicazioni Internet avanzate in Windows, Macintosh o Linux.
 
-Le aziende hanno il controllo completo dell&#39;interfaccia utente e possono progettare un&#39;esperienza utente che rifletta e rafforzi il proprio marchio. Grazie al supporto integrato per la riproduzione di contenuti protetti con  Adobe Primetime DRM SDK,  Adobe AIR consente di creare catene di distribuzione di contenuti end-to-end personalizzate.
+Le aziende hanno il controllo completo dell&#39;interfaccia utente e possono progettare un&#39;esperienza utente per riflettere e rafforzare il proprio marchio. Grazie al supporto integrato per la riproduzione di contenuti protetti con Adobe Primetime DRM SDK, Adobe AIR consente di creare catene di distribuzione dei contenuti end-to-end personalizzate.
 
-Per maggiori informazioni su  Adobe AIR, visita: [www.adobe.com/go/air](https://www.adobe.com/go/air)
+Per ulteriori informazioni su Adobe AIR, visita: [www.adobe.com/go/air](https://www.adobe.com/go/air)
