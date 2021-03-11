@@ -1,13 +1,10 @@
 ---
-description: Quando i metadati DRM di un video sono separati dal flusso multimediale, è necessario eseguire l'autenticazione prima di avviare la riproduzione.
-seo-description: Quando i metadati DRM di un video sono separati dal flusso multimediale, è necessario eseguire l'autenticazione prima di avviare la riproduzione.
-seo-title: Autenticazione DRM prima della riproduzione
+description: Quando i metadati DRM di un video sono separati dal flusso multimediale, è necessario eseguire l'autenticazione prima di iniziare la riproduzione.
 title: Autenticazione DRM prima della riproduzione
-uuid: be319b04-a506-4278-8275-db32cd3f18aa
 translation-type: tm+mt
-source-git-commit: e300238be5a2bddc7c6b9bd26682dcb4401959b1
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '339'
 ht-degree: 1%
 
 ---
@@ -15,20 +12,20 @@ ht-degree: 1%
 
 # Autenticazione DRM prima della riproduzione {#drm-authentication-before-playback}
 
-Quando i metadati DRM di un video sono separati dal flusso multimediale, è necessario eseguire l&#39;autenticazione prima di avviare la riproduzione.
+Quando i metadati DRM di un video sono separati dal flusso multimediale, è necessario eseguire l&#39;autenticazione prima di iniziare la riproduzione.
 
 Una risorsa video può avere un file di metadati DRM associato, ad esempio:
 
 * `"url": "https://www.domain.com/asset.m3u8"`
 * `"drmMetadata": "https://www.domain.com/asset.metadata"`
 
-In questo esempio, potete utilizzare i metodi `DRMHelper` per scaricare il contenuto del file di metadati DRM, analizzarlo e verificare se è necessaria l&#39;autenticazione DRM.
+In questo esempio, puoi utilizzare i metodi `DRMHelper` per scaricare il contenuto del file di metadati DRM, analizzarlo e verificare se è necessaria l’autenticazione DRM.
 
-1. Utilizzate `loadDRMMetadata` per caricare il contenuto dell&#39;URL dei metadati e analizzare i byte scaricati in un `DRMMetadata`.
+1. Utilizza `loadDRMMetadata` per caricare il contenuto dell&#39;URL dei metadati e analizzare i byte scaricati in un `DRMMetadata`.
 
    >[!TIP]
    >
-   >Questo metodo è asincrono e crea un proprio thread.
+   >Questo metodo è asincrono e crea il proprio thread.
 
    ```java
    public static void loadDRMMetadata( 
@@ -45,13 +42,13 @@ In questo esempio, potete utilizzare i metodi `DRMHelper` per scaricare il conte
                                       new DRMLoadMetadataListener());
    ```
 
-1. Informare l&#39;utente che questa operazione è asincrona, è consigliabile renderlo consapevole.
+1. Notifica all&#39;utente che l&#39;operazione è asincrona; è consigliabile informare l&#39;utente in merito.
 
-   Se gli utenti non sanno che l&#39;operazione è asincrona, potrebbero chiedersi perché la riproduzione non sia ancora iniziata. Ad esempio, potete visualizzare una ruota di selezione mentre i metadati DRM vengono scaricati e analizzati.
+   Se gli utenti non sanno che l’operazione è asincrona, potrebbero chiedersi perché la riproduzione non è ancora iniziata. Ad esempio, puoi mostrare una ruota rotante mentre i metadati DRM vengono scaricati e analizzati.
 
-1. Implementa le callback in `DRMLoadMetadataListener`.
+1. Implementa i callback in `DRMLoadMetadataListener`.
 
-   La `loadDRMMetadata` richiama questi gestori eventi.
+   Il `loadDRMMetadata` chiama questi gestori eventi.
 
    ```java
    public interface DRMLoadMetadataListener { 
@@ -70,11 +67,11 @@ In questo esempio, potete utilizzare i metodi `DRMHelper` per scaricare il conte
 
    Di seguito sono riportati ulteriori dettagli sui gestori:
 
-   * `onLoadMetadataUrlStart` rileva l’inizio del caricamento dell’URL dei metadati.
-   * `onLoadMetadataUrlComplete` rileva il termine del caricamento dell’URL dei metadati.
-   * `onLoadMetadataUrlError` indica che il caricamento dei metadati non è riuscito.
+   * `onLoadMetadataUrlStart` rileva quando è iniziato il caricamento dell&#39;URL dei metadati.
+   * `onLoadMetadataUrlComplete` rileva quando l&#39;URL dei metadati ha terminato il caricamento.
+   * `onLoadMetadataUrlError` indica che non è stato possibile caricare i metadati.
 
-1. Al termine del caricamento, ispezionare l&#39;oggetto `DRMMetadata` per determinare se è necessaria l&#39;autenticazione DRM.
+1. Al termine del caricamento, controlla l&#39;oggetto `DRMMetadata` per determinare se è necessaria l&#39;autenticazione DRM.
 
    ```java
    public static boolean isAuthNeeded(DRMMetadata drmMetadata);
@@ -96,10 +93,10 @@ In questo esempio, potete utilizzare i metodi `DRMHelper` per scaricare il conte
    } 
    ```
 
-1. Completa una delle attività seguenti:
+1. Completa una delle seguenti attività:
 
-   * Se l&#39;autenticazione non è necessaria, avviate la riproduzione.
-   * Se è richiesta l&#39;autenticazione, completare l&#39;autenticazione acquisendo la licenza.
+   * Se l&#39;autenticazione non è necessaria, avviare la riproduzione.
+   * Se è necessaria l’autenticazione, completa l’autenticazione acquisendo la licenza.
 
       ```java
       /** 
@@ -155,9 +152,9 @@ In questo esempio, potete utilizzare i metodi `DRMHelper` per scaricare il conte
       }); 
       ```
 
-1. Utilizzare un listener di eventi per controllare lo stato di autenticazione.
+1. Utilizza un listener di eventi per controllare lo stato di autenticazione.
 
-   Questo processo richiede la comunicazione in rete, quindi anche questa è un&#39;operazione asincrona.
+   Questo processo implica la comunicazione in rete, quindi anche questa è un&#39;operazione asincrona.
 
    ```java
    public interface DRMAuthenticationListener { 
@@ -193,7 +190,7 @@ In questo esempio, potete utilizzare i metodi `DRMHelper` per scaricare il conte
    } 
    ```
 
-1. Se l&#39;autenticazione ha esito positivo, avviate la riproduzione.
-1. Se l&#39;autenticazione non ha esito positivo, avvisate l&#39;utente e non avviate la riproduzione.
+1. Se l&#39;autenticazione ha esito positivo, avviare la riproduzione.
+1. Se l&#39;autenticazione non ha esito positivo, avvisa l&#39;utente e non avvia la riproduzione.
 
-   L&#39;applicazione deve gestire eventuali errori di autenticazione. Se l&#39;autenticazione non viene eseguita correttamente prima della riproduzione, TVSDK viene collocato in uno stato di errore e la riproduzione si arresta. L’applicazione deve risolvere il problema, ripristinare il lettore e ricaricare la risorsa.
+   L&#39;applicazione deve gestire eventuali errori di autenticazione. Impossibile eseguire l&#39;autenticazione prima che la riproduzione riporti TVSDK in uno stato di errore e la riproduzione si interrompe. L’applicazione deve risolvere il problema, reimpostare il lettore e ricaricare la risorsa.
