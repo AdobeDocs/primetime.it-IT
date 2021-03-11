@@ -1,29 +1,26 @@
 ---
-description: Per impostazione predefinita, TVSDK forza la riproduzione di un'interruzione di annuncio quando l'utente cerca su un'interruzione di annuncio. Potete personalizzare il comportamento per saltare un'interruzione annuncio se il tempo trascorso da un completamento interruzione precedente è compreso entro un certo numero di minuti.
-seo-description: Per impostazione predefinita, TVSDK forza la riproduzione di un'interruzione di annuncio quando l'utente cerca su un'interruzione di annuncio. Potete personalizzare il comportamento per saltare un'interruzione annuncio se il tempo trascorso da un completamento interruzione precedente è compreso entro un certo numero di minuti.
-seo-title: Ignora interruzioni annuncio per un periodo di tempo
-title: Ignora interruzioni annuncio per un periodo di tempo
-uuid: 1a18d5fd-c957-481b-83ae-2129590c1678
+description: Per impostazione predefinita, TVSDK forza la riproduzione di un’interruzione pubblicitaria quando l’utente cerca tramite un’interruzione pubblicitaria. Puoi personalizzare il comportamento per saltare un’interruzione pubblicitaria se il tempo trascorso da un precedente completamento dell’interruzione si trova entro un certo numero di minuti.
+title: Ignora interruzioni pubblicitarie per un periodo di tempo
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '181'
 ht-degree: 0%
 
 ---
 
 
-# Ignora interruzioni annuncio per un periodo di tempo{#skip-ad-breaks-for-a-period-of-time}
+# Ignora interruzioni pubblicitarie per un periodo di tempo{#skip-ad-breaks-for-a-period-of-time}
 
-Per impostazione predefinita, TVSDK forza la riproduzione di un&#39;interruzione di annuncio quando l&#39;utente cerca su un&#39;interruzione di annuncio. Potete personalizzare il comportamento per saltare un&#39;interruzione annuncio se il tempo trascorso da un completamento interruzione precedente è compreso entro un certo numero di minuti.
+Per impostazione predefinita, TVSDK forza la riproduzione di un’interruzione pubblicitaria quando l’utente cerca tramite un’interruzione pubblicitaria. Puoi personalizzare il comportamento per saltare un’interruzione pubblicitaria se il tempo trascorso da un precedente completamento dell’interruzione si trova entro un certo numero di minuti.
 
 >[!IMPORTANT]
 >
->Quando viene eseguito un tentativo interno di saltare un annuncio, potrebbe verificarsi una leggera pausa nella riproduzione.
+>Quando si verifica una ricerca interna per saltare un annuncio, potrebbe verificarsi una leggera pausa nella riproduzione.
 
-L&#39;esempio seguente di un selettore di criteri di pubblicità personalizzato salta gli annunci nei prossimi cinque minuti (ora dell&#39;orologio a muro) dopo che un utente ha visto un&#39;interruzione di annuncio.
+L&#39;esempio seguente di un selettore di criteri di annunci personalizzati salta gli annunci nei cinque minuti successivi (tempo di clock della bacheca) dopo che un utente ha guardato un&#39;interruzione di pubblicità.
 
-1. Estendi il selettore di criteri di annunci predefinito per ignorare il comportamento predefinito.
+1. Estende il selettore predefinito dei criteri per gli annunci in modo da ignorare il comportamento predefinito.
 
    ```
    /** 
@@ -82,7 +79,7 @@ L&#39;esempio seguente di un selettore di criteri di pubblicità personalizzato 
    }
    ```
 
-1. Create una nuova factory pubblicitaria che utilizzi il vostro selettore personalizzato.
+1. Crea una nuova advertising factory che utilizza il selettore personalizzato.
 
    ```
    public class CustomAdPolicyContentFactory extends DefaultContentFactory { 
@@ -109,7 +106,7 @@ L&#39;esempio seguente di un selettore di criteri di pubblicità personalizzato 
    }
    ```
 
-1. Registrare la nuova classe di annunci pubblicitari da utilizzare con MediaPlayer.
+1. Registra la nuova classe di advertising factory da utilizzare con MediaPlayer.
 
    ```
    var mediaResource:MediaResource =  
