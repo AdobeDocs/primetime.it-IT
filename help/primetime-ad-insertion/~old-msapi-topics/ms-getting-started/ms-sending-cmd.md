@@ -1,23 +1,20 @@
 ---
-description: Utilizzare il comando GET HTTP per interagire con il server manifesto.
-seo-description: Utilizzare il comando GET HTTP per interagire con il server manifesto.
-seo-title: Invio di un comando al server manifesto
-title: Invio di un comando al server manifesto
-uuid: e9680563-d268-406d-87ce-1521a677e9ec
+description: Usa il comando HTTP GET per interagire con il server manifest.
+title: Invia un comando al server manifesto
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '235'
 ht-degree: 0%
 
 ---
 
 
-# Inviare un comando al server manifesto {#send-a-command-to-the-manifest-server}
+# Invia un comando al server manifesto {#send-a-command-to-the-manifest-server}
 
-Utilizzare il comando GET HTTP per interagire con il server manifesto.
+Usa il comando HTTP GET per interagire con il server manifest.
 
-1. Inviate una richiesta `HTTP GET` per un URL del programma di avvio automatico creato con il seguente pattern:
+1. Invia una richiesta `HTTP GET` per un URL di bootstrap costruito utilizzando il seguente pattern:
 
    ```
    https://{manifest-server:port}/auditude/variant/
@@ -25,11 +22,11 @@ Utilizzare il comando GET HTTP per interagire con il server manifesto.
     ?{query parameters}
    ```
 
-* **** PublisherAssetIDRequred. ID univoco dell&#39;editore per il contenuto specifico.
+* **** PublisherAssetIDRrequired. ID univoco dell&#39;editore per il contenuto specifico.
 
-* **Content** URLRequred. URL del contenuto del file M3U8, con codifica Base64 per garantire la sicurezza all&#39;interno dell&#39;URL del server manifesto. L&#39;URL del contenuto deve puntare a una variante del file M3U8, anche se è presente un solo flusso di bit rate.
+* **Contenuto** URLRobbligatorio. URL del contenuto file M3U8, codificato Base64 per essere sicuro all&#39;interno dell&#39;URL del server manifesto. L’URL del contenuto deve puntare a un file M3U8 variante, anche se è presente un solo flusso di bit rate.
 
-* **Parametri** di query: alcuni sono obbligatori, altri facoltativi. Queste costituiscono la parte più variegata della richiesta. Indica al server di manifesto quale tipo di client sta effettuando la richiesta e cosa desidera che esegua il server di manifesto.
+* **Parametri di queryAlcuni sono obbligatori, altri facoltativi.** Questi costituiscono la parte più variegata della richiesta. Essi dicono al server manifest quale tipo di client sta facendo la richiesta e cosa vuole che il server manifest faccia.
 
    Ad esempio:
 
@@ -42,8 +39,8 @@ Utilizzare il comando GET HTTP per interagire con il server manifesto.
 
    **Richieste HTTP e HTTPS**
 
-   Il server manifesto crea URL utilizzando lo stesso protocollo HTTP della richiesta del client. Se un lettore effettua una richiesta HTTP non sicura (http), il server manifesto restituisce gli URL manifest e gli URL di tracciamento Auditude con il protocollo http. Se un lettore crea una connessione HTTP (https) protetta, un server manifesto, restituisce gli URL manifest e gli URL di tracciamento Auditude con il protocollo https.
+   Il server manifesto crea gli URL utilizzando lo stesso protocollo HTTP della richiesta del client. Se un lettore effettua una richiesta HTTP (http) non sicura, il server manifesto restituisce gli URL manifest e gli URL di tracciamento di Auditude con il protocollo http. Se un lettore effettua una connessione HTTP (https) sicura, un server manifest, restituisce gli URL manifest e gli URL di tracciamento Auditude con il protocollo https.
 
    >[!NOTE]
    >
-   >Il server manifesto non può modificare il protocollo (HTTP o HTTPS) dei segmenti di contenuto (.ts) e dei beacon di tracciamento di terze parti. È necessario contattare il contenuto e i fornitori di annunci di terze parti per fare in modo che configurino i protocolli desiderati.
+   >Il server manifesto non può modificare il protocollo (HTTP o HTTPS) dei segmenti di contenuto (.ts) e dei beacon di tracciamento di terze parti. Per configurare i protocolli desiderati, contatta il contenuto e i provider di annunci di terze parti.
