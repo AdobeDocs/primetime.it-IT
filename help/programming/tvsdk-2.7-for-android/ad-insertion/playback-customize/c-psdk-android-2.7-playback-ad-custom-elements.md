@@ -1,13 +1,10 @@
 ---
-description: TVSDK fornisce classi e metodi che possono essere utilizzati per personalizzare il comportamento di riproduzione del contenuto che contiene annunci pubblicitari.
-seo-description: TVSDK fornisce classi e metodi che possono essere utilizzati per personalizzare il comportamento di riproduzione del contenuto che contiene annunci pubblicitari.
-seo-title: Elementi API per la riproduzione di annunci
+description: TVSDK fornisce classi e metodi che è possibile utilizzare per personalizzare il comportamento di riproduzione dei contenuti che contengono annunci pubblicitari.
 title: Elementi API per la riproduzione di annunci
-uuid: 5e21e709-8446-4fed-8711-aa4f629f1147
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Elementi API per la riproduzione di annunci {#api-elements-for-ad-playback}
 
-TVSDK fornisce classi e metodi che possono essere utilizzati per personalizzare il comportamento di riproduzione del contenuto che contiene annunci pubblicitari.
+TVSDK fornisce classi e metodi che è possibile utilizzare per personalizzare il comportamento di riproduzione dei contenuti che contengono annunci pubblicitari.
 
 I seguenti elementi API sono utili per personalizzare la riproduzione:
 
@@ -29,19 +26,19 @@ I seguenti elementi API sono utili per personalizzare la riproduzione:
  <tbody> 
   <tr> 
    <td colname="col1"><span class="apiname"> AdvertisingMetadata  </span> </td> 
-   <td colname="col2">Controllate se un'interruzione annuncio deve essere contrassegnata come osservata da un visualizzatore e, in caso affermativo, quando contrassegnarla. Impostare e ottenere il criterio controllato utilizzando <span class="codeph"> setAdBreakAsWatched</span> e <span class="codeph"> getAdBreakAsWatched</span>. </td> 
+   <td colname="col2">Controlla se un'interruzione pubblicitaria deve essere contrassegnata come osservata da un visualizzatore e, in caso affermativo, quando contrassegnarla. Imposta e ottieni il criterio controllato utilizzando <span class="codeph"> setAdBreakAsWatched</span> e <span class="codeph"> getAdBreakAsWatched</span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="apiname"> AdBreakPolicy</span> </td> 
-   <td colname="col2"> Enumera possibili criteri di riproduzione per le interruzioni di annunci. </td> 
+   <td colname="col2"> Enumera possibili criteri di riproduzione per interruzioni pubblicitarie. </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="apiname"> AdPolicy</span> </td> 
-   <td colname="col2"> Enumera possibili criteri di riproduzione per gli annunci. </td> 
+   <td colname="col2"> Enumera i possibili criteri di riproduzione per gli annunci. </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="apiname"> AdPolicySelector  </span> </td> 
-   <td colname="col2"> Interfaccia che consente la personalizzazione del comportamento degli annunci TVSDK. </td> 
+   <td colname="col2"> Interfaccia che consente di personalizzare il comportamento degli annunci TVSDK. </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="apiname"> DefaultAdPolicySelector  </span> </td> 
@@ -51,10 +48,10 @@ I seguenti elementi API sono utili per personalizzare la riproduzione:
    <td colname="col1"> <span class="apiname"> MediaPlayer</span> </td> 
    <td colname="col2"> 
     <ul id="ul_37700A741403448A8760FDDA68B099AA"> 
-     <li id="li_B465170D449E49489C5924572BEEB4A5"><span class="codeph"> getLocalTime</span> <p>Ora locale della riproduzione, ad eccezione delle interruzioni pubblicitarie inserite. </p> </li> 
-     <li id="li_D9D68CF428904BB2B84E1BCE828A90DC"><span class="codeph"> searchToLocal</span>. <p>In questo caso, la ricerca si verifica in relazione a un'ora locale nel flusso. </p> </li> 
-     <li id="li_9DBCA75537DC4824AA66B53A3FA28812"><span class="codeph"> getTimeline.convertToLocalTime</span>. <p>La posizione virtuale sulla timeline viene convertita nella posizione locale. </p> </li> 
-    </ul> <p>Importante:  <span class="codeph"> getLocalTime</span> in <span class="codeph"> MediaPlayer</span> restituisce l'ora corrente relativa al contenuto originale, senza annunci con giunzione dinamica. <span class="codeph"> </span> getLocalTimein  <span class="codeph"> </span> AdBreakfast restituisce l'ora di inizio dell'interruzione in relazione al contenuto originale. </p> </td> 
+     <li id="li_B465170D449E49489C5924572BEEB4A5"><span class="codeph"> getLocalTime</span> <p>Ora locale della riproduzione, escluse le interruzioni pubblicitarie inserite. </p> </li> 
+     <li id="li_D9D68CF428904BB2B84E1BCE828A90DC"><span class="codeph"> cercaToLocal</span>. <p>In questo caso, la ricerca si verifica in relazione a un’ora locale nel flusso. </p> </li> 
+     <li id="li_9DBCA75537DC4824AA66B53A3FA28812"><span class="codeph"> getTimeline.convertToLocalTime</span>. <p>La posizione virtuale nella timeline viene convertita nella posizione locale. </p> </li> 
+    </ul> <p>Importante:  <span class="codeph"> getLocalTime</span> in <span class="codeph"> MediaPlayer</span> restituisce l'ora corrente relativa al contenuto originale, senza annunci replicati dinamicamente. <span class="codeph"> </span> getLocalTimein  <span class="codeph"> </span> AdBreakfast restituisce l'ora di inizio dell'interruzione in relazione al contenuto originale. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="apiname"> AdBreak</span> </td> 
