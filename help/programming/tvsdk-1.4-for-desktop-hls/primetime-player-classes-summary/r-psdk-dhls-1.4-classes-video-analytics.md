@@ -1,26 +1,23 @@
 ---
-description: Queste classi forniscono l'interfaccia tra TVSDK e  Video Analytics Adobe.
-seo-description: Queste classi forniscono l'interfaccia tra TVSDK e  Video Analytics Adobe.
-seo-title: Classi Analisi video
-title: Classi Analisi video
-uuid: ec66dea3-47ae-4c80-a2cb-b1c7cce1b94f
+description: Queste classi forniscono l'interfaccia tra TVSDK e Adobe Video Analytics.
+title: Classi di Video Analytics
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '133'
+source-wordcount: '118'
 ht-degree: 0%
 
 ---
 
 
-# Classi di analisi video{#video-analytics-classes}
+# Classi di Video Analytics{#video-analytics-classes}
 
-Queste classi forniscono l&#39;interfaccia tra TVSDK e  Video Analytics Adobe.
+Queste classi forniscono l&#39;interfaccia tra TVSDK e Adobe Video Analytics.
 
 Pacchetto: [com.adobe.mediacore.videoanalytics](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/videoanalytics/package-detail.html)
 
 | Nome | Descrizione |
 |---|---|
-| [VideoAnalyticsConfigParameters](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/videoanalytics/VideoAnalyticsConfigParameters.html) | Contiene i metadati delle proprietà specifici per il tracciamento di Video Analytics in TVSDK. |
-| [VideoAnalyticsProvider](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/videoanalytics/VideoAnalyticsProvider.html) | Associa l&#39;istanza `MediaPlayer` al modulo VideoHeartbeat per il tracciamento della riproduzione. |
-| [VideoAnalyticsMetadata](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/videoanalytics/VideoAnalyticsMetadata.html) | Contiene i metadati delle proprietà specifici di Video Analytics. |
+| [Parametri di configurazioneVideoAnalytics](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/videoanalytics/VideoAnalyticsConfigParameters.html) | Contiene i metadati delle proprietà specifici per il tracciamento di Video Analytics nel TVSDK. |
+| [VideoAnalyticsProvider](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/videoanalytics/VideoAnalyticsProvider.html) | Allega l&#39;istanza `MediaPlayer` al modulo VideoHeartbeat per il tracciamento della riproduzione. |
+| [MetadatiVideoAnalytics](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/videoanalytics/VideoAnalyticsMetadata.html) | Contiene metadati di proprietà specifici di Video Analytics. |
