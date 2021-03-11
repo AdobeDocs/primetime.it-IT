@@ -1,36 +1,33 @@
 ---
-description: TVSDK scarica i segmenti di annunci e li visualizza sullo schermo del dispositivo.
-seo-description: TVSDK scarica i segmenti di annunci e li visualizza sullo schermo del dispositivo.
-seo-title: Fase ad-riproduzione
-title: Fase ad-riproduzione
-uuid: 1bbcea08-3475-4a64-9f89-c455d5dd828e
+description: TVSDK scarica i segmenti di annunci ed effettua il rendering sullo schermo del dispositivo.
+title: Fase di riproduzione annunci
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '184'
 ht-degree: 0%
 
 ---
 
 
-# Fase ad-riproduzione{#ad-playback-phase}
+# Fase di riproduzione annunci{#ad-playback-phase}
 
-TVSDK scarica i segmenti di annunci e li visualizza sullo schermo del dispositivo.
+TVSDK scarica i segmenti di annunci ed effettua il rendering sullo schermo del dispositivo.
 
 A questo punto, TVSDK ha risolto gli annunci, li ha posizionati sulla timeline e tenta di eseguire il rendering del contenuto sullo schermo.
 
-In questa fase potrebbero verificarsi le seguenti classi principali di errori:
+In questa fase potrebbero verificarsi le seguenti principali classi di errori:
 
 * Errori durante la connessione al server host
 * Errori durante il download del file manifesto
 * Errori durante il download dei segmenti multimediali
 
-Per tutte e tre le classi di errore, TVSDK inoltra all&#39;applicazione gli eventi attivati, inclusi:
+Per tutte e tre le classi di errore, TVSDK inoltra gli eventi attivati all&#39;applicazione, tra cui:
 
-* Eventi di notifica attivati in caso di failover.
+* Eventi di notifica attivati quando si verifica un failover.
 * Eventi di notifica quando il profilo viene modificato a causa dell&#39;algoritmo di failover.
-* Gli eventi di notifica attivati quando sono state prese in considerazione tutte le opzioni di failover e non è possibile eseguire automaticamente alcuna azione aggiuntiva.
+* Eventi di notifica attivati quando sono state prese in considerazione tutte le opzioni di failover e non è possibile eseguire automaticamente alcuna azione aggiuntiva.
 
    La tua applicazione deve intraprendere l&#39;azione appropriata.
 
-Che si verifichino o meno errori, TVSDK chiama adBreakComplete per ogni `onAdBreakStart` e `onAdComplete` ogni `onAdStart`. Tuttavia, se non è stato possibile scaricare i segmenti, potrebbero verificarsi degli spazi nella timeline. Quando gli spazi vuoti sono sufficientemente grandi, i valori nella posizione dell&#39;indicatore di riproduzione e l&#39;avanzamento degli annunci riportati potrebbero mostrare delle discontinuità.
+Che si verifichino o meno errori, TVSDK chiama AdBreakComplete per ogni `onAdBreakStart` e `onAdComplete` per ogni `onAdStart`. Tuttavia, se non è stato possibile scaricare i segmenti, potrebbero esserci spazi nella timeline. Quando gli spazi vuoti sono sufficientemente grandi, i valori nella posizione della testina di riproduzione e l&#39;avanzamento dell&#39;annuncio riportato potrebbero presentare delle discontinuità.
