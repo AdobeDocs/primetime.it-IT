@@ -1,20 +1,17 @@
 ---
-description: TVSDK monitora automaticamente gli annunci per VOD e lo streaming live/lineare.
-seo-description: TVSDK monitora automaticamente gli annunci per VOD e lo streaming live/lineare.
-seo-title: Track client ad
-title: Track client ad
-uuid: e095fbd5-656d-4c34-bf7d-ae43fa998a2a
+description: TVSDK traccia automaticamente gli annunci per VOD e lo streaming live/lineare.
+title: Tracciare l’annuncio client
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '61'
+source-wordcount: '48'
 ht-degree: 0%
 
 ---
 
 
-# Track client ad {#track-client-ad}
+# Tracciare gli annunci client {#track-client-ad}
 
-TVSDK monitora automaticamente gli annunci per VOD e lo streaming live/lineare.
+TVSDK traccia automaticamente gli annunci per VOD e lo streaming live/lineare.
 
-Le notifiche vengono utilizzate per informare l&#39;applicazione sull&#39;avanzamento di un annuncio pubblicitario, incluse informazioni su quando inizia e quando termina.
+Le notifiche vengono utilizzate per informare l&#39;applicazione sull&#39;avanzamento di un annuncio, incluse informazioni su quando inizia e quando termina.
