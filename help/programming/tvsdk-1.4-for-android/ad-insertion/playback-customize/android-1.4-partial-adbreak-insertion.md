@@ -1,38 +1,35 @@
 ---
-description: Potete abilitare un'esperienza simile a quella televisiva per partecipare nel mezzo di un annuncio, in streaming live.
-seo-description: Potete abilitare un'esperienza simile a quella televisiva per partecipare nel mezzo di un annuncio, in streaming live.
-seo-title: Inserimento interruzione annuncio parziale
-title: Inserimento interruzione annuncio parziale
-uuid: 296a9b6a-9e9f-4ca7-ab8a-c8cbc98fb9af
+description: È possibile abilitare un'esperienza simile a quella televisiva di essere in grado di partecipare nel mezzo di un annuncio, in flussi live.
+title: Inserimento di interruzioni pubblicitarie parziali
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '325'
 ht-degree: 0%
 
 ---
 
 
-# Inserimento interruzione annuncio parziale {#partial-ad-break-insertion}
+# Inserimento di interruzioni pubblicitarie parziali {#partial-ad-break-insertion}
 
-Potete abilitare un&#39;esperienza simile a quella televisiva per partecipare nel mezzo di un annuncio, in streaming live.
+È possibile abilitare un&#39;esperienza simile a quella televisiva di essere in grado di partecipare nel mezzo di un annuncio, in flussi live.
 
-La funzione di interruzione parziale degli annunci consente di riprodurre un&#39;esperienza simile a quella di un televisore in cui, se il cliente avvia uno streaming live all&#39;interno di un midroll, questo verrà avviato all&#39;interno di tale midrol. È simile al passaggio a un canale TV e la pubblicità funziona senza problemi.
+La funzione di interruzione pubblicitaria parziale consente di imitare un’esperienza simile a quella televisiva in cui, se il cliente avvia un flusso live all’interno di un flusso multimediale, questo verrà avviato all’interno di tale proxy. È simile al passaggio a un canale televisivo e gli spot vengono eseguiti senza problemi.
 
-Ad esempio, se un utente si unisce al centro di un annuncio pubblicitario di 90 secondi (tre annunci da 30 secondi), 10 secondi alla seconda pubblicità (ovvero, a 40 secondi dall&#39;interruzione dell&#39;annuncio), si verifica quanto segue:
+Ad esempio, se un utente si unisce nel mezzo di un’interruzione pubblicitaria di 90 secondi (tre annunci di 30 secondi), a 10 secondi dalla seconda inserzione (cioè a 40 secondi dall’interruzione pubblicitaria), si verifica quanto segue:
 
 * Il secondo annuncio viene riprodotto per la durata rimanente (20 sec) seguita dal terzo annuncio.
-* I tracciatori di annunci per l&#39;annuncio parzialmente riprodotto (il secondo annuncio) non vengono attivati. Viene attivato solo il tracciatore del terzo annuncio.
+* I tracciatori di annunci per l’annuncio parzialmente riprodotto (il secondo annuncio) non vengono attivati. Viene attivato solo il tracker per il terzo annuncio.
 
-Questo comportamento non è attivato per impostazione predefinita. Per abilitare questa funzionalità nell&#39;app, effettua le seguenti operazioni.
+Questo comportamento non è abilitato per impostazione predefinita. Per abilitare questa funzione nell’app, procedi come segue.
 
-1. Disattivate i primi dinamici utilizzando il metodo setEnableLivePreroll della classe AdvertisingMetadata.
+1. Disattiva i record live utilizzando il metodo setEnableLivePreroll della classe AdvertisingMetadata.
 
    ```
    advertisingMetadata.setEnableLivePreroll(String.valueOf(false))
    ```
 
-1. Attivate la preferenza per l&#39;inserimento di interruzioni pubblicitarie parziali. Utilizzare il nuovo metodo setPartialAdBreakPref nell&#39;interfaccia di MediaPlayer per attivare questa funzione. Utilizzare il metodo getPartialAdBreakPref per trovare lo stato corrente di questa preferenza.
+1. Attiva la preferenza per l’inserimento di interruzioni pubblicitarie parziali. Utilizza il nuovo metodo setPartialAdBreakPref nell&#39;interfaccia MediaPlayer per attivare questa funzione. Utilizzare il metodo getPartialAdBreakPref per trovare lo stato corrente di questa preferenza.
 
    ```
    MediaPlayer mediaPlayer = DefaultMediaPlayer.create(getActivity().getApplicationContext()); 
@@ -40,11 +37,11 @@ Questo comportamento non è attivato per impostazione predefinita. Per abilitare
           mediaPlayer.setPartialAdBreakPref(true); 
    ```
 
-1. Questa funzione richiede l&#39;implementazione di un selettore di criteri per gli annunci personalizzato per personalizzare il comportamento. Se non disponete già di un&#39;implementazione personalizzata della classe AdvertisingFactory, aggiungete una nuova implementazione AdvertisingFactory. Ignorare il metodo createAdPolicySelector. Questo metodo restituisce una nuova istanza dell&#39;implementazione di AdPolicySelector.
+1. Questa funzione richiede l’implementazione di un selettore di criteri per gli annunci personalizzato per personalizzare il comportamento. Se non disponi già di un&#39;implementazione personalizzata della classe AdvertisingFactory , aggiungi una nuova implementazione AdvertisingFactory . Ignorare il metodo createAdPolicySelector . Questo metodo restituisce una nuova istanza dell&#39;implementazione di AdPolicySelector.
 
-   Di seguito è riportata un&#39;implementazione di esempio per riferimento. L&#39;implementazione di esempio seguente è disponibile per l&#39;utilizzo dal pacchetto com.adobe.mediacore. Tuttavia, è semplificato per un riferimento semplice e non è consigliato utilizzarlo così com&#39;è.
+   Di seguito è riportato un esempio di implementazione per riferimento. Il seguente esempio di implementazione è disponibile per l&#39;utilizzo dal pacchetto com.adobe.mediacore . Tuttavia, è semplificato per un riferimento semplice e non è consigliato utilizzarlo così com’è.
 
-   1. Selettore criteri annunci di esempio
+   1. Selettore dei criteri degli annunci di esempio
 
       ```
        package com.adobe.mediacore;
@@ -187,7 +184,7 @@ Questo comportamento non è attivato per impostazione predefinita. Per abilitare
       } 
       ```
 
-   1. Registrare la nostra AdvertisingFactory con il lettore multimediale
+   1. Registrare AdvertisingFactory con il lettore multimediale
 
       ```
       AdvertisingFactory advertisingFactory = createPartialAdBreakFactory();  
