@@ -1,13 +1,10 @@
 ---
-description: L’interfaccia di MediaPlayer per Android racchiude le funzionalità e il comportamento di un lettore multimediale.
-seo-description: L’interfaccia di MediaPlayer per Android racchiude le funzionalità e il comportamento di un lettore multimediale.
-seo-title: Configurare MediaPlayer
+description: L'interfaccia MediaPlayer per Android incapsula le funzionalità e il comportamento di un lettore multimediale.
 title: Configurare MediaPlayer
-uuid: 492b4693-acdf-4213-98e5-d6f0f1ae086d
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '137'
+source-wordcount: '119'
 ht-degree: 0%
 
 ---
@@ -15,31 +12,31 @@ ht-degree: 0%
 
 # Configurare MediaPlayer {#set-up-the-mediaplayer}
 
-L’interfaccia di MediaPlayer per Android racchiude le funzionalità e il comportamento di un lettore multimediale.
+L&#39;interfaccia MediaPlayer per Android incapsula le funzionalità e il comportamento di un lettore multimediale.
 
-TVSDK fornisce un&#39;implementazione dell&#39;interfaccia `MediaPlayer`, la classe `DefaultMediaPlayer`. Per utilizzare la funzionalità di riproduzione video, create un&#39;istanza `DefaultMediaPlayer`.
+TVSDK fornisce un’implementazione dell’interfaccia `MediaPlayer` , la classe `DefaultMediaPlayer` . Quando hai bisogno della funzionalità di riproduzione video, crea un&#39;istanza `DefaultMediaPlayer`.
 
 >[!TIP]
 >
 >Interagisci con l&#39;istanza `DefaultMediaPlayer` solo con i metodi esposti dall&#39;interfaccia `MediaPlayer`.
 
-1. Create un&#39;istanza di MediaPlayer utilizzando il metodo pubblico `DefaultMediaPlayer.create`, passando un oggetto contestuale dell&#39;applicazione Java Android.
+1. Creare un&#39;istanza di MediaPlayer utilizzando il metodo di fabbrica pubblico `DefaultMediaPlayer.create`, passando un oggetto contestuale dell&#39;applicazione Java Android.
 
    ```java
    public static MediaPlayer create(Context context) 
    ```
 
-1. Chiamare `MediaPlayer.getView` per ottenere un riferimento all&#39;istanza `MediaPlayerView`.
+1. Chiama `MediaPlayer.getView` per ottenere un riferimento all&#39;istanza `MediaPlayerView`.
 
    ```java
    MediaPlayerView getView() throws IllegalStateException; 
    ```
 
-1. Posizionare l&#39;istanza `MediaPlayerView` in un&#39;istanza `FrameLayout`, che posiziona il video sullo schermo del dispositivo.
+1. Posiziona l’istanza `MediaPlayerView` in un’istanza `FrameLayout`, che inserisce il video sullo schermo del dispositivo.
 
    ```java
    FrameLayout playerFrame = (FrameLayout) view.findViewById(R.id.playerFrame); 
    playerFrame.addView(mediaPlayer.getView()); 
    ```
 
-L&#39;istanza `MediaPlayer` è ora disponibile e configurata correttamente per visualizzare il contenuto video sullo schermo del dispositivo.
+L’istanza `MediaPlayer` è ora disponibile e configurata correttamente per visualizzare il contenuto video sullo schermo del dispositivo.
