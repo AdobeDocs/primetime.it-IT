@@ -1,25 +1,22 @@
 ---
-description: Queste classi consentono di risolvere il contenuto, ad esempio gli annunci, da inserire nella cronologia.
-seo-description: Queste classi consentono di risolvere il contenuto, ad esempio gli annunci, da inserire nella cronologia.
-seo-title: Lezioni dei risolutori della linea temporale
-title: Lezioni dei risolutori della linea temporale
-uuid: a36349b2-23ee-4774-99b2-7e1cd9168686
+description: Queste classi consentono di risolvere il contenuto, ad esempio gli annunci, da posizionare sulla timeline.
+title: Classi dei risolutori Timeline
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '116'
+source-wordcount: '99'
 ht-degree: 0%
 
 ---
 
 
-# Lezioni dei risolutori della timeline{#timeline-resolvers-classes}
+# Classi dei risolutori Timeline{#timeline-resolvers-classes}
 
-Queste classi consentono di risolvere il contenuto, ad esempio gli annunci, da inserire nella cronologia.
+Queste classi consentono di risolvere il contenuto, ad esempio gli annunci, da posizionare sulla timeline.
 
 Pacchetto: [com.adobe.mediacore.timeline.resolver](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/resolvers/package-detail.html)
 
 | Nome | Descrizione |
 |---|---|
-| [ContentResolver](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/resolvers/ContentResolver.html) | Classe base per vari risolutori di contenuti. |
-| [ContentResolverClient](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/resolvers/ContentResolverClient.html) | Interfaccia utilizzata dai generatori di contenuti per comunicare con i componenti TVSDK. |
+| [ContentResolver](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/resolvers/ContentResolver.html) | Classe di base per vari risolutori di contenuti. |
+| [ContentResolverClient](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/resolvers/ContentResolverClient.html) | Interfaccia utilizzata dai generatori di resolver per comunicare con i componenti TVSDK. |
