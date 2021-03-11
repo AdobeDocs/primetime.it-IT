@@ -1,25 +1,22 @@
 ---
-description: È possibile abilitare il fallback quando un elemento multimediale VMAP in linea contiene un tipo di supporto non valido.
-seo-description: È possibile abilitare il fallback quando un elemento multimediale VMAP in linea contiene un tipo di supporto non valido.
-seo-title: Definizione del comportamento fallback ad annunci in linea VMAP
-title: Definizione del comportamento fallback ad annunci in linea VMAP
-uuid: bc8cb0b4-5ea9-429b-ab5d-746c6f03e74b
+description: È possibile abilitare il fallback quando un annuncio VMAP in linea contiene un tipo di supporto non valido.
+title: Definire il comportamento di fallback ad per gli annunci in linea VMAP
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '130'
+source-wordcount: '108'
 ht-degree: 0%
 
 ---
 
 
-# Definizione del comportamento fallback ad annunci in linea VMAP {#define-fallback-ad-behavior-for-vmap-inline-ads}
+# Definire il comportamento di fallback ad per gli annunci in linea VMAP {#define-fallback-ad-behavior-for-vmap-inline-ads}
 
-È possibile abilitare il fallback quando un elemento multimediale VMAP in linea contiene un tipo di supporto non valido.
+È possibile abilitare il fallback quando un annuncio VMAP in linea contiene un tipo di supporto non valido.
 
-1. Impostate `setFallbackOnInvalidCreativeEnabled` su `true` affinché VMAP venga ripristinato quando il tipo di supporto per un annuncio lineare/inline non è valido per HLS.
+1. Impostare `setFallbackOnInvalidCreativeEnabled` su `true` per far sì che VMAP torni quando il tipo di supporto per un annuncio lineare/in linea non è valido per HLS.
 
-   Il valore predefinito è `false`. Se un annuncio lineare ha un tipo di supporto non valido o non può essere reinserito in un pacchetto, questo flag consente a Primetime ad DECISION di seguire lo stesso comportamento di fallback come se l&#39;annuncio fosse un wrapper VAST vuoto.
+   Il valore predefinito è `false`. Se un annuncio lineare non riesce perché ha un tipo di supporto non valido o perché non può essere ricompilato, questo flag consente a Primetime ad DECISIONING di seguire lo stesso comportamento di fallback come se l&#39;annuncio fosse un wrapper VAST vuoto.
 
    ```java
    AuditudeSettings result = new AuditudeSettings(); 
