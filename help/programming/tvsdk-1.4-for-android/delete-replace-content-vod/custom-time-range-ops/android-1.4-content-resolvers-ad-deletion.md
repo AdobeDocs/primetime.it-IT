@@ -1,13 +1,10 @@
 ---
-description: Potete utilizzare più risolutori di contenuti per gestire diverse operazioni della timeline.
-seo-description: Potete utilizzare più risolutori di contenuti per gestire diverse operazioni della timeline.
-seo-title: Risolutori di contenuti per eliminazione/sostituzione di annunci
-title: Risolutori di contenuti per eliminazione/sostituzione di annunci
-uuid: 2954ce0f-aed2-4a85-8e53-d4e89d1497b6
+description: È possibile utilizzare più resolver di contenuti per gestire diverse operazioni della timeline.
+title: Risolutori di contenuti per cancellazione/sostituzione di annunci
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '51'
+source-wordcount: '34'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Risolutori di contenuti per eliminazione/sostituzione di annunci {#content-resolvers-for-ad-deletion-replacement}
 
-Potete utilizzare più risolutori di contenuti per gestire diverse operazioni della timeline.
+È possibile utilizzare più resolver di contenuti per gestire diverse operazioni della timeline.
 
 ```java
 List<ContentResolver> contentResolvers = new ArrayList<ContentResolver>(); 
