@@ -1,21 +1,18 @@
 ---
-seo-title: Oggetto JSON per ID risorsa di adesione
-title: Oggetto JSON per ID risorsa di adesione
-uuid: f5b659da-1732-404c-bf00-d32a0ae39aa1
-description: Il seguente blocco di codice fornisce un esempio di oggetto JSON quando l'ID risorsa di adesione è una semplice stringa di testo.
-seo-description: Il seguente blocco di codice fornisce un esempio di oggetto JSON quando l'ID risorsa di adesione è una semplice stringa di testo.
+title: Oggetto JSON per ID risorsa adesione
+description: Il seguente blocco di codice fornisce un esempio di oggetto JSON quando l'ID della risorsa di adesione è una stringa di testo semplice.
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '122'
+source-wordcount: '95'
 ht-degree: 0%
 
 ---
 
 
-# Oggetto JSON per ID risorsa di adesione {#json-object-for-entitlement-resource-id}
+# Oggetto JSON per ID risorsa adesione {#json-object-for-entitlement-resource-id}
 
-Il seguente blocco di codice fornisce un esempio di oggetto JSON quando l&#39;ID risorsa di adesione è una semplice stringa di testo. In questo caso, l&#39;ID risorsa è la stringa &quot;resource&quot;.
+Il seguente blocco di codice fornisce un esempio di oggetto JSON quando l&#39;ID della risorsa di adesione è una stringa di testo semplice. In questo caso, l’ID risorsa è la stringa &quot;resource&quot;.
 
 ```
 "metadata" : { 
@@ -25,7 +22,7 @@ Il seguente blocco di codice fornisce un esempio di oggetto JSON quando l&#39;ID
 }
 ```
 
-Il seguente blocco di codice fornisce un esempio di oggetto JSON quando l&#39;ID risorsa di adesione è una stringa mRSS con codifica HTML.
+Il seguente blocco di codice fornisce un esempio di oggetto JSON quando l&#39;ID della risorsa di adesione è una stringa mRSS con codifica HTML.
 
 ```
 <rss version="2.0" xmlns:media="https://search.yahoo.com/mrss/"> 
