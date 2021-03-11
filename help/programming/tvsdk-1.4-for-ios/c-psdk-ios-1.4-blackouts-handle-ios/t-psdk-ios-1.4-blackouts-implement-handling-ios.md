@@ -1,25 +1,22 @@
 ---
-description: TVSDK fornisce API e codice di esempio per la gestione dei periodi di blackout.
-seo-description: TVSDK fornisce API e codice di esempio per la gestione dei periodi di blackout.
-seo-title: Implementare la gestione della blackout
+description: Il TVSDK fornisce API e codice di esempio per la gestione dei periodi di sospensione attività.
 title: Implementare la gestione della blackout
-uuid: 38a78a57-b641-439a-a7d8-da571a0902e4
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '129'
 ht-degree: 1%
 
 ---
 
 
-# Implementare la gestione della blackout {#implement-blackout-handling}
+# Implementare la gestione della sospensione attività {#implement-blackout-handling}
 
-TVSDK fornisce API e codice di esempio per la gestione dei periodi di blackout.
+Il TVSDK fornisce API e codice di esempio per la gestione dei periodi di sospensione attività.
 
-Per implementare la gestione della blackout e fornire contenuto alternativo durante la blackout:
+Per implementare la gestione della sospensione attività e fornire contenuto alternativo durante la sospensione attività:
 
-1. Configurate l&#39;app per iscrivervi ai tag blackout in un manifesto del flusso live.
+1. Imposta l&#39;app per abbonarti ai tag di blackout in un manifesto di streaming live.
 
 ```
  - (void) createMediaPlayer:(PTMediaPlayerItem *)item
@@ -30,7 +27,7 @@ Per implementare la gestione della blackout e fornire contenuto alternativo dura
  }
 ```
 
-1. Aggiungete un listener di notifica per `PTTimedMetadataChangedNotification`.
+1. Aggiungi un listener di notifica per `PTTimedMetadataChangedNotification`.
 
    ```
    - (void)addobservers 
@@ -40,7 +37,7 @@ Per implementare la gestione della blackout e fornire contenuto alternativo dura
    }
    ```
 
-1. Implementare un metodo listener per gli oggetti `PTTimedMetadata` in primo piano.
+1. Implementa un metodo listener per gli oggetti `PTTimedMetadata` in primo piano.
 
    Ad esempio:
 
@@ -64,7 +61,7 @@ Per implementare la gestione della blackout e fornire contenuto alternativo dura
    }
    ```
 
-1. Gestire gli oggetti `TimedMetadata` con aggiornamenti costanti durante la riproduzione.
+1. Gestisci gli oggetti `TimedMetadata` con aggiornamenti costanti durante la riproduzione.
 
    ```
    - (void)onMediaPlayerTimeChange:(NSNotification *)notification 
@@ -85,7 +82,7 @@ Per implementare la gestione della blackout e fornire contenuto alternativo dura
    }
    ```
 
-1. Aggiungete il gestore `PTTimedMetadata` per passare al contenuto alternativo e tornare al contenuto principale come indicato dall&#39;oggetto `PTTimedMetadata` e il relativo tempo di riproduzione.
+1. Aggiungere il gestore `PTTimedMetadata` per passare al contenuto alternativo e tornare al contenuto principale come indicato dall&#39;oggetto `PTTimedMetadata` e il relativo tempo di riproduzione.
 
    ```
    - (void)handleCollectionAtTime:(int)currentTime 
@@ -200,7 +197,7 @@ Per implementare la gestione della blackout e fornire contenuto alternativo dura
    }
    ```
 
-1. Implementare un metodo listener per gli oggetti `PTTimedMetadata` in background.
+1. Implementa un metodo listener per gli oggetti `PTTimedMetadata` in background.
 
    ```
    - (void)onSubscribedTagInBackground:(NSNotification *)notification 
@@ -221,7 +218,7 @@ Per implementare la gestione della blackout e fornire contenuto alternativo dura
    }
    ```
 
-1. Implementare un metodo listener per gli errori in background.
+1. Implementa un metodo listener per gli errori in background.
 
    ```
    - (void) onBackgroundManifestError:(NSNotification *)notification 
@@ -230,7 +227,7 @@ Per implementare la gestione della blackout e fornire contenuto alternativo dura
    }
    ```
 
-1. Se l’intervallo di blackout è sul DVR nel flusso di riproduzione, aggiornate gli intervalli non ricercabili.
+1. Se l&#39;intervallo di blackout è sul DVR nel flusso di riproduzione, aggiornare gli intervalli non ricercabili.
 
    ```
    // This sample assumes that blackoutStartTimedMetadata is the PTTimedMetadata  
