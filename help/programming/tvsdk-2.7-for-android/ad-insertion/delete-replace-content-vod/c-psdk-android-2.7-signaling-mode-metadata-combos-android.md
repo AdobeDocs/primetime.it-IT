@@ -1,41 +1,38 @@
 ---
-description: Potete contrassegnare, eliminare e sostituire gli intervalli di tempo nei flussi VOD utilizzando diverse combinazioni di metadati e modalità di segnalazione annunci. Diverse combinazioni di modalità di segnalazione e metadati determinano comportamenti diversi.
-seo-description: Potete contrassegnare, eliminare e sostituire gli intervalli di tempo nei flussi VOD utilizzando diverse combinazioni di metadati e modalità di segnalazione annunci. Diverse combinazioni di modalità di segnalazione e metadati determinano comportamenti diversi.
-seo-title: Effetto sull’inserimento e l’eliminazione di annunci dalla modalità di segnalazione e dalle combinazioni di metadati degli annunci
-title: Effetto sull’inserimento e l’eliminazione di annunci dalla modalità di segnalazione e dalle combinazioni di metadati degli annunci
-uuid: 7b2a5588-110d-4ce5-aa9c-706d357f211d
+description: È possibile contrassegnare, eliminare e sostituire gli intervalli di tempo nei flussi VOD utilizzando diverse modalità di segnalazione degli annunci e combinazioni di metadati degli annunci. Diverse combinazioni di modalità di segnalazione e metadati determinano comportamenti diversi.
+title: Effetto sull’inserimento e l’eliminazione degli annunci dalle combinazioni della modalità di segnalazione degli annunci e dei metadati degli annunci
 translation-type: tm+mt
-source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '434'
 ht-degree: 0%
 
 ---
 
 
-# Effetto sull&#39;inserimento e l&#39;eliminazione di annunci dalla modalità di segnalazione e dalle combinazioni di metadati degli annunci {#effect-on-ad-insertion-and-deletion-from-ad-signaling-mode-and-ad-metadata-combinations}
+# Effetto sull&#39;inserimento e l&#39;eliminazione degli annunci dalle combinazioni di modalità ad Signing e metadati degli annunci {#effect-on-ad-insertion-and-deletion-from-ad-signaling-mode-and-ad-metadata-combinations}
 
-Potete contrassegnare, eliminare e sostituire gli intervalli di tempo nei flussi VOD utilizzando diverse combinazioni di metadati e modalità di segnalazione annunci. Diverse combinazioni di modalità di segnalazione e metadati determinano comportamenti diversi.
+È possibile contrassegnare, eliminare e sostituire gli intervalli di tempo nei flussi VOD utilizzando diverse modalità di segnalazione degli annunci e combinazioni di metadati degli annunci. Diverse combinazioni di modalità di segnalazione e metadati determinano comportamenti diversi.
 
 >[!TIP]
 >
->In caso di conflitto tra intervalli di tempo e modalità di segnalazione degli annunci, TVSDK assegna la priorità agli intervalli di tempo.
+>Quando si verifica un conflitto tra intervalli di tempo e modalità di segnalazione degli annunci, TVSDK assegna la priorità agli intervalli di tempo.
 
-Nella tabella seguente sono riportati i dettagli relativi alla modalità di segnalazione e ai comportamenti di combinazione di metadati:
+Nella tabella seguente sono riportati i dettagli relativi alla modalità di segnalazione e ai comportamenti di combinazione dei metadati:
 
 <table id="table_6044AA1ACFA244FA814EA2D0766C6D12"> 
  <thead> 
   <tr> 
-   <th class="entry"> Modalità di segnalazione annunci </th> 
-   <th class="entry"> Aggiungi metadati </th> 
+   <th class="entry"> Modalità di segnalazione degli annunci </th> 
+   <th class="entry"> Metadati annuncio </th> 
    <th class="entry"> Risolutori creati </th> 
-   <th class="entry"><span class="codeph"> PlacementInformation</span> screated </th> 
+   <th class="entry"><span class="codeph"> </span> PlacementInformationScreated </th> 
    <th class="entry"> Comportamento risultante </th> 
   </tr> 
  </thead>
  <tbody> 
   <tr> 
-   <td colname="1"> <p><b>Mappa server</b> </p> </td> 
+   <td colname="1"> <p><b>Mappa del server</b> </p> </td> 
    <td colname="2"> </td> 
    <td colname="3"> </td> 
    <td colname="4"> </td> 
@@ -68,14 +65,14 @@ Nella tabella seguente sono riportati i dettagli relativi alla modalità di segn
   </tr> 
   <tr> 
    <td></td> 
-   <td> Replace, Auditude </td> 
+   <td> Sostituisci, Auditude </td> 
    <td> Elimina, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.REPLACE)</span> </td> 
    <td> Intervalli sostituiti </td> 
   </tr> 
   <tr> 
    <td></td> 
-   <td> Contrassegna </td> 
+   <td> Segna </td> 
    <td> CustomAd </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
    <td> Intervalli contrassegnati </td> 
@@ -128,14 +125,14 @@ Nella tabella seguente sono riportati i dettagli relativi alla modalità di segn
   </tr> 
   <tr> 
    <td></td> 
-   <td> Contrassegna </td> 
+   <td> Segna </td> 
    <td> CustomAd </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
    <td> Intervalli contrassegnati </td> 
   </tr> 
   <tr> 
    <td></td> 
-   <td> Replace, Auditude </td> 
+   <td> Sostituisci, Auditude </td> 
    <td> Elimina, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.REPLACE)</span> </td> 
    <td> Intervalli sostituiti </td> 
@@ -165,19 +162,19 @@ Nella tabella seguente sono riportati i dettagli relativi alla modalità di segn
    <td></td> 
    <td> Auditude </td> 
    <td> Auditude </td> 
-   <td> None </td> 
+   <td> Nessuno </td> 
    <td> Nessun annuncio inserito </td> 
   </tr> 
   <tr> 
    <td></td> 
-   <td> Replace, Auditude </td> 
+   <td> Sostituisci, Auditude </td> 
    <td> Elimina, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.REPLACE)</span> </td> 
-   <td> Intervalli sostituiti con annunci </td> 
+   <td> Intervalli sostituiti dagli annunci </td> 
   </tr> 
   <tr> 
    <td></td> 
-   <td> Contrassegna </td> 
+   <td> Segna </td> 
    <td> CustomAd </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
    <td> Intervalli contrassegnati </td> 
@@ -190,7 +187,7 @@ Nella tabella seguente sono riportati i dettagli relativi alla modalità di segn
    <td> Intervalli contrassegnati, nessun annuncio inserito </td> 
   </tr> 
   <tr> 
-   <td colname="1"> <p><b>Not set (predefinito)</b> </p> </td> 
+   <td colname="1"> <p><b>Non impostato (predefinito)</b> </p> </td> 
    <td colname="2"> </td> 
    <td colname="3"> </td> 
    <td colname="4"> </td> 
@@ -219,14 +216,14 @@ Nella tabella seguente sono riportati i dettagli relativi alla modalità di segn
   </tr> 
   <tr> 
    <td></td> 
-   <td> Replace, Auditude </td> 
+   <td> Sostituisci, Auditude </td> 
    <td> Elimina, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.REPLACE)</span> </td> 
-   <td> Intervalli sostituiti con annunci </td> 
+   <td> Intervalli sostituiti dagli annunci </td> 
   </tr> 
   <tr> 
    <td></td> 
-   <td> Contrassegna </td> 
+   <td> Segna </td> 
    <td> CustomAd </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
    <td> Intervalli contrassegnati </td> 
