@@ -1,13 +1,10 @@
 ---
-description: Quando gli utenti avanzano velocemente o riavvolgono rapidamente i supporti, si trovano in modalità di riproduzione trucco. Per passare alla modalità di riproduzione a trucco, impostare la velocità di riproduzione di MediaPlayer su un valore diverso da 1.
-seo-description: Quando gli utenti avanzano velocemente o riavvolgono rapidamente i supporti, si trovano in modalità di riproduzione trucco. Per passare alla modalità di riproduzione a trucco, impostare la velocità di riproduzione di MediaPlayer su un valore diverso da 1.
-seo-title: Implementazione rapida in avanti e indietro
-title: Implementazione rapida in avanti e indietro
-uuid: 070a3331-43a3-4517-9cd9-06d817ffcfbd
+description: Quando gli utenti avanzano velocemente o riavvolgono velocemente i contenuti multimediali, si trovano in modalità di riproduzione a trucco. Per accedere alla modalità di riproduzione a trucco, impostare la velocità di riproduzione di MediaPlayer su un valore diverso da 1.
+title: Implementazione rapida in avanti e in riavvolgimento
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '201'
 ht-degree: 0%
 
 ---
@@ -15,18 +12,18 @@ ht-degree: 0%
 
 # Panoramica {#implement-fast-forward-and-rewind-overview}
 
-Quando gli utenti avanzano velocemente o riavvolgono rapidamente i supporti, si trovano in modalità di riproduzione trucco. Per passare alla modalità di riproduzione a trucco, impostare la velocità di riproduzione di MediaPlayer su un valore diverso da 1.
+Quando gli utenti avanzano velocemente o riavvolgono velocemente i contenuti multimediali, si trovano in modalità di riproduzione a trucco. Per accedere alla modalità di riproduzione a trucco, impostare la velocità di riproduzione di MediaPlayer su un valore diverso da 1.
 
 Per cambiare la velocità, è necessario impostare un valore.
 
-1. Passa dalla modalità di riproduzione normale (1x) alla modalità di riproduzione ingannevole impostando la velocità su `MediaPlayer` su un valore consentito.
+1. Passa dalla modalità di riproduzione normale (1x) alla modalità di riproduzione con trucco impostando la velocità su `MediaPlayer` su un valore consentito.
 
        Ricorda le seguenti informazioni:
    
-   * La classe `MediaPlayerItem` definisce le frequenze di riproduzione consentite.
-   * TVSDK seleziona la tariffa più vicina consentita se la frequenza specificata non è consentita.
+   * La classe `MediaPlayerItem` definisce le velocità di riproduzione consentite.
+   * TVSDK seleziona la velocità consentita più vicina se la velocità specificata non è consentita.
 
-      L&#39;esempio seguente imposta la frequenza di riproduzione interna del lettore sulla frequenza richiesta:
+      L&#39;esempio seguente imposta la velocità di riproduzione interna del lettore sulla velocità richiesta:
 
       ```
       import com.adobe.mediacore.MediaPlayer; 
@@ -52,13 +49,13 @@ Per cambiare la velocità, è necessario impostare un valore.
       }
       ```
 
-1. Facoltativamente, puoi ascoltare gli eventi relativi ai cambiamenti di tasso, che ti avvisano quando hai richiesto una variazione di tasso e quando la variazione di tasso si verifica effettivamente.
+1. Facoltativamente, puoi ascoltare gli eventi di variazione del tasso, che ti avvisa quando hai richiesto una variazione del tasso e quando la variazione del tasso si verifica effettivamente.
 
-       TVSDK invia gli eventi seguenti relativi al trucco:
+       TVSDK invia i seguenti eventi relativi al gioco a tre:
    
-   * `MediaPlayerEvent.RATE_SELECTED`, quando il  `rate` valore cambia in un altro valore.
+   * `MediaPlayerEvent.RATE_SELECTED`, quando il  `rate` valore cambia in un valore diverso.
 
    * `MediaPlayerEvent.RATE_PLAYING`, quando la riproduzione riprende alla velocità selezionata.
 
-      TVSDK invia questi eventi quando il lettore ritorna dalla modalità di riproduzione a quella normale.
+      TVSDK invia questi eventi quando il lettore ritorna dalla modalità di riproduzione a trucco alla modalità di riproduzione normale.
 
