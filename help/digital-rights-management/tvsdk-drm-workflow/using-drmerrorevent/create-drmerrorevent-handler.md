@@ -1,9 +1,9 @@
 ---
-seo-title: Creare un gestore DRMErrorEvent
 title: Creare un gestore DRMErrorEvent
-uuid: dde660fc-6899-47d4-97d4-46acda2db262
+description: Creare un gestore DRMErrorEvent
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 5749142d42f7d7b36c96592955d1f71f6a7956fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '63'
 ht-degree: 0%
@@ -11,11 +11,11 @@ ht-degree: 0%
 ---
 
 
-# Creare un gestore DRMErrorEvent{#create-a-drmerrorevent-handler}
+# Crea un gestore DRMErrorEvent{#create-a-drmerrorevent-handler}
 
-Creare un gestore eventi per elaborare gli eventi di errore inviati da Primetime quando si verifica un errore durante il tentativo di riprodurre il contenuto protetto.
+Crea un gestore di eventi per elaborare gli eventi di errore inviati da Primetime quando viene rilevato un errore durante il tentativo di riprodurre contenuto protetto.
 
-Normalmente, quando un&#39;applicazione rileva un errore, esegue un numero qualsiasi di attività di pulizia. Quindi, informa l&#39;utente dell&#39;errore e fornisce le opzioni per risolvere il problema.
+Normalmente, quando un&#39;applicazione rileva un errore, esegue un numero qualsiasi di attività di pulizia. Quindi informa l&#39;utente dell&#39;errore e fornisce le opzioni per risolvere il problema.
 
 ```
 private function drmErrorEventHandler(event:DRMErrorEvent):void {  
