@@ -1,9 +1,9 @@
 ---
-seo-title: Concatenamento Delle Licenze Migliorato
-title: Concatenamento Delle Licenze Migliorato
-uuid: dc0e0a46-d3cd-44e8-a45d-3e22787be44e
+title: Concatena delle licenze migliorata
+description: Concatena delle licenze migliorata
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 0%
@@ -11,11 +11,11 @@ ht-degree: 0%
 ---
 
 
-# Concatenamento delle licenze migliorato {#enhanced-license-chaining}
+# Concatena delle licenze migliorata {#enhanced-license-chaining}
 
-Con la catena delle licenze migliorata in  Adobe Access 3.0, si consiglia di rilasciare sia una foglia che una radice la prima volta che l&#39;utente richiede una licenza per un particolare computer. Se l&#39;utente dispone già della licenza Root, il server può emettere solo un comando Leaf (chiamare `LicenseRequestMessage.clientHasEnhancedRootForPolicy()` per determinare se il client ha già una directory principale Enhanced 3.0). Per le richieste di licenza successive, il client indicherà che dispone già di una foglia e di una radice, pertanto il server dovrebbe emettere una nuova licenza Root. Quando si utilizza il concatenamento delle licenze avanzato, è necessario chiamare `setRootKeyRetrievalInfo()` per fornire le credenziali necessarie per decrittografare la chiave di crittografia principale nel criterio.
+Con una catena di licenze migliorata in Adobe Access 3.0, si consiglia di rilasciare sia una foglia che una radice la prima volta che l&#39;utente richiede una licenza per un particolare computer. Se l&#39;utente dispone già della licenza Root, il server può emettere solo una chiamata Leaf (chiamare `LicenseRequestMessage.clientHasEnhancedRootForPolicy()` per determinare se il client dispone già di una radice Enhanced 3.0). Per le richieste di licenza successive, il client indicherà che dispone già di una foglia e di una radice, pertanto il server dovrebbe rilasciare una nuova licenza Root. Quando si utilizza il concatenamento di licenze avanzato, `setRootKeyRetrievalInfo()` deve essere chiamato per fornire le credenziali necessarie per decrittografare la chiave di crittografia radice nel criterio.
 
 >[!NOTE]
 >
->Se il criterio supporta il concatenamento delle licenze avanzato 3.0, ma il client è  Access 2.0 Adobe, il server rilascerà una licenza concatenata originale 2.0. Per determinare la versione client, utilizzate LicenseRequestMessage.getClientVersion().
+>Se il criterio supporta il concatenamento licenze avanzato 3.0, ma il client è Adobe Access 2.0, il server rilascerà una licenza concatenata originale 2.0. Per determinare la versione client, utilizzare LicenseRequestMessage.getClientVersion().
 
