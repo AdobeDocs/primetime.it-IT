@@ -1,28 +1,25 @@
 ---
-description: Potete selezionare una traccia da un elenco di tracce di sottotitoli attualmente disponibili. Questa diventa la traccia corrente, che viene visualizzata quando la visibilità è attivata. Alcuni brani potrebbero non essere disponibili inizialmente, quindi ascoltare l'evento che indica che sono diventati disponibili altri brani.
-seo-description: Potete selezionare una traccia da un elenco di tracce di sottotitoli attualmente disponibili. Questa diventa la traccia corrente, che viene visualizzata quando la visibilità è attivata. Alcuni brani potrebbero non essere disponibili inizialmente, quindi ascoltare l'evento che indica che sono diventati disponibili altri brani.
-seo-title: Selezionare una traccia di didascalia corrente tra le tracce disponibili
+description: È possibile selezionare una traccia da un elenco di tracce a didascalia chiusa attualmente disponibili. Questa diventa la traccia corrente, che viene visualizzata quando la visibilità è attiva. Alcune tracce potrebbero non essere disponibili all'inizio, quindi ascolta l'evento che indica che sono state rese disponibili altre tracce.
 title: Selezionare una traccia di didascalia corrente tra le tracce disponibili
-uuid: ee2bda5e-e398-4d09-bc5c-5a6adbf5f603
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '251'
-ht-degree: 1%
+source-wordcount: '198'
+ht-degree: 2%
 
 ---
 
 
 # Selezionare una traccia di didascalia corrente tra le tracce disponibili {#select-a-current-caption-track-from-among-available-tracks}
 
-Potete selezionare una traccia da un elenco di tracce di sottotitoli attualmente disponibili. Questa diventa la traccia corrente, che viene visualizzata quando la visibilità è attivata. Alcuni brani potrebbero non essere disponibili inizialmente, quindi ascoltare l&#39;evento che indica che sono diventati disponibili altri brani.
+È possibile selezionare una traccia da un elenco di tracce a didascalia chiusa attualmente disponibili. Questa diventa la traccia corrente, che viene visualizzata quando la visibilità è attiva. Alcune tracce potrebbero non essere disponibili all&#39;inizio, quindi ascolta l&#39;evento che indica che sono state rese disponibili altre tracce.
 
-1. Attendete che il lettore multimediale sia almeno nello stato `PREPARED`.
-1. Ascoltare i seguenti eventi:
+1. Attendi che il lettore multimediale sia almeno nello stato `PREPARED`.
+1. Ascolta questi eventi:
 
-   * `MediaPlayerEvent.STATUS_CHANGED` con stato  `MediaPlayerStatus.INITIALIZED`: È disponibile l’elenco iniziale di tracce di sottotitoli codificati.
+   * `MediaPlayerEvent.STATUS_CHANGED` con stato  `MediaPlayerStatus.INITIALIZED`: È disponibile l’elenco iniziale delle tracce di sottotitoli.
 
-1. Ottenete un elenco di tutte le tracce di sottotitoli codificati attualmente disponibili.
+1. Ottenere un elenco di tutti i brani a didascalia chiusa attualmente disponibili.
 
    Ad esempio:
 
@@ -31,7 +28,7 @@ Potete selezionare una traccia da un elenco di tracce di sottotitoli attualmente
      mediaPlayer.getCurrentItem().getClosedCaptionsTracks();
    ```
 
-1. Selezionate una traccia disponibile come traccia corrente.
+1. Seleziona una traccia disponibile come traccia corrente.
 
    Ad esempio:
 
@@ -46,6 +43,6 @@ Potete selezionare una traccia da un elenco di tracce di sottotitoli attualmente
    }
    ```
 
-1. Implementare un listener per l&#39;evento che indica che sono disponibili più tracce. Quando TVSDK invia l’evento, recuperate l’elenco corrente delle tracce disponibili.
+1. Implementa un listener per l&#39;evento che indica che sono disponibili più tracce. Quando TVSDK invia l’evento, recupera l’elenco corrente delle tracce disponibili.
 
-   Recuperate l’elenco ogni volta che si verifica l’evento per essere certi di disporre sempre dell’elenco più recente.
+   Recupera l’elenco ogni volta che si verifica l’evento per assicurarti di disporre sempre dell’elenco più aggiornato.
