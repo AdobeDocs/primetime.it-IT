@@ -1,13 +1,10 @@
 ---
-description: Quando TVSDK rileva un tag con iscrizione nella playlist o nel manifesto, il lettore tenta automaticamente di elaborare ed esporre il tag sotto forma di un oggetto TimedMetadata.
-seo-description: Quando TVSDK rileva un tag con iscrizione nella playlist o nel manifesto, il lettore tenta automaticamente di elaborare ed esporre il tag sotto forma di un oggetto TimedMetadata.
-seo-title: Classe di metadati temporizzati
-title: Classe di metadati temporizzati
-uuid: 45bd0d9f-3641-4041-905a-a36658c8c9ce
+description: Quando TVSDK rileva un tag con sottoscrizione nella playlist/manifesto, il lettore prova automaticamente a elaborare ed esporre il tag sotto forma di un oggetto TimedMetadata.
+title: Classe metadati temporizzati
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '388'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # Classe metadati temporizzati {#timed-metadata-class}
 
-Quando TVSDK rileva un tag con iscrizione nella playlist o nel manifesto, il lettore tenta automaticamente di elaborare ed esporre il tag sotto forma di un oggetto TimedMetadata.
+Quando TVSDK rileva un tag con sottoscrizione nella playlist/manifesto, il lettore prova automaticamente a elaborare ed esporre il tag sotto forma di un oggetto TimedMetadata.
 
-La classe fornisce gli elementi seguenti:
+La classe fornisce i seguenti elementi:
 
 <table id="table_FFC56AC5B1E04DA99C9309C0223ABA90"> 
  <thead> 
@@ -31,12 +28,12 @@ La classe fornisce gli elementi seguenti:
   <tr> 
    <td colname="col1"> <span class="codeph"> id  </span> </td> 
    <td colname="col02"> long </td> 
-   <td colname="col2"> <p>Identificatore univoco dei metadati temporizzati. </p> <p>Questo valore viene in genere estratto dall’attributo cue/tag ID. In caso contrario, viene fornito un valore casuale univoco. Utilizzare <span class="codeph"> getId </span>. </p> </td> 
+   <td colname="col2"> <p>Identificatore univoco dei metadati temporizzati. </p> <p>Questo valore viene solitamente estratto dall’attributo cue/tag ID . In caso contrario, viene fornito un valore casuale univoco. Utilizza <span class="codeph"> getId </span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> metadata  </span> </td> 
+   <td colname="col1"> <span class="codeph"> metadati  </span> </td> 
    <td colname="col02"> Metadati </td> 
-   <td colname="col2"> <p>Informazioni elaborate/estratte dal tag personalizzato playlist/manifest. Utilizzare <span class="codeph"> getMetadata </span>. </p> </td> 
+   <td colname="col2"> <p>Le informazioni elaborate/estratte dal tag personalizzato playlist/manifest. Utilizza <span class="codeph"> getMetadata </span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> name </span> </td> 
@@ -46,14 +43,14 @@ La classe fornisce gli elementi seguenti:
   <tr> 
    <td colname="col1"> <span class="codeph"> time  </span> </td> 
    <td colname="col02"> long </td> 
-   <td colname="col2"> <p>La posizione temporale, in millisecondi, rispetto all'inizio del contenuto principale in cui sono presenti i metadati temporizzati nel flusso. Utilizzare <span class="codeph"> getTime </span>. </p> </td> 
+   <td colname="col2"> <p>La posizione temporale, in millisecondi, relativa all'inizio del contenuto principale in cui sono presenti i metadati temporizzati nel flusso. Utilizzare <span class="codeph"> getTime </span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> type  </span> </td> 
    <td colname="col02"> Tipo </td> 
-   <td colname="col2"> <p>Il tipo di metadati temporizzati. Utilizzare <span class="codeph"> getType </span>. 
+   <td colname="col2"> <p>Il tipo di metadati temporizzati. Utilizza <span class="codeph"> getType </span>. 
      <ul id="ul_70FBFB33E9F846D8B38592560CCE9560"> 
-      <li id="li_739D30561BFB4D9B97DF212E4880BA2C">TAG - indica che i metadati temporizzati sono stati creati da un tag nella playlist o nel manifesto. </li> 
+      <li id="li_739D30561BFB4D9B97DF212E4880BA2C">TAG - indica che i metadati temporizzati sono stati creati da un tag nella playlist/manifesto. </li> 
       <li id="li_E785E1DEF1CC4D9DBE7764E5D05EFAFC">ID3 - indica che i metadati temporizzati sono stati creati da un tag ID3 nel flusso multimediale. </li> 
      </ul> </p> </td> 
   </tr> 
@@ -64,7 +61,7 @@ La classe fornisce gli elementi seguenti:
 
 Ricorda quanto segue:
 
-* TVSDK estrae automaticamente l&#39;elenco degli attributi in coppie chiave-valore e memorizza gli attributi nella proprietà metadata.
+* TVSDK estrae automaticamente l’elenco degli attributi in coppie chiave-valore e memorizza gli attributi nella proprietà metadati.
 
    >[!TIP]
    >
@@ -76,7 +73,7 @@ Ricorda quanto segue:
    >"www.example.com:8090?parameter1=xyz&parameter2=abc"
    >```
 
-* Se l&#39;estrazione non riesce a causa di un formato di tag personalizzato, la proprietà dei metadati sarà vuota e l&#39;applicazione deve estrarre le informazioni effettive. In questo caso, non viene generato alcun errore.
+* Se l’estrazione non riesce a causa di un formato di tag personalizzato, la proprietà dei metadati sarà vuota e l’applicazione deve estrarre le informazioni effettive. In questo caso, non viene generato alcun errore.
 
 <table id="table_1BAE98BF23F641A3A5709EBE37B327F6"> 
  <thead> 
@@ -87,24 +84,24 @@ Ricorda quanto segue:
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public enum Type {TAG, ID3}  </span> </td> 
+   <td colname="col1"> <span class="codeph"> tipo enum pubblico {TAG, ID3}  </span> </td> 
    <td colname="col2"> <p>Tipi possibili per i metadati temporizzati. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public TimedMetadata(tipo, long time, long id, String name, Metadata);  </span> </td> 
-   <td colname="col2"> <p>Costruttore predefinito (ora è l'ora del flusso locale). </p> </td> 
+   <td colname="col1"> <span class="codeph"> public TimedMetadata(tipo di tipo, long time, long id, String name, Metadata);  </span> </td> 
+   <td colname="col2"> <p>costruttore predefinito (l'ora è l'ora del flusso locale). </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> public long getTime();  </span> </td> 
-   <td colname="col2"> <p>La posizione temporale, relativa all'inizio del contenuto principale, in cui tali metadati sono stati inseriti nel flusso. </p> </td> 
+   <td colname="col2"> <p>La posizione temporale relativa all'inizio del contenuto principale, in cui tali metadati sono stati inseriti nel flusso. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public Metadata getMetadata();  </span> </td> 
+   <td colname="col1"> <span class="codeph"> metadati pubblici getMetadata();  </span> </td> 
    <td colname="col2"> <p>I metadati inseriti nel flusso. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> public Type getType();  </span> </td> 
-   <td colname="col2"> <p>Restituisce il tipo dei metadati temporizzati. </p> </td> 
+   <td colname="col2"> <p>Restituisce il tipo di metadati temporizzati. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> public long getId();  </span> </td> 
@@ -112,7 +109,7 @@ Ricorda quanto segue:
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> public String getName();  </span> </td> 
-   <td colname="col2"> <p>Restituisce il nome del cue point, che in genere corrisponde al nome del tag HLS. </p> </td> 
+   <td colname="col2"> <p>Restituisce il nome del cue, che in genere corrisponde al nome del tag HLS. </p> </td> 
   </tr> 
  </tbody> 
 </table>
