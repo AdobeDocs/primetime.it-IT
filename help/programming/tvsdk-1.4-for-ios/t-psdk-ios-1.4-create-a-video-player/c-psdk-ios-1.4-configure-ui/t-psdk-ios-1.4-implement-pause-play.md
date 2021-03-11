@@ -1,13 +1,10 @@
 ---
 description: È possibile impostare pulsanti che richiamano i metodi TVSDK per mettere in pausa e riprodurre il contenuto multimediale.
-seo-description: È possibile impostare pulsanti che richiamano i metodi TVSDK per mettere in pausa e riprodurre il contenuto multimediale.
-seo-title: Implementare un pulsante di riproduzione/pausa
 title: Implementare un pulsante di riproduzione/pausa
-uuid: eccdce4b-0114-4389-b5ee-74fe62d38ed8
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '72'
+source-wordcount: '52'
 ht-degree: 0%
 
 ---
@@ -17,7 +14,7 @@ ht-degree: 0%
 
 È possibile impostare pulsanti che richiamano i metodi TVSDK per mettere in pausa e riprodurre il contenuto multimediale.
 
-Usate il seguente codice di esempio per implementare un pulsante di riproduzione o pausa:
+Utilizza il seguente codice di esempio per implementare un pulsante di riproduzione o pausa:
 
 <!--<a id="example_BC2632D673FE451190A30A23145090D0"></a>-->
 
