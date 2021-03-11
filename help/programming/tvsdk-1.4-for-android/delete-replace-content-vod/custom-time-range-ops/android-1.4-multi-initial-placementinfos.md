@@ -1,13 +1,10 @@
 ---
 description: TVSDK può impostare più informazioni di posizionamento iniziali.
-seo-description: TVSDK può impostare più informazioni di posizionamento iniziali.
-seo-title: Più informazioni di posizionamento iniziali
-title: Più informazioni di posizionamento iniziali
-uuid: e0f549d7-3092-45e9-bd67-ee41d01075b5
+title: Informazioni di posizionamento iniziali multiple
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '30'
+source-wordcount: '20'
 ht-degree: 0%
 
 ---
