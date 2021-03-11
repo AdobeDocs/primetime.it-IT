@@ -1,9 +1,9 @@
 ---
-seo-title: Ottenere i certificati CA del dominio
-title: Ottenere i certificati CA del dominio
-uuid: 41bbe02b-363a-47f4-9cc0-350730b6c787
+title: Ottieni certificati CA del dominio
+description: Ottieni certificati CA del dominio
+copied-description: true
 translation-type: tm+mt
-source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 0%
@@ -11,18 +11,18 @@ ht-degree: 0%
 ---
 
 
-# Ottenere certificati CA di dominio{#obtain-domain-ca-certificates}
+# Ottieni certificati CA di dominio{#obtain-domain-ca-certificates}
 
-A differenza del certificato License Server, Packager o Transport, il certificato Domain CA non viene emesso dal Adobe . È possibile ottenere questo certificato da un&#39;autorità di certificazione oppure generare un certificato autofirmato da utilizzare a tale scopo.
+A differenza del certificato License Server, Packager o Transport, il certificato Domain CA non viene rilasciato da Adobe. Puoi ottenere questo certificato da un’autorità di certificazione oppure generare un certificato autofirmato da utilizzare a questo scopo.
 
 Il certificato Domain CA deve utilizzare una chiave a 1024 bit e contenere gli attributi standard richiesti in un certificato CA:
 
-* Estensione Vincoli di base con il flag CA impostato su true
-* Estensione dell&#39;uso chiave che specifica che la firma del certificato è consentita
+* Estensione dei vincoli di base con il flag CA impostato su true
+* Estensione Key Usage che specifica la firma del certificato è consentita
 
 Ad esempio, utilizzando OpenSSL, è possibile generare un certificato CA autofirmato come segue:
 
-1. Create un file denominato [!DNL ca-extensions.txt] contenente:
+1. Crea un file denominato [!DNL ca-extensions.txt] contenente:
 
    ```
    keyUsage=critical,keyCertSign  
