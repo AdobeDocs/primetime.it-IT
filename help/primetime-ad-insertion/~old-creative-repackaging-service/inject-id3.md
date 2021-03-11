@@ -1,32 +1,29 @@
 ---
-description: I CRS possono inserire i metadati ID3 temporizzati in formato HLS e creare elementi creativi per facilitare il tracciamento degli annunci lato client.
-seo-description: I CRS possono inserire i metadati ID3 temporizzati in formato HLS e creare elementi creativi per facilitare il tracciamento degli annunci lato client.
-seo-title: Utilizzo di CRS per inserire tag di metadati temporizzati ID3
-title: Utilizzo di CRS per inserire tag di metadati temporizzati ID3
-uuid: 491bbb9e-15de-4871-baa1-f7bb0ea0dde2
+description: CRS può inserire i metadati temporizzati ID3 nel formato HLS e creare contenuti per facilitare il tracciamento degli annunci lato client.
+title: Utilizzo di CRS per inserire tag dei metadati temporizzati ID3
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: '141'
 ht-degree: 0%
 
 ---
 
 
-# Utilizzo di CRS per inserire tag di metadati temporizzati ID3 {#using-crs-to-inject-id-timed-metadata-tags}
+# Utilizzo di CRS per inserire tag dei metadati temporizzati ID3 {#using-crs-to-inject-id-timed-metadata-tags}
 
-I CRS possono inserire i metadati ID3 temporizzati in formato HLS e creare elementi creativi per facilitare il tracciamento degli annunci lato client.
+CRS può inserire i metadati temporizzati ID3 nel formato HLS e creare contenuti per facilitare il tracciamento degli annunci lato client.
 
-Il lettore client legge i metadati ID3 per abilitare il tracciamento degli annunci accurato in base al frame.
+Il lettore client legge i metadati ID3 per consentire il tracciamento degli annunci accurato in base al frame.
 
 >[!NOTE]
 >
->L’inserimento di metadati temporizzati ID3 funziona solo su Safari su iOS.
+>L’iniezione di metadati temporizzati ID3 funziona solo su Safari su iOS.
 
 ## Flusso di lavoro per CRS per l&#39;iniezione ID3 {#workflow-for-crs-for-id3-injection}
 
-Il flusso di lavoro per l&#39;iniezione ID3 è lo stesso di [Flussi di lavoro dettagliati per il reimballaggio JIT.](../~old-creative-repackaging-service/jit-repackage.md) Se il server di manifesto riceve il  `ptplayer=ios-mobileweb` parametro, dice ai CRS di inserire i pacchetti ID3 nel codice pubblicitario transcodificato prima di caricarlo nel server CDN.
+Il flusso di lavoro per l’iniezione ID3 è lo stesso di in [Flussi di lavoro dettagliati per il repackaging JIT.](../~old-creative-repackaging-service/jit-repackage.md) Se il server manifest riceve il  `ptplayer=ios-mobileweb` parametro , dice a CRS di inserire i pacchetti ID3 nell&#39;annuncio pubblicitario transcodificato prima di caricarli nel server CDN.
 
 >[!NOTE]
 >
->In una configurazione multi-CDN, il server manifesto utilizza il parametro `ptcdn` nell’URL di avvio per identificare il server CDN per caricare l’annuncio creativo.
+>In una configurazione multi-CDN, il server manifesto utilizza il parametro `ptcdn` nell&#39;URL di avvio per identificare il server CDN per caricare la creatività dell&#39;annuncio.
