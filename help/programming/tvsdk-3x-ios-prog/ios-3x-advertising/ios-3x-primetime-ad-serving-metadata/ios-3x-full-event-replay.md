@@ -1,37 +1,34 @@
 ---
-description: TVSDK supporta la risoluzione e l'inserimento di annunci per VOD e flussi live/lineari.
-seo-description: TVSDK supporta la risoluzione e l'inserimento di annunci per VOD e flussi live/lineari.
-seo-title: Primetime e metadati del server
-title: Primetime e metadati del server
-uuid: 61e224dd-551a-438f-8560-e64915087fef
+description: TVSDK supporta la risoluzione e l’inserimento di annunci per VOD e flussi live/lineari.
+title: Metadati di Primetime ad server
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
 
 
-# Abilitare gli annunci nella riproduzione a tutti gli eventi {#section_6016E1DAF03645C8A8388D03C6AB7571}
+# Abilitare gli annunci nella riproduzione completa degli eventi {#section_6016E1DAF03645C8A8388D03C6AB7571}
 
-La riproduzione a tutti gli eventi (FER) è una risorsa VOD che funge da risorsa live/DVR, pertanto l’applicazione deve adottare misure per garantire che gli annunci vengano inseriti correttamente.
+La riproduzione a eventi completi (FER) è una risorsa VOD che agisce come risorsa live/DVR, pertanto l’applicazione deve adottare misure per garantire che gli annunci siano posizionati correttamente.
 
-Per i contenuti live, TVSDK utilizza i metadati/suggerimenti presenti nel manifesto per determinare dove inserire gli annunci. Tuttavia, a volte i contenuti live/lineari possono assomigliare ai contenuti VOD. Ad esempio, al termine del contenuto live, al manifesto live viene aggiunto un tag `EXT-X-ENDLIST`. Per HLS, il tag `EXT-X-ENDLIST` indica che il flusso è un flusso VOD. TVSDK non è in grado di distinguere automaticamente questo flusso da un normale flusso VOD per inserire correttamente gli annunci.
+Per i contenuti live, TVSDK utilizza i metadati/suggerimenti nel manifesto per determinare dove collocare gli annunci. Tuttavia, a volte i contenuti live/lineari potrebbero assomigliare al contenuto VOD. Ad esempio, al completamento del contenuto live, al manifesto live viene aggiunto un tag `EXT-X-ENDLIST` . Per HLS, il tag `EXT-X-ENDLIST` indica che il flusso è un flusso VOD. TVSDK non è in grado di distinguere automaticamente questo flusso da un normale flusso VOD per inserire correttamente gli annunci.
 
-L&#39;applicazione deve indicare a TVSDK se il contenuto è live o VOD specificando il `PTAdSignalingMode`.
+L’applicazione deve indicare a TVSDK se il contenuto è live o VOD specificando il `PTAdSignalingMode`.
 
-Per un flusso FER, il server di gestione annunci  Adobe Primetime non deve fornire l&#39;elenco delle interruzioni pubblicitarie che devono essere inserite nella timeline prima di avviare la riproduzione. Questo è il processo tipico per il contenuto VOD. Al contrario, specificando una diversa modalità di segnalazione, TVSDK legge tutti i cue point dal manifesto FER e va al server di annunci per ogni cue point per richiedere un&#39;interruzione annuncio. Questo processo è simile al contenuto live/DVR.
+Per un flusso FER, il server Adobe Primetime ad decisioning non deve fornire l&#39;elenco delle interruzioni pubblicitarie che devono essere inserite nella timeline prima di avviare la riproduzione. Questo è il processo tipico per il contenuto VOD. Invece, specificando una modalità di segnalazione diversa, TVSDK legge tutti i punti di cue dal manifesto FER e va al server di annunci per ogni punto di cue per richiedere un&#39;interruzione pubblicitaria. Questo processo è simile al contenuto live/DVR.
 
-Oltre a ogni richiesta associata a un cue point, TVSDK invia una richiesta aggiuntiva per annunci pre-roll.
+Oltre a ogni richiesta associata a un punto di cue, TVSDK invia una richiesta aggiuntiva di annunci per annunci pre-roll.
 
-1. Da un&#39;origine esterna, come vCMS, ottenete la modalità di segnalazione da utilizzare.
-1. Create i metadati relativi alla pubblicità.
-1. Se il comportamento predefinito deve essere sovrascritto, specificare il `PTAdSignalingMode` utilizzando `PTAdMetadata.signalingMode`.
+1. Da un&#39;origine esterna, ad esempio vCMS, ottenere la modalità di segnalazione da utilizzare.
+1. Crea i metadati relativi alla pubblicità.
+1. Se il comportamento predefinito deve essere sovrascritto, specifica `PTAdSignalingMode` utilizzando `PTAdMetadata.signalingMode`.
 
    I valori validi sono `PTAdSignalingModeDefault`, `PTAdSignalingModeManifestCues` e `PTAdSignalingModeServerMap`.
 
-   È necessario impostare la modalità di segnalazione degli annunci prima di chiamare `prepareToPlay`. Dopo che TVSDK ha iniziato a risolvere e inserire gli annunci sulla timeline, le modifiche alla modalità di segnalazione degli annunci vengono ignorate. Impostate la modalità quando create i metadati pubblicitari per la risorsa.
+   È necessario impostare la modalità di segnalazione degli annunci prima di chiamare `prepareToPlay`. Dopo che TVSDK inizia a risolvere e posizionare gli annunci sulla timeline, le modifiche alla modalità di segnalazione degli annunci vengono ignorate. Imposta la modalità quando crei i metadati pubblicitari per la risorsa.
 
 1. Continua a riprodurre.
 
