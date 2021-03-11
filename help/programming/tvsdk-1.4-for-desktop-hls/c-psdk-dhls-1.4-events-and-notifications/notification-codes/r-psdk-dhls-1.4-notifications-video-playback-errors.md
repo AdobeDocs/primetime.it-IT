@@ -1,13 +1,10 @@
 ---
-description: L'interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione video nell'oggetto metadati NATIVE_ERROR.
-seo-description: L'interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione video nell'oggetto metadati NATIVE_ERROR.
-seo-title: Valori di riproduzione video NATIVE_ERROR
+description: L'interfaccia Video Encoder dell'AVE restituisce queste notifiche di riproduzione video nell'oggetto metadati NATIVE_ERROR.
 title: Valori di riproduzione video NATIVE_ERROR
-uuid: 4916f96c-857a-4e15-8d91-9c2f949ce783
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '1362'
+source-wordcount: '1339'
 ht-degree: 6%
 
 ---
@@ -15,13 +12,13 @@ ht-degree: 6%
 
 # NATIVE_ERROR: Valori di riproduzione video{#native-error-video-playback-values}
 
-L&#39;interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione video nell&#39;oggetto metadati NATIVE_ERROR.
+L&#39;interfaccia Video Encoder dell&#39;AVE restituisce queste notifiche di riproduzione video nell&#39;oggetto metadati NATIVE_ERROR.
 
 <table> 
  <thead> 
   <tr> 
-   <th colname="col1" class="entry"> Valore per la chiave di metadati RUNTIME_CODE </th> 
-   <th colname="col2" class="entry"> Valore per la chiave di metadati RUNTIME_CODE_MESSAGE </th> 
+   <th colname="col1" class="entry"> Valore della chiave di metadati RUNTIME_CODE </th> 
+   <th colname="col2" class="entry"> Valore della chiave di metadati RUNTIME_CODE_MESSAGE </th> 
    <th colname="col3" class="entry"> Descrizione </th> 
   </tr>
  </thead>
@@ -34,17 +31,17 @@ L&#39;interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione 
   <tr> 
    <td colname="col1"> 0 </td> 
    <td colname="col2"><span class="codeph"> SUCCESSO</span> </td> 
-   <td colname="col3"> Operazione completata. </td> 
+   <td colname="col3"> Operazione riuscita. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 1 </td> 
    <td colname="col2"> <span class="codeph"> ASYNC_OPERATION_IN_PROGRESS</span> </td> 
-   <td colname="col3"> Operazione asincrona. La richiesta di operazione è stata effettuata. Le informazioni sul successo/fallimento saranno disponibili in seguito. </td> 
+   <td colname="col3"> Operazione asincrona. Richiesta operazione effettuata. Le informazioni sul successo o sull’errore saranno disponibili in seguito. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 2 </td> 
    <td colname="col2"><span class="codeph"> EOF</span> </td> 
-   <td colname="col3"> Operazione non possibile a causa della condizione di fine del file (EOF). </td> 
+   <td colname="col3"> Operazione non possibile a causa della condizione di fine file (EOF). </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 1 </td> 
@@ -69,12 +66,12 @@ L&#39;interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione 
   <tr> 
    <td colname="col1"> 7 </td> 
    <td colname="col2"><span class="codeph"> IRRECOVERABLE_ERROR  </span> </td> 
-   <td colname="col3"> Una condizione di errore per la quale il motore video non è in grado di eseguire il ripristino. </td> 
+   <td colname="col3"> Una condizione di errore da cui il motore video non può eseguire il ripristino. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 8 </td> 
    <td colname="col2"><span class="codeph"> LOST_CONNECTION_RECOVERABLE  </span> </td> 
-   <td colname="col3"> Errore di rete, tentativo di ripristino. </td> 
+   <td colname="col3"> Errore di rete durante il tentativo di ripristino. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 9 </td> 
@@ -83,13 +80,13 @@ L&#39;interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione 
   </tr> 
   <tr> 
    <td colname="col1"> 10 </td> 
-   <td colname="col2"><span class="codeph"> NOT_IMPLEMENTED  </span> </td> 
+   <td colname="col2"><span class="codeph"> NOT_IMPLEMENTO  </span> </td> 
    <td colname="col3"> Funzionalità non implementata. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 11 </td> 
    <td colname="col2"><span class="codeph"> OUT_OF_MEMORY  </span> </td> 
-   <td colname="col3"> Memoria insufficiente. </td> 
+   <td colname="col3"> Memoria esaurita. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 12 </td> 
@@ -113,7 +110,7 @@ L&#39;interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione 
   </tr> 
   <tr> 
    <td colname="col1"> 16 </td> 
-   <td colname="col2"><span class="codeph"> UNSUPPORTED_OPERATION  </span> </td> 
+   <td colname="col2"><span class="codeph"> OPERATION_NON SUPPORTATO  </span> </td> 
    <td colname="col3"> Operazione non supportata. </td> 
   </tr> 
   <tr> 
@@ -139,7 +136,7 @@ L&#39;interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione 
   <tr> 
    <td colname="col1"> 21 </td> 
    <td colname="col2"><span class="codeph"> OP_INVALID_WITH_AUDIO_ONLY_FILE</span> </td> 
-   <td colname="col3"> L'operazione non può essere utilizzata solo sui file audio. </td> 
+   <td colname="col3"> L'operazione non può essere utilizzata su file solo audio. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 22 </td> 
@@ -224,7 +221,7 @@ L&#39;interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione 
   <tr> 
    <td colname="col1"> 38 </td> 
    <td colname="col2"><span class="codeph"> CALLED_FROM_WRONG_THREAD</span> </td> 
-   <td colname="col3"> L'API non può essere chiamata dal thread sbagliato. Principalmente, per gli elementi API che dovrebbero essere richiamati solo dal thread principale. </td> 
+   <td colname="col3"> L'API non può essere chiamata dal thread sbagliato. Per lo più, per gli elementi API che devono essere chiamati solo dal thread principale. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 39 </td> 
@@ -234,7 +231,7 @@ L&#39;interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione 
   <tr> 
    <td colname="col1"> 40 </td> 
    <td colname="col2"><span class="codeph"> ABORTO</span> </td> 
-   <td colname="col3"> L'operazione è stata interrotta da una chiamata Abort o Destroy esplicita. </td> 
+   <td colname="col3"> Operazione interrotta da una chiamata Abort o Destroy esplicita. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 41 </td> 
@@ -254,17 +251,17 @@ L&#39;interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione 
   <tr> 
    <td colname="col1"> 44 </td> 
    <td colname="col2"><span class="codeph"> NETWORK_DOWN  </span> </td> 
-   <td colname="col3"> La connessione di rete dell'utente non è attiva. La riproduzione potrebbe arrestarsi in qualsiasi momento e riprenderà quando la connessione sarà disponibile. </td> 
+   <td colname="col3"> La connessione di rete dell'utente non è disponibile. La riproduzione potrebbe interrompere qualsiasi momento e riprenderà quando la connessione sarà disponibile. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 45 </td> 
    <td colname="col2"><span class="codeph"> NO_USABLE_BITRATE_PROFILE</span> </td> 
-   <td colname="col3"> Nessun profilo di bitrate utilizzabile trovato nel flusso. </td> 
+   <td colname="col3"> Nessun profilo di bit rate utilizzabile trovato nel flusso. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 46 </td> 
    <td colname="col2"><span class="codeph"> BAD_MANIFEST_SIGNATURE</span> </td> 
-   <td colname="col3"> Il manifesto ha una firma errata. Il test di firma del manifesto non è riuscito. </td> 
+   <td colname="col3"> Il manifesto ha una firma errata. Non è stato eseguito il test di firma del manifesto. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 47 </td> 
@@ -274,47 +271,47 @@ L&#39;interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione 
   <tr> 
    <td colname="col1"> 48 </td> 
    <td colname="col2"><span class="codeph"> REPLACEMENT_FAILED</span> </td> 
-   <td colname="col3"> La sostituzione specificata in un'API Insert non è riuscita. Ciò significa che l'inserimento è riuscito ma non è stato sostituito. La sostituzione potrebbe non riuscire se il manifesto da sostituire è stato rimosso dalla timeline. </td> 
+   <td colname="col3"> La sostituzione specificata in un'API di inserimento non è riuscita. Ciò significa che l'inserimento è riuscito ma non è stato sostituito. La sostituzione potrebbe non riuscire se il manifesto da sostituire è stato rimosso dalla timeline. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 49 </td> 
    <td colname="col2"><span class="codeph"> SWITCH_TO_ASYMMETRIC_PROFILE</span> </td> 
-   <td colname="col3"> DRM sta passando a un profilo asimmetrico. Tutti i profili devono essere allineati in base alla durata. In caso contrario, l'avviso verrà visualizzato e potrebbero verificarsi salti durante la riproduzione. </td> 
+   <td colname="col3"> DRM sta passando a un profilo asimmetrico. Tutti i profili devono essere allineati in base alla durata. In caso contrario, l'avviso verrà lanciato e potrebbero verificarsi salti nella riproduzione. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 50 </td> 
    <td colname="col2"><span class="codeph"> LIVE_WINDOW_MOVED_BACKWARD</span> </td> 
-   <td colname="col3"> La finestra Live deve essere spostata solo in avanti. In caso contrario, verrà visualizzato questo avviso e la finestra non verrà letta. A causa di ciò, durante la riproduzione potrebbero verificarsi salti (o interruzioni/pause lunghe). </td> 
+   <td colname="col3"> È previsto che la finestra Live avanzi solo. In caso contrario, l'avviso verrà lanciato e la finestra non verrà letta. A causa di ciò, potrebbero verificarsi salti (o interruzioni / pause lunghe) nella riproduzione. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 51 </td> 
    <td colname="col2"><span class="codeph"> CURRENT_PERIOD_EXPIRED</span> </td> 
-   <td colname="col3"> La finestra Live si è spostata oltre il periodo corrente. </td> 
+   <td colname="col3"> La finestra Live è stata spostata oltre il periodo corrente. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 52 </td> 
    <td colname="col2"><span class="codeph"> CONTENT_LENGTH_MISMATCH</span> </td> 
-   <td colname="col3"> La lunghezza del contenuto indicata dal server HTTP non corrisponde alla dimensione effettiva del supporto. </td> 
+   <td colname="col3"> La lunghezza del contenuto riportata dal server HTTP non corrisponde alla dimensione effettiva del supporto. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 53 </td> 
    <td colname="col2"><span class="codeph"> PERIOD_HOLD</span> </td> 
-   <td colname="col3"> Il lettore multimediale non è in grado di leggere oltre perché ha raggiunto il tempo impostato dall'API <span class="codeph"> setHoldAt</span>. </td> 
+   <td colname="col3"> Il lettore multimediale non è in grado di leggere ulteriormente perché ha raggiunto il tempo impostato dall'API <span class="codeph"> setHoldAt</span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 54 </td> 
    <td colname="col2"><span class="codeph"> LIVE_HOLD  </span> </td> 
-   <td colname="col3"> Il lettore multimediale non è in grado di caricare i segmenti perché ha raggiunto la fine della finestra dal vivo. Il caricamento del segmento riprenderà quando il server aggiungerà nuovi supporti alla finestra dal vivo. Questo stato viene generalmente raggiunto se: 
+   <td colname="col3"> Il lettore multimediale non è in grado di caricare segmenti perché ha raggiunto la fine della finestra live. Il caricamento del segmento riprenderà quando il server aggiungerà nuovi file multimediali alla finestra live. Questo stato viene generalmente raggiunto se: 
     <ul id="ul_FCFF658EDA4144E59970B317D6DEB624"> 
      <li id="li_2F6EEEB782D54CD999BC7CC7C0B78B48">Il <span class="codeph"> bufferTime</span> è troppo alto (uguale o superiore alla durata della finestra attiva). </li> 
-     <li id="li_25CE97115ED64E44AA89977FB5F0DCF7">Una combinazione di una o più API di inserimento/cancellazione ha sostituito più supporti rispetto all'aggiunta. </li> 
-     <li id="li_1B14716B2157492AB1859306D1250523">Il periodo successivo è un periodo live con una sostituzione di supporti in sospeso (a causa della chiamata API <span class="codeph"> InsertBy</span>) </li> 
+     <li id="li_25CE97115ED64E44AA89977FB5F0DCF7">Una combinazione di una o più API di inserimento/cancellazione ha sostituito più supporti rispetto all’aggiunta. </li> 
+     <li id="li_1B14716B2157492AB1859306D1250523">Il periodo successivo è un periodo live con una sostituzione di file multimediali in sospeso (a causa di <span class="codeph"> InsertBy</span> chiamata API) </li> 
     </ul> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 55 </td> 
    <td colname="col2"><span class="codeph"> BAD_MEDIA_INTERLEAVING  </span> </td> 
-   <td colname="col3"> L'interfoliazione audio e video nel supporto non viene eseguita correttamente. Si tratta di un errore di package. L'avviso viene inviato quando la differenza supera i due secondi. </td> 
+   <td colname="col3"> L'interfoliazione audio e video nel file multimediale non viene eseguita correttamente. Questo è un errore di imballaggio. L’avviso viene inviato quando la differenza supera i due secondi. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 56 </td> 
@@ -324,12 +321,12 @@ L&#39;interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione 
   <tr> 
    <td colname="col1"> 57 </td> 
    <td colname="col2"><span class="codeph"> PLAYBACK_NOT_AUTHORIZED</span> </td> 
-   <td colname="col3"> La riproduzione HLS non è stata abilitata nel Flash Player. Vedere <span class="codeph"> AuthorizedFeatures.enableHLSPlayback</span>. </td> 
+   <td colname="col3"> Riproduzione HLS non abilitata nel Flash Player. Vedere <span class="codeph"> AuthorizedFeatures.enableHLSPlayback</span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 58 </td> 
    <td colname="col2"><span class="codeph"> BAD_MEDIA_SAMPLE_FOUND</span> </td> 
-   <td colname="col3"> Il decodificatore ha ricevuto un campione errato che non può essere decodificato. In genere non si tratta di un errore fatale, ma indica che potrebbero verificarsi dei problemi nell’audio/video. Troppe istanze di questo errore indicano una codifica non valida o un file non valido. </td> 
+   <td colname="col3"> Il decodificatore ha ricevuto un campione non valido che non può essere decodificato. Questo di solito non è un errore fatale, ma indica che potrebbero esserci problemi nell'audio/video. Troppe istanze di questo errore indicano una codifica non valida o un file non valido. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 59 </td> 
@@ -342,34 +339,34 @@ L&#39;interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione 
    <td colname="col3"> Gli inserimenti post-roll non sono consentiti su un supporto live. Tuttavia, sono consentiti dopo che il server contrassegna il supporto come completo. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 61 </td> 
+   <td colname="col1"> 81 </td> 
    <td colname="col2"><span class="codeph"> INTERNAL_ERROR</span> </td> 
    <td colname="col3"> Una questione molto rara che non dovrebbe mai accadere. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 62 </td> 
    <td colname="col2"><span class="codeph"> SPS_PPS_FOUND_OUTSIDE_AVCC</span> </td> 
-   <td colname="col3"> Il flusso non segue la raccomandazione del package di inserire sempre H264 SPS/PPS in un AVCC. È possibile che si verifichino problemi di ricerca/riproduzione. </td> 
+   <td colname="col3"> Il flusso non segue la raccomandazione di inserire sempre H264 SPS/PPS in un AVCC. È possibile che si verifichino problemi di ricerca/riproduzione. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 63 </td> 
    <td colname="col2"><span class="codeph"> PARAL_REPLACEMENT</span> </td> 
-   <td colname="col3"> La sostituzione specificata in un'API Insert è stata eseguita solo in parte. Questo accade quando replaceDuration si estende sulla durata della timeline. </td> 
+   <td colname="col3"> La sostituzione specificata in un’API di inserimento è stata eseguita solo in parte. Questo accade quando replaceDuration si estende sulla durata della timeline. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 64 </td> 
    <td colname="col2"><span class="codeph"> RENDITION_M3U8_ERROR</span> </td> 
-   <td colname="col3"> Errore durante il caricamento della playlist della rappresentazione. Questo è solo per AVE, non per Flash Player. </td> 
+   <td colname="col3"> Errore durante il caricamento della playlist di rendering. Questo è solo per AVE, non per FlashPlayer. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 65 </td> 
    <td colname="col2"><span class="codeph"> NULL_OPERATION</span> </td> 
-   <td colname="col3"> L'operazione non ha alcun effetto. </td> 
+   <td colname="col3"> L'operazione non fa nulla. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 66 </td> 
    <td colname="col2"><span class="codeph"> SEGMENT_SKIPPED_ON_FAILURE</span> </td> 
-   <td colname="col3"> Il segmento non può essere riprodotto e viene ignorato in caso di errore. </td> 
+   <td colname="col3"> Impossibile riprodurre il segmento e viene ignorato in caso di errore. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 67 </td> 
@@ -427,7 +424,7 @@ L&#39;interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione 
    <td colname="col3"> Nessun lavello audio presente in una struttura dati interna. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 58 </td> 
+   <td colname="col1"> 78 </td> 
    <td colname="col2"><span class="codeph"> FILE_OPEN_ERROR</span> </td> 
    <td colname="col3"> Impossibile aprire il file. </td> 
   </tr> 
@@ -449,7 +446,7 @@ L&#39;interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione 
   <tr> 
    <td colname="col1"> 82 </td> 
    <td colname="col2"><span class="codeph"> SECURITY_ERROR  </span> </td> 
-   <td colname="col3"> Caricamento del contenuto non riuscito a causa di restrizioni di protezione. </td> 
+   <td colname="col3"> Caricamento del contenuto non riuscito a causa di restrizioni di sicurezza. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 83 </td> 
@@ -474,12 +471,12 @@ L&#39;interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione 
   <tr> 
    <td colname="col1"> 88 </td> 
    <td colname="col2"><span class="codeph"> INVALID_KEY</span> </td> 
-   <td colname="col3"> La chiave non è valida. </td> 
+   <td colname="col3"> Chiave non valida. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 89 </td> 
    <td colname="col2"> <span class="codeph"> KEY_SERVER_NOT_FOUND</span> </td> 
-   <td colname="col3"> Il server delle chiavi non restituisce una chiave. </td> 
+   <td colname="col3"> Il server chiavi non restituisce una chiave. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 90 </td> 
