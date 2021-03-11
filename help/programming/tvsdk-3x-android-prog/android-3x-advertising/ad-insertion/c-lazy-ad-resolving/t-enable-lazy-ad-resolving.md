@@ -1,14 +1,11 @@
 ---
-description: Potete attivare o disattivare la funzione Lazy Ad Resolving utilizzando il meccanismo di caricamento Lazy Ad esistente (Lazy Ad Resolving è disabilitato per impostazione predefinita).
-keywords: Lazy;Ad resolving;Ad loading;delayLoading
-seo-description: Potete attivare o disattivare la funzione Lazy Ad Resolving utilizzando il meccanismo di caricamento Lazy Ad esistente (Lazy Ad Resolving è disabilitato per impostazione predefinita).
-seo-title: Abilita risoluzione annunci pigri
+description: Puoi abilitare o disabilitare la funzione Lazy Ad Resolving utilizzando il meccanismo esistente Lazy Ad Loading (Lazy Ad Resolving è disabilitato per impostazione predefinita).
+keywords: Pigro;risoluzione annunci;Caricamento annunci;ritardoLoading
 title: Abilita risoluzione annunci pigri
-uuid: 91884eea-a622-4f5d-b6a8-36bb0050ba1d
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '298'
 ht-degree: 0%
 
 ---
@@ -16,17 +13,17 @@ ht-degree: 0%
 
 # Abilita risoluzione annunci pigri {#enable-lazy-ad-resolving}
 
-Potete attivare o disattivare la funzione Lazy Ad Resolving utilizzando il meccanismo di caricamento Lazy Ad esistente (Lazy Ad Resolving è disabilitato per impostazione predefinita).
+Puoi abilitare o disabilitare la funzione Lazy Ad Resolving utilizzando il meccanismo esistente Lazy Ad Loading (Lazy Ad Resolving è disabilitato per impostazione predefinita).
 
-Potete abilitare o disabilitare la risoluzione degli annunci pigri chiamando [AdvertisingMetadata.setDelayLoading](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.4/com/adobe/mediacore/metadata/AdvertisingMetadata.html#setDelayAdLoading-boolean-) con true o false.
+Puoi abilitare o disabilitare Lazy Ad Resolving richiamando [AdvertisingMetadata.setDelayLoading](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.4/com/adobe/mediacore/metadata/AdvertisingMetadata.html#setDelayAdLoading-boolean-) con true o false.
 
-* Utilizzate i metodi booleani *hasDelayAdLoading* e *setDelayAdLoading* in AdvertisingMetadata per controllare il tempo di risoluzione degli annunci e il posizionamento degli annunci sulla timeline:
+* Utilizza i metodi booleani *hasDelayAdLoading* e *setDelayAdLoading* in AdvertisingMetadata per controllare la tempistica della risoluzione degli annunci e il posizionamento degli annunci sulla timeline:
 
-   * Se *hasDelayAdLoading* restituisce false, TVSDK attende che tutti gli annunci vengano risolti e inseriti prima di passare allo stato PREPARATO.
+   * Se *hasDelayAdLoading* restituisce false, TVSDK attende che tutti gli annunci vengano risolti e inseriti prima di passare allo stato PREPARED.
    * Se *hasDelayAdLoading* restituisce true, TVSDK risolve solo gli annunci e le transizioni iniziali allo stato PREPARATO.
 
-      * Gli altri annunci vengono risolti e inseriti durante la riproduzione.
-   * Se *hasPreroll *o *hasLivePreroll* restituisce false, TVSDK presuppone che non sia presente alcun annuncio preroll e avvia la riproduzione del contenuto immediatamente. Questi valori predefiniti sono impostati su true.
+      * Gli annunci rimanenti vengono risolti e inseriti durante la riproduzione.
+   * Se *hasPreroll *o *hasLivePreroll* restituisce false, TVSDK presuppone che non vi sia alcun annuncio preliminare e avvia immediatamente la riproduzione del contenuto. Queste sono impostate su true per impostazione predefinita.
 
 
 **API rilevanti per la risoluzione degli annunci pigri:**
@@ -49,11 +46,11 @@ Methods:
     public Placement.Type getPlacementType() // Returns whether
 ```
 
-Per riflettere con precisione gli annunci come segnali su una barra di scorrimento, ascoltate l&#39;evento `TimelineEvent`e ridisegnate la barra di scorrimento ogni volta che ricevete questo evento.
+Per riflettere con precisione gli annunci come indizi su una barra di scorrimento, ascolta l’evento `TimelineEvent`e ridisegna la barra di scorrimento ogni volta che ricevi questo evento.
 
-Quando Lazy Ad Resolving è abilitato per i flussi VOD, tutte le interruzioni di annuncio vengono inserite nella timeline, tuttavia, molte delle interruzioni di annuncio non verranno ancora risolte. L&#39;applicazione può determinare se disegnare o meno questi marcatori controllando la `TimelineMarker::getDuration()`. Se il valore è maggiore di zero, gli annunci all&#39;interno dell&#39;interruzione di annuncio sono stati risolti.
+Quando Lazy Ad Resolving è abilitato per flussi VOD, tutte le interruzioni di annunci vengono posizionate sulla timeline, tuttavia, molte interruzioni di annunci non saranno ancora risolte. L&#39;applicazione può determinare se disegnare o meno questi marcatori controllando `TimelineMarker::getDuration()`. Se il valore è maggiore di zero, gli annunci all’interno dell’interruzione pubblicitaria sono stati risolti.
 
-TVSDK invia questo evento quando è stata risolta un&#39;interruzione pubblicitaria, e anche quando il lettore passa allo stato PREPARATO.
+TVSDK invia questo evento quando un&#39;interruzione pubblicitaria è stata risolta e anche quando il lettore passa allo stato PREPARED.
 
 ```
 mediaPlayer.addEventListener(MediaPlayerEvent.TIMELINE_UPDATED, timelineUpdatedEventListener); 
