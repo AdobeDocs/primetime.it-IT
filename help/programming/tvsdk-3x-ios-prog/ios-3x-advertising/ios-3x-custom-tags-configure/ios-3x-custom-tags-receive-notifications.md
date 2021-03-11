@@ -1,35 +1,32 @@
 ---
 description: Per ricevere notifiche sui tag nel manifesto, implementa i listener di notifica appropriati.
-seo-description: Per ricevere notifiche sui tag nel manifesto, implementa i listener di notifica appropriati.
-seo-title: Aggiunta di listener per le notifiche di metadati temporizzate
-title: Aggiunta di listener per le notifiche di metadati temporizzate
-uuid: b6939011-a6ff-4342-8e7c-3a0c805ee91c
+title: Aggiungi i listener per le notifiche dei metadati temporizzati
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '186'
 ht-degree: 0%
 
 ---
 
 
-# Aggiunta di listener per le notifiche di metadati temporizzate {#add-listeners-for-timed-metadata-notifications}
+# Aggiungi i listener per le notifiche dei metadati temporizzati {#add-listeners-for-timed-metadata-notifications}
 
 Per ricevere notifiche sui tag nel manifesto, implementa i listener di notifica appropriati.
 
-Potete monitorare i metadati temporizzati ascoltando i seguenti eventi, che notificano all’applicazione le relative attività:
+Puoi monitorare i metadati temporizzati ascoltando i seguenti eventi, che notificano all’applicazione le relative attività:
 
-* `PTTimedMetadataChangedNotification`: Ogni volta che viene identificato un tag di sottoscrizione univoco durante l&#39;analisi del contenuto, TVSDK prepara un nuovo  `PTTimedMetadata` oggetto e invia questa notifica.
+* `PTTimedMetadataChangedNotification`: Ogni volta che un tag di sottoscrizione univoco viene identificato durante l’analisi del contenuto, TVSDK prepara un nuovo  `PTTimedMetadata` oggetto e invia questa notifica.
 
-   L&#39;oggetto contiene il nome del tag a cui avete effettuato la sottoscrizione, l&#39;ora locale nella riproduzione in cui apparirà il tag e altri dati.
+   L&#39;oggetto contiene il nome del tag a cui hai effettuato la sottoscrizione, l&#39;ora locale nella riproduzione in cui apparirà il tag e altri dati.
 
-* `PTMediaPlayerTimeChangeNotification` : Per i flussi live/lineari in cui il manifest/playlist viene aggiornato periodicamente, è possibile che nella playlist/nel manifesto aggiornato vengano visualizzati tag personalizzati aggiuntivi, per cui è possibile aggiungere  `TimedMetadata` oggetti aggiuntivi alla  `MediaPlayerItem.timedMetadata` proprietà.
+* `PTMediaPlayerTimeChangeNotification` : Per i flussi in diretta/lineare in cui il manifesto/playlist si aggiorna periodicamente, potrebbero essere visualizzati tag personalizzati aggiuntivi nella playlist/manifesto aggiornato, pertanto è possibile aggiungere  `TimedMetadata` oggetti aggiuntivi alla  `MediaPlayerItem.timedMetadata` proprietà.
 
-   Questo evento notifica l’applicazione in caso di evento.
+   Questo evento notifica l&#39;applicazione quando si verifica questa situazione.
 
-   Recuperate i metadati temporizzati in uno dei modi seguenti.
+   Recupera i metadati temporizzati in uno dei seguenti modi.
 
-   * Impostate l&#39;applicazione in modo che si aggiunga come listener alla notifica `PTTimedMetadataChangedNotification` e recuperate l&#39;oggetto utilizzando `PTTimedMetadataKey`.
+   * Imposta l&#39;applicazione per aggiungersi come listener alla notifica `PTTimedMetadataChangedNotification` e recupera l&#39;oggetto utilizzando `PTTimedMetadataKey`.
 
       ```
       [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onTimedMetadataChanged:)  
@@ -41,4 +38,4 @@ Potete monitorare i metadati temporizzati ascoltando i seguenti eventi, che noti
       }
       ```
 
-   * Accedere alla proprietà `timedMetadataCollection` di `PTMediaPlayerItem`, costituita da tutti gli oggetti `PTTimedMetadata` notificati finora.
+   * Accedi alla proprietà `timedMetadataCollection` di `PTMediaPlayerItem`, che è costituita da tutti gli oggetti `PTTimedMetadata` notificati finora.
