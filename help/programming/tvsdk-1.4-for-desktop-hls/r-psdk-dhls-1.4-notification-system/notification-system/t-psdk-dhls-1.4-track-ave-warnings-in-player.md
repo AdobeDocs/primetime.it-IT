@@ -1,25 +1,22 @@
 ---
-description: Utilizzando NotificationEvent, potete tenere traccia degli avvisi passati dal motore video  Adobe (AVE).
-seo-description: Utilizzando NotificationEvent, potete tenere traccia degli avvisi passati dal motore video  Adobe (AVE).
-seo-title: Tenere traccia degli avvisi AVE nel lettore
-title: Tenere traccia degli avvisi AVE nel lettore
-uuid: 236aee5e-6b1a-4298-9d3b-f33b40416c19
+description: Utilizzando NotificationEvent, puoi tenere traccia degli avvisi trasmessi dal motore video di Adobe (AVE).
+title: Tracciare gli avvisi AVE nel lettore
 translation-type: tm+mt
-source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '187'
+source-wordcount: '165'
 ht-degree: 1%
 
 ---
 
 
-# Tenere traccia degli avvisi AVE nel lettore{#track-ave-warnings-in-your-player}
+# Tracciare gli avvisi AVE nel lettore{#track-ave-warnings-in-your-player}
 
-Utilizzando NotificationEvent, potete tenere traccia degli avvisi passati dal motore video  Adobe (AVE).
+Utilizzando NotificationEvent, puoi tenere traccia degli avvisi trasmessi dal motore video di Adobe (AVE).
 
-L’app lettore può tenere traccia degli avvisi e degli errori di riproduzione generati dall’AVE, ad esempio gli eventi di failover o di spegnimento della rete, che non arrestano la riproduzione e non richiedono necessariamente l’intervento dell’app. Mentre alcuni errori AVE vengono gestiti da TVSDK, `NotificationEvent` funge da meccanismo di passaggio generale al livello dell&#39;applicazione per gli avvisi AVE. Dopo aver ricevuto gli avvisi AVE, potete scegliere di eseguire alcune azioni, ad esempio interrompere la riproduzione in modo proattivo, attivare un piano di emergenza, registrare messaggi e così via.
+L’app del lettore può tenere traccia degli avvisi e degli errori di riproduzione generati dall’AVE, ad esempio gli eventi di failover o di rete, che non arrestano la riproduzione e non richiedono necessariamente l’intervento dell’app. Mentre alcuni errori AVE vengono gestiti da TVSDK, `NotificationEvent` funge da meccanismo generale di passaggio al livello dell&#39;applicazione per gli avvisi AVE. Dopo aver ricevuto gli avvisi AVE, puoi scegliere di intraprendere alcune azioni, ad esempio interrompere la riproduzione in modo proattivo, attivare un piano di emergenza, registrare messaggi e così via.
 
-Utilizzate i seguenti elementi API per tenere traccia degli avvisi AVE nel lettore:
+Utilizza i seguenti elementi API per tenere traccia degli avvisi AVE nel lettore:
 
 **NotificationCode**
 
@@ -79,7 +76,7 @@ public class NotificationEvent extends Event {
 }
 ```
 
-Aggiungete un listener di eventi al lettore per intercettare gli avvisi AVE.
+Aggiungi un listener di eventi al lettore per rilevare gli avvisi AVE.
 
 Ad esempio:
 
@@ -102,7 +99,7 @@ private function onWarningAvailable(event:NotificationEvent):void {
 
 <!--<a id="example_C35262605D394718B40C084B569A5052"></a>-->
 
-Di seguito è riportato un esempio di avvisi AVE tracciati utilizzando `NotificationEvent`:
+Ecco un esempio di avvisi AVE tracciati utilizzando `NotificationEvent`:
 
 ```
 [WARN ] [psdkdemo::PSDKDemo] #onWarningAvailable metadata [resourceType:HLS] 
