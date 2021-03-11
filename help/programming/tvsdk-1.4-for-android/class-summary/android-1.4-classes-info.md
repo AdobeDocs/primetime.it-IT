@@ -1,21 +1,18 @@
 ---
-description: Queste classi forniscono informazioni sui supporti.
-seo-description: Queste classi forniscono informazioni sui supporti.
-seo-title: Informazioni, classi
-title: Informazioni, classi
-uuid: 49d6dc60-573e-41a6-aef9-2094c2699673
+description: Queste classi forniscono informazioni sui file multimediali.
+title: Informazioni sulle classi
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '167'
 ht-degree: 0%
 
 ---
 
 
-# Classi di informazioni {#info-classes}
+# Informazioni sulle classi {#info-classes}
 
-Queste classi forniscono informazioni sui supporti.
+Queste classi forniscono informazioni sui file multimediali.
 
 Pacchetto: [com.adobe.mediacore.info](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/info/package-summary.html)
 
@@ -34,15 +31,15 @@ Pacchetto: [com.adobe.mediacore.info](https://help.adobe.com/en_US/primetime/api
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/info/ClosedCaptionsTrack.html" format="html" scope="external"> </a> 
    ClosedCaptionsTrackClosedCaptionsTrack</span> </td> 
-   <td colname="2">Classe che si estende <span class="codeph"> Track</span> per definire l'astrazione dei sottotitoli codificati. Classe che definisce l'astrazione <span class="codeph"> ClosedCaptions</span>. Una traccia di sottotitoli codificati è definita in modo univoco in base al nome e al tipo di servizio. Diversi tipi di servizi possono condividere lo stesso nome.</td> 
+   <td colname="2">Classe che estende <span class="codeph"> Track</span> per definire l'astrazione della didascalia chiusa. Classe che definisce l'astrazione <span class="codeph"> ClosedCaptions</span>. Una traccia di sottotitoli codificati è definita in modo univoco in base al nome e al tipo di servizio. Diversi tipi di servizio possono condividere lo stesso nome.</td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/info/Profile.html" format="html" scope="external"> Profilo</a> </span></td> 
-   <td colname="2"> Classe che contiene informazioni sul profilo multimediale, ad esempio altezza, larghezza e bitrate. </td> 
+   <td colname="2"> Classe che contiene informazioni sul profilo multimediale, ad esempio altezza, larghezza e bit rate. </td> 
   </tr> 
   <tr rowsep="0"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/info/Track.html" format="html" scope="external"> Track</a> </span></td> 
-   <td colname="2">Classe che definisce l'astrazione della traccia da utilizzare nella definizione di <span class="codeph"> AudioTrack</span> e <span class="codeph"> ClosedCaptionsTrack</span>. </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/info/Track.html" format="html" scope="external"> Traccia</a> </span></td> 
+   <td colname="2">Classe che definisce l'astrazione del brano da utilizzare nella definizione di <span class="codeph"> AudioTrack</span> e <span class="codeph"> ClosedCaptionsTrack</span>. </td> 
   </tr>
  </tbody>
 </table>
