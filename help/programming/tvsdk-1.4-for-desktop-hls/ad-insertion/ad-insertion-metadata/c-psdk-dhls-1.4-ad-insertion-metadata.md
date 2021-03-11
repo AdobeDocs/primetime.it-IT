@@ -1,13 +1,10 @@
 ---
-description: Per consentire il funzionamento del risolutore degli annunci, i fornitori di annunci, come  Adobe Primetime e le decisioni, richiedono valori di configurazione per abilitare la connessione al provider.
-seo-description: Per consentire il funzionamento del risolutore degli annunci, i fornitori di annunci, come  Adobe Primetime e le decisioni, richiedono valori di configurazione per abilitare la connessione al provider.
-seo-title: Aggiungi metadati di inserimento
-title: Aggiungi metadati di inserimento
-uuid: 3eb024c3-4bb5-4bee-943e-fe0c60379e60
+description: Per consentire il funzionamento del risolutore di annunci, i fornitori di annunci, come Adobe Primetime ad decision, richiedono valori di configurazione per abilitare la connessione al provider.
+title: Metadati di inserimento annunci
 translation-type: tm+mt
-source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '397'
 ht-degree: 0%
 
 ---
@@ -15,37 +12,37 @@ ht-degree: 0%
 
 # Metadati di inserimento annunci {#ad-insertion-metadata}
 
-Per consentire il funzionamento del risolutore degli annunci, i fornitori di annunci, come  Adobe Primetime e le decisioni, richiedono valori di configurazione per abilitare la connessione al provider.
+Per consentire il funzionamento del risolutore di annunci, i fornitori di annunci, come Adobe Primetime ad decision, richiedono valori di configurazione per abilitare la connessione al provider.
 
-TVSDK include la libreria Primetime e decisionali. Affinché il contenuto includa la pubblicità dal server di decisione degli annunci Primetime, l&#39;applicazione deve fornire le seguenti `AuditudeSettings` informazioni necessarie:
+TVSDK include la libreria Primetime ad decision ioning. Affinché i contenuti includano la pubblicità dal server di ad decisioning di Primetime, l&#39;applicazione deve fornire le seguenti informazioni `AuditudeSettings` necessarie:
 
 * `mediaID`, che è un identificatore univoco per il video da riprodurre.
 
-   L’editore assegna il mediaID quando invia contenuti video e informazioni sull’annuncio al server Adobe Primetime  e decisionale. Questo ID viene utilizzato da Primetime ad Decioning per recuperare informazioni pubblicitarie correlate al video dal server.
+   L&#39;editore assegna il mediaID quando invia contenuti video e informazioni sugli annunci al server Adobe Primetime ad decision ioning. Questo ID viene utilizzato da Primetime ad decision per recuperare dal server le informazioni pubblicitarie correlate al video.
 
-* Il `zoneID`, assegnato dal Adobe , identifica la società o il sito Web.
-* Il dominio del server di annunci assegnato.
+* Il `zoneID`, assegnato per Adobe, identifica l&#39;azienda o il sito web.
+* Dominio del server di annunci assegnato.
 * Altri parametri di targeting.
 
    Puoi includere questi parametri in base alle tue esigenze e alle esigenze del provider di annunci.
 
-## Impostare e inserire i metadati {#set-up-ad-insertion-metadata}
+## Impostare i metadati di inserimento annunci {#set-up-ad-insertion-metadata}
 
-Utilizzate la classe helper AuditudeSettings , che estende la classe MetadataNode, per impostare  Adobe Primetime e i metadati di decisione.
+Utilizza la classe helper AuditudeSettings , che estende la classe MetadataNode, per configurare i metadati di Adobe Primetime e delle decisioni.
 
 >[!TIP]
 >
-> il processo decisionale pubblicitario di Adobe Primetime era precedentemente noto come Auditude.
+>Adobe Primetime ad decision era noto in precedenza come Auditude.
 
-I metadati della pubblicità si trovano nella proprietà `MediaResource.metadata`. Quando avviate la riproduzione di un nuovo video, l’applicazione è responsabile dell’impostazione dei metadati pubblicitari corretti.
+I metadati della pubblicità si trovano nella proprietà `MediaResource.metadata` . Quando si avvia la riproduzione di un nuovo video, l&#39;applicazione è responsabile dell&#39;impostazione dei metadati pubblicitari corretti.
 
-1. Create l&#39;istanza `AuditudeSettings`.
+1. Crea l&#39;istanza `AuditudeSettings` .
 
    ```
    var auditudeSettings:AuditudeSettings = new AuditudeSettings();
    ```
 
-1. Impostate i parametri mediaID, zoneID, dominio  Adobe Primetime e di decisione dell&#39;annuncio pubblicitario e i parametri di targeting facoltativi.
+1. Imposta mediaID, zoneID, dominio e i parametri di targeting facoltativi per Adobe Primetime ad decision.
 
    ```
    auditudeSettings.zoneId = "yourZoneID"; 
@@ -58,12 +55,12 @@ I metadati della pubblicità si trovano nella proprietà `MediaResource.metadata
 
    >[!TIP]
    >
-   >L&#39;ID del supporto viene utilizzato da TVSDK come stringa, che viene convertita in un valore md5 e utilizzato per il valore `u` nella richiesta URL di Primetime e di decisione. Ad esempio:
+   >L&#39;ID del file multimediale viene utilizzato da TVSDK come stringa, che viene convertita in un valore md5 e viene utilizzato per il valore `u` nella richiesta URL Primetime ad decision ioning. Ad esempio:
    >
    >
    >` https://ad.auditude.com/adserver? **u**=c76d04ee31c91c4ce5c8cee41006c97d &z=114100&l=20150206141527&of=1.4&tm=15&g=1000002`
 
-1. Create un&#39;istanza `MediaResource` utilizzando l&#39;URL del flusso multimediale e i metadati pubblicitari creati in precedenza.
+1. Crea un&#39;istanza `MediaResource` utilizzando l&#39;URL del flusso multimediale e i metadati pubblicitari creati in precedenza.
 
    ```
    var mediaResourceMetadata:MetadataNode = new MetadataNode(); 
@@ -74,17 +71,17 @@ I metadati della pubblicità si trovano nella proprietà `MediaResource.metadata
          mediaResourceMetadata);
    ```
 
-1. Caricate l&#39;oggetto `MediaResource` tramite il metodo `MediaPlayer.replaceCurrentResource`.
+1. Caricare l&#39;oggetto `MediaResource` attraverso il metodo `MediaPlayer.replaceCurrentResource`.
 
-   `MediaPlayer` avvia il caricamento e l&#39;elaborazione del manifesto del flusso multimediale.
+   Il `MediaPlayer` inizia a caricare ed elaborare il manifesto del flusso multimediale.
 
-1. (Facoltativo) Eseguite una query sull&#39;istanza `MediaPlayerItem` per verificare se il flusso è live, indipendentemente dal fatto che contenga tracce audio alternative o che il flusso sia protetto.
+1. (Facoltativo) Esegui una query sull&#39;istanza `MediaPlayerItem` per verificare se il flusso è attivo, indipendentemente dal fatto che abbia tracce audio alternative o se il flusso sia protetto.
 
-   Queste informazioni sono utili per preparare l’interfaccia per la riproduzione. Ad esempio, se sai che esistono due tracce audio, puoi includere un controllo dell’interfaccia utente che alterni tali tracce.
+   Queste informazioni sono utili per preparare l’interfaccia utente per la riproduzione. Ad esempio, se sai che ci sono due tracce audio, puoi includere un controllo dell’interfaccia utente che passa da una traccia all’altra.
 
-1. Chiama `MediaPlayer.prepareToPlay` per avviare il flusso di lavoro della pubblicità.
+1. Chiama `MediaPlayer.prepareToPlay` per avviare il flusso di lavoro pubblicitario.
 
-   Dopo che gli annunci sono stati risolti e inseriti nella timeline, la transizione `MediaPlayer` allo stato PREPARATO.
-1. Chiamate `MediaPlayer.play` per avviare la riproduzione.
+   Una volta risolti e inseriti gli annunci nella timeline, lo stato `MediaPlayer` passa allo stato PREPARATO.
+1. Richiama `MediaPlayer.play` per avviare la riproduzione.
 
-TVSDK ora include annunci durante la riproduzione dei contenuti multimediali.
+TVSDK ora include gli annunci durante la riproduzione dei contenuti multimediali.
