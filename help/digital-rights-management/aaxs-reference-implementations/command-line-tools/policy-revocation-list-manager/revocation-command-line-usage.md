@@ -1,9 +1,9 @@
 ---
-seo-title: Utilizzo della riga di comando
-title: Utilizzo della riga di comando
-uuid: 273e9d3b-efeb-46fa-a4b1-f13247b4e498
+title: Uso della riga di comando
+description: Uso della riga di comando
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Utilizzo della riga di comando {#command-line-usage}
+# Uso della riga di comando {#command-line-usage}
 
 Revocation List Manager si trova nella directory \Reference Implementation\Command Line Tools del DVD. Per eseguire lo strumento, utilizzare una delle seguenti sintassi:
 
@@ -33,9 +33,9 @@ Revocation List Manager si trova nella directory \Reference Implementation\Comma
 ```
 
 * `destfile` indica dove verrà scritto l&#39;elenco di revoche.
-* `crlNumber` è un numero di versione non negativo dell&#39;elenco di revoca dei certificati (CRL). Questo numero deve essere incrementato ogni volta che il CRL viene aggiornato.
+* `crlNumber` è un numero di versione non negativo dell’elenco di revoca dei certificati (CRL). Questo numero deve essere incrementato ogni volta che il CRL viene aggiornato.
 
-La tabella seguente contiene le descrizioni delle opzioni della riga di comando mostrate nella sintassi precedente:
+La tabella seguente contiene le descrizioni delle opzioni della riga di comando visualizzate nella sintassi precedente:
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_a3y_wqy_n4"> 
  <thead class="- topic/thead "> 
@@ -47,19 +47,19 @@ La tabella seguente contiene le descrizioni delle opzioni della riga di comando 
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-c file di configurazione</span> </td> 
-   <td colname="2" class="- topic/entry ">Specifica il percorso del file di configurazione. Se questa opzione non viene utilizzata, il Gestore elenco revoca cercherà <span class="filepath"> flashaccesstools.properties</span> nella directory di lavoro. </td> 
+   <td colname="2" class="- topic/entry ">Specifica il percorso del file di configurazione. Se questa opzione non viene utilizzata, Gestione elenchi di revoca cercherà <span class="filepath"> flashaccesstools.properties</span> nella directory di lavoro. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-d nomefile</span> </td> 
+   <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-d nome del file</span> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Visualizza informazioni sull'elenco di revoche. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-e data</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">(Facoltativo) Data di scadenza dell'elenco di revoche. Utilizzare il formato <span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd</span> o <span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd-h24:min:sec</span> (ad esempio, 2009-01-31-14:30:00 rappresenta il 31 gennaio alle 2:30 PM). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">(Facoltativo) Data di scadenza dell'elenco di revoche. Utilizzare il formato <span class="+ topic/ph pr-d/codeph codeph">aaaa-mm-gg</span> o <span class="+ topic/ph pr-d/codeph codeph">aaaa-mm-gg-h24:min:sec</span> (ad esempio, 2009-01-31-14:30:00 rappresenta il 31 gennaio alle 2:30 PM). </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">-f nomefile[certfile]</span> </td> 
-   <td colname="2" class="- topic/entry ">Aggiunge tutte le voci dall'elenco di revoche esistente. È possibile specificare un solo file esistente. <p class="- topic/p ">Se l'elenco esistente è stato firmato con una credenziale diversa da quella utilizzata per firmare il nuovo elenco, specificarne il file di certificato successivo, in modo da verificarne la firma. </p> </td> 
+   <td colname="2" class="- topic/entry ">Aggiunge tutte le voci dall'elenco di revoche esistente. È possibile specificare un solo file esistente. <p class="- topic/p ">Se l’elenco esistente è stato firmato con una credenziale diversa da quella utilizzata per firmare il nuovo elenco, specificare il file di certificato successivo, in modo da verificare la firma. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> -noprompt</span> </td> 
@@ -67,11 +67,11 @@ La tabella seguente contiene le descrizioni delle opzioni della riga di comando 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> -o</span> </td> 
-   <td colname="2" class="- topic/entry "> Se il file di destinazione esiste già, sovrascrivetelo senza richiedere l'invio di richieste. </td> 
+   <td colname="2" class="- topic/entry "> Se il file di destinazione esiste già, sovrascriverlo senza richiedere conferma. </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="codeph">-r issuersName serialNumber revocaDate</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Revoca il certificato identificato da <span class="codeph"> issuersName</span> e <span class="codeph"> serialNumber</span> alla data specificata. Il nome <span class="codeph"> issuersName</span> deve seguire il formato 509 (ad esempio, <span class="codeph"> CN=12345,O=Adobe Systems Incorporated,C=US</span>). Specificare i numeri di serie in formato esadecimale. Specificare la data di revoca come <span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd</span> o <span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd-h24:min:sec</span>, ad esempio 2008-12-1 o 2008-12-1-00:00:00 per la mezzanotte del 1, 2222220000000000000000000000000000000000000000000000000000000000000000000000 008. Se la data di revoca non è specificata, viene utilizzata la data corrente. </p> </td> 
+   <td colname="1" class="- topic/entry "><span class="codeph">-r emittenteName serialNumber decadenzaDate</span> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Revoca il certificato identificato da <span class="codeph"> issuersName</span> e <span class="codeph"> serialNumber</span> alla data specificata. Il <span class="codeph"> issuersName</span> deve seguire il formato 509 name (ad esempio, <span class="codeph"> CN=12345,O=Adobe Systems Incorporated,C=US</span>). Specificare numeri di serie in formato esadecimale. Specificare la data di revoca come <span class="+ topic/ph pr-d/codeph codeph">aaaa-mm-gg</span> o <span class="+ topic/ph pr-d/codeph codeph">aaaa-mm-gg-h24:min:sec</span>, ad esempio 2008-12-1 o 2008-12-1-00:00:00 per la mezzanotte del 1 dicembre 21, 2 008 Se la data di revoca non è specificata, viene utilizzata la data corrente. </p> </td> 
   </tr> 
  </tbody> 
 </table>
