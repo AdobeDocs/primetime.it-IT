@@ -1,23 +1,20 @@
 ---
-description: Rimuovere gli intervalli di tempo tra inizio e fine in localeTime dalla timeline.
-seo-description: Rimuovere gli intervalli di tempo tra inizio e fine in localeTime dalla timeline.
-seo-title: Elimina intervalli con annunci pubblicitari con Primetime
-title: Elimina intervalli con annunci pubblicitari con Primetime
-uuid: efd36a2f-db61-434a-bc2a-50a866f44b33
+description: Rimuovi gli intervalli di tempo tra inizio e fine in localTime dalla timeline.
+title: Elimina intervalli con annunci ad decisioning di Primetime
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '60'
+source-wordcount: '42'
 ht-degree: 0%
 
 ---
 
 
-# Elimina intervalli con Primetime ad Decision ad{#delete-ranges-with-primetime-ad-decisioning-ad}
+# Elimina intervalli con Primetime ad decisioning ad{#delete-ranges-with-primetime-ad-decisioning-ad}
 
-Rimuovere gli intervalli di tempo tra inizio e fine in localeTime dalla timeline.
+Rimuovi gli intervalli di tempo tra inizio e fine in localTime dalla timeline.
 
-Eliminate gli intervalli con un annuncio di frase.
+Elimina intervalli con un annuncio di frase.
 
 ```
 {   
