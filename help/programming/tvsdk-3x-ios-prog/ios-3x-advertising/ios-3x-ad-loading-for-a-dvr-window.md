@@ -1,13 +1,10 @@
 ---
-description: Puoi decidere se risolvere solo gli annunci che si verificano dopo il live point dell'utente o anche risolvere quelli che si verificano prima del live point corrente.
-seo-description: Puoi decidere se risolvere solo gli annunci che si verificano dopo il live point dell'utente o anche risolvere quelli che si verificano prima del live point corrente.
-seo-title: Carica annuncio per una finestra DVR
+description: Puoi decidere se risolvere solo gli annunci che si verificano dopo il punto attivo corrente dell’utente o anche risolvere gli annunci che si verificano prima del punto attivo corrente.
 title: Carica annuncio per una finestra DVR
-uuid: 3ae1fbf6-deae-4f39-a17d-43d1fe3cb975
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '212'
 ht-degree: 0%
 
 ---
@@ -15,13 +12,13 @@ ht-degree: 0%
 
 # Carica annuncio per una finestra DVR {#load-ad-for-a-dvr-window}
 
-Puoi decidere se risolvere solo gli annunci che si verificano dopo il live point dell&#39;utente o anche risolvere quelli che si verificano prima del live point corrente.
+Puoi decidere se risolvere solo gli annunci che si verificano dopo il punto attivo corrente dell’utente o anche risolvere gli annunci che si verificano prima del punto attivo corrente.
 
-Quando un utente inizia a visualizzare il contenuto all&#39;inizio di un flusso DVR, TVSDK risolve tutti gli annunci per il flusso in quel momento. Tuttavia, quando l&#39;utente inizia a visualizzare il contenuto in un punto successivo all&#39;inizio del flusso, potete decidere se risolvere solo gli annunci che si verificano dopo il punto attivo corrente dell&#39;utente o anche risolvere gli annunci che si sono verificati prima del punto attivo corrente.
+Quando un utente inizia a visualizzare il contenuto all&#39;inizio di un flusso DVR, TVSDK risolve tutti gli annunci per il flusso in quel momento. Tuttavia, quando l’utente inizia a visualizzare il contenuto in un punto successivo all’inizio del flusso, puoi decidere se risolvere solo gli annunci che si verificano dopo il punto attivo corrente dell’utente o anche risolvere gli annunci che si sono verificati prima del punto attivo corrente.
 
 >[!TIP]
 >
->La risoluzione degli annunci dopo il punto attivo corrente è più rapida, ma se l&#39;utente cerca all&#39;indietro, questa opzione impedisce al lettore di riprodurre gli annunci visualizzati in precedenza.
+>La risoluzione degli annunci dopo il punto attivo corrente è più veloce, ma se l&#39;utente cerca indietro, questa opzione impedisce al lettore di riprodurre gli annunci che sono apparsi in precedenza.
 
 ## Controllo e caricamento di una finestra DVR {#section_2D93E2E947644D66B6F6ED1DD6742C25}
 
