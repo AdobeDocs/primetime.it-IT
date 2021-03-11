@@ -1,9 +1,9 @@
 ---
-seo-title: Creazione di un criterio tramite l'API Java
-title: Creazione di un criterio tramite l'API Java
-uuid: c653548d-4abf-46b9-8669-d68b966da359
+title: Creazione di un criterio tramite l’API Java
+description: Creazione di un criterio tramite l’API Java
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
@@ -13,10 +13,10 @@ ht-degree: 0%
 
 # Creazione di un criterio tramite l&#39;API Java {#creating-a-policy-using-the-java-api}
 
-Per creare un criterio utilizzando l&#39;API Java, effettuate le seguenti operazioni:
+Per creare un criterio utilizzando l’API Java, esegui i seguenti passaggi:
 
-1. Configurate l&#39;ambiente di sviluppo e includete tutti i file JAR menzionati in [Impostazione dell&#39;ambiente di sviluppo](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) all&#39;interno del progetto.
-1. Create un oggetto `com.adobe.flashaccess.sdk.policy.Policy` e specificatene le proprietà, quali i diritti, la durata del caching delle licenze e la data di fine del criterio.
+1. Configura l&#39;ambiente di sviluppo e includi tutti i file JAR menzionati in [Impostazione dell&#39;ambiente di sviluppo](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) all&#39;interno del progetto.
+1. Crea un oggetto `com.adobe.flashaccess.sdk.policy.Policy` e specifica le relative proprietà, ad esempio i diritti, la durata del caching delle licenze e la data di fine dei criteri.
 
    ```java
      // Create a new Policy object.  
@@ -66,4 +66,4 @@ Per creare un criterio utilizzando l&#39;API Java, effettuate le seguenti operaz
      out.close();
    ```
 
-Per l&#39;origine completa di questo codice di esempio, vedere *com.adobe.flashaccess.samples.policy.CreatePolicy* nella directory Reference Implementation Command Line Tools &quot;[!DNL samples]&quot;.
+Per l&#39;origine completa di questo codice di esempio, consulta *com.adobe.flashaccess.amples.policy.CreatePolicy* nella directory Strumenti della riga di comando per l&#39;implementazione di riferimento &quot;[!DNL samples]&quot;.
