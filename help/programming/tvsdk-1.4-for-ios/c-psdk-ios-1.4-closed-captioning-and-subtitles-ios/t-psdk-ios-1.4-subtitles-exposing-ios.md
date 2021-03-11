@@ -1,13 +1,10 @@
 ---
-description: Il TVSDK informa il client del lettore sulla disponibilità della notifica AVAssetMediaCharacteristicsWithMediaSelectionOptions interna utilizzando la notifica PTMediaPlayerMediaSelectionOptionsAvailableNotification.
-seo-description: Il TVSDK informa il client del lettore sulla disponibilità della notifica AVAssetMediaCharacteristicsWithMediaSelectionOptions interna utilizzando la notifica PTMediaPlayerMediaSelectionOptionsAvailableNotification.
-seo-title: Esporre i sottotitoli
+description: Il TVSDK notifica al client del lettore la disponibilità della notifica availableMediaFeaturesWithMediaSelectionOptions interna di AVAsset utilizzando la notifica PTMediaPlayerMediaSelectionOptionsAvailableNotification.
 title: Esporre i sottotitoli
-uuid: 657ab9c7-b205-4d13-81a7-51bc8e7d5ee2
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '110'
+source-wordcount: '90'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # Esporre i sottotitoli {#expose-subtitles}
 
-Il TVSDK informa il client del lettore sulla disponibilità della notifica AVAssetMediaCharacteristicsWithMediaSelectionOptions interna utilizzando la notifica PTMediaPlayerMediaSelectionOptionsAvailableNotification.
+Il TVSDK notifica al client del lettore la disponibilità della notifica availableMediaFeaturesWithMediaSelectionOptions interna di AVAsset utilizzando la notifica PTMediaPlayerMediaSelectionOptionsAvailableNotification.
 
-È possibile accedere ai sottotitoli disponibili tramite la proprietà `PTMediaPlayerItem` `subtitlesOptions`.
+Puoi accedere ai sottotitoli disponibili tramite l’ `PTMediaPlayerItem` della proprietà `subtitlesOptions` .
 
 Per esporre i sottotitoli:
 
@@ -30,7 +27,7 @@ Per esporre i sottotitoli:
    ```
 
    Quando il cliente riceve questa notifica, i sottotitoli sono pronti in `PTMediaPlayerItem`.
-1. Implementare il metodo `onMediaPlayerItemMediaSelectionOptionsAvailable` simile al seguente esempio:
+1. Implementa il metodo `onMediaPlayerItemMediaSelectionOptionsAvailable` simile al seguente esempio:
 
    ```
    - (void) onMediaPlayerItemMediaSelectionOptionsAvailable:(NSNotification *) notification { 
@@ -39,4 +36,4 @@ Per esporre i sottotitoli:
    }
    ```
 
-   Per informazioni sulle tracce audio alternative, consultate [Audio alternativo](../alternate-audio/c-psdk-ios-1.4-alternate-audio.md).
+   Per informazioni sulle tracce audio alternative, vedere [Audio alternativo](../alternate-audio/c-psdk-ios-1.4-alternate-audio.md).
