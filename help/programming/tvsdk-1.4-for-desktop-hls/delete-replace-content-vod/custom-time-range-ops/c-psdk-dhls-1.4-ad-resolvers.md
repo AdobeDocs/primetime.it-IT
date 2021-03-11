@@ -1,19 +1,17 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Rivenditori annunci
-title: Rivenditori annunci
-uuid: 705df232-4adc-4f3a-b4aa-dafbd2b8fe4c
+title: Ad resolver
+description: Ad resolver
+copied-description: true
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '8'
+source-wordcount: '6'
 ht-degree: 0%
 
 ---
 
 
-# Risolutori annunci {#ad-resolvers}
+# Ad resolver {#ad-resolvers}
 
 ```
 if (resource.metadata != null) { 
