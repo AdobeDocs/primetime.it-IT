@@ -1,38 +1,35 @@
 ---
 description: L'ottimizzazione del reindirizzamento 302 riduce al minimo il numero di risposte di reindirizzamento 302, consentendo all'applicazione di bilanciare il carico in modo più efficace.
-seo-description: L'ottimizzazione del reindirizzamento 302 riduce al minimo il numero di risposte di reindirizzamento 302, consentendo all'applicazione di bilanciare il carico in modo più efficace.
-seo-title: Ottimizzazione reindirizzamento HTTP 302
-title: Ottimizzazione reindirizzamento HTTP 302
-uuid: 58593d5f-a639-4d87-9589-dba6b2dbba38
+title: Ottimizzazione del reindirizzamento HTTP 302
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '205'
-ht-degree: 0%
+source-wordcount: '185'
+ht-degree: 1%
 
 ---
 
 
-# Ottimizzazione reindirizzamento HTTP 302{#http-redirect-optimization}
+# Ottimizzazione del reindirizzamento HTTP 302{#http-redirect-optimization}
 
 L&#39;ottimizzazione del reindirizzamento 302 riduce al minimo il numero di risposte di reindirizzamento 302, consentendo all&#39;applicazione di bilanciare il carico in modo più efficace.
 
-Se una richiesta di manifesto principale viene reindirizzata e l’ottimizzazione 302 è abilitata nel lettore, le richieste successive effettuate per le risorse da tale manifesto utilizzeranno la posizione di dominio finale, evitando così ulteriori 302 risposte.
+Se una richiesta di manifesto principale viene reindirizzata e l’ottimizzazione 302 è abilitata nel lettore, le richieste successive effettuate per le risorse da quel manifesto utilizzeranno la posizione del dominio finale, evitando così ulteriori 302 risposte.
 
-Questa funzione è disattivata per impostazione predefinita e potete modificare questa impostazione.
+Questa funzione è disabilitata per impostazione predefinita ed è possibile modificarla.
 
-Se si abilita questa funzione, funziona correttamente solo se *all* delle seguenti condizioni è vero; in caso contrario, non si verifica alcuna ottimizzazione di reindirizzamento e continuano a verificarsi 302 risposte:
+Se abiliti questa funzione, funziona correttamente solo se *all* delle seguenti condizioni è true; in caso contrario, non si verifica alcuna ottimizzazione di reindirizzamento e continuano a verificarsi 302 risposte:
 
-* L&#39;applicazione è stata compilata per  Adobe 11.8, utilizzando `-swf-version` 21 o versione successiva.
-* Gli utenti finali hanno installato  Adobe 11.8 o successivo.
+* L&#39;applicazione è stata compilata per Adobe Flash Player 11.8, utilizzando `-swf-version` 21 o versioni successive.
+* Gli utenti finali in cui è installato Adobe Flash Player 11.8 o versione successiva.
 
 >[!IMPORTANT]
 >
->Per assicurarsi che i cookie vengano passati con le richieste di annunci, disattivate il reindirizzamento 302. Quando il reindirizzamento 302 è abilitato, la richiesta di annuncio potrebbe essere reindirizzata a un dominio diverso da quello da cui il cookie ha avuto origine.
+>Per garantire che i cookie vengano passati con le richieste di annunci, disattiva il reindirizzamento 302. Quando è abilitato il reindirizzamento 302, la richiesta di annuncio può essere reindirizzata a un dominio diverso da quello di origine del cookie.
 
-## Disabilitare o abilitare l&#39;ottimizzazione di reindirizzamento 302 {#section_D6687FC44C61446F878008B629A5FA19}
+## Disabilita o abilita l&#39;ottimizzazione del reindirizzamento 302 {#section_D6687FC44C61446F878008B629A5FA19}
 
-Utilizzare la proprietà `useRedirectedUrl` per attivare (true) o disattivare (false) il reindirizzamento 302.
+Utilizza la proprietà `useRedirectedUrl` per attivare (true) o disattivare il reindirizzamento 302 (false).
 
 <!--<a id="example_B886777252B745AAB48B1FCC42C97A25"></a>-->
 
