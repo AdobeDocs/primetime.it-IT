@@ -1,29 +1,26 @@
 ---
-description: Potete impostare un controllo dell’interfaccia utente per regolare il volume del video.
-seo-description: Potete impostare un controllo dell’interfaccia utente per regolare il volume del video.
-seo-title: Controllo del volume
+description: È possibile impostare un controllo dell'interfaccia utente per regolare il volume del video.
 title: Controllo del volume
-uuid: c87fe656-0329-4c9c-b65b-43be48c77062
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 1%
+source-wordcount: '98'
+ht-degree: 2%
 
 ---
 
 
-# Controllo volume {#provide-volume-control}
+# Controllo del volume {#provide-volume-control}
 
-Potete impostare un controllo dell’interfaccia utente per regolare il volume del video.
+È possibile impostare un controllo dell&#39;interfaccia utente per regolare il volume del video.
 
-1. Nella routine di callback per l&#39;elemento dell&#39;interfaccia di controllo del volume, assicurarsi che il lettore sia in uno stato valido per questo comando.
+1. Nella routine di callback per l&#39;elemento dell&#39;interfaccia di controllo del volume, assicurati che il lettore sia in uno stato valido per questo comando.
 
    >[!TIP]
    >
-   >Qualsiasi stato, tranne RELEASED, è valido.
+   >Qualsiasi stato, ad eccezione di RELEASED, è valido.
 
-1. Chiamate `setVolume` per impostare il volume audio.
+1. Chiama `setVolume` per impostare il volume audio.
 
    Ad esempio:
 
