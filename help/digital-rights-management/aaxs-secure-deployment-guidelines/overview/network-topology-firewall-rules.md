@@ -1,9 +1,9 @@
 ---
-seo-title: Regole firewall
-title: Regole firewall
-uuid: a5667030-c4d0-42e3-b56e-20a12c903954
+title: Regole del firewall
+description: Regole del firewall
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '365'
 ht-degree: 0%
@@ -11,11 +11,11 @@ ht-degree: 0%
 ---
 
 
-# Regole firewall {#firewall-rules}
+# Regole del firewall {#firewall-rules}
 
 ## URL in arrivo {#section-F111526A9DB844CBBF21A3CAE5F50880}
 
-Configurate il firewall esterno in modo da esporre solo gli URL per la funzionalità dell’applicazione che desiderate fornire agli utenti finali. Consente agli utenti esterni di accedere tramite il firewall esterno solo agli URL elencati nella tabella seguente:
+Configura il firewall esterno in modo che esponga solo gli URL per la funzionalità dell’applicazione che desideri fornire agli utenti finali. Consenti agli utenti esterni di accedere attraverso il firewall esterno solo agli URL elencati nella tabella seguente:
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table-bqs-whz-n4"> 
  <thead class="- topic/thead "> 
@@ -37,7 +37,7 @@ Configurate il firewall esterno in modo da esporre solo gli URL per la funzional
      <li id="li-ED3C15EB4D194FFE99954BDB7D5C1E41"><span class="filepath"> /flashaccess/authn/v4/*</span> </li> 
      <li id="li-4DD6CBBE939F4E6EABA474E3DCCBD893"><span class="filepath"> /flashaccess/authn/v5/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL per l’autenticazione dell’utente. Questo URL deve essere accessibile solo se utilizzate  API client di accesso Adobe per eseguire l'autenticazione dell'utente. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL per l’autenticazione utente. Questo URL deve essere accessibile solo se si utilizzano le API client di Adobe Access per eseguire l’autenticazione degli utenti. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -56,7 +56,7 @@ Configurate il firewall esterno in modo da esporre solo gli URL per la funzional
      <li id="li-B333B85FFE8A46DD884595B0A620B4EE"><span class="filepath"> /flashaccess/sync/v4</span> </li> 
      <li id="li-E4771D3C5AA5454CA1EDCFAA3E027CC1"><span class="filepath"> /flashaccess/sync/v5</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL per richieste di sincronizzazione. Questo URL deve essere accessibile solo se specificate i requisiti di sincronizzazione nelle licenze. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL per le richieste di sincronizzazione. Questo URL deve essere accessibile solo se specifichi i requisiti di sincronizzazione nelle licenze. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -65,7 +65,7 @@ Configurate il firewall esterno in modo da esporre solo gli URL per la funzional
      <li id="li-40F0952F09674CA3B9AAFB5A62F9D02E"><span class="filepath"> /flashaccess/domain/v4</span> </li> 
      <li id="li-3ADE44B959B548F8A31A6FF08537AF46"><span class="filepath"> /flashaccess/domain/v5</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL per la registrazione del dominio. Questo URL deve essere accessibile solo se implementate il supporto del dominio. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL per la registrazione del dominio. Questo URL deve essere accessibile solo se implementi il supporto del dominio. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -74,30 +74,30 @@ Configurate il firewall esterno in modo da esporre solo gli URL per la funzional
      <li id="li-AB33657BC7E140E695767710DF7AEC72"><span class="filepath"> /flashaccess/dereg/v4</span> </li> 
      <li id="li-D15B32BCD4674269A3A2644DD5204707"><span class="filepath"> /flashaccess/dereg/v5</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL per la deregistrazione del dominio. Questo URL deve essere accessibile solo se implementate il supporto del dominio. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL per la deregistrazione del dominio. Questo URL deve essere accessibile solo se implementi il supporto del dominio. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/headerconversion/v1/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL da utilizzare dal client per convertire i metadati DRM FMRMS 1.x in metadati DRM di accesso  Adobe. </p> <p class="- topic/p ">Nota: <i class="+ topic/ph hi-d/i ">Questo URL deve utilizzare SSL (HTTPS)</i>. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL da utilizzare dal client per convertire i metadati DRM FMRMS 1.x in metadati DRM di accesso Adobe. </p> <p class="- topic/p ">Nota: <i class="+ topic/ph hi-d/i ">Questo URL deve utilizzare SSL (HTTPS)</i>. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /edcws/services/urn:EDCLicenseService/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">LiveCycle Rights Management ES URL servizio Web. Se il contenuto è stato pubblicato con una versione precedente di FMRMS, questo URL consente ai client meno recenti di connettersi al server e viene richiesto di effettuare l'aggiornamento a  accesso al Adobe. </p> <p class="- topic/p ">Nota: <i class="+ topic/ph hi-d/i ">Questo URL deve utilizzare SSL (HTTPS)</i>. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL del servizio Web LiveCycle Rights Management ES. Se il contenuto è stato pubblicato utilizzando una versione precedente di FMRMS, questo URL consente ai client meno recenti di connettersi al server e viene richiesto di eseguire l'aggiornamento ad Adobe Access. </p> <p class="- topic/p ">Nota: <i class="+ topic/ph hi-d/i ">Questo URL deve utilizzare SSL (HTTPS)</i>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/lreturn/v5</span> </td> 
-   <td colname="2" class="- topic/entry "> <p>URL per la restituzione della licenza. L'URL deve essere accessibile solo se implementate il supporto per la restituzione delle licenze. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>URL per la restituzione della licenza. L’URL deve essere accessibile solo se implementi il supporto per la restituzione della licenza. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 >[!NOTE]
 >
->Il firewall interno deve consentire solo le connessioni al server delle licenze di accesso al Adobe  attraverso il proxy inverso e solo agli URL elencati sopra. Per migliorare la scalabilità, le connessioni tra il proxy inverso e  accesso al Adobe avverranno attraverso HTTP.
+>Il firewall interno deve consentire solo le connessioni al server licenze di accesso Adobe tramite il proxy inverso e solo agli URL elencati sopra. Per migliorare la scalabilità, le connessioni tra il proxy inverso e l&#39;accesso all&#39;Adobe saranno effettuate tramite HTTP.
 
 ## URL in uscita {#section-FFF9F7BB353149F4A27F8788E9934A48}
 
-Il server licenze richiede l&#39;accesso attraverso il firewall per scaricare i seguenti CRL da  Adobe:
+Il server licenze richiede l’accesso tramite il firewall per scaricare i seguenti CRL dall’Adobe:
 
 * h<span></span>ttps://crl2.adobe.com/Adobe/FlashAccessRootCA.crl
 * ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl
