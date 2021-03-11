@@ -1,30 +1,27 @@
 ---
-description: Di seguito è riportato un esempio di come un utente può selezionare una traccia di sottotitoli codificati.
-seo-description: Di seguito è riportato un esempio di come un utente può selezionare una traccia di sottotitoli codificati.
-seo-title: Consentire all'utente di cambiare il tracciamento
-title: Consentire all'utente di cambiare il tracciamento
-uuid: bd3d4d20-9b52-4365-b656-83ec2a405a1c
+description: Ecco un esempio di come un utente può selezionare una traccia a didascalia chiusa.
+title: Consenti all'utente di modificare il brano
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '97'
+source-wordcount: '77'
 ht-degree: 0%
 
 ---
 
 
-# Consentire all&#39;utente di modificare la traccia{#allow-the-user-to-change-the-track}
+# Consenti all&#39;utente di modificare la traccia{#allow-the-user-to-change-the-track}
 
-Di seguito è riportato un esempio di come un utente può selezionare una traccia di sottotitoli codificati.
+Ecco un esempio di come un utente può selezionare una traccia a didascalia chiusa.
 
-1. Per visualizzare le tracce di sottotitoli codificati disponibili, utilizzare la proprietà `MediaPlayerItem.closedCaptionsTracks`.
+1. Per visualizzare le tracce di didascalia chiusa disponibili, utilizzare la proprietà `MediaPlayerItem.closedCaptionsTracks` .
 
    ```js
    var tracks = item.closedCaptionsTracks;
    ```
 
-1. Per impostare la traccia dei sottotitoli codificati corrente, utilizzare il metodo `MediaPlayerItem.selectClosedCaptionsTrack`.
-1. Una volta preparato l&#39;elemento del lettore multimediale, recuperatelo dal lettore multimediale utilizzando il metodo ` MediaPlayer.  currentItem `.
+1. Per impostare la traccia dei sottotitoli codificati corrente, utilizzare il metodo `MediaPlayerItem.selectClosedCaptionsTrack` .
+1. Una volta preparato l&#39;elemento del lettore multimediale, recuperalo dal lettore multimediale utilizzando il metodo ` MediaPlayer.  currentItem ` .
 
    ```js
    // Select the cc track with index k. 
