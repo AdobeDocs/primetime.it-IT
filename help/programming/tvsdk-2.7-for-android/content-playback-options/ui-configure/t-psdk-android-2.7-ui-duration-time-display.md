@@ -1,13 +1,10 @@
 ---
 description: È possibile utilizzare TVSDK per recuperare informazioni sulla posizione del lettore nel supporto e visualizzarlo sulla barra di ricerca.
-seo-description: È possibile utilizzare TVSDK per recuperare informazioni sulla posizione del lettore nel supporto e visualizzarlo sulla barra di ricerca.
-seo-title: Visualizzare la durata, l’ora corrente e il tempo rimanente del video
-title: Visualizzare la durata, l’ora corrente e il tempo rimanente del video
-uuid: 13627fa2-8cd8-4336-bc4b-7e3226330389
+title: Visualizza la durata, l'ora corrente e il tempo rimanente del video
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '367'
 ht-degree: 0%
 
 ---
@@ -17,32 +14,32 @@ ht-degree: 0%
 
 È possibile utilizzare TVSDK per recuperare informazioni sulla posizione del lettore nel supporto e visualizzarlo sulla barra di ricerca.
 
-1. Attendere che il lettore sia almeno nello stato PREPARATO.
-1. Recuperare il tempo corrente dell&#39;indicatore di riproduzione utilizzando il metodo `MediaPlayer.getCurrentTime`.
+1. Attendi che il lettore sia almeno nello stato PREPARATO.
+1. Recupera l&#39;ora corrente della testina di riproduzione utilizzando il metodo `MediaPlayer.getCurrentTime` .
 
-   Questo restituisce la posizione corrente dell&#39;indicatore di riproduzione sulla timeline virtuale, in millisecondi. L&#39;ora viene calcolata in relazione al flusso risolto che potrebbe contenere più istanze di contenuto alternativo, ad esempio più annunci pubblicitari o interruzioni di annunci nel flusso principale. Per i flussi live/lineari, il tempo restituito è sempre compreso nell&#39;intervallo della finestra di riproduzione.
+   Restituisce la posizione corrente dell&#39;indicatore di riproduzione sulla timeline virtuale, in millisecondi. Il tempo viene calcolato in base al flusso risolto che potrebbe contenere più istanze di contenuto alternativo, ad esempio più annunci o interruzioni pubblicitarie unite nel flusso principale. Per i flussi in tempo reale/lineare, il tempo restituito è sempre nell&#39;intervallo della finestra di riproduzione.
 
    ```java
    long getCurrentTime() throws MediaPlayerException;
    ```
 
-1. Recuperate l’intervallo di riproduzione del flusso e stabilite la durata.
-   1. Utilizzare il metodo `MediaPlayer.getPlaybackRange` per ottenere l&#39;intervallo di tempo della cronologia virtuale.
+1. Recupera l&#39;intervallo di riproduzione del flusso e determina la sua durata.
+   1. Utilizzare il metodo `MediaPlayer.getPlaybackRange` per ottenere l&#39;intervallo di tempo della timeline virtuale.
 
       ```java
       TimeRange getPlaybackRange() throws MediaPlayerException;
       ```
 
-   1. Utilizzare il metodo `MediaPlayer.getPlaybackRange` per ottenere l&#39;intervallo di tempo della cronologia virtuale.
+   1. Utilizzare il metodo `MediaPlayer.getPlaybackRange` per ottenere l&#39;intervallo di tempo della timeline virtuale.
 
-      * Per il VOD, l&#39;intervallo inizia sempre con zero e il valore finale è uguale alla somma della durata del contenuto principale e delle durate del contenuto aggiuntivo nel flusso (annunci).
-      * Per una risorsa lineare/live, l&#39;intervallo rappresenta l&#39;intervallo delle finestre di riproduzione. Questo intervallo cambia durante la riproduzione.
+      * Per VOD, l’intervallo inizia sempre con zero e il valore finale è uguale alla somma della durata del contenuto principale e delle durate del contenuto aggiuntivo nel flusso (annunci).
+      * Per una risorsa lineare/live, l’intervallo rappresenta l’intervallo della finestra di riproduzione. Questo intervallo cambia durante la riproduzione.
 
-         TVSDK chiama il callback `ITEM_Updated` per indicare che l&#39;elemento multimediale è stato aggiornato e che i suoi attributi, incluso l&#39;intervallo di riproduzione, sono stati aggiornati.
+         TVSDK chiama il callback `ITEM_Updated` per indicare che l’elemento multimediale è stato aggiornato e che i suoi attributi, compreso l’intervallo di riproduzione, sono stati aggiornati.
 
-1. Utilizzate i metodi disponibili in `MediaPlayer` e nella classe `SeekBar` nell&#39;SDK Android per impostare i parametri della barra di ricerca.
+1. Utilizza i metodi disponibili su `MediaPlayer` e sulla classe `SeekBar` nell’SDK per Android per impostare i parametri della barra di ricerca.
 
-   Ad esempio, di seguito è riportato un layout possibile che contiene la barra di ricerca e due elementi `TextView`.
+   Ad esempio, ecco un possibile layout che contiene la barra di ricerca e due elementi `TextView`.
 
    ```xml
    <LinearLayout 
@@ -80,7 +77,7 @@ ht-degree: 0%
 
    ![](assets/seek-bar.jpg){width=&quot;477.000pt&quot;}
 
-   L&#39;esempio seguente utilizza la classe helper `Clock.java`, disponibile in `ReferencePlayer`, come timer. Questa classe imposta un listener di eventi e attiva un evento `onTick` ogni secondo, o un altro valore di timeout che è possibile specificare.
+   Nell&#39;esempio seguente viene utilizzata la classe helper `Clock.java`, disponibile in `ReferencePlayer`, come timer. Questa classe imposta un listener di eventi e attiva un evento `onTick` ogni secondo o un altro valore di timeout che è possibile specificare.
 
    ```java
    playbackClock = new Clock(PLAYBACK_CLOCK, CLOCK_TIMER); 
@@ -93,7 +90,7 @@ ht-degree: 0%
    playbackClock.addClockEventListener(playbackClockEventListener);
    ```
 
-   Ad ogni clic dell&#39;orologio, questo esempio recupera la posizione corrente del lettore multimediale e aggiorna la barra di ricerca. Utilizza i due elementi `TextView` per contrassegnare il tempo corrente e la posizione finale dell&#39;intervallo di riproduzione come valori numerici.
+   Su ogni segno di spunta dell&#39;orologio, questo esempio recupera la posizione corrente del lettore multimediale e aggiorna la barra di ricerca. Usa i due elementi `TextView` per contrassegnare l&#39;ora corrente e la posizione finale dell&#39;intervallo di riproduzione come valori numerici.
 
    ```java
    @Override 
