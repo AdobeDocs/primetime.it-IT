@@ -1,13 +1,10 @@
 ---
-description: Potete utilizzare l'API di Primetime Player per personalizzare il comportamento del lettore.
-seo-description: Potete utilizzare l'API di Primetime Player per personalizzare il comportamento del lettore.
-seo-title: Classi Mediacore
+description: Puoi utilizzare l’API di Primetime Player per personalizzare il comportamento del lettore.
 title: Classi Mediacore
-uuid: 2d4e41e6-e689-4f79-9021-1ab8ce0fe40d
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '635'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # Classi Mediacore {#mediacore-classes}
 
-Potete utilizzare l&#39;API di Primetime Player per personalizzare il comportamento del lettore.
+Puoi utilizzare l’API di Primetime Player per personalizzare il comportamento del lettore.
 
-Per visualizzare la documentazione completa relativa alle API per TVSDK, andate alla pagina [ Adobe Primetime API References](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References).
+Per consultare la documentazione completa sull&#39;API per TVSDK, vai a [Riferimenti API Adobe Primetime](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References).
 
 Queste classi descrivono il lettore multimediale e le relative risorse.
 Pacchetto: [com.adobe.mediacore](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/package-summary.html)
@@ -32,7 +29,7 @@ Pacchetto: [com.adobe.mediacore](https://help.adobe.com/en_US/primetime/api/psdk
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/ABRControlParameters.html" format="html" scope="external"> </a>  ABRControlParametersABRControlParameters</span> </td> 
-   <td colname="2"> Classe che racchiude tutti i parametri di controllo del bitrate adattivo. </td> 
+   <td colname="2"> Classe che incapsula tutti i parametri di controllo del bit rate adattivo. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/AdClientFactory.html" format="html" scope="external"> AdClientFactory</a> </span> </td> 
@@ -40,11 +37,11 @@ Pacchetto: [com.adobe.mediacore](https://help.adobe.com/en_US/primetime/api/psdk
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/AdvertisingFactory.html" format="html" scope="external"> AdvertisingFactory</a> </span> </td> 
-   <td colname="2"> Classe di fabbrica che consente la personalizzazione del processo di decisione degli annunci. </td> 
+   <td colname="2"> Classe di fabbrica che consente la personalizzazione del processo decisionale degli annunci. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/BufferControlParameters.html" format="html" scope="external"> BufferControlParameters</a> </span> </td> 
-   <td colname="2"> Classe che racchiude tutti i parametri di controllo del buffer. </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/BufferControlParameters.html" format="html" scope="external"> ParametriBufferControl</a> </span> </td> 
+   <td colname="2"> Classe che incapsula tutti i parametri di controllo del buffer. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/DefaultAdPolicySelector.html" format="html" scope="external"> DefaultAdPolicySelector</a></span> </td> 
@@ -52,11 +49,11 @@ Pacchetto: [com.adobe.mediacore](https://help.adobe.com/en_US/primetime/api/psdk
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/DefaultMediaPlayer.html" format="html" scope="external"> DefaultMediaPlayer</a></span> </td> 
-   <td colname="2">Implementazione di classe predefinita dell'interfaccia <span class="codeph"> MediaPlayer</span>. </td> 
+   <td colname="2">Implementazione della classe predefinita dell'interfaccia <span class="codeph"> MediaPlayer</span>. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.html" format="html" scope="external"> MediaPlayer</a> </span> </td> 
-   <td colname="2">Interfaccia pubblica per la classe <span class="codeph"> DefaultMediaPlayer</span>. Include enumerazioni per Event, PlayerState e Visibility. </td> 
+   <td colname="2">Interfaccia pubblica per la classe <span class="codeph"> DefaultMediaPlayer</span> . Include enumerazioni per Event, PlayerState e Visibility. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.AdPlaybackEventListener.html" format="html" scope="external"> MediaPlayer.AdPlaybackEventListener</a></span> </td> 
@@ -64,7 +61,7 @@ Pacchetto: [com.adobe.mediacore](https://help.adobe.com/en_US/primetime/api/psdk
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.DRMEventListener.html" format="html" scope="external"> MediaPlayer.DRMEventListener</a></span> </td> 
-   <td colname="2"> Definizione di interfaccia di un callback da richiamare quando diventano disponibili i metadati protetti. </td> 
+   <td colname="2"> Definizione di interfaccia di un callback da richiamare quando i metadati protetti diventano disponibili. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.EventListener.html" format="html" scope="external"> MediaPlayer.EventListener</a> </span> </td> 
@@ -80,7 +77,7 @@ Pacchetto: [com.adobe.mediacore](https://help.adobe.com/en_US/primetime/api/psdk
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayerItem.html" format="html" scope="external"> MediaPlayerItem</a> </span> </td> 
-   <td colname="2"> Interfaccia che rappresenta i supporti audio-video. </td> 
+   <td colname="2"> Interfaccia che rappresenta i file multimediali audio-video. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayerItemLoader.html" format="html" scope="external"> MediaPlayerItemLoader</a> </span> </td> 
@@ -88,7 +85,7 @@ Pacchetto: [com.adobe.mediacore](https://help.adobe.com/en_US/primetime/api/psdk
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayerItemLoader.LoaderListener.html" format="html" scope="external"> MediaPlayerItemLoader.LoaderListener</a> </span> </td> 
-   <td colname="2"> Interfaccia che definisce i metodi del listener associati all'oggetto MediaPlayerItemLoader. </td> 
+   <td colname="2"> Interfaccia che definisce i metodi listener associati all'oggetto MediaPlayerItemLoader. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayerView.html" format="html" scope="external"> MediaPlayerView</a> </span> </td> 
@@ -96,23 +93,23 @@ Pacchetto: [com.adobe.mediacore](https://help.adobe.com/en_US/primetime/api/psdk
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaResource.html" format="html" scope="external"> MediaResource</a> </span> </td> 
-   <td colname="2"> Classe che racchiude tutte le informazioni su una risorsa multimediale. Include l'enumerazione per il tipo di risorsa multimediale. </td> 
+   <td colname="2"> Classe che racchiude tutte le informazioni su una risorsa multimediale. Include l'enumerazione per la risorsa Tipo di supporto. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/PlacementOpportunityDetector.html" format="html" scope="external"> PlacementOpportunityDetector</a> </span> </td> 
-   <td colname="2"> Interfaccia utilizzata per l'elaborazione dei segnali in-manifest che verranno utilizzati come punti di posizionamento per il processo di decisione degli annunci. </td> 
+   <td colname="2"> Interfaccia utilizzata per l’elaborazione di segnali in-manifest che verranno utilizzati come posizionamenti per il processo di decisione degli annunci. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/PSDKConfig.html" format="html" scope="external"> PSDKConfig</a> </span> </td> 
-   <td colname="2"> Classe che incapsula i tag personalizzati utilizzati dal lettore multimediale durante l'esecuzione della posizione dell'annuncio, oltre ai tag cue predefiniti. Include inoltre i nomi dei tag di cui l'applicazione desidera ricevere notifica. </td> 
+   <td colname="2"> Classe che incapsula i tag personalizzati utilizzati dal lettore multimediale durante l'esecuzione del posizionamento dell'annuncio, oltre ai tag cue predefiniti. Include anche i nomi dei tag di cui l'applicazione desidera ricevere le notifiche. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/TextFormat.html" format="html" scope="external"> TextFormat</a> </span> </td> 
-   <td colname="2"> Interfaccia che racchiude attributi diversi che descrivono uno stile di testo (ad esempio, lo stile dei sottotitoli codificati). </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/TextFormat.html" format="html" scope="external"> Formato testo</a> </span> </td> 
+   <td colname="2"> Interfaccia che racchiude attributi diversi che descrivono uno stile di testo (ad esempio, lo stile dei sottotitoli). </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/TextFormatBuilder.html" format="html" scope="external"> TextFormatBuilder</a></span> </td> 
-   <td colname="2"> Metodi di classe per impostare la formattazione del testo. </td> 
+   <td colname="2"> Metodi delle classi per impostare la formattazione del testo. </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/Version.html" format="html" scope="external"> Versione</a></span> </td> 
