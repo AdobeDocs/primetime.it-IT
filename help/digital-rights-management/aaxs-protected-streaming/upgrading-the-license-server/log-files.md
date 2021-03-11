@@ -1,9 +1,9 @@
 ---
-seo-title: File di registro
 title: File di registro
-uuid: 90450f27-ed2f-4b67-953b-0546910deebf
+description: File di registro
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '56'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # File di registro{#log-files}
 
-I file di registro generati dall&#39;applicazione Adobe Access Server per lo streaming protetto si trovano nella directory specificata da *LicenseServer.LogRoot*.
+I file di registro generati dall&#39;applicazione Adobe Access Server per lo streaming protetto si troveranno nella directory specificata da *LicenseServer.LogRoot*.
 
 >[!NOTE]
 >
