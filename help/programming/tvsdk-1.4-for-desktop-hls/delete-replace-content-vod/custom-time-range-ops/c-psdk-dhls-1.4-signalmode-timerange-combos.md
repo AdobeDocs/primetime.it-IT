@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Modalità di segnalazione e intervallo di tempo
 title: Modalità di segnalazione e intervallo di tempo
-uuid: a4d2b0f3-49ce-4a07-a460-9e63bb91b5d3
+description: Modalità di segnalazione e intervallo di tempo
+copied-description: true
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '91'
+source-wordcount: '89'
 ht-degree: 0%
 
 ---
@@ -21,12 +19,12 @@ ht-degree: 0%
    <th class="entry"> </th> 
    <th class="entry"> MARCHIO </th> 
    <th class="entry"> DELETE </th> 
-   <th class="entry"> SOSTITUISCI </th> 
+   <th class="entry"> SOSTITUIRE </th> 
   </tr> 
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> CustomRange OpportunityGenerator  </span> </td> 
+   <td> <span class="codeph"> Generatore di opportunità CustomRange  </span> </td> 
    <td> 
     <code>
       (range.begin,&nbsp; 
@@ -45,7 +43,7 @@ ht-degree: 0%
     </code> </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Modalità  </span> di segnalazione ServerMap </td> 
+   <td> <span class="codeph"> Modalità  </span> di segnalazione di ServerMap </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -65,10 +63,10 @@ ht-degree: 0%
      &nbsp;&nbsp;&nbsp;&nbsp;range.end&nbsp;-&nbsp;range.begin,&nbsp; 
      &nbsp;&nbsp;&nbsp;&nbsp;PlacementMode.DELETE&nbsp;); 
     </code> </td> 
-   <td> N/A (modalità di segnalazione personalizzataRange automatica) </td> 
+   <td> N/D (modalità automatica di segnalazione CustomRange) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Modalità  </span> di segnalazione ManifestCue </td> 
+   <td> <span class="codeph"> Modalità di  </span> segnalazione ManifestCue </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -89,7 +87,7 @@ ht-degree: 0%
      &nbsp;&nbsp;&nbsp;&nbsp;PlacementMode.DELETE 
      ); 
     </code> </td> 
-   <td> N/A (modalità di segnalazione personalizzataRange automatica) </td> 
+   <td> N/D (modalità automatica di segnalazione CustomRange) </td> 
   </tr> 
   <tr> 
    <td> <span class="codeph"> Modalità  </span> di segnalazione CustomRange </td> 
@@ -140,12 +138,12 @@ ht-degree: 0%
    <th class="entry"> </th> 
    <th class="entry"> MARCHIO </th> 
    <th class="entry"> DELETE </th> 
-   <th class="entry"> SOSTITUISCI </th> 
+   <th class="entry"> SOSTITUIRE </th> 
   </tr> 
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> AdSignalingMode OpportunityGenerator  </span> </td> 
+   <td> <span class="codeph"> Generatore di opportunità in modalità AdSignaling  </span> </td> 
    <td> 
     <code>
       (range.begin,&nbsp; 
@@ -164,8 +162,8 @@ ht-degree: 0%
     </code> </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Modalità  </span> di segnalazione mappa server </td> 
-   <td> Non presente (ad è disattivato). </td> 
+   <td> <span class="codeph"> Modalità  </span> di segnalazione di SeverMap </td> 
+   <td> Non presente (e viene disattivato). </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -178,8 +176,8 @@ ht-degree: 0%
    <td> N/A (modalità di segnalazione automatica <span class="codeph"> CustomRange </span>) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Modalità  </span> di segnalazione ManifestCue </td> 
-   <td> Non presente (ad è disattivato). </td> 
+   <td> <span class="codeph"> Modalità di  </span> segnalazione ManifestCue </td> 
+   <td> Non presente (e viene disattivato). </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -193,9 +191,9 @@ ht-degree: 0%
   </tr> 
   <tr> 
    <td> <span class="codeph"> Modalità  </span> di segnalazione CustomRange </td> 
-   <td> Non presente (ad è disattivato). </td> 
-   <td> None </td> 
-   <td> Nessuno (cura in <span class="codeph"> CustomRangeOpportunityGenerator </span>) </td> 
+   <td> Non presente (e viene disattivato). </td> 
+   <td> Nessuno </td> 
+   <td> Nessuno (occupato in <span class="codeph"> CustomRangeOpportunityGenerator </span>) </td> 
   </tr> 
  </tbody> 
 </table>
