@@ -1,26 +1,23 @@
 ---
-description: Per creare un lettore di base utilizzando il browser TVSDK, completare i seguenti passaggi.
-seo-description: Per creare un lettore di base utilizzando il browser TVSDK, completare i seguenti passaggi.
-seo-title: Creazione di un lettore di base con TVSDK
-title: Creazione di un lettore di base con TVSDK
-uuid: ec15cf53-197f-4190-a6b2-600a57815390
+description: Completa i seguenti passaggi per creare un lettore di base utilizzando il browser TVSDK.
+title: Creare un lettore di base utilizzando TVSDK
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---
 
 
-# Creare un lettore di base con TVSDK{#create-a-basic-player-using-tvsdk}
+# Creare un lettore di base utilizzando TVSDK{#create-a-basic-player-using-tvsdk}
 
-Per creare un lettore di base utilizzando il browser TVSDK, completare i seguenti passaggi.
+Completa i seguenti passaggi per creare un lettore di base utilizzando il browser TVSDK.
 
-1. Create una nuova directory in cui scaricare i file compressi per l&#39;SDK del browser.
-1. Scaricate Browser TVSDK da Zendesk, decomprimete i file e inserite la cartella framework nella nuova directory.
-1. Create un semplice standard HTML per il codice con un `div` in esso contenuto.
-1. Inserite questo standard in un file HTML nella directory creata al punto 1.
+1. Crea una nuova directory in cui puoi scaricare i file compressi per Browser TVSDK.
+1. Scarica Browser TVSDK da Zendesk, decomprimi i file e inserisci la cartella dei framework nella nuova directory.
+1. Crea un semplice modello HTML per il codice con un `div` al suo interno.
+1. Posiziona questo modello in un file HTML nella directory creata al punto 1.
 
    ```
    <!DOCTYPE html> 
@@ -36,7 +33,7 @@ Per creare un lettore di base utilizzando il browser TVSDK, completare i seguent
    </html>
    ```
 
-1. Aggiungete le librerie TVSDK del browser nella sezione head.
+1. Aggiungi le librerie TVSDK per browser nella sezione head.
 
    ```js
    <script src= "frameworks/player/dash.min.js"></script> 
@@ -45,16 +42,16 @@ Per creare un lettore di base utilizzando il browser TVSDK, completare i seguent
    <script src= "frameworks/player/primetimeei.min.js"></script>
    ```
 
-1. Per il tag body, aggiungete la sezione `onLoad`.
+1. Per il tag body, aggiungi la sezione `onLoad` .
 
    ```
    <body onload="startVideo()">
    ```
 
-1. Avviare l&#39;implementazione della funzione `startVideo`.
-1. Aggiungete un tag script e create la funzione `startVideo` nel tag .
+1. Inizia a implementare la funzione `startVideo` .
+1. Aggiungi un tag script e crea la funzione `startVideo` nel tag .
 
-   Questo dovrebbe essere nella sezione head della pagina.
+   Questo dovrebbe essere nella sezione iniziale della pagina.
 
    ```js
    <script> 
@@ -63,17 +60,17 @@ Per creare un lettore di base utilizzando il browser TVSDK, completare i seguent
    </script>
    ```
 
-1. Create la cartella `Adobe.MediaPlayer`.
+1. Crea il `Adobe.MediaPlayer`.
 
    ```js
    var player = new AdobePSDK.MediaPlayer();
    ```
 
-1. Create la cartella `MediaPlayerView`.
+1. Crea il `MediaPlayerView`.
 
    >[!TIP]
    >
-   >Qui si utilizza la `div` creata in precedenza.
+   >In questo punto viene utilizzato il `div` creato in precedenza.
 
    ```js
    var view = new AdobePSDK.MediaPlayerView( 
@@ -81,13 +78,13 @@ Per creare un lettore di base utilizzando il browser TVSDK, completare i seguent
    player.view = view;
    ```
 
-1. Aggiungete il listener di eventi del lettore.
+1. Aggiungi il listener di eventi del lettore.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED, onStatusChange);
    ```
 
-1. Implementare il gestore eventi e posizionarlo prima del listener di eventi add.
+1. Implementa il gestore eventi e inseriscilo prima del listener di eventi add.
 
    ```js
    var onStatusChange = function (event) { 
@@ -144,7 +141,7 @@ Per creare un lettore di base utilizzando il browser TVSDK, completare i seguent
    }; 
    ```
 
-1. Create il `MediaResource`, che passa il collegamento M3U8 (o mpd).
+1. Crea il `MediaResource`, che passa il collegamento M3U8 (o mpd).
 
    ```js
    var resourceUrl = "https://example.com/a/yourUrl.m3u8"; 
@@ -152,7 +149,7 @@ Per creare un lettore di base utilizzando il browser TVSDK, completare i seguent
    var mediaResource = new AdobePSDK.MediaResource(resourceUrl, resourceType, null, false);
    ```
 
-1. Create una configurazione vuota e sostituite la risorsa.
+1. Crea una configurazione vuota e sostituisci la risorsa .
 
    ```js
    var config = new AdobePSDK.MediaPlayerItemConfig(); 
@@ -160,7 +157,7 @@ Per creare un lettore di base utilizzando il browser TVSDK, completare i seguent
    player.replaceCurrentResource(mediaResource, config);
    ```
 
-1. Quando il lettore è nello stato INITIALIZED, chiamare `prepareToPlay`.
+1. Quando il lettore è nello stato INITIALIZZATO, chiama `prepareToPlay`.
 
    ```js
    case INITIALIZED: 
@@ -168,7 +165,7 @@ Per creare un lettore di base utilizzando il browser TVSDK, completare i seguent
     break;
    ```
 
-1. Una volta che il lettore è nello stato PREPARATO, chiamare `play`.
+1. Una volta che il lettore è nello stato PREPARATO, chiama `play`.
 
    ```js
    case PREPARED: 
