@@ -1,25 +1,22 @@
 ---
-description: TVSDK fornisce API e codice di esempio per la gestione dei periodi di blackout.
-seo-description: TVSDK fornisce API e codice di esempio per la gestione dei periodi di blackout.
-seo-title: Implementare la gestione della blackout
+description: TVSDK fornisce API e codice di esempio per la gestione dei periodi di sospensione attività.
 title: Implementare la gestione della blackout
-uuid: db7f831c-5069-4426-bfe3-5fc51fec7930
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '158'
 ht-degree: 0%
 
 ---
 
 
-# Implementare la gestione della blackout{#implement-blackout-handling}
+# Implementa la gestione della blackout{#implement-blackout-handling}
 
-TVSDK fornisce API e codice di esempio per la gestione dei periodi di blackout.
+TVSDK fornisce API e codice di esempio per la gestione dei periodi di sospensione attività.
 
-Per implementare la gestione della blackout, compresa l&#39;indicazione di contenuto alternativo durante la blackout:
+Per implementare la gestione della sospensione attività, incluso fornire contenuto alternativo durante la sospensione attività:
 
-1. Configurate l&#39;app per rilevare i tag blackout in un manifesto del flusso live.
+1. Imposta l&#39;app per rilevare i tag di blackout in un manifesto del flusso live.
 
    ```java
    public void createMediaPlayer { 
@@ -30,7 +27,7 @@ Per implementare la gestione della blackout, compresa l&#39;indicazione di conte
    }
    ```
 
-1. Creare listener di eventi per gli eventi di metadati temporizzati nei flussi in primo piano e in background.
+1. Crea listener di eventi per gli eventi di metadati temporizzati nei flussi in primo piano e in background.
 
    ```java
    private MediaPlayer createMediaPlayer() { 
@@ -39,7 +36,7 @@ Per implementare la gestione della blackout, compresa l&#39;indicazione di conte
    }
    ```
 
-1. Implementate i gestori di eventi di metadati temporizzati per i flussi in primo piano e in background.
+1. Implementa i gestori eventi di metadati temporizzati sia per i flussi in primo piano che per quelli in background.
 
    Primo piano:
 
@@ -78,7 +75,7 @@ Per implementare la gestione della blackout, compresa l&#39;indicazione di conte
    }; 
    ```
 
-1. Gestire gli oggetti `TimedMetadata` durante l&#39;esecuzione di `MediaPlayer`.
+1. Gestisci gli oggetti `TimedMetadata` durante l&#39;esecuzione di `MediaPlayer`.
 
    ```java
    _playbackClockEventListener = new Clock.ClockEventListener() { 
@@ -101,7 +98,7 @@ Per implementare la gestione della blackout, compresa l&#39;indicazione di conte
    };
    ```
 
-1. Creare metodi per cambiare il contenuto all’inizio e alla fine del periodo di sospensione attività.
+1. Crea metodi per cambiare contenuto all’inizio e alla fine del periodo di sospensione attività.
 
    ```java
    private void handleTimedMetadataList(long currentTime) { 
@@ -153,7 +150,7 @@ Per implementare la gestione della blackout, compresa l&#39;indicazione di conte
    }
    ```
 
-1. Aggiornate gli intervalli non ricercabili se l&#39;intervallo di blackout è in DVR sul flusso di riproduzione.
+1. Aggiornare gli intervalli non ricercabili se l&#39;intervallo di blackout è in DVR sul flusso di riproduzione.
 
    ```java
    // prepare and update blackout nonSeekable ranges 
@@ -186,7 +183,7 @@ Per implementare la gestione della blackout, compresa l&#39;indicazione di conte
 
    >[!NOTE]
    >
-   >Attualmente, per flussi live con bitrate multiplo, i profili ABR (bit rate regolabile) possono non essere sincronizzati. Questo causa la duplicazione di oggetti `timedMetadata` per lo stesso tag con sottoscrizione. Per evitare calcoli non corretti, si consiglia vivamente di verificare la sovrapposizione di intervalli non ricercabili dopo i calcoli, ad esempio nell&#39;esempio seguente:
+   >Attualmente, per flussi live a bit rate multiplo, occasionalmente i profili a bit rate regolabile (ABR) possono non essere sincronizzati. Questo causa la duplicazione di oggetti `timedMetadata` per lo stesso tag sottoscritto. Per evitare calcoli non corretti e non ricercabili, si consiglia vivamente di verificare la sovrapposizione di intervalli non ricercabili dopo i calcoli, come nell&#39;esempio seguente:
 
    ```java
    List<TimeRange> rangesToRemove = new ArrayList<TimeRange>(); 
