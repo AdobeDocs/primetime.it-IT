@@ -1,34 +1,31 @@
 ---
-description: Quando create un pacchetto di contenuto, dovete specificare l'URL del server delle licenze.
-seo-description: Quando create un pacchetto di contenuto, dovete specificare l'URL del server delle licenze.
-seo-title: Creazione di pacchetti di contenuto
-title: Creazione di pacchetti di contenuto
-uuid: 2e47a9a2-bbc6-4995-8ce5-6ca6b116349b
+description: Quando si crea un pacchetto di contenuto, è necessario specificare l’URL del server licenze.
+title: Contenuto del pacchetto
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '128'
 ht-degree: 0%
 
 ---
 
 
-# Creazione di pacchetti di contenuto{#packaging-content}
+# Contenuto del pacchetto{#packaging-content}
 
-Quando create un pacchetto di contenuto, dovete specificare l&#39;URL del server delle licenze.
+Quando si crea un pacchetto di contenuto, è necessario specificare l’URL del server licenze.
 
-L&#39;URL del server Adobe Primetime DRM  utilizza il formato seguente:
+L&#39;URL del server DRM di Adobe Primetime utilizza il formato seguente:
 
 ```
 http(s)://<license-server-host:port>/flashaccessserver/<tenant-name>
 ```
 
-Ad esempio, per il nome host del server di licenze `mylicenseserver.com` che viene visualizzato sulla porta 8080 e un tenant denominato *`tenant1`*, per l&#39;URL del server di licenze si utilizza la sintassi seguente che è stata specificata al momento del pacchetto del contenuto:
+Ad esempio, per il nome host del server di licenza `mylicenseserver.com` che ascolta la porta 8080 e un tenant denominato *`tenant1`*, è necessario utilizzare la sintassi seguente per l&#39;URL del server di licenze specificato al momento del package del contenuto:
 
 ```
 https://mylicenseserver.com:8080/flashaccessserver/tenant1
 ```
 
-Se ogni tenant utilizza un server licenze e credenziali di trasporto diverse, accertatevi di specificare il certificato corretto del tenant nel packager.
+Se ogni tenant utilizza un server licenze e credenziali di trasporto diverse, assicurati di specificare il certificato corretto del tenant nel packager.
 
-Per essere certi che il server rilasci licenze solo per il contenuto dei packager noti, è necessario includere il certificato del packager nel elenco consentiti  packager del file di configurazione tenant.
+Se si desidera assicurarsi che il server rilasci licenze solo per il contenuto dei pacchetti noti, è necessario includere il certificato del packager nell&#39;elenco consentiti del packager del file di configurazione del tenant.
