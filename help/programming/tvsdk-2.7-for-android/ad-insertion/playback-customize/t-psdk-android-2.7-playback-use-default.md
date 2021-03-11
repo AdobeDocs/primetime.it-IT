@@ -1,13 +1,10 @@
 ---
-description: Puoi scegliere di utilizzare i comportamenti annunci predefiniti.
-seo-description: Puoi scegliere di utilizzare i comportamenti annunci predefiniti.
-seo-title: Utilizzare il comportamento di riproduzione predefinito
+description: Puoi scegliere di utilizzare i comportamenti degli annunci predefiniti.
 title: Utilizzare il comportamento di riproduzione predefinito
-uuid: 20785251-eb2f-4cc0-b919-1a88c0b1c57c
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '214'
+source-wordcount: '201'
 ht-degree: 0%
 
 ---
@@ -15,36 +12,36 @@ ht-degree: 0%
 
 # Utilizzare il comportamento di riproduzione predefinito {#use-the-default-playback-behavior}
 
-Puoi scegliere di utilizzare i comportamenti annunci predefiniti.
+Puoi scegliere di utilizzare i comportamenti degli annunci predefiniti.
 
-1. Per utilizzare i comportamenti predefiniti, effettuare una delle seguenti operazioni:
+1. Per utilizzare i comportamenti predefiniti, effettua una delle operazioni seguenti:
 
-   * Se implementate la vostra classe `AdvertisingFactory`, restituite null per `createAdPolicySelector`.
+   * Se implementi la tua classe `AdvertisingFactory`, restituisce null per `createAdPolicySelector`.
 
-   * Se non disponete di un&#39;implementazione personalizzata per la classe `AdvertisingFactory`, TVSDK utilizza un selettore di criteri di annunci predefinito.
+   * Se non disponi di un’implementazione personalizzata per la classe `AdvertisingFactory` , TVSDK utilizza un selettore predefinito di criteri per gli annunci.
 
-## Configurare la riproduzione personalizzata {#set-up-customized-playback}
+## Imposta riproduzione personalizzata {#set-up-customized-playback}
 
-Potete personalizzare o ignorare i comportamenti degli annunci.
+Puoi personalizzare o ignorare i comportamenti degli annunci.
 
-Prima di personalizzare o ignorare i comportamenti degli annunci, registra l’istanza del criterio degli annunci con TVSDK.
+Prima di personalizzare o sostituire i comportamenti degli annunci, registra l’istanza di criteri degli annunci con TVSDK.
 
-* Implementare l&#39;interfaccia `AdPolicySelector` e tutti i relativi metodi.
+* Implementa l’interfaccia `AdPolicySelector` e tutti i relativi metodi.
 
-   Questa opzione è consigliata se dovete ignorare **all** i comportamenti annunci predefiniti.
+   Questa opzione è consigliata se devi sovrascrivere **all** i comportamenti di annunci predefiniti.
 
-* Estendete la classe `DefaultAdPolicySelector` e fornite implementazioni solo per quei comportamenti che richiedono la personalizzazione.
+* Estendi la classe `DefaultAdPolicySelector` e fornisci implementazioni solo per quei comportamenti che richiedono personalizzazione.
 
    Questa opzione è consigliata se è necessario ignorare solo **alcuni** dei comportamenti predefiniti.
 
 Per personalizzare i comportamenti degli annunci:
 
-1. Implementare l&#39;interfaccia `AdPolicySelector` e tutti i relativi metodi.
-1. Assegnate l&#39;istanza del criterio che deve essere utilizzata da TVSDK tramite il modulo pubblicitario.
+1. Implementa l&#39;interfaccia `AdPolicySelector` e tutti i relativi metodi.
+1. Assegna l’istanza dei criteri che deve essere utilizzata da TVSDK tramite advertising factory.
 
    >[!NOTE]
    >
-   >I criteri di annunci personalizzati registrati all&#39;inizio della riproduzione vengono cancellati quando l&#39;istanza `MediaPlayer` viene deallocata. L&#39;applicazione deve registrare un&#39;istanza del selettore criteri ogni volta che viene creata una nuova sessione di riproduzione.
+   >I criteri degli annunci personalizzati registrati all&#39;inizio della riproduzione vengono cancellati quando l&#39;istanza `MediaPlayer` viene deallocata. L&#39;applicazione deve registrare un&#39;istanza del selettore dei criteri ogni volta che viene creata una nuova sessione di riproduzione.
 
    Ad esempio:
 
@@ -66,4 +63,4 @@ Per personalizzare i comportamenti degli annunci:
    mediaPlayer.replaceCurrentResource(resource, config);
    ```
 
-1. Implementa le personalizzazioni.
+1. Implementa le tue personalizzazioni.
