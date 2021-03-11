@@ -1,35 +1,32 @@
 ---
-description: È possibile impostare i valori di controllo ABR solo con ABRControlParameters, ma è possibile crearne uno nuovo in qualsiasi momento.
-seo-description: È possibile impostare i valori di controllo ABR solo con ABRControlParameters, ma è possibile crearne uno nuovo in qualsiasi momento.
-seo-title: Configurare i bitrate adattivi mediante ABRControlParameters
-title: Configurare i bitrate adattivi mediante ABRControlParameters
-uuid: 99b7a463-327b-48bf-8244-e41467072b44
+description: È possibile impostare valori di controllo ABR solo con ABRControlParameters, ma è possibile crearne uno nuovo in qualsiasi momento.
+title: Configurare i bit rate adattivi utilizzando ABRControlParameters
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '132'
+source-wordcount: '107'
 ht-degree: 0%
 
 ---
 
 
-# Configurare i bitrate adattivi utilizzando ABRControlParameters{#configure-adaptive-bit-rates-using-abrcontrolparameters}
+# Configura i bit rate adattivi utilizzando ABRControlParameters{#configure-adaptive-bit-rates-using-abrcontrolparameters}
 
-È possibile impostare i valori di controllo ABR solo con ABRControlParameters, ma è possibile crearne uno nuovo in qualsiasi momento.
+È possibile impostare valori di controllo ABR solo con ABRControlParameters, ma è possibile crearne uno nuovo in qualsiasi momento.
 
 Le seguenti condizioni si applicano a `ABRControlParameters`:
 
-* È necessario specificare i valori per tutti i parametri al momento della costruzione.
+* È necessario fornire valori per tutti i parametri in fase di costruzione.
 * Non è possibile modificare singoli valori dopo il tempo di costruzione.
-* Se i parametri specificati non rientrano nell&#39;intervallo consentito, viene restituito un `ArgumentError`.
+* Se i parametri specificati sono al di fuori dell’intervallo consentito, viene lanciato un `ArgumentError`.
 
-1. Determinare il criterio ABR:
+1. Determina il criterio ABR:
 
    * `ABRControlParameters.CONSERVATIVE_POLICY`
    * `ABRControlParameters.MODERATE_POLICY`
    * `ABRControlParameters.AGGRESSIVE_POLICY`
 
-1. Impostate i valori dei parametri ABR nel costruttore `ABRControlParameters` e assegnateli a Media Player.
+1. Imposta i valori dei parametri ABR nel costruttore `ABRControlParameters` e assegnali a Media Player.
 
    ```js
    var abrParams = new AdobePSDK.ABRControlParameters(); 
