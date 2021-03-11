@@ -1,24 +1,21 @@
 ---
-description: Per ricevere notifiche sugli aggiornamenti della cronologia, registrate i listener di eventi appropriati.
-seo-description: Per ricevere notifiche sugli aggiornamenti della cronologia, registrate i listener di eventi appropriati.
-seo-title: Aggiunta di listener per TimelineUpdatedEvent
-title: Aggiunta di listener per TimelineUpdatedEvent
-uuid: 7d742e15-5a55-4155-93a7-7b79f21c1472
+description: Per ricevere notifiche sugli aggiornamenti della timeline, registra i listener di eventi appropriati.
+title: Aggiungi listener per TimelineUpdatedEvent
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '62'
+source-wordcount: '47'
 ht-degree: 0%
 
 ---
 
 
-# Aggiunta di listener per TimelineUpdatedEvent{#add-listeners-for-timelineupdatedevent}
+# Aggiungi i listener per TimelineUpdatedEvent{#add-listeners-for-timelineupdatedevent}
 
-Per ricevere notifiche sugli aggiornamenti della cronologia, registrate i listener di eventi appropriati.
+Per ricevere notifiche sugli aggiornamenti della timeline, registra i listener di eventi appropriati.
 
-Ogni volta che la timeline viene aggiornata, `MediaPlayer` invia `AdobePSDK.TimelineEvent` con il tipo `AdobePSDK.PSDKEventType.TIMELINE_UPDATED`.
-1. Implementa i listener appropriati.
+Ogni volta che la timeline viene aggiornata, il `MediaPlayer` invia `AdobePSDK.TimelineEvent` con il tipo `AdobePSDK.PSDKEventType.TIMELINE_UPDATED`.
+1. Implementa gli ascoltatori appropriati.
 
    ```js
    function onTimelineUpdatedEvent(event) { 
@@ -36,7 +33,7 @@ Ogni volta che la timeline viene aggiornata, `MediaPlayer` invia `AdobePSDK.Time
    }
    ```
 
-1. Registrate i listener di eventi.
+1. Registra i listener di eventi.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.TIMELINE_UPDATED,  
