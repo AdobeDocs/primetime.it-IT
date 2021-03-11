@@ -1,9 +1,9 @@
 ---
-seo-title: Creazione di un criterio DRM con l'API Java
-title: Creazione di un criterio DRM con l'API Java
-uuid: 1672a6d0-e38c-4330-97b0-02147f99db47
+title: Creazione di un criterio DRM con l’API Java
+description: Creazione di un criterio DRM con l’API Java
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
@@ -11,12 +11,12 @@ ht-degree: 0%
 ---
 
 
-# Creazione di un criterio DRM con l&#39;API Java {#creating-a-drm-policy-with-the-java-api}
+# Creazione di un criterio DRM con API Java {#creating-a-drm-policy-with-the-java-api}
 
-Per creare un criterio DRM con l&#39;API Java:
+Per creare un criterio DRM con l’API Java:
 
-1. Configurare l&#39;ambiente di sviluppo e includere nel progetto tutti i file JAR elencati in [Configurare l&#39;ambiente di sviluppo.](../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
-1. Create un oggetto `com.adobe.flashaccess.sdk.policy.Policy` e specificatene le proprietà, inclusi i diritti, la durata del caching delle licenze e la data di fine del criterio DRM.
+1. Configura l&#39;ambiente di sviluppo e includi nel progetto tutti i file JAR elencati in [Imposta l&#39;ambiente di sviluppo.](../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
+1. Crea un oggetto `com.adobe.flashaccess.sdk.policy.Policy` e specifica le relative proprietà, compresi i diritti, la durata del caching delle licenze e la data di fine del criterio DRM.
 
    ```java
    // Create a new DRM policy object.  
@@ -65,4 +65,4 @@ Per creare un criterio DRM con l&#39;API Java:
    out.close(); 
    ```
 
-Vedere [!DNL com.adobe.flashaccess.samples.policy.CreatePolicy] nella directory Strumenti della riga di comando di implementazione di riferimento [!DNL samples] per l&#39;origine completa di questo codice di esempio.
+Per l’origine completa di questo codice di esempio, vedi [!DNL com.adobe.flashaccess.samples.policy.CreatePolicy] nella directory Strumenti della riga di comando per l’implementazione di riferimento [!DNL samples] .
