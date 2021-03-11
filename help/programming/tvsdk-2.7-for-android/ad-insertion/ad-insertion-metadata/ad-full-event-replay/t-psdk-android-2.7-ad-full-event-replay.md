@@ -1,41 +1,38 @@
 ---
-description: La riproduzione a tutti gli eventi (FER) è una risorsa VOD che funge da risorsa live/DVR, pertanto l’applicazione deve adottare misure per garantire che gli annunci vengano inseriti correttamente.
-seo-description: La riproduzione a tutti gli eventi (FER) è una risorsa VOD che funge da risorsa live/DVR, pertanto l’applicazione deve adottare misure per garantire che gli annunci vengano inseriti correttamente.
-seo-title: Abilitare gli annunci nella riproduzione a tutti gli eventi
-title: Abilitare gli annunci nella riproduzione a tutti gli eventi
-uuid: 69244069-ef61-42e4-b2f5-62ae2561d9e1
+description: La riproduzione a eventi completi (FER) è una risorsa VOD che agisce come risorsa live/DVR, pertanto l’applicazione deve adottare misure per garantire che gli annunci siano posizionati correttamente.
+title: Abilitare gli annunci nella riproduzione completa degli eventi
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '319'
 ht-degree: 0%
 
 ---
 
 
-# Abilitare gli annunci nella riproduzione a tutti gli eventi {#enable-ads-in-full-event-replay-overview}
+# Abilitare gli annunci nella riproduzione completa degli eventi {#enable-ads-in-full-event-replay-overview}
 
-La riproduzione a tutti gli eventi (FER) è una risorsa VOD che funge da risorsa live/DVR, pertanto l’applicazione deve adottare misure per garantire che gli annunci vengano inseriti correttamente.
+La riproduzione a eventi completi (FER) è una risorsa VOD che agisce come risorsa live/DVR, pertanto l’applicazione deve adottare misure per garantire che gli annunci siano posizionati correttamente.
 
-Per i contenuti live, TVSDK utilizza i metadati/suggerimenti presenti nel manifesto per determinare dove inserire gli annunci. Tuttavia, a volte i contenuti live/lineari possono assomigliare ai contenuti VOD. Ad esempio, al termine del contenuto live, al manifesto live viene aggiunto un tag `EXT-X-ENDLIST`. Per HLS, il tag `EXT-X-ENDLIST` indica che il flusso è un flusso VOD. Per inserire correttamente gli annunci, TVSDK non è in grado di distinguere automaticamente questo flusso da un flusso VOD tipico.
+Per i contenuti live, TVSDK utilizza i metadati/suggerimenti nel manifesto per determinare dove collocare gli annunci. Tuttavia, a volte i contenuti live/lineari potrebbero assomigliare al contenuto VOD. Ad esempio, al completamento del contenuto live, al manifesto live viene aggiunto un tag `EXT-X-ENDLIST` . Per HLS, il tag `EXT-X-ENDLIST` indica che il flusso è un flusso VOD. Per inserire correttamente gli annunci, TVSDK non può distinguere automaticamente questo flusso da un flusso VOD tipico.
 
-L&#39;applicazione deve indicare a TVSDK se il contenuto è live o VOD specificando il `AdSignalingMode`.
+L’applicazione deve indicare a TVSDK se il contenuto è live o VOD specificando il `AdSignalingMode`.
 
-Per un flusso FER, il server di gestione annunci  Adobe Primetime non deve fornire l&#39;elenco delle interruzioni pubblicitarie che devono essere inserite nella timeline prima di avviare la riproduzione. Questo è il processo tipico per il contenuto VOD. Al contrario, specificando una diversa modalità di segnalazione, TVSDK legge tutti i cue point dal manifesto FER e va al server di annunci per ogni cue point per richiedere un&#39;interruzione annuncio. Questo processo è simile al contenuto live/DVR.
+Per un flusso FER, il server Adobe Primetime ad decisioning non deve fornire l&#39;elenco delle interruzioni pubblicitarie che devono essere inserite nella timeline prima di avviare la riproduzione. Questo è il processo tipico per il contenuto VOD. Invece, specificando una modalità di segnalazione diversa, TVSDK legge tutti i punti di cue dal manifesto FER e va al server di annunci per ogni punto di cue per richiedere un&#39;interruzione pubblicitaria. Questo processo è simile al contenuto live/DVR.
 
 >[!TIP]
 >
->Oltre a ogni richiesta associata a un cue point, TVSDK invia una richiesta aggiuntiva per annunci pre-roll.
+>Oltre a ogni richiesta associata a un punto di cue, TVSDK invia una richiesta aggiuntiva di annunci per annunci pre-roll.
 
-1. Da un&#39;origine esterna, come vCMS, ottenete la modalità di segnalazione da utilizzare.
-1. Create i metadati relativi alla pubblicità.
-1. Se il comportamento predefinito deve essere sovrascritto, specificare il `AdSignalingMode` utilizzando `AdvertisingMetadata.setSignalingMode`.
+1. Da un&#39;origine esterna, ad esempio vCMS, ottenere la modalità di segnalazione da utilizzare.
+1. Crea i metadati relativi alla pubblicità.
+1. Se il comportamento predefinito deve essere sovrascritto, specifica `AdSignalingMode` utilizzando `AdvertisingMetadata.setSignalingMode`.
 
    I valori validi sono `DEFAULT`, `SERVER_MAP` e `MANIFEST_CUES`.
 
    >[!IMPORTANT]
    >
-   >È necessario impostare la modalità di segnalazione degli annunci prima di chiamare `prepareToPlay`. Dopo che TVSDK ha iniziato a risolvere e inserire gli annunci sulla timeline, le modifiche alla modalità di segnalazione degli annunci vengono ignorate. Impostare la modalità quando si crea l&#39;oggetto `AuditudeSettings`.
+   >È necessario impostare la modalità di segnalazione degli annunci prima di chiamare `prepareToPlay`. Dopo che TVSDK inizia a risolvere e posizionare gli annunci sulla timeline, le modifiche alla modalità di segnalazione degli annunci vengono ignorate. Impostare la modalità quando si crea l&#39;oggetto `AuditudeSettings` .
 
 1. Continua a riprodurre.
 
