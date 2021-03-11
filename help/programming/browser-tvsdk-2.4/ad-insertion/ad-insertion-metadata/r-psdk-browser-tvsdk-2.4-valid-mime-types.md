@@ -1,25 +1,22 @@
 ---
-description: Un annuncio potrebbe avere più elementi creativi, di cui uno selezionato per la riproduzione.
-seo-description: Un annuncio potrebbe avere più elementi creativi, di cui uno selezionato per la riproduzione.
-seo-title: Tipi mime validi
+description: Un annuncio potrebbe avere più contenuti creativi, di cui uno selezionato per la riproduzione.
 title: Tipi mime validi
-uuid: ab2baac9-a9ef-44f1-83a1-2e6e471e3231
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '156'
+source-wordcount: '138'
 ht-degree: 0%
 
 ---
 
 
-# Tipi mime validi{#valid-mime-types}
+# Tipi di mime validi{#valid-mime-types}
 
-Un annuncio potrebbe avere più elementi creativi, di cui uno selezionato per la riproduzione.
+Un annuncio potrebbe avere più contenuti creativi, di cui uno selezionato per la riproduzione.
 
-Con i tipi mime, potete specificare quali tipi creativi gli utenti possono assegnare priorità. I tipi mime specificati dagli utenti e i tipi mime supportati da Browser TVSDK vengono utilizzati per determinare quali creativi verranno assegnati priorità.
+Con i tipi mime, puoi specificare quali tipi creativi gli utenti possono assegnare la priorità. I tipi mime specificati dagli utenti e i tipi mime supportati dall&#39;SDK del browser vengono utilizzati per determinare quale creativo avrà la priorità.
 
-Per impostare i tipi mime validi in Browser TVSDK:
+Per impostare i tipi di mime validi in Browser TVSDK:
 
 ```js
 var auditudeSettings = new AdobePSDK.AuditudeSettings(); 
@@ -27,6 +24,6 @@ var mimeTypes = [“video/mp4”, “application/x-mpegURL”];
 auditudeSettings.validMimeTypes = mimeTypes; 
 ```
 
-dove `mimeTypes` è un array di stringhe e ogni stringa rappresenta un tipo mime.
+dove `mimeTypes` è una matrice di stringhe e ogni stringa rappresenta un tipo mime.
 
-Se per un annuncio vengono restituiti più file multimediali, la selezione dipende dall&#39;ordine in cui i file multimediali vengono visualizzati nell&#39;array `validMimeTypes`. Ai tipi mime con indice inferiore viene assegnata una preferenza rispetto a quelli con indice più alto.
+Nel caso in cui vengano restituiti più file multimediali per un annuncio, la selezione dipende dall’ordine in cui i file multimediali vengono visualizzati nella matrice `validMimeTypes`. Ai tipi mime con indice inferiore viene data una preferenza rispetto a quelli con indice più alto.
