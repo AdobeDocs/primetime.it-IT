@@ -1,9 +1,9 @@
 ---
-seo-title: Sovrapposizione delle opzioni dei criteri
-title: Sovrapposizione delle opzioni dei criteri
-uuid: eeab6013-cd02-443a-9f26-bb3259b32c8a
+title: Opzioni dei criteri di sovrascrittura
+description: Opzioni dei criteri di sovrascrittura
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 0%
@@ -11,6 +11,6 @@ ht-degree: 0%
 ---
 
 
-# Sovrapposizione delle opzioni del criterio{#overriding-policy-options}
+# Opzioni dei criteri di sovrascrittura{#overriding-policy-options}
 
-Quando si rilascia una licenza, il server licenze può ignorare le regole di utilizzo specificate nel criterio. Se il criterio specifica una data di inizio, una licenza non viene generata prima di tale data. Tuttavia, è possibile impostare una data di inizio futura nella licenza dopo la generazione della licenza. Questa opzione deve essere utilizzata con cautela, in quanto il client non impedirà all&#39;utente di spostare l&#39;ora del sistema in avanti per eludere la data di inizio.
+Quando si rilascia una licenza, il server licenze può ignorare le regole di utilizzo specificate nel criterio. Se il criterio specifica una data di inizio, una licenza non viene generata prima di tale data di inizio. Tuttavia, è possibile impostare una data di inizio futura nella licenza dopo la generazione della licenza. Questa opzione deve essere utilizzata con cautela, in quanto il client non impedirà all&#39;utente di spostare l&#39;ora del sistema in avanti per aggirare la data di inizio.
