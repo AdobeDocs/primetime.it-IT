@@ -1,9 +1,9 @@
 ---
-seo-title: Memorizzazione delle credenziali
 title: Memorizzazione delle credenziali
-uuid: a9e9db72-c921-4c28-ad1d-3fd3c2283f14
+description: Memorizzazione delle credenziali
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '396'
 ht-degree: 0%
@@ -13,24 +13,24 @@ ht-degree: 0%
 
 # Memorizzazione delle credenziali{#storing-credentials}
 
-L&#39;SDK DRM di Primetime supporta diversi modi per memorizzare le credenziali, ad esempio utilizzando un modulo di sicurezza hardware (HSM) o come file PKCS12. L’SDK utilizza una credenziale (certificato di chiave pubblica e chiave privata associata) quando è richiesta la chiave privata. Ad esempio, il packager utilizza una credenziale per firmare i metadati; il server licenze utilizza una credenziale per decrittografare i dati crittografati con il server licenze o con la chiave pubblica Trasporto.
+L&#39;SDK DRM di Primetime supporta diversi modi per memorizzare le credenziali, tra cui l&#39;utilizzo di un modulo di sicurezza hardware (HSM) o come file PKCS12. L’SDK utilizza una credenziale (certificato a chiave pubblica e chiave privata associata) quando è richiesta la chiave privata. Ad esempio, il packager utilizza una credenziale per firmare i metadati; il server licenze utilizza una credenziale per decrittografare i dati crittografati con il server licenze o la chiave pubblica di trasporto.
 
-Per garantire la sicurezza del contenuto e del server licenze, dovete proteggere attentamente le chiavi private. PKCS12 è un formato di file di archivio standard per la memorizzazione delle credenziali crittografate con una password. Potete inoltre cifrare e firmare il file PKCS12 stesso. L&#39;estensione del file [!DNL .pfx] è comunemente utilizzata per i file che supportano questo formato.
-
->[!NOTE]
->
-> Adobe consiglia di utilizzare un HSM per la massima sicurezza.
->
->Vedere la guida *alle linee guida per la distribuzione protetta di Adobe Primetime DRM*.
+Per garantire la sicurezza del contenuto e del server licenze, è necessario proteggere strettamente le chiavi private. PKCS12 è un formato di file di archivio standard per l&#39;archiviazione delle credenziali crittografate con una password. (È inoltre possibile crittografare e firmare il file PKCS12 stesso.) L’estensione del file [!DNL .pfx] viene comunemente utilizzata per i file che supportano questo formato.
 
 >[!NOTE]
 >
->A partire da Java 1.7, Sun Java a 64 bit per Windows non supporta più le interfacce PKCS11 richieste da Primetime DRM per la comunicazione con i dispositivi HSM. Se si intende utilizzare un HSM, è necessario utilizzare una versione a 32 bit di Java, oppure un JDK che supporti le interfacce PKCS11 complete.
+>Adobe consiglia di utilizzare un HSM per la massima sicurezza.
+>
+>Consulta la guida *Adobe Primetime DRM Secure Deployment Guidelines* .
 
-È possibile mantenere una chiave privata su un HSM e utilizzare Primetime DRM SDK per trasmettere la credenziale ottenuta dall’HSM. Se si desidera utilizzare una credenziale memorizzata in un HSM, è necessario utilizzare un provider JCE in grado di comunicare con un HSM per ottenere una maniglia per la chiave privata. Quindi, è necessario passare l&#39;handle di chiave privata, il nome del provider e il certificato che include la chiave pubblica a `ServerCredentialFactory.getServerCredential()`.
+>[!NOTE]
+>
+>A partire da Java 1.7, Sun Java per Windows a 64 bit non supporta più le interfacce PKCS11 richieste da Primetime DRM per la comunicazione con i dispositivi HSM. Se si intende utilizzare un HSM, è necessario utilizzare una versione a 32 bit di Java o un JDK che supporti l&#39;interfaccia PKCS11 completa.
 
-Il provider SunPKCS11 rappresenta un esempio di provider JCE che potete utilizzare per accedere a una chiave privata su un HSM. Alcuni HSM sono inclusi anche con un SDK Java fornito con un provider JCE.
+Puoi mantenere una chiave privata in un HSM e utilizzare l’SDK DRM di Primetime per passare la credenziale ottenuta dall’HSM. Se desideri utilizzare una credenziale memorizzata in un HSM, devi utilizzare un provider JCE in grado di comunicare con un HSM per ottenere un handle per la chiave privata. Quindi devi passare l’handle di chiave privata, il nome del provider e il certificato che include la chiave pubblica a `ServerCredentialFactory.getServerCredential()`.
 
-Per istruzioni sull&#39;utilizzo di questo provider, consultate la documentazione di Sun Java.
+Il provider SunPKCS11 rappresenta un esempio di provider JCE che è possibile utilizzare per accedere a una chiave privata in un HSM. Alcuni HSM sono anche inclusi con un SDK Java fornito con un provider JCE.
 
-PEM e DER sono metodi per codificare un certificato di chiave pubblica. PEM è una codifica base-64 e DER è una codifica binaria. I file di certificato in genere utilizzano l&#39;estensione [!DNL .cer], [!DNL .pem] o [!DNL .der]. I certificati vengono utilizzati quando è richiesta solo una chiave pubblica. Se un componente richiede solo la chiave pubblica per funzionare, si consiglia di fornire al componente il certificato invece di un file di credenziali o PKCS12.
+Per istruzioni su come utilizzare questo provider, consulta la documentazione di Sun Java .
+
+PEM e DER sono modi per codificare un certificato a chiave pubblica. PEM è una codifica base-64 e DER è una codifica binaria. I file di certificato in genere utilizzano l’estensione [!DNL .cer], [!DNL .pem] o [!DNL .der]. I certificati vengono utilizzati quando è richiesta solo una chiave pubblica. Se un componente richiede solo la chiave pubblica per funzionare, è consigliabile fornire al componente il certificato invece di un file di credenziali o PKCS12.
