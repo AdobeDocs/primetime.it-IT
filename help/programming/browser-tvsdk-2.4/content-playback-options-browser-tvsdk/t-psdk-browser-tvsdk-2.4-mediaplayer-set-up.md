@@ -1,13 +1,10 @@
 ---
-description: Un oggetto MediaPlayer racchiude il comportamento e le funzionalità di un lettore multimediale.
-seo-description: Un oggetto MediaPlayer racchiude il comportamento e le funzionalità di un lettore multimediale.
-seo-title: Configurare MediaPlayer
+description: Un oggetto MediaPlayer incapsula il comportamento e le funzionalità di un lettore multimediale.
 title: Configurare MediaPlayer
-uuid: 2279e388-6fbc-49a2-8560-218d3d31e1d6
 translation-type: tm+mt
-source-git-commit: af9b865bc1627a97bf8957b5460ff9b46052a7dc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '107'
+source-wordcount: '91'
 ht-degree: 0%
 
 ---
@@ -15,21 +12,21 @@ ht-degree: 0%
 
 # Configurare MediaPlayer{#set-up-the-mediaplayer}
 
-Un oggetto MediaPlayer racchiude il comportamento e le funzionalità di un lettore multimediale.
+Un oggetto MediaPlayer incapsula il comportamento e le funzionalità di un lettore multimediale.
 
-1. Create un&#39;istanza di `MediaPlayer` utilizzando quanto segue:
+1. Crea un&#39;istanza di `MediaPlayer` utilizzando quanto segue:
 
    ```js
    var player = new AdobePSDK.MediaPlayer();
    ```
 
-1. Create un&#39;istanza `MediaPlayerView`:
+1. Crea un&#39;istanza `MediaPlayerView`:
 
    ```js
    var view = new AdobePSDK.MediaPlayerView(container);
    ```
 
-   dove `container` è l&#39;elemento `div` di destinazione che contiene l&#39;elemento `HTMLMediaElement`.
+   dove `container` è l&#39;elemento target `div` che contiene il `HTMLMediaElement`.
 
    Ad esempio, in una pagina HTML:
 
@@ -53,13 +50,13 @@ Un oggetto MediaPlayer racchiude il comportamento e le funzionalità di un letto
          document.getElementById("videoDiv"));  
    ```
 
-1. Collegare l&#39;istanza `MediaPlayerView` all&#39;istanza `MediaPlayer`:
+1. Allega l&#39;istanza `MediaPlayerView` all&#39;istanza `MediaPlayer`:
 
    ```js
    player.view = view;
    ```
 
-1. Collegare l&#39;elemento `div` dei controlli personalizzati all&#39;istanza MediaPlayer.
+1. Allega l&#39;elemento controlli personalizzati `div` all&#39;istanza MediaPlayer.
 
    Ad esempio, in HTML:
 
@@ -80,4 +77,4 @@ Un oggetto MediaPlayer racchiude il comportamento e le funzionalità di un letto
    }
    ```
 
-L&#39;istanza `MediaPlayer` è ora disponibile e configurata correttamente per visualizzare il contenuto video sullo schermo del dispositivo.
+L’istanza `MediaPlayer` è ora disponibile e configurata correttamente per visualizzare il contenuto video sullo schermo del dispositivo.
