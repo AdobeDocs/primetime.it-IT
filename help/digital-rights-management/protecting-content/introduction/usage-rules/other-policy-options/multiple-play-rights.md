@@ -1,9 +1,9 @@
 ---
-seo-title: Più diritti di riproduzione
-title: Più diritti di riproduzione
-uuid: 90f898bf-ffa2-44f0-a01a-0af8868500ee
+title: Diritti di riproduzione multipli
+description: Diritti di riproduzione multipli
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 53654b740b03c6a79394d30704a41186d4655237
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '66'
 ht-degree: 0%
@@ -11,8 +11,8 @@ ht-degree: 0%
 ---
 
 
-# Più diritti di riproduzione {#multiple-play-rights}
+# Diritti di riproduzione multipli {#multiple-play-rights}
 
-Potete specificare il parametro dei diritti di riproduzione multipli per le diverse regole di utilizzo applicate a piattaforme o applicazioni diverse.
+È possibile specificare il parametro dei diritti di riproduzione multipli per le diverse regole di utilizzo applicate a piattaforme o applicazioni diverse.
 
-Esempio di utilizzo: Utilizzando più diritti di riproduzione, potete creare un criterio DRM di Primetime per specificare che Protezione output è necessaria sulla piattaforma Microsoft® Windows®. Tuttavia, è facoltativo sulle piattaforme Apple® Macintosh® e Linux®.
+Esempio di utilizzo: Utilizzando più diritti di riproduzione, è possibile creare un criterio DRM di Primetime per specificare che la protezione dell&#39;output è necessaria sulla piattaforma Microsoft® Windows®. Tuttavia, è facoltativo sulle piattaforme Apple® Macintosh® e Linux®.
