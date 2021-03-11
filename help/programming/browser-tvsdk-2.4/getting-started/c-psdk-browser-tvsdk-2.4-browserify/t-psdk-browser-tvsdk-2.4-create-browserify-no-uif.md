@@ -1,32 +1,29 @@
 ---
-description: Utilizzate il file di libreria Browserify fornito da Browser TVSDK nella vostra app per creare un lettore compatibile con Browserify.
-seo-description: Utilizzate il file di libreria Browserify fornito da Browser TVSDK nella vostra app per creare un lettore compatibile con Browserify.
-seo-title: Creare un lettore compatibile con browserify senza utilizzare l'interfaccia utente Framework
-title: Creare un lettore compatibile con browserify senza utilizzare l'interfaccia utente Framework
-uuid: c4315bc8-c75d-4dd9-8680-946c1197be1e
+description: Utilizza il file della libreria Browserify fornito dal browser TVSDK nella tua app per creare un lettore compatibile con Browserify.
+title: Creare un lettore compatibile con browser senza l'interfaccia utente Framework
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '229'
 ht-degree: 0%
 
 ---
 
 
-# Creare un lettore compatibile con browserify senza UI-Framework{#create-a-browserify-compatible-player-without-the-ui-framework}
+# Crea un lettore compatibile con browser senza UI-Framework{#create-a-browserify-compatible-player-without-the-ui-framework}
 
-Utilizzate il file di libreria Browserify fornito da Browser TVSDK nella vostra app per creare un lettore compatibile con Browserify.
+Utilizza il file della libreria Browserify fornito dal browser TVSDK nella tua app per creare un lettore compatibile con Browserify.
 
-L&#39;argomento [](../../../browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/t-psdk-browser-tvsdk-2.4-create-basic-player-tvsdk.md) elenca il set di librerie TVSDK del browser che normalmente includete quando create un lettore video di base. A questo scopo, è sufficiente aggiungere tag `script` con gli attributi `src` che puntano alle librerie.
+L’argomento [](../../../browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/t-psdk-browser-tvsdk-2.4-create-basic-player-tvsdk.md) elenca il set di librerie TVSDK per browser che normalmente vengono incluse quando si crea un lettore video di base. A questo scopo è sufficiente aggiungere tag `script` con attributi `src` che puntano alle librerie.
 
-Il processo è leggermente diverso per la creazione di un lettore compatibile con Browserify. A questo scopo, utilizzate il comando `require` per includere il file [!DNL AdobePSDK.module.js] (fornito dal TVSDK del browser) nell&#39;app. Questo file crea il bundle dei file libreria del lettore di base nell&#39;ordine di dipendenza corretto e restituisce lo spazio dei nomi `AdobePSDK` utilizzato per implementare le funzionalità del lettore.
+Il processo è leggermente diverso per la creazione di un lettore compatibile con browserify. A questo scopo, utilizza il comando `require` per includere il file [!DNL AdobePSDK.module.js] (fornito dal TVSDK del browser) nell’app. Questo file raggruppa i file della libreria del lettore di base nell’ordine di dipendenza corretto e restituisce lo spazio dei nomi `AdobePSDK` utilizzato per implementare le funzionalità del lettore.
 
-Il browser TVSDK fornisce l&#39;esempio seguente Browserify application and build files in the release package:
+Il browser TVSDK fornisce il seguente esempio Browserify application and build files in the release package:
 
-* [!DNL [...]/samples/browserify/reference/build/Gruntfile.js]
-* [!DNL [...]/samples/browserify/reference/build/package.json]
-* [!DNL [...]/samples/browserify/reference/examples/sample.html]
-* [!DNL [...]/samples/browserify/reference/examples/sample.js]
+* [!DNL [..]/samples/browserify/reference/build/Gruntfile.js]
+* [!DNL [..]/samples/browserify/reference/build/package.json]
+* [!DNL [..]/samples/browserify/reference/examples/sample.html]
+* [!DNL [..]/samples/browserify/reference/examples/sample.js]
 
 Per creare un lettore video compatibile con browser:
 
@@ -40,7 +37,7 @@ Per creare un lettore video compatibile con browser:
    […]
    ```
 
-1. Creare il lettore come descritto in [](../../../browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/t-psdk-browser-tvsdk-2.4-create-basic-player-tvsdk.md).
+1. Crea il lettore come descritto in [](../../../browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/t-psdk-browser-tvsdk-2.4-create-basic-player-tvsdk.md).
 
-   Il passaggio 1 di questa attività sostituisce il passaggio delle istruzioni di base del lettore in cui vengono sorgente le singole librerie di base del lettore nel file dell&#39;app.
-Ora puoi creare pacchetti di file dell&#39;app utilizzando la funzione di ricerca.
+   Il passaggio 1 in questa attività sostituisce il passaggio nelle istruzioni di base del lettore in cui si sorgente le librerie di base del lettore nel file dell’app.
+Ora puoi raggruppare i file dell’app utilizzando la funzione Sfoglia.
