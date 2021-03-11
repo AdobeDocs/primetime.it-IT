@@ -1,13 +1,10 @@
 ---
 description: Questo flusso di lavoro Multi-DRM consente di configurare, creare pacchetti, concedere licenze e riprodurre contenuti DASH crittografati con Widevine e PlayReady.
-seo-description: Questo flusso di lavoro Multi-DRM consente di configurare, creare pacchetti, concedere licenze e riprodurre contenuti DASH crittografati con Widevine e PlayReady.
-seo-title: Flusso di lavoro Multi-DRM per Widevine e PlayReady
 title: Flusso di lavoro Multi-DRM per Widevine e PlayReady
-uuid: 295a7024-353c-4ff5-a46a-927020834322
 translation-type: tm+mt
-source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '354'
 ht-degree: 0%
 
 ---
@@ -17,15 +14,15 @@ ht-degree: 0%
 
 Questo flusso di lavoro Multi-DRM consente di configurare, creare pacchetti, concedere licenze e riprodurre contenuti DASH crittografati con Widevine e PlayReady.
 
-Primetime TVSDK supporta la riproduzione di contenuto DASH crittografato con Widevine o con codifica PlayReady su HTML5 e Android solo nella versione TVSDK 2.X. La cifratura del contenuto DASH è definita dalla specifica di cifratura comune, i cui dettagli non rientrano nell&#39;ambito di questo documento. Questa sezione fornisce informazioni pertinenti sul formato DASH, sulle specifiche di cifratura e su alcuni degli strumenti che è possibile utilizzare per generare il contenuto supportato.
+Primetime TVSDK supporta la riproduzione di contenuti DASH crittografati con widevine o PlayReady su HTML5 e Android solo nella versione TVSDK 2.X. La crittografia dei contenuti DASH è definita dalle specifiche di Crittografia comune, i cui dettagli completi non rientrano nell’ambito di questo documento. Questa sezione fornisce dettagli pertinenti sul formato DASH e sulle specifiche di crittografia e informazioni su alcuni degli strumenti che puoi utilizzare per generare il contenuto supportato.
 
 >[!NOTE]
 >
->Non è stato pianificato il backup su Android TVSDK 1.X per la riproduzione di contenuti DASH codificati con Widevine.
+>Non è stato pianificato il backup su Android TVSDK 1.X della riproduzione di contenuti DASH crittografati con Widevine.
 
-## DASH Content and Common Encryption (Contenuto DASH e Cifratura comune){#section_33A881158F724835B4B89AAE97302B17}
+## DASH Content e crittografia comune a colpo d&#39;occhio {#section_33A881158F724835B4B89AAE97302B17}
 
-Il contenuto del trattino è costituito da un manifesto principale, scritto in xml, che punta a file video e audio per la riproduzione. Nell&#39;esempio sotto il manifesto DASH puntano a un URL per video, video/1080_30.mp4, e a un URL audio, audio/1080_30.mp4, relativo all&#39;URL del manifesto.
+Il contenuto del trattino è costituito da un manifesto principale, scritto in xml, che punta a file video e audio da riprodurre. Nell&#39;esempio sotto il manifesto DASH punta a un url video, video/1080_30.mp4, e un URL audio, audio/1080_30.mp4, relativo all&#39;URL del manifesto.
 
 ```
 <MPD xmlns="urn:mpeg:DASH:schema:MPD:2011" xmlns:cenc="urn:mpeg:cenc:2013" xmlns:scte35="urn:scte:scte35:2013" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"mediaPresentationDuration="PT30S" minBufferTime="PT8S" profiles="urn:mpeg:dash:profile:isoff-on-demand:2011" type="static" xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011 DASH-MPD.xsd">
@@ -47,7 +44,7 @@ Il contenuto del trattino è costituito da un manifesto principale, scritto in x
 </MPD>
 ```
 
-Di seguito è riportato un manifesto di esempio a cui è stata applicata la crittografia comune. Gli elementi XML di protezione del contenuto Widevine (i blocchi `<ContentProtection>`) nel manifesto contengono una casella pssh (Protection System Specific Header) con codifica base64. La casella pssh contiene i dati necessari per l&#39;inizializzazione della decrittazione del contenuto. Questi dati vengono incorporati anche nel contenuto video/audio a cui fa riferimento il manifesto. I contenuti DASH possono presentare più elementi di protezione dei contenuti, ad esempio 1 per PlayReady e 1 per Widevine.
+Di seguito è riportato un manifesto di esempio a cui è stata applicata la crittografia comune. Gli elementi XML di protezione del contenuto Widevine (i `<ContentProtection>` blocchi) nel manifesto contengono una casella pssh (Protection System Specific Header) codificata base64. La casella pssh contiene i dati necessari per l’inizializzazione della decrittografia del contenuto. Questi dati sono anche incorporati nel contenuto video/audio a cui fa riferimento il manifesto. I contenuti DASH possono presentare più elementi di protezione dei contenuti, ad esempio 1 per PlayReady e 1 per Widevine.
 
 ```
 <?xml version="1.0" ?>
@@ -124,7 +121,7 @@ Di seguito è riportato un manifesto di esempio a cui è stata applicata la crit
 </MPD>
 ```
 
-Il primo esempio fa riferimento a un solo file per ciascun flusso, mentre il secondo fa riferimento a una serie di frammenti di contenuto di dimensioni ridotte. Anziché fare riferimento in modo esplicito ai frammenti, è anche possibile definire un modello di frammento, ad esempio:
+Osserva che il primo esempio sopra fa riferimento a un solo file per ogni flusso, mentre il secondo fa riferimento a una serie di piccoli frammenti di contenuto. Invece di fare riferimento esplicito ai frammenti, puoi anche definire un modello di frammento, ad esempio:
 
 ```
 <Representation bandwidth="348000" codecs="avc1.42c01e" height="360" id="1" width="640">
@@ -140,4 +137,4 @@ Il primo esempio fa riferimento a un solo file per ciascun flusso, mentre il sec
 </Representation>
 ```
 
-In questo caso, il parser di contenuti (TVSDK) prevede di trovare contenuti video in Jaigo0.m4s, Jaigo1.m4s, Jaigo2.m4s e così via. Questo viene utilizzato principalmente per lo streaming live e ha il vantaggio di non richiedere al client di scaricare nuovamente il manifesto di volta in volta.
+In questo caso, il parser di contenuti (TVSDK) prevede di trovare contenuti video in Jaigo0.m4s, Jaigo1.m4s, Jaigo2.m4s e così via. Questo viene utilizzato principalmente per lo streaming live e ha il vantaggio di non richiedere al client di scaricare il manifesto tutto di nuovo di tanto in tanto.
