@@ -1,13 +1,10 @@
 ---
-description: Se il client richiede informazioni di tracciamento, il server manifesto invia di nuovo un file formattato. Il suo formato e il suo contenuto dipendono dal valore del parametro query pttrackingversion
-seo-description: Se il client richiede informazioni di tracciamento, il server manifesto invia di nuovo un file formattato. Il suo formato e il suo contenuto dipendono dal valore del parametro query pttrackingversion
-seo-title: Formato VMAP per il tracciamento degli URL
+description: Se il client richiede informazioni di tracciamento, il server manifesto invia un file formattato. Il formato e il contenuto dipendono dal valore del parametro query pttrackingversion
 title: Formato VMAP per il tracciamento degli URL
-uuid: e3173fad-caa2-49cb-9a65-631573812e52
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '170'
+source-wordcount: '138'
 ht-degree: 0%
 
 ---
@@ -15,11 +12,11 @@ ht-degree: 0%
 
 # Formato VMAP per il tracciamento degli URL {#vmap-format-for-tracking-urls}
 
-Se il client richiede informazioni di tracciamento, il server manifesto invia di nuovo un file formattato. Il formato e il contenuto dipendono dal valore del parametro di query `pttrackingversion`
+Se il client richiede informazioni di tracciamento, il server manifesto invia un file formattato. Il formato e il contenuto dipendono dal valore del parametro di query `pttrackingversion`
 
 ## Formato VMAP singolo {#vmap}
 
-Il file VMAP inviato dal server manifesto se `pttrackingversion=vmap` ha il formato del seguente esempio, che proviene da un tipico blocco VMAP. È stato ridotto per evitare inutili ripetizioni, in modo che la struttura sia più chiara. Un puntino di sospensione (tre punti separati da spazi) indica informazioni omesse all’interno di alcuni URL e tra alcuni blocchi di codice. Gli URL non abbreviati vengono visualizzati su più righe, anche se appaiono su una sola riga nel file VMAP.
+Il file VMAP inviato dal server manifest se `pttrackingversion=vmap` ha il formato del seguente esempio, che proviene da un tipico blocco VMAP. È stato accorciato per evitare inutili ripetizioni, in modo che la struttura sia più chiara. Un&#39;ellissi (tre punti, separati da spazi) indica le informazioni omesse all&#39;interno di alcuni URL e tra alcuni blocchi di codice. Gli URL non abbreviati vengono visualizzati su più righe, anche se compaiono su una singola riga nel file VMAP.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?> 
