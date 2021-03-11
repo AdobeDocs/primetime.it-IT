@@ -1,13 +1,10 @@
 ---
-description: Per visualizzare gli annunci per banner, dovete creare istanze di banner e consentire a TVSDK di ascoltare gli eventi relativi agli annunci.
-seo-description: Per visualizzare gli annunci per banner, dovete creare istanze di banner e consentire a TVSDK di ascoltare gli eventi relativi agli annunci.
-seo-title: Visualizza annunci banner
+description: Per visualizzare gli annunci banner, devi creare istanze banner e consentire a TVSDK di ascoltare gli eventi relativi agli annunci.
 title: Visualizza annunci banner
-uuid: 7246dfab-860f-4b55-9554-49738a483406
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '249'
 ht-degree: 0%
 
 ---
@@ -15,28 +12,28 @@ ht-degree: 0%
 
 # Visualizza annunci banner {#display-banner-ads}
 
-Per visualizzare gli annunci per banner, dovete creare istanze di banner e consentire a TVSDK di ascoltare gli eventi relativi agli annunci.
+Per visualizzare gli annunci banner, devi creare istanze banner e consentire a TVSDK di ascoltare gli eventi relativi agli annunci.
 
-TVSDK fornisce un elenco di banner pubblicitari associati a un annuncio lineare tramite l&#39;evento `AdPlaybackEventListener.onAdBreakStart`.
+TVSDK fornisce un elenco di banner pubblicitari associati a un annuncio lineare tramite l&#39;evento `AdPlaybackEventListener.onAdBreakStart` .
 
-I manifesti possono specificare annunci banner complementari per:
+I manifesti possono specificare annunci di banner complementari per:
 
-* Snippet HTML
+* Frammento HTML
 * URL di una pagina iFrame
-* URL di un’immagine statica o di un file SWF di Flash di Adobi 
+* URL di un’immagine statica o di un file SWF di Flash di Adobe
 
-Per ogni annuncio aggiuntivo complementare, TVSDK indica quali tipi sono disponibili per l’applicazione.
+Per ogni annuncio correlato, TVSDK indica quali tipi sono disponibili per l’applicazione.
 
-1. Aggiungete un listener per l&#39;evento `AdPlaybackEventListener.onAdBreakStart` che esegue le seguenti operazioni:
+1. Aggiungi un listener per l&#39;evento `AdPlaybackEventListener.onAdBreakStart` che esegue le seguenti operazioni:
 
    * Cancella gli annunci esistenti nell&#39;istanza del banner.
-   * Ottiene l&#39;elenco degli annunci complementari da `Ad.getCompanionAssets`.
-   * Se l&#39;elenco degli annunci complementari non è vuoto, ripetete l&#39;operazione sull&#39;elenco per le istanze del banner.
+   * Ottiene l&#39;elenco degli annunci companion da `Ad.getCompanionAssets`.
+   * Se l’elenco degli annunci associati non è vuoto, ripeti l’errore sopra l’elenco per le istanze del banner.
 
-      Ogni istanza del banner (un `AdAsset`) contiene informazioni quali larghezza, altezza, tipo di risorsa (html, iframe o statico) e dati necessari per visualizzare il banner ausiliario.
-   * Se un annuncio video non contiene annunci pubblicitari associati, l’elenco delle risorse ausiliarie non contiene dati per tale annuncio video.
-   * Per visualizzare un annuncio di visualizzazione indipendente, aggiungete la logica allo script per eseguire un tag di annuncio di visualizzazione normale DFP (DoubleClick for Publishers) nell&#39;istanza di banner appropriata.
-   * Invia le informazioni sul banner a una funzione sulla pagina che visualizza i banner in una posizione appropriata.
+      Ogni istanza del banner (un elemento `AdAsset`) contiene informazioni quali larghezza, altezza, tipo di risorsa (html, iframe o statico) e dati necessari per visualizzare il banner correlato.
+   * Se un annuncio video non ha annunci correlati prenotati con esso, l’elenco delle risorse correlate non contiene dati per quell’annuncio video.
+   * Per mostrare un annuncio di visualizzazione indipendente, aggiungi la logica al tuo script per eseguire un tag di annunci di visualizzazione normale DFP (DoubleClick for Publishers) nell’istanza di banner appropriata.
+   * Invia le informazioni sul banner a una funzione nella pagina in cui vengono visualizzati i banner in una posizione appropriata.
 
-      In genere si tratta di un `div` e la funzione utilizza il `div ID` per visualizzare il banner.
+      In genere si tratta di una `div` e la funzione utilizza `div ID` per visualizzare il banner.
 
