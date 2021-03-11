@@ -1,23 +1,20 @@
 ---
-description: Potete visualizzare il tempo corrente e rimanente del contenuto in corso di riproduzione.
-seo-description: Potete visualizzare il tempo corrente e rimanente del contenuto in corso di riproduzione.
-seo-title: Visualizzare una barra di scorrimento della ricerca con la posizione corrente del tempo di riproduzione
-title: Visualizzare una barra di scorrimento della ricerca con la posizione corrente del tempo di riproduzione
-uuid: db57eb6f-3c67-4a64-a0f4-7e39027eb3e0
+description: È possibile visualizzare il tempo corrente e rimanente del contenuto in fase di riproduzione.
+title: Visualizza una barra di scorrimento con la posizione corrente del tempo di riproduzione
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '88'
+source-wordcount: '62'
 ht-degree: 0%
 
 ---
 
 
-# Visualizzare una barra di scorrimento della ricerca con la posizione corrente del tempo di riproduzione {#display-a-seek-scrub-bar-with-the-current-playback-time-position}
+# Visualizzare una barra di scorrimento con la posizione corrente del tempo di riproduzione {#display-a-seek-scrub-bar-with-the-current-playback-time-position}
 
-Potete visualizzare il tempo corrente e rimanente del contenuto in corso di riproduzione.
+È possibile visualizzare il tempo corrente e rimanente del contenuto in fase di riproduzione.
 
-Per implementare una barra di scorrimento, usate il seguente codice di esempio:
+Per implementare una barra di scorrimento, utilizza il seguente codice di esempio:
 
 ```
 // 1. Register for the PTMediaPlayerTimeChangeNotification 
