@@ -1,13 +1,10 @@
 ---
-description: Per utilizzare elenchi di revoche di certificati (CRL, Certificate Revocation List) generati localmente ed elenchi di aggiornamenti di criteri, utilizzare  API DRM di Adobe Primetime per verificare la firma.
-seo-description: Per utilizzare elenchi di revoche di certificati (CRL, Certificate Revocation List) generati localmente ed elenchi di aggiornamenti di criteri, utilizzare  API DRM di Adobe Primetime per verificare la firma.
-seo-title: Utilizzo di CRL generati localmente
+description: Per utilizzare elenchi di revoche di certificati (CRL) generati localmente e elenchi di aggiornamenti dei criteri, utilizza le API DRM di Adobe Primetime per verificare la firma.
 title: Utilizzo di CRL generati localmente
-uuid: 2e20b8ca-8606-4c27-b585-2f020b93be32
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '190'
 ht-degree: 0%
 
 ---
@@ -15,15 +12,15 @@ ht-degree: 0%
 
 # Utilizzo di CRL generati localmente {#consuming-locally-generated-crls}
 
-Per utilizzare elenchi di revoche di certificati (CRL, Certificate Revocation List) generati localmente ed elenchi di aggiornamenti di criteri, utilizzare  API DRM di Adobe Primetime per verificare la firma.
+Per utilizzare elenchi di revoche di certificati (CRL) generati localmente e elenchi di aggiornamenti dei criteri, utilizza le API DRM di Adobe Primetime per verificare la firma.
 
-Le seguenti API verificano che gli elenchi non siano stati alterati e che gli elenchi siano stati firmati dal server licenze corretto:
+Le seguenti API verificano che gli elenchi non siano stati manomessi e che siano stati firmati dal server licenze corretto:
 
-* Chiamare [RevocationList.verifySignature](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/revocation/RevocationList.html#verifySignature(java.security.cert.X509Certificate)) per verificare la firma prima di fornire l&#39; [RevocationList](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/revocation/RevocationList.html) a qualsiasi API.
+* Chiama [RevocationList.verifySignature](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/revocation/RevocationList.html#verifySignature(java.security.cert.X509Certificate)) per controllare la firma prima di fornire il [RevocationList](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/revocation/RevocationList.html) a qualsiasi API.
 
    Per ulteriori informazioni, vedere [RevocationListFactory](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/revocation/RevocationListFactory.html).
 
-* Chiama [PolicyUpdateList.verifySignature](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/policyupdate/PolicyUpdateList.html#verifySignature(java.security.cert.X509Certificate)) per controllare la firma prima di fornire la `PolicyUpdateList` a qualsiasi API.
+* Chiama [PolicyUpdateList.verifySignature](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/policyupdate/PolicyUpdateList.html#verifySignature(java.security.cert.X509Certificate)) per controllare la firma prima di fornire `PolicyUpdateList` a qualsiasi API.
 
    Per ulteriori informazioni, vedere [PolicyUpdateList](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/policyupdate/PolicyUpdateList.html).
 
