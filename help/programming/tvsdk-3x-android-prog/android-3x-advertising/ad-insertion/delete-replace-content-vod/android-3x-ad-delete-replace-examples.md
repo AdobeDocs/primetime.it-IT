@@ -1,23 +1,20 @@
 ---
-description: Di seguito sono riportati alcuni esempi del processo di eliminazione e sostituzione degli annunci.
-seo-description: Di seguito sono riportati alcuni esempi del processo di eliminazione e sostituzione degli annunci.
-seo-title: Esempi per eliminare e sostituire gli annunci
+description: Di seguito sono riportati alcuni esempi del processo per eliminare e sostituire gli annunci.
 title: Esempi per eliminare e sostituire gli annunci
-uuid: 6bf9d71a-73fe-4033-b97a-6b0cff8687f2
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '68'
+source-wordcount: '50'
 ht-degree: 0%
 
 ---
 
 
-# Esempi per eliminare e sostituire annunci {#examples-to-delete-and-replace-ads}
+# Esempi per eliminare e sostituire gli annunci {#examples-to-delete-and-replace-ads}
 
-Di seguito sono riportati alcuni esempi del processo di eliminazione e sostituzione degli annunci.
+Di seguito sono riportati alcuni esempi del processo per eliminare e sostituire gli annunci.
 
-Di seguito è riportato un esempio di utilizzo di `DELETE_RANGE`:
+Ecco un esempio di utilizzo di `DELETE_RANGE`:
 
 ```java
 // Assume that the 3 timerange specs are obtained through external means,  
@@ -46,7 +43,7 @@ config.setCustomRangeMetadata(customRangeMetadata);
 mediaPlayer.replaceCurrentResource(mediaResource, config);
 ```
 
-Di seguito è riportato un esempio di utilizzo di `REPLACE_RANGE`:
+Ecco un esempio di utilizzo di `REPLACE_RANGE`:
 
 ```java
 // Assume that the 3 timerange specs are obtained through external means, like 
