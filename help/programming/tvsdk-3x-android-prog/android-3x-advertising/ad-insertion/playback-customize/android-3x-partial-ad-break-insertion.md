@@ -1,34 +1,32 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Inserimento interruzione annuncio parziale
-title: Inserimento interruzione annuncio parziale
-uuid: a81295b8-77fe-4475-a472-080ee7804d7a
+title: Inserimento di interruzioni pubblicitarie parziali
+description: Inserimento di interruzioni pubblicitarie parziali
+copied-description: true
 translation-type: tm+mt
-source-git-commit: fe9d7d1b2b23a70eb4e212de3d9bda47fc11d8f1
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '214'
 ht-degree: 0%
 
 ---
 
 
-# Inserimento ad-break parziale {#partial-ad-break-insertion}
+# Inserimento di interruzioni pubblicitarie parziali {#partial-ad-break-insertion}
 
-Potete abilitare un&#39;esperienza simile a quella televisiva per partecipare nel mezzo di un annuncio, in streaming live. La funzione di interruzione annuncio parziale consente di simulare un&#39;esperienza simile a quella di un televisore in cui, se il cliente avvia un flusso live all&#39;interno di un midroll, questo verrà avviato all&#39;interno di tale midrol. È simile al passaggio a un canale TV e la pubblicità funziona senza problemi.
+È possibile abilitare un&#39;esperienza simile a quella televisiva di essere in grado di partecipare nel mezzo di un annuncio, in flussi live. La funzione di interruzione dell’annuncio parziale consente di imitare un’esperienza simile a quella televisiva in cui, se il cliente avvia un flusso live all’interno di un proxy, questo verrà avviato all’interno di tale proxy. È simile al passaggio a un canale televisivo e gli spot vengono eseguiti senza problemi.
 
-Ad esempio, se un utente si unisce al centro di un annuncio pubblicitario di 90 secondi (tre annunci da 30 secondi), 10 secondi alla seconda pubblicità (ovvero, a 40 secondi dall&#39;interruzione dell&#39;annuncio), si verifica quanto segue:
+Ad esempio, se un utente si unisce nel mezzo di un’interruzione pubblicitaria di 90 secondi (tre annunci di 30 secondi), a 10 secondi dalla seconda inserzione (cioè a 40 secondi dall’interruzione pubblicitaria), si verifica quanto segue:
 
 * Il secondo annuncio viene riprodotto per la durata rimanente (20 sec) seguita dal terzo annuncio.
-* I tracciatori di annunci per l&#39;annuncio parzialmente riprodotto (il secondo annuncio) non vengono attivati. Viene attivato solo il tracciatore del terzo annuncio.
+* I tracciatori di annunci per l’annuncio parzialmente riprodotto (il secondo annuncio) non vengono attivati. Viene attivato solo il tracker per il terzo annuncio.
 
-Questo comportamento non è attivato per impostazione predefinita. Per abilitare questa funzione nell&#39;app, effettua le seguenti operazioni:
+Questo comportamento non è abilitato per impostazione predefinita. Per abilitare questa funzione nell’app, procedi come segue:
 
-Attivate la preferenza per l&#39;inserimento di interruzioni pubblicitarie parziali. Utilizzate il nuovo metodo `setPartialAdBreakPref` nell&#39;interfaccia di MediaPlayer per attivare questa funzione. Utilizzare il metodo `getPartialAdBreakPref` per trovare lo stato corrente di questa preferenza.
+Attiva la preferenza per l’inserimento di interruzioni pubblicitarie parziali. Utilizzare il nuovo metodo `setPartialAdBreakPref` nell&#39;interfaccia MediaPlayer per attivare questa funzione. Utilizzare il metodo `getPartialAdBreakPref` per trovare lo stato corrente di questa preferenza.
 
 ```
     MediaPlayer mediaPlayer = new MediaPlayer(getActivity(). getApplicationContext()); 
     mediaPlayer.setPartialAdBreakPref(true);
 ```
 
-L&#39;annuncio pre-roll, se disponibile, viene riprodotto, e poi il contenuto viene riprodotto dal punto in diretta emulando l&#39;esperienza della televisione in diretta.
+L&#39;annuncio pre-roll, se disponibile, viene riprodotto e il contenuto viene riprodotto dal punto live emulando l&#39;esperienza della televisione in diretta.
