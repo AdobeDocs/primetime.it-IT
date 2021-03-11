@@ -1,13 +1,10 @@
 ---
-description: Queste classi forniscono informazioni sulla cronologia dei supporti specifici, inclusa la posizione degli annunci.
-seo-description: Queste classi forniscono informazioni sulla cronologia dei supporti specifici, inclusa la posizione degli annunci.
-seo-title: Classi Timeline
+description: Queste classi forniscono informazioni sulla timeline di un particolare supporto, compreso il posizionamento degli annunci.
 title: Classi Timeline
-uuid: 9c06fec1-d725-4fe8-9cf5-1e3ade2b7d27
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '394'
+source-wordcount: '376'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Classi Timeline{#timeline-classes}
 
-Queste classi forniscono informazioni sulla cronologia dei supporti specifici, inclusa la posizione degli annunci.
+Queste classi forniscono informazioni sulla timeline di un particolare supporto, compreso il posizionamento degli annunci.
 
 Pacchetto: [com.adobe.mediacore.timeline](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/package-detail.html)
 
@@ -29,7 +26,7 @@ Pacchetto: [com.adobe.mediacore.timeline](https://help.adobe.com/en_US/primetime
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/ContentTracker.html" format="html" scope="external"> ContentTracker  </a> </span> </td> 
-   <td colname="2"> Interfaccia che definisce il protocollo da implementare se si desidera creare un modulo di tracciamento del contenuto progettato per l’integrazione con la libreria TVSDK. <p>Per questa interfaccia è necessario definire il modo in cui gli eventi di avanzamento vengono segnalati al sistema di tracciamento remoto. </p> </td> 
+   <td colname="2"> Interfaccia che definisce il protocollo da implementare se desideri creare un modulo di tracciamento dei contenuti progettato per l’integrazione con la libreria TVSDK. <p>Questa interfaccia richiede di definire il modo in cui gli eventi di avanzamento vengono segnalati al sistema di tracciamento remoto. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/Opportunity.html" format="html" scope="external"> Opportunità  </a> </span> </td> 
@@ -37,7 +34,7 @@ Pacchetto: [com.adobe.mediacore.timeline](https://help.adobe.com/en_US/primetime
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/Placement.html" format="html" scope="external"> Posizionamento  </a> </span> </td> 
-   <td colname="2"> Classe che racchiude informazioni relative alla posizione della timeline. </td> 
+   <td colname="2"> Classe che racchiude informazioni relative al posizionamento della timeline. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/PlacementMode.html" format="html" scope="external"> PlacementMode  </a> </span> </td> 
@@ -45,7 +42,7 @@ Pacchetto: [com.adobe.mediacore.timeline](https://help.adobe.com/en_US/primetime
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/PlacementType.html" format="html" scope="external"> PlacementType  </a> </span> </td> 
-   <td colname="2"> enumerazione di tipi di posizionamento che indicano la posizione nella timeline; ad esempio, PRE_ROLL. </td> 
+   <td colname="2"> enumerazione dei tipi di posizionamento che indicano la posizione nella timeline; ad esempio, PRE_ROLL. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/Reservation.html" format="html" scope="external"> Prenotazione  </a> </span> </td> 
@@ -53,15 +50,15 @@ Pacchetto: [com.adobe.mediacore.timeline](https://help.adobe.com/en_US/primetime
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/Timeline.html" format="html" scope="external"> Timeline  </a> </span> </td> 
-   <td colname="2"> Interfaccia che fornisce un iteratore per l’elaborazione dei marcatori timeline. Rappresenta la timeline del contenuto, comprese le interruzioni di annuncio. </td> 
+   <td colname="2"> Interfaccia che fornisce un iteratore per l’elaborazione dei marcatori timeline. Rappresenta la timeline del contenuto, incluse le interruzioni pubblicitarie. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/TimelineItem.html" format="html" scope="external"> TimelineItem  </a> </span> </td> 
-   <td colname="2"> Classe. Rappresentazione immutabile generica di un elemento della cronologia. </td> 
+   <td colname="1"> <span class="codeph"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/TimelineItem.html" format="html" scope="external"> ElementoTimeline  </a> </span> </td> 
+   <td colname="2"> Classe. Rappresentazione immutabile generica di un elemento della timeline. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/TimelineMarker.html" format="html" scope="external"> TimelineMarker  </a> </span> </td> 
-   <td colname="2"> Classe che rappresenta un marcatore sulla timeline. Indica un'area di interesse sulla timeline effettiva. Attualmente, le aree di interesse sono gli annunci, che potresti voler contrassegnare, ad esempio, con un colore diverso nell’interfaccia della barra di scorrimento. Ciascun indicatore è definito da una posizione e una durata (ciascuna espressa in millisecondi). </td> 
+   <td colname="2"> Classe che rappresenta un marcatore sulla timeline. Indica un'area di interesse sulla timeline effettiva. Attualmente, le aree di interesse sono gli annunci che potresti voler contrassegnare, ad esempio, con un colore diverso nell’interfaccia della barra di scorrimento. Ogni marcatore è definito da una posizione e una durata (ciascuna espressa in millisecondi). </td> 
   </tr> 
  </tbody> 
 </table>
