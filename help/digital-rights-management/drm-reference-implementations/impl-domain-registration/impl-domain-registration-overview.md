@@ -1,9 +1,9 @@
 ---
-seo-title: Panoramica
 title: Panoramica
-uuid: 578e749f-ee11-4682-9159-95a17982f3c4
+description: Panoramica
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Panoramica {#implement-domain-registration-overview}
 
-Il server licenze di implementazione di riferimento illustra due varianti della logica aziendale di registrazione del dominio:
+Il server licenze di implementazione di riferimento illustra due varianti della logica di business di registrazione del dominio:
 
-* **Base**  identità: ogni utente autenticato ha un dominio e un numero specifico di dispositivi che possono accedere al dominio.
-* **Anonimo** : un numero elevato di dispositivi appartiene a un dominio e l&#39;autenticazione potrebbe non essere necessaria.
+* **Basato su identità** : ogni utente autenticato dispone di un dominio e di un numero specifico di dispositivi che possono accedere al dominio.
+* **Anonymous**  - Un numero elevato di dispositivi appartiene a un dominio e l&#39;autenticazione potrebbe non essere necessaria.
