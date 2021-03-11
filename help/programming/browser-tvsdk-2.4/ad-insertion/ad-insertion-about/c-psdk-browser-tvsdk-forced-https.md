@@ -1,27 +1,25 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Proteggere il caricamento di annunci tramite HTTPS
-title: Proteggere il caricamento di annunci tramite HTTPS
-uuid: 10657f59-cfbf-4c75-9249-fc154952bc51
+title: Caricamento sicuro degli annunci tramite HTTPS
+description: Caricamento sicuro degli annunci tramite HTTPS
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '73'
+source-wordcount: '71'
 ht-degree: 0%
 
 ---
 
 
-# Caricamento annunci protetti tramite HTTPS{#secure-ad-loading-over-https}
+# Caricamento annunci sicuro su HTTPS{#secure-ad-loading-over-https}
 
- Adobe Primetime può richiedere server di annunci di terze parti tramite https anche se il lettore è ospitato su http. Solo le chiamate ad-server vengono aggiornate a https che il client cerca durante la fase del risolutore di Auditude Ad.
+Adobe Primetime può richiedere server di annunci di terze parti su https anche se il lettore è ospitato su http. Solo le chiamate ad-server vengono aggiornate a https che il client cerca durante la fase del risolutore di annunci Auditude.
 
 >[!NOTE]
 >
->Questa funzione non è supportata ad Flash.
+>Questa funzionalità non è supportata ad Flash.
 
-Utilizzate quanto segue per abilitare il caricamento sicuro degli annunci. Per impostazione predefinita non è attivato.
+Utilizza quanto segue per abilitare il caricamento sicuro degli annunci. Non è abilitata per impostazione predefinita.
 
 ```
 var auditudeSettings = new AdobePSDK.AuditudeSettings(); 
