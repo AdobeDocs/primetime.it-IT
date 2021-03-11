@@ -1,13 +1,10 @@
 ---
-description: Potete specificare o ignorare le timeline per le interruzioni di annunci nel contenuto VOD utilizzando un elenco formattato di segmenti di annunci e contenuti denominato contenitori.
-seo-description: Potete specificare o ignorare le timeline per le interruzioni di annunci nel contenuto VOD utilizzando un elenco formattato di segmenti di annunci e contenuti denominato contenitori.
-seo-title: Formato della timeline VOD
+description: È possibile specificare o ignorare le timeline per le interruzioni pubblicitarie nel contenuto VOD utilizzando un elenco formattato di segmenti di annunci e contenuti denominati pod.
 title: Formato della timeline VOD
-uuid: 6daaf605-e5ee-48dc-a222-a5973b3d915a
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '163'
 ht-degree: 0%
 
 ---
@@ -15,20 +12,20 @@ ht-degree: 0%
 
 # Formato della timeline VOD {#vod-timeline-format}
 
-Potete specificare o ignorare le timeline per le interruzioni di annunci nel contenuto VOD utilizzando un elenco formattato di segmenti di annunci e contenuti denominato contenitori.
+È possibile specificare o ignorare le timeline per le interruzioni pubblicitarie nel contenuto VOD utilizzando un elenco formattato di segmenti di annunci e contenuti denominati pod.
 
 ## Contenitori {#section_606E9456E25E41C8B8537A023DDD96CE}
 
-Un contenitore è un&#39;interruzione annuncio o un segmento di contenuto. Una timeline è costituita da una sequenza di contenitori, separati da punto e virgola. Esistono i seguenti tipi di contenitori:
+Un pod è un’interruzione pubblicitaria o un segmento di contenuto. Una timeline è costituita da una sequenza di baccelli, separati da punto e virgola. Esistono i seguenti tipi di pod:
 
-### Annuncio
+### Pausa annunci
 
 ```
 B,duration,maximum_number_of_ads,position
 ```
 
 La durata è in secondi, con precisione di 0,001 (millisecondi); il numero di annunci è un numero intero. La posizione è una delle seguenti:
-* **n** Nessuno — no ad
+* **n** Nessuno — nessun annuncio
 * **p** Pre-roll — prima del contenuto
 * **m** Mid-roll — all&#39;interno del contenuto
 * **t** Post-roll — dopo il contenuto
