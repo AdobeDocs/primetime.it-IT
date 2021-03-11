@@ -1,13 +1,10 @@
 ---
-description: I tag ID3 forniscono informazioni su un file audio o video, ad esempio il titolo del file o il nome dell’artista. TVSDK rileva i tag ID3 a livello di segmento del flusso di trasporto (TS) nei flussi HLS e invia un evento. L'applicazione può estrarre dati dal tag .
-seo-description: I tag ID3 forniscono informazioni su un file audio o video, ad esempio il titolo del file o il nome dell’artista. TVSDK rileva i tag ID3 a livello di segmento del flusso di trasporto (TS) nei flussi HLS e invia un evento. L'applicazione può estrarre dati dal tag .
-seo-title: ID3, tag
-title: ID3, tag
-uuid: 5e5c5f89-7653-47c1-b9c1-6b9b9b1f8d73
+description: I tag ID3 forniscono informazioni su un file audio o video, ad esempio il titolo del file o il nome dell’artista. TVSDK rileva i tag ID3 a livello di segmento del flusso di trasporto (TS) nei flussi HLS e invia un evento. L’applicazione può estrarre dati dal tag .
+title: Tag ID3
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '235'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Tag ID3 {#id-tags}
 
-I tag ID3 forniscono informazioni su un file audio o video, ad esempio il titolo del file o il nome dell’artista. TVSDK rileva i tag ID3 a livello di segmento del flusso di trasporto (TS) nei flussi HLS e invia un evento. L&#39;applicazione può estrarre dati dal tag .
+I tag ID3 forniscono informazioni su un file audio o video, ad esempio il titolo del file o il nome dell’artista. TVSDK rileva i tag ID3 a livello di segmento del flusso di trasporto (TS) nei flussi HLS e invia un evento. L’applicazione può estrarre dati dal tag .
 
 >[!IMPORTANT]
 >
@@ -25,18 +22,18 @@ Quando TVSDK rileva i metadati ID3, invia una notifica con i seguenti dati:
 
 * InfoCode = 303007
 * TYPE = ID3
-* NAME = not present
+* NAME = non presente
 * ID = 0
 
-1. Implementare un listener di eventi per `MediaPlayer.PlaybackEventListener#onTimedMetadata(TimeMetadata timeMetadata)` e registrarlo con l&#39;oggetto `MediaPlayer`.
+1. Implementa un listener di eventi per `MediaPlayer.PlaybackEventListener#onTimedMetadata(TimeMetadata timeMetadata)` e registralo con l&#39;oggetto `MediaPlayer` .
 
    TVSDK chiama questo listener quando rileva i metadati ID3.
 
    >[!NOTE]
    >
-   >I suggerimenti per gli annunci personalizzati utilizzano lo stesso evento `onTimedMetadata` per indicare il rilevamento di un nuovo tag. Ciò non deve creare confusione perché vengono rilevati segnali pubblicitari personalizzati a livello di manifesto e i tag ID3 sono incorporati nel flusso. Per ulteriori informazioni, consultate custom-tags-configure .
+   >I suggerimenti per gli annunci personalizzati utilizzano lo stesso evento `onTimedMetadata` per indicare il rilevamento di un nuovo tag. Questo non deve causare confusione perché vengono rilevati suggerimenti di annunci personalizzati a livello di manifesto e i tag ID3 sono incorporati nel flusso. Per ulteriori informazioni, consulta custom-tags-configure .
 
-1. Recuperate i metadati.
+1. Recupera i metadati.
 
    ```java
    @Override 
