@@ -1,16 +1,13 @@
 ---
-description: L'oggetto MediaPlayer rappresenta il lettore multimediale. Un elemento MediaPlayerItem rappresenta l’audio o il video sul lettore.
-seo-description: L'oggetto MediaPlayer rappresenta il lettore multimediale. Un elemento MediaPlayerItem rappresenta l’audio o il video sul lettore.
-seo-title: Operazioni con gli oggetti MediaPlayer
-title: Operazioni con gli oggetti MediaPlayer
-uuid: 3545f7a7-260c-4004-aca8-b33b99b36d89
+description: L'oggetto MediaPlayer rappresenta il lettore multimediale. Un MediaPlayerItem rappresenta audio o video sul lettore.
+title: Utilizzare gli oggetti MediaPlayer
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '44'
+source-wordcount: '24'
 ht-degree: 0%
 
 ---
 
 
-# Operazioni con gli oggetti MediaPlayer{#work-with-mediaplayer-objects}
+# Utilizzare gli oggetti MediaPlayer{#work-with-mediaplayer-objects}
