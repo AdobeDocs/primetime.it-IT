@@ -2,9 +2,9 @@
 description: Puoi inserire annunci nel tuo VOD e contenuti live/lineari utilizzando l'interfaccia Adobe Primetime ad Decioning.
 title: Requisiti in materia di pubblicità
 translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 944bfb0f3bd0050a9d2974a37f4fabddaaac8a93
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '234'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,4 @@ Per incorporare annunci nei contenuti video, accertati che il contenuto pubblici
 * Se il contenuto principale contiene un flusso solo audio, il contenuto pubblicitario deve contenere anche un flusso solo audio.
 * Se il contenuto principale contiene flussi di sottotitoli, il contenuto pubblicitario deve essere non crittografato.
 * Se il contenuto principale è a bit rate multiplo (MBR), anche il contenuto pubblicitario deve essere MBR.
-* Se il contenuto principale dispone di tracce audio alternative, ogni annuncio deve avere almeno un flusso solo audio.
-
-Se l’annuncio non dispone di almeno un flusso solo audio, l’annuncio viene ignorato.
+* Se il contenuto principale dispone di tracce audio alternative, ogni annuncio deve avere almeno un flusso solo audio o gli annunci devono essere demuxed. Se l’annuncio non dispone di almeno un flusso solo audio né viene demussato, l’annuncio viene ignorato.
