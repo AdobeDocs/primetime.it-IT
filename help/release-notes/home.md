@@ -3,10 +3,10 @@ title: Note sulla versione di Primetime
 description: Note sulla versione di Primetime
 copied-description: true
 translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 944bfb0f3bd0050a9d2974a37f4fabddaaac8a93
 workflow-type: tm+mt
-source-wordcount: '342'
-ht-degree: 32%
+source-wordcount: '378'
+ht-degree: 29%
 
 ---
 
@@ -14,6 +14,12 @@ ht-degree: 32%
 # Note sulla versione di Primetime
 
 Benvenuto nelle note sulla versione di Adobe Primetime. I documenti elencati nella navigazione a sinistra forniscono informazioni specifiche sulla versione, requisiti di sistema, limitazioni, problemi risolti e problemi noti.
+
+## Miglioramenti e correzioni in TVSDK 3.13 iOS
+
+Il rilascio introduce il supporto per gli annunci DEMUXED &quot;HLS/CMAF&quot; (preroll, midroll e postroll) per flussi LIVE, VOD e FER.
+
+Per altre correzioni e dettagli, consulta [TVSDK per le note sulla versione iOS](../release-notes/tvsdk-3x-ios.md)
 
 ## Miglioramenti e correzioni in PTAI 21.2.2
 
