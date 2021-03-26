@@ -5,15 +5,15 @@ description: Specifiche di Adobe Primetime
 seo-description: Specifiche di Adobe Primetime
 topic-tags: Adobe Primetime Specifications
 translation-type: tm+mt
-source-git-commit: 53014028cf1a9cb48f93781cbbb4aec3e2bcc523
+source-git-commit: 0bd926b510cd23268b6374ef81a09efcc5d1371a
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: '263'
 ht-degree: 0%
 
 ---
 
 
-# Specifiche API di Adobe Primetime
+# Specifiche di Adobe Primetime
 
 Adobe Primetime porta la TV su ogni schermo connesso a IP. Offre a programmatori e operatori funzionalità modulari per lo streaming, la protezione, l&#39;analisi e la monetizzazione dei video su desktop e dispositivi. La potenza di queste esperienze è una serie di tecnologie di streaming utilizzate per distribuire contenuti e pubblicità ai lettori video Primetime.
 
