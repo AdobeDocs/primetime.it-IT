@@ -1,10 +1,9 @@
 ---
-cloud: experience-cloud
 product: adobe primetime
 audience: end-user
 user-guide-title: Guida di Primetime Ad Insertion
 translation-type: tm+mt
-source-git-commit: bde82bd062a7980e08cdf2642c9e64be8f074a6e
+source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 4%
@@ -14,13 +13,13 @@ ht-degree: 4%
 
 # Guida di Primetime Ad Insertion {#ad-insertion}
 
-+ [Ad Insertion di Adobe Primetime](home.md)
-+ Annunci Ad Insertion di Primetime{#announcements}
++ [Adobe Primetime Ad Insertion](home.md)
++ Annunci Primetime Ad Insertion{#announcements}
    + [Annunci](announcements/overview.md)
    + [Note sulla versione](/help/release-notes/ptai-21x-release-notes.md)
-+ Guida introduttiva a Ad Insertion di Primetime{#get-started}
++ Guida introduttiva di Primetime Ad Insertion{#get-started}
    + [Panoramica](getting-started/get-started-overview.md)
-   + [Preparare l’utilizzo di Ad Insertion di Primetime](getting-started/setup-ptai.md)
+   + [Preparare l’utilizzo di Primetime Ad Insertion](getting-started/setup-ptai.md)
    + [Integrare il server di annunci](getting-started/integrate-ad-server.md)
    + [Integrare la rete CDN](getting-started/integrate-cdn.md)
    + [Utilizzare l&#39;inserimento di annunci in flussi live/lineari](getting-started/ad-insertion-live-linear-stream.md)
@@ -48,7 +47,7 @@ ht-degree: 4%
    + [Metriche chiave e dimensioni dei dati](advanced-telemetry/key-metrics.md)
 + [Monitoraggio degli eventi live](live-event-monitoring.md)
 + Riferimento {#technical-reference}
-   + [Riferimento API / API di Bootstrap](technical-reference/bootstrap-api.md)
+   + [Riferimento API / API Bootstrap](technical-reference/bootstrap-api.md)
    + Best practice{#best-practices}
       + [Panoramica](best-practices/best-practices-overview.md)
       + [Ottimizzare i tempi di avvio dei video](best-practices/optimize-video-startup-time.md)
