@@ -1,10 +1,11 @@
 ---
 title: Formati supportati
-description: null
+description: Formati supportati
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 126a5129ee4102802173f3203ec4fb829ad0b08d
+source-git-commit: f0e58c59e5f71ff79861dc634d9c9b3364e49db6
 workflow-type: tm+mt
-source-wordcount: '52'
+source-wordcount: '54'
 ht-degree: 0%
 
 ---
@@ -12,17 +13,17 @@ ht-degree: 0%
 
 # Formati supportati {#supported-formats}
 
-Primetime  Ad Insertion intercetta e supporta l&#39;inserimento di annunci nei seguenti flussi multimediali:
+Primetime Ad Insertion intercetta e supporta l&#39;inserimento di annunci nei seguenti flussi multimediali:
 
 ## HLS {#hls}
 
-- Elenchi di riproduzione di frammenti audio/video
-- Playlist CMAF e audio/video demuxed, comprese le playlist solo audio
+- playlist con frammenti audio/video a mbox
+- Playlist CMAF e audio/video dismussati, comprese le playlist solo audio
 - WebVTT
 - Playlist di flussi I-Frame (#EXT-X-I-FRAME-STREAM-INF)
-- Sequenze di riproduzione delle immagini Thubmanil (#EXT-X-IMAGE-STREAM-INF)
+- Playlist immagini Thubmanil (#EXT-X-IMAGE-STREAM-INF)
 
 ## DASH {#dash}
 
-- Playlist CMAF e audio/video demuxed, comprese le playlist solo audio
+- Playlist CMAF e audio/video dismussati, comprese le playlist solo audio
 - WebVTT
