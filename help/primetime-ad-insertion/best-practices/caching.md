@@ -1,25 +1,26 @@
 ---
-title: Caching
-description: null
+title: Memorizzazione in cache
+description: Memorizzazione in cache
+copied-description: true
+exl-id: c12c2345-db55-468a-b4b5-5a9e1364a46d
 translation-type: tm+mt
-source-git-commit: 76dc54fabdae400ad708ba83fcf6f7fd5caa2b22
+source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
 workflow-type: tm+mt
-source-wordcount: '105'
+source-wordcount: '106'
 ht-degree: 0%
 
 ---
 
+# Memorizzazione in cache HTTP {#caching}
 
-# Cache HTTP {#caching}
-
-Primetime  Ad Insertion per impostazione predefinita rispetta le intestazioni di controllo della cache HTTP al momento del recupero di contenuti e creativi per gli annunci.  Questo può ridurre drasticamente la quantità di richieste di rete necessarie per il Ad Insertion Primetime  per effettuare il collegamento alla rete CDN tra tutti i client.  Per il caching,  Adobe consiglia le seguenti impostazioni e prevede l&#39;invio dell&#39;intestazione HTTP `max-age` dalla rete CDN.  Contattate il rappresentante CDN per abilitare queste intestazioni sui flussi video e sui flussi di annunci.
+Primetime Ad Insertion per impostazione predefinita rispetta le intestazioni di controllo della cache HTTP durante il recupero di contenuti e creativi di annunci.  Questo può ridurre drasticamente la quantità di richieste di rete necessarie a Primetime Ad Insertion per effettuare l’accesso alla rete CDN in tutti i client.  Per il caching, Adobe consiglia le seguenti impostazioni e richiede l’invio dell’intestazione HTTP `max-age` dalla rete CDN.  Contatta il tuo rappresentante CDN per abilitare queste intestazioni sui flussi video e sui flussi di annunci.
 
 ## Per contenuti live/lineari {#caching-live-linear-content}
 
-* manifest principale: 24 ore o controllo cache: max-age=86400
-* manifest multimediale: 1 secondo, o controllo cache: max-age=1
+* Manifesto principale: 24 ore o controllo della cache: max-age=86400
+* Manifesto multimediale: 1 secondo, o controllo cache: max-age=1
 
-## Per contenuti VOD {#caching-vod-content}
+## Per contenuto VOD {#caching-vod-content}
 
-* manifest principale: 24 ore o controllo cache: max-age=86400
-* manifest multimediale: 24 ore o controllo cache: max-age=86400
+* Manifesto principale: 24 ore o controllo della cache: max-age=86400
+* Manifesto multimediale: 24 ore o controllo della cache: max-age=86400
