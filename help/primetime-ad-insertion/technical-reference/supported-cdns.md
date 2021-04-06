@@ -1,21 +1,22 @@
 ---
 title: CDN supportati
-description: null
+description: CDN supportati
+copied-description: true
+exl-id: 4620c84d-965d-4ecd-b17e-e21c74427282
 translation-type: tm+mt
-source-git-commit: 0f98b9848f1764e7c66e3692d8a845513493597f
+source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
 workflow-type: tm+mt
-source-wordcount: '48'
+source-wordcount: '50'
 ht-degree: 4%
 
 ---
 
-
 # CDN supportati {#cdn-supported}
 
- Adobe Primetime  Ad Insertion supporta il recupero di contenuti e frammenti da qualsiasi CDN, ma offre supporto di autenticazione/personalizzazione esteso per molti dei principali CDN.  Contattateci per ulteriori informazioni sul supporto CDN aggiuntivo o sulle esigenze di autenticazione/autorizzazione.
+Adobe Primetime Ad Insertion supporta il recupero di contenuti e frammenti da qualsiasi CDN, ma ha esteso il supporto di autenticazione/token per molte delle principali CDN.  Contattateci per maggiori informazioni su ulteriori esigenze di supporto CDN o di autenticazione/autorizzazione.
 
 * Akamai
 * Limelight
-* Reti Limelight
+* Reti limitate
 * Livello3
 * CenturyLink
