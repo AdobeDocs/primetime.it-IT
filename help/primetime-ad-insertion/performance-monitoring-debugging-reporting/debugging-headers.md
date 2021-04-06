@@ -1,43 +1,44 @@
 ---
-title: Debugging delle intestazioni
-description: null
+title: Intestazioni di debug
+description: Intestazioni di debug
+copied-description: true
+exl-id: 42c19089-2c61-4622-b53a-c28b8d495ef8
 translation-type: tm+mt
-source-git-commit: 45e5c8e6144adf4a405bde7d8d19505b7ad549e0
+source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '257'
 ht-degree: 7%
 
 ---
 
+# Intestazioni di debug (X-ADBE-AI-X1) {#debugging-headers}
 
-# Debugging delle intestazioni (X-ADBE-AI-X1) {#debugging-headers}
+SSAI invia intestazioni HTTP che possono essere utilizzate per raccogliere informazioni e determinare le prestazioni per le sessioni di produzione, che si trovano nell&#39;intestazione X-ADBE-AI-X1.
 
-SSAI invia intestazioni HTTP utilizzabili per raccogliere informazioni e determinare le prestazioni per le sessioni di produzione, che si trovano nell’intestazione X-ADBE-AI-X1.
-
-Intestazione esempio:
+Intestazione di esempio:
 `X-ADBE-AI-X1: 0 1 1594181097704 15126333-5ba9-49b8-a219-4f37e60d259c v 0 1 30 2 1 199 2 185 497 204 104 0 1 0 4`
 
 La descrizione dei campi è la seguente:
 
 | Nome | Descrizione | Esempio |
 |--- |--- |--- |
-| isActivePreroll | Indica se è stata inviata una richiesta di annuncio per pre-roll | 0 |
-| isActiveMidroll | Indica se è stata inviata una chiamata ad annuncio per il midroll-roll | 1 |
+| isActivePreroll | Se è stata inviata una chiamata ad per pre-roll | 0 |
+| isActiveMidroll | Se è stata inviata una chiamata ad per midroll-roll | 3 |
 | ID richiesta | SSAI interno | 1594181097704 |
-| ID sessione | ID sessione della richiesta | 15126333-5ba9-49b8-a219-4f37e60d259c |
+| ID sessione | ID sessione della richiesta | 1512633-5ba9-49b8-a219-4f37e60d259c |
 | Tipo di flusso | u=variante, l=live, v=vod | v |
-| isBootstrap | Indica se questa richiesta è una chiamata di avvio | 0 |
-| Conteggio interruzioni annuncio | Numero totale di interruzioni pubblicitarie nel manifesto | 1 |
-| Durata totale interruzione annuncio | Durata totale dell&#39;interruzione annuncio, in secondi | 30 |
-| Conteggio chiamate annuncio | Numero di chiamate ad annunci inviate in questa richiesta | 2 |
-| Conteggio chiamate pubblicitarie di reindirizzamento | Numero di chiamate di reindirizzamento ad inviate in questa richiesta | 1 |
-| Durata totale chiamate annuncio | Tempo di elaborazione annunci totali | 199 |
-| Conteggio annunci inseriti | Numero di annunci inseriti nel manifesto | 2 |
-| Tempo richiesta manifesto origine | Tempo impiegato per recuperare solo il contenuto | 185 |
-| Tempo totale richiesta | Tempo totale impiegato per recuperare contenuti e annunci | 497 |
-| Tempo recupero manifesto annuncio (totale) | Quantità totale di annunci con recupero di tempo | 204 |
-| Tempo recupero manifesto annuncio (effettivo) | Quantità effettiva di eventi pubblicitari da recuperare in parallelo | 104 |
-| Hit cache contenuto | Numero di hit della cache del contenuto | 0 |
-| Mancanza cache contenuto | Numero di errori nella cache del contenuto | 3 |
-| Hit cache manifesto annuncio | Numero di hit della cache del manifesto degli annunci | 0 |
-| Mancata cache manifesto annuncio | Numero di errori cache del manifesto dell&#39;annuncio | 4 |
+| isBootstrap | Se questa richiesta è una chiamata di avvio | 0 |
+| Conteggio interruzioni annunci | Numero totale di interruzioni pubblicitarie nel manifesto | 3 |
+| Durata totale dell’interruzione dell’annuncio | Durata totale dell’interruzione pubblicitaria, in secondi | 30 |
+| Conteggio chiamate annunci | Numero di chiamate ad inviate nella richiesta | 2 |
+| Conteggio chiamate ad reindirizzamento | Numero di chiamate ad di reindirizzamento inviate nella richiesta | 1 |
+| Durata totale della chiamata dell’annuncio | Tempo di elaborazione totale delle chiamate ad | 199 |
+| Conteggio annunci inserito | Numero di annunci inseriti nel manifesto | 2 |
+| Tempo di richiesta del manifesto di origine | Tempo impiegato solo per il recupero del contenuto | 185 |
+| Tempo di richiesta totale | Tempo totale impiegato per recuperare contenuti e annunci | 497 |
+| Tempo di recupero manifesto dell’annuncio (totale) | Quantità totale di annunci pubblicitari da recuperare | 204 |
+| Tempo di recupero manifesto dell’annuncio (effettivo) | Quantità effettiva di eventi di recupero annunci in parallelo | 104 |
+| Hit nella cache dei contenuti | Numero di hit della cache del contenuto | 0 |
+| Mancanza nella cache del contenuto | Numero di mancati riscontri nella cache del contenuto | 3 |
+| Hit cache manifesto dell&#39;annuncio | Numero di hit della cache del manifesto di annunci | 0 |
+| Mancata cache manifesto dell’annuncio | Numero di mancati riscontri nella cache del manifesto dell&#39;annuncio | 4 |
