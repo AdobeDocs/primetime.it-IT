@@ -1,21 +1,22 @@
 ---
 title: Best practice
-description: null
+description: Best practice
+copied-description: true
+exl-id: 2dae6032-5e22-4274-a5a2-02960fcbcf19
 translation-type: tm+mt
-source-git-commit: 76dc54fabdae400ad708ba83fcf6f7fd5caa2b22
+source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
 workflow-type: tm+mt
-source-wordcount: '45'
+source-wordcount: '47'
 ht-degree: 0%
 
 ---
 
-
 # Best practice {#best-practices}
 
-Per ottenere prestazioni ottimali e tempi di avvio ottimali per i flussi video, consulta le best practice riportate di seguito per analizzare e ottimizzare i flussi di lavoro relativi ad annunci e contenuti.
+Per prestazioni ottimali e tempi di avvio ottimali per i flussi video, consulta le best practice seguenti per analizzare e ottimizzare i flussi di lavoro relativi ad e contenuti.
 
 + [Ottimizzare i tempi di avvio dei video](optimize-video-startup-time.md)
 + [Analizzare le prestazioni](analyze-performance.md)
-+ [Cache HTTP](caching.md)
-+ [Ottimizzazione di route e protocolli](optimize-routes-protocols.md)
-+ [Applica vincoli di risoluzione](apply-ad-resolution-constraints.md)
++ [Memorizzazione in cache HTTP](caching.md)
++ [Ottimizzazione di percorsi e protocolli](optimize-routes-protocols.md)
++ [Applica vincoli di risoluzione degli annunci](apply-ad-resolution-constraints.md)
