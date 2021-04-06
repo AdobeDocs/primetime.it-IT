@@ -1,19 +1,20 @@
 ---
 title: Analizzare le prestazioni
-description: null
+description: Analizzare le prestazioni
+copied-description: true
+exl-id: bef14bc2-30dc-44e5-bdfe-8b79f3af2cec
 translation-type: tm+mt
-source-git-commit: 0392466ae8779d62054232352ce039377818caca
+source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
 workflow-type: tm+mt
-source-wordcount: '62'
+source-wordcount: '64'
 ht-degree: 0%
 
 ---
 
-
 # Analizzare le prestazioni {#analyze-performnce}
 
-La console  Ad Insertion Primetime offre dashboard per analizzare le richieste e le prestazioni pubblicitarie di singole sessioni o flussi. Per ulteriori informazioni, vedere [Monitoraggio delle prestazioni](/help/primetime-ad-insertion/performance-monitoring-debugging-reporting/performance-monitoring.md) e [Generazione di rapporti e fatturazione](/help/primetime-ad-insertion/performance-monitoring-debugging-reporting/reporting-and-billing.md).
+La console Ad Insertion di Primetime offre dashboard per analizzare le richieste e le prestazioni degli annunci di singole sessioni o flussi. Per ulteriori informazioni, consulta [Monitoraggio delle prestazioni](/help/primetime-ad-insertion/performance-monitoring-debugging-reporting/performance-monitoring.md) e [Generazione di rapporti e fatturazione](/help/primetime-ad-insertion/performance-monitoring-debugging-reporting/reporting-and-billing.md).
 
 ## Analizzare i singoli orari di una richiesta {#analyze-timings}
 
-Gli intervalli per la risoluzione di annunci e CDN possono essere ispezionati utilizzando intestazioni che vengono inviate con ogni richiesta.  Per ulteriori informazioni, vedere [Debugging Headers](/help/primetime-ad-insertion/performance-monitoring-debugging-reporting/debugging-headers.md).
+I tempi per CDN e risoluzione annunci possono essere ispezionati utilizzando intestazioni che vengono inviate con ogni richiesta.  Per ulteriori informazioni, consulta [Intestazioni di debug](/help/primetime-ad-insertion/performance-monitoring-debugging-reporting/debugging-headers.md).
