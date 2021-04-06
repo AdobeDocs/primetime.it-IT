@@ -1,27 +1,28 @@
 ---
 title: Transcodifica e normalizzazione
-description: null
+description: Transcodifica e normalizzazione
+copied-description: true
+exl-id: 48d9d971-4b15-4f1b-8740-c21983a3e835
 translation-type: tm+mt
-source-git-commit: 0f98b9848f1764e7c66e3692d8a845513493597f
+source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
 workflow-type: tm+mt
-source-wordcount: '89'
+source-wordcount: '92'
 ht-degree: 0%
 
 ---
 
-
 # Transcodifica e normalizzazione {#transcoding-and-normalization}
 
-Primetime  Ad Insertion tenterà di garantire un&#39;esperienza di visualizzazione coerente tra i contenuti e gli annunci, cercando di trovare una corrispondenza:
+Primetime Ad Insertion tenterà di garantire un’esperienza di visualizzazione coerente tra contenuti e annunci tentando di abbinare:
 
-1. Codec flusso sorgente e bitrate, selezionando sempre la massima qualità/bitrate creativa durante la transcodifica
+1. Codec di flusso sorgente e bit rate, selezionando sempre la creatività di qualità/bitrate più elevata durante la transcodifica
 
 1. Dimensioni dei frammenti del flusso di origine (HLS/#EXT-X-TARGETDURATION)
 
 1. Formati creativi preferiti per la transcodifica
 
-1. Livellamento automatico dell&#39;audio per garantire un livello dB coerente tra tutte le creatività degli annunci.
+1. Livellamento automatico audio per garantire un livello dB coerente in tutti i creativi degli annunci.
 
 >[!NOTE]
 >
->Le risorse HLS generate dalla transcodifica del tempo di  Primetime producono risorse HLS della versione 3, indipendentemente dalla versione HLS definita nel contenuto.
+>Le risorse HLS generate dalla transcodifica just-in di Primetime Ad Insertion producono risorse HLS della versione 3, indipendentemente dalla versione HLS definita nel contenuto.
