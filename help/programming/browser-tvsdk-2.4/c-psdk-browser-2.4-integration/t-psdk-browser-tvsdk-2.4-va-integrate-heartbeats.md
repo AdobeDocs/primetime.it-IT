@@ -1,14 +1,14 @@
 ---
 description: Puoi configurare il lettore per tenere traccia e analizzare l’utilizzo dei video.
 title: Inizializzare e configurare l’analisi video
+exl-id: e0bf461b-a431-4fba-bd3d-c38be307a92f
 translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: d884836a2a585bd3540b085de1098cf6ae3de46b
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 0%
 
 ---
-
 
 # Inizializzare e configurare l&#39;analisi video {#initialize-and-configure-video-analytics}
 
@@ -133,6 +133,7 @@ Prima di iniziare una nuova sessione di riproduzione dei contenuti, elimina l’
           videoAnalyticsProvider.detachMediaPlayer();
           videoAnalyticsProvider = null;
       ```
+
    4. Contrassegna manualmente il flusso Live/Lineare come completato.
 Se hai vari episodi su uno streaming live, puoi contrassegnare manualmente un episodio come completo utilizzando l&#39;API completa. Questo termina la sessione di tracciamento video per l&#39;episodio video corrente e puoi avviare una nuova sessione di tracciamento per l&#39;episodio successivo.
       >[!TIP]
@@ -146,5 +147,5 @@ Se hai vari episodi su uno streaming live, puoi contrassegnare manualmente un ep
       videoAnalyticsProvider.detachMediaPlayer();
       videoAnalyticsProvider = null;
       // Create a new instance of VideoAnalyticsProvider to continue tracking.
-      } 
+      }
       ```
