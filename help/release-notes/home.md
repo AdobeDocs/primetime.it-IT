@@ -2,28 +2,29 @@
 title: Note sulla versione di Primetime
 description: Note sulla versione di Primetime
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 944bfb0f3bd0050a9d2974a37f4fabddaaac8a93
+exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
+source-git-commit: fe0f5f3399d2e2ab3e07713fbcd29ede47888d98
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 29%
+source-wordcount: '352'
+ht-degree: 31%
 
 ---
-
 
 # Note sulla versione di Primetime
 
 Benvenuto nelle note sulla versione di Adobe Primetime. I documenti elencati nella navigazione a sinistra forniscono informazioni specifiche sulla versione, requisiti di sistema, limitazioni, problemi risolti e problemi noti.
+
+## Miglioramenti e correzioni in PTAI 21.5.1
+
+Il rilascio include una nuova telemetria per le prossime modifiche del dashboard e il supporto per il tipo di segmentazione obsoleta 0x01 (UPID) per i formati di cue basati su SCTE.
+
+Per altre correzioni e dettagli, consulta [Note sulla versione di Ad Insertion](/help/release-notes/ptai-21x-release-notes.md)
 
 ## Miglioramenti e correzioni in TVSDK 3.13 iOS
 
 Il rilascio introduce il supporto per gli annunci DEMUXED &quot;HLS/CMAF&quot; (preroll, midroll e postroll) per flussi LIVE, VOD e FER.
 
 Per altre correzioni e dettagli, consulta [TVSDK per le note sulla versione iOS](../release-notes/tvsdk-3x-ios.md)
-
-## Miglioramenti e correzioni in PTAI 21.2.2
-
-Il rilascio include il supporto per l&#39;inserimento/sincronizzazione del flusso EXT-X-IMAGE-STREAM-INF nei flussi HLS. La funzione viene abilitata tramite una configurazione lato server. Contatta il rappresentante del tuo account tecnico per abilitare la funzione.
 
 ## Correzioni in TVSDK 3.13 Android
 
@@ -32,12 +33,6 @@ Questo rilascio fornisce una soluzione al problema del congelamento del flusso D
 Per risolvere il problema, impostare l&#39;API `MediaPlayer.flushVideoDecoderOnHeaderChange(true)` per i dispositivi Fire TV specificati prima di avviare la riproduzione. Il valore predefinito è false.
 
 Per ulteriori informazioni, consulta le [Note sulla versione TVSDK per Android](../release-notes/tvsdk-3x-android.md) .
-
-## Miglioramenti e correzioni nelle note sulla versione di TVSDK 3.12 iOS
-
-Il rilascio si è concentrato sulla soluzione dei principali problemi dei clienti.
-
-Per ulteriori informazioni sulla versione rilasciata corrente, consulta [iOS](../release-notes/tvsdk-3x-ios.md) .
 
 ## Vedi anche
 
