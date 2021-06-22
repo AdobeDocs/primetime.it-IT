@@ -1,14 +1,13 @@
 ---
 description: L’applicazione può monitorare l’attività nel lettore e lo stato del lettore che cambia ascoltando gli eventi inviati da TVSDK.
 title: Riepilogo eventi del lettore Primetime
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3912f140-1600-41fb-9dc4-306646b7cd85
+source-git-commit: 59f7f8aa82be59c4012ee80648032600590bc4e1
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '567'
 ht-degree: 0%
 
 ---
-
 
 # Riepilogo eventi del lettore Primetime {#primetime-player-events-summary}
 
@@ -109,7 +108,7 @@ TVSDK notifica quando si verificano eventi a cui l’applicazione deve risponder
 
 * **Codice evento** `BUFFERING_END`
 
-`BufferPreparedEventListener&#39;
+`BufferPreparedEventListener`
 
 * **** SignificatoIl buffer è preparato.
 
