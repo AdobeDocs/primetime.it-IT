@@ -1,14 +1,13 @@
 ---
 description: In genere, tutte le licenze DRM di Primetime, al momento della creazione, sono associate a un dispositivo univoco. Questo binding impedisce agli utenti di condividere licenze tra diversi dispositivi senza autorizzazione. Oltre al binding per dispositivo, Primetime DRM consente di associare le licenze a un dominio dispositivo o a un gruppo di dispositivi.
 title: Riprodurre contenuto crittografato utilizzando il supporto del dominio
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3c9badfc-046b-4c56-bde1-7b3b708bfaa2
+source-git-commit: 59f7f8aa82be59c4012ee80648032600590bc4e1
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
-
 
 # Supporto del dominio del dispositivo {#device-domain-support}
 
@@ -32,6 +31,6 @@ Per riprodurre contenuto crittografato utilizzando DRM di Primetime , esegui le 
    1. Richiama `DRMManager.addToDeviceGroup()`
 1. Ottieni la licenza per il contenuto eseguendo una delle seguenti attività:
    1. Utilizzare il metodo `DRMManager.loadVoucher()`.
-   1. Ottieni la licenza da un dispositivo diverso registrato nello stesso gruppo di dispositivi e fornisci la licenza al ` DRMManager` tramite il metodo `DRMManager.storeVoucher()` .
+   1. Ottieni la licenza da un dispositivo diverso registrato nello stesso gruppo di dispositivi e fornisci la licenza al `DRMManager` tramite il metodo `DRMManager.storeVoucher()` .
 1. Riproduci il contenuto crittografato utilizzando il metodo `Primetime.play()` .
 Per esportare la licenza per il contenuto, uno qualsiasi dei dispositivi può fornire i byte non elaborati della licenza utilizzando il metodo `DRMVoucher.toByteArray()` dopo aver ottenuto la licenza dal server di licenze DRM di Primetime. In genere, i provider di contenuti limitano il numero di dispositivi in un gruppo di dispositivi. Se il limite viene raggiunto, potrebbe essere necessario chiamare il metodo `DRMManager.removeFromDeviceGroup()` su un dispositivo non utilizzato prima di registrare il dispositivo corrente.
