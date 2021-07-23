@@ -3,17 +3,17 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Note sulla versione di Primetime
 user-guide-description: Fornisce informazioni specifiche sulla versione, requisiti di sistema, limitazioni, problemi risolti e problemi noti.
-source-git-commit: fe0f5f3399d2e2ab3e07713fbcd29ede47888d98
+source-git-commit: 2b7f0e3202107320168e5b0b37b3a9296029a0cd
 workflow-type: tm+mt
-source-wordcount: '114'
-ht-degree: 14%
+source-wordcount: '113'
+ht-degree: 16%
 
 ---
 
 
-# Note sulla versione di Primetime  {#release-notes}
+# Note sulla versione di Primetime {#release-notes}
 
-+ [Panoramica delle note sulla versione](home.md)
++ [Note sulla versione Panoramica](home.md)
 + Ad Insertion Primetime {#ptai}
    + [Note sulla versione di PTAI 21.5.1](ptai-21x-release-notes.md)
    + [Note sulla versione di PTAI 20.12.1](ptai-20x-release-notes.md)
@@ -28,7 +28,7 @@ ht-degree: 14%
    + [Note sulla versione di TVSDK 1.4 per Android](tvsdk-1-4-android.md)
 + Browser TVSDK {#browser-tvsdk}
    + [Note sulla versione del browser TVSDK 2.4](tvsdk-24-browser.md)
-+ TVSDK per HLS desktop {tvsdk-desktop-hls}
++ TVSDK per HLS desktop {#tvsdk-desktop-hls}
    + [Note sulla versione di TVSDK 1.4 per desktop HLS](tvsdk-1-4-desktop-hls.md)
 + Pacchetto offline di Primetime {#offline-packager}
    + [Versioni di Primetime Offline Packager versione 2](offline-packager-2x-release-note.md)
