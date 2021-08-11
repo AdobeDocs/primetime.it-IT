@@ -1,16 +1,15 @@
 ---
-description: 'La versione di #EXT-X-VERSION nel file .m3u8 influisce sulle funzioni disponibili per la tua applicazione e sui tag EXT validi nella playlist/manifesto.'
-title: '#EXT-X-VERSION requisiti'
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: La versione di `#`EXT-X-VERSION nel file .m3u8 influisce sulle funzioni disponibili per la tua applicazione e sui tag EXT validi nella playlist/manifesto.
+title: '`#`EXT-X-VERSION requisiti'
+exl-id: 1b7c205b-c6b1-416f-885a-d1cd23d8e803
+source-git-commit: 8610792a7410dab59d42ab7771b534c2c1670ad2
 workflow-type: tm+mt
 source-wordcount: '176'
 ht-degree: 0%
 
 ---
 
-
-# #EXT-X-VERSION requirements{#ext-x-version-requirements}
+# `#`Requisiti della versione EXT-X{#ext-x-version-requirements}
 
 La versione di #EXT-X-VERSION nel file .m3u8 influisce sulle funzioni disponibili per la tua applicazione e sui tag EXT validi nella playlist/manifesto.
 
@@ -48,4 +47,3 @@ Ecco alcune informazioni sul tag `#EXT-X-VERSION`, che specifica la versione del
   </tr> 
  </tbody> 
 </table>
-
