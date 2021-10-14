@@ -1,16 +1,15 @@
 ---
 description: Puoi configurare il lettore per tenere traccia e analizzare l’utilizzo dei video.
 title: Inizializzare e configurare l’analisi video
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 58d560d1-f668-4e1d-a817-b2e02008fdbe
+source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '697'
 ht-degree: 0%
 
 ---
 
-
-# Inizializzare e configurare l&#39;analisi video{#initialize-and-configure-video-analytics}
+# Inizializzare e configurare l’analisi video{#initialize-and-configure-video-analytics}
 
 Puoi configurare il lettore per tenere traccia e analizzare l’utilizzo dei video.
 
@@ -27,7 +26,7 @@ Prima di attivare il tracciamento video (heartbeat video), assicurati di disporr
   </tr> 
   <tr> 
    <td colname="col1"> Endpoint server di tracciamento analisi video </td> 
-   <td colname="col2"> URL dell’endpoint di raccolta back-end di analisi video. Qui vengono inviate tutte le chiamate di tracciamento heartbeat video. <p>Suggerimento:  L’URL del server di tracciamento dei visitatori è lo stesso dell’URL del server di tracciamento di Analytics. Per informazioni sull’implementazione del servizio ID visitatori, consulta <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementare il servizio ID </a>. </p> </td> 
+   <td colname="col2"> URL dell’endpoint di raccolta back-end di analisi video. Qui vengono inviate tutte le chiamate di tracciamento heartbeat video. <p>Suggerimento:  L’URL del server di tracciamento dei visitatori è lo stesso dell’URL del server di tracciamento di Analytics. Per informazioni sull’implementazione del servizio ID visitatori, consulta <a href="https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en" format="html" scope="external"> Implementare il servizio ID </a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Nome account </td> 
@@ -182,4 +181,3 @@ Per configurare il tracciamento video nel lettore:
       >[!TIP]
       >
       >Questa API è facoltativa e non è necessaria per il tracciamento video VOD.
-

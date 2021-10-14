@@ -3,10 +3,10 @@ title: Note sulla versione di Primetime
 description: Note sulla versione di Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 97a192ed1d0ddc034f72a836a70293acfcca9881
+source-git-commit: 9b91bbc92a613a60233a73cded542a04efd61148
 workflow-type: tm+mt
-source-wordcount: '340'
-ht-degree: 32%
+source-wordcount: '301'
+ht-degree: 37%
 
 ---
 
@@ -24,13 +24,11 @@ Per altre correzioni e dettagli, consulta [Note sulla versione di Ad Insertion](
 
 Il rilascio introduce il supporto per gli annunci DEMUXED &quot;HLS/CMAF&quot; (preroll, midroll e postroll) per flussi LIVE, VOD e FER.
 
-Per altre correzioni e dettagli, consulta [TVSDK per le note sulla versione iOS](../release-notes/tvsdk-3x-ios.md)
+Per altre correzioni e dettagli, consulta [TVSDK per le note sulla versione di iOS](../release-notes/tvsdk-3x-ios.md)
 
-## Correzioni in TVSDK 3.13 Android
+## Correzioni in TVSDK 3.14 Android
 
-Questo rilascio fornisce una soluzione al problema del congelamento del flusso DRM Widevine o la visualizzazione di fotogrammi neri sull&#39;interruttore ABR su dispositivi FireTV, che includono Fire TV 3rd generation Pendant e Fire TV Cube 1st e 2a generazione dispositivi.
-
-Per risolvere il problema, impostare l&#39;API `MediaPlayer.flushVideoDecoderOnHeaderChange(true)` per i dispositivi Fire TV specificati prima di avviare la riproduzione. Il valore predefinito è false.
+Questa versione fornisce una correzione a un problema in cui l&#39;applicazione si blocca quando il nodo [!UICONTROL CDATA] è vuoto per uno qualsiasi degli elementi [!UICONTROL ClickTracking], [!UICONTROL CustomClick] o [!UICONTROL CompanionClickTracking] nella risposta [!UICONTROL VAST].
 
 Per ulteriori informazioni, consulta le [Note sulla versione TVSDK per Android](../release-notes/tvsdk-3x-android.md) .
 
@@ -44,7 +42,7 @@ Per ulteriori informazioni, consulta le [Note sulla versione TVSDK per Android](
 | [Riferimenti API di Primetime](/help/reference/api-references.md) | Fornisce informazioni dettagliate sulle funzioni TVSDK, le strutture di dati e altri costrutti di programmazione. |
 | [Digital Rights Management](/help/digital-rights-management/home.md) | Consente di ottenere ulteriori informazioni sui vari scenari utente nel Digital Rights Management (DRM) |
 | [Guida di Primetime Ad Insertion](/help/primetime-ad-insertion/home.md) | Spiega come monetizzare i contenuti inserendo sul server annunci dinamici mirati agli utenti e coinvolgendo il pubblico con annunci personalizzati. |
-| [Archivi](https://helpx.adobe.com/primetime/archives.html) | Scarica i PDF della documentazione archiviata. |
+| [Archivi](https://helpx.adobe.com/primetime/archives.html) | Scarica PDF della documentazione archiviata. |
 
 ## Risorse utili
 

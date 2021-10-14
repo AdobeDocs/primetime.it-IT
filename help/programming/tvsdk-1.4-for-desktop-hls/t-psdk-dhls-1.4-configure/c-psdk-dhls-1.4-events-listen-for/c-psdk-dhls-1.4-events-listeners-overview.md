@@ -1,22 +1,19 @@
 ---
 description: Gli eventi di TVSDK indicano lo stato del lettore, gli errori che si verificano, il completamento delle azioni richieste, ad esempio un video che inizia a essere riprodotto o le azioni che si verificano implicitamente, ad esempio il completamento di un annuncio.
 title: Ascolta gli eventi di Primetime Player
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3a740245-a9e1-4e36-8761-f9f4b4e85b93
+source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '236'
 ht-degree: 0%
 
 ---
-
 
 # Panoramica {#implement-event-listeners-and-callbacks-overview}
 
 I gestori di eventi consentono a TVSDK di rispondere agli eventi. Quando si verifica un evento, il meccanismo eventi di TVSDK chiama il gestore eventi registrato e trasmette le informazioni sull&#39;evento al gestore.
 
 Flash Runtime fornisce un meccanismo di eventi generici, che TVSDK utilizza e definisce una serie di eventi personalizzati. L’applicazione deve implementare listener di eventi per gli eventi TVSDK che influiscono sull’applicazione.
-
-Per un elenco completo degli eventi per l&#39;analisi video, consulta [Tracciare la riproduzione di video core](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/hbvideo/c_vhl_track-core-vid-playback.html).
 
 1. Determinare gli eventi che l&#39;applicazione deve ascoltare.
 
@@ -55,5 +52,3 @@ Per un elenco completo degli eventi per l&#39;analisi video, consulta [Tracciare
      MediaPlayerStatusChangeEvent.STATUS_CHANGED,  
      onStatusChanged);
    ```
-
-

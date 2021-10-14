@@ -2,16 +2,15 @@
 title: Inizializzare e configurare l’analisi video
 description: Inizializzare e configurare l’analisi video
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: add832e3-5a17-4235-a76f-ae342e1d85f0
+source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 0%
 
 ---
 
-
-# Inizializzare e configurare l&#39;analisi video {#initialize-and-configure-video-analytics}
+# Inizializzare e configurare l’analisi video {#initialize-and-configure-video-analytics}
 
 Puoi configurare il lettore per tenere traccia e analizzare l’utilizzo dei video.
 Prima di attivare il tracciamento video (heartbeat video), assicurati di disporre dei seguenti elementi:
@@ -33,7 +32,7 @@ Prima di attivare il tracciamento video (heartbeat video), assicurati di disporr
   </tr> 
   <tr> 
    <td colname="col1"> Endpoint server di tracciamento analisi video </td> 
-   <td colname="col2"> URL dell’endpoint di raccolta back-end di analisi video. Qui vengono inviate tutte le chiamate di tracciamento heartbeat video. <p>Suggerimento:  L’URL del server di tracciamento dei visitatori è lo stesso dell’URL del server di tracciamento di Analytics. Per informazioni sull’implementazione del servizio ID visitatori, consulta <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementare il servizio ID </a>. </p> </td> 
+   <td colname="col2"> URL dell’endpoint di raccolta back-end di analisi video. Qui vengono inviate tutte le chiamate di tracciamento heartbeat video. <p>Suggerimento:  L’URL del server di tracciamento dei visitatori è lo stesso dell’URL del server di tracciamento di Analytics. Per informazioni sull’implementazione del servizio ID visitatori, consulta <a href="https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en" format="html" scope="external"> Implementare il servizio ID </a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Nome account </td> 
@@ -90,7 +89,7 @@ Per configurare il tracciamento video nel lettore:
    1. Compilare e creare l&#39;applicazione.
    1. Distribuisci ed esegui l&#39;applicazione in bundle.
 
-      Per ulteriori informazioni su queste impostazioni di AppMeasurement, consulta [Misurazione di video in Adobe Analytics](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/video/).
+      Per ulteriori informazioni su queste impostazioni di AppMeasurement, consulta [Misurazione di video in Adobe Analytics](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=en).
 
 1. Inizializzare e configurare i metadati di tracciamento heartbeat video.
 
@@ -169,4 +168,3 @@ Per configurare il tracciamento video nel lettore:
           videoAnalyticsProvider.trackVideoComplete();    
       }
       ```
-

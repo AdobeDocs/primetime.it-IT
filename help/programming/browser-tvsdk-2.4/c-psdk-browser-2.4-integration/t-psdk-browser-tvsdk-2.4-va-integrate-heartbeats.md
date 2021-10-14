@@ -2,15 +2,14 @@
 description: Puoi configurare il lettore per tenere traccia e analizzare l’utilizzo dei video.
 title: Inizializzare e configurare l’analisi video
 exl-id: e0bf461b-a431-4fba-bd3d-c38be307a92f
-translation-type: tm+mt
-source-git-commit: d884836a2a585bd3540b085de1098cf6ae3de46b
+source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
 workflow-type: tm+mt
-source-wordcount: '687'
+source-wordcount: '689'
 ht-degree: 0%
 
 ---
 
-# Inizializzare e configurare l&#39;analisi video {#initialize-and-configure-video-analytics}
+# Inizializzare e configurare l’analisi video {#initialize-and-configure-video-analytics}
 
 Puoi configurare il lettore per tenere traccia e analizzare l’utilizzo dei video.
 
@@ -26,7 +25,7 @@ Prima di attivare il tracciamento video (heartbeat video), assicurati di disporr
   </tr>
   <tr>
    <td colname="col1"> Endpoint server di tracciamento analisi video </td>
-   <td colname="col2"> URL dell’endpoint di raccolta back-end di analisi video. Qui vengono inviate tutte le chiamate di tracciamento heartbeat video. <p>Suggerimento:  L’URL del server di tracciamento dei visitatori è lo stesso dell’URL del server di tracciamento di Analytics. Per informazioni sull’implementazione del servizio ID visitatori, consulta <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementare il servizio ID </a>. </p> </td>
+   <td colname="col2"> URL dell’endpoint di raccolta back-end di analisi video. Qui vengono inviate tutte le chiamate di tracciamento heartbeat video. <p>Suggerimento:  L’URL del server di tracciamento dei visitatori è lo stesso dell’URL del server di tracciamento di Analytics. Per informazioni sull’implementazione del servizio ID visitatori, consulta <a href="https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en" format="html" scope="external"> Implementare il servizio ID </a>. </p> </td>
   </tr>
   <tr>
    <td colname="col1"> Nome account </td>
@@ -59,7 +58,7 @@ Per configurare il tracciamento video nel lettore:
    * L&#39;unica opzione di configurazione per la libreria VisitorAPI è l&#39;URL dell&#39;endpoint di back-end che fornisce l&#39;identificatore univoco per l&#39;utente corrente.
    * L’URL del server di tracciamento dei visitatori è lo stesso dell’URL del server di tracciamento di Analytics.
 
-      Per informazioni sull&#39;implementazione del servizio ID visitatori, consulta [Implementazione del servizio ID visitatori](https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html).
+      Per informazioni sull&#39;implementazione del servizio ID visitatori, consulta [Implementazione del servizio ID visitatori](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en).
 
    ```js
    var_visitor = new Visitor("MARKETING_CLOUD_ORG_ID");
