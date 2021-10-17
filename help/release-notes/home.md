@@ -3,7 +3,7 @@ title: Note sulla versione di Primetime
 description: Note sulla versione di Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 9b91bbc92a613a60233a73cded542a04efd61148
+source-git-commit: 6621a42d859cb872569123c175764e577bb46b9a
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 37%
@@ -13,6 +13,12 @@ ht-degree: 37%
 # Note sulla versione di Primetime
 
 Benvenuto nelle note sulla versione di Adobe Primetime. I documenti elencati nella navigazione a sinistra forniscono informazioni specifiche sulla versione, requisiti di sistema, limitazioni, problemi risolti e problemi noti.
+
+## Correzioni in TVSDK 3.14 Android
+
+Questa versione fornisce una correzione a un problema in cui l&#39;applicazione si blocca quando il nodo [!UICONTROL CDATA] è vuoto per uno qualsiasi degli elementi [!UICONTROL ClickTracking], [!UICONTROL CustomClick] o [!UICONTROL CompanionClickTracking] nella risposta [!UICONTROL VAST].
+
+Per ulteriori informazioni, consulta le [Note sulla versione TVSDK per Android](../release-notes/tvsdk-3x-android.md) .
 
 ## Miglioramenti e correzioni in PTAI 21.8.1
 
@@ -25,12 +31,6 @@ Per altre correzioni e dettagli, consulta [Note sulla versione di Ad Insertion](
 Il rilascio introduce il supporto per gli annunci DEMUXED &quot;HLS/CMAF&quot; (preroll, midroll e postroll) per flussi LIVE, VOD e FER.
 
 Per altre correzioni e dettagli, consulta [TVSDK per le note sulla versione di iOS](../release-notes/tvsdk-3x-ios.md)
-
-## Correzioni in TVSDK 3.14 Android
-
-Questa versione fornisce una correzione a un problema in cui l&#39;applicazione si blocca quando il nodo [!UICONTROL CDATA] è vuoto per uno qualsiasi degli elementi [!UICONTROL ClickTracking], [!UICONTROL CustomClick] o [!UICONTROL CompanionClickTracking] nella risposta [!UICONTROL VAST].
-
-Per ulteriori informazioni, consulta le [Note sulla versione TVSDK per Android](../release-notes/tvsdk-3x-android.md) .
 
 ## Vedi anche
 
