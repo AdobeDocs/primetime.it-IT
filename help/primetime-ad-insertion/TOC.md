@@ -2,8 +2,7 @@
 product: adobe primetime
 audience: end-user
 user-guide-title: Guida di Primetime Ad Insertion
-translation-type: tm+mt
-source-git-commit: 9cf1312024ee755e0c99213899c89c015731b66f
+source-git-commit: 98882f0e36919635d99b0cd95f87f9736b692f73
 workflow-type: tm+mt
 source-wordcount: '176'
 ht-degree: 4%
@@ -14,7 +13,7 @@ ht-degree: 4%
 # Guida di Primetime Ad Insertion {#ad-insertion}
 
 + [Adobe Primetime Ad Insertion](home.md)
-+ Annunci Primetime Ad Insertion{#announcements}
++ Annunci di Primetime Ad Insertion{#announcements}
    + [Annunci](announcements/overview.md)
    + [Note sulla versione](https://experienceleague.adobe.com/docs/primetime/release-notes/ptai/ptai-21x-release-notes.html)
 + Guida introduttiva di Primetime Ad Insertion{#get-started}
@@ -47,7 +46,8 @@ ht-degree: 4%
    + [Metriche chiave e dimensioni dei dati](advanced-telemetry/key-metrics.md)
 + [Monitoraggio degli eventi live](live-event-monitoring.md)
 + Riferimento {#technical-reference}
-   + [Riferimento API / API Bootstrap](technical-reference/bootstrap-api.md)
+   + [API Bootstrap](technical-reference/bootstrap-api.md)
+   + [API per report](assets/auditude-report-api.pdf)
    + Best practice{#best-practices}
       + [Panoramica](best-practices/best-practices-overview.md)
       + [Ottimizzare i tempi di avvio dei video](best-practices/optimize-video-startup-time.md)
