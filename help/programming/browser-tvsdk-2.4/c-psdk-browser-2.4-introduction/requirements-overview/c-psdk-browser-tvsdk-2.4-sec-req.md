@@ -1,14 +1,13 @@
 ---
 description: È necessario tenere presenti alcune considerazioni sulla sicurezza per il browser TVSDK.
 title: Considerazioni sulla sicurezza
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: bc98890a-082a-4e2d-b927-ecb3bd878de9
+source-git-commit: 78be1575cc7bd6630a7bf85faa061327e5c414d7
 workflow-type: tm+mt
 source-wordcount: '233'
 ht-degree: 0%
 
 ---
-
 
 # Considerazioni sulla sicurezza{#security-considerations}
 
@@ -16,7 +15,7 @@ ht-degree: 0%
 
 * **Flash Player Adobe**
 
-   * Il Flash Player non consente l&#39;accesso ai dati che si trovano al di fuori del dominio da cui è stato creato il file SWF.
+   * Il Flash Player non consente l&#39;accesso ai dati che si trovano al di fuori del dominio da cui ha avuto origine SWF.
 
       Per consentire l’accesso, ospita un file di criteri tra domini con le autorizzazioni appropriate nella directory principale del server che ospita i dati. Nella modalità di fallback del Flash nel browser TVSDK (versione del Flash Player 23 e successive), è necessario il token di autorizzazione per il dominio. Per generare il token, contatta il tuo rappresentante di Adobe.
 
@@ -35,4 +34,3 @@ ht-degree: 0%
       >[!IMPORTANT]
       >
       >A partire dalla versione 2.4.5, se il lettore è ospitato su HTTPS, il browser TVSDK converte le chiamate HTTP in HTTPS quando si utilizza la tecnologia MSE.
-
