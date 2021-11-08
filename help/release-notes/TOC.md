@@ -3,7 +3,7 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Note sulla versione di Primetime
 user-guide-description: Fornisce informazioni specifiche sulla versione, requisiti di sistema, limitazioni, problemi risolti e problemi noti.
-source-git-commit: 7d754e95d8a6c5d92382e3d20fe2c9096f2162ea
+source-git-commit: f266b93281a290a8c2f19ac6869287d6480f49e5
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 16%
@@ -14,7 +14,7 @@ ht-degree: 16%
 # Note sulla versione di Primetime {#release-notes}
 
 + [Note sulla versione Panoramica](home.md)
-+ Ad Insertion Primetime {#ptai}
++ Ad Insertion di Primetime {#ptai}
    + [Note sulla versione di PTAI 21.10.1](ptai-21x-release-notes.md)
    + [Note sulla versione di PTAI 20.12.1](ptai-20x-release-notes.md)
    + [Note sulla versione di PTAI 19.11.1](ptai-19x-release-notes.md)
@@ -22,7 +22,7 @@ ht-degree: 16%
    + [Note sulla versione di TVSDK 3.13 per iOS](tvsdk-3x-ios.md)
    + [Note sulla versione di TVSDK 1.4 per iOS](tvsdk-1-4-ios.md)
 + TVSDK per Android {#tvsdk-android}
-   + [Note sulla versione di TVSDK 3.14 per Android](tvsdk-3x-android.md)
+   + [Note sulla versione di TVSDK 3.15 per Android](tvsdk-3x-android.md)
    + [Note sulla versione di TVSDK 2.7 per Android](tvsdk-27-android.md)
    + [Note sulla versione di TVSDK 2.4.1 per Android](tvsdk-24-android.md)
    + [Note sulla versione di TVSDK 1.4 per Android](tvsdk-1-4-android.md)

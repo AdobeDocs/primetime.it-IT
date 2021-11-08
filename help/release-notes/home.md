@@ -3,9 +3,9 @@ title: Note sulla versione di Primetime
 description: Note sulla versione di Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 21695ad15f1dcbbfa33211efd0fb3ab282fefbeb
+source-git-commit: 3b2495960cb4f5c625069415977596b5f6632bc4
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '305'
 ht-degree: 36%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 36%
 
 Benvenuto nelle note sulla versione di Adobe Primetime. I documenti elencati nella navigazione a sinistra forniscono informazioni specifiche sulla versione, requisiti di sistema, limitazioni, problemi risolti e problemi noti.
 
-## Correzioni in TVSDK 3.14 Android
+## Correzioni in TVSDK 3.15 Android
 
-Questa versione fornisce una correzione a un problema in cui l&#39;applicazione si blocca quando il nodo [!UICONTROL CDATA] è vuoto per uno qualsiasi degli elementi [!UICONTROL ClickTracking], [!UICONTROL CustomClick] o [!UICONTROL CompanionClickTracking] nella risposta [!UICONTROL VAST].
+Questa versione fornisce una correzione a un problema in cui l’applicazione subisce un arresto anomalo quando manca un tag creativo o quando [!UICONTROL url CDATA] è vuoto in [!UICONTROL VAST] risposta.
 
-Per ulteriori informazioni, consulta le [Note sulla versione TVSDK per Android](../release-notes/tvsdk-3x-android.md) .
+Consulta la sezione [Note sulla versione di TVSDK per Android](../release-notes/tvsdk-3x-android.md) per ulteriori informazioni.
 
 ## Miglioramenti e correzioni in PTAI 21.10.1
 
@@ -30,7 +30,7 @@ Per altre correzioni e dettagli, consulta [Note sulla versione di Ad Insertion](
 
 Il rilascio introduce il supporto per gli annunci DEMUXED &quot;HLS/CMAF&quot; (preroll, midroll e postroll) per flussi LIVE, VOD e FER.
 
-Per altre correzioni e dettagli, consulta [TVSDK per le note sulla versione di iOS](../release-notes/tvsdk-3x-ios.md).
+Per altre correzioni e dettagli, consulta [Note sulla versione di TVSDK per iOS](../release-notes/tvsdk-3x-ios.md).
 
 ## Vedi anche
 
