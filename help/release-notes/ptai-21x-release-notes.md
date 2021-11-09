@@ -1,25 +1,31 @@
 ---
-title: Note sulla versione di PTAI 21.10.1
+title: Note sulla versione di PTAI 21.11.1
 description: Le note sulla versione PTAI descrivono le novità o le modifiche, i problemi risolti e noti in Primetime Ad Insertion nel 2021.
 exl-id: 39a05f6d-431a-4416-81b1-21d82c0dbd69
-source-git-commit: 7d754e95d8a6c5d92382e3d20fe2c9096f2162ea
+source-git-commit: b58fea35be528c4c030eab39fde9dd642d90cb58
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '383'
 ht-degree: 0%
 
 ---
 
-# Note sulla versione di Primetime Ad Insertion 21.10.1
+# Note sulla versione di Primetime Ad Insertion 21.11.1
 
 Le note sulla versione di Primetime Ad Insertion 21.xx.x descrivono le novità o le modifiche, i problemi risolti e i problemi noti in Primetime Ad Insertion nel 2021.
 
-## Novità in PTAI 21.10.1
+## Novità in PTAI 21.11.1
 
-Quando:  Martedì 12 ottobre 2021 dalle 7:45 alle 13:45 ora orientale
+Quando: Martedì 9 novembre 2021 dalle ore 1:30 alle 04:30 ora orientale
 
-* Questa versione si concentra sul consolidamento dei server, rimuovendo i server non di produzione e non utili.
+* [!UICONTROL EXT-X-IMAGE-STREAM-INF] è ora configurabile per zona.
 
 ## Miglioramenti e correzioni nelle versioni precedenti
+
+### Versione 21.10.1
+
+Quando: Martedì 12 ottobre 2021 dalle 7:45 alle 13:45 ora orientale
+
+* Server consolidati, server non di produzione rimossi e server non utili.
 
 ### Versione di manutenzione di Primetime Ad Insertion
 
@@ -41,7 +47,7 @@ Quando: Martedì 24 agosto 2021 dalle 2:00 alle 05:00 Ora orientale
 
 ### Versione 21.5.1
 
-Quando:  Mercoledì 26 maggio 2021 dalle 3.30 alle 06.30 Ora orientale
+Quando: Mercoledì 26 maggio 2021 dalle 3.30 alle 06.30 Ora orientale
 
 **Modifiche**
 
@@ -51,7 +57,7 @@ Quando:  Mercoledì 26 maggio 2021 dalle 3.30 alle 06.30 Ora orientale
 
 ### Versione 21.4.1
 
-**Quando:** giovedì 22 aprile 2021 dalle 2:00 alle 5:00 ora orientale
+**Quando:** Giovedì 22 aprile 2021 dalle 2:00 alle 5:00 Ora orientale
 
 **Modifiche**
 
@@ -61,7 +67,7 @@ Quando:  Mercoledì 26 maggio 2021 dalle 3.30 alle 06.30 Ora orientale
 
 ### Versione 21.2.2
 
-**Quando:** martedì 23 febbraio 2021 dalle 1:00 alle 04:00 ora orientale
+**Quando:** Martedì 23 febbraio 2021 dalle ore 1:00 alle 04:00 Ora orientale
 
 **Modifiche**
 
@@ -69,7 +75,7 @@ Quando:  Mercoledì 26 maggio 2021 dalle 3.30 alle 06.30 Ora orientale
 
 ### Versione 21.2.1
 
-**Quando:** Mercoledì 3 febbraio 2021 dalle 1:00 alle 04:00 Ora orientale
+**Quando:** Mercoledì 3 febbraio 2021 dalle ore 1:00 alle 04:00 Ora orientale
 
 **Modifiche**
 
@@ -77,7 +83,7 @@ Quando:  Mercoledì 26 maggio 2021 dalle 3.30 alle 06.30 Ora orientale
 
 ### Versione 21.1.2
 
-**Quando:** martedì 19 gennaio 2021 dalle 12:30 alle 08:30 ora orientale
+**Quando:** Martedì 19 gennaio 2021 dalle 12:30 alle 08:30 Ora orientale
 
 **Modifiche**
 
@@ -85,7 +91,7 @@ Quando:  Mercoledì 26 maggio 2021 dalle 3.30 alle 06.30 Ora orientale
 
 ### Versione 21.1.1
 
-**Quando:** mercoledì 13 gennaio 2021 dalle 01:00 alle 04:00 ora orientale
+**Quando:** Mercoledì 13 gennaio 2021 dalle 01:00 alle 04:00 Ora orientale
 
 **Modifiche**
 

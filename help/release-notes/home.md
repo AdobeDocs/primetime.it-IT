@@ -3,10 +3,10 @@ title: Note sulla versione di Primetime
 description: Note sulla versione di Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 3b2495960cb4f5c625069415977596b5f6632bc4
+source-git-commit: c0e5d435ded98fa9b359c3887ed0aafd1b39b33d
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 36%
+source-wordcount: '286'
+ht-degree: 39%
 
 ---
 
@@ -14,15 +14,13 @@ ht-degree: 36%
 
 Benvenuto nelle note sulla versione di Adobe Primetime. I documenti elencati nella navigazione a sinistra forniscono informazioni specifiche sulla versione, requisiti di sistema, limitazioni, problemi risolti e problemi noti.
 
+## Miglioramenti e correzioni in PTAI 21.11.1
+
+La [!UICONTROL EXT-X-IMAGE-STREAM-INF] è ora configurabile per zona.
+
 ## Correzioni in TVSDK 3.15 Android
 
 Questa versione fornisce una correzione a un problema in cui l’applicazione subisce un arresto anomalo quando manca un tag creativo o quando [!UICONTROL url CDATA] è vuoto in [!UICONTROL VAST] risposta.
-
-Consulta la sezione [Note sulla versione di TVSDK per Android](../release-notes/tvsdk-3x-android.md) per ulteriori informazioni.
-
-## Miglioramenti e correzioni in PTAI 21.10.1
-
-La release è incentrata sul consolidamento dei server, rimuovendo server non di produzione e non utili.
 
 Per altre correzioni e dettagli, consulta [Note sulla versione di Ad Insertion](/help/release-notes/ptai-21x-release-notes.md).
 
