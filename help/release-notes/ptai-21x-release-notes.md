@@ -2,9 +2,9 @@
 title: Note sulla versione di PTAI 21.11.1
 description: Le note sulla versione PTAI descrivono le novità o le modifiche, i problemi risolti e noti in Primetime Ad Insertion nel 2021.
 exl-id: 39a05f6d-431a-4416-81b1-21d82c0dbd69
-source-git-commit: b58fea35be528c4c030eab39fde9dd642d90cb58
+source-git-commit: f4c6ef44c7f13bf8170a1f23a7ae8eba0171316a
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,8 @@ Quando: Martedì 9 novembre 2021 dalle ore 1:30 alle 04:30 ora orientale
 
 * [!UICONTROL EXT-X-IMAGE-STREAM-INF] è ora configurabile per zona.
 
+* Roku Trick Play è completamente supportato.
+
 ## Miglioramenti e correzioni nelle versioni precedenti
 
 ### Versione 21.10.1
@@ -29,7 +31,7 @@ Quando: Martedì 12 ottobre 2021 dalle 7:45 alle 13:45 ora orientale
 
 ### Versione di manutenzione di Primetime Ad Insertion
 
-Quando: Martedì 28 settembre 2021 dalle 5.00 alle 6.00 Ora orientale
+Quando: Martedì 28 settembre 2021 dalle 5:00 alle 6:00 Ora orientale
 
 * Aggiornamenti allo stack Load Balancer da AWS Elastic Load Balancer a AWS Application Load Balancer per funzionalità e scalabilità migliorate. Questi load balancer vengono utilizzati per indirizzare e richiedere il traffico al backend Auditude dal livello Ad Insertion (SSAI/CSAI).
 
