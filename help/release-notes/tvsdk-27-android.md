@@ -4,9 +4,9 @@ description: Le note sulla versione TVSDK 2.7 per Android™ descrivono le novit
 products: SG_PRIMETIME
 topic-tags: release-notes
 exl-id: d64f0ef2-60a9-43a1-b2f9-44764a570538
-source-git-commit: d2c8133f126db44b9c505dc0a21ba208fd6c01c8
+source-git-commit: 3891ea44775899c1e0d43c4ac74bbc4b07d7962e
 workflow-type: tm+mt
-source-wordcount: '4072'
+source-wordcount: '4070'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Il lettore di riferimento Android™ è incluso con Android™ TVSDK nella direc
 
 >[!NOTE]
 >
->To successfully build the reference player, as described in the README.md distributed with the release, make sure you do the following:
+>Per generare correttamente il lettore di riferimento, come descritto in README.md distribuito con il rilascio, assicurati di effettuare le seguenti operazioni:
 >
 >1. Scarica VideoHeartbeat.jar da [https://github.com/Adobe-Marketing-Cloud/media-sdks/releases](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases) (Libreria VideoHeartbeat per Android™ v2.0.0)
 >1. Estrai VideoHeartbeat.jar nella cartella libs/ .
@@ -61,7 +61,7 @@ TVSDK ora annulla il download del segmento in corso, se necessario, e passa in m
 * **Inserimento di interruzioni pubblicitarie parziali**
 
    Esperienza simile a quella televisiva di partecipare nel mezzo di un annuncio senza attivare il tracking per l&#39;annuncio parzialmente guardato.\
-   Esempio**: **L&#39;utente si unisce al centro (a 40 secondi) di un&#39;interruzione pubblicitaria di 90 secondi costituita da tre annunci da 30 secondi. Questo è a 10 secondi dal secondo annuncio dell&#39;interruzione.
+   Esempio: L&#39;utente si unisce al centro (a 40 secondi) di un&#39;interruzione pubblicitaria di 90 secondi costituita da tre annunci da 30 secondi. Questo è a 10 secondi dal secondo annuncio dell&#39;interruzione.
    * Il secondo annuncio viene riprodotto per la durata rimanente (20 sec) seguita dal terzo annuncio.
    * I tracciatori degli annunci per l’annuncio parziale riprodotto (secondo annuncio) non vengono attivati. I tracciatori solo per il terzo annuncio vengono attivati.
 
@@ -71,7 +71,7 @@ TVSDK ora annulla il download del segmento in corso, se necessario, e passa in m
 
 * **Aggiunta di AdSystem e ID creativo alle richieste CRS**
 
-   * Ora includendo &quot;AdSystem&quot; e &quot;CreativeId&quot; come nuovi parametri nelle richieste 1401 e 1403.
+   * Ora incluso `AdSystem` e `CreativeId` come nuovi parametri nelle richieste 1401 e 1403.
 
 * **È stata rimossa la classe API setEncodeUrlForTracking nella classe NetworkConfiguration** poiché i caratteri non sicuri in un URL devono essere codificati.
 
@@ -81,7 +81,8 @@ Android™ TVSDK v2.5.4 offre i seguenti aggiornamenti e modifiche API:
 
 * Modifiche al valore predefinito per `WebViewDebbuging`
 
-   `WebViewDebbuging` è impostato su False per impostazione predefinita. To enable it, call setWebCon`tentsDebuggingEnabled(true) in the application.
+   La `WebViewDebbuging` è impostato su _False_ per impostazione predefinita. Per abilitarlo, chiama `setWebContentsDebuggingEnabled` a _True_ nell&#39;applicazione.
+
 * Aggiornamento versione OpenSSL e Curl aggiornato `libcurl` alle versioni v7.57.0 e OpenSSL alla versione 1.0.2k.
 * Accesso a livello di app per l&#39;oggetto di risposta VAST Introduzione di una nuova API NetworkAdInfo::getVastXml() che fornisce l&#39;accesso dell&#39;oggetto di risposta VAST all&#39;applicazione.
 
@@ -409,15 +410,15 @@ Questa versione presenta i seguenti problemi:
 
 Questa versione presenta i seguenti problemi:
 
-* The live video playback may have audio-video sync issues on low-end devices.
-* Playback may stall at times when seeking to the end of the VOD media.
+* La riproduzione video in diretta potrebbe presentare problemi di sincronizzazione audio-video su dispositivi di fascia bassa.
+* La riproduzione può arrestarsi a volte quando si cerca la fine del supporto VOD.
 * Per i flussi FER, virtualTime e localTime possono variare. Inoltre, FER con offset non funziona.
 
 **Android™ TVSDK 2.5.1**
 
 Questa versione di TVSDK presenta i seguenti problemi:
 
-* Live video playback may have audio-video sync issues on low-end devices.
+* La riproduzione di video in tempo reale può presentare problemi di sincronizzazione audio-video su dispositivi di fascia bassa.
 * Per i flussi FER, virtualTime e localTime possono variare. Inoltre, FER con offset non funziona.
 * In VMAP XML, se esiste un tag VAST vuoto senza un tag di chiusura esplicito (&lt;/vast>) e senza una nuova riga successiva, l&#39;XML VMAP non viene analizzato correttamente e gli annunci potrebbero non essere riprodotti.
 * Il post-roll VPAID non è supportato.
