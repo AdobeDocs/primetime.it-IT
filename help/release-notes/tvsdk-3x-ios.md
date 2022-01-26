@@ -2,7 +2,7 @@
 title: Note sulla versione di TVSDK 3.13 per iOS
 description: Le note sulla versione di TVSDK 3.13 per iOS descrivono le novità o le modifiche, i problemi risolti e noti e i problemi del dispositivo in TVSDK iOS 3.13.
 exl-id: adf8ab23-86d6-4113-b243-2709d5f7f829
-source-git-commit: d2c8133f126db44b9c505dc0a21ba208fd6c01c8
+source-git-commit: 92defeee19a430c8b0b66696c527a6abe377f4b9
 workflow-type: tm+mt
 source-wordcount: '7587'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Correzioni fornite per i problemi dei clienti in cui `isFallbackOnInvalidCreativ
 
 * È stato risolto un problema che impediva la riproduzione dei sottotitoli VTT, causando il blocco dell’app.
 
-* iOS TVSDK 3.9 included the updated individualization transport certificate.
+* iOS TVSDK 3.9 include il certificato di trasporto di individualizzazione aggiornato.
 
 **Hotfix di iOS TVSDK 3.8.0.83**
 
@@ -55,13 +55,13 @@ Conformità iOS 13 e gestione di iOS 13 `UIWebView` Obsolescenza dell’API.
 
 **iOS TVSDK 3.7**
 
-Hotfix for a scenario where play back stopped when many ad resolution requests were made simultaneously.
+Hotfix per uno scenario in cui la riproduzione si arresta quando sono state effettuate più richieste di risoluzione di annunci simultaneamente.
 
 **iOS TVSDK 3.6**
 
-**Fixes in vastXML property of class`PTNetworkAdInfo`**
+**Correzioni nella proprietà wideXML della classe`PTNetworkAdInfo`**
 
-The `vastXML` property was not being set properly and was returning a nil value.
+La `vastXML` la proprietà non veniva impostata correttamente e restituiva un valore nil.
 
 **iOS TVSDK 3.5**
 
@@ -148,7 +148,7 @@ Nessuna nuova funzione o miglioramento in questa versione.
 
 **Versione 1.4.42**
 
-No new features are added in this release. Per un elenco dei problemi risolti, vedi [Problemi risolti](#resolved-issues).
+In questa versione non vengono aggiunte nuove funzioni. Per un elenco dei problemi risolti, vedi [Problemi risolti](#resolved-issues).
 
 **Versione 1.4.41**
 
@@ -156,9 +156,9 @@ Modifiche API:
 
 * **isSecure**: È stata introdotta una nuova API isSecure per impedire al lettore di registrare e generare un errore. Il valore predefinito è vero.
 
-* **allowExternalRecording**: È stata introdotta una nuova API per consentire il mirroring di airplay per un contenuto protetto. Airplay mirroring is treated as recording therefore `allowExternalRecording` value must be set to `True`, to allow airplay mirroring or set to `False` to stop the airplay mirroring for secure content. Per impostazione predefinita, `value` è vero.
+* **allowExternalRecording**: È stata introdotta una nuova API per consentire il mirroring di airplay per un contenuto protetto. Il mirroring dell&#39;airplay viene trattato come registrazione `allowExternalRecording` deve essere impostato su `True`, per consentire il mirroring dell&#39;airplay o impostare `False` per interrompere il mirroring dell&#39;airplay per contenuti sicuri. Per impostazione predefinita, `value` è vero.
 
-**Version 1.4.40**
+**Versione 1.4.40**
 
 Nessuna nuova funzionalità.
 
@@ -248,7 +248,7 @@ Come parte dell’aggiornamento 1.4 TVSDK, Adobe ora supporta anche l’accesso 
 
 **Video Heartbeat Library (VHL) aggiornato alla versione 1.5**
 
-* Ability to send metadata with video start or video/ad/chapter start as context data.
+* Possibilità di inviare metadati con inizio video o inizio video/annuncio/capitolo come dati contestuali.
 
 * Meno traffico di rete - Gli heartbeat sono in media meno e le dimensioni sono più piccole.
 
@@ -260,7 +260,7 @@ Supporto per le installazioni on-premise di Adobe Individualization Server per p
 
 * **Protezione dell&#39;uscita basata su risoluzione**
 
-I criteri DRM ora possono specificare la risoluzione più elevata consentita, a seconda delle funzionalità di protezione dell&#39;output del dispositivo. For example, _If HDCP is available, allow  content  of up to 1080p resolution to be played, and if HDCP is not available, allow  content  of up to 480p resolution to be played._
+I criteri DRM ora possono specificare la risoluzione più elevata consentita, a seconda delle funzionalità di protezione dell&#39;output del dispositivo. Ad esempio: _Se è disponibile l&#39;HDCP, è possibile riprodurre contenuti con una risoluzione fino a 1080p; se l&#39;HDCP non è disponibile, è possibile riprodurre contenuti con una risoluzione fino a 480p._
 
 **Versione 1.4.4**
 
@@ -389,8 +389,7 @@ Sono state corrette le richieste duplicate effettuate per gli URL Manifest duran
 
 * **Biglietto36321** - Discrepanza osservata nell&#39;intervallo ricercabile tra `PTMediaPlayer` e `AVPlayer` istanza in _Riproduzione_ stato.
 
-* **Ticket36493** - `libstdc++` support on iOS 12
-Fixed the compilation issues with TVSDK on iOS 12. Le app basate su TVSDK per iOS 1.4.45 e versioni successive richiedono una destinazione di distribuzione minima come iOS 7.0
+* **Biglietto36493** - `libstdc++` supporto su iOS 12 Sono stati risolti i problemi di compilazione con TVSDK su iOS 12. Le app basate su TVSDK per iOS 1.4.45 e versioni successive richiedono una destinazione di distribuzione minima come iOS 7.0
 
 **Versione 1.4.44**
 
@@ -936,11 +935,11 @@ Il tipo di mime JavaScript non veniva sempre incluso o considerato come un tipo 
 
 * (ZD #20749) - Fallback salta le risposte VAST non vuote; Gli URL di tracciamento degli annunci aggiuntivi vengono attivati
 
-The issue where some of the creatives are not being repackaged has been fixed.
+Il problema in cui alcuni dei creativi non vengono riconfezionati è stato risolto.
 
 **Versione 1.4.19** (1.4.19.563) per iOS 6.0+
 
-* ZD #18639) - The TVSDK uses excessive CPU/resources on a lengthy hot-recording asset
+* ZD #18639) - Il TVSDK utilizza CPU/risorse eccessive su una lunga risorsa di registrazione a caldo
 
 Questo problema è stato risolto ottimizzando la riscrittura della playlist DRM m3u8 ai bit della cache della playlist che sono stati riscritti in precedenza. Questo è più pertinente quando si riproducono flussi live m3u8 per i quali viene scaricato m3u8 dopo ogni download del segmento.
 
@@ -1049,15 +1048,15 @@ Sono stati aggiunti metadati per esporre il contenuto al momento della notifica 
 
 Per supportare correttamente iOS 9, è necessario configurare le eccezioni di Application Transportation Security. Per la demo, l&#39;ATS è completamente disabilitato.
 
-**Version 1.4.12** (1.4.12.464) for iOS 6.0+
+**Versione 1.4.12** (1.4.12.464) per iOS 6.0+
 
-* (ZD #4521) CRS Testing Client Side and SSAI
+* (ZD #4521) Test CRS lato client e SSAI
 
 È stato corretto MD5 invertito errato nell&#39;URL 3P.
 
 **Versione 1.4.12** (1.4.12.463) per iOS 6.0+
 
-* (ZD #2751) CSAI and CRS / Enhance: Handle dynamic elements in certain media file URLs.
+* (ZD #2751) CSAI e CRS / Miglioramento: Gestisci gli elementi dinamici in determinati URL di file multimediali.
 
 È stato aggiornato Creative Repackaging Service per gestire correttamente gli annunci con URL creativi dinamici.
 
@@ -1085,7 +1084,7 @@ Risolto con correzione per ZD #4279
 
 * (ZD #3193) Richiesta di modifica dell’API del profilo in TVSDK
 
-Aggiornato `PTPlaybackInformation` per esporre i dati aggiornati indicati`Bitrate. Updated `Notifica BITRATE_CHANGE` più affidabile e precisa ai bit rate segnalati M3U8.
+Aggiornato `PTPlaybackInformation` per esporre il Bitrate aggiornato indicato. Aggiornato `BITRATE_CHANGE` notifica per essere più affidabile e preciso ai bit rate segnalati da M3U8.
 
 * (ZD #3324) Problema di reporting degli annunci Primetime quando nessun supporto pubblicitario in VMAP
 
@@ -1155,7 +1154,7 @@ Supporto per il ping di URL vuoti di tracciamento delle interruzioni pubblicitar
 **Versione 1.4.28**
 
 * TVSDK 1.4.28 è stato certificato per iOS 10 Beta 7.
-* DRM support to force HTTPS by adding  `forceHTTPS`  and `isForcingHTTPS` APIs.
+* Supporto DRM per forzare HTTPS aggiungendo  `forceHTTPS`  e `isForcingHTTPS` API.
 * Sono state aggiornate le librerie VHL a 1.5.8, Adobe Mobile Libraries a 4.8.4 e la libreria di utilità logger alla destinazione di distribuzione della versione 7.0.
 
 **Versione 1.4.19**
@@ -1166,12 +1165,12 @@ Questa versione del TVSDK è stata certificata con il supporto FairPlay per iOS 
 
 * tvOS
 
-   This version of the  TVSDK  includes support for tvOS and has been certified for unencrypted HLS streams.
+   Questa versione di TVSDK include il supporto per tvOS ed è stata certificata per flussi HLS non crittografati.
 
    **Nota**: Ricorda le seguenti linee guida per la compilazione:
 
-   * Il supporto per tvOS TVSDK è limitato a flussi crittografati DRM non Adobi. È necessario rimuovere il riferimento a `drmNativeInterface.framework` nelle impostazioni della build tvOS. AES encrypted streams are still supported.
-   * Apple requires all Apple TV applications to be bitcode enabled, so you must turn on this flag in your project settings.
+   * Il supporto per tvOS TVSDK è limitato a flussi crittografati DRM non Adobi. È necessario rimuovere il riferimento a `drmNativeInterface.framework` nelle impostazioni della build tvOS. I flussi crittografati AES sono ancora supportati.
+   * Apple richiede che tutte le applicazioni Apple TV siano abilitate per il bitcode, pertanto devi attivare questo flag nelle impostazioni del progetto.
 
 ## Problemi noti e limitazioni {#known-issues-and-limitations}
 
