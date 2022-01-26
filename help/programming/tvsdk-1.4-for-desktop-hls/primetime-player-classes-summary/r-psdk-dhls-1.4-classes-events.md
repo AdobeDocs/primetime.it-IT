@@ -1,16 +1,15 @@
 ---
 description: Queste classi descrivono gli eventi che TVSDK invia al lettore multimediale in risposta a varie attività.
 title: Classi Eventi
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: a349984a-5e47-4895-a56f-ef25eb372c79
+source-git-commit: 776d3d1668f063f1595bd3ecb53603171905014a
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '473'
 ht-degree: 0%
 
 ---
 
-
-# Classi eventi {#events-classes}
+# Classi Eventi {#events-classes}
 
 Queste classi descrivono gli eventi che TVSDK invia al lettore multimediale in risposta a varie attività.
 
@@ -22,13 +21,13 @@ Pacchetto: [com.adobe.mediacore.events](https://help.adobe.com/en_US/primetime/a
 | [AdClickEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/AdClickEvent.html) | Classe. L&#39;utente ha fatto clic su un annuncio. |
 | [AdPlaybackEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/AdPlaybackEvent.html) | Classe. Il giocatore ha suonato un annuncio. |
 | [BufferEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/BufferEvent.html) | Classe. Il lettore ha avviato o interrotto il buffering. |
-| [CustomAdEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/CustomAdEvent.html) | Classe. Il lettore visualizza lo stato di caricamento personalizzato degli annunci e può ignorare gli annunci che presentano errori o che richiedono troppo tempo per essere caricati. |
+| [CustomAdEvent](https://experienceleague.adobe.com/docs/primetime/programming/tvsdk-1-4-for-desktop-hls/advertising/custom-ads/r-psdk-dhls-1.4-custom-ad-events.html?lang=en) | Classe. Il lettore visualizza lo stato di caricamento personalizzato degli annunci e può ignorare gli annunci che presentano errori o che richiedono troppo tempo per essere caricati. |
 | [DRMMetadataInfoEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/DRMMetadataInfoEvent.html) | Classe. I nuovi metadati DRM sono associati all&#39;elemento corrente. |
 | [LoadInformationEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/LoadInformationEvent.html) | Classe. Le informazioni di download sono disponibili per il flusso multimediale corrente in fase di riproduzione. |
 | [MediaPlayerItemEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerItemEvent.html) | Classe. È stato creato un elemento del lettore multimediale. |
 | [MediaPlayerItemLoaderEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerItemLoaderEvent.html) | Classe. Operazione di caricamento completata. Inviato da `MediaPlayerItemLoader` per informare i propri clienti. |
 | [MediaPlayerStatusChangeEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerStatusChangeEvent.html) | Classe. Lo stato del lettore multimediale è stato modificato. |
-| [MediaPlayerViewEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerViewEvent.html) | Classe. Fai clic su `MediaPlayerView` . |
+| [MediaPlayerViewEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerViewEvent.html) | Classe. La `MediaPlayerView` è stato selezionato. |
 | [PlaybackRateEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/PlaybackRateEvent.html) | Classe. La velocità di riproduzione del lettore multimediale cambia. |
 | [ProfileEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/ProfileEvent.html) | Classe. L&#39;algoritmo di commutazione del bit rate adattivo del lettore multimediale è passato a un altro profilo a causa di condizioni di rete o macchina. |
 | [SeekEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/SeekEvent.html) | Classe. Il lettore ha iniziato la ricerca o l&#39;operazione di ricerca è stata completata. |
