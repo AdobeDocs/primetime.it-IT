@@ -3,10 +3,10 @@ title: Note sulla versione di Primetime
 description: Note sulla versione di Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: f4c6ef44c7f13bf8170a1f23a7ae8eba0171316a
+source-git-commit: d549c83b50683ed3f803226eaa414179896a29b0
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '320'
+ht-degree: 35%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 Benvenuto nelle note sulla versione di Adobe Primetime. I documenti elencati nella navigazione a sinistra forniscono informazioni specifiche sulla versione, requisiti di sistema, limitazioni, problemi risolti e problemi noti.
 
-## Miglioramenti e correzioni in PTAI 21.11.1
+## Miglioramenti e correzioni in PTAI 22.2.2
 
-La [!UICONTROL EXT-X-IMAGE-STREAM-INF] è ora configurabile per zona e [!UICONTROL Roku Trick] play è completamente supportato.
+Questa versione è incentrata sull’acquisizione di nuovi eventi di performance pubblicitaria, come chiamate ad creative, chiamate ad server ed eventi di risoluzione avail. Questi eventi saranno esposti tramite la nuova interfaccia utente grafica di Primetime Ad Insertion in una delle prossime versioni.
 
 ## Correzioni in TVSDK 3.15 Android
 
