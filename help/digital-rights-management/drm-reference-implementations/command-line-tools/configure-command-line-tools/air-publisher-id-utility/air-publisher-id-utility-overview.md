@@ -2,26 +2,25 @@
 title: Panoramica
 description: Panoramica
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 07f2ef0b-c6aa-4574-a3ae-18685a090cf2
+source-git-commit: a1fc67b708f3d5821532d3827639adbadf15f6b4
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
 
 ---
 
+# Utility AIR Publisher ID {#air-publisher-id-utility}
 
-# Utility ID di AIR Publisher {#air-publisher-id-utility}
+Quando si crea un file AIR, AIR Developer Tool (ADT) genera automaticamente un ID editore. Utility AIR Publisher ID ( [!DNL AdobePublisherIDUtility.jar]) calcola l&#39;ID editore per un&#39;applicazione AIR.
 
-Quando si crea un file AIR, AIR Developer Tool (ADT) genera automaticamente un ID editore. L&#39;utility AIR Publisher ID ( [!DNL AdobePublisherIDUtility.jar]) calcola l&#39;ID editore per un&#39;applicazione AIR.
-
-L’ID editore è univoco per il certificato utilizzato per creare un file AIR. Se riutilizzi lo stesso certificato per più applicazioni AIR, tutte le applicazioni AIR avranno lo stesso ID editore. Una versione di AIR successiva alla versione 1.5.2 non aggiunge l’ID editore generato a un file . Pertanto, se prevedi di utilizzare un elenco consentiti di applicazione AIR, utilizza questo strumento per determinare l&#39;ID editore.
+L&#39;ID editore è univoco per il certificato utilizzato per creare un file AIR. Se riutilizzi lo stesso certificato per più applicazioni AIR, tutte le applicazioni AIR avranno lo stesso ID editore. Una versione di AIR successiva alla versione 1.5.2 non aggiunge l’ID editore generato a un file . Pertanto, se si intende utilizzare un elenco consentiti di applicazione AIR, utilizzare questo strumento per determinare l&#39;ID editore.
 
 >[!NOTE]
 >
->L&#39;ID dell&#39;editore utilizzato per l&#39;applicazione dell&#39;elenco consentiti AIR non è lo stesso ID dell&#39;editore specificato dall&#39;autore dell&#39;applicazione nel file [!DNL application.xml] dell&#39;applicazione.
+>L&#39;ID editore utilizzato per l&#39;applicazione di AIR elenco consentiti non è lo stesso ID editore specificato dall&#39;editore dell&#39;applicazione nel [!DNL application.xml] file.
 
-## Uso della riga di comando dell&#39;utilità ID editore di AIR {#air-publisher-id-utility-command-line-usage}
+## Utilizzo della riga di comando dell&#39;utilità di pubblicazione AIR ID {#air-publisher-id-utility-command-line-usage}
 
 ```
 java -jar AdobePublisherIDUtility.jar 
@@ -36,11 +35,10 @@ java -jar AdobePublisherIDUtility.jar
 </i class="+ topic>
 ```
 
-* 
-   * `signaturefile`* specifica un percorso del  [!DNL signatures.xml] file dell&#39;applicazione AIR, situato nella  [!DNL META-INF] directory delle applicazioni
+* `signaturefile` specifica un percorso dell&#39;applicazione AIR [!DNL signatures.xml] file, situato nelle applicazioni [!DNL META-INF] directory
 
 * `signingcert` specifica il certificato utilizzato per firmare un&#39;applicazione AIR
 
 >[!NOTE]
 >
->Per determinare l&#39;ID editore per un&#39;applicazione Android, devi utilizzare l&#39;opzione `-s` per specificare il certificato utilizzato per firmare il pacchetto dell&#39;applicazione Android (APK). Primetime DRM è necessario per creare applicazioni Android che possono riprodurre contenuti protetti da DRM di Primetime.
+>Per determinare l&#39;ID editore per un&#39;applicazione Android, è necessario utilizzare il `-s` per specificare il certificato utilizzato per firmare il pacchetto dell&#39;applicazione Android (APK). Primetime DRM è necessario per creare applicazioni Android che possono riprodurre contenuti protetti da DRM di Primetime.
