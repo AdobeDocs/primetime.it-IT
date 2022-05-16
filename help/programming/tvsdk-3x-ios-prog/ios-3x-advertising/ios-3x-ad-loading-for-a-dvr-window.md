@@ -1,14 +1,13 @@
 ---
 description: Puoi decidere se risolvere solo gli annunci che si verificano dopo il punto attivo corrente dell’utente o anche risolvere gli annunci che si verificano prima del punto attivo corrente.
 title: Carica annuncio per una finestra DVR
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3e8542a8-0912-4023-904d-0fdb28411a9d
+source-git-commit: 0019a95fa9ca6d21249533d559ce844897ab67cf
 workflow-type: tm+mt
-source-wordcount: '212'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
-
 
 # Carica annuncio per una finestra DVR {#load-ad-for-a-dvr-window}
 
@@ -24,11 +23,11 @@ Quando un utente inizia a visualizzare il contenuto all&#39;inizio di un flusso 
 
 Per controllare e caricare una finestra DVR:
 
-    Per caricare tutti gli annunci per l&#39;intero flusso, imposta la proprietà `PTAdMetadata.enableDVRAds` su `YES`.
+Per caricare tutti gli annunci per l&#39;intero flusso, imposta la `PTAdMetadata.enableDVRAds` proprietà di `YES`.
 
 >[!NOTE]
 >
->Il valore predefinito è `NO` e questa opzione carica gli annunci solo dal punto attivo corrente.
+>Il valore predefinito è `NO`e questa opzione carica gli annunci solo dal punto attivo corrente.
 
 Ad esempio:
 
