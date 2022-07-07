@@ -1,27 +1,56 @@
 ---
-title: Note sulla versione di PTAI 2.2.2
+title: Note sulla versione di PTAI 22.6.2
 description: Le note sulla versione PTAI descrivono le novità o le modifiche, i problemi risolti e noti in Primetime Ad Insertion nel 2022.
 exl-id: 58b254b8-18b9-48ba-bd4e-378785e56af5
-source-git-commit: 899b8dc98b79d531c7f13bfe26d12806e90d5685
+source-git-commit: 9f218bddddeab52480bbdcd41e8f0e6fd0fab0f8
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '276'
 ht-degree: 0%
 
 ---
 
-# Note sulla versione di Primetime Ad Insertion 2.2.2
+# Note sulla versione di Primetime Ad Insertion 22.6.2
 
 Le note sulla versione di Primetime Ad Insertion 22.xx.x descrivono le novità o le modifiche, i problemi risolti e i problemi noti in Primetime Ad Insertion nel 2022.
 
-## Novità in PTAI 22.4.4
+## Novità in PTAI 22.6.2
 
-Quando: Mercoledì 20 aprile 2022 dalle 3:00 alle 6:00 Ora orientale
+Quando: Mercoledì 29 giugno 2022, dalle 3.00 alle 6.00 Ora orientale
+
+* Miglioramento della registrazione delle prestazioni degli annunci con ulteriori dettagli sulla perdita di valore.
+
+* Altre origini di archiviazione netta per CRS.
+
+## Miglioramenti e correzioni nelle versioni precedenti
+
+### Versione 2.6.1
+
+**Quando:** Martedì 14 giugno 2022, dalle 3.00 alle 6.00 Ora orientale
+
+**Modifiche**
+
+* Supporto per DASH VOD/FER multiperiodo
+* Correzione del tipo MIME DASH per HLS
+* Console legacy integrate nell’interfaccia utente unificata
+* Al servizio vengono passati nuovi valori di dimensione di impression
+
+### Versione 22.5.2
+
+**Quando:** Mercoledì 25 maggio 2022, dalle 3.00 alle 6.00 Ora orientale
+
+**Modifiche**
+
+* Miglioramenti a funzionalità, usabilità e affidabilità nelle console SSAI e CRS legacy.
+
+### Versione 2.4.4
+
+**Quando:** Mercoledì 20 aprile 2022 dalle 3:00 alle 6:00 Ora orientale
+
+**Modifiche**
 
 * Un aggiornamento per acquisire nuovi eventi di performance pubblicitaria intorno alle chiamate ad.
 
 * Un aggiornamento per acquisire nuove dimensioni di impression per arricchire l’interfaccia di reporting, la fatturazione interna e le iniziative di performance pubblicitarie.
-
-## Miglioramenti e correzioni nelle versioni precedenti
 
 ### Versione 2.3.2
 
