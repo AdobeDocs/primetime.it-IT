@@ -3,11 +3,10 @@ product: primetime
 audience: end-user
 user-guide-title: Guida all’implementazione di Primetime
 user-guide-description: Consente di comprendere il TVSDK e modificare i gestori delle funzioni per personalizzare il lettore personale.
-translation-type: tm+mt
 source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
-source-wordcount: '246'
-ht-degree: 7%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -23,11 +22,11 @@ ht-degree: 7%
       + [Creazione dei gestori di funzioni tramite trasmissione delle informazioni di configurazione a MediaPlayer in corso...](ref-implementation/using-feature-managers/creating-feature-managers.md)
       + [Attivazione o disattivazione delle funzioni con ManagerFactory](ref-implementation/using-feature-managers/turning-features-on-off.md)
       + [Gestione degli eventi](ref-implementation/using-feature-managers/handling-events.md)
-   + Configurare l&#39;ambiente di sviluppo {#setup-dev}
+   + Configurare l’ambiente di sviluppo {#setup-dev}
       + [Configurare l’ambiente di sviluppo](set-up-dev-environment/set-up-dev-environment-overview.md)
       + [Download e configurazione del software di prerequisiti](set-up-dev-environment/download-prereqs-android.md)
       + [Creare l’implementazione di riferimento di Primetime](set-up-dev-environment/install-the-ref-player-project.md)
-   + Esplora il codice {#explore-code}
+   + Esplorare il codice {#explore-code}
       + [PlayerFragment](set-up-dev-environment/exploring-code/player-fragment.md)
       + [Manager](set-up-dev-environment/exploring-code/about-psdk-feature-managers.md)
       + [ConfigProvider](set-up-dev-environment/exploring-code/config-provider.md)
@@ -65,7 +64,7 @@ ht-degree: 7%
       + [Integrare l’autenticazione Primetime](paytvpass-entitlement/integrate-pass.md)
       + [Configurare i rapporti di Adobe Analytics](paytvpass-entitlement/pass-analytics-setup.md)
       + [Documentazione API correlata](paytvpass-entitlement/pass-apis-callbacks.md)
-   + Analisi video {#video-analytics}
+   + Analisi dei video {#video-analytics}
       + [Analisi dei video](video-analytics/video-analytics-overview.md)
       + [Creare Video Analytics Manager](video-analytics/create-video-analytics-manager.md)
       + [Configurare Video Analytics](video-analytics/configure-video-analytics-manager.md)
