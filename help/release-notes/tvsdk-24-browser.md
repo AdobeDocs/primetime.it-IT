@@ -4,14 +4,13 @@ description: Le note sulla versione TVSDK 2.4 per browser descrivono le funzioni
 contentOwner: dekalra
 topic-tags: release-notes
 products: SG_PRIMETIME
-translation-type: tm+mt
-source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
+exl-id: 83fdf530-5cbb-41d9-ab2a-28e117f04488
+source-git-commit: 3b051c3188c81673129e12dfeb573aaf85c15c97
 workflow-type: tm+mt
 source-wordcount: '6812'
 ht-degree: 0%
 
 ---
-
 
 # Note sulla versione del browser TVSDK 2.4 {#browser-tvsdk-release-notes}
 
@@ -24,7 +23,7 @@ Browser TVSDK è un toolkit che consente di aggiungere funzionalità avanzate di
 Il browser TVSDK 2.4 fornisce API JavaScript per creare applicazioni video basate su browser e include il supporto per la riproduzione nelle seguenti modalità:
 
 * Solo HTML5
-* HTML5 con fallback flash automatico
+* HTML5 con fallback auto flash
 * Flash sempre
 
 Questa versione include le seguenti informazioni:
@@ -33,9 +32,9 @@ Questa versione include le seguenti informazioni:
 
 ・ [Guida alla programmazione TVSDK per browser](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_browser-tvsdk.pdf).
 
-・ [Guida alla migrazione TVSDK per 1.4 DHLS al browser TVSDK 2.4](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-dhls-browser-tvsdk-24.html).
+・ [Guida alla migrazione a TVSDK 2.4 per 1.4 da DHLS al browser](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-dhls-browser-tvsdk-24.html).
 
-・ [Conversione dal browser TVSDK 2.4.6 alla versione 2.4.7](https://helpx.adobe.com/primetime/conversion-guides/browser-tvsdk-246-to-247-for-javascript.html).
+・ [Conversione da browser TVSDK 2.4.6 a versione 2.4.7](https://helpx.adobe.com/primetime/conversion-guides/browser-tvsdk-246-to-247-for-javascript.html).
 
 ・ Un’implementazione di riferimento, inclusa nella build.
 
@@ -43,7 +42,7 @@ Questa versione include le seguenti informazioni:
 >
 >*Per un elenco completo delle considerazioni sulla sicurezza per questa versione, vedere Considerazioni sulla sicurezza.
 
-## Novità e funzioni supportate {#what-s-new-and-supported-features}
+## Novità e funzionalità supportate {#what-s-new-and-supported-features}
 
 Questa versione del TVSDK per browser fornisce nuove funzioni che è possibile utilizzare per migliorare le applicazioni video.
 
@@ -53,7 +52,7 @@ La seguente aggiunta è disponibile come parte dell’aggiornamento del browser 
 
 * L&#39;implementazione dell&#39;API del volume di AdobePSDK.MediaPlayer viene modificata per consentire la riproduzione automatica su iOS quando la riproduzione è disattivata.
 
-・ Viene aggiunta una nuova API, `auditudeSettings.ignoreVPAIDAds`, per consentire di ignorare gli annunci VPAID ricevuti dal server Auditude. L’API non funziona per Fallback di Flash.
+・ Una nuova API, `auditudeSettings.ignoreVPAIDAds`, viene aggiunto per consentire di ignorare gli annunci VPAID ricevuti dal server Auditude . L’API non funziona per Fallback di Flash.
 
 **Versione 2.4.11**
 
@@ -61,15 +60,15 @@ I seguenti miglioramenti e aggiunte sono disponibili come parte del rilascio del
 
 ・ Il failover dei segmenti HLS Live è supportato per le modalità di fallback MSE e Flash.
 
-・ Il supporto per `AuditudeSettings.creativeRepackagingDomain` API è ora disponibile anche per MSE. In precedenza era supportato solo con la modalità di fallback del Flash.
+・ Supporto per `AuditudeSettings.creativeRepackagingDomain` API è ora disponibile anche per MSE. In precedenza era supportato solo con la modalità di fallback del Flash.
 
-・ La versione contiene correzioni per problemi critici dei clienti. Vedere *Problemi risolti* un elenco.
+・ La versione contiene correzioni per problemi critici dei clienti. Vedi *Problemi risolti* un elenco.
 
 **Versione 2.4.10**
 
 I seguenti miglioramenti e aggiunte sono disponibili come parte del rilascio del browser TVSDK 2.4.10:
 
-・ TVSDK fornisce enableLogging() per abilitare o disabilitare la registrazione. Per informazioni sull&#39;utilizzo, consulta la [documentazione API](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html).
+・ TVSDK fornisce enableLogging() per abilitare o disabilitare la registrazione. Fai riferimento a [Documentazione API](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)per l&#39;utilizzo.
 
 ・ TVSDK non supporta più i capitoli predefiniti quando si utilizza Adobe Analytics. Definisci e gestisci i capitoli utilizzando l’applicazione.
 
@@ -95,17 +94,17 @@ Classe AdobePSDK.ForceHttpsAdConfiguration .
 
 **Novità dell’aggiornamento 2.4.8 (build 6002)**
 
-Questo aggiornamento contiene correzioni di problemi critici per i clienti. Consulta *Problemi risolti*, per l&#39;elenco.
+Questo aggiornamento contiene correzioni di problemi critici per i clienti. Vedi *Problemi risolti*, per l’elenco.
 
 **Versione 2.4.8**
 
 I seguenti miglioramenti e aggiunte sono disponibili come parte del rilascio del browser TVSDK 2.4.8:
 
-・ L’SDK è ora compatibile con Chrome EME e le modifiche alle best practice disponibili a partire da Chrome v58. Per ulteriori informazioni, consulta [https://storage.googleapis.com/wvdocs/Chrome_EME_Changes_and_Best_Practices.pdf](https://storage.googleapis.com/wvdocs/Chrome_EME_Changes_and_Best_Practices.pdf)**
+・ L’SDK è ora compatibile con Chrome EME e le modifiche alle best practice disponibili a partire da Chrome v58. Per ulteriori dettagli vedi [https://storage.googleapis.com/wvdocs/Chrome_EME_Changes_and_Best_Practices.pdf](https://storage.googleapis.com/wvdocs/Chrome_EME_Changes_and_Best_Practices.pdf)**
 
 ・ Il framework dell&#39;interfaccia utente ora supporta HLS Access DRM sul flusso di lavoro Flash, Solo annuncio e Informazioni di targeting.
 
-・ L&#39;API setDRMAuthenticateData viene aggiunta al framework dell&#39;interfaccia utente. Per riprodurre flussi protetti con Adobe Access DRM, richiama questa API. In alternativa, è possibile specificare l’attributo drmAuthenticateData nel lettore. Per ulteriori informazioni, consulta [AdobePSDK.videoBehavior ](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/VideoBehavior.html).
+・ L&#39;API setDRMAuthenticateData viene aggiunta al framework dell&#39;interfaccia utente. Per riprodurre flussi protetti con Adobe Access DRM, richiama questa API. In alternativa, è possibile specificare l’attributo drmAuthenticateData nel lettore. Vedi [AdobePSDK.videoBehavior ](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/VideoBehavior.html)per i dettagli.
 
 **Versione 2.4.7**
 
@@ -125,7 +124,7 @@ In questo strumento, puoi selezionare varie impostazioni, fare clic su **Test Co
 
 ・ Aggiunta dell&#39;API MediaPlayerItemConfig al framework dell&#39;interfaccia utente
 
-È possibile configurare tramite MediaPlayerItemConfig varie funzioni, tra cui advertisingMetadata, advertisingFactory, adSignalingMode, networkConfiguration, customRangeMetadata, useHardwareDecoder, subscriTags, thumbnailScrubber, billingMetricsConfiguration. Per ulteriori informazioni, consulta la documentazione di AdobePSDK.MediaPlayerItemConfig in [API TVSDK del browser](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)* * [documentazione](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html).
+È possibile configurare tramite MediaPlayerItemConfig varie funzioni, tra cui advertisingMetadata, advertisingFactory, adSignalingMode, networkConfiguration, customRangeMetadata, useHardwareDecoder, subscriTags, thumbnailScrubber, billingMetricsConfiguration. Per ulteriori informazioni, consulta la documentazione di AdobePSDK.MediaPlayerItemConfig nella sezione [API TVSDK per browser](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)* [documentazione](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html).
 
 Nel framework dell&#39;interfaccia utente, è stato modificato il modo in cui si trasmettono le configurazioni di rete attraverso la configurazione del lettore.
 
@@ -165,7 +164,7 @@ Le configurazioni DRM e il tracciamento di Analytics possono essere abilitati tr
 
 Questa nuova API offre flessibilità all’app di riproduzione per selezionare il div in cui può incorporare il file FlashFallback.swf.
 
-* È stata sostituita l’ `getVersion`API dalla classe `AdobePSDK.MediaPlayer` con la classe `AdobePSDK.Version` per le informazioni relative alla versione TVSDK. Per informazioni dettagliate, consulta `AdobePSDK.Version` API [qui](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/AdobePSDK.Version.html).
+* Sostituito `getVersion`API da `AdobePSDK.MediaPlayer` classe con `AdobePSDK.Version` per informazioni relative alla versione TVSDK. Per maggiori dettagli, vedi `AdobePSDK.Version` API [qui](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/AdobePSDK.Version.html).
 
 **Versione 2.4.6**
 
@@ -181,7 +180,7 @@ Con l&#39;aiuto della fatturazione, Browser TVSDK può raccogliere le metriche d
 
 >[!NOTE]
 >
->L&#39;enum MediaPlayer.Events obsoleto e le costanti obsolete in Enum PSDKErrorCode sono state rimosse nella versione 2.4.6. Per ulteriori informazioni, consulta [Conversione da Browser TVSDK 2.4.5 a 2.4.6](https://helpx.adobe.com/primetime/conversion-guides/browser-tvsdk-245-to-246-for-javascript.html).
+>L&#39;enum MediaPlayer.Events obsoleto e le costanti obsolete in Enum PSDKErrorCode sono state rimosse nella versione 2.4.6. Per ulteriori informazioni, vedi [Conversione da browser TVSDK 2.4.5 a versione 2.4.6](https://helpx.adobe.com/primetime/conversion-guides/browser-tvsdk-245-to-246-for-javascript.html).
 
 **Versione 2.4.5**
 
@@ -189,7 +188,7 @@ Nella versione 2.4.5 sono state introdotte le seguenti funzioni:
 
 * **Riproduzione e annunci eventi completi**
 
-   I flussi HLS Full Event Replay (FER) ora supportano la risoluzione degli annunci e i comportamenti degli annunci. Per abilitare questo supporto, impostare la modalità di segnalazione degli annunci su `MANIFEST_CUES` durante la creazione dell&#39;oggetto `MediaPlayerItemConfig`.
+   I flussi HLS Full Event Replay (FER) ora supportano la risoluzione degli annunci e i comportamenti degli annunci. Per abilitare questo supporto, imposta la modalità di segnalazione degli annunci su `MANIFEST_CUES` quando si crea `MediaPlayerItemConfig` oggetto.
 
 * **Supporto di MediaView ScalePolicy**
 
@@ -201,7 +200,7 @@ Nella versione 2.4.5 sono state introdotte le seguenti funzioni:
 
 * **Applicazione selettiva di`withCredentials`**
 
-Quando `withCredentials` è impostato su true, l&#39;intestazione `Access-Control-Allow-Origin` non può essere impostata su un carattere jolly. A seconda della risposta del server, Browser TVSDK imposterà in modo selettivo l&#39;attributo `withCredentials` . Per ulteriori informazioni su questo supporto, consulta [Documenti API TVSDK per browser](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html).
+Quando `withCredentials` è impostato su true, il `Access-Control-Allow-Origin` impossibile impostare l&#39;intestazione su un carattere jolly. A seconda della risposta del server, Browser TVSDK imposterà in modo selettivo il `withCredentials` attributo. Per ulteriori informazioni su questo supporto, consulta [Documenti API TVSDK per browser](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html).
 
 **Versione 2.4.4**
 
@@ -233,7 +232,7 @@ Nella versione 2.4.2 sono state introdotte le seguenti funzioni:
 
 * **Parità API**
 
-Per un elenco completo della parità API, consulta la [Guida alla migrazione di TVSDK per 1.4 DHLS al browser TVSDK 2.4](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-dhls-browser-tvsdk-24.html).
+Per un elenco completo della parità API, consulta [Guida alla migrazione a TVSDK 2.4 per 1.4 da DHLS al browser](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-dhls-browser-tvsdk-24.html).
 
 * **Supporto di Sample-AES**
 
@@ -421,7 +420,7 @@ Elenco delle funzioni supportate e non supportate per questa versione:
 >
 >*Nelle tabelle della matrice delle funzioni riportate di seguito, un valore &quot;Y&quot; indica che la funzione è supportata nella versione corrente.*
 
-### Funzioni audio MP3 {#mp-audio-features}
+### Caratteristiche audio MP3 {#mp-audio-features}
 
 **Tabella 1: Riproduzione core{#table-core-playback}**
 
@@ -433,7 +432,7 @@ Elenco delle funzioni supportate e non supportate per questa versione:
 
 2 Firefox utilizza per impostazione predefinita il Flash Player per le versioni 41 o precedenti.
 
-### Funzioni audio MP4 {#mp-audio-features-1}
+### Caratteristiche audio MP4 {#mp-audio-features-1}
 
 **Tabella 2: Riproduzione core**
 
@@ -893,11 +892,11 @@ Ecco la matrice delle funzioni per le funzioni DASH nel browser TVSDK.
 
 ・ *Funzioni di riproduzione DASH Core*
 
-・ *Funzioni di riproduzione avanzate DASH*
+・ *Funzioni avanzate di riproduzione DASH*
 
 ・ *Funzioni di protezione dei contenuti DASH*
 
-・ *Funzioni di inserimento annunci DASH Core*
+・ *Funzioni di inserimento degli annunci core DASH*
 
 ・ *Funzioni avanzate di inserimento annunci DASH*
 
@@ -1237,9 +1236,9 @@ I seguenti problemi sono stati risolti nell’aggiornamento del browser TVSDK ve
 
 ・ **21647**- TVSDK dovrebbe consentire la riproduzione video automatica sui dispositivi iOS quando l&#39;audio è disattivato.
 
-・ **21465**- Si riceve l&#39;accesso negato al sistema della chiave di errore durante la riproduzione di un flusso DASH protetto da DRM dopo la riproduzione di un flusso DASH Live.
+・ **21465**- Accesso chiave di errore negato durante la riproduzione di un flusso DASH protetto da DRM dopo la riproduzione di un flusso DASH Live.
 
-・ **21442**- Abilitare la riproduzione automatica dei contenuti su iOS Web, dopo che l&#39;annuncio preroll viene riprodotto con un gesto dell&#39;utente.
+・ **21442**- Abilita la riproduzione automatica dei contenuti su iOS Web, dopo che l’annuncio preroll viene riprodotto con un gesto dell’utente.
 
 ・ **21240**- API fornita per filtrare gli annunci VPAID analizzati da Auditude/VMAP.
 
@@ -1283,7 +1282,7 @@ I seguenti problemi sono stati risolti nella versione 2.4.10 del browser TVSDK:
 
 ・ **20769**: L&#39;SDK ora inizia con il bit rate corrente alla ricerca invece di passare immediatamente alla modalità in base ai criteri ABR.
 
-・ **20031**: In modalità verticale su IE11 (Windows 8.1), la schermata video diventa piccola. Funzione di protezione dei contenuti:
+・ **2003**: In modalità verticale su IE11 (Windows 8.1), la schermata video diventa piccola. Funzione di protezione dei contenuti:
 
 ・ **19316**: Salta i segmenti che non riescono a decrittografare in caso di flussi HLS AES-128.
 
@@ -1305,17 +1304,17 @@ I seguenti problemi sono stati risolti nella versione 2.4.9 del browser TVSDK:
 
 ・ **19780**: La riproduzione non viene avviata per i contenuti HLS e HLS Ad su Firefox v53 (problema Firefox #354653).
 
-・ **20046**: Data programma L’ora viene ricevuta come chiave invece che come valore quando viene ricevuta come oggetto metadati temporizzati.
+・ **2004**: Data programma L’ora viene ricevuta come chiave invece che come valore quando viene ricevuta come oggetto metadati temporizzati.
 
 ・ **20047**: useDefaultResizeHandler genera un errore con il fallback del Flash.
 
-・ **20179**: Flash Fallback non funziona con Flash Player v25.0.0.171.
+・ **2017**: Flash Fallback non funziona con Flash Player v25.0.0.171.
 
 ・ **20293**: Firefox interrompe il buffering dei dati per alcuni flussi HLS che portano all&#39;arresto.
 
 ・ **20626**: Il lettore genera un errore di decodifica dei contenuti multimediali su Chrome a causa di una gestione non corretta dei campioni video con durata zero.
 
-・ **20078**: La riproduzione si arresta con l&#39;errore del browser &#39;QuotaSuperata&#39;.
+・ **2007**: La riproduzione si arresta con l&#39;errore del browser &#39;QuotaSuperata&#39;.
 
 ・ **18639**: In HLS Live Stream 608 Il testo CC a volte appare come errato.
 
@@ -1327,7 +1326,7 @@ I seguenti problemi sono stati risolti nella versione 2.4.9 del browser TVSDK:
 
 ・ **20043**: Chiamate ad impression mancanti e di tracciamento degli annunci con più annunci e reindirizzamenti di terze parti.
 
-・ **20044**: Quando si utilizza il riconfezionamento creativo, tutti gli annunci nell&#39;interruzione pubblicitaria devono essere ricompilati con successo, altrimenti l&#39;interruzione pubblicitaria viene completamente scartata.
+・ **2004**: Quando si utilizza il riconfezionamento creativo, tutti gli annunci nell&#39;interruzione pubblicitaria devono essere ricompilati con successo, altrimenti l&#39;interruzione pubblicitaria viene completamente scartata.
 
 ・ **20097**: La riproduzione dell’annuncio viene ignorata e il contenuto principale riprende immediatamente anziché attendere il timeout di 20 secondi se il manifesto dell’annuncio non è disponibile.
 
@@ -1337,21 +1336,21 @@ I seguenti problemi sono stati risolti nell’aggiornamento del browser TVSDK ve
 
 ・ **14126:** La riproduzione potrebbe arrestarsi su Firefox (problema #1316024) a causa di un gap interno nel buffer sorgente MSE. Provare a cercare per riprendere la riproduzione
 
-・ **19608:** Correzione per rispettare il valore di scostamento di tempo dalla risposta di Auditude VMAP.
+・ **19608:** Correzione per rispettare il valore di offset temporale dalla risposta Auditude VMAP.
 
-・ **19635:** Corregge lo stallo video in Internet Explorer 11 su Windows 10.
+・ **19635:** Correzione dell&#39;arresto video in Internet Explorer 11 in Windows 10.
 
-・ **19761:** Correzioni per problemi ABR con HLS.
+・ **19761:** Correzioni di problemi di ABR con HLS.
 
-・ **19780:** Corregge la riproduzione dell&#39;annuncio con contenuto HLS interrotto in Mozilla Firefox v53.
+・ **19780:** Corregge la riproduzione dell’annuncio con contenuto HLS interrotto in Mozilla Firefox v53.
 
-・ **19877 e 19744:** I problemi risolvono l&#39;incoerenza nella selezione del bitrate dopo un&#39;operazione di ricerca. Ora la selezione del bitrate sulla ricerca è il valore più basso del bitrate corrente e il bitrate all&#39;avvio-up.
+・ **1987 e 1974:** I problemi risolvono l&#39;incoerenza nella selezione del bitrate dopo un&#39;operazione di ricerca. Ora la selezione del bitrate sulla ricerca è il valore più basso del bitrate corrente e il bitrate all&#39;avvio-up.
 
-・ **19881:** La riproduzione bloccata e la sovrapposizione buffering appare per un tempo infinito dopo l&#39;esecuzione della ricerca per 3-4 volte.
+・ **1981:** La riproduzione bloccata e la sovrapposizione buffering appare per un tempo infinito dopo la ricerca viene eseguita per 3-4 volte.
 
-・ **19884:** Conferma la conformità ai requisiti di Chrome 59 Beta Verified Media Path (VMP). bTVSDK è stato in grado di riprodurre contenuti DRM Widevine con Chrome 59 Beta.
+・ **1984:** Conferma la conformità ai requisiti di Chrome 59 Beta Verified Media Path (VMP). bTVSDK è stato in grado di riprodurre contenuti DRM Widevine con Chrome 59 Beta.
 
-・ **19916:** La riproduzione DRM su UI-Framework è stata interrotta. Ora, richiama acquisitionLicense anche se non vi è alcun criterio nei metadati.
+・ **19916:** Riproduzione DRM nell&#39;interfaccia utente Framework interrotta. Ora, richiama acquisitionLicense anche se non vi è alcun criterio nei metadati.
 
 **Problemi risolti nella versione 2.4.8**
 
@@ -1443,7 +1442,7 @@ Le limitazioni e i problemi noti nel browser TVSDK sono indicati di seguito.
    <td><p>・ I formati multimediali diversi da HLS non sono supportati.</p> <p>8799: La funzione di fallback del Flash non si occupa dei contenuti misti, pertanto è necessario garantire che Contenuto, Annuncio e altri URL non portino a contenuti misti (contenuti protetti e non protetti insieme).</p> <p>・ 19271: La riproduzione multiview tramite framework di interfaccia utente non è supportata in modalità di fallback del Flash.</p> <p>・ Il fallback del Flash non funziona su Microsoft Internet Explorer 8 e 9 su Windows 7, in quanto queste versioni non sono supportate dall'SDK.</p> <p>・ 20262: Il fallback Flash aggiunge parametri personalizzati all'elenco di informazioni sul targeting. Anche l’ordine prioritario dei parametri personalizzati è diverso nel caso di Flash e MSE.</p> <p>・ 20653:Il fallback del Flash TVSDK del browser non funziona su Win10 con Creators Update.</p> <p>・ Flash Fallback funziona con il Flash Player versione 23 e successive.</p> <p>・ 20087 - Chrome 59 Beta con</p> <p>Flash 25.0.0.171</p> <p>Beta (impostazione predefinita), la riproduzione HLS non funziona in modalità Fallback Flash. Sta funzionando bene su Canary.</p> </td> 
    <td><p>・ 12563: I Dash Streams con codec audio mp4a.40.02 non riproducono su Firefox a causa della stringa di codec audio non supportata in MPD. È supportato il codec audio mp4a.40.2.</p> <p>15029: Quando si passa da un video all’altro in multiView nell’interfaccia utente Framework, il pulsante di riproduzione/pausa non viene aggiornato di conseguenza.</p> <p>・ 16034:Su Windows 8.1 IE, la chiamata di reset() porta a un errore di tipo MIME sconosciuto. Ricaricare il supporto per riprendere la riproduzione.</p> <p>・ 18235: Alcuni problemi di ricerca sono osservati con i flussi di vod DASH con Ads.</p> <p>・ 18727: L'API di errore non è supportata per MSE</p> <p>18750: Gli eventi di modifica dello stato potrebbero non essere ordinati in alcuni casi per il framework SDK e dell'interfaccia utente e in UI Framework, gli eventi IDLE e Inizializzazione di StatusChange potrebbero mancare per gli eventi Listener aggiunti dopo il caricamento della risorsa.</p> <p>・ 18889: Se MediaPlayer è in stato ERROR, l'oggetto di visualizzazione non viene restituito.</p> <p>・ 19039: Se AdobePSDK. MediaPlayer. searchToLocal() viene utilizzato con un valore maggiore di EOF, quindi la riproduzione inizia dall'inizio in caso di MSE.</p> <p>・ 19049: Non viene segnalato alcun stato di errore per Flash Player su Chrome, IE, Firefox quando il video è bloccato durante la riproduzione.</p> <p>・ 17205: La riproduzione video si arresta durante la riproduzione di un flusso non muxed per alcune ore mentre l'audio continua a essere riprodotto (Chromium issue# 664033).</p> <p>・ 12308: I flussi DASH con composizione_ time_offset specificato possono avere timeStampOffset applicato su di esso sul browser Chrome che porta a tempo di decodifica negativo e quindi errore MEDIA_ERR_ SRC_NOT_ SUPPORTED (problema di cromo #398141).</p> <p>・ 14126: La riproduzione potrebbe arrestarsi su Firefox (problema# 1316024) a causa di un gap interno nel buffer sorgente MSE. Provare a cercare per riprendere la riproduzione.</p> <p>・ 1915: MS Edge e IE 11 (Win 8.1 e 10) non imposta Origin su null nel reindirizzamento CORS, ma non riesce perché l'intestazione non è null e causa un errore di riproduzione.</p> <p>・ 19861:Problema con il comportamento di aggiunta sul buffer di origine per i supporti già riprodotti. Chrome rifiuta il frammento aggiunto, incluso moov, causando un successivo errore di decodifica. (Emissione di cromo #735335)</p> <p>19921: La riproduzione blocca per alcuni contenuti HLS anche se il buffered è riuscito (problema di cromo #713540)</p> <p>・ 20444:La ricerca della fine dell'intervallo buffered su IE e Edge può causare l'arresto della riproduzione.</p> <p>・ 20511: A volte può essere osservato il rifiuto per i flussi HLS con o senza annunci.</p> <p>・ 20743: Su Windows 10 Chrome, lo streaming HLS Live viene riprodotto per alcuni secondi prima della riproduzione MP4 pre-roll.</p> <p>・ 21043: La dimensione video potrebbe non essere corretta al caricamento iniziale a causa della mancanza di metadati.</p> <p>・ 21115: Il gesto dell'utente Android è necessario per avviare la riproduzione se l'annuncio pre-roll è disponibile per i video in una playlist.</p> <p>・ HLS Live non supporta il rollover del timestamp.</p> <p>・ Audio AAC-SSR non supportato.</p> <p>I codec audio AC3 e Enhanced AC3 non sono supportati.</p> <p>・ Per flussi con discontinuità timestamp ma senza marcatori di discontinuità</p> <p>・ La riproduzione potrebbe avere problemi e ricerca errata a causa di salti.</p> <p>・ La durata del contenuto e la durata della riproduzione potrebbero non corrispondere.</p> <p>・ Le discontinuità tra rappresentazioni e rappresentazioni devono corrispondere ad altri saggi possono portare a problemi di sincronizzazione e stallo.</p> <p>・ Sottotitoli e WebVTT potrebbero non essere visualizzati vicino alla fine del flusso.</p> <p>・ Le modifiche del codec audio non sono supportate tra i salti di marca temporale.</p> <p>・ L'inserimento di annunci non è supportato.</p> <p>・ La modalità di avanzamento rapido può portare a loop di riproduzione su Win 8.1 IE 11 (problema MS #12446268).</p> <p>DASH:</p> <p>・ Per i flussi live - è supportato il profilo live con tipo dinamico.</p> <p>・ Per i flussi VoD: è supportato il profilo live con tipo statico.</p> <p>Per i flussi VoD - il profilo on demand non è certificato per i flussi di lavoro di annunci.</p> </td> 
    <td><p>・ I flussi DASH Live e DASH Video on Demand non sono supportati.</p> <p>・ La riproduzione video PIP (Picture in Picture) non è supportata su iOS in modalità a schermo intero.</p> <p>In Safari (Video Tag) l’estensione meno manifesto senza l’intestazione corretta del tipo di contenuto non funziona.</p> </td> 
-   <td><p>・ l'ID applicazione nell'app mittente deve essere lo stesso generato durante la registrazione dell'URL del Destinatario come app del Destinatario personalizzato.</p> <p>・ Il lettore di riferimento è certificato per i flussi di lavoro DASH. Il framework dell'interfaccia utente non è certificato.</p> <p>Per un elenco dei codec multimediali supportati, fai riferimento <a href="https://developers.google.com/cast/docs/media"><em>qui</em></a>.</p> </td> 
+   <td><p>・ l'ID applicazione nell'app mittente deve essere lo stesso generato durante la registrazione dell'URL del Destinatario come app del Destinatario personalizzato.</p> <p>・ Il lettore di riferimento è certificato per i flussi di lavoro DASH. Il framework dell'interfaccia utente non è certificato.</p> <p>Per un elenco dei codec multimediali supportati, consulta <a href="https://developers.google.com/cast/docs/media"><em>qui</em></a>.</p> </td> 
   </tr> 
   <tr> 
    <td>FER VOD</td> 
@@ -1553,14 +1552,14 @@ Le limitazioni e i problemi noti nel browser TVSDK sono indicati di seguito.
    <td>Riproduzione a offset</td> 
    <td><p>L'avvio della riproduzione con un particolare valore di offset non è supportato per i contenuti MP4.</p> </td> 
    <td>20492: Gli annunci a scorrimento intermedio prima dell'offset vengono riprodotti prima che il contenuto riprenda dal valore di offset.</td> 
-   <td>La riproduzione con funzione di offset non è supportata su iOS.</td> 
+   <td>La riproduzione con funzione di offset non è supportata in iOS.</td> 
    <td> </td> 
   </tr> 
   <tr> 
    <td>VOD</td> 
    <td>Gioco A Trick</td> 
    <td>Il Trickplay uniforme non funziona per i flussi con rappresentazioni iFrame prive.</td> 
-   <td><p>・ Gli adattamenti di Trick Play non sono supportati su Firefox e Internet Explorer e quindi la modalità di gioco inversa non è disponibile su questi browser.</p> <p>・ Trickplay non è disponibile quando si riproducono contenuti insieme agli annunci.</p> <p>・ 10435: Durante la riproduzione DASH, il video si blocca durante la riproduzione di trucco in avanti su Internet Explorer (Win 8.1)</p> <p>a intermittenza. Questo accade perché usiamo la proprietà playbackRate degli elementi video senza l'adattamento del gioco di trucco.</p> <p>14182: A volte, durante il riavvolgimento sul browser Chrome, l'evento di ricerca potrebbe non essere ricevuto e quindi la modalità di trucco non funzionerà.</p> <p>・ 14942: Le percentuali di riproduzione possono essere impostate su Chrome per Android anche in caso di flussi di riproduzione non trabocchetto, ma l'impostazione non verrà applicata e la riproduzione continuerà a velocità normale.</p> <p>・ 17308: La ricerca non funziona in modalità Trickplay.</p> <p>・ 17309: Nel browser Chrome, la modalità di gioco a ritroso non può essere sostenuta per più di 2 secondi.</p> <p>19272: La riproduzione dei mattoni potrebbe non essere recuperata dal buffering sul browser Windows 10 Edge in caso di flussi DASH.</p> </td> 
+   <td><p>・ Gli adattamenti di Trick Play non sono supportati su Firefox e Internet Explorer e quindi la modalità di gioco inversa non è disponibile su questi browser.</p> <p>・ Trickplay non è disponibile quando si riproducono contenuti insieme agli annunci.</p> <p>・ 10435: Durante la riproduzione DASH, il video si blocca durante la riproduzione di trucco in avanti su Internet Explorer (Win 8.1)</p> <p>a intermittenza. Questo sta accadendo in quanto stiamo utilizzando la proprietà playbackRate degli elementi video senza l'adattamento del gioco di trucco.</p> <p>14182: A volte, durante il riavvolgimento sul browser Chrome, l'evento di ricerca potrebbe non essere ricevuto e quindi la modalità di trucco non funzionerà.</p> <p>・ 14942: Le percentuali di riproduzione possono essere impostate su Chrome per Android anche in caso di flussi di riproduzione non trabocchetto, ma l'impostazione non verrà applicata e la riproduzione continuerà a velocità normale.</p> <p>・ 17308: La ricerca non funziona in modalità Trickplay.</p> <p>・ 17309: Nel browser Chrome, la modalità di gioco a ritroso non può essere sostenuta per più di 2 secondi.</p> <p>19272: La riproduzione dei mattoni potrebbe non essere recuperata dal buffering sul browser Windows 10 Edge in caso di flussi DASH.</p> </td> 
    <td>La modalità di riavvolgimento non è supportata.</td> 
    <td> </td> 
   </tr> 
@@ -1607,7 +1606,7 @@ Le limitazioni e i problemi noti nel browser TVSDK sono indicati di seguito.
    <td>VOD</td> 
    <td>DRM</td> 
    <td> </td> 
-   <td><p>・ 12660: Il lettore HTML5 genera un errore interno del server per i contenuti crittografati PlayReady scaduti.</p> <p>・ 16720: Il contenuto crittografato DASH DRM non funziona se manca l'attributo start nel tag punto.</p> <p>・ 18589: La riproduzione non è supportata per i flussi multiperiodo DRM protetti VoD con Xlink.</p> <p>・ 18653: La riproduzione di contenuto Widevine MultiPeriod con più chiavi, si arresta al primo punto e non può passare al punto successivo.</p> <p>・ 18656: Streaming MultiPeriod Playready, crittografato con chiavi diverse, non esegue la riproduzione.</p> <p>Playready 2.0 per Dash non è certificato.</p> <p> </p> <p> </p> </td> 
+   <td><p>・ 12660: Il lettore HTML5 genera l'errore interno del server per i contenuti crittografati PlayReady scaduti.</p> <p>・ 16720: Il contenuto crittografato DASH DRM non funziona se manca l'attributo start nel tag punto.</p> <p>・ 18589: La riproduzione non è supportata per i flussi multiperiodo DRM protetti VoD con Xlink.</p> <p>・ 18653: La riproduzione di contenuto Widevine MultiPeriod con più chiavi, si arresta al primo punto e non può passare al punto successivo.</p> <p>・ 18656: Streaming MultiPeriod Playready, crittografato con chiavi diverse, non esegue la riproduzione.</p> <p>Playready 2.0 per Dash non è certificato.</p> <p> </p> <p> </p> </td> 
    <td>12602: I metadati HLS Fairplay DRM vengono continuamente aggiornati dal lettore HTML5 su Safari</td> 
    <td><p>È possibile riprodurre contenuti DASH Widevine DRM confezionati tramite Bento4. Il contenuto confezionato tramite il Packager offline e il packager Shaka non viene riprodotto. DASH PlayReady DRM non supportato.</p> </td> 
   </tr> 
@@ -1712,7 +1711,7 @@ Le limitazioni e i problemi noti nel browser TVSDK sono indicati di seguito.
    <td> </td> 
    <td>VPAID 2.0</td> 
    <td> </td> 
-   <td><p>・ I comportamenti degli annunci non sono supportati per gli annunci VPAID.</p> <p>・ 15032: Gli annunci VPAID in combinazione con annunci MP4 o HLS in un'interruzione pubblicitaria non sono supportati.</p> <p>・ 19001: Su Android e iOS quando l'annuncio VPAID viene riprodotto con MP4 come contenuto principale le tracce audio doppie sono udibili, uno dei contenuti principali e uno degli annunci.</p> <p>・ 20762: Gli annunci VPAID non sono supportati con Picture in Picture (PIP).</p> <p>・ 21172: L’evento Play complete non viene ricevuto per il contenuto HLS VOD con annunci VPAID.</p> <p>・ 21173: onAdBreakCompleteEvent non viene ricevuto per il contenuto VOD HLS e gli annunci VPAID post-roll.</p> </td> 
+   <td><p>・ I comportamenti degli annunci non sono supportati per gli annunci VPAID.</p> <p>・ 15032: Gli annunci VPAID in combinazione con annunci MP4 o HLS in un'interruzione pubblicitaria non sono supportati.</p> <p>・ 19001: Su Android e iOS quando l'annuncio VPAID viene riprodotto con MP4 come contenuto principale, le tracce audio doppie sono udibili, uno dei contenuti principali e uno degli annunci.</p> <p>・ 20762: Gli annunci VPAID non sono supportati con Picture in Picture (PIP).</p> <p>・ 21172: L’evento Play complete non viene ricevuto per il contenuto HLS VOD con annunci VPAID.</p> <p>・ 21173: onAdBreakCompleteEvent non viene ricevuto per il contenuto VOD HLS e gli annunci VPAID post-roll.</p> </td> 
    <td>Il lettore passa dalla modalità normale alla modalità a tutto schermo quando si passa da un annuncio VPAID al contenuto principale.</td> 
    <td> </td> 
    <td> </td> 
@@ -1728,4 +1727,4 @@ Le limitazioni e i problemi noti nel browser TVSDK sono indicati di seguito.
 
 ## Risorse utili {#helpful-resources}
 
-* Consulta la documentazione completa della guida nella pagina [Informazioni e supporto per Adobe Primetime](https://helpx.adobe.com/support/primetime.html) .
+* Consulta la documentazione completa dell’Aiuto all’indirizzo [Informazioni e supporto per Adobe Primetime](https://experienceleague.adobe.com/docs/primetime.html) pagina.

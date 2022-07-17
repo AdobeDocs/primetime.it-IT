@@ -1,14 +1,13 @@
 ---
 description: TVSDK ha requisiti specifici per contenuti multimediali, contenuti manifest, DRM e versioni software.
 title: Requisiti
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 85bf7b85-5f4b-4ed5-aa4f-765dabc5d4d8
+source-git-commit: 3b051c3188c81673129e12dfeb573aaf85c15c97
 workflow-type: tm+mt
 source-wordcount: '310'
 ht-degree: 0%
 
 ---
-
 
 # Requisiti {#requirements}
 
@@ -35,11 +34,11 @@ Controlla le restrizioni e i requisiti per i flussi e le playlist (manifesti), i
 
 ## #EXT-X-VERSION requisiti {#section_49A33664651A46EC9ED888BA9C1C3F6D}
 
-La versione di `#EXT-X-VERSION` nel file manifesto [!DNL .m3u8] influisce sulle funzioni disponibili per l&#39;applicazione e sui tag `EXT` validi.
+Versione di `#EXT-X-VERSION` in [!DNL .m3u8] il file manifest influenza quali funzioni sono disponibili per la tua applicazione e quali `EXT` i tag sono validi.
 
-Ecco alcune informazioni sul tag `#EXT-X-VERSION`, che specifica la versione del protocollo HLS:
+Seguono alcune informazioni sulla `#EXT-X-VERSION` , che specifica la versione del protocollo HLS:
 
-* La versione deve corrispondere alle caratteristiche e agli attributi della playlist HLS; in caso contrario, potrebbero verificarsi errori di riproduzione. Per ulteriori informazioni, consulta [Specifica di streaming HTTP Live](https://datatracker.ietf.org/doc/draft-pantos-http-live-streaming/?include_text=1).
+* La versione deve corrispondere alle caratteristiche e agli attributi della playlist HLS; in caso contrario, potrebbero verificarsi errori di riproduzione. Per ulteriori informazioni, consulta [Specifica di Streaming HTTP Live](https://datatracker.ietf.org/doc/draft-pantos-http-live-streaming/?include_text=1).
 * Adobe consiglia di utilizzare almeno la versione 2 di HLS per la riproduzione nei client basati su TVSDK.
 
    I client e i server devono implementare le versioni nel modo seguente:
@@ -53,25 +52,25 @@ Ecco alcune informazioni sul tag `#EXT-X-VERSION`, che specifica la versione del
  </thead>
  <tbody> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> EXT-X-VERSION:2  </span> </td> 
-   <td colname="2"> L'attributo IV del tag <span class="codeph"> EXT-X-KEY </span> . </td> 
+   <td colname="1"> <span class="codeph"> EXT-X-VERSION:2 </span> </td> 
+   <td colname="2"> L'attributo IV del <span class="codeph"> TASTO EXT-X </span> tag . </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> EXT-X-VERSION:3  </span> </td> 
+   <td colname="1"> <span class="codeph"> EXT-X-VERSION:3 </span> </td> 
    <td colname="2"> 
     <ul id="ul_C9500D3F934848639C204BF248F139FF"> 
-     <li id="li_535A7E3FABCB46FE872A7EA5DE2A1784">Valori di durata a virgola mobile <span class="codeph"> EXTINF </span> <p>Tag della durata ( <span class="codeph"> #EXTINF: </span>&lt;duration&gt;,&lt;title&gt;) nella versione 2 sono stati arrotondati a valori interi. La versione 3 e successive richiede che le durate siano specificate esattamente in virgola mobile. </p> </li> 
+     <li id="li_535A7E3FABCB46FE872A7EA5DE2A1784">Mobile-point <span class="codeph"> EXTINF </span> valori della durata <p>The duration tags ( <span class="codeph"> #EXTINF: </span>&lt;duration&gt;,&lt;title&gt;) in version 2 were rounded to integer values. La versione 3 e successive richiede che le durate siano specificate esattamente in virgola mobile. </p> </li> 
     </ul> </td> 
   </tr> 
   <tr rowsep="0"> 
-   <td colname="1"> <span class="codeph"> EXT-X-VERSION:4  </span> </td> 
+   <td colname="1"> <span class="codeph"> EXT-X-VERSION:4 </span> </td> 
    <td colname="2"> 
     <ul id="ul_3355A6CBBE2141DDB92660BB4B604D70"> 
-     <li id="li_5E73D41AF6DC4CEE88D6C029FFCFC350">Tag <span class="codeph"> EXT-X-BYTERANGE </span> </li> 
-     <li id="li_BF5141F516F749E5890860D487EB5287">Tag <span class="codeph"> EXT-X-I-FRAME-STREAM-INF </span> </li> 
-     <li id="li_E0D399A13812499B94107CDE62998EE9">Il tag <span class="codeph"> EXT-X-I-FRAMES-ONLY </span> </li> 
-     <li id="li_A7783AFF99854EFBBAECD2967E4CBF2B">Il tag <span class="codeph"> EXT-X-MEDIA </span> </li> 
-     <li id="li_15AE652F33C1454AA90DDC65E7D6C2FD">Gli attributi <span class="codeph"> AUDIO </span> e <span class="codeph"> VIDEO </span> del tag <span class="codeph"> EXT-X-STREAM-INF </span> </li> 
+     <li id="li_5E73D41AF6DC4CEE88D6C029FFCFC350">La <span class="codeph"> BYTERANGE EXT-X </span> tag </li> 
+     <li id="li_BF5141F516F749E5890860D487EB5287">La <span class="codeph"> EXT-X-I-FRAME-STREAM-INF </span> tag </li> 
+     <li id="li_E0D399A13812499B94107CDE62998EE9">La <span class="codeph"> SOLO FOTOGRAMMI EXT-X-I </span> tag </li> 
+     <li id="li_A7783AFF99854EFBBAECD2967E4CBF2B">La <span class="codeph"> EXT-X-MEDIA </span> tag </li> 
+     <li id="li_15AE652F33C1454AA90DDC65E7D6C2FD">La <span class="codeph"> AUDIO </span> e <span class="codeph"> VIDEO </span> gli attributi <span class="codeph"> EXT-X-STREAM-INF </span> tag </li> 
      <li id="li_DB2A7847D5884F6E91FD9E78101FBCA5">Audio alternativo TVSDK </li> 
     </ul> </td> 
   </tr> 

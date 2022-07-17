@@ -4,9 +4,9 @@ description: Le note sulla versione TVSDK 3.15 per Android descrivono le novità
 products: SG_PRIMETIME
 topic-tags: release-notes
 exl-id: cd2c64ef-dd42-4dc2-805f-eeb64a8a53d9
-source-git-commit: f266b93281a290a8c2f19ac6869287d6480f49e5
+source-git-commit: 3b051c3188c81673129e12dfeb573aaf85c15c97
 workflow-type: tm+mt
-source-wordcount: '5540'
+source-wordcount: '5516'
 ht-degree: 0%
 
 ---
@@ -203,7 +203,7 @@ TVSDK ora annulla il download del segmento in corso, se necessario, e passa in m
 
 * **Caricamento sicuro degli annunci tramite HTTPS**
 
-   Adobe Primetime fornisce un&#39;opzione per richiedere la prima chiamata al server di annunci primetime e al CRS su https.
+   Adobe Primetime fornisce un&#39;opzione per richiedere la prima chiamata al server ad primetime e al CRS su https.
 
 * **Aggiunta di AdSystem e ID creativo alle richieste CRS**
 
@@ -289,7 +289,7 @@ Quando TVSDK apre una connessione, richiede al server un *mantenere in vita* con
 
    >[!NOTE]
    >
-   >La commutazione ABR, la riproduzione a trucco, l&#39;inserimento di annunci, l&#39;associazione audio in ritardo e la segmentazione secondaria non sono supportate per la riproduzione MP4.
+   >La commutazione ABR, la riproduzione a trucco, l&#39;inserimento di annunci, l&#39;associazione audio tardiva e la segmentazione secondaria non sono supportate per la riproduzione MP4.
 
 * **Gioco a mattoni con bit rate adattivo (ABR) -** Questa funzione consente a TVSDK di passare da un flusso di iFrame all&#39;altro in modalità di riproduzione a trucco. È possibile utilizzare profili non iFrame per eseguire la riproduzione a velocità più basse.
 
@@ -320,7 +320,7 @@ Quando TVSDK apre una connessione, richiede al server un *mantenere in vita* con
 
 * **Analytics**
 
-   * **VHL 2.0 -** Questa è l’integrazione più recente della Libreria Heartbeat video (VHL) ottimizzata per la raccolta automatica dei dati di utilizzo per Adobe Analytics. La complessità delle API è stata ridotta per facilitare l’implementazione. Scarica la libreria VHL [v2.0.0 per Android](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) ed estrarre il file JAR nella cartella libs.
+   * **VHL 2.0 -** Questa è l’integrazione più recente della Video Heartbeat Library (VHL) ottimizzata per la raccolta automatica dei dati di utilizzo per Adobe Analytics. La complessità delle API è stata ridotta per facilitare l’implementazione. Scarica la libreria VHL [v2.0.0 per Android](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) ed estrarre il file JAR nella cartella libs.
 
 * **SizeAvaliableEventListener**
 
@@ -649,11 +649,11 @@ WebViewDebbuging è impostato su False per impostazione predefinita. Per abilita
 
 * Zendesk#17305 Artifact in didascalie chiuse con sfondo non opaco.
 
-   La proprietà setTreatSpaceAsAlphaNum in TextFormat è esposta. Per impostazione predefinita, la proprietà è False. Impostare la proprietà su True in un client per risolvere il problema di spazio scuro.
+   La proprietà setTreatSpaceAsAlphaNum in TextFormat è esposta. Per impostazione predefinita, la proprietà è impostata su False. Impostare la proprietà su True in un client per risolvere il problema di spazio scuro.
 
 * Zendesk#25097 Il display CC presenta artefatti visivi con impostazioni CC.
 
-   Viene esposta la proprietà setTreatSpaceAsAlphaNum in TextFormat. Per impostazione predefinita, la proprietà è False. Impostare la proprietà su True in un client per risolvere il problema di spazio scuro.
+   La proprietà setTreatSpaceAsAlphaNum in TextFormat è esposta. Per impostazione predefinita, la proprietà è impostata su False. Impostare la proprietà su True in un client per risolvere il problema di spazio scuro.
 
 * La stringa dell&#39;agente utente Zendesk #31620 che esce dal lettore TVSDK è troncata.
 
@@ -677,7 +677,7 @@ WebViewDebbuging è impostato su False per impostazione predefinita. Per abilita
 * Quando vengono riprodotti gli annunci VPAID, il heartbeat VHL chiama l&#39;evento:type:Mancano gli annunci di gioco.
 * Dopo aver inserito lo stato COMPLETE, il lettore torna allo stato PLAYING con SKIP adBreakPolicy per gli annunci post-roll.
 * I cookie non vengono allegati ai callback degli annunci in uscita.
-* I punti di cue degli annunci non sono visibili.
+* I cue point degli annunci non sono visibili.
 * HLS con binario SAP EAC3 separato non viene caricato.
 * Il lettore si blocca quando TVSDK riceve un intento di attivazione dello schermo dopo il ripristino del Media Player.
 
@@ -772,8 +772,8 @@ Questa versione di TVSDK presenta i seguenti problemi:
 
 ## Risorse utili {#helpful-resources}
 
-* [Requisiti di sistema](https://docs.adobe.com/content/help/en/primetime/programming/tvsdk-3x-android-prog/introduction/android-3x-requirements.html)
-* [Guida per programmatori Android TVSDK 3.10](https://docs.adobe.com/content/help/en/primetime/programming/tvsdk-3x-android-prog/introduction/android-3x-overview-prod-audience-guide.html)
+* [Requisiti di sistema](/help/programming/tvsdk-3x-android-prog/android-3x-introduction/android-3x-requirements.md)
+* [Guida per programmatori Android TVSDK 3.10](/help/programming/tvsdk-3x-android-prog/android-3x-introduction/overview-prod-audience-guide/android-3x-overview-prod-audience-guide.md)
 * [Guida di riferimento di riferimento per Android TVSDK per API](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.5/index.html)
 * [Documento API TVSDK per Android C++](https://help.adobe.com/en_US/primetime/api/psdk/cpp_3.5/namespaces.html) - Ogni classe Java ha una classe C++ corrispondente e la documentazione C++ contiene più materiale esplicativo rispetto a Javadocs, quindi consulta la documentazione C++ per una comprensione più approfondita dell’API Java.
 * [Guida alla migrazione a TVSDK da 1.4 a 2.5 per Android (Java)](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-25-android.html)

@@ -3,16 +3,15 @@ title: Note sulla versione di TVSDK 2.4.1 per Android
 description: Le note sulla versione di TVSDK 2.4.1 per Android descrivono le funzioni nuove e supportate e i problemi e le limitazioni noti in TVSDK Android 2.4.1.
 topic-tags: release-notes
 products: SG_PRIMETIME
-translation-type: tm+mt
-source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
+exl-id: 3de09048-ae32-43b4-a019-34b217931a4c
+source-git-commit: 3b051c3188c81673129e12dfeb573aaf85c15c97
 workflow-type: tm+mt
-source-wordcount: '1963'
+source-wordcount: '1962'
 ht-degree: 0%
 
 ---
 
-
-# TVSDK 2.4.1 per le note sulla versione Android {#tvsdk-for-android-release-notes}
+# Note sulla versione di TVSDK 2.4.1 per Android {#tvsdk-for-android-release-notes}
 
 Le note sulla versione di TVSDK 2.4.1 per Android descrivono le funzioni nuove e supportate e i problemi e le limitazioni noti in TVSDK Android 2.4.1.
 
@@ -30,7 +29,7 @@ Qui puoi trovare la documentazione:
 
 Gli Javadocs sono l’autorità suprema, in quanto vengono generati automaticamente direttamente dal codice sorgente TVSDK.
 
-・ [C++ documentazione API TVSDK 2.4 per Android C++ API](https://help.adobe.com/en_US/primetime/api/psdk/cpp_2.4/namespaces.html)
+・ [Documentazione API C++ TVSDK 2.4 per API Android C++](https://help.adobe.com/en_US/primetime/api/psdk/cpp_2.4/namespaces.html)
 
 Ogni classe Java ha una classe C++ corrispondente e la documentazione C++ contiene più materiale esplicativo rispetto a Javadocs, quindi consulta la documentazione C++ per una comprensione più approfondita dell’API Java.
 
@@ -48,12 +47,12 @@ Di seguito sono elencate le nuove funzioni chiave della versione 2.4.1:
 
 * Funzioni di HLS versione 4
 
-   * **Riproduzione video**  (riproduzione, pausa, ricerca) con controllo del lettore per flussi in tempo reale, lineare e VOD.
+   * **Riproduzione video** (riproduzione, pausa, ricerca) con controllo del lettore per flussi in tempo reale, lineare e VOD.
    * **sottotitoli codificati.** TVSDK può visualizzare sottotitoli codificati 608/708 con una selezione di font, dimensioni dei font, colori e sfondo. Può inoltre supportare i video con didascalie di roll-up e passare tra le tracce di lingua, se disponibili.
-   * **Il** modesto gioco di mattoni supporta il rapido avanzamento e il riavvolgimento per i flussi HLS che utilizzano i-frame. Tutti i controlli di riproduzione video funzionano sul contenuto. È disponibile la modalità di riproduzione video esterna con velocità comprese tra 0 e 1.
-   * **Il bitrate adattivo (ABR)**  consente al lettore di selezionare dinamicamente quale delle versioni multiple dello stesso flusso di contenuto riprodurre, in base alla rete e ad altre condizioni. Puoi impostare i parametri in modo dinamico o nel file manifesto da selezionare tra criteri di selezione aggressivi, moderati e conservativi.
-   * **Gli** intervalli di byte consentono a un singolo file TS di contenere più segmenti TS.
-   * **Il rendering audio alternativo** consente al lettore di passare da una traccia audio all’altra.
+   * **Modalità di riproduzione dei mattoni** supporta l’avanzamento e il riavvolgimento rapidi per i flussi HLS che utilizzano i-frame. Tutti i controlli di riproduzione video funzionano sul contenuto. È disponibile la modalità di riproduzione video esterna con velocità comprese tra 0 e 1.
+   * **bitrate adattivo (ABR)** consente al lettore di selezionare dinamicamente quale di più versioni dello stesso flusso di contenuto riprodurre, in base alla rete e ad altre condizioni. Puoi impostare i parametri in modo dinamico o nel file manifesto da selezionare tra criteri di selezione aggressivi, moderati e conservativi.
+   * **Intervalli di byte** abilitare un singolo file TS per contenere più segmenti TS.
+   * **Rappresentazioni audio alternative** attivare il lettore per passare da una traccia audio disponibile all&#39;altra.
    * **Supporto per ID3.** TVSDK può riprodurre flussi audio e video HLS che contengono metadati audio ID3, come nome dell&#39;artista, titolo e album.
    * **Failover. **TVSDK utilizza strategie per continuare la riproduzione ininterrotta, nonostante gli errori dei server host, dei file playlist e dei segmenti.
    * **Passaggio audio multicanale (DD+).** TVSDK può trasmettere i dati audio Dolby Digital Plus (E-AC3) all&#39;hardware di supporto.
@@ -69,26 +68,26 @@ Di seguito sono elencate le nuove funzioni chiave della versione 2.4.1:
       * IV rotazione
 
 * **Riproduzione AES 128.** TVSDK può riprodurre contenuti HLS avanzati (AES) con dimensioni chiave di 128 bit.
-* **L&#39;HLS protetto (PHLS)** fornisce un set limitato di criteri DRM predefiniti, un sottoinsieme di ciò che l&#39;accesso Adobe fornisce, per consentire un DRM leggero su HLS per flussi live e VOD.
+* **HLS protetto (PHLS)** fornisce un set limitato di criteri DRM predefiniti, un sottoinsieme di ciò che offre Access di Adobe, per consentire una DRM leggera su HLS per flussi live e VOD.
 
 * Funzionalità di pubblicità/contenuto alternativo e monetizzazione
 
    * **Tracciamento degli annunci inseriti sul lato server.** TVSDK può tenere traccia degli annunci inseriti dal servizio di inserimento annunci di Adobe Cloud. Supporta gli annunci lineari nei formati VAST2, VAST3 e VMAP per i flussi VOD e live/lineari.
-   * **Tag HLS personalizzati.** TVSDK utilizza la sua  `MediaPlayerConfig` classe per abilitare la notifica all’applicazione del lettore quando nel flusso vengono visualizzati tag HLS personalizzati.
+   * **Tag HLS personalizzati.** TVSDK utilizza `MediaPlayerConfig` per abilitare la notifica all&#39;applicazione del lettore quando nel flusso vengono visualizzati tag HLS personalizzati.
    * **Inserimento di annunci lato client.** La libreria di inserimento annunci audio funziona con i server Adobe Auditude per risolvere gli annunci da inserire in modo dinamico nei contenuti live, lineari e VOD, nelle posizioni pre-roll, mid-roll o post-roll.
-   * **Risolutori di annunci personalizzati.** Le interfacce  `ContentResolver, OpportunityGenerator,` e  `MediaPlayerClientFactory` ti consentono di implementare un risolutore di contenuti alternativo/ad personalizzato e di registrare un rilevatore di opportunità personalizzato per lavorare con TVSDK. Le classi `TestAdResolver` e `AuditudeResolver` forniscono esempi C++ sull’implementazione di un risolutore di contenuti. Puoi trovare un esempio Javascript in `samples/jspsdk/testapp/psdk.js`.
-   * **Comportamento pubblicitario coerente.** Utilizza l’ `AdPolicySelector` interfaccia per abilitare un comportamento coerente tra tutti i lettori per operazioni come cercare e ingannare quando gli annunci sono presenti nel contenuto. Se non implementi il tuo , TVSDK utilizza `DefaultAdPolicySelector`.
+   * **Risolutori di annunci personalizzati.** La `ContentResolver, OpportunityGenerator,` e `MediaPlayerClientFactory` le interfacce consentono di implementare un risolutore di contenuti personalizzati e alternativi e di registrare un rilevatore di opportunità personalizzato per lavorare con TVSDK. La `TestAdResolver` e `AuditudeResolver` Le classi forniscono esempi C++ sull&#39;implementazione di un risolutore di contenuti. Puoi trovare un esempio JavaScript in `samples/jspsdk/testapp/psdk.js`.
+   * **Comportamento pubblicitario coerente.** Utilizza la `AdPolicySelector` per abilitare un comportamento coerente tra tutti i lettori per operazioni quali ricerca e giochi con trucchi quando gli annunci sono presenti nel contenuto. Se non implementi il tuo , TVSDK utilizza `DefaultAdPolicySelector`.
    * **Rimuovi/sostituisci gli annunci C3.** Utilizza l’API TVSDK appropriata per rimuovere intervalli di contenuto personalizzati e inserire in modo dinamico nuovi annunci senza ulteriore preparazione. Questa funzione è utile quando vengono trasmessi contenuti live/lineari, per poi renderli immediatamente disponibili su richiesta senza pulizia.
 
 Di seguito sono elencate le nuove funzionalità principali della versione 2.4:
 
-* **Attiva istantaneamente per VOD e** liveQuando si attiva l&#39;istante, il TVSDK inizializza e carica i contenuti multimediali prima dell&#39;avvio della riproduzione. Poiché puoi avviare più istanze `MediaPlayerItemLoader` contemporaneamente in background, puoi creare un buffer per più flussi. Quando un utente cambia il canale e il flusso è bufferizzato correttamente, la riproduzione sul nuovo canale viene avviata immediatamente. TVSDK 2.4 supporta anche l’opzione Instant On per i flussi live. I flussi live vengono ri-bufferizzati quando la finestra live si sposta.
+* **Instant on per VOD e live** Quando si attiva l’accesso immediato, il TVSDK inizializza e carica i contenuti multimediali prima dell’avvio della riproduzione. Perché è possibile avviare più `MediaPlayerItemLoader` istanze contemporaneamente in background, puoi creare un buffer per più flussi. Quando un utente cambia il canale e il flusso è bufferizzato correttamente, la riproduzione sul nuovo canale viene avviata immediatamente. TVSDK 2.4 supporta anche l’opzione Instant On per i flussi live. I flussi live vengono ri-bufferizzati quando la finestra live si sposta.
 
 * **Miglioramenti delle prestazioni **La nuova architettura TVSDK 2.4 offre diversi miglioramenti delle prestazioni:
 
-   * **Sottosegmentazione** : TVSDK riduce ulteriormente le dimensioni di ciascun frammento per avviare la riproduzione il prima possibile.
-   * **Download paralleli di annunci**  - TVSDK precarica gli annunci in parallelo alla riproduzione dei contenuti prima di colpire l’annuncio e interrompe così la riproduzione continua di annunci e contenuti.
-   * **Lazy ad Resolution** - Con questa funzione, non aspettiamo la risoluzione degli annunci non preroll prima di avviare la riproduzione, riducendo così il tempo di avvio. Le API come ricerca e trucco non sono ancora consentite finché tutti gli annunci non vengono risolti.
+   * **Sottosegmentazione** - TVSDK riduce ulteriormente le dimensioni di ciascun frammento per avviare la riproduzione il prima possibile.
+   * **Download paralleli di annunci** - TVSDK precarica gli annunci in parallelo alla riproduzione dei contenuti prima di colpire l’annuncio, consentendo in tal modo una riproduzione fluida di annunci e contenuti.
+   * **Lazy e risoluzione** - Con questa funzione, non attendiamo la risoluzione degli annunci non preroll prima di avviare la riproduzione, riducendo così il tempo di avvio. Le API come ricerca e trucco non sono ancora consentite finché tutti gli annunci non vengono risolti.
 
 * **Riproduzione di contenuti MP4**
 
@@ -236,7 +235,7 @@ TVSDK per Android 2.4 supporta una serie di funzioni che è possibile implementa
  </tbody>
 </table>
 
-### Funzioni principali di Ad Insertion (CSAI) {#core-ad-insertion-features-csai}
+### Funzionalità di Ad Insertion core (CSAI) {#core-ad-insertion-features-csai}
 
 | **Funzione** | **Tipo di contenuto** | **HLS** | **DASH** |
 |---|---|---|---|
@@ -399,7 +398,7 @@ Questa versione di TVSDK presenta i seguenti problemi:
 * L&#39;impostazione della didascalia vicina alle lingue CJK non funziona.
 * Il video può uscire dalla modalità &quot;trucco&quot; automaticamente tra VOD e live.
 * VHL: vengono inviate chiamate heartbeat errate quando si avvia un contenuto da un offset.
-* Quando gli annunci VPAID vengono riprodotti, le chiamate heartbeat VHL per eventi:type:play e sono mancanti.
+* Quando gli annunci VPAID vengono riprodotti chiamate VHL heartbeat per eventi:type:Mancano gli annunci di gioco.
 * L&#39;annuncio pre-roll viene riprodotto anche quando viene selezionato il SKIP di adBreakPolicy.
 * Dopo aver effettuato l&#39;accesso allo stato Complete, il lettore torna allo stato Playing con SKIP adBreakPolicy per gli annunci post-roll.
 
@@ -407,4 +406,4 @@ Senza video, non esiste una dimensione di visualizzazione e senza una dimensione
 
 ## Risorse utili {#helpful-resources}
 
-* Consulta la documentazione completa della guida nella pagina [Informazioni e supporto per Adobe Primetime](https://helpx.adobe.com/support/primetime.html) .
+* Consulta la documentazione completa dell’Aiuto all’indirizzo [Informazioni e supporto per Adobe Primetime](https://experienceleague.adobe.com/docs/primetime.html) pagina.
