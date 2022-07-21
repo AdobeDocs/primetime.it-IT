@@ -1,10 +1,11 @@
 ---
 product: adobe primetime
 audience: end-user
-source-git-commit: 683b5a5c1dc8dde3f546bbf4b7a09406bc018d78
+user-guide-description: 'Guida di Primetime Account IQ fornisce informazioni sui componenti di Account IQ e illustra i percorsi di utenti per l’utilizzo dei vari componenti. '
+source-git-commit: 6ae9c8651a47e2f458d69c078ba1f314a0227c00
 workflow-type: tm+mt
-source-wordcount: '89'
-ht-degree: 1%
+source-wordcount: '111'
+ht-degree: 0%
 
 ---
 
