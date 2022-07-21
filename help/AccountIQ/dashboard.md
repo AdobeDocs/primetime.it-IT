@@ -2,9 +2,9 @@
 title: Dashboard IQ dell'account
 description: Il dashboard aiuta a individuare le istanze di condivisione delle password analizzando un'ampia gamma di dati degli utenti abbonati.
 exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: 8e041e6bb3b0f607eb421be002904e3a8a447f52
+source-git-commit: 2ae03c61344b878c9cac268ad6e7e91b08810488
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '563'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,9 @@ Il dashboard riepiloga e aggrega i dati in una raccolta di grafici e rapporti pr
 
 ![dashboard di IQ account](assets/dashboard-capture.png)
 
+
+*Figura: Dashboard*
+
 ## Punteggio di condivisione medio - aggregato per il segmento corrente {#aggregated-sharing}
 
 Il pannello Punteggio di condivisione aggregata fornisce una lettura della riga principale che riassume la quantità e l’impatto della condivisione in termini di account e volume in streaming.
@@ -23,9 +26,12 @@ I valori consentono di comprendere l’entità della condivisione delle credenzi
 
 ![](assets/aggregate-sharing-score.png)
 
+
+*Figura: Pannello del punteggio medio di condivisione - aggregato per il segmento corrente*
+
 ![](assets/aggregate-sharing-score.svg)
 
-Le tre metriche seguenti sono componenti del punteggio di condivisione aggregato.
+Le tre metriche seguenti sono componenti del punteggio medio di condivisione.
 
 ### Livello di condivisione {#sharing-level}
 
@@ -34,6 +40,9 @@ L&#39;indicatore del livello di condivisione mostra la percentuale di tutti gli 
 Un valore calcolato in base alla media della probabilità di condivisione calcolata per ogni conto nell&#39;insieme di MVPD selezionati che è stato trasmesso da uno dei canali programmatori selezionati durante l&#39;intervallo di tempo selezionato.
 
 ![](assets/sharing-level.png)
+
+
+*Figura: Livello di condivisione*
 
 L’indicatore Tendenza mostra la variazione percentuale del valore della metrica in rispetto all’intervallo di tempo precedente.
 
@@ -45,6 +54,9 @@ Puoi anche vedere l&#39;indicatore Tendenza, che rappresenta un aumento o una di
 
 ![](assets/usage-4mshared-accounts.png)
 
+
+*Figura: Utilizzo dagli account condivisi*
+
 ### Punteggio di condivisione complessivo {#overall-sharing-score}
 
 Il punteggio di condivisione complessivo è composito dei punteggi di condivisione, tra cui &quot;Livello di condivisione&quot; e &quot;Utilizzo z dagli account condivisi&quot;.
@@ -52,6 +64,9 @@ Il punteggio di condivisione complessivo è composito dei punteggi di condivisio
 Fornisce un valore inteso per riflettere l&#39;impatto relativo della condivisione rispetto al settore. La sua funzione è simile a quella di un punteggio di credito, che riassume la situazione con un singolo numero. Ma in questo caso, più alto è il numero, maggiore è il danno potenziale.
 
 ![](assets/overall-sharing-score.png)
+
+
+*Figura: Punteggio di condivisione complessivo*
 
 <!--### MVPDs in segment {#mvpd-in-segment}
 
@@ -69,11 +84,17 @@ Questa tabella fornisce una visualizzazione comparativa dei diversi Punteggi di 
 
 ![](assets/top-mvpds.png)
 
+
+*Figura: MVPD principali nel segmento per punteggio complessivo*
+
 ### Condivisione dei punteggi per canali e MVPD {#sharin-score-by-channels-and-mvpds}
 
 Questa tabella fornisce una visualizzazione comparativa della condivisione dei punteggi dei canali selezionati per gli MVPD nel segmento corrente.
 
 ![](assets/sharing-scores-by-channels-mvpds.png)
+
+
+*Figura: Condivisione dei punteggi per canali e MVPD*
 
 ### Probabilità di condivisione degli account {#accounts-sharing-probability}
 
@@ -86,8 +107,15 @@ Questo grafico divide gli account in intervalli di quote di probabilità di cond
 
 ![](assets/dashboard-ac-sharing-prob.png)
 
+
+*Figura: Numeri e percentuali degli account abbonati in diversi intervalli di probabilità di condivisione*
+
 ### Numero di account e utilizzo condividendo il livello di probabilità {#number-of-accounts-usage-sharing-probability}
 
 Questo pannello fornisce una visualizzazione tabulare degli account suddivisi in intervalli di condivisione dei quintili di probabilità da molto basso (0-20%) a molto alto (80=100%) con l’utilizzo associato di ciascun quintile dagli account condivisi.
 
 ![](assets/no-acc-usage-prob-level.png)
+
+
+*Figura: Numero di account, tendenze e utilizzi che rientrano in vari intervalli di probabilità*
+
