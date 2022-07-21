@@ -1,13 +1,13 @@
 ---
 title: Dashboard IQ dell'account
-description: 'Il dashboard aiuta a individuare le istanze di condivisione delle password analizzando un''ampia gamma di dati degli utenti abbonati.  '
-source-git-commit: f6f1769d86a98d3a545bf986e41e9ba2252a36ff
+description: Il dashboard aiuta a individuare le istanze di condivisione delle password analizzando un'ampia gamma di dati degli utenti abbonati.
+exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
+source-git-commit: 8e041e6bb3b0f607eb421be002904e3a8a447f52
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '499'
 ht-degree: 0%
 
 ---
-
 
 # Dashboard {#dashboard}
 
@@ -15,13 +15,15 @@ Il dashboard riepiloga e aggrega i dati in una raccolta di grafici e rapporti pr
 
 ![dashboard di IQ account](assets/dashboard-capture.png)
 
-## Punteggio di condivisione aggregato {#aggregated-sharing}
+## Punteggio di condivisione medio - aggregato per il segmento corrente {#aggregated-sharing}
 
 Il pannello Punteggio di condivisione aggregata fornisce una lettura della riga principale che riassume la quantità e l’impatto della condivisione in termini di account e volume in streaming.
 
 I valori consentono di comprendere l’entità della condivisione delle credenziali da parte degli abbonati, fornendo quindi una misura della necessità di agire su di essa.
 
 ![](assets/aggregate-sharing-score.png)
+
+![](assets/aggregate-sharing-score.svg)
 
 Le tre metriche seguenti sono componenti del punteggio di condivisione aggregato.
 
