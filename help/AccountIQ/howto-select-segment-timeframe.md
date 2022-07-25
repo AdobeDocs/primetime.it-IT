@@ -2,9 +2,9 @@
 title: Definire un segmento e un intervallo di tempo
 description: Definire un segmento e un intervallo di tempo
 exl-id: 86fe010d-3202-4ce2-b803-ff44f5538d7e
-source-git-commit: cc8b34705d9ede95c5e5f25cab1b86a772abec02
+source-git-commit: 037c65b28d3c4d7f09bde89e3a9d4bae86f6f867
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '579'
 ht-degree: 0%
 
 ---
@@ -55,8 +55,10 @@ Per selezionare i canali di programmazione desiderati dalla **Canali nel segment
 
    Gli elementi di elenco di primo livello nel **Canali nel segmento** sono [programmatore](/help/AccountIQ/product-concepts.md#programmer-def) le aziende e le voci di elenco sotto i nomi dei programmatori sono loro [canali](/help/AccountIQ/product-concepts.md#channel-def). È possibile selezionare singoli canali sotto i programmatori, oppure selezionare i programmatori e tutte le attività dei canali sotto quel programmatore sono incluse nei risultati dei report e dei grafici.
 
-   <!--![](assets/programmer-channels.png)
-   *Figure: Programmers and channels listed in channels selector*-->
+   ![](assets/programmer-channels.png)
+
+
+   *Figura: Programmatori e canali elencati nel selettore canali*
 
    >[!IMPORTANT]
    >
@@ -95,7 +97,10 @@ Per selezionare un periodo di tempo di valutazione:
 
 1. Seleziona o **Settimana** o **Mese** da **Aggrega per** per impostare la granularità per la valutazione.
 
-   <!--![](assets/granularity-timeframe-weekwise.png)   *Figure: Date picker to select Granularity and time frame*-->
+   ![](assets/granularity-timeframe-weekwise.png)
+
+
+   *Figura: Selezione data per selezionare Granularità e intervallo temporale*
 
 1. Dopo aver selezionato la granularità, è possibile utilizzare le frecce avanti o indietro per spostarsi avanti o indietro nel tempo.
 
