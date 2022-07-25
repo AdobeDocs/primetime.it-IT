@@ -2,7 +2,7 @@
 title: Dashboard IQ dell'account
 description: Il dashboard aiuta a individuare le istanze di condivisione delle password analizzando un'ampia gamma di dati degli utenti abbonati.
 exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: cc8b34705d9ede95c5e5f25cab1b86a772abec02
+source-git-commit: 32ba300ce729eab7a6906d8fb0875e8f2bbe2d1d
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 0%
@@ -110,7 +110,7 @@ Questo grafico divide gli account in intervalli di quote di probabilità di cond
 
 ### Numero di account e utilizzo condividendo il livello di probabilità {#number-of-accounts-usage-sharing-probability}
 
-Questo pannello fornisce una visualizzazione tabulare degli account suddivisi in intervalli di condivisione dei quintili di probabilità da molto basso (0-20%) a molto alto (80=100%) con l’utilizzo associato di ciascun quintile dagli account condivisi.
+Questo pannello fornisce una visualizzazione tabulare degli account suddivisi in intervalli di condivisione dei quintili di probabilità da molto basso (0-20%) a molto alto (80-100%) con l’utilizzo associato di ciascun quintile dagli account condivisi.
 
 ![](assets/no-acc-usage-prob-level.png)
 
