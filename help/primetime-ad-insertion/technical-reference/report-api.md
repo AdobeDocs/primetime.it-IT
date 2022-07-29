@@ -1,19 +1,21 @@
 ---
 title: API rapporto
 description: API del rapporto di audit
-source-git-commit: 7f958c83a4dd481221feb4a266440b920ac7d195
+exl-id: 50eb4869-3765-4591-8c41-794b29d50044
+source-git-commit: 628544e38616715e83e0274ba26cf93302ce0e61
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1042'
+ht-degree: 1%
 
 ---
-
 
 # API rapporto {#report-api}
 
 Interfaccia utente dispone di ruoli gestiti per i clienti e per il team di abilitazione (Adobe). I clienti possono accedere al portale e quindi creare e modificare le proprie configurazioni. Possono inoltre visualizzare i rapporti relativi alle impression degli annunci sull’interfaccia utente.
 
 Le API lavorano dietro le quinte per facilitare la comunicazione tra clienti e amministratori con l’infrastruttura back-end.
+
+Per esplorare [!DNL Primetime Ad Insertion] API vedi [Endpoint API di Ad Insertion nell’interfaccia utente swaggered](https://adconfigservice-va6.cloud.adobe.io/swagger-ui/index.html#/).
 
 ## Endpoint API {#report-api-endpoint}
 
