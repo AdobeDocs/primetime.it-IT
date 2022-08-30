@@ -1,13 +1,13 @@
 ---
 title: Operazioni nel IQ account
 description: Le operazioni nell'IQ account comportano azioni per eseguire automatizzazioni e operazioni in blocco sugli account degli abbonati e per tracciarne gli effetti.
-source-git-commit: e61cca77bad4f01de871e300dc99d7368c283f2a
+exl-id: ba6bceca-221c-42db-b207-804e4b9f6d54
+source-git-commit: 40239b6715d8eab95bc2564fb19eb6832387ad3e
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
-
 
 # Operazioni {#operations-tab-next-steps}
 
@@ -15,7 +15,7 @@ Una volta compresi i pattern di utilizzo degli abbonati e identificato la condiv
 
 La funzionalità Operazioni in Account IQ consente di gestire e gestire in modo efficace la condivisione delle credenziali tramite procedure mirate, denominate operazioni. Offre le opzioni per progettare azioni mirate oggettive e personalizzate (in base all’obiettivo) per specifici gruppi di account di abbonati e automatizzarne l’esecuzione per una durata futura. La funzionalità Operazioni consente non solo di creare ed eseguire operazioni, ma anche di misurarne l’impatto. Quindi, misurando gli impatti è possibile regolare la strategia per ottimizzare l&#39;effetto, sia che si tratti di convertire i mutuatari o di mitigare la condivisione delle credenziali.
 
-Per visualizzare **Operazioni** selezione pagina **Operazioni** opzione sotto **Azioni** nella navigazione a sinistra dell&#39;applicazione Account IQ. Nella pagina Operazioni sono elencate tutte le operazioni già esistenti nel sistema IQ account e i relativi dettagli.
+Per visualizzare **Operazioni** selezione pagina **Operazioni** opzione sotto **Azioni** nella navigazione a sinistra dell&#39;applicazione Account IQ. Nella pagina Operazioni sono elencate tutte le operazioni già esistenti nel sistema IQ dell&#39;account, insieme ai relativi dettagli.
 
 ![](assets/operations-page.png)
 
@@ -61,13 +61,24 @@ Puoi analizzare l’impatto di un’operazione visualizzandone il rapporto. Per 
 
    *Figura: Rapporto sulle operazioni per visualizzare gli impatti delle operazioni*
 
-   L&#39;asse x traccia il periodo di valutazione e l&#39;asse y traccia una variabile per misurare l&#39;impatto dell&#39;operazione.
+   L&#39;asse X rappresenta il periodo di valutazione e l&#39;asse y rappresenta l&#39;impatto dell&#39;operazione (in termini di numero di conti in un segmento durante il periodo di valutazione). Ogni barra è divisa in tre parti.
 
-   Ad esempio, nell’immagine precedente la variabile sull’asse y è il numero di account. Osservando il grafico è possibile confrontare il numero di conti che si trovano nel segmento delle operazioni rispetto al numero di conti che si trovano al di fuori del segmento delle operazioni in un dato momento (ad esempio la seconda settimana del periodo di valutazione delle operazioni). Pertanto, puoi analizzare come nel periodo di valutazione il numero di account varia all’interno del segmento di operazione e all’esterno del segmento.
+   * Una parte rappresenta il numero di account che soddisfano ancora i criteri del segmento di operazione.
 
-   Quindi, se l&#39;operazione consisteva nell&#39;inviare e-mail di avviso a account sospetti e gli account nel segmento delle operazioni erano quelli con probabilità di condivisione superiore a 90 e che utilizzavano più di 5 dispositivi per lo streaming dei contenuti, all&#39;inizio del periodo di valutazione gli account nel segmento sono più di 7 milioni. Questo numero cambia nel corso del periodo di valutazione, come mostrato nel grafico, indicando in tal modo l&#39;impatto dell&#39;operazione. In base alla valutazione, puoi prendere misure correttive su account sospetti o continuare con l’operazione, oppure modificare la strategia per risultati migliori per limitare la condivisione delle credenziali.
+   * Un&#39;altra parte rappresenta il numero di account attivi per quel periodo che erano originariamente nel segmento, ma non soddisfano più i criteri del segmento di operazione.
 
-2. Per chiudere il rapporto e tornare alla pagina Operazioni principale, selezionare **Operazioni** opzione sotto **Azioni** nella navigazione a sinistra.
+   * La terza parte rappresenta i conti che non erano attivi in quel periodo.
+   >[!NOTE]
+   >
+   >La prima barra rappresenta il numero di conti che soddisfano le condizioni del segmento dell&#39;operazione all&#39;inizio del periodo di valutazione.
+
+   Nel tempo il grafico mostra l’effetto dell’azione (tramite l’operazione) indicando il numero di account che hanno modificato il loro comportamento rispetto ai criteri originali (ad esempio, con una probabilità di condivisione superiore a 90 e utilizzando più di 5 dispositivi) o che sono diventati inattivi.
+
+<!--For example, in the above image the variable on the y-axis is number of accounts. Looking at the graph you can compare the number of accounts that are in the operations' segment versus the number of accounts that are outside the operations segment at a particular time (such as week 2nd of the operations evaluation period). Therefore, you can analyze how over the evaluation period do number of accounts vary within the operation segment and outside the segment.
+
+So, if your operation was to send out warning emails to suspecting accounts, and accounts in operations segment were those with sharing probability more than 90 and using more than 5 devices to stream content, then in the beginning of the evaluation period accounts in segment are more than 17 thousand. This number changes over the evaluation period as shown in the graph, thereby indicating the impact of operation. Based on the evaluation, you can take remedial measures on suspecting accounts, or continue with the operation, or adjust your strategy for better outcomes to curb credential sharing.-->
+
+1. Per chiudere il rapporto e tornare alla pagina Operazioni principale, selezionare **Operazioni** opzione sotto **Azioni** nella navigazione a sinistra.
 
 <!--
 
