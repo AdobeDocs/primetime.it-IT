@@ -2,9 +2,9 @@
 title: Dashboard IQ dell'account
 description: Il dashboard aiuta a individuare le istanze di condivisione delle password analizzando un'ampia gamma di dati degli utenti abbonati.
 exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: 7706d5fcafdcfb9c0d4cc69936681c6223b0739d
+source-git-commit: 5b34fbe26078ae761d61179975366505c5628c9c
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 0%
 # Dashboard {#dashboard}
 
 Il dashboard riepiloga e aggrega i dati in una raccolta di grafici e rapporti progettati per fornire una panoramica di alto livello dell&#39;ambito e dell&#39;impatto della condivisione dei conti. Fornisce una singola pagina contenente i report principali e le metriche da Account IQ.
-
-<table><tr><th>
-
-+++Dashboard per programmatori
 
 ![dashboard di IQ account](assets/dashboard-capture.png)
 
@@ -121,29 +117,7 @@ Questo pannello fornisce una visualizzazione tabulare degli account suddivisi in
 
 *Figura: Numero di account, tendenze e utilizzi che rientrano in vari intervalli di probabilità*
 
-+++
 
-</th><th>
-
-+++Dashboard per MVPD Il quadro comandi per gli utenti MVPD è leggermente diverso da quelli degli utenti del programmatore.
-
-![](assets/dashboard-mvpd.png)
-
-
-*Figura: Dashboard MVPD*
-
-## Migliori programmatori nel segmento per punteggio di condivisione complessivo {#}
-
-![](assets/top-programmers-panel.png)
-
-
-*Figura: Pannello che mostra i programmatori principali in un segmento*
-+++
-
-</th>
-</tr>
-
-</table>
 
 <!--
 +++Dashboard for programmers
