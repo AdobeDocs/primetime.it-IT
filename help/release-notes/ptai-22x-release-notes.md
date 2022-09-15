@@ -1,27 +1,45 @@
 ---
-title: Note sulla versione di PTAI 22.7.1
+title: Note sulla versione di PTAI 22.9.2
 description: Le note sulla versione PTAI descrivono le novità o le modifiche, i problemi risolti e noti in Primetime Ad Insertion nel 2022.
 exl-id: 58b254b8-18b9-48ba-bd4e-378785e56af5
-source-git-commit: 037c65b28d3c4d7f09bde89e3a9d4bae86f6f867
+source-git-commit: 1782a6b1d5f1c56d39648d73616bdefddd8a51bc
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '368'
 ht-degree: 0%
 
 ---
 
-# Note sulla versione di Primetime Ad Insertion 22.7.1
+# Note sulla versione di Primetime Ad Insertion 22.9.2
 
 Le note sulla versione di Primetime Ad Insertion 22.xx.x descrivono le novità o le modifiche, i problemi risolti e i problemi noti in Primetime Ad Insertion nel 2022.
 
-## Novità in PTAI 22.7.1
+## Novità in PTAI 22.9.2
 
-Quando: Mercoledì 20 luglio 2022, dalle 3.00 alle 6.00 Ora orientale
+**Quando:** Mercoledì 7 settembre 2022, dalle 3.00 alle 6.00 Ora orientale
+
+* Miglioramenti ai dati di telemetria delle prestazioni degli annunci in Primetime Ad Insertion per includere dati di registrazione aggiuntivi di Ad Call e Avail.
+
+## Miglioramenti e correzioni nelle versioni precedenti
+
+### Versione PTAI 22.9.1
+
+**Quando:** Martedì 6 settembre 2022, dalle 3:00 alle 6:00 Ora orientale
+
+**Modifiche:**
+
+* Miglioramenti all’autenticazione back-end del servizio Content Repackaging (CRS).
+
+* Aggiornamenti ai grafici di telemetria del Content Repackaging Service (CRS) nell’interfaccia utente di Primetime Ad Insertion.
+
+### Versione 2.7.1
+
+**Quando:** Mercoledì 20 luglio 2022, dalle 3.00 alle 6.00 Ora orientale
+
+**Modifiche:**
 
 * Miglioramenti alla registrazione delle prestazioni degli annunci, con l’introduzione di metriche valide correlate per i flussi di lavoro DASH.
 
 * Migrazione del database.
-
-## Miglioramenti e correzioni nelle versioni precedenti
 
 ### Versione 2.6.2
 
