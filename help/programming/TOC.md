@@ -4,7 +4,7 @@ user-guide-title: Guida alla programmazione per Primetime
 user-guide-description: Consente di imparare a sviluppare applicazioni e lettori video utilizzando Java su dispositivi Android e Objective-C su dispositivi iOS.
 source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '4342'
 ht-degree: 0%
 
 ---
