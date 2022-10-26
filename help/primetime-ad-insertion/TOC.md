@@ -2,10 +2,10 @@
 product: adobe primetime
 audience: end-user
 user-guide-title: Guida di Primetime Ad Insertion
-source-git-commit: 79cdd0b7ae33d7c1d2bec970ecd3654aea4fdab0
+source-git-commit: 2b8aa2d4d20dac0f6f8467043dd2e55a88e9e9f1
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 4%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 4%
 + [Adobe Primetime Ad Insertion](home.md)
 + Annunci di Primetime Ad Insertion{#announcements}
    + [Annunci](announcements/overview.md)
-   + [Note sulla versione](/help/release-notes/ptai-22x-release-notes.md)
+   + [Note sulla versione](https://experienceleague.adobe.com/docs/primetime/release-notes/ptai/ptai-22x-release-notes.html)
 + Guida introduttiva di Primetime Ad Insertion{#get-started}
    + [Panoramica](getting-started/get-started-overview.md)
    + [Preparare l’utilizzo di Primetime Ad Insertion](getting-started/setup-ptai.md)
