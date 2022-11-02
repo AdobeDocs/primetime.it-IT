@@ -1,14 +1,13 @@
 ---
 description: È possibile implementare una barra di controllo con supporto DVR per VOD e streaming live. Il supporto DVR include il concetto di una finestra ricercabile e il punto live del cliente.
 title: Costruire una barra di controllo migliorata per il DVR
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 12e989f3-0e39-4224-89a7-ebfeb130f5fc
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
-source-wordcount: '325'
+source-wordcount: '324'
 ht-degree: 0%
 
 ---
-
 
 # Costruire una barra di controllo migliorata per il DVR {#construct-a-control-bar-enhanced-for-dvr}
 
@@ -27,9 +26,9 @@ ht-degree: 0%
 
 <!--<a id="fig_37A39A28BA714BA5A2C461357ED5BD41"></a>-->
 
-![](assets/dvr-window.PNG){width=&quot;684&quot;}
+![](assets/dvr-window.PNG){width="684"}
 
-1. Per implementare una barra di controllo con supporto DVR, seguire i passaggi descritti in [Visualizzare una barra di scorrimento con la posizione di riproduzione corrente.](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-seek-scrub-bar-display.md) con le seguenti differenze:
+1. Per implementare una barra di controllo con supporto DVR, segui i passaggi descritti in [Visualizza una barra di scorrimento con la posizione di riproduzione corrente.](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-seek-scrub-bar-display.md) con le seguenti differenze:
 
    * È possibile implementare una barra di controllo mappata solo per l&#39;intervallo ricercabile anziché per l&#39;intervallo di riproduzione.
 
@@ -49,7 +48,7 @@ ht-degree: 0%
       }
       ```
 
-      Puoi anche scegliere di cercare il punto attivo del client utilizzando la costante `MediaPlayer.LIVE_POINT` .
+      Puoi anche scegliere di cercare il punto attivo del cliente utilizzando `MediaPlayer.LIVE_POINT` costante.
 
       ```
       mediaPlayer.seek(MediaPlayer.LIVE_POINT);

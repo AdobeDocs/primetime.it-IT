@@ -1,21 +1,20 @@
 ---
 description: È possibile utilizzare TVSDK per recuperare informazioni sulla posizione del lettore nel supporto e visualizzarlo sulla barra di ricerca.
 title: Visualizza la durata, l'ora corrente e il tempo rimanente del video
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 68501c81-346a-4c3e-aa20-a98b8b1c6b17
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '365'
 ht-degree: 0%
 
 ---
-
 
 # Visualizza la durata, l&#39;ora corrente e il tempo rimanente del video {#display-the-duration-current-time-and-remaining-time-of-the-video}
 
 È possibile utilizzare TVSDK per recuperare informazioni sulla posizione del lettore nel supporto e visualizzarlo sulla barra di ricerca.
 
 1. Attendi che il lettore sia almeno nello stato PREPARATO.
-1. Recupera l&#39;ora corrente della testina di riproduzione utilizzando il metodo `MediaPlayer.getCurrentTime` .
+1. Recupera l&#39;ora corrente della testina di riproduzione utilizzando `MediaPlayer.getCurrentTime` metodo .
 
    Restituisce la posizione corrente dell&#39;indicatore di riproduzione sulla timeline virtuale, in millisecondi. Il tempo viene calcolato in base al flusso risolto che potrebbe contenere più istanze di contenuto alternativo, ad esempio più annunci o interruzioni pubblicitarie unite nel flusso principale. Per i flussi in tempo reale/lineare, il tempo restituito è sempre nell&#39;intervallo della finestra di riproduzione.
 
@@ -24,22 +23,22 @@ ht-degree: 0%
    ```
 
 1. Recupera l&#39;intervallo di riproduzione del flusso e determina la sua durata.
-   1. Utilizzare il metodo `MediaPlayer.getPlaybackRange` per ottenere l&#39;intervallo di tempo della timeline virtuale.
+   1. Utilizza la `MediaPlayer.getPlaybackRange` per ottenere l&#39;intervallo di tempo della timeline virtuale.
 
       ```java
       TimeRange getPlaybackRange() throws MediaPlayerException;
       ```
 
-   1. Utilizzare il metodo `MediaPlayer.getPlaybackRange` per ottenere l&#39;intervallo di tempo della timeline virtuale.
+   1. Utilizza la `MediaPlayer.getPlaybackRange` per ottenere l&#39;intervallo di tempo della timeline virtuale.
 
       * Per VOD, l’intervallo inizia sempre con zero e il valore finale è uguale alla somma della durata del contenuto principale e delle durate del contenuto aggiuntivo nel flusso (annunci).
       * Per una risorsa lineare/live, l’intervallo rappresenta l’intervallo della finestra di riproduzione. Questo intervallo cambia durante la riproduzione.
 
-         TVSDK chiama il callback `ITEM_Updated` per indicare che l’elemento multimediale è stato aggiornato e che i suoi attributi, compreso l’intervallo di riproduzione, sono stati aggiornati.
+         Chiamate TVSDK `ITEM_Updated` callback per indicare che l’elemento multimediale è stato aggiornato e che i relativi attributi, compreso l’intervallo di riproduzione, sono stati aggiornati.
 
-1. Utilizza i metodi disponibili su `MediaPlayer` e sulla classe `SeekBar` nell’SDK per Android per impostare i parametri della barra di ricerca.
+1. Utilizza i metodi disponibili in `MediaPlayer` e `SeekBar` in Android SDK per impostare i parametri della barra di ricerca.
 
-   Ad esempio, ecco un possibile layout che contiene la barra di ricerca e due elementi `TextView`.
+   Ad esempio, ecco un possibile layout che contiene la barra di ricerca e due `TextView` elementi.
 
    ```xml
    <LinearLayout 
@@ -75,9 +74,9 @@ ht-degree: 0%
 
    <!--<a id="fig_689CEDDD02094C0C8E91C5195F8EAD3F"></a>-->
 
-   ![](assets/seek-bar.jpg){width=&quot;477.000pt&quot;}
+   ![](assets/seek-bar.jpg){width="477.000pt"}
 
-   Nell&#39;esempio seguente viene utilizzata la classe helper `Clock.java`, disponibile in `ReferencePlayer`, come timer. Questa classe imposta un listener di eventi e attiva un evento `onTick` ogni secondo o un altro valore di timeout che è possibile specificare.
+   Nell&#39;esempio seguente viene utilizzato il `Clock.java` classe helper, disponibile in `ReferencePlayer`, come timer. Questa classe imposta un listener di eventi e attiva un `onTick` ogni secondo, o un altro valore di timeout che è possibile specificare.
 
    ```java
    playbackClock = new Clock(PLAYBACK_CLOCK, CLOCK_TIMER); 
@@ -90,7 +89,7 @@ ht-degree: 0%
    playbackClock.addClockEventListener(playbackClockEventListener);
    ```
 
-   Su ogni segno di spunta dell&#39;orologio, questo esempio recupera la posizione corrente del lettore multimediale e aggiorna la barra di ricerca. Usa i due elementi `TextView` per contrassegnare l&#39;ora corrente e la posizione finale dell&#39;intervallo di riproduzione come valori numerici.
+   Su ogni segno di spunta dell&#39;orologio, questo esempio recupera la posizione corrente del lettore multimediale e aggiorna la barra di ricerca. Usa i due `TextView` elementi per contrassegnare l’ora corrente e la posizione finale dell’intervallo di riproduzione come valori numerici.
 
    ```java
    @Override 

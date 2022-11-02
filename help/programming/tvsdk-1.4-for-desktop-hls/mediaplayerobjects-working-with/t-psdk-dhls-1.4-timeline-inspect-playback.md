@@ -1,14 +1,13 @@
 ---
 description: Puoi ottenere una descrizione della timeline associata all’elemento attualmente selezionato riprodotto da TVSDK. Questa funzione è particolarmente utile quando l’applicazione visualizza un controllo personalizzato a barre di scorrimento in cui vengono identificate le sezioni di contenuto corrispondenti al contenuto dell’annuncio.
 title: Inspect la timeline di riproduzione
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 38b5ce0e-5554-462e-986f-f3864f7cf879
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '203'
 ht-degree: 0%
 
 ---
-
 
 # Inspect la timeline di riproduzione{#inspect-the-playback-timeline}
 
@@ -17,13 +16,13 @@ Puoi ottenere una descrizione della timeline associata all’elemento attualment
 Ecco un esempio di implementazione, come mostrato nella schermata successiva.
 <!--<a id="fig_6D9FB3764F3947A38B8E7726187BD461"></a>-->
 
-![](assets/inspect-playback.jpg){width=&quot;368.641pt&quot;}
+![](assets/inspect-playback.jpg){width="368.641pt"}
 
-1. Accedi all&#39;oggetto `Timeline` in `MediaPlayer` utilizzando il metodo `get` .
+1. Accedere al `Timeline` nell&#39;oggetto `MediaPlayer` utilizzando `get` metodo .
 
-   La classe `Timeline` incapsula le informazioni correlate al contenuto della timeline associata all&#39;elemento multimediale attualmente caricato dall&#39;istanza `MediaPlayer`. La classe `Timeline` consente di accedere a una visualizzazione in sola lettura della timeline sottostante. La classe `Timeline` fornisce un metodo migliore per ottenere tutti gli oggetti `TimelineMarker` inseriti.
+   La `Timeline` incapsula le informazioni correlate al contenuto della timeline associata all&#39;elemento multimediale attualmente caricato dal `MediaPlayer` istanza. La `Timeline` La classe fornisce l&#39;accesso a una visualizzazione in sola lettura della timeline sottostante. La `Timeline` Classe fornisce un metodo getter per ottenere tutti gli elementi inseriti `TimelineMarker` oggetti.
 
-1. Itera l’elenco di `TimelineMarkers` e utilizza le informazioni restituite per implementare la timeline.
+1. Itera attraverso l&#39;elenco di `TimelineMarkers` e utilizza le informazioni restituite per implementare la timeline.
 
        Un oggetto `TimelineMarker` contiene due informazioni:
    
@@ -51,4 +50,3 @@ markers.forEach(function(item:TimelineMarker,
     // draw the marker on the scrub-bar 
 }
 ```
-
