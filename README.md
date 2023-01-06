@@ -1,55 +1,54 @@
 ---
-source-git-commit: 8c828661016782f79257c11708bf7cac618853b7
+source-git-commit: 7ab48cf61552febab21a5d5c05586e0aefe8ce17
 workflow-type: tm+mt
-translation-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '372'
+ht-degree: 7%
 
 ---
-# Articolo di Contribute
+# Collaborare a un articolo
 
-Accogliamo con favore i contributi della nostra comunità e di  dipendenti dei Adobi esterni ai team di documentazione.
+Accogliamo con favore i contributi della nostra community e di dipendenti di Adobi provenienti da team esterni alla documentazione.
 
-## Codice di condotta open source  Adobe
+## Codice di condotta open source di Adobe
 
 Questo progetto ha adottato il [Codice di condotta di Adobe Open Source](code-of-conduct.md) o il [Codice di condotta di .NET Foundation](https://dotnetfoundation.org/code-of-conduct). Per ulteriori informazioni, consulta l’articolo [Contribuzione](contributing.md).
 
-## Informazioni sui contributi al contenuto  Adobe
+## Informazioni sui contributi al contenuto di Adobe
 
-Vedere la [ Adobe Docs Contributor Guide](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html).
+Consulta la sezione [Guida per i collaboratori per la documentazione di Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html).
 
-Il tuo contributo dipende da chi sei e dal tipo di modifiche che vorresti apportare:
+Il tuo contributo dipende da chi sei e dal tipo di modifiche che desideri apportare:
 
 ### Modifiche minori
 
-Se state contribuendo piccoli aggiornamenti dalla bontà del vostro cuore, visitate l&#39;articolo e fate clic sul collegamento **Edit** nell&#39;articolo che va alla fonte GitHub per l&#39;articolo. Quindi, utilizzate l’interfaccia utente GitHub per effettuare gli aggiornamenti. Per ulteriori informazioni, vedere la guida generale [ Adobe Docs contributor Guide](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html).
+Se stai contribuendo piccoli aggiornamenti per la bontà del tuo cuore, visita l&#39;articolo e fai clic sul **Modifica** nell’articolo che accede all’origine GitHub per l’articolo. Quindi, utilizza l’interfaccia utente GitHub per apportare i tuoi aggiornamenti. Vedi il generale [Guida per i collaboratori per la documentazione di Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html) per ulteriori informazioni.
 
-Le correzioni minori o i chiarimenti inviati per la documentazione e gli esempi di codice in questo repo sono coperti dai termini di utilizzo  Adobe.
+Le correzioni minori o i chiarimenti inviati per la documentazione e gli esempi di codice in questo repository sono coperti dai termini di utilizzo Adobi.
 
-### Modifiche principali o nuovi articoli dai membri della community
+### Modifiche sostanziali o nuovi articoli dei membri della community
 
-Se fate parte della comunità di Adobi  e desiderate creare un nuovo articolo o inviare modifiche importanti, utilizzate la scheda Problemi nell’archivio di Git per inviare un problema per avviare una conversazione con il team di documentazione. Una volta che hai accettato un piano, dovrai collaborare con un dipendente per aiutare a includere il nuovo contenuto attraverso una combinazione di lavoro nei repository pubblici e privati.
+Se fai parte della community Adobe e desideri creare un nuovo articolo o inviare modifiche importanti, utilizza la scheda Issues (Problemi) nell’archivio Git per inviare un problema e avviare una conversazione con il team di documentazione. Una volta concordato un piano, dovrai collaborare con un dipendente per inserire il nuovo contenuto attraverso una combinazione di lavoro negli archivi pubblici e privati.
 
 <!--
 If you submit a pull request with significant changes to documentation and code examples, you'll see a message in the pull request asking you to submit an online contribution license agreement (CLA). We need you to complete the online form before we can review your pull request.
 -->
 
-### Modifiche principali apportate dai dipendenti  Adobe
+### Modifiche di rilievo apportate dai dipendenti Adobi
 
-Se sei un autore tecnico, un responsabile di programma o uno sviluppatore del team di prodotti per una soluzione Adobe Experience Cloud e hai il compito di contribuire o creare articoli tecnici, devi utilizzare il repository privato [https://git.corp.adobe.com/AdobeDocs](https://git.corp.adobe.com/AdobeDocs). <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
+Se sei un autore tecnico, un responsabile di programma o uno sviluppatore del team di prodotto per una soluzione Adobe Experience Cloud ed è tuo compito creare o contribuire ad articoli tecnici, devi utilizzare l’archivio privato [https://git.corp.adobe.com/AdobeDocs](https://git.corp.adobe.com/AdobeDocs). <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
 ## Strumenti e configurazione
 
-I collaboratori della community possono utilizzare l’interfaccia utente di GitHub per effettuare modifiche di base o fork del repo per apportare importanti contributi.
+I collaboratori della community possono utilizzare l’interfaccia utente GitHub per effettuare modifiche di base o creare un fork dell’archivio per apportare contributi importanti.
 
-Per ulteriori informazioni, vedere la [ Adobe Docs Contributor Guide](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html).
+Consulta la sezione [Guida per i collaboratori per la documentazione di Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html) per i dettagli.
 
-## Come utilizzare la funzione di marketing per formattare l&#39;argomento
+## Come utilizzare markdown per formattare l’argomento
 
-Tutti gli articoli in questo archivio utilizzano la marca aromatizzata GitHub. Se non hai familiarità con la funzione di marketing, consulta:
+Tutti gli articoli in questo archivio utilizzano markdown GitHub. Se non conosci markdown, consulta:
 
-* [Nozioni di base sulle marcature](https://help.github.com/articles/markdown-basics/)
-* [Foglio di lavoro per la stampa](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
+* [Nozioni di base su Markdown](https://help.github.com/articles/markdown-basics/)
+* [Foglio di riferimento per markdown stampabile](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
 
 <!--
 ## Labels
