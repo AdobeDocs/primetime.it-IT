@@ -2,9 +2,9 @@
 title: Definire un segmento e un intervallo di tempo
 description: Definire un segmento e un intervallo di tempo
 exl-id: 86fe010d-3202-4ce2-b803-ff44f5538d7e
-source-git-commit: 037c65b28d3c4d7f09bde89e3a9d4bae86f6f867
+source-git-commit: c17fb003d8c8103aac36696f696c9e3c7bb83c4f
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '569'
 ht-degree: 0%
 
 ---
@@ -80,10 +80,6 @@ Oltre a modificare la selezione nella **MVPD nel segmento** e **Canali nel segme
 * Selezione della **Rimuovi** icona (![icona di rimozione](assets/remove-icon.png)) sui nomi di questi MVPD selezionati e dei canali visualizzati sotto il selettore dei segmenti.
 
 * È inoltre possibile utilizzare **Cancella selezione** per rimuovere tutti gli MVPD o i canali precedentemente selezionati.
-
-![](assets/segment-panel-selection1.png)
-
-*Figura: MVPD e canali selezionati nel pannello dei segmenti e dell’intervallo temporale*
 
 ![](assets/segment-panel-selection.png)
 

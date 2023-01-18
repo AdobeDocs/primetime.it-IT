@@ -1,15 +1,15 @@
 ---
 title: Come visualizzare i report per i primi 10 MVPD da persona programmatore.
 description: Visualizza i report per i primi 10 MVPD.
-source-git-commit: e61cca77bad4f01de871e300dc99d7368c283f2a
+exl-id: 76fd1af8-dd96-426b-b9c8-a356b53b491d
+source-git-commit: 5963c55d87385fbd92646bfc45a3650fb568bca5
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 0%
 
 ---
 
-
-# Come visualizzare i rapporti per i primi 10 MVPD <!--and Programmers--> {#view-top-10-mvpd-reports}
+# Visualizza rapporti di condivisione account per i primi 10 MVPD <!--and Programmers--> {#view-top-10-mvpd-reports}
 
 L&#39;account IQ dispone di funzionalità che consentono di visualizzare e analizzare le statistiche di condivisione degli account per i primi 10 MVPD (in una definizione [segmento](/help/AccountIQ/product-concepts.md#segmet-def)) aventi:
 

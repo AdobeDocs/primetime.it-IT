@@ -1,13 +1,13 @@
 ---
-title: 'Rapporti sugli account condivisi '
+title: Rapporti sugli account condivisi
 description: Report account condivisi
-source-git-commit: ead505dfa3e6569b7e349fa63170e5f8d90d759b
+exl-id: 16c5ded1-2a95-4373-8b90-b445131f333a
+source-git-commit: dd1001d94e32a1a8b5346ff97b0f6cb7d244dcf2
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '458'
 ht-degree: 0%
 
 ---
-
 
 # Report account condivisi {#shared-accounts-reports}
 
@@ -53,7 +53,7 @@ Questo pannello consente di selezionare un intervallo tra le seguenti soglie per
 
 ![](assets/threshold-selector-shared-accounts.png)
 
-Una volta selezionata la soglia, il pannello mostra la percentuale (e il numero) di account su tutti gli account abbonati per gli MVPD selezionati nel segmento.
+Una volta selezionata la soglia, il pannello mostra la percentuale (e il numero) di account su tutti gli account abbonati nel segmento selezionato.
 
 ## Segmento - Richieste di riproduzione dal totale {#play-request-out-total}
 

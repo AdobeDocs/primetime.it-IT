@@ -1,25 +1,27 @@
 ---
 title: Panoramica di IQ account
-description: 'Account IQ aiuta gli MVPD e i programmatori a comprendere i rischi per le loro attività di business e di ricavo, e a determinare le azioni più efficaci da intraprendere per mitigare l''impatto delle truffe sulle credenziali. '
-source-git-commit: e61cca77bad4f01de871e300dc99d7368c283f2a
+description: Account IQ aiuta gli MVPD e i programmatori a comprendere i rischi per le loro attività di business e di ricavo, e a determinare le azioni più efficaci da intraprendere per mitigare l'impatto delle truffe sulle credenziali.
+exl-id: c0d85fc8-b5ab-4284-802e-82f52eff401f
+source-git-commit: 4475faca828510153a7ec3e505704ee8d8b044d0
 workflow-type: tm+mt
 source-wordcount: '403'
 ht-degree: 0%
 
 ---
 
-
 # Panoramica dell’account IQ {#account-iq-overview}
 
 La condivisione delle credenziali tramite gli abbonati ai servizi in streaming è un problema importante e in crescita per il settore. Per aggiungerla, comprendere, identificare e agire sulla condivisione delle credenziali è un processo complesso. C&#39;è complessità nel comprendere il comportamento di utilizzo degli abbonati e nello sviluppare una visione olistica della loro attività, ad esempio distinguendo la condivisione tra i membri all&#39;interno della stessa famiglia e all&#39;esterno. A causa di questa sfida, i fornitori di servizi di streaming possono avere inibizioni nell&#39;agire contro la condivisione delle credenziali.
 
-Generalmente, i fornitori di servizi di streaming video comprendono il rischio e i costi della condivisione sul proprio business, ma hanno mezzi di ricorso limitati, come il blocco degli utenti o la creazione di offerte. Tuttavia, si consiglia un approccio informato e mirato, che consenta ai servizi di comprendere con precisione la condivisione e di adottare strategie che premiino un buon comportamento di visualizzazione e allo stesso tempo mirino alla crescita aziendale.
+
+<div class "preview">
+Generalmente, i fornitori di servizi di streaming video comprendono il rischio e i costi della condivisione sul proprio business, ma hanno mezzi di ricorso limitati, come il blocco degli utenti o la creazione di offerte. Tuttavia, si consiglia un approccio informato e mirato, che consenta ai servizi di comprendere con precisione la condivisione e di adottare strategie che premiino un buon comportamento di visualizzazione e allo stesso tempo mirino alla crescita aziendale. </span>
 
 ![Diagramma di flusso di IQ conto](assets/aiq-intro.png)
 
 *Figura: Flusso di informazioni dell&#39;account IQ*
 
-Adobe Primetime Account IQ consente ai servizi di streaming video di comprendere i pattern di utilizzo degli abbonati e identificare la condivisione delle credenziali. Analizzando profondamente il lungo percorso di dati lasciato indietro da ogni utente che si abbona utilizzando il modello proprietario di machine learning multi-layer di Adobe, i servizi di streaming possono comprendere il comportamento di utilizzo e identificare la condivisione delle credenziali con un maggiore grado di certezza. Inoltre, consente di intraprendere azioni attraverso integrazioni con altri sistemi, come la limitazione dei flussi simultanei o la personalizzazione delle offerte, e convalida l&#39;impatto di tali azioni, sia che incoraggi comportamenti di visualizzazione legittimi, sia che creino abbonati e ricavi.
+Adobe Primetime Account IQ consente ai servizi di streaming video di comprendere i pattern di utilizzo degli abbonati e identificare la condivisione delle credenziali. Analizzando profondamente il lungo percorso di dati lasciato indietro da ogni utente che utilizza il modello di apprendimento automatico multi-livello proprietario di Adobe, i servizi di streaming possono comprendere il comportamento di utilizzo e identificare la condivisione delle credenziali con un maggiore grado di certezza. Inoltre, consente di intraprendere azioni attraverso integrazioni con altri sistemi, come la limitazione dei flussi simultanei o la personalizzazione delle offerte, e convalida l&#39;impatto di tali azioni, sia che incoraggi comportamenti di visualizzazione legittimi, sia che creino abbonati e ricavi.
 
 L&#39;account IQ fornisce gli strumenti e le funzionalità per misurare, gestire e monetizzare la condivisione delle credenziali. I rapporti, le analisi e le dashboard consentono di esplorare i dati per identificare i pattern. L’azione diretta è supportata tramite esportazioni e integrazioni con sistemi di Adobe e di terze parti come la gestione delle campagne, la limitazione delle valute o la registrazione degli abbonati. E strumenti di tracciamento dedicati misurano il successo di queste azioni in modo che possano essere aggiornate o espanse.
 
@@ -54,9 +56,9 @@ Generally, video streaming service providers consider password sharing as fatal 
 
 Adobe Primetime Account IQ enables video streaming services understand the subscriber usage patterns and identify password sharing by analyzing usage behavior. Moreover, it validates the impact of applying actions to encourage legitimate viewing behavior while maximizing business ROI, eventually growing subscribers and revenue.
 
-By deeply analyzing the long, winding trail of data left behind by each subscriber using Adobe’s proprietary multi-layer machine learning model, customers can understand usage behavior and identify password sharing with a greater degree of certainty, use the insights to validate the impact of applying actions to encourage legitimate viewing behavior while maximizing business growth, eventually act on password sharing using validated tactics to improve viewer experience, growing subscribers and revenue (for e.g. converting sharers to paid subscribers, managing ad loads based on sharing behavior, rewarding good behavior with better viewer experience).
+By deeply analyzing the long, winding trail of data left behind by each subscriber using Adobe's proprietary multi-layer machine learning model, customers can understand usage behavior and identify password sharing with a greater degree of certainty, use the insights to validate the impact of applying actions to encourage legitimate viewing behavior while maximizing business growth, eventually act on password sharing using validated tactics to improve viewer experience, growing subscribers and revenue (for e.g. converting sharers to paid subscribers, managing ad loads based on sharing behavior, rewarding good behavior with better viewer experience).
 
-Account IQ is helps you understand usage patterns and identify password sharing by leveraging the Primetime Authentication  solution that processes a huge volume of TV Everywhere transactions. A proprietary multi-layer machine learning model trained by this real-world TVE data accurately characterizes usage patterns and helps video streaming services understand usage patterns and identify password sharing at an individual account level. Based on Adobe’s customer experience management solutions, Account IQ enables video streaming services to effectively use their audience data to create actionable sharing profiles as well powers integrations with other Adobe Digital Experience and 3rd party solutions—for example, Adobe Primetime Concurrency Monitoring or Adobe Analytics—to enable understanding usage patterns, identify and act upon password sharing.
+Account IQ is helps you understand usage patterns and identify password sharing by leveraging the Primetime Authentication  solution that processes a huge volume of TV Everywhere transactions. A proprietary multi-layer machine learning model trained by this real-world TVE data accurately characterizes usage patterns and helps video streaming services understand usage patterns and identify password sharing at an individual account level. Based on Adobe's customer experience management solutions, Account IQ enables video streaming services to effectively use their audience data to create actionable sharing profiles as well powers integrations with other Adobe Digital Experience and 3rd party solutions—for example, Adobe Primetime Concurrency Monitoring or Adobe Analytics—to enable understanding usage patterns, identify and act upon password sharing.
 
 
 <!-- The widespread availability of video content and streaming services bring with it problem of account sharing; eventually leading to the loss of revenue by content providers. Account IQ helps TV Everywhere and VOD (video on demand) providers understand the risks to their revenue and business operations, and determine the most effective actions to take to mitigate the impacts of credential fraud. It helps these media companies (MVPDs, Programmers, and VOD providers) manage and uncover the instances of password sharing with a high level of confidence, enabling them deliver better business outcomes and provide better viewing experiences for subscribers.

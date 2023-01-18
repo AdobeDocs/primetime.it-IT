@@ -1,13 +1,13 @@
 ---
 title: Best practice
 description: Continua a leggere per scoprire come utilizzare meglio lo strumento IQ dell’account.
-source-git-commit: 3ee1620dad552c76545f5441ea8530a45143fc4b
+exl-id: 55901f5d-d9c1-4ee5-9349-afa28445b324
+source-git-commit: dcd89849937f4893705423465be4003948739eeb
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 0%
 
 ---
-
 
 # Best practice {#aiq-best-practices}
 
@@ -28,6 +28,7 @@ Per comprendere la natura e l&#39;impatto della condivisione sulla tua azienda:
 ## Prendere azioni incrementali mirate {#incremental-targeted-action}
 
 Con un segmento di destinazione definito, esegui un’azione. Cominciando con un segmento ben definito, riduci il rischio di conseguenze non intenzionali e capisca meglio il risultato. Indipendentemente dalla posizione del percorso, puoi sempre perfezionare o espandere il target dell&#39;operazione.
+
 Iniziare con piccoli e rampicati è un approccio prudente. Utilizzare segmenti precedentemente identificati e intraprendere azioni (come esperimenti) con obiettivi specifici.
 
 Utilizza lo strumento Operazione per definire il segmento di destinazione e un intervallo di tempo operativo. In questo modo potrai tenere traccia degli effetti nella fase successiva.
@@ -98,7 +99,7 @@ How many additional ads were viewed?
 
 Did the number of borrowers decrease?
 
-Account IQ’s sophisticated machine learning based models help you analyze and measure the impacts of your experiments (or actions).
+Account IQ's sophisticated machine learning based models help you analyze and measure the impacts of your experiments (or actions).
 
 Improve and repeat
 Based on the outcomes of your experiments and targeted actions on small groups of users, you can expand the reach of your strategies to rest of the user segment or reset the strategy and audience to act on.

@@ -1,13 +1,13 @@
 ---
 title: Rapporti generali sull'utilizzo
 description: Rapporti generali sull'utilizzo
-source-git-commit: 683b5a5c1dc8dde3f546bbf4b7a09406bc018d78
+exl-id: 1272073a-61fe-47ec-aced-2e8055b6b11e
+source-git-commit: a2181a8fd7334f19b8387a31c71527d4f689ab9d
 workflow-type: tm+mt
-source-wordcount: '1241'
+source-wordcount: '1281'
 ht-degree: 0%
 
 ---
-
 
 # Rapporti generali sull&#39;utilizzo {#general-usage-reports}
 
@@ -41,7 +41,26 @@ I rapporti sono tutti basati sul segmento corrente selezionato utilizzando [Segm
 
 I grafici a linee forniscono una visualizzazione delle modifiche nel tempo in valori di AuthN OK, AuthZ OK, Play Requests e Unique Subscribers in un intervallo di tempo selezionato per il segmento definito.
 
-![](assets/line-graph-gu.png)
+++Programmatore- **AuthN OK / AuthZ OK / Play Requests / Univoci Sottoscrittori**
+
+![](assets/progr-line-graph-gu.png)
+
+
+*Figura: AuthN OK / AuthZ OK / Richieste Play / Sottoscrittori unici per l&#39;utente programmatore*
+
+
++++
+
+
++++MVPD- **AuthN OK / AuthZ OK / Sottoscrittori univoci**
+
+![](assets/mvpd-line-graph-gu.png)
+
+
+*Figura: AuthN OK / AuthZ OK / Sottoscrittori unici per l&#39;utente MVPD*
+
+
++++
 
 L’asse x presenta le unità entro l’intervallo di tempo corrente e l’asse y rappresenta le metriche di base dell’attività degli utenti abbonati durante tale periodo. I grafici a linee consentono di confrontare i seguenti valori per gli abbonati a MVPD e canali selezionati nel pannello di selezione dei segmenti:
 
@@ -57,13 +76,18 @@ L’asse x presenta le unità entro l’intervallo di tempo corrente e l’asse 
 
    Le richieste di riproduzione sono il numero di richieste di riproduzione. Per ulteriori informazioni e definizioni vedi [Concetti di prodotto: Richieste di riproduzione](/help/AccountIQ/product-concepts.md#play-requests-def)
 
+   >[!NOTE]
+   >
+   >Il grafico a linee delle richieste di riproduzione non è disponibile per gli utenti MVPD.
+
+
 * **Sottoscrittori univoci**
 
    Gli abbonati univoci sono il numero di abbonati univoci riusciti. Per ulteriori informazioni e definizioni vedi [Concetti di prodotto: Abbonati univoci](/help/AccountIQ/product-concepts.md#unique-subscriber-def)
 
    >[!NOTE]
    >
-   >Il numero totale di abbonati univoci include anche il numero di dispositivi univoci se l&#39;uso di un programmatore di TempPass Adobe (cioè anteprima gratuita) fa parte del segmento.
+   >Il numero totale di abbonati univoci include anche il numero di dispositivi univoci se l&#39;uso di un programmatore di TempPass Adobe (che è anteprima gratuita) fa parte del segmento.
 
 ## Panoramica snapshot - Account al di sopra delle soglie {#snapshot-overview}
 
@@ -105,7 +129,7 @@ Il grafico mostra i seguenti elementi:
 
 ## Dispositivi a settimana (o mese) per account {#devices-week-account}
 
-La **grafico a barre** fornisce informazioni sul comportamento di utilizzo in termini di come gli abbonati agli MVPD utilizzano i loro dispositivi per accedere ai contenuti dal tuo canale.
+La **grafico a barre** fornisce informazioni sul comportamento di utilizzo in termini di come gli abbonati utilizzano i loro dispositivi per accedere ai contenuti.
 
 L&#39;asse x traccia il numero di account e l&#39;asse y il numero di dispositivi. In base alla soglia impostata per il numero di dispositivi per account, indica il numero assoluto di account abbonati che consumano contenuti da un numero specifico di dispositivi nella durata di una settimana.
 
@@ -135,7 +159,7 @@ Risultati di questa metrica combinati con numero di [Dispositivi a settimana (o 
 
 ![](assets/graph-loc-week-acc.png)
 
-Una volta definito un segmento (selezionando MVPD e canali) e impostato la soglia per il numero di posizioni, puoi identificare dal grafico:
+Dopo aver definito un segmento e impostato la soglia per il numero di posizioni, puoi identificarti dal grafico:
 
 * Numero (e percentuale) di abbonati che consumano contenuti da (uno specifico) x numero di posizioni in una settimana.
 
@@ -163,7 +187,7 @@ Una volta definito un segmento (selezionando MVPD e canali) e impostato la sogli
 
 Il grafico a barre Vista storica consente di confrontare le metriche di utilizzo tra diversi intervalli di tempo. Inoltre, traccia collettivamente le varie metriche di utilizzo, come [Dispositivi a settimana (o mese) per account](#devices-week-account), [Posizioni per settimana (o mese) per account](#locations-week-account)e [IP a settimana (o mese) per account](#ip-week-account).
 
-* L’asse x traccia l’intervallo di tempo e l’asse y traccia il numero di account utente, dispositivi, posizioni e IP.
+* L&#39;asse x traccia l&#39;intervallo di tempo e l&#39;asse y traccia il numero di account utente, dispositivi, posizioni e IP.
 
 * Le barre colorate arancioni indicano i segmenti in diversi intervalli di tempo.
 
@@ -179,5 +203,5 @@ Il grafico a barre Vista storica consente di confrontare le metriche di utilizzo
 
 >[!MORELIKETHIS]
 >
->* Scopri come esportare i rapporti per i primi 1000 abbonati per gli MVPD selezionati utilizzando i filtri nel rapporto sull’utilizzo generale utilizzando [Esporta i primi 1000 account](/help/AccountIQ/export-acc-information.md) opzione .
+>* Scopri come esportare i rapporti per i primi 1000 abbonati nel segmento selezionato utilizzando i filtri nel rapporto sull’utilizzo generale utilizzando [Esporta i primi 1000 account](/help/AccountIQ/export-acc-information.md) opzione .
 

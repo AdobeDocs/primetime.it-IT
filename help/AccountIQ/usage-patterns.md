@@ -1,23 +1,23 @@
 ---
 title: Pattern di utilizzo
 description: Visualizza il comportamento di condivisione account per diverse tipologie di utenti.
-source-git-commit: dd9b8edfd00bb97d01c6478ae0be6944e7e57535
+exl-id: 2faa7e75-b3a1-491b-bb7d-bd3a149cbe79
+source-git-commit: 560611f2af2605ba399e4cf5ddfd331b6e8e0231
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '327'
 ht-degree: 0%
 
 ---
 
-
 # Pattern di utilizzo {#usage-patterns}
 
-L&#39;account IQ classifica gli utenti degli account utente in varie categorie in termini di comportamento sociale, come Viaggiatore o pendolare, Grande famiglia e condivisione della comunità. La **Pattern di utilizzo** In questa pagina sono visualizzate diverse analisi e rapporti per queste tipologie di utenti. Ad esempio: **Distribuzione dei pattern di utilizzo: utenti nei segmenti e nel settore** confronta il comportamento di utilizzo del segmento corrente con l’intero settore.
+L&#39;account IQ classifica gli utenti degli account utente in varie categorie in termini di comportamento sociale, come il viaggiatore o il pendolare, la grande famiglia e la condivisione della comunità. La **Pattern di utilizzo** In questa pagina sono visualizzate diverse analisi e rapporti per queste tipologie di utenti. Ad esempio: **Distribuzione dei pattern di utilizzo: utenti nel segmento rispetto al totale** confronta il comportamento di utilizzo del segmento corrente con l’intero settore.
 
 Come le altre pagine dell&#39;app, le analisi e i rapporti qui sono basati sul segmento corrente come definito nella [pannello dei segmenti](/help/AccountIQ/segments-timeframe.md).
 
 ## Distribuzione dei pattern di utilizzo {#usage-pattern-dis}
 
-Il grafico a barre in **Distribuzione dei pattern di utilizzo: utenti nei segmenti e nel settore** rappresenta il numero e le percentuali degli abbonati per ogni comportamento social o modello di utilizzo. Oltre a confrontare ogni pattern di utilizzo nel segmento corrente con l’intero settore, vengono confrontati anche con un segmento contenente tutti i tuoi canali.
+Il grafico a barre in **Distribuzione dei pattern di utilizzo: utenti nel segmento rispetto al totale** rappresenta il numero e le percentuali degli abbonati per ogni comportamento social o modello di utilizzo. Oltre a confrontare ogni pattern di utilizzo nel segmento corrente con l’intero settore, vengono confrontati anche con un segmento contenente tutti i tuoi canali.
 
 ![](assets/segment-users-industry.png)
 
@@ -39,8 +39,20 @@ Ad esempio, nell’immagine precedente:
 
 * E il 15,7% (24.073.311) delle richieste di gioco totali (153.076.350) sono effettuate da utenti abituali.
 
-## Distribuzione dei pattern di utilizzo per gli MVPD {#usage-pattern-dis-mvpd}
+## Distribuzione dei pattern di utilizzo per partner di segmenti {#usage-pattern-dis-mvpd}
 
-La **Distribuzione dei pattern di utilizzo per gli MVPD** La tabella fornisce un confronto tra la distribuzione dei pattern di utilizzo per gli MVPD nel segmento corrente.
++++Programmatore- Distribuzione del pattern di utilizzo per segmenti totali e partner di segmenti
+
+La **Distribuzione dei pattern di utilizzo** La tabella fornisce un confronto tra la distribuzione dei pattern di utilizzo per gli MVPD nel segmento corrente.
 
 ![](assets/usage-patterns-mvpdwise.png)
+
++++
+
++++MVPD- Distribuzione del pattern di utilizzo per segmenti totali e partner di segmenti
+
+La **Distribuzione dei pattern di utilizzo** La tabella fornisce un confronto tra la distribuzione dei pattern di utilizzo per i canali di programmazione nel segmento corrente.
+
+![](assets/usage-patterns-programmerwise.png)
+
++++
