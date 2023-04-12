@@ -2,7 +2,7 @@
 title: Best practice
 description: Continua a leggere per scoprire come utilizzare meglio lo strumento IQ dell’account.
 exl-id: 55901f5d-d9c1-4ee5-9349-afa28445b324
-source-git-commit: dcd89849937f4893705423465be4003948739eeb
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 0%
@@ -28,7 +28,6 @@ Per comprendere la natura e l&#39;impatto della condivisione sulla tua azienda:
 ## Prendere azioni incrementali mirate {#incremental-targeted-action}
 
 Con un segmento di destinazione definito, esegui un’azione. Cominciando con un segmento ben definito, riduci il rischio di conseguenze non intenzionali e capisca meglio il risultato. Indipendentemente dalla posizione del percorso, puoi sempre perfezionare o espandere il target dell&#39;operazione.
-
 Iniziare con piccoli e rampicati è un approccio prudente. Utilizzare segmenti precedentemente identificati e intraprendere azioni (come esperimenti) con obiettivi specifici.
 
 Utilizza lo strumento Operazione per definire il segmento di destinazione e un intervallo di tempo operativo. In questo modo potrai tenere traccia degli effetti nella fase successiva.

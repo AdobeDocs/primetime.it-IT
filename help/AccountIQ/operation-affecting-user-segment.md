@@ -2,9 +2,9 @@
 title: Crea un’operazione su un segmento utente e tiene traccia dell’effetto
 description: Come creare un'operazione che effetti e tiene traccia dell'effetto su un segmento di utenti definito.
 exl-id: ab74f857-e178-4120-8f9c-655ec921d096
-source-git-commit: dd1001d94e32a1a8b5346ff97b0f6cb7d244dcf2
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
-source-wordcount: '1010'
+source-wordcount: '1007'
 ht-degree: 0%
 
 ---
@@ -146,7 +146,7 @@ La **Azione** definisce l’operazione da eseguire sul segmento definito.
 
 Puoi eseguire due tipi di azioni:
 
-* Azioni che utilizzano sistemi integrati con Account IQ; quali [Monitoraggio della concorrenza](https://tve.helpdocsonline.com/concurrency-monitoring-introduction)<!--, or Adobe Target-->.
+* Azioni che utilizzano sistemi integrati con Account IQ; quali **Monitoraggio della concorrenza** <!--[Concurrency Monitoring](https://tve.helpdocsonline.com/concurrency-monitoring-introduction), or Adobe Target-->.
 
 * Azioni per creare ed elaborare flussi di lavoro esterni all&#39;Account IQ e non integrati con il sistema Account IQ. Ad esempio, un&#39;azione per il programmatore di canale &#39;N&#39; per inviare e-mail in blocco a tutti gli abbonati di MVPD &#39;C&#39;.
 

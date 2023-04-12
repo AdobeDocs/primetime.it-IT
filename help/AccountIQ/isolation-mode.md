@@ -1,13 +1,13 @@
 ---
 title: Visualizzare i rapporti in modalità isolamento
-description: 'Visualizza i rapporti in modalità isolamento per Xfinity. '
-source-git-commit: afa77dd0d7ffe38d353fed21dc9591b994b11193
+description: Visualizza i rapporti in modalità isolamento per Xfinity.
+exl-id: e7cf24c5-9bfa-48f6-b5c8-20443a976891
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 0%
 
 ---
-
 
 # Visualizzazione della condivisione di rapporti in modalità isolamento {#report-isolation-mode}
 
@@ -19,7 +19,7 @@ Ad esempio, nell&#39;immagine seguente, se un Sottoscrittore B di un MVPD in mod
 
 *Figura: Modalità di isolamento MVPD identifica quattro abbonati diversi invece di due*
 
-Per gestire la distorsione dei dati (a causa dell’identificazione dello stesso abbonato come diverso in base all’accesso a diversi programmatori), la modalità di isolamento limita l’attività riportata su un programmatore all’attività solo sulle applicazioni di quel programmatore. Ad esempio, per la modalità di isolamento nell&#39;immagine precedente, il programmatore L vede i dati solo in base all&#39;attività delle identità W e Y, ignorando le identità X e Z.
+Per gestire la distorsione dei dati (a causa dell&#39;identificazione dello stesso abbonato come diverso in base all&#39;accesso a diversi programmatori), la Modalità Isolamento limita l&#39;attività riportata su un programmatore all&#39;attività solo sulle applicazioni di quel programmatore. Ad esempio, per la modalità di isolamento nell&#39;immagine precedente, il programmatore L vede i dati solo in base all&#39;attività delle identità W e Y, ignorando le identità X e Z.
 
 >[!IMPORTANT]
 >
@@ -40,7 +40,7 @@ Per visualizzare le metriche in modalità isolamento:
 
    >[!IMPORTANT]
    >
-   >Poiché la condivisione dell’account è più pertinente quando viene misurata per lo streaming su tutte le applicazioni dei programmatori, vedrai punteggi di condivisione inferiori e alcune variazioni nelle metriche in modalità isolamento.
+   >Poiché la condivisione dell&#39;account è più rilevante quando viene misurata per lo streaming su tutte le applicazioni dei programmatori, vedrai punteggi di condivisione inferiori e alcune variazioni nelle metriche in modalità isolamento.
 
    ![](assets/aggregate-sharing-isolation.png)
 
