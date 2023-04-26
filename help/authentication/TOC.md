@@ -3,9 +3,9 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Autenticazione Primetime
 user-guide-description: Primetime Authentication è una soluzione di adesione per TV Everywhere, che fornisce un framework modulare per determinare se qualcuno che richiede l'accesso a una risorsa ne ha diritto.
-source-git-commit: 0afc48ae0e423c2a851b3bf22803fbd730999c04
+source-git-commit: aa8169da1308e5372128a93b6a2e5a3a6db5cfef
 workflow-type: tm+mt
-source-wordcount: '719'
+source-wordcount: '723'
 ht-degree: 0%
 
 ---
@@ -152,6 +152,7 @@ ht-degree: 0%
    + [Monitoraggio del pass PayTV Adobe Primetime](monitoring-adobe-pay-tv-pass.md)
    + [Requisiti minimi di sistema](minimum-system-requirements.md)
 + Note sulla versione {#release-notes}
+   + [Note sulla versione di Primetime Authentication 2.65](auth-rn-265.md)
    + [Note sulla versione di Primetime Authentication 2.64.1](auth-rn-2641.md)
    + [Note sulla versione di Primetime Authentication 2.64](auth-rn-264.md)
    + [Note sulla versione di Primetime Authentication 2.63](auth-rn-263.md)
