@@ -5,7 +5,7 @@ user-guide-title: Autenticazione Primetime
 user-guide-description: Primetime Authentication è una soluzione di adesione per TV Everywhere, che fornisce un framework modulare per determinare se qualcuno che richiede l'accesso a una risorsa ne ha diritto.
 source-git-commit: aa8169da1308e5372128a93b6a2e5a3a6db5cfef
 workflow-type: tm+mt
-source-wordcount: '723'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
