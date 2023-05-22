@@ -1,33 +1,31 @@
 ---
-description: Sul server licenze è possibile configurare diverse proprietà del sistema Java per controllare la posizione dei file di configurazione e di registro.
+description: Nel server licenze è possibile configurare diverse proprietà del sistema Java per controllare la posizione dei file di configurazione e di registro.
 title: Proprietà del sistema Java
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 08fe6910-9d58-41c3-91d3-514406bedf05
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 0%
 
 ---
 
-
 # Proprietà del sistema Java{#java-system-properties}
 
-Sul server licenze è possibile configurare diverse proprietà del sistema Java per controllare la posizione dei file di configurazione e di registro.
+Nel server licenze è possibile configurare diverse proprietà del sistema Java per controllare la posizione dei file di configurazione e di registro.
 
 Facoltativamente, puoi configurare le seguenti proprietà del sistema Java:
 
 * *`LicenseServer.ConfigRoot`* — Nome della directory che include i file di configurazione per il server licenze.
 
-   Per informazioni dettagliate sul contenuto di questi file, consulta *Licenza file di configurazione del server* . Se non è configurato, il valore predefinito è `CATALINA_BASE/licenseserver`.
+   Consulta *File di configurazione del server licenze* per informazioni dettagliate sul contenuto di questi file. Se non è configurato, il valore predefinito è `CATALINA_BASE/licenseserver`.
 
-* *LicenseServer.LogRoot* : nome della  [!DNL logs] directory in cui si trovano i log dell&#39;applicazione del server licenze. Se il nome di questa directory non è stato modificato, per impostazione predefinita il nome di questa directory è configurato come *LicenseServer.ConfigRoot*.
+* *LicenseServer.LogRoot* — Nome del [!DNL logs] directory in cui si trovano i registri applicazioni del server licenze. Se non hai modificato il nome di questa directory, il nome della directory viene configurato come *LicenseServer.ConfigRoot* per impostazione predefinita.
 
-Se utilizzi il file [!DNL catalina.bat] o [!DNL catalina.sh] per avviare Tomcat, puoi configurare le proprietà di sistema con la variabile di ambiente `JAVA_OPTS`. Tutte le opzioni Java configurate vengono applicate automaticamente all&#39;avvio di Tomcat.
+Se si utilizza [!DNL catalina.bat] o [!DNL catalina.sh] per avviare Tomcat, è possibile configurare le proprietà di sistema con il `JAVA_OPTS` variabile di ambiente. Tutte le opzioni Java configurate vengono applicate automaticamente all&#39;avvio di Tomcat.
 
-Ad esempio, puoi configurare la variabile di ambiente `JAVA_OPTS` come segue:
+Ad esempio, puoi configurare `JAVA_OPTS` variabile di ambiente come segue:
 
 ```
 JAVA_OPTS=-DLicenseServer.ConfigRoot="absolute-path-to-config-folder" 
   -DLicenseServer.LogRoot="absolute-path-to-log-folder"
 ```
-

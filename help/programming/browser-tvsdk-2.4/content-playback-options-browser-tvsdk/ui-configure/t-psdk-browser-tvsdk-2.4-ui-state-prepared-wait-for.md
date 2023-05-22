@@ -1,30 +1,28 @@
 ---
 description: Prima di poter utilizzare la maggior parte dei metodi del lettore TVSDK del browser, il lettore deve trovarsi in uno stato valido.
-title: Attendi uno stato valido
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Attesa di uno stato valido
+exl-id: 14f6a5db-4f81-448b-b291-487569a7bc4e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '130'
 ht-degree: 0%
 
 ---
 
-
-# Attendi uno stato valido {#wait-for-a-valid-state}
+# Attesa di uno stato valido {#wait-for-a-valid-state}
 
 Prima di poter utilizzare la maggior parte dei metodi del lettore TVSDK del browser, il lettore deve trovarsi in uno stato valido.
 
-Il lettore passa attraverso vari stati. In attesa che il lettore sia nello stato corretto, la risorsa multimediale viene caricata correttamente. Se il lettore non è almeno nello stato richiesto, molti metodi di riproduzione generano `IllegalStateException`.
+Il lettore si sposta attraverso vari stati. L’attesa che il lettore si trovi nello stato corretto assicura che la risorsa multimediale sia stata caricata correttamente. Se il lettore non si trova almeno nello stato richiesto, vengono lanciati molti metodi del lettore `IllegalStateException`.
 
-In genere lo stato richiesto è PREPARATO.
+Lo stato richiesto è in genere PREPARATO.
 
 1. Per confermare che lo stato è PREPARATO:
 
-   Quando il lettore sta inizializzando, attendi che il browser TVSDK invii l&#39;evento `AdobePSDK.MediaPlayerStatusChangeEvent` con un `event.status` di `MediaPlayerStatus.PREPARED`.
+   Quando il lettore viene inizializzato, attendi che il browser TVSDK invii il `AdobePSDK.MediaPlayerStatusChangeEvent` evento con un `event.status` di `MediaPlayerStatus.PREPARED`.
 
-   Verificare se lo stato corrente dell&#39;oggetto MediaPlayer è almeno PREPARATO.
+   Per verificare se lo stato corrente dell&#39;oggetto MediaPlayer è almeno READY.
 
    ```
    <readonly> status :AdobePSDK.MediaPlayerStatus
    ```
-

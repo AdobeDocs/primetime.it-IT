@@ -1,22 +1,21 @@
 ---
-title: Creazione di un criterio tramite l’API Java
-description: Creazione di un criterio tramite l’API Java
+title: Creazione di un criterio utilizzando l’API Java
+description: Creazione di un criterio utilizzando l’API Java
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 60e26fd6-1b72-413c-a35b-b317389cd9ed
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
 
 ---
 
+# Creazione di un criterio utilizzando l’API Java {#creating-a-policy-using-the-java-api}
 
-# Creazione di un criterio tramite l&#39;API Java {#creating-a-policy-using-the-java-api}
+Per creare un criterio utilizzando l’API Java, effettua le seguenti operazioni:
 
-Per creare un criterio utilizzando l’API Java, esegui i seguenti passaggi:
-
-1. Configura l&#39;ambiente di sviluppo e includi tutti i file JAR menzionati in [Impostazione dell&#39;ambiente di sviluppo](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) all&#39;interno del progetto.
-1. Crea un oggetto `com.adobe.flashaccess.sdk.policy.Policy` e specifica le relative proprietà, ad esempio i diritti, la durata del caching delle licenze e la data di fine dei criteri.
+1. Configura l’ambiente di sviluppo e includi tutti i file JAR menzionati in [Configurazione dell’ambiente di sviluppo](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) all’interno del progetto.
+1. Creare un `com.adobe.flashaccess.sdk.policy.Policy` e specificarne le proprietà, ad esempio i diritti, la durata della memorizzazione nella cache della licenza e la data di fine del criterio.
 
    ```java
      // Create a new Policy object.  
@@ -52,7 +51,7 @@ Per creare un criterio utilizzando l’API Java, esegui i seguenti passaggi:
      }
    ```
 
-1. Serializzare l&#39;oggetto `Policy` e archiviarlo in un file o in un database.
+1. Serializzare `Policy` e memorizzarlo in un file o database.
 
    ```java
      // Serialize the policy  
@@ -66,4 +65,4 @@ Per creare un criterio utilizzando l’API Java, esegui i seguenti passaggi:
      out.close();
    ```
 
-Per l&#39;origine completa di questo codice di esempio, consulta *com.adobe.flashaccess.amples.policy.CreatePolicy* nella directory Strumenti della riga di comando per l&#39;implementazione di riferimento &quot;[!DNL samples]&quot;.
+Per l&#39;origine completa del codice di esempio, vedi *com.adobe.flashaccess.samples.policy.CreatePolicy* negli Strumenti della riga di comando per l’implementazione di riferimento &quot; [!DNL samples]&quot;.

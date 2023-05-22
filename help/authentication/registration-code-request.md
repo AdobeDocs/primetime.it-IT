@@ -1,21 +1,21 @@
 ---
 title: Pagina di registrazione
 description: Pagina di registrazione
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 581b8e2e-7420-4511-88b9-f2cd43a41e10
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 0%
 
 ---
 
-
 # Pagina di registrazione {#registration-page}
 
-## Endpoint API REST {#clientless-endpoints}
+## Endpoint REST API {#clientless-endpoints}
 
 >[!NOTE]
 >
->Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente a partire da Adobe. Non è consentito alcun uso non autorizzato.
+>Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente di Adobe. Non è consentito alcun uso non autorizzato.
 
 &lt;reggie_fqdn>:
 
@@ -31,33 +31,33 @@ ht-degree: 0%
 
 ## Descrizione {#create-reg-code-svc}
 
-Restituisce il codice di registrazione generato in modo casuale e l’URI della pagina di accesso.
+Restituisce l&#39;URI del codice di registrazione e della pagina di accesso generati in modo casuale.
 
-| Endpoint | Chiamato  </br>Da | Ingresso   </br>Parametro | HTTP  </br>Metodo | Risposta | HTTP  </br>Risposta |
+| Endpoint | Chiamato  </br>Da | Input   </br>Parametro | HTTP  </br>Metodo | Risposta | HTTP  </br>Risposta |
 | --- | --- | --- | --- | --- | --- |
-| &lt;reggie_fqdn>/reggie/v1/{requestor}/regcode</br>Ad esempio:</br>REGGIE_FQDN/reggie/v1/sampleRequestorId/regcode | App in streaming</br>o</br>Servizio programmatore | 1. richiedente  </br>    (componente Percorso)</br>2.  deviceId (Hashed)   </br>    (Obbligatorio)</br>3.  device_info/X-Device-Info (obbligatorio)</br>4.  mvpd (facoltativo)</br>5.  ttl (facoltativo)</br>6.  _deviceType_</br> 7.  _deviceUser_ (Obsoleto)</br>8.  _appId_ (Obsoleto) | POST | XML o JSON contenente un codice di registrazione e informazioni o dettagli di errore in caso di errore. Vedi gli schemi e gli esempi seguenti. | 201 |
+| &lt;reggie_fqdn>/reggie/v1/{requestor}/regcode</br>Ad esempio:</br>REGGIE_FQDN/reggie/v1/sampleRequestorId/regcode | App di streaming</br>o</br>Servizio programmatore | 1. richiedente  </br>    (componente Percorso)</br>2.  deviceId (Hashed)   </br>    (Obbligatorio)</br>3.  device_info/X-Device-Info (Obbligatorio)</br>4.  mvpd (facoltativo)</br>5.  ttl (facoltativo)</br>6.  _deviceType_</br> 7.  _deviceUser_ (Obsoleto)</br>8.  _appId_ (Obsoleto) | POST | XML o JSON contenente un codice di registrazione e informazioni o dettagli sull’errore in caso di esito negativo. Consulta schemi ed esempi di seguito. | 201 |
 
 {style="table-layout:auto"}
 
 | Parametro di input | Descrizione |
 | --- | --- |
-| richiedente | Il requestorId del programmatore per il quale l&#39;operazione è valida. |
-| deviceId | Byte dell&#39;ID dispositivo. |
-| device_info/</br>X-Device-Info | Informazioni sul dispositivo in streaming.</br>**Nota**: QUESTO PUÒ essere passato a device_info come parametro URL, ma a causa della dimensione potenziale di questo parametro e delle limitazioni della lunghezza di un URL GET, DEVE essere passato come X-Device-Info nell&#39;intestazione http. </br>Vedi tutti i dettagli in [Trasferimento delle informazioni sul dispositivo e sulla connessione](/help/authentication/passing-client-information-device-connection-and-application.md). |
-| mvpd | ID MVPD per il quale l&#39;operazione è valida. |
-| ttl | Quanto tempo deve vivere questo regcode in secondi.</br>**Nota**: Il valore massimo consentito per ttl è di 36000 secondi (10 ore). Valori più elevati generano una risposta HTTP 400 (richiesta errata). Se `ttl` viene lasciata vuota, l’autenticazione Primetime imposta un valore predefinito di 30 minuti. |
-| _deviceType_ | Tipo di dispositivo (ad esempio Roku, PC).</br>Se questo parametro è impostato correttamente, ESM offre metriche che [suddivisi per tipo di dispositivo](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) quando utilizzi Clientless, in modo che possano essere eseguiti diversi tipi di analisi, ad esempio Roku, AppleTV e Xbox.</br>Vedi [Vantaggi dell&#39;utilizzo del parametro del tipo di dispositivo senza client nelle metriche di passaggio ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br>**Nota**: il parametro device_info sostituirà questo parametro. |
-| _deviceUser_ | Identificatore utente del dispositivo. |
-| _appId_ | ID/nome dell&#39;applicazione. </br>**Nota**: device_info sostituisce questo parametro. |
+| richiedente | ID richiedente del programmatore per il quale è valida questa operazione. |
+| deviceId | Byte ID dispositivo. |
+| device_info/</br>X-Device-Info | Informazioni sul dispositivo di streaming.</br>**Nota**: questo PUÒ essere trasmesso device_info come parametro URL, ma a causa delle dimensioni potenziali del parametro e delle limitazioni alla lunghezza di un URL GET, DEVE essere trasmesso come X-Device-Info nell’intestazione http. </br>Vedi tutti i dettagli in [Trasmissione delle informazioni sul dispositivo e sulla connessione](/help/authentication/passing-client-information-device-connection-and-application.md). |
+| mvpd | ID MVPD per il quale è valida questa operazione. |
+| ttl | Durata di questo codice regcode in secondi.</br>**Nota**: il valore massimo consentito per ttl è di 36000 secondi (10 ore). Valori più alti determinano una risposta HTTP 400 (richiesta non valida). Se `ttl` viene lasciato vuoto, l’autenticazione Primetime imposta un valore predefinito di 30 minuti. |
+| _deviceType_ | Il tipo di dispositivo (ad esempio, Roku, PC).</br>Se questo parametro è impostato correttamente, ESM offre metriche che sono [suddiviso per tipo di dispositivo](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) quando utilizzi Clientless, in modo da poter eseguire diversi tipi di analisi, ad esempio Roku, AppleTV e Xbox.</br>Vedi, [Vantaggi dell’utilizzo del parametro del tipo di dispositivo senza client nelle metriche di passaggio ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br>**Nota**: device_info sostituirà questo parametro. |
+| _deviceUser_ | L’identificatore utente del dispositivo. |
+| _appId_ | ID/nome dell’applicazione. </br>**Nota**: device_info sostituisce questo parametro. |
 
 {style="table-layout:auto"}
 
 
 >[!CAUTION]
 >
->**Indirizzo IP del dispositivo di streaming**
+>**Indirizzo IP dispositivo di streaming**
 ></br>
->Per le implementazioni da client a server, l&#39;indirizzo IP del dispositivo di streaming viene inviato in modo implicito con questa chiamata.  Per le implementazioni server-to-server, dove **regcode** La chiamata è effettuata come Servizio programmatore e non come Dispositivo streaming, per trasmettere l&#39;indirizzo IP del dispositivo streaming è necessaria la seguente intestazione:
+>Per le implementazioni client-server, l&#39;indirizzo IP del dispositivo di streaming viene inviato implicitamente con questa chiamata.  Per le implementazioni server-to-server, in cui **regcode** Viene effettuata una chiamata al servizio Programmatore e non al dispositivo di streaming, è necessaria la seguente intestazione per trasmettere l&#39;indirizzo IP del dispositivo di streaming:
 >
 >
 >
@@ -67,7 +67,7 @@ Restituisce il codice di registrazione generato in modo casuale e l’URI della 
 >
 >dove `<streaming\_device\_ip>` è l&#39;indirizzo IP pubblico del dispositivo di streaming.
 ></br></br>
->Esempio :</br>
+>Esempio:</br>
 >
 >
 ```
@@ -116,18 +116,18 @@ Restituisce il codice di registrazione generato in modo casuale e l’URI della 
 
 | Nome elemento | Descrizione |
 | --------------- | ------------------------------------------------------------------------------------ |
-| id | UUID generato dal servizio di registrazione del codice |
-| codice | Codice di registrazione generato dal servizio di registrazione |
+| id | UUID generato da Registration Code Service |
+| codice | Codice di registrazione generato da Registration Code Service |
 | richiedente | ID richiedente |
 | mvpd | ID Mvpd |
 | generato | Timestamp di creazione del codice di registrazione (in millisecondi dal 1° gennaio 1970 GMT) |
-| scadenza | Timestamp della scadenza del codice di registrazione (in millisecondi dal 1° gennaio 1970 GMT) |
+| scade | Timestamp di scadenza del codice di registrazione (in millisecondi dal 1° gennaio 1970 GMT) |
 | deviceId | ID dispositivo univoco (o token XSTS) |
 | deviceType | Tipo di dispositivo |
 | deviceUser | Utente connesso al dispositivo |
 | appId | ID applicazione |
 | appVersion | Versione applicazione |
-| registerURL | URL dell’app Web di accesso da visualizzare all’utente finale |
+| registrationURL | URL dell&#39;app Web di accesso da visualizzare all&#39;utente finale |
 
 {style="table-layout:auto"}
  </br>
@@ -199,4 +199,3 @@ Restituisce il codice di registrazione generato in modo casuale e l’URI della 
         }
     }
 ```
-

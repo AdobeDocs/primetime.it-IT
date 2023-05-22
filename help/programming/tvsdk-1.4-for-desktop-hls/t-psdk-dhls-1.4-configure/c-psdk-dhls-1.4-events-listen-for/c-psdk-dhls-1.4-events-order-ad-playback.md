@@ -1,22 +1,21 @@
 ---
-description: Quando la riproduzione include la pubblicità, TVSDK invia eventi/notifiche in sequenze generalmente previste. Il lettore può implementare azioni in base agli eventi nella sequenza prevista.
+description: Quando la riproduzione include annunci, TVSDK invia eventi/notifiche in sequenze generalmente previste. Il lettore può implementare azioni basate sugli eventi nella sequenza prevista.
 title: Ordine degli eventi pubblicitari
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 131b1dc1-3a59-4276-b639-d004ab7394ea
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '97'
 ht-degree: 0%
 
 ---
 
-
 # Ordine degli eventi pubblicitari{#order-of-advertising-events}
 
-Quando la riproduzione include la pubblicità, TVSDK invia eventi/notifiche in sequenze generalmente previste. Il lettore può implementare azioni in base agli eventi nella sequenza prevista.
+Quando la riproduzione include annunci, TVSDK invia eventi/notifiche in sequenze generalmente previste. Il lettore può implementare azioni basate sugli eventi nella sequenza prevista.
 
 <!--<a id="section_69E3CCBC57BB48399799876E83908348"></a>-->
 
-Durante la riproduzione degli annunci, l&#39;ordine degli eventi è:
+Durante la riproduzione degli annunci, l’ordine degli eventi è:
 
 * `AdBreakPlaybackEvent.AD_BREAK_STARTED`
 * I seguenti vengono inviati per ogni annuncio nell’interruzione pubblicitaria:
@@ -28,7 +27,7 @@ Durante la riproduzione degli annunci, l&#39;ordine degli eventi è:
 
 * `AdBreakPlaybackEvent.AD_BREAK_COMPLETED`
 
-L’esempio seguente mostra una progressione tipica degli eventi di riproduzione di annunci:
+L’esempio seguente mostra una progressione tipica degli eventi di riproduzione degli annunci:
 
 ```
 mediaPlayer.addEventListener(AdBreakPlaybackEvent.AD_BREAK_STARTED, onAdBreakStarted); 
@@ -68,4 +67,3 @@ private function onAdClick(event:AdClickThroughEvent):void {
     ... 
 } 
 ```
-

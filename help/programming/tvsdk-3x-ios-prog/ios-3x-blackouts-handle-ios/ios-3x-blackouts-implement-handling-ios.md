@@ -1,22 +1,21 @@
 ---
-description: Il TVSDK fornisce API e codice di esempio per la gestione dei periodi di sospensione attività.
-title: Implementare la gestione della blackout
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK fornisce API e codice di esempio per la gestione dei periodi di sospensione attività.
+title: Implementare la gestione delle sospensioni attività
+exl-id: 57823364-fdb3-41c3-8441-008e991f19a7
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '129'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Implementare la gestione delle sospensioni attività {#implement-blackout-handling}
 
-# Implementare la gestione della sospensione attività {#implement-blackout-handling}
+TVSDK fornisce API e codice di esempio per la gestione dei periodi di sospensione attività.
 
-Il TVSDK fornisce API e codice di esempio per la gestione dei periodi di sospensione attività.
+Per implementare la gestione delle sospensioni attività e fornire contenuto alternativo durante la sospensione attività:
 
-Per implementare la gestione della sospensione attività e fornire contenuto alternativo durante la sospensione attività:
-
-1. Imposta l&#39;app per abbonarti ai tag di blackout in un manifesto di streaming live.
+1. Configura l&#39;app per abbonarti ai tag di sospensione attività in un manifesto live stream.
 
    ```
    - (void) createMediaPlayer:(PTMediaPlayerItem *)item 
@@ -37,7 +36,7 @@ Per implementare la gestione della sospensione attività e fornire contenuto alt
    }
    ```
 
-1. Implementa un metodo listener per gli oggetti `PTTimedMetadata` in primo piano.
+1. Implementare un metodo listener per `PTTimedMetadata` oggetti in primo piano.
 
    Ad esempio:
 
@@ -61,7 +60,7 @@ Per implementare la gestione della sospensione attività e fornire contenuto alt
    }
    ```
 
-1. Gestisci gli oggetti `TimedMetadata` con aggiornamenti costanti durante la riproduzione.
+1. Maniglia `TimedMetadata` con aggiornamenti costanti durante la riproduzione.
 
    ```
    - (void)onMediaPlayerTimeChange:(NSNotification *)notification 
@@ -82,7 +81,7 @@ Per implementare la gestione della sospensione attività e fornire contenuto alt
    }
    ```
 
-1. Aggiungere il gestore `PTTimedMetadata` per passare al contenuto alternativo e tornare al contenuto principale come indicato dall&#39;oggetto `PTTimedMetadata` e il relativo tempo di riproduzione.
+1. Aggiungi il `PTTimedMetadata` al gestore di passare al contenuto alternativo e tornare al contenuto principale come indicato dalla `PTTimedMetadata` e il tempo di riproduzione dell&#39;oggetto.
 
    ```
    - (void)handleCollectionAtTime:(int)currentTime 
@@ -197,7 +196,7 @@ Per implementare la gestione della sospensione attività e fornire contenuto alt
    }
    ```
 
-1. Implementa un metodo listener per gli oggetti `PTTimedMetadata` in background.
+1. Implementare un metodo listener per `PTTimedMetadata` oggetti in background.
 
    ```
    - (void)onSubscribedTagInBackground:(NSNotification *)notification 
@@ -227,7 +226,7 @@ Per implementare la gestione della sospensione attività e fornire contenuto alt
    }
    ```
 
-1. Se l&#39;intervallo di blackout è sul DVR nel flusso di riproduzione, aggiornare gli intervalli non ricercabili.
+1. Se l&#39;intervallo di sospensione attività si trova sul DVR nel flusso di riproduzione, aggiornare gli intervalli non ricercabili.
 
    ```
    // This sample assumes that blackoutStartTimedMetadata is the PTTimedMetadata  

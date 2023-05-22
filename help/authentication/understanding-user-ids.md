@@ -1,42 +1,41 @@
 ---
 title: Informazioni sugli ID utente
 description: Informazioni sugli ID utente
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 813a8501-db72-4850-a387-c8db6120db80
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '602'
 ht-degree: 0%
 
 ---
 
-
 # Informazioni sugli ID utente {#understanding-user-ids}
 
 >[!NOTE]
 >
->Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente a partire da Adobe. Non è consentito alcun uso non autorizzato.
+>Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente di Adobe. Non è consentito alcun uso non autorizzato.
 
-Concettualmente, ogni utente che avvia un flusso di adesione è associato a un singolo ID utente univoco. Tuttavia, nel corso di un flusso di adesione, un ID utente può essere presentato in modi diversi, a seconda dell&#39;API da cui si ottiene l&#39;ID.
+Concettualmente, ogni utente che avvia un flusso di adesione è associato a un singolo ID utente univoco. Tuttavia, attraverso il corso di un flusso di adesione, tale ID utente può essere presentato in modi diversi, a seconda dell’API da cui ottieni l’ID.
 
-La `sessionGUID` nel token per contenuti multimediali brevi è la forma sicura dell’ID utente, disponibile tramite il `sendTrackingData()` chiama. In tutte le integrazioni correnti, si tratta di un GUID permanente per l’utente in più dispositivi e nel tempo. L’origine del GUID inizia con l’ID utente dalla risposta di autenticazione proveniente dall’MVPD. Tuttavia, alcuni MVPD potrebbero cambiare idea in futuro, e iniziare a inviare un GUID transitorio. Se un programmatore vuole garantire che l&#39;ID utente di origine MVPD nella risposta AuthN sia persistente, dovrebbe organizzarlo nei loro accordi con gli MVPD.
+Il `sessionGUID` in Short Media Token è la forma sicura dell’ID utente, disponibile tramite `sendTrackingData()` chiamare. In tutte le integrazioni correnti, si tratta di un GUID persistente per l’utente nel tempo e nei dispositivi. L&#39;origine del GUID inizia con l&#39;ID utente della risposta di autenticazione proveniente dall&#39;MVPD. Tuttavia, alcuni MVPD potrebbero cambiare idea in futuro e iniziare a inviare un GUID transitorio. Se un programmatore vuole assicurarsi che l’ID utente sorgente MVPD nella risposta AuthN sia persistente, deve provvedere in tal senso nei suoi accordi con gli MVPD.
 
-Di seguito sono elencati i diversi modi in cui l’ID utente viene rappresentato nelle API di autenticazione di Adobe Primetime:
+Di seguito sono riportati i diversi modi in cui l’ID utente viene rappresentato nelle API di autenticazione di Adobe Primetime:
 
-| Proprietà | Finalità | Hashed | Firma digitale | Descrizione |
+| Proprietà | Finalità | Hash | Firma digitale | Descrizione |
 | --- | --- | --- | --- | --- |
-| sendTrackingData(), proprietà GUID | Tracciamento/analisi | Sì | No | - ID utente MVPD, con hash per Adobe. L&#39;ID utente non è rintracciabile all&#39;origine nel MVPD. </br> </br> - Questo tipo di ID non è firmato digitalmente, quindi non è sicuro per la prevenzione delle frodi. Tuttavia, è sufficiente per l’analisi.  </br> </br> - Questo modulo dell’ID utente viene fornito lato client su tutti gli eventi generati dall’autenticazione Adobe Primetime nel flusso AuthN/AuthZ. |
-| Proprietà sessionGUID del token multimediale breve | Tracciamento delle frodi relative all’utilizzo simultaneo | Sì | Sì | - Questo è lo stesso ID utente tramite sendTrackingData(), tuttavia, questo è firmato digitalmente per proteggere la sua integrità ed è sufficientemente buono per essere utilizzato per il tracciamento delle frodi. </br> </br> - Deve essere elaborato sul lato server dopo aver utilizzato la libreria di convalida e può essere analizzato per individuare i pattern di frode prima di rilasciare il flusso video al client.  Eseguire uno di questi compiti è compito del programmatore. |
-| getMetadata(), proprietà userID | Collegamento di account, indagine per frode con MVPD | No | No | - Questa proprietà consente ad Adobe di esporre l&#39;ID utente MVPD di origine effettiva al programmatore. </br> </br> - Nella configurazione dell&#39;Adobe può essere impostato come crittografato o meno (a seconda della preferenza MVPD). Se è crittografato, verrà crittografato con la chiave pubblica dal certificato del programmatore fornito all&#39;Adobe, in modo che non venga esposto in modo chiaro al client. </br> </br> - Questo dà al programmatore l&#39;ID utente effettivo dall&#39;MVPD, quindi è qualcosa che può essere utilizzato per il collegamento dell&#39;account o le indagini di frode direttamente con l&#39;MVPD. |
+| Proprietà GUID sendTrackingData() | Tracciamento/analisi | Sì | No | : ID utente MVPD, con hash per Adobe. L&#39;ID utente non può essere ricondotto all&#39;origine all&#39;MVPD. </br> </br> - Questo tipo di ID non dispone di firma digitale, pertanto non è sicuro per la prevenzione delle frodi. Tuttavia, è sufficiente per l’analisi.  </br> </br> : questo modulo dell’ID utente viene fornito lato client su tutti gli eventi generati dall’autenticazione Adobe Primetime nel flusso AuthN/AuthZ. |
+| Proprietà sessionGUID del token multimediale corto | Tracciamento delle frodi relative all’utilizzo simultaneo | Sì | Sì | : corrisponde all’ID utente tramite sendTrackingData(), tuttavia è dotato di firma digitale per proteggerne l’integrità e può essere utilizzato per il monitoraggio delle frodi. </br> </br> - Deve essere elaborato sul lato server dopo aver utilizzato la libreria di convalida e può essere analizzato per individuare eventuali modelli di frode prima di rilasciare il flusso video al client.  È compito del programmatore eseguire una qualsiasi di queste operazioni. |
+| getMetadata(), proprietà userID | Collegamento di account, indagine antifrode con MVPD | No | No | - Questa proprietà consente ad Adobe di esporre l&#39;ID utente MVPD della sorgente effettiva al programmatore. </br> </br> - Nella configurazione di Adobe può essere impostato come crittografato o meno (a seconda della preferenza MVPD). Se crittografato, verrà crittografato con la chiave pubblica del certificato del programmatore fornito ad Adobe, in modo che non venga esposto in modo chiaro al client. </br> </br> - Questo fornisce al programmatore l&#39;ID utente effettivo dall&#39;MVPD, quindi è qualcosa che può essere utilizzato per il collegamento dell&#39;account o per l&#39;indagine antifrode direttamente con l&#39;MVPD. |
 
 
 **In conclusione**
 
-* In generale, l&#39;MVPD fornisce un ID univoco persistente <u>e lo trasmette ad Adobe in caso di esito positivo dell&#39;autenticazione</u>. È generalmente coerente in tutte le reti. L&#39;eccezione è Comcast MVPD, che fornisce un ID utente diverso per ogni canale.
+* In generale, MVPD fornisce un ID univoco persistente <u>e lo trasmette all’Adobe in caso di autenticazione riuscita</u>. Generalmente è coerente su tutte le reti. L’eccezione è Comcast MVPD, che fornisce un ID utente diverso per ogni canale.
 
-* L&#39;ID utente MVPD non contiene PII e NON è un numero di account. Non è necessario esporlo in forma criptata poiché abbiamo convalidato con tutti gli MVPD che non viene inviato alcun PII.
+* L&#39;ID utente MVPD non contiene dati PII e NON è un numero di account. Non è necessario esporlo in forma crittografata poiché abbiamo verificato con tutti gli MVPD che non viene inviato alcun PII.
 
-Il modo in cui utilizzi l’ID utente dipende dal caso d’uso:
+La modalità di utilizzo dell’ID utente dipende dal caso d’uso:
 
-* Se necessario per il tracciamento/analisi, il posto più pratico è quello di ottenerlo da `sendTrackingData()`.
-* Se è necessario sul lato server per la versione del flusso, la frode o i dati operativi, è possibile ottenerlo dal validatore del token multimediale.
-* Se ti serve per il collegamento dell&#39;account e la frode più profonda, controlla con il tuo contatto Adobe per la disponibilità.
-
+* Se ne hai bisogno per il tracciamento/analisi, il punto più pratico è ottenerlo da `sendTrackingData()`.
+* Se ne hai bisogno sul lato server per la versione di flusso, la frode o i dati operativi, puoi ottenerli dalla convalida Media Token.
+* Se ne hai bisogno per il collegamento dell’account e per frodi più profonde, verifica la disponibilità con il tuo contatto di Adobe.

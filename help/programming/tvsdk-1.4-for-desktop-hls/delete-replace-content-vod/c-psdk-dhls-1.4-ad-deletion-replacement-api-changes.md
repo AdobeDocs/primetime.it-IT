@@ -1,48 +1,47 @@
 ---
-description: Queste modifiche in TVSDK supportano e cancellano e sostituiscono gli annunci.
-title: Modifiche all’API di cancellazione e sostituzione degli annunci
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Queste modifiche in TVSDK supportano l’eliminazione e la sostituzione degli annunci.
+title: Modifiche all’API di eliminazione e sostituzione dell’annuncio
+exl-id: 3cf63353-741b-41f4-93fd-609b69f7c3af
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 0%
 
 ---
 
+# Modifiche all’API di eliminazione e sostituzione dell’annuncio {#ad-deletion-and-replacement-api-changes}
 
-# Modifiche API di cancellazione e sostituzione degli annunci {#ad-deletion-and-replacement-api-changes}
+Queste modifiche in TVSDK supportano l’eliminazione e la sostituzione degli annunci.
 
-Queste modifiche in TVSDK supportano e cancellano e sostituiscono gli annunci.
+* `AdSignalingMode` Aggiunto `CUSTOM_RANGES` modalità di segnalazione.
 
-* `AdSignalingMode` È stata aggiunta la modalità  `CUSTOM_RANGES` di segnalazione.
+* `OpportunityGenerator`  `extractAdSignalingMode()` - Imposta `AdSignalingMode.CUSTOM_RANGES` se i metadati contengono intervalli di sostituzione.
 
-* `OpportunityGenerator`  `extractAdSignalingMode()` - Imposta  `AdSignalingMode.CUSTOM_RANGES` se gli intervalli di sostituzione si trovano nei metadati.
-
-* `PlacementType` È stato aggiunto  `CUSTOM_RANGE` il tipo .
+* `PlacementType` Aggiunto `CUSTOM_RANGE` tipo.
 
 * `PlacementMode`
 
-   * È stata aggiunta la modalità `DELETE` .
-   * È stata aggiunta la modalità `MARK`
-   * È stata aggiunta la modalità `FreeReplace` : questa modalità ha una durata ma è un inserimento puro
+   * Aggiunto `DELETE` modalità.
+   * Aggiunto `MARK` modalità
+   * Aggiunto `FreeReplace` modalità: questa modalità ha una durata ma è un inserimento puro
 
-* `TimeRange` Non più una  `final` classe
+* `TimeRange` Non più un `final` classe
 
-* È stato aggiunto il metodo `ReplaceTimeRange()`
+* Aggiunto `ReplaceTimeRange()` metodo
 
-   Estende `TimeRange` per avere una proprietà `replacementDuration`. Per i casi MARK e DELETE, `replacementDuration` è 0.
+   Estende `TimeRange` avere un `replacementDuration` proprietà. Per le cause MARK e DELETE: `replacementDuration` è 0.
 
 * `TimeRangeCollection`
 
-   * È stata aggiunta la funzione di utilità `toReplaceMetadata()` per estrarre `timeRanges`.
+   * Aggiunto `toReplaceMetadata()` funzione di utilità da estrarre `timeRanges`.
 
    * Modificato per funzionare con `DELETE` e `REPLACE`
 
-   * `METADATA_KEY_CUSTOM_MARK_RANGES`,  `METADATA_KEY_CUSTOM_DELETE_RANGES`,  `METADATA_KEY_CUSTOM_REPLACE_RANGES`
+   * `METADATA_KEY_CUSTOM_MARK_RANGES`, `METADATA_KEY_CUSTOM_DELETE_RANGES`, `METADATA_KEY_CUSTOM_REPLACE_RANGES`
 
 * `CatalogItem`
 
-   * Aggiunto `createCustomTimeRangesFrom()` - Crea metadati per i casi d’uso MARK/DELETE/REPLACE dal file JSON.
+   * Aggiunto `createCustomTimeRangesFrom()` : crea metadati per i casi d’uso MARK/DELETE/REPLACE dal file JSON.
    * Rimosso `createCustomAdMarkersMetadataFrom()`
 
 * `DefaultMetadataKeys`
@@ -55,77 +54,76 @@ Queste modifiche in TVSDK supportano e cancellano e sostituiscono gli annunci.
 
    * `doRetrieveGenerators()`
 
-      * Aggiunto `CustomRangesOpportunityGenerator` per quando i metadati contengono intervalli personalizzati
+      * Aggiunto `CustomRangesOpportunityGenerator` per specificare quando i metadati contengono intervalli personalizzati
    * `doRetrieveResolvers()`
 
-      * Aggiungi `CustomRangeResolver` per quando gli intervalli personalizzati di DELETE e SOSTITUISCI sono presenti nei metadati
-      * Spostato `CustomAdMarkerResolver` davanti a `AuditudeResolver`
+      * Aggiungi `CustomRangeResolver` per quando gli intervalli personalizzati DELETE e REPLACE sono presenti nei metadati
+      * Spostato `CustomAdMarkerResolver` prima di `AuditudeResolver`
 
 
 * Aggiunto `CustomRangeOpportunityGenerator`
 
-   * `doUpdate()` Lascia vuoto - nessun aggiornamento, VOD
-   * `doProcess()` Crea una nuova posizione di un nuovo tipo  `Placement.Delete_Range`
+   * `doUpdate()` Foglie vuote - nessun aggiornamento, VOD
+   * `doProcess()` Crea un nuovo posizionamento di un nuovo tipo `Placement.Delete_Range`
 
-   * Aggiunto `CustomRangeOppotunityGenerator` nella parte superiore dell’elenco dei generatori in `DefaultContentFactory`, gli intervalli di eliminazione vengono elaborati prima degli inserimenti degli annunci.
+   * Aggiunto `CustomRangeOppotunityGenerator` all&#39;inizio dell&#39;elenco dei generatori in `DefaultContentFactory`Pertanto, gli intervalli di eliminazione vengono elaborati prima degli inserimenti di annunci.
 
-   * È stato aggiunto `createCustomRangeOpportunities` per creare tutte le opportunità
+   * Aggiunto `createCustomRangeOpportunities` per creare tutte le opportunità
 
-      MARK - Un&#39;opportunità per ogni intervallo di marchi valido di `PlacementType.CUSTOM_RANGE` e `PlacementMode.MARK`
+      MARK: un&#39;opportunità per ogni intervallo di marchi valido di `PlacementType.CUSTOM_RANGE` e `PlacementMode.MARK`
 
-      DELETE - Un&#39;opportunità per ogni intervallo di eliminazione valido di `PlacementType.CUSTOM_RANGE` e `PlacementMode.DELETE`
+      DELETE: un’opportunità per ogni intervallo di eliminazione valido di `PlacementType.CUSTOM_RANGE` e `PlacementMode.DELETE`
 
-      SOSTITUZIONE - Due opportunità per ogni intervallo di sostituzione valido:
+      SOSTITUISCI: due opportunità per ogni intervallo di sostituzione valido:
 
-      1. Un’opportunità di eliminazione dell’intervallo tra `PlacementType.CUSTOM_RANGE` e `PlacementMode.DELETE`.
+      1. Opportunità di eliminazione intervallo di `PlacementType.CUSTOM_RANGE` e `PlacementMode.DELETE`.
 
-      1. Un&#39;opportunità pubblicitaria Primetime di `PlacementType.MID_ROLL` o `PlacementType.PRE_ROLL` e `PlacementMode.FREEREPLACE`
+      1. Un’opportunità di ad decisioning di Primetime di `PlacementType.MID_ROLL` o `PlacementType.PRE_ROLL` e `PlacementMode.FREEREPLACE`
 
-* È stato aggiunto `CustomRangeResolver`:
+* Aggiunto `CustomRangeResolver`:
 
-   * `doCanResolve()` restituisce  `true` gli intervalli di eliminazione.
+   * `doCanResolve()` restituisce `true` per eliminare gli intervalli.
 
-   * È stato aggiunto `createDeleteRangeOperation()` per creare `DeleteRange` per il posizionamento
+   * Aggiunto `createDeleteRangeOperation()` per creare `DeleteRange` per il posizionamento
 
-* È stato aggiunto `CustomRangeHelper`:
+* Aggiunto `CustomRangeHelper`:
 
-   * Classe di utilità comune per estrarre Mark/Delete/Replace `timeRanges` ed elaborarli.
+   * Classe di utilità comune per estrarre le opzioni Contrassegna/Elimina/Sostituisci `timeRanges` ed elaborarli.
    * Aggiunto `extractCustomRangesMetadata()`
    * Aggiunto `extractCustomRanges()`
-   * Aggiunto `mergeRanges()` - Risolve conflitti e sottoinsiemi/unioni
+   * Aggiunto `mergeRanges()` - Risoluzione di conflitti e sottoinsiemi/unioni
 
 * `MediaPlayerTimeline`:
 
-   * &quot;>In `executeOperation()`, se l&#39;operazione è `DeleteRange`, è stata aggiunta una chiamata per rimuovere il metodo nell&#39;operazione
+   * &quot;>In `executeOperation()`, se l&#39;operazione è `DeleteRange`, aggiunta chiamata al metodo remove nell&#39;operazione
 
-   * In `executeOperation()`, se l&#39;operazione è `NOPTimelineOperation` (vuoto `AdBreaks` proveniente dal server), è stata aggiunta una chiamata per cancellare.
+   * In entrata `executeOperation()`, se l&#39;operazione è `NOPTimelineOperation` (vuoto `AdBreaks` dal server), aggiunta chiamata a clear.
 
    * Aggiunto `onDeleteRangeComplete()`
    * Aggiunto `removeRange()`
-   * In `adjustPlacement()`, per la modalità `PlacementMode.FREEREPLACE`, la durata è stata azzerata. Questa durata è necessaria in precedenza quando si richiede `AdBreaks`, a questo punto deve essere zero per essere un inserimento puro.
+   * In entrata `adjustPlacement()`, per `PlacementMode.FREEREPLACE` , azzerata la durata. Questa durata è necessaria prima quando si richiede `AdBreaks`, a questo punto deve essere zero per essere un&#39;inserzione pura.
 
-* `VideoEngineTimeline` Aggiunta  `removeC3Ad()` - chiamata  `removeByLocalTime()` per intervalli di eliminazione
+* `VideoEngineTimeline` Aggiunto `removeC3Ad()` - chiama `removeByLocalTime()` per eliminare intervalli
 
 * `AdSignalingModeGenerator`
 
    * `doConfigure()` - Non risolvere se non viene generata alcuna opportunità
-   * `createInitialOpportunity()` - Non generare opportunità iniziali per  `AdSignalingMode.CUSTOM_RANGE`. Il `CustomRangeOpportunityGenerator` lo copre già.
+   * `createInitialOpportunity()` - Non generare opportunità iniziale per `AdSignalingMode.CUSTOM_RANGE`. Il `CustomRangeOpportunityGenerator` già copre questo aspetto.
 
 * `DeleteRange`
 
    * Estende `TimelineOperation`.
-   * Creato da `CustomRangeResolver` per eliminare e sostituire (la parte di eliminazione della sostituzione)
+   * Creato da `CustomRangeResolver` per la cancellazione e la sostituzione (la parte di eliminazione della sostituzione)
 
 * `AuditudeConstant`
 
-   * `MAX_PLACEMENTS_PER_REQUEST 1->5` - consentire l&#39;imballaggio
+   * `MAX_PLACEMENTS_PER_REQUEST 1->5` - Consenti imballaggio
    * `MINIMUM_AD_DURATION 10->5`
 
-* `AuditudeRequest` Il  `accepts()` metodo è stato modificato per consentire l&#39;imballaggio di diversi tipi di posizionamento (pre-roll, mid-roll, post-roll)
+* `AuditudeRequest` Il `accepts()` il metodo è stato modificato per consentire l’imballaggio di diversi tipi di posizionamento (pre-roll, mid-roll, post-roll)
 
-* `AuditudeRequestHelper` Correzioni di bug per consentire la sostituzione del server con i parametri degli annunci
+* `AuditudeRequestHelper` Correzioni di bug per consentire l’override del server sui parametri dell’annuncio
 
-* `AuditudeResolver` Il  `canBePacked()` metodo è stato modificato per consentire l&#39;imballaggio
+* `AuditudeResolver` Il `canBePacked()` il metodo è stato modificato per consentire l&#39;imballaggio
 
-* `CustomAdResolver` Le funzioni di  `timeRange` estrazione sono state rimosse. Otteniamo un posizionamento alla volta e lo trasformiamo in un `AdBreakPlacement timelineOperation`.
-
+* `CustomAdResolver` Il `timeRange` le funzioni di estrazione sono state rimosse. Otteniamo un posizionamento alla volta, e lo trasformiamo in un `AdBreakPlacement timelineOperation`.

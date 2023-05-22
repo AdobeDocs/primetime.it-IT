@@ -1,39 +1,39 @@
 ---
 title: Autorizzazione di verifica preliminare MVPD
 description: Autorizzazione di verifica preliminare MVPD
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: da2e7150-b6a8-42f3-9930-4bc846c7eee9
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '745'
 ht-degree: 0%
 
 ---
 
-
 # Autorizzazione di verifica preliminare MVPD
 
 >[!NOTE]
 >
->Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente a partire da Adobe. Non è consentito alcun uso non autorizzato.
+>Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente di Adobe. Non è consentito alcun uso non autorizzato.
 
 ## Introduzione {#mvpd-preflight-authz-intro}
 
-&quot;Autorizzazione Preflight&quot; è un controllo di autorizzazione leggero per più risorse. I programmatori lo utilizzano principalmente per decorare le loro interfacce utente (ad esempio, per indicare lo stato di accesso con icone di blocco e sblocco).
+&quot;Autorizzazione di verifica preliminare&quot; è un controllo di autorizzazione semplificato per più risorse. I programmatori lo utilizzano principalmente per decorare le loro UI (ad esempio, indicando lo stato di accesso con le icone di blocco e sblocco).
 
-L’autenticazione Adobe Primetime può attualmente supportare l’autorizzazione di verifica preliminare in due modi per gli MVPD, tramite gli attributi di risposta AuthN o tramite una richiesta AuthZ multicanale.  Gli scenari seguenti descrivono il costo/beneficio dei diversi modi in cui è possibile implementare l&#39;autorizzazione di preflight:
+L’autenticazione Adobe Primetime al momento supporta la verifica preliminare delle autorizzazioni per gli MVPD in due modi, tramite gli attributi di risposta AuthN o una richiesta AuthZ multicanale.  I seguenti scenari descrivono il rapporto costi/benefici dei diversi modi in cui è possibile implementare l&#39;autorizzazione di verifica preliminare:
 
-* **Scenario migliore** - L&#39;MVPD fornisce l&#39;elenco delle risorse preautorizzate durante la fase di autorizzazione (Multi-channel AuthZ).
-* **Scenario peggiore** - Se un MVPD non supporta alcuna forma di autorizzazione per più risorse, il server di autenticazione Adobe Primetime esegue una chiamata di autorizzazione all&#39;MVPD per ogni risorsa nell&#39;elenco delle risorse. Questo scenario ha un impatto (proporzionale al numero di risorse) sul tempo di risposta per la richiesta di autorizzazione di preflight. Può aumentare il carico sia sui server Adobe che MVPD causando problemi di prestazioni. Inoltre, genererà richieste di autorizzazione / eventi di risposta senza l&#39;effettiva necessità di un gioco.
-* **Obsoleto** - L&#39;MVPD fornisce l&#39;elenco delle risorse preautorizzate durante la fase di autenticazione, quindi non ci saranno chiamate di rete necessarie, nemmeno la richiesta di verifica preliminare, dal momento che l&#39;elenco è memorizzato nella cache sul client.
+* **Scenario migliore** - MVPD fornisce l&#39;elenco delle risorse preautorizzate durante la fase di autorizzazione (Multi-channel AuthZ).
+* **Scenario del caso peggiore** - Se un MVPD non supporta alcuna forma di autorizzazione per più risorse, il server di autenticazione di Adobe Primetime esegue una chiamata di autorizzazione all&#39;MVPD per ogni risorsa nell&#39;elenco delle risorse. Questo scenario ha un impatto (proporzionale al numero di risorse) sul tempo di risposta per la richiesta di autorizzazione di verifica preliminare. Può aumentare il carico sui server Adobe e MVPD causando problemi di prestazioni. Inoltre, genera richieste di autorizzazione/eventi di risposta senza l’effettiva necessità di un gioco.
+* **Obsoleto** - MVPD fornisce l’elenco delle risorse preautorizzate durante la fase di autenticazione, quindi non ci saranno chiamate di rete necessarie, nemmeno la richiesta di verifica preliminare, poiché l’elenco è memorizzato nella cache del client.
 
-Sebbene gli MVPD non debbano supportare l’autorizzazione di preflight, le sezioni seguenti descrivono alcuni metodi di autorizzazione di preflight che l’autenticazione Adobe Primetime può supportare, prima di tornare allo scenario peggiore di cui sopra.
+Sebbene gli MVPD non debbano supportare l’autorizzazione di verifica preliminare, le sezioni seguenti descrivono alcuni metodi di autorizzazione supportati dall’autenticazione Adobe Primetime prima di ricorrere allo scenario più sfavorevole descritto sopra.
 
-## Verifica preliminare in AuthN {#preflight-authn}
+## Verifica preliminare in Autenticazione {#preflight-authn}
 
-Questo scenario di verifica preliminare è compatibile con OLCA (Cableabs). La sezione 7.5.2 sulla specifica dell&#39;interfaccia di autenticazione e autorizzazione 1.0 intitolata &quot;Attribute Statement Within Authentication Assertion&quot;, descrive come una risposta di autenticazione SAML possa contenere un elenco di risorse preautorizzate. Se un IdP supporta questa funzione, il server di autenticazione Adobe Primetime sarà in grado di generare l’elenco delle risorse con priorità in fase di autenticazione e di memorizzarlo nella cache sul client insieme al token di autenticazione. Questo metodo consente inoltre di ottenere lo scenario migliore e non verranno eseguite chiamate di rete quando il programmatore chiama checkPreauthorizedResources(), dal momento che tutto è già sul client.
+Questa verifica preliminare è compatibile con OLCA (Cableab). La sezione 7.5.2 delle specifiche di Authentication and Authorization Interface 1.0, intitolata &quot;Attribute Statement Within Authentication Assertion&quot;, descrive come una risposta di autenticazione SAML possa contenere un elenco di risorse preautorizzate. Se un IdP supporta questa impostazione, il server di autenticazione di Adobe Primetime sarà in grado di generare l’elenco delle risorse predefinite al momento dell’autenticazione e di memorizzarlo nella cache del client insieme al token di autenticazione. Questo metodo offre anche lo scenario migliore e non verranno eseguite chiamate di rete quando il programmatore chiama checkPreauthorizedResources(), poiché tutto si trova già sul client.
 
-### Elenco risorse personalizzate nell&#39;istruzione attributo SAML {#custom-res-saml-attr}
+### Elenco risorse personalizzato nell&#39;istruzione dell&#39;attributo SAML {#custom-res-saml-attr}
 
-La risposta di autenticazione SAML dell&#39;IdP include un AttributeStatement contenente i nomi delle risorse che AdobePass deve autorizzare.  Alcuni MVPD forniscono questo nel seguente formato:
+La risposta di autenticazione SAML dell&#39;IdP deve includere un AttributeStatement contenente i nomi delle risorse che AdobePass deve autorizzare.  Alcuni MVPD forniscono questo nel seguente formato:
 
 ```XML
 <saml:AttributeStatement>
@@ -44,19 +44,19 @@ La risposta di autenticazione SAML dell&#39;IdP include un AttributeStatement co
 </saml:AttributeStatement>
 ```
 
-L’esempio di cui sopra presenta un elenco contenente due risorse preautorizzate: &quot;MMOD&quot; e &quot;Olympic2012&quot;.
+L’esempio precedente presenta un elenco contenente due risorse preautorizzate: &quot;MMOD&quot; e &quot;Olympics2012&quot;.
 
-In questo modo si ottiene effettivamente lo scenario migliore e non verranno eseguite chiamate di rete quando il programmatore chiama checkPreauthorizedResources(), poiché tutto è già sul client.
+In questo modo viene raggiunto lo scenario migliore e non verranno eseguite chiamate di rete quando il programmatore chiama checkPreauthorizedResources(), in quanto tutto si trova già sul client.
 
 ## Verifica preliminare multicanale in AuthZ {#preflight-multich-authz}
 
-Questa implementazione di verifica preliminare è anche compatibile con OLCA (Cablelabs).  La specifica 1.0 dell&#39;interfaccia di autenticazione e autorizzazione (sezioni 7.5.3 e 7.5.4) descrive i metodi per richiedere informazioni sull&#39;autorizzazione da un MVPD utilizzando le asserzioni SAML o XACML. Questo è il modo consigliato per eseguire query sullo stato di autorizzazione per gli MVPD che non lo supportano come parte del flusso di autenticazione. L’autenticazione Adobe Primetime genera una singola chiamata di rete all’MVPD per recuperare l’elenco delle risorse autorizzate.
+Questa implementazione preliminare è anche compatibile OLCA (Cablelab).  Le specifiche dell&#39;interfaccia di autenticazione e autorizzazione 1.0 (sezioni 7.5.3 e 7.5.4) descrivono i metodi per la richiesta di informazioni sulle autorizzazioni da un MVPD utilizzando le asserzioni SAML o XACML. Questo è il metodo consigliato per eseguire query sullo stato di autorizzazione per gli MVPD che non lo supportano come parte del flusso di autenticazione. L’autenticazione Adobe Primetime invia una singola chiamata di rete all’MVPD per recuperare l’elenco delle risorse autorizzate.
 
 
-L’autenticazione Adobe Primetime riceve l’elenco delle risorse dall’applicazione del programmatore. L’integrazione MVPD di Adobe Primetime Authentication può quindi effettuare una chiamata AuthZ che include tutte le risorse, quindi analizzare la risposta ed estrarre le decisioni di autorizzazione/negazione multiple.  Il flusso per la verifica preliminare con lo scenario AuthZ multicanale funziona come segue:
+L’autenticazione Adobe Primetime riceve l’elenco delle risorse dall’applicazione del Programmatore. L’integrazione MVPD dell’autenticazione di Adobe Primetime può quindi effettuare una chiamata AuthZ includendo tutte queste risorse, quindi analizzare la risposta ed estrarre le decisioni relative a più autorizzazioni/negazioni.  Il flusso per la verifica preliminare con lo scenario AuthZ multicanale funziona come segue:
 
-1. L’app del programmatore invia un elenco di risorse separato da virgole tramite l’API del client di preflight, ad esempio: &quot;TestChannel1,TestChannel2,TestChannel3&quot;.
-1. La chiamata di richiesta di verifica preliminare MVPD AuthZ contiene le risorse multiple e presenta la seguente struttura:
+1. L’app del programmatore invia un elenco separato da virgole di risorse tramite l’API client di verifica preliminare, ad esempio: &quot;TestChannel1,TestChannel2,TestChannel3&quot;.
+1. La chiamata di richiesta AuthZ di verifica preliminare MVPD contiene più risorse e presenta la seguente struttura:
 
 ```XML
 <?xml version="1.0" encoding="UTF-8"?><soap11:Envelope xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/"> 
@@ -115,19 +115,19 @@ L’autenticazione Adobe Primetime riceve l’elenco delle risorse dall’applic
 
 ## Autorizzazione Personalizzata Per Più Risorse {#custom-authz}
 
-Alcuni MVPD dispongono di endpoint di autorizzazione che supportano l&#39;autorizzazione per più risorse in una richiesta, ma non rientrano nello scenario descritto in Multi-channel AuthZ. Questi MVPD specifici richiedono un lavoro personalizzato.
+Alcuni MVPD dispongono di endpoint di autorizzazione che supportano l&#39;autorizzazione per più risorse in una richiesta, ma non rientrano nello scenario descritto in AuthZ multicanale. Questi MVPD specifici richiedono un lavoro personalizzato.
 
-Adobe può anche supportare più autorizzazioni per i canali senza apportare modifiche all&#39;implementazione esistente.  Questo approccio deve essere rivisto tra l&#39;Adobe e il team tecnico MVPD per garantire che funzioni come previsto.
+Adobe può inoltre supportare l’autorizzazione di più canali senza modifiche all’implementazione esistente.  Questo approccio deve essere rivisto tra l&#39;Adobe e il team tecnico dell&#39;MVPD per garantire che funzioni come previsto.
 
-## MVPD che supportano l&#39;autorizzazione di preflight {#mvpds-supp-preflight-authz}
+## MVPD che supportano l&#39;autorizzazione di verifica preliminare {#mvpds-supp-preflight-authz}
 
-Nella tabella seguente sono elencati gli MVPD che supportano l’autorizzazione di verifica preliminare, insieme al tipo di verifica preliminare supportato e alle limitazioni note:
+Nella tabella seguente sono elencati gli MVPD che supportano l&#39;autorizzazione di verifica preliminare, insieme al tipo di verifica preliminare supportato e alle limitazioni note:
 
 | Approccio di verifica preliminare | MVPD | Note |
 |:-------------------------------:|:--------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------:|
 | AuthZ multicanale | Comcast AT&amp;T Proxy Clearleap Charter_Direct Proxy GLDS Rogers Verizon OSN Bell Sasktel Optimum AlticeOne |  |
-| Line-up dei canali nei metadati utente | Collegamento improvviso HTC | Anche tutte le integrazioni dirette di Synacor supportano questo approccio. |
-| Fork e join | Tutti gli altri non elencati sopra | Il numero massimo predefinito di risorse controllate = 5. |
+| Linea di canali nei metadati dell’utente | Suddenlink HTC | Tutte le integrazioni dirette Synacor supportano anche questo approccio. |
+| Fork e join | Tutti gli altri non elencati sopra | Numero massimo predefinito di risorse controllate = 5. |
 
 <!--
 ![RelatedInformation]

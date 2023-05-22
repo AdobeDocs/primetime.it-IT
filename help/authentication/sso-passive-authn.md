@@ -1,56 +1,56 @@
 ---
 title: SSO tramite autenticazione passiva
 description: SSO tramite autenticazione passiva
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: ce45899f-6e94-4bb0-a2c1-51f03bd66d8d
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '776'
 ht-degree: 0%
 
 ---
 
-
 # SSO tramite autenticazione passiva
 
 >[!NOTE]
 >
->Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente a partire da Adobe. Non è consentito alcun uso non autorizzato.
+>Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente di Adobe. Non è consentito alcun uso non autorizzato.
 
 
 ## Introduzione
 
-Scopo del presente documento è descrivere l&#39;implementazione del flusso di autenticazione passiva e come questo funziona con il nostro approccio standard single sign-on.
+Scopo del presente documento è descrivere l’implementazione del flusso di autenticazione passiva e il suo funzionamento con l’approccio standard del Single Sign-On.
 
-## Usecs
+## Casi d&#39;uso
 
-L&#39;autenticazione Adobe Primetime abilita il Single Sign-On (SSO) tra app/siti. Dopo che un utente effettua l’accesso con le proprie credenziali MVPD, Adobe Primetime Authentication genera un token sicuro che rappresenta la sessione di autenticazione dell’MVPD e lo associa al dispositivo dell’utente utilizzando un ID dispositivo. L’autenticazione Adobe Primetime memorizza il token o l’ID dispositivo su un server o sul dispositivo.
+L’autenticazione Adobe Primetime abilita il Single Sign-On (SSO) tra app/siti. Dopo che un utente effettua l’accesso con le proprie credenziali MVPD, l’autenticazione Adobe Primetime genera un token protetto che rappresenta la sessione di autenticazione MVPD e associa tale token al dispositivo dell’utente utilizzando un ID dispositivo. L’autenticazione Adobe Primetime memorizza il token o l’ID dispositivo su un server o sul dispositivo.
 
-Finché il token è ancora valido, gli utenti appariranno direttamente come autenticati. Ciò consente agli utenti di immettere le proprie credenziali meno frequentemente mantenendo le transazioni sicure.
-
-
-
-Il caso d&#39;uso aziendale descritto qui è un requisito molto specifico: che l&#39;utente DEVE essere autenticato almeno una volta per ogni sito visitato. Questo consente all&#39;MVPD di applicare le regole aziendali associate alla sessione authN che possono variare a seconda della rete. È in conflitto con la promessa TVE corrente che un utente deve effettuare l’accesso una sola volta e sarà autenticato su tutti i siti che fanno parte dell’ecosistema di autenticazione di Adobe Primetime.
+Se il token è ancora valido, gli utenti verranno visualizzati direttamente come autenticati. In questo modo gli utenti possono immettere le credenziali con minore frequenza, mantenendo al contempo sicure le transazioni.
 
 
 
-Per mantenere la regola business ma anche mantenere una buona esperienza utente, l&#39;MVPD NON richiede che un utente fornisca manualmente le informazioni sulle credenziali. Possiamo beneficiare del cookie di sessione precedentemente impostato e tentare di eseguire una nuova autenticazione automatica utilizzando il flusso passivo; dal punto di vista dell&#39;utente, apparirà come connesso automaticamente.
+Il caso di utilizzo aziendale descritto di seguito è un requisito molto specifico: che l’utente DEVE essere autenticato almeno una volta per ogni sito visitato. Questo consente al MVPD di applicare le regole di business associate alla sessione di autenticazione che possono variare a seconda della rete. È in conflitto con la promessa TVE corrente che un utente deve effettuare l’accesso una sola volta e sarà autenticato su tutti i siti che fanno parte dell’ecosistema di autenticazione di Adobe Primetime.
 
 
 
-Per risolvere questi problemi, abbiamo implementato 2 caratteristiche distinte: autenticazione per rete e supporto di autenticazione passiva. Gli MVPD supporteranno SAML passive authN dove stanno semplicemente riautenticando un utente se esiste una sessione authN sull&#39;IdP, indipendentemente dal sito in cui è stata creata la sessione.
+Al fine di mantenere la regola di business ma anche una buona esperienza utente, MVPD NON richiede che un utente fornisca manualmente le informazioni sulle credenziali. Possiamo beneficiare del cookie di sessione impostato in precedenza e tentare di effettuare una riautenticazione automatica utilizzando il flusso passivo; dal punto di vista dell’utente, apparirà come connesso automaticamente.
+
+
+
+Per risolvere questi problemi, abbiamo implementato 2 funzioni distinte: autenticazione per rete e supporto dell’autenticazione passiva. Gli MVPD supporteranno l&#39;autenticazione passiva SAML in cui si limitano a autenticare nuovamente un utente se nell&#39;IdP esiste una sessione di autenticazione, indipendentemente dal sito in cui è stata creata.
 
 
 
 ## Autenticazione per rete
 
-Questa funzione assicura che l&#39;MVPD riceva una richiesta di autenticazione una volta per ogni sito visitato. Questa funzionalità significa che un token di autenticazione di Adobe Primetime sarà associato al requestorID, quindi valido solo per la rete che lo ha richiesto. Di conseguenza, una volta che l&#39;utente si autentica sul sito &quot;A&quot; e successivamente visita il sito &quot;B&quot;, sarà necessario eseguire l&#39;autenticazione.
+Questa funzione assicura che MVPD riceva una richiesta di autenticazione una volta per ogni sito visitato. Questa funzionalità indica che un token di autenticazione Adobe Primetime sarà limitato a requestorID, ed è quindi valido solo per la rete che lo ha richiesto. Di conseguenza, una volta che l’utente si autentica sul sito &quot;A&quot; e successivamente visita il sito &quot;B&quot;, sarà necessario eseguire l’autenticazione.
 
 
 
-Si noti che, a causa del fatto che sull&#39;MVPD IdP l&#39;utente è già autenticato, non sarà richiesto di fornire le informazioni di accesso, ma invece il browser verrà semplicemente reindirizzato dal sito &quot;B&quot; all&#39;MVPD IdP e poi di nuovo. Lo stesso utente sarà ancora autenticato sul sito &quot;A&quot; se ritorna.
+Tieni presente che a causa del fatto che sull’IdP MVPD l’utente è già autenticato, non gli verrà richiesto di fornire le informazioni di accesso, ma il browser verrà semplicemente reindirizzato dal sito &quot;B&quot; all’IdP MVPD e quindi nuovamente. Lo stesso utente sarà comunque autenticato sul sito &quot;A&quot; se ritorna.
 
 
 
-Il flusso seguente rappresenta la funzione di base Autenticazione per rete:
+Il seguente flusso illustra la funzione Autenticazione di base per rete:
 
 
 
@@ -58,15 +58,15 @@ Il flusso seguente rappresenta la funzione di base Autenticazione per rete:
 
 ## Autenticazione passiva
 
-L&#39;obiettivo è quello di rendere il processo di riautenticazione in background senza la necessità di un reindirizzamento completo del browser e la visualizzazione del selettore. Di conseguenza, un utente che si sposta dal sito A al sito B sarà automaticamente autenticato.
+L’obiettivo è fare in modo che il processo di riautenticazione avvenga in background senza la necessità di un reindirizzamento completo del browser e che venga visualizzato il selettore. Di conseguenza, un utente che si sposta dal sito A al sito B sarà automaticamente autenticato.
 
 
 
-Da una prospettiva UX non ci sarà alcuna differenza tra questo flusso e un flusso eseguito con un MVPD regolare. Ciò che l&#39;utente vede è che dopo aver inserito le credenziali come risultato della visita al sito A, verrà autenticato automaticamente sul sito B.
+Da un punto di vista UX non ci sarà differenza tra questo flusso e un flusso eseguito con un MVPD regolare. Ciò che l’utente vede è che dopo aver inserito le credenziali in seguito alla visita del sito A, verrà automaticamente autenticato sul sito B.
 
 
 
-Per rendere questo flusso fattibile, l&#39;MVPD dovrà supportare l&#39;autenticazione passiva in modo che l&#39;iframe nascosto non sia &quot;bloccato&quot; sulla pagina di accesso nel caso in cui l&#39;MVPD non abbia più una sessione. Questo viene fatto tramite l’attributo standard &quot;isPassive&quot;.
+Per rendere fattibile questo flusso, MVPD dovrà supportare l’autenticazione passiva in modo che l’iframe nascosto non si blocchi sulla pagina di accesso nel caso in cui MVPD non abbia più una sessione. Questa operazione viene eseguita tramite l’attributo standard &quot;isPassive&quot;.
 
 
 
@@ -76,7 +76,7 @@ Il diagramma seguente illustra il flusso migliorato e l’autenticazione passiva
 
 
 
-Esempio di richiesta SAML Ecco un esempio di richiesta SAML per il flusso passivo di authN:
+Esempio di richiesta SAML Ecco un esempio di richiesta SAML per il flusso di autenticazione passiva:
 
 
 ```xml
@@ -101,17 +101,17 @@ Esempio di richiesta SAML Ecco un esempio di richiesta SAML per il flusso passiv
 </saml2p:AuthnRequest>
 ```
 
-Gli MVPD delle regole aziendali hanno restrizioni specifiche dell&#39;ambito SSO del dominio. Ad esempio, solo alcuni domini potrebbero essere consentiti da alcuni MVPD (SSO per la stessa società di media ma non tra società).
-Alcuni MVPD potrebbero richiedere l&#39;applicazione di regole di autenticazione diverse. Ad esempio, gli MVPD potrebbero avere TTL di autenticazione diversi per reti diverse. Inoltre, gli MVPD possono abilitare l&#39;autenticazione basata su casa per alcune reti ma non per altre (i casi di utilizzo di controllo genitori sono fortemente rappresentati qui).
+Le regole business MVPD hanno restrizioni di dominio con ambito SSO specifico. Ad esempio, alcuni MVPD potrebbero consentire solo alcuni domini (SSO per la stessa società di media ma non tra società).
+Alcuni MVPD potrebbero richiedere l&#39;applicazione di regole di autenticazione diverse. Ad esempio, gli MVPD potrebbero avere TTL di autenticazione diversi per reti diverse. Inoltre, gli MVPD potrebbero abilitare l&#39;autenticazione basata su home per alcune reti ma non per altre (qui sono fortemente rappresentati i casi di utilizzo del controllo genitori).
 
 
-Questi requisiti aziendali devono tenere presente che il caso d’uso principale è che l’utente non deve essere obbligato ad accedere di nuovo dopo aver effettuato l’accesso con il proprio MVPD.
+Questi requisiti aziendali devono tenere presente che il caso d’uso principale è che all’utente non deve essere richiesto di accedere nuovamente dopo aver effettuato correttamente l’accesso con il proprio MVPD.
 
-Questo può essere ottenuto utilizzando l’autenticazione per rete con flag passivo authN.
+Questa operazione può essere eseguita utilizzando l’autenticazione per rete con il flag di autenticazione passiva.
 
 
 
-Limitazioni note iOS - A causa della natura dell&#39;archiviazione locale iOS, i flussi SSO non funzionano su iOS per le applicazioni sviluppate da diversi fornitori. Per ulteriori informazioni sull&#39;SSO in iOS 8 e versioni successive, consulta questa nota tecnica.
+Limitazioni note di iOS: a causa della natura dell’archiviazione locale di iOS, i flussi SSO non funzionano su iOS per le applicazioni sviluppate da fornitori diversi. Per ulteriori informazioni sull’SSO in iOS 8 e versioni successive, consulta questa nota tecnica.
 
 
 <!--

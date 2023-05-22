@@ -1,25 +1,24 @@
 ---
-description: Per l'inserimento di annunci in streaming live, potrebbe essere necessario uscire da un'interruzione pubblicitaria prima che tutti gli annunci nell'interruzione siano riprodotti al completamento.
-title: Implementare un ritorno a capo rapido dell’annuncio
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Per l’inserimento di annunci in streaming live, potrebbe essere necessario uscire da un’interruzione pubblicitaria prima che tutti gli annunci dell’interruzione vengano riprodotti fino al completamento.
+title: Implementare un ritorno rapido dell’annuncio pubblicitario
+exl-id: 07246e31-c2a2-4646-9e59-6294f0ce8838
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '178'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
+# Implementare un ritorno rapido dell’annuncio pubblicitario {#implement-an-early-ad-break-return}
 
-# Implementa un ritorno anticipato dell&#39;interruzione pubblicitaria {#implement-an-early-ad-break-return}
+Per l’inserimento di annunci in streaming live, potrebbe essere necessario uscire da un’interruzione pubblicitaria prima che tutti gli annunci dell’interruzione vengano riprodotti fino al completamento.
 
-Per l&#39;inserimento di annunci in streaming live, potrebbe essere necessario uscire da un&#39;interruzione pubblicitaria prima che tutti gli annunci nell&#39;interruzione siano riprodotti al completamento.
+Ad esempio, la durata dell’interruzione pubblicitaria in alcuni eventi sportivi potrebbe non essere nota prima dell’inizio dell’interruzione. TVSDK fornisce una durata predefinita, ma se il gioco riprende prima del termine dell’interruzione, l’interruzione pubblicitaria deve essere chiusa. Un altro esempio è un segnale di emergenza durante un’interruzione pubblicitaria in un flusso live.
 
-Ad esempio, la durata dell’interruzione pubblicitaria in alcuni eventi sportivi potrebbe non essere nota prima dell’inizio dell’interruzione. TVSDK fornisce una durata predefinita, ma se il gioco riprende prima del termine dell’interruzione, l’interruzione pubblicitaria deve essere chiusa. Un altro esempio è un segnale di emergenza durante una pausa pubblicitaria in un flusso live.
-
-1. Iscriviti a `#EXT-X-CUE-OUT`, `#EXT-X-CUE-IN` e `#EXT-X-CUE`, che rappresentano la giunzione in uscita/splice nei marcatori.
-Per ulteriori informazioni su come applicare marcatori di annunci in uscita/in, consulta [Generatori di opportunità e risolutori di contenuti](../../ad-insertion/content-resolver/android-3x-content-resolver.md).
-1. Utilizza un `ContentFactory` personalizzato.
-1. In `retrieveGenerators`, utilizza `SpliceInPlacementOpportunityGenerator`.
+1. Iscriviti a `#EXT-X-CUE-OUT`, `#EXT-X-CUE-IN`, e `#EXT-X-CUE`, che rappresentano il giunto esterno/giunto nei marcatori.
+Per ulteriori informazioni su come montare i marcatori degli annunci in uscita/in, consulta [Generatori di opportunità e risolutori di contenuti](../../ad-insertion/content-resolver/android-3x-content-resolver.md).
+1. Utilizza un `ContentFactory`.
+1. In entrata `retrieveGenerators`, utilizza `SpliceInPlacementOpportunityGenerator`.
 
    Ad esempio:
 
@@ -31,9 +30,9 @@ Per ulteriori informazioni su come applicare marcatori di annunci in uscita/in, 
    }
    ```
 
-   Per ulteriori informazioni sull&#39;utilizzo di un `ContentFactory` personalizzato, consulta il passaggio 1 in [Implementare un generatore di opportunità personalizzato](../../ad-insertion/content-resolver/android-3x-opp-detector-impl-android.md).
+   Per ulteriori informazioni sull&#39;utilizzo di un `ContentFactory`, vedere il passaggio 1 in [Implementare un generatore di opportunità personalizzato](../../ad-insertion/content-resolver/android-3x-opp-detector-impl-android.md).
 
-1. Sullo stesso `ContentFactory` personalizzato, implementa `retrieveResolvers` e includi `AuditudeResolver` e `SpliceInCustomResolver`.
+1. Sulla stessa personalizzazione `ContentFactory`, implementare `retrieveResolvers` e includono `AuditudeResolver` e `SpliceInCustomResolver`.
 
    Ad esempio:
 

@@ -1,20 +1,19 @@
 ---
-description: Puoi implementare generatori di opportunità personalizzati implementando la classe OpportunityGenerator .
+description: È possibile implementare i propri generatori di opportunità implementando la classe OpportunityGenerator.
 title: Implementare un generatore di opportunità personalizzato
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 215259bd-d8df-43df-9dba-a373559fd926
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '100'
-ht-degree: 4%
+ht-degree: 0%
 
 ---
 
+# Implementare un generatore di opportunità personalizzato {#implement-a-custom-opportunity-generator}
 
-# Implementa un generatore di opportunità personalizzato {#implement-a-custom-opportunity-generator}
+È possibile implementare i propri generatori di opportunità implementando la classe OpportunityGenerator.
 
-Puoi implementare generatori di opportunità personalizzati implementando la classe OpportunityGenerator .
-
-1. Implementa il tuo `ContentFactory` personalizzato implementando l&#39;interfaccia `ContentFactory` e ignorando `retrieveGenerators`.
+1. Implementare `ContentFactory` implementando `ContentFactory` interfaccia e sostituzione `retrieveGenerators`.
 
    Ad esempio:
 
@@ -30,7 +29,7 @@ Puoi implementare generatori di opportunità personalizzati implementando la cla
    }
    ```
 
-1. Registra il `ContentFactory` nel `MediaPlayer`.
+1. Registra il `ContentFactory` al `MediaPlayer`.
 
    Ad esempio:
 
@@ -47,14 +46,14 @@ Puoi implementare generatori di opportunità personalizzati implementando la cla
    itemLoader.load(resource, id, config);
    ```
 
-1. Crea una classe di generatore di opportunità personalizzata che implementa la classe `OpportunityGenerator` .
+1. Creare una classe generatore di opportunità personalizzata che implementa `OpportunityGenerator` classe.
 
    ```java
    public class CustomOpportunityGenerator implements OpportunityGenerator  
    {...}
    ```
 
-   1. Nel generatore di opportunità personalizzato, sovrascrivi `doConfigure`, `doUpdate` e `doCleanup`:
+   1. Nel generatore di opportunità personalizzato, sostituisci `doConfigure`, `doUpdate` e `doCleanup`:
 
       ```java
       @Override 
@@ -86,7 +85,7 @@ Puoi implementare generatori di opportunità personalizzati implementando la cla
       ); 
       ```
 
-   1. Per ogni opportunità creata, chiama `resolve` sul `OpportunityGeneratorClient:getClient().resolve(opportunity);`.
+   1. Per ogni opportunità creata, chiama `resolve` il `OpportunityGeneratorClient:getClient().resolve(opportunity);`.
 
 <!--<a id="example_7A46377EBE79458E87423EB95D0568D4"></a>-->
 

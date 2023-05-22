@@ -1,20 +1,19 @@
 ---
-description: Quando il browser TVSDK rileva un tag con sottoscrizione nella playlist/manifesto, il lettore prova automaticamente a elaborare il tag ed esporlo come un oggetto TimedMetadata.
+description: Quando il browser TVSDK rileva un tag sottoscritto nella playlist/manifesto, il lettore tenta automaticamente di elaborare il tag e di esporlo come oggetto TimedMetadata.
 title: Classe metadati temporizzati
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 893879b5-03ed-4c11-80a6-b57b7d54a95c
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 0%
 
 ---
 
-
 # Classe metadati temporizzati{#timed-metadata-class}
 
-Quando il browser TVSDK rileva un tag con sottoscrizione nella playlist/manifesto, il lettore prova automaticamente a elaborare il tag ed esporlo come un oggetto TimedMetadata.
+Quando il browser TVSDK rileva un tag sottoscritto nella playlist/manifesto, il lettore tenta automaticamente di elaborare il tag e di esporlo come oggetto TimedMetadata.
 
-La classe `TimedMetadata` fornisce i seguenti elementi:
+Il `TimedMetadata` La classe fornisce i seguenti elementi:
 
 <table id="table_5827A0626EDC45F68DC3E7644F3EFF69"> 
  <thead> 
@@ -26,7 +25,7 @@ La classe `TimedMetadata` fornisce i seguenti elementi:
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <p>type </p> </td> 
+   <td colname="col1"> <p>tipo </p> </td> 
    <td colname="col02"> <p><span class="codeph"> TimedMetadataType</span> </p> </td> 
    <td colname="col2"> <p>Di seguito sono elencati i tipi di metadati temporizzati: 
      <ul id="ul_E79C375A54C64BF09A927EE8983E98E3"> 
@@ -35,24 +34,24 @@ La classe `TimedMetadata` fornisce i seguenti elementi:
      </ul> </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p>time </p> </td> 
+   <td colname="col1"> <p>tempo </p> </td> 
    <td colname="col02"> <p>Numero </p> </td> 
-   <td colname="col2"> <p>Posizione ora locale (millisecondi) relativa all'inizio del contenuto principale in cui sono presenti i metadati temporizzati nel flusso. </p> </td> 
+   <td colname="col2"> <p>La posizione temporale locale (millisecondi) relativa all’inizio del contenuto principale in cui sono presenti i metadati temporizzati nel flusso. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>id </p> </td> 
    <td colname="col02"> <p>Stringa </p> </td> 
-   <td colname="col2"> <p>Identificatore univoco dei metadati temporizzati. </p> <p>In genere viene estratto dall’attributo cue/tag ID se presente. Altrimenti, si tratta di un valore casuale univoco. </p> </td> 
+   <td colname="col2"> <p>Identificatore univoco dei metadati temporizzati. </p> <p>Viene in genere estratto dall’attributo ID cue/tag, se presente. In caso contrario, si tratta di un valore casuale univoco. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p>name </p> </td> 
+   <td colname="col1"> <p>nome </p> </td> 
    <td colname="col02"> <p>Numero </p> </td> 
    <td colname="col2"> <p>Nome dei metadati temporizzati. </p> <p>Se il tipo è TAG, il valore rappresenta il nome del cue/tag. Se il tipo è ID3, il valore è null. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p>content </p> </td> 
+   <td colname="col1"> <p>contenuto </p> </td> 
    <td colname="col02"> <p>Stringa </p> </td> 
-   <td colname="col2"> <p>Contenuto non elaborato dei metadati temporizzati. </p> <p>Se il tipo è TAG, il valore rappresenta l’intero elenco di attributi del cue/tag. Se il tipo ID3 è nullo, il valore è nullo. </p> </td> 
+   <td colname="col2"> <p>Il contenuto non elaborato dei metadati temporizzati. </p> <p>Se il tipo è TAG, il valore rappresenta l'intero elenco di attributi del cue/tag. Se il tipo id ID3, il valore è null. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>metadati </p> </td> 
@@ -61,4 +60,3 @@ La classe `TimedMetadata` fornisce i seguenti elementi:
   </tr> 
  </tbody> 
 </table>
-

@@ -1,45 +1,41 @@
 ---
-description: Alcuni annunci di terze parti (o creativi) non possono essere uniti nel flusso di contenuto HTTP Live Streaming (HLS) perché il loro formato video è incompatibile con HLS. L’inserimento di annunci Primetime e TVSDK possono tentare facoltativamente di ricompattare gli annunci incompatibili in video M3U8 compatibili.
-title: Ricomprimi annunci incompatibili utilizzando Adobe Creative Repackaging Service (CRS)
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Alcuni annunci di terze parti (o creativi) non possono essere uniti nel flusso di contenuto HTTP Live Streaming (HLS) perché il loro formato video è incompatibile con HLS. Primetime ad insertion e TVSDK possono opzionalmente tentare di ricompilare gli annunci incompatibili in video M3U8 compatibili.
+title: Reimpacchettare annunci incompatibili utilizzando Adobe Creative Repackaging Service (CRS)
+exl-id: b6fb2846-64b6-4db7-a6a9-f85365780775
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 0%
 
 ---
 
+# Reimpacchettare annunci incompatibili utilizzando Adobe Creative Repackaging Service (CRS) {#repackage-incompatible-ads-using-adobe-creative-repackaging-service-crs}
 
-# Ricomprimi annunci incompatibili utilizzando Adobe Creative Repackaging Service (CRS) {#repackage-incompatible-ads-using-adobe-creative-repackaging-service-crs}
+Alcuni annunci di terze parti (o creativi) non possono essere uniti nel flusso di contenuto HTTP Live Streaming (HLS) perché il loro formato video è incompatibile con HLS. Primetime ad insertion e TVSDK possono opzionalmente tentare di ricompilare gli annunci incompatibili in video M3U8 compatibili.
 
-Alcuni annunci di terze parti (o creativi) non possono essere uniti nel flusso di contenuto HTTP Live Streaming (HLS) perché il loro formato video è incompatibile con HLS. L’inserimento di annunci Primetime e TVSDK possono tentare facoltativamente di ricompattare gli annunci incompatibili in video M3U8 compatibili.
+Gli annunci forniti da terze parti, come ad esempio un server di annunci di un&#39;agenzia, un partner di inventario o una rete di annunci, vengono spesso consegnati in formati incompatibili, come il formato MP4 per il download progressivo.
 
-Gli annunci forniti da varie terze parti, come un agenzia ad server, il tuo partner di inventario o una rete pubblicitaria, vengono spesso consegnati in formati incompatibili, come il formato MP4 per il download progressivo.
+Quando TVSDK rileva per la prima volta un annuncio incompatibile, il lettore ignora l’annuncio e invia una richiesta al servizio di repackaging creativo (CRS), che fa parte del back-end di inserimento dell’annuncio Primetime, per riconfezionare l’annuncio in un formato compatibile. CRS tenta di generare più copie trasformate M3U8 a velocità bit dell’annuncio e memorizza tali copie trasformate sulla rete CDN (Content Delivery Network) Primetime. La prossima volta che TVSDK riceve una risposta dell’annuncio che punta a tale annuncio, il lettore utilizza la versione M3U8 compatibile con HLS dalla CDN.
 
-Quando TVSDK incontra per la prima volta un annuncio non compatibile, il lettore ignora l&#39;annuncio e invia una richiesta al servizio di ricompilazione creativa (CRS), che fa parte del back end di inserimento degli annunci Primetime, per ricompattare l&#39;annuncio in un formato compatibile. CRS tenta di generare più rappresentazioni del bit rate M3U8 dell’annuncio e le memorizza sulla rete CDN (Content Delivery Network) di Primetime. La prossima volta che TVSDK riceve una risposta pubblicitaria che punta a quell&#39;annuncio, il lettore utilizza la versione M3U8 compatibile con HLS dalla CDN.
-
-Per attivare questa funzione CRS opzionale, contatta il tuo rappresentante di Adobe.
+Per attivare questa funzione CRS opzionale, contatta il rappresentante del tuo Adobe.
 
 >[!NOTE]
 >
 >Per i clienti CRS versione 3.0 (e precedenti), a partire dalla versione 3.1 di CRS, le seguenti modifiche hanno migliorato sia la sicurezza che le prestazioni:
 >
->* CRS 3.1 continua con `https:` se il contenuto in fase di reinserimento utilizza `https:`. Questo riduce il potenziale di alcuni lettori per presentare contenuti non sicuri.
-   >
-   >
-* CRS 3.1 riduce notevolmente le chiamate di rete, migliorando il tempo di avvio del video.
-
+>* CRS 3.1 continua con `https:` se il contenuto da ricompilare utilizza `https:`. Questo riduce la possibilità che alcuni lettori presentino contenuti non sicuri.
 >
-
+>* CRS 3.1 riduce notevolmente le chiamate di rete, migliorando i tempi di avvio dei video.
+>
 
 
 Per ulteriori informazioni su CRS, consulta [Creative Packaging Service (CRS)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_certificate_enrollment.pdf).
 
 ## Abilitare CRS nelle applicazioni TVSDK{#enable-crs-in-tvsdk-applications}
 
-Per abilitare CRS nelle applicazioni TVSDK, devi impostare le seguenti informazioni nelle impostazioni di Auditude:
+Per abilitare CRS nelle applicazioni TVSDK, devi impostare le seguenti informazioni nelle impostazioni Auditude:
 
-1. Abilita CRS in `AuditudeSettings`.
+1. Abilitare CRS in `AuditudeSettings`.
 
    ```
    ... 

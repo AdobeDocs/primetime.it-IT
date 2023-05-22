@@ -1,49 +1,47 @@
 ---
-description: È possibile utilizzare le sovrapposizioni HTML con StageVideo per visualizzare gli elementi dell’interfaccia utente nel piano video dell’elenco di visualizzazione del Flash. Questo piano si trova sopra il piano StageVideo, quindi StageVideo viene sempre visualizzato dietro qualsiasi elemento elenco di visualizzazione Flash.
+description: È possibile utilizzare le sovrapposizioni HTML con StageVideo per visualizzare gli elementi dell'interfaccia utente nel piano video dell'elenco di visualizzazione del Flash. Questo piano si trova sopra il piano StageVideo, pertanto StageVideo viene sempre visualizzato dietro qualsiasi elemento dell'elenco di visualizzazione del Flash.
 title: Sovrapposizioni StageVideo e HTML
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 6beda4c8-0981-4a38-bd5e-5714b9ec7efa
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 0%
 
 ---
 
-
 # Sovrapposizioni StageVideo e HTML{#stagevideo-and-html-overlays}
 
-È possibile utilizzare le sovrapposizioni HTML con StageVideo per visualizzare gli elementi dell’interfaccia utente nel piano video dell’elenco di visualizzazione del Flash. Questo piano si trova sopra il piano StageVideo, quindi StageVideo viene sempre visualizzato dietro qualsiasi elemento elenco di visualizzazione Flash.
+È possibile utilizzare le sovrapposizioni HTML con StageVideo per visualizzare gli elementi dell&#39;interfaccia utente nel piano video dell&#39;elenco di visualizzazione del Flash. Questo piano si trova sopra il piano StageVideo, pertanto StageVideo viene sempre visualizzato dietro qualsiasi elemento dell&#39;elenco di visualizzazione del Flash.
 
-Le sovrapposizioni HTML sono elementi dell’interfaccia utente che possono essere visualizzati nel piano di visualizzazione del Flash su un video di cui è eseguito il rendering da `StageVideo` sul proprio piano. Prima del Flash 15, non era possibile utilizzare sovrapposizioni HTML quando l&#39;accelerazione hardware non era disponibile. A partire dal Flash 15, le sovrapposizioni HTML vengono visualizzate quando `StageVideo` torna al rendering del software.
+Le sovrapposizioni HTML sono elementi dell’interfaccia utente che puoi visualizzare nel piano di visualizzazione del Flash su un video renderizzato da `StageVideo` sul proprio aereo. Prima del Flash 15, non era possibile utilizzare le sovrapposizioni HTML quando l’accelerazione hardware non era disponibile. A partire dal Flash 15, le sovrapposizioni HTML vengono visualizzate quando `StageVideo` torna al rendering software.
 
 >[!IMPORTANT]
 >
->A seconda delle funzionalità del sistema, le prestazioni possono peggiorare di più o meno quando si utilizzano sovrapposizioni HTML.
+>A seconda delle funzionalità del sistema, le prestazioni possono diminuire in misura maggiore o minore quando si utilizzano le sovrapposizioni HTML.
 
 Considera le seguenti informazioni:
 
-* al Flash Player 15:
+* Nel Flash Player 15:
 
-   * È possibile utilizzare le sovrapposizioni HTML se l&#39;accelerazione hardware è disponibile.
-   * Per utilizzare le sovrapposizioni HTML, imposta `wmode` su `opaque`.
+   * È possibile utilizzare le sovrapposizioni HTML se è disponibile l&#39;accelerazione hardware.
+   * Per utilizzare le sovrapposizioni HTML, imposta `wmode` a `opaque`.
 
-* al Flash Player 14:
+* Nel Flash Player 14:
 
-   * Quando l&#39;accelerazione hardware è disponibile, `StageVideo` si trova sotto l&#39;elenco di visualizzazione del Flash, in modo da poter utilizzare le sovrapposizioni HTML.
-   * Quando l’accelerazione hardware non è disponibile, il video viene riprodotto sopra tutti gli altri elementi del browser, impedendo l’utilizzo di sovrapposizioni HTML.
+   * Quando è disponibile l&#39;accelerazione hardware, `StageVideo` si trova al di sotto dell’elenco di visualizzazione del Flash, per cui puoi utilizzare le sovrapposizioni di HTML.
+   * Quando l&#39;accelerazione hardware non è disponibile, il video viene riprodotto sopra tutti gli altri elementi nel browser, impedendo l&#39;utilizzo di sovrapposizioni HTML.
 
-Di seguito sono riportati i requisiti minimi del browser per utilizzare le sovrapposizioni HTML con `StageVideo`:
+Di seguito sono riportati i requisiti minimi del browser per l’utilizzo delle sovrapposizioni HTML con `StageVideo`:
 
 * Firefox versione 4 e successive
 * Safari versione 4 e successive
 * Internet Explorer:
 
-   * Versione 9+ su Windows 7 e versioni successive
-   * Versione 10+ in Windows XP
+   * Versione 9+ su Windows 7 e successive
+   * Versione 10+ su Windows XP
 
 * Chrome versione 26 e successive
 
    >[!IMPORTANT]
    >
-   >Il peperoncino Chrome su Windows XP e Windows Vista non è supportato.
-
+   >Chrome Pepper su Windows XP e Windows Vista non è supportato.

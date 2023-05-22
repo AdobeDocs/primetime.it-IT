@@ -1,8 +1,7 @@
 ---
-title: Riepilogo delle classi di Primetime Player
-description: Riepilogo delle classi di Primetime Player
+title: Riepilogo classi lettore Primetime
+description: Riepilogo classi lettore Primetime
 copied-description: true
-translation-type: tm+mt
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '12'
@@ -11,4 +10,4 @@ ht-degree: 0%
 ---
 
 
-# Riepilogo delle classi di Primetime Player{#primetime-player-classes-summary}
+# Riepilogo classi lettore Primetime{#primetime-player-classes-summary}

@@ -1,37 +1,38 @@
 ---
-title: Visualizza rapporti di condivisione account per più programmatori e canali
-description: Visualizza rapporti di condivisione account per più programmatori e canali
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Visualizzare i rapporti di condivisione account per più programmatori e canali
+description: Visualizzare i rapporti di condivisione account per più programmatori e canali
+exl-id: 8afa9e45-f0e3-43a3-970f-05a11adc0e42
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 0%
 
 ---
 
-# Visualizza rapporti di condivisione account per più programmatori e canali {#viewreport-multiple-programmer-channel}
+# Visualizzare i rapporti di condivisione account per più programmatori e canali {#viewreport-multiple-programmer-channel}
 
-Account IQ, uno strumento di analisi affidabile e scalabile, consente di visualizzare, analizzare e confrontare le statistiche di condivisione degli account degli abbonati non solo per uno, due o tre ma per più programmatori in un dato momento.
+L’Account IQ è uno strumento di analisi affidabile e scalabile che ti consente di visualizzare, analizzare e confrontare le statistiche di condivisione degli account degli abbonati non solo per uno, due o tre ma per più programmatori in un dato momento.
 
 >[!NOTE]
 >
->Tuttavia, a partire da ora è possibile selezionare al massimo 10 canali (o programmatori) individuali dal pannello del segmento e dell&#39;intervallo di tempo per visualizzare le statistiche di condivisione degli abbonati.
+>Tuttavia, a partire da ora è possibile selezionare al massimo 10 singoli canali (o programmatori) dal pannello segmento e intervallo di tempo per visualizzare le statistiche di condivisione degli abbonati.
 
-Per visualizzare le statistiche di condivisione degli account degli abbonati per più canali:
+Per visualizzare le statistiche di condivisione dell&#39;account del sottoscrittore per più canali:
 
-1. Definisci un segmento desiderato seguendo i passaggi descritti in [Come definire il segmento e selezionare l’intervallo temporale](/help/AccountIQ/howto-select-segment-timeframe.md) per la valutazione da [pannello relativo al segmento e al calendario](/help/AccountIQ/segments-timeframe.md).
+1. Definisci un segmento desiderato seguendo i passaggi descritti in [Come definire il segmento e selezionare l’intervallo temporale](/help/AccountIQ/howto-select-segment-timeframe.md) per la valutazione da [pannello segmento e intervallo temporale](/help/AccountIQ/segments-timeframe.md).
 
-1. Seleziona la pagina dei rapporti desiderata dal menu di navigazione a sinistra:
+1. Seleziona una pagina di rapporti desiderata dal menu di navigazione a sinistra:
 
-* [Dashboard](/help/AccountIQ/dashboard.md) (il dashboard fornisce un&#39;occhiata ai grafici selezionati da diverse pagine dei rapporti).
+* [Dashboard](/help/AccountIQ/dashboard.md) (il dashboard offre un’occhiata ai grafici selezionati da diverse pagine di rapporti).
 
    ![](assets/mult-prog-dashboard.png)
 
-   *Figura: Report dashboard per più programmatori*
+   *Figura: Report del dashboard per più programmatori*
 
 * [Utilizzo generale](/help/AccountIQ/general-usage-reports.md)
 
 * [Account condivisi](/help/AccountIQ/shared-acc-reports.md)
 
-* [Pattern di utilizzo](/help/AccountIQ/usage-patterns.md)
+* [Modelli di utilizzo](/help/AccountIQ/usage-patterns.md)
 
-Ciascuna di queste pagine riflette l’attività del segmento selezionato.
+Ognuna di queste pagine riflette l’attività del segmento selezionato.

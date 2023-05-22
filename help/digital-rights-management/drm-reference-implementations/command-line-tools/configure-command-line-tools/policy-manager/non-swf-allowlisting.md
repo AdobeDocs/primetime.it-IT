@@ -1,33 +1,32 @@
 ---
-title: Elenco Consentiti applicazioni non SWF
-description: Elenco Consentiti applicazioni non SWF
+title: Inserimento di applicazioni non SWF nell’elenco Consentiti
+description: Inserimento di applicazioni non SWF nell’elenco Consentiti
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f33fb0e9-144f-49f8-8da2-8a50aea09456
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
 
 ---
 
+# Inserimento di applicazioni non SWF nell’elenco Consentiti {#non-swf-application-isting}
 
-# Elenco consentiti applicazioni non SWF {#non-swf-application-isting}
+AIR è stata la prima piattaforma che presentava l’inserimento di applicazioni nell’elenco Consentiti e il nome della proprietà utilizzata per l’elenco consentiti di applicazioni non SWF (Adobe AIR, iOS, Android, ecc.) mantiene il nome originale: `policy.allowedAIRApplication.n`. Questo consente di riprodurre il contenuto da tutte le applicazioni non di Flash che sono firmate con un certificato di firma prima della pubblicazione. Tale procedura è denominata *ID applicazione*. È possibile estrarre l’ID applicazione utilizzando [!DNL AdobePublisherIDUtility.jar] strumento. Questo inserimento nell’elenco Consentiti verrà applicato a qualsiasi client che supporta Primetime DRM.
 
-AIR è stata la prima piattaforma che presentava l’applicazione allow listing, e il nome della proprietà utilizzata per elenco consentiti di applicazioni non SWF (Adobe AIR, iOS, Android, ecc.) conserva il nome originale: `policy.allowedAIRApplication.n`. Questo consente la riproduzione del contenuto da parte di tutte le applicazioni non Flash firmate con un certificato di firma prima della pubblicazione. Questo viene indicato come *ID applicazione*. Puoi estrarre l’ID applicazione utilizzando lo strumento [!DNL AdobePublisherIDUtility.jar] . L’inserimento nell’elenco Consentiti verrà applicato a qualsiasi client che supporti DRM di Primetime.
+L’ID applicazione deriva dalla chiave pubblica del certificato di firma utilizzato per firmare una particolare applicazione. Se la chiave pubblica nel certificato scade, tutti i contenuti precedenti consentiranno la riproduzione solo sulle app firmate con il certificato precedente, ma non sulla nuova app (firmata con il nuovo certificato).
 
-L&#39;ID applicazione deriva dalla chiave pubblica del certificato di firma utilizzato per firmare una particolare applicazione. Se la chiave pubblica nel certificato scade, tutti i contenuti precedenti consentono di riprodurre nell’elenco solo le app firmate con il certificato precedente e non vengono riprodotti nella nuova app (firmata con il nuovo certificato).
+Se disponi di una libreria di contenuti che ti consente di elencare le applicazioni firmate con un determinato certificato di firma e tale certificato scade e ti viene rilasciato un nuovo certificato (con una coppia di chiavi pubblica/privata diversa), i contenuti precedenti non verranno riprodotti nella nuova app *salvo* effettua una delle seguenti operazioni:
 
-Se ti trovi nella situazione in cui disponi di una libreria di contenuti per l’elenco delle applicazioni firmate con un particolare certificato di firma e tale certificato scade e ti viene rilasciato un nuovo certificato (con una diversa coppia di chiavi pubblica/privata), il contenuto precedente non verrà riprodotto nella nuova app *a meno che* non esegua una delle seguenti operazioni:
+* Utilizza un `PolicyUpdateList` sul server licenze per ignorare i criteri in ingresso e inserire una nuova voce di Elenco consentiti dell&#39;applicazione con il digest del nuovo certificato di firma.
+* Aggiornare la logica del server licenze per ignorare il criterio in ingresso e inserire una nuova voce di Elenco consentiti dell&#39;applicazione.
+* Richiedi che l’emittente del certificato di firma ti rilasci un nuovo certificato che utilizza la stessa coppia di chiavi pubblica/privata utilizzata nel certificato precedente.
+* Se distribuisci contenuto HDS/HLS che fa riferimento a un endpoint URL per recuperare `DRMMetadata`, è possibile rigenerare `DRMMetadata` (utilizzando Primetime DRM Java SDK) per inserire un nuovo criterio DRM contenente una voce di Elenco consentiti Application aggiornata.
 
-* Utilizzare un `PolicyUpdateList` sul server licenze per ignorare i criteri in entrata e inserire una nuova voce di Elenco consentiti applicazione con il riepilogo del nuovo certificato di firma .
-* Aggiornare la logica del server licenze per ignorare il criterio in entrata e inserire una nuova voce di Elenco consentiti applicazione.
-* Richiedi all’emittente del certificato di firma di emettere un nuovo certificato che utilizza la stessa coppia di chiavi pubblica/privata utilizzata dal certificato precedente.
-* Se distribuisci contenuto HDS/HLS che fa riferimento a un endpoint URL per il recupero di `DRMMetadata`, puoi rigenerare il `DRMMetadata` (utilizzando l&#39;SDK Java DRM di Primetime) per inserire un nuovo criterio DRM contenente una voce di Elenco consentiti dell&#39;applicazione aggiornata.
+* Riconfezionate tutti i vecchi contenuti con un nuovo criterio DRM con il digest del nuovo certificato di firma.
 
-* Ricompila tutti i contenuti obsoleti con un nuovo criterio DRM con il riepilogo del nuovo certificato di firma.
-
-Per ulteriori informazioni, consulta `policy.allowedAIRApplication.n` in *Proprietà di configurazione* .
+Consulta `policy.allowedAIRApplication.n` in *Proprietà di configurazione* per i dettagli.
 
 >[!NOTE]
 >
->L’inserimento di un’applicazione iOS nell’elenco Consentiti richiede un approccio speciale. Consulta [Elenco consentiti l&#39;applicazione iOS](../../../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-allowlist-your-ios-application.md) nella *Guida TVSDK per programmatori iOS*.
+>Per inserire un’applicazione iOS nell’elenco Consentiti è necessario un approccio speciale. Consulta [Elenco consentiti dell’applicazione iOS](../../../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-allowlist-your-ios-application.md) nel *Guida per i programmatori di TVSDK per iOS*.

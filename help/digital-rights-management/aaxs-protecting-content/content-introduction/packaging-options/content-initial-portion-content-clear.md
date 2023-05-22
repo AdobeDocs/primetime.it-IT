@@ -1,18 +1,17 @@
 ---
-title: Parte iniziale del contenuto nel modulo di cancellazione
-description: Parte iniziale del contenuto nel modulo di cancellazione
+title: Parte iniziale del contenuto nella cancellazione
+description: Parte iniziale del contenuto nella cancellazione
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ef296d64-e0e1-4126-8258-f95d5da3adbf
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 0%
 
 ---
 
+# Parte iniziale del contenuto nella cancellazione{#initial-portion-of-content-in-the-clear}
 
-# Parte iniziale del contenuto nella cartella clear{#initial-portion-of-content-in-the-clear}
+Specifica un periodo di tempo facoltativo, in secondi, per il quale l&#39;inizio del contenuto viene lasciato in chiaro (ovvero non crittografato).
 
-Specifica un periodo di tempo facoltativo, in secondi, in cui l’inizio del contenuto viene lasciato libero (ovvero non crittografato).
-
-Esempio di utilizzo: Consente di eseguire la riproduzione più velocemente mentre il client Adobe Access scarica la licenza in background. La parte non crittografata del video inizia la riproduzione immediatamente, mentre l&#39;inizializzazione di Adobe Access e l&#39;acquisizione della licenza si verificano dietro le quinte. Con questa funzione disattivata, gli utenti potrebbero notare un ritardo nell’esperienza di riproduzione, poiché il computer client esegue tutti i passaggi di licenza prima che si verifichi una riproduzione video.
+Caso d’uso di esempio: consente un tempo di riproduzione più rapido mentre il client Adobe Access scarica la licenza in background. La parte non crittografata del video inizia immediatamente la riproduzione, mentre l’inizializzazione dell’accesso agli Adobi e l’acquisizione della licenza avvengono dietro le quinte. Quando questa funzione è disattivata, gli utenti potrebbero notare un ritardo nell’esperienza di riproduzione, poiché il computer client esegue tutte le fasi della licenza prima che si verifichi qualsiasi riproduzione video.

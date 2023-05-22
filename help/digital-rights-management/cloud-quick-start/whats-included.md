@@ -1,40 +1,38 @@
 ---
-description: Adobe fornisce un servizio Cloud DRM ai clienti Adobe Primetime DRM che non desiderano sviluppare e mantenere il proprio server licenze Primetime DRM. Utilizzando questo servizio, i clienti possono ridurre la complessità operativa e di sviluppo rispetto al rilascio della licenza DRM. Primetime Cloud DRM può rilasciare licenze DRM a tutti i dispositivi in grado di eseguire un'applicazione video abilitata per TVSDK del browser Primetime, come iOS, Android, Desktop e Xbox360. Questo servizio DRM è ospitato e gestito da Adobe, con tempi di attività 24/7.
+description: Adobe fornisce un servizio Cloud DRM ai clienti di Adobe Primetime DRM che non desiderano sviluppare e mantenere il proprio server di licenze DRM Primetime. Grazie a questo servizio, i clienti possono ridurre la complessità operativa e di sviluppo legata al rilascio delle licenze DRM. Primetime Cloud DRM può rilasciare licenze DRM a tutti i dispositivi in grado di eseguire un’applicazione video abilitata per Primetime Browser TVSDK, come iOS, Android, Desktops e Xbox360. Questo servizio DRM è ospitato e gestito da Adobe, con un tempo di attività 24 ore su 24, 7 giorni su 7.
 title: Sfondo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: bb5ad080-5b1d-43a6-8d0e-9b5735c82d96
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 0%
 
 ---
 
-
 # Sfondo {#background}
 
-Adobe fornisce un servizio Cloud DRM ai clienti Adobe Primetime DRM che non desiderano sviluppare e mantenere il proprio server licenze Primetime DRM. Utilizzando questo servizio, i clienti possono ridurre la complessità operativa e di sviluppo rispetto al rilascio della licenza DRM. Primetime Cloud DRM può rilasciare licenze DRM a tutti i dispositivi in grado di eseguire un&#39;applicazione video abilitata per TVSDK del browser Primetime, come iOS, Android, Desktop e Xbox360. Questo servizio DRM è ospitato e gestito da Adobe, con tempi di attività 24/7.
+Adobe fornisce un servizio Cloud DRM ai clienti di Adobe Primetime DRM che non desiderano sviluppare e mantenere il proprio server di licenze DRM Primetime. Grazie a questo servizio, i clienti possono ridurre la complessità operativa e di sviluppo legata al rilascio delle licenze DRM. Primetime Cloud DRM può rilasciare licenze DRM a tutti i dispositivi in grado di eseguire un’applicazione video abilitata per Primetime Browser TVSDK, come iOS, Android, Desktops e Xbox360. Questo servizio DRM è ospitato e gestito da Adobe, con un tempo di attività 24 ore su 24, 7 giorni su 7.
 
 >[!NOTE]
 >
->Adobe Primetime DRM era precedentemente denominato accesso Adobe e prima di tale Flash Access.
+>Adobe Primetime DRM era precedentemente denominato Adobe Access e, prima di questo, Flash Access.
 
 ## Cosa è incluso con Primetime Cloud DRM {#section_788D0DD5F6DB41678FD87CFBD21B25FD}
 
-* Modulo di autenticazione/adesione personalizzato e istruzioni su come interagire con l’autenticazione personalizzata per i contenuti. Per ulteriori informazioni, consulta la directory [!DNL Custom Authentication Entitlement] .
-* Certificato del server licenze specifico per DRM cloud ( [!DNL .pem/.cer/.der])
+* Modulo di autenticazione/adesione personalizzato e istruzioni su come attivare l’autenticazione personalizzata per il contenuto. Per ulteriori informazioni, consulta [!DNL Custom Authentication Entitlement] directory.
+* Certificato server licenze specifico per DRM cloud ( [!DNL .pem/.cer/.der])
 
 * Certificato di trasporto del server licenze specifico per DRM cloud ( [!DNL .pem/.cer/.der])
 
-* Pacchetto offline Java di Primetime
-* Criteri DRM di esempio per il pacchetto
+* Primetime Java Offline Packager
+* Criteri DRM di esempio per la creazione di pacchetti
 
-   * **policy_24hr**  - Licenza cache su disco per 24 ore. Dopo 24 ore, è necessario acquisire una nuova licenza per visualizzare il contenuto. Tutte le altre politiche in questo kit hanno anche 24 ore di memorizzazione in cache delle licenze.
-   * **policy_ios_remotekeyserver**  - Su dispositivi iOS, la licenza DRM verrà acquisita da Cloud DRM. Inoltre, il cliente acquisirà tutte le chiavi di decrittografia AES da Cloud DRM. Riproduzione non consentita su dispositivi iOS jailbreak.
+   * **policy_24hr** - Licenze memorizzate su disco per 24 ore. Dopo 24 ore, è necessario acquisire una nuova licenza per visualizzare il contenuto. Anche tutti gli altri criteri di questo kit dispongono di memorizzazione nella cache delle licenze 24 ore.
+   * **policy_ios_remotekeyserver** - Sui dispositivi iOS, la licenza DRM verrà acquisita da Cloud DRM. Inoltre, il client acquisirà tutte le chiavi di decrittografia AES da Cloud DRM. La riproduzione non è consentita sui dispositivi iOS jailbroken.
 
-   * **policy_ios_localkeyserver**  - Su dispositivi iOS, la licenza DRM verrà acquisita da Cloud DRM. Inoltre, il client acquisirà tutte le chiavi di decrittografia AES HLS da un server HTTP locale, invece di Cloud DRM. Riproduzione non consentita su dispositivi iOS jailbreak.
+   * **policy_ios_localkeyserver** - Sui dispositivi iOS, la licenza DRM verrà acquisita da Cloud DRM. Inoltre, il client acquisirà tutte le chiavi di decrittografia AES HLS da un server HTTP locale, anziché da Cloud DRM. La riproduzione non è consentita sui dispositivi iOS jailbroken.
 
-   * **policy_adobePass** : il client deve prima eseguire l&#39;autenticazione con (precedentemente denominato Adobe Pass) oppure viene negata una licenza.
+   * **policy_adobePass** : il client deve prima autenticarsi con (precedentemente denominato Adobe Pass) altrimenti la licenza verrà negata.
 
-* Strumento Adobe Policy Manager per creare criteri DRM aggiuntivi
+* Strumento Adobe Policy Manager per la creazione di ulteriori criteri DRM
 * Contenuto video di esempio da utilizzare per la creazione di pacchetti
-

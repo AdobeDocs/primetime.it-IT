@@ -1,27 +1,26 @@
 ---
-description: Quando gli utenti avanzano velocemente o riavvolgono velocemente i contenuti multimediali, si trovano in modalità di riproduzione a trucco. Per accedere alla modalità di riproduzione a trucco, è necessario impostare la velocità di riproduzione di MediaPlayer su un valore diverso da 1.
-title: Implementazione rapida in avanti e in riavvolgimento
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Quando l'utente avanza o riavvolge rapidamente il supporto, si trova nella modalità di riproduzione con trucco. Per accedere alla modalità di riproduzione con trucco, è necessario impostare la velocità di riproduzione di MediaPlayer su un valore diverso da 1.
+title: Implementazione di avanzamento rapido e riavvolgimento
+exl-id: 58ed9a96-9617-4364-81d4-b404b23cf265
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 0%
 
 ---
 
-
 # Panoramica {#implement-fast-forward-and-rewind-overview}
 
-Quando gli utenti avanzano velocemente o riavvolgono velocemente i contenuti multimediali, si trovano in modalità di riproduzione a trucco. Per accedere alla modalità di riproduzione a trucco, è necessario impostare la velocità di riproduzione di MediaPlayer su un valore diverso da 1.
+Quando l&#39;utente avanza o riavvolge rapidamente il supporto, si trova nella modalità di riproduzione con trucco. Per accedere alla modalità di riproduzione con trucco, è necessario impostare la velocità di riproduzione di MediaPlayer su un valore diverso da 1.
 
 Per cambiare la velocità, è necessario impostare un valore.
 
-1. Passa dalla modalità di riproduzione normale (1x) alla modalità di riproduzione con trucco impostando la velocità su `MediaPlayer` su un valore consentito.
+1. Passare dalla modalità di riproduzione normale (1x) alla modalità di riproduzione con trazione impostando la frequenza su `MediaPlayer` a un valore consentito.
 
-   * La classe `MediaPlayerItem` definisce le velocità di riproduzione consentite.
-   * TVSDK seleziona la velocità consentita più vicina se la velocità specificata non è consentita.
+   * Il `MediaPlayerItem` classe definisce le velocità di riproduzione consentite.
+   * Se la tariffa specificata non è consentita, TVSDK seleziona la tariffa consentita più vicina.
 
-   In questo esempio la velocità di riproduzione interna del lettore viene impostata sulla velocità richiesta.
+   Questo esempio imposta la velocità di riproduzione interna del lettore sulla velocità richiesta.
 
    ```java
    import com.adobe.mediacore.MediaPlayer; 
@@ -47,13 +46,12 @@ Per cambiare la velocità, è necessario impostare un valore.
    }
    ```
 
-1. Facoltativamente, puoi ascoltare gli eventi di cambio di tasso, che ti permettono di sapere quando hai richiesto un cambiamento di tasso e quando un cambiamento di tasso si verifica effettivamente.
+1. Facoltativamente, è possibile ascoltare gli eventi di variazione di tasso, che consentono di sapere quando è stata richiesta una modifica di tasso e quando si verifica effettivamente una modifica di tasso.
 
-       TVSDK invia i seguenti eventi relativi al trucco:
+       TVSDK invia i seguenti eventi relativi alla riproduzione con trucco:
    
-   * `AdobePSDK.PSDKEventType.RATE_SELECTED` quando il  `rate` valore cambia in un valore diverso.
+   * `AdobePSDK.PSDKEventType.RATE_SELECTED` quando `rate` il valore viene modificato in un valore diverso.
 
    * `AdobePSDK.PSDKEventType.RATE_PLAYING` quando la riproduzione riprende alla velocità selezionata.
 
-      TVSDK invia entrambi questi eventi quando il lettore ritorna dalla modalità di gioco-trucco alla modalità di riproduzione normale.
-
+      TVSDK invia entrambi questi eventi quando il lettore ritorna dalla modalità di riproduzione con trucco alla modalità di riproduzione normale.

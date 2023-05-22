@@ -1,23 +1,22 @@
 ---
-description: L'audio in ritardo utilizza PTMediaPlayer per riprodurre un video specificato in una playlist HLS M3U8 e che può contenere diversi flussi audio alternativi.
+description: L'audio con associazione tardiva utilizza PTMediaPlayer per riprodurre un video specificato in una playlist HLS M3U8 e che può contenere diversi flussi audio alternativi.
 title: Accedere a tracce audio alternative
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: c95e2bae-fcf3-4ae2-be11-fb3191b380f1
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '106'
 ht-degree: 0%
 
 ---
 
-
 # Accedere a tracce audio alternative {#access-alternate-audio-tracks}
 
-L&#39;audio in ritardo utilizza PTMediaPlayer per riprodurre un video specificato in una playlist HLS M3U8 e che può contenere diversi flussi audio alternativi.
+L&#39;audio con associazione tardiva utilizza PTMediaPlayer per riprodurre un video specificato in una playlist HLS M3U8 e che può contenere diversi flussi audio alternativi.
 
-1. Attendi che MediaPlayer sia almeno nello stato `PTMediaPlayerStatusReady` .
+1. Attendere che MediaPlayer sia incluso almeno nel `PTMediaPlayerStatusReady` stato.
 1. Ascolta questo evento:
 
-   notifica `PTMediaPlayerItemMediaSelectionOptionsAvailable`: È disponibile l&#39;elenco iniziale delle tracce audio.
+   notifica `PTMediaPlayerItemMediaSelectionOptionsAvailable`: è disponibile l’elenco iniziale delle tracce audio.
 
    ```
    [[NSNotificationCenter defaultCenter] addObserver:self 
@@ -26,7 +25,7 @@ L&#39;audio in ritardo utilizza PTMediaPlayer per riprodurre un video specificat
         object:self.player];
    ```
 
-1. Ottieni le tracce audio disponibili dall&#39;istanza `PTMediaPlayerItem`.
+1. Ottieni le tracce audio disponibili da `PTMediaPlayerItem` dell&#39;istanza.
 
    ```
    - (void) onMediaPlayerItemMediaSelectionOptionsAvailable:(NSNotification *) notification { 
@@ -35,5 +34,5 @@ L&#39;audio in ritardo utilizza PTMediaPlayer per riprodurre un video specificat
    }
    ```
 
-1. (Facoltativo) Presentare all&#39;utente le tracce disponibili.
-1. Imposta la traccia audio selezionata sull&#39;istanza `PTMediaPlayerItem`.
+1. (Facoltativo) Presenta all&#39;utente i brani disponibili.
+1. Imposta la traccia audio selezionata su `PTMediaPlayerItem` dell&#39;istanza.

@@ -1,36 +1,35 @@
 ---
-description: Il lettore Primetime supporta l'integrazione DRM di Primetime come flussi di lavoro DRM personalizzati. Ciò significa che l’applicazione deve implementare i flussi di lavoro di autenticazione DRM prima di riprodurre il flusso.
+description: Il lettore Primetime supporta l’integrazione di Primetime DRM come flussi di lavoro DRM personalizzati. Ciò significa che l'applicazione deve implementare i flussi di lavoro di autenticazione DRM prima di riprodurre il flusso.
 title: Protezione dei contenuti DRM
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: c1904d15-023f-49fb-95f9-d157d17b3516
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 0%
 
 ---
 
-
 # Protezione dei contenuti DRM {#drm-content-protection}
 
-Il lettore Primetime supporta l&#39;integrazione DRM di Primetime come flussi di lavoro DRM personalizzati. Ciò significa che l’applicazione deve implementare i flussi di lavoro di autenticazione DRM prima di riprodurre il flusso.
+Il lettore Primetime supporta l’integrazione di Primetime DRM come flussi di lavoro DRM personalizzati. Ciò significa che l&#39;applicazione deve implementare i flussi di lavoro di autenticazione DRM prima di riprodurre il flusso.
 
-Per abilitare questa funzione, TVSDK ti fornisce la gestione DRM per l’autenticazione. L’implementazione di riferimento fornisce un esempio dei seguenti flussi di lavoro:
+Per abilitare questa funzione, TVSDK fornisce il gestore DRM per l&#39;autenticazione. L’implementazione di riferimento fornisce un esempio dei seguenti flussi di lavoro:
 
-* Come caricare e riprodurre flussi HLS con protezione dei contenuti di Access, ottimizzato per bassi tassi di errore e avvio rapido.
-* Come caricare e riprodurre flussi HLS con la protezione dei contenuti AES128.
-* Come caricare e riprodurre flussi HLS con protezione dei contenuti PHLS, ottimizzato per bassi tassi di errore e avvio rapido.
+* Come caricare e riprodurre flussi HLS con protezione dei contenuti di Access, ottimizzati per tassi di errore bassi e avvio rapido.
+* Come caricare e riprodurre flussi HLS con protezione dei contenuti AES128.
+* Come caricare e riprodurre flussi HLS con protezione dei contenuti PHLS, ottimizzati per tassi di errore bassi e avvio rapido.
 
-Tutti i contenuti protetti da DRM vengono gestiti automaticamente dalle librerie DRM integrate nel TVSDK. Tuttavia, puoi esporre la gestione degli errori, l’ottimizzazione dell’individualizzazione del dispositivo e l’acquisizione della licenza utilizzando i callback API TVSDK.
+Tutti i contenuti protetti da DRM vengono gestiti automaticamente dalle librerie DRM integrate in TVSDK. Tuttavia, puoi esporre la gestione degli errori, l’ottimizzazione della personalizzazione del dispositivo e l’acquisizione delle licenze utilizzando i callback API TVSDK.
 
-## Aggiungi la protezione del contenuto al lettore {#section_F1FC4322C35C4FE8A3B47FDC0A74221B}
+## Aggiungere la protezione dei contenuti al lettore {#section_F1FC4322C35C4FE8A3B47FDC0A74221B}
 
-È possibile aggiungere la protezione del contenuto al lettore creando un gestore di riproduzione o utilizzando il manager factory.
+Puoi aggiungere la protezione dei contenuti al lettore creando un gestore della riproduzione o utilizzando il programma di fabbrica del gestore.
 
 Per creare un gestore della protezione dei contenuti:
 
 * Inizializzare il sistema DRM.
 
-   L&#39;esempio di codice seguente mostra la chiamata di `loadDRMServices` nella funzione dell&#39;applicazione `onCreate()` per garantire che l&#39;inizializzazione necessaria per il sistema DRM venga avviata prima dell&#39;avvio della riproduzione.
+   Esempio Nell&#39;esempio di codice riportato di seguito viene illustrato come chiamare `loadDRMServices` nell’applicazione `onCreate()` per garantire che qualsiasi inizializzazione necessaria per il sistema DRM venga avviata prima dell&#39;avvio della riproduzione.
 
    ```java
    @Override 
@@ -40,9 +39,9 @@ Per creare un gestore della protezione dei contenuti:
     }
    ```
 
-* Caricare le licenze DRM.
+* Precaricare le licenze DRM.
 
-   L&#39;esempio di codice seguente mostra il caricamento di `VideoItems` al termine del caricamento dell&#39;elenco di contenuti. In questo modo le licenze DRM verranno acquisite dal server licenze e memorizzate nella cache locale, in modo che, all&#39;avvio della riproduzione, il contenuto venga caricato con un ritardo minimo.
+   Nell&#39;esempio di codice riportato di seguito viene illustrato come caricare `VideoItems` al termine del caricamento dell’elenco dei contenuti. In questo modo, le licenze DRM vengono acquisite dal server licenze e memorizzate nella cache locale, in modo che all’avvio della riproduzione il contenuto venga caricato con il minimo ritardo.
 
    ```java
    DrmManager.preLoadDrmLicenses(item.getUrl(),  
@@ -62,11 +61,11 @@ Per creare un gestore della protezione dei contenuti:
 
    >[!NOTE]
    >
-   >È possibile impostare le licenze DRM Precache su ON nell&#39;interfaccia utente Impostazioni per prenotare le licenze DRM durante il caricamento del contenuto. Tuttavia, è consigliabile precaricare un elemento specifico invece di prememorizzare tutte le licenze nel catalogo.
+   >È possibile impostare Precache DRM license (Licenze DRM precedenti) su ON (Attivate) nell&#39;interfaccia utente Settings (Impostazioni) per prememorizzare le licenze DRM nella cache durante il caricamento del contenuto. Tuttavia, si consiglia di precaricare un elemento specifico invece di prememorizzare nella cache tutte le licenze nel catalogo.
    >
    >![](assets/precache-drm-licenses.jpg)
 
-* Per utilizzare `ManagerFactory` per implementare la gestione degli errori DRM, assicurati che la seguente riga di codice sia nel file [!DNL PlayerFragment.java]:
+* Da utilizzare `ManagerFactory` per implementare la gestione degli errori DRM, assicurarsi che la seguente riga di codice sia nel [!DNL PlayerFragment.java] file:
 
    ```java
    drmManager = ManagerFactory.getDrmManager(config, mediaPlayer);

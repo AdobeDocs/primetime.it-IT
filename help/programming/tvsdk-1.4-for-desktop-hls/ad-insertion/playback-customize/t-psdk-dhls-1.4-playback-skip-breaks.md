@@ -1,26 +1,25 @@
 ---
-description: Per impostazione predefinita, TVSDK forza la riproduzione di un’interruzione pubblicitaria quando l’utente cerca tramite un’interruzione pubblicitaria. Puoi personalizzare il comportamento per saltare un’interruzione pubblicitaria se il tempo trascorso da un precedente completamento dell’interruzione si trova entro un certo numero di minuti.
-title: Ignora interruzioni pubblicitarie per un periodo di tempo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Per impostazione predefinita, TVSDK forza la riproduzione di un’interruzione pubblicitaria quando l’utente cerca sopra un’interruzione pubblicitaria. Puoi personalizzare il comportamento per saltare un’interruzione pubblicitaria se il tempo trascorso dal completamento di un’interruzione precedente è entro un determinato numero di minuti.
+title: Ignorare le interruzioni pubblicitarie per un periodo di tempo
+exl-id: 7d5ee788-4a67-4c70-acc7-a950e6b2db8a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 0%
 
 ---
 
+# Ignorare le interruzioni pubblicitarie per un periodo di tempo{#skip-ad-breaks-for-a-period-of-time}
 
-# Ignora interruzioni pubblicitarie per un periodo di tempo{#skip-ad-breaks-for-a-period-of-time}
-
-Per impostazione predefinita, TVSDK forza la riproduzione di un’interruzione pubblicitaria quando l’utente cerca tramite un’interruzione pubblicitaria. Puoi personalizzare il comportamento per saltare un’interruzione pubblicitaria se il tempo trascorso da un precedente completamento dell’interruzione si trova entro un certo numero di minuti.
+Per impostazione predefinita, TVSDK forza la riproduzione di un’interruzione pubblicitaria quando l’utente cerca sopra un’interruzione pubblicitaria. Puoi personalizzare il comportamento per saltare un’interruzione pubblicitaria se il tempo trascorso dal completamento di un’interruzione precedente è entro un determinato numero di minuti.
 
 >[!IMPORTANT]
 >
->Quando si verifica una ricerca interna per saltare un annuncio, potrebbe verificarsi una leggera pausa nella riproduzione.
+>Quando è presente una ricerca interna per saltare un annuncio, potrebbe essere presente una leggera pausa nella riproduzione.
 
-L&#39;esempio seguente di un selettore di criteri di annunci personalizzati salta gli annunci nei cinque minuti successivi (tempo di clock della bacheca) dopo che un utente ha guardato un&#39;interruzione di pubblicità.
+L’esempio seguente di selettore di criteri di annuncio personalizzato ignora gli annunci nei successivi cinque minuti (tempo di clock a parete) dopo che un utente ha guardato un’interruzione pubblicitaria.
 
-1. Estende il selettore predefinito dei criteri per gli annunci in modo da ignorare il comportamento predefinito.
+1. Estendi il selettore dei criteri degli annunci predefinito per ignorare il comportamento predefinito.
 
    ```
    /** 
@@ -106,7 +105,7 @@ L&#39;esempio seguente di un selettore di criteri di annunci personalizzati salt
    }
    ```
 
-1. Registra la nuova classe di advertising factory da utilizzare con MediaPlayer.
+1. Registrare la nuova classe di fabbrica pubblicitaria da utilizzare con MediaPlayer.
 
    ```
    var mediaResource:MediaResource =  
@@ -116,4 +115,3 @@ L&#39;esempio seguente di un selettore di criteri di annunci personalizzati salt
    mediaPlayerItemConfig.advertisingFactory = new CustomAdPolicyContentFactory(); 
    player.replaceCurrentResource(mediaResource, mediaPlayerItemConfig);
    ```
-

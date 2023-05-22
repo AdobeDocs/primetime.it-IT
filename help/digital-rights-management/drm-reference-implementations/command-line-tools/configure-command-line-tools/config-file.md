@@ -2,24 +2,23 @@
 title: Informazioni sui file di configurazione degli strumenti della riga di comando
 description: Informazioni sui file di configurazione degli strumenti della riga di comando
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 0ec4917e-7c70-4b84-86ac-c34c8a522018
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '144'
 ht-degree: 0%
 
 ---
 
-
 # Informazioni sui file di configurazione degli strumenti della riga di comando{#about-command-line-tools-configuration-files}
 
-Gli strumenti della riga di comando cercano [!DNL flashaccesstools.properties] nella directory in cui vengono eseguiti gli strumenti. Tuttavia, è possibile utilizzare l&#39;opzione `-c` quando si esegue uno strumento a riga di comando per specificare una posizione diversa per il percorso predefinito [!DNL flashaccesstools.properties]. È inoltre possibile utilizzare `-c` per specificare un file di configurazione diverso.
+Gli strumenti della riga di comando cercano [!DNL flashaccesstools.properties] nella directory in cui vengono eseguiti gli strumenti. Tuttavia, è possibile utilizzare `-c` quando si esegue uno strumento da riga di comando per specificare una posizione diversa per il valore predefinito [!DNL flashaccesstools.properties]. Puoi anche utilizzare `-c` per specificare un file di configurazione diverso.
 
-I file di configurazione degli strumenti della riga di comando utilizzano il formato *file di proprietà Java*, per il quale si applicano le seguenti regole:
+I file di configurazione degli strumenti della riga di comando utilizzano *File di proprietà Java* formato, al quale si applicano le seguenti regole:
 
-* Elimina le barre rovesciate con una barra rovesciata aggiuntiva.
+* Esci dalle barre rovesciate con una barra rovesciata aggiuntiva.
 
-   Ad esempio, su un computer Windows, per specificare il file [!DNL C:\credentials.pfx], è necessario immetterlo come [!DNL C:\\credentials.pfx] o `C:/credentials.pfx`. Per specificare un file su un server di rete Windows, è necessario immettere `\\\\server\\folder\\filename.pfx`
-* Includere solo caratteri *Latin-1*.
+   Ad esempio, in un computer Windows per specificare [!DNL C:\credentials.pfx] file, è necessario immetterlo come [!DNL C:\\credentials.pfx] o `C:/credentials.pfx`. Per specificare un file in un server di rete Windows, è necessario immettere `\\\\server\\folder\\filename.pfx`
+* Solo inclusione *Latin-1* caratteri.
 
-   Per utilizzare caratteri non-*Latin-1*, è necessario utilizzare la sequenza di escape Unicode appropriata. Facoltativamente, puoi applicare lo strumento [!DNL native2ascii] (incluso con Java) alle voci del file di configurazione.
+   Per utilizzare non *Latin-1* caratteri, è necessario utilizzare la sequenza di escape Unicode appropriata. Facoltativamente, puoi applicare [!DNL native2ascii] (incluso in Java) alle voci del file di configurazione.

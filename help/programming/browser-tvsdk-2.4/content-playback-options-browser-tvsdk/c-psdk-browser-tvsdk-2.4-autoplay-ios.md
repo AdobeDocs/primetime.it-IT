@@ -1,21 +1,20 @@
 ---
-title: Riproduzione automatica su iOS
-description: Riproduzione automatica su iOS
+title: Riproduzione automatica in iOS
+description: Riproduzione automatica in iOS
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 591e8f74-63c3-4f74-9df4-024eb8aab646
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '93'
 ht-degree: 0%
 
 ---
 
+# Riproduzione automatica in iOS{#autoplay-on-ios}
 
-# Riproduzione automatica su iOS{#autoplay-on-ios}
+L’implementazione dell’API del volume di AdobePSDK.MediaPlayer consente la riproduzione automatica dei contenuti sui dispositivi che eseguono iOS versione 10 o successiva. iOS consente la riproduzione automatica solo quando il volume è disattivato. Quando il volume è impostato su zero, l’API imposta il `muted` proprietà del tag video a `true`, altrimenti il `muted` proprietà impostata su `false`. Il `play` L’API avvia la riproduzione senza alcuna interazione da parte dell’utente o gesto da parte dell’utente.
 
-L&#39;implementazione dell&#39;API del volume di AdobePSDK.MediaPlayer consente la riproduzione automatica dei contenuti sui dispositivi con iOS versione 10 o superiore. iOS consente la riproduzione automatica solo quando il volume è disattivato. Quando il volume è impostato su zero, l&#39;API imposta la proprietà `muted` del tag video su `true`, altrimenti la proprietà `muted` viene impostata su `false`. L&#39;API `play` avvia la riproduzione senza alcuna interazione da parte dell&#39;utente o alcun gesto dell&#39;utente.
-
-Per la riproduzione automatica su iPhone, imposta anche la proprietà `playsInline` del tag `video` su `true`.
+Per la riproduzione automatica su iPhone, imposta inoltre `playsInline` proprietà del `video` tag a `true`.
 
 ```
 videoDiv.getElementsByTagName('video')[0].playsInline = true;
@@ -23,5 +22,4 @@ videoDiv.getElementsByTagName('video')[0].playsInline = true;
 
 >[!NOTE]
 >
->L&#39;utilizzo della proprietà `playsInline` avvia la riproduzione senza la modalità a schermo intero.
-
+>Uso di `playsInline` avvia la riproduzione senza la modalità a schermo intero.

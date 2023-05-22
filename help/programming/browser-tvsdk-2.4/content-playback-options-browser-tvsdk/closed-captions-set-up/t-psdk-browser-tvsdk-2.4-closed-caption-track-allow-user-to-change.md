@@ -1,27 +1,26 @@
 ---
-description: Ecco un esempio di come un utente può selezionare una traccia a didascalia chiusa.
+description: Di seguito è riportato un esempio di come un utente può selezionare una traccia di sottotitoli.
 title: Consenti all'utente di modificare il brano
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 103ca0ad-2707-4e4f-87ee-f55041e4527a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '77'
 ht-degree: 0%
 
 ---
 
+# Consenti all&#39;utente di modificare il brano{#allow-the-user-to-change-the-track}
 
-# Consenti all&#39;utente di modificare la traccia{#allow-the-user-to-change-the-track}
+Di seguito è riportato un esempio di come un utente può selezionare una traccia di sottotitoli.
 
-Ecco un esempio di come un utente può selezionare una traccia a didascalia chiusa.
-
-1. Per visualizzare le tracce di didascalia chiusa disponibili, utilizzare la proprietà `MediaPlayerItem.closedCaptionsTracks` .
+1. Per visualizzare le tracce di sottotitoli codificati disponibili, utilizzare `MediaPlayerItem.closedCaptionsTracks` proprietà.
 
    ```js
    var tracks = item.closedCaptionsTracks;
    ```
 
-1. Per impostare la traccia dei sottotitoli codificati corrente, utilizzare il metodo `MediaPlayerItem.selectClosedCaptionsTrack` .
-1. Una volta preparato l&#39;elemento del lettore multimediale, recuperalo dal lettore multimediale utilizzando il metodo ` MediaPlayer.  currentItem ` .
+1. Per impostare la traccia con sottotitoli codificati corrente, utilizzare `MediaPlayerItem.selectClosedCaptionsTrack` metodo.
+1. Dopo aver preparato l’elemento del lettore multimediale, recuperalo dal lettore utilizzando ` MediaPlayer.  currentItem ` metodo.
 
    ```js
    // Select the cc track with index k. 
@@ -32,4 +31,3 @@ Ecco un esempio di come un utente può selezionare una traccia a didascalia chiu
        item.selectClosedCaptionsTrack(tracks[k]); 
    }
    ```
-

@@ -1,22 +1,21 @@
 ---
 description: È possibile utilizzare TimedMetadata quando il tempo di riproduzione corrente corrisponde all'ora di inizio.
-title: Utilizzare i metadati temporizzati
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Usa metadati temporizzati
+exl-id: 19375158-3647-4d6e-a2fb-6b06a2fd23c5
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '100'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
-
 
 # Usa metadati temporizzati{#use-timed-metadata}
 
 È possibile utilizzare TimedMetadata quando il tempo di riproduzione corrente corrisponde all&#39;ora di inizio.
 
-Per utilizzare questi oggetti salvati `PTTimedMetadata` durante la riproduzione, utilizzare il dizionario salvato da [Memorizzare gli oggetti con metadati temporizzati durante l&#39;invio](../../../tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-timed-metadata-store.md).
+Per utilizzare i file salvati `PTTimedMetadata` durante la riproduzione, utilizzare il dizionario salvato da [Archivia gli oggetti metadati temporizzati durante l’invio](../../../tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-timed-metadata-store.md).
 
-1. Estrai e aggiorna il tempo di riproduzione corrente da questa notifica e trova tutti gli oggetti `PTTimedMetadata` con orari di avvio che corrispondono al tempo di riproduzione corrente.
+1. Estrarre e aggiornare il tempo di riproduzione corrente da questa notifica e trovare tutte le `PTTimedMetadata` oggetti con orari di inizio corrispondenti al tempo di riproduzione corrente.
 
    È possibile utilizzare questi oggetti per completare varie azioni.
 
@@ -57,4 +56,4 @@ Per utilizzare questi oggetti salvati `PTTimedMetadata` durante la riproduzione,
    }
    ```
 
-1. Svuotare periodicamente le istanze obsolete `PTTimedMetadata` dall&#39;elenco per evitare che la memoria cresca continuamente.
+1. Svuotamento periodico non aggiornato `PTTimedMetadata` dall&#39;elenco per impedire che la memoria cresca continuamente.

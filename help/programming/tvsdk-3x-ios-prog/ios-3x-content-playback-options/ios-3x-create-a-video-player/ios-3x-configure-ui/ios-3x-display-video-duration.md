@@ -1,26 +1,26 @@
 ---
-description: È possibile visualizzare la durata del contenuto attualmente attivo.
+description: Puoi visualizzare la durata del contenuto attualmente attivo.
 title: Visualizza la durata del video
 exl-id: a41cb291-9355-44cf-80bb-9c3cf6628b81
 source-git-commit: 85818281390b68522da2663496be025acf8f8675
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '106'
 ht-degree: 0%
 
 ---
 
 # Visualizza la durata del video {#display-the-duration-of-the-video}
 
-È possibile visualizzare la durata del contenuto attualmente attivo.
+Puoi visualizzare la durata del contenuto attualmente attivo.
 
-Implementa una visualizzazione a durata video utilizzando il seguente codice di esempio:
+Implementa una visualizzazione della durata video utilizzando il seguente codice di esempio:
 
-La `PTMediaPlayer` proprietà, [searchkableRange](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTMediaPlayer.html#//api/name/seekableRange), contiene l&#39;intervallo di finestre ricercabili corrente:
+Il `PTMediaPlayer` proprietà, [seekableRange](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTMediaPlayer.html#//api/name/seekableRange), contiene l’intervallo di finestre attualmente ricercabili:
 
-* Per VOD, questo intervallo è l’intero intervallo di contenuti VOD, inclusi gli annunci.
-* Per le immagini live/lineari, questo intervallo rappresenta la finestra ricercabile.
+* Per VOD, questo intervallo corrisponde all’intero intervallo di contenuti VOD, inclusi gli annunci.
+* Per live/linear, questo intervallo rappresenta la finestra ricercabile.
 
-Per ulteriori informazioni sull’API, consulta [Guida di riferimento per l’API TVSDK 3.4 per iOS](https://help.adobe.com/en_US/primetime/api/psdk/appledoc_v3/index.html)
+Per ulteriori informazioni sull’API, consulta [Riferimento API di TVSDK 3.4 per iOS](https://help.adobe.com/en_US/primetime/api/psdk/appledoc_v3/index.html)
 
 <!--<a id="example_A153BE3AC03F43C6BF3A156316A08CD3"></a>-->
 

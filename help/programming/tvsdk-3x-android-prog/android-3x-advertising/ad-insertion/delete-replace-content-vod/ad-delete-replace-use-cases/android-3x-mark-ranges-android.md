@@ -1,24 +1,23 @@
 ---
-description: È possibile designare intervalli di tempo nel contenuto VOD come interruzioni pubblicitarie.
-title: Segna intervalli
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: È possibile designare gli intervalli di tempo nel contenuto VOD come interruzioni pubblicitarie.
+title: Contrassegna intervalli
+exl-id: 904d4d33-6421-44cf-8699-af59a0f7aa58
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '81'
 ht-degree: 0%
 
 ---
 
+# Contrassegna intervalli {#mark-ranges}
 
-# Segna intervalli {#mark-ranges}
+È possibile designare gli intervalli di tempo nel contenuto VOD come interruzioni pubblicitarie.
 
-È possibile designare intervalli di tempo nel contenuto VOD come interruzioni pubblicitarie.
-
-Il `TimeRanges` tra `begin` e `end` in `localTime` verrà contrassegnato come `AdBreak` nella timeline. Le altre impostazioni degli annunci vengono ignorate.
+Il `TimeRanges` tra `begin` e `end` in `localTime` sarà contrassegnato come `AdBreak` nella timeline. Altre impostazioni annuncio vengono ignorate.
 
 >[!TIP]
 >
->Se desideri contrassegnare solo alcuni intervalli nel contenuto come annunci, senza inserimento di annunci dinamici, crea un&#39;istanza `CustomRangeMetadata` e specifica il tipo come operazione `MARK` con gli intervalli personalizzati definiti.
+>Se desideri contrassegnare solo determinati intervalli nel contenuto come annunci, senza inserimento di annunci dinamici, crea un `CustomRangeMetadata` e specifica il tipo come `MARK` con gli intervalli personalizzati definiti.
 
 1. Tp contrassegna gli intervalli:
 

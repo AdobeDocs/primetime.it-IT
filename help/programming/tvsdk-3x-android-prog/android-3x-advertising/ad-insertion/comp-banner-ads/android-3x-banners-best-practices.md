@@ -1,31 +1,30 @@
 ---
-title: Best practice per annunci banner complementari
-description: Best practice per annunci banner complementari
+title: Best practice per gli annunci banner correlati
+description: Best practice per gli annunci banner correlati
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: e7d15916-9059-4993-a588-baf7d7ddc534
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '158'
 ht-degree: 0%
 
 ---
 
+# Best practice per gli annunci banner correlati {#best-practices-for-companion-banner-ads}
 
-# Best practice per annunci banner associati {#best-practices-for-companion-banner-ads}
+TVSDK supporta gli annunci banner correlati, ovvero gli annunci che accompagnano un annuncio lineare e che spesso rimangono sulla pagina al termine dell’annuncio lineare. L&#39;applicazione è responsabile della visualizzazione dei banner correlati forniti con un annuncio lineare.
 
-TVSDK supporta annunci per banner complementari, che sono annunci che accompagnano un annuncio lineare e spesso rimangono sulla pagina dopo la fine dell’annuncio lineare. La tua applicazione è responsabile della visualizzazione dei banner complementari che sono forniti con un annuncio lineare.
+Quando visualizzi gli annunci correlati, segui queste raccomandazioni:
 
-Quando si visualizzano gli annunci companion, attenersi alle seguenti raccomandazioni:
-
-* Tenta di presentare il numero di annunci banner di un annuncio video come si adatterà al layout del tuo giocatore.
-* Presenta un banner complementare solo se disponi di una posizione che corrisponde all’altezza e alla larghezza specificate dell’annuncio.
+* Tenta di presentare tutti gli annunci banner associati a un annuncio video che rientrano nel layout del lettore.
+* Presenta un banner correlato solo se la posizione corrisponde all’altezza e alla larghezza specificate per l’annuncio.
 
    >[!IMPORTANT]
    >
    >Non ridimensionare l’annuncio.
 
-* Inizia a presentare i banner associati il prima possibile dopo l’inizio dell’annuncio.
-* Non sovrapporre il contenitore principale annuncio/video con banner complementari.
-* È possibile visualizzare i banner complementari dopo la fine dell&#39;annuncio.
+* Inizia a presentare il banner o i banner correlati il prima possibile dopo l’inizio dell’annuncio.
+* Non sovrapporre il contenitore principale annuncio/video con i banner correlati.
+* Puoi visualizzare i banner associati al termine dell’annuncio.
 
-La pratica standard consiste nel visualizzare ogni banner associato fino a quando non si sostituisce l’annuncio.
+La procedura standard prevede la visualizzazione di ogni banner del partner fino a quando non si dispone di un sostituto per l’annuncio.

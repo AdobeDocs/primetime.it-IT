@@ -1,23 +1,22 @@
 ---
-description: Queste classi consentono di eseguire operazioni che influiscono sulla timeline.
-title: Classi delle operazioni Timeline
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Queste classi consentono di eseguire operazioni che influiscono sulla sequenza temporale.
+title: Classi delle operazioni della sequenza temporale
+exl-id: 56e4b745-c340-4986-a61b-d41d2156482e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 0%
 
 ---
 
+# Classi delle operazioni della sequenza temporale{#timeline-operations-classes}
 
-# Classi delle operazioni Timeline{#timeline-operations-classes}
+Queste classi consentono di eseguire operazioni che influiscono sulla sequenza temporale.
 
-Queste classi consentono di eseguire operazioni che influiscono sulla timeline.
-
-Pacchetto: [com.adobe.mediacore.timeline.operations](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/operations/package-detail.html)
+Pacchetto [com.adobe.mediacore.timeline.operations](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/operations/package-detail.html)
 
 | Nome | Descrizione |
 |---|---|
-| [AdBreakPlacement](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/operations/AdBreakPlacement.html) | Classe di operazione di posizionamento dell’interruzione dell’annuncio. |
-| [NopTimelineOperation](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/operations/NopTimelineOperation.html) | Classe che indica un funzionamento NOP sulla timeline. |
-| [TimelineOperation](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/operations/TimelineOperation.html) | Classe di base per tutte le operazioni che influiscono sulla timeline. |
+| [AdBreakPlacement](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/operations/AdBreakPlacement.html) | Classe dell’operazione di posizionamento dell’interruzione pubblicitaria. |
+| [OperazioneNopTimeline](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/operations/NopTimelineOperation.html) | Classe che indica un&#39;operazione NOP sulla timeline. |
+| [OperazioneTimeline](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/operations/TimelineOperation.html) | Classe di base per tutte le operazioni che influiscono sulla sequenza temporale. |

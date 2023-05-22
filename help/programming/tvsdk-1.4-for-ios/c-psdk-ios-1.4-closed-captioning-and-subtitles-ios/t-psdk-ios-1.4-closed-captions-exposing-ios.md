@@ -1,29 +1,28 @@
 ---
-description: Per rendere i sottotitoli codificati disponibili al lettore client, è necessario attivarli. L’utente può attivare o disattivare i sottotitoli codificati e selezionare la formattazione.
-title: Esporre sottotitoli codificati
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Per rendere i sottotitoli codificati disponibili per il lettore client, devi abilitarli. L’utente può attivare o disattivare i sottotitoli codificati e selezionare la formattazione.
+title: Mostra sottotitoli codificati
+exl-id: 57168c6e-a958-4a89-b22b-0c9f1cab3a49
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 0%
 
 ---
 
+# Mostra sottotitoli codificati {#expose-closed-captions}
 
-# Esporre sottotitoli codificati {#expose-closed-captions}
+Per rendere i sottotitoli codificati disponibili per il lettore client, devi abilitarli. L’utente può attivare o disattivare i sottotitoli codificati e selezionare la formattazione.
 
-Per rendere i sottotitoli codificati disponibili al lettore client, è necessario attivarli. L’utente può attivare o disattivare i sottotitoli codificati e selezionare la formattazione.
+Per esporre sottotitoli codificati:
 
-Per esporre i sottotitoli codificati:
+1. In entrata `PTMediaPlayer` oggetto, impostare `closedCaptionDisplayEnabled` proprietà.
 
-1. Nell&#39;oggetto `PTMediaPlayer`, impostare la proprietà `closedCaptionDisplayEnabled` .
-
-   Se l’utente ha abilitato le didascalie, in questo passaggio viene visualizzato il testo.
-
-   >[!NOTE]
-   >
-   >L’utente client attiva o disattiva i sottotitoli codificati utilizzando le impostazioni di accessibilità di iOS e queste impostazioni forniscono anche opzioni di formattazione.
+   Se l’utente ha abilitato i sottotitoli codificati, questo passaggio visualizza il testo.
 
    >[!NOTE]
    >
-   >`closedCaptionDisplayEnabled` è obsoleta. Utilizzare la proprietà `subtitlesOptions` di `PTMediaPlayerItem`. Per utilizzare i sottotitoli codificati, vedere [Esporre i sottotitoli](../../tvsdk-1.4-for-ios/c-psdk-ios-1.4-closed-captioning-and-subtitles-ios/t-psdk-ios-1.4-subtitles-exposing-ios.md) .
+   >L’utente client attiva o disattiva i sottotitoli codificati utilizzando le Impostazioni di accessibilità di iOS e queste impostazioni forniscono anche opzioni di formattazione.
+
+   >[!NOTE]
+   >
+   >`closedCaptionDisplayEnabled` è obsoleto. Utilizzare `subtitlesOptions` proprietà di `PTMediaPlayerItem`. Consulta [Esposizione sottotitoli](../../tvsdk-1.4-for-ios/c-psdk-ios-1.4-closed-captioning-and-subtitles-ios/t-psdk-ios-1.4-subtitles-exposing-ios.md) per utilizzare i sottotitoli.

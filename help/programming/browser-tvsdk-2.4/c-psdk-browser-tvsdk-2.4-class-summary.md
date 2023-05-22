@@ -1,17 +1,16 @@
 ---
-description: Puoi utilizzare l’API di Primetime Player per personalizzare il comportamento del lettore.
-title: Riepilogo delle classi di Primetime Player
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Puoi utilizzare l’API del lettore Primetime per personalizzare il comportamento del lettore.
+title: Riepilogo delle classi del lettore Primetime
+exl-id: c081df21-8b21-4604-abf5-fdbf9d92a046
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '63'
 ht-degree: 0%
 
 ---
 
-
 # Riepilogo delle classi del lettore Primetime {#primetime-player-classes-summary}
 
-Puoi utilizzare l’API di Primetime Player per personalizzare il comportamento del lettore.
+Puoi utilizzare l’API del lettore Primetime per personalizzare il comportamento del lettore.
 
-Per consultare la documentazione completa sull&#39;API per il browser TVSDK, vai a [Riferimenti API Adobe Primetime](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References).
+Per consultare la documentazione API completa per il browser TVSDK, vai al [Riferimenti API di Adobe Primetime](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References).

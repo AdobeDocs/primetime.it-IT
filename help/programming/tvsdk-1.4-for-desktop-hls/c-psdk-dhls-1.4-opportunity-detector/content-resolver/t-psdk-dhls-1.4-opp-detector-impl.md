@@ -1,29 +1,28 @@
 ---
 description: Puoi implementare i tuoi rilevatori di opportunità.
 title: Implementare un rilevatore di opportunità personalizzato
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: a3f6d6b3-4d5e-49bc-b8de-a1196305bbb4
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 0%
 
 ---
 
-
-# Implementa un rilevatore di opportunità personalizzato{#implement-a-custom-opportunity-detector}
+# Implementare un rilevatore di opportunità personalizzato{#implement-a-custom-opportunity-detector}
 
 Puoi implementare i tuoi rilevatori di opportunità.
 
-* Se il generatore di opportunità si basa su oggetti `TimedMetadata` associati al flusso multimediale corrente, deve estendere `SpliceOutOpportunityGenerator` o `TimedMetadataOpportunityGenerator`.
+* Se il generatore di opportunità si basa su `TimedMetadata` associati al flusso multimediale corrente, quindi deve estendere il `SpliceOutOpportunityGenerator` o `TimedMetadataOpportunityGenerator`.
 
 * Se il generatore di opportunità si basa su dati fuori banda forniti da un servizio esterno (ad esempio un CIS), deve estendere il `OpportunityGenerator`.
 
 1. Crea il generatore di opportunità personalizzato.
 
-       Se il generatore di opportunità personalizzato si basa su oggetti &quot;TimedMetadata&quot;, estendere l&#39;oggetto &quot;TimedMetadataOpportunityGenerator&quot; e ignorare questi metodi:
+       Se il generatore di opportunità personalizzato si basa su oggetti &quot;TimedMetadata&quot;, estendi &quot;TimedMetadataOpportunityGenerator&quot; ed esegui l’override di questi metodi:
    
-   * `doConfigure` - Questo metodo viene chiamato dopo la creazione dell&#39;elemento del lettore multimediale e fornisce al generatore di opportunità di creare un set iniziale di opportunità, se necessario
-   * `doProcess` - Questo metodo viene chiamato ogni volta che  `TimedMetadata` viene rilevato un nuovo metodo (ad esempio, per flussi live/lineari ogni volta che la playlist/aggiornamento del manifesto)
+   * `doConfigure` : questo metodo viene richiamato dopo la creazione dell’elemento del lettore multimediale e, se necessario, fornisce al generatore di opportunità la possibilità di creare un set iniziale di opportunità
+   * `doProcess` - Questo metodo viene chiamato ogni volta che si verifica una nuova `TimedMetadata` viene rilevato (ad esempio, per flussi live/lineari ogni volta che la playlist/manifesto si aggiorna)
 
    ```
    public class CustomOpportunityGenerator extends TimedMetadataOpportunityGenerator { 
@@ -47,7 +46,7 @@ Puoi implementare i tuoi rilevatori di opportunità.
    }
    ```
 
-1. Crea la content factory personalizzata, che utilizza il generatore di opportunità personalizzato.
+1. Crea il factory dei contenuti personalizzato, che utilizza il generatore di opportunità personalizzato.
 
    ```
    public class CustomContentFactory extends DefaultContentFactory { 
@@ -65,7 +64,7 @@ Puoi implementare i tuoi rilevatori di opportunità.
    }
    ```
 
-1. Registra il content factory personalizzato per il flusso multimediale da riprodurre.
+1. Registra il factory dei contenuti personalizzati per il flusso multimediale da riprodurre.
 
    ```
    var mediaPlayerItemConfig:MediaPlayerItemConfig = new DefaultMediaPlayerItemConfig(); 
@@ -74,4 +73,3 @@ Puoi implementare i tuoi rilevatori di opportunità.
    
    player.replaceCurrentResource(mediaResource, mediaPlayerItemConfig);
    ```
-

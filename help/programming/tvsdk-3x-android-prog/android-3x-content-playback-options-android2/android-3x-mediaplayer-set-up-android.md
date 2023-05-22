@@ -1,30 +1,29 @@
 ---
-description: TVSDK fornisce gli strumenti per creare un’applicazione di lettore video avanzata (il lettore Primetime) che è possibile integrare con altri componenti Primetime. Offre inoltre una serie di funzioni progettate per massimizzare la qualità di riproduzione video.
+description: TVSDK fornisce gli strumenti per creare un’applicazione video player avanzata (il lettore Primetime) che puoi integrare con altri componenti di Primetime. Offre inoltre una serie di funzioni progettate per ottimizzare la qualità della riproduzione video.
 title: Configurare il lettore multimediale
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 99fdc4c1-0c67-4de5-87a5-b42d76f43ae9
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 0%
 
 ---
 
-
 # Configurare il lettore multimediale {#set-up-the-media-player}
 
-TVSDK fornisce gli strumenti per creare un’applicazione di lettore video avanzata (il lettore Primetime) che è possibile integrare con altri componenti Primetime. Offre inoltre una serie di funzioni progettate per massimizzare la qualità di riproduzione video.
+TVSDK fornisce gli strumenti per creare un’applicazione video player avanzata (il lettore Primetime) che puoi integrare con altri componenti di Primetime. Offre inoltre una serie di funzioni progettate per ottimizzare la qualità della riproduzione video.
 
 <!--<a id="section_1FE83A68DE624F20B52C0959851F5699"></a>-->
 
-Creare un&#39;istanza di `MediaPlayer` e inserirne una visualizzazione in un layout di frame.
+Crea istanza di `MediaPlayer` e posizionare una visualizzazione in un layout di cornice.
 
-1. Creare un&#39;istanza `MediaPlayer` passando un oggetto `android.content.Context` al costruttore:
+1. Crea istanza `MediaPlayer`, passaggio di un `android.content.Context` oggetto al costruttore:
 
    ```java
    MediaPlayer mediaPlayer = new MediaPlayer(context);
    ```
 
-1. Fornire un layout di fotogramma ( `android.widget.FrameLayout`) per contenere un `ViewGroup` di `mediaPlayer`:
+1. Fornire un layout di frame ( `android.widget.FrameLayout`) per contenere una `ViewGroup` di `mediaPlayer`:
 
    ```java
    FrameLayout playerFrame = (FrameLayout) _viewGroup.findViewById(R.id.playerFrame);
@@ -32,7 +31,7 @@ Creare un&#39;istanza di `MediaPlayer` e inserirne una visualizzazione in un lay
 
    >[!NOTE]
    >
-   >Di seguito è riportato il frammento di codice da creare `_viewGroup`.
+   >Di seguito è riportato lo snippet di codice da creare `_viewGroup`.
 
    ```
    @Override 
@@ -44,7 +43,7 @@ Creare un&#39;istanza di `MediaPlayer` e inserirne una visualizzazione in un lay
     }
    ```
 
-1. Posizionate una vista di `mediaPlayer` all&#39;interno del layout del fotogramma:
+1. Posiziona una visualizzazione di `mediaPlayer` all&#39;interno del layout del frame:
 
    ```java
    playerFrame.addView(mediaPlayer.getView());
@@ -52,4 +51,4 @@ Creare un&#39;istanza di `MediaPlayer` e inserirne una visualizzazione in un lay
 
    >[!NOTE]
    >
-   >L’istanza `MediaPlayer` ( `mediaPlayer`) è ora disponibile e configurata correttamente per visualizzare il contenuto video sullo schermo del dispositivo.
+   >Il `MediaPlayer` istanza ( `mediaPlayer`) è ora disponibile e configurato correttamente per visualizzare il contenuto video sullo schermo del dispositivo.

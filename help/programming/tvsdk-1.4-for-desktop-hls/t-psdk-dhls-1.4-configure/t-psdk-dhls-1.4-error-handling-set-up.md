@@ -1,26 +1,25 @@
 ---
 description: Imposta un'unica posizione per gestire gli errori.
 title: Configurare la gestione degli errori
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ce4a2954-0166-43af-afdf-0aa24659f1ae
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '99'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
-
-# Imposta la gestione degli errori{#set-up-error-handling}
+# Configurare la gestione degli errori{#set-up-error-handling}
 
 Imposta un&#39;unica posizione per gestire gli errori.
 
-1. Implementa una funzione di callback di un evento per `MediaPlayerStatusChangeEvent.STATUS_CHANGED`.
+1. Implementare una funzione di callback dell’evento per `MediaPlayerStatusChangeEvent.STATUS_CHANGED`.
 
-   TVSDK trasmette le informazioni sull’evento, ad esempio un oggetto `MediaPlayerStatusChangeEvent` .
-1. Nel callback, quando lo stato del parametro dell&#39;evento è `MediaPlayerStatus.ERROR`, fornisci logica per gestire tutti gli errori.
-1. Dopo aver gestito l&#39;errore, reimpostare l&#39;oggetto `MediaPlayer` o caricare una nuova risorsa multimediale.
+   TVSDK trasmette le informazioni sull’evento, ad esempio `MediaPlayerStatusChangeEvent` oggetto.
+1. Nel callback, quando lo stato dal parametro evento è `MediaPlayerStatus.ERROR`, forniscono logica per gestire tutti gli errori.
+1. Dopo aver gestito l’errore, reimposta il `MediaPlayer` o carica una nuova risorsa multimediale.
 
-   Quando l&#39;oggetto `MediaPlayer` si trova nello stato ERROR, non può uscire da questo stato finché non si reimposta l&#39;oggetto `MediaPlayer` (tramite il metodo `MediaPlayer.reset`) o si carica una nuova risorsa multimediale ( `MediaPlayer.replaceCurrentItem`).
+   Quando `MediaPlayer` l&#39;oggetto è nello stato ERROR, non può uscire da questo stato finché non viene reimpostato `MediaPlayer` oggetto (tramite `MediaPlayer.reset` o carica una nuova risorsa multimediale ( `MediaPlayer.replaceCurrentItem`).
 
 <!--<a id="example_49FF225E92EA494AA06B2E5F26101F4C"></a>-->
 
@@ -37,4 +36,3 @@ private void onStatusChanged(event:MediaPlayerStatusChangeEvent):void {
     } 
 } 
 ```
-

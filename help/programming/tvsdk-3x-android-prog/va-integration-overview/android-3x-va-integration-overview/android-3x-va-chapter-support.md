@@ -2,26 +2,25 @@
 title: Implementare il supporto per i capitoli
 description: Implementare il supporto per i capitoli
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 2db335b3-1d9b-4339-b1b6-e12ee0f06566
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '60'
 ht-degree: 0%
 
 ---
 
-
 # Implementare il supporto per i capitoli {#implement-chapter-support}
 
-È possibile definire e tenere traccia dei capitoli *personalizzati* per il tracciamento video nelle applicazioni basate su TVSDK.
+Puoi definire e tenere traccia di *personalizzato* capitoli per il tracciamento video nelle applicazioni basate su TVSDK.
 
-I capitoli personalizzati sono gestiti dall&#39;applicazione e si basano sui dati CMS o su un altro modo che l&#39;applicazione utilizza per definire i capitoli.
+I capitoli personalizzati vengono gestiti dall’applicazione e sono basati sui dati CMS o su un altro modo utilizzato dall’applicazione per definire i capitoli.
 
 >[!CAUTION]
 >
 >I capitoli predefiniti non sono supportati in Android TVSDK 3.0.
 
-Definire e tenere traccia dei capitoli personalizzati.
+Definisci e tieni traccia dei capitoli personalizzati.
 
 ```java
 // First, enable chapter tracking by setting   

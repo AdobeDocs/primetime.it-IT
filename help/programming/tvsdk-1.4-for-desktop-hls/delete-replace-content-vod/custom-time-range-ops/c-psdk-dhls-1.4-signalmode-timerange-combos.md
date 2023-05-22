@@ -2,14 +2,13 @@
 title: Modalità di segnalazione e intervallo di tempo
 description: Modalità di segnalazione e intervallo di tempo
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ccaf345f-63f2-42f1-8558-65c7e0dffa89
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 0%
 
 ---
-
 
 # Modalità di segnalazione e intervallo di tempo {#signaling-mode-and-time-range}
 
@@ -17,14 +16,14 @@ ht-degree: 0%
  <thead> 
   <tr> 
    <th class="entry"> </th> 
-   <th class="entry"> MARCHIO </th> 
+   <th class="entry"> CONTRASSEGNA </th> 
    <th class="entry"> DELETE </th> 
-   <th class="entry"> SOSTITUIRE </th> 
+   <th class="entry"> SOSTITUISCI </th> 
   </tr> 
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> Generatore di opportunità CustomRange  </span> </td> 
+   <td> <span class="codeph"> Generatore opportunità intervallo personalizzato </span> </td> 
    <td> 
     <code>
       (range.begin,&nbsp; 
@@ -43,7 +42,7 @@ ht-degree: 0%
     </code> </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Modalità  </span> di segnalazione di ServerMap </td> 
+   <td> <span class="codeph"> ServerMap </span> Modalità di segnalazione </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -63,10 +62,10 @@ ht-degree: 0%
      &nbsp;&nbsp;&nbsp;&nbsp;range.end&nbsp;-&nbsp;range.begin,&nbsp; 
      &nbsp;&nbsp;&nbsp;&nbsp;PlacementMode.DELETE&nbsp;); 
     </code> </td> 
-   <td> N/D (modalità automatica di segnalazione CustomRange) </td> 
+   <td> N/D (modalità di segnalazione automatica CustomRange) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Modalità di  </span> segnalazione ManifestCue </td> 
+   <td> <span class="codeph"> ManifestCue </span> Modalità di segnalazione </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -87,10 +86,10 @@ ht-degree: 0%
      &nbsp;&nbsp;&nbsp;&nbsp;PlacementMode.DELETE 
      ); 
     </code> </td> 
-   <td> N/D (modalità automatica di segnalazione CustomRange) </td> 
+   <td> N/D (modalità di segnalazione automatica CustomRange) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Modalità  </span> di segnalazione CustomRange </td> 
+   <td> <span class="codeph"> CustomRange </span> Modalità di segnalazione </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -136,14 +135,14 @@ ht-degree: 0%
  <thead> 
   <tr> 
    <th class="entry"> </th> 
-   <th class="entry"> MARCHIO </th> 
+   <th class="entry"> CONTRASSEGNA </th> 
    <th class="entry"> DELETE </th> 
-   <th class="entry"> SOSTITUIRE </th> 
+   <th class="entry"> SOSTITUISCI </th> 
   </tr> 
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> Generatore di opportunità in modalità AdSignaling  </span> </td> 
+   <td> <span class="codeph"> AdSignalingMode OpportunityGenerator </span> </td> 
    <td> 
     <code>
       (range.begin,&nbsp; 
@@ -162,8 +161,8 @@ ht-degree: 0%
     </code> </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Modalità  </span> di segnalazione di SeverMap </td> 
-   <td> Non presente (e viene disattivato). </td> 
+   <td> <span class="codeph"> ServerMap </span> Modalità di segnalazione </td> 
+   <td> Non presente (annuncio disabilitato). </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -173,11 +172,11 @@ ht-degree: 0%
      Placement.UNKNOWN_DURATION, 
      PlacementMode.DEFAULT); 
     </code> </td> 
-   <td> N/A (modalità di segnalazione automatica <span class="codeph"> CustomRange </span>) </td> 
+   <td> N/D (automatico <span class="codeph"> CustomRange </span> modalità di segnalazione) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Modalità di  </span> segnalazione ManifestCue </td> 
-   <td> Non presente (e viene disattivato). </td> 
+   <td> <span class="codeph"> ManifestCue </span> Modalità di segnalazione </td> 
+   <td> Non presente (annuncio disabilitato). </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -187,13 +186,13 @@ ht-degree: 0%
      Placement.UNKNOWN_DURATION, 
      PlacementMode.DEFAULT); 
     </code> </td> 
-   <td> N/A (modalità di segnalazione automatica <span class="codeph"> CustomRange </span>) </td> 
+   <td> N/D (automatico <span class="codeph"> CustomRange </span> modalità di segnalazione) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Modalità  </span> di segnalazione CustomRange </td> 
-   <td> Non presente (e viene disattivato). </td> 
+   <td> <span class="codeph"> CustomRange </span> Modalità di segnalazione </td> 
+   <td> Non presente (annuncio disabilitato). </td> 
    <td> Nessuno </td> 
-   <td> Nessuno (occupato in <span class="codeph"> CustomRangeOpportunityGenerator </span>) </td> 
+   <td> Nessuno (gestito in <span class="codeph"> CustomRangeOpportunityGenerator </span>) </td> 
   </tr> 
  </tbody> 
 </table>

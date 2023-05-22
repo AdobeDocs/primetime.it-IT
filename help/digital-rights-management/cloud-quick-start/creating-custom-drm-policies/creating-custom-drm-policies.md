@@ -2,38 +2,37 @@
 title: Creare criteri DRM personalizzati (facoltativo)
 description: Creare criteri DRM personalizzati (facoltativo)
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: a74f60b1-96a0-4fc4-bbf2-5db78f343562
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 0%
 
 ---
 
+# Creare criteri DRM personalizzati (facoltativo){#create-custom-drm-policies-optional}
 
-# Crea criteri DRM personalizzati (facoltativo){#create-custom-drm-policies-optional}
-
-Il kit di protezione DRM di Primetime Cloud include alcuni criteri preconfigurati che possono essere utilizzati durante il packaging. Se desideri configurazioni di criteri aggiuntive, ad esempio un diritto di elenco Consentiti da SWF specifico, è possibile utilizzare Gestione criteri DRM di Primetime incluso per generare criteri personalizzati.
+Il kit di protezione DRM per Primetime Cloud viene fornito con alcuni criteri preconfigurati che possono essere utilizzati durante la creazione dei pacchetti. Se si desiderano configurazioni di criteri aggiuntive, ad esempio un diritto specifico per l’inserimento nell’elenco Consentiti da SWF, è possibile utilizzare Gestione criteri DRM Primetime incluso per generare criteri personalizzati.
 
 >[!NOTE]
 >
->Tutti i criteri devono utilizzare l’autenticazione ANONYMOUS (non Password nome utente o Personalizzato), indipendentemente dal fatto che venga utilizzato o meno il flusso di lavoro di autenticazione/adesione personalizzata.
+>Tutti i criteri devono utilizzare l’autenticazione ANONIMA (non Password nome utente o Personalizzata), indipendentemente dal fatto che venga utilizzato o meno il flusso di lavoro Autenticazione/Autorizzazione personalizzata.
 
-Incluso in Policy Manager è il file di configurazione [!DNL flashaccesstools.properties] che è stato modificato per esporre solo le opzioni di criteri configurabili supportate da Primetime Cloud DRM Service. L’impostazione delle opzioni dei criteri non supportate dal servizio DRM di Primetime Cloud genererà errori di acquisizione della licenza. Per informazioni sull&#39;utilizzo di Gestione criteri DRM di Primetime, fare riferimento a: [Implementazioni di riferimento DRM di Primetime: Policy Manager](https://help.adobe.com/en_US/primetime/drm/5.3/reference_implementations/index.html#concept-DRM_Policy_Manager).
+Con Policy Manager è incluso [!DNL flashaccesstools.properties] file di configurazione, che è stato modificato per esporre solo le opzioni di policy configurabili supportate dal servizio DRM di Primetime Cloud. Se si impostano opzioni dei criteri non supportate dal servizio DRM di Primetime Cloud, si verificheranno errori di acquisizione della licenza. Per informazioni sull&#39;utilizzo di Primetime DRM Policy Manager, vedere: [Implementazioni di riferimento di Primetime DRM: Policy Manager](https://help.adobe.com/en_US/primetime/drm/5.3/reference_implementations/index.html#concept-DRM_Policy_Manager).
 
-Per creare un nuovo criterio, aggiorna il file [!DNL flashaccesstools.properties] come desiderato, quindi utilizza il comando :
+Per creare un nuovo criterio, aggiorna il [!DNL flashaccesstools.properties] file come desiderato, quindi utilizzare il comando:
 
 ```
 java -jar libs/AdobePolicyManager.jar new myPolicy.pol
 ```
 
-## Crea i criteri in modo dinamico per Autorizzazione personalizzata{#create-policies-dynamically-for-custom-auth-entitlement}
+## Creazione dinamica di criteri per autenticazione/adesione personalizzata{#create-policies-dynamically-for-custom-auth-entitlement}
 
-Se utilizzi l’autenticazione/autorizzazione personalizzata DRM di Primetime Cloud e desideri creare in modo dinamico un nuovo criterio DRM per ogni richiesta di licenza (invece di estrarre i criteri da un pool pregenerato), Adobe consiglia di utilizzare direttamente l’SDK Java DRM di Primetime. L&#39;utilizzo diretto dell&#39;SDK Java è più veloce dello strumento [!DNL AdobePolicyManager.jar] , che emette automaticamente il file dei criteri su disco, con conseguente sovraccarico di I/O del disco.
+Se si utilizza l&#39;autenticazione/titolazione personalizzata DRM di Primetime Cloud e si desidera creare in modo dinamico un nuovo criterio DRM per ogni richiesta di licenza (anziché richiamare i criteri da un pool pregenerato), l&#39;Adobe consiglia di utilizzare direttamente l&#39;SDK Java DRM di Primetime. L’utilizzo diretto dell’SDK Java è più veloce della [!DNL AdobePolicyManager.jar] che invia automaticamente il file della policy su disco, causando sovraccarico di I/O del disco.
 
-Il codice di esempio che utilizza l&#39;SDK Java si trova nella directory [!DNL /Primetime DRM PolicyManager/sampleCode/], denominata [!DNL CreatePolicy.java] e [!DNL CreatePolicyWithOutputProtection.java]. Javadocs e documentazione per l&#39;SDK Java sono disponibili in [Una panoramica dell&#39;SDK DRM di Adobe Primetime](../../../digital-rights-management/drm-sdk-overview/overview.md)
+Il codice di esempio che utilizza l’SDK Java è disponibile nella sezione [!DNL /Primetime DRM PolicyManager/sampleCode/] directory, denominata [!DNL CreatePolicy.java] e [!DNL CreatePolicyWithOutputProtection.java]. JavaScript e la documentazione per l’SDK Java sono disponibili all’indirizzo [Panoramica dell’SDK Adobe Primetime DRM](../../../digital-rights-management/drm-sdk-overview/overview.md)
 
-Per generare ed eseguire i campioni, copia i file .java nella cartella ../libs/ ed esegui:
+Per generare ed eseguire gli esempi, copia i file .java nella cartella ../libs/ ed esegui:
 
 ```
 javac -cp adobe-flashaccess-sdk.jar:. CreatePolicy.java

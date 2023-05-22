@@ -1,36 +1,35 @@
 ---
-description: È possibile controllare la posizione e le dimensioni della visualizzazione video utilizzando l'oggetto MediaPlayerView .
-title: Controllare la posizione e le dimensioni della visualizzazione video
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: È possibile controllare la posizione e le dimensioni della visualizzazione video utilizzando l'oggetto MediaPlayerView.
+title: Controlla la posizione e le dimensioni della visualizzazione video
+exl-id: ab88a90f-4493-4f05-8da0-703ab3cf159e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 0%
 
 ---
 
+# Controlla la posizione e le dimensioni della visualizzazione video{#control-the-position-and-size-of-the-video-view}
 
-# Controllare la posizione e le dimensioni della visualizzazione video{#control-the-position-and-size-of-the-video-view}
+È possibile controllare la posizione e le dimensioni della visualizzazione video utilizzando l&#39;oggetto MediaPlayerView.
 
-È possibile controllare la posizione e le dimensioni della visualizzazione video utilizzando l&#39;oggetto MediaPlayerView .
+Per impostazione predefinita, il browser TVSDK tenta di mantenere le proporzioni della visualizzazione video ogni volta che la dimensione o la posizione del video cambia a causa di una modifica apportata dall’applicazione, da un interruttore di profilo, da un interruttore di contenuto e così via.
 
-Il browser TVSDK per impostazione predefinita tenta di mantenere le proporzioni della visualizzazione video ogni volta che le dimensioni o la posizione del video vengono modificate a causa di una modifica apportata dall’applicazione, di un interruttore di profilo, di un interruttore di contenuto e così via.
-
-È possibile ignorare il comportamento predefinito delle proporzioni specificando un diverso *criterio di scalabilità*. Specificare il criterio di scalabilità utilizzando la proprietà `scalePolicy` dell&#39;oggetto `MediaPlayerView`. Il criterio di scalabilità predefinito di `MediaPlayerView` viene impostato con un&#39;istanza della classe `MaintainAspectRatioScalePolicy`. Per reimpostare il criterio di scalabilità, sostituisci l’istanza predefinita di `MaintainAspectRatioScalePolicy` su `MediaPlayerView.scalePolicy` con il tuo criterio.
+È possibile ignorare il comportamento predefinito delle proporzioni specificando un *criteri di scalabilità*. Specificare il criterio di scalabilità utilizzando `MediaPlayerView` dell&#39;oggetto `scalePolicy` proprietà. Criterio di scala predefinito di `MediaPlayerView` è impostato con un&#39;istanza di `MaintainAspectRatioScalePolicy` classe. Per reimpostare il criterio di scalabilità, sostituire l&#39;istanza predefinita di `MaintainAspectRatioScalePolicy` il `MediaPlayerView.scalePolicy` con la tua politica.
 
 >[!IMPORTANT]
 >
->Non è possibile impostare la proprietà `scalePolicy` su un valore null.
+>Impossibile impostare `scalePolicy` su un valore null.
 
-## Scenari di fallback non Flash {#non-flash-fallback-scenarios}
+## Scenari di fallback non di Flash {#non-flash-fallback-scenarios}
 
-In scenari di fallback non Flash, affinché il criterio di scalabilità funzioni correttamente, l’elemento div video fornito nel costruttore `View` deve restituire valori diversi da zero per `offsetWidth` e `offsetHeight`. Per fornire un esempio di funzione errata, a volte quando la larghezza e l’altezza degli elementi div del video non sono impostate esplicitamente in css, il costruttore `View` restituisce zero per `offsetWidth` o `offsetHeight`.
+In scenari di fallback non di Flash, affinché i criteri di scala funzionino correttamente, l’elemento div video fornito in `View` il costruttore deve restituire valori diversi da zero per `offsetWidth` e `offsetHeight`. Per fare un esempio di funzione non corretta, a volte quando la larghezza e l&#39;altezza degli elementi div video non sono impostate esplicitamente in css, allora il `View` costruttore restituisce zero per `offsetWidth` o `offsetHeight`.
 
 >[!NOTE]
 >
->Il supporto di CustomScalePolicy è limitato per alcuni browser, in particolare IE, Edge e Safari 9. Per questi browser, le proporzioni native del video non possono essere modificate. Tuttavia, la posizione e le dimensioni del video saranno applicate in base alla politica di scala.
+>CustomScalePolicy dispone di supporto limitato per alcuni browser, in particolare IE, Edge e Safari 9. Per questi browser, le proporzioni native del video non possono essere modificate. Tuttavia, la posizione e le dimensioni del video verranno applicate in base alla politica di scala.
 
-1. Implementa l&#39;interfaccia `MediaPlayerViewScalePolicy` per creare criteri di scalabilità personalizzati.
+1. Implementare `MediaPlayerViewScalePolicy` per creare criteri di scalabilità personalizzati.
 
    Il `MediaPlayerViewScalePolicy` dispone di un metodo:
 
@@ -64,14 +63,14 @@ In scenari di fallback non Flash, affinché il criterio di scalabilità funzioni
    };
    ```
 
-1. Assegna l&#39;implementazione alla proprietà `MediaPlayerView` .
+1. Assegna l’implementazione a `MediaPlayerView` proprietà.
 
    ```js
    var view = new AdobePSDK.MediaPlayerView(videoDiv); 
    view.scalePolicy= new MediaPlayerViewCustomScalePolicy();
    ```
 
-1. Aggiungi la visualizzazione alla proprietà `view` di Media Player.
+1. Aggiungere la visualizzazione al lettore multimediale `view` proprietà.
 
    ```
    mediaplayer.view = view;
@@ -79,7 +78,7 @@ In scenari di fallback non Flash, affinché il criterio di scalabilità funzioni
 
 <!--<a id="example_ABCD79AE29DB4A668F9A8B729FE44AF9"></a>-->
 
-**Ad esempio: Adatta il video a tutto il video, senza mantenere le proporzioni:**
+**Ad esempio: ridimensiona il video per riempire l’intera visualizzazione video, senza mantenere le proporzioni:**
 
 ```
 /** 
@@ -102,4 +101,3 @@ var view = new AdobePSDK.MediaPlayerView(videoDiv);
 view.scalePolicy = new MediaPlayerViewCustomScalePolicy (); 
 mediaPlayer.view = view;
 ```
-

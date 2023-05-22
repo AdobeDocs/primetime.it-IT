@@ -1,51 +1,51 @@
 ---
 title: Appendice B "Suggerimenti per il debug"
 description: Appendice B "Suggerimenti per il debug"
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: ea024797-315e-47c0-99ea-1ac49c8c9697
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 0%
 
 ---
 
-
-# Appendice B: Suggerimenti per il debug {#appendix-b-debugging-tips}
+# Appendice B: suggerimenti per il debug {#appendix-b-debugging-tips}
 
 >[!NOTE]
 >
->Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente a partire da Adobe. Non è consentito alcun uso non autorizzato.
+>Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente di Adobe. Non è consentito alcun uso non autorizzato.
 
 
 ## Cancellazione dei dati temporanei {#clearing-temporary-data}
 
-L’autenticazione Adobe Primetime memorizza dati temporanei quali la cache del browser, la cache degli LSO e i cookie. La cancellazione dei dati temporanei è importante, per assicurarti di ottenere una lavagna pulita durante il test.
+L’autenticazione di Adobe Primetime memorizza dati temporanei come la cache del browser, la cache degli LSO e i cookie. La cancellazione dei dati temporanei è importante, per essere certi di ottenere un’area di lavoro pulita durante il test.
 
-- [Cancellazione della cache del browser e dei cookie](#clearing-the-browser-cache-and-cookies)
-- [Cancellazione della cache degli LSO](#clearing-lsos-cache)\
+- [Cancellazione della cache e dei cookie del browser](#clearing-the-browser-cache-and-cookies)
+- [Cancellazione cache LSO](#clearing-lsos-cache)\
     
 
-## Cancellazione della cache del browser e dei cookie {#clearing-the-browser-cache-and-cookies}
+## Cancellazione della cache e dei cookie del browser {#clearing-the-browser-cache-and-cookies}
 
-È affidabile per il browser, ma in Firefox: &quot;Strumenti&quot; -\> &quot;Cancella cronologia recente..&quot; -\> Su &quot;Intervallo di tempo da cancellare:&quot; selezionare &quot;Tutto&quot;; e su &quot;Dettagli&quot;: controlla &quot;Cookies&quot; e &quot;Cache&quot; -\> Fai clic su &quot;Cancella ora&quot;.\
+È affidabile dal browser, ma in Firefox: &quot;Tools&quot; -\> &quot;Clear Recent History...&quot; -\> On &quot;Time range to clear:&quot; seleziona &quot;Everything&quot;; and on &quot;Details&quot;: check the &quot;Cookies&quot; and &quot;Cache&quot; -\> Fai clic su &quot;Clear Now&quot; (Cancella ora).\
  
 
-## Cancellazione della cache degli LSO {#clearing-lsos-cache}
+## Cancellazione cache LSO {#clearing-lsos-cache}
 
-Accedere al [Guida del Flash Player](http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager07.html).
+Accedere a [Guida del Flash Player](http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager07.html).
 
 Seleziona la ```entitlement.\*``` (a seconda di ciò che viene testato) e fare clic su &quot;Elimina sito Web&quot;.\
  
 
 ## Strumenti di debug {#tools}
 
-Gli ingegneri di autenticazione di Adobe Primetime utilizzano i seguenti strumenti di debug:
+I tecnici dell’autenticazione di Adobe Primetime utilizzano i seguenti strumenti di debug:
 
 - Firebug - <http://www.getfirebug.com/>
-- Flashbug (funziona con la versione di debug del flash player) <https://addons.mozilla.org/en-US/firefox/addon/14465/>
+- Flashbug (funziona con la versione di debug di Flash Player) <https://addons.mozilla.org/en-US/firefox/addon/14465/>
 - Intestazioni http live - <https://addons.mozilla.org/en-US/firefox/addon/3829/>
-- Fiddler - <http://www.fiddler2.com/fiddler2/>
-- Charles - <http://www.charlesproxy.com/>
-- Wireshark - <http://www.wireshark.org/>
+- Filtro - <http://www.fiddler2.com/fiddler2/>
+- Charles <http://www.charlesproxy.com/>
+- Wireshark <http://www.wireshark.org/>
 
 
 <!--

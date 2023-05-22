@@ -1,18 +1,17 @@
 ---
-description: Se utilizzi la configurazione predefinita, non è necessario eseguire altre operazioni per abilitare o configurare la fatturazione. Se hai ottenuto diversi parametri di configurazione dal tuo rappresentante di abilitazione Adobe, utilizza la classe BillingMetricsConfiguration per impostare questi parametri prima di inizializzare il lettore multimediale.
+description: Se utilizzi la configurazione predefinita, non c’è altro da fare per abilitare o configurare la fatturazione. Se hai ottenuto parametri di configurazione diversi dal rappresentante Adobe Enablement, utilizza la classe BillingMetricsConfiguration per impostare questi parametri prima di inizializzare il lettore multimediale.
 title: Configurare le metriche di fatturazione
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: b49b64eb-682b-420f-9681-6e77cdb02c23
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 0%
 
 ---
 
-
 # Configurare le metriche di fatturazione {#configure-billing-metrics}
 
-Se utilizzi la configurazione predefinita, non è necessario eseguire altre operazioni per abilitare o configurare la fatturazione. Se hai ottenuto diversi parametri di configurazione dal tuo rappresentante di abilitazione Adobe, utilizza la classe BillingMetricsConfiguration per impostare questi parametri prima di inizializzare il lettore multimediale.
+Se utilizzi la configurazione predefinita, non c’è altro da fare per abilitare o configurare la fatturazione. Se hai ottenuto parametri di configurazione diversi dal rappresentante Adobe Enablement, utilizza la classe BillingMetricsConfiguration per impostare questi parametri prima di inizializzare il lettore multimediale.
 
 >[!TIP]
 >
@@ -24,7 +23,7 @@ Se utilizzi la configurazione predefinita, non è necessario eseguire altre oper
 
 Per configurare le metriche di fatturazione:
 
-1. Immetti il seguente codice di esempio.
+1. Inserire il codice di esempio seguente.
 
    ```java
    MediaPlayerItemConfig config = new MediaPlayerItemConfig(); 
@@ -36,4 +35,3 @@ Per configurare le metriche di fatturazione:
    config.setBillingMetricsConfiguration(billingConfig); 
    mediaPlayer.replaceCurrentResource(mediaResource, config);
    ```
-

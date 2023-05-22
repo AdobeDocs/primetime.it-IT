@@ -1,20 +1,19 @@
 ---
 description: Il codice può richiedere una chiave tramite DRMManager.
-title: Flusso di lavoro della richiesta chiave su HTML5 TVSDK
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Flusso di lavoro delle richieste chiave in HTML5 TVSDK
+exl-id: 1f60aadc-4730-4f71-a221-1af3ae3cba93
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '106'
 ht-degree: 0%
 
 ---
 
-
-# Flusso di lavoro della richiesta chiave su HTML5 TVSDK{#key-request-workflow-on-html-tvsdk}
+# Flusso di lavoro delle richieste chiave in HTML5 TVSDK{#key-request-workflow-on-html-tvsdk}
 
 Il codice può richiedere una chiave tramite DRMManager.
 
-Il browser TVSDK espone anche un&#39;API setProtectionData tramite l&#39;oggetto DRMManager:
+Il browser TVSDK espone inoltre un’API setProtectionData tramite l’oggetto DRMManager:
 
 ```
 [  /** 
@@ -31,9 +30,9 @@ license acquisition. </p>
    setProtectionData: function(protectionData) 
 ```
 
-Il codice deve chiamare questa API prima di avviare la riproduzione del contenuto nel modo normale. MediaPlayer.vo.protection.ProtectionData è documentato qui: [https://vm2.dashif.org/dash.js/docs/jsdocs/MediaPlayer.vo.protection.ProtectionData.html](https://vm2.dashif.org/dash.js/docs/jsdocs/MediaPlayer.vo.protection.ProtectionData.html)
+Il codice dovrebbe chiamare questa API prima di avviare la riproduzione del contenuto nel modo normale. MediaPlayer.vo.protection.ProtectionData è documentato qui: [https://vm2.dashif.org/dash.js/docs/jsdocs/MediaPlayer.vo.protection.ProtectionData.html](https://vm2.dashif.org/dash.js/docs/jsdocs/MediaPlayer.vo.protection.ProtectionData.html)
 
-Di seguito è riportato un esempio di oggetto dati di protezione con URL del server licenze per PlayReady e Widevine.
+Di seguito è riportato un oggetto dati di protezione di esempio con URL del server licenze sia per PlayReady che per Widevine.
 
 ```
 var protectionData = { 

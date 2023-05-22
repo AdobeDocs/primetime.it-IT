@@ -1,27 +1,26 @@
 ---
-description: È possibile specificare se consentire la riproduzione prima che tutti gli annunci vengano caricati e inseriti nella timeline. La riproduzione viene avviata in modo da consentire a un visualizzatore di accedere più rapidamente al contenuto principale. Questa funzione è applicabile solo per il DVR live e non funziona, ad esempio, su VOD assets.
-title: Abilita il caricamento lento degli annunci
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Puoi specificare se consentire la riproduzione prima che tutti gli annunci vengano caricati e posizionati nella timeline. Avviando la riproduzione in questo modo, l’utente può accedere più rapidamente al contenuto principale. Questa funzione è applicabile solo ai DVR live e non funziona, ad esempio, con le risorse VOD.
+title: Attiva il caricamento lento degli annunci
+exl-id: 6b70a7ae-28ce-4a19-9560-26e937c721cd
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 0%
 
 ---
 
+# Attiva il caricamento lento degli annunci{#enable-lazy-ad-loading}
 
-# Abilita il caricamento lento degli annunci{#enable-lazy-ad-loading}
-
-È possibile specificare se consentire la riproduzione prima che tutti gli annunci vengano caricati e inseriti nella timeline. La riproduzione viene avviata in modo da consentire a un visualizzatore di accedere più rapidamente al contenuto principale. Questa funzione è applicabile solo per il DVR live e non funziona, ad esempio, su VOD assets.
+Puoi specificare se consentire la riproduzione prima che tutti gli annunci vengano caricati e posizionati nella timeline. Avviando la riproduzione in questo modo, l’utente può accedere più rapidamente al contenuto principale. Questa funzione è applicabile solo ai DVR live e non funziona, ad esempio, con le risorse VOD.
 
 1. Utilizzare la proprietà booleana `delayAdLoading` in `AdvertisingMetadata`.
 
-   * Se false, TVSDK attende che tutti gli annunci vengano risolti e inseriti prima di passare allo stato PREPARED. È false per impostazione predefinita.
-   * Se true, TVSDK risolve solo gli annunci e le transizioni iniziali allo stato PREPARATO. Gli annunci rimanenti vengono risolti e inseriti durante la riproduzione.
+   * Se è false, TVSDK attende che tutti gli annunci siano risolti e posizionati prima di passare allo stato PREPARATO. È false per impostazione predefinita.
+   * Se è true, TVSDK risolve solo gli annunci iniziali e le transizioni nello stato PREPARATO. Gli annunci rimanenti vengono risolti e posizionati durante la riproduzione.
 
-1. Per attivare anche il caricamento ritardato degli annunci con Adobe Primetime ad decision, imposta questo su `true` quando crei `AuditudeSettings`.
+1. Per attivare anche il caricamento ritardato degli annunci con Adobe Primetime ad decisioning, imposta questo su `true` quando si crea `AuditudeSettings`.
 
-   La classe `AuditudeSettings` eredita questa proprietà da `AdvertisingMetadata`, ma non eredita il valore corrente.
+   Il `AuditudeSettings` la classe eredita questa proprietà da `AdvertisingMetadata`, ma non eredita il valore corrente.
 
    ```
    var auditudeSettings:AuditudeSettings = new AuditudeSettings(); 
@@ -30,11 +29,11 @@ ht-degree: 0%
    auditudeSettings.delayAdLoading = true;
    ```
 
-1. Per riflettere con precisione gli annunci come indizi su una barra di scorrimento, ascolta la sezione `TimelineEvent`. `TIMELINE_UPDATED` e ridisegnare la barra di scorrimento ogni volta che si riceve questo evento.
+1. Per riflettere accuratamente gli annunci come spunti su una barra di scorrimento, ascolta la `TimelineEvent`. `TIMELINE_UPDATED` e ridisegnare la barra di scorrimento ogni volta che si riceve questo evento.
 
-   Quando i flussi VoD utilizzano il caricamento ritardato degli annunci, non tutti gli annunci vengono inseriti sulla timeline quando il lettore entra nello stato PREPARATO, quindi devi ridisegnare esplicitamente la barra di scorrimento.
+   Quando i flussi VoD utilizzano il caricamento ritardato degli annunci, non tutti gli annunci vengono inseriti sulla timeline quando il lettore entra nello stato READY, pertanto è necessario ridisegnare esplicitamente la barra di scorrimento.
 
-   TVSDK ottimizza l’invio di questo evento per ridurre al minimo il numero di volte in cui è necessario ridisegnare la barra di scorrimento; pertanto, il numero di eventi della timeline non è correlato al numero di interruzioni pubblicitarie da inserire nella timeline. Ad esempio, in presenza di cinque interruzioni pubblicitarie, potresti non ricevere esattamente cinque eventi.
+   TVSDK ottimizza l’invio di questo evento per ridurre al minimo il numero di volte in cui è necessario ridisegnare la barra di scorrimento; pertanto, il numero di eventi della timeline non è correlato al numero di interruzioni pubblicitarie da posizionare sulla timeline. Ad esempio, in presenza di cinque interruzioni pubblicitarie, potresti non ricevere esattamente cinque eventi.
 
    ```
    mediaPlayer.addEventListener(TimelineEvent.TIMELINE_UPDATED, onTimelineUpdated); 
@@ -45,4 +44,3 @@ ht-degree: 0%
        drawMarkers(markers); 
    } 
    ```
-

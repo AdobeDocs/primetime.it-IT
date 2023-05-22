@@ -2,23 +2,21 @@
 title: Distribuire i file WAR
 description: Distribuire i file WAR
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 9f491596-2a02-4a55-9baa-86407e389d20
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '64'
 ht-degree: 0%
 
 ---
 
-
 # Distribuire i file WAR{#deploy-the-war-files}
 
-1. Copia il file WAR nella directory [!DNL webapps] di Tomcat.
+1. Copiare il file WAR in Tomcat [!DNL webapps] directory.
 
-   * Individualization Server: [!DNL flashaccess.war]
+   * Server di personalizzazione: [!DNL flashaccess.war]
    * Server di generazione chiavi: [!DNL flashaccess-kgs.war]
 
-1. Copia la cartella [!DNL ROOT] dal pacchetto fornito da Adobe nella directory [!DNL webapps] .
+1. Copia il [!DNL ROOT] dal pacchetto fornito da Adobe alla cartella [!DNL webapps] directory.
 
-   Il server di Individualization deve inoltre ospitare il file [!DNL crossdomain.xml] . (La cartella [!DNL ROOT] contiene il file [!DNL crossdomain.xml]; [!DNL ROOT] deve essere in tutte le maiuscole.) Il file non è richiesto dal server di generazione della chiave.
-
+   Il server di personalizzazione deve inoltre ospitare [!DNL crossdomain.xml] file. (Il [!DNL ROOT] la cartella contiene [!DNL crossdomain.xml] file; [!DNL ROOT] deve essere in maiuscolo.) Il server di generazione della chiave non richiede questo file.

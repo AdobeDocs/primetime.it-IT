@@ -1,28 +1,27 @@
 ---
-description: È possibile ignorare il comportamento predefinito per il modo in cui TVSDK gestisce le ricerche sugli annunci quando si utilizzano gli ad markers personalizzati.
-title: Controllare il comportamento di riproduzione per la ricerca di indicatori di annunci personalizzati
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Quando si utilizzano marcatori di annunci personalizzati, è possibile ignorare il comportamento predefinito per la gestione delle ricerche tramite TVSDK sugli annunci.
+title: Controlla il comportamento di riproduzione per la ricerca sui marcatori di annunci personalizzati
+exl-id: c148aca6-699d-4b93-9013-9e20bc391687
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '122'
 ht-degree: 0%
 
 ---
 
+# Controlla il comportamento di riproduzione per la ricerca sui marcatori di annunci personalizzati {#control-playback-behavior-for-seeking-over-custom-ad-markers}
 
-# Controllare il comportamento di riproduzione per la ricerca di marcatori di annunci personalizzati {#control-playback-behavior-for-seeking-over-custom-ad-markers}
+Quando si utilizzano marcatori di annunci personalizzati, è possibile ignorare il comportamento predefinito per la gestione delle ricerche tramite TVSDK sugli annunci.
 
-È possibile ignorare il comportamento predefinito per il modo in cui TVSDK gestisce le ricerche sugli annunci quando si utilizzano gli ad markers personalizzati.
+Per impostazione predefinita, quando un utente cerca in o nelle sezioni di annunci precedenti che derivano dal posizionamento di marcatori di annunci personalizzati, TVSDK salta gli annunci. Questo comportamento potrebbe differire da quello corrente per le interruzioni pubblicitarie standard. Puoi impostare TVSDK per riposizionare l’indicatore di riproduzione all’inizio dell’annuncio personalizzato saltato più di recente quando l’utente cerca oltre uno o più annunci personalizzati.
 
-Per impostazione predefinita, quando un utente cerca nelle sezioni o nelle sezioni precedenti degli annunci risultanti dal posizionamento di marcatori pubblicitari personalizzati, TVSDK salta gli annunci. Questo potrebbe differire dal comportamento di riproduzione corrente per le interruzioni pubblicitarie standard. Puoi impostare TVSDK per riposizionare l’indicatore di riproduzione all’inizio dell’annuncio personalizzato saltato più di recente quando l’utente cerca oltre uno o più annunci personalizzati.
-
-1. Chiama `CustomRangeMetadata.setAdjustSeekPosition` con `true`.
+1. Chiamata `CustomRangeMetadata.setAdjustSeekPosition` con `true`.
 
    ```java
    customRangeMetadata.setAdjustSeekPosition (true);
    ```
 
-1. Utilizza `customRangeMetadata` in `MediaPlayerItemConfig`.
+1. Utilizzare `customRangeMetadata` in `MediaPlayerItemConfig`.
 
    ```java
    // Set customRangeMetadata 

@@ -2,16 +2,15 @@
 title: Aggiungi pubblicità
 description: Aggiungi pubblicità
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 72f875ea-80ae-482b-94be-41116fff3614
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 0%
 
 ---
 
-
-# Aggiungi annuncio {#add-advertising}
+# Aggiungi pubblicità {#add-advertising}
 
 1. Definisci i metadati pubblicitari.
 
@@ -22,14 +21,14 @@ ht-degree: 0%
      auditudeSettings.zoneId = "123869";
    ```
 
-1. Aggiungi i metadati pubblicitari a `MediaResource`.
+1. Aggiungi i metadati pubblicitari al `MediaResource`.
 
    ```js
    var mediaResource =  
      new AdobePSDK.MediaResource(resourceUrl, resourceType, auditudeSettings, false);
    ```
 
-1. Aggiungi le impostazioni alla configurazione e aggiungi un parametro `SpliceOut` parser factory.
+1. Aggiungi le impostazioni alla configurazione e aggiungi un `SpliceOut` parser factory.
 
    ```js
    var config = new AdobePSDK.MediaPlayerItemConfig(); 
@@ -37,8 +36,8 @@ ht-degree: 0%
    config.advertisingFactory = new ExtCueOutContentFactory(auditudeSettings);
    ```
 
-1. Aggiungi il `ExtCueOutContentFactory` alla sezione della libreria .
-1. Scarica il `ExtCueOutContentFactory.js` dalla sezione della libreria e inseriscilo nella cartella di lavoro.
+1. Aggiungi il `ExtCueOutContentFactory` alla sezione libreria.
+1. Scarica il file `ExtCueOutContentFactory.js` dalla sezione libreria e inserirla nella cartella di lavoro.
 
    ```js
    <script src= "frameworks/player/dash.min.js"></script> 

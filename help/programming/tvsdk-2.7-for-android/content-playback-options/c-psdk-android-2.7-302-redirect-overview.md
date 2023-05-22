@@ -1,24 +1,23 @@
 ---
-description: L'ottimizzazione del reindirizzamento 302 riduce al minimo il numero di risposte di reindirizzamento 302, consentendo all'applicazione di bilanciare il carico in modo più efficace.
-title: Ottimizzazione del reindirizzamento HTTP 302
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: L'ottimizzazione del reindirizzamento 302 riduce al minimo il numero di risposte di reindirizzamento, consentendo all'applicazione di bilanciare il carico in modo più efficace.
+title: Ottimizzazione reindirizzamento HTTP 302
+exl-id: fdbdc2b4-6c1a-4ab1-80e2-b5e079ffa906
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '100'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
+# Ottimizzazione reindirizzamento HTTP 302 {#http-redirect-optimization}
 
-# Ottimizzazione del reindirizzamento HTTP 302 {#http-redirect-optimization}
+L&#39;ottimizzazione del reindirizzamento 302 riduce al minimo il numero di risposte di reindirizzamento, consentendo all&#39;applicazione di bilanciare il carico in modo più efficace.
 
-L&#39;ottimizzazione del reindirizzamento 302 riduce al minimo il numero di risposte di reindirizzamento 302, consentendo all&#39;applicazione di bilanciare il carico in modo più efficace.
-
-Se una richiesta di manifesto principale viene reindirizzata e l’ottimizzazione 302 è abilitata nel lettore, le richieste successive effettuate per le risorse da quel manifesto utilizzeranno la posizione del dominio finale, evitando così ulteriori 302 risposte. Questa funzione è attivata per impostazione predefinita ed è possibile modificarla.
+Se una richiesta del manifesto principale viene reindirizzata e l’ottimizzazione 302 è abilitata nel lettore, le richieste successive effettuate per le risorse da tale manifesto utilizzeranno la posizione del dominio finale, evitando ulteriori risposte 302. Questa funzione è attivata per impostazione predefinita e puoi modificarla.
 
 ## Disabilita o abilita l&#39;ottimizzazione del reindirizzamento 302 {#section_8977448B268E41D69A8F75B60EB9DA3B}
 
-Utilizzare la proprietà `useRedirectedUrl` per attivare o disattivare il reindirizzamento 302 ( `true`) o disattivarlo ( `false`).
+Utilizza il `useRedirectedUrl` proprietà per attivare il reindirizzamento 302 ( `true`) o disattivato ( `false`).
 
 <!--<a id="example_888749F70C8A43279D06A29BD68E7E4D"></a>-->
 
@@ -35,4 +34,3 @@ config.setNetworkConfiguration(networkConfiguration);
  
 //Use this config when loading the MediaPlayerItem or calling replaceCurrentResource
 ```
-

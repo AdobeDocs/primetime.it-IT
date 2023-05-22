@@ -1,17 +1,16 @@
 ---
-description: TVSDK supporta l’eliminazione programmatica e la sostituzione del contenuto degli annunci nei flussi VOD.
+description: TVSDK supporta l’eliminazione e la sostituzione programmatica del contenuto di annunci nei flussi VOD.
 title: Eliminare e sostituire gli annunci nei flussi VOD
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: cef546e6-0cf5-4730-be5c-b2bb6ac5ab1b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '73'
 ht-degree: 0%
 
 ---
 
-
 # Panoramica {#delete-and-replace-ads-in-vod-streams-overview}
 
-TVSDK supporta l’eliminazione programmatica e la sostituzione del contenuto degli annunci nei flussi VOD.
+TVSDK supporta l’eliminazione e la sostituzione programmatica del contenuto di annunci nei flussi VOD.
 
-La funzione di eliminazione e sostituzione estende la funzione degli ad markers personalizzati. Gli ad markers personalizzati contrassegnano sezioni del contenuto principale come periodi di contenuto relativi agli annunci. Oltre a contrassegnare questi intervalli di tempo, puoi anche eliminare e sostituire gli intervalli di tempo.
+La funzione di eliminazione e sostituzione estende la funzione dei marcatori di annunci personalizzati. I marcatori di annunci personalizzati contrassegnano le sezioni del contenuto principale come periodi di contenuto relativi agli annunci. Oltre a contrassegnare questi intervalli di tempo, puoi anche eliminarli e sostituirli.

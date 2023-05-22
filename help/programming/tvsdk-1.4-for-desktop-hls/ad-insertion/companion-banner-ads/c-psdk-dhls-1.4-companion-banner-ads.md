@@ -1,42 +1,41 @@
 ---
-description: TVSDK supporta annunci per banner complementari, che sono annunci che accompagnano un annuncio lineare e spesso rimangono sulla pagina dopo la fine dell’annuncio lineare. La tua applicazione è responsabile della visualizzazione dei banner complementari che sono forniti con un annuncio lineare.
-title: Annunci banner
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK supporta gli annunci banner correlati, ovvero gli annunci che accompagnano un annuncio lineare e che spesso rimangono sulla pagina al termine dell’annuncio lineare. L'applicazione è responsabile della visualizzazione dei banner correlati forniti con un annuncio lineare.
+title: Banner pubblicitari
+exl-id: c10a38ec-acbb-4e84-aff2-c93c9b1cec81
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '607'
 ht-degree: 0%
 
 ---
 
+# Banner pubblicitari {#companion-banner-ads}
 
-# Annunci per banner pubblicitari {#companion-banner-ads}
+TVSDK supporta gli annunci banner correlati, ovvero gli annunci che accompagnano un annuncio lineare e che spesso rimangono sulla pagina al termine dell’annuncio lineare. L&#39;applicazione è responsabile della visualizzazione dei banner correlati forniti con un annuncio lineare.
 
-TVSDK supporta annunci per banner complementari, che sono annunci che accompagnano un annuncio lineare e spesso rimangono sulla pagina dopo la fine dell’annuncio lineare. La tua applicazione è responsabile della visualizzazione dei banner complementari che sono forniti con un annuncio lineare.
+Quando visualizzi gli annunci correlati, segui queste raccomandazioni:
 
-Quando si visualizzano gli annunci companion, attenersi alle seguenti raccomandazioni:
-
-* Tenta di presentare il numero di annunci banner di un annuncio video come si adatterà al layout del tuo giocatore.
-* Presentare un banner complementare solo se si dispone di una posizione che corrisponde esattamente alla sua altezza e larghezza specificate.
+* Tenta di presentare tutti gli annunci banner associati a un annuncio video che rientrano nel layout del lettore.
+* Presentare un banner correlato solo se la posizione corrisponde esattamente all&#39;altezza e alla larghezza specificate.
 
    >[!TIP]
    >
    >Non ridimensionare il banner.
 
-* Presenta i banner associati il prima possibile dopo l’inizio dell’annuncio.
-* Non sovrapporre il contenitore principale annuncio/video con banner complementari.
-* Continua a visualizzare i banner complementari dopo la fine dell’annuncio.
+* Presenta il banner/i correlato/i il prima possibile dopo l’inizio dell’annuncio.
+* Non sovrapporre il contenitore principale annuncio/video con i banner correlati.
+* Continua a visualizzare i banner associati dopo la fine dell’annuncio.
 
-   Lo standard è quello di visualizzare ogni banner associato fino a quando non si dispone di una sostituzione per questo banner.
+   Lo standard prevede la visualizzazione di ogni banner complementare fino a quando non si dispone di un banner sostitutivo.
 
-## Dati banner Companion {#companion-banner-data}
+## Dati banner aziendale {#companion-banner-data}
 
-Il contenuto di un AdBannerAsset descrive un banner correlato.
+Il contenuto di una risorsa AdBanner descrive un banner correlato.
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-L&#39;evento `AdPlaybackEvent.AD_STARTED` restituisce un&#39;istanza `Ad` che contiene una proprietà `companionAssets` ( `Vector.<AdAsset>`).
-Ogni elemento `AdAsset` fornisce informazioni sulla visualizzazione della risorsa.
+Il `AdPlaybackEvent.AD_STARTED` l&#39;evento restituisce un `Ad` istanza che contiene un `companionAssets` proprietà ( `Vector.<AdAsset>`).
+Ogni `AdAsset` fornisce informazioni sulla visualizzazione della risorsa.
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
  <thead> 
@@ -48,7 +47,7 @@ Ogni elemento `AdAsset` fornisce informazioni sulla visualizzazione della risors
  <tbody> 
   <tr> 
    <td colname="col1"> larghezza </td> 
-   <td colname="col2"> Larghezza del banner correlato in pixel. </td> 
+   <td colname="col2"> Larghezza in pixel del banner correlato. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> altezza </td> 
@@ -56,54 +55,54 @@ Ogni elemento `AdAsset` fornisce informazioni sulla visualizzazione della risors
   </tr> 
   <tr> 
    <td colname="col1"> tipo di risorsa </td> 
-   <td colname="col2">Tipo di risorsa per il banner correlato: 
+   <td colname="col2">Il tipo di risorsa per questo banner correlato: 
     <ul id="ul_A067787FE49E4B6095BE0AC1D447DBB3"> 
-     <li id="li_02B7224C67004095B3F6E50FD21E507E">html I dati sono nel codice HTML. </li> 
-     <li id="li_5F37E14472424F808C6094F42009E676">iframe: I dati sono un URL iframe (src). </li> 
+     <li id="li_02B7224C67004095B3F6E50FD21E507E">html: i dati sono nel codice HTML. </li> 
+     <li id="li_5F37E14472424F808C6094F42009E676">iframe: i dati sono un URL iframe (src). </li> 
     </ul> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> dati banner </td> 
-   <td colname="col2"> I dati del tipo specificato da <span class="codeph"> resourceType</span> per questo banner correlato. </td> 
+   <td colname="col2"> Dati del tipo specificato da <span class="codeph"> resourceType</span> per questo banner. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> URL statico </td> 
-   <td colname="col2"> <p>A volte, il banner associato ha anche un URL statico che è un URL diretto all'immagine o a un <span class="filepath"> .swf</span> (banner flash). </p> <p>Se non desideri utilizzare html o iframe, puoi utilizzare un URL diretto per un’immagine o un swf per visualizzare il banner nella fase di Flash. In questo caso, puoi utilizzare staticURL per visualizzare il banner. </p> <p>Importante:  È necessario verificare se l’URL statico è una stringa valida, perché questa proprietà potrebbe non essere sempre disponibile. </p> </td> 
+   <td colname="col2"> <p>A volte, il banner correlato ha anche un URL statico che è un URL diretto all’immagine o a un <span class="filepath"> .swf</span> (banner flash). </p> <p>Se non desideri utilizzare html o iframe, puoi utilizzare un URL diretto per un’immagine o un file swf per visualizzare il banner nella fase di Flash. In questo caso, puoi utilizzare staticURL per visualizzare il banner. </p> <p>Importante: è necessario verificare se l’URL statico è una stringa valida, perché questa proprietà potrebbe non essere sempre disponibile. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-## Visualizza annunci banner {#display-banner-ads}
+## Visualizza banner pubblicitari {#display-banner-ads}
 
-Per visualizzare gli annunci banner, devi creare istanze banner e consentire a TVSDK di ascoltare gli eventi relativi agli annunci.
+Per visualizzare gli annunci banner, devi creare istanze di banner e consentire a TVSDK di ascoltare eventi relativi agli annunci.
 
-TVSDK fornisce un elenco di banner pubblicitari associati a un annuncio lineare tramite l&#39;evento `AdPlaybackEvent.AD_STARTED` .
+TVSDK fornisce un elenco di banner pubblicitari correlati associati a un annuncio lineare tramite `AdPlaybackEvent.AD_STARTED` evento.
 
-I manifesti possono specificare annunci di banner complementari per:
+I manifesti possono specificare gli annunci banner correlati in base a:
 
-* Frammento HTML
+* Un frammento di HTML
 * URL di una pagina iFrame
-* URL di un’immagine statica o di un file SWF di Flash di Adobe
+* URL di un&#39;immagine statica o di un file SWF di Flash di Adobe
 
-Per ogni annuncio correlato, TVSDK indica quali tipi sono disponibili per l’applicazione.
+Per ogni annuncio correlato, TVSDK indica i tipi disponibili per l’applicazione.
 
-Aggiungi un listener per l&#39;evento `AdPlaybackEvent.AD_STARTED` che esegue le seguenti operazioni:
+Aggiungere un listener per `AdPlaybackEvent.AD_STARTED` evento che esegue le seguenti operazioni:
 
-1. Cancella gli annunci esistenti nell&#39;istanza del banner.
+1. Cancella gli annunci esistenti nell’istanza del banner.
 
-1. Ottiene l&#39;elenco degli annunci companion da `Ad.companionAssets`.
+1. Ottiene l’elenco degli annunci correlati da `Ad.companionAssets`.
 
-1. Se l’elenco degli annunci associati non è vuoto, ripeti l’errore sopra l’elenco per le istanze del banner.
+1. Se l’elenco degli annunci correlati non è vuoto, scorri l’elenco per le istanze del banner.
 
-   Ogni istanza di banner ( an `AdBannerAsset`) contiene informazioni quali larghezza, altezza, tipo di risorsa (html, iframe o statico) e dati necessari per visualizzare il banner correlato.
+   Ogni istanza del banner ( an `AdBannerAsset`) contiene informazioni quali larghezza, altezza, tipo di risorsa (html, iframe o statica) e dati necessari per visualizzare il banner correlato.
 
-1. Se un annuncio video non ha annunci correlati prenotati con esso, l’elenco delle risorse correlate non contiene dati per quell’annuncio video.
+1. Se un annuncio video non ha annunci correlati prenotati con esso, l’elenco delle risorse correlate non contiene dati per tale annuncio video.
 
-   Per mostrare un annuncio di visualizzazione indipendente, aggiungi la logica al tuo script per eseguire un tag di annunci di visualizzazione normale DFP (DoubleClick for Publishers) nell’istanza di banner appropriata.
+   Per visualizzare un annuncio di visualizzazione autonomo, aggiungi la logica allo script per eseguire un normale tag annuncio di visualizzazione DFP (DoubleClick for Publishers) nell’istanza del banner appropriata.
 
-1. Invia le informazioni sul banner a una funzione nella pagina, in genere JavaScript, utilizzando `ExternalInterface`, che visualizza i banner in una posizione appropriata.
+1. Invia le informazioni sul banner a una funzione sulla pagina, in genere JavaScript, utilizzando `ExternalInterface`, che visualizza i banner in una posizione appropriata.
 
-   In genere si tratta di una `div` e la funzione utilizza `div ID` per visualizzare il banner. Ad esempio:
+   Questo è di solito un `div`, e la tua funzione utilizza `div ID` per visualizzare il banner. Ad esempio:
 
    Aggiungi il listener di eventi:
 
@@ -111,7 +110,7 @@ Aggiungi un listener per l&#39;evento `AdPlaybackEvent.AD_STARTED` che esegue le
    _player.addEventListener(AdobePSDK.PSDKEventType.AD_STARTED, onAdStarted);
    ```
 
-   Implementa il gestore di listener:
+   Implementa il gestore listener:
 
    ```js
    private function onAdStarted(event:AdPlaybackEvent):void { 

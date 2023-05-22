@@ -1,26 +1,25 @@
 ---
-description: L'interfaccia del token di licenza FairPlay fornisce servizi di produzione e test.
+description: L'interfaccia dei token di licenza FairPlay fornisce servizi di produzione e test.
 title: Richiesta/risposta token di licenza FairPlay
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 7073a74b-d907-4d45-8550-4305655c33f5
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '814'
-ht-degree: 5%
+ht-degree: 4%
 
 ---
 
-
 # Richiesta e risposta del token di licenza FairPlay {#fairplay-license-token-request-response}
 
-L&#39;interfaccia del token di licenza FairPlay fornisce servizi di produzione e test. Questa richiesta restituisce un token che può essere riscattato per una licenza FairPlay.
+L&#39;interfaccia dei token di licenza FairPlay fornisce servizi di produzione e test. Questa richiesta restituisce un token che può essere riscattato per una licenza FairPlay.
 
-**Metodo: GET, POST**  (con un corpo codificato www-url-che contiene parametri per entrambi i metodi)
+**Metodo: GET, POST** (con un corpo codificato www-url contenente i parametri per entrambi i metodi)
 
 **URL:**
 
 * **Produzione:** `https://fp-gen.{prod_domain}/hms/fp/token`
 
-* **Test:** `https://fp-gen.test.expressplay.com/hms/fp/token`
+* **Prova:** `https://fp-gen.test.expressplay.com/hms/fp/token`
 
 * **Richiesta di esempio:**
 
@@ -43,29 +42,29 @@ L&#39;interfaccia del token di licenza FairPlay fornisce servizi di produzione e
    https://fp.service.expressplay.com:80/hms/fp/rights/?ExpressPlayToken=<base64-encoded ExpressPlay token>
    ```
 
-**Parametri query di richiesta**
+**Parametri query richiesta**
 
 **Tabella 3: Parametri query token**
 
 | Parametro query | Descrizione | Obbligatorio |
 |--- |--- |--- |
-| customerAuthenticator Autenticatore cliente come parametro query customerAuthenticator FairPlay | Questa è la chiave API del cliente, una per ogni ambiente di produzione e test. Puoi trovarlo nella scheda Dashboard di amministrazione di ExpressPlay. | Sì |
-| errorFormat | HTML o json. Se html (l’impostazione predefinita) viene fornita una rappresentazione HTML di eventuali errori nel corpo dell’entità della risposta. Se viene specificato json, viene restituita una risposta strutturata in formato JSON. Per ulteriori informazioni, consulta [Errori JSON](https://www.expressplay.com/developer/restapi/#json-errors) . Il tipo mime della risposta è text/uri-list on success, text/html for HTML error format o application/json for JSON error format. | No |
+| customerAuthenticator Autenticatore del cliente come parametro di query customerAuthenticator FairPlay | Questa è la chiave API del cliente, una per ogni ambiente di produzione e di test. È disponibile nella scheda ExpressPlay Admin Dashboard. | Sì |
+| errorFormat | html o json. Se html (l’impostazione predefinita), nel corpo dell’entità della risposta viene fornita una rappresentazione HTML di eventuali errori. Se si specifica json, viene restituita una risposta strutturata in formato JSON. Consulta [Errori JSON](https://www.expressplay.com/developer/restapi/#json-errors) per i dettagli. Il tipo mime della risposta è text/uri-list on success, text/html for HTML error format o application/json for JSON error format. | No |
 
-**Tabella 4: Parametri query di licenza**
+**Tabella 4: Parametri di query della licenza**
 
 | **Parametro query** | **Descrizione** | **Obbligatorio** |
 |---|---|---|
-| `generalFlags` | Una stringa esadecimale a 4 byte che rappresenta i flag di licenza. &quot;0000&quot; è l’unico valore consentito. | No |
-| `kek` | Chiave di crittografia (KEK). Le chiavi vengono memorizzate crittografate con un KEK utilizzando un algoritmo di wrapping chiave (AES Key Wrap, RFC3394). Se viene fornito `kek`, è necessario specificare uno dei parametri `kid` o `ek`, *ma non entrambi*. | No |
-| `kid` | Una rappresentazione di stringa esadecimale a 16 byte della chiave di crittografia del contenuto o una stringa `'^somestring'`. La lunghezza della stringa seguita da `'^'` non può essere maggiore di 64 caratteri. | No |
-| `ek` | Una rappresentazione stringa esadecimale della chiave di contenuto crittografata. | No |
-| `contentKey` | Una rappresentazione di stringa esadecimale a 16 byte della chiave di crittografia del contenuto | Sì, a meno che non siano forniti i valori `kek` e `ek` o `kid`. |
-| `iv` | Una rappresentazione di stringa esadecimale a 16 byte della crittografia del contenuto IV | Sì |
-| `rentalDuration` | Durata del noleggio in secondi (predefinito - 0) | No |
-| `fpExtension` | Una stringa separata da virgole con wrapping di moduli brevi `extensionType` e `extensionPayload`. Ad esempio: […] `&fpExtension=wudo,AAAAAA==&`[…] | No, è possibile utilizzare qualsiasi numero |
+| `generalFlags` | Stringa esadecimale da 4 byte che rappresenta i flag di licenza. &quot;0000&quot; è l’unico valore consentito. | No |
+| `kek` | Chiave di crittografia (KEK). Le chiavi vengono memorizzate crittografate con una chiave utilizzando un algoritmo di wrapping delle chiavi (Key Wrap di AES, RFC3394). Se `kek` viene fornito, uno dei `kid` o `ek` parametri da fornire, *ma non entrambi*. | No |
+| `kid` | Una rappresentazione di stringa esadecimale da 16 byte della chiave di crittografia del contenuto o di una stringa `'^somestring'`. La lunghezza della stringa seguita dalla stringa `'^'` non può superare i 64 caratteri. | No |
+| `ek` | Una rappresentazione di stringa esadecimale della chiave del contenuto crittografato. | No |
+| `contentKey` | Una rappresentazione di stringa esadecimale da 16 byte della chiave di crittografia del contenuto | Sì, a meno che `kek` e `ek` o `kid` vengono fornite. |
+| `iv` | Una rappresentazione di stringa esadecimale da 16 byte della crittografia del contenuto IV | Sì |
+| `rentalDuration` | Durata del noleggio in secondi (impostazione predefinita - 0) | No |
+| `fpExtension` | Ritorno a capo in forma breve `extensionType` e `extensionPayload`, come stringa separata da virgole. Ad esempio: [...] `&fpExtension=wudo,AAAAAA==&`[...] | No, è possibile utilizzare qualsiasi numero |
 
-**Tabella 5: Parametri query di limitazione token**
+**Tabella 5: Parametri query di restrizione token**
 
 <table id="table_ar3_lsx_pv">  
  <thead> 
@@ -77,30 +76,30 @@ L&#39;interfaccia del token di licenza FairPlay fornisce servizi di produzione e
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> expirationTime  </span> </td> 
-   <td> Tempo di scadenza del token. Questo valore DEVE essere una stringa nel formato <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339 </a> data/ora nel designatore di zona Z ("ora Zulu") o un numero intero preceduto dal segno "+". Un esempio di RFC 3339 data/ora è <span class="codeph"> 2006-04-14T12:01:10Z </span>. <p>Se il valore è una stringa in formato data/ora <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339 </a>, rappresenta una data/ora di scadenza assoluta per il token. Se il valore è un numero intero preceduto dal segno "+", viene interpretato come un numero relativo di secondi dalla pubblicazione che il token è valido. </p> Ad esempio, <span class="codeph"> +60 </span> specifica un minuto. La durata massima e predefinita del token (se non specificata) è di 30 giorni. </td> 
+   <td> <span class="codeph"> expirationTime </span> </td> 
+   <td> Data di scadenza del token. Questo valore DEVE essere una stringa in <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339 </a> formato data/ora nel designatore di zona "Z" ("Ora Zulu") o un numero intero preceduto dal segno "+". Un esempio di data/ora RFC 3339 è <span class="codeph"> 04-04-2006:01:10Z </span>. <p>Se il valore è una stringa in <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339 </a> formato data/ora, quindi rappresenta una data/ora di scadenza assoluta del token. Se il valore è un numero intero preceduto dal segno "+", viene interpretato come un numero relativo di secondi, dall’emissione, di validità del token. </p> Ad esempio: <span class="codeph"> +60 </span> specifica un minuto. La durata massima e predefinita del token (se non specificata) è di 30 giorni. </td> 
    <td> No </td> 
   </tr> 
  </tbody> 
 </table>
 
-**Tabella 6: Parametri query di correlazione**
+**Tabella 6: Parametri della query di correlazione**
 
 | **Parametro query** | **Descrizione** | **Obbligatorio** |
 |---|---|---|
-| `cookie` | Una stringa arbitraria lunga fino a 32 caratteri, eseguita nel token e registrata dal server di rimborso del token. Può essere utilizzato per correlare le voci di registro nel server di rimborso e quelle nei server del provider di servizi. | No |
+| `cookie` | Stringa arbitraria lunga fino a 32 caratteri, inserita nel token e registrata dal server di rimborso del token. Può essere utilizzato per correlare le voci di registro nel server di riscatto e quelle nei server del provider di servizi. | No |
 
 **Risposta**
 
 **Tabella 7: Risposte HTTP**
 
-| **Codice di stato HTTP** | **Descrizione** | **Content-Type** | **Il corpo dell&#39;entità contiene** |
+| **Codice di stato HTTP** | **Descrizione** | **Content-Type** | **Corpo entità contiene** |
 |---|---|---|---|
-| `200 OK` | Nessun errore. | `text/uri-list` | URL di acquisizione della licenza + token |
-| `400 Bad Request` | Archi non validi | `text/html` o  `application/json` | Descrizione errore |
-| `401 Unauthorized` | Autenticazione non riuscita | `text/html` o  `application/json` | Descrizione errore |
-| `404 Not found` | URL non valido | `text/html` o  `application/json` | Descrizione errore |
-| `50x Server Error` | Errore del server | `text/html` o  `application/json` | Descrizione errore |
+| `200 OK` | Nessun errore. | `text/uri-list` | URL di acquisizione licenza + token |
+| `400 Bad Request` | Argomenti non validi | `text/html` o `application/json` | Descrizione errore |
+| `401 Unauthorized` | Autenticazione non riuscita | `text/html` o `application/json` | Descrizione errore |
+| `404 Not found` | URL non valido | `text/html` o `application/json` | Descrizione errore |
+| `50x Server Error` | Errore del server | `text/html` o `application/json` | Descrizione errore |
 
 **Tabella 8: Codici di errore evento**
 
@@ -114,7 +113,7 @@ L&#39;interfaccia del token di licenza FairPlay fornisce servizi di produzione e
  <tbody> 
   <tr> 
    <td> -2002 </td> 
-   <td> Data di scadenza token non valida: &lt;details&gt; </td> 
+   <td> Data di scadenza del token non valida: &lt;details&gt; </td> 
   </tr> 
   <tr> 
    <td> -2003 </td> 
@@ -126,19 +125,19 @@ L&#39;interfaccia del token di licenza FairPlay fornisce servizi di produzione e
   </tr> 
   <tr> 
    <td> -2008 </td> 
-   <td> Flag di controllo di output specificati non validi: &lt;details&gt; </td> 
+   <td> Sono stati specificati flag di controllo di output non validi: &lt;details&gt; </td> 
   </tr> 
   <tr> 
    <td> -2017 </td> 
-   <td> Il token di autenticazione deve essere fornito </td> 
+   <td> È necessario fornire il token di autenticazione </td> 
   </tr> 
   <tr> 
    <td> -2018 </td> 
-   <td> Token di autenticazione non valido: &lt;details&gt; <p>Nota:  Questo può accadere se l'autenticatore è sbagliato o quando si accede all'API di test su <span class="filepath"> *.test.espressplay.com </span> utilizzando l'autenticatore di produzione e viceversa. </p> <p importance="high">Nota:  L'SDK di test e lo strumento di test avanzato (ATT) funzionano solo con <span class="filepath"> *.test.espressplay.com </span>, mentre i dispositivi di produzione devono utilizzare <span class="filepath"> *.service.espressplay.com </span>. </p> </td> 
+   <td> Token di autenticazione non valido: &lt;details&gt; <p>Nota: questo può accadere se l’autenticatore ha torto o quando si accede all’API di test in <span class="filepath"> *.test.expressplay.com </span> utilizzando l’autenticatore di produzione e viceversa. </p> <p importance="high">Nota: Test SDK e Advanced Test Tool (ATT) funzionano solo con <span class="filepath"> *.test.expressplay.com </span>, che i dispositivi di produzione devono utilizzare <span class="filepath"> *.service.expressplay.com </span>. </p> </td> 
   </tr> 
   <tr> 
    <td> -2019 </td> 
-   <td> Token insufficienti </td> 
+   <td> Numero insufficiente di token disponibili </td> 
   </tr> 
   <tr> 
    <td> -2020 </td> 
@@ -150,27 +149,27 @@ L&#39;interfaccia del token di licenza FairPlay fornisce servizi di produzione e
   </tr> 
   <tr> 
    <td> -2022 </td> 
-   <td> Ora di fine periodo del noleggio mancante </td> 
+   <td> Ora di fine periodo di noleggio mancante </td> 
   </tr> 
   <tr> 
    <td> -2023 </td> 
-   <td> Durata di gioco a noleggio mancante </td> 
+   <td> Durata riproduzione in affitto mancante </td> 
   </tr> 
   <tr> 
    <td> -2025 </td> 
-   <td> Durata della riproduzione a noleggio non valida </td> 
+   <td> Durata riproduzione in affitto non valida </td> 
   </tr> 
   <tr> 
    <td> -2027 </td> 
-   <td> La chiave di crittografia del contenuto deve essere lunga 32 cifre esadecimali </td> 
+   <td> La chiave di crittografia del contenuto deve contenere 32 cifre esadecimali </td> 
   </tr> 
   <tr> 
    <td> -2030 </td> 
-   <td> Errore amministratore di ExpressPlay: &lt;details&gt; </td> 
+   <td> Errore di amministrazione di ExpressPlay: &lt;details&gt; </td> 
   </tr> 
   <tr> 
    <td> -2031 </td> 
-   <td> Account di servizio disattivato </td> 
+   <td> Account del servizio disabilitato </td> 
   </tr> 
   <tr> 
    <td> -2033 </td> 
@@ -178,7 +177,7 @@ L&#39;interfaccia del token di licenza FairPlay fornisce servizi di produzione e
   </tr> 
   <tr> 
    <td> -2034 </td> 
-   <td> Controllo di output non valido. Valori non compresi nell'intervallo specificato </td> 
+   <td> Controllo di output non valido, valori non compresi nell'intervallo specificato </td> 
   </tr> 
   <tr> 
    <td> -2035 </td> 
@@ -186,7 +185,7 @@ L&#39;interfaccia del token di licenza FairPlay fornisce servizi di produzione e
   </tr> 
   <tr> 
    <td> -2036 </td> 
-   <td> Il tipo di estensione deve essere di 4 caratteri </td> 
+   <td> Il tipo di estensione può contenere un massimo di 4 caratteri </td> 
   </tr> 
   <tr> 
    <td> -2037 </td> 
@@ -194,11 +193,11 @@ L&#39;interfaccia del token di licenza FairPlay fornisce servizi di produzione e
   </tr> 
   <tr> 
    <td> -2040 </td> 
-   <td> <span class="codeph"> OutputControlFlag  </span> deve essere codificato 4 byte </td> 
+   <td> <span class="codeph"> ContrassegnoControlloOutput </span> deve essere codificato di 4 byte </td> 
   </tr> 
   <tr> 
    <td> -3004 </td> 
-   <td> Formato di errore specificato non valido: &lt;format&gt; </td> 
+   <td> È stato specificato un formato di errore non valido: &lt;format&gt; </td> 
   </tr> 
   <tr> 
    <td> -4001 </td> 
@@ -210,27 +209,27 @@ L&#39;interfaccia del token di licenza FairPlay fornisce servizi di produzione e
   </tr> 
   <tr> 
    <td> -4018 </td> 
-   <td> Bambino scomparso </td> 
+   <td> Figlio mancante </td> 
   </tr> 
   <tr> 
    <td> -4019 </td> 
-   <td> Impossibile ottenere la chiave di contenuto dal servizio di archiviazione chiavi </td> 
+   <td> Impossibile ottenere la chiave del contenuto dal servizio di archiviazione chiavi </td> 
   </tr> 
   <tr> 
    <td> -4020 </td> 
-   <td> <span class="codeph"> il bambino  </span> deve essere lungo 32 caratteri esadecimali </td> 
+   <td> <span class="codeph"> bambino </span> deve contenere 32 caratteri esadecimali </td> 
   </tr> 
   <tr> 
    <td> -4021 </td> 
-   <td> <span class="codeph"> il bambino  </span> deve essere lungo 64 caratteri dopo il ^ </td> 
+   <td> <span class="codeph"> bambino </span> deve contenere 64 caratteri dopo il simbolo ^ </td> 
   </tr> 
   <tr> 
    <td> -4022 </td> 
-   <td> Elemento <span class="codeph"> non valido </span> </td> 
+   <td> Non valido <span class="codeph"> bambino </span> </td> 
   </tr> 
   <tr> 
    <td> -4024 </td> 
-   <td> Chiave crittografata non valida o chiave <span class="codeph"> </span> </td> 
+   <td> Chiave crittografata non valida o <span class="codeph"> chiavetta </span> </td> 
   </tr> 
   <tr> 
    <td> -5003 </td> 
@@ -238,7 +237,7 @@ L&#39;interfaccia del token di licenza FairPlay fornisce servizi di produzione e
   </tr> 
   <tr> 
    <td> -6001 </td> 
-   <td> Parametri <span class="codeph"> FPExtension </span> non validi specificati </td> 
+   <td> Non valido <span class="codeph"> FPExtension </span> parametri specificati </td> 
   </tr> 
   <tr> 
    <td> -6002 </td> 
@@ -246,7 +245,7 @@ L&#39;interfaccia del token di licenza FairPlay fornisce servizi di produzione e
   </tr> 
   <tr> 
    <td> -6003 </td> 
-   <td> Parametro <span class="codeph"> iv </span> non valido specificato </td> 
+   <td> Non valido <span class="codeph"> iv </span> parametro specificato </td> 
   </tr> 
   <tr> 
    <td> -6004 </td> 
@@ -254,7 +253,7 @@ L&#39;interfaccia del token di licenza FairPlay fornisce servizi di produzione e
   </tr> 
   <tr> 
    <td> -6005 </td> 
-   <td> Dati chiave non validi specificati </td> 
+   <td> Dati chiave specificati non validi </td> 
   </tr> 
   <tr> 
    <td> -6006 </td> 
@@ -262,11 +261,11 @@ L&#39;interfaccia del token di licenza FairPlay fornisce servizi di produzione e
   </tr> 
   <tr> 
    <td> -6007 </td> 
-   <td> Durata di noleggio non valida specificata </td> 
+   <td> Durata noleggio non valida specificata </td> 
   </tr> 
   <tr> 
    <td> -6008 </td> 
-   <td> Il binding ID dispositivo non è supportato per FairPlay </td> 
+   <td> Associazione ID dispositivo non supportata per FairPlay </td> 
   </tr> 
   <tr> 
    <td> -6009 </td> 

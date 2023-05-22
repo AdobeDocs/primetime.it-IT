@@ -1,29 +1,28 @@
 ---
-description: L'applicazione deve utilizzare gli oggetti TimedMetadata appropriati ai momenti opportuni.
-title: Archiviare gli oggetti metadati temporizzati durante l'invio
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: L'applicazione deve utilizzare gli oggetti TimedMetadata appropriati nei momenti appropriati.
+title: Archivia gli oggetti metadati temporizzati durante l’invio
+exl-id: db8b303a-441e-4cc0-a80d-dc9afda482b8
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 0%
 
 ---
 
+# Archivia gli oggetti metadati temporizzati durante l’invio {#store-timed-metadata-objects-as-they-are-dispatched}
 
-# Archiviare gli oggetti metadati temporizzati durante l&#39;invio {#store-timed-metadata-objects-as-they-are-dispatched}
+L&#39;applicazione deve utilizzare gli oggetti TimedMetadata appropriati nei momenti appropriati.
 
-L&#39;applicazione deve utilizzare gli oggetti TimedMetadata appropriati ai momenti opportuni.
-
-Durante l’analisi del contenuto, che avviene prima della riproduzione, TVSDK identifica i tag sottoscritti e notifica all’applicazione tali tag. L&#39;ora associata a ogni `TimedMetadata` è l&#39;ora locale nella timeline di riproduzione.
+Durante l’analisi del contenuto, che si verifica prima della riproduzione, TVSDK identifica i tag abbonati e ne informa l’applicazione. L’ora associata a ogni `TimedMetadata` è l’ora locale sulla timeline di riproduzione.
 
 L&#39;applicazione deve completare le seguenti attività:
 
-1. Tenere traccia del tempo di riproduzione corrente.
-1. Associa il tempo di riproduzione corrente agli oggetti `TimedMetadata` inviati.
+1. Tieni traccia del tempo di riproduzione corrente.
+1. Corrispondenza del tempo di riproduzione corrente con quello inviato `TimedMetadata` oggetti.
 
-1. Utilizzare il valore `TimedMetadata` in cui l&#39;ora di inizio è uguale al tempo di riproduzione locale corrente.
+1. Utilizza il `TimedMetadata` dove l’ora di inizio è uguale all’ora di riproduzione locale corrente.
 
-   L&#39;esempio seguente mostra come salvare gli oggetti `TimedMetadata` in un `ArrayList`.
+   L’esempio seguente mostra come salvare `TimedMetadata` oggetti in un `ArrayList`.
 
    ```java
    private List<TimedMetadata> _timedMetadataList = new ArrayList<TimedMetadata>(); 
@@ -36,4 +35,3 @@ L&#39;applicazione deve completare le seguenti attività:
        ... 
    }
    ```
-

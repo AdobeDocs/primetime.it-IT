@@ -1,24 +1,23 @@
 ---
-description: In alcune implementazioni di Analytics, l'applicazione client potrebbe voler fornire una posizione di playhead diversa da quella indicata dal valore localTime di TVSDK. Ad esempio, durante la riproduzione di un flusso lineare, la testina di riproduzione di ogni programma può essere fornita in base al tempo di inizio.
-title: Implementare aggiornamenti temporali personalizzati
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: In alcune implementazioni di Analytics, l’applicazione client potrebbe voler fornire una posizione della testina di riproduzione diversa da quella riportata dal valore localTime dell’SDK. Ad esempio, durante una riproduzione lineare dello streaming, è possibile fornire la testina di riproduzione di ciascun programma relativamente al suo tempo di avvio.
+title: Implementare aggiornamenti dell’ora personalizzati
+exl-id: 85ec4744-541f-451f-95a3-063dd1151635
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '142'
 ht-degree: 0%
 
 ---
 
+# Implementare aggiornamenti dell’ora personalizzati{#implement-custom-time-updates}
 
-# Implementa aggiornamenti temporali personalizzati{#implement-custom-time-updates}
-
-In alcune implementazioni di Analytics, l&#39;applicazione client potrebbe voler fornire una posizione di playhead diversa da quella indicata dal valore localTime di TVSDK. Ad esempio, durante la riproduzione di un flusso lineare, la testina di riproduzione di ogni programma può essere fornita in base al tempo di inizio.
+In alcune implementazioni di Analytics, l’applicazione client potrebbe voler fornire una posizione della testina di riproduzione diversa da quella riportata dal valore localTime dell’SDK. Ad esempio, durante una riproduzione lineare dello streaming, è possibile fornire la testina di riproduzione di ciascun programma relativamente al suo tempo di avvio.
 
 >[!TIP]
 >
->Ignorare questo metodo solo se si desidera fornire una posizione diversa da quella predefinita.
+>Ignora questo metodo solo se desideri fornire una posizione della testina di riproduzione diversa dalla posizione predefinita.
 
-1. Per sovrascrivere la posizione predefinita della testina di riproduzione:
+1. Per ignorare la posizione predefinita della testina di riproduzione:
 
    ```
    vaTrackingMetadata.currentTimeUpdateBlock = ^CMTime () { 
@@ -29,5 +28,4 @@ In alcune implementazioni di Analytics, l&#39;applicazione client potrebbe voler
 
    >[!IMPORTANT]
    >
-   >In questo esempio di codice, 500 è solo un valore di esempio. È necessario utilizzare un valore diverso per la posizione personalizzata della testina di riproduzione.
-
+   >In questo esempio di codice, 500 è solo un valore di esempio. Devi utilizzare un valore diverso per la posizione personalizzata della testina di riproduzione.

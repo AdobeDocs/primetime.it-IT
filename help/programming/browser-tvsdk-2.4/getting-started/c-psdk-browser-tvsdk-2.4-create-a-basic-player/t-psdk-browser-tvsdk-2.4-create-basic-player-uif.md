@@ -1,21 +1,20 @@
 ---
-title: Creare un lettore di base utilizzando il framework dell'interfaccia utente
-description: Creare un lettore di base utilizzando il framework dell'interfaccia utente
+title: Creare un lettore di base utilizzando il Framework dell’interfaccia utente
+description: Creare un lettore di base utilizzando il Framework dell’interfaccia utente
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 78629042-fd87-406b-af42-229e34d48162
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '134'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Creare un lettore di base utilizzando il Framework dell’interfaccia utente{#create-a-basic-player-using-the-ui-framework}
 
-# Crea un lettore di base utilizzando l&#39;interfaccia utente Framework{#create-a-basic-player-using-the-ui-framework}
+Per creare un lettore di base utilizzando il Framework dell’interfaccia utente:
 
-Per creare un lettore di base utilizzando il framework dell&#39;interfaccia utente:
-
-1. Crea un `<div>` per la tua istanza del lettore.
+1. Creare un `<div>` per l’istanza del lettore.
 
    Ad esempio:
 
@@ -34,7 +33,7 @@ Per creare un lettore di base utilizzando il framework dell&#39;interfaccia uten
    </script>
    ```
 
-   Quando viene creato il lettore, all&#39;elemento `<div>` specificato viene assegnata una classe CSS di `ptp-main-video-div-style`. Il DOM risultante sarà simile al seguente:
+   Al momento della creazione del lettore, il `<div>` all&#39;elemento viene assegnata una classe CSS di `ptp-main-video-div-style`. Il DOM risultante sarà simile al seguente:
 
    ```
    <div id="video1" class="ptp-main-video-div-style"> 
@@ -42,9 +41,9 @@ Per creare un lettore di base utilizzando il framework dell&#39;interfaccia uten
    </div>
    ```
 
-1. Aggiungi un controllo dell’interfaccia utente.
+1. Aggiungere un controllo UI.
 
-   Ad esempio, aggiungere una barra di controllo visualizzata quando il mouse passa sopra il lettore:
+   Ad esempio, aggiungi una barra di controllo che appare quando il mouse passa sopra il lettore:
 
    ```js
    <script> 
@@ -71,7 +70,7 @@ Per creare un lettore di base utilizzando il framework dell&#39;interfaccia uten
    </div>
    ```
 
-L&#39;oggetto restituito dalla chiamata a `ptp.videoPlayer()` fornisce un comportamento che racchiude l&#39;API del lettore multimediale TVSDK e consente il controllo programmatico della riproduzione. Quando effettui chiamate all&#39;istanza del lettore multimediale, l&#39;interfaccia utente si aggiorna automaticamente in base agli eventi attivati dal lettore multimediale:
+L&#39;oggetto restituito dalla chiamata `ptp.videoPlayer()` fornisce un comportamento che racchiude l’API del lettore multimediale TVSDK e consente il controllo programmatico della riproduzione. Quando effettui chiamate sull’istanza del lettore multimediale, l’interfaccia utente si aggiorna in base agli eventi attivati dal lettore multimediale:
 
 ```js
 <script> 

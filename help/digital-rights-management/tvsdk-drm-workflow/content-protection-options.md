@@ -1,22 +1,21 @@
 ---
-title: Opzioni di protezione dei contenuti DRM di Primetime
-description: Opzioni di protezione dei contenuti DRM di Primetime
+title: Opzioni di protezione dei contenuti DRM Primetime
+description: Opzioni di protezione dei contenuti DRM Primetime
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: fb73caf8-a542-4ca6-a5ea-3cd633b2495b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '107'
 ht-degree: 0%
 
 ---
 
+# Opzioni di protezione dei contenuti DRM Primetime{#primetime-drm-content-protection-options}
 
-# Opzioni di protezione dei contenuti DRM di Primetime{#primetime-drm-content-protection-options}
+DRM di Primetime offre ai proprietari di contenuti diverse opzioni per proteggerne i contenuti:
 
-Primetime DRM fornisce una serie di opzioni ai proprietari dei contenuti per proteggere i loro contenuti:
+* **SDK** - [SDK ADOBE PRIMETIME DRM](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_sdk_overview.pdf)
 
-* **SDK**  - SDK DRM  [Adobe Primetime](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_sdk_overview.pdf)
+* **Strumenti della riga di comando** - [Packager offline Primetime](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf), e [Implementazioni di riferimento DRM di Primetime](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_reference_implementations.pdf).
 
-* **Strumenti da riga di comando**  -  [Implementazioni di riferimento DRM ](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf)Primetime Offline Packager [ e ](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_reference_implementations.pdf)Primetime.
-
-* **Codificatori hardware e software** : codificatori che implementano l&#39; [Adobe Primetime DRM ](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_sdk_overview.pdf) SDK o l&#39;Adobe Broadcast SDK (HDKb).
+* **Codificatori hardware e software** - Codificatori che implementano [SDK ADOBE PRIMETIME DRM](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_sdk_overview.pdf) o l’SDK per trasmissione in Adobe (HDKb).

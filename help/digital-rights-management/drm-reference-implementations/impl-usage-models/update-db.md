@@ -1,29 +1,28 @@
 ---
-title: Aggiorna il database di implementazione di riferimento
-description: Aggiorna il database di implementazione di riferimento
+title: Aggiornare il database di implementazione di riferimento
+description: Aggiornare il database di implementazione di riferimento
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: b337bf9c-7add-47b8-9576-db7fa067c51d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '122'
 ht-degree: 0%
 
 ---
 
-
-# Aggiorna l&#39;implementazione di riferimento DB{#update-the-reference-implementation-db}
+# Aggiornare il database di implementazione di riferimento{#update-the-reference-implementation-db}
 
 Per controllare i modelli di utilizzo in base ai quali viene rilasciata una licenza a un utente designato, aggiungere voci al database di implementazione di riferimento.
 
-1. Aggiungi le voci alla tabella `Customer`.
+1. Aggiungi voci al `Customer` tabella.
 
-   La tabella `Customer` include nomi utente e password per l&#39;autenticazione degli utenti. Indica inoltre se un utente dispone di un abbonamento (una licenza rilasciata sotto il modello di utilizzo *Abbonamento*).
+   Il `Customer` La tabella include nomi utente e password per l&#39;autenticazione degli utenti. Indica inoltre se un utente dispone di un abbonamento (una licenza rilasciata in base al *Abbonamento* modello di utilizzo).
 
-1. Concedi a un utente l&#39;accesso ai modelli di utilizzo Download-to-own o Video-on-demand.
+1. Concedi a un utente l’accesso secondo i modelli di utilizzo Download-to-own o Video-on-demand.
 
-       Aggiungi le voci alla tabella &quot;CustomerAuthorization&quot; per specificare:
+       Aggiungi voci alla tabella &quot;CustomerAuthorization&quot; per specificare:
    
-   * Il modello di utilizzo
+   * Modello di utilizzo
    * Ogni segmento di contenuto a cui un utente può accedere
 
-Per ulteriori informazioni su come compilare ogni tabella, vedere lo script [!DNL PopulateSampleDB.sql] (incluso nel DVD DRM Primetime nel [!DNL Reference Implementation/Server/Reference Implementation Server/dbscript/] directory).
+Per ulteriori informazioni su come compilare ogni tabella, vedere [!DNL PopulateSampleDB.sql] (incluso nel DVD DRM Primetime nel [!DNL Reference Implementation/Server/Reference Implementation Server/dbscript/] directory).

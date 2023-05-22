@@ -1,72 +1,72 @@
 ---
 title: API di registrazione client dinamica
 description: API di registrazione client dinamica
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 06a76c71-bb19-4115-84bc-3d86ebcb60f3
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '927'
 ht-degree: 0%
 
 ---
 
-
 # API di registrazione client dinamica {#dynamic-client-registration-api}
 
 >[!NOTE]
 >
->Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente a partire da Adobe. Non è consentito alcun uso non autorizzato.
+>Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente di Adobe. Non è consentito alcun uso non autorizzato.
 
 ## Panoramica {#overview}
 
-Attualmente, esistono due modi in cui Primetime Authentication identifica e registra le applicazioni:
+Attualmente, l’autenticazione Primetime identifica e registra le applicazioni in due modi:
 
-* i client basati su browser sono registrati tramite [elenco di domini](/help/authentication/programmer-overview.md)
-* i client dell&#39;applicazione nativa, come le applicazioni iOS e Android, vengono registrati tramite il meccanismo di richiesta firmato.
+* i client basati su browser sono registrati tramite consentiti [elenco domini](/help/authentication/programmer-overview.md)
+* i client delle applicazioni native, come le applicazioni iOS e Android, vengono registrati tramite il meccanismo del richiedente firmato.
 
-Adobe Primetime Authentication propone un nuovo meccanismo per la registrazione delle applicazioni. Questo meccanismo è descritto nei paragrafi seguenti.
+L’autenticazione Adobe Primetime propone un nuovo meccanismo per la registrazione delle applicazioni. Questo meccanismo è descritto nei paragrafi seguenti.
 
-## Meccanismo di registrazione delle applicazioni {#appRegistrationMechanism}
+## Il meccanismo di registrazione delle domande {#appRegistrationMechanism}
 
 ### Motivi tecnici {#reasons}
 
-Il meccanismo di autenticazione nell’autenticazione di Adobe Primetime si basava sui cookie di sessione, ma a causa di [Schede personalizzate Android Chrome](https://developer.chrome.com/multidevice/android/customtabs){target=_blank} and [Apple Safari View Controller](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller){target=_blank}Questo obiettivo non può più essere raggiunto.
+Il meccanismo di autenticazione nell’autenticazione di Adobe Primetime si basava sui cookie di sessione, ma a causa di [Schede personalizzate Android Chrome](https://developer.chrome.com/multidevice/android/customtabs){target=_blank} and [Apple Safari View Controller](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller){target=_blank}, questo obiettivo non può più essere raggiunto.
 
-Date queste limitazioni, l&#39;Adobe introduce un nuovo meccanismo di registrazione per tutti i suoi clienti. Si basa sulla RFC OAuth 2.0 e prevede i seguenti passaggi:
+Date queste limitazioni, Adobe introduce un nuovo meccanismo di registrazione per tutti i suoi clienti. Si basa sulla RFC di OAuth 2.0 ed è costituito dai seguenti passaggi:
 
-1. Recupero dell&#39;istruzione software dal dashboard TVE
-1. Recupero delle credenziali client
+1. Recupero dell&#39;istruzione software da TVE Dashboard
+1. Ottenimento delle credenziali del client
 1. Ottenimento del token di accesso
 
-### Recupero dell&#39;istruzione software dal dashboard TVE {#softwareStatement}
+### Recupero del rendiconto software dal dashboard TVE {#softwareStatement}
 
-Per ogni applicazione rilasciata, è necessario ottenere un&#39;istruzione software. Tutte le istruzioni software vengono fornite tramite TVE Dashboard, una volta create le applicazioni. L&#39;istruzione software deve essere distribuita insieme all&#39;applicazione sul dispositivo dell&#39;utente.
+Per ogni applicazione rilasciata, è necessario ottenere un rendiconto software. Tutte le istruzioni software vengono fornite tramite la dashboard TVE, una volta create le applicazioni. L&#39;istruzione software deve essere distribuita insieme all&#39;applicazione sul dispositivo dell&#39;utente.
 
 >[!IMPORTANT]
 >
->Quando si utilizza un&#39;istruzione software, il meccanismo requestor id firmato non sarà più necessario.
+>Quando si utilizza un&#39;istruzione software, il meccanismo dell&#39;ID richiedente firmato non sarà più necessario.
 
-Per ulteriori dettagli su come creare istruzioni software, visitare il sito [Registrazione client nel dashboard TVE](/help/authentication/dynamic-client-registration.md).
+Per ulteriori dettagli su come creare istruzioni software, visitare il sito Web all&#39;indirizzo [Registrazione client nel dashboard TVE](/help/authentication/dynamic-client-registration.md).
 
-### Recupero delle credenziali client {#clientCredentials}
+### Ottenimento delle credenziali client {#clientCredentials}
 
-Dopo aver recuperato un&#39;istruzione software da TVE Dashboard, è necessario registrare l&#39;applicazione con il server di autorizzazione Adobe Primetime. Esegui questa operazione eseguendo una chiamata /register e recuperando l&#39;identificativo client univoco.
+Dopo aver recuperato un&#39;istruzione software da TVE Dashboard, è necessario registrare l&#39;applicazione con il server di autorizzazione Adobe Primetime. A tale scopo, esegui una chiamata /register e recupera l’identificatore client univoco.
 
 **Richiesta**
 
-| chiamata HTTP |  |
+| Chiamata HTTP |  |
 |-----------|--------------------|
-| path | /o/client/register |
+| percorso | /o/client/register |
 | metodo | POST |
 
-| field |  |  |
+| campi |  |  |
 |--------------------|---------------------------------------------------------------------------|-----------|
-| software_statement | Istruzione software creata in TVE Dashboard. | obbligatorio |
+| software_statement | L&#39;istruzione software creata in TVE Dashboard. | obbligatorio |
 | redirect_uri | URI utilizzato dall&#39;applicazione per completare il flusso di autenticazione. | facoltativo |
 
-| intestazioni richieste |  |  |
+| intestazioni di richiesta |  |  |
 |-----------------|--------------------------------------------------------------------------------|-----------|
 | Content-Type | application/json | obbligatorio |
-| X-Device-Info | Informazioni sul dispositivo come definito in Passaggio di informazioni sul dispositivo e sulla connessione | obbligatorio |
-| Agente utente | Agente utente | obbligatorio |
+| X-Device-Info | Le informazioni sul dispositivo definite in Passing Device and Connection Information | obbligatorio |
+| User-Agent | L’agente utente | obbligatorio |
 
 **Risposta**
 
@@ -78,22 +78,22 @@ Dopo aver recuperato un&#39;istruzione software da TVE Dashboard, è necessario 
 |---------------------|-----------------|----------------------------|
 | client_id | Stringa | obbligatorio |
 | client_secret | Stringa | obbligatorio |
-| client_id_sent_at | long | obbligatorio |
-| redirect_uris | elenco delle stringhe | obbligatorio |
-| Grant_types | elenco delle stringhe<br/> **valore accettato**<br/> `client_credentials`: Utilizzato da client non sicuri, ad esempio Android SDK. | obbligatorio |
-| errore | **valori accettati**<ul><li>request_non valido</li><li>valid_redirect_uri</li><li>istruzione_software non valida</li><li>unapprovato_software_statement</li></ul> | obbligatorio in un flusso di errore |
+| client_id_issue_at | long | obbligatorio |
+| redirect_uris | elenco di stringhe | obbligatorio |
+| grant_types | elenco di stringhe<br/> **valore accettato**<br/> `client_credentials`: utilizzato da client non sicuri, ad esempio SDK per Android. | obbligatorio |
+| errore | **valori accettati**<ul><li>invalid_request</li><li>invalid_redirect_uri</li><li>invalid_software_statement</li><li>unauthorized_software_statement</li></ul> | obbligatorio in un flusso di errore |
 
 
 #### Risposta di errore {#error-response}
 
-In caso di errore, il server di registrazione risponde con un codice di stato HTTP 400 (Bad Request) e include i seguenti parametri all&#39;interno della risposta:
+In caso di errore, il server di registrazione risponde con un codice di stato HTTP 400 (Richiesta non valida) e include i seguenti parametri nella risposta:
 
-| codice di stato | organismo di risposta | descrizione |
+| codice di stato | corpo della risposta | descrizione |
 | --- | --- | --- |
-| HTTP 400 | {&quot;error&quot;: &quot;nome_richiesta non valido&quot;} | Nella richiesta manca un parametro obbligatorio, include un valore di parametro non supportato, ripete un parametro o in caso contrario è errato. |
-| HTTP 400 | {&quot;error&quot;: &quot;non valido_redirect_uri&quot;} | Redirect_uri non consentito per questo client in base alla sua applicazione registrata. |
-| HTTP 400 | {&quot;error&quot;: &quot;non valido_software_statement&quot;} | Istruzione software non valida. |
-| HTTP 400 | {&quot;error&quot;: &quot;unapprovato_software_statement&quot;} | Impossibile trovare software_id nella configurazione. |
+| HTTP 400 | {&quot;error&quot;: &quot;invalid_request&quot;} | Nella richiesta manca un parametro obbligatorio, include un valore di parametro non supportato, ripete un parametro o il formato non è corretto. |
+| HTTP 400 | {&quot;error&quot;: &quot;invalid_redirect_uri&quot;} | Redirect_uri non consentito per questo client in base alla sua applicazione registrata. |
+| HTTP 400 | {&quot;error&quot;: &quot;invalid_software_statement&quot;} | Dichiarazione software non valida. |
+| HTTP 400 | {&quot;error&quot;: &quot;unapprove_software_statement&quot;} | Software_id non trovato nella configurazione. |
 
 #### Esempio di credenziali client {#client-credentials-example}
 
@@ -151,23 +151,23 @@ Pragma: no-cache
 
 ### Ottenimento del token di accesso {#accessToken}
 
-Dopo aver recuperato l’identificatore client univoco (ID client e segreto client) per l’applicazione, devi ottenere un token di accesso. Il token di accesso è un token OAuth 2.0 obbligatorio, utilizzato per chiamare le API di autenticazione di Primetime.
+Dopo aver recuperato l’identificatore client univoco (ID client e segreto client) per l’applicazione, devi ottenere un token di accesso. Il token di accesso è un token OAuth 2.0 obbligatorio, utilizzato per chiamare le API di autenticazione Primetime.
 
 >[!NOTE]
 >
->Attualmente, i token di accesso hanno 24 ore di tempo per vivere.
+>Attualmente, i token di accesso hanno un tempo di durata di 24 ore.
 
 **Richiesta**
 
 
-| **chiamata HTTP** |  |
+| **Chiamata HTTP** |  |
 | --- | --- |
-| path | `/o/client/token` |
+| percorso | `/o/client/token` |
 | metodo | POST |
 
 | **parametri di richiesta** |  |
 | --- | --- |
-| `grant_type` | Ricevuto nel processo di registrazione del client.<br/> **Valore accettato**<br/>`client_credentials`: Utilizzato per client non sicuri, come l&#39;SDK per Android. |
+| `grant_type` | Ricevuto nel processo di registrazione del client.<br/> **Valore accettato**<br/>`client_credentials`: utilizzato per client non sicuri, come l’SDK per Android. |
 | `client_id` | Identificatore client ottenuto nel processo di registrazione client. |
 | `client_secret` | Identificatore client ottenuto nel processo di registrazione client. |
 
@@ -176,21 +176,21 @@ Dopo aver recuperato l’identificatore client univoco (ID client e segreto clie
 | campi di risposta |  |  |
 | --- | --- | --- |
 | `access_token` | Il valore del token di accesso da utilizzare per chiamare le API Primetime | obbligatorio |
-| `expires_in` | Tempo in secondi fino alla scadenza di access_token | obbligatorio |
+| `expires_in` | Il tempo in secondi che deve trascorrere prima della scadenza del token di accesso | obbligatorio |
 | `token_type` | Tipo del token **portatore** | obbligatorio |
-| `created_at` | Ora del problema del token | obbligatorio |
+| `created_at` | Ora di emissione del token | obbligatorio |
 | **intestazioni di risposta** |  |  |
 | `Content-Type` | application/json | obbligatorio |
 
 **Risposta di errore**
 
-In caso di errore, il server di autorizzazione risponde con un codice di stato HTTP 400 (Bad Request) e include i seguenti parametri all&#39;interno della risposta:
+In caso di errore, il server autorizzazioni risponde con un codice di stato HTTP 400 (Richiesta non valida) e include i seguenti parametri nella risposta:
 
-| codice di stato | organismo di risposta | descrizione |
+| codice di stato | corpo della risposta | descrizione |
 | --- | --- | --- |
-| HTTP 400 | {&quot;error&quot;: &quot;nome_richiesta non valido&quot;} | Nella richiesta manca un parametro obbligatorio, include un valore di parametro non supportato (diverso dal tipo di sovvenzione), ripete un parametro, include più credenziali, utilizza più di un meccanismo di autenticazione del client o è altrimenti in formato non valido. |
-| HTTP 400 | {&quot;error&quot;: &quot;client_non valido&quot;} | Autenticazione client non riuscita. Client sconosciuto. L&#39;SDK DEVE registrarsi nuovamente con il server di autorizzazione. |
-| HTTP 400 | {&quot;error&quot;: &quot;unauthorized_client&quot;} | Il client autenticato non è autorizzato a utilizzare questo tipo di concessione dell&#39;autorizzazione. |
+| HTTP 400 | {&quot;error&quot;: &quot;invalid_request&quot;} | Nella richiesta manca un parametro obbligatorio, include un valore di parametro non supportato (diverso dal tipo di concessione), ripete un parametro, include più credenziali, utilizza più meccanismi per l’autenticazione del client o ha un formato non valido. |
+| HTTP 400 | {&quot;error&quot;: &quot;invalid_client&quot;} | Autenticazione client non riuscita. Client sconosciuto. L’SDK DEVE registrarsi nuovamente con il server autorizzazioni. |
+| HTTP 400 | {&quot;error&quot;: &quot;unauthorized_client&quot;} | Il client autenticato non è autorizzato a utilizzare questo tipo di concessione di autorizzazione. |
 
 #### Esempio di ottenimento del token di accesso: {#obt-access-token}
 
@@ -232,21 +232,21 @@ Pragma: no-cache
 
 ## Esecuzione di richieste di autenticazione {#autheticationRequests}
 
-Utilizza il token di accesso per eseguire Adobe Primetime [Chiamate API di autenticazione](/help/authentication/initiate-authentication.md). Per eseguire questa operazione, è necessario aggiungere il token di accesso alla richiesta API, in uno dei seguenti modi:
+Utilizza il token di accesso per eseguire Adobe Primetime [Chiamate API di autenticazione](/help/authentication/initiate-authentication.md). A questo scopo, è necessario aggiungere il token di accesso alla richiesta API in uno dei seguenti modi:
 
-* aggiungendo un nuovo parametro di query alla richiesta. Viene chiamato il nuovo parametro **access_token**.
+* aggiungendo un nuovo parametro di query alla richiesta. Questo nuovo parametro viene chiamato **access_token**.
 
-* aggiungendo una nuova intestazione HTTP alla richiesta: Autorizzazione: Portatore. È consigliabile utilizzare l’intestazione HTTP , in quanto le stringhe di query tendono a essere visibili nei registri del server.
+* aggiungendo una nuova intestazione HTTP alla richiesta: Authorization: Bearer. È consigliabile utilizzare l’intestazione HTTP, in quanto le stringhe di query tendono a essere visibili nei registri del server.
 
-In caso di errore, è possibile restituire le seguenti risposte di errore:
+In caso di errore, è possibile restituire le risposte di errore seguenti:
 
 | Risposte di errore |  |  |
 |-----------------|-----|--------------------------------------------------------------------------------------------------------|
-| request_non valido | 400 | Richiesta non valida. |
-| client_non valido | 403 | L’ID client non è più autorizzato a eseguire richieste. È necessario generare nuove credenziali client. |
-| access_negato | 401 | Access_token non valido (scaduto o non valido). Il client DEVE richiedere un nuovo access_token. |
+| invalid_request | 400 | Richiesta non valida. |
+| invalid_client | 403 | L’ID client non è più autorizzato a eseguire richieste. È necessario generare nuove credenziali client. |
+| accesso negato | 401 | Access_token non valido (scaduto o non valido). Il client DEVE richiedere un nuovo access_token. |
 
-### Esecuzione di esempi di richieste di autenticazione:
+### Esempi di esecuzione di richieste di autenticazione:
 
 **Invio del token di accesso come parametro della richiesta:**
 

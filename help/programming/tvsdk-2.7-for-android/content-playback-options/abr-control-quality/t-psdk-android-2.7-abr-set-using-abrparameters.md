@@ -1,33 +1,32 @@
 ---
-description: È possibile impostare valori di controllo ABR solo con ABRControlParameters, ma è possibile crearne uno nuovo in qualsiasi momento.
-title: Configurare i bit rate adattivi utilizzando ABRControlParameters
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: È possibile impostare i valori di controllo ABR solo con ABRControlParameters, ma è possibile crearne uno nuovo in qualsiasi momento.
+title: Configurare velocità bit adattivi utilizzando ABRControlParameters
+exl-id: fc7887bd-37e8-48e7-8afb-3946fb3f1e77
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '116'
 ht-degree: 0%
 
 ---
 
+# Configurare velocità bit adattivi utilizzando ABRControlParameters {#configure-adaptive-bit-rates-using-abrcontrolparameters}
 
-# Configura i bit rate adattivi utilizzando ABRControlParameters {#configure-adaptive-bit-rates-using-abrcontrolparameters}
-
-È possibile impostare valori di controllo ABR solo con ABRControlParameters, ma è possibile crearne uno nuovo in qualsiasi momento.
+È possibile impostare i valori di controllo ABR solo con ABRControlParameters, ma è possibile crearne uno nuovo in qualsiasi momento.
 
 Le seguenti condizioni si applicano a `ABRControlParameters`:
 
-* In fase di costruzione, è necessario fornire valori per tutti i parametri.
+* Al momento della costruzione, dovete fornire i valori per tutti i parametri.
 * Dopo la costruzione, non è possibile modificare i singoli valori.
-* Se i parametri specificati sono al di fuori dell’intervallo consentito, viene lanciato un `ArgumentError`.
+* Se i parametri specificati non rientrano nell&#39;intervallo consentito, `ArgumentError` viene lanciato.
 
-1. Determina i bit rate iniziali, minimi e massimi.
-1. Determina il criterio ABR:
+1. Determinare la velocità di trasmissione iniziale, minima e massima.
+1. Determinare il criterio ABR:
 
    * `ABR_CONSERVATIVE`
    * `ABR_MODERATE`
    * `ABR_AGGRESSIVE`
 
-1. Imposta i valori dei parametri ABR nel costruttore `ABRControlParameters` e assegna i valori a Media Player.
+1. Impostare i valori dei parametri ABR in `ABRControlParameters` e assegnare i valori al lettore multimediale.
 
    ```
    public ABRControlParameters(int initialBitRate, 
@@ -39,4 +38,3 @@ Le seguenti condizioni si applicano a `ABRControlParameters`:
      int maxTrickPlayBandwidthUsage, 
      int maxPlayoutRate);
    ```
-

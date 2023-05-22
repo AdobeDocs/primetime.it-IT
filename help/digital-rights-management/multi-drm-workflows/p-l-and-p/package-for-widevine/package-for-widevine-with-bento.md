@@ -1,26 +1,25 @@
 ---
-description: Utilizziamo sia il packager Bento4 che il packager offline Adobe per creare contenuti DASH crittografati. Bento4 prende come input contenuto mp4 non crittografato.
-title: Pacchetto dei contenuti con Bento4
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Utilizziamo sia il Packager Bento4 che il Packager offline Adobe per creare contenuti DASH crittografati. Bento4 accetta come input contenuto mp4 non crittografato.
+title: Creare pacchetti di contenuti con Bento4
+exl-id: c873eaf6-c738-4f95-a900-a8aecb03754d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '264'
 ht-degree: 0%
 
 ---
 
+# Creazione di pacchetti di contenuti per Widevine e PlayReady {#package-for-widevine}
 
-# Contenuto del pacchetto per Widevine e PlayReady {#package-for-widevine}
+Utilizziamo sia il Packager Bento4 che il Packager offline Adobe per creare contenuti DASH crittografati. Bento4 accetta come input contenuto mp4 non crittografato.
 
-Utilizziamo sia il packager Bento4 che il packager offline Adobe per creare contenuti DASH crittografati. Bento4 prende come input contenuto mp4 non crittografato.
+## Creare pacchetti di contenuti con Bento4{#package-your-content-with-bento}
 
-## Crea un pacchetto con i contenuti con Bento4{#package-your-content-with-bento}
+Il packager Bento4 prevede che l&#39;input mp4 sia pre-frammentato. La distribuzione Bento4 Packager include uno strumento per questo.
 
-Il packager Bento4 prevede che l&#39;input mp4 sia pre-frammentato. La distribuzione del packager Bento4 include uno strumento per questo.
+**Chiamata Bento4**
 
-**Chiamata a Bento4**
-
-Le chiamate tipiche del packager Bento4 sono simili agli esempi seguenti:
+Le chiamate Bento4 Packager tipiche sono simili agli esempi seguenti:
 
 ```
 ./mp4dash
@@ -45,7 +44,7 @@ Le chiamate tipiche del packager Bento4 sono simili agli esempi seguenti:
 --playready-header=\"LA_URL:http://pr.test.expressplay.com/playready/RightsManager.asmx\"
 ```
 
-L&#39;esempio seguente combina gli schemi PlayReady e Widevine. In questo caso particolare il packager sta aggiungendo sia la protezione del contenuto Widevine che i dati di inizializzazione della protezione del contenuto PlayReady al contenuto DASH di output.
+L&#39;esempio seguente combina gli schemi PlayReady e Widevine. In questo caso particolare, l&#39;autore del pacchetto sta aggiungendo al contenuto DASH di output sia i dati di inizializzazione della protezione dei contenuti Widevine che quelli della protezione dei contenuti PlayReady.
 
 ```
 /mp4dash
@@ -63,19 +62,19 @@ L&#39;esempio seguente combina gli schemi PlayReady e Widevine. In questo caso p
 
 dove
 
-Il valore del flag `--encryption-key` si trova nel modulo `<base16 encoded key id>:<base16 encoded encryption key>`.
+Il valore per `--encryption-key` il contrassegno è nel modulo `<base16 encoded key id>:<base16 encoded encryption key>`.
 
-Il flag `--widevine-header=provider:intertrust#content_id:2a` indica al gestore di pacchetti di includere la casella pssh nel manifesto, che TVSDK attualmente richiede per la riproduzione.
+Il `--widevine-header=provider:intertrust#content_id:2a` Questo flag indica al packager di includere la casella pssh nel manifesto, che TVSDK attualmente richiede per la riproduzione.
 
-Il valore di `-playready-header` è per l&#39;acquisizione della licenza PlayReady.
+Il valore per `-playready-header` è per l&#39;acquisizione con licenza PlayReady.
 
-## Pacchetto del contenuto con Adobe Offline Packager {#package-your-content-with-adobe-offline-packager}
+## Creare un pacchetto dei contenuti con Adobe Offline Packager {#package-your-content-with-adobe-offline-packager}
 
-Adobe Offline Packager prende come input contenuto mp4 non crittografato.
+Adobe Offline Packager prende come input il contenuto mp4 non crittografato.
 
-**Chiamata di Adobe Offline Packager**
+**Adobe chiamante Offline Packager**
 
-Una tipica chiamata di adobe offline packager assomiglia alla chiamata di seguito:
+Una tipica chiamata a Adobe Offline Packager è simile alla chiamata seguente:
 
 ```
 java -jar OfflinePackager.jar -conf_path Content_PR_WV.xml -in_path "Jaigo.mp4"
@@ -89,9 +88,9 @@ http://pr.test.expressplay.com/playready/RightsManager.asmx
 -content_id c595f214d84dc7ecf31a8ebf1b7ddda5
 ```
 
-In questo caso particolare il packager offline sta aggiungendo sia i dati di inizializzazione della protezione del contenuto Widevine che quelli della protezione del contenuto PlayReady al contenuto DASH di output. Il valore di `-key_file_path` è per una chiave con codifica base64. Il valore di `-playready_LA_URL` è per l&#39;acquisizione della licenza PlayReady.
+In questo caso particolare, l&#39;utilità di creazione pacchetti offline sta aggiungendo sia dati di protezione dei contenuti Widevine che dati di inizializzazione della protezione dei contenuti PlayReady al contenuto DASH di output. Il valore di `-key_file_path` è per una chiave con codifica base64. Il valore di `-playready_LA_URL` è per l&#39;acquisizione con licenza PlayReady.
 
-L&#39;argomento conf_path punta al file di configurazione che contiene quanto segue:
+L&#39;argomento conf_path punta al file di configurazione che conterrà quanto segue:
 
 ```
 <config>
@@ -101,4 +100,4 @@ L&#39;argomento conf_path punta al file di configurazione che contiene quanto se
 </config>
 ```
 
-Poiché alcuni dispositivi Android, principalmente Amazon Fire TV, non supportano la decrittografia audio, la crittografia audio è facoltativa.
+Poiché alcuni dispositivi Android, principalmente Amazon Fire TV, non supportano la decrittografia audio, la crittografia audio è opzionale.

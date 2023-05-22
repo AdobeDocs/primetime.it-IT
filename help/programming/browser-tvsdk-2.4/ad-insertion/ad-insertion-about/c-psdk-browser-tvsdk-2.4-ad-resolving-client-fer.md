@@ -1,22 +1,21 @@
 ---
-description: 'Il contenuto Full Event Replay (FER) è un flusso live convertito in VOD aggiungendo il tag #EXT-X-ENDLIST alla fine del file manifesto. Il flusso mantiene i marcatori di cue degli annunci.'
-title: Risoluzione e inserimento di annunci gratuiti
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Il contenuto FER (Full Event Replay) è un flusso live convertito in VOD aggiungendo il tag
+title: Risoluzione e inserimento di annunci FER
+exl-id: 9075932d-4e77-4249-af5d-0b392033907f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%
 
 ---
 
-
 # Risoluzione e inserimento di annunci FER{#fer-ad-resolving-and-insertion}
 
-Il contenuto Full Event Replay (FER) è un flusso live convertito in VOD aggiungendo il tag #EXT-X-ENDLIST alla fine del file manifesto. Il flusso mantiene i marcatori di cue degli annunci.
+Il contenuto FER (Full Event Replay) è un flusso live convertito in VOD aggiungendo il tag #EXT-X-ENDLIST alla fine del file manifesto. Il flusso mantiene i marcatori di cue dell’annuncio.
 
-Il browser TVSDK tratta un flusso FER come VOD, quindi per impostazione predefinita la modalità di segnalazione degli annunci è `SERVER_MAP`. Tuttavia, poiché il flusso mantiene i suoi marcatori di cue degli annunci, puoi impostare la modalità di segnalazione degli annunci su `MANIFEST_CUES`, che consente di utilizzare i marcatori di cue degli annunci per l’inserimento degli annunci.
+Il browser TVSDK tratta un flusso FER come VOD, quindi per impostazione predefinita la modalità di segnalazione dell’annuncio è `SERVER_MAP`. Tuttavia, poiché il flusso mantiene i suoi marcatori di cue dell’annuncio, puoi impostare la modalità di segnalazione dell’annuncio su `MANIFEST_CUES`, che consente di utilizzare i marcatori di cue dell’annuncio per l’inserimento degli annunci.
 
-Per attivare l&#39;inserimento di annunci utilizzando i marcatori cue per un flusso FER:
+Per attivare l’inserimento di annunci utilizzando marcatori cue per un flusso FER:
 
 ```js
 var config = new AdobePSDK.MediaPlayerItemConfig(); 
@@ -24,11 +23,11 @@ config.adSignalingMode = AdobePSDK.AdSignalingMode.MANIFEST_CUES;
 player.replaceCurrentResource(mediaResource, config);
 ```
 
-Il comportamento di risoluzione e inserimento di annunci gratuiti è simile alla risoluzione e all&#39;inserimento di annunci live. Il browser TVSDK effettua le seguenti operazioni:
+Il comportamento di risoluzione e inserimento degli annunci FER è simile a quello di risoluzione e inserimento degli annunci live. TVSDK per browser esegue le seguenti operazioni:
 
-1. Inserisce eventuali annunci pre-scorrimento all’inizio del contenuto.
-1. Risolve gli annunci specificati dai punti di cue definiti nel manifesto.
+1. Inserisce eventuali annunci pre-roll all’inizio del contenuto.
+1. Risolve gli annunci specificati dai cue point definiti nel manifesto.
 1. Sostituisce parti del contenuto principale con interruzioni pubblicitarie della stessa durata
-1. Se necessario, ricalcola la timeline virtuale.
+1. Ricalcola la timeline virtuale, se necessario.
 
-**Restrizione:** il browser TVSDK supporta solo la riproduzione di flussi HLS FER. Inoltre, gli annunci MP4 mid-roll non sono supportati con flussi FER.
+**Limitazione:** Browser TVSDK supporta solo la riproduzione di flussi HLS FER. Inoltre, gli annunci MP4 mid-roll non sono supportati con i flussi FER.

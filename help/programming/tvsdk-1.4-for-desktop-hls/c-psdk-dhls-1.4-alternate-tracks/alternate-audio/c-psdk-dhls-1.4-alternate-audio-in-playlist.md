@@ -1,28 +1,27 @@
 ---
-description: La playlist di un video può specificare un numero illimitato di tracce audio alternative per il contenuto video principale. Ad esempio, potresti voler aggiungere lingue diverse al contenuto video o consentire all’utente di passare da un brano all’altro del dispositivo durante la riproduzione del contenuto.
-title: Tracce audio alternative nella playlist
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: La playlist di un video può specificare un numero illimitato di tracce audio alternative per il contenuto video principale. Ad esempio, potrebbe essere utile aggiungere lingue diverse al contenuto video o consentire all'utente di passare da un brano all'altro del dispositivo durante la riproduzione del contenuto.
+title: Brani audio alternativi nella playlist
+exl-id: dfd45f2d-8c8f-4c90-9c79-3afa03b518bf
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 0%
 
 ---
 
+# Brani audio alternativi nella playlist{#alternate-audio-tracks-in-the-playlist}
 
-# Tracce audio alternative nella playlist{#alternate-audio-tracks-in-the-playlist}
+La playlist di un video può specificare un numero illimitato di tracce audio alternative per il contenuto video principale. Ad esempio, potrebbe essere utile aggiungere lingue diverse al contenuto video o consentire all&#39;utente di passare da un brano all&#39;altro del dispositivo durante la riproduzione del contenuto.
 
-La playlist di un video può specificare un numero illimitato di tracce audio alternative per il contenuto video principale. Ad esempio, potresti voler aggiungere lingue diverse al contenuto video o consentire all’utente di passare da un brano all’altro del dispositivo durante la riproduzione del contenuto.
-
-Le tracce audio alternative, o l&#39;audio in ritardo, consentono agli utenti di passare da più tracce in lingua per flussi video HTTP (in tempo reale/lineare e VOD) e non è necessario modificare, duplicare o riassemblare il video per ciascuna traccia audio. È possibile fornire tracce in più lingue per una risorsa video prima o dopo la creazione del pacchetto iniziale della risorsa.
+Le tracce audio alternative, o l&#39;audio di associazione tardiva, consentono agli utenti di passare da una traccia in più lingue per i flussi video HTTP (live/linear e VOD) e non è necessario modificare, duplicare o ricompilare il video per ogni traccia audio. Puoi fornire tracce in più lingue per una risorsa video prima o dopo la sua creazione iniziale.
 
 >[!TIP]
 >
->Affinché l’audio alternativo sia unito alla traccia video del supporto principale, le marche temporali della traccia alternativa devono corrispondere alle marche temporali dell’audio nella traccia principale.
+>Affinché l&#39;audio alternativo possa essere mixato con la traccia video del supporto principale, le marche temporali della traccia alternativa devono corrispondere a quelle dell&#39;audio nella traccia principale.
 
-La traccia audio principale è inclusa nella raccolta di tracce audio con l&#39;etichetta `default`. I metadati per i flussi audio alternativi sono inclusi nella playlist nei tag `#EXT-X-MEDIA` con `TYPE=AUDIO`.
+La traccia audio principale è inclusa nella raccolta di tracce audio con `default` etichetta. I metadati per i flussi audio alternativi sono inclusi nella playlist nel `#EXT-X-MEDIA` tag con `TYPE=AUDIO`.
 
-Ad esempio, un manifesto M3U8 che specifica più flussi audio alternativi potrebbe avere un aspetto simile al seguente:
+Ad esempio, un manifesto M3U8 che specifica più flussi audio alternativi potrebbe essere simile al seguente:
 
 ```
 #EXTM3U
@@ -44,4 +43,3 @@ gear1/prog_index.m3u8
 gear2/prog_index.m3u8
 ...
 ```
-

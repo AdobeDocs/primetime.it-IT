@@ -1,29 +1,28 @@
 ---
-description: I sottotitoli codificati visualizzano la parte audio di un video sotto forma di testo sullo schermo quando l’audio non è udibile o l’utente non è udito.
-title: Selezionare una traccia di didascalia corrente tra le tracce disponibili
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: I sottotitoli codificati visualizzano la porzione audio di un video come testo sullo schermo quando l'audio non è udibile o lo spettatore è ipoudente.
+title: Seleziona una traccia di didascalia corrente tra le tracce disponibili
+exl-id: 75970604-c318-4621-bad3-caab292c8a04
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '230'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Seleziona una traccia di didascalia corrente tra le tracce disponibili{#select-a-current-caption-track-from-among-available-tracks}
 
-# Selezionare una traccia di didascalia corrente tra le tracce disponibili{#select-a-current-caption-track-from-among-available-tracks}
-
-È possibile selezionare una traccia da un elenco di tracce a didascalia chiusa attualmente disponibili. Questa diventa la traccia corrente, che viene visualizzata quando la visibilità è attiva. Alcune tracce potrebbero non essere disponibili all&#39;inizio, quindi ascolta l&#39;evento che indica che sono state rese disponibili altre tracce.
+È possibile selezionare un brano da un elenco di brani con sottotitoli attualmente disponibili. Questa diventa la traccia corrente, che viene visualizzata quando la visibilità è attiva. Alcuni brani potrebbero non essere disponibili inizialmente, quindi ascolta l’evento che indica che sono stati resi disponibili altri brani.
 
 >[!TIP]
 >
->I sottotitoli codificati sono sempre abilitati. Tutte le tracce di didascalia chiusa predefinite sono considerate presenti. Le tracce predefinite (come CC1-CC4, CS1-CS6) sono enumerate in `ClosedCaptionsTrack.DefaultCCTypes`. Quando la riproduzione inizia, TVSDK cerca l’attività su uno di questi canali. Se trova l&#39;attività, imposta il metodo `isActive` per quel brano e invia l&#39;evento `MediaPlayer.PlaybackEventListener.onUpdated` .
+>I sottotitoli codificati sono sempre abilitati. Tutte le tracce sottotitoli predefinite sono considerate presenti. I brani predefiniti (come CC1-CC4, CS1-CS6) sono elencati in `ClosedCaptionsTrack.DefaultCCTypes`. Quando inizia la riproduzione, TVSDK cerca l’attività su uno qualsiasi di questi canali. Se trova attività, imposta `isActive` metodo per tale tracciamento e invia `MediaPlayer.PlaybackEventListener.onUpdated` evento.
 
-1. Attendi che il lettore multimediale sia almeno nello stato PREPARATO.
+1. Attendere che il lettore multimediale sia almeno nello stato PREPARATO.
 1. Ascolta questi eventi:
 
-   * `MediaPlayer.PlaybackEventListener.onStateChanged with state MediaPlayer.PlayerState.INITIALIZED`: È disponibile l’elenco iniziale di tracce a didascalia chiusa
+   * `MediaPlayer.PlaybackEventListener.onStateChanged with state MediaPlayer.PlayerState.INITIALIZED`: è disponibile l’elenco iniziale dei brani con sottotitoli
 
-1. Ottenere un elenco di tutti i brani a didascalia chiusa attualmente disponibili.
+1. Ottieni un elenco di tutte le tracce di sottotitoli attualmente disponibili.
 
    Ad esempio:
 
@@ -32,7 +31,7 @@ ht-degree: 1%
          mediaPlayer.getCurrentItem().getClosedCaptionsTracks();
    ```
 
-1. Seleziona una traccia disponibile come traccia corrente.
+1. Selezionate un brano disponibile come brano corrente.
 
    Ad esempio:
 
@@ -47,6 +46,6 @@ ht-degree: 1%
    }
    ```
 
-1. Implementa un listener per l&#39;evento che indica che sono disponibili più tracce. Quando TVSDK invia l’evento, recupera l’elenco corrente delle tracce disponibili.
+1. Implementa un listener per l’evento che indica che sono disponibili più tracce. Quando TVSDK invia l’evento, recupera l’elenco corrente dei brani disponibili.
 
-   Recupera l’elenco ogni volta che si verifica l’evento per assicurarti di disporre sempre dell’elenco più aggiornato.
+   Recupera l’elenco ogni volta che si verifica l’evento, per assicurarti di disporre sempre dell’elenco più recente.

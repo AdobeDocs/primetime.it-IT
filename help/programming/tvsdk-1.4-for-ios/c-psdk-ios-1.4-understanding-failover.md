@@ -1,20 +1,19 @@
 ---
-description: La gestione del failover si verifica quando una playlist di varianti presenta più rappresentazioni per lo stesso bit rate e una delle rappresentazioni smette di funzionare. Il TVSDK passa tra le rappresentazioni.
+description: La gestione del failover si verifica quando una playlist di varianti presenta più copie trasformate per la stessa velocità bit e una di esse smette di funzionare. Il TVSDK passa da un rendering all’altro.
 title: Failover
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 8c215e2b-e601-4991-a66f-0e810176a511
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '222'
 ht-degree: 0%
 
 ---
 
-
 # Failover{#failover}
 
-La gestione del failover si verifica quando una playlist di varianti presenta più rappresentazioni per lo stesso bit rate e una delle rappresentazioni smette di funzionare. Il TVSDK passa tra le rappresentazioni.
+La gestione del failover si verifica quando una playlist di varianti presenta più copie trasformate per la stessa velocità bit e una di esse smette di funzionare. Il TVSDK passa da un rendering all’altro.
 
-L&#39;esempio seguente mostra una playlist variante con URL di failover con lo stesso bit rate:
+L’esempio seguente mostra una playlist di varianti con URL di failover della stessa velocità in bit:
 
 ```
 #EXTM3U
@@ -25,14 +24,13 @@ https://sj2slu225.corp.adobe.com:8090/_default_/_default_/livestream.m3u8
 https://sj2slu225.corp.adobe.com:8091/_default_/_default_/livestream.m3u8
 ```
 
-Quando TVSDK carica la playlist della variante, crea una coda che contiene gli URL per tutte le rappresentazioni del contenuto per lo stesso bit rate. Quando una richiesta di un URL non riesce, TVSDK utilizza l&#39;URL successivo dello stesso bit rate dalla coda di failover. In qualsiasi momento di errore specifico, TVSDK passa una volta in rassegna tutti gli URL disponibili fino a quando non ne trova uno che funziona correttamente o finché non ha tentato tutti gli URL disponibili. Se TVSDK ha tentato di tutti gli URL disponibili e nessuno degli URL funziona, TVSDK smette di provare a riprodurre il contenuto.
+Quando TVSDK carica la playlist delle varianti, crea una coda che contiene gli URL di tutte le rappresentazioni del contenuto con la stessa velocità bit. Quando una richiesta di un URL non riesce, TVSDK utilizza l’URL successivo con la stessa velocità bit dalla coda di failover. In qualsiasi momento di errore specifico, TVSDK scorre una volta tra tutti gli URL disponibili fino a quando non ne trova uno che funziona correttamente o fino a quando non ha tentato tutti gli URL disponibili. Se TVSDK ha tentato di usare tutti gli URL disponibili e nessuno di essi funziona, TVSDK smette di provare a riprodurre il contenuto.
 
-Il failover avviene solo a livello M3U8, il che significa:
+Il failover si verifica solo a livello di M3U8, il che significa:
 
-* Per il VOD, il failover può verificarsi solo quando inizia a tentare di riprodurre e non dopo l&#39;avvio della riproduzione.
+* Per VOD, il failover può verificarsi solo quando inizia a tentare di riprodurre e non dopo l&#39;avvio della riproduzione.
 * Per lo streaming live, il failover può avvenire nel mezzo del flusso.
 
 >[!TIP]
 >
->TVSDK, invece del lettore Apple AV Foundation, fornisce la gestione del failover.
-
+>TVSDK, anziché Apple AV Foundation Player, consente la gestione del failover.

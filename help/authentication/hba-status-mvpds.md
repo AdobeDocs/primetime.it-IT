@@ -1,30 +1,30 @@
 ---
-title: Stato dell'HBA per gli MVPD
-description: Stato dell'HBA per gli MVPD
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Stato HBA per MVPD
+description: Stato HBA per MVPD
+exl-id: 9e506417-0886-4306-9b9f-5fde24a792d3
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '139'
 ht-degree: 0%
 
 ---
 
-
-# Stato dell&#39;HBA per gli MVPD
+# Stato HBA per MVPD
 
 >[!NOTE]
 >
->Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente a partire da Adobe. Non è consentito alcun uso non autorizzato.
+>Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente di Adobe. Non è consentito alcun uso non autorizzato.
 
 
 * HBA con MVPD abilitati per SAML
-* HBA con MVPD abilitati OAuth 2.0
+* HBA con MVPD abilitati per OAuth 2.0
 
 
 ## HBA con MVPD abilitati per SAML {#bha-saml-enabled-mvpds}
 
-| MVPD | Funzionalità di base disponibili? | Invia flag nella risposta di autenticazione | SSO? | Commenti |
+| MVPD | Funzionalità di base disponibili? | Invia un flag alla risposta di autenticazione | SSO? | Commenti |
 |---|---|---|---|---|
-| DirectTV | Sì | No |  |  |
+| DirecTV | Sì | No |  |  |
 | Piatto | In corso | In corso |  |  |
 | Spettro | Sì | Sì |  |  |
 | Carta | Sì | No |  |  |
@@ -32,17 +32,16 @@ ht-degree: 0%
 | AT&amp;T | Sì | No |  |  |
 | Verizon | Sì | Sì |  |  |
 | Cablevision | In corso | In corso |  |  |
-| Suddenlink | Sì | In corso |  |  |
+| Collegamento improvviso | Sì | In corso |  |  |
 | Mediacom | Sì | In corso |  |  |
 | Midcontinente | Sì | In corso |  |  |
-| Massilone | Sì | No |  |  |
-| Fibre Google | Sì | In corso |  |  |
+| Massilon | Sì | No |  |  |
+| Fibra Google | Sì | In corso |  |  |
 | AlticeOne | Sì | Sì |  |  |
 
 
-## HBA con MVPD abilitati OAuth 2.0 {#hba-with-oauth2-enabled-mvpds}
+## HBA con MVPD abilitati per OAuth 2.0 {#hba-with-oauth2-enabled-mvpds}
 
-| MVPD | Funzionalità di base disponibili? | Invia flag nella risposta di autenticazione | SSO? | Commenti |
+| MVPD | Funzionalità di base disponibili? | Invia un flag alla risposta di autenticazione | SSO? | Commenti |
 |---|---|---|---|---|
 | Comcast | Sì | Sì |  |  |
-

@@ -1,21 +1,20 @@
 ---
-title: Proprietà di consegna chiavi remote (iOS)
-description: Proprietà di consegna chiavi remote (iOS)
+title: Proprietà di consegna della chiave remota (iOS)
+description: Proprietà di consegna della chiave remota (iOS)
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 0fe3ed9b-a8ee-43b4-ab3c-8ea2e696503b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
+# Proprietà di consegna della chiave remota (iOS){#remote-key-delivery-properties-ios}
 
-# Proprietà di consegna chiavi remote (iOS){#remote-key-delivery-properties-ios}
+Per supportare la generazione di licenze per la consegna di chiavi remote a un client iOS in Adobe Primetime DRM, è necessario specificare il certificato del server chiavi in `flashaccess-refimpl.properties` file.
 
-Per supportare la generazione di licenze per la consegna di chiavi remote a un client iOS in Adobe Primetime DRM , devi specificare il certificato del server chiavi nel file `flashaccess-refimpl.properties` .
-
-Le seguenti proprietà sono state aggiunte in Primetime DRM :
+In Primetime DRM sono state aggiunte le seguenti proprietà:
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_xz2_lwy_n4"> 
  <thead class="- topic/thead "> 
@@ -27,12 +26,11 @@ Le seguenti proprietà sono state aggiunte in Primetime DRM :
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> HandlerConfiguration.KeyServerCertificate</span> </td> 
-   <td colname="2" class="- topic/entry "> <p>Certificato server licenze del server chiavi rilasciato da Adobe. </p> <p>Questo certificato genera licenze per dispositivi iOS quando i metadati indicano che è necessario un server chiavi. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>Certificato del server licenze del server chiavi rilasciato da Adobe. </p> <p>Questo certificato genera licenze per i dispositivi iOS quando i metadati indicano che è necessario un server chiavi. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> RefImpl.HSM.HandlerConfiguration.\ KeyServerCertificate.Alias</span> </td> 
-   <td colname="2" class="- topic/entry "> <p>L'alias di un certificato License Server rilasciato da un Adobe del server che è memorizzato in HSM. </p> <p>Quando abiliti HSM, puoi applicare questa proprietà invece della proprietà <span class="codeph"> HandlerConfiguration.KeyServerCertificate</span> . </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>Alias del certificato del server licenze rilasciato da un Adobe di un server chiavi memorizzato in HSM. </p> <p>Quando abiliti HSM, puoi applicare questa proprietà invece del <span class="codeph"> HandlerConfiguration.KeyServerCertificate</span> proprietà. </p> </td> 
   </tr> 
  </tbody> 
 </table>
-

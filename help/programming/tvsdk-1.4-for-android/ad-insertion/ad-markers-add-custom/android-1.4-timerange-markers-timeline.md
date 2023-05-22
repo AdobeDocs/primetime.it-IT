@@ -1,31 +1,30 @@
 ---
 description: Questo esempio mostra il modo consigliato per includere le specifiche TimeRange nella timeline di riproduzione.
-title: Posizionare i marcatori di annunci TimeRange sulla timeline
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Posizionare i marcatori degli annunci TimeRange sulla timeline
+exl-id: 53b48d5b-7725-48ae-848a-ccd2a54b132a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 0%
 
 ---
 
-
-# Posizionare i marcatori di annunci TimeRange sulla timeline {#place-timerange-ad-markers-on-the-timeline}
+# Posizionare i marcatori degli annunci TimeRange sulla timeline {#place-timerange-ad-markers-on-the-timeline}
 
 Questo esempio mostra il modo consigliato per includere le specifiche TimeRange nella timeline di riproduzione.
 
-1. Traduci le informazioni di posizionamento degli annunci fuori banda in un elenco di `TimeRange` specifiche (ovvero, istanze della classe `TimeRange`).
-1. Utilizza l&#39;insieme di specifiche `TimeRange` per popolare un&#39;istanza della classe `TimeRangeCollection`.
-1. Passa l&#39;istanza Metadata, che può essere ottenuta dall&#39;istanza `TimeRangeCollection` al metodo `replaceCurrentItem` (parte dell&#39;interfaccia MediaPlayer).
-1. Attendi che TVSDK passi alla transizione allo stato `PREPARED` in attesa che venga attivato il callback `PlaybackEventListener#onPrepared`.
-1. Avvia la riproduzione video chiamando il metodo `play()` (parte dell&#39;interfaccia `MediaPlayer`).
+1. Tradurre le informazioni sul posizionamento degli annunci fuori banda in un elenco di `TimeRange` specifiche (ovvero istanze del `TimeRange` classe).
+1. Utilizza il set di `TimeRange` specifiche per compilare un&#39;istanza del `TimeRangeCollection` classe.
+1. Passa l’istanza di metadati, che può essere ottenuta da `TimeRangeCollection` istanza, al `replaceCurrentItem` (parte dell&#39;interfaccia MediaPlayer).
+1. Attendi la transizione di TVSDK a `PREPARED` attendendo il `PlaybackEventListener#onPrepared` callback da attivare.
+1. Avvia la riproduzione del video chiamando il `play()` metodo (parte del metodo `MediaPlayer` ).
 
-* Gestione dei conflitti della timeline: Ci possono essere casi in cui alcune specifiche `TimeRange` si sovrappongono sulla timeline di riproduzione. Ad esempio, il valore della posizione iniziale corrispondente a una specifica `TimeRange` potrebbe essere inferiore al valore della posizione finale già inserita. In questo caso, TVSDK regola in modo invisibile la posizione iniziale della specifica `TimeRange` offesa per evitare conflitti nella timeline. Grazie a questa regolazione, il nuovo `TimeRange` diventa più breve di quanto specificato originariamente. Se la regolazione è così estrema che porterebbe a un `TimeRange` con una durata di zero ms, TVSDK rilascia silenziosamente la specifica `TimeRange` che causa il danno.
-* Quando vengono fornite le specifiche `TimeRange` per le interruzioni di annunci personalizzate, TVSDK tenta di tradurle in annunci raggruppati all’interno di interruzioni di annunci. TVSDK cerca le specifiche adiacenti `TimeRange` e le raggruppa in interruzioni pubblicitarie separate. Se ci sono intervalli di tempo che non sono adiacenti a nessun altro intervallo di tempo, vengono tradotti in interruzioni pubblicitarie che contengono un singolo annuncio.
-* Si presume che l&#39;elemento del lettore multimediale caricato punti a una risorsa VOD. TVSDK lo controlla ogni volta che l’applicazione prova a caricare una risorsa multimediale i cui metadati contengono `TimeRange` specifiche che possono essere utilizzate solo nel contesto della funzione di ad-markers personalizzata. Se la risorsa sottostante non è di tipo VOD, la libreria TVSDK genera un&#39;eccezione.
-* Quando si utilizzano marcatori di annunci personalizzati, TVSDK disattiva altri meccanismi di risoluzione degli annunci (tramite Adobe Primetime ad Decioning (precedentemente noto come Auditude) o altri sistemi di provisioning degli annunci). Puoi utilizzare uno dei vari moduli ad-resolver forniti da TVSDK o il meccanismo di ad-markers personalizzato. Quando si utilizza l’API degli ad-markers personalizzata, il contenuto dell’annuncio viene considerato già risolto e inserito nella timeline.
+* Gestione dei conflitti della timeline: in alcuni casi `TimeRange` le specifiche si sovrappongono sulla timeline di riproduzione. Ad esempio, il valore della posizione iniziale corrispondente a `TimeRange` la specifica potrebbe essere inferiore al valore della posizione finale già posizionata. In questo caso, TVSDK regola automaticamente la posizione iniziale dell&#39;offesa `TimeRange` specifica per evitare conflitti nella timeline. Grazie a questa regolazione, il nuovo `TimeRange` diventa più breve di quanto originariamente specificato. Se l&#39;aggiustamento è così estremo da portare ad una `TimeRange` con una durata di zero ms, TVSDK rilascia silenziosamente l’offensiva `TimeRange` specifica.
+* Quando `TimeRange` specifiche per le interruzioni pubblicitarie personalizzate, TVSDK tenta di tradurle in annunci raggruppati all’interno di interruzioni pubblicitarie. TVSDK cerca adiacenti `TimeRange` e li raggruppa in interruzioni pubblicitarie separate. Se esistono intervalli di tempo non adiacenti a nessun altro intervallo di tempo, vengono convertiti in interruzioni pubblicitarie che contengono un singolo annuncio.
+* Si presume che l’elemento del lettore multimediale che viene caricato punti a una risorsa VOD. TVSDK controlla questo valore ogni volta che l’applicazione tenta di caricare una risorsa multimediale i cui metadati contengono `TimeRange` specifiche che possono essere utilizzate solo nel contesto della funzione marcatori annuncio personalizzati. Se la risorsa sottostante non è di tipo VOD, la libreria TVSDK genera un’eccezione.
+* Quando si tratta di marcatori di annunci personalizzati, TVSDK disattiva altri meccanismi di risoluzione degli annunci (tramite Adobe Primetime ad decisioning (precedentemente noto come Auditude) o altro sistema di provisioning di annunci). Puoi utilizzare uno dei vari moduli ad-resolver forniti da TVSDK o il meccanismo personalizzato per i marcatori degli annunci. Quando utilizzi l’API per i marcatori di annunci personalizzati, il contenuto dell’annuncio viene considerato già risolto e inserito nella timeline.
 
-Il frammento di codice seguente fornisce un esempio semplice in cui un set di tre specifiche TimeRange viene posizionato sulla timeline come ad-markers personalizzati.
+Il seguente frammento di codice fornisce un semplice esempio in cui un set di tre specifiche TimeRange viene inserito sulla timeline come marcatori annuncio personalizzati.
 
 ```java>
 // Assume that the 3 timerange specs are obtained through external means: CMS, etc. 

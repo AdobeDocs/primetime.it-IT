@@ -1,28 +1,27 @@
 ---
-description: Il comportamento della riproduzione dei contenuti multimediali è influenzato dalla ricerca, dalla sospensione e dall'inclusione della pubblicità.
-title: Comportamento di riproduzione predefinito e personalizzato con annunci pubblicitari
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Il comportamento della riproduzione dei contenuti multimediali è influenzato dalla ricerca, dalla sospensione e dall’inclusione di annunci pubblicitari.
+title: Comportamento di riproduzione predefinito e personalizzato con annunci
+exl-id: bd92b58a-fc71-41de-a80e-19002d66246f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 0%
 
 ---
 
-
 # Comportamento di riproduzione predefinito e personalizzato con annunci{#default-and-customized-playback-behavior-with-ads}
 
-Il comportamento della riproduzione dei contenuti multimediali è influenzato dalla ricerca, dalla sospensione e dall&#39;inclusione della pubblicità.
+Il comportamento della riproduzione dei contenuti multimediali è influenzato dalla ricerca, dalla sospensione e dall’inclusione di annunci pubblicitari.
 
 Per ignorare il comportamento predefinito, utilizza `PTAdPolicySelector`.
 
 >[!IMPORTANT]
 >
->Per i VOD e lo streaming live/lineare, non è possibile rivedere le regolazioni della timeline. Questo significa che un annuncio non può essere rimosso dalla timeline dopo la riproduzione. Se l’utente cerca di nuovo, lo stesso annuncio viene riprodotto anche se il criterio normale sarebbe stato quello di rimuoverlo.
+>Per VOD e streaming live/lineare, le regolazioni della timeline non possono essere riviste. Ciò significa che un annuncio pubblicitario non può essere rimosso dalla timeline dopo che è stato riprodotto. Se l’utente cerca indietro, lo stesso annuncio viene riprodotto nuovamente anche se la normale policy sarebbe stata quella di rimuoverlo.
 
 >[!IMPORTANT]
 >
->TVSDK non fornisce un modo per disabilitare la ricerca durante gli annunci. Adobe consiglia di configurare l&#39;applicazione per disabilitare la ricerca durante gli annunci.
+>TVSDK non fornisce un modo per disabilitare la ricerca durante gli annunci. L’Adobe consiglia di configurare l’applicazione per disabilitare la ricerca durante gli annunci.
 
 La tabella seguente descrive come TVSDK gestisce gli annunci e le interruzioni pubblicitarie durante la riproduzione:
 
@@ -30,51 +29,50 @@ La tabella seguente descrive come TVSDK gestisce gli annunci e le interruzioni p
  <thead> 
   <tr> 
    <th colname="col1" class="entry"> Attività video </th> 
-   <th colname="col2" class="entry"> Criterio di comportamento TVSDK predefinito </th> 
+   <th colname="col2" class="entry"> Criterio del comportamento predefinito di TVSDK </th> 
    <th colname="col3" class="entry">Personalizzazione disponibile tramite <span class="codeph"> PTAdPolicySelector</span> </th> 
   </tr>
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> Durante la riproduzione normale, si verifica un'interruzione pubblicitaria. </td> 
+   <td colname="col1"> Durante la riproduzione normale, si verifica un’interruzione pubblicitaria. </td> 
    <td colname="col2"></td> 
-   <td colname="col3">Specifica un criterio diverso per l'interruzione pubblicitaria utilizzando <span class="codeph"> selectPolicyForAdBreak</span>. </td> 
+   <td colname="col3">Specifica un criterio diverso per l’interruzione pubblicitaria utilizzando <span class="codeph"> selectPolicyForAdBreak</span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> L'applicazione cerca in avanti e suddivide i contenuti principali. </td> 
-   <td colname="col2"> Riproduce l'ultima interruzione pubblicitaria non osservata saltata e riprende la riproduzione nella posizione di ricerca desiderata al termine della riproduzione delle interruzioni. </td> 
-   <td colname="col3">Selezionare l'interruzione saltata da riprodurre utilizzando <span class="codeph"> selectAdBreaksToPlay</span>. </td> 
+   <td colname="col1"> L’applicazione cerca tra le interruzioni pubblicitarie nel contenuto principale. </td> 
+   <td colname="col2"> Riproduce l’ultima interruzione pubblicitaria non osservata che è stata ignorata e riprende la riproduzione nella posizione di ricerca desiderata al termine della riproduzione delle interruzioni. </td> 
+   <td colname="col3">Seleziona l’interruzione saltata da riprodurre utilizzando <span class="codeph"> selectAdBreaksToPlay</span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> L'applicazione cerca all'indietro le interruzioni pubblicitarie nel contenuto principale. </td> 
-   <td colname="col2"> Salta alla posizione di ricerca desiderata senza giocare ad break. </td> 
-   <td colname="col3">Selezionare l'interruzione saltata da riprodurre utilizzando <span class="codeph"> selectAdBreaksToPlay</span>.                      </td> 
+   <td colname="col1"> L’applicazione cerca all’indietro tra le interruzioni pubblicitarie nel contenuto principale. </td> 
+   <td colname="col2"> Passa alla posizione di ricerca desiderata senza interruzioni pubblicitarie. </td> 
+   <td colname="col3">Seleziona l’interruzione saltata da riprodurre utilizzando <span class="codeph"> selectAdBreaksToPlay</span>.                      </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> La tua applicazione cerca in avanti in un annuncio break. </td> 
-   <td colname="col2"> Riproduce dall’inizio dell’annuncio in cui la ricerca è terminata. </td> 
-   <td colname="col3">Specifica un diverso criterio di annunci per l'interruzione pubblicitaria e per l'annuncio specifico in cui la ricerca è terminata utilizzando <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
+   <td colname="col1"> L’applicazione cerca di creare un’interruzione pubblicitaria. </td> 
+   <td colname="col2"> Riproduce dall’inizio dell’annuncio in cui si è conclusa la ricerca. </td> 
+   <td colname="col3">Specifica un criterio di annuncio diverso per l’interruzione pubblicitaria e per l’annuncio specifico in cui la ricerca si è conclusa utilizzando <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> L'applicazione cerca all'indietro in un'interruzione pubblicitaria. </td> 
-   <td colname="col2"> Riproduce dall’inizio dell’annuncio in cui la ricerca è terminata. </td> 
-   <td colname="col3">Specifica un diverso criterio per l'interruzione pubblicitaria e per l'annuncio specifico in cui la ricerca è terminata utilizzando <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
+   <td colname="col1"> L’applicazione torna indietro e crea un’interruzione pubblicitaria. </td> 
+   <td colname="col2"> Riproduce dall’inizio dell’annuncio in cui si è conclusa la ricerca. </td> 
+   <td colname="col3">Specifica un criterio di annuncio diverso per l’interruzione pubblicitaria e per l’annuncio specifico in cui la ricerca si è conclusa utilizzando <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> L'applicazione cerca in avanti o all'indietro gli annunci osservati e li suddivide in contenuti principali. </td> 
-   <td colname="col2"> Se l’ultima interruzione pubblicitaria è già stata osservata, passa alla posizione di ricerca selezionata dall’utente. </td> 
-   <td colname="col3">Seleziona quale delle interruzioni saltate da riprodurre utilizzando <span class="codeph"> selectAdBreaksToPlay</span> e determina quali interruzioni sono già state controllate utilizzando <span class="codeph"> PTAdBreak.isWatched</span>. <p> <p>Importante:  Per impostazione predefinita, TVSDK contrassegna un’interruzione pubblicitaria come osservata immediatamente dopo l’accesso al primo annuncio nell’interruzione pubblicitaria. </p> </p> </td> 
+   <td colname="col1"> L’applicazione cerca in avanti o all’indietro rispetto alle interruzioni pubblicitarie osservate nel contenuto principale. </td> 
+   <td colname="col2"> Se l’ultima interruzione pubblicitaria saltata è già stata guardata, passa alla posizione di ricerca selezionata dall’utente. </td> 
+   <td colname="col3">Seleziona con quale delle interruzioni saltate riprodurre <span class="codeph"> selectAdBreaksToPlay</span> e determinare quali interruzioni sono già state osservate utilizzando <span class="codeph"> PTAdBreak.isWatched</span>. <p> <p>Importante: per impostazione predefinita, TVSDK contrassegna un’interruzione pubblicitaria come guardata immediatamente dopo l’immissione del primo annuncio nell’interruzione pubblicitaria. </p> </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> L'applicazione cerca in avanti o all'indietro su uno o più annunci break e drops in un annuncio break guardato. </td> 
-   <td colname="col2"> Ignora l’interruzione pubblicitaria e cerca la posizione immediatamente dopo l’interruzione pubblicitaria. </td> 
-   <td colname="col3">Specifica un diverso criterio di annunci per l'interruzione pubblicitaria (con lo stato guardato impostato su true) e per l'annuncio specifico in cui la ricerca è terminata utilizzando <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
+   <td colname="col1"> L’applicazione cerca in avanti o all’indietro attraverso una o più interruzioni pubblicitarie e cade in un’interruzione pubblicitaria osservata. </td> 
+   <td colname="col2"> Ignora l’interruzione pubblicitaria e cerca la posizione immediatamente successiva all’interruzione pubblicitaria. </td> 
+   <td colname="col3">Specifica un criterio di annuncio diverso per l’interruzione pubblicitaria (con lo stato di visualizzazione impostato su true) e per l’annuncio specifico in cui la ricerca si è conclusa utilizzando <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> L’applicazione cerca in avanti rispetto agli annunci inseriti utilizzando marcatori di annunci personalizzati. </td> 
-   <td colname="col2"> Passa alla posizione di ricerca selezionata dall’utente. </td> 
+   <td colname="col1"> L’applicazione cerca in avanti gli annunci inseriti utilizzando marcatori di annunci personalizzati. </td> 
+   <td colname="col2"> Passa alla posizione di ricerca selezionata dall'utente. </td> 
    <td colname="col3"></td> 
   </tr> 
  </tbody> 
 </table>
-

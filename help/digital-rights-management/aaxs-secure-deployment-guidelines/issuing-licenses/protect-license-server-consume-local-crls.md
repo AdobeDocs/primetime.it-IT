@@ -1,25 +1,23 @@
 ---
-title: Consuma CRL generati localmente
-description: Consuma CRL generati localmente
+title: Consumo di CRL generati localmente
+description: Consumo di CRL generati localmente
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: d96418d0-8fd3-4f6d-8480-191fe540080a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 0%
 
 ---
 
+# Consumo di CRL generati localmente{#consume-locally-generated-crls}
 
-# Consuma CRL generati localmente{#consume-locally-generated-crls}
+Per utilizzare gli elenchi di revoche di certificati (CRL) generati localmente e gli elenchi di aggiornamento dei criteri, utilizza le API di accesso Adobe per verificare la firma. Le API verificano che gli elenchi non siano stati manomessi e che siano stati firmati dal server licenze corretto.
 
-Per utilizzare elenchi di revoche di certificati (CRL) generati localmente e elenchi di aggiornamenti dei criteri, utilizzare le API di accesso di Adobe per verificare la firma. Le API verificano che gli elenchi non siano stati manomessi e che siano stati firmati dal server licenze corretto.
+* Chiamata `RevocationList.verifySignature` per controllare la firma prima di fornire RevocationList a qualsiasi API.
 
-* Chiama `RevocationList.verifySignature` per controllare la firma prima di fornire RevocationList a qualsiasi API.
+   Per ulteriori informazioni, consulta `RevocationListFactory` nel *Riferimento API per l’accesso agli Adobi*.
 
-   Per ulteriori informazioni, consulta `RevocationListFactory` in *Riferimento API di accesso agli Adobi*.
+* Chiamata `PolicyUpdateList.verifySignature`per verificare la firma prima di fornire `PolicyUpdateList` a qualsiasi API.
 
-* Chiama `PolicyUpdateList.verifySignature`per controllare la firma prima di fornire `PolicyUpdateList` a qualsiasi API.
-
-   Per ulteriori informazioni, consulta `PolicyUpdateList` in *Riferimento API di accesso agli Adobi*.
-
+   Per ulteriori informazioni, consulta `PolicyUpdateList` nel *Riferimento API per l’accesso agli Adobi*.

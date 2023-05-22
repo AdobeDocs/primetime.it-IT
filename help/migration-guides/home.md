@@ -2,39 +2,38 @@
 title: Guida alla migrazione di Primetime
 description: Guida alla migrazione di Primetime
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 1f3f1a5b-95c7-4d47-a36f-7ad934a7d49d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '208'
-ht-degree: 50%
+ht-degree: 0%
 
 ---
 
-
 # Guida alla migrazione e alla conversione di Primetime
 
-Ti diamo il benvenuto nella guida alla migrazione e alla conversione per Adobe Primetime. I documenti elencati nel menu di navigazione a sinistra spiegano il processo di conversione e migrazione da una suite TVSDK Primetime esistente alla suite di nuova generazione.
+Ti diamo il benvenuto nella guida alla migrazione e alla conversione per Adobe Primetime. I documenti elencati nella barra di navigazione a sinistra illustrano il processo di conversione e migrazione per passare dalla suite TVSDK Primetime esistente alla suite di nuova generazione.
 
 ## Vedi anche
 
 | Guida utente | Descrizione |
 |--- |--- |
 | [Note sulla versione di Primetime](/help/release-notes/home.md) | Fornisce informazioni specifiche sulla versione, requisiti di sistema, limitazioni, problemi risolti e problemi noti. |
-| [Guida alla programmazione per Primetime](/help/programming/home.md) | Consente di imparare a sviluppare applicazioni e lettori video utilizzando Java su dispositivi Android e Objective-C su dispositivi iOS. |
+| [Guida alla programmazione di Primetime](/help/programming/home.md) | Consente di imparare a sviluppare applicazioni e lettori video utilizzando Java su dispositivi Android e Objective-C su dispositivi iOS. |
 | [Implementazione di riferimento](/help/android-reference-implementation/home.md) | Consente di comprendere il TVSDK e modificare i gestori delle funzioni per personalizzare il lettore personale. |
-| [Guida di Primetime Ad Insertion](/help/primetime-ad-insertion/home.md) | Spiega come monetizzare i contenuti inserendo sul server annunci dinamici mirati agli utenti e coinvolgendo il pubblico con annunci personalizzati. |
-| [Digital Rights Management](/help/digital-rights-management/home.md) | Consente di ottenere ulteriori informazioni sui vari scenari utente nel Digital Rights Management (DRM) |
-| [Riferimenti API di Primetime](/help/reference/api-references.md) | Fornisce informazioni dettagliate sulle funzioni TVSDK, le strutture di dati e altri costrutti di programmazione. |
+| [Guida per gli Ad Insertion di Primetime](/help/primetime-ad-insertion/home.md) | Spiega come monetizzare i contenuti inserendo sul server annunci dinamici mirati agli utenti e coinvolgendo il pubblico con annunci personalizzati. |
+| [Digital Rights Management](/help/digital-rights-management/home.md) | Consente di ottenere ulteriori informazioni sui vari scenari utente in Digital Rights Management (DRM) |
+| [Riferimenti API di Primetime](/help/reference/api-references.md) | Fornisce informazioni dettagliate sulle funzioni TVSDK, sulle strutture di dati e su altri costrutti di programmazione. |
 | [Archivi](https://helpx.adobe.com/primetime/archives.html) | Scarica i PDF della documentazione archiviata. |
 
 ## Risorse utili
 
 * [Scopri Adobe Primetime](https://www.adobe.com/in/marketing/primetime.html)
 
-* [Monitoraggio della concorrenza](https://tve.helpdocsonline.com/concurrency-monitoring-introduction)
+* [Monitoraggio concorrenza](https://tve.helpdocsonline.com/concurrency-monitoring-introduction)
 
 * [Autenticazione Primetime](https://tve.helpdocsonline.com/home)
 
-* [Forum DRM di Adobe Primetime](https://forums.adobe.com/community/adobe_access)
+* [Forum Adobe Primetime DRM](https://forums.adobe.com/community/adobe_access)
 
-* [Risorse per sviluppatori di Adobe Primetime](https://www.adobe.com/devnet/primetime.html)
+* [Risorse per sviluppatori Adobe Primetime](https://www.adobe.com/devnet/primetime.html)

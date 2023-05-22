@@ -1,28 +1,27 @@
 ---
-title: Aggiornamento di un criterio DRM con l’API Java
-description: Aggiornamento di un criterio DRM con l’API Java
+title: Aggiornamento di una policy DRM con API Java
+description: Aggiornamento di una policy DRM con API Java
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 00bb9b64-30f7-4900-b6bd-57604295b44d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
-
-# Aggiornamento di un criterio DRM con API Java {#updating-a-drm-policy-with-the-java-api}
+# Aggiornamento di una policy DRM con API Java {#updating-a-drm-policy-with-the-java-api}
 
 Per aggiornare un criterio DRM con l’API Java:
 
-1. Imposta l&#39;ambiente di sviluppo e includi nel progetto tutti i file JAR elencati in [Impostazione dell&#39;ambiente di sviluppo](../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
-1. Crea un&#39;istanza DRM `Policy` e leggi i criteri DRM da un file o da un database.
+1. Configura l’ambiente di sviluppo e includi nel progetto tutti i file JAR elencati in [Configurazione dell’ambiente di sviluppo](../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
+1. Creare un DRM `Policy` e leggere il criterio DRM da un file o da un database.
 
    ```
    Policy policy = new Policy(policyBytes);
    ```
 
-1. Aggiornare l’oggetto DRM `Policy` impostandone le proprietà, ad esempio il nome e le regole di utilizzo.
+1. Aggiornare il DRM `Policy` impostandone le proprietà, ad esempio il nome e le regole di utilizzo.
 
    ```java
    // Change the DRM policy name.  
@@ -47,7 +46,7 @@ Per aggiornare un criterio DRM con l’API Java:
    }
    ```
 
-1. Serializzare l&#39;oggetto DRM aggiornato `Policy` e archiviarlo in un file o in un database.
+1. Serializzare il DRM aggiornato `Policy` e memorizzarlo in un file o database.
 
    ```java
    // Serialize the DRM policy.  
@@ -61,4 +60,4 @@ Per aggiornare un criterio DRM con l’API Java:
    out.close();
    ```
 
-Per l’origine di questo codice di esempio, vedi `com.adobe.flashaccess.samples.policy.UpdatePolicy` nella directory Strumenti della riga di comando per l’implementazione di riferimento [!DNL samples] .
+Consulta `com.adobe.flashaccess.samples.policy.UpdatePolicy` negli strumenti della riga di comando per l’implementazione di riferimento [!DNL samples] per l&#39;origine di questo codice di esempio.

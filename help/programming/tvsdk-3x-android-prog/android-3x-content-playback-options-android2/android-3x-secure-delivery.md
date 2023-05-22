@@ -1,26 +1,25 @@
 ---
-description: TVSDK introduce una consegna sicura su HTTPS.
+description: TVSDK introduce la consegna sicura tramite HTTPS.
 title: Consegna sicura tramite HTTPS
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 41e2c925-2145-4dfd-909a-aec57dbae9cd
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '81'
 ht-degree: 0%
 
 ---
 
-
 # Consegna sicura tramite HTTPS {#secure-delivery-https}
 
 Adobe Primetime TVSDK fornisce il supporto per la consegna HTTPS per tutte le chiamate provenienti da TVSDK, che includono
 
-* Chiamate al server di annunci audio
+* Chiamate al server di Auditude Ad
 * Richieste CRS
 * Chiamate di licenza DRM
-* Pings di Video Analytics
-* Pali di fatturazione
+* Ping di analisi video
+* Ping fatturazione
 
-Per utilizzare questa funzione, assicurati che i server configurati per il servizio delle richieste di cui sopra supportino HTTPS.
+Per utilizzare questa funzione, assicurati che i server configurati per soddisfare le richieste di cui sopra supportino HTTPS.
 
 Questo nuovo comportamento non è abilitato per impostazione predefinita. Utilizza quanto segue per abilitare la consegna sicura prima della chiamata a `MediaPlayer.replaceCurrentResource()`
 

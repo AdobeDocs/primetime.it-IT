@@ -1,39 +1,38 @@
 ---
-description: Per visualizzare gli annunci banner, devi creare istanze di banner e consentire al browser TVSDK di ascoltare gli eventi relativi agli annunci.
-title: Visualizza annunci banner
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Per visualizzare gli annunci pubblicitari dei banner, devi creare istanze di banner e consentire a TVSDK del browser di rilevare gli eventi relativi agli annunci.
+title: Visualizza banner pubblicitari
+exl-id: 331c10a4-ae31-4d3b-aaca-9497e2970ecf
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 0%
 
 ---
 
+# Visualizza banner pubblicitari {#display-banner-ads}
 
-# Visualizza annunci banner {#display-banner-ads}
+Per visualizzare gli annunci pubblicitari dei banner, devi creare istanze di banner e consentire a TVSDK del browser di rilevare gli eventi relativi agli annunci.
 
-Per visualizzare gli annunci banner, devi creare istanze di banner e consentire al browser TVSDK di ascoltare gli eventi relativi agli annunci.
+Browser TVSDK fornisce un elenco di banner pubblicitari correlati associati a un annuncio lineare tramite `AdobePSDK.PSDKEventType.AD_STARTED` evento.
 
-Il browser TVSDK fornisce un elenco di banner pubblicitari associati a un annuncio lineare tramite l&#39;evento `AdobePSDK.PSDKEventType.AD_STARTED` .
+I manifesti possono specificare gli annunci banner correlati in base a:
 
-I manifesti possono specificare annunci di banner complementari per:
-
-* Frammento HTML
+* Un frammento di HTML
 * URL di una pagina iFrame
-* URL di un’immagine statica o di un file SWF di Flash di Adobe
+* URL di un&#39;immagine statica o di un file SWF di Flash di Adobe
 
-Per ogni annuncio correlato, Browser TVSDK indica quali tipi sono disponibili per l&#39;applicazione.
+Per ogni annuncio correlato, il TVSDK del browser indica i tipi disponibili per l’applicazione.
 
-Aggiungi un listener per l&#39;evento `AdobePSDK.PSDKEventType.AD_STARTED` che esegue le seguenti operazioni:
-1. Cancella gli annunci esistenti nell&#39;istanza del banner.
-1. Ottiene l&#39;elenco degli annunci companion da `Ad.getCompanionAssets`.
-1. Se l’elenco degli annunci associati non è vuoto, ripeti l’errore sopra l’elenco per le istanze del banner.
+Aggiungere un listener per l&#39;evento `AdobePSDK.PSDKEventType.AD_STARTED` che effettua le seguenti operazioni:
+1. Cancella gli annunci esistenti nell’istanza del banner.
+1. Ottiene l’elenco degli annunci correlati da `Ad.getCompanionAssets`.
+1. Se l’elenco degli annunci correlati non è vuoto, scorri l’elenco per le istanze del banner.
 
-   Ogni istanza del banner (un elemento `AdBannerAsset`) contiene informazioni quali larghezza, altezza, tipo di risorsa (html, iframe o statico) e dati necessari per visualizzare il banner correlato.
-1. Se un annuncio video non ha annunci correlati prenotati con esso, l’elenco delle risorse correlate non contiene dati per quell’annuncio video.
-1. Invia le informazioni sul banner a una funzione nella pagina in cui vengono visualizzati i banner in una posizione appropriata.
+   Ogni istanza del banner (un `AdBannerAsset`) contiene informazioni quali larghezza, altezza, tipo di risorsa (html, iframe o statica) e dati necessari per visualizzare il banner correlato.
+1. Se un annuncio video non ha annunci correlati prenotati con esso, l’elenco delle risorse correlate non contiene dati per tale annuncio video.
+1. Invia le informazioni sul banner a una funzione sulla pagina che visualizza i banner in una posizione appropriata.
 
-   In genere si tratta di una `div` e la funzione utilizza `div ID` per visualizzare il banner. Ad esempio:
+   Questo è di solito un `div`, e la tua funzione utilizza `div ID` per visualizzare il banner. Ad esempio:
 
    Aggiungi il listener di eventi:
 
@@ -41,7 +40,7 @@ Aggiungi un listener per l&#39;evento `AdobePSDK.PSDKEventType.AD_STARTED` che e
    _player.addEventListener(AdobePSDK.PSDKEventType.AD_STARTED, onAdStarted);
    ```
 
-   Implementa il gestore di listener:
+   Implementa il gestore listener:
 
    ```js
    private function onAdStarted(event:AdPlaybackEvent):void 
@@ -75,4 +74,3 @@ Aggiungi un listener per l&#39;evento `AdobePSDK.PSDKEventType.AD_STARTED` che e
        } 
    }
    ```
-

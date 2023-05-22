@@ -1,26 +1,24 @@
 ---
-description: TVSDK invia eventi di qualità del servizio (QoS) per notificare all’applicazione gli eventi che potrebbero influenzare il calcolo delle statistiche di QoS, ad esempio buffering o ricerca.
+description: TVSDK invia eventi Quality of Service (QoS) per notificare all'applicazione gli eventi che potrebbero influenzare il calcolo delle statistiche QoS, come il buffering o la ricerca.
 title: Eventi QoS
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 7de28d00-12e2-4f2a-bb1b-53661e3578a1
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '191'
 ht-degree: 0%
 
 ---
 
-
 # Eventi QoS{#qos-events}
 
-TVSDK invia eventi di qualità del servizio (QoS) per notificare all’applicazione gli eventi che potrebbero influenzare il calcolo delle statistiche di QoS, ad esempio buffering o ricerca.
+TVSDK invia eventi Quality of Service (QoS) per notificare all&#39;applicazione gli eventi che potrebbero influenzare il calcolo delle statistiche QoS, come il buffering o la ricerca.
 
-Per ricevere notifiche su tutti gli eventi relativi a QoS, registra gli ascoltatori di eventi con l&#39;oggetto `MediaPlayer` per i seguenti eventi:
+Per ricevere notifiche su tutti gli eventi relativi al QoS, registra i listener di eventi con `MediaPlayer` oggetto per i seguenti eventi:
 
 | Evento | Significato |
 |---|---|
 | BufferEvent.[BUFFERING_END](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/BufferEvent.html#BUFFERING_END) | Buffering completato. |
-| BufferEvent.[BUFFERING_BEGIN](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/BufferEvent.html#BUFFERING_BEGIN) | Buffering avviato. |
+| BufferEvent.[INIZIO_BUFFERING](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/BufferEvent.html#BUFFERING_BEGIN) | Buffering avviato. |
 | SeekEvent.[SEEK_COMPLETED](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/SeekEvent.html#SEEK_END) | Ricerca completata. |
-| SeekEvent.[SEEK_BEGIN](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/SeekEvent.html#SEEK_BEGIN) | La ricerca sta iniziando. |
-| SeekEvent.[SEEK_POSITION_ADJUSTED](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/SeekEvent.html#SEEK_POSITION_ADJUSTED) | TVSDK ha modificato la posizione di ricerca a seguito dei criteri pubblicitari correnti. |
-
+| SeekEvent.[SEEK_BEGIN](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/SeekEvent.html#SEEK_BEGIN) | Inizio della ricerca. |
+| SeekEvent.[SEEK_POSITION_ADJUSTED](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/SeekEvent.html#SEEK_POSITION_ADJUSTED) | TVSDK ha cambiato la posizione di ricerca a seguito delle attuali politiche pubblicitarie. |

@@ -1,22 +1,21 @@
 ---
-description: È possibile implementare i propri risolutori di contenuti in base ai risolutori predefiniti.
-title: Implementare un risolutore di contenuti personalizzato
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Puoi implementare dei resolver di contenuto personalizzati in base ai resolver predefiniti.
+title: Implementare un sistema di risoluzione dei contenuti personalizzato
+exl-id: 96468f6d-80ad-4721-8ed3-4dbfa2a64b9e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '241'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Implementare un sistema di risoluzione dei contenuti personalizzato {#implement-a-custom-content-resolver}
 
-# Implementa un risolutore di contenuti personalizzato {#implement-a-custom-content-resolver}
+Puoi implementare dei resolver di contenuto personalizzati in base ai resolver predefiniti.
 
-È possibile implementare i propri risolutori di contenuti in base ai risolutori predefiniti.
+Quando TVSDK rileva una nuova opportunità, scorre attraverso i risolutori di contenuti registrati alla ricerca di una che sia in grado di risolverla. Il primo che restituisce true viene selezionato per la risoluzione dell&#39;opportunità. Se non è possibile utilizzare alcun risolutore contenuti, tale opportunità viene ignorata. Poiché il processo di risoluzione dei contenuti è in genere asincrono, il resolver dei contenuti è responsabile della notifica al termine del processo.
 
-Quando TVSDK rileva una nuova opportunità, esegue un’iterazione attraverso i risolutori di contenuti registrati alla ricerca di una che sia in grado di risolvere tale opportunità. Il primo che restituisce true viene selezionato per risolvere l&#39;opportunità. Se nessun risolutore di contenuti è in grado di farlo, questa opportunità viene ignorata. Poiché il processo di risoluzione del contenuto è in genere asincrono, il risolutore del contenuto è responsabile della notifica al completamento del processo.
-
-1. Crea un&#39;istanza `AdvertisingFactory` personalizzata e sovrascrivi `createContentResolver`.
+1. Creare un `AdvertisingFactory` istanza e sostituzione `createContentResolver`.
 
    Ad esempio:
 
@@ -43,7 +42,7 @@ Quando TVSDK rileva una nuova opportunità, esegue un’iterazione attraverso i 
    }
    ```
 
-1. Registra la Ad Client Factory in `MediaPlayer`.
+1. Registra la factory dell’ad client su `MediaPlayer`.
 
    Ad esempio:
 
@@ -53,9 +52,9 @@ Quando TVSDK rileva una nuova opportunità, esegue un’iterazione attraverso i 
    mediaPlayer.registerAdClientFactory(advertisingFactory);
    ```
 
-1. Passa un oggetto `AdvertisingMetadata` a TVSDK come segue:
-   1. Creare un oggetto `AdvertisingMetadata` e un oggetto `MetadataNode`.
-   1. Salvare l’oggetto `AdvertisingMetadata` su `MetadataNode`.
+1. Passa un `AdvertisingMetadata` a TVSDK come segue:
+   1. Creare un `AdvertisingMetadata` oggetto e `MetadataNode` oggetto.
+   1. Salva il `AdvertisingMetadata` oggetto a `MetadataNode`.
 
    ```java
    MetadataNode result = new MetadataNode(); 
@@ -63,15 +62,15 @@ Quando TVSDK rileva una nuova opportunità, esegue un’iterazione attraverso i 
                   advertisingMetadata);
    ```
 
-1. Crea una classe ad resolver personalizzata che estende la classe `ContentResolver` .
-   1. Nel risolutore di annunci personalizzato, sovrascrivi questa funzione protetta:
+1. Creare una classe ad resolver personalizzata che estenda `ContentResolver` classe.
+   1. Nel resolver dell’annuncio personalizzato, sovrascrivi questa funzione protetta:
 
       ```java
       void doResolveAds(Metadata metadata,  
                         PlacementOpportunity placementOpportunity)
       ```
 
-      I metadati contengono il `AdvertisingMetada`. Utilizzalo per la seguente generazione vettoriale `TimelineOperation`.
+      I metadati contengono `AdvertisingMetada`. Utilizzala per i seguenti elementi `TimelineOperation` generazione vettoriale.
 
    1. Per ogni opportunità di posizionamento, crea un `Vector<TimelineOperation>`.
 
@@ -90,10 +89,10 @@ Quando TVSDK rileva una nuova opportunità, esegue un’iterazione attraverso i 
       )
       ```
 
-   1. Una volta risolti gli annunci, chiama una delle seguenti funzioni:
+   1. Dopo la risoluzione degli annunci, chiama una delle seguenti funzioni:
 
-      * Se la risoluzione dell&#39;annuncio ha esito positivo: `notifyResolveComplete(Vector<TimelineOperation> proposals)`
-      * Se la risoluzione dell&#39;annuncio non riesce: `notifyResolveError(Error error)`
+      * Se la risoluzione dell’annuncio ha esito positivo: `notifyResolveComplete(Vector<TimelineOperation> proposals)`
+      * Se la risoluzione dell’annuncio non riesce: `notifyResolveError(Error error)`
 
       Ad esempio, se non riesce:
 
@@ -223,4 +222,3 @@ Esempio di risposta JSON ad server per VOD:
     } 
 } 
 ```
-

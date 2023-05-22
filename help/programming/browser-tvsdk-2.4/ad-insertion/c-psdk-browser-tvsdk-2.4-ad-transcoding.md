@@ -1,17 +1,16 @@
 ---
-description: Alcuni annunci (o creativi) di terze parti non possono essere inseriti nello streaming di contenuti HTTP Live Streaming (HLS)/Dynamic Adaptive Streaming su HTTP (DASH) perché il loro formato video è incompatibile con HLS/DASH. L'inserimento di annunci Adobe Primetime e il browser TVSDK possono tentare facoltativamente di ricompattare (transcodificare) video incompatibili in video m3u8/mpd compatibili.
-title: Repackage (transcode) annunci incompatibili
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Alcuni annunci di terze parti (o creativi) non possono essere uniti nel flusso di contenuto HTTP Live Streaming (HLS)/Dynamic Adaptive Streaming over HTTP (DASH) perché il loro formato video è incompatibile con HLS/DASH. Adobe Primetime ad insertion e Browser TVSDK possono opzionalmente tentare di ricompilare (transcodificare) video incompatibili in video m3u8/mpd compatibili.
+title: Annunci non compatibili con il riconfezionamento (transcodifica)
+exl-id: aaa78d5a-4b4b-4d50-b516-d39b47174487
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '141'
 ht-degree: 0%
 
 ---
 
+# Annunci non compatibili con il riconfezionamento (transcodifica){#repackage-transcode-incompatible-ads}
 
-# Ricompila (transcodifica) annunci incompatibili{#repackage-transcode-incompatible-ads}
+Alcuni annunci di terze parti (o creativi) non possono essere uniti nel flusso di contenuto HTTP Live Streaming (HLS)/Dynamic Adaptive Streaming over HTTP (DASH) perché il loro formato video è incompatibile con HLS/DASH. Adobe Primetime ad insertion e Browser TVSDK possono opzionalmente tentare di ricompilare (transcodificare) video incompatibili in video m3u8/mpd compatibili.
 
-Alcuni annunci (o creativi) di terze parti non possono essere inseriti nello streaming di contenuti HTTP Live Streaming (HLS)/Dynamic Adaptive Streaming su HTTP (DASH) perché il loro formato video è incompatibile con HLS/DASH. L&#39;inserimento di annunci Adobe Primetime e il browser TVSDK possono tentare facoltativamente di ricompattare (transcodificare) video incompatibili in video m3u8/mpd compatibili.
-
-Gli annunci forniti da varie terze parti, come un agenzia ad server, il tuo partner di inventario o una rete pubblicitaria, vengono spesso consegnati in formati incompatibili, come ad esempio il progressivo download MP4.
+Gli annunci forniti da terze parti, come ad esempio un server di annunci di un&#39;agenzia, un partner di inventario o una rete di annunci, vengono spesso consegnati in formati incompatibili, come ad esempio MP4 con download progressivo.

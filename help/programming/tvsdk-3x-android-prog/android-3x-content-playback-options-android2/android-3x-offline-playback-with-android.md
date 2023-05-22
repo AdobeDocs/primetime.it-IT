@@ -1,25 +1,24 @@
 ---
-description: 'Sono state introdotte nuove API che istruiranno a TVSDK di ignorare lo stato di connettività di rete durante il download dei manifesti. '
+description: Sono state introdotte nuove API che indicheranno a TVSDK di ignorare lo stato della connettività di rete durante il download dei manifesti.
 title: Riproduzione offline con Android
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 9ac50d3e-5839-4eb9-8811-efde56cfe375
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 0%
 
 ---
 
-
 # Riproduzione offline con Android {#offline-playback-with-android}
 
-Sono state introdotte le seguenti API che istruiranno a TVSDK di ignorare lo stato di connettività di rete durante il download dei manifesti. Lo stato di connettività di rete viene generalmente utilizzato durante lo streaming a bitrate adattivo (ABR), per determinare se tentare un fallback o attendere che la rete riprenda.
+Sono state introdotte le seguenti API che indicheranno a TVSDK di ignorare lo stato della connettività di rete durante il download dei manifesti. Lo stato di connettività di rete viene generalmente utilizzato durante il flusso di bitrate adattivo (ABR, Adaptive Bitrate Streaming) per determinare se tentare un fallback o attendere la ripresa della rete.
 
 ```
 NetworkConfiguration::setOfflinePlayback(boolean)
 boolean NetworkConfiguration::getOfflinePlayback()
 ```
 
-Puoi abilitare questa impostazione e ignorare la connettività di rete.
+È possibile abilitare questa impostazione e ignorare la connettività di rete.
 
 Imposta `com.adobe.mediacore.system.NetworkConfiguration::setOfflinePlayback` su true. Il valore predefinito per un valore booleano è false.
 

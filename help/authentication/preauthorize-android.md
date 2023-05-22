@@ -1,29 +1,28 @@
 ---
-title: Autorizzare Android
-description: Autorizzare Android
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Autorizza in anticipo Android
+description: Autorizza in anticipo Android
+exl-id: b5337595-135f-4981-a578-2da432f125d6
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
 
 ---
 
-
-
-# Autorizzare {#preuthorize-android}
+# Autorizza in anticipo {#preuthorize-android}
 
 >[!NOTE]
 >
->Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente a partire da Adobe. Non è consentito alcun uso non autorizzato.
+>Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente di Adobe. Non è consentito alcun uso non autorizzato.
 
 </br>
 
 
-Per ottenere una decisione di preautorizzazione per una o più risorse, le applicazioni devono utilizzare il metodo API di preautorizzazione. La richiesta API di preautorizzazione deve essere utilizzata per i suggerimenti dell’interfaccia utente e/o per il filtraggio dei contenuti. Prima di concedere all’utente l’accesso alle risorse specificate, è necessario effettuare una richiesta API di autorizzazione effettiva.
+Il metodo API Preauthorize deve essere utilizzato dalle applicazioni al fine di ottenere una decisione di preautorizzazione per una o più risorse. La richiesta API di pre-autorizzazione deve essere utilizzata per gli hint dell’interfaccia utente e/o per il filtro dei contenuti. È necessario effettuare una richiesta API di autorizzazione effettiva prima di concedere all’utente l’accesso alle risorse specificate.
 
 
 
-In caso di errore imprevisto (ad esempio, problema di rete, endpoint di autorizzazione MVPD non disponibile, ecc.) che si verifica quando una richiesta API di preautorizzazione viene elaborata dai servizi di autenticazione di Adobe Primetime, una o più informazioni di errore separate verranno incluse per le risorse interessate come parte del risultato della risposta API di preautorizzazione.
+In caso di errore imprevisto (ad esempio, problema di rete, endpoint di autorizzazione MVPD non disponibile, ecc.) in corso, quando una richiesta API di preautorizzazione viene elaborata dai servizi di autenticazione di Adobe Primetime, verranno incluse una o più informazioni di errore separate per le risorse interessate come parte del risultato della risposta API di preautorizzazione.
 
 
 ## `public void preauthorize(PreauthorizeRequest request, AccessEnablerCallback<PreauthorizeResponse> callback);`
@@ -35,14 +34,14 @@ In caso di errore imprevisto (ad esempio, problema di rete, endpoint di autorizz
 
 **Parametri:**
 
-- *PreautorizzareRequest*: Oggetto Builder utilizzato per definire la richiesta
+- *PreauthorizeRequest*: oggetto Builder utilizzato per definire la richiesta
 - AccessEnablerCallback : callback utilizzato per restituire la risposta API
-- PreautorizzareRisposta : Oggetto utilizzato per restituire il contenuto della risposta API
+- PreauthorizeResponse: oggetto utilizzato per restituire il contenuto della risposta API
 
 
-### classe pubblica PreautorizzazioneRequest {#androidpreauthorizerequest}
+### public class PreauthorizeRequest {#androidpreauthorizerequest}
 
-**Classe PreauthorizeRequest.Builder**\
+**class PreauthorizeRequest.Builder**\
  
 
 ```java
@@ -64,7 +63,7 @@ In caso di errore imprevisto (ad esempio, problema di rete, endpoint di autorizz
     ///
 ```
 
-**public Builder setResources(List\&lt;string> risorse)**
+**setResources(List\ pubblico di Builder&lt;string> resources)**
 
 ```
     ///
@@ -86,8 +85,8 @@ In caso di errore imprevisto (ad esempio, problema di rete, endpoint di autorizz
 ```
 
 
-**public Builder disableFeatures(Set\)&lt;preauthorizerequest.feature>
-caratteristiche)**
+**public Builder disableFeatures(Set\&lt;preauthorizerequest.feature>
+)**
 
 ```
     ///
@@ -143,7 +142,7 @@ caratteristiche)**
 
  
 
-### classe PreautorizzazioneResponse {#preauthorizeresponse}
+### class PreauthorizeResponse {#preauthorizeresponse}
 
 ```java
     ///
@@ -164,7 +163,7 @@ caratteristiche)**
 ```
 
 
-**stato classe** {#status}
+**Stato classe** {#status}
 
 ```java
 ///
@@ -228,7 +227,7 @@ caratteristiche)**
 
 </br>
 
->**decisione di classe** {#decision}
+>**class Decision** {#decision}
 
 ```
     ///
@@ -265,7 +264,7 @@ caratteristiche)**
 
 
 
-Esempio : 
+Esempio: 
 
 
 ```java
@@ -289,4 +288,3 @@ Esempio : 
         }
     });
 ```
-

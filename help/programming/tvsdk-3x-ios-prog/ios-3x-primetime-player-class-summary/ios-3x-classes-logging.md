@@ -1,14 +1,13 @@
 ---
 description: Queste classi consentono di personalizzare la registrazione.
 title: Classi di registrazione
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 214c3744-dea8-448d-9d7e-68a18e02dd3b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '83'
 ht-degree: 0%
 
 ---
-
 
 # Classi di registrazione {#logging-classes}
 
@@ -24,15 +23,15 @@ Queste classi consentono di personalizzare la registrazione.
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1" rowsep="0"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTLogEntry.html" format="html" scope="external"> PTLogEntry</a> </td> 
-   <td colname="2" rowsep="0"> Classe che definisce un registro di ingresso e contiene informazioni su un messaggio di registro. </td> 
+   <td colname="2" rowsep="0"> Classe che definisce un registro delle voci e contiene informazioni su un messaggio di registro. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTLogFactory.html" format="html" scope="external"> PTLogFactory</a> </td> 
    <td colname="2"> Classe che abilita la registrazione personalizzata.</td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTLogger.html" format="html" scope="external"> PTLogger</a> </td> 
-   <td colname="2"> Protocollo. I metodi necessari per implementare un logger personalizzato per l’SDK TVSDK. </td> 
+   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTLogger.html" format="html" scope="external"> PTLlogger</a> </td> 
+   <td colname="2"> Protocollo. I metodi necessari per implementare un logger personalizzato per TVSDK. </td> 
   </tr> 
  </tbody> 
 </table>

@@ -1,19 +1,18 @@
 ---
-title: Segna intervalli
-description: Segna intervalli
+title: Contrassegna intervalli
+description: Contrassegna intervalli
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 173769cd-6580-4461-9dbc-5bb2fed346d2
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '24'
 ht-degree: 0%
 
 ---
 
+# Contrassegna intervalli{#mark-ranges}
 
-# Segna intervalli{#mark-ranges}
-
-Contrassegna `TimeRanges` tra `begin` e `end` in `localTime` come `AdBreak` dalla timeline. Le altre impostazioni degli annunci vengono ignorate.
+Contrassegna `TimeRanges` tra `begin` e `end` in `localTime` come `AdBreak` dalla timeline. Altre impostazioni annuncio vengono ignorate.
 
 1. Contrassegna intervalli di tempo.
 
@@ -58,4 +57,3 @@ Contrassegna `TimeRanges` tra `begin` e `end` in `localTime` come `AdBreak` dall
        "id": "vod_004"
    }
    ```
-

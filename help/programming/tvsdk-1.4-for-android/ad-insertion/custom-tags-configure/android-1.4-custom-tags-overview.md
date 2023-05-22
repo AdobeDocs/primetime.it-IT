@@ -2,14 +2,13 @@
 title: Esempio di risorsa VOD personalizzata
 description: Esempio di risorsa VOD personalizzata
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 62b3ddf2-4c00-4402-8178-85143736b15f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '72'
 ht-degree: 0%
 
 ---
-
 
 # Esempio di risorsa VOD personalizzata{#example-of-a-customized-vod-asset}
 
@@ -41,8 +40,7 @@ seg5.ts
 #EXT-X-ENDLIST
 ```
 
-L&#39;applicazione potrebbe configurare i seguenti scenari:
+L&#39;applicazione può configurare i seguenti scenari:
 
-* Nel file è presente una notifica quando sono presenti tag `#EXT-X-ASSET` o qualsiasi altro set di nomi di tag personalizzati a cui hai effettuato la sottoscrizione.
-* Inserisci annunci quando nel flusso è presente un tag `#EXT-X-AD` o qualsiasi altro nome di tag personalizzato.
-
+* Una notifica quando `#EXT-X-ASSET` I tag, o qualsiasi altro insieme di nomi di tag personalizzati a cui ti sei iscritto, sono già presenti nel file.
+* Inserisci annunci quando un `#EXT-X-AD` o qualsiasi altro nome di tag personalizzato si trova nel flusso.

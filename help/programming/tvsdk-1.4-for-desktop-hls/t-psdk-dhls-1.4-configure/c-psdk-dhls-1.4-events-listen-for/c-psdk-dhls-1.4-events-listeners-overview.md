@@ -1,5 +1,5 @@
 ---
-description: Gli eventi di TVSDK indicano lo stato del lettore, gli errori che si verificano, il completamento delle azioni richieste, ad esempio un video che inizia a essere riprodotto o le azioni che si verificano implicitamente, ad esempio il completamento di un annuncio.
+description: Gli eventi da TVSDK indicano lo stato del lettore, gli errori che si verificano, il completamento delle azioni richieste, ad esempio l’avvio della riproduzione di un video, o le azioni che si verificano implicitamente, ad esempio il completamento di un annuncio.
 title: Ascolta gli eventi di Primetime Player
 exl-id: 3a740245-a9e1-4e36-8761-f9f4b4e85b93
 source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
@@ -11,27 +11,27 @@ ht-degree: 0%
 
 # Panoramica {#implement-event-listeners-and-callbacks-overview}
 
-I gestori di eventi consentono a TVSDK di rispondere agli eventi. Quando si verifica un evento, il meccanismo eventi di TVSDK chiama il gestore eventi registrato e trasmette le informazioni sull&#39;evento al gestore.
+I gestori di eventi consentono a TVSDK di rispondere agli eventi. Quando si verifica un evento, il meccanismo degli eventi di TVSDK chiama il gestore eventi registrato e trasmette le informazioni sull&#39;evento al gestore.
 
-Flash Runtime fornisce un meccanismo di eventi generici, che TVSDK utilizza e definisce una serie di eventi personalizzati. L’applicazione deve implementare listener di eventi per gli eventi TVSDK che influiscono sull’applicazione.
+Il runtime di Flash fornisce un meccanismo di eventi generico, che TVSDK utilizza e definisce una serie di eventi personalizzati. L&#39;applicazione deve implementare listener di eventi per gli eventi TVSDK che influiscono sull&#39;applicazione.
 
-1. Determinare gli eventi che l&#39;applicazione deve ascoltare.
+1. Determina per quali eventi l&#39;applicazione deve essere in ascolto.
 
-   * **Eventi** richiesti: Ascoltare tutti gli eventi di riproduzione.
+   * **Eventi richiesti**: ascolta tutti gli eventi di riproduzione.
 
       >[!IMPORTANT]
       >
-      >L&#39;evento di riproduzione `MediaPlayerStatusChangeEvent.STATUS_CHANGE` fornisce lo stato del lettore, compresi gli errori. Uno qualsiasi degli stati potrebbe influenzare il passaggio successivo del lettore.
+      >Evento di riproduzione `MediaPlayerStatusChangeEvent.STATUS_CHANGE` fornisce lo stato del lettore, compresi gli errori. Uno qualsiasi degli stati potrebbe influire sul passaggio successivo del lettore.
 
-   * **Altri eventi**: Facoltativo, a seconda dell’applicazione.
+   * **Altri eventi**: facoltativo, a seconda dell’applicazione.
 
-      Ad esempio, se incorpori pubblicità nella riproduzione, ascolta tutti gli eventi `AdBreakPlaybackEvent` e `AdPlaybackEvent`.
+      Ad esempio, se incorpori pubblicità nella riproduzione, ascolta per tutti `AdBreakPlaybackEvent` e `AdPlaybackEvent` eventi.
 
-1. Implementa i listener di eventi per ogni evento.
+1. Implementa listener di eventi per ogni evento.
 
-   TVSDK restituisce i valori dei parametri alle chiamate di ritorno del listener di eventi. Questi valori forniscono informazioni rilevanti sull&#39;evento che è possibile utilizzare nei listener per eseguire le azioni appropriate.
+   TVSDK restituisce i valori dei parametri ai callback del listener di eventi. Questi valori forniscono informazioni rilevanti sull&#39;evento che è possibile utilizzare nei listener per eseguire azioni appropriate.
 
-   La classe `Event` elenca tutte le interfacce di callback. Ciascuna interfaccia visualizza i parametri restituiti per tale interfaccia.
+   Il `Event` classe elenca tutte le interfacce di callback. Ogni interfaccia visualizza i parametri restituiti per l&#39;interfaccia.
 
    Ad esempio:
 
@@ -43,9 +43,9 @@ Flash Runtime fornisce un meccanismo di eventi generici, che TVSDK utilizza e de
                    error:MediaError = null) 
    ```
 
-1. Registra i listener di callback con l&#39;oggetto `MediaPlayer` utilizzando `MediaPlayer.addEventListener`.
+1. Registrare i listener di callback con `MediaPlayer` oggetto utilizzando `MediaPlayer.addEventListener`.
 
-   `MediaPlayer` Estensione  `flash.events.IEventDispatcher`, che fa parte dei file core del lettore di Flash e include le funzioni  `addEventListener` e  `removeEventListener`.
+   `MediaPlayer` si estende `flash.events.IEventDispatcher`, che fa parte dei file core del lettore Flash e include le funzioni `addEventListener` e `removeEventListener`.
 
    ```
    mediaPlayer.addEventListener( 

@@ -1,39 +1,37 @@
 ---
 description: Puoi personalizzare o ignorare i comportamenti degli annunci.
-title: Impostare una riproduzione personalizzata
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Impostare la riproduzione personalizzata
+exl-id: aaa4d1c2-c425-4a2e-8377-0a3072f3fb18
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '159'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Configurazione della riproduzione personalizzata {#cset-up-customized-playback}
 
-# Configurare la riproduzione personalizzata {#cset-up-customized-playback}
+Puoi personalizzare o ignorare il comportamento degli annunci registrando l’istanza dei criteri degli annunci con TVSDK.
 
-Puoi personalizzare o sovrascrivere il comportamento degli annunci registrando l’istanza del criterio degli annunci con TVSDK.
+Per personalizzare i comportamenti degli annunci, effettuare una delle seguenti operazioni:
 
-Per personalizzare i comportamenti degli annunci, effettua una delle seguenti operazioni:
+* Implementare `AdPolicySelector` e tutti i relativi metodi.
+Questa opzione è consigliata se devi ignorare tutti i comportamenti di annuncio predefiniti.
 
-* Implementa l’interfaccia `AdPolicySelector` e tutti i relativi metodi.
-Questa opzione è consigliata se devi sovrascrivere tutti i comportamenti di annunci predefiniti.
+* Estendi il `DefaultAdPolicySelector` e forniscono implementazioni solo per i comportamenti che richiedono personalizzazione.
+Questa opzione è consigliata se devi ignorare solo alcuni dei comportamenti predefiniti.
 
-* Estendi la classe `DefaultAdPolicySelector` e fornisci implementazioni solo per quei comportamenti che richiedono
-personalizzazione.
-Questa opzione è consigliata se è necessario ignorare solo alcuni dei comportamenti predefiniti.
-
-Per entrambe le opzioni, completa le attività seguenti:
+Per entrambe le opzioni, completa le seguenti attività:
 
 Per personalizzare i comportamenti degli annunci:
 
-1. Implementa l’interfaccia AdPolicySelector e tutti i relativi metodi.
+1. Implementare l&#39;interfaccia AdPolicySelector e tutti i relativi metodi.
 
-1. Assegna l’istanza dei criteri che deve essere utilizzata da TVSDK tramite advertising factory.
+1. Assegna l’istanza dei criteri che deve essere utilizzata da TVSDK tramite la advertising factory.
 
 >[!IMPORTANT]
 >
->I criteri degli annunci personalizzati registrati all&#39;inizio di >playback vengono cancellati quando l&#39;istanza di MediaPlayer è >deallocate.L&#39;applicazione deve registrare un&#39;istanza di criterio >selettore ogni volta che viene creata una nuova sessione di riproduzione.
+>I criteri degli annunci personalizzati registrati all’inizio della riproduzione vengono cancellati quando l’istanza MediaPlayer è deallocata. L’applicazione deve registrare un’istanza di criteri > selettore ogni volta che viene creata una nuova sessione di riproduzione.
 
 Ad esempio:
 
@@ -54,4 +52,4 @@ Ad esempio:
     mediaPlayer.replaceCurrentResource(resource, config);
 ```
 
-1. Implementa le tue personalizzazioni.
+1. Implementare le personalizzazioni.

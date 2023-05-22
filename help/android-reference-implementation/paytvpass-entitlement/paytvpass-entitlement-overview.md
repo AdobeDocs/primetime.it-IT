@@ -1,21 +1,20 @@
 ---
-description: Puoi utilizzare l’autenticazione Adobe Primetime per gestire l’adesione degli utenti nel lettore.
+description: Puoi utilizzare l’autenticazione Adobe Primetime per gestire le adesioni utente nel lettore.
 title: Panoramica
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 0db18747-0ccb-4654-8f1d-9b51915b3652
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '99'
 ht-degree: 0%
 
 ---
 
-
 # Panoramica {#overview}
 
-Puoi utilizzare l’autenticazione Adobe Primetime per gestire l’adesione degli utenti nel lettore.
+Puoi utilizzare l’autenticazione Adobe Primetime per gestire le adesioni utente nel lettore.
 
-Il gestore di funzioni che incapsula i flussi di adesione all&#39;autenticazione Primetime è il `EntitlementManager`. Questa classe incapsula la logica di adesione durante la delega dell&#39;interfaccia utente ad altre aree.
+Il gestore delle funzioni che incapsula i flussi di adesione all’autenticazione Primetime è il `EntitlementManager`. Questa classe racchiude la logica di adesione mentre si delega il lavoro dell’interfaccia utente ad altre aree.
 
-Questa implementazione di riferimento per Android utilizza la libreria AccessEnabler di Primetime Authentication versione 1.7.3. Gran parte dell&#39;implementazione è molto simile all&#39;applicazione demo esistente fornita con la libreria AccessEnabler.
+Questa implementazione di riferimento per Android utilizza la versione 1.7.3 della libreria AccessEnabler di autenticazione Primetime. Gran parte dell’implementazione è molto simile all’applicazione demo esistente fornita con la libreria AccessEnabler.
 
-Per ulteriori informazioni sull&#39;autenticazione Primetime, consulta la documentazione in [Introduzione all&#39;integrazione del programmatore](https://tve.helpdocsonline.com/introduction-to-programmer-integration).
+Per ulteriori informazioni sull’autenticazione Primetime, consulta la documentazione all’indirizzo [Introduzione all’integrazione dei programmatori](https://tve.helpdocsonline.com/introduction-to-programmer-integration).

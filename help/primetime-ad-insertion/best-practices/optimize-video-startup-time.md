@@ -1,25 +1,24 @@
 ---
 title: Ottimizzare i tempi di avvio dei video
-description: Ottimizzazione dei tempi di avvio del video
-translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+description: Ottimizzazione dei tempi di avvio dei video
+exl-id: 5a89c774-0fed-4378-9cf8-98c4c843ae0d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '110'
 ht-degree: 0%
 
 ---
 
+# Panoramica sull’ottimizzazione dei tempi di avvio dei video {#optimize-video-start-up-times}
 
-# Panoramica sull&#39;ottimizzazione dei tempi di avvio del video {#optimize-video-start-up-times}
+Primetime Ad Insertion fornisce diverse funzioni per ottimizzare il tempo di avvio del video, ad esempio il caching e le regole per l’ottimizzazione di route/protocollo. Di seguito sono riportati alcuni altri consigli per garantire tempi di avvio video più rapidi quando si utilizza Primetime Ad Insertion:
 
-Primetime  Ad Insertion offre diverse funzioni per ottimizzare il tempo di avvio del video, ad esempio la memorizzazione nella cache e le regole per l&#39;ottimizzazione di route/protocollo. Seguono altre raccomandazioni per garantire tempi di avvio dei video più rapidi quando si utilizza Primetime  Ad Insertion:
+* Distribuisci tutti gli annunci e i contenuti dalle reti CDN (Content Delivery Networks)
 
-* Distribuzione di tutti gli annunci e contenuti da Content Delivery Networks (CDN)
+* Riduci o rimuovi gli handshake TLS tra l’Ad Insertion Primetime e i CDN. Per ulteriori informazioni, consulta [Ottimizzare route e protocolli](optimize-routes-protocols.md).
 
-* Ridurre o rimuovere i handshakes TLS tra i Ad Insertion Primetime  e i CDN. Per ulteriori informazioni, vedere [Ottimizzare route e protocolli](optimize-routes-protocols.md).
+* Distribuisci frammenti di annunci e contenuti dalla stessa rete CDN
 
-* Distribuzione di frammenti di annunci e contenuti dalla stessa CDN
+* Inserisci intestazioni di controllo cache per contenuti e manifesti VOD/live
 
-* Inserire intestazioni di controllo cache per contenuti e manifesti live/VOD
-
-* Riduzione o rimozione di fornitori di annunci pubblicitari o creativi che rispondono lentamente
+* Ridurre o rimuovere i provider di annunci o i creativi di annunci che sono lenti a rispondere

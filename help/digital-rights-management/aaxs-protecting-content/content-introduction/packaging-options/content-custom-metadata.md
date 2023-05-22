@@ -2,19 +2,18 @@
 title: Metadati personalizzati
 description: Metadati personalizzati
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: d7783420-b345-44de-8f22-a16dda5d7554
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '109'
 ht-degree: 0%
 
 ---
 
-
 # Metadati personalizzati {#custom-metadata}
 
-**Specifica chiave/valore personalizzato da aggiungere ai metadati del contenuto che possono essere interpretati dall&#39;applicazione server.**
+**Specificare chiave/valore personalizzato da aggiungere ai metadati di contenuto che possono essere interpretati dall&#39;applicazione server.**
 
-Il formato dei metadati dei contenuti di Adobe Access consente l&#39;inclusione di coppie chiave/valore personalizzate al momento dell&#39;imballaggio da elaborare dal server licenze durante il rilascio della licenza. Questi metadati sono separati dal criterio e possono essere univoci per ogni contenuto.
+Il formato dei metadati del contenuto di Access di Adobe consente di includere coppie chiave/valore personalizzate in fase di creazione del pacchetto che devono essere elaborate dal server licenze durante il rilascio della licenza. Questi metadati sono separati dalla policy e possono essere univoci per ogni contenuto.
 
-Esempio di utilizzo: Durante una fase beta, includi la proprietà personalizzata &quot;Release:BETA&quot; al momento della creazione del pacchetto. I server licenze possono vendere licenze per questo contenuto durante il periodo Beta, ma dopo la scadenza del periodo Beta, i server licenze non consentono l’accesso al contenuto.
+Caso d’uso di esempio: durante una fase Beta, includi la proprietà personalizzata &quot;Release:BETA&quot; al momento del packaging. I server di licenze possono distribuire licenze a questo contenuto durante il periodo Beta, ma dopo la scadenza del periodo Beta, i server di licenze non consentono l’accesso al contenuto.

@@ -1,32 +1,31 @@
 ---
-description: Puoi usare l’SDK per browser per recuperare informazioni sui file multimediali da visualizzare sulla barra di ricerca.
+description: È possibile utilizzare il browser TVSDK per recuperare informazioni sul supporto che è possibile visualizzare sulla barra di ricerca.
 title: Visualizza la durata, l'ora corrente e il tempo rimanente del video
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f2aa3c42-9c47-4a55-aed6-7dc5a8d0662b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '289'
 ht-degree: 0%
 
 ---
 
-
 # Visualizza la durata, l&#39;ora corrente e il tempo rimanente del video{#display-the-duration-current-time-and-remaining-time-of-the-video}
 
-Puoi usare l’SDK per browser per recuperare informazioni sui file multimediali da visualizzare sulla barra di ricerca.
+È possibile utilizzare il browser TVSDK per recuperare informazioni sul supporto che è possibile visualizzare sulla barra di ricerca.
 
-1. Attendi che il lettore sia almeno nello stato PREPARATO.
-1. Recupera l&#39;ora corrente dell&#39;indicatore di riproduzione utilizzando l&#39;attributo `MediaPlayer.currentTime` .
+1. Attendere che il lettore sia almeno nello stato PREPARATO.
+1. Recupera il tempo corrente della testina di riproduzione utilizzando `MediaPlayer.currentTime` attributo.
 
-   Questo attributo restituisce la posizione corrente dell&#39;indicatore di riproduzione sulla timeline virtuale, in millisecondi. Il tempo viene calcolato in base al flusso risolto che potrebbe contenere più istanze di contenuto alternativo, ad esempio più annunci o interruzioni pubblicitarie unite nel flusso principale. Per i flussi in tempo reale/lineare, il tempo restituito è sempre nell&#39;intervallo della finestra di riproduzione.
+   Questo attributo restituisce la posizione corrente dell’indicatore di riproduzione sulla timeline virtuale in millisecondi. Il tempo viene calcolato rispetto al flusso risolto che potrebbe contenere più istanze di contenuto alternativo, ad esempio più annunci o interruzioni pubblicitarie unite nel flusso principale. Per i flussi live/lineari, il tempo restituito è sempre nell’intervallo della finestra di riproduzione.
 
    ```js
    MediaPlayer.currentTime
    ```
 
-1. Recupera l&#39;intervallo di riproduzione del flusso e determina la sua durata.
-   1. Utilizzare la proprietà `mediaPlayer.playbackRange` per ottenere l&#39;intervallo di tempo della timeline virtuale.
+1. Recupera l’intervallo di riproduzione del flusso e determina la durata.
+   1. Utilizza il  `mediaPlayer.playbackRange` per ottenere l&#39;intervallo di tempo della timeline virtuale.
 
-   1. Per determinare la durata, sottraete l’inizio dalla fine dell’intervallo.
+   1. Per determinare la durata, sottrarre l&#39;inizio dalla fine dell&#39;intervallo.
 
       Ciò include la durata del contenuto aggiuntivo inserito nel flusso (annunci).
 
@@ -36,7 +35,7 @@ Puoi usare l’SDK per browser per recuperare informazioni sui file multimediali
 
 1. Utilizza i metodi disponibili sugli elementi MediaPlayer e Browser TVSDK per impostare i parametri della barra di ricerca.
 
-   Ad esempio, ecco un layout possibile per visualizzare la barra di ricerca in HTML.
+   Ad esempio, qui è presente un layout possibile per visualizzare la barra di ricerca in HTML.
 
    ```
    <div class="seekbar" id="seekbar"> 
@@ -50,7 +49,7 @@ Puoi usare l’SDK per browser per recuperare informazioni sui file multimediali
      </div> 
    ```
 
-   Ecco il css corrispondente:
+   Di seguito è riportato il css corrispondente:
 
    ```
    #seekbar { 
@@ -148,7 +147,7 @@ Puoi usare l’SDK per browser per recuperare informazioni sui file multimediali
    } 
    ```
 
-1. Ascolta `AdobePSDK.TimeChangeEvent` e aggiorna di conseguenza la barra di ricerca.
+1. Ascolta `AdobePSDK.TimeChangeEvent` e aggiorna la barra di ricerca di conseguenza.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.TIME_CHANGED, onTimeChange); 
@@ -172,7 +171,7 @@ Puoi usare l’SDK per browser per recuperare informazioni sui file multimediali
        } 
    ```
 
-   In questo esempio viene creato un oggetto barra di ricerca per aggiornare la barra di ricerca:
+   In questo esempio viene creato un oggetto Sekbar per aggiornare la barra di ricerca:
 
    ```js
    /** 
@@ -343,4 +342,3 @@ Puoi usare l’SDK per browser per recuperare informazioni sui file multimediali
    
            })(); 
    ```
-

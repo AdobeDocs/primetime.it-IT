@@ -1,21 +1,21 @@
 ---
-title: Recupera l'elenco delle risorse preautorizzate dalla seconda schermata Web App
-description: Recupera l'elenco delle risorse preautorizzate dalla seconda schermata Web App
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Recupera elenco di risorse preautorizzate tramite l’app web Second Screen
+description: Recupera elenco di risorse preautorizzate tramite l’app web Second Screen
+exl-id: 78eeaf24-4cc1-4523-8298-999c9effdb7a
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 0%
 
 ---
 
-
-# Recupera l&#39;elenco delle risorse preautorizzate dalla seconda schermata Web App {#retrieve-list-of-preauthorized-resources-by-second-screen-web-app}
+# Recupera elenco di risorse preautorizzate tramite l’app web Second Screen {#retrieve-list-of-preauthorized-resources-by-second-screen-web-app}
 
 >[!NOTE]
 >
->Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente a partire da Adobe. Non è consentito alcun uso non autorizzato.
+>Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente di Adobe. Non è consentito alcun uso non autorizzato.
 
-## Endpoint API REST {#clientless-endpoints}
+## Endpoint REST API {#clientless-endpoints}
 
 &lt;reggie_fqdn>:
 
@@ -31,19 +31,19 @@ ht-degree: 0%
 
 ## Descrizione {#description}
 
-Richiesta di autenticazione Adobe Primetime per ottenere l’elenco delle risorse preautorizzate.
+Una richiesta all’autenticazione di Adobe Primetime per ottenere l’elenco delle risorse preautorizzate.
 
-Esistono due set di API: un set per l’app in streaming o il servizio programmatore e uno per l’app Web in secondo schermo. Questa pagina descrive l’API per l’app AuthN.
+Esistono due set di API: un set per Streaming App o Programmer Service e uno per Second Screen Web App. Questa pagina descrive l’API per l’app AuthN.
 
  \
-| Endpoint | Chiamato  </br>Da | Input   </br>Parametri | HTTP  </br>Metodo | Risposta | HTTP  </br>Risposta | | — | — | — | — | — | — | | &lt;sp_fqdn>/api/v1/preautorizzare/{codice di registrazione} | Modulo AuthN 1.  codice di registrazione  </br>    (componente Percorso)</br>2.  richiedente (obbligatorio)</br>3.  elenco di risorse (obbligatorio) | GET | XML o JSON contenente singole decisioni di pre-autorizzazione o dettagli di errore. Di seguito sono riportati alcuni esempi. | 200 - Successo</br></br>400 - Richiesta errata</br></br>401 - Non autorizzato</br></br>405 - Metodo non consentito  </br></br>412 - Precondizione non riuscita</br></br>500 - Errore interno del server |
+| Endpoint | Richiamato  </br>Da | Input   </br>Parametri | HTTP  </br>Metodo | Risposta | HTTP  </br>Risposta | | — | — | — | — | — | — | | &lt;sp_fqdn>/api/v1/preauthorize/{codice di registrazione} | Modulo AuthN | 1  codice di registrazione  </br>    (componente Percorso)</br>2.  richiedente (obbligatorio)</br>3.  elenco risorse (obbligatorio) | GET | XML o JSON contenente singole decisioni di pre-autorizzazione o dettagli di errore. Vedi gli esempi di seguito. | 200 - Successo</br></br>400 - Richiesta non valida</br></br>401 - Non autorizzato</br></br>405 - Metodo non consentito  </br></br>412 - Precondizione non riuscita</br></br>500 - Errore interno del server |
 
 
 
 | Parametro di input | Descrizione |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| codice di registrazione | Valore del codice di registrazione fornito dall&#39;utente all&#39;inizio del flusso di autenticazione. |
-| richiedente | Il requestorId del programmatore per il quale l&#39;operazione è valida. |
+| codice di registrazione | Il valore del codice di registrazione fornito dall’utente all’inizio del flusso di autenticazione. |
+| richiedente | ID richiedente del programmatore per il quale è valida questa operazione. |
 | elenco risorse | Una stringa che contiene un elenco delimitato da virgole di resourceIds che identifica il contenuto che potrebbe essere accessibile a un utente ed è riconosciuto dagli endpoint di autorizzazione MVPD. |
 
 
@@ -108,4 +108,3 @@ Content-Type: application/json; charset=utf-8
     ]
 }
 ```
-

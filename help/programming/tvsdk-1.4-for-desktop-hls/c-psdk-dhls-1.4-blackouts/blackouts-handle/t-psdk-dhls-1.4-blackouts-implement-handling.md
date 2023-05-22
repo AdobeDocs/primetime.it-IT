@@ -1,22 +1,21 @@
 ---
 description: TVSDK fornisce API e codice di esempio per la gestione dei periodi di sospensione attività.
-title: Implementare la gestione della blackout
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Implementare la gestione delle sospensioni attività
+exl-id: c7252467-a075-4227-b7bc-db1112a96a2b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
-
-# Implementa la gestione della blackout{#implement-blackout-handling}
+# Implementare la gestione delle sospensioni attività{#implement-blackout-handling}
 
 TVSDK fornisce API e codice di esempio per la gestione dei periodi di sospensione attività.
 
-Per implementare la gestione della sospensione attività, incluso fornire contenuto alternativo durante la sospensione attività:
+Per implementare la gestione delle sospensioni attività, inclusa la fornitura di contenuto alternativo durante la sospensione attività:
 
-1. Imposta l&#39;app per rilevare i tag di blackout in un manifesto del flusso live.
+1. Configura l&#39;app per rilevare i tag di sospensione attività in un manifesto live stream.
 
    ```
    private function startPlayback(resource:MediaResource):void { 
@@ -30,7 +29,7 @@ Per implementare la gestione della sospensione attività, incluso fornire conten
    }
    ```
 
-1. Crea listener di eventi per gli eventi di metadati temporizzati nei flussi in primo piano e in background.
+1. Creare listener di eventi per eventi di metadati temporizzati nei flussi in primo piano e in background.
 
    ```
    private function createMediaPlayer(context:MediaPlayerContext):void { 
@@ -42,7 +41,7 @@ Per implementare la gestione della sospensione attività, incluso fornire conten
    }
    ```
 
-1. Implementa i gestori eventi di metadati temporizzati sia per i flussi in primo piano che per quelli in background.
+1. Implementa gestori eventi metadati temporizzati per flussi in primo piano e in background.
 
    Primo piano:
 
@@ -61,7 +60,7 @@ Per implementare la gestione della sospensione attività, incluso fornire conten
    }
    ```
 
-   Contesto:
+   Sfondo:
 
    ```
    private function onTimedMetadataInBackground(event:TimedMetadataEvent):void { 
@@ -86,7 +85,7 @@ Per implementare la gestione della sospensione attività, incluso fornire conten
    }
    ```
 
-1. Prepara MediaPlayer per i blackout.
+1. Preparare MediaPlayer per le sospensioni attività.
 
    ```
    public function prepareBlackoutRanges(timedMetadata:Vector.<TimedMetadata>):void { 
@@ -124,7 +123,7 @@ Per implementare la gestione della sospensione attività, incluso fornire conten
    }
    ```
 
-1. Imposta un controllo dell&#39;elenco di TimedMetadataObjects per ogni occorrenza di un aggiornamento alla posizione del playhead.
+1. Imposta una verifica dell’elenco di TimedMetadataObjects per ogni occorrenza di aggiornamento della posizione della testina di riproduzione.
 
    ```
    private function onTimeChange(event:TimeChangeEvent):void { 
@@ -157,7 +156,7 @@ Per implementare la gestione della sospensione attività, incluso fornire conten
    }
    ```
 
-1. Crea metodi per cambiare contenuto all’inizio e alla fine del periodo di sospensione attività.
+1. Creare metodi per cambiare il contenuto all&#39;inizio e alla fine del periodo di sospensione attività.
 
    ```
    public function initiate(event:TimerEvent=null):void { 
@@ -195,4 +194,3 @@ Per implementare la gestione della sospensione attività, incluso fornire conten
        } 
    }
    ```
-

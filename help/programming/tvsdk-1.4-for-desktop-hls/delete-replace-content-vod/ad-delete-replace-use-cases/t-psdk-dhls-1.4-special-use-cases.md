@@ -1,23 +1,22 @@
 ---
-title: Casi d'uso speciali
-description: Casi d'uso speciali
+title: Casi d’uso speciali
+description: Casi d’uso speciali
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 33aad8cc-5939-4890-bc89-32d6bbf1fa4c
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 0%
 
 ---
 
+# Casi d’uso speciali{#special-use-cases}
 
-# Casi d&#39;uso speciali{#special-use-cases}
-
-TVSDK favorisce le impostazioni dell’intervallo personalizzate rispetto alle impostazioni degli annunci standard. Ad esempio, se gli intervalli MARK sono definiti, le impostazioni di inserimento dell’annuncio vengono ignorate. Se gli intervalli di SOSTITUZIONE sono definiti, TVSDK utilizza automaticamente la modalità di segnalazione `CustomRanges`.
+TVSDK favorisce le impostazioni di intervallo personalizzate rispetto alle impostazioni di annuncio standard. Ad esempio, se sono definiti intervalli MARK, le impostazioni di inserimento dell’annuncio vengono ignorate. Se si definiscono gli intervalli REPLACE, TVSDK utilizza automaticamente `CustomRanges` modalità di segnalazione.
 
 1. `ReplaceRange` senza durata di sostituzione
 
-   Se manca la durata della sostituzione, la durata effettiva della sostituzione è determinata dal server. Anche il numero di annunci inseriti in questo `AdBreak` è determinato dal server.
+   Se la durata della sostituzione non è presente, la durata effettiva della sostituzione viene determinata dal server. Il numero di annunci inseriti in questo `AdBreak` è determinato anche dal server.
 
    ```
    {

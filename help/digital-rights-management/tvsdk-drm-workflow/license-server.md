@@ -1,18 +1,17 @@
 ---
-title: Server di licenza DRM di Primetime
-description: Server di licenza DRM di Primetime
+title: Server licenze DRM Primetime
+description: Server licenze DRM Primetime
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 2927bb21-0001-46d4-aae1-a277f414560d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '121'
 ht-degree: 0%
 
 ---
 
+# Server licenze DRM Primetime {#primetime-drm-license-server}
 
-# Server di licenze DRM Primetime {#primetime-drm-license-server}
+Il server licenze DRM di Primetime è stato creato dall&#39;SDK Java di Primetime DRM. Questo server utilizza le richieste di licenza dei client che richiedono l&#39;accesso al contenuto protetto. Il server è in grado di analizzare e manipolare i criteri DRM dall&#39;interno della richiesta di licenza, al fine di modificare o sostituire i criteri prima di utilizzarli per generare una licenza per il client richiedente.
 
-Il server di licenza DRM di Primetime è costruito dall&#39;SDK Java DRM di Primetime. Questo server utilizza le richieste di licenza dei client che richiedono l’accesso al contenuto protetto. Il server è in grado di analizzare e manipolare i criteri DRM dall&#39;interno della richiesta di licenza, al fine di modificare o sostituire il criterio prima di utilizzare il criterio per generare una licenza per il client richiedente.
-
-Per implementare un server di licenza DRM di Primetime, deve prima soddisfare **le regole di conformità e robustezza di Adobe** per DRM di Primetime. Adobe offre anche un servizio di licenze DRM in hosting Primetime chiamato [Primetime Cloud DRM](../cloud-quick-start/whats-included.md), che puoi utilizzare come alternativa all&#39;hosting del tuo server di licenze.
+Per distribuire un server licenze DRM Primetime, è necessario soddisfare i requisiti **Regole di conformità e robustezza di Adobe** per Primetime DRM. Adobe offre anche un servizio di gestione licenze Primetime DRM in hosting denominato [DRM cloud Primetime](../cloud-quick-start/whats-included.md), che è possibile utilizzare come alternativa all&#39;hosting del proprio server licenze.

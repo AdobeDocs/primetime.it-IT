@@ -1,20 +1,19 @@
 ---
-title: Verificare il contenuto del pacchetto
-description: Verificare il contenuto del pacchetto
+title: Testare il contenuto del pacchetto
+description: Testare il contenuto del pacchetto
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 98456bf8-5d4d-47a7-905a-e6dac1e826ba
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 0%
 
 ---
 
+# Testare il contenuto del pacchetto {#test-the-packaged-content}
 
-# Verifica il contenuto del pacchetto {#test-the-packaged-content}
+È necessario verificare che l’operazione di creazione pacchetti sia stata completata utilizzando Adobe Primetime Desktop Player disponibile al pubblico (tramite Flash Player). Questo lettore può supportare solo contenuti HDS. Per testare il contenuto HLS, è necessario un lettore abilitato per Primetime Browser TVSDK.
 
-È necessario verificare che l&#39;operazione di packaging sia riuscita utilizzando Adobe Primetime Desktop Player disponibile al pubblico (tramite Flash Player). Questo lettore può supportare solo il contenuto HDS. Per testare il contenuto HLS è necessario un lettore abilitato per TVSDK del browser Primetime.
-
-1. Ospita il contenuto su un server web.
-1. Avvia il lettore DRM di Primetime (precedentemente denominato Adobe Access) all&#39;indirizzo https://drmtest2.adobe.com:8080/AccessPlayer/player.html.
-1. Incolla l&#39;URL del manifesto HDS ( [!DNL .f4m]) nel campo di navigazione del lettore e fai clic sul pulsante **[!UICONTROL Play]** .
+1. Ospita i contenuti su un server web.
+1. Avviare il lettore DRM Primetime (precedentemente denominato Adobe Access) all&#39;indirizzo https://drmtest2.adobe.com:8080/AccessPlayer/player.html.
+1. Incollare l&#39;URL nel manifesto HDS ( [!DNL .f4m]) nel campo di navigazione del lettore e fai clic sul pulsante **[!UICONTROL Play]** pulsante.

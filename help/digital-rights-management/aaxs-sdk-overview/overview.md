@@ -1,18 +1,17 @@
 ---
-title: Panoramica di Adobe Access SDK
-description: Panoramica di Adobe Access SDK
+title: Panoramica dell’SDK di accesso agli Adobi
+description: Panoramica dell’SDK di accesso agli Adobi
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 2d39ab29-d499-4632-894c-03b07d3ffdc3
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '156'
 ht-degree: 0%
 
 ---
 
+# Panoramica dell’SDK di accesso agli Adobi {#an-overview-of-adobe-access-sdk}
 
-# Panoramica di Adobe Access SDK {#an-overview-of-adobe-access-sdk}
+Adobe ® Access™ SDK è una piattaforma di gestione dei diritti digitali che consente di proteggere e distribuire in modo sicuro contenuti video e audio da riprodurre su dispositivi consumer come i personal computer. Adobe Access è una piattaforma flessibile che consente ai proprietari dei contenuti di proteggerli e di mantenere il controllo sulla distribuzione. I proprietari dei contenuti possono proteggere e gestire i propri diritti creando licenze per ciascun file multimediale digitale, garantendo ai consumatori la disponibilità di un&#39;ampia varietà di contenuti di altissima qualità.
 
-Adobe® Access™ SDK è una piattaforma per la gestione dei diritti digitali che consente di proteggere e fornire in modo sicuro contenuti video e audio da riprodurre su dispositivi consumer come i personal computer. Adobe Access è una piattaforma flessibile che consente ai proprietari dei contenuti di proteggere i propri contenuti e mantenere il controllo sulla distribuzione. I proprietari dei contenuti possono proteggere e gestire i propri diritti creando licenze per ogni file multimediale digitale, garantendo che ai consumatori sia resa disponibile un&#39;ampia varietà di contenuti di altissima qualità.
-
-Adobe Access supporta un&#39;ampia gamma di modelli di business, tra cui video on demand, noleggio e vendita elettronica. È possibile distribuire contenuti protetti con Adobe Access tramite streaming tramite il software di Flash Media Server Adobe, offrendo download progressivo tramite HTTP utilizzando la tecnologia HTTP Dynamic Streaming di Adobe o consentendo download in una libreria di contenuti per la riproduzione locale a piacimento del consumatore.
+Adobe Access supporta una vasta gamma di modelli aziendali, tra cui video on-demand, noleggio e sell-through elettronico. I contenuti protetti con Adobe Access possono essere distribuiti in streaming mediante il software Adobe Flash Media Server, con download progressivo tramite HTTP utilizzando la tecnologia HTTP Dynamic Streaming di Adobe o con download in una libreria di contenuti per la riproduzione locale a discrezione del consumatore.

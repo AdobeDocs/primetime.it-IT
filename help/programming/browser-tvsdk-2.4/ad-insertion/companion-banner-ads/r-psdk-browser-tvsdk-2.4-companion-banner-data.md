@@ -1,23 +1,22 @@
 ---
-description: Il contenuto di un AdBannerAsset descrive un banner correlato.
-title: Dati banner Companion
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Il contenuto di una risorsa AdBanner descrive un banner correlato.
+title: Dati banner aziendale
+exl-id: 94954233-4357-43be-a61f-6d8010c930ca
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 0%
 
 ---
 
+# Dati banner aziendale{#companion-banner-data}
 
-# Dati banner Companion{#companion-banner-data}
-
-Il contenuto di un AdBannerAsset descrive un banner correlato.
+Il contenuto di una risorsa AdBanner descrive un banner correlato.
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-L&#39;evento `AdobePSDK.PSDKEventType.AD_STARTED` restituisce un&#39;istanza `Ad` che contiene una proprietà `companionAssets` ( `Array<AdBannerAsset>`).
-Ogni elemento `AdBannerAsset` fornisce informazioni sulla visualizzazione della risorsa.
+Il `AdobePSDK.PSDKEventType.AD_STARTED` l&#39;evento restituisce un `Ad` istanza che contiene un `companionAssets` proprietà ( `Array<AdBannerAsset>`).
+Ogni `AdBannerAsset` fornisce informazioni sulla visualizzazione della risorsa.
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
  <thead> 
@@ -29,7 +28,7 @@ Ogni elemento `AdBannerAsset` fornisce informazioni sulla visualizzazione della 
  <tbody> 
   <tr> 
    <td colname="col1"> larghezza </td> 
-   <td colname="col2"> Larghezza del banner correlato in pixel. </td> 
+   <td colname="col2"> Larghezza in pixel del banner correlato. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> altezza </td> 
@@ -37,11 +36,11 @@ Ogni elemento `AdBannerAsset` fornisce informazioni sulla visualizzazione della 
   </tr> 
   <tr> 
    <td colname="col1"> tipo di risorsa </td> 
-   <td colname="col2">Tipo di risorsa per il banner correlato: 
+   <td colname="col2">Il tipo di risorsa per questo banner correlato: 
     <ul id="ul_A067787FE49E4B6095BE0AC1D447DBB3"> 
-     <li id="li_02B7224C67004095B3F6E50FD21E507E">html I dati sono nel codice HTML. </li> 
-     <li id="li_5F37E14472424F808C6094F42009E676">iframe: I dati sono un URL iframe (src). </li> 
-     <li id="li_48E74AC5F00640EC8A4DE2CB31E106EC">statico: I dati sono un URL immagine statico (src). </li> 
+     <li id="li_02B7224C67004095B3F6E50FD21E507E">html: i dati sono nel codice HTML. </li> 
+     <li id="li_5F37E14472424F808C6094F42009E676">iframe: i dati sono un URL iframe (src). </li> 
+     <li id="li_48E74AC5F00640EC8A4DE2CB31E106EC">statico: i dati sono un URL immagine statico (src). </li> 
     </ul> </td> 
   </tr> 
   <tr> 
@@ -49,12 +48,11 @@ Ogni elemento `AdBannerAsset` fornisce informazioni sulla visualizzazione della 
     <pre>
       dati banner
     </pre> </td> 
-   <td colname="col2"> I dati del tipo specificato da <span class="codeph"> resourceType</span> per questo banner correlato. </td> 
+   <td colname="col2"> Dati del tipo specificato da <span class="codeph"> resourceType</span> per questo banner. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> URL statico </td> 
-   <td colname="col2"> <p>A volte il banner correlato potrebbe avere anche un URL statico che è un URL diretto all’immagine. </p> <p>Se non desideri utilizzare html o iframe, puoi utilizzare un URL diretto a un’immagine. In questo caso, puoi utilizzare staticURL per visualizzare il banner. </p> <p>Importante:  È necessario verificare se l’URL statico è una stringa valida, perché questa proprietà potrebbe non essere sempre disponibile. </p> </td> 
+   <td colname="col2"> <p>A volte il banner correlato può anche avere un URL statico che è un URL diretto all’immagine. </p> <p>Se non desideri utilizzare html o iframe, puoi utilizzare un URL diretto per un’immagine. In questo caso, puoi utilizzare staticURL per visualizzare il banner. </p> <p>Importante: è necessario verificare se l’URL statico è una stringa valida, perché questa proprietà potrebbe non essere sempre disponibile. </p> </td> 
   </tr> 
  </tbody> 
 </table>
-

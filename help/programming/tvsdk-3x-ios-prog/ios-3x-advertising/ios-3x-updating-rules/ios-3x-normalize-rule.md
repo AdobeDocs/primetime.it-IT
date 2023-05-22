@@ -1,17 +1,16 @@
 ---
 description: La regola di normalizzazione definisce una trasformazione URL da applicare a un URL creativo di origine ottenuto da una risposta VAST/VMAP.
 keywords: normalizza regola;regole di selezione creativa
-title: Normalizzare le regole
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Normalizza regole
+exl-id: 63d67da5-8952-4ace-8822-c74900e15f95
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '168'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
-# Normalizzare le regole {#normalize-rules}
+# Normalizza regole {#normalize-rules}
 
 La regola di normalizzazione definisce una trasformazione URL da applicare a un URL creativo di origine ottenuto da una risposta VAST/VMAP.
 
@@ -28,48 +27,48 @@ La regola di normalizzazione definisce una trasformazione URL da applicare a un 
  </thead>
  <tbody> 
   <tr> 
-   <td><span class="codeph"> type</span></td> 
+   <td><span class="codeph"> tipo</span></td> 
    <td><span class="codeph"> Stringa</span></td> 
    <td><span class="codeph"> normalizzare</span></td> 
-   <td>Il valore deve sempre essere <span class="codeph"> normalize</span>.</td> 
+   <td>Il valore deve essere sempre <span class="codeph"> normalizzare</span>.</td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> item</span></td> 
+   <td><span class="codeph"> elemento</span></td> 
    <td><span class="codeph"> Stringa</span></td> 
    <td><span class="codeph"> host</span></td> 
-   <td>Attualmente è supportato solo <span class="codeph"> host</span>. Questo attributo deve essere presente quando sono definiti gli attributi <span class="codeph"> corrisponde a</span> e <span class="codeph"> valori</span> .</td> 
+   <td>Attualmente solo <span class="codeph"> host</span> è supportato. Questo attributo deve essere presente quando <span class="codeph"> corrisponde a</span> e <span class="codeph"> valori</span> attributi definiti.</td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> matches</span></td> 
+   <td><span class="codeph"> corrisponde a</span></td> 
    <td></td> 
    <td></td> 
    <td>Valori possibili:
     <ul id="ul_tnf_2hx_hz"> 
-     <li><span class="codeph"> eq</span>  - è uguale a</li> 
-     <li><span class="codeph"> ne</span>  - not equals</li> 
-     <li><span class="codeph"> co</span>  - contiene</li> 
-     <li><span class="codeph"> nc</span>  - non contiene</li> 
-     <li><span class="codeph"> sw</span>  - inizia con</li> 
-     <li><span class="codeph"> </span>  - termina con</li> 
+     <li><span class="codeph"> eq</span> - è uguale a</li> 
+     <li><span class="codeph"> ne</span> - non è uguale a</li> 
+     <li><span class="codeph"> co</span> - contiene</li> 
+     <li><span class="codeph"> nc</span> - non contiene</li> 
+     <li><span class="codeph"> sw</span> - inizia con</li> 
+     <li><span class="codeph"> ew</span> - termina con</li> 
     </ul></td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> values</span></td> 
+   <td><span class="codeph"> valori</span></td> 
    <td><span class="codeph"> Array</span></td> 
    <td></td> 
-   <td>TVSDK utilizzerà l'attributo <span class="codeph"> corrisponde a</span> sull' <span class="codeph"> elemento</span> del creativo sorgente e corrisponderà ai valori definiti in questo array.</td> 
+   <td>TVSDK utilizzerà <span class="codeph"> corrisponde a</span> attributo su <span class="codeph"> elemento</span> della creatività sorgente e confrontarla con i valori definiti in questo array.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> trova</span></td> 
    <td><span class="codeph"> regex</span></td> 
    <td></td> 
-   <td> Un’espressione regolare da applicare all’URL creativo sorgente da abbinare.</td> 
+   <td> Espressione regolare da applicare all’URL creativo di origine da rilevare.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> replace</span></td> 
    <td><span class="codeph"> regex</span></td> 
    <td></td> 
-   <td> Un’espressione regolare da applicare all’URL creativo sorgente da sostituire in base alla corrispondenza.</td> 
+   <td> Espressione regolare da applicare all’URL creativo di origine da sostituire in base alla corrispondenza.</td> 
   </tr> 
  </tbody> 
 </table>

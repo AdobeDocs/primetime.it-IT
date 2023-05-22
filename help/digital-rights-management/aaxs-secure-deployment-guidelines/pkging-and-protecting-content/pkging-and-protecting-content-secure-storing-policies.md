@@ -1,20 +1,19 @@
 ---
-title: Archiviazione sicura dei criteri
-description: Archiviazione sicura dei criteri
+title: Archiviazione sicura delle policy
+description: Archiviazione sicura delle policy
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: fd335a0c-7eb1-4159-958f-7302fce98cef
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '145'
 ht-degree: 0%
 
 ---
 
+# Archiviazione sicura delle policy{#securely-storing-policies}
 
-# Memorizzazione sicura dei criteri{#securely-storing-policies}
+L’SDK per l’accesso agli Adobi offre una grande flessibilità nello sviluppo di applicazioni da utilizzare per la creazione di pacchetti di contenuti e policy. Durante la creazione di tali applicazioni, può essere utile consentire ad alcuni utenti di creare e modificare le policy e limitare altri utenti in modo che possano applicare le policy esistenti solo al contenuto. In questo caso, devi implementare i controlli di accesso necessari per creare account utente con privilegi diversi per la creazione di criteri e l’applicazione di criteri al contenuto.
 
-Adobe Access SDK offre una grande flessibilità nello sviluppo di applicazioni da utilizzare nei pacchetti di contenuti e nella creazione di regole. Quando crei tali applicazioni, puoi consentire ad alcuni utenti di creare e modificare i criteri e limitare altri utenti in modo che possano applicare i criteri esistenti solo al contenuto. In questo caso, è necessario implementare i controlli di accesso necessari per creare account utente con privilegi diversi per la creazione dei criteri e l&#39;applicazione dei criteri al contenuto.
+I criteri non vengono firmati o protetti in altro modo da eventuali modifiche fino a quando non vengono utilizzati nel pacchetto. Se si è preoccupati degli utenti degli strumenti di creazione pacchetti che modificano i criteri, è consigliabile firmare i criteri per assicurarsi che non possano essere modificati.
 
-Le politiche non sono firmate o altrimenti protette dalla modifica finché non vengono utilizzate in imballaggi. Se sei preoccupato per gli utenti dei tuoi strumenti di imballaggio che modificano i criteri, dovresti considerare la possibilità di firmare i criteri in modo che non possano essere modificati.
-
-Per ulteriori informazioni sulla creazione di applicazioni utilizzando l&#39;SDK, consulta la sezione *Guida di riferimento dell&#39;API di accesso agli Adobi*.
+Per ulteriori informazioni sulla creazione di applicazioni tramite l&#39;SDK, vedi *Riferimento API per l’accesso agli Adobi*.

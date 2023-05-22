@@ -1,46 +1,45 @@
 ---
-description: TVSDK gestisce gli errori dell’intervallo di tempo in base al problema specifico, unendo o riordinando gli intervalli di tempo definiti in modo errato.
-title: Eliminazione degli annunci e gestione degli errori di sostituzione
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK gestisce gli errori di intervallo di tempo in base al problema specifico, unendo o riordinando gli intervalli di tempo definiti in modo errato.
+title: Gestione degli errori di eliminazione e sostituzione degli annunci
+exl-id: 3147d446-68a1-4e4b-9a29-f464b936d650
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 0%
 
 ---
 
+# Gestione degli errori di eliminazione e sostituzione degli annunci{#ad-deletion-and-replacement-error-handling}
 
-# Eliminazione degli annunci e gestione degli errori di sostituzione{#ad-deletion-and-replacement-error-handling}
+TVSDK gestisce gli errori di intervallo di tempo in base al problema specifico, unendo o riordinando gli intervalli di tempo definiti in modo errato.
 
-TVSDK gestisce gli errori dell’intervallo di tempo in base al problema specifico, unendo o riordinando gli intervalli di tempo definiti in modo errato.
+TVSDK tratta con `timeRanges` commettendo errori di unione e riordinamento predefiniti. Innanzitutto, ordina gli intervalli di tempo definiti dal cliente in base al *inizio* tempo. In base a questo ordinamento, unisce quindi intervalli adiacenti e li unisce se sono presenti sottoinsiemi e intersezioni tra gli intervalli.
 
-TVSDK gestisce gli errori `timeRanges` effettuando l’unione e il riordino predefiniti. Innanzitutto, ordina gli intervalli di tempo definiti dal cliente in base all&#39; ora *start*. In base a questo ordinamento, unisce quindi gli intervalli adiacenti e li unisce in presenza di sottoinsiemi e intersezioni tra gli intervalli.
-
-TVSDK gestisce gli errori nell’intervallo di tempo come segue:
+TVSDK gestisce gli errori dell’intervallo di tempo come segue:
 
 * Fuori servizio: TVSDK riordina gli intervalli di tempo.
 * Sottoinsieme: TVSDK unisce i sottoinsiemi dell’intervallo di tempo.
-* Interseziona : TVSDK unisce gli intervalli di tempo intersecanti.
-* Conflitto di intervalli di sostituzione : TVSDK sceglie la durata di sostituzione dal primo `timeRange` nel gruppo in conflitto.
+* Intersezione: TVSDK unisce gli intervalli di tempo intersecanti.
+* Conflitto per la sostituzione degli intervalli: TVSDK sceglie la durata della sostituzione dal primo elemento visualizzato `timeRange` nel gruppo in conflitto.
 
 TVSDK gestisce i conflitti in modalità di segnalazione con i metadati dell’annuncio come segue:
 
-* Se la modalità di segnalazione degli annunci è in conflitto con i metadati dell&#39;intervallo di tempo, i metadati dell&#39;intervallo di tempo hanno sempre la priorità. Ad esempio, se la modalità di segnalazione degli annunci è impostata come spunti di manifesto o mappa del server e ci sono anche intervalli di tempo MARK nei metadati dell&#39;annuncio, il comportamento risultante è che gli intervalli sono contrassegnati e non vengono inseriti annunci.
-* Per gli intervalli di SOSTITUZIONE, se la modalità di segnalazione è impostata come riferimento della mappa del server o del manifesto, gli intervalli vengono sostituiti come specificato negli intervalli di SOSTITUZIONE e non vi è inserimento di annunci tramite la mappa del server o i segnali del manifesto. Consulta [Modalità di segnalazione annunci](../../../tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-signaling-mode.md).
+* Se la modalità di segnalazione dell’annuncio è in conflitto con i metadati dell’intervallo di tempo, questi ultimi hanno sempre la priorità. Ad esempio, se la modalità di segnalazione dell’annuncio è impostata come mappa del server o segnali manifesti e i metadati dell’annuncio contengono anche degli intervalli di tempo MARK, il risultato è che gli intervalli vengono contrassegnati e non vengono inseriti annunci.
+* Per gli intervalli REPLACE, se la modalità di segnalazione è impostata come mappa del server o segnali manifest, gli intervalli vengono sostituiti come specificato negli intervalli REPLACE e non vi è inserimento di annunci tramite mappa del server o segnali manifest. Consulta [Modalità di segnalazione dell’annuncio](../../../tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-signaling-mode.md).
 
-Quando il server non restituisce un valore `AdBreaks` valido:
+Se il server non restituisce un valore valido `AdBreaks`:
 
-* TVSDK genera ed elabora un `NOPTimelineOperation` per il `AdBreak` vuoto. Nessun annuncio gioca.
+* TVSDK genera ed elabora un `NOPTimelineOperation` per il vuoto `AdBreak`. Nessun annuncio riprodotto.
 
-Per intervalli di tempo con flussi live:
+Per gli intervalli di tempo con flussi live:
 
-* Anche se questa funzione di cancellazione/sostituzione degli annunci C3 è destinata a essere supportata solo per i VOD, gli intervalli di tempo vengono elaborati per i flussi live e se specificato nei metadati degli annunci.
+* Sebbene questa funzione di eliminazione/sostituzione di annunci C3 sia progettata per essere supportata solo per VOD, gli intervalli di tempo vengono elaborati anche per i flussi live, se specificato nei metadati dell’annuncio.
 
-## Esempi di errore nell&#39;intervallo di tempo {#time-range-error-examples}
+## Esempi di errori nell’intervallo di tempo {#time-range-error-examples}
 
-TVSDK risponde alle specifiche errate dell’intervallo di tempo unendo o sostituendo gli intervalli di tempo come appropriato.
+TVSDK risponde a specifiche di intervalli di tempo errate unendo o sostituendo gli intervalli di tempo in base alle esigenze.
 
-Nell’esempio seguente vengono definiti quattro intervalli di tempo DELETE intersecanti. TVSDK unisce i quattro intervalli di tempo in uno, in modo che l’intervallo di eliminazione effettivo sia compreso tra 0 e 50.
+Nell&#39;esempio seguente vengono definiti quattro intervalli di tempo DELETE intersecanti. TVSDK unisce i quattro intervalli di tempo in uno, in modo che l’intervallo di eliminazione effettivo sia compreso tra 0 e 50 secondi.
 
 ```
 "time-ranges": {
@@ -61,7 +60,7 @@ Nell’esempio seguente vengono definiti quattro intervalli di tempo DELETE inte
 }
 ```
 
-Nell&#39;esempio seguente, quattro intervalli di tempo SOSTITUISCI sono definiti con intervalli di tempo in conflitto. In questo caso, TVSDK sostituisce 0-50 con 25 annunci. Si abbina alla prima durata di sostituzione nell&#39;ordinamento, perché ci sono conflitti negli intervalli successivi.
+Nell&#39;esempio seguente vengono definiti quattro intervalli di tempo REPLACE con intervalli di tempo in conflitto. In questo caso, TVSDK sostituisce 0-50 con 25 annunci. Viene associata alla prima durata di sostituzione nell&#39;ordinamento, in quanto sono presenti conflitti negli intervalli successivi.
 
 ```
 "time-ranges": {

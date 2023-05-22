@@ -1,27 +1,25 @@
 ---
-description: Quando TVSDK rileva un VMAP interrotto in una risposta ad server, invia un errore 1109 (NETWORK_AD_URL_FAILED).
-keywords: 1109;NETWORK_AD_URL_FAILED;VMAP interrotto
-title: Gestione degli errori client per VMAP non funzionante
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Quando TVSDK rileva una VMAP interrotta in una risposta di un ad server, invia un errore 1109 (NETWORK_AD_URL_FAILED).
+keywords: 1109;NETWORK_AD_URL_FAILED;BREAKED VMAP
+title: Gestione degli errori client per VMAP interrotta
+exl-id: 268307a9-b72e-45fa-84f2-a8e7d969e2ba
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 0%
 
 ---
 
+# Gestione degli errori client per VMAP interrotta {#client-error-handling-for-broken-vmap}
 
-# Gestione degli errori client per VMAP non funzionante {#client-error-handling-for-broken-vmap}
+Quando TVSDK rileva una VMAP interrotta in una risposta di un ad server, invia un errore 1109 (NETWORK_AD_URL_FAILED).
 
-Quando TVSDK rileva un VMAP interrotto in una risposta ad server, invia un errore 1109 (NETWORK_AD_URL_FAILED).
+A seconda della natura della risposta dell’ad server e delle impostazioni di caricamento dell’annuncio, il lettore potrebbe ricevere diversi numeri di errori 1109 quando TVSDK rileva una VMAP interrotta in una risposta dell’ad server.
 
-A seconda della natura della risposta del server di annunci e delle impostazioni di caricamento degli annunci, il lettore potrebbe ricevere numeri diversi di errori 1109 quando TVSDK incontra un VMAP non funzionante in una risposta del server di annunci.
+Prendiamo in considerazione uno scenario in cui la risposta dell’ad server punta all’XML VMAP. Supponiamo inoltre che la risposta dell’ad server disponga di quattro slot pubblicitari disponibili, ciascuno dei quali punta alla stessa VMAP. Infine, supponiamo che questa VMAP sia rotta.
 
-Consideriamo uno scenario in cui la risposta del server di annunci punta a VMAP XML. Diciamo anche che la risposta ad server ha quattro slot per annunci disponibili, ciascuno dei quali punta allo stesso VMAP. Infine, diciamo che questo VMAP è rotto.
-
-In questo scenario, se la risoluzione degli annunci pigri è abilitata ( [Abilita risoluzione annunci pigri](../../../tvsdk-2.7-for-android/ad-insertion/c-psdk-android-2.7-lazy-ad-resolving/t-psdk-android-2.7-enable-lazy-ad-resolving.md)), TVSDK invierà due errori 1109 (non uno come previsto): viene inviato un errore su ogni passaggio di analisi sulla timeline. Questo perché quando la risoluzione degli annunci pigri è abilitata, TVSDK analizza gli annunci in 2 passaggi: la prima passata avviene immediatamente prima dell’avvio della riproduzione dei contenuti per gli annunci pre-scorrimento, e la seconda passata avviene dopo l’avvio della riproduzione, per gli annunci mid-roll e post-roll.
+In questo scenario, se la risoluzione lenta degli annunci è abilitata ( [Abilita lazy ad resolving](../../../tvsdk-2.7-for-android/ad-insertion/c-psdk-android-2.7-lazy-ad-resolving/t-psdk-android-2.7-enable-lazy-ad-resolving.md)), TVSDK invierà due errori 1109 (non uno come previsto): viene inviato un errore a ogni passaggio di analisi sulla timeline. Questo perché quando è abilitata la risoluzione lenta degli annunci, TVSDK analizza gli annunci in 2 passaggi: il primo passaggio si verifica appena prima che inizi la riproduzione del contenuto per gli annunci pre-roll e il secondo passaggio si verifica dopo l’avvio della riproduzione, per gli annunci mid-roll e post-roll.
 
 >[!NOTE]
 >
->In questo scenario, se disattivi la risoluzione lenta degli annunci, TVSDK attiverà un solo errore 1109 (un solo passaggio di analisi).
-
+>In questo scenario, se disattivi la risoluzione lazy degli annunci, TVSDK attiverà solo un errore 1109 (una sola passata di analisi).

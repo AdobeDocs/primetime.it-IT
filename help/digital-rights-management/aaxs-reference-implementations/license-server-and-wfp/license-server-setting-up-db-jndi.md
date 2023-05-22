@@ -1,69 +1,68 @@
 ---
-title: Configurazione del database e configurazione dell'origine dati JNDI
-description: Configurazione del database e configurazione dell'origine dati JNDI
+title: Configurazione del database e dell’origine dati JNDI
+description: Configurazione del database e dell’origine dati JNDI
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ed22f095-924b-4792-8a10-e7548fab2c3b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '521'
 ht-degree: 0%
 
 ---
 
-
-# Configurazione del database e configurazione dell&#39;origine dati JNDI {#setting-up-the-database-and-configuring-the-jndi-datasource}
+# Configurazione del database e dell’origine dati JNDI {#setting-up-the-database-and-configuring-the-jndi-datasource}
 
 Il server licenze di implementazione di riferimento richiede un database per supportare le seguenti funzionalità:
 
 * Autenticazione utente
 * Regole aziendali dimostrative del modello di utilizzo
-* Conversione dei metadati
+* Conversione metadati
 * Supporto del dominio
 
-L&#39;acquisizione con licenza anonima non richiede l&#39;esecuzione di un database.
+L&#39;acquisizione di licenze anonime non richiede l&#39;esecuzione di un database.
 
 >[!NOTE]
 >
->Le istruzioni contenute in questa sezione sono per la piattaforma Microsoft Windows. Per altri sistemi operativi, consultare la documentazione relativa al sistema operativo in uso o consultare la documentazione di MySQL.
+>Le istruzioni contenute in questa sezione si riferiscono alla piattaforma Microsoft Windows. Per altri sistemi operativi, consultare la documentazione del sistema operativo in uso o fare riferimento alla documentazione MySQL.
 
 Per eseguire il server licenze, è necessario installare e configurare MySQL 5.1.34:
 
-1. Eseguire il programma di installazione di MySQL (che si trova nella terza cartella Party\MySQL\Installer\5.1 sul DVD).
-1. Al termine della procedura di installazione, selezionare **[!UICONTROL Configure MySQL Server Now]** per avviare la procedura guidata di configurazione. Utilizzare le impostazioni predefinite o selezionare impostazioni specifiche a scopo di test, con l&#39;eccezione che nella quinta schermata è necessario selezionare **[!UICONTROL Online Transaction Processing (OLTP)]** o **[!UICONTROL Manual Setting]** e immettere il numero massimo di connessioni consentite.
+1. Eseguire il programma di installazione MySQL (disponibile nella terza cartella Party\MySQL\Installer\5.1 del DVD).
+1. Al termine della procedura di installazione, controllare **[!UICONTROL Configure MySQL Server Now]** per avviare la configurazione guidata. Utilizza le impostazioni predefinite o seleziona impostazioni specifiche a scopo di test, con l’eccezione che nella quinta schermata devi selezionare **[!UICONTROL Online Transaction Processing (OLTP)]** o **[!UICONTROL Manual Setting]** e inserisci il numero massimo di connessioni consentite.
 
-1. Prendi nota della password principale.
-1. Se è necessario reinstallare MySQL, seguire questi passaggi per evitare problemi nell&#39;avvio successivo del server:
+1. Prendere nota della password root.
+1. Se è necessario reinstallare MySQL, eseguire la procedura seguente per evitare problemi nell&#39;avvio del server in seguito:
 
    * Elimina la cartella *unità di sistema:* [!DNL \Documents and Settings\All Users\Application Data\MySQL].
 
-   * Elimina la cartella di installazione di MySQL precedente: ad esempio, *unità di sistema:* [!DNL \Program Files\MySQL\MySQL Server 5.1].
+   * Elimina la cartella di installazione MySQL precedente: ad esempio, *unità di sistema:* [!DNL \Program Files\MySQL\MySQL Server 5.1].
 
-Successivamente, sarà necessario installare il driver JDBC MySQL 5.1.7. A questo scopo, copiare [!DNL mysql-connector-java-5.1.7-bin.jar] (nella cartella [!DNL Third Party\MySQL\Installer\5.1] sul DVD) nella directory lib Tomcat Server: [!DNL ...\Tomcat6.0\lib].
+Sarà quindi necessario installare MySQL JDBC Driver 5.1.7. Per eseguire questa operazione, copia [!DNL mysql-connector-java-5.1.7-bin.jar] (disponibile nella sezione [!DNL Third Party\MySQL\Installer\5.1] sul DVD) nella directory della libreria di Tomcat Server: [!DNL ...\Tomcat6.0\lib].
 
 >[!NOTE]
 >
->Il driver JDBC MySQL 5.1.7 funziona con Tomcat 6.0. Le versioni precedenti di Tomcat non sono supportate.
+>MySQL JDBC Driver 5.1.7 funziona con Tomcat 6.0. Le versioni precedenti di Tomcat non sono supportate.
 
-Impostare il database di esempio impostando lo schema del database e compilando il database con dati di esempio. A questo scopo, esegui le seguenti operazioni:
+Impostare il database di esempio impostando lo schema del database e popolando il database con dati di esempio. A questo scopo, effettua le seguenti operazioni:
 
-1. Vai a **[!UICONTROL Window's Start Menu]** > **[!UICONTROL MySQL]** > **[!UICONTROL MySQL Server 5.1]** > **[!UICONTROL MySQL Command Line Client]** .
-1. Dopo aver digitato la password, eseguire il seguente script SQL per aggiungere l&#39;account utente `dbuser` per stabilire una connessione tramite un&#39;applicazione Web e creare uno schema di database (assicurarsi che alla fine non vi sia &quot;;&quot;. Premere Invio.):
+1. Vai a  **[!UICONTROL Window's Start Menu]** > **[!UICONTROL MySQL]** > **[!UICONTROL MySQL Server 5.1]** > **[!UICONTROL MySQL Command Line Client]** .
+1. Dopo aver digitato la password, eseguire lo script SQL seguente per aggiungere l&#39;account utente `dbuser` per stabilire una connessione tramite un’applicazione web e creare uno schema di database (assicurati che non sia presente &quot;;&quot; alla fine. Premere Invio.):
 
    ```
        mysql> source “Reference Implementation\Server\dbscript\createsampledb.sql”
    ```
 
-1. Modificare lo script che popola i dati di esempio nelle tabelle per includere i dati a scopo di test: [!DNL Reference Implementation\Server\dbscript\PopulateSampleDB.sql].
-1. Esegui questo script per compilare i dati come nel passaggio 2.
+1. Modifica lo script che compila i dati di esempio nelle tabelle per includere i dati a scopo di test: [!DNL Reference Implementation\Server\dbscript\PopulateSampleDB.sql].
+1. Esegui questo script per popolare i dati come hai fatto nel passaggio 2.
 
 >[!NOTE]
 >
->La prima volta che esegui lo script [!DNL CreateSampleDB.sql] riceverai il seguente errore:
+>La prima volta che esegui [!DNL CreateSampleDB.sql] script verrà visualizzato il seguente errore:
 
-*ERRORE 1396 (HY000): Operazione DROP USER non riuscita per la query &#39;dbuser&#39;@&#39;localhost&#39; OK, 0 righe interessate (0,00 sec).*
+*ERRORE 1396 (HY000): operazione DROP USER non riuscita per la query &#39;dbuser&#39;@&#39;localhost&#39; OK, 0 righe interessate (0,00 sec).*
 
-È possibile ignorare questo errore in tutta sicurezza. Questo accade solo la prima volta che esegui questo script.
+Puoi ignorare questo errore. Questo accade solo la prima volta che esegui questo script.
 
-A questo punto sarà necessario configurare Database Connection Pooling (DBCP). DBCP utilizza il pool di connessioni al database Jakarta-Commons. Un Datasource TestDB JNDI è configurato per sfruttare questo pool di connessioni server applicazioni. Per modificare la connessione al database in modo che punti a un server MySQL che non si trova su localhost, modificare il file [!DNL META-INF\context.xml] (che specifica il percorso, il nome utente e la password del database del server licenze) che si trova in [!DNL flashaccess.war] oppure modificare [!DNL \Reference Implementation\Server\refimpl\WebContent\META-INF\context.xml] e ricreare il file WAR utilizzando i file aggiornati. Per modificare uno di questi parametri, modificare il [!DNL context.xml] situato nella directory WebContent e utilizzare lo script Ant per ricreare il file WAR. Per ottimizzare il database, modificare le impostazioni dell&#39;origine dati JNDI in questo file.
+A questo punto è necessario configurare il connection pooling del database (DBCP). DBCP utilizza il pool di connessioni al database Jakarta-Commons. Un database di origine dati JNDI TestDB è configurato per sfruttare questo pool di connessioni al server applicazioni. Per modificare la connessione al database in modo che punti a un server MySQL che non si trova su localhost, modificare il [!DNL META-INF\context.xml] file (che specifica la posizione, il nome utente e la password del database del server licenze) che si trova in [!DNL flashaccess.war], o modifica [!DNL \Reference Implementation\Server\refimpl\WebContent\META-INF\context.xml] e ricreare il file WAR utilizzando i file aggiornati. Per modificare uno di questi parametri, modificare il [!DNL context.xml] si trova nella directory WebContent e utilizza lo script Ant per ricreare il file WAR. Per ottimizzare il database, modificare le impostazioni dell&#39;origine dati JNDI in questo file.
 
-Se esegui il debug del progetto di implementazione di riferimento in Eclipse, devi aggiungere `$CATALINA_HOME\lib\tomcat-dbcp.jar` alla configurazione di esecuzione/debug. Questo passaggio non è necessario se esegui il file [!DNL flashaccess.war] su un server Tomcat 6.0 autonomo.
+Se esegui il debug del progetto di implementazione di riferimento in Eclipse, devi aggiungere `$CATALINA_HOME\lib\tomcat-dbcp.jar` alla configurazione di esecuzione/debug. Questo passaggio non è necessario se si esegue [!DNL flashaccess.war] su un server Tomcat 6.0 autonomo.

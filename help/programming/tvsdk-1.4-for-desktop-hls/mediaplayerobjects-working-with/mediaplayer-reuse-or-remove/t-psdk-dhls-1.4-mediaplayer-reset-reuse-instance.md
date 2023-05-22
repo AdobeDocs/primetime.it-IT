@@ -1,43 +1,42 @@
 ---
-description: Quando si reimposta un'istanza MediaPlayer, viene restituito al relativo stato IDLE non inizializzato come definito in MediaPlayerStatus.
+description: Quando si reimposta un'istanza MediaPlayer, questa viene ripristinata allo stato IDLE non inizializzato definito in MediaPlayerStatus.
 title: Reimpostare o riutilizzare un'istanza MediaPlayer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: e06a0052-ce0a-4a6c-8ebc-0666b109cf07
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 0%
 
 ---
 
+# Reimpostare o riutilizzare un&#39;istanza MediaPlayer{#reset-or-reuse-a-mediaplayer-instance}
 
-# Reimposta o riutilizza un&#39;istanza MediaPlayer{#reset-or-reuse-a-mediaplayer-instance}
+È possibile reimpostare, riutilizzare o rilasciare un&#39;istanza di MediaPlayer non più necessaria.
 
-È possibile reimpostare, riutilizzare o rilasciare un&#39;istanza MediaPlayer non più necessaria.
+Quando si reimposta un&#39;istanza MediaPlayer, questa viene ripristinata allo stato IDLE non inizializzato definito in MediaPlayerStatus.
 
-Quando si reimposta un&#39;istanza MediaPlayer, viene restituito al relativo stato IDLE non inizializzato come definito in MediaPlayerStatus.
+Questa operazione è utile nei seguenti casi:
 
-Questa operazione è utile nei casi seguenti:
+* Si desidera riutilizzare un `MediaPlayer` ma deve caricare un nuovo `MediaResource` (contenuto video) e sostituisci l’istanza precedente.
 
-* Desideri riutilizzare un&#39;istanza `MediaPlayer` ma devi caricare una nuova `MediaResource` (contenuto video) e sostituire l&#39;istanza precedente.
+   Il ripristino consente di riutilizzare `MediaPlayer` senza il sovraccarico di rilasciare le risorse, ricreando il `MediaPlayer`e la riallocazione delle risorse. Il `replaceCurrentItem` e `replaceCurrentResource` i metodi eseguono automaticamente questi passaggi senza dover chiamare il metodo reset.
 
-   La reimpostazione consente di riutilizzare l’istanza `MediaPlayer` senza sovraccaricare le risorse rilasciate, ricreare l’ `MediaPlayer` e riallocare le risorse. I metodi `replaceCurrentItem` e `replaceCurrentResource` eseguono automaticamente questi passaggi senza dover chiamare il metodo reset.
-
-* Quando il `MediaPlayer` ha uno stato ERROR e deve essere cancellato.
+* Quando `MediaPlayer` ha uno stato ERROR e deve essere cancellato.
 
    >[!IMPORTANT]
    >
-   >Questo è l&#39;unico modo per recuperare dallo stato ERROR.
+   >Questo è l’unico modo per recuperare dallo stato ERROR.
 
-1. Invoca `reset` per restituire l&#39;istanza `MediaPlayer` al suo stato non inizializzato:
+1. Chiamata `reset` per restituire il `MediaPlayer` istanza al relativo stato non inizializzato:
 
    ```
    function reset():void; 
    ```
 
-1. Utilizza `MediaPlayer.replaceCurrentItem` o `MediaPlayer.replaceCurrentResource` per caricare un altro `MediaResource`.
+1. Utilizzare `MediaPlayer.replaceCurrentItem` o `MediaPlayer.replaceCurrentResource` per caricare un altro `MediaResource`.
 
    >[!TIP]
    >
    >Per cancellare un errore, carica lo stesso `MediaResource`.
 
-1. Quando ricevi il `MediaPlaybackStatusChangeEvent.STATUS_CHANGED` con lo stato `PREPARED`, avvia la riproduzione.
+1. Quando ricevi il `MediaPlaybackStatusChangeEvent.STATUS_CHANGED` con `PREPARED` stato, avvia la riproduzione.

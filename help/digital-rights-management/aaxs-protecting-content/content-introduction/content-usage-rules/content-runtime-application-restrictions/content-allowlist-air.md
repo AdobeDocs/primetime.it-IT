@@ -1,23 +1,21 @@
 ---
-title: Elenco consentiti per le applicazioni Adobe® Primetime autorizzate a riprodurre contenuti protetti
-description: Elenco consentiti per le applicazioni Adobe® Primetime autorizzate a riprodurre contenuti protetti
+title: 'Elenco consentiti Adobe: ® applicazioni Primetime a cui è consentito riprodurre contenuto protetto'
+description: 'Elenco consentiti Adobe: ® applicazioni Primetime a cui è consentito riprodurre contenuto protetto'
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 56004a0f-118c-42f3-869b-2cc1c91ee544
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%
 
 ---
 
+# Elenco consentiti Adobe: ® applicazioni Primetime a cui è consentito riprodurre contenuto protetto {#allowlist-for-adobe-primetime-applications-allowed-to-play-protected-content}
 
-# Elenco consentiti per le applicazioni Adobe® Primetime autorizzate a riprodurre contenuti protetti {#allowlist-for-adobe-primetime-applications-allowed-to-play-protected-content}
+Specifica le applicazioni AIR/iOS che possono riprodurre i contenuti. Specifica l&#39;ID applicazione AIR/iOS, la versione minima, la versione massima e l&#39;ID dell&#39;editore.
 
-Specifica le applicazioni AIR/iOS che possono riprodurre il contenuto. Specifica l’ID applicazione AIR/iOS, la versione minima, la versione massima e l’ID editore.
-
-Esempio di utilizzo: Utilizza questa regola per limitare la riproduzione a una particolare applicazione AIR/iOS o per controllare quale versione può accedere al contenuto.
+Caso d’uso di esempio: utilizza questa regola per limitare la riproduzione a una particolare applicazione AIR/iOS o per controllare quale versione può accedere al contenuto.
 
 >[!NOTE]
 >
->Se utilizzi Adobe Flash Builder per creare applicazioni protette, assicurati di non distribuire l&#39;applicazione in modalità &quot;Debug&quot;. Quando si distribuisce un&#39;applicazione in modalità &quot;Debug&quot;, il Flash Builder aggiunge &quot;.debug&quot; all&#39;ID dell&#39;applicazione AIR. Questo causerà un funzionamento imprevisto della funzionalità elenco consentiti in Adobe Access.
-
+>Se utilizzi Adobe Flash Builder per creare applicazioni protette, assicurati di non distribuire l’applicazione in modalità &quot;Debug&quot;. Quando si distribuisce un’applicazione in modalità ‘Debug’, il Flash Builder aggiunge &quot;.debug&quot; all’ID dell’applicazione AIR. In questo modo la funzionalità di elenco consentiti in Adobe Access si comporta in modo imprevisto.

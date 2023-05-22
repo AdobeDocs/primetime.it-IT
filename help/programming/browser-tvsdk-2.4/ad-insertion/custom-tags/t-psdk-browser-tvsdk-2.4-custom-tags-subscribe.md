@@ -1,23 +1,22 @@
 ---
-description: Il browser TVSDK prepara gli oggetti TimedMetadata per i tag sottoscritti ogni volta che questi oggetti vengono incontrati nel file MPD (Media Presentation Description).
-title: Iscriviti ai tag personalizzati degli annunci
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Il browser TVSDK prepara gli oggetti TimedMetadata per i tag sottoscritti ogni volta che questi oggetti vengono rilevati nel file MPD (Media Presentation Description).
+title: Iscriviti ai tag annuncio personalizzati
+exl-id: d4b9ec3a-9c3f-4adf-984e-b45862e97140
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 0%
 
 ---
 
+# Iscriviti ai tag annuncio personalizzati{#subscribe-to-custom-ad-tags}
 
-# Iscriviti ai tag di annunci personalizzati{#subscribe-to-custom-ad-tags}
+Il browser TVSDK prepara gli oggetti TimedMetadata per i tag sottoscritti ogni volta che questi oggetti vengono rilevati nel file MPD (Media Presentation Description).
 
-Il browser TVSDK prepara gli oggetti TimedMetadata per i tag sottoscritti ogni volta che questi oggetti vengono incontrati nel file MPD (Media Presentation Description).
+È necessario sottoscrivere i tag prima di avviare la riproduzione.
+Per abbonarti ai tag, imposta un vettore contenente i nomi dei tag personalizzati su `subscribedTags` proprietà. Se inoltre devi modificare i tag annuncio utilizzati dal generatore di opportunità predefinito, imposta un vettore contenente i nomi dei tag annuncio personalizzati su `adTags` proprietà.
 
-È necessario abbonarsi ai tag prima dell&#39;avvio della riproduzione.
-Per abbonarti ai tag, imposta un vettore contenente i nomi dei tag personalizzati sulla proprietà `subscribedTags` . Se devi anche modificare i tag degli annunci utilizzati dal generatore di opportunità predefinito, imposta un vettore che contiene i nomi dei tag degli annunci personalizzati sulla proprietà `adTags` .
-
-Per abbonarti a tag personalizzati:
+Per abbonarsi a tag personalizzati:
 
 1. Crea una nuova configurazione di elemento del lettore multimediale.
 
@@ -25,50 +24,49 @@ Per abbonarti a tag personalizzati:
    var mediaPlayerItemConfig = new AdobePSDK.MediPlayerItemConfig();
    ```
 
-1. Crea un vettore stringa vuoto.
+1. Crea un vettore di stringa vuoto.
 
    ```js
    var subscribeTags = [];
    ```
 
-1. Aggiungi i nomi dei tag personalizzati a questo vettore.
+1. Aggiungi i nomi di tag personalizzati a questo vettore.
 
    >[!IMPORTANT]
    >
-   >Se hai a che fare con flussi HLS, ricorda di includere il prefisso `#`.
+   >Se stai trattando con flussi HLS, ricorda di includere `#` prefisso.
 
    ```js
    subscribeTags.push("urn:mpeg:dash:event:2012"); 
    subscribeTags.push("urn:com:adobe:dpi:simple:2015"); 
    ```
 
-1. Assegna il vettore aggiornato alla proprietà `mediaPlayerItemConfig.subscribeTags` .
+1. Assegna il vettore aggiornato a `mediaPlayerItemConfig.subscribeTags` proprietà.
 
    ```js
    mediaPlayerItemConfig.subscribeTags = subscribeTags;
    ```
 
-1. Crea un vettore stringa vuoto.
+1. Crea un vettore di stringa vuoto.
 
    ```js
    var adTags= [];
    ```
 
-1. Aggiungi il nome del tag di annuncio personalizzato a questo vettore.
+1. Aggiungi il nome del tag annuncio personalizzato a questo vettore.
 
    ```js
    adTags.push("urn:com:adobe:dpi:simple:2015");
    ```
 
-1. Assegna il vettore aggiornato alla proprietà `mediaPlayerItemConfig.adTags` .
+1. Assegna il vettore aggiornato a `mediaPlayerItemConfig.adTags` proprietà.
 
    ```js
    mediaPlayerItemConfig.adTags = adTags;
    ```
 
-1. Utilizza la configurazione dell&#39;elemento del lettore multimediale durante il caricamento del flusso multimediale.
+1. Utilizza la configurazione dell’elemento del lettore multimediale durante il caricamento del flusso multimediale.
 
    ```js
    player.replaceCurrentResource(mediaResource,mediaPlayerItemConfig);
    ```
-

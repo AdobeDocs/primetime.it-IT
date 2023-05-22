@@ -1,33 +1,32 @@
 ---
-description: TVSDK supporta l’eliminazione programmatica e la sostituzione del contenuto degli annunci nei flussi VOD.
-title: Operazioni con intervalli di tempo personalizzati
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK supporta l’eliminazione e la sostituzione programmatica del contenuto di annunci nei flussi VOD.
+title: Operazioni per intervalli di tempo personalizzati
+exl-id: 5480b22a-ecff-4fd8-9ec0-40e4a2e97641
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 0%
 
 ---
 
-
 # Panoramica {#custom-time-range-operations-overview}
 
-TVSDK supporta l’eliminazione programmatica e la sostituzione del contenuto degli annunci nei flussi VOD.
+TVSDK supporta l’eliminazione e la sostituzione programmatica del contenuto di annunci nei flussi VOD.
 
-La funzione di eliminazione e sostituzione estende la funzione degli ad markers personalizzati. Gli ad markers personalizzati contrassegnano sezioni del contenuto principale come periodi di contenuto relativi agli annunci. Oltre a contrassegnare questi intervalli di tempo, puoi anche eliminare e sostituire gli intervalli di tempo.
+La funzione di eliminazione e sostituzione estende la funzione dei marcatori di annunci personalizzati. I marcatori di annunci personalizzati contrassegnano le sezioni del contenuto principale come periodi di contenuto relativi agli annunci. Oltre a contrassegnare questi intervalli di tempo, puoi anche eliminarli e sostituirli.
 
 <!--<a id="section_D3FE668CAF764DCC912373D5410C932C"></a>-->
 
-L’eliminazione e la sostituzione degli annunci sono implementate con marcatori personalizzati che identificano diversi tipi di intervalli di tempo in un flusso VOD: contrassegna, elimina e sostituisci. Per ogni intervallo di tempo personalizzato, puoi eseguire le operazioni associate, inclusa l’eliminazione o la sostituzione del contenuto dell’annuncio.
+L’eliminazione e la sostituzione degli annunci vengono implementate con marcatori personalizzati che identificano diversi tipi di intervalli di tempo in un flusso VOD: contrassegna, elimina e sostituisci. Per ogni intervallo di tempo personalizzato, puoi eseguire le operazioni associate, inclusa l’eliminazione o la sostituzione del contenuto dell’annuncio.
 
-Per l&#39;eliminazione e la sostituzione degli annunci, TVSDK include le seguenti modalità *funzionamento dell&#39;intervallo di tempo personalizzato*:
+Per l’eliminazione e la sostituzione degli annunci, TVSDK include quanto segue *operazione intervallo di tempo personalizzato* modalità:
 
-* MARK - Invia eventi `AdBreak` per le aree contrassegnate. (Questa funzione era denominata `customAdMarker` nelle versioni precedenti di TVSDK.) Inserimento di annunci non consentito in questa modalità.
+* MARK - Dispatches `AdBreak` eventi per le regioni contrassegnate. (Chiamato `customAdMarker` nelle versioni precedenti di TVSDK.) L’inserimento di annunci non è consentito in questa modalità.
 
-* DELETE: per questa modalità, l’app utilizza la classe `TimeRangeCollection` per definire le aree di tempo per l’eliminazione di annunci C3. L’inserimento di annunci è consentito in questa modalità.
-* SOSTITUISCI : in questa modalità, l&#39;app sostituisce un `timeRange` con un ad decision ioning Adobe Primetime `AdBreak`. L&#39;operazione di sostituzione inizia dove si verifica l&#39;eliminazione dell&#39;annuncio C3 e termina all&#39;ora indicata (più breve o più lungo dell&#39;intervallo di tempo originale).
+* DELETE: per questa modalità, l’app utilizza `TimeRangeCollection` per definire le aree temporali per l&#39;eliminazione dell&#39;annuncio C3. L’inserimento di annunci è consentito in questa modalità.
+* REPLACE - In questa modalità, l’app sostituisce un `timeRange` con Adobe Primetime ad decisioning `AdBreak`. L’operazione di sostituzione inizia nel punto in cui si verifica l’eliminazione dell’annuncio C3 e termina all’ora indicata (più breve o più lunga dell’intervallo di tempo originale).
 
-TVSDK fornisce una classe `CustomRangesOpportunityGenerator` per generare opportunità di posizionamento per gli intervalli MARK e DELETE. Per la modalità REPLACE, TVSDK genera due opportunità di posizionamento per ogni intervallo di tempo:
+TVSDK fornisce un `CustomRangesOpportunityGenerator` per generare opportunità di posizionamento per gli intervalli MARK e DELETE. Per la modalità SOSTITUISCI, TVSDK genera due opportunità di posizionamento per ogni intervallo di tempo:
 
-* `CustomRangeResolver` genera opportunità di posizionamento per DELETE
+* Il `CustomRangeResolver` genera opportunità di posizionamento per DELETE
 * Il `AuditudeAdResolver` genera opportunità di posizionamento per INSERT.

@@ -1,28 +1,27 @@
 ---
-description: Il browser TVSDK supporta attualmente la riproduzione di flussi in cui manifesti e frammenti non contengono estensioni.
-title: Flussi illimitati
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Il TVSDK del browser attualmente supporta la riproduzione di flussi in cui i manifesti e i frammenti non contengono estensioni.
+title: Flussi senza estensione
+exl-id: ef81bfd2-2bfa-4ff7-b826-fd80802b3c07
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '149'
 ht-degree: 0%
 
 ---
 
+# Flussi senza estensione{#extensionless-streams}
 
-# Flussi illimitati{#extensionless-streams}
-
-Il browser TVSDK supporta attualmente la riproduzione di flussi in cui manifesti e frammenti non contengono estensioni.
+Il TVSDK del browser attualmente supporta la riproduzione di flussi in cui i manifesti e i frammenti non contengono estensioni.
 
 ## Livello di frammento {#section_0E035129501D4A77BBC14192D8A53A86}
 
-Il browser TVSDK analizza i primi byte della risposta per rilevare il tipo di contenuto dei frammenti estensionless. Se non viene rilevato alcun tipo di contenuto valido, il browser TVSDK genererà un errore.
+Il TVSDK del browser analizza i primi byte della risposta per rilevare il tipo di contenuto dei frammenti senza estensione. Se non viene rilevato alcun tipo di contenuto valido, la funzione TVSDK del browser genererà un errore.
 
-## Livello del manifesto {#section_AAD9EBAC883D4CC3A0133A45B555EECF}
+## Livello manifesto {#section_AAD9EBAC883D4CC3A0133A45B555EECF}
 
-Il browser TVSDK utilizza il parametro `mediaResource.resourceType` passato nel metodo `replaceCurrentResource` per rilevare il tipo di contenuto dell&#39;URL manifesto. Per ulteriori informazioni, vedere la classe `AdobePSDK.MediaPlayer` .
+TVSDK del browser utilizza `mediaResource.resourceType` parametro passato nel `replaceCurrentResource` per rilevare il tipo di contenuto dell’URL del manifesto. Per ulteriori informazioni, vedere `AdobePSDK.MediaPlayer` classe.
 
-Nel lettore di framework dell&#39;interfaccia utente, puoi specificare il tipo di risorsa nella risorsa multimediale come segue:
+Nel lettore del framework dell’interfaccia utente, puoi specificare il tipo di risorsa nella risorsa multimediale come segue:
 
 ```js
 var playerWrapper = ptp.videoPlayer('.videoDiv', { 
@@ -35,9 +34,8 @@ var playerWrapper = ptp.videoPlayer('.videoDiv', {
 }); 
 ```
 
-Se `resourceType` non viene fornito, il framework dell&#39;interfaccia utente determina il tipo di risorsa dall&#39;estensione dell&#39;URL della risorsa, che viene quindi passato al metodo `replaceCurrentResource` .
+Se `resourceType` non viene fornito, il Framework dell’interfaccia utente determina il tipo di risorsa dall’estensione URL della risorsa, che viene quindi passata a `replaceCurrentResource` metodo.
 
 >[!TIP]
 >
->Per un manifesto senza estensione, assicurati che `resourceType` sia sempre passato durante il caricamento di una risorsa in UI Framework.
-
+>Per il manifesto senza estensione, assicurati che `resourceType` viene sempre passato durante il caricamento di una risorsa nel Framework dell’interfaccia utente.

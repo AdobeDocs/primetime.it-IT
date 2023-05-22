@@ -1,32 +1,30 @@
 ---
-description: Il browser TVSDK fornisce generatori di opportunità e risolutori di contenuti predefiniti che inseriscono gli annunci nella timeline e questi generatori e risolutori si basano su tag non standard nel manifesto. L'applicazione potrebbe dover modificare la cronologia in base alle opportunità identificate nel manifesto.
+description: Browser TVSDK fornisce generatori di opportunità e resolver di contenuto predefiniti che inseriscono annunci nella timeline. Questi generatori e resolver si basano su tag non standard nel manifesto. L’applicazione potrebbe dover modificare la timeline in base alle opportunità identificate nel manifesto.
 title: Generatori di opportunità e risolutori di contenuti
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: a47acd22-8b1b-4c66-a7eb-a4d99afb5f17
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 0%
 
 ---
 
-
 # Generatori di opportunità e risolutori di contenuti{#opportunity-generators-and-content-resolvers}
 
-Il browser TVSDK fornisce generatori di opportunità e risolutori di contenuti predefiniti che inseriscono gli annunci nella timeline e questi generatori e risolutori si basano su tag non standard nel manifesto. L&#39;applicazione potrebbe dover modificare la cronologia in base alle opportunità identificate nel manifesto.
+Browser TVSDK fornisce generatori di opportunità e resolver di contenuto predefiniti che inseriscono annunci nella timeline. Questi generatori e resolver si basano su tag non standard nel manifesto. L’applicazione potrebbe dover modificare la timeline in base alle opportunità identificate nel manifesto.
 
-Un *`opportunity`* rappresenta un punto di interesse sulla timeline che in genere indica un’opportunità di posizionamento di annunci. Questa opportunità può anche indicare un’operazione personalizzata che potrebbe influenzare la timeline. Un *`opportunity generator`* identifica opportunità specifiche (tag) nella timeline e notifica a TVSDK che queste opportunità sono state contrassegnate.
+Un *`opportunity`* rappresenta un punto di interesse sulla timeline che in genere indica un’opportunità di posizionamento di un annuncio. Questa opportunità può anche indicare un’operazione personalizzata che potrebbe influenzare la timeline. Un *`opportunity generator`* identifica opportunità specifiche (tag) nella timeline e notifica a TVSDK che a tali opportunità sono stati assegnati dei tag.
 
-Le opportunità sono identificate in una timeline in `TimedMetata`. Il `ManifestCuesOpportunityGenerator` crea opportunità in base agli `TimedMetadata` oggetti creati per ogni tag di annuncio a comparsa (in `MediaPlayerItemConfig.adTags`) rilevato nel manifesto. L’ `AdSignalingModeOpportunityGenerator` crea l’opportunità iniziale basata sul tipo `MediaPlayerItem` e sulla relativa modalità di segnalazione degli annunci associata.
-
->[!TIP]
->
->Se è impostata la proprietà `AdvertisingMetadata.livePreroll` o `AdvertisingMetadata.preroll` , `AdSignalingModeOpportunityGenerator` genera un’opportunità pre-roll per i flussi live.
-
-Quando l&#39;applicazione viene informata di un&#39;opportunità (tag), l&#39;applicazione potrebbe modificare la timeline inserendo, ad esempio, una serie di annunci. Per impostazione predefinita, il browser TVSDK chiama il *`content resolver`* appropriato per implementare le modifiche o le azioni della timeline richieste. L&#39;applicazione può utilizzare il risolutore di contenuti pubblicitari TVSDK del browser predefinito o registrare il proprio risolutore di contenuti.
-
-Puoi inoltre utilizzare `MediaPlayerItemConfig.adTags` per aggiungere altri tag/suggerimenti per gli indicatori di annunci per la classe predefinita `ManifestCuesOpportunityGenerator` e utilizzare `MediaPlayerItemConfig.subscribedTags` in modo che TVSDK possa inviare alla tua applicazione notifiche su tag aggiuntivi che potrebbero avere informazioni sul flusso di lavoro pubblicitario.
+Le opportunità vengono identificate in una timeline in `TimedMetata`. Il `ManifestCuesOpportunityGenerator` crea opportunità basate su `TimedMetadata` oggetti creati per ogni tag annuncio di giunzione (in `MediaPlayerItemConfig.adTags`) rilevato nel manifesto. Il `AdSignalingModeOpportunityGenerator` crea l&#39;opportunità iniziale basata su `MediaPlayerItem` il tipo e la modalità di segnalazione pubblicitaria associata.
 
 >[!TIP]
 >
->I valori predefiniti di `MediaPlayerItemConfig.adTags` e `MediaPlayerItemConfig.subscribeTags` sono `[MediaPlayerItemConfig.DEFAULT_AD_TAG]`.
+>Se il `AdvertisingMetadata.livePreroll` o `AdvertisingMetadata.preroll` proprietà impostata, `AdSignalingModeOpportunityGenerator` genera un’opportunità di pre-roll per i flussi live.
 
+Quando l’applicazione riceve una notifica relativa a un’opportunità (tag), l’applicazione potrebbe modificare la timeline, ad esempio, inserendo una serie di annunci. Per impostazione predefinita, il TVSDK del browser chiama il *`content resolver`* per implementare le modifiche o le azioni della sequenza temporale richieste. La tua applicazione può utilizzare il browser predefinito TVSDK advertising content resolver o registrare il proprio content resolver.
+
+Puoi anche utilizzare `MediaPlayerItemConfig.adTags` per aggiungere altri tag/segnali di marcatura annuncio per il valore predefinito `ManifestCuesOpportunityGenerator` classe e utilizzo `MediaPlayerItemConfig.subscribedTags` in modo che TVSDK possa notificare all’applicazione eventuali tag aggiuntivi con informazioni sul flusso di lavoro pubblicitario.
+
+>[!TIP]
+>
+>I valori predefiniti di `MediaPlayerItemConfig.adTags` e `MediaPlayerItemConfig.subscribeTags` è `[MediaPlayerItemConfig.DEFAULT_AD_TAG]`.

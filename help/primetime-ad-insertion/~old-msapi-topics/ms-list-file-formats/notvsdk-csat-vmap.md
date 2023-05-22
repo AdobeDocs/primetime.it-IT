@@ -1,7 +1,6 @@
 ---
-description: Se il client richiede informazioni di tracciamento, il server manifesto invia un file formattato. Il formato e il contenuto dipendono dal valore del parametro query pttrackingversion
+description: Se il client richiede informazioni di tracciamento, il server manifest invia nuovamente un file formattato. Il formato e il contenuto dipendono dal valore del parametro di query pttrackingversion
 title: Formato VMAP per il tracciamento degli URL
-translation-type: tm+mt
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '138'
@@ -12,11 +11,11 @@ ht-degree: 0%
 
 # Formato VMAP per il tracciamento degli URL {#vmap-format-for-tracking-urls}
 
-Se il client richiede informazioni di tracciamento, il server manifesto invia un file formattato. Il formato e il contenuto dipendono dal valore del parametro di query `pttrackingversion`
+Se il client richiede informazioni di tracciamento, il server manifest invia nuovamente un file formattato. Il formato e il contenuto dipendono dal valore del parametro di query `pttrackingversion`
 
 ## Formato VMAP singolo {#vmap}
 
-Il file VMAP inviato dal server manifest se `pttrackingversion=vmap` ha il formato del seguente esempio, che proviene da un tipico blocco VMAP. È stato accorciato per evitare inutili ripetizioni, in modo che la struttura sia più chiara. Un&#39;ellissi (tre punti, separati da spazi) indica le informazioni omesse all&#39;interno di alcuni URL e tra alcuni blocchi di codice. Gli URL non abbreviati vengono visualizzati su più righe, anche se compaiono su una singola riga nel file VMAP.
+Il file VMAP inviato dal server manifesto se `pttrackingversion=vmap` ha il formato del seguente esempio, che proviene da un tipico blocco VMAP. è stata accorciata per evitare inutili ripetizioni, in modo che la struttura sia più chiara. I puntini di sospensione (tre punti, separati da spazi) indicano informazioni omesse all’interno di alcuni URL e tra alcuni blocchi di codice. Gli URL non abbreviati vengono visualizzati su più righe, anche se vengono visualizzati su un&#39;unica riga nel file VMAP.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?> 

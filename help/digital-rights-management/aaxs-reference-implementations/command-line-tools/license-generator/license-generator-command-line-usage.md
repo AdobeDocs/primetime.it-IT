@@ -1,19 +1,18 @@
 ---
-title: Uso della riga di comando
-description: Uso della riga di comando
+title: Utilizzo della riga di comando
+description: Utilizzo della riga di comando
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 241849bb-e818-420e-98b4-c12e306b17b2
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 0%
 
 ---
 
+# Utilizzo della riga di comando {#command-line-usage}
 
-# Uso della riga di comando {#command-line-usage}
-
-Per generare una licenza, utilizza la sintassi seguente:
+Per generare una licenza, utilizzare la sintassi seguente:
 
 ```
     java -jar AdobeLicenseGenerator.jar -m 
@@ -25,9 +24,9 @@ Per generare una licenza, utilizza la sintassi seguente:
 </i class="+ topic>
 ```
 
-`metadata` è un file .metadata contenente i metadati DRM di accesso Adobe. Questo file può essere ottenuto da contenuti protetti utilizzando l&#39;opzione `-d -m` di Media Packager.
+`metadata` è un file con estensione metadata contenente i metadati DRM di Access Adobe. Questo file può essere ottenuto da contenuto protetto utilizzando `-d -m` opzione di Media Packager.
 
-Per visualizzare una licenza generata in precedenza, utilizza la sintassi seguente:
+Per visualizzare una licenza generata in precedenza, utilizzare la sintassi seguente:
 
 ```
     java -jar AdobeLicenseGenerator.jar -d 
@@ -50,19 +49,19 @@ La tabella seguente descrive le opzioni della riga di comando che possono essere
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-c file di configurazione</span> </td> 
-   <td colname="2" class="- topic/entry "> Specifica il percorso del file di configurazione. Se questa opzione non viene utilizzata, il Generatore licenze cercherà flashaccesstools.properties nella directory di lavoro. Le opzioni specificate nella riga di comando hanno la precedenza su quelle presenti nel file di configurazione. </td> 
+   <td colname="2" class="- topic/entry "> Specificare il percorso del file di configurazione. Se questa opzione non viene utilizzata, il Generatore di licenze cercherà flashaccesstools.properties nella directory di lavoro. Le opzioni specificate nella riga di comando hanno la precedenza su quelle presenti nel file di configurazione. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-d <i class="+ topic/ph hi-d/i "><span class="+ topic/ph pr-d/codeph codeph"> file di licenza</span></i> </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">d <i class="+ topic/ph hi-d/i "><span class="+ topic/ph pr-d/codeph codeph"> licensefile</span></i> </p> </td> 
    <td colname="2" class="- topic/entry "> Mostra informazioni su una licenza già generata. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-nomefile foglia</span> </td> 
-   <td colname="2" class="- topic/entry "> Generare una licenza foglia e scrivere l'output in un file specifico. </td> 
+   <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-leaf leaf-filename</span> </td> 
+   <td colname="2" class="- topic/entry "> Generare una licenza foglia e scrivere l'output in un file specificato. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-m metadata-nomefile</span> </td> 
-   <td colname="2" class="- topic/entry "> Specifica i metadati del contenuto per i quali generare una licenza. (Necessario per generare la licenza) </td> 
+   <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-m nome-file-metadati</span> </td> 
+   <td colname="2" class="- topic/entry "> Specifica i metadati di contenuto per i quali generare una licenza. (necessario per generare la licenza) </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> -noprompt</span> </td> 
@@ -70,20 +69,19 @@ La tabella seguente descrive le opzioni della riga di comando che possono essere
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> -o</span> </td> 
-   <td colname="2" class="- topic/entry "> Se il file di destinazione esiste già, sovrascriverlo senza richiedere conferma. </td> 
+   <td colname="2" class="- topic/entry "> Se il file di destinazione esiste già, sovrascriverlo senza chiedere conferma. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-policy-num</span> </td> 
-   <td colname="2" class="- topic/entry "> Se i metadati contengono più criteri, specifica il numero del criterio da utilizzare (a partire da 1) per generare la licenza. Se non viene specificato, viene utilizzato il primo criterio. </td> 
+   <td colname="2" class="- topic/entry "> Se i metadati contengono più criteri, specifica il numero di criteri da utilizzare (a partire da 1) per generare la licenza. Se non viene specificato, viene utilizzato il primo criterio. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-r Certificato del destinatario</span> </td> 
-   <td colname="2" class="- topic/entry ">Genera una licenza per il destinatario specificato. È possibile utilizzare un certificato di dominio o dispositivo. È possibile specificare più opzioni <span class="+ topic/ph pr-d/codeph codeph"> -r </span>per creare una licenza per più destinatari. </td> 
+   <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-r certificato destinatario</span> </td> 
+   <td colname="2" class="- topic/entry ">Genera una licenza per il destinatario specificato. È possibile utilizzare un dispositivo o un certificato di dominio. Più <span class="+ topic/ph pr-d/codeph codeph"> -r </span>è possibile specificare opzioni per creare una licenza per più destinatari. </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-root-nomefile</span> </td> 
-   <td colname="2" class="- topic/entry "> Genera una licenza root e scrivi l'output nel file specificato. </td> 
+   <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-root-filename</span> </td> 
+   <td colname="2" class="- topic/entry "> Generare una licenza radice e scrivere l'output nel file specificato. </td> 
   </tr> 
  </tbody> 
 </table>
-

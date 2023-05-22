@@ -1,18 +1,17 @@
 ---
 title: Oggetto JSON per ID risorsa adesione
-description: Il seguente blocco di codice fornisce un esempio di oggetto JSON quando l'ID della risorsa di adesione è una stringa di testo semplice.
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Il blocco di codice seguente fornisce un esempio di oggetto JSON quando l’ID della risorsa spettante è una stringa di testo semplice.
+exl-id: 396c43e7-404a-40f5-8113-a720e2c834e7
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '95'
 ht-degree: 0%
 
 ---
 
-
 # Oggetto JSON per ID risorsa adesione {#json-object-for-entitlement-resource-id}
 
-Il seguente blocco di codice fornisce un esempio di oggetto JSON quando l&#39;ID della risorsa di adesione è una stringa di testo semplice. In questo caso, l’ID risorsa è la stringa &quot;resource&quot;.
+Il blocco di codice seguente fornisce un esempio di oggetto JSON quando l’ID della risorsa spettante è una stringa di testo semplice. In questo caso, l’ID risorsa è la stringa &quot;resource&quot;.
 
 ```
 "metadata" : { 
@@ -22,7 +21,7 @@ Il seguente blocco di codice fornisce un esempio di oggetto JSON quando l&#39;ID
 }
 ```
 
-Il seguente blocco di codice fornisce un esempio di oggetto JSON quando l&#39;ID della risorsa di adesione è una stringa mRSS con codifica HTML.
+Il blocco di codice seguente fornisce un esempio di oggetto JSON quando l’ID della risorsa spettante è una stringa mRSS con codifica HTML.
 
 ```
 <rss version="2.0" xmlns:media="https://search.yahoo.com/mrss/"> 
@@ -37,7 +36,7 @@ Il seguente blocco di codice fornisce un esempio di oggetto JSON quando l&#39;ID
 </rss>
 ```
 
-La seguente stringa mRSS viene utilizzata come ID risorsa.
+La seguente stringa mRSS viene utilizzata come ID di risorsa.
 
 ```
 "metadata" : { 

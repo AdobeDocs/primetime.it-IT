@@ -1,44 +1,43 @@
 ---
-description: Per configurare Adobe® Access™ per l'utilizzo, copiare i file dal DVD. Questi file includono file JAR contenenti codice, certificati e classi di terze parti. Inoltre, richiedi un certificato da Adobe Systems Incorporated. Verranno rilasciate più credenziali utilizzate per proteggere l'integrità del contenuto, delle licenze e della comunicazione in pacchetto tra client e server.
-title: Impostazione dell'ambiente di sviluppo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Per impostare l'Adobe ® Access™, copiare i file dal DVD. Questi file includono file JAR contenenti codice, certificati e classi di terze parti. Inoltre, richiedi un certificato a Adobe Systems Incorporated. Verranno rilasciate più credenziali utilizzate per proteggere l'integrità dei pacchetti di contenuto, licenze e comunicazioni tra client e server.
+title: Configurazione dell’ambiente di sviluppo
+exl-id: 66310fc8-7513-4aab-81d6-1370ce216cbf
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 0%
 
 ---
 
+# Configurazione dell’SDK {#setting-up-the-sdk}
 
-# Configurazione dell&#39;SDK {#setting-up-the-sdk}
+Per impostare l&#39;Adobe ® Access™, copiare i file dal DVD. Questi file includono file JAR contenenti codice, certificati e classi di terze parti. Inoltre, richiedi un certificato a Adobe Systems Incorporated. Verranno rilasciate più credenziali utilizzate per proteggere l&#39;integrità dei pacchetti di contenuto, licenze e comunicazioni tra client e server.
 
-Per configurare Adobe® Access™ per l&#39;utilizzo, copiare i file dal DVD. Questi file includono file JAR contenenti codice, certificati e classi di terze parti. Inoltre, richiedi un certificato da Adobe Systems Incorporated. Verranno rilasciate più credenziali utilizzate per proteggere l&#39;integrità del contenuto, delle licenze e della comunicazione in pacchetto tra client e server.
-
-L’SDK per Adobe Access è disponibile in due tipi:
+L’SDK di accesso di Adobe è disponibile in due tipi:
 * SDK per Adobe Access Core
 * SDK per Adobe Access Professional
 
-La tabella seguente mostra un confronto di base tra gli SDK di Adobe Access:
+Nella tabella seguente viene illustrato un confronto di base tra gli SDK di Adobe Access:
 
-| Funzione | SDK per Adobe Access Core | SDK per Adobe Access Professional |
+| Funzionalità | SDK per Adobe Access Core | SDK per Adobe Access Professional |
 |---|---|---|
-| Funzioni di Flash Access 2.0 | Disponibile | Disponibile |
+| Caratteristiche di Flash Access 2.0 | Disponibile | Disponibile |
 | Rotazione chiave | - | Disponibile |
-| Supporto del dominio | Disponibile | Disponibile |
-| Concatena delle licenze migliorata | Disponibile | Disponibile |
+| Supporto dominio | Disponibile | Disponibile |
+| Concatenamento licenze migliorato | Disponibile | Disponibile |
 | Messaggi di sincronizzazione | Disponibile | Disponibile |
-| Pre-generazione licenza | Disponibile | Disponibile |
-| Licenze incorporate | Disponibile | Disponibile |
+| Licenza di pre-generazione | Disponibile | Disponibile |
+| Licenze integrate | Disponibile | Disponibile |
 
-## Configurazione dell&#39;ambiente di sviluppo {#setting-up-the-development-environment}
+## Configurazione dell’ambiente di sviluppo {#setting-up-the-development-environment}
 
-Dal DVD, copia i seguenti file SDK da utilizzare nel tuo ambiente di sviluppo e nel tuo percorso di classe Java:
+Dal DVD, copia i seguenti file SDK da utilizzare nell’ambiente di sviluppo e nel percorso di classe Java:
 
-* adobe-flashaccess-certs.jar (contiene certificati radice di Adobe)
+* adobe-flashaccess-certs.jar (contiene Adobi di certificati radice)
 * adobe-flashaccess-sdk.jar (contiene le classi SDK di Adobe Access Core)
-* adobe-flashaccess-sdk-pro.jar (contiene le classi Adobe Access Professional SDK, richieste solo per le funzioni Professional)
+* adobe-flashaccess-sdk-pro.jar (contiene le classi SDK di Adobe Access Professional, necessarie solo per le funzioni professionali)
 
-Sono necessari i seguenti file JAR di terze parti anche che si trovano sul DVD nella cartella &quot;third-party&quot; dell&#39;SDK:
+Nella cartella &quot;third party&quot; dell&#39;SDK, è necessario che anche i seguenti file JAR di terze parti si trovino sul DVD:
 
 * bcmail-jdk15-141.jar
 * bcprov-jdk15-141.jar
@@ -52,6 +51,6 @@ Sono necessari i seguenti file JAR di terze parti anche che si trovano sul DVD n
 * rm-pdrl.jar
 * xsdlib.jar
 
-Per migliorare le prestazioni, puoi facoltativamente abilitare il supporto nativo per le operazioni di crittografia distribuendo le librerie specifiche della piattaforma che si trovano nella cartella &quot;thirdparty/cryptoj&quot; dell’SDK. Per abilitare il supporto nativo, aggiungi la libreria per la piattaforma (jsafe.dll per Windows o libjsafe.so per Linux) al percorso. Vengono fornite le versioni a 32 bit e a 64 bit di queste librerie. La versione a 64 bit deve essere utilizzata solo se si dispone di un sistema operativo a 64 bit e si esegue la versione a 64 bit di Java.
+Per migliorare le prestazioni, puoi facoltativamente abilitare il supporto nativo per le operazioni di crittografia distribuendo le librerie specifiche per la piattaforma che si trovano nella cartella &quot;third party/cryptoj&quot; dell’SDK. Per abilitare il supporto nativo, aggiungi la libreria per la piattaforma (jsafe.dll per Windows o libjsafe.so per Linux) al percorso. Vengono fornite le versioni a 32 bit e a 64 bit di queste librerie. Si noti che la versione a 64 bit deve essere utilizzata solo se si dispone di un sistema operativo a 64 bit e si esegue la versione a 64 bit di Java.
 
-Inoltre, una parte facoltativa dell&#39;SDK è adobe-flashaccess-lcrm.jar. Questo file è necessario solo per le funzionalità relative alla compatibilità di Adobe Flash Media Rights Management Server (FMRMS) 1.x. Se in precedenza è stato implementato FMRMS 1.x e non si desidera creare un pacchetto per i contenuti protetti da FMRMS, è necessario aggiungere il supporto al server licenze in modo che sia in grado di gestire contenuti e client obsoleti.
+Inoltre, una parte opzionale dell&#39;SDK è adobe-flashaccess-lcrm.jar. Questo file è necessario solo per funzionalità relative alla compatibilità Adobe Flash Media Rights Management Server (FMRMS) 1.x. Se in precedenza è stato distribuito FMRMS 1.x e non si desidera creare un nuovo pacchetto del contenuto protetto da FMRMS, è necessario aggiungere il supporto al server licenze in modo che sia in grado di gestire i vecchi contenuti e client.

@@ -1,35 +1,34 @@
 ---
 title: Autenticazione Adobe Primetime e il nuovo modello di autorizzazioni "Marshmallow" per Android 6
 description: Autenticazione Adobe Primetime e il nuovo modello di autorizzazioni "Marshmallow" per Android 6
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 3c96769e-b25b-48ab-bb74-40f13d4e5a84
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '480'
 ht-degree: 0%
 
 ---
 
-
-
 # Autenticazione Adobe Primetime e il nuovo modello di autorizzazioni &quot;Marshmallow&quot; per Android 6 {#adobe-primetime-authentication-and-the-android-6-marshmallow-new-permissions-model}
 
 >[!NOTE]
 >
->Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente a partire da Adobe. Non è consentito alcun uso non autorizzato.
+>Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente di Adobe. Non è consentito alcun uso non autorizzato.
 
 </br>
 
-La nuova versione di Android 6 Marshmallow introduce alcuni aggiornamenti al modello di autorizzazioni, che possono influenzare il comportamento delle app che utilizzano l&#39;SDK di autenticazione Adobe Primetime esistente versione 1.8 e precedenti. 
+La nuova versione di Marshmallow per Android 6 introduce alcuni aggiornamenti al modello di autorizzazioni, che possono influenzare il comportamento delle app che utilizzano l’SDK di autenticazione di Adobe Primetime versione 1.8 e precedenti. 
 
-Come nuova funzione, il nuovo sistema operativo Android offre [controllo granulare sulle autorizzazioni richieste dalle app al momento dell&#39;installazione e in fase di runtime](https://developer.android.com/about/versions/marshmallow/android-6.0-changes.html).
+La nuova funzionalità del sistema operativo Android offre [controllo granulare sulle autorizzazioni necessarie per le app al momento dell’installazione e in fase di runtime](https://developer.android.com/about/versions/marshmallow/android-6.0-changes.html).
 
 >[!IMPORTANT]
 >
->Le modifiche descritte di seguito **influisce solo sulle applicazioni sviluppate specificamente per Android 6.0** (targetSdkVersion=23). Non influiscono sulle applicazioni meno recenti già installate sul dispositivo dell&#39;utente durante l&#39;aggiornamento ad Android 6.0. 
+>Le modifiche descritte di seguito **ha effetto solo sulle applicazioni sviluppate specificamente per Android 6.0** (targetSdkVersion=23). Non influisce sulle applicazioni precedenti già installate sul dispositivo dell’utente durante l’aggiornamento ad Android 6.0. 
 
 
-In particolare, per le app sviluppate in Android Studio utilizzando [Livello API 23](http://developer.android.com/sdk/api_diff/23/changes.html) e che utilizzano l’SDK per l’autenticazione di Adobe Primetime, lo sviluppatore dovrà scrivere un codice personalizzato (vedi lo snippet di codice qui sotto) [per attivare la finestra di dialogo consenti/nega autorizzazioni](https://developer.android.com/training/permissions/requesting.html). 
+In particolare, per le app sviluppate in Android Studio utilizzando [Livello API 23](http://developer.android.com/sdk/api_diff/23/changes.html) e che utilizzano l’SDK di autenticazione di Adobe Primetime, lo sviluppatore dovrà scrivere un codice personalizzato (vedi frammento di codice di seguito) [per attivare la finestra di dialogo consenti/nega autorizzazioni](https://developer.android.com/training/permissions/requesting.html). 
 
-Di seguito è riportato l&#39;estratto di codice utilizzato per richiedere l&#39;accesso in scrittura all&#39;archiviazione esterna del dispositivo:
+Di seguito è riportato un estratto di codice utilizzato per richiedere l’accesso in scrittura allo storage esterno del dispositivo:
 
 ```java
 // Here, thisActivity is the current activity
@@ -63,21 +62,21 @@ if (ContextCompat.checkSelfPermission(thisActivity,
 
 
 
-**Dal punto di vista degli utenti**, al momento dell’installazione, gli utenti vengono accolti da una finestra che richiede loro di confermare le autorizzazioni di lettura/scrittura per i file (vedi la figura 2 di seguito). Questo porta a uno dei due risultati seguenti:
+**Dal punto di vista degli utenti** Al momento dell&#39;installazione, gli utenti vengono accolti da una finestra che richiede di confermare le autorizzazioni di lettura/scrittura per i file (vedere la figura 2 di seguito). Questo porta a uno dei due risultati seguenti:
 
-1. Se l&#39;utente **conferma** le autorizzazioni, il flusso regolare di autenticazione sarà mantenuto e i token saranno memorizzati nell&#39;archiviazione globale. Gli utenti rimarranno autenticati nell’app e tra le app utilizzando l’autenticazione Adobe Primetime per tutto il tempo in cui i token sono validi.
-1. Se l&#39;utente **negazione** le autorizzazioni, le azioni di scrittura nell&#39;archivio avranno esito negativo e gli utenti saranno autenticati solo fino a quando non usciranno dall&#39;app. Tieni presente che alcune applicazioni vengono reinizializzate quando si passa da un primo piano all’altro in background, in modo che gli utenti vengano disconnessi durante l’esecuzione di questa azione. I token NON sono memorizzati e gli utenti dovranno eseguire l’autenticazione ogni volta che utilizzano l’app. 
+1. Se l&#39;utente **conferma** le autorizzazioni, il flusso di autenticazione regolare verranno conservati e i token verranno memorizzati nell’archiviazione globale. Gli utenti rimarranno autenticati nell’app e tra le app utilizzando l’autenticazione Adobe Primetime fino a quando i token sono validi.
+1. Se l&#39;utente **nega** le autorizzazioni, le azioni di scrittura nell’archiviazione non riusciranno e gli utenti verranno autenticati solo fino a quando non usciranno dall’app. Tieni presente che alcune applicazioni vengono reinizializzate quando si passa dal primo piano al background, in modo che gli utenti vengano disconnessi quando si esegue questa azione. I token NON sono memorizzati e gli utenti dovranno autenticarsi ogni volta che utilizzano l’app. 
 
 
 >[!TIP]
 >
->È in fase di sviluppo una funzione che introduce la resilienza dello storage per l’SDK 1.9 per l’autenticazione di Adobe Primetime. Il nuovo SDK è destinato a **rilascio nell’ultima settimana di ottobre**. L&#39;applicazione si basa sulla scrittura nell&#39;archivio sandbox dell&#39;applicazione ogni volta che non è possibile utilizzare l&#39;archiviazione generale. Questo riguarda il caso in cui, per le applicazioni sviluppate nel livello API 23, gli utenti NON accettano le autorizzazioni di lettura/scrittura nell&#39;archiviazione globale. I token vengono memorizzati singolarmente per app, il che significa che il Single-Sign-On tra le app che utilizzano l’autenticazione Adobe Primetime verrà disattivato.
+>Una funzione che introduce la resilienza dello storage è attualmente in fase di sviluppo per l’SDK 1.9 per l’autenticazione di Adobe Primetime. Il nuovo SDK è destinato a **rilascio nell’ultima settimana di ottobre**. L’applicazione eseguirà il fallback alla scrittura nell’archiviazione sandbox dell’applicazione ogni volta che non è possibile utilizzare l’archiviazione generale. In questo caso, per le applicazioni sviluppate in API di livello 23, gli utenti NON accettano le autorizzazioni di lettura/scrittura nell’archiviazione globale. I token vengono memorizzati singolarmente per app, il che significa che il Single Sign-On tra le app che utilizzano l’autenticazione Adobe Primetime verrà disabilitato.
 
 
 ![](assets/android-permissions-request.png)
 
-*Figura: Finestra di dialogo di richiesta delle autorizzazioni per le app scritte con targeting API livello 23*
+*Figura: Finestra di dialogo per la richiesta di autorizzazione per le app scritte nel targeting dell’API di livello 23*
 
 >[!IMPORTANT]
 >
-> Consigli Adobi **i suoi partner per sviluppare app utilizzando API di livello 22 (targetSdkVersion=22) o versioni precedenti al fine di garantire la migliore esperienza utente possibile nel processo di autenticazione**. 
+> Adobi consigliati **i suoi partner a sviluppare app utilizzando l’API livello 22 (targetSdkVersion=22) o versioni precedenti per garantire la migliore esperienza utente possibile nel processo di autenticazione**.

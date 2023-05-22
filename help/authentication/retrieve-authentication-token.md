@@ -1,21 +1,21 @@
 ---
 title: Recupera token di autenticazione
 description: Recupera token di autenticazione
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 7fb03854-edad-41e7-b218-1858fc071876
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 0%
 
 ---
 
-
 # Recupera token di autenticazione {#retrieve-authentication-token}
 
 >[!NOTE]
 >
->Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente a partire da Adobe. Non è consentito alcun uso non autorizzato.
+>Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente di Adobe. Non è consentito alcun uso non autorizzato.
 
-## Endpoint API REST {#clientless-endpoints}
+## Endpoint REST API {#clientless-endpoints}
 
 &lt;reggie_fqdn>:
 
@@ -33,21 +33,21 @@ ht-degree: 0%
 
 Recupera il token di autenticazione (AuthN).  
 
-| Endpoint | Chiamato  </br>Da | Ingresso   </br>Parametri | HTTP  </br>Metodo | Risposta | HTTP  </br>Risposta |
+| Endpoint | Chiamato  </br>Da | Input   </br>Parametri | HTTP  </br>Metodo | Risposta | HTTP  </br>Risposta |
 | --- | --- | --- | --- | --- | --- |
-| &lt;sp_fqdn>/api/v1/token/autenticazione</br></br>Ad esempio:</br></br>&lt;sp_fqdn>/api/v1/token/autenticazione | App in streaming</br></br>o</br></br>Servizio programmatore | 1. richiedente (obbligatorio)</br>2.  deviceId (obbligatorio)</br>3.  device_info/X-Device-Info (obbligatorio)</br>4.  _deviceType_ (obsoleto)</br>5.  _deviceUser_ (Obsoleto)</br>6.  _appId_ (Obsoleto) | GET | XML o JSON contenente informazioni di autenticazione o dettagli di errore in caso di esito negativo. | 200 - Successo.  </br>404 - Token non trovato  </br>410 - Token scaduto |
+| &lt;sp_fqdn>/api/v1/tokens/authn</br></br>Ad esempio:</br></br>&lt;sp_fqdn>/api/v1/tokens/authn | App di streaming</br></br>o</br></br>Servizio programmatore | 1. richiedente (obbligatorio)</br>2.  deviceId (obbligatorio)</br>3.  device_info/X-Device-Info (Obbligatorio)</br>4.  _deviceType_ (obsoleto)</br>5.  _deviceUser_ (Obsoleto)</br>6.  _appId_ (Obsoleto) | GET | XML o JSON contenente informazioni di autenticazione o dettagli sull’errore in caso di esito negativo. | 200 - Operazione completata.  </br>404 - Token non trovato  </br>410 - Token scaduto |
 
 {style="table-layout:auto"}
 
 
 | Parametro di input | Descrizione |
 | --- | --- |
-| richiedente | Il requestorId del programmatore per il quale l&#39;operazione è valida. |
-| deviceId | Byte dell&#39;ID dispositivo. |
-| device_info/</br></br>X-Device-Info | Informazioni sul dispositivo in streaming.</br></br>**Nota**: QUESTO PUÒ essere passato a device_info come parametro URL, ma a causa della dimensione potenziale di questo parametro e delle limitazioni della lunghezza di un URL GET, DEVE essere passato come X-Device-Info nell&#39;intestazione http. </br></br><!--See the full details in [Passing Device and Connection Information](http://tve.helpdocsonline.com/passing-device-information)-->. |
+| richiedente | ID richiedente del programmatore per il quale è valida questa operazione. |
+| deviceId | Byte ID dispositivo. |
+| device_info/</br></br>X-Device-Info | Informazioni sul dispositivo di streaming.</br></br>**Nota**: questo PUÒ essere trasmesso device_info come parametro URL, ma a causa delle dimensioni potenziali del parametro e delle limitazioni alla lunghezza di un URL GET, DEVE essere trasmesso come X-Device-Info nell’intestazione http. </br></br><!--See the full details in [Passing Device and Connection Information](http://tve.helpdocsonline.com/passing-device-information)-->. |
 | _deviceType_ | Il tipo di dispositivo (ad esempio, Roku, PC).</br></br>**Nota**: device_info sostituisce questo parametro. |
-| _deviceUser_ | Identificatore utente del dispositivo.</br></br>**Nota**: se utilizzato, deviceUser deve avere gli stessi valori di nel [Crea codice di registrazione](/help/authentication/registration-code-request.md) richiesta. |
-| _appId_ | ID/nome dell&#39;applicazione. </br></br>**Nota**: device_info sostituisce questo parametro. Se utilizzato, `appId` deve avere gli stessi valori di nel [Crea codice di registrazione](/help/authentication/registration-code-request.md) richiesta. |
+| _deviceUser_ | L’identificatore utente del dispositivo.</br></br>**Nota**: se utilizzato, deviceUser deve avere gli stessi valori di [Crea codice di registrazione](/help/authentication/registration-code-request.md) richiesta. |
+| _appId_ | ID/nome dell’applicazione. </br></br>**Nota**: device_info sostituisce questo parametro. Se utilizzato, `appId` deve avere gli stessi valori di [Crea codice di registrazione](/help/authentication/registration-code-request.md) richiesta. |
 
 {style="table-layout:auto"}
 
@@ -108,4 +108,3 @@ Recupera il token di autenticazione (AuthN).  
         "message": "Not Found"
     }
 ```
-

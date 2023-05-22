@@ -1,35 +1,34 @@
 ---
-description: È possibile tenere traccia dell’utilizzo dei video integrando l’SDK per browser con Adobe Analytics.
-title: Analisi video
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Puoi tenere traccia dell’utilizzo dei video integrando Browser TVSDK con Adobe Analytics.
+title: Analisi dei video
+exl-id: b6fb39a9-6cb8-4498-a9fa-0ea19af52a58
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '245'
 ht-degree: 0%
 
 ---
 
+# Analisi dei video{#video-analytics}
 
-# Analisi video{#video-analytics}
+Puoi tenere traccia dell’utilizzo dei video integrando Browser TVSDK con Adobe Analytics.
 
-È possibile tenere traccia dell’utilizzo dei video integrando l’SDK per browser con Adobe Analytics.
+Il tracciamento video nel browser TVSDK utilizza **Adobe Analytics Video Essentials** servizio, che fornisce metriche di coinvolgimento video, come visualizzazioni video, completamenti video, impressioni di annunci, tempo trascorso su video e così via. Per ulteriori informazioni su questo servizio, contatta il rappresentante del tuo Adobe.
 
-Il tracciamento video nel browser TVSDK utilizza il servizio **Adobe Analytics Video Essentials**, che fornisce metriche di coinvolgimento video, come visualizzazioni video, visualizzazioni complete di video, impressioni di annunci, tempo trascorso sul video e così via. Per ulteriori informazioni su questo servizio, contatta il tuo rappresentante di Adobe.
+La procedura seguente riepiloga i passaggi per attivare il tracciamento video nel lettore:
 
-La procedura seguente riassume i passaggi per attivare il tracciamento video nel lettore:
+1. Inizializza e/o configura i seguenti componenti di tracciamento video:
 
-1. Inizializzare e/o configurare i seguenti componenti di tracciamento video:
-
-   * **Libreria AppMeasurement**  - Contiene la logica di base della raccolta dati di basso livello. Qui i dati dell&#39;heartbeat video vengono accumulati e inviati attraverso la rete.
-   * **Libreria heartbeat video**  - Contiene la logica di base della raccolta dati video-heartbeat. La libreria heartbeat video accede a un sottoinsieme delle API della libreria AppMeasurement.
+   * **Libreria AppMeasurement** : contiene la logica di base per la raccolta dati di basso livello. Qui vengono accumulati i dati heartbeat video e inviati tramite la rete.
+   * **Libreria heartbeat video** : contiene la logica di base per la raccolta dati video-heartbeat. La libreria heartbeat video accede a un sottoinsieme delle API della libreria AppMeasurement.
 
       >[!TIP]
       >
-      >L&#39;app non interagisce direttamente con il codice heartbeat video. Al contrario, l’app utilizza le API TVSDK per browser per configurare le funzionalità di tracciamento video del lettore.
+      >L&#39;app non interagisce direttamente con il codice heartbeat video. Al contrario, l’app utilizza le API TVSDK del browser per configurare le funzionalità di tracciamento video del lettore.
 
    * **Libreria VisitorID** : identifica in modo univoco i visitatori della pagina web che ospita il lettore video.
    >[!IMPORTANT]
    >
-   >La funzionalità di tracciamento video integrato del browser TVSDK dipende da un&#39;istanza AppMeasurement configurata correttamente. Gli elementi di tracciamento presuppongono che la libreria AppMeasurement sia già creata e configurata prima di configurare e attivare il tracciamento video. Le funzionalità di tracciamento video TVSDK per browser dipendono dall’esistenza di un’istanza completamente funzionale e configurata correttamente della libreria AppMeasurement.
+   >La funzionalità di tracciamento video integrato TVSDK nel browser dipende da un’istanza AppMeasurement configurata correttamente. Gli elementi di tracciamento presuppongono che la libreria AppMeasurement sia già stata creata un’istanza e configurata prima di configurare e attivare il tracciamento video. Le funzionalità di tracciamento video di TVSDK per browser dipendono dall’esistenza di un’istanza completamente funzionale e configurata correttamente della libreria AppMeasurement.
 
-1. Imposta i rapporti di analisi video sul lato server utilizzando gli strumenti di amministrazione di Adobe Analytics.
+1. Imposta la generazione di rapporti di analisi video sul lato server utilizzando gli Strumenti di amministrazione di Adobe Analytics.

@@ -1,25 +1,23 @@
 ---
-title: Elenco Bloccati di runtime di applicazioni
-description: Elenco Bloccati di runtime di applicazioni
+title: Elenco Bloccati di runtime dell’applicazione
+description: Elenco Bloccati di runtime dell’applicazione
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f8d1d385-41d4-4361-82c1-417b2ff421c5
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '121'
 ht-degree: 0%
 
 ---
 
+# Elenco Bloccati di runtime dell’applicazione {#blocklist-of-application-runtimes}
 
-# Elenco Bloccati di runtime di applicazioni {#blocklist-of-application-runtimes}
+Elenco Bloccati di runtime applicazione specifica la versione del client Primetime o del runtime di Flash che non può accedere al contenuto. Specifica il runtime con restrizioni (Flash Player, AIR o iOS), la piattaforma e la versione.
 
-Elenco Bloccati di runtime dell’applicazione specifica la versione del client Primetime o di Flash Runtime che non può accedere al contenuto. Specifica il runtime limitato (Flash Player, AIR o iOS), la piattaforma e la versione.
+Caso d’uso di esempio: simile all’elenco Bloccati del client DRM di Primetime, è possibile specificare la versione più recente del runtime di Flash Player, AIR o iOS come versione minima richiesta per l’acquisizione della licenza e la riproduzione dei contenuti.
 
-Esempio di utilizzo: Analogamente all’elenco Bloccati client DRM di Primetime, è possibile specificare come versione minima necessaria per l’acquisizione della licenza e la riproduzione dei contenuti la versione più recente dei tempi di esecuzione di Flash Player, AIR o iOS.
+È possibile identificare il runtime dell&#39;applicazione in base a uno qualsiasi degli attributi supportati per le versioni del client DRM di Primetime, oltre ai seguenti attributi:
 
-È possibile identificare il runtime dell’applicazione mediante uno qualsiasi degli attributi supportati per le versioni client DRM di Primetime, oltre ai seguenti attributi:
-
-| **Attributo** | **Valori supportati** | **Criteri di corrispondenza** | **Descrizione** |
+| **Attributo** | **Valori supportati** | **Corrispondenza criteri** | **Descrizione** |
 |---|---|---|---|
 | Applicazione | `“FlashPlayer”, “AIR”, "DRM_Library", "AVE"` | Corrispondenza esatta | Identifica il nome del runtime dell&#39;applicazione. |
-

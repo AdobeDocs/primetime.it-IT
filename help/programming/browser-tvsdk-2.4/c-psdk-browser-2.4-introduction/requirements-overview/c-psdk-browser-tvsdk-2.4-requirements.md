@@ -1,28 +1,27 @@
 ---
-description: Questa versione include lettori e supporta un’ampia gamma di browser.
+description: Questa versione include i lettori e supporta un’ampia gamma di browser.
 title: Requisiti
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3157a86b-bf93-41d9-be82-0b702d69c69e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
 
 ---
 
-
 # Panoramica {#requirements-overview}
 
 Il browser TVSDK richiede proprietà specifiche per il contenuto multimediale, il contenuto manifesto e le versioni software.
 
-La versione TVSDK per browser include i seguenti lettori:
+Il rilascio del browser TVSDK include i seguenti lettori:
 
 * `Primetime.js` per HLS su desktop e dispositivi mobili
 
 I lettori includono le seguenti API di riferimento:
 
-* `Primetime.js` Browser TVSDK
-* API JavaScript per la riproduzione core
-* Lettore Demo di riferimento
+* `Primetime.js` TVSDK del browser
+* API JavaScript per la riproduzione di base
+* Lettore demo di riferimento
 
 **Piattaforme certificate:**
 
@@ -41,7 +40,7 @@ I lettori includono le seguenti API di riferimento:
    * Microsoft Windows 10
 
       * Edge+
-   * Apple OS X
+   * APPLE OS X
 
       * Safari 8+
       * Chrome 33+
@@ -50,7 +49,7 @@ I lettori includono le seguenti API di riferimento:
 
 
 
-* **Configurazioni Web per dispositivi mobili**
+* **Configurazioni web per dispositivi mobili**
 
    * Android 4.4
 
@@ -63,11 +62,11 @@ I lettori includono le seguenti API di riferimento:
    * Android 6.0
 
       * Chrome 33+
-   * Apple iOS 8
+   * APPLE IOS 8
 
       * Safari 8+
       * Chrome 33+
-   * Apple iOS 9
+   * APPLE IOS 9
 
       * Safari 8+
       * Chrome 33+

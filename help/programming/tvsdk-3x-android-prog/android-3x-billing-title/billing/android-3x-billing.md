@@ -1,20 +1,19 @@
 ---
-description: Per soddisfare i clienti che desiderano pagare solo ciò che utilizzano, anziché un tasso fisso indipendentemente dall’uso effettivo, Adobe raccoglie le metriche di utilizzo e utilizza queste metriche per determinare quanto fatturare ai clienti.
+description: Per soddisfare i clienti che desiderano pagare solo per ciò che utilizzano, anziché una tariffa fissa indipendentemente dall’uso effettivo, Adobe raccoglie le metriche di utilizzo e le utilizza per determinare quanto fatturare ai clienti.
 title: Metriche di fatturazione
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 6e839f59-dd1e-4037-96a9-8b35b361988f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 0%
 
 ---
 
-
 # Metriche di fatturazione {#billing-metrics}
 
-Per soddisfare i clienti che desiderano pagare solo ciò che utilizzano, anziché un tasso fisso indipendentemente dall’uso effettivo, Adobe raccoglie le metriche di utilizzo e utilizza queste metriche per determinare quanto fatturare ai clienti.
+Per soddisfare i clienti che desiderano pagare solo per ciò che utilizzano, anziché una tariffa fissa indipendentemente dall’uso effettivo, Adobe raccoglie le metriche di utilizzo e le utilizza per determinare quanto fatturare ai clienti.
 
-Ogni volta che il lettore genera un evento di avvio del flusso, TVSDK inizia a inviare periodicamente messaggi HTTP al sistema di fatturazione di Adobe. Il periodo, noto come durata fatturabile, può essere diverso per VOD standard, pro VOD (annunci mid-roll abilitati) e contenuti live. La durata predefinita di ciascun tipo di contenuto è di 30 minuti, ma il contratto con Adobe determina i valori effettivi.
+Ogni volta che il lettore genera un evento di avvio del flusso, TVSDK inizia a inviare periodicamente messaggi HTTP al sistema di fatturazione di Adobe. Il periodo, noto come durata fatturabile, può essere diverso per VOD standard, pro VOD (annunci mid-roll abilitati) e contenuti live. La durata predefinita per ogni tipo di contenuto è di 30 minuti, ma il contratto con Adobe determina i valori effettivi.
 
 I messaggi contengono le seguenti informazioni:
 
@@ -25,6 +24,6 @@ I messaggi contengono le seguenti informazioni:
 * Se il flusso è protetto da DRM
 * Versione e piattaforma TVSDK
 
-L&#39;Adobe preconfigura questa disposizione, ma puoi collaborare con il tuo rappresentante di abilitazione Adobe per modificare la disposizione e lavorare con il tuo rappresentante di abilitazione di Adobe.
+Adobe preconfigura questa disposizione, ma puoi lavorare con il tuo rappresentante di Adobe Enablement per modificare la disposizione, e lavorare con il tuo rappresentante di Adobe Enablement.
 
-Per monitorare le statistiche inviate ad Adobe da TVSDK, ottieni l’URL dal tuo rappresentante di abilitazione Adobe e utilizza uno strumento di acquisizione di rete, come Charles, per vedere i dati.
+Per monitorare le statistiche inviate da TVSDK ad Adobe, ottieni l’URL dal tuo rappresentante per l’abilitazione dell’Adobe e utilizza uno strumento di acquisizione di rete, come Charles, per visualizzare i dati.

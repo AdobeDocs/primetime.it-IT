@@ -1,46 +1,43 @@
 ---
-description: TVSDK fornisce elementi API utili per l’implementazione delle blackout, inclusi metodi, metadati e notifiche.
-title: Elementi dell’API Blackout
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK fornisce elementi API che sono utili quando si implementano sospensioni attività, inclusi metodi, metadati e notifiche.
+title: Elementi API di sospensione attività
+exl-id: 0f098caa-1e2c-4fca-9037-33ebf222021b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 0%
 
 ---
 
-
 # Elementi API di sospensione attività{#blackout-api-elements}
 
-TVSDK fornisce elementi API utili per l’implementazione delle blackout, inclusi metodi, metadati e notifiche.
+TVSDK fornisce elementi API che sono utili quando si implementano sospensioni attività, inclusi metodi, metadati e notifiche.
 
-Quando si implementa una soluzione blackout nel lettore, è possibile utilizzare quanto segue.
+Puoi utilizzare quanto segue durante l’implementazione di una soluzione di sospensione attività nel lettore.
 
 * **PTMediaPlayer**
 
-   * `registerCurrentItemAsBackgroundItem` Salva la risorsa attualmente caricata come risorsa in background. Se `replaceCurrentItemWithPlayerItem` viene chiamato dopo questo metodo, TVSDK continua a scaricare il manifesto dell&#39;elemento in background fino a quando non chiami `unregisterCurrentBackgroundItem` , `stop` o `reset` .
+   * `registerCurrentItemAsBackgroundItem` Salva la risorsa caricata come risorsa di sfondo. Se `replaceCurrentItemWithPlayerItem` chiamato dopo questo metodo, TVSDK continua a scaricare il manifesto dell&#39;elemento in background fino a quando non chiami `unregisterCurrentBackgroundItem` , `stop`, o `reset` .
 
-   * `unregisterCurrentBackgroundItem` Imposta l&#39;elemento di sfondo su nil e smette di recuperare e analizzare il manifesto di sfondo.
+   * `unregisterCurrentBackgroundItem` Imposta l&#39;elemento di sfondo su zero e interrompe il recupero e l&#39;analisi del manifesto di sfondo.
 
-* **PTMetadata.** PTBlackoutMetadataUna  `PTMetadata` classe specifica per le blackout.
+* **PTMetadata.PTBlackoutMetadata** A `PTMetadata` classe specifica per le sospensioni attività.
 
-   Questo consente di impostare intervalli non ricercabili (una matrice di `CMTimeRanges`) su TVSDK. TVSDK controlla questi intervalli ogni volta che l’utente cerca. Se è impostato e l’utente cerca in un intervallo non ricercabile, TVSDK forza il visualizzatore alla fine dell’intervallo non ricercabile.
+   Questo consente di impostare intervalli non ricercabili (un array di `CMTimeRanges`) su TVSDK. TVSDK controlla questi intervalli ogni volta che l’utente cerca. Se è impostato e l’utente cerca in un intervallo non ricercabile, TVSDK forza il visualizzatore alla fine dell’intervallo non ricercabile.
 
-* **AVVIA QUI** **** NEXTPTAdMetadataAttiva o disattiva il pre-roll su un flusso live impostando  `enableLivePreroll` su YES o NO. Se NO, TVSDK non effettua una chiamata ad server esplicita per gli annunci pre-scorrimento prima della riproduzione del contenuto e quindi non riproduce il pre-roll. Questo non ha alcun impatto sui rulli medi. Il valore predefinito è YES.
+* **INIZIA QUI DOPO** **PTAdMetadata** Abilita o disabilita il pre-roll su un flusso live impostando `enableLivePreroll` a YES o NO. Se NO, TVSDK non effettua una chiamata esplicita ad server per gli annunci pre-roll prima della riproduzione del contenuto e quindi non riproduce il pre-roll. Questo non ha alcun impatto sulle mid-roll. Il valore predefinito è YES.
 
-* **Notifiche NSN**
+* **NotificheNSN**
 
-   * `PTTimedMetadataChangedInBackgroundNotification` - Pubblicato quando TVSDK rileva un tag con sottoscrizione nel manifesto di background e ne prepara una nuova  `PTTimedMetadata` istanza. L&#39;oggetto della notifica è l&#39;istanza `PTMediaPlayerItem` attualmente in esecuzione. Puoi recuperare l’istanza `PTTimedMetadata` dal dizionario `userInfo` della notifica utilizzando la chiave `PTTimedMetadataKey` .
+   * `PTTimedMetadataChangedInBackgroundNotification` - Pubblicato quando TVSDK rileva un tag sottoscritto nel manifesto in background e un nuovo `PTTimedMetadata` L&#39;istanza viene preparata da essa. L’oggetto della notifica è `PTMediaPlayerItem` istanza attualmente in riproduzione. Puoi recuperare `PTTimedMetadata` istanza dal file di notifica `userInfo` dizionario che utilizza `PTTimedMetadataKey` chiave.
 
-   * `PTBackgroundManifestErrorNotification` - Pubblicato quando il lettore multimediale non riesce completamente a caricare il manifesto in background, ovvero, tutti gli URL del flusso restituiscono un errore o una risposta non valida. L&#39;oggetto della notifica è l&#39;istanza `PTMediaPlayerItem` attualmente in esecuzione.
+   * `PTBackgroundManifestErrorNotification` - Pubblicato quando il lettore multimediale non riesce completamente a caricare il manifesto in background, ovvero tutti gli URL del flusso restituiscono un errore o una risposta non valida. L’oggetto della notifica è `PTMediaPlayerItem` istanza attualmente in riproduzione.
 
-* **Notifica PTN**
+* **PTNotification**
 
    * `BACKGROUND_MANIFEST_WARNING`
 
       * Codice: 204000
-      * Tipo: Avviso
+      * Tipo: avvertenza
       * Errore nel download del manifesto in background.
-   * `INVALID_SEEK_WARNING` Inviato quando si tenta una ricerca in un intervallo non ricercabile (in  `nonSeekableRanges` impostato in  `PTBlackoutMetadata`).
-
-
+   * `INVALID_SEEK_WARNING` Inviato quando si tenta una ricerca in un intervallo non ricercabile (in `nonSeekableRanges` imposta in `PTBlackoutMetadata`).

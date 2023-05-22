@@ -1,20 +1,19 @@
 ---
 description: Domande frequenti sull'utilizzo della protezione dell'output basata sulla risoluzione.
-title: Domande frequenti su RBOP
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: DOMANDE FREQUENTI SU RBOP
+exl-id: 16b95db4-43a9-4458-b7f4-94033a36542e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '321'
 ht-degree: 0%
 
 ---
 
-
-# Domande frequenti su RBOP {#rbop-faq}
+# DOMANDE FREQUENTI SU RBOP {#rbop-faq}
 
 Domande frequenti sull&#39;utilizzo della protezione dell&#39;output basata sulla risoluzione.
 
-* **D.** *Quando definisco un requisito di output digitale per un vincolo di pixel, ricevo errori di analisi/formattazione quando lascio fuori la versione HDCP, ma non ho requisiti HDCP. Come posso configurare il mio requisito di output digitale in questo caso?* **A.** Poiché attualmente il controllo della versione HDCP non è supportato nel client, Adobe consiglia di impostare la versione HDCP su  `1.0`. Questo assicurerà che la configurazione sia formattata correttamente ed è semanticamente coerente in futuro quando sarà supportato il controllo della versione HDCP. Il frammento seguente illustra una configurazione con questo valore HDCP.
+* **D.** *Quando si definisce un requisito di uscita digitale per un vincolo di pixel, si verificano errori di analisi/formattazione quando si esce dalla versione HDCP, ma non è necessario alcun requisito HDCP. Come si configura il fabbisogno di output digitale in questo caso?* **R.** Poiché il controllo della versione HDCP non è attualmente supportato dal client, l’Adobe consiglia di impostare la versione HDCP su `1.0`. In questo modo la configurazione sarà formattata correttamente e sarà semanticamente coerente in futuro quando sarà supportato il controllo della versione HDCP. Lo snippet seguente illustra una configurazione con questo valore HDCP.
 
    ```
    { "pixelConstraints":  
@@ -30,27 +29,27 @@ Domande frequenti sull&#39;utilizzo della protezione dell&#39;output basata sull
    }
    ```
 
-* **D.** *I vincoli di pixel RBOP sono discreti o basati su intervalli?* **I vincoli di pixel A.** RBOP sono suddivisi in base a. Ogni conteggio di pixel definisce i requisiti per tutti i conteggi di pixel inferiori o uguali al conteggio specificato o fino al conteggio più grande minore di quel valore se esistono più vincoli di pixel. In parole povere, i valori si applicano come soglie massime per ogni conteggio pixel verticale.
+* **D.** *I vincoli pixel RBOP sono discreti o basati su intervalli?* **R.** I vincoli dei pixel RBOP sono basati sull&#39;intervallo. Ogni conteggio di pixel definisce i requisiti per tutti i conteggi di pixel minori o uguali al conteggio specificato o fino al conteggio più grande minore di tale valore, se esiste più di un vincolo pixel. In breve, i valori si applicano come soglie massime per ogni conteggio di pixel verticali.
 
-   Supponiamo che un flusso MBR con risoluzioni verticali di 240, 480, 600, 720 e 1080 venga trasmesso al lettore con le seguenti impostazioni RBOP.
+   Supponiamo che un flusso MBR con risoluzioni verticali di 240, 480, 600, 720 e 1080 venga passato al lettore con le seguenti impostazioni RBOP.
 
-   **Impostazioni dei criteri RBOP:**
+   **Impostazioni criteri RBOP:**
 
    * 720P - HDCP richiesto
-   * 480P - No OP
+   * 480P - Nessun OP
 
-   A ogni variante verranno applicate le seguenti regole.
+   Le seguenti regole vengono applicate a ogni variante.
 
    **Flussi:**
 
-   * 240, 480: sono &lt;= 480; non è richiesto nessun OP e i flussi si caricano con o senza HDCP presente.
-   * 600, 720: sono &lt;= 720; HDCP è richiesto per la riproduzione
-   * 1080: > 720; il flusso è inserito nell’elenco dei blocchi (restituito l’errore) in quanto non è trovato nelle regole di cui sopra.
+   * 240, 480: entrambi sono &lt;= 480; non è richiesto alcun OP e i flussi verranno caricati con o senza HDCP presente.
+   * 600, 720: entrambi sono &lt;= 720; per la riproduzione è richiesto l&#39;HDCP
+   * 1080: > 720; il flusso viene inserito nell’elenco dei blocchi (errore restituito) perché non si trova nelle regole precedenti.
 
 
-* **D.** Su alcuni dei miei dispositivi Android, le restrizioni di conteggio dei pixel che ho definito non vengono applicate esattamente come definite. Cosa sta succedendo?
+* **D.** Su alcuni dei miei dispositivi Android, le restrizioni di conteggio dei pixel che ho definito non vengono applicate esattamente come definito. Cosa sta succedendo?
 
-   **A.** Alcuni dispositivi Android registrano dimensioni dei fotogrammi leggermente superiori a quelle normali. Per ovviare a questa situazione, regola le dimensioni dei fotogrammi ( `maxPixel` e `pixelCount` impostazioni) verso l&#39;alto di 20 pixel. Ad esempio, regola le impostazioni delle dimensioni del fotogramma verso l&#39;alto, da:
+   **R.** Alcuni dispositivi Android segnalano dimensioni dei fotogrammi leggermente superiori alle dimensioni normali. Per risolvere questo problema, regolare le dimensioni dei frame ( `maxPixel` e `pixelCount` di 20 pixel. Ad esempio, è possibile regolare le dimensioni dei fotogrammi verso l&#39;alto, da:
 
    ```
    { 
@@ -76,5 +75,4 @@ Domande frequenti sull&#39;utilizzo della protezione dell&#39;output basata sull
    ... 
    ```
 
-   in tutto, per tutte le istanze di `maxPixel` e `pixelCount`.
-
+   in, per tutte le istanze di `maxPixel` e `pixelCount`.

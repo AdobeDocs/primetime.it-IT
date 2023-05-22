@@ -12,31 +12,31 @@ ht-degree: 0%
 
 # Informazioni sui file CRL {#about-crl-files}
 
-Per funzionare correttamente, i server Individualization e License devono disporre di diversi file dell’elenco di revoca dei certificati (CRL) memorizzati nella cache su disco sul server dell’applicazione in esecuzione (ad esempio, Tomcat). I nuovi file CRL devono essere scaricati e memorizzati nella cache su disco su base regolare. Se il periodo di validità dei file CRL sul disco è lasciato scadere, Individualization Server rifiuterà di individuare i client e il License Server rifiuterà di rilasciare licenze.
+Per funzionare correttamente, i server di Personalizzazione e Licenza devono disporre di diversi file CRL (Certificate Revocation List) memorizzati su disco nel server applicazioni in esecuzione (ad esempio, Tomcat). I nuovi file CRL devono essere scaricati e memorizzati nella cache su disco regolarmente secondo la pianificazione. Se il periodo di validità dei file CRL su disco scade, il server di personalizzazione si rifiuterà di individuare i client e il server licenze si rifiuterà di rilasciare le licenze.
 
-I CRL memorizzati nella cache su disco devono avere nomi di file che corrispondono agli URL corrispondenti. I caratteri speciali quali i due punti &#39;:&#39; e le barre &#39;/&#39; sono convertiti in caratteri di sottolineatura &#39;_&#39; nei nomi dei file.
+I CRL memorizzati nella cache del disco devono avere nomi di file corrispondenti agli URL corrispondenti. Nei nomi dei file, i caratteri speciali come i due punti &quot;:&quot; e le barre &quot;/&quot; vengono convertiti in caratteri di sottolineatura &quot;_&quot;.
 
-Di seguito è riportato un elenco di CRL ospitati esternamente utilizzati sia dai server di Individualization che da quelli di Licenza:
+Di seguito è riportato un elenco di CRL in hosting esterno utilizzati sia dai server di personalizzazione che dai server licenze:
 
 * **CRL intermedio:**
 
    * URL: [!DNL <ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl>]
    * File: [!DNL http___crl2.adobe.com_Adobe_FlashAccessIntermediateCA.crl]
-   * Validità: Buono per circa 12 mesi dalla creazione
+   * Validità: valida per circa 12 mesi dalla creazione
 
-* **CRL principale:**
+* **CRL radice:**
 
    * URL: [!DNL <ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessRootCA.crl>]
    * File: [!DNL http___crl2.adobe.com_Adobe_FlashAccessRootCA.crl]
-   * Validità: Buono per circa 5 anni dalla creazione
+   * Validità: valida per circa 5 anni dalla creazione
 
-* **Ultimo CRL:**
+* **CRL più recente:**
 
    * URL: [!DNL <ht<span></span>tps://crl3.adobe.com/AdobeSystemsIncorporatedFlashAccessRuntime/LatestCRL.crl>]
    * File: [!DNL http___crl3.adobe.com_AdobeSystemsIncorporatedFlashAccessRuntime_LatestCRL.crl]
-   * Validità: Buono per circa 3 mesi dalla creazione
+   * Validità: valida per circa 3 mesi dalla creazione
 
-Per informazioni sui CRL ospitati esternamente che possono essere utilizzati dai server di licenza, contattare il supporto Adobe.
+Per informazioni sui CRL ospitati esternamente che possono essere utilizzati dai server licenze, contatta il supporto Adobe.
 
 <!---
 
@@ -64,6 +64,6 @@ The following are externally hosted CRLs that are used only by the License Serve
 
 --->
 
-Oltre ai CRL ospitati esternamente, puoi creare e gestire un CRL aggiuntivo. Si tratta del CRL di Individualization CA, come specificato nel [Creare un CRL di CA per l&#39;individuazione](../../../on-premises-i15n-server/server-configuration-section/server-properties/create-i15n-ca-crl.md) sezione di questo documento.
+Oltre ai CRL ospitati esternamente, puoi creare e gestire un CRL aggiuntivo. Questo è il CRL della CA di Personalizzazione, come specificato nella [Crea CRL CA di personalizzazione](../../../on-premises-i15n-server/server-configuration-section/server-properties/create-i15n-ca-crl.md) sezione del presente documento.
 
-È previsto l’aggiornamento dei CRL 45 giorni prima della scadenza. In questo modo è possibile disporre di tempo sufficiente per acquisire e installare i nuovi CRL generati da Internet. È necessario assicurarsi di aggiornare i file CRL prima che siano scaduti.
+L’aggiornamento dei CRL è pianificato 45 giorni prima della scadenza. In questo modo avrai a disposizione il tempo necessario per acquisire e installare i CRL appena generati da Internet. Prima della scadenza, è necessario aggiornare i file CRL.

@@ -1,22 +1,21 @@
 ---
 description: TVSDK fornisce API e codice di esempio per la gestione dei periodi di sospensione attività.
-title: Implementare la gestione della blackout
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Implementare la gestione delle sospensioni attività
+exl-id: 9b23674d-76d5-4879-b595-3a6e368c45cd
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '158'
 ht-degree: 0%
 
 ---
 
-
-# Implementa la gestione della blackout{#implement-blackout-handling}
+# Implementare la gestione delle sospensioni attività{#implement-blackout-handling}
 
 TVSDK fornisce API e codice di esempio per la gestione dei periodi di sospensione attività.
 
-Per implementare la gestione della sospensione attività, incluso fornire contenuto alternativo durante la sospensione attività:
+Per implementare la gestione delle sospensioni attività, inclusa la fornitura di contenuto alternativo durante la sospensione attività:
 
-1. Imposta l&#39;app per rilevare i tag di blackout in un manifesto del flusso live.
+1. Configura l&#39;app per rilevare i tag di sospensione attività in un manifesto live stream.
 
    ```java
    public void createMediaPlayer { 
@@ -27,7 +26,7 @@ Per implementare la gestione della sospensione attività, incluso fornire conten
    }
    ```
 
-1. Crea listener di eventi per gli eventi di metadati temporizzati nei flussi in primo piano e in background.
+1. Creare listener di eventi per eventi di metadati temporizzati nei flussi in primo piano e in background.
 
    ```java
    private MediaPlayer createMediaPlayer() { 
@@ -36,7 +35,7 @@ Per implementare la gestione della sospensione attività, incluso fornire conten
    }
    ```
 
-1. Implementa i gestori eventi di metadati temporizzati sia per i flussi in primo piano che per quelli in background.
+1. Implementa gestori eventi metadati temporizzati per flussi in primo piano e in background.
 
    Primo piano:
 
@@ -75,7 +74,7 @@ Per implementare la gestione della sospensione attività, incluso fornire conten
    }; 
    ```
 
-1. Gestisci gli oggetti `TimedMetadata` durante l&#39;esecuzione di `MediaPlayer`.
+1. Maniglia `TimedMetadata` oggetti quando `MediaPlayer` il tempo scorre.
 
    ```java
    _playbackClockEventListener = new Clock.ClockEventListener() { 
@@ -98,7 +97,7 @@ Per implementare la gestione della sospensione attività, incluso fornire conten
    };
    ```
 
-1. Crea metodi per cambiare contenuto all’inizio e alla fine del periodo di sospensione attività.
+1. Creare metodi per cambiare il contenuto all&#39;inizio e alla fine del periodo di sospensione attività.
 
    ```java
    private void handleTimedMetadataList(long currentTime) { 
@@ -150,7 +149,7 @@ Per implementare la gestione della sospensione attività, incluso fornire conten
    }
    ```
 
-1. Aggiornare gli intervalli non ricercabili se l&#39;intervallo di blackout è in DVR sul flusso di riproduzione.
+1. Aggiornare gli intervalli non ricercabili se l&#39;intervallo di sospensione attività è in DVR nel flusso di riproduzione.
 
    ```java
    // prepare and update blackout nonSeekable ranges 
@@ -183,7 +182,7 @@ Per implementare la gestione della sospensione attività, incluso fornire conten
 
    >[!NOTE]
    >
-   >Attualmente, per flussi live a bit rate multiplo, occasionalmente i profili a bit rate regolabile (ABR) possono non essere sincronizzati. Questo causa la duplicazione di oggetti `timedMetadata` per lo stesso tag sottoscritto. Per evitare calcoli non corretti e non ricercabili, si consiglia vivamente di verificare la sovrapposizione di intervalli non ricercabili dopo i calcoli, come nell&#39;esempio seguente:
+   >Attualmente, per flussi live con velocità di trasmissione multipla, occasionalmente i profili ABR (bit-rate regolabile) possono non essere sincronizzati. Questo causa la duplicazione `timedMetadata` per lo stesso tag sottoscritto. Per evitare calcoli non ricercabili errati, si consiglia vivamente di verificare la presenza di intervalli non ricercabili sovrapposti dopo i calcoli, ad esempio nell’esempio seguente:
 
    ```java
    List<TimeRange> rangesToRemove = new ArrayList<TimeRange>(); 
@@ -209,4 +208,3 @@ Per implementare la gestione della sospensione attività, incluso fornire conten
        nonSeekableRanges.removeAll(rangesToRemove); 
    }
    ```
-

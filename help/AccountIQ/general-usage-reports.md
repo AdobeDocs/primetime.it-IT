@@ -1,6 +1,6 @@
 ---
-title: Rapporti generali sull'utilizzo
-description: Rapporti generali sull'utilizzo
+title: Rapporti di utilizzo generali
+description: Rapporti di utilizzo generali
 exl-id: 1272073a-61fe-47ec-aced-2e8055b6b11e
 source-git-commit: a2181a8fd7334f19b8387a31c71527d4f689ab9d
 workflow-type: tm+mt
@@ -9,11 +9,11 @@ ht-degree: 0%
 
 ---
 
-# Rapporti generali sull&#39;utilizzo {#general-usage-reports}
+# Rapporti di utilizzo generali {#general-usage-reports}
 
-I rapporti IQ dell’account sono strumenti di analisi di base e rapporti che ti consentono di approfondire i tuoi dati per isolare [coorti](/help/AccountIQ/product-concepts.md#segmet-def), identificare le anomalie e acquisire una comprensione delle caratteristiche dell’account.
+I rapporti Account IQ sono strumenti analitici di base e rapporti che consentono di analizzare in profondità i dati per isolarli [coorti](/help/AccountIQ/product-concepts.md#segmet-def), identifica le anomalie e acquisisci una maggiore comprensione delle caratteristiche del tuo account.
 
-La pagina Rapporti sull’utilizzo generale fornisce gli strumenti per eseguire lo sviluppo delle metriche dei sottogruppi in base al numero di dispositivi dell’account in uso, agli IP rilevati e ai rispettivi codici postali.
+La pagina dei report sull’utilizzo generale fornisce gli strumenti necessari per suddividere le metriche dei sottogruppi in base al numero di dispositivi dell’account in uso, IP rilevati e rispettivi codici postali.
 
 <!--Divide the content in cohorts.
 
@@ -23,7 +23,7 @@ device filters
 segment and definition replicate to cohorts. Number of people and number of account that ......
 content consumption.....-->
 
-I rapporti sono tutti basati sul segmento corrente selezionato utilizzando [Segmenti e intervalli di tempo](/help/AccountIQ/howto-select-segment-timeframe.md) pannello. Puoi ottimizzare la selezione e restringerla ulteriormente specificando (numero di dispositivi, numero di IP e numero di codici postali) le soglie in [Panoramica snapshot - Account al di sopra delle soglie](#snapshot-overview) pannello.
+I rapporti si basano tutti sul segmento corrente selezionato utilizzando [Segmenti e intervallo temporale](/help/AccountIQ/howto-select-segment-timeframe.md) pannello. Puoi ottimizzare la selezione e limitarla ulteriormente specificando (numero di dispositivi, numero di IP e numero di codici postali) le soglie in [Panoramica snapshot - Conti superiori alle soglie](#snapshot-overview) pannello.
 
 <!--To view General Usage Reports:
 
@@ -37,171 +37,171 @@ I rapporti sono tutti basati sul segmento corrente selezionato utilizzando [Segm
 
 4. You can fine tune your selection and further narrow it down by specifying (number of devices, number of IPs, and number of zip codes) thresholds in [Snapshot Overview - Accounts above thresholds](#snapshot-overview) widget/panel.-->
 
-## AuthN OK / AuthZ OK / Play Requests / Univoci Sottoscrittori {#authn-authz-playreq-uniquesubs}
+## AuthN OK / AuthZ OK / Riproduci richieste / Abbonati univoci {#authn-authz-playreq-uniquesubs}
 
-I grafici a linee forniscono una visualizzazione delle modifiche nel tempo in valori di AuthN OK, AuthZ OK, Play Requests e Unique Subscribers in un intervallo di tempo selezionato per il segmento definito.
+I grafici a linee forniscono una visualizzazione delle modifiche nel tempo dei valori di AuthN OK, AuthZ OK, Play Requests e Unique Subscribers in un intervallo di tempo selezionato per il segmento definito.
 
-++Programmatore- **AuthN OK / AuthZ OK / Play Requests / Univoci Sottoscrittori**
++++Programmatore- **AuthN OK / AuthZ OK / Riproduci richieste / Abbonati univoci**
 
 ![](assets/progr-line-graph-gu.png)
 
 
-*Figura: AuthN OK / AuthZ OK / Richieste Play / Sottoscrittori unici per l&#39;utente programmatore*
+*Figura: AuthN OK / AuthZ OK / Play Requests / Abbonati univoci per l’utente del programmatore*
 
 
 +++
 
 
-+++MVPD- **AuthN OK / AuthZ OK / Sottoscrittori univoci**
++++MVPD- **AuthN OK / AuthZ OK / Abbonati univoci**
 
 ![](assets/mvpd-line-graph-gu.png)
 
 
-*Figura: AuthN OK / AuthZ OK / Sottoscrittori unici per l&#39;utente MVPD*
+*Figura: AuthN OK / AuthZ OK / Abbonati univoci per l’utente MVPD*
 
 
 +++
 
-L’asse x presenta le unità entro l’intervallo di tempo corrente e l’asse y rappresenta le metriche di base dell’attività degli utenti abbonati durante tale periodo. I grafici a linee consentono di confrontare i seguenti valori per gli abbonati a MVPD e canali selezionati nel pannello di selezione dei segmenti:
+L’asse x presenta le unità entro l’intervallo di tempo corrente e l’asse y rappresenta le metriche di base dell’attività del sottoscrittore durante tale periodo. I grafici a linee ti consentono di confrontare i seguenti valori per gli abbonati a MVPD e ai canali selezionati nel pannello di selezione dei segmenti:
 
 * **AuthN OK**
 
-   AuthN OK indica il numero di autenticazioni riuscite. Per ulteriori informazioni e definizioni vedi [Concetti di prodotto: AuthN OK](/help/AccountIQ/product-concepts.md#authn-ok-def).
+   AuthN OK è il numero di autenticazioni riuscite. Per ulteriori informazioni e definizioni consulta [Concetti del prodotto: AuthN OK](/help/AccountIQ/product-concepts.md#authn-ok-def).
 
 * **AuthZ OK**
 
-   AuthZ OK è il numero di autorizzazioni riuscite. Per ulteriori informazioni e definizioni vedi [Concetti di prodotto: AuthZ OK](/help/AccountIQ/product-concepts.md#authz-ok-def).
+   AuthZ OK indica il numero di autorizzazioni completate. Per ulteriori informazioni e definizioni consulta [Concetti del prodotto: AuthZ OK](/help/AccountIQ/product-concepts.md#authz-ok-def).
 
 * **Riproduci richieste**
 
-   Le richieste di riproduzione sono il numero di richieste di riproduzione. Per ulteriori informazioni e definizioni vedi [Concetti di prodotto: Richieste di riproduzione](/help/AccountIQ/product-concepts.md#play-requests-def)
+   Richieste Play indica il numero di richieste Play. Per ulteriori informazioni e definizioni consulta [Concetti di prodotto: Riproduci richieste](/help/AccountIQ/product-concepts.md#play-requests-def)
 
    >[!NOTE]
    >
    >Il grafico a linee delle richieste di riproduzione non è disponibile per gli utenti MVPD.
 
 
-* **Sottoscrittori univoci**
+* **Abbonati univoci**
 
-   Gli abbonati univoci sono il numero di abbonati univoci riusciti. Per ulteriori informazioni e definizioni vedi [Concetti di prodotto: Abbonati univoci](/help/AccountIQ/product-concepts.md#unique-subscriber-def)
+   Abbonati univoci indica il numero di abbonati univoci riusciti. Per ulteriori informazioni e definizioni consulta [Concetti di prodotto: abbonati univoci](/help/AccountIQ/product-concepts.md#unique-subscriber-def)
 
    >[!NOTE]
    >
-   >Il numero totale di abbonati univoci include anche il numero di dispositivi univoci se l&#39;uso di un programmatore di TempPass Adobe (che è anteprima gratuita) fa parte del segmento.
+   >Il numero totale di abbonati univoci include anche il numero di dispositivi univoci se l’utilizzo da parte di un programmatore di TempPass Adobe (ovvero anteprima gratuita) fa parte del segmento.
 
-## Panoramica snapshot - Account al di sopra delle soglie {#snapshot-overview}
+## Panoramica snapshot - Conti superiori alle soglie {#snapshot-overview}
 
-Ottimizza le tue analisi e i tuoi report utilizzando questo filtro aggiuntivo per impostare diverse soglie di utilizzo. Una volta definito il segmento (o coorte) per l’analisi selezionando gli MVPD e i canali desiderati, puoi anche utilizzare i filtri seguenti per analizzare il comportamento degli abbonati:
+Ottimizza le analisi e i rapporti utilizzando questo filtro aggiuntivo per impostare varie soglie di utilizzo. Dopo aver definito il segmento (o la coorte) per l’analisi selezionando gli MVPD e i canali desiderati, puoi utilizzare i seguenti filtri per per analizzare il comportamento degli abbonati:
 
 * Soglia numero di dispositivi
 
-* Soglia del numero di IP
+* Soglia numero di IP
 
-* Soglia codici ZIP
+* Soglia numero di codici postali
 
-Quando si aggiornano i valori di soglia in [Segmento di account - in base alle soglie selezionate](#account-segments-basedon-segments) potete visualizzare l&#39;effetto in:
+Quando si aggiornano i valori di soglia in [Segmento conti - in base alle soglie selezionate](#account-segments-basedon-segments) dell&#39;effetto in:
 
 * [Dispositivi per settimana (o mese) per account](#devices-week-account)
 
-* [Posizioni per settimana (o mese) per conto](#locations-week-account)
+* [Posizioni per settimana (o mese) per account](#locations-week-account)
 
-* [IP a settimana (o mese) per account](#ip-week-account)
+* [IP per settimana (o mese) per account](#ip-week-account)
 
-* [Vista storica del segmento dei conti](#account-segment-historical-view)
+* [Visualizzazione cronologica del segmento dei conti](#account-segment-historical-view)
 
 >[!NOTE]
 >
->Il valore predefinito per ciascuna delle soglie è 4. Ciò significa che la pagina Uso generale mostra l’analisi per gli MVPD con gli abbonati che utilizzano quattro (e più di quattro) dispositivi, consumando contenuti da quattro (e più) posizioni geografiche diverse e quattro (e più) codici postali diversi.
+>Il valore predefinito per ciascuna soglia è 4. Ciò significa che la pagina Uso generale mostra l’analisi per MVPD con gli abbonati che utilizzano quattro (e più di quattro) dispositivi, utilizzando contenuti provenienti da quattro (e più) diverse posizioni geografiche e quattro (e più) diversi codici postali.
 
-### Segmento di account - in base alle soglie selezionate {#account-segments-basedon-segments}
+### Segmento conti - in base alle soglie selezionate {#account-segments-basedon-segments}
 
-La **Segmento di account - in base alle soglie selezionate** Il pannello offre le opzioni per impostare le soglie (tra 1 e 10) per il numero di dispositivi, il numero di IP e il numero di codici ZIP.
+Il **Segmento conti - in base alle soglie selezionate** Il pannello consente di impostare soglie (tra 1 e 10) per il numero di dispositivi, il numero di IP e il numero di codici postali.
 
-Il grafico mostra i seguenti elementi:
+Il grafico mostra:
 
-* numero assoluto di conti sottoscrittori, e
+* numero assoluto di account abbonati e
 
-* percentuale dei conti totali degli abbonati in quel segmento,
+* percentuale del totale dei conti degli abbonati in quel segmento,
 
-   che utilizzano un numero X di dispositivi, un numero Y di IP e un numero Z di codici ZIP per utilizzare contenuti dal canale per gli MVPD (segmento definito di), per un intervallo di tempo.
+   che utilizzano il numero X di dispositivi, il numero Y di IP e il numero Z di codici postali per utilizzare contenuti dal canale per gli MVPD (segmenti definiti di), per un intervallo di tempo.
 
 ![](assets/select-thresholds.png)
 
-## Dispositivi a settimana (o mese) per account {#devices-week-account}
+## Dispositivi per settimana (o mese) per account {#devices-week-account}
 
-La **grafico a barre** fornisce informazioni sul comportamento di utilizzo in termini di come gli abbonati utilizzano i loro dispositivi per accedere ai contenuti.
+Il **grafico a barre** fornisce informazioni sul comportamento di utilizzo in termini di utilizzo dei dispositivi da parte degli abbonati per accedere ai contenuti.
 
-L&#39;asse x traccia il numero di account e l&#39;asse y il numero di dispositivi. In base alla soglia impostata per il numero di dispositivi per account, indica il numero assoluto di account abbonati che consumano contenuti da un numero specifico di dispositivi nella durata di una settimana.
+L&#39;asse x rappresenta il numero di account e l&#39;asse y il numero di dispositivi. In base alla soglia impostata per il numero di dispositivi per account, indica il numero assoluto di account di abbonati che utilizzano contenuti da un numero specifico di dispositivi nella durata di una settimana.
 
 ![](assets/bar-gr-devices-w-acc.png)
 
-Quando passi il cursore su una barra (specifica per il numero di dispositivi), viene visualizzata un’etichetta che fornisce informazioni sul numero di account di abbonati (e sulla percentuale sul totale degli account di abbonati nel segmento) che stanno trasmettendo il contenuto del canale utilizzando questi molti dispositivi in una settimana.
+Quando si passa il mouse su una barra (specifica per il numero di dispositivi), viene visualizzata un’etichetta che fornisce informazioni sul numero di account dell’abbonato (e sulla percentuale del totale di account dell’abbonato nel segmento) che stanno trasmettendo contenuti del canale utilizzando questi numerosi dispositivi in una settimana.
 
-Il grafico indica anche quanto segue:
+Il grafico contrassegna inoltre quanto segue:
 
 * Una linea rossa per contrassegnare la soglia impostata.
 
-* Una linea verde per contrassegnare la media del numero di dispositivi diversi utilizzati da un account utente iscritto per settimana (o mese).
+* Una linea verde per indicare la media del numero di dispositivi diversi utilizzati da un account abbonato alla settimana (o al mese).
 
-Puoi confrontare il livello di soglia con la media settimanale del numero di dispositivi diversi utilizzati da un account, per valutare il livello di condivisione.
+Puoi confrontare il livello di soglia con la media settimanale del numero di diversi dispositivi utilizzati da un account, per giudicare il livello di condivisione.
 
-Il grafico fornisce anche un&#39;occhiata alla percentuale di account abbonati che utilizzano più dispositivi della soglia impostata.
+Il grafico fornisce anche un’idea della percentuale di account degli abbonati che utilizzano un numero di dispositivi maggiore della soglia impostata.
 
-Il grafico ad anello ti aiuta a valutare rapidamente l’entità degli account abbonati che consumano contenuti del canale utilizzando dispositivi che superano la soglia impostata (in un arco temporale).
+Il grafico ad anello consente di valutare rapidamente l’entità degli account degli abbonati che consumano contenuto del canale utilizzando dispositivi superiori alla soglia impostata (in un arco temporale).
 
 ![](assets/donut-devices-w-acc.png)
 
 ## Posizioni per settimana (o mese) per account {#locations-week-account}
 
-Simile [Dispositivi a settimana (o mese) per account](#devices-week-account), le posizioni settimanali (o mensili) per metrica Account consentono di analizzare l’utilizzo dell’account utente iscritto da posizioni diverse, per identificare più da vicino la condivisione delle password. L&#39;asse x traccia il numero di conti e l&#39;asse y traccia il numero di posizioni.
+Mi piace [Dispositivi per settimana (o mese) per account](#devices-week-account), la metrica Posizioni per settimana (o mese) per account consente di analizzare l’utilizzo dell’account abbonato da posizioni diverse, per identificare più da vicino la condivisione delle password. L&#39;asse x rappresenta il numero di conti e l&#39;asse y il numero di posizioni.
 
-Risultati di questa metrica combinati con numero di [Dispositivi a settimana (o mese) per account](#devices-week-account) e il numero [IP a settimana (o mese) per account](#ip-week-account) consente di giudicare più accuratamente le istanze di condivisione della password; in modo che gli utenti autentici non siano conteggiati.
+Risultati da questa metrica combinati con il numero di [Dispositivi per settimana (o mese) per account](#devices-week-account) e numero di [IP per settimana (o mese) per account](#ip-week-account) consente di valutare in modo più accurato le istanze di condivisione delle password, in modo che gli utenti autentici non vengano conteggiati in.
 
 ![](assets/graph-loc-week-acc.png)
 
-Dopo aver definito un segmento e impostato la soglia per il numero di posizioni, puoi identificarti dal grafico:
+Dopo aver definito un segmento e impostato la soglia per il numero di posizioni, puoi identificare dal grafico:
 
-* Numero (e percentuale) di abbonati che consumano contenuti da (uno specifico) x numero di posizioni in una settimana.
+* Numero (e percentuale) di abbonati che utilizzano contenuti da (uno specifico) x numero di posizioni in una settimana.
 
-* Percentuale di account abbonati totali che visualizzano contenuto da più posizioni rispetto alla soglia.
+* Percentuale di account sottoscrittori totali che visualizzano il contenuto da più posizioni rispetto alla soglia.
 
 * Confronta la media settimanale (numero di posizioni diverse per un account) con Soglia.
 
-## IP a settimana (o mese) per account {#ip-week-account}
+## IP per settimana (o mese) per account {#ip-week-account}
 
-Simile a [Dispositivi a settimana (o mese) per account](#devices-week-account) e [Posizioni per settimana (o mese) per account](#locations-week-account), **Numero di IP a settimana per account** consente di analizzare la condivisione delle password in modo più preciso e con maggiore granularità.
+Simile a [Dispositivi per settimana (o mese) per account](#devices-week-account) e [Posizioni per settimana (o mese) per account](#locations-week-account), il **Numero di IP alla settimana per account** La metrica consente di analizzare la condivisione delle password in modo più preciso e con maggiore granularità.
 
-L&#39;asse x traccia il numero di account e l&#39;asse y il numero di IP.
+L’asse x rappresenta il numero di account e l’asse y il numero di IP.
 
 ![](assets/graph-ip-week-acc.png)
 
-Una volta definito un segmento (selezionando MVPD e canali) e impostato la soglia per il numero di IP, puoi identificare dal grafico:
+Dopo aver definito un segmento (selezionando MVPD e canali) e impostato la soglia per il numero di IP, puoi identificare dal grafico:
 
-* Numero (e percentuale) di abbonati che consumano contenuti da (uno specifico) x numero di IP in una settimana.
+* Numero (e percentuale) di abbonati che utilizzano contenuti da (uno specifico) x numero di IP in una settimana.
 
-* Percentuale di account di abbonati totali che visualizzano il contenuto da più indirizzi IP della soglia.
+* Percentuale di account sottoscrittori totali che visualizzano il contenuto da più indirizzi IP della soglia.
 
-* Confronta la media settimanale (numero di IP diversi per un account) con Soglia.
+* Confronta la media settimanale (numero di IP diversi per un account) con la soglia.
 
-## Segmento Account - Vista storica {#account-segment-historical-view}
+## Segmento conti - Visualizzazione cronologica {#account-segment-historical-view}
 
-Il grafico a barre Vista storica consente di confrontare le metriche di utilizzo tra diversi intervalli di tempo. Inoltre, traccia collettivamente le varie metriche di utilizzo, come [Dispositivi a settimana (o mese) per account](#devices-week-account), [Posizioni per settimana (o mese) per account](#locations-week-account)e [IP a settimana (o mese) per account](#ip-week-account).
+Il grafico a barre Visualizzazione cronologica consente di confrontare le metriche di utilizzo tra diversi intervalli di tempo. Inoltre, traccia collettivamente le varie metriche di utilizzo, come [Dispositivi per settimana (o mese) per account](#devices-week-account), [Posizioni per settimana (o mese) per account](#locations-week-account), e [IP per settimana (o mese) per account](#ip-week-account).
 
-* L&#39;asse x traccia l&#39;intervallo di tempo e l&#39;asse y traccia il numero di account utente, dispositivi, posizioni e IP.
+* L’asse x rappresenta l’intervallo di tempo e l’asse y rappresenta il numero di account abbonato, dispositivi, posizioni e IP.
 
-* Le barre colorate arancioni indicano i segmenti in diversi intervalli di tempo.
+* Le barre arancioni colorate indicano i segmenti in vari intervalli di tempo.
 
-* Il grafico a linee traccia le modifiche in [Dispositivi a settimana (o mese) per account](#devices-week-account), [Posizioni per settimana (o mese) per account](#locations-week-account)e [IP a settimana (o mese) per account](#ip-week-account) in base alla soglia.
+* Il grafico a linee traccia le modifiche in [Dispositivi per settimana (o mese) per account](#devices-week-account), [Posizioni per settimana (o mese) per account](#locations-week-account), e [IP per settimana (o mese) per account](#ip-week-account) valori nell’intervallo di tempo in base alla soglia.
 
 ![](assets/historical-view.png)
 
 * Le barre blu indicano il numero totale di abbonati attivi nel settore per un intervallo di tempo.
 
-* Potete selezionare legende specifiche che vi aiutano a ridimensionare il grafico.
+* Potete selezionare legende specifiche che vi aiuteranno a scalare il grafico.
 
 ![](assets/historical-view-total.png)
 
 >[!MORELIKETHIS]
 >
->* Scopri come esportare i rapporti per i primi 1000 abbonati nel segmento selezionato utilizzando i filtri nel rapporto sull’utilizzo generale utilizzando [Esporta i primi 1000 account](/help/AccountIQ/export-acc-information.md) opzione .
+>* Scopri come esportare rapporti per i primi 1000 abbonati nel segmento selezionato utilizzando i filtri in Rapporto di utilizzo generale utilizzando [Esporta i primi 1000 account](/help/AccountIQ/export-acc-information.md) opzione.
 

@@ -1,30 +1,29 @@
 ---
-description: È possibile implementare i propri risolutori di contenuti in base ai risolutori predefiniti.
-title: Implementare un risolutore di contenuti personalizzato
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Puoi implementare dei resolver di contenuto personalizzati in base ai resolver predefiniti.
+title: Implementare un sistema di risoluzione dei contenuti personalizzato
+exl-id: f594840b-ff56-49c5-baf5-ac2800411215
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '191'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Implementare un sistema di risoluzione dei contenuti personalizzato{#implement-a-custom-content-resolver}
 
-# Implementa un risolutore di contenuti personalizzato{#implement-a-custom-content-resolver}
+Puoi implementare dei resolver di contenuto personalizzati in base ai resolver predefiniti.
 
-È possibile implementare i propri risolutori di contenuti in base ai risolutori predefiniti.
+Quando il TVSDK del browser rileva una nuova opportunità, scorre attraverso i resolver di contenuti registrati alla ricerca di una che sia in grado di risolvere tale opportunità utilizzando `canResolve` metodo. Il primo che restituisce true viene selezionato per la risoluzione dell&#39;opportunità. Se non è possibile utilizzare alcun risolutore contenuti, tale opportunità viene ignorata. Poiché il processo di risoluzione dei contenuti è in genere asincrono, il resolver dei contenuti è responsabile della notifica a TVSDK del browser al termine del processo.
 
-Quando il browser TVSDK rileva una nuova opportunità, esegue un&#39;iterazione attraverso i risolutori di contenuti registrati alla ricerca di una che sia in grado di risolvere tale opportunità utilizzando il metodo `canResolve` . Il primo che restituisce true viene selezionato per risolvere l&#39;opportunità. Se nessun risolutore di contenuti è in grado di farlo, questa opportunità viene ignorata. Poiché il processo di risoluzione dei contenuti è in genere asincrono, il risolutore dei contenuti è responsabile della notifica al browser TVSDK al termine del processo.
+Tenere presenti le seguenti informazioni:
 
-Ricorda le seguenti informazioni:
+* Chiamate del resolver dei contenuti `client.process` per specificare l&#39;operazione della timeline da eseguire per TVSDK.
 
-* Il risolutore dei contenuti chiama `client.process` per specificare quale operazione timeline deve essere eseguita da TVSDK.
+   L’operazione consiste solitamente nel posizionamento di un’interruzione pubblicitaria.
 
-   L’operazione di solito è un posizionamento di interruzione annuncio.
+* Chiamate del resolver dei contenuti `client.notifyCompleted` se il processo di risoluzione ha esito positivo o `client.notifyFailed` se il processo non riesce.
 
-* Il risolutore dei contenuti chiama `client.notifyCompleted` se il processo di risoluzione ha esito positivo o `client.notifyFailed` se il processo non riesce.
-
-1. Crea un risolutore di opportunità personalizzato.
+1. Creare un risolutore opportunità personalizzato.
 
    ```js
    /** 
@@ -81,7 +80,7 @@ Ricorda le seguenti informazioni:
    }; 
    ```
 
-1. Crea la content factory personalizzata che utilizza il risolutore di contenuti personalizzato.
+1. Crea il factory dei contenuti personalizzato, che utilizza il risolutore contenuti personalizzato.
 
    Ad esempio:
 
@@ -106,9 +105,9 @@ Ricorda le seguenti informazioni:
    }; 
    ```
 
-1. Registra il content factory personalizzato per il flusso multimediale da riprodurre.
+1. Registra il factory dei contenuti personalizzati per il flusso multimediale da riprodurre.
 
-   Nel lettore di framework dell&#39;interfaccia utente, puoi specificare una directory di fabbrica del contenuto personalizzata come segue:
+   Nel lettore del framework dell’interfaccia utente, puoi specificare il factory dei contenuti personalizzato come segue:
 
    ```js
    var advertisingFactory = new CustomContentFactory(); 
@@ -132,4 +131,3 @@ Ricorda le seguenti informazioni:
    
    }); 
    ```
-

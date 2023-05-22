@@ -1,26 +1,25 @@
 ---
 description: Quando i metadati DRM di un video sono inclusi nel flusso multimediale, è possibile eseguire l'autenticazione durante la riproduzione.
-title: Autenticazione DRM durante la riproduzione
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: autenticazione DRM durante la riproduzione
+exl-id: f6e6e73a-d455-4b2c-b35c-2db173372092
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '194'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
-# Autenticazione DRM durante la riproduzione {#drm-authentication-during-playback}
+# autenticazione DRM durante la riproduzione {#drm-authentication-during-playback}
 
 Quando i metadati DRM di un video sono inclusi nel flusso multimediale, è possibile eseguire l&#39;autenticazione durante la riproduzione.
 
-Con la rotazione della licenza, una risorsa viene crittografata con più licenze DRM. Ogni volta che vengono rilevati nuovi metadati DRM, vengono utilizzati i metodi `DRMHelper` per verificare se i metadati DRM richiedono l’autenticazione DRM.
+Con la rotazione delle licenze, una risorsa viene crittografata con più licenze DRM. Ogni volta che vengono rilevati nuovi metadati DRM, il `DRMHelper` vengono utilizzati metodi per verificare se i metadati DRM richiedono l&#39;autenticazione DRM.
 
 >[!TIP]
 >
->Prima di avviare la riproduzione, determinare se si tratta di una licenza associata a un dominio e se è necessaria l’autenticazione del dominio. Se sì, completa l’autenticazione del dominio e unisciti al dominio .
+>Prima di iniziare la riproduzione, verifica se si sta utilizzando una licenza associata al dominio e se è richiesta l’autenticazione del dominio. In caso affermativo, completa l’autenticazione del dominio e aggiungi al dominio.
 
-1. Quando in una risorsa vengono rilevati nuovi metadati DRM, viene inviato un evento a livello di applicazione.
+1. Quando vengono rilevati nuovi metadati DRM in una risorsa, viene inviato un evento a livello di applicazione.
 
    ```java
    mediaPlayer.addEventListener(MediaPlayerEvent.DRM_METADATA,  
@@ -35,12 +34,12 @@ Con la rotazione della licenza, una risorsa viene crittografata con più licenze
    };
    ```
 
-1. Utilizza il `DRMMetadata` per verificare se è necessaria l’autenticazione.
+1. Utilizza il `DRMMetadata` per verificare se è necessaria l&#39;autenticazione.
 
-   * Se l&#39;autenticazione non è necessaria, non è necessario eseguire alcuna operazione e la riproduzione continua senza interruzioni.
-   * Se è richiesta l’autenticazione, completa l’autenticazione DRM.
+   * Se non è richiesta l&#39;autenticazione, non è necessario eseguire alcuna operazione e la riproduzione continua senza interruzioni.
+   * Se è richiesta l&#39;autenticazione, completare l&#39;autenticazione DRM.
 
-      Poiché questa operazione è asincrona e viene gestita in un thread diverso, non ha alcun impatto sull&#39;interfaccia utente né sulla riproduzione video.
+      Poiché questa operazione è asincrona e viene gestita in un thread diverso, non ha alcun impatto sull’interfaccia utente o sulla riproduzione video.
 
 1. Se l’autenticazione non riesce, l’utente non può continuare a visualizzare il video e la riproduzione si interrompe.
 
@@ -111,4 +110,3 @@ DRMMetadataInfoEventListener drmMetadataInfoEventListener =
     } 
 }; 
 ```
-

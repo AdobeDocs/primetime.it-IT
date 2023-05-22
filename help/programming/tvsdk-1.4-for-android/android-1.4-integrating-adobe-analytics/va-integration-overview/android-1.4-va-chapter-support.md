@@ -2,25 +2,24 @@
 title: Implementare il supporto per i capitoli
 description: Implementare il supporto per i capitoli
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f86af555-4eba-4bc8-a323-41f65f23f4cc
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '95'
 ht-degree: 0%
 
 ---
 
-
 # Implementare il supporto per i capitoli {#implement-chapter-support}
 
-Puoi definire e monitorare i capitoli per il tracciamento video in un’applicazione basata su TVSDK nei seguenti modi:
+Puoi definire e tenere traccia dei capitoli per il tracciamento video in un’applicazione basata su TVSDK nei seguenti modi:
 
 * Capitoli predefiniti, gestiti internamente da TVSDK.
 
-   Un capitolo è definito come il tempo tra ciascuna interruzione pubblicitaria. Ad esempio, il tempo tra un annuncio pre-roll e il primo mid-roll è definito come il primo capitolo.
-* Capitoli personalizzati, gestiti dall&#39;applicazione e basati sui dati CMS o in un altro modo che l&#39;applicazione utilizza per definire i capitoli.
+   Un capitolo è definito come il tempo tra ogni interruzione pubblicitaria. Ad esempio, il tempo tra un’interruzione pubblicitaria pre-roll e il primo mid-roll è definito come primo capitolo.
+* Capitoli personalizzati, gestiti dall’applicazione e basati su dati CMS o in un altro modo utilizzato dall’applicazione per definire i capitoli.
 
-1. Definire e tenere traccia dei capitoli predefiniti o personalizzati.
+1. Definisci e tieni traccia dei capitoli predefiniti o personalizzati.
 
    ```java
    // First, enable chapter tracking by setting  

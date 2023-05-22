@@ -2,25 +2,24 @@
 title: Preparare le password per i file delle proprietà del server
 description: Preparare le password per i file delle proprietà del server
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: b613d43d-17ec-44e9-bd14-81f9bb9a7f62
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '101'
 ht-degree: 0%
 
 ---
 
+# Preparare le password per i file delle proprietà del server{#prepare-passwords-for-the-server-properties-files}
 
-# Prepara le password per i file delle proprietà del server{#prepare-passwords-for-the-server-properties-files}
+L’implementazione di riferimento fornisce `ScrambleUtil.class`, classe che garantisce la protezione della password delle credenziali.
 
-L&#39;implementazione di riferimento fornisce `ScrambleUtil.class`, una classe che assicura la sicurezza della password delle credenziali.
+Utilizzare questo strumento per crittografare la password prima di includerla nel [!DNL flashaccess-refimpl.properties] file.
 
-Usa questo strumento per crittografare la password prima di includerla nel file [!DNL flashaccess-refimpl.properties].
+Per eseguire lo strumento, puoi utilizzare uno script di Ant o Java.
 
-Per eseguire lo strumento, è possibile utilizzare uno script Ant o Java.
-
-L&#39;utility genera la password crittografata, che è necessario copiare nel file [!DNL flashaccess-refimpl.properties].
+L&#39;utility genera la password crittografata, che è necessario copiare in [!DNL flashaccess-refimpl.properties] file.
 
 >[!NOTE]
 >
->Le password codificate con `ScrambleUtil.class` fornite con l&#39;implementazione di riferimento non funzionano con il server DRM di Primetime per lo streaming protetto.
+>Password codificate con `ScrambleUtil.class` che è stato fornito con l’implementazione di riferimento non funzionano con il server DRM Primetime per lo streaming protetto.

@@ -2,18 +2,17 @@
 title: Risoluzione dei problemi
 description: Risoluzione dei problemi
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 6c4f15b6-507e-496e-ad1c-702ce77dd069
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 0%
 
 ---
 
-
 # Risoluzione dei problemi{#troubleshooting}
 
-Di seguito sono riportati alcuni problemi e soluzioni che potresti riscontrare durante l&#39;implementazione.
+Di seguito sono riportati alcuni problemi e soluzioni che possono verificarsi durante la distribuzione.
 
 * Se viene visualizzato il seguente messaggio di errore:
 
@@ -22,7 +21,7 @@ Di seguito sono riportati alcuni problemi e soluzioni che potresti riscontrare d
        javax.crypto.IllegalBlockSizeException: Input length must be multiple of 8 when decrypting with padded cipher"
    ```
 
-   Assicurati che la password sia stata crittografata con la classe `ScrambleUtil` .
+   Verificare che la password sia stata crittografata con `ScrambleUtil` classe.
 
 * Se viene visualizzato il seguente messaggio di errore:
 
@@ -30,7 +29,7 @@ Di seguito sono riportati alcuni problemi e soluzioni che potresti riscontrare d
    "Unable to load credential from file.pfx -- possibly wrong password."
    ```
 
-   Assicurati di aver specificato la password crittografata corretta nel file PFX.
+   Verificare di aver specificato la password crittografata corretta nel file PFX.
 
 * Se viene visualizzato il seguente messaggio di errore:
 
@@ -38,5 +37,4 @@ Di seguito sono riportati alcuni problemi e soluzioni che potresti riscontrare d
    "javax.crypto.BadPaddingException: Given final block not properly padded"
    ```
 
-   Assicurati di utilizzare la classe di scrambler della password *fornita con l&#39;implementazione di riferimento*. Questa utility Srambler è diversa da quella fornita con Adobe Primetime DRM Server per lo streaming protetto.
-
+   Assicurati di utilizzare la classe di scrambler delle password *che è stato fornito con l’implementazione di riferimento*. Questa utility di scrambler è diversa da quella fornita con Adobe Primetime DRM Server for Protected Streaming.

@@ -1,25 +1,24 @@
 ---
-title: Abilita audio in background
-description: Abilita audio in background
+title: Abilita audio di sfondo
+description: Abilita audio di sfondo
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: db494969-ef63-46ad-9f08-a95f58c8b27b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '63'
 ht-degree: 0%
 
 ---
 
+# Abilita audio di sfondo {#enable-background-audio}
 
-# Abilita audio in background {#enable-background-audio}
-
-Per abilitare la riproduzione audio quando l’app è in background, l’app deve chiamare l’API `enableAudioPlaybackInBackground` di MediaPlayer con true come argomento quando il lettore è in stato PREPARATO.
+Per abilitare la riproduzione audio quando l’app è in background, l’app deve chiamare `enableAudioPlaybackInBackground` API di MediaPlayer con argomento true come quando il lettore è nello stato PREPARATO.
 
 ```
 _mediaPlayer.enableAudioPlaybackInBackground(true);
 ```
 
-L&#39;app dovrebbe mettere in pausa la riproduzione quando perde il blocco dell&#39;audio durante eventi come la risposta al telefono, ecc. Il seguente frammento di codice illustra come implementare il `OnAudioFocusChangeListener`:
+L’app deve mettere in pausa la riproduzione quando perde lo stato di attivazione audio durante eventi come la risposta al telefono, ecc. Il seguente frammento di codice illustra come implementare `OnAudioFocusChangeListener`:
 
 ```
 /** 
@@ -46,4 +45,3 @@ L&#39;app dovrebbe mettere in pausa la riproduzione quando perde il blocco dell&
 AudioManager audioManager = (AudioManager) getActivity().getApplicationContext().getSystemService(Context.AUDIO_SERVICE); 
 audioManager.requestAudioFocus(onAudioFocusChangeListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN);
 ```
-

@@ -1,36 +1,36 @@
 ---
 title: Utilizzo di Charles Proxy
 description: Utilizzo di Charles Proxy
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: bb38543f-f6bc-4b5a-91b8-41bc51ee4c56
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 0%
 
 ---
 
-
 # Utilizzo di Charles Proxy {#using-charles-proxy}
 
 >[!NOTE]
 >
->Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente a partire da Adobe. Non è consentito alcun uso non autorizzato.
+>Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente di Adobe. Non è consentito alcun uso non autorizzato.
 
 
 **Charles:** <http://charlesproxy.com>
 
  
-## Scarica, installa e inizia con Charles Proxy {#download-install-and-get-stared-with-charles-proxy}
+## Download, installazione e guida introduttiva a Charles Proxy {#download-install-and-get-stared-with-charles-proxy}
 
 - **Scarica** - <http://www.charlesproxy.com/download/>
 - **Installa** - <http://www.charlesproxy.com/documentation/installation/>
-- **Introduzione** - <http://www.charlesproxy.com/documentation/getting-started/>
+- **Guida introduttiva** - <http://www.charlesproxy.com/documentation/getting-started/>
 
  
-## Struttura e schede di sequenza {#structure-vs-sequence-tabs}
+## Schede Struttura e Sequenza {#structure-vs-sequence-tabs}
 
 Esistono due modi diversi per visualizzare il traffico:
 
-1. **Struttura** - Richieste raggruppate per host
+1. **Struttura** - Le richieste sono raggruppate per host
 1. **Sequenza** - Le richieste sono elencate nell’ordine in cui vengono chiamate
 
 
@@ -47,14 +47,14 @@ Seleziona la casella di controllo &quot;Abilita proxy SSL&quot; e aggiungi tutte
 
 - Proxy SSL - <http://www.charlesproxy.com/documentation/proxying/ssl-proxying/>
 - Certificati SSL - <http://www.charlesproxy.com/documentation/using-charles/ssl-certificates/>
-- Proxy SSL da dispositivi mobili - Vedi sotto.
+- Proxy SSL da dispositivi mobili: vedi di seguito.
 
  
 ## Ignora/Escludi host {#ignore-/-exclude-hosts}
 
-Se l&#39;output diventa troppo limitato, puoi scegliere di ignorare o escludere le posizioni Puoi ignorare o escludere le posizioni eseguendo una delle seguenti operazioni:
+Se l&#39;output risulta troppo ingombrante, è possibile scegliere di ignorare o escludere le posizioni. È possibile ignorare o escludere le posizioni eseguendo una delle operazioni seguenti:
 
-- Fai clic con il pulsante destro del mouse sulle richieste da ignorare e seleziona &quot;Ignora&quot;
+- Fai clic con il pulsante destro del mouse sulle richieste che desideri ignorare e seleziona &quot;Ignora&quot;
 - Aggiungi manualmente le posizioni da escludere `\[ *Proxy -\> Recording Settings... -\> Exclude* \]`
 
  
@@ -64,20 +64,20 @@ Se l&#39;output diventa troppo limitato, puoi scegliere di ignorare o escludere 
 
  
 
-Lo spoofing DNS è molto utile quando si tenta di reindirizzare una richiesta a un IP diverso, soprattutto quando si lavora con i dispositivi mobili:
+Lo spoofing DNS è molto utile quando si tenta di reindirizzare una richiesta a un IP diverso, soprattutto quando si lavora con dispositivi mobili:
 
 ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/DNSSpoofing.PNG)
 
 <http://www.charlesproxy.com/documentation/tools/dns-spoofing/>
 
  
-## Mappa remota {#map-remote}
+## Mappa remoto {#map-remote}
 
 `\[ *Tools -\> Map Remote...* \]`
 
  
 
-Con map remote è possibile reindirizzare una richiesta &quot;in arrivo&quot; a un endpoint diverso. Il caso d’uso più comune per questa funzione è &quot;Mappa&quot; `AccessEnabler.swf` a `AccessEnablerDebug.swf:`
+Con map remote puoi reindirizzare una richiesta &quot;in arrivo&quot; a un endpoint diverso. Il caso d’uso più comune per questa funzione è quello di &quot;mappare&quot; `AccessEnabler.swf` a `AccessEnablerDebug.swf:`
 
 ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/MapRemote.PNG) ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/MapRemoteAdd.PNG)
 
@@ -85,23 +85,23 @@ Con map remote è possibile reindirizzare una richiesta &quot;in arrivo&quot; a 
 
  
 
-## Proxy inverso {#reverse-proxy}
+## Inverti proxy {#reverse-proxy}
 
 <http://www.charlesproxy.com/documentation/proxying/reverse-proxy/>
 
-## Mobile {#mobile}
+## Dispositivi mobili {#mobile}
 
-### Usa Charles su un dispositivo iOS (iPhone / iPad) {#use-charles-on-an-ios-device-(iphone-/-ipad)}
+### Utilizzare Charles su un dispositivo iOS (iPhone/iPad) {#use-charles-on-an-ios-device-(iphone-/-ipad)}
 
 #### Connessione SSL da iPhone {#ssl-connection-from-iphone}
 
-Sfoglia per <http://charlesproxy.com/charles.crt> dal tuo dispositivo iOS.  Verrà avviata la finestra di dialogo di installazione del certificato:
+Sfoglia per <http://charlesproxy.com/charles.crt> dal dispositivo iOS.  Verrà avviata la finestra di dialogo per l’installazione del certificato:
 
 ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/iOSDeviceSSLCertificate1\(1\).PNG)![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/iOSDeviceSSLCertificate2\(1\).PNG)![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/iOSDeviceSSLCertificate3.PNG)
 
  </br>
 
-Fai clic su `\[ *Install*... *Install*... *Done* \]` per completare l’installazione del certificato.
+Clic `\[ *Install*... *Install*... *Done* \]` per completare l&#39;installazione del certificato.
 
 <http://www.charlesproxy.com/documentation/faqs/ssl-connections-from-within-iphone-applications/>
 
@@ -109,7 +109,7 @@ Fai clic su `\[ *Install*... *Install*... *Done* \]` per completare l’inst
 
 #### Utilizzo di Charles da un dispositivo iOS {#using-charles-from-an-ios-device}
 
-Sul tuo dispositivo iOS seleziona `\[ *Settings* -\> *Wi-FI* -\> (*YOUR\_WIFI\_NETWORK)* \]`. Fare clic sulla piccola freccia blu accanto alla rete, quindi scendere a Proxy HTTP e selezionare &quot;Manuale&quot;: 
+Sul dispositivo iOS, seleziona `\[ *Settings* -\> *Wi-FI* -\> (*YOUR\_WIFI\_NETWORK)* \]`. Fai clic sulla piccola freccia blu accanto alla rete, quindi vai su Proxy HTTP e seleziona &quot;Manuale&quot;: 
 
 
  </br>
@@ -118,14 +118,14 @@ Sul tuo dispositivo iOS seleziona `\[ *Settings* -\> *Wi-FI* -\> (*YOUR\_WIF
 
 
  </br>
-Qui è necessario specificare l&#39;IP e la porta della macchina in cui si esegue Charles. <span style="line-height: 1.6em;">Se ora apri Safari sul tuo dispositivo iOS e provi ad aprire una pagina web, dovresti ottenere la seguente finestra a comparsa sul computer che esegue Charles:
+Qui devi specificare l’IP e la porta del computer su cui stai eseguendo Charles. <span style="line-height: 1.6em;">Se ora apri Safari sul tuo dispositivo iOS e provi ad aprire una pagina web, dovresti ottenere il seguente pop-up sul computer su cui è in esecuzione Charles:
  
  </br>
 
 ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/iOSDeviceManualProxy3.PNG)
 
 </br>
-Fai clic su "Consenti" per consentire al dispositivo di utilizzare Charles per delegare tutte le sue richieste.
+Fai clic su "Consenti" per consentire al dispositivo di utilizzare Charles per eseguire il proxy di tutte le sue richieste.
 
 <http://www.charlesproxy.com/documentation/faqs/using-charles-from-an-iphone/>
 
@@ -146,4 +146,4 @@ Fai clic su "Consenti" per consentire al dispositivo di utilizzare Charles per d
 <http://www.charlesproxy.com/documentation/configuration/browser-and-system-configuration>
 
 
-Sfoglia per [proxy Charles](http://charlesproxy.com/charles.crt) dal tuo dispositivo Android.
+Sfoglia per [proxy Charles](http://charlesproxy.com/charles.crt) dal dispositivo Android.

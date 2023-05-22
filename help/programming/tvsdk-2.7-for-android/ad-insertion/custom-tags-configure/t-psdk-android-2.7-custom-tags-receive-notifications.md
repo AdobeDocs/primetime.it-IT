@@ -1,20 +1,19 @@
 ---
-description: Per ricevere notifiche sui tag nel manifesto, devi implementare i listener di eventi appropriati.
-title: Aggiungi i listener per le notifiche dei metadati temporizzati
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Per ricevere notifiche sui tag nel manifesto, è necessario implementare i listener di eventi appropriati.
+title: Aggiungere listener per le notifiche di metadati temporizzate
+exl-id: e38f2a25-3379-4132-a8de-6703dc564ed4
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 0%
 
 ---
 
+# Aggiungere listener per le notifiche di metadati temporizzate {#add-listeners-for-timed-metadata-notifications}
 
-# Aggiungi i listener per le notifiche dei metadati temporizzati {#add-listeners-for-timed-metadata-notifications}
+Per ricevere notifiche sui tag nel manifesto, è necessario implementare i listener di eventi appropriati.
 
-Per ricevere notifiche sui tag nel manifesto, devi implementare i listener di eventi appropriati.
-
-Puoi monitorare i metadati temporizzati ascoltando `onTimedMetadata`, che notificano all&#39;applicazione le relative attività. Ogni volta che un tag di sottoscrizione univoco viene identificato durante l’analisi del contenuto, TVSDK prepara un nuovo oggetto `TimedMetadata` e invia questo evento. L&#39;oggetto contiene il nome del tag a cui hai effettuato la sottoscrizione, l&#39;ora locale nella riproduzione in cui apparirà il tag e altri dati.
+È possibile monitorare i metadati temporizzati ascoltando `onTimedMetadata`, che notifica all&#39;applicazione l&#39;attività correlata. Ogni volta che durante l’analisi del contenuto viene identificato un tag sottoscritto univoco, TVSDK prepara un nuovo `TimedMetadata` e invia questo evento. L’oggetto contiene il nome del tag a cui ti sei iscritto, l’ora locale nella riproduzione in cui verrà visualizzato il tag e altri dati.
 
 1. Ascolta gli eventi.
 
@@ -38,4 +37,4 @@ Puoi monitorare i metadati temporizzati ascoltando `onTimedMetadata`, che notifi
    }; 
    ```
 
-I metadati ID3 utilizzano lo stesso `onTimedMetadata` listener per indicare la presenza di un tag ID3. Tuttavia, questo non deve causare confusione, perché è possibile utilizzare la proprietà `TimedMetadata` `type` per distinguere tra TAG e ID3. Per ulteriori informazioni sui tag ID3, consulta [ID3 tags](../../content-playback-options/t-psdk-android-2.7-id3-metadata-retrieve.md).
+I metadati ID3 utilizzano lo stesso `onTimedMetadata` per indicare la presenza di un tag ID3. Tuttavia, questo non dovrebbe causare confusione, perché è possibile utilizzare il `TimedMetadata` `type` per distinguere tra TAG e ID3. Per ulteriori informazioni sui tag ID3, consulta  [Tag ID3](../../content-playback-options/t-psdk-android-2.7-id3-metadata-retrieve.md).

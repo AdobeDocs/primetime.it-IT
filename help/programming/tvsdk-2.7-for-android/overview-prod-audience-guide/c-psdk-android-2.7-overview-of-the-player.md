@@ -1,55 +1,54 @@
 ---
-description: TVSDK per Android 2.5 include una varietà di funzioni che puoi implementare nei tuoi lettori.
-title: Funzioni TVSDK di Primetime
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK per Android 2.5 include una varietà di funzioni che puoi implementare nei lettori.
+title: Funzioni di Primetime TVSDK
+exl-id: 1f1ea807-67b0-4dfa-adf3-198207f57aff
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 0%
 
 ---
 
+# Funzioni di Primetime TVSDK {#primetime-tvsdk-features}
 
-# Funzioni TVSDK di Primetime {#primetime-tvsdk-features}
-
-TVSDK per Android 2.7 include una varietà di funzioni che puoi implementare nei tuoi lettori.
+TVSDK per Android 2.7 include una varietà di funzioni che puoi implementare nei lettori.
 
 Funzionalità TVSDK:
 
-* **Riproduzione VOD e live/lineare**
+* **VOD e riproduzione live/lineare**
 
-   * Gestione della finestra di riproduzione, compresi i metodi che riproducono, fermano, mettono in pausa, cercano e recuperano la posizione della testina di riproduzione
-   * Supporto per la riproduzione a eventi completi
-   * Sottotitoli codificati (608, 708, WebVTT) e moduli audio alternativi per una maggiore accessibilità
-   * Controlli per lo stile del testo nelle didascalie
-   * Funzionalità DVR, avanzamento rapido e riavvolgimento rapido (le ultime due sono note come *modalità di riproduzione a trucco*)
-   * Logica del bit rate adattivo (ABR) e configurazione iniziale dei controlli ABR
-   * Supporto del failover del manifesto in tempo reale
+   * Gestione della finestra di riproduzione, inclusi i metodi di riproduzione, arresto, pausa, ricerca e recupero della posizione della testina di riproduzione
+   * Supporto per la riproduzione completa degli eventi
+   * Sottotitoli codificati (608, 708, WebVTT) e forme alternative di audio per una maggiore accessibilità
+   * Controlli per lo stile del testo nei sottotitoli
+   * Capacità DVR, avanzamento rapido e riavvolgimento rapido (gli ultimi due sono noti come *modalità trick-play*)
+   * Logica di bit rate adattivo (ABR) e configurazione iniziale dei controlli ABR
+   * Supporto del failover del manifesto live
    * Buffer di riproduzione regolabili
-   * Supporto per il tracciamento di tempi e dimensioni dei frammenti e del tempo necessario per il download
+   * Supporto del tracciamento per durata, dimensione e tempo di download dei frammenti
 
 * **Pubblicità**
 
    * VPAID 2.0
    * Unione di annunci lato client
 
-      * Inserimento senza problemi di annunci, compreso il supporto per VAST/VMAP
-      * Supporto per tag cue personalizzati per gli annunci
-      * Supporto per la marcatura, la sostituzione e l’eliminazione degli annunci C3
-      * Flusso di lavoro di inserimento di contenuti/annunci personalizzabili, inclusa la segnaletica di blackout
+      * Inserimento semplice degli annunci, incluso il supporto per VAST/VMAP
+      * Supporto di tag di cue personalizzati per gli annunci
+      * Supporto per contrassegnare, sostituire ed eliminare annunci C3
+      * Flusso di lavoro personalizzabile per l&#39;inserimento di contenuti/annunci, inclusa la segnalazione di sospensione attività
 
 * **Protezione dei contenuti**
 
-   * Accesso ai servizi relativi alla gestione dei diritti digitali (DRM)
-   * Riproduzione di flussi HLS non crittografati o con HTTP Live Streaming (PHLS) protetto
-   * Controllo dell&#39;uscita basato su risoluzione, basato su criteri DRM
+   * Accesso ai servizi correlati alla gestione dei diritti digitali (DRM)
+   * Riproduzione di flussi HLS non crittografati o con Protected HTTP Live Streaming (PHLS)
+   * Controllo dell&#39;output basato su risoluzione, basato su regole DRM
 
-* **Tracciamento video e annunci**
+* **Tracciamento di video e annunci**
 
-   * Tracciamento degli eventi QoS
-   * Notifiche che aiutano TVSDK e la tua applicazione a comunicare in modo asincrono lo stato di video, annunci pubblicitari e altri elementi. Le notifiche registrano anche l’attività .
+   * Tracciamento eventi QoS
+   * Notifiche che consentono a TVSDK e all’applicazione di comunicare in modo asincrono sullo stato di video, annunci pubblicitari e altri elementi. Le notifiche registrano anche l’attività.
 
 * **Registrazione**
 
    * Debug logging
-   * Supporto per il tracciamento di durata, dimensioni e tempo di download dei frammenti.
+   * Supporto del tracciamento per durata, dimensioni e tempo di download dei frammenti.

@@ -1,18 +1,17 @@
 ---
-description: Puoi implementare il generatore di opportunità estendendo l’interfaccia OpportunityGenerator.
+description: Puoi implementare un generatore di opportunità personalizzato estendendo l’interfaccia OpportunityGenerator.
 title: Implementare un generatore di opportunità personalizzato
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 45f9ed89-94c4-4e74-b20a-4789a25bd9b3
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '78'
-ht-degree: 5%
+ht-degree: 0%
 
 ---
 
+# Implementare un generatore di opportunità personalizzato{#implement-a-custom-opportunity-generator}
 
-# Implementa un generatore di opportunità personalizzato{#implement-a-custom-opportunity-generator}
-
-Puoi implementare il generatore di opportunità estendendo l’interfaccia OpportunityGenerator.
+Puoi implementare un generatore di opportunità personalizzato estendendo l’interfaccia OpportunityGenerator.
 
 1. Crea il generatore di opportunità personalizzato.
 
@@ -44,7 +43,7 @@ Puoi implementare il generatore di opportunità estendendo l’interfaccia Oppor
    }; 
    ```
 
-1. Crea la content factory personalizzata, che utilizza il generatore di opportunità personalizzato.
+1. Crea il factory dei contenuti personalizzato, che utilizza il generatore di opportunità personalizzato.
 
    Ad esempio:
 
@@ -66,9 +65,9 @@ Puoi implementare il generatore di opportunità estendendo l’interfaccia Oppor
    }; 
    ```
 
-1. Registra il content factory personalizzato per il flusso multimediale da riprodurre.
+1. Registra il factory dei contenuti personalizzati per il flusso multimediale da riprodurre.
 
-   In UI Framework Player è possibile specificare una content factory personalizzata come segue:
+   In UI Framework player (Lettore framework interfaccia utente), puoi specificare il content factory personalizzato come segue:
 
    ```js
    var advertisingFactory = new CustomContentFactory(); 
@@ -83,4 +82,3 @@ Puoi implementare il generatore di opportunità estendendo l’interfaccia Oppor
      } 
    }); 
    ```
-

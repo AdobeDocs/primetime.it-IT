@@ -1,44 +1,43 @@
 ---
 description: I gestori di eventi consentono a TVSDK di rispondere agli eventi.
-title: Implementare listener e callback di eventi
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Implementare listener di eventi e callback
+exl-id: eda5cd4e-4ee8-4b37-a179-242e8697f61f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 0%
 
 ---
 
-
-# Implementa listener di eventi e callback{#implement-event-listeners-and-callbacks}
+# Implementare listener di eventi e callback{#implement-event-listeners-and-callbacks}
 
 I gestori di eventi consentono a TVSDK di rispondere agli eventi.
 
-Quando si verifica un evento, il meccanismo eventi di TVSDK chiama il gestore eventi registrato e trasmette le informazioni sull&#39;evento al gestore.
+Quando si verifica un evento, il meccanismo degli eventi di TVSDK chiama il gestore eventi registrato e trasmette le informazioni sull&#39;evento al gestore.
 
-TVSDK definisce i listener come interfacce interne pubbliche nell&#39;interfaccia `MediaPlayer`.
+TVSDK definisce i listener come interfacce pubbliche interne nel `MediaPlayer` di rete.
 
-L’applicazione deve implementare listener di eventi per gli eventi TVSDK che influiscono sull’applicazione.
+L&#39;applicazione deve implementare listener di eventi per gli eventi TVSDK che influiscono sull&#39;applicazione.
 
-Per un elenco completo degli eventi per l’analisi video, consulta Tracciare la riproduzione di video core.
+Per un elenco completo degli eventi per l’analisi dei video, consulta Tracciare riproduzione video core.
 
-1. Determinare gli eventi che l&#39;applicazione deve ascoltare.
+1. Determina per quali eventi l&#39;applicazione deve essere in ascolto.
 
-   * **Eventi** richiesti: Ascoltare tutti gli eventi di riproduzione.
+   * **Eventi richiesti**: ascolta tutti gli eventi di riproduzione.
 
       >[!IMPORTANT]
       >
-      >L&#39;evento di riproduzione `onStateChanged` fornisce lo stato del lettore, compresi gli errori. Uno qualsiasi degli stati potrebbe influenzare il passaggio successivo del lettore
+      >Evento di riproduzione `onStateChanged` fornisce lo stato del lettore, compresi gli errori. Uno qualsiasi degli stati potrebbe influire sul passaggio successivo del lettore
 
-   * **Altri eventi**: Facoltativo, a seconda dell’applicazione.
+   * **Altri eventi**: facoltativo, a seconda dell’applicazione.
 
-      Ad esempio, se incorpori pubblicità nella riproduzione, implementa i callback AdPlaybackEventListener .
+      Ad esempio, se incorpori la pubblicità nella riproduzione, implementa i callback AdPlaybackEventListener.
 
-1. Implementa i listener di eventi per ogni evento.
+1. Implementa listener di eventi per ogni evento.
 
-   TVSDK restituisce i valori dei parametri alle chiamate di ritorno del listener di eventi. Questi valori forniscono informazioni rilevanti sull&#39;evento che è possibile utilizzare nei listener per eseguire le azioni appropriate.
+   TVSDK restituisce i valori dei parametri ai callback del listener di eventi. Questi valori forniscono informazioni rilevanti sull&#39;evento che è possibile utilizzare nei listener per eseguire azioni appropriate.
 
-   `MediaPlayer.EventListener` elenca tutte le interfacce di callback. Ciascuna interfaccia visualizza il nome e i parametri di callback restituiti per ciascun evento.
+   `MediaPlayer.EventListener` elenca tutte le interfacce di callback. Ogni interfaccia visualizza il nome del callback e i parametri restituiti per ogni evento.
 
    Ad esempio:
 
@@ -47,7 +46,7 @@ Per un elenco completo degli eventi per l’analisi video, consulta Tracciare la
     MediaPlayer.PlayerState state, MediaPlayerNotification notification)
    ```
 
-1. Registra i listener di callback con l&#39;oggetto `MediaPlayer` utilizzando `MediaPlayer.addEventListener`.
+1. Registrare i listener di callback con `MediaPlayer` oggetto utilizzando `MediaPlayer.addEventListener`.
 
    ```
    mediaPlayer.addEventListener(MediaPlayer.Event.PLAYBACK, 
@@ -61,28 +60,28 @@ Per un elenco completo degli eventi per l’analisi video, consulta Tracciare la
 
 ## Ordine degli eventi di riproduzione {#section_6D412C33ACE54E9D90DB1DAA9AA30272}
 
-TVSDK invia eventi/notifiche nelle sequenze generalmente previste. Il lettore può implementare azioni in base agli eventi nella sequenza prevista.
+TVSDK invia eventi/notifiche in sequenze generalmente previste. Il lettore può implementare azioni basate sugli eventi nella sequenza prevista.
 
 Gli esempi seguenti mostrano l’ordine di alcuni eventi che includono eventi di riproduzione.
 
-* Quando si carica correttamente una risorsa multimediale tramite `MediaPlayer.replaceCurrentResource`, l&#39;ordine degli eventi è:
+* Quando si carica correttamente una risorsa multimediale tramite `MediaPlayer.replaceCurrentResource`, l’ordine degli eventi è:
 
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` con stato  `MediaPlayer.PlayerState.INITIALIZING`
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` con stato `MediaPlayer.PlayerState.INITIALIZING`
 
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` con stato  `MediaPlayer.PlayerState.INITIALIZED`
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` con stato `MediaPlayer.PlayerState.INITIALIZED`
 
 >[!TIP]
 >
 >Carica la risorsa multimediale sul thread principale. Se carichi una risorsa multimediale su un thread in background, questa operazione o le successive operazioni TVSDK, o entrambe, potrebbero generare un errore (ad esempio, `IllegalStateException`) e uscire.
 
-* Durante la preparazione della riproduzione tramite `MediaPlayer.prepareToPlay`, l&#39;ordine degli eventi è:
+* Durante la preparazione per la riproduzione tramite `MediaPlayer.prepareToPlay`, l’ordine degli eventi è:
 
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` con stato  `MediaPlayerStatus.PREPARING`
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` con stato `MediaPlayerStatus.PREPARING`
 
 1. `MediaPlayer.PlaybackEventListener.onTimelineUpdated` se sono stati inseriti annunci.
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` con stato  `MediaPlayerStatus.PREPARED`
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` con stato `MediaPlayerStatus.PREPARED`
 
-* Per i flussi in tempo reale/lineare, durante la riproduzione con l&#39;avanzamento della finestra di riproduzione e la risoluzione di ulteriori opportunità, l&#39;ordine degli eventi è:
+* Per i flussi live/lineari, durante la riproduzione man mano che la finestra di riproduzione avanza e vengono risolte opportunità aggiuntive, l’ordine degli eventi è:
 
 1. `MediaPlayer.PlaybackEventListener.onUpdated`
 1. `MediaPlayer.PlaybackEventListener.onTimelineUpdated` se sono stati inseriti annunci
@@ -112,9 +111,9 @@ mediaPlayer.addEventListener(MediaPlayer.Event.PLAYBACK,
 
 ## Ordine degli eventi pubblicitari {#section_7B3BE3BD3B6F4CF69D81F9CFAC24CAD5}
 
-Quando la riproduzione include la pubblicità, TVSDK invia eventi/notifiche in sequenze generalmente previste. Il lettore può implementare azioni in base agli eventi nella sequenza prevista.
+Quando la riproduzione include annunci, TVSDK invia eventi/notifiche in sequenze generalmente previste. Il lettore può implementare azioni basate sugli eventi nella sequenza prevista.
 
-Durante la riproduzione degli annunci, l&#39;ordine degli eventi è:
+Durante la riproduzione degli annunci, l’ordine degli eventi è:
 
 * `AdPlaybackEventListener.onAdBreakStart`
 * I seguenti vengono inviati per ogni annuncio nell’interruzione pubblicitaria:
@@ -125,7 +124,7 @@ Durante la riproduzione degli annunci, l&#39;ordine degli eventi è:
    * `AdPlaybackEventListener.onAdStart`
    * `AdPlaybackEventListener.onAdBreakComplete`
 
-L’esempio seguente mostra una progressione tipica degli eventi di riproduzione di annunci:
+L’esempio seguente mostra una progressione tipica degli eventi di riproduzione degli annunci:
 
 ```java
 mediaPlayer.addEventListener(MediaPlayer.Event.AD_PLAYBACK,  
@@ -145,7 +144,7 @@ mediaPlayer.addEventListener(MediaPlayer.Event.AD_PLAYBACK,
 });
 ```
 
-Durante la riproduzione degli annunci, l&#39;ordine degli eventi è:
+Durante la riproduzione degli annunci, l’ordine degli eventi è:
 
 * `AdPlaybackEventListener.onAdBreakStart`
 * I seguenti vengono inviati per ogni annuncio nell’interruzione pubblicitaria:
@@ -157,7 +156,7 @@ Durante la riproduzione degli annunci, l&#39;ordine degli eventi è:
 
 * `AdPlaybackEventListener.onAdBreakComplete`
 
-L’esempio seguente mostra una progressione tipica degli eventi di riproduzione di annunci:
+L’esempio seguente mostra una progressione tipica degli eventi di riproduzione degli annunci:
 
 ```java
 mediaPlayer.addEventListener(MediaPlayer.Event.AD_PLAYBACK,  
@@ -179,9 +178,9 @@ mediaPlayer.addEventListener(MediaPlayer.Event.AD_PLAYBACK,
 
 ## Eventi QoS {#section_9BFF3CD7AA1C4BD6960ACF6B9C0B25CC}
 
-TVSDK invia eventi Quality of Service (QoS) per notificare all’applicazione gli eventi che potrebbero influenzare il calcolo delle statistiche QoS, ad esempio gli eventi di buffering e ricerca.
+TVSDK invia eventi Quality of Service (QoS) per notificare all&#39;applicazione gli eventi che potrebbero influenzare il calcolo delle statistiche QoS, come ad esempio gli eventi di buffering e ricerca.
 
-L&#39;esempio seguente mostra una progressione tipica di questi eventi:
+L’esempio seguente mostra una progressione tipica di questi eventi:
 
 ```java
 mediaPlayer.addEventListener(MediaPlayer.Event.QOS,  
@@ -207,9 +206,9 @@ mediaPlayer.addEventListener(MediaPlayer.Event.QOS,
 
 ## Eventi DRM {#section_3FECBF127B3E4EFEAB5AE87E89CCDE7C}
 
-TVSDK invia eventi di gestione dei diritti digitali (DRM) in risposta a operazioni relative a DRM, come quando nuovi metadati DRM diventano disponibili. Il lettore può implementare azioni in risposta a questi eventi.
+TVSDK invia eventi DRM (Digital Rights Management) in risposta alle operazioni relative a DRM, ad esempio quando diventano disponibili nuovi metadati DRM. Il lettore può implementare azioni in risposta a questi eventi.
 
-Per ricevere notifiche su tutti gli eventi relativi a DRM, ascolta `onDRMMetadata(DRMMetadataInfo drmMetadataInfo)`. TVSDK invia eventi DRM aggiuntivi tramite la classe `DRMManager` .
+Per ricevere notifiche su tutti gli eventi relativi a DRM, attendere `onDRMMetadata(DRMMetadataInfo drmMetadataInfo)`. TVSDK invia ulteriori eventi DRM tramite `DRMManager` classe.
 
 L’esempio seguente mostra una progressione tipica:
 
@@ -221,12 +220,11 @@ mediaPlayer.addEventListener(MediaPlayer.Event.DRM,
 }); 
 ```
 
-## Eventi di caricamento {#section_5638F8EDACCE422A9425187484D39DCC}
+## Eventi del caricatore {#section_5638F8EDACCE422A9425187484D39DCC}
 
-Il lettore può implementare azioni in base ai seguenti eventi:
+Il lettore può implementare azioni basate sui seguenti eventi:
 
 | Evento | Significato |
 |---|---|
-| `onLoadComplete (mediaPlayerItem playerItem)` | Caricamento della risorsa multimediale completato. |
-| `onError` | Si è verificato un problema durante il caricamento della risorsa multimediale. |
-
+| `onLoadComplete (mediaPlayerItem playerItem)` | Caricamento delle risorse multimediali completato. |
+| `onError` | Si è verificato un problema con il caricamento delle risorse multimediali. |

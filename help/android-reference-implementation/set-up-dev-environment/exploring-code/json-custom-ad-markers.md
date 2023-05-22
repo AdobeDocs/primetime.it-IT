@@ -2,22 +2,21 @@
 title: Oggetto JSON per marcatori di annunci personalizzati
 description: Oggetto JSON per marcatori di annunci personalizzati
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 85bcf306-703c-4a0d-b125-df9316fadf69
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '159'
 ht-degree: 0%
 
 ---
 
-
 # Oggetto JSON per marcatori di annunci personalizzati {#json-object-for-custom-ad-markers}
 
-Il blocco di codice seguente definisce l’oggetto JSON &quot;details&quot; quando il tipo è un marcatore di annunci personalizzato.
+Il blocco di codice seguente definisce l’oggetto JSON &quot;details&quot; (dettagli) quando il tipo è un indicatore di annuncio personalizzato.
 
 Il MetadataNode restituito da IFeedItemAdapter:getStreamMetadata() contiene 2 voci:
-1. una voce con chiave di tipo `com.adobe.mediacore.metadata.DefaultMetadataKeys.CUSTOM_AD_MARKERS_METADATA_KEY` e valore di un&#39;istanza del MetadataNode restituito da `TimeRangeCollection.toMetadata()`.
-1. La seconda voce ha una chiave di tipo `com.adobe.mediacore.metadata.DefaultMetadataKeys.METADATA_KEY_ADJUST_SEEK_ENABLED` con il valore dell&#39;attributo *adjust-search-position* riportato di seguito.
+1. una voce con chiave di tipo `com.adobe.mediacore.metadata.DefaultMetadataKeys.CUSTOM_AD_MARKERS_METADATA_KEY` e il valore di un&#39;istanza del MetadataNode restituito da `TimeRangeCollection.toMetadata()`.
+1. La seconda voce ha una chiave di tipo `com.adobe.mediacore.metadata.DefaultMetadataKeys.METADATA_KEY_ADJUST_SEEK_ENABLED` con il valore del *adjust-seek-position* di seguito.
 
 ```
 “metadata”: {
@@ -42,9 +41,9 @@ Il MetadataNode restituito da IFeedItemAdapter:getStreamMetadata() contiene 2 vo
 
 | Proprietà | Descrizione |
 |---|---|
-| posizione di regolazione-ricerca | true o false, utilizzato per impostare il valore della chiave com.adobe.mediacore.metadata.DefaultMetadataKeys.METADATA_KEY_ADJUST_SEEK_ENABLED nel MetadataNode. |
-| intervalli di tempo | Matrice di oggetti JSON che indica l’intervallo di tempo per ciascun indicatore pubblicitario. Ogni voce di oggetto JSON viene mappata su un&#39;istanza di com.adobe.mediacore.utils.TimeRange. |
-| time-ranges.begin | Valore in ms che indica l&#39;ora di inizio dell&#39;indicatore pubblicitario. |
-| time-ranges.end | Valore in ms che indica l&#39;ora di fine dell&#39;indicatore pubblicitario. |
+| adjust-seek-position | true o false, utilizzato per impostare il valore della chiave com.adobe.mediacore.metadata.DefaultMetadataKeys.METADATA_KEY_ADJUST_SEEK_ENABLED in MetadataNode. |
+| intervalli di tempo | Matrice di oggetti JSON che indica l’intervallo di tempo per ogni marcatore di annuncio. Ogni voce Oggetto JSON viene mappata su un&#39;istanza di com.adobe.mediacore.utils.TimeRange. |
+| time-ranges.begin | Valore in ms che indica l’ora di inizio del marcatore dell’annuncio. |
+| time-ranges.end | Valore in ms che indica l’ora di fine del marcatore dell’annuncio. |
 
-Per ulteriori informazioni sul funzionamento dei marcatori di annunci personalizzati, consulta la documentazione TVSDK .
+Per ulteriori informazioni sul funzionamento dei marcatori degli annunci personalizzati, consulta la documentazione di TVSDK.

@@ -1,33 +1,32 @@
 ---
-description: L'accesso immediato precarica parti del contenuto multimediale su uno o più canali. Dopo che un utente seleziona o commuta i canali, il contenuto viene avviato prima perché alcuni dei buffering sono già stati completati.
-title: Immediato
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Il caricamento istantaneo precarica parti del supporto su uno o più canali. Quando un utente seleziona o cambia canale, il contenuto inizia prima perché parte del buffering è già stato completato.
+title: Istantanea attiva
+exl-id: 3a1b2172-8036-40f1-86b6-8304ef771aa9
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 0%
 
 ---
 
+# Istantanea attiva{#instant-on}
 
-# Instant-on{#instant-on}
+Il caricamento istantaneo precarica parti del supporto su uno o più canali. Quando un utente seleziona o cambia canale, il contenuto inizia prima perché parte del buffering è già stato completato.
 
-L&#39;accesso immediato precarica parti del contenuto multimediale su uno o più canali. Dopo che un utente seleziona o commuta i canali, il contenuto viene avviato prima perché alcuni dei buffering sono già stati completati.
-
-Quando il lettore è nello stato `PTMediaPlayerStatusReady`, chiama `prepareToPlay` per precaricare ed elaborare parte del contenuto per una riproduzione successiva.
+Quando il lettore si trova nel `PTMediaPlayerStatusReady` stato, chiama `prepareToPlay` per precaricare ed elaborare parte del contenuto per una riproduzione successiva.
 
 >[!TIP]
 >
->Se non chiami `prepareToPlay`, la chiamata a `play` chiama automaticamente `prepareToPlay`. Al momento il precaricamento e l’elaborazione vengono completati.
+>Se non chiami `prepareToPlay`, chiamata `play` chiamate automatiche `prepareToPlay` prima. Il precaricamento e l’elaborazione vengono completati in questa fase.
 
 TVSDK completa alcune o tutte le seguenti attività per `prepareToPlay`:
 
-* Se la chiave di metadati `kSyncCookiesWithAVAsset` è impostata, TVSDK invia una richiesta al file M3U8 originale per sincronizzare i cookie.
+* Se la chiave dei metadati `kSyncCookiesWithAVAsset` è impostato, TVSDK effettua una richiesta al file originale M3U8 per sincronizzare i cookie.
 * Carica le chiavi di metadati DRM.
 * Crea e prepara alcune strutture, elementi o risorse necessarie per la riproduzione del contenuto.
 
 >[!TIP]
 >
->I metodi `PTMediaPlayer` e `PTMediaPlayerItem` `prepareToPlay` sono uguali. Per evitare di creare un&#39;istanza `PTMediaPlayer` separata per ciascuna risorsa, utilizza il metodo `PTMediaPlayerItem` .
+>Il `PTMediaPlayer` e `PTMediaPlayerItem` `prepareToPlay` i metodi sono uguali. Per evitare la creazione di un `PTMediaPlayer` per ogni risorsa, utilizza `PTMediaPlayerItem` metodo.
 
-L&#39;accesso istantaneo consente di avviare più istanze del lettore multimediale, o istanze del caricatore di elementi multimediali, simultaneamente in background e in buffer i flussi video in tutte queste istanze. Quando un utente cambia il canale e il flusso è stato bufferizzato correttamente, la chiamata di `play` sul nuovo canale avvia la riproduzione prima.
+Instant-on consente di avviare più istanze del lettore multimediale, o istanze del caricatore di elementi del lettore multimediale, simultaneamente in background e di inserire flussi video in tutte queste istanze. Quando un utente cambia il canale e il flusso viene inserito correttamente nel buffer, chiamando `play` sul nuovo canale avvia prima la riproduzione.

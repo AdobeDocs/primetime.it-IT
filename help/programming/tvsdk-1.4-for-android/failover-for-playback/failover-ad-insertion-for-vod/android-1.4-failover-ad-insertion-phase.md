@@ -1,21 +1,20 @@
 ---
 description: TVSDK inserisce il contenuto alternativo (annunci) nella timeline che corrisponde al contenuto principale.
-title: Fase di inserimento annunci
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Fase di inserimento dell’annuncio
+exl-id: bad246e9-ff2b-4584-a320-826385bb0e6d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 0%
 
 ---
 
-
-# Fase di inserimento annunci{#ad-insertion-phase}
+# Fase di inserimento dell’annuncio{#ad-insertion-phase}
 
 TVSDK inserisce il contenuto alternativo (annunci) nella timeline che corrisponde al contenuto principale.
 
-Al termine della fase di risoluzione degli annunci, TVSDK dispone di un elenco ordinato di risorse di annunci raggruppate in interruzioni di annunci. Ogni interruzione pubblicitaria viene posizionata nella timeline del contenuto principale utilizzando un valore di tempo iniziale espresso in millisecondi (ms). Ogni annuncio in un&#39;interruzione pubblicitaria ha una proprietà di durata che è espressa anche in ms. Gli annunci in una pausa pubblicitaria vengono incatenati uno dopo l&#39;altro. Di conseguenza, la durata di un’interruzione pubblicitaria è uguale alla somma delle durate dei singoli annunci compositi.
+Al termine della fase di risoluzione degli annunci, TVSDK dispone di un elenco ordinato di risorse pubblicitarie raggruppate in interruzioni pubblicitarie. Ogni interruzione pubblicitaria è posizionata sulla timeline del contenuto principale utilizzando un valore di ora di inizio espresso in millisecondi (ms). Ogni annuncio in un’interruzione pubblicitaria ha una proprietà duration espressa anche in ms. Gli annunci in un’interruzione pubblicitaria sono concatenati uno dopo l’altro. Di conseguenza, la durata di un’interruzione pubblicitaria è uguale alla somma delle durate dei singoli annunci di composizione.
 
-Il failover può verificarsi in questa fase con conflitti che potrebbero verificarsi nella timeline durante l&#39;inserimento di annunci. Per combinazioni specifiche di valori di inizio/durata di un’interruzione pubblicitaria, i segmenti di annunci potrebbero sovrapporsi. La sovrapposizione si verifica quando l’ultima parte di un’interruzione pubblicitaria interseca l’inizio del primo annuncio nell’interruzione pubblicitaria successiva. In queste situazioni, TVSDK elimina l’interruzione pubblicitaria successiva e continua il processo di inserimento degli annunci con la voce successiva nell’elenco fino a quando tutte le interruzioni di annunci non vengono inserite o scartate.
+In questa fase può verificarsi il failover con conflitti che potrebbero verificarsi sulla timeline durante l’inserimento di annunci. Per combinazioni specifiche di valori di ora di inizio/durata dell’interruzione pubblicitaria, i segmenti dell’annuncio potrebbero sovrapporsi. La sovrapposizione si verifica quando l’ultima parte di un’interruzione pubblicitaria interseca l’inizio del primo annuncio nell’interruzione pubblicitaria successiva. In queste situazioni, TVSDK elimina l’interruzione pubblicitaria successiva e continua il processo di inserimento dell’annuncio con la voce successiva nell’elenco fino a quando tutte le interruzioni pubblicitarie non vengono inserite o eliminate.
 
 TVSDK invia una notifica di avviso relativa all’errore e continua l’elaborazione.

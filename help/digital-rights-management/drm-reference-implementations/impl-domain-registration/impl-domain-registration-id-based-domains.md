@@ -2,25 +2,24 @@
 title: Logica di registrazione del dominio basata su identità
 description: Logica di registrazione del dominio basata su identità
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 6e391fce-00b4-45cf-b785-3b0ec734a11e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 0%
 
 ---
 
-
 # Logica di registrazione del dominio basata su identità{#identity-based-domain-registration-logic}
 
 ## Logica di registrazione del dominio {#section_149C247458954877AF158B4A09A8526B}
 
-L’implementazione di riferimento applica la seguente logica per la registrazione del dominio basato sull’identità:
+L’implementazione di riferimento applica la seguente logica per la registrazione dei domini basati su identità:
 
-1. Determinare il nome di dominio da assegnare a un utente designato.
+1. Determina il nome di dominio da assegnare a un utente designato.
 
    Il nome di dominio ( `namequalifier:username`) viene estratto dal token di autenticazione. Se un token non è disponibile, viene generato un errore.
-1. Cerca il nome di dominio nella tabella `DomainServerInfo`.
+1. Cercare il nome di dominio in `DomainServerInfo` tabella.
 
    Se non viene trovata alcuna voce, inserire una voce. I valori predefiniti sono:
 
@@ -29,45 +28,44 @@ L’implementazione di riferimento applica la seguente logica per la registrazio
 
    .
 
-1. Per verificare che il dispositivo sia stato registrato nel dominio:
+1. Per verificare che il dispositivo sia stato registrato con il dominio:
 
-   1. Cerca il `domainname` nella tabella `UserDomainMembership`:
+   1. Cercare `domainname` nel `UserDomainMembership` tabella:
 
       1. Per ogni ID computer individuato, confronta l’ID con l’ID computer nella richiesta.
-      1. Se si tratta di un nuovo computer, aggiungere una voce alla tabella `UserDomainMembership`.
-      1. Cerca i record corrispondenti nella tabella `UserDomainRefCount`.
+      1. Se si tratta di un nuovo computer, aggiungere una voce al `UserDomainMembership` tabella.
+      1. Cerca i record corrispondenti in `UserDomainRefCount` tabella.
       1. Se non esiste una voce per questo GUID computer, aggiungere un record.
-   1. Se si tratta di un nuovo dispositivo e il valore `Max Membership` è stato raggiunto, restituisce l’errore .
+   1. Se si tratta di un nuovo dispositivo, e `Max Membership` è stato raggiunto il valore, viene restituito un errore.
 
 
-1. Cerca tutte le chiavi di dominio per questo dominio nella tabella `DomainKeys`:
+1. Cerca tutte le chiavi di dominio per questo dominio nel `DomainKeys` tabella:
 
-   1. Se `DomainServerInfo` indica che è necessario eseguire il rollover delle chiavi, genera una nuova coppia di chiavi,
-   1. Salvare la coppia nella tabella `DomainKeys` con una versione chiave superiore alla chiave esistente più alta.
-   1. Reimposta il flag `Key Rollover Required` in `DomainServerInfo`.
+   1. Se `DomainServerInfo` indica che è necessario eseguire il rollover delle chiavi e generare una nuova coppia di chiavi,
+   1. Salva la coppia in `DomainKeys` con una versione di chiave superiore di una a quella della chiave esistente più elevata.
+   1. Reimposta `Key Rollover Required` contrassegna in `DomainServerInfo`.
 
    1. Per ogni chiave di dominio, genera una credenziale di dominio.
 
-## Logica di cancellazione del dominio {#section_78AFA63D8F744BE6BCA10A51B4FCBA22}
+## Logica di annullamento registrazione dominio {#section_78AFA63D8F744BE6BCA10A51B4FCBA22}
 
-L&#39;implementazione di riferimento applica la seguente logica per la deregistrazione del dominio basato sull&#39;identità:
+L’implementazione di riferimento applica la seguente logica per la cancellazione del dominio basata su identità:
 
-1. Determinare il nome di dominio da assegnare a questo utente.
+1. Determina il nome di dominio da assegnare a questo utente.
 
-   Il nome di dominio è `namequalifier:username`, che viene estratto dal token di autenticazione. Se non è disponibile alcun token, si verifica l’errore di ritorno `DOM_AUTHENTICATION_REQUIRED (503)`.
-1. Cerca il nome di dominio richiesto nella tabella `DomainServerInfo`.
-1. Cerca il nome di dominio nella tabella `UserDomainMembership`.
-1. Confronta ogni ID macchina trovato con l&#39;ID macchina nella richiesta.
-1. Individua la voce corrispondente nella tabella `UserDomainRefCount`.
+   Il nome di dominio è `namequalifier:username`, estratto dal token di autenticazione. Se non è disponibile alcun token, viene restituito un errore `DOM_AUTHENTICATION_REQUIRED (503)` si verifica.
+1. Cercare il nome di dominio richiesto in `DomainServerInfo` tabella.
+1. Cercare il nome di dominio in `UserDomainMembership` tabella.
+1. Confronta ogni ID computer trovato con l’ID computer nella richiesta.
+1. Individuare la voce corrispondente nella `UserDomainRefCount` tabella.
 
-   Se non si trova una voce corrispondente, restituisce l’errore .
+   Se non si trova una voce corrispondente, viene restituito un errore.
 
-1. Se non si tratta di una richiesta di anteprima, elimina la voce dalla tabella `UserDomainRefCount`.
-1. Se non sono presenti voci aggiuntive in quella tabella per il computer, eliminare la voce da `UserDomainMembership` e impostare il flag [!DNL Key Rollover Required] nella proprietà `DomainServerInfo`.
+1. Se non si tratta di una richiesta di anteprima, elimina la voce dalla `UserDomainRefCount` tabella.
+1. Se nella tabella non sono presenti voci aggiuntive per il computer, eliminare la voce da `UserDomainMembership` e imposta [!DNL Key Rollover Required] contrassegno nel `DomainServerInfo` proprietà.
 
-Ogni utente può registrare un numero limitato di computer, in modo da poter utilizzare l&#39;ID macchina completo e il metodo `matches()` per contare i computer. Poiché un utente può registrarsi più volte, attraverso più applicazioni AIR o lettori in diversi browser, il server deve mantenere un conteggio di riferimento in modo che possa essere conteggiata anche la cancellazione della registrazione.
+Ogni utente può registrare un numero limitato di computer, in modo da poter utilizzare l&#39;ID macchina completo e `matches()` metodo di conteggio delle macchine. Poiché un utente può registrarsi più volte, tramite più applicazioni AIR o lettori in diversi browser, il server deve mantenere un conteggio di riferimento in modo che possa essere conteggiata anche la cancellazione.
 
 >[!NOTE]
 >
->La cancellazione della registrazione non è completa finché non vengono consegnati tutti i token di dominio sul computer.
-
+>La cancellazione dal registro non è completa finché non vengono restituiti tutti i token di dominio del computer.

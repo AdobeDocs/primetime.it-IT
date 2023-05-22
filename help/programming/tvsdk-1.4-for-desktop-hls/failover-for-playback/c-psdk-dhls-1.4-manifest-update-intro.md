@@ -1,79 +1,77 @@
 ---
-description: TVSDK è in grado di rilevare le informazioni sulla riproduzione modificate nei manifesti master m3u8 per lo streaming live e aggiornare le informazioni sulla riproduzione durante la riproduzione dello streaming. TVSDK supporta un set dinamico di profili a bit rate quando i profili appaiono o scompaiono dal manifest, inclusi i bit rate di profilo non sovrapposti tra gli aggiornamenti.
-title: Aggiornamento del master-manifest live
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK può rilevare le informazioni di riproduzione modificate nei manifesti master m3u8 per lo streaming live e aggiornare le informazioni di riproduzione durante la riproduzione del flusso. TVSDK supporta un set dinamico di profili di velocità in bit quando i profili appaiono o scompaiono dal manifesto principale, incluse velocità in bit di profilo non sovrapposte tra gli aggiornamenti.
+title: Aggiornamento Live master-manifesto
+exl-id: e3fffe64-1d44-4227-b830-c7661478f067
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '740'
 ht-degree: 0%
 
 ---
 
+# Aggiornamento Live master-manifesto{#live-master-manifest-update}
 
-# Aggiornamento del manifesto master live{#live-master-manifest-update}
+TVSDK può rilevare le informazioni di riproduzione modificate nei manifesti master m3u8 per lo streaming live e aggiornare le informazioni di riproduzione durante la riproduzione del flusso. TVSDK supporta un set dinamico di profili di velocità in bit quando i profili appaiono o scompaiono dal manifesto principale, incluse velocità in bit di profilo non sovrapposte tra gli aggiornamenti.
 
-TVSDK è in grado di rilevare le informazioni sulla riproduzione modificate nei manifesti master m3u8 per lo streaming live e aggiornare le informazioni sulla riproduzione durante la riproduzione dello streaming. TVSDK supporta un set dinamico di profili a bit rate quando i profili appaiono o scompaiono dal manifest, inclusi i bit rate di profilo non sovrapposti tra gli aggiornamenti.
+Sono supportate le seguenti funzionalità:
 
-Sono supportate le seguenti funzioni:
-
-* Numero di profili (in aumento o in diminuzione)
-* Bit rate del profilo (sovrapposizione o meno)
-* Profili con URL sullo stesso server (o su server diversi)
+* Conteggio profili (crescente o decrescente)
+* Velocità in bit del profilo (sovrapposizione o non sovrapposizione)
+* Profili con URL sugli stessi server (o su server diversi)
 * Qualsiasi struttura di failover
 
 Devono essere soddisfatte tutte le seguenti condizioni:
 
 * Il flusso è live.
-* Sia il tempo che il tag cambiano.
-* Tutte le informazioni sul rendering rimangono le stesse (tranne che gli URL possono variare).
-* Le informazioni di accesso DRM rimangono le stesse.
-* I segmenti vengono assemblati intorno agli stessi PTS e i bordi dei fotogrammi in un piccolo intervallo di errore.
+* Cambiano sia l’ora che l’e-mail.
+* Tutte le informazioni sulla rappresentazione rimangono invariate, tranne che gli URL possono variare.
+* Le informazioni di accesso DRM rimangono invariate.
+* I segmenti sono raggruppati intorno allo stesso PTS e ai limiti del frame in un intervallo di errori ridotto.
 
-## Architettura dell&#39;aggiornamento del master-manifest live {#section_32254A0F684B4960ACC33BF6B1AEF6F1}
+## Architettura di aggiornamento del manifesto principale live {#section_32254A0F684B4960ACC33BF6B1AEF6F1}
 
-Seguono alcune informazioni ed esempi su come TVSDK gestisce i manifesti master aggiornati.
+Di seguito sono riportate alcune informazioni ed esempi su come TVSDK gestisce i manifesti master aggiornati.
 
-Per impostazione predefinita, questa funzione è disattivata. Se l&#39;applicazione lo attiva impostando una frequenza di aggiornamento in minuti, i seguenti passaggi si verificano dopo ogni intervallo di aggiornamento:
+Per impostazione predefinita, questa funzione è disattivata. Se l&#39;applicazione lo attiva impostando una frequenza di aggiornamento in minuti, dopo ogni intervallo di aggiornamento si verificano i seguenti passaggi:
 
-1. Il TVSDK controlla l&#39;ora e il tag dell&#39;ultima modifica del manifesto master per determinare se il file è stato aggiornato.
+1. TVSDK controlla l&#39;ora e l&#39;etichetta dell&#39;ultima modifica del manifesto master per determinare se il file è stato aggiornato.
 
-   Se sia l’ora che il tag sono cambiati, il file viene considerato come modificato.
-1. Il TVSDK analizza e analizza il nuovo manifesto e adotta le azioni appropriate in base alla natura dell’aggiornamento.
-1. Se il bit rate di riproduzione corrente corrisponde al bit rate del manifesto modificato, il TVSDK passa al nuovo profilo.
+   Se sono stati modificati sia l’ora che l’e-mail, il file viene considerato modificato.
+1. TVSDK analizza e analizza il nuovo manifesto e intraprende azioni appropriate in base alla natura dell’aggiornamento.
+1. Se la velocità bit corrente corrisponde alla velocità bit del manifesto modificato, TVSDK passa al nuovo profilo.
 
-   Il nuovo profilo potrebbe provenire da un server diverso o dallo stesso server, allo stesso bit rate. In questo caso, la transizione è graduale.
-1. Se il bit rate di riproduzione corrente non è più presente nel nuovo manifesto, il TVSDK cerca di trovare un bit rate nel profilo corrente che esiste anche nel nuovo manifesto.
+   Il nuovo profilo potrebbe provenire da un server diverso o dallo stesso server, alla stessa velocità bit. In questo caso, la transizione è uniforme.
+1. Se la velocità in bit di riproduzione corrente non è più presente nel nuovo manifesto, TVSDK tenta di trovare una velocità in bit nel profilo corrente che esiste anche nel nuovo manifesto.
 
-   * Se viene trovata una corrispondenza, il lettore passa prima al profilo del bit rate corrispondente nel manifesto esistente e passa al profilo del bit rate corrispondente nel manifesto aggiornato. In questo modo la transizione risulterà fluida.
-   * Se non c&#39;è un bit rate in comune tra il manifesto precedente e il nuovo manifesto, o se il TVSDK non può passare al bit rate corrispondente, il TVSDK passa direttamente al bit rate più basso del nuovo manifesto e utilizza l&#39;ABR per passare a qualsiasi bit rate consentito in base alla larghezza di banda. Questo può causare un leggero difetto nella riproduzione ma dovrebbe avere un impatto minimo.
+   * Se viene trovata una corrispondenza, il lettore passa prima al profilo della velocità in bit corrispondente nel manifesto esistente e poi al profilo della velocità in bit corrispondente nel manifesto aggiornato. In questo modo la transizione risulterà fluida.
+   * Se non c&#39;è una velocità in comune tra il manifesto precedente e quello nuovo, o se TVSDK non può passare alla velocità in bit corrispondente, TVSDK passa direttamente al profilo di velocità in bit più basso del nuovo manifesto e utilizza ABR per passare a qualsiasi velocità in bit consentita in base alla larghezza di banda. Questo può causare un leggero intoppo nella riproduzione, ma dovrebbe avere un impatto minimo.
 
-1. Se l’aggiornamento ha esito positivo, TVSDK invia un evento `MediaPlayerItemEvent.MASTER_UPDATED` .
-1. Se l&#39;aggiornamento non ha esito positivo, la riproduzione continua con la configurazione precedente a questo aggiornamento.
+1. Se l&#39;aggiornamento ha esito positivo, TVSDK invia un `MediaPlayerItemEvent.MASTER_UPDATED` evento.
+1. Se l’aggiornamento non riesce, la riproduzione continua con la configurazione da prima di questo aggiornamento.
 
 ### Esempio 1 {#example_DB55F2B9D98741628C9B973E47A0B6A0}
 
-I seguenti bit rate sono trasmessi in diretta:
+Le velocità di trasmissione in diretta sono le seguenti:
 
-* 500.000
-* 900.000
-* 2100.000
+* 500k
+* 900k
+* 2100k
 
-Il flusso 2100k ha alcuni problemi, quindi deve essere riavviato. Il manifesto principale viene aggiornato per contenere solo 500k e 900k. Poco dopo, gli utenti che guardano questo programma a 2100k sperimenteranno un cambio di bit rate a 900k. Gli utenti che guardano a 900k continuano a guardare a 900k. Successivamente, il flusso 2100k riprende, e viene aggiunto nuovamente nel manifesto principale. Poco dopo, gli utenti che guardano a 900k, e hanno la larghezza di banda, sono passati a 2100k.
+Il flusso 2100k presenta alcuni problemi, pertanto è necessario riavviarlo. Il manifesto principale viene aggiornato in modo da contenere solo 500k e 900k. Poco dopo, gli utenti che guarderanno questo programma a 2100k sperimenteranno un bit rate switch down a 900k. Gli utenti che guardano a 900k continuano a guardare a 900k. Successivamente, il flusso 2100k riprende e viene aggiunto nuovamente nel manifesto principale. Un po&#39; più tardi, gli utenti che guardano a 900k, e hanno la larghezza di banda, passano a 2100k.
 
 ### Esempio 2 {#example_485E9A9F373D454CADE5395DEC734E5D}
 
-I seguenti bit rate sono trasmessi in diretta:
+Le velocità di trasmissione in diretta sono le seguenti:
 
-* 500.000
-* 900.000
-* 2100.000
+* 500k
+* 900k
+* 2100k
 
-Tutti questi bit rate devono essere riavviati. Ci sono due flussi temporali configurati per questo, a 400k e 1500k. Gli utenti sono passati a 400 k, che è il bit rate più basso della nuova configurazione. Alcuni degli utenti sono passati a 1500k quando la loro larghezza di banda è sufficiente. Successivamente, i tre bit rate vengono riportati di nuovo e il manifest viene aggiornato. Gli utenti tornano automaticamente a guardare a 500k, che è la larghezza di banda più bassa nel manifesto rivisto (originale). Poco dopo, gli utenti passano alla larghezza di banda più elevata (900k o 1200k) consentita dalla loro rete.
+È necessario riavviare tutte queste velocità bit. Ci sono due flussi temporali impostati per questo, a 400k e 1500k. Gli utenti sono passati a 400k, che è il bit rate più basso della nuova configurazione. Alcuni utenti passano a 1500k quando la loro larghezza di banda è sufficiente. Successivamente, viene eseguito il backup delle tre velocità bit e viene aggiornato il manifesto principale. Gli utenti tornano automaticamente a guardare a 500k, che è la larghezza di banda più bassa nel manifesto rivisto (originale). Poco dopo, gli utenti passano alla larghezza di banda più elevata (900k o 1200k) consentita dalla rete.
 
-## Usa aggiornamento del manifesto master in tempo reale {#section_34AC4A9751DB4B7C8561302C6A59A1C4}
+## Usa aggiornamento del manifesto principale live {#section_34AC4A9751DB4B7C8561302C6A59A1C4}
 
-È possibile attivare questa funzione e verificare la presenza di eventi correlati.
+Puoi attivare questa funzione e verificare la presenza di eventi correlati.
 
-1. Per attivare gli aggiornamenti del manifest live, imposta la frequenza di aggiornamento (in minuti) impostando la proprietà `NetworkConfiguration.masterUpdateInterval` .
-1. Facoltativamente, tieni traccia degli aggiornamenti del manifesto riusciti ascoltando l&#39;evento `MediaPlayerItemEvent.MASTER_UPDATED` .
-
+1. Per attivare gli aggiornamenti live del manifesto principale, impostare la frequenza di aggiornamento (in minuti) impostando `NetworkConfiguration.masterUpdateInterval` proprietà.
+1. Facoltativamente, tenere traccia degli aggiornamenti del manifesto riusciti ascoltando `MediaPlayerItemEvent.MASTER_UPDATED` evento.

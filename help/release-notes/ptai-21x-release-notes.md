@@ -4,7 +4,7 @@ description: Le note sulla versione PTAI descrivono le novità o le modifiche, i
 exl-id: 39a05f6d-431a-4416-81b1-21d82c0dbd69
 source-git-commit: f4c6ef44c7f13bf8170a1f23a7ae8eba0171316a
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '389'
 ht-degree: 0%
 
 ---
@@ -13,71 +13,71 @@ ht-degree: 0%
 
 Le note sulla versione di Primetime Ad Insertion 21.xx.x descrivono le novità o le modifiche, i problemi risolti e i problemi noti in Primetime Ad Insertion nel 2021.
 
-## Novità in PTAI 21.11.1
+## Novità di PTAI 21.11.1
 
-Quando: Martedì 9 novembre 2021 dalle ore 1:30 alle 04:30 ora orientale
+Quando: martedì 9 novembre 2021 dalle 01:30 alle 04:30 Ora orientale
 
 * [!UICONTROL EXT-X-IMAGE-STREAM-INF] è ora configurabile per zona.
 
 * Roku Trick Play è completamente supportato.
 
-## Miglioramenti e correzioni nelle versioni precedenti
+## Miglioramenti e correzioni nelle versioni precedenti di
 
 ### Versione 21.10.1
 
-Quando: Martedì 12 ottobre 2021 dalle 7:45 alle 13:45 ora orientale
+Quando: martedì 12 ottobre 2021 dalle 07:45 alle 13:45 fuso orientale
 
-* Server consolidati, server non di produzione rimossi e server non utili.
+* Server consolidati, server non di produzione e non utili rimossi.
 
-### Versione di manutenzione di Primetime Ad Insertion
+### Versione di manutenzione per Ad Insertion di Primetime
 
-Quando: Martedì 28 settembre 2021 dalle 5:00 alle 6:00 Ora orientale
+Quando: martedì 28 settembre 2021 dalle 05:00 alle 06:00 ora orientale
 
-* Aggiornamenti allo stack Load Balancer da AWS Elastic Load Balancer a AWS Application Load Balancer per funzionalità e scalabilità migliorate. Questi load balancer vengono utilizzati per indirizzare e richiedere il traffico al backend Auditude dal livello Ad Insertion (SSAI/CSAI).
+* Aggiornamenti allo stack del load balancer da Elastic Load Balancer di AWS a Application Load Balancer di AWS per funzionalità e scalabilità migliorate. Questi load balancer vengono utilizzati per indirizzare e richiedere il traffico al backend Auditude dal livello Ad Insertion (SSAI/CSAI).
 
 ### Versione 21.9.1
 
-Quando: Martedì 7 settembre 2021 dalle 02:30 alle 05:30 Ora orientale
+Quando: martedì 7 settembre 2021 dalle 02:30 alle 05:30 Ora orientale
 
-* Aggiornamenti ai componenti dell’infrastruttura alla base dei componenti per la mediazione e il reporting di Primetime Ad Insertion (GUI di Primetime Ads).
+* Aggiornamenti ai componenti dell’infrastruttura alla base dei componenti di reporting e mediazione di Primetime Ad Insertion (interfaccia utente di Primetime Ads).
 
 ### Versione 21.8.1
 
-Quando: Martedì 24 agosto 2021 dalle 2:00 alle 05:00 Ora orientale
+Quando: martedì 24 agosto 2021 dalle 02:00 alle 05:00 ora orientale
 
-* È stato aggiunto il supporto per i flussi DASH Live/ Linear (VOD è già supportato).
+* È stato aggiunto il supporto per flussi DASH Live/ lineari (VOD è già supportato).
 
 ### Versione 21.5.1
 
-Quando: Mercoledì 26 maggio 2021 dalle 3.30 alle 06.30 Ora orientale
+Quando: Mercoledì 26 maggio 2021 dalle 03:30 alle 06:30 Ora orientale
 
 **Modifiche**
 
-* È stato aggiunto il supporto per il tipo di segmentazione obsoleta 0x01 (UPID) per i formati di cue basati su SCTE.
+* È stato aggiunto il supporto per il tipo di segmentazione obsoleto 0x01 (UPID) per i formati di cue basati su SCTE.
 
-* È stata aggiunta una nuova telemetria per le prossime modifiche al dashboard.
+* È stata aggiunta una nuova telemetria per le modifiche imminenti al dashboard.
 
 ### Versione 21.4.1
 
-**Quando:** Giovedì 22 aprile 2021 dalle 2:00 alle 5:00 Ora orientale
+**Quando:** Giovedì 22 aprile 2021 dalle 02:00 alle 05:00 Ora orientale
 
 **Modifiche**
 
-* La limitazione della richiesta di sessione sarà abilitata per proteggere da potenziali attacchi DDOS. Le sessioni saranno limitate a 10 richieste al secondo, con un massimo di 100 richieste in coda. Non prevediamo alcun impatto sui giocatori che si comportano secondo le specifiche HLS/DASH.
+* La limitazione della richiesta di sessione verrà abilitata per la protezione contro potenziali attacchi DDOS. Le sessioni saranno limitate a 10 richieste al secondo, con un massimo di 100 richieste in coda. Non prevediamo alcun impatto sui giocatori che si comportano secondo le specifiche HLS/DASH.
 
-* Altri miglioramenti a livello di manutenzione e sicurezza
+* Altri miglioramenti di manutenzione e sicurezza
 
 ### Versione 21.2.2
 
-**Quando:** Martedì 23 febbraio 2021 dalle ore 1:00 alle 04:00 Ora orientale
+**Quando:** Martedì 23 febbraio 2021 dalle 01:00 alle 04:00 Ora orientale
 
 **Modifiche**
 
-* È stato aggiunto il supporto per l’inserimento/sincronizzazione del flusso EXT-X-IMAGE-STREAM-INF nei flussi HLS. La funzione viene abilitata tramite una configurazione lato server. Contatta il rappresentante del tuo account tecnico per abilitare la funzione.
+* È stato aggiunto il supporto per l’inserimento/sincronizzazione di flussi EXT-X-IMAGE-STREAM-INF nei flussi HLS. La funzione viene abilitata tramite una configurazione lato server. Contatta il rappresentante del tuo account tecnico per abilitare questa funzione.
 
 ### Versione 21.2.1
 
-**Quando:** Mercoledì 3 febbraio 2021 dalle ore 1:00 alle 04:00 Ora orientale
+**Quando:** Mercoledì 3 febbraio 2021 dalle 01:00 alle 04:00 Ora orientale
 
 **Modifiche**
 
@@ -89,7 +89,7 @@ Quando: Mercoledì 26 maggio 2021 dalle 3.30 alle 06.30 Ora orientale
 
 **Modifiche**
 
-* Aggiornamento di manutenzione: Aggiornamento dei cluster memcache back-end di Primetime Ad Insertion.
+* Aggiornamento di manutenzione: aggiornamento dei cluster memcache back-end Ad Insertion di Primetime.
 
 ### Versione 21.1.1
 
@@ -97,4 +97,4 @@ Quando: Mercoledì 26 maggio 2021 dalle 3.30 alle 06.30 Ora orientale
 
 **Modifiche**
 
-* È stato aggiunto il supporto per le risorse affiliate per i formati cue basati su SCTE35.
+* È stato aggiunto il supporto per la disponibilità di affiliate per i formati cue basati su SCTE35.

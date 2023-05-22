@@ -1,16 +1,14 @@
 ---
-description: La registrazione del browser TVSDK è abilitata per impostazione predefinita. Fornisce inoltre il supporto API per abilitare o disabilitare la registrazione dall’SDK. Utilizza l’API AdobePSDK.LogManager.enableLogging per abilitare o disabilitare i registri.
+description: Per impostazione predefinita, per TVSDK del browser è abilitata la registrazione. Fornisce inoltre il supporto API per abilitare o disabilitare la registrazione dall'SDK. Utilizza AdobePSDK.LogManager.enableLogging API per abilitare o disabilitare i registri.
 title: Debug e registrazione
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 01258df5-6e84-4457-a187-c3974ce9a5e0
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '64'
 ht-degree: 0%
 
 ---
 
+# Debug e registrazione{#debugging-and-logging}
 
-# Debug e logging{#debugging-and-logging}
-
-La registrazione del browser TVSDK è abilitata per impostazione predefinita. Fornisce inoltre il supporto API per abilitare o disabilitare la registrazione dall’SDK. Utilizza l’API AdobePSDK.LogManager.enableLogging per abilitare o disabilitare i registri.
-
+Per impostazione predefinita, per TVSDK del browser è abilitata la registrazione. Fornisce inoltre il supporto API per abilitare o disabilitare la registrazione dall&#39;SDK. Utilizza AdobePSDK.LogManager.enableLogging API per abilitare o disabilitare i registri.

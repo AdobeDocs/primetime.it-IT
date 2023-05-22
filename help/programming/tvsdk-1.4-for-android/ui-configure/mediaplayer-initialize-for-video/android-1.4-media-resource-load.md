@@ -1,43 +1,41 @@
 ---
-description: Carica una risorsa creando direttamente un'istanza di MediaResource e caricando il contenuto video da riprodurre. Questo è un modo per caricare una risorsa multimediale.
+description: Carica una risorsa creando direttamente un’istanza di MediaResource e caricando il contenuto video da riprodurre. Questo è uno dei modi per caricare una risorsa multimediale.
 title: Caricare una risorsa multimediale in MediaPlayer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 2d5e95bc-3962-4356-b90f-e550066f7a70
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 0%
 
 ---
 
-
 # Caricare una risorsa multimediale in MediaPlayer {#load-a-media-resource-in-the-mediaplayer}
 
-Carica una risorsa creando direttamente un&#39;istanza di MediaResource e caricando il contenuto video da riprodurre. Questo è un modo per caricare una risorsa multimediale.
+Carica una risorsa creando direttamente un’istanza di MediaResource e caricando il contenuto video da riprodurre. Questo è uno dei modi per caricare una risorsa multimediale.
 
-1. Imposta l&#39;elemento riproducibile di MediaPlayer con la nuova risorsa da riprodurre.
+1. Imposta l&#39;elemento riproducibile del lettore multimediale con la nuova risorsa da riprodurre.
 
-   Sostituisci l&#39;elemento attualmente riproducibile di MediaPlayer chiamando `MediaPlayer.replaceCurrentItem` e passando un&#39;istanza `MediaResource` esistente.
+   Sostituisci l&#39;elemento attualmente riproducibile del lettore multimediale esistente chiamando `MediaPlayer.replaceCurrentItem` e il passaggio di un `MediaResource` dell&#39;istanza.
 
-1. Registra un&#39;implementazione dell&#39;interfaccia `MediaPlayer.PlaybackEventListener` con l&#39;istanza `MediaPlayer` .
+1. Registra un&#39;implementazione di `MediaPlayer.PlaybackEventListener` interfaccia con `MediaPlayer` dell&#39;istanza.
 
    * `onPrepared`
-   * `onStateChanged`, quindi controlla INITIALIZED e ERROR.
+   * `onStateChanged`, e verificare se sono stati impostati i valori INITIALIZED ed ERROR.
 
-1. Quando lo stato del lettore multimediale diventa INITIALIZED, puoi chiamare `MediaPlayer.prepareToPlay`
+1. Quando lo stato del lettore multimediale diventa INITIALIZED, è possibile chiamare `MediaPlayer.prepareToPlay`
 
-   Lo stato INITIALIZED indica che il supporto è stato caricato correttamente. Una chiamata a `prepareToPlay` avvia il processo di risoluzione e posizionamento dei messaggi pubblicitari, se presente.
+   Lo stato INIZIALIZZATO indica che il supporto è stato caricato correttamente. Chiamata `prepareToPlay` avvia il processo di risoluzione e posizionamento pubblicitario, se presente.
 
-1. Quando TVSDK chiama il callback `onPrepared`, il flusso multimediale è stato caricato correttamente ed è pronto per la riproduzione.
+1. Quando TVSDK chiama `onPrepared` callback, il flusso multimediale è stato caricato correttamente ed è pronto per la riproduzione.
 
-   Quando il flusso multimediale viene caricato, viene creato un `MediaPlayerItem`.
+   Quando il flusso multimediale viene caricato, `MediaPlayerItem` viene creato.
 
->Se si verifica un errore, `MediaPlayer` passa allo stato ERROR. Invia inoltre notifica all&#39;applicazione chiamando il callback `PlaybackEventListener.onStateChanged`di .
+>Se si verifica un errore, il `MediaPlayer` passa allo stato ERROR. Notifica inoltre l&#39;applicazione chiamando il `PlaybackEventListener.onStateChanged`callback.
 >
->Questo passa diversi parametri:
->* Un parametro `state` di tipo `MediaPlayer.PlayerState` con il valore di `MediaPlayer.PlayerState.ERROR`.
-   >
-   >
-* Un parametro `notification` di tipo `MediaPlayerNotification` che contiene informazioni diagnostiche sull&#39;evento di errore.
+>In questo modo vengono trasmessi diversi parametri:
+>* A `state` parametro di tipo `MediaPlayer.PlayerState` con il valore di `MediaPlayer.PlayerState.ERROR`.
+>
+>* A `notification` parametro di tipo `MediaPlayerNotification` che contiene informazioni di diagnostica sull’evento di errore.
 
 
 Il seguente codice di esempio semplificato illustra il processo di caricamento di una risorsa multimediale:

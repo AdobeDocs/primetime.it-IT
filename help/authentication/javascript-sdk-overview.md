@@ -1,43 +1,43 @@
 ---
-title: Panoramica dell'SDK JavaScript
-description: Panoramica dell'SDK JavaScript
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Panoramica dell’SDK JavaScript
+description: Panoramica dell’SDK JavaScript
+exl-id: 8756c804-a4c1-4ee3-b2b9-be45f38bdf94
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '511'
 ht-degree: 0%
 
 ---
 
-
-# Panoramica dell&#39;SDK JavaScript {#javascript-sdk-overview}
+# Panoramica dell’SDK JavaScript {#javascript-sdk-overview}
 
 >[!NOTE]
 >
->Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente a partire da Adobe. Non è consentito alcun uso non autorizzato.
+>Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente di Adobe. Non è consentito alcun uso non autorizzato.
 
 ## Introduzione
 
-L&#39;Adobe consiglia vivamente di eseguire la migrazione all&#39;ultima versione di JS v4.x della libreria AccessEnabler.
+L’Adobe consiglia vivamente di migrare alla versione più recente di JS v4.x della libreria AccessEnabler.
 
-L&#39;integrazione JavaScript di autenticazione Adobe Primetime offre ai programmatori una soluzione TV-Everywhere nel familiare ambiente di sviluppo delle applicazioni web JS. I componenti principali dell&#39;integrazione sono l&#39;applicazione di &quot;alto livello&quot; (interazione utente, presentazione video) e la libreria AccessEnabler di &quot;basso livello&quot; fornita dall&#39;Adobe che fornisce la voce ai flussi di adesione e gestisce la comunicazione con i server di autenticazione Adobe Primetime.
+L’integrazione JavaScript di autenticazione di Adobe Primetime offre ai programmatori una soluzione TV-Everywhere nel familiare ambiente di sviluppo delle applicazioni web JS. I componenti principali dell’integrazione sono l’applicazione di &quot;alto livello&quot; (interazione dell’utente, presentazione video) e la libreria AccessEnabler di &quot;basso livello&quot; fornita dall’Adobe, che fornisce l’accesso ai flussi di adesione e gestisce le comunicazioni con i server di autenticazione di Adobe Primetime.
 
-Il flusso generale di adesione all’autenticazione di Adobe Primetime è incluso in [Flusso di adesione del programmatore](/help/authentication/entitlement-flow.md), e la guida all&#39;integrazione JavaScript descrive l&#39;implementazione di . Le sezioni seguenti forniscono descrizioni ed esempi specifici dell&#39;integrazione di AccessEnabler JavaScript.
+Il flusso di adesioni all’autenticazione generale di Adobe Primetime è trattato in [Flusso adesione programmatore](/help/authentication/entitlement-flow.md), e il manuale JavaScript Integration Cookbook illustra l’implementazione. Le sezioni seguenti forniscono descrizioni ed esempi specifici per l’integrazione JavaScript AccessEnabler.
 
 >[!IMPORTANT]
 >
->Questo documento descrive l’implementazione per una soluzione web desktop. La libreria JavaScript non è supportata sulle piattaforme mobili (ad esempio, Safari su iOS, Chrome su Android). Utilizza i nostri SDK nativi se desideri eseguire il targeting di una piattaforma mobile (iOS, Android, Windows).
+>Questo documento descrive l’implementazione per una soluzione web desktop. La libreria JavaScript non è supportata sulle piattaforme mobili (ad esempio, Safari su iOS e Chrome su Android). Utilizza i nostri SDK nativi per eseguire il targeting di una piattaforma mobile (iOS, Android, Windows).
 
 ## Creazione della finestra di dialogo di selezione MVPD {#creating-the-mvpd-selection-dialog}
 
-Affinché un utente possa accedere al proprio MVPD e diventare autenticato, la pagina o il lettore deve fornire all&#39;utente un modo per identificare il proprio MVPD. Per lo sviluppo viene fornita una versione predefinita di una finestra di dialogo di selezione MVPD. Per l&#39;utilizzo in produzione, è necessario implementare il proprio selettore MVPD. 
+Affinché un utente possa accedere al proprio MVPD e autenticarsi, la pagina o il lettore deve fornire all’utente un modo per identificare il proprio MVPD. Viene fornita una versione predefinita della finestra di dialogo di selezione MVPD per lo sviluppo. Per l’utilizzo in produzione, devi implementare un selettore MVPD personalizzato. 
 
-Se sai già chi è il fornitore del cliente, puoi [impostare l&#39;MVPD a livello di programmazione](/help/authentication/home.md), senza l’interazione dell’utente. La tecnica è la stessa, ma bypassa il passaggio di richiamare la finestra di dialogo Selettore provider e chiedere al cliente di selezionare il proprio MVPD.
+Se sai già chi è il fornitore del cliente, puoi [impostare MVPD a livello di programmazione](/help/authentication/home.md), senza interazione dell’utente. La tecnica è la stessa, ma ignora il passaggio di richiamare la finestra di dialogo Selettore provider e chiedere al cliente di selezionare il proprio MVPD.
 
 ## Visualizzazione del provider di servizi {#displaying-the-service-provider}
 
-L&#39;esempio di codice seguente illustra come individuare e visualizzare il provider di servizi per il cliente corrente:
+Nell&#39;esempio di codice riportato di seguito viene illustrato come individuare e visualizzare il provider di servizi per il cliente corrente:
 
- **HTML** - Questa pagina aggiunge una sezione alla pagina che visualizza il provider scelto dal cliente, se ha già effettuato l&#39;accesso:
+ **HTML** - Questa pagina aggiunge una sezione alla pagina in cui viene visualizzato il provider scelto dal cliente, se questo ha già effettuato l’accesso:
 
 ```HTML
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
@@ -76,7 +76,7 @@ L&#39;esempio di codice seguente illustra come individuare e visualizzare il pro
 ```
  
 
-**JavaScript** Questo file JavaScript esegue una query su Access Enabler per il provider corrente se l&#39;utente ha già effettuato l&#39;accesso e visualizza il risultato nella sezione della pagina riservata. Inoltre, implementa una finestra di dialogo del selettore MVPD:
+**JavaScript** Se l&#39;utente ha già eseguito l&#39;accesso, questo file JavaScript esegue una query sull&#39;Access Enabler per il provider corrente e visualizza il risultato nella sezione della pagina riservata a tale provider. Implementa anche una finestra di dialogo del selettore MVPD:
 
 ```JS
     $(function() {
@@ -197,17 +197,17 @@ L&#39;esempio di codice seguente illustra come individuare e visualizzare il pro
 
 ## Disconnessione {#logout}
 
-Chiamata `logout()` per avviare il processo di logout. Questo metodo non accetta argomenti. Disconnette l&#39;utente corrente, cancella tutte le informazioni di autenticazione e autorizzazione per quell&#39;utente ed elimina tutti i token AuthN e AuthZ dal sistema locale.
+Chiamata `logout()` per avviare il processo di disconnessione. Questo metodo non accetta argomenti. Consente di disconnettere l&#39;utente corrente, cancellando tutte le informazioni di autenticazione e autorizzazione per tale utente ed eliminando tutti i token AuthN e AuthZ dal sistema locale.
 
-Ci sono alcuni casi in cui il lettore non è responsabile della gestione degli accessi utente:
+In alcuni casi, il lettore non è responsabile della gestione dei loghi utente:
 
  
 
-- **Quando l&#39;accesso viene avviato da un sito non integrato con l&#39;autenticazione Adobe Primetime.** In questo caso, l’MVPD può richiamare il servizio Single Logout di autenticazione Adobe Primetime tramite un reindirizzamento del browser. (La chiamata di SLO tramite una chiamata backchannel non è attualmente supportata.)
+- **Quando la disconnessione viene avviata da un sito non integrato con l&#39;autenticazione di Adobe Primetime.** In questo caso MVPD può richiamare il servizio di autenticazione Adobe Primetime Single Logout tramite un reindirizzamento del browser. La chiamata SLO tramite una chiamata backchannel non è attualmente supportata.
 
 >[!NOTE]
 >
->Se l’utente lascia il computer inattivo abbastanza a lungo da far scadere i token, può comunque tornare alla sessione e avviare correttamente l’logout. L’autenticazione Adobe Primetime assicura che tutti i token vengano eliminati e notifica all’MVPD di eliminare anche la loro sessione.
+>Se l&#39;utente lascia il computer inattivo per un tempo sufficiente a far scadere i token, può comunque tornare alla sessione e avviare correttamente la disconnessione. L’autenticazione di Adobe Primetime garantisce che tutti i token vengano eliminati e notifica all’MVPD di eliminare anche la loro sessione.
 
 Il seguente codice JavaScript illustra la disconnessione (deautenticazione) di un utente attualmente autenticato:
 

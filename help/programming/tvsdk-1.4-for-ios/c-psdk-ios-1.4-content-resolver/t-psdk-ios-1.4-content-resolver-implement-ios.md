@@ -1,30 +1,29 @@
 ---
-description: È possibile implementare i resolver in base ai resolver predefiniti.
-title: Implementare un risolutore di opportunità/contenuti personalizzato
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Puoi implementare i resolver in base a quelli predefiniti.
+title: Implementare un’opportunità personalizzata/risolutore contenuti
+exl-id: f2a8512f-9f6c-4fd9-8694-32132cddc7d2
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 0%
 
 ---
 
+# Implementare un’opportunità personalizzata/risolutore contenuti{#implement-a-custom-opportunity-content-resolver}
 
-# Implementa un risolutore di opportunità/contenuti personalizzato{#implement-a-custom-opportunity-content-resolver}
-
-È possibile implementare i resolver in base ai resolver predefiniti.
+Puoi implementare i resolver in base a quelli predefiniti.
 
 <!--<a id="fig_CC41E2A66BDB4115821F33737B46A09B"></a>-->
 
 ![](assets/ios_psdk_content_resolver.png)
 
-1. Sviluppa un risolutore di annunci personalizzato estendendo la classe astratta `PTContentResolver` .
+1. Sviluppare un ad resolver personalizzato estendendo la `PTContentResolver` classe astratta.
 
-   `PTContentResolver` è un&#39;interfaccia che deve essere implementata da una classe content resolver. È disponibile anche una classe astratta con lo stesso nome e gestisce automaticamente la configurazione (ottenendo il delegato).
+   `PTContentResolver` è un’interfaccia che deve essere implementata da una classe del resolver dei contenuti. È inoltre disponibile una classe astratta con lo stesso nome che gestisce automaticamente la configurazione (ottenendo il delegato).
 
    >[!TIP]
    >
-   >`PTContentResolver` è esposto attraverso la  `PTDefaultMediaPlayerClientFactory` classe . I clienti possono registrare un nuovo risolutore di contenuti estendendo la classe astratta `PTContentResolver` . Per impostazione predefinita, e a meno che non sia stato rimosso in modo specifico, un `PTDefaultAdContentResolver` viene registrato in `PTDefaultMediaPlayerClientFactory`.
+   >`PTContentResolver` è esposto tramite `PTDefaultMediaPlayerClientFactory` classe. I client possono registrare un nuovo risolutore di contenuti estendendo il `PTContentResolver` classe astratta. Per impostazione predefinita, e a meno che non venga specificamente rimossa, `PTDefaultAdContentResolver` è registrato in `PTDefaultMediaPlayerClientFactory`.
 
    ```
    @protocol PTContentResolver <NSObject> 
@@ -52,27 +51,27 @@ ht-degree: 0%
    @end
    ```
 
-1. Implementa `shouldResolveOpportunity` e restituisce `YES` se deve gestire il `PTPlacementOpportunity` ricevuto.
-1. Implementa `resolvePlacementOpportunity`, che inizia a caricare il contenuto alternativo o gli annunci.
-1. Dopo aver caricato gli annunci, prepara un `PTTimeline` con le informazioni sul contenuto da inserire.
+1. Implementare `shouldResolveOpportunity` e ritorno `YES` se deve gestire il `PTPlacementOpportunity`.
+1. Implementare `resolvePlacementOpportunity`, che inizia a caricare il contenuto o gli annunci alternativi.
+1. Dopo il caricamento degli annunci, prepara un `PTTimeline` con le informazioni sul contenuto da inserire.
 
-       Seguono alcune utili informazioni sulle timeline:
+       Seguono alcune informazioni utili sulle timeline:
    
-   * Possono essere presenti più tipi `PTAdBreak`di pre-roll, mid-roll e post-roll.
+   * Ci possono essere più `PTAdBreak`s di tipi pre-roll, mid-roll e post-roll.
 
-      * A `PTAdBreak` ha i seguenti elementi:
+      * A `PTAdBreak` presenta le seguenti caratteristiche:
 
-         * A `CMTimeRange` con l&#39;ora di inizio e la durata dell&#39;interruzione.
+         * A `CMTimeRange` con l’ora di inizio e la durata dell’interruzione.
 
-            Viene impostata come proprietà di intervallo di `PTAdBreak`.
+            Viene impostata come proprietà intervallo di `PTAdBreak`.
 
-         * `NSArray` di  `PTAd`s.
+         * `NSArray` di `PTAd`s.
 
-            Viene impostata come proprietà degli annunci di `PTAdBreak`.
-   * Un `PTAd` rappresenta l&#39;annuncio e ogni `PTAd` ha i seguenti elementi:
+            Viene impostata come proprietà ads di `PTAdBreak`.
+   * A `PTAd` rappresenta l’annuncio, e ogni `PTAd` presenta le seguenti caratteristiche:
 
-      * Un `PTAdHLSAsset` impostato come proprietà della risorsa principale dell’annuncio.
-      * Possibilità di più istanze `PTAdAsset` come annunci cliccabili o banner pubblicitari.
+      * A `PTAdHLSAsset` impostata come proprietà della risorsa principale dell’annuncio.
+      * Possibilmente multipli `PTAdAsset` istanze come annunci selezionabili o banner pubblicitari.
 
    Ad esempio:
 
@@ -103,8 +102,8 @@ ht-degree: 0%
    _timeline.adBreaks = ptBreaks;
    ```
 
-1. Chiama `didFinishResolvingPlacementOpportunity`, che fornisce il `PTTimeline`.
-1. Registra il tuo rivenditore di contenuti/annunci personalizzati nella fabbrica del lettore multimediale predefinita chiamando `registerContentResolver`.
+1. Chiamata `didFinishResolvingPlacementOpportunity`, che fornisce `PTTimeline`.
+1. Registra il contenuto personalizzato/ad resolver nella fabbrica predefinita del lettore multimediale chiamando `registerContentResolver`.
 
    ```
    //Remove default content/ad resolver 
@@ -117,11 +116,11 @@ ht-degree: 0%
    [[PTDefaultMediaPlayerFactory defaultFactory] registerContentResolver:[contentResolver autorelease]];
    ```
 
-1. Se hai implementato un risolutore di opportunità personalizzato, registralo nella fabbrica predefinita del lettore multimediale.
+1. Se hai implementato un risolutore opportunità personalizzato, registralo nella fabbrica predefinita del lettore multimediale.
 
    >[!TIP]
    >
-   >Non è necessario registrare un risolutore di opportunità personalizzato per registrare un risolutore di contenuti/annunci personalizzato.
+   >Non è necessario registrare un resolver di opportunità personalizzato per registrare un contenuto personalizzato o un resolver di annunci.
 
    ```
    //Remove default opportunity resolver 
@@ -135,6 +134,6 @@ ht-degree: 0%
               registerOpportunityResolver:[opportunityResolver autorelease]];
    ```
 
-Quando il lettore carica il contenuto ed è determinato come di tipo VOD o LIVE, si verifica una delle seguenti situazioni: >
-* Se il contenuto è VOD, viene utilizzato il risolutore di contenuto personalizzato per ottenere la timeline dell’annuncio dell’intero video.
-* Se il contenuto è LIVE, il risolutore di contenuto personalizzato viene chiamato ogni volta che viene rilevata un’opportunità di posizionamento (punto di cue) nel contenuto.
+Quando il lettore carica il contenuto e viene determinato che è di tipo VOD o LIVE, si verifica una delle seguenti situazioni: >
+* Se il contenuto è VOD, il risolutore contenuto personalizzato viene utilizzato per ottenere la timeline dell’annuncio dell’intero video.
+* Se il contenuto è LIVE, il resolver del contenuto personalizzato viene chiamato ogni volta che nel contenuto viene rilevata un’opportunità di posizionamento (punto di cue).

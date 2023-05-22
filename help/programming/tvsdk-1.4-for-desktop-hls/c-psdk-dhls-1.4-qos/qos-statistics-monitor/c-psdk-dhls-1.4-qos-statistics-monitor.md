@@ -1,30 +1,29 @@
 ---
-description: Quality of Service (QoS) offre una visualizzazione dettagliata delle prestazioni del motore video. TVSDK fornisce statistiche dettagliate sulla riproduzione, il buffering e i dispositivi.
-title: Qualità delle statistiche del servizio
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Quality of Service (QoS) offre una visualizzazione dettagliata delle prestazioni del motore video. TVSDK fornisce statistiche dettagliate su riproduzione, buffering e dispositivi.
+title: Statistiche sulla qualità del servizio
+exl-id: ab664d75-a24f-41d6-91d7-a26ad7baab9a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '418'
 ht-degree: 0%
 
 ---
 
-
 # Statistiche sulla qualità del servizio {#quality-of-service-statistics}
 
-Quality of Service (QoS) offre una visualizzazione dettagliata delle prestazioni del motore video. TVSDK fornisce statistiche dettagliate sulla riproduzione, il buffering e i dispositivi.
+Quality of Service (QoS) offre una visualizzazione dettagliata delle prestazioni del motore video. TVSDK fornisce statistiche dettagliate su riproduzione, buffering e dispositivi.
 
-TVSDK fornisce anche informazioni sulle seguenti risorse scaricate:
+TVSDK fornisce inoltre informazioni sulle seguenti risorse scaricate:
 
-* Playlist/file manifest
+* File playlist/manifest
 * Frammenti di file
-* Tracciamento delle informazioni sui file
+* Informazioni di tracciamento per i file
 
-## Tracciare a livello di frammento utilizzando le informazioni sul caricamento {#track-at-the-fragment-level-using-load-information}
+## Tracciare a livello di frammento utilizzando le informazioni di caricamento {#track-at-the-fragment-level-using-load-information}
 
-È possibile leggere informazioni sulla qualità del servizio (QoS) relative alle risorse scaricate, ad esempio frammenti e tracce, dalla classe LoadInformation.
+È possibile leggere informazioni sulla qualità del servizio (QoS) relative alle risorse scaricate, ad esempio frammenti e brani, dalla classe LoadInformation.
 
-1. Implementa il listener di eventi di callback `onLoadInformationAvailable` .
+1. Implementare `onLoadInformationAvailable` listener di eventi di callback.
 
    ```
    private function onLoadInformationAvailable(event:LoadInformationEvent):void { 
@@ -33,14 +32,14 @@ TVSDK fornisce anche informazioni sulle seguenti risorse scaricate:
    }
    ```
 
-1. Registra il listener di eventi, che TVSDK chiama ogni volta che un frammento viene scaricato.
+1. Registra il listener di eventi, che TVSDK chiama ogni volta che un frammento è stato scaricato.
 
    ```
    player.addEventListener(LoadInformationEvent.LOAD_INFORMATION_AVAILABLE,  
                                     onLoadInformationAvailable);
    ```
 
-1. Leggi i dati di interesse del `LoadInformation` passato al callback.
+1. Leggi i dati di interesse da `LoadInformation` che viene passato al callback.
 
    <table id="table_75E61A2EB25E435DB631166A7FF64757"> 
    <thead> 
@@ -52,63 +51,63 @@ TVSDK fornisce anche informazioni sulle seguenti risorse scaricate:
    </thead>
    <tbody> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> downloadDuration  </span> </td> 
+      <td colname="col01"> <span class="codeph"> downloadDuration </span> </td> 
       <td colname="col1"> <p>Numero </p> </td> 
-      <td colname="col2"> <p>Durata del download in millisecondi. </p> <p>TVSDK non distingue tra il tempo impiegato dal client per connettersi al server e il tempo impiegato per scaricare l’intero frammento. Ad esempio, se il download di un segmento da 10 MB richiede 8 secondi, TVSDK fornisce tali informazioni, ma non indica che sono necessari 4 secondi fino al primo byte e altri 4 secondi per scaricare l’intero frammento. </p> </td> 
+      <td colname="col2"> <p>Durata del download in millisecondi. </p> <p>TVSDK non distingue tra il tempo impiegato dal client per connettersi al server e il tempo necessario per scaricare l’intero frammento. Ad esempio, se il download di un segmento da 10 MB richiede 8 secondi, TVSDK fornisce tali informazioni, ma non indica che sono occorsi 4 secondi prima del primo byte e altri 4 secondi per scaricare l’intero frammento. </p> </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> mediaDuration  </span> </td> 
+      <td colname="col01"> <span class="codeph"> mediaDuration </span> </td> 
       <td colname="col1"> <p>Numero </p> </td> 
-      <td colname="col2"> Durata dei frammenti scaricati in millisecondi. </td> 
+      <td colname="col2"> La durata media dei frammenti scaricati in millisecondi. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> size  </span> </td> 
+      <td colname="col01"> <span class="codeph"> dimensione </span> </td> 
       <td colname="col1"> <p>Numero </p> </td> 
       <td colname="col2"> Dimensione della risorsa scaricata in byte. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> trackIndex  </span> </td> 
+      <td colname="col01"> <span class="codeph"> trackIndex </span> </td> 
       <td colname="col1"> <p>int </p> </td> 
-      <td colname="col2"> l'indice del binario corrispondente, se noto; altrimenti, 0. </td> 
+      <td colname="col2"> Indice del binario corrispondente, se noto; altrimenti, 0. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> trackName  </span> </td> 
+      <td colname="col01"> <span class="codeph"> trackName </span> </td> 
       <td colname="col1"> <p>Stringa </p> </td> 
-      <td colname="col2"> il nome del brano corrispondente, se noto; altrimenti, null. </td> 
+      <td colname="col2"> Nome del brano corrispondente, se noto; in caso contrario, null. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> trackType  </span> </td> 
+      <td colname="col01"> <span class="codeph"> trackType </span> </td> 
       <td colname="col1"> <p>Stringa </p> </td> 
-      <td colname="col2"> il tipo di binario corrispondente, se noto; altrimenti, null. </td> 
+      <td colname="col2"> Tipo del brano corrispondente, se noto; altrimenti null. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> type  </span> </td> 
+      <td colname="col01"> <span class="codeph"> tipo </span> </td> 
       <td colname="col1"> <p>Stringa </p> </td> 
-      <td colname="col2"> Cos’è stato scaricato TVSDK. Una delle seguenti opzioni: 
+      <td colname="col2"> Informazioni scaricate da TVSDK. Uno dei seguenti elementi: 
       <ul id="ul_FA02F42D109344F4866073908CA4E835"> 
-      <li id="li_0E2D3EBCAB58477FB5EA526C54FACFFB">MANIFEST - Una playlist/manifesto </li> 
-      <li id="li_D7894C2F0CB64C909C6398288EA5683A">FRAMMENTO - Un frammento </li> 
-      <li id="li_4D4FEDB7704C411B80891B5028B0C20E">TRACK - Un frammento associato a una traccia specifica </li> 
+      <li id="li_0E2D3EBCAB58477FB5EA526C54FACFFB">MANIFEST (MANIFESTO): playlist/manifesto </li> 
+      <li id="li_D7894C2F0CB64C909C6398288EA5683A">FRAMMENTO: un frammento </li> 
+      <li id="li_4D4FEDB7704C411B80891B5028B0C20E">TRACK: frammento associato a un brano specifico </li> 
       </ul> A volte potrebbe non essere possibile rilevare il tipo di risorsa. In questo caso, viene restituito FILE. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> url  </span> </td> 
+      <td colname="col01"> <span class="codeph"> url </span> </td> 
       <td colname="col1"> <p>Stringa </p> </td> 
       <td colname="col2"> URL che punta alla risorsa scaricata. </td> 
    </tr> 
    </tbody> 
    </table>
 
-## Leggi le statistiche relative a riproduzione, buffering e dispositivo QOS {#read-qos-playback-buffering-and-device-statistics}
+## Leggi le statistiche su riproduzione, buffering e dispositivo QOS {#read-qos-playback-buffering-and-device-statistics}
 
 È possibile leggere le statistiche di riproduzione, buffering e dispositivo dalla classe QOSProvider.
 
-La classe `QOSProvider` fornisce diverse statistiche, tra cui buffering, bit rate, frame rate, dati temporali e così via.
+Il `QOSProvider` class fornisce varie statistiche, tra cui informazioni su buffering, bit rate, frame rate, dati temporali e così via.
 
-Fornisce inoltre informazioni sul dispositivo, ad esempio il produttore, il modello, il sistema operativo, la versione SDK e la dimensione/densità dello schermo.
+Fornisce inoltre informazioni sul dispositivo, ad esempio produttore, modello, sistema operativo, versione SDK e dimensioni/densità dello schermo.
 
-1. Creare un&#39;istanza di un lettore multimediale.
-1. Crea un oggetto `QOSProvider` e allegalo al lettore multimediale.
+1. Crea un&#39;istanza di un lettore multimediale.
+1. Creare un `QOSProvider` e collegarlo al lettore multimediale.
 
    ```
    // Create Media Player. 
@@ -116,9 +115,9 @@ Fornisce inoltre informazioni sul dispositivo, ad esempio il produttore, il mode
    _mediaQosProvider.attachMediaPlayer(_mediaPlayer);
    ```
 
-1. (Facoltativo) Leggere le statistiche di riproduzione.
+1. (Facoltativo) Leggi le statistiche di riproduzione.
 
-   Una soluzione per leggere le statistiche di riproduzione è avere un timer, che recupera periodicamente i nuovi valori QoS dal `QOSProvider`. Ad esempio:
+   Una soluzione per leggere le statistiche di riproduzione è disporre di un timer, che recupera periodicamente i nuovi valori QoS dalla `QOSProvider`. Ad esempio:
 
    ```
    var qosTimer:Timer = new Timer(1000); // every 1 second  

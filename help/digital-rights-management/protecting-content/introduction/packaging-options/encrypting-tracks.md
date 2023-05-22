@@ -1,18 +1,17 @@
 ---
-title: Cifratura di tracce
-description: Cifratura di tracce
+title: Crittografia delle tracce
+description: Crittografia delle tracce
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f9d1a589-7545-4fd4-aeaf-d2ee3642882a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '45'
 ht-degree: 0%
 
 ---
 
+# Crittografia delle tracce {#encrypting-tracks}
 
-# Cifratura di tracce {#encrypting-tracks}
+Questa opzione di creazione pacchetti specifica quali parti del contenuto si desidera crittografare: audio, video o entrambi.
 
-Questa opzione di pacchetto specifica quali parti del contenuto desideri crittografare: audio, video o entrambi.
-
-Esempio di utilizzo: Consente di crittografare solo le tracce che richiedono protezione, di ridurre il sovraccarico della decrittografia sul client e di migliorare le prestazioni di riproduzione.
+Caso d’uso di esempio: le autorizzazioni che crittografano solo i brani che richiedono protezione riducono il sovraccarico di decrittografia sul client e migliorano le prestazioni di riproduzione.

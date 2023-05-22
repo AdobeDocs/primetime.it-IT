@@ -1,22 +1,21 @@
 ---
-title: Panoramica del flusso di lavoro lato client TVSDK-DRM
-description: Panoramica del flusso di lavoro lato client TVSDK-DRM
+title: Panoramica del flusso di lavoro lato client di TVSDK-DRM
+description: Panoramica del flusso di lavoro lato client di TVSDK-DRM
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 8ff17731-f13b-4fe1-8027-d58b4f6f34e7
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 0%
 
 ---
 
+# Panoramica del flusso di lavoro lato client di TVSDK-DRM {#tvsdk-drm-client-side-workflow-overview}
 
-# Panoramica del flusso di lavoro lato client TVSDK-DRM {#tvsdk-drm-client-side-workflow-overview}
-
-Adobe Primetime DRM, soluzione di protezione dei contenuti di Adobe, è integrato in Primetime TVSDK. Primetime DRM dispone anche di componenti lato server, tra cui un server di licenza, un server di individualizzazione, strumenti della riga di comando e altro ancora.
+Adobe Primetime DRM, la soluzione di protezione dei contenuti Adobe, è integrata in Primetime TVSDK. DRM di Primetime include anche componenti lato server, tra cui un server licenze, un server di personalizzazione, strumenti della riga di comando e altro ancora.
 
 >[!NOTE]
 >
->Primetime DRM era precedentemente chiamato Adobe Access e prima di questo, Flash Access. L&#39;aspetto lato client viene ancora definito accesso.
+>In precedenza, DRM Primetime era denominato accesso di Adobe e prima ancora Flash Access. L’aspetto lato client è ancora denominato Accesso.
 
-In alternativa, o in aggiunta a Primetime DRM (Access), su alcune piattaforme puoi utilizzare una soluzione Multi-DRM per la tua applicazione TVSDK (incluse, ad esempio, le soluzioni FairPlay, Widevine e PlayReady DRM). Per informazioni aggiornate sul supporto della piattaforma Multi-DRM, consulta il tuo rappresentante di Adobe e consulta la [Documentazione Multi-DRM](../multi-drm-workflows/title-page/overview.md).
+In alternativa, o in aggiunta a Primetime DRM (Access), su alcune piattaforme è possibile utilizzare una soluzione Multi-DRM per l&#39;applicazione TVSDK (incluse, ad esempio, le soluzioni FairPlay, Widevine e PlayReady DRM). Per informazioni aggiornate sul supporto della piattaforma Multi-DRM, contattare il rappresentante di Adobe e vedere [Documentazione di Multi-DRM](../multi-drm-workflows/title-page/overview.md).

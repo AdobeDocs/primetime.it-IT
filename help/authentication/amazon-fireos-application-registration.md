@@ -1,61 +1,61 @@
 ---
-title: Registrazione dell'applicazione Amazon FireOS
-description: Registrazione dell'applicazione Amazon FireOS
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Registrazione applicazione Amazon FireOS
+description: Registrazione applicazione Amazon FireOS
+exl-id: 650fd4a2-dfc3-4c74-9b5b-6bea832a28ca
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 0%
 
 ---
 
-
-# Registrazione dell&#39;applicazione Amazon FireOS {#amazon-fireos-application-registration}
+# Registrazione applicazione Amazon FireOS {#amazon-fireos-application-registration}
 
 >[!NOTE]
 >
->Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente a partire da Adobe. Non è consentito alcun uso non autorizzato.
+>Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente di Adobe. Non è consentito alcun uso non autorizzato.
 
 </br>
 
 ## Introduzione {#intro}
 
-A partire dalla versione 3.0 dell’SDK FireOS AccessEnabler, stiamo modificando il meccanismo di autenticazione con i server di Adobe. Invece di utilizzare una chiave pubblica e un sistema segreto per firmare il requestorID, stiamo introducendo il concetto di una stringa di Dichiarazione software che può essere utilizzata per ottenere un token di accesso che viene successivamente utilizzato per tutte le chiamate che l’SDK effettua ai nostri server. Oltre a una dichiarazione software è necessario creare un collegamento profondo per la propria applicazione.
+A partire dalla versione 3.0 dell’SDK di FireOS AccessEnabler, stiamo modificando il meccanismo di autenticazione con i server di Adobe. Invece di utilizzare una chiave pubblica e un sistema segreto per firmare l’ID richiedente, introduciamo il concetto di stringa di informativa software che può essere utilizzata per ottenere un token di accesso che viene successivamente utilizzato per tutte le chiamate dell’SDK ai nostri server. Oltre a una dichiarazione software, è necessario creare un collegamento profondo per l&#39;applicazione.
 
-Ulteriori informazioni, vedi [Registrazione client dinamica](/help/authentication/dynamic-client-registration.md)
+Per ulteriori informazioni, consulta [Registrazione client dinamici](/help/authentication/dynamic-client-registration.md)
 
-## Cos&#39;è un&#39;istruzione software? {#what}
+## Che cos&#39;è una dichiarazione software? {#what}
 
-Un&#39;istruzione software è un token JWT che contiene informazioni sull&#39;applicazione. Ogni applicazione deve disporre di una dichiarazione software unica che viene utilizzata dai nostri server per identificare l&#39;applicazione nel sistema di Adobe. L&#39;istruzione software deve essere passata quando si inizializza l&#39;SDK di AccessEnabler e verrà utilizzata per registrare l&#39;applicazione con Adobe. Al momento della registrazione, l’SDK riceverà un ID client e un segreto client che verranno utilizzati per ottenere un token di accesso. Qualsiasi chiamata effettuata dall&#39;SDK ai nostri server richiederà un token di accesso valido. L’SDK è responsabile della registrazione dell’applicazione, del recupero e dell’aggiornamento del token di accesso.
+Un rendiconto software è un token JWT che contiene informazioni sull’applicazione. Ogni applicazione deve disporre di una dichiarazione software univoca utilizzata dai nostri server per identificare l&#39;applicazione nel sistema Adobe. L&#39;istruzione software deve essere passata quando si inizializza l&#39;SDK di AccessEnabler e verrà utilizzata per registrare l&#39;applicazione con Adobe. Al momento della registrazione, l’SDK riceverà un ID client e un segreto client che verranno utilizzati per ottenere un token di accesso. Qualsiasi chiamata effettuata dall&#39;SDK ai nostri server richiederà un token di accesso valido. L’SDK è responsabile della registrazione dell’applicazione, del recupero e dell’aggiornamento del token di accesso.
 
-**Nota:** Le istruzioni software sono specifiche per l&#39;app e non possono essere utilizzate per più applicazioni. Questo vale anche per le applicazioni che offrono accesso a più canali.
+**Nota:** Le istruzioni software sono specifiche dell&#39;app e non possono essere utilizzate per più di un&#39;applicazione. Tieni presente che questo vale anche per le applicazioni che offrono accesso a più canali.
 
-## Come ottenere una dichiarazione software? {#how-to}
+## Come si ottiene una dichiarazione software? {#how-to}
 
-### Se disponi dell&#39;accesso al dashboard TVE di Adobe:
+### Se hai accesso al dashboard TVE di Adobe:
 
 - Apri il browser e passa a <https://console.auth.adobe.com>
-- Passa a `Channels` e seleziona il canale.
-- Passa a `Registered Applications` Tab.
+- Accedi a `Channels` e selezionare il canale.
+- Accedi a `Registered Applications` Tab.
 - Fai clic su `Add new application`.
-- Fornisci un nome e una versione per la tua applicazione e seleziona le piattaforme sulle quali sarà disponibile (ad esempio, Android nel nostro caso).
-- Fornisci un nome di dominio scegliendo da un elenco di domini già configurati per il tuo programmatore.
+- Specifica un nome e una versione per l’applicazione e seleziona le piattaforme su cui sarà disponibile (ad esempio, Android nel nostro caso).
+- Specifica un nome dominio scegliendo un dominio da un elenco già configurato per il programmatore.
 - Invia le modifiche al server e quindi torna alla scheda Applicazioni registrate del canale.
-- Dovresti visualizzare un elenco con tutte le applicazioni registrate. Fai clic sul pulsante `Download` sull&#39;applicazione appena creata. Nota: potrebbe essere necessario attendere alcuni minuti prima che la dichiarazione software sia pronta per il download.
-- Verrà scaricato un file di testo. Utilizzare i contenuti come dichiarazione software.
+- Dovresti visualizzare un elenco con tutte le applicazioni registrate. Fai clic su `Download` sull&#39;applicazione appena creata. Nota: potrebbe essere necessario attendere alcuni minuti prima che l&#39;informativa software sia pronta per il download.
+- Verrà scaricato un file di testo. Utilizza il contenuto come informativa sul software.
 
-Ulteriori informazioni, vedi [Dynamic Client Registration Management](/help/authentication/dynamic-client-registration-management.md)
+Per ulteriori informazioni, consulta [Dynamic Client Registration Management](/help/authentication/dynamic-client-registration-management.md)
 
-### Se non disponi dell&#39;accesso al dashboard TVE di Adobe:
+### Se non hai accesso al dashboard TVE di Adobe:
 
-Invia un biglietto a <tve-support@adobe.com>. Includi tutte le informazioni necessarie, inclusi il canale, il nome dell&#39;applicazione, la versione e le piattaforme, e qualcuno del nostro team di supporto creerà una dichiarazione software per te.
+Invia un ticket a <tve-support@adobe.com>. Includere tutte le informazioni necessarie, inclusi il canale, il nome dell&#39;applicazione, la versione e le piattaforme. Verrà creata una dichiarazione software per l&#39;utente da parte del team di supporto.
 
-## Come utilizzare l&#39;istruzione software? {#use}
+## Come utilizzare la dichiarazione software? {#use}
 
-Dopo aver ottenuto la dichiarazione software è necessario trasmetterla come parlamentare nel costruttore di Access Enabler. Si consiglia di ospitare l&#39;Informativa software in una posizione remota. In questo modo, è possibile revocare e modificare facilmente l&#39;Informativa software senza rilasciare una nuova versione dell&#39;applicazione.
+Dopo aver ottenuto l&#39;Informativa sul software, è necessario trasmetterla come parametro nel costruttore di Access Enabler. Si consiglia di ospitare l&#39;Informativa sul software in una posizione remota. In questo modo, è possibile revocare e modificare facilmente l&#39;Informativa software senza rilasciare una nuova versione dell&#39;applicazione.
 
-## Come utilizzare la dichiarazione software {#use-both}
+## Come utilizzare l&#39;Informativa sul software {#use-both}
 
-Nel file delle risorse dell&#39;applicazione `strings.xml` aggiungi il seguente codice:
+Nel file di risorse dell’applicazione `strings.xml` aggiungi il seguente codice:
 
 ```XML
 <string name="software_statement">softwarestatement value</string>

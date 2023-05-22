@@ -2,23 +2,22 @@
 title: Gestione delle richieste di sincronizzazione
 description: Gestione delle richieste di sincronizzazione
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: bbfc6096-72df-4597-96b3-8f67a640ea8f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '162'
 ht-degree: 0%
 
 ---
 
-
 # Gestione delle richieste di sincronizzazione{#handling-synchronization-requests}
 
-. Se una licenza specifica i requisiti di sincronizzazione ([Requisiti per la sincronizzazione](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-time-based-rules/content-time-based-rules-defining.md#requirements-for-synchronization)), il client invia periodicamente le richieste di sincronizzazione al server, in base alla frequenza specificata nella licenza. Per abilitare i messaggi di sincronizzazione, imposta SyncFrequencyRequirements in a PlayRight.
+. Se una licenza specifica i requisiti di sincronizzazione ([Requisiti per la sincronizzazione](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-time-based-rules/content-time-based-rules-defining.md#requirements-for-synchronization)), il client invierà periodicamente richieste di sincronizzazione al server, in base alla frequenza specificata nella licenza. Per abilitare i messaggi di sincronizzazione, impostare SyncFrequencyRequirements in un oggetto PlayRight.
 
 * La classe del gestore richieste è `com.adobe.flashaccess.sdk.protocol.sync.SynchronizationHandler`
 * La classe del messaggio di richiesta è `com.adobe.flashaccess.sdk.protocol.sync.SynchronizationRequestMessage`
-* Se il protocollo di supporto client e server versione 5, l’URL della richiesta è &quot;URL del server licenze nei metadati: + &quot;/flashaccess/sync/v4&quot;. In caso contrario, l&#39;URL della richiesta è &quot;URL del server licenze nei metadati&quot; + &quot;/flashaccess/sync/v3&quot;
+* Se sia il client che il server supportano la versione 5 del protocollo, l&#39;URL della richiesta è &quot;License Server URL in metadata: + &quot;/flashaccess/sync/v4&quot;. In caso contrario, l’URL della richiesta è &quot;License Server URL in metadata&quot; + &quot;/flashaccess/sync/v3&quot;
 
-I messaggi di sincronizzazione vengono utilizzati per sincronizzare l&#39;ora del client con l&#39;ora del server. Se le licenze sono incorporate nel contenuto e non è necessario recuperarle da un server licenze, la sincronizzazione dell&#39;ora del client è importante per evitare che il client modifichi il proprio orologio al fine di bypassare la scadenza della licenza.
+I messaggi di sincronizzazione vengono utilizzati per sincronizzare l&#39;ora del client con l&#39;ora del server. Se le licenze sono incorporate nel contenuto e non è necessario recuperarle da un server licenze, è importante sincronizzare l&#39;ora del client per evitare che modifichi l&#39;orologio in modo da evitare la scadenza della licenza.
 
-I messaggi di sincronizzazione possono inoltre essere utilizzati per comunicare le informazioni sullo stato del client al server ( `getClientState()`) per il rilevamento del rollback. Vedere [Protezione del ripristino](../../aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-rollback-detection.md).
+I messaggi di sincronizzazione possono essere utilizzati anche per comunicare le informazioni sullo stato del client al server ( `getClientState()`) per il rilevamento del rollback. Consulta [Protezione rollback](../../aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-rollback-detection.md).

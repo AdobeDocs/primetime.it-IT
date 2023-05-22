@@ -1,39 +1,38 @@
 ---
-title: Determinare se il server licenze di implementazione di riferimento è in esecuzione correttamente
-description: Determinare se il server licenze di implementazione di riferimento è in esecuzione correttamente
+title: Determinare se Reference Implementation License Server è in esecuzione correttamente
+description: Determinare se Reference Implementation License Server è in esecuzione correttamente
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ef28e169-f8d2-4c7f-b606-aa4e811aae9b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%
 
 ---
 
+# Determinare se Reference Implementation License Server è in esecuzione correttamente {#determining-if-reference-implementation-license-server-is-running-properly}
 
-# Determinare se il server delle licenze di implementazione di riferimento viene eseguito correttamente {#determining-if-reference-implementation-license-server-is-running-properly}
+Esistono diversi modi per determinare se il server è stato avviato correttamente. Visualizzazione di [!DNL catalina.log] i registri potrebbero non essere sufficienti, in quanto il server licenze registra i propri file di registro. Segui i passaggi seguenti per assicurarti che l’implementazione di riferimento sia stata avviata correttamente.
 
-Esistono diversi modi per determinare se il server è stato avviato correttamente. La visualizzazione dei registri [!DNL catalina.log] potrebbe non essere sufficiente, in quanto il server licenze accede ai propri file di registro. Segui i passaggi riportati di seguito per assicurarti che l’implementazione di riferimento sia stata avviata correttamente.
+* Controlla il tuo [!DNL AdobeFlashAccess.log] file. In questo punto l’implementazione di riferimento scrive le informazioni di registro. La posizione di questo file di registro è indicata dal [!DNL log4j.xml] e possono essere modificati in modo da puntare a una posizione desiderata. Per impostazione predefinita, il file di registro viene inviato alla directory di lavoro in cui è stato eseguito catalina.
 
-* Controlla il tuo file [!DNL AdobeFlashAccess.log]. In questo caso le informazioni di registro vengono scritte dall’implementazione di riferimento. La posizione di questo file di registro è indicata dal file [!DNL log4j.xml] e può essere modificata in modo da puntare a qualsiasi posizione desiderata. Per impostazione predefinita, il file di registro viene inviato alla directory di lavoro in cui è stata eseguita la catalina.
+* Passa all’URL seguente: `https:///flashaccess/license/v4<your server:server port>`. Dovresti trovare il testo &quot;License Server is setup correct&quot; (Il server licenze è configurato correttamente).
 
-* Passa al seguente URL: `https:///flashaccess/license/v4<your server:server port>`. Dovresti visualizzare il testo &quot;License Server è configurato correttamente&quot;.
+Un altro modo per verificare se il server funziona correttamente consiste nel creare un pacchetto del contenuto di prova, impostare un lettore video di esempio e riprodurlo. La procedura seguente descrive questo processo:
 
-Un altro modo per verificare se il server funziona correttamente è quello di creare un pacchetto di contenuti di prova, impostare un lettore video di esempio e riprodurlo. La procedura seguente descrive questo processo:
+1. Accedi a [!DNL \Reference Implementation\Command Line Tools] cartella. Per informazioni sull&#39;installazione degli strumenti della riga di comando, vedere [Installazione degli strumenti della riga di comando](../aaxs-reference-implementations/command-line-tools/aaxs-ref-impl-command-line-overview.md#installing-the-command-line-tools).
 
-1. Passa alla cartella [!DNL \Reference Implementation\Command Line Tools] . Per informazioni sull&#39;installazione degli strumenti della riga di comando, vedere [Installazione degli strumenti della riga di comando](../aaxs-reference-implementations/command-line-tools/aaxs-ref-impl-command-line-overview.md#installing-the-command-line-tools).
-
-1. Crea un semplice criterio anonimo utilizzando il seguente comando:
+1. Crea un criterio anonimo semplice utilizzando il comando seguente:
 
    ```
        java -jar libs\AdobePolicyManager.jar new policy_test.pol -x
    ```
 
-   Per ulteriori informazioni sulla creazione di criteri tramite Gestione criteri, vedere [Uso della riga di comando](../aaxs-reference-implementations/command-line-tools/policy-manager/command-line-usage.md).
+   Per ulteriori informazioni sulla creazione di criteri tramite Gestione criteri, vedere [Utilizzo della riga di comando](../aaxs-reference-implementations/command-line-tools/policy-manager/command-line-usage.md).
 
-1. Imposta la proprietà `encrypt.license.serverurl` nel file [!DNL flashaccesstools.properties] sull&#39;URL del server licenze (ad esempio, `https:// localhost:8080/`). Il file [!DNL flashaccesstools.properties] si trova sotto la cartella [!DNL \Reference Implementation\Command Line Tools] .
+1. Imposta il `encrypt.license.serverurl` proprietà in [!DNL flashaccesstools.properties] all&#39;URL del server licenze (ad esempio, `https:// localhost:8080/`). Il [!DNL flashaccesstools.properties] il file si trova sotto [!DNL \Reference Implementation\Command Line Tools] cartella.
 
-1. Crea un pacchetto di contenuti utilizzando il seguente comando:
+1. Creare un pacchetto di contenuto utilizzando il comando seguente:
 
    ```java
        java -jar libs\AdobePackager.jar  
@@ -46,13 +45,13 @@ Un altro modo per verificare se il server funziona correttamente è quello di cr
    </i class="+ topic>
    ```
 
-1. Copia i 2 file generati nella cartella Tomcat [!DNL webapps\ROOT\Content] .
-1. Passa a `Reference Implementation\Sample Video Players\Desktop\Flash Player\Release` e copia il contenuto nella cartella Tomcat `webapps\ROOT\SVP\` .
+1. Copia i 2 file generati nel Tomcat [!DNL webapps\ROOT\Content] cartella.
+1. Accedi a `Reference Implementation\Sample Video Players\Desktop\Flash Player\Release` e copia il contenuto nel Tomcat `webapps\ROOT\SVP\` cartella.
 1. Installa Flash Player 10.1 o versione successiva.
 1. Apri il browser web e passa al seguente URL:
 
    `https:// localhost:8080/SVP/player.html`
-1. Passa al seguente URL, quindi fai clic sul pulsante Play :
+1. Passa all’URL seguente, quindi fai clic sul pulsante Riproduci:
 
    `https:// localhost:8080/Content/<your_encrypted_FLV>`
-1. Se la riproduzione del video non riesce, controlla se sono stati scritti codici di errore nel riquadro di registrazione del sample video player o nel file `AdobeFlashAccess.log`. La posizione del file di registro `AdobeFlashAccess.log` è indicata dal file log4j.xml e può essere modificata in modo che punti a qualsiasi posizione desideri. Per impostazione predefinita, il file di registro viene scritto nella directory di lavoro in cui è stata eseguita la catalina.
+1. Se il video non viene riprodotto correttamente, verificare se sono stati scritti codici di errore nel riquadro di registrazione del lettore video di esempio o nel `AdobeFlashAccess.log` file. La posizione del `AdobeFlashAccess.log` Il file di registro è indicato dal file log4j.xml e può essere modificato in modo da puntare a una posizione desiderata. Per impostazione predefinita, il file di registro viene scritto nella directory di lavoro in cui è stato eseguito catalina.

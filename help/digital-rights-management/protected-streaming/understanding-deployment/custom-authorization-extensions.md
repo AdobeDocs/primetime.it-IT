@@ -1,23 +1,22 @@
 ---
-description: È possibile invocare la logica di autorizzazione personalizzata durante l'acquisizione della licenza per decidere se rilasciare una licenza al client richiedente.
+description: È possibile richiamare la logica di autorizzazione personalizzata durante l'acquisizione della licenza per decidere se una licenza deve essere rilasciata al client richiedente.
 title: Estensioni di autorizzazione personalizzate
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: dbdda9c6-32bf-4904-981f-0029bf0a82f0
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '174'
 ht-degree: 0%
 
 ---
 
-
 # Estensioni di autorizzazione personalizzate{#custom-authorization-extensions}
 
-È possibile invocare la logica di autorizzazione personalizzata durante l&#39;acquisizione della licenza per decidere se rilasciare una licenza al client richiedente.
+È possibile richiamare la logica di autorizzazione personalizzata durante l&#39;acquisizione della licenza per decidere se una licenza deve essere rilasciata al client richiedente.
 
-Se desideri implementare una tua estensione di autorizzazione dei clienti, devi prima dare un&#39;occhiata al codice di esempio [!DNL SampleAuthorizer.java] presente nella directory amples. La versione compilata di questo esempio si trova in [!DNL flashaccess-license-server-ext-sample.jar].
+Se desideri implementare una tua estensione di autorizzazione cliente, devi prima esaminare [!DNL SampleAuthorizer.java] codice di esempio che si trova nella directory samples. La versione compilata di questo esempio si trova in [!DNL flashaccess-license-server-ext-sample.jar].
 
-Se desideri generare la tua estensione, devi implementare l’interfaccia `com.adobe.flashaccess.server.license.extension.auth.IAuthorizer` e accertarti che [!DNL flashaccess-license-server-exts.jar] e [!DNL commons-logging.jar] siano nel percorso di build ( [!DNL adobe-flashaccess-sdk.jar] deve trovarsi anche nel percorso di build se utilizzi determinati campi in `IMessageFacade`).
+Se desideri creare una tua estensione, devi implementare `com.adobe.flashaccess.server.license.extension.auth.IAuthorizer` e assicurati che [!DNL flashaccess-license-server-exts.jar] e [!DNL commons-logging.jar] sono nel percorso di compilazione ( [!DNL adobe-flashaccess-sdk.jar] deve trovarsi anche nel percorso di build se utilizzi alcuni campi in `IMessageFacade`).
 
-Se desideri distribuire l&#39;estensione, devi copiare i file jar o class in *LicenseServer.ConfigRoot* [!DNL /flashaccessserver/libs].
+Se desideri distribuire l’estensione, devi copiare i file jar o di classe in *LicenseServer.ConfigRoot* [!DNL /flashaccessserver/libs].
 
-Per aggiornare i file jar o class, è necessario riavviare il server prima di poter utilizzare la versione aggiornata. È inoltre necessario aggiungere il nome della classe dell’autore al file di configurazione del tenant.
+Se desideri aggiornare i file jar o di classe, devi riavviare il server prima di poter utilizzare la versione aggiornata. È inoltre necessario aggiungere il nome della classe di authoring al file di configurazione del tenant.

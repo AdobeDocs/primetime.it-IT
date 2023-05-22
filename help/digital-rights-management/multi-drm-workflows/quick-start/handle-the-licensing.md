@@ -1,33 +1,32 @@
 ---
-description: La concessione di licenze è il meccanismo principale tramite il quale gli utenti possono o meno riprodurre contenuti video protetti. A un utente legittimo (autorizzato) può essere rilasciata una licenza (una chiave) per decrittografare e riprodurre un elemento specifico del contenuto crittografato del proprio fornitore di contenuti.
+description: La concessione di licenze è il meccanismo principale mediante il quale agli utenti viene consentita o negata la possibilità di riprodurre un contenuto video protetto. A un utente legittimo (autorizzato) può essere rilasciata una licenza (una chiave) per decrittografare e riprodurre una parte specifica del contenuto crittografato del provider di contenuti.
 title: Licenze
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 60aa3e77-f821-41b3-ba0e-1a2c05b2bb1a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '346'
 ht-degree: 0%
 
 ---
 
-
 # Licenze{#licensing}
 
-La concessione di licenze è il meccanismo principale tramite il quale gli utenti possono o meno riprodurre contenuti video protetti. A un utente legittimo (autorizzato) può essere rilasciata una licenza (una chiave) per decrittografare e riprodurre un elemento specifico del contenuto crittografato del proprio fornitore di contenuti.
+La concessione di licenze è il meccanismo principale mediante il quale agli utenti viene consentita o negata la possibilità di riprodurre un contenuto video protetto. A un utente legittimo (autorizzato) può essere rilasciata una licenza (una chiave) per decrittografare e riprodurre una parte specifica del contenuto crittografato del provider di contenuti.
 
-Prima che l&#39;app o la pagina web sul dispositivo di un utente finale possa riprodurre contenuto protetto da DRM, deve acquisire un token da un server di adesione o vetrina utilizzato dal cliente. Adobe fornisce un esempio di server di riferimento a questo scopo: [Server di riferimento: Esempio di ExpressPlay Entitlement Server (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md).
+Prima che l’app o la pagina web su un dispositivo di un utente finale possa riprodurre contenuti protetti da DRM, deve acquisire un token da un server di adesione o vetrina che tu, il cliente, utilizzi. Adobe fornisce un esempio di server di riferimento a questo scopo: [Server di riferimento: Sample ExpressPlay Entitlement Server (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md).
 
-L&#39;adesione o il server di vetrina richiederà un token di licenza al relativo server ExpressPlay Server, solo dopo aver verificato con i propri sistemi back-end se l&#39;utente specifico è autorizzato a guardare il contenuto richiesto. La risposta restituita dalla richiesta di token di licenza è un URL pronto all’uso per il server licenze o la risposta contiene l’URL in una struttura JSON, a seconda della soluzione DRM con cui stai lavorando.
+Il server autorizzato o storefront richiederà un token di licenza al server ExpressPlay interessato solo dopo aver verificato con i propri sistemi back-end se l&#39;utente specifico è autorizzato a guardare il contenuto richiesto. La risposta restituita dalla richiesta del token di licenza è un URL pronto all’uso per il server licenze oppure contiene l’URL in una struttura JSON, a seconda della soluzione DRM con cui stai lavorando.
 
 >[!NOTE]
 >
 >Impossibile effettuare la richiesta del token di licenza dal client stesso:
->1. I diritti devono essere controllati in un ambiente affidabile; e
->1. L&#39;autenticatore del cliente deve essere tenuto segreto.
+>1. i diritti devono essere verificati in un ambiente attendibile; e
+>1. L’autenticatore del cliente deve essere tenuto segreto.
 
 
-1. Effettua la richiesta del token di licenza.
+1. Effettuare la richiesta del token di licenza.
 
-   Per uno scenario di avvio rapido, in cui desideri semplicemente assicurarti che i vari componenti coinvolti lavorino insieme, puoi utilizzare qualcosa come [!DNL curl] per effettuare la richiesta del token di licenza (invece di ottenere inizialmente un&#39;app attiva e in esecuzione e testare le chiamate da lì). Ad esempio:
+   Per uno scenario di avvio rapido, in cui desideri semplicemente assicurarsi che i vari componenti coinvolti funzionino insieme, puoi utilizzare qualcosa di simile a [!DNL curl] per effettuare la richiesta del token di licenza (anziché avviare inizialmente un’app e testare le chiamate da lì). Ad esempio:
 
    * Widevine:
 
@@ -57,7 +56,7 @@ L&#39;adesione o il server di vetrina richiederà un token di licenza al relativ
       &<Any additional licensing attributes desired>" >>WidevineToken 
    ```
 
-   Token di prova Widevine di esempio:
+   Esempio di token di prova della linea wireless:
 
    ```
    https://wv.test.expressplay.com/widevine/RightsManager.asmx?ExpressPlayToken= 
@@ -66,7 +65,7 @@ L&#39;adesione o il server di vetrina richiederà un token di licenza al relativ
       O1PqRkx59Q2q1s2cFNrqfml8Y3RQ 
    ```
 
-   La risposta Widevine è una stringa URL &quot;pronta all’uso&quot;.
+   La risposta di Widevine è una stringa URL &quot;pronta per l’uso&quot;.
 
    * PlayReady:
 
@@ -135,7 +134,7 @@ L&#39;adesione o il server di vetrina richiederà un token di licenza al relativ
     &<Any additional licensing attributes desired>"
    ```
 
-   Token di test FairPlay di esempio:
+   Esempio di token di test FairPlay:
 
    ```
    https://{expressplay_test_domain_license_url}/?ExpressPlayToken= 
@@ -144,4 +143,4 @@ L&#39;adesione o il server di vetrina richiederà un token di licenza al relativ
    O1PqRkx59Q2q1s2cFNrqfml8Y3RQ
    ```
 
-   La risposta FairPlay è una stringa URL &quot;pronta all’uso&quot;.
+   La risposta FairPlay è una stringa URL &quot;pronta per l’uso&quot;.

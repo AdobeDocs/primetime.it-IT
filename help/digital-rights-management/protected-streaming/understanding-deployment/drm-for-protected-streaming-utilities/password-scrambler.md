@@ -1,18 +1,17 @@
 ---
-description: L'utility Password Scrambler crittografa una password per il server DRM di Adobe Primetime per i file di configurazione Protected Streaming.
-title: Scrambler di password
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: L'utilità Scrambler password crittografa una password per i file di configurazione di Adobe Primetime DRM Server for Protected Streaming.
+title: Scrambler password
+exl-id: 9cedd3e5-01db-4ea9-bf23-8767987fc26c
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '92'
 ht-degree: 0%
 
 ---
 
+# Scrambler password {#password-scrambler}
 
-# Scrambler di password {#password-scrambler}
-
-L&#39;utility Password Scrambler crittografa una password per il server DRM di Adobe Primetime per i file di configurazione Protected Streaming.
+L&#39;utilità Scrambler password crittografa una password per i file di configurazione di Adobe Primetime DRM Server for Protected Streaming.
 
 Per eseguire lo scrambler, digitare:
 
@@ -32,7 +31,7 @@ java -jar libs/flashaccess-scrambler.jar
 </i class="+ topic>
 ```
 
-L&#39;utilità visualizza il seguente messaggio:
+L&#39;utility visualizza il seguente messaggio:
 
 ```
 Encrypted password:  
@@ -41,8 +40,8 @@ Encrypted password:
 </i class="+ topic>
 ```
 
-Tutte le password specificate nei file [!DNL flashaccess-global.xml] e [!DNL flashaccess-tenant.xml] devono essere crittografate.
+Tutte le password specificate in [!DNL flashaccess-global.xml] e [!DNL flashaccess-tenant.xml] i file devono essere crittografati.
 
 >[!NOTE]
 >
->L&#39;utility Password Scrambler nel server DRM di Primetime per lo streaming protetto non è intercambiabile con lo scrambler fornito con il server delle licenze di implementazione di riferimento.
+>L&#39;utilità Scrambler password nel server DRM Primetime per lo streaming protetto non è intercambiabile con lo scrambler fornito con il server licenze di implementazione di riferimento.

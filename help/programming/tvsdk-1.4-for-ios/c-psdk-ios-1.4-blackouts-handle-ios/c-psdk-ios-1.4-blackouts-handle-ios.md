@@ -1,47 +1,45 @@
 ---
-description: TVSDK gestisce le blackout nei flussi video in diretta e fornisce contenuti alternativi durante una blackout.
-title: Gestire i blackout nei flussi live
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK gestisce le sospensioni attività nei flussi video live e fornisce contenuto alternativo durante una sospensione attività.
+title: Gestire le sospensioni attività nei flussi live
+exl-id: 772700ac-2b6d-4bf9-9400-c357dd77f701
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 0%
 
 ---
 
+# Gestire le sospensioni attività nei flussi live{#handle-blackouts-in-live-streams}
 
-# Gestire i blackout nei flussi live{#handle-blackouts-in-live-streams}
+TVSDK gestisce le sospensioni attività nei flussi video live e fornisce contenuto alternativo durante una sospensione attività.
 
-TVSDK gestisce le blackout nei flussi video in diretta e fornisce contenuti alternativi durante una blackout.
-
-Il caso d’uso più comune associato a un blackout di programmazione è quando l’app di lettore fornisce contenuto alternativo agli utenti che non sono idonei a guardare il flusso principale. Questa app può utilizzare TVSDK per determinare l’inizio e la fine del periodo di sospensione attività. In questo modo, all&#39;inizio del periodo di sospensione, la riproduzione può passare dal flusso principale a un flusso alternativo e quindi tornare al flusso principale quando il periodo di sospensione è terminato.
+Il caso d’uso più comune associato a una sospensione attività di programmazione è il caso in cui l’app del lettore fornisce contenuto alternativo agli utenti che non sono idonei a guardare il flusso principale. Questa app può utilizzare TVSDK per determinare l’inizio e la fine del periodo di sospensione attività. In questo modo, all&#39;inizio del periodo di sospensione, la riproduzione può passare dal flusso principale a uno alternativo e quindi tornare al flusso principale al termine del periodo di sospensione.
 
 Per implementare la soluzione per questo caso d’uso:
 
-1. Imposta l&#39;app per abbonarti ai tag di blackout in un manifesto di streaming live.
+1. Configura l&#39;app per abbonarti ai tag di sospensione attività in un manifesto live stream.
 
-   TVSDK non è direttamente a conoscenza dei tag di blackout, ma consente all’app di abbonarsi alle notifiche quando si incontrano tag specifici durante l’analisi dei file manifest.
+   TVSDK non è direttamente a conoscenza dei tag di sospensione attività, ma consente all’app di abbonarsi alle notifiche quando vengono rilevati tag specifici durante l’analisi del file manifesto.
 1. Aggiungi un listener di notifica per `PTTimedMetadataChangedNotification`.
 
-   Questa notifica viene inviata ogni volta che un tag con sottoscrizione viene analizzato nel manifesto e ne viene preparato uno nuovo `PTTimedMetadata`.
+   Questa notifica viene inviata ogni volta che nel manifesto viene analizzato un tag sottoscritto e viene aggiunto un nuovo `PTTimedMetadata` è preparato da esso.
 
-1. Implementa un metodo listener, ad esempio `onMediaPlayerSubscribedTagIdentified`, per gli oggetti `PTTimedMetadata` in primo piano.
+1. Implementare un metodo listener, ad esempio `onMediaPlayerSubscribedTagIdentified`, per `PTTimedMetadata` oggetti in primo piano.
 
-1. Ogni volta che si verifica un aggiornamento durante la riproduzione, utilizzare il listener `PTMediaPlayerTimeChangeNotification` per gestire gli oggetti `PTTimedMetadata`.
+1. Ogni volta che si verifica un aggiornamento durante la riproduzione, utilizzare `PTMediaPlayerTimeChangeNotification` listener da gestire `PTTimedMetadata` oggetti.
 
-1. Aggiungi il gestore `PTTimedMetadata` .
+1. Aggiungi il `PTTimedMetadata` handler.
 
-   Questo gestore consente di passare al contenuto alternativo e di tornare al contenuto principale come indicato dall&#39;oggetto `PTTimedMetadata` e dal relativo tempo di riproduzione.
+   Questo gestore consente di passare a un contenuto alternativo e tornare al contenuto principale come indicato dalla `PTTimedMetadata` e il tempo di riproduzione dell&#39;oggetto.
 
-1. Utilizzare `onSubscribedTagInBackground` per implementare il metodo listener per gli oggetti `PTTimedMetadata` in background.
+1. Utilizzare `onSubscribedTagInBackground` per implementare il metodo listener per `PTTimedMetadata` oggetti in background.
 
-   Questo metodo controlla la tempistica del flusso in background, aiutando a determinare quando passare dal contenuto alternativo al contenuto principale.
+   Questo metodo monitora la temporizzazione del flusso in background, che consente di determinare quando è possibile tornare dal contenuto alternativo al contenuto principale.
 
 1. Implementa un metodo listener per gli errori in background.
-1. Se l&#39;intervallo di blackout si trova nel DVR del flusso di riproduzione, aggiornare gli intervalli non ricercabili.
+1. Se l&#39;intervallo di sospensione attività si trova nel DVR nel flusso di riproduzione, aggiornare gli intervalli non ricercabili.
 
    L&#39;applicazione deve impostare l&#39;intervallo non ricercabile nel DVR nei seguenti casi:
 
-   * Quando si unisce al flusso principale quando un blackout è nel DVR.
+   * Quando si unisce lo streaming principale quando è presente una sospensione attività nel DVR.
    * Quando si torna al contenuto principale dal contenuto alternativo.
-

@@ -1,22 +1,21 @@
 ---
-title: Panoramica sulla distribuzione del server licenze e del gestore cartelle controllate
-description: Panoramica sulla distribuzione del server licenze e del gestore cartelle controllate
+title: Panoramica sulla distribuzione del server licenze e del packager delle cartelle controllate
+description: Panoramica sulla distribuzione del server licenze e del packager delle cartelle controllate
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: b44aec8b-f1d7-4dce-bc51-0ce2b74ae0c1
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 0%
 
 ---
 
+# Panoramica sulla distribuzione del server licenze e del packager delle cartelle controllate {#deploying-the-license-server-and-watched-folder-packager-overview}
 
-# Panoramica sulla distribuzione del server licenze e del gestore cartelle controllate {#deploying-the-license-server-and-watched-folder-packager-overview}
+Copiare i file WAR del server licenze in Tomcat [!DNL webapps] directory. Se il file WAR è stato distribuito in precedenza, potrebbe essere necessario eliminare manualmente le directory WAR decompresse ( [!DNL flashaccess], [!DNL edcws], e [!DNL flashaccess-packager] in Tomcat [!DNL webapps] directory). Per evitare che Tomcat decomprima i file WAR, modificare la [!DNL server.xml] nella directory conf di Tomcat e impostare `unpackWARs` attribuire a `false`.
 
-Copiare i file WAR del server licenze nella directory [!DNL webapps] di Tomcat. Se in precedenza hai implementato il file WAR, potrebbe essere necessario eliminare manualmente le directory WAR decompresse ( [!DNL flashaccess], [!DNL edcws] e [!DNL flashaccess-packager] nella directory [!DNL webapps] di Tomcat. Per evitare che Tomcat scompili i file WAR, modifica il file [!DNL server.xml] nella directory conf di Tomcat e imposta l&#39;attributo `unpackWARs` su `false`.
+Il file delle proprietà ( [!DNL flashaccess-refimpl.properties]) deve trovarsi nel classpath affinché il server possa caricare le proprietà. Copiare il file in una directory e aggiornarlo con i valori appropriati. Modifica il [!DNL catalina.properties] file in Tomcat [!DNL conf] e aggiungere la directory contenente [!DNL flashaccess-refimpl.properties] al `shared.loader` proprietà. Il [!DNL log4j.xml] il file per la configurazione della registrazione deve trovarsi anche sul classpath (vedere [!DNL resources\log4j.xml] ad esempio).
 
-Per caricare le proprietà, il file delle proprietà ( [!DNL flashaccess-refimpl.properties]) deve trovarsi nel percorso di classe del server. Copia questo file in una directory e aggiorna il file con i valori appropriati. Modifica il file [!DNL catalina.properties] nella directory [!DNL conf] di Tomcat e aggiungi la directory contenente [!DNL flashaccess-refimpl.properties] alla proprietà `shared.loader`. Anche il file [!DNL log4j.xml] per la configurazione della registrazione deve trovarsi nel percorso di classe (vedi [!DNL resources\log4j.xml] per un esempio).
+Il server di implementazione di riferimento utilizza diversi file di certificato, file di criteri e altre risorse. Tali file si trovano tutti in una cartella di risorse. Per impostazione predefinita, la cartella delle risorse è [!DNL C:\flashaccess-server-resources], ma questa posizione può essere modificata in [!DNL flashaccess-refimpl.properties]. Accertarsi di copiare tutte le risorse richieste in questa posizione prima di avviare il server.
 
-Il server di implementazione di riferimento utilizza diversi file di certificato, file di criteri e altre risorse. Tali file si trovano tutti in una cartella di risorse. Per impostazione predefinita, la cartella delle risorse è [!DNL C:\flashaccess-server-resources], ma questo percorso può essere modificato in [!DNL flashaccess-refimpl.properties]. Prima di avviare il server, assicurati di copiare tutte le risorse necessarie in questa posizione.
-
-Per avviare Tomcat e il server licenze, esegui `catalina.bat start` dalla directory [!DNL bin] di Tomcat.
+Per avviare Tomcat e il server licenze, eseguire `catalina.bat start` da Tomcat [!DNL bin] directory.

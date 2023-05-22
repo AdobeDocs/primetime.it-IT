@@ -1,34 +1,33 @@
 ---
-description: Puoi implementare un tuo sistema di registrazione.
+description: Puoi implementare un sistema di registrazione personalizzato.
 title: Informazioni sulla registrazione personalizzata
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 8b6a916e-783e-40e1-8a3d-706b57a6ff63
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 0%
 
 ---
 
-
 # Registrazione personalizzata {#customized-logging}
 
-Puoi implementare un tuo sistema di registrazione.
+Puoi implementare un sistema di registrazione personalizzato.
 
-Oltre a registrare utilizzando notifiche predefinite, puoi implementare un sistema di registrazione che utilizza i messaggi di log e i messaggi generati da TVSDK. Per ulteriori informazioni sulle notifiche predefinite, vedere [Sistema di notifica](https://help.adobe.com/en_US/primetime/psdk/ios/index.html#PSDKs-concept-The_Notification_System). È possibile utilizzare questi registri per risolvere i problemi delle applicazioni del lettore e per fornire una migliore comprensione del flusso di lavoro di riproduzione e pubblicità.
+Oltre a eseguire la registrazione utilizzando notifiche predefinite, è possibile implementare un sistema di registrazione che utilizza i messaggi di registro e i messaggi generati da TVSDK. Per ulteriori informazioni sulle notifiche predefinite, consulta [Il sistema di notifica](https://help.adobe.com/en_US/primetime/psdk/ios/index.html#PSDKs-concept-The_Notification_System). Puoi utilizzare questi registri per risolvere eventuali problemi relativi alle applicazioni del lettore e per comprendere meglio il flusso di lavoro di riproduzione e pubblicità.
 
-La registrazione personalizzata utilizza un&#39;istanza singleton condivisa di `PSDKPTLogFactory`, che fornisce un meccanismo per registrare i messaggi a più logger. Puoi definire e aggiungere (registrare) uno o più logger al `PTLogFactory`. Questo consente di definire più logger con implementazioni personalizzate, ad esempio un logger di console, un Registratore web o un Registratore di cronologia della console.
+La registrazione personalizzata utilizza un’istanza singleton condivisa del `PSDKPTLogFactory`, che fornisce un meccanismo per registrare i messaggi su più logger. Puoi definire e aggiungere (registrare) uno o più logger alla `PTLogFactory`. Questo consente di definire più logger con implementazioni personalizzate, ad esempio un logger di console, un logger web o un logger di cronologia della console.
 
-TVSDK genera messaggi di registro per molte delle sue attività, che il `PTLogFactory` inoltra a tutti i logger registrati. L’applicazione può inoltre generare messaggi di log personalizzati, che vengono inoltrati a tutti i logger registrati. Ogni logger può filtrare i messaggi e intraprendere le azioni appropriate.
+TVSDK genera messaggi di registro per molte delle sue attività, che `PTLogFactory` inoltra a tutti i logger registrati. L&#39;applicazione può inoltre generare messaggi di registro personalizzati, che vengono inoltrati a tutti i logger registrati. Ogni logger può filtrare i messaggi e intraprendere le azioni appropriate.
 
-Sono disponibili due implementazioni per `PTLogFactory`:
+Esistono due implementazioni per `PTLogFactory`:
 
-* Per ascoltare i log.
-* Per aggiungere i registri a un `PTLogFactory`.
+* Per l’ascolto dei registri.
+* Per aggiungere registri a una `PTLogFactory`.
 
 ## Ascolta i registri {#listen-to-logs}
 
-Per registrarsi per l&#39;ascolto dei log:
-1. Implementa una classe personalizzata che segue il protocollo `PTLogger`:
+Per registrarsi per l’ascolto dei registri:
+1. Implementare una classe personalizzata che segue il protocollo `PTLogger`:
 
    ```
    @implementation PTConsoleLogger 
@@ -45,7 +44,7 @@ Per registrarsi per l&#39;ascolto dei log:
    @end
    ```
 
-1. Per registrare l&#39;istanza per ricevere le voci di log, aggiungi un&#39;istanza del `PTLogger` al `PTLoggerFactory`:
+1. Per registrare l&#39;istanza per la ricezione delle voci di registrazione, aggiungere un&#39;istanza di `PTLogger` al `PTLoggerFactory`:
 
    ```
    PTConsoleLogger *logger = [PTConsoleLogger consoleLogger]; 
@@ -58,7 +57,7 @@ Per registrarsi per l&#39;ascolto dei log:
 
 <!--<a id="example_3738B5A8B4C048D28695E62297CF39E3"></a>-->
 
-Ecco un esempio di filtraggio dei registri utilizzando il tipo `PTLogEntry` :
+Di seguito è riportato un esempio di filtro dei registri utilizzando `PTLogEntry` tipo:
 
 ```
 @implementation PTConsoleLogger 
@@ -89,15 +88,15 @@ Ecco un esempio di filtraggio dei registri utilizzando il tipo `PTLogEntry` :
 @end
 ```
 
-## Aggiungi nuovi messaggi di log {#add-new-log-messages}
+## Aggiungere nuovi messaggi di registro {#add-new-log-messages}
 
-Per registrarsi per ascoltare i log:
+Per registrarsi e ascoltare i registri:
 
-Crea un nuovo `PTLogEntry` e aggiungilo a `thePTLogFactory`:
+Crea un nuovo `PTLogEntry` e aggiungerlo a `thePTLogFactory`:
 
-È possibile creare manualmente un&#39;istanza `PTLogEntry` e aggiungerla all&#39;istanza condivisa `PTLogFactory` oppure utilizzare una delle macro per eseguire la stessa operazione.
+È possibile creare manualmente un&#39;istanza di `PTLogEntry` e aggiungerlo al `PTLogFactory` ha condiviso un&#39;istanza o utilizza una delle macro per eseguire la stessa attività.
 
-Ecco un esempio di registrazione utilizzando la macro `PTLogDebug`:
+Di seguito è riportato un esempio di registrazione tramite `PTLogDebug` macro:
 
 <!--<a id="example_F014436E1686468F941F4EBD1A21B18E"></a>-->
 

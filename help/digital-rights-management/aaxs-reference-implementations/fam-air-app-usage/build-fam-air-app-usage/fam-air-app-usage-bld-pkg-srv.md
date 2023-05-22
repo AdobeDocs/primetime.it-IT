@@ -2,15 +2,14 @@
 title: Creazione del server Packager
 description: Creazione del server Packager
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3b2ac5d2-8d70-45ae-85cd-1778a2fd1c17
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '28'
 ht-degree: 0%
 
 ---
 
+# Creazione del server Packager {#building-the-packager-server}
 
-# Creazione del server dei pacchetti {#building-the-packager-server}
-
-Per modificare il codice sorgente, consulta le istruzioni per la compilazione dell’implementazione di riferimento.
+Se desideri modificare il codice sorgente, consulta le istruzioni sulla compilazione dell’implementazione di riferimento.

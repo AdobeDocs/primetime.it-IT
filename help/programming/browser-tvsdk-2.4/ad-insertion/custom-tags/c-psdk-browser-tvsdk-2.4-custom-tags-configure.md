@@ -1,34 +1,33 @@
 ---
-description: I flussi multimediali possono includere metadati aggiuntivi sotto forma di tag nel file MPD (Media Presentation Description), e questo file indica il posizionamento della pubblicità. Puoi specificare nomi di tag personalizzati da avvisare quando alcuni tag compaiono nel file manifesto.
+description: I flussi multimediali possono contenere metadati aggiuntivi sotto forma di tag nel file MPD (Media Presentation Description) e questo file indica il posizionamento della pubblicità. È possibile specificare nomi di tag personalizzati e ricevere una notifica quando determinati tag vengono visualizzati nel file manifesto.
 title: Tag personalizzati
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 9e6343b5-ade7-467a-b2a1-8f8d69492a1a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 0%
 
 ---
 
-
 # Panoramica {#custom-tags-overview}
 
-I flussi multimediali possono includere metadati aggiuntivi sotto forma di tag nel file MPD (Media Presentation Description), e questo file indica il posizionamento della pubblicità. Puoi specificare nomi di tag personalizzati da avvisare quando alcuni tag compaiono nel file manifesto.
+I flussi multimediali possono contenere metadati aggiuntivi sotto forma di tag nel file MPD (Media Presentation Description) e questo file indica il posizionamento della pubblicità. È possibile specificare nomi di tag personalizzati e ricevere una notifica quando determinati tag vengono visualizzati nel file manifesto.
 
-## Tag del contenuto HLS {#section_E99299152089418FBA56F5F09FC547B0}
+## Tag di contenuto HLS {#section_E99299152089418FBA56F5F09FC547B0}
 
 >[!IMPORTANT]
 >
->Questa funzione non è disponibile per Safari nei computer Apple, perché per riprodurre il contenuto HLS il browser TVSDK utilizza il tag video, anziché il Flash o MSE.
+>Questa funzione non è disponibile per Safari su computer Apple, perché Browser TVSDK utilizza il tag video, anziché Flash o MSE, per riprodurre contenuti HLS.
 
-Il browser TVSDK fornisce il supporto predefinito per tag pubblicitari #EXT specifici. L&#39;applicazione può utilizzare tag personalizzati per migliorare il flusso di lavoro pubblicitario o per supportare scenari di blackout. Per supportare flussi di lavoro avanzati, il browser TVSDK consente di specificare e sottoscrivere tag aggiuntivi nel manifesto. Puoi ricevere notifiche quando questi tag compaiono nel file manifesto.
+Browser TVSDK fornisce supporto predefinito per tag pubblicitari di #EXT specifici. L’applicazione può utilizzare tag personalizzati per migliorare il flusso di lavoro della pubblicità o per supportare scenari di sospensione attività. Per supportare flussi di lavoro avanzati, Browser TVSDK consente di specificare e sottoscrivere tag aggiuntivi nel manifesto. Puoi ricevere una notifica quando questi tag vengono visualizzati nel file manifesto.
 
 >[!TIP]
 >
->Puoi abbonarti a tag personalizzati sia per i flussi VOD che per quelli live/lineari.
+>Puoi abbonarti a tag personalizzati sia per VOD che per flussi live/lineari.
 
 >[!NOTE]
 >
->Quando HLS viene riprodotto utilizzando il tag Video in Safari e non utilizzando Flash Fallback, questa funzione non sarà disponibile in Safari.
+>Quando HLS viene riprodotto utilizzando il tag Video in Safari e non il Flash Fallback, questa funzione non sarà disponibile in Safari.
 
 ## Utilizzo di tag HLS personalizzati {#section_AD032318AEF5418393D2B1DF36B0BABB}
 
@@ -62,22 +61,22 @@ seg5.ts
 
 L&#39;applicazione può impostare i seguenti scenari:
 
-* Nel file è presente una notifica quando sono presenti tag `#EXT-X-ASSET` o qualsiasi altro set di nomi di tag personalizzati a cui hai effettuato la sottoscrizione.
-* Inserisci annunci quando nel flusso è presente un tag `#EXT-X-AD` o qualsiasi altro nome di tag personalizzato.
+* Una notifica quando `#EXT-X-ASSET` I tag, o qualsiasi altro insieme di nomi di tag personalizzati a cui ti sei iscritto, sono già presenti nel file.
+* Inserisci annunci quando un `#EXT-X-AD` o qualsiasi altro nome di tag personalizzato si trova nel flusso.
 
-Puoi abbonarti a uno dei seguenti tag come tag personalizzati: `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`. Ricevi una notifica con un evento `TimedMetadata` durante l&#39;analisi dei file manifest.
+È possibile sottoscrivere uno qualsiasi dei seguenti tag come tag personalizzati: `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`. Viene inviata una notifica con `TimedMetadata` durante l&#39;analisi dei file manifest.
 
-Esistono alcuni tag pubblicitari, ad esempio `EXT-X-CUE`, ai quali sei già iscritto. Questi tag ad vengono utilizzati anche dal generatore di opportunità predefinito. Puoi specificare quali tag di annunci vengono utilizzati dal generatore di opportunità predefinito impostando la proprietà `adTags` .
+Ci sono alcuni tag pubblicitari, come `EXT-X-CUE`, a cui si è già iscritti. Questi tag di annuncio vengono utilizzati anche dal generatore di opportunità predefinito. È possibile specificare quali tag di annunci vengono utilizzati dal generatore di opportunità predefinito impostando `adTags` proprietà.
 
-## Tag del contenuto DASH {#section_967A952319BE4048B4C6612FFF7ADA6E}
+## Tag di contenuto TRATTEGGIATO {#section_967A952319BE4048B4C6612FFF7ADA6E}
 
-DASH offre due modi per segnalare gli eventi:
+DASH dispone di due modi per segnalare gli eventi:
 
 * Nel file MPD.
 
-   Questo file è simile al file M3U8 nel contenuto HLS e gli eventi MPD esistono nel file .mpd.
-* Inbanda nella rappresentazione
+   Questo file è simile al file M3U8 nel contenuto HLS e gli eventi MPD esistono nel file mpd.
+* Inband nella rappresentazione
 
-   Gli eventi in banda vengono moltiplicati con le rappresentazioni aggiungendo i messaggi evento come parte dei segmenti. Una rappresentazione è un elenco di segmenti video e audio riprodotti in sequenza. I dati dell’evento in banda sono incorporati in questi segmenti.
+   Gli eventi in banda vengono multiplexati con le rappresentazioni aggiungendo i messaggi dell’evento come parte dei segmenti. Una rappresentazione è un elenco di segmenti video e audio riprodotti in sequenza. I dati dell’evento inband sono incorporati in questi segmenti.
 
-Questi eventi vengono notificati come eventi `TimedMetadata` all&#39;applicazione non appena vengono analizzati dal browser TVSDK. Una volta che un evento viene notificato, non verrà più inviato un nuovo avviso.
+Questi eventi vengono notificati come `TimedMetadata` all&#39;applicazione non appena vengono analizzati da TVSDK del browser. Una volta inviata la notifica, l’evento non viene più notificato.

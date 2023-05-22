@@ -1,33 +1,32 @@
 ---
 description: Puoi personalizzare o ignorare i comportamenti degli annunci.
-title: Impostare una riproduzione personalizzata
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Impostare la riproduzione personalizzata
+exl-id: 28c28589-9e94-40de-b921-1bffc0392c29
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 0%
 
 ---
 
-
-# Imposta riproduzione personalizzata{#set-up-customized-playback}
+# Impostare la riproduzione personalizzata{#set-up-customized-playback}
 
 Puoi personalizzare o ignorare i comportamenti degli annunci.
 
-Prima di personalizzare o ignorare i comportamenti degli annunci, registra l’istanza del criterio degli annunci con .
-Per personalizzare i comportamenti degli annunci, effettua una delle seguenti operazioni:
+Prima di poter personalizzare o ignorare i comportamenti degli annunci, registra l’istanza dei criteri degli annunci con .
+Per personalizzare i comportamenti degli annunci, effettuare una delle seguenti operazioni:
 
-* Implementa l’interfaccia `AdPolicySelector` e tutti i relativi metodi.
+* Implementare `AdPolicySelector` e tutti i relativi metodi.
 
-   Questa opzione è consigliata se devi sovrascrivere **all** i comportamenti di annunci predefiniti.
+   Questa opzione è consigliata se devi eseguire l’override di **tutto** i comportamenti di annuncio predefiniti.
 
-* Estendi la classe `DefaultAdPolicySelector` e fornisci implementazioni solo per quei comportamenti che richiedono personalizzazione.
+* Estendi il `DefaultAdPolicySelector` e forniscono implementazioni solo per i comportamenti che richiedono personalizzazione.
 
-   Questa opzione è consigliata se è necessario ignorare solo **alcuni** dei comportamenti predefiniti.
+   Questa opzione è consigliata solo se è necessario eseguire l&#39;override **alcuni** dei comportamenti predefiniti.
 
-Per entrambe le opzioni, completa le attività seguenti:
+Per entrambe le opzioni, completa le seguenti attività:
 
-1. Implementa il tuo selettore di criteri per gli annunci personalizzati.
+1. Implementa un selettore di criteri per gli annunci personalizzato.
 
    ```
    public class CustomAdPolicySelector implements AdPolicySelector { 
@@ -35,7 +34,7 @@ Per entrambe le opzioni, completa le attività seguenti:
    }
    ```
 
-1. Estendi la content factory per utilizzare il selettore dei criteri per gli annunci personalizzati.
+1. Estendi il factory dei contenuti per utilizzare il selettore dei criteri degli annunci personalizzati.
 
    ```
    public class CustomContentFactory extends DefaultContentFactory { 
@@ -55,7 +54,7 @@ Per entrambe le opzioni, completa le attività seguenti:
    factory->retrieveAdPolicySelector(item, &defaultAdPolicySelector);
    ```
 
-1. Registra il nuovo content factory che deve essere utilizzato da TVSDK nel flusso di lavoro pubblicitario.
+1. Registra la nuova fabbrica di contenuti che deve essere utilizzata da TVSDK nel flusso di lavoro per la pubblicità.
 
    ```
    PSDKConfig.advertisingFactory = new CustomContentFactory();
@@ -63,4 +62,4 @@ Per entrambe le opzioni, completa le attività seguenti:
 
    >[!TIP]
    >
-   >Se la content factory personalizzata è stata registrata per un flusso specifico attraverso la classe `MediaPlayerItemConfig`, verrà cancellata quando l&#39;istanza `MediaPlayer` viene deallocata. L&#39;applicazione deve registrarla ogni volta che viene creata una nuova sessione di riproduzione.
+   >Se la content factory personalizzata è stata registrata per un flusso specifico tramite `MediaPlayerItemConfig` classe, verrà cancellato quando `MediaPlayer` istanza deallocata. L’applicazione deve registrarla ogni volta che viene creata una nuova sessione di riproduzione.

@@ -1,26 +1,25 @@
 ---
 description: La richiesta e la risposta di adesione vengono trasmesse tramite una connessione SSL reciprocamente autenticata tra il server licenze e il servizio di adesione del cliente.
-title: API pubblica SEES
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: API PUBBLICA SEES
+exl-id: b78cd74d-06ea-4d31-a1f2-0f0d84d23670
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 0%
 
 ---
 
-
-# API pubblica SEES {#sees-public-api}
+# API PUBBLICA SEES {#sees-public-api}
 
 La richiesta e la risposta di adesione vengono trasmesse tramite una connessione SSL reciprocamente autenticata tra il server licenze e il servizio di adesione del cliente.
 
-Lo schema URI HTTPS ( [https://tools.ietf.org/html/rfc7230#section-2.7.2](https://tools.ietf.org/html/rfc7230#section-2.7.2)) viene utilizzato per definire l&#39;endpoint di adesione e per la richiesta viene utilizzato il metodo di richiesta HTTP POST ( [https://tools.ietf.org/html/rfc7231#section-4.3.3](https://tools.ietf.org/html/rfc7231#section-4.3.3)). L&#39;endpoint per l&#39;adesione, nonché un flag che indica l&#39;adesione back-end, è obbligatorio e deve essere incluso nel criterio al momento dell&#39;imballaggio.
+Schema URI HTTPS ( [https://tools.ietf.org/html/rfc7230#section-2.7.2](https://tools.ietf.org/html/rfc7230#section-2.7.2)) viene utilizzato per definire l’endpoint di adesione e il metodo di richiesta HTTP POST ( [https://tools.ietf.org/html/rfc7231#section-4.3.3](https://tools.ietf.org/html/rfc7231#section-4.3.3)) viene utilizzato per la richiesta. L’endpoint di adesione, nonché un flag che indica la adesione back-end, è obbligatorio e deve essere incluso nella policy al momento della creazione dell’imballaggio.
 
 ## Richiesta di adesione {#section_BFBFEF0795CA46D6842C479256B95F95}
 
 Il corpo della richiesta di adesione sarà un oggetto JSON definito come mostrato di seguito.
 
-**Definizione dell&#39;oggetto della richiesta di adesione JSON**
+**Definizione dell’oggetto della richiesta di adesione JSON**
 
 ```
 { 
@@ -52,11 +51,11 @@ Il corpo della richiesta di adesione sarà un oggetto JSON definito come mostrat
 }
 ```
 
-## Risposta di autorizzazione {#section_F15A9FD6BAD946B3B4C5C14612F90154}
+## Risposta diritto {#section_F15A9FD6BAD946B3B4C5C14612F90154}
 
 Il corpo della risposta di adesione è un oggetto JSON.
 
-**Definizione dell&#39;oggetto di risposta dell&#39;adesione JSON**
+**Definizione oggetto risposta diritto JSON**
 
 ```
 { 

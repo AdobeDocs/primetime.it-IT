@@ -1,14 +1,13 @@
 ---
 description: Quando i metadati DRM di un video sono separati dal flusso multimediale, eseguire l'autenticazione prima di iniziare la riproduzione.
 title: Autenticazione DRM prima della riproduzione
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: da81ec38-ea77-4fcd-a6e4-5804465385cb
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '338'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
-
 
 # Autenticazione DRM prima della riproduzione {#drm-authentication-before-playback}
 
@@ -19,11 +18,11 @@ A una risorsa video può essere associato un file di metadati DRM. Ad esempio:
 * &quot;url&quot;: &quot;ht<span></span>tps://www.domain.com/asset.m3u8&quot;
 * &quot;drmMetadata&quot;: &quot;ht<span></span>tps://www.domain.com/asset.metadata&quot;
 
-In questo caso, utilizza i metodi `DRMHelper` per scaricare il contenuto del file di metadati DRM, analizzarlo e verificare se è necessaria l’autenticazione DRM.
+In questo caso, utilizza `DRMHelper` metodi per scaricare il contenuto del file di metadati DRM, analizzarlo e verificare se è necessaria l&#39;autenticazione DRM.
 
-1. Utilizza `loadDRMMetadata` per caricare il contenuto dell&#39;URL dei metadati e analizzare i byte scaricati in un `DRMMetadata`.
+1. Utilizzare `loadDRMMetadata` per caricare il contenuto dell’URL dei metadati e analizzare i byte scaricati in una `DRMMetadata`.
 
-   Come qualsiasi altra operazione di rete, questo metodo è asincrono, creando il proprio thread.
+   Come qualsiasi altra operazione di rete, questo metodo è asincrono e crea il proprio thread.
 
    ```java
    public static void loadDRMMetadata( 
@@ -38,8 +37,8 @@ In questo caso, utilizza i metodi `DRMHelper` per scaricare il contenuto del fil
    DRMHelper.loadDRMMetadata(drmManager, metadataURL, new DRMLoadMetadataListener());
    ```
 
-1. Poiché l’operazione è asincrona, è consigliabile renderla consapevole. Altrimenti, si chiederà perché la sua riproduzione non è in fase di avvio. Ad esempio, mostra una ruota rotante mentre i metadati DRM vengono scaricati e analizzati.
-1. Implementa i callback in `DRMLoadMetadataListener`. Il `loadDRMMetadata` chiama questi gestori eventi (invia questi eventi).
+1. Poiché l’operazione è asincrona, è consigliabile informare l’utente al riguardo. Altrimenti, si chiederà perché la sua riproduzione non inizia. Ad esempio, visualizzare una ruota di selezione durante il download e l&#39;analisi dei metadati DRM.
+1. Implementare i callback in `DRMLoadMetadataListener`. Il `loadDRMMetadata` chiama questi gestori eventi (invia questi eventi).
 
    ```java
    public interface  
@@ -58,11 +57,11 @@ In questo caso, utilizza i metodi `DRMHelper` per scaricare il contenuto del fil
    }
    ```
 
-   * `onLoadMetadataUrlStart` rileva quando è iniziato il caricamento dell&#39;URL dei metadati.
-   * `onLoadMetadataUrlComplete` rileva quando l&#39;URL dei metadati ha terminato il caricamento.
-   * `onLoadMetadataUrlError` indica che non è stato possibile caricare i metadati.
+   * `onLoadMetadataUrlStart` rileva quando è iniziato il caricamento dell’URL dei metadati.
+   * `onLoadMetadataUrlComplete` rileva quando l’URL dei metadati è stato caricato.
+   * `onLoadMetadataUrlError` indica che il caricamento dei metadati non è riuscito.
 
-1. Al termine del caricamento, controlla l’oggetto `DRMMetadata` per verificare se è necessaria l’autenticazione DRM.
+1. Al termine del caricamento, controllare `DRMMetadata` per verificare se è necessaria l&#39;autenticazione DRM.
 
    ```java
    public static boolean <b>isAuthNeeded</b>(DRMMetadata drmMetadata);
@@ -83,7 +82,7 @@ In questo caso, utilizza i metodi `DRMHelper` per scaricare il contenuto del fil
      }
    ```
 
-1. Se l&#39;autenticazione non è necessaria, avviare la riproduzione.
+1. Se l’autenticazione non è necessaria, avvia la riproduzione.
 1. Se è necessaria l’autenticazione, esegui l’autenticazione acquisendo la licenza.
 
    ```java
@@ -106,7 +105,7 @@ In questo caso, utilizza i metodi `DRMHelper` per scaricare il contenuto del fil
         final DRMAuthenticationListener authenticationListener);
    ```
 
-   Questo esempio, per semplicità, codifica esplicitamente il nome e la password dell&#39;utente.
+   Questo esempio, per semplicità, codifica esplicitamente il nome e la password dell’utente.
 
    ```java
    DRMHelper.performDrmAuthentication(drmManager, drmMetadata, DRM_USERNAME, DRM_PASSWORD,  
@@ -132,7 +131,7 @@ In questo caso, utilizza i metodi `DRMHelper` per scaricare il contenuto del fil
    }); 
    ```
 
-1. Ciò implica anche la comunicazione in rete, quindi anche questa è un&#39;operazione asincrona. Utilizza un listener di eventi per controllare lo stato di autenticazione.
+1. Questo implica anche la comunicazione di rete, quindi anche questa è un&#39;operazione asincrona. Utilizza un listener di eventi per controllare lo stato di autenticazione.
 
    ```java
    public interface DRMAuthenticationListener { 
@@ -166,8 +165,7 @@ In questo caso, utilizza i metodi `DRMHelper` per scaricare il contenuto del fil
    } 
    ```
 
-1. Se l&#39;autenticazione ha esito positivo, avviare la riproduzione.
-1. Se l&#39;autenticazione non ha esito positivo, avvisa l&#39;utente e non avvia la riproduzione.
+1. Se l’autenticazione ha esito positivo, avvia la riproduzione.
+1. Se l’autenticazione non ha esito positivo, avvisa l’utente e non avvia la riproduzione.
 
-L&#39;applicazione deve gestire eventuali errori di autenticazione. Impossibile eseguire l&#39;autenticazione prima che TVSDK venga riprodotto in uno stato di errore. In altre parole, cambia lo stato in ERROR, viene generato un errore contenente il codice di errore dalla libreria DRM e la riproduzione si arresta. L’applicazione deve risolvere il problema, reimpostare il lettore e ricaricare la risorsa.
-
+L&#39;applicazione deve gestire tutti gli errori di autenticazione. Impossibile autenticare correttamente prima che TVSDK venga riprodotto in uno stato di errore. In altre parole, modifica il suo stato in ERRORE, viene generato un errore contenente il codice di errore della libreria DRM e la riproduzione si interrompe. L&#39;applicazione deve risolvere il problema, reimpostare il lettore e ricaricare la risorsa.

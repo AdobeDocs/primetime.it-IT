@@ -1,23 +1,22 @@
 ---
-title: Convertire file
-description: Convertire file
+title: Conversione di file
+description: Conversione di file
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 7344ca2f-5307-403b-a6fc-cbbea7c2829f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 0%
 
 ---
 
+# Conversione di file{#convert-files}
 
-# Converti file{#convert-files}
-
-Utilizzando un&#39;utilità come OpenSSL e la chiave privata, il Richiedente genera i file PKCS#12 (pfx) e PEM/DER immettendo i seguenti comandi da una finestra di comando:
+Utilizzando un’utility come OpenSSL e la chiave privata, il richiedente genera i file PKCS#12 (pfx) e PEM/DER immettendo i seguenti comandi da una finestra di comando:
 
 1. Convertire il file PKCS#7 in un file PEM temporaneo.
 
-   Per utilizzare OpenSSL, apri una finestra di comando e immetti quanto segue:
+   Per utilizzare OpenSSL, aprire una finestra di comando e immettere quanto segue:
 
    ```
    openssl pkcs7 -in mycompany-license.p7b -inform DER -out mycompany-license-temp.pem \ 
@@ -30,16 +29,16 @@ Utilizzando un&#39;utilità come OpenSSL e la chiave privata, il Richiedente gen
 
 1. Convertire il file PEM temporaneo in un file PFX.
 
-   Per utilizzare OpenSSL, apri una finestra di comando e immetti quanto segue:
+   Per utilizzare OpenSSL, aprire una finestra di comando e immettere quanto segue:
 
    ```
    openssl pkcs12 -export -inkey mycompany-license.key -in mycompany-license-temp.pem \ 
    -out mycompany-license.pfx -passin pass:private_key_password -passout pass:pfx_password 
    ```
 
-1. Converti il file PEM temporaneo in un file PEM finale.
+1. Convertire il file PEM temporaneo in un file PEM finale.
 
-   Per utilizzare OpenSSL, apri una finestra di comando e immetti quanto segue:
+   Per utilizzare OpenSSL, aprire una finestra di comando e immettere quanto segue:
 
    ```
    openssl x509 -in mycompany-license-temp.pem -inform PEM -out mycompany-license.pem -outform PEM 
@@ -47,13 +46,13 @@ Utilizzando un&#39;utilità come OpenSSL e la chiave privata, il Richiedente gen
 
    >[!NOTE]
    >
-   >Sebbene non sia obbligatorio, Adobe consiglia di utilizzare password diverse per la chiave privata (private_key_password) e per PFX (pfx_password).
+   >Anche se non obbligatorio, l’Adobe consiglia di utilizzare password diverse per la chiave privata (private_key_password) e la PFX (pfx_password).
 
-   Questo file PEM finale contiene solo il certificato.
+   Il file PEM finale contiene solo il certificato.
 
 1. Convertire il file PEM in un file DER.
 
-   Per utilizzare OpenSSL, apri una finestra di comando e immetti quanto segue:
+   Per utilizzare OpenSSL, aprire una finestra di comando e immettere quanto segue:
 
    ```
    openssl x509 -in mycompany-license.pem -inform PEM -out mycompany-license.der -outform DER 
@@ -61,5 +60,4 @@ Utilizzando un&#39;utilità come OpenSSL e la chiave privata, il Richiedente gen
 
    >[!NOTE]
    >
-   >I file DER sono necessari solo per il packager HTTP Dynamic Streaming.
-
+   >I file DER sono necessari solo per il pacchetto HTTP Dynamic Streaming.

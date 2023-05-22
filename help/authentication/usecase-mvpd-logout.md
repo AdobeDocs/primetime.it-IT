@@ -1,23 +1,23 @@
 ---
-title: Logout MVPD
-description: Logout MVPD
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Disconnessione MVPD
+description: Disconnessione MVPD
+exl-id: a2b57d02-9688-48e3-beff-1012cd361d0c
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 0%
 
 ---
 
-
-# Logout MVPD
+# Disconnessione MVPD
 
 >[!NOTE]
 >
->Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente a partire da Adobe. Non è consentito alcun uso non autorizzato.
+>Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente di Adobe. Non è consentito alcun uso non autorizzato.
 
-I casi d’uso di disconnessione possono essere implementati da una richiesta di logout SAML inviata all’IdP o da un endpoint di logout personalizzato chiamato.  Gli esempi di richiesta e risposta riportati di seguito forniscono esempi dell’implementazione del logout SAML.
+I casi di utilizzo di disconnessione possono essere implementati tramite una richiesta di disconnessione SAML inviata all&#39;IdP o tramite la chiamata di un endpoint di disconnessione personalizzato.  Gli esempi di richieste e risposte riportati di seguito forniscono esempi dell’implementazione di disconnessione SAML.
 
-## Richiesta di disconnessione di esempio {#sample-logout-request}
+## Esempio di richiesta di disconnessione {#sample-logout-request}
 
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>
@@ -37,7 +37,7 @@ I casi d’uso di disconnessione possono essere implementati da una richiesta di
 </samlp:LogoutRequest>
 ```
 
-## Risposta di disconnessione di esempio {#sample-logout-response}
+## Esempio di risposta di disconnessione {#sample-logout-response}
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

@@ -1,29 +1,27 @@
 ---
-description: I sottotitoli codificati visualizzano la parte audio di un video sotto forma di testo sullo schermo quando l’audio non è udibile o l’utente non è udito.
-title: Utilizzare i sottotitoli codificati
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: I sottotitoli codificati visualizzano la porzione audio di un video come testo sullo schermo quando l'audio non è udibile o lo spettatore è ipoudente.
+title: Utilizzare i sottotitoli
+exl-id: 7550ef78-e87f-4cbc-91d6-9aab39e613d7
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 0%
 
 ---
 
-
 # Utilizzare i sottotitoli{#work-with-closed-captions}
 
-I sottotitoli codificati visualizzano la parte audio di un video sotto forma di testo sullo schermo quando l’audio non è udibile o l’utente non è udito.
+I sottotitoli codificati visualizzano la porzione audio di un video come testo sullo schermo quando l&#39;audio non è udibile o lo spettatore è ipoudente.
 
-I sottotitoli codificati si trovano in genere nella stessa lingua dell’audio e presentano anche suoni di sottofondo come testo, ma in genere i sottotitoli sono in una lingua diversa e non includono suoni di sottofondo.
+I sottotitoli codificati sono in genere nella stessa lingua dell&#39;audio e visualizzano anche i suoni di sottofondo come testo, ma i sottotitoli sono in genere in una lingua diversa e non includono i suoni di sottofondo.
 
-TVSDK supporta il rendering di questi formati:
+TVSDK supporta il rendering dei seguenti formati:
 
-* sottotitoli codificati 608 e 708, se forniti come parte del flusso di trasporto video su HLS come pacchetti di dati in flussi video MPEG-2.
-* File di didascalie WebVTT, a cui si fa riferimento dai file manifest M3U8 come definiti nelle specifiche HLS. Sono automaticamente disponibili come tracce a sottotitoli nel lettore Primetime.
+* 608 e 708 sottotitoli, se forniti come parte del flusso di trasporto video su HLS come pacchetti di dati in flussi video MPEG-2.
+* File di didascalia WebVTT, a cui si fa riferimento dai file manifesto M3U8 definiti nelle specifiche HLS. Sono automaticamente disponibili come tracce di sottotitoli nel lettore Primetime.
 
-Puoi:
+È possibile:
 
-* Selezionare una traccia di didascalia disponibile come traccia corrente e ascoltare gli eventi che indicano ulteriori tracce disponibili.
-* Attiva o disattiva i sottotitoli codificati (visibili o non visibili) tramite l’interfaccia `MediaPlayer`.
-* Selezionare le opzioni di stile che determinano il rendering dei sottotitoli codificati da parte del motore video sottostante. Utilizza l&#39;interfaccia `MediaPlayerItem` per selezionare formati quali il colore del font o del font.
-
+* Selezionare un brano di didascalia disponibile come brano corrente e ascoltare gli eventi che indicano altri brani disponibili.
+* Attiva o disattiva i sottotitoli codificati (visibili o non visibili) utilizzando `MediaPlayer` di rete.
+* Seleziona le opzioni di stile che determinano il rendering dei sottotitoli codificati da parte del motore video sottostante. Utilizza il `MediaPlayerItem` per selezionare formati quali il carattere o il colore del carattere.

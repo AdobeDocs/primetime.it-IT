@@ -1,20 +1,19 @@
 ---
-description: Per aggiungere il supporto VPAID 2.0, aggiungi una visualizzazione annunci personalizzata e gli ascoltatori appropriati.
-title: Implementare l’integrazione con VPAID 2.0
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Per aggiungere il supporto VPAID 2.0, aggiungi una visualizzazione annuncio personalizzata e i listener appropriati.
+title: Implementazione dell’integrazione VPAID 2.0
+exl-id: a0d9a370-8fb6-4246-b59d-3b7c0b043bed
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '165'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
+# Implementazione dell’integrazione VPAID 2.0 {#implement-vpaid-integration}
 
-# Implementare l&#39;integrazione VPAID 2.0 {#implement-vpaid-integration}
+Per aggiungere il supporto VPAID 2.0, aggiungi una visualizzazione annuncio personalizzata e i listener appropriati.
 
-Per aggiungere il supporto VPAID 2.0, aggiungi una visualizzazione annunci personalizzata e gli ascoltatori appropriati.
-
-1. Aggiungi la visualizzazione annunci personalizzata all&#39;interfaccia del lettore quando il lettore è nello stato PREPARATO.
+1. Aggiungi la visualizzazione personalizzata dell’annuncio all’interfaccia del lettore quando questo si trova nello stato PREPARATO.
 
    ```java
    ... 
@@ -31,17 +30,17 @@ Per aggiungere il supporto VPAID 2.0, aggiungi una visualizzazione annunci perso
        _playerFrame.addView(view);
    ```
 
-1. Crea i listener ed elabora gli eventi descritti in [Eventi](../../../../tvsdk-3x-android-prog/android-3x-events-notifications/events-summary/android-3x-events-summary.md).
+1. Creare listener ed elaborare gli eventi descritti in [Eventi](../../../../tvsdk-3x-android-prog/android-3x-events-notifications/events-summary/android-3x-events-summary.md).
 
    >[!IMPORTANT]
    >
-   >In un flusso di lavoro VPAID 2.0, per le visualizzazioni di annunci personalizzate è molto importante mantenere l’istanza `CustomAdView` tra `AdBreak` gli avvii (evento `AD_BREAK_START`) e le visualizzazioni di `AdBreak` completate (evento `AD_BREAK_COMPLETE`), dal momento in cui crei la visualizzazione di annunci personalizzata fino a quando la elimini. Cioè, non creare una visualizzazione annunci personalizzata su ogni inizio di interruzione annuncio e disporla su ogni interruzione annuncio completata.
+   >In un flusso di lavoro VPAID 2.0, per le visualizzazioni di annunci personalizzate è molto importante mantenere `CustomAdView` istanza in `AdBreak` starts (evento) `AD_BREAK_START`) e `AdBreak` completes (evento `AD_BREAK_COMPLETE`), dal momento della creazione della visualizzazione dell’annuncio personalizzata fino al momento dello smaltimento. In altre parole, non creare una visualizzazione personalizzata a ogni avvio dell’interruzione pubblicitaria ed eliminarla a ogni interruzione pubblicitaria completata.
    >
    >
-   >Inoltre, devi creare la visualizzazione annunci personalizzata solo quando il lettore è nello stato PREPARATO,
+   >Inoltre, è necessario creare la visualizzazione dell’annuncio personalizzato solo quando il lettore è nello stato PREPARATO,
    >
    >
-   >Quando viene chiamata la reimpostazione, elimina la visualizzazione annunci personalizzata solo. Ad esempio:
+   >Elimina la visualizzazione dell’annuncio personalizzato solo quando viene chiamato il ripristino. Ad esempio:
    >
    >
    ```
@@ -53,7 +52,7 @@ Per aggiungere il supporto VPAID 2.0, aggiungi una visualizzazione annunci perso
    >
    >```
    >
-   >Infine, prima di eliminare la visualizzazione annunci personalizzata, devi rimuoverla dal `FrameLayout`. Ad esempio:
+   >Infine, prima di eliminare la visualizzazione dell’annuncio personalizzata, devi rimuoverla dal `FrameLayout`. Ad esempio:
    >
    >
    ```

@@ -1,33 +1,32 @@
 ---
-description: Il browser TVSDK invia eventi/notifiche nelle sequenze generalmente previste. Il lettore può implementare azioni in base agli eventi nella sequenza prevista.
+description: Il browser TVSDK invia eventi/notifiche in sequenze generalmente previste. Il lettore può implementare azioni basate sugli eventi nella sequenza prevista.
 title: Ordine degli eventi di riproduzione
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: fd9dc0d5-0f39-4a6d-9d88-1fd49946fedf
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 0%
 
 ---
 
-
 # Ordine degli eventi di riproduzione{#order-of-playback-events}
 
-Il browser TVSDK invia eventi/notifiche nelle sequenze generalmente previste. Il lettore può implementare azioni in base agli eventi nella sequenza prevista.
+Il browser TVSDK invia eventi/notifiche in sequenze generalmente previste. Il lettore può implementare azioni basate sugli eventi nella sequenza prevista.
 
 <!--<a id="section_D247A5873A854A079EFA6AC2E80AB894"></a>-->
 
 Gli esempi seguenti mostrano l’ordine di alcuni eventi che includono eventi di riproduzione.
 
-* Quando si carica correttamente una risorsa multimediale tramite `replaceCurrentResource`, l&#39;ordine degli eventi è:
+* Quando si carica correttamente una risorsa multimediale tramite `replaceCurrentResource`, l’ordine degli eventi è:
 
-   * `AdobePSDK.MediaPlayerStatusChangeEvent` con  `event.status =`
+   * `AdobePSDK.MediaPlayerStatusChangeEvent` con `event.status =`
 
       * `MediaPlayerStatus.INITIALIZING`
       * `MediaPlayerStatus.INITIALIZED`
 
-* Durante la preparazione della riproduzione tramite `MediaPlayer.prepareToPlay`, l&#39;ordine degli eventi è:
+* Durante la preparazione per la riproduzione tramite `MediaPlayer.prepareToPlay`, l’ordine degli eventi è:
 
-   * `AdobePSDK.MediaPlayerStatusChangeEvent` con  `event.status =`
+   * `AdobePSDK.MediaPlayerStatusChangeEvent` con `event.status =`
 
       * `MediaPlayerStatus.PREPARING`
       * `MediaPlayerStatus.PREPARED`
@@ -100,4 +99,3 @@ onStatusChange = function (event) {
     } 
 };
 ```
-

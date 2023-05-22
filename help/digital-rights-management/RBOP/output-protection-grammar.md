@@ -1,20 +1,19 @@
 ---
-description: Questa sezione descrive la grammatica dell’input di configurazione, enfatizzando le opzioni di input valide e non valide e spiegando come vengono interpretati i campi facoltativi omessi.
+description: Questa sezione descrive la grammatica dell’input di configurazione, enfatizza le opzioni di input valide e non valide e spiega come vengono interpretati i campi facoltativi omessi.
 title: Grammatica RBOP
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 311194ec-e59b-4145-b22b-6983e212fcab
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 0%
 
 ---
 
-
 # Grammatica RBOP {#rbop-grammar}
 
-Questa sezione descrive la grammatica dell’input di configurazione, enfatizzando le opzioni di input valide e non valide e spiegando come vengono interpretati i campi facoltativi omessi.
+Questa sezione descrive la grammatica dell’input di configurazione, enfatizza le opzioni di input valide e non valide e spiega come vengono interpretati i campi facoltativi omessi.
 
-La grammatica di protezione dell&#39;output basata sulla risoluzione è definita come una sequenza di regole, in cui ogni regola può avere più moduli validi:
+La grammatica di protezione dell’output basata sulla risoluzione è definita come una sequenza di regole, in cui ogni regola può avere più forme valide:
 
 ```
 Rule ::=       
@@ -30,9 +29,9 @@ AnotherRule ::=
 
 >[!NOTE]
 >
->Per migliorare la leggibilità della grammatica, le seguenti proprietà non vengono riportate nella grammatica ma rimangono vere:
+>Per migliorare la leggibilità della grammatica, le seguenti proprietà non vengono riportate all’interno della grammatica ma rimangono vere:
 
-1. L’ordine delle coppie definite all’interno degli oggetti non è fisso; pertanto, qualsiasi permutazione delle coppie è valida.
+1. L&#39;ordine delle coppie definite all&#39;interno degli oggetti non è fisso; pertanto, qualsiasi permutazione delle coppie è valida.
 
    Ad esempio, se abbiamo definito un oggetto come questo:
 
@@ -54,7 +53,7 @@ AnotherRule ::=
    }
    ```
 
-1. Per ogni coppia all&#39;interno di un oggetto, si presume che esista solo 1 istanza di tale coppia all&#39;interno di una determinata istanza di un dato oggetto.
+1. Per ogni coppia all&#39;interno di un oggetto, si presume che esista solo un&#39;istanza di quella coppia all&#39;interno di una determinata istanza di un determinato oggetto.
 
    Ad esempio, se abbiamo definito un oggetto come questo:
 
@@ -66,7 +65,7 @@ AnotherRule ::=
    }
    ```
 
-   l&#39;istanza seguente non è valida, perché all&#39;interno dello stesso oggetto sono presenti due coppie `foo`:
+   la seguente istanza non sarebbe valida, perché sono presenti due `foo` coppie all’interno dello stesso oggetto:
 
    ```
    { 
@@ -76,7 +75,7 @@ AnotherRule ::=
    } 
    ```
 
-   Allo stesso modo, avendo due oggetti come:
+   Allo stesso modo, con due oggetti quali:
 
    ```
    {  
@@ -98,13 +97,13 @@ AnotherRule ::=
 
    è valido, in quanto sono istanze indipendenti dello stesso oggetto.
 
-1. Per le definizioni in cui è possibile scegliere una o più sequenze di stringhe, trattare le stringhe come un set, in cui le voci duplicate vengono trattate come una singola voce. Ad esempio, `["foo", "bar", "foo", "baz"]` equivale a `["foo", "bar", "baz"]`
+1. Per le definizioni in cui è possibile scegliere una o più sequenze di stringhe, trattare le stringhe come un insieme, in cui le voci duplicate vengono trattate come una singola voce. Ad esempio: `["foo", "bar", "foo", "baz"]` equivale a `["foo", "bar", "baz"]`
 
-1. Per la definizione dei numeri, viene utilizzato uno spazio tra le regole (ad esempio, `Digit Digits`), ma non deve essere utilizzato uno spazio simile durante l’applicazione della regola.
+1. Per definire i numeri, viene utilizzato uno spazio tra le regole (ad esempio, `Digit Digits`), ma non utilizzare tale spazio durante l’applicazione della regola.
 
-   Ad esempio, se esprimiamo il numero *cento ventitré* per la regola NonZeroInteger, deve essere espresso come `123` anziché come `1 2 3`, anche se la regola contiene uno spazio tra NonZeroDigit e Cifre.
+   Ad esempio, se esprimiamo il numero *centoventitré* in base alla regola NonZeroInteger, deve essere espressa come `123` anziché `1 2 3`, anche se la regola contiene uno spazio tra NonZeroDigit e Digits.
 
-1. Alcune delle regole consentono più moduli. In questi casi, i diversi moduli sono separati dal carattere `'|'`.
+1. Alcune delle regole consentono più moduli. In questi casi, i diversi moduli sono separati da `'|'` carattere.
 
    Ad esempio, questa regola:
 
@@ -112,7 +111,7 @@ AnotherRule ::=
    Foo ::= "A" | "B" | "C"
    ```
 
-   significa che un&#39;istanza di `Foo` può essere sostituita con &quot;A&quot;, &quot;B&quot; o &quot;C&quot;. Non confonderlo con un modulo che si estende su più righe; questa è una funzione per rendere i moduli più lunghi più leggibili.
+   significa che un&#39;istanza di `Foo` può essere sostituito con &quot;A&quot;, &quot;B&quot; o &quot;C&quot;. Non va confuso con un modulo che si estende su più righe, una caratteristica che consente di rendere più leggibili i moduli più lunghi.
 
 ## Grammatica {#section_52189FD66B1A46BA9F8FDDE1D7C8E8E8}
 
@@ -233,11 +232,11 @@ NonZeroDigit ::=
     | 9
 ```
 
-## Semantica: Configurazioni legali ma non valide {#section_709BE240FF0041D4A1B0A0A7544E4966}
+## Semantica: configurazioni legali ma non valide {#section_709BE240FF0041D4A1B0A0A7544E4966}
 
-L&#39;argomento *Configurazione della protezione dell&#39;output di esempio* presenta una configurazione valida con il relativo significato semantico. La sezione precedente in *questo* argomento presentava le regole grammaticali per le configurazioni. Mentre la grammatica aiuta a garantire la correttezza sintattica, ci sono configurazioni legali sintatticamente che non sono semanticamente corrette (cioè, non sono logiche). Questa sezione presenta configurazioni *sintatticamente* legali, ma *semanticamente* non corrette. Tenere presente che gli esempi contenuti in questa sezione sono stati ridotti alla struttura minima necessaria per illustrare lo scenario in discussione.
+Il *Esempio di configurazione della protezione dell&#39;output* L&#39;argomento ha presentato una configurazione valida insieme al relativo significato semantico. La sezione precedente in *questo* L&#39;argomento presentava le regole grammaticali per le configurazioni. Mentre la grammatica aiuta a garantire la correttezza sintattica, ci sono configurazioni sintatticamente legali che non sono semanticamente corrette (cioè, non sono logiche). Questa sezione presenta le configurazioni *sintatticamente* legale, ma *semantico* errato. Tieni presente che gli esempi in questa sezione sono stati ridotti alla struttura minima necessaria per illustrare lo scenario in discussione.
 
-* Non è possibile definire più vincoli di pixel con lo stesso conteggio di pixel.
+* Non è possibile definire più vincoli pixel con lo stesso numero di pixel.
 
    ```
    {  
@@ -248,7 +247,7 @@ L&#39;argomento *Configurazione della protezione dell&#39;output di esempio* pre
     }  
    ```
 
-* Il conteggio dei pixel non deve superare la risoluzione massima dei pixel specificata.
+* Un numero di pixel non deve superare la risoluzione massima specificata.
 
    ```
    { 

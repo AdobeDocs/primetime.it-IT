@@ -1,53 +1,51 @@
 ---
-description: È possibile gestire i blackout nei flussi video in diretta e fornire contenuti alternativi durante una sospensione attività.
-title: Gestire i blackout nei flussi live
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: È possibile gestire le sospensioni attività nei flussi video live e fornire contenuto alternativo durante una sospensione attività.
+title: Gestire le sospensioni attività nei flussi live
+exl-id: 2e63fb0c-44b1-46f1-a4b8-f8f67389d183
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '519'
 ht-degree: 0%
 
 ---
 
+# Gestire le sospensioni attività nei flussi live{#handle-blackouts-in-live-streams}
 
-# Gestire i blackout nei flussi live{#handle-blackouts-in-live-streams}
+È possibile gestire le sospensioni attività nei flussi video live e fornire contenuto alternativo durante una sospensione attività.
 
-È possibile gestire i blackout nei flussi video in diretta e fornire contenuti alternativi durante una sospensione attività.
+Quando si verifica una sospensione attività in un flusso live, il lettore utilizza gestori di eventi per rilevare la sospensione attività e fornire contenuto alternativo agli utenti non idonei a guardare il flusso principale. Il lettore rileva l&#39;inizio e la fine del periodo di sospensione attività, passa la riproduzione dal flusso principale a un flusso alternativo e torna al flusso principale al termine del periodo di sospensione attività.
 
-Quando si verifica un blackout in un flusso live, il lettore utilizza gestori eventi per rilevare la blackout e fornire contenuti alternativi agli utenti che non sono idonei a guardare il flusso principale. Il lettore rileva l&#39;inizio e la fine del periodo di sospensione attività, passa la riproduzione dal flusso principale a un flusso alternativo e torna al flusso principale al termine del periodo di sospensione attività.
-
-Nell’app client, ti abboni per i tag di blackout in TVSDK. Dopo aver ricevuto la notifica dei nuovi oggetti *metadati temporizzati*, analizzare i dati dell&#39;oggetto metadati temporizzati per identificare se l&#39;oggetto indica una voce di sospensione attività o un&#39;uscita. Per le blackout identificate, chiama gli elementi TVSDK pertinenti per passare al contenuto alternativo all’inizio della blackout e di nuovo per tornare al contenuto principale quando la blackout è terminata.
+Nell’app client, effettui l’abbonamento per i tag di sospensione attività in TVSDK. Al momento della notifica di *metadati temporizzati* , si analizzano i dati dell&#39;oggetto metadati temporizzati per identificare se l&#39;oggetto indica una voce di sospensione attività o un&#39;uscita. Per le sospensioni attività identificate, è necessario chiamare gli elementi TVSDK rilevanti per passare al contenuto alternativo all’inizio della sospensione attività e di nuovo per tornare al contenuto principale al termine della sospensione attività.
 
 >[!TIP]
 >
->Le chiavi vengono ancora scaricate dal manifesto prima della riproduzione del contenuto.
+>I tasti vengono comunque scaricati dal manifesto prima della riproduzione del contenuto.
 
-Quando un utente si connette a un flusso live al termine del periodo di sospensione attività e lo fa scorrere indietro nel tempo fino al periodo di inattività, il contenuto verrà riprodotto.
+Quando un utente si connette a un flusso live dopo la fine del periodo di sospensione attività e scorre indietro nel tempo fino al periodo di sospensione attività, il contenuto viene riprodotto.
 
 >[!IMPORTANT]
 >
->Se tutte le richieste chiave non riescono, viene generato un errore durante l&#39;analisi del manifesto. Se alcune richieste hanno esito negativo e alcune hanno esito positivo, TVSDK tenta di riprodurre il contenuto. Se TVSDK tenta di riprodurre una sezione del contenuto, ma non esiste una chiave valida per decrittografare il contenuto, restituisce un errore.
+>Se tutte le richieste chiave hanno esito negativo, viene generato un errore durante l’analisi del manifesto. Se alcune richieste non vanno a buon fine e altre vanno a buon fine, TVSDK tenta di riprodurre il contenuto. Se TVSDK tenta di riprodurre una sezione del contenuto, ma non esiste una chiave valida per decrittografarlo, viene restituito un errore.
 
-Per gestire i blackout nei flussi live:
+Per gestire le sospensioni attività nei flussi live:
 
-1. Imposta l’app per rilevare i tag di blackout mediante l’iscrizione ai tag di blackout in un manifesto in streaming live.
+1. Imposta l&#39;app per rilevare i tag di sospensione attività mediante l&#39;iscrizione a tali tag in un manifesto live-stream.
 
-   TVSDK non rileva i tag di blackout da solo; devi abbonarti ai tag di blackout per ricevere la notifica quando i tag vengono rilevati durante l’analisi dei file manifest.
-1. Crea listener di eventi per i tag a cui il lettore è iscritto.
+   TVSDK non rileva i tag di sospensione attività da solo. È necessario sottoscrivere i tag di sospensione attività per ricevere una notifica quando i tag vengono rilevati durante l&#39;analisi del file manifesto.
+1. Crea listener di eventi per i tag a cui il lettore è abbonato.
 
-   Quando si verifica un tag a cui il lettore ha effettuato la sottoscrizione (ad esempio, un tag blackout) in primo piano (contenuto principale) o in background (contenuto alternativo), il TVSDK invia un `TimedMetadataEvent` e crea un `TimedMetadataObject` per il `TimedMetadataEvent`.
-1. Implementa i gestori per gli eventi di metadati temporizzati sia per i flussi in primo piano che per quelli in background.
+   Quando si verifica un tag a cui il lettore si è abbonato (ad esempio, un tag di sospensione attività) nei manifesti di flusso in primo piano (contenuto principale) o in background (contenuto alternativo), TVSDK invia un tag `TimedMetadataEvent` e crea un `TimedMetadataObject` per `TimedMetadataEvent`.
+1. Implementa gestori per gli eventi di metadati temporizzati per i flussi in primo piano e in background.
 
-   In questi gestori, ottieni gli orari di inizio e fine del periodo di sospensione attività dagli oggetti evento metadati temporizzati.
-1. Prepara i `MediaPlayer` per i blackout.
+   In questi gestori, ottenere gli orari di inizio e fine per il periodo di sospensione attività dagli oggetti evento metadati temporizzati.
+1. Prepara il `MediaPlayer` per le sospensioni attività.
 
-   Quando `MediaPlayer` entra nello stato PREPARATO, calcola e prepara gli intervalli di sospensione attività e li imposta sull&#39;oggetto `MediaPlayer` .
+   Quando `MediaPlayer` entra nello stato PREPARATO, si calcolano e si preparano gli intervalli di sospensione attività e li si imposta su `MediaPlayer` oggetto.
 
-1. Per ogni aggiornamento della posizione della testina di riproduzione, controllare l&#39;elenco di `TimedMetadataObjects`.
+1. Per ogni aggiornamento della posizione della testina di riproduzione, controlla l’elenco di `TimedMetadataObjects`.
 
-   Qui il lettore rileva l&#39;inizio e la fine del blackout e tiene traccia dell&#39;ora del blackout mentre si verifica.
+   In questo punto il lettore rileva l&#39;inizio e la fine della sospensione attività e tiene traccia dell&#39;ora in cui si verifica.
 
-1. Crea metodi per cambiare contenuto all’inizio e alla fine del periodo di sospensione attività.
+1. Creare metodi per cambiare il contenuto all&#39;inizio e alla fine del periodo di sospensione attività.
 
-   All’avvio del periodo di sospensione attività, sposta il contenuto principale in background e cambia il contenuto alternativo in modo che diventi il flusso principale. Continua a recuperare e analizzare il manifesto originale in background e continua a controllare il tag &quot;blackout end end&quot;, in modo che il lettore possa ricongiungersi al flusso originale al termine del blackout.
-
+   All&#39;avvio del periodo di sospensione attività, passa il contenuto principale allo sfondo e cambia il contenuto alternativo in flusso principale. Continua a recuperare e analizzare il manifesto originale in background e continua a verificare la presenza del tag &quot;blackout end&quot;, in modo che il lettore possa unirsi nuovamente al flusso originale al termine della blackout.

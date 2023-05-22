@@ -1,24 +1,23 @@
 ---
-description: È possibile rimuovere gli intervalli di tempo tra inizio e fine in localTime dalla timeline.
+description: È possibile rimuovere gli intervalli di tempo compresi tra inizio e fine in localTime dalla timeline.
 title: Elimina intervalli
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 1c0f7718-8a40-4fc8-b70b-f751d8ff40a4
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '79'
 ht-degree: 0%
 
 ---
 
-
 # Elimina intervalli{#delete-ranges}
 
-È possibile rimuovere gli intervalli di tempo tra inizio e fine in localTime dalla timeline.
+È possibile rimuovere gli intervalli di tempo compresi tra inizio e fine in localTime dalla timeline.
 
 >[!NOTE]
 >
->Se desideri rimuovere solo alcuni intervalli dal contenuto e la mappa dell’annuncio deve essere utilizzata come definito dal server di annunci, crea un’istanza `CustomRangeMetadata` e specifica il tipo come operazione DELETE con gli intervalli personalizzati definiti.
+>Se desideri rimuovere solo determinati intervalli dal contenuto e la mappa dell’annuncio deve essere utilizzata come definito dal server di annunci, crea un `CustomRangeMetadata` e specificare il tipo come operazione DELETE con gli intervalli personalizzati definiti.
 
-Elimina intervalli con un annuncio di Adobe Primetime ad decisioning.
+Elimina intervalli con un annuncio Adobe Primetime ad decisioning.
 
 ```
 {   
@@ -76,4 +75,3 @@ Elimina intervalli con un annuncio di Adobe Primetime ad decisioning.
     "id": "vod_003"
 }
 ```
-

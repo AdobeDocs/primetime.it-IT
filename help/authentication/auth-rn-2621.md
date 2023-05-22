@@ -1,7 +1,8 @@
 ---
 title: Note sulla versione di Adobe Primetime authentication 2.62.1
 description: Note sulla versione di Adobe Primetime authentication 2.62.1
-source-git-commit: 0afc48ae0e423c2a851b3bf22803fbd730999c04
+exl-id: 7a43cb64-27c7-41ec-b02a-64cf7f476c5d
+source-git-commit: 79ec21744e682112a7e95c2ce7845d9a9458b8bc
 workflow-type: tm+mt
 source-wordcount: '79'
 ht-degree: 0%
@@ -12,20 +13,20 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente a partire da Adobe. Non è consentito alcun uso non autorizzato.
+>Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente di Adobe. Non è consentito alcun uso non autorizzato.
 
 Questa pagina descrive nuove funzioni, modifiche e problemi noti relativi a questa versione:
 
-## Client lato server e Web {#server-side-web-clients-2621}
+## Client Web e lato server {#server-side-web-clients-2621}
 
 * [Numero build](#build-number-2621)
 * [Nuove funzioni](#new-features-2621)
 
 ### Numero build {#build-number-2621}
 
-Autenticazione Adobe Primetime: adobe-pass-**2.62.1**
-Data di rilascio: **02/08/2022 - 04/08/2022**
+Autenticazione Adobe Primetime: adobe-pass-**2.62.1.**
+Data di rilascio: **08/02/2022 - 08/04/2022**
 
 ### Nuove funzioni {#new-features-2621}
 
-Questa versione continua con i miglioramenti dell’architettura interna.
+Questa versione continua i miglioramenti dell’architettura interna.

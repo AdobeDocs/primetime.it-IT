@@ -1,64 +1,59 @@
 ---
-description: La risoluzione degli annunci e il caricamento degli annunci possono causare un ritardo inaccettabile per un utente in attesa dell'avvio della riproduzione. Le funzioni Lazy Ad Loading e Lazy Ad Resolving possono ridurre questo ritardo di avvio.
-keywords: Pigro;risoluzione annunci;Caricamento annunci
-title: Lazy e risoluzione
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: La risoluzione e il caricamento degli annunci possono causare un ritardo inaccettabile per l’utente in attesa dell’avvio della riproduzione. Le funzioni Lazy Ad Loading e Lazy Ad Resolving possono ridurre questo ritardo di avvio.
+keywords: Lazy;Risoluzione annuncio;Caricamento annuncio
+title: Risoluzione annuncio lazy
+exl-id: 6f4c2b9b-a129-4132-8c88-259602222381
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 0%
 
 ---
 
-
 # Panoramica {#lazy-ad-resolving}
 
-La risoluzione degli annunci e il caricamento degli annunci possono causare un ritardo inaccettabile per un utente in attesa dell&#39;avvio della riproduzione. Le funzioni Lazy Ad Loading e Lazy Ad Resolving possono ridurre questo ritardo di avvio.
+La risoluzione e il caricamento degli annunci possono causare un ritardo inaccettabile per l’utente in attesa dell’avvio della riproduzione. Le funzioni Lazy Ad Loading e Lazy Ad Resolving possono ridurre questo ritardo di avvio.
 
-* Processo di risoluzione e caricamento degli annunci di base:
+* Processo di base di risoluzione e caricamento degli annunci:
 
    1. TVSDK scarica un manifesto (playlist) e *risolve* tutti gli annunci.
-   1. TVSDK *carica* tutti gli annunci e li inserisce nella timeline.
-   1. TVSDK sposta il lettore nello stato PREPARATO e inizia la riproduzione del contenuto.
+   1. TVSDK *Carichi* tutti gli annunci e li inserisce nella timeline.
+   1. TVSDK sposta il lettore nello stato READY e inizia la riproduzione del contenuto.
 
-   Il lettore utilizza gli URL nel manifesto per ottenere il contenuto dell’annuncio (creativi), assicura che il contenuto dell’annuncio sia in un formato che TVSDK può riprodurre e TVSDK inserisce gli annunci nella timeline. Questo processo di base di risoluzione e caricamento degli annunci può causare un ritardo inaccettabilmente lungo per un utente che aspetta di riprodurre il proprio contenuto, soprattutto se il manifesto contiene diversi URL di annunci.
+   Il lettore utilizza gli URL nel manifesto per ottenere il contenuto dell’annuncio (creativi), si assicura che il contenuto dell’annuncio sia in un formato riproducibile da TVSDK e che TVSDK inserisca gli annunci nella timeline. Questo processo di base di risoluzione e caricamento degli annunci può causare un ritardo inaccettabilmente lungo per un utente in attesa di riprodurre il proprio contenuto, soprattutto se il manifesto contiene diversi URL di annunci.
 
-* *Caricamento* annuncio pigro:
+* *Caricamento annuncio lazy*:
 
    1. TVSDK scarica una playlist e *risolve* tutti gli annunci.
-   1. TVSDK *carica* annunci pre-scorrimento, sposta il lettore nello stato PREPARATO e inizia la riproduzione del contenuto.
-   1. TVSDK *carica* gli annunci rimanenti e li inserisce sulla timeline mentre si verifica la riproduzione.
+   1. TVSDK *Carichi* pre-roll di annunci, sposta il lettore nello stato READY e inizia la riproduzione del contenuto.
+   1. TVSDK *Carichi* gli annunci rimanenti e li inserisce nella timeline durante la riproduzione.
 
-   Questa funzione migliora il processo di base inserendo il lettore nello stato PREPARATO prima che tutti gli annunci vengano caricati.
+   Questa funzione migliora il processo di base portando il lettore nello stato READY prima che tutti gli annunci vengano caricati.
 
-* *Risoluzione* annunci pigri:
+* *Lazy Ad Resolving*:
 
    1. TVSDK scarica la playlist.
-   1. TVSDK risolve e carica tutti gli annunci pre-roll, sposta il lettore nello stato PREPARATO e inizia la riproduzione del contenuto.
-   1. TVSDK risolve e carica gli annunci rimanenti e li inserisce nella timeline mentre si verifica la riproduzione.
+   1. TVSDK risolve e carica tutti gli annunci pre-roll, sposta il lettore nello stato READY e inizia la riproduzione del contenuto.
+   1. TVSDK risolve e carica gli annunci rimanenti e li inserisce nella timeline quando si verifica la riproduzione.
 
-   Lazy Ad Resolving si basa su Lazy Ad Loading per consentire un avvio ancora più veloce. Una volta inseriti gli annunci pre-roll, TVSDK sposta il lettore nello stato PREPARATO, quindi risolve gli annunci aggiuntivi e li posiziona sulla timeline.
+   Lazy Ad Resolving si basa su Lazy Ad Loading per consentire un avvio ancora più rapido. Dopo che TVSDK inserisce qualsiasi annuncio pre-roll, sposta il lettore nello stato PREPARATO, quindi risolve gli annunci aggiuntivi e li posiziona sulla timeline.
 
 >[!IMPORTANT]
 >
 >Fattori da considerare con Lazy Ad Resolving:
 >
->* La risoluzione degli annunci pigri è abilitata per impostazione predefinita. Se lo disattivi, tutti gli annunci vengono risolti prima dell’avvio della riproduzione.
->* Lazy Ad Resolving non consente la ricerca o il trickplay fino alla risoluzione di tutti gli annunci:
-
+>* La funzione Lazy Ad Resolving è attivata per impostazione predefinita. Se lo disattivi, tutti gli annunci vengono risolti prima dell’inizio della riproduzione.
+>* Lazy Ad Resolving non consente la ricerca o il trickplay fino a quando non vengono risolti tutti gli annunci:
    >
-   >    
-   * Il lettore deve attendere l&#39;evento `kEventAdResolutionComplete` prima di consentire la ricerca o il gioco di trucco.
-   >    * Se l’utente tenta di eseguire operazioni di ricerca o di trucco durante la risoluzione degli annunci, TVSDK genera l’errore `kECLazyAdResolutionInProgress`.
-   >    * Se necessario, il lettore deve aggiornare la barra di scorrimento, *dopo* che ha ricevuto l&#39;evento `kEventAdResolutionComplete`.
+   >    * Il lettore deve attendere `kEventAdResolutionComplete` prima di consentire la ricerca o la riproduzione con trucco.
+   >    * Se l’utente tenta di eseguire operazioni di ricerca o di riproduzione tramite trucco mentre gli annunci sono ancora in fase di risoluzione, TVSDK genera il `kECLazyAdResolutionInProgress` errore.
+   >    * Se necessario, il lettore deve aggiornare la barra di scorrimento, *dopo* ricezione `kEventAdResolutionComplete` evento.
 >
 >* Lazy Ad Resolving è solo per VOD. Non funzionerà con i flussi LIVE.
->* La funzione Lazy Ad Resolving non è compatibile con la funzione *Instant On* .
-
+>* Lazy Ad Resolving non è compatibile con *Istantanea attiva* funzionalità.
 >
->  
-
-Per ulteriori informazioni su Instant On, consulta l’ accesso immediato .
+>  Per ulteriori informazioni su Instant On, vedere Instant-on.
 >
->* Mentre Lazy Ad Resolving consente di avviare la riproduzione molto più velocemente, se si verifica un&#39;interruzione pubblicitaria nei primi 60 secondi di riproduzione, potrebbe non essere risolto.
->* La risoluzione degli annunci pigri non influisce sugli annunci pre-roll.
+>* Mentre la risoluzione dei Lazy Ad determina un avvio molto più rapido della riproduzione, se si verifica un’interruzione pubblicitaria nei primi 60 secondi di riproduzione, potrebbe non venire risolta.
+>* La risoluzione lenta degli annunci non influisce sugli annunci pre-roll.
+

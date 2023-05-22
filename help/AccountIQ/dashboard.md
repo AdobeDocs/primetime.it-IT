@@ -1,6 +1,6 @@
 ---
-title: Dashboard IQ dell'account
-description: Il dashboard aiuta a individuare le istanze di condivisione delle password analizzando un'ampia gamma di dati degli utenti abbonati.
+title: Dashboard Account IQ
+description: La dashboard consente di individuare le istanze di condivisione delle password analizzando un’ampia gamma di dati degli abbonati.
 exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
 source-git-commit: a2181a8fd7334f19b8387a31c71527d4f689ab9d
 workflow-type: tm+mt
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Dashboard {#dashboard}
 
-Il dashboard riepiloga e aggrega i dati in una raccolta di grafici e rapporti progettati per fornire una panoramica di alto livello dell&#39;ambito e dell&#39;impatto della condivisione dei conti. Fornisce una singola pagina contenente i report principali e le metriche da Account IQ.
+Il dashboard riepiloga e aggrega i dati in una raccolta di grafici e rapporti progettati per fornire una panoramica ad alto livello dell’ambito e dell’impatto della condivisione degli account. Fornisce una singola pagina contenente i rapporti e le metriche principali dell’Account IQ.
 
 
 +++Programmatore- dashboard
@@ -19,62 +19,62 @@ Il dashboard riepiloga e aggrega i dati in una raccolta di grafici e rapporti pr
 ![dashboard di Account IQ per gli utenti programmatori](assets/dashboard-programr.png)
 
 
-Figura: Dashboard per gli utenti del programmatore
+Figura: Dashboard per utenti programmatori
 
 +++
 
-+++MVPD- dashboard
++++Dashboard MVPD-
 
-La dashboard per gli utenti MVPD è leggermente diversa da quelle degli utenti del programmatore.
+La dashboard per gli utenti MVPD è leggermente diversa da quelle degli utenti programmatori.
 
 ![dashboard di Account IQ per gli utenti programmatori](assets/dashboard-mvpd.png)
 
-Figura: Dashboard per gli utenti MVPD
+Figura: Dashboard per utenti MVPD
 
 +++
 
-## Punteggio di condivisione medio - aggregato per il segmento corrente {#aggregated-sharing}
+## Punteggio medio di condivisione - aggregato per il segmento corrente {#aggregated-sharing}
 
-Il pannello Punteggio di condivisione aggregata fornisce una lettura della riga principale che riassume la quantità e l’impatto della condivisione in termini di account e volume in streaming.
+Il pannello Punteggio di condivisione aggregato fornisce una lettura della riga superiore che riepiloga la quantità e l’impatto della condivisione in termini di conti e volume di streaming.
 
-I valori consentono di comprendere l’entità della condivisione delle credenziali da parte degli abbonati, fornendo quindi una misura della necessità di agire su di essa.
+I valori ti aiutano a comprendere l’entità della condivisione delle credenziali da parte degli abbonati, fornendo così una misura della necessità di agire di conseguenza.
 
 ![](assets/aggregate-sharing-score.png)
 
 
-*Figura: Pannello del punteggio medio di condivisione - aggregato per il segmento corrente*
+*Figura: Pannello punteggio medio di condivisione, aggregato per il segmento corrente*
 
 Le tre metriche seguenti sono componenti del punteggio medio di condivisione.
 
 ### Livello di condivisione {#sharing-level}
 
-L&#39;indicatore del livello di condivisione mostra la percentuale di tutti gli account degli abbonati (nel segmento definito) che vengono condivisi, durante l&#39;intervallo di tempo selezionato.
+Il contatore dei livelli di condivisione mostra la percentuale di tutti gli account abbonato (nel segmento definito) condivisi, durante l’intervallo di tempo selezionato.
 
-Un valore calcolato in base alla media della probabilità di condivisione calcolata per ogni conto nell&#39;insieme di MVPD selezionati che è stato trasmesso da uno dei canali programmatori selezionati durante l&#39;intervallo di tempo selezionato.
+Un valore calcolato sulla base di una media della probabilità di condivisione calcolata per ogni account nel set di MVPD selezionati che è stato inviato in streaming da uno dei canali del programmatore selezionati durante l’intervallo di tempo selezionato.
 
 ![](assets/sharing-level.png)
 
 
 *Figura: Livello di condivisione*
 
-L’indicatore Tendenza mostra la variazione percentuale del valore della metrica in rispetto all’intervallo di tempo precedente.
+L’indicatore Tendenza mostra la variazione percentuale nel valore della metrica rispetto all’intervallo di tempo precedente.
 
-### Utilizzo dagli account condivisi {#usage-from-shared-accounts}
+### Utilizzo da account condivisi {#usage-from-shared-accounts}
 
-Questo indicatore indica la percentuale di utilizzo di tutti gli account utente iscritto dagli account condivisi per il segmento e il periodo di tempo definiti. Il contatore indica gli intervalli di utilizzo (da account condivisi) nella scala da 0 a 100%. Questi intervalli, denominati Bassa, Media, Alta e Anormale, si basano sulla media del settore.
+Questo indicatore indica la percentuale di utilizzo di tutti i conti sottoscrittori rispetto ai conti condivisi per il segmento e il periodo di tempo definiti. Il contatore contrassegna gli intervalli di utilizzo (da account condivisi) sulla scala da 0 a 100%. Questi intervalli, denominati Basso, Medio, Alto e Anormale, sono basati sulla media del settore.
 
-Puoi anche vedere l&#39;indicatore Tendenza, che rappresenta un aumento o una diminuzione dell&#39;utilizzo da account condivisi rispetto all&#39;intervallo di tempo precedente.
+È inoltre possibile visualizzare l’indicatore Tendenza, che mostra un aumento o una diminuzione nell’utilizzo da account condivisi rispetto all’intervallo di tempo precedente.
 
 ![](assets/usage-4mshared-accounts.png)
 
 
-*Figura: Utilizzo dagli account condivisi*
+*Figura: Utilizzo da account condivisi*
 
 ### Punteggio di condivisione complessivo {#overall-sharing-score}
 
-Il punteggio di condivisione complessivo è composito dei punteggi di condivisione, tra cui &quot;Livello di condivisione&quot; e &quot;Utilizzo z dagli account condivisi&quot;.
+Il punteggio di condivisione complessivo è composito di punteggi di condivisione che includono &quot;Livello di condivisione&quot; e &quot;Utilizzo z da account condivisi&quot;.
 
-Fornisce un valore inteso per riflettere l&#39;impatto relativo della condivisione rispetto al settore. Lo scopo è simile a quello di un punteggio di credito, che riassume la situazione con un singolo numero. Ma in questo caso, più alto è il numero, maggiore è il danno potenziale.
+Fornisce un valore destinato a riflettere l&#39;impatto relativo della condivisione rispetto al settore. Il suo scopo è simile a quello di un punteggio di credito, che riassume la situazione con un singolo numero. Ma in questo caso, più alto è il numero, maggiore è il danno potenziale.
 
 ![](assets/overall-sharing-score.png)
 
@@ -87,31 +87,31 @@ It is a table of risk indices and accounts totals for the top MVPDs ranked by ov
 
 ![](assets/mvpds-in-segment.png)-->
 
-## Punteggi complessivi di condivisione a livello di industria per MVPD {#top-mvpds}
+## Punteggi complessivi di condivisione a livello di settore per MVPD {#top-mvpds}
 
-Questa tabella fornisce una visualizzazione comparativa dei diversi Punteggi di condivisione aggregata per gli MVPD nel segmento.
+Questa tabella fornisce una visualizzazione comparativa dei diversi punteggi aggregati di condivisione per gli MVPD nel segmento.
 
 >[!NOTE]
 >
->Questa tabella utilizza i dati industriali complessivi a fini comparativi, non i dati rappresentati da tali MVPD nel segmento.
+>Questa tabella utilizza i dati complessivi del settore per scopi comparativi, non i dati rappresentati da tali MVPD nel segmento.
 
 ![](assets/top-mvpds.png)
 
 
 *Figura: MVPD principali nel segmento per punteggio complessivo*
 
-## Condivisione dei punteggi per canali e MVPD {#sharin-score-by-channels-and-mvpds}
+## Condivisione del punteggio per canali e MVPD {#sharin-score-by-channels-and-mvpds}
 
-Questa tabella fornisce una visualizzazione comparativa della condivisione dei punteggi dei canali selezionati per gli MVPD nel segmento corrente.
+Questa tabella fornisce una visualizzazione comparativa dei punteggi di condivisione dei canali selezionati per gli MVPD nel segmento corrente.
 
 ![](assets/sharing-scores-by-channels-mvpds.png)
 
 
-*Figura: Condivisione dei punteggi per canali e MVPD*
+*Figura: Condivisione di punteggi per canali e MVPD*
 
-## Probabilità di condivisione degli account {#accounts-sharing-probability}
+## Probabilità di condivisione account {#accounts-sharing-probability}
 
-Questo grafico divide gli account in intervalli di quote di probabilità di condivisione da molto basso (0-20%) a molto alto (80=100%).
+Questo grafico suddivide gli intervalli di quintili di probabilità di condivisione da molto basso (0-20%) a molto alto (80=100%).
 
 >[!NOTE]
 >
@@ -121,11 +121,11 @@ Questo grafico divide gli account in intervalli di quote di probabilità di cond
 ![](assets/dashboard-ac-sharing-prob.png)
 
 
-*Figura: Numeri e percentuali degli account abbonati in diversi intervalli di probabilità di condivisione*
+*Figura: Numeri e percentuali degli account degli abbonati in diversi intervalli di probabilità di condivisione*
 
 ## Numero di account e utilizzo condividendo il livello di probabilità {#number-of-accounts-usage-sharing-probability}
 
-Questo pannello fornisce una visualizzazione tabulare degli account suddivisi in intervalli di condivisione dei quintili di probabilità da molto basso (0-20%) a molto alto (80-100%) con l&#39;utilizzo associato di ciascun quintile dagli account condivisi.
+Questo pannello fornisce una vista tabulare degli account suddivisi in intervalli di quintili di probabilità di condivisione da molto basso (0-20%) a molto alto (80-100%) con l’utilizzo associato di ciascun quintile dagli account condivisi.
 
 ![](assets/no-acc-usage-prob-level.png)
 

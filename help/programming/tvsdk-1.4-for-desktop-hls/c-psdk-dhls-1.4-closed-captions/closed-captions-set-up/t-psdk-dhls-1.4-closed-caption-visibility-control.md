@@ -1,26 +1,25 @@
 ---
-description: È possibile controllare la visibilità dei sottotitoli codificati. Quando la visibilità è attiva, viene visualizzata la traccia attualmente selezionata. Se modifichi la traccia corrente, l’impostazione di visibilità rimane la stessa.
-title: Controllo della visibilità dei sottotitoli
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Potete controllare la visibilità dei sottotitoli codificati. Quando la visibilità è attiva, viene visualizzato il brano attualmente selezionato. Se modificate la traccia corrente, l'impostazione di visibilità rimane invariata.
+title: Controlla la visibilità dei sottotitoli
+exl-id: fac24d97-b83e-4bc4-a824-8a1692509519
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 0%
 
 ---
 
+# Controlla la visibilità dei sottotitoli{#control-closed-caption-visibility}
 
-# Controllare la visibilità dei sottotitoli{#control-closed-caption-visibility}
-
-È possibile controllare la visibilità dei sottotitoli codificati. Quando la visibilità è attiva, viene visualizzata la traccia attualmente selezionata. Se modifichi la traccia corrente, l’impostazione di visibilità rimane la stessa.
+Potete controllare la visibilità dei sottotitoli codificati. Quando la visibilità è attiva, viene visualizzato il brano attualmente selezionato. Se modificate la traccia corrente, l&#39;impostazione di visibilità rimane invariata.
 
 >[!TIP]
 >
->Se il testo della didascalia chiusa viene visualizzato quando il lettore entra nella modalità di ricerca, il testo non viene più visualizzato al termine della ricerca. Al contrario, dopo alcuni secondi, TVSDK visualizza il testo della didascalia successiva nel video dopo la posizione di ricerca finale.
+>Se il testo con sottotitoli codificati viene visualizzato quando il lettore entra nella modalità di ricerca, non viene più visualizzato dopo il completamento della ricerca. Invece, dopo alcuni secondi, TVSDK mostra il testo della didascalia successiva nel video dopo la posizione di ricerca finale.
 
 >[!NOTE]
 >
->I valori di visibilità dei sottotitoli codificati sono definiti in `ClosedCaptionsVisibility`.
+>I valori di visibilità per i sottotitoli codificati sono definiti in `ClosedCaptionsVisibility`.
 >
 >
 ```
@@ -28,14 +27,14 @@ ht-degree: 0%
 >public static const VISIBLE:String = visible;
 >```
 
-1. Attendere che il `MediaPlayer` disponga almeno dello stato PREPARATO (vedere [Attendere che uno stato valido](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)).
-1. Per ottenere l’impostazione di visibilità corrente per i sottotitoli codificati, utilizza il metodo getter in `MediaPlayer`, che restituisce un valore di visibilità.
+1. Attendi `MediaPlayer` avere almeno lo stato PREPARATO (vedere [Attesa di uno stato valido](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)).
+1. Per ottenere l&#39;impostazione di visibilità corrente per i sottotitoli, utilizzare il metodo getter in `MediaPlayer`, che restituisce un valore di visibilità.
 
    ```
    public function get ccVisibility():String
    ```
 
-1. Per modificare la visibilità dei sottotitoli codificati, utilizzare il metodo setter, passando un valore di visibilità da `ClosedCaptionsVisibility`.
+1. Per modificare la visibilità dei sottotitoli codificati, utilizzate il metodo setter, trasmettendo un valore di visibilità da `ClosedCaptionsVisibility`.
 
    Ad esempio:
 
@@ -43,7 +42,7 @@ ht-degree: 0%
    public function set ccVisibility(value:String):void
    ```
 
-1. Definire un elenco a discesa.
+1. Definisci un elenco a discesa.
 
    ```
    <s:DropDownList id="ccTracksList" width="85" 
@@ -52,14 +51,14 @@ ht-degree: 0%
                    prompt="CC"/>
    ```
 
-1. Definire una matrice associabile di tracce di didascalia chiusa.
+1. Definite un array associabile di tracce di sottotitoli.
 
    ```
    [Bindable] private var _ccTracks:ArrayCollection =  
      new ArrayCollection(); // active tracks 
    ```
 
-1. Imposta ascoltatori.
+1. Configurare i listener.
 
    ```
    player.addEventListener(MediaPlayerItemEvent.ITEM_CREATED, onItemCreated); 
@@ -146,4 +145,3 @@ ht-degree: 0%
        ccTracksList.selectedIndex = selectedIndex; 
    } 
    ```
-

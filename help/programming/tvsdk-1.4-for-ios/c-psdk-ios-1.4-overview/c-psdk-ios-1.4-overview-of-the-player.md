@@ -1,52 +1,50 @@
 ---
-description: TVSDK per iOS include numerose funzioni.
-title: Funzioni TVSDK di Primetime
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK per iOS include diverse funzioni.
+title: Funzioni di Primetime TVSDK
+exl-id: 1968c072-2651-442d-9e4c-412f7959bcab
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
 
 ---
 
+# Funzioni di Primetime TVSDK {#primetime-tvsdk-features}
 
-# Funzioni TVSDK di Primetime {#primetime-tvsdk-features}
+TVSDK per iOS include diverse funzioni e fornisce le seguenti funzionalità principali:
 
-TVSDK per iOS include numerose funzioni e fornisce le seguenti funzionalità principali:
+* VOD e riproduzione live/lineare
 
-* Riproduzione VOD e live/lineare
-
-   * Gestione della finestra di riproduzione, compresi i metodi che riproducono, fermano, mettono in pausa, cercano e recuperano la posizione della testina di riproduzione
-   * Supporto per la riproduzione a eventi completi
-   * Sottotitoli codificati (608, WebVTT) e moduli audio alternativi per una maggiore accessibilità
-   * Funzionalità DVR
-   * Logica del bit rate adattivo (ABR) e configurazione iniziale dei controlli ABR
-   * Iscrizione a tag non HLS e HLS
-   * Supporto del failover del manifesto in tempo reale
+   * Gestione della finestra di riproduzione, inclusi i metodi di riproduzione, arresto, pausa, ricerca e recupero della posizione della testina di riproduzione
+   * Supporto per la riproduzione completa degli eventi
+   * Sottotitoli codificati (608, WebVTT) e forme audio alternative per una maggiore accessibilità
+   * Capacità DVR
+   * Logica di bit rate adattivo (ABR) e configurazione iniziale dei controlli ABR
+   * Abbonamento a tag non HLS e HLS
+   * Supporto del failover del manifesto live
 
 * Pubblicità
 
    * VPAID 2.0
    * Unione di annunci lato client
 
-      * Inserimento senza problemi di annunci, compreso il supporto per VAST/VMAP
-      * Supporto per tag cue personalizzati per gli annunci
-      * Supporto per la marcatura, la sostituzione e l’eliminazione degli annunci C3
-      * Flusso di lavoro di inserimento di contenuti/annunci personalizzabili, inclusa la segnaletica di blackout
+      * Inserimento semplice degli annunci, incluso il supporto per VAST/VMAP
+      * Supporto di tag di cue personalizzati per gli annunci
+      * Supporto per contrassegnare, sostituire ed eliminare annunci C3
+      * Flusso di lavoro personalizzabile per l&#39;inserimento di contenuti/annunci, inclusa la segnalazione di sospensione attività
 
 * Protezione dei contenuti
 
-   * Accesso ai servizi relativi alla gestione dei diritti digitali (DRM)
-   * Riproduzione di flussi HLS non crittografati o con HTTP Live Streaming (PHLS) protetto
-   * Controllo dell&#39;uscita basato su risoluzione, basato su criteri DRM
+   * Accesso ai servizi correlati alla gestione dei diritti digitali (DRM)
+   * Riproduzione di flussi HLS non crittografati o con Protected HTTP Live Streaming (PHLS)
+   * Controllo dell&#39;output basato su risoluzione, basato su regole DRM
 
-* Tracciamento video e annunci
+* Tracciamento di video e annunci
 
-   * Tracciamento degli eventi QoS
-   * Notifiche che aiutano TVSDK e la tua applicazione a comunicare in modo asincrono lo stato dei video, degli annunci pubblicitari e di altri elementi, nonché l’attività di log
+   * Tracciamento eventi QoS
+   * Notifiche che consentono a TVSDK e all’applicazione di comunicare in modo asincrono sullo stato di video, annunci pubblicitari e altri elementi, e anche su tale attività di registro
    * Integrazione con Adobe Analytics e supporto heartbeat
 
 * Registrazione
 
    * Debug logging
-

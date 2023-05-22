@@ -1,44 +1,43 @@
 ---
-description: 'Questa tabella fornisce informazioni dettagliate sulle notifiche di ottimizzazione dei ricavi. '
-title: Codice di ottimizzazione dei ricavi
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Questa tabella fornisce informazioni dettagliate sulle notifiche di ottimizzazione dei ricavi.
+title: Codice ottimizzazione RICAVI
+exl-id: 3657ba70-ec35-495b-ae7b-4198429bdf6a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '752'
 ht-degree: 0%
 
 ---
 
+# Codice ottimizzazione RICAVI {#revenue-optimization-code}
 
-# Codice di ottimizzazione dei ricavi {#revenue-optimization-code}
+Questa tabella fornisce informazioni dettagliate sulle notifiche di OTTIMIZZAZIONE DELLE ENTRATE.
 
-Questa tabella fornisce informazioni dettagliate sulle notifiche di OTTIMIZZAZIONE DEI RICAVI.
+## Abilita report di ottimizzazione dei ricavi {#enable-revenue-optimization-reporting}
 
-## Abilitare i rapporti di ottimizzazione dei ricavi {#enable-revenue-optimization-reporting}
-
-Per abilitare questo reporting, utilizza l&#39;api PTMediaPlayer: `[mediaPlayersetRevenueOptimizationReportingLevel:PTNotificationTypeInfo]`.
+Per abilitare questo reporting, utilizza l’api PTMediaPlayer: `[mediaPlayersetRevenueOptimizationReportingLevel:PTNotificationTypeInfo]`.
 
 >[!NOTE]
 >
->La maggior parte delle notifiche informative contiene metadati rilevanti, ad esempio l’URL della risorsa che non è stato possibile scaricare. Alcune notifiche contengono metadati per specificare se il problema si è verificato nel contenuto video principale, nel contenuto audio alternativo o in un annuncio.
+>La maggior parte delle notifiche informative contiene metadati rilevanti, ad esempio l’URL della risorsa che non è stata scaricata. Alcune notifiche contengono metadati che consentono di specificare se il problema si è verificato nel contenuto video principale, nel contenuto audio alternativo o in un annuncio.
 
 | Codice | Nome | Notifica interna | Chiavi metadati | Commenti |
 |---|---|---|---|---|
-| 401001 | REVENUE_OPTIMIZATION_REPORTING | Nessuno | Fai riferimento alla tabella seguente per le chiavi di metadati basate su eventi diversi. | Nessuno |
+| 401001 | REVENUE_OPTIMIZATION_REPORTING | Nessuno | Fai riferimento alla tabella seguente per le chiavi dei metadati basate su eventi diversi. | Nessuno |
 
 | Dettagli evento | ContextMetadata |
 |---|---|
-| **CONTENT_RESOURCE_** STARTDispatched in TVSDK quando viene chiamato MediaPlayer::replaceCurrentResource. | clientTimestamp, fallbackOnInvalidCreative, showStaticBanner, hasPreroll, event, adSignalingMode, resourceUrl, creativeRepackagingFormat, delayAdLoadingTolerance, zoneID, hasLivePreroll, adRequestTimeout, delayAdLoading, resourceType, creativeRepackagingEnabled, media clientId |
-| **CONTENT_PLAYBACK_** STARTDispatched in TVSDK quando il contenuto è entrato nello stato preparato ed è pronto per la riproduzione. Questo evento non invierà su ogni caricamento del manifesto - invierà solo al caricamento iniziale. | clientTimestamp, contentURL, contentType, event, isLive, clientID |
-| **AD_OPPORTUNITY_** GENERATEDDispatched in TVSDK quando viene generata un&#39;opportunità. | clientTimestamp, evento, entity, ileId, placementDuration, clientId |
-| **AD_OPPORTUNITY_RESOLVE_** STARTDispatched in TVSDK quando viene avviata la risoluzione di un&#39;opportunità. | clientTimestamp, evento, entity, ileId, placementDuration, clientId |
-| **AD_OPPORTUNITY_RESOLVE_** FAILEDDispatched in TVSDK quando un ad resolver chiama MediaPlayerClient::notifyFailed(). Necessità di compilare i dati | opportunitàId, notificationAD |
-| **AD_RESOURCE_** LOADDispatched quando una qualsiasi risorsa di annunci viene recuperata dall&#39;URL. responseStartTime:Unix timestamp per l&#39;avvio della richiesta. responseTotalTime:quantità totale di tempo (in secondi) necessario per il caricamento di una risposta. responseStatus:Il codice di stato rilevato durante il recupero della risorsa. status:&quot;error&quot; o &quot;success&quot; referrerAdId:l&#39;id dell&#39;annuncio di riferimento che ha richiesto il recupero di questa risorsa (se presente). referrerUrl:URL di provenienza che ha richiesto il recupero di questa risorsa. errorMessage:Se lo stato è &quot;error&quot;, il motivo dell&#39;errore si trova qui. | opportunitàId, resourceType, responseTotalTime, responseStatus, responseStartTime, status, errorMessage, url, referrerURL, referrerAdId |
-| **AD_RESOURCE_LOAD_** CRSDispatched in TVSDK quando un CRS viene applicato a una risorsa, così come la risposta per m3u8. resourceType:always &quot;crs&quot;. responseStartTime:Unix timestamp per l&#39;avvio della richiesta. responseTotalTime:quantità totale di tempo (in secondi) necessario per il caricamento di una risposta. responseStatus:Il codice di stato rilevato durante il recupero della risorsa. status:&quot;error&quot; o &quot;success&quot;. errorMessage:Se lo stato è &quot;error&quot;, il motivo dell&#39;errore si trova qui. mediaFileUrl:URL del file multimediale originale selezionato. mediaFileBitrate:Il bitrate del file multimediale selezionato. mediaFileMimeType: Il tipo MIME del file multimediale selezionato. url:url della risorsa finale. | opportunitàId, resourceType, responseTotalTime, responseStatus, responseStartTime, status, errorMessage, url, mediaFileURL, mediaFileBitrate, mediaFileMimeType, url |
-| **AD_TIMELINE_** PLACEDispatched in TVSDK dopo che un adBreak è stato inserito sulla timeline. Questo evento si verifica una volta per ogni interruzione pubblicitaria. propostoTime:l’ora in cui è stata richiesta l’interruzione pubblicitaria. realTime:l’ora in cui l’interruzione pubblicitaria è stata effettivamente inserita. durataProposta:la durata dell&#39;interruzione pubblicitaria richiesta per l&#39;inserimento. Per i contenuti live questa è la durata del cue. Per il contenuto VOD si tratta normalmente di -1. effectiveDuration:la durata effettiva dell’interruzione pubblicitaria inserita. Calcolato come la durata della somma di tutti gli annunci, definita dalle rispettive durate del segmento, aggiunto o sostituito nella timeline del flusso originale. proposteAds:il numero di annunci nell’interruzione pubblicitaria proposta. totalAds:il numero di annunci inseriti correttamente. annunci pubblicitari...n:Gli annunci inseriti correttamente verranno inseriti qui. È possibile recuperare informazioni complete e manifeste da AD_OPPORTUNITY_RESOLVE_PROCESS | OpportunitàId, stato, errorMessage, offerTime, durataProposta, tempoEffettivo, DurataEffettiva, annunciProposti, annunciTotale, annunci_id, ads_type, ads_duration, ads_url |
-| **AD_PLAYBACK_** STARTDispatched in TVSDK dopo l&#39;inizio della riproduzione di un annuncio. | clientTimestamp, evento, id, url, durata, tipo, petrolioSpedent, clientId |
-| **AD_PLAYBACK_** COMPLETEDispatched in TVSDK dopo che un annuncio ha completato la riproduzione. | clientTimestamp, evento, id, url, durata, tipo, petrolioSpedent, clientId |
-| **ADBREAK_PLAYBACK_** STARTDispatched in TVSDK quando un adbreak avvia la riproduzione. | clientTimestamp, evento, OpportunitàId, durata, ora, clientId |
-| **ADBREAK_PLAYBACK_** COMPLETEDispatched in TVSDK quando una pausa completa la riproduzione. | clientTimestamp, evento, opportunitàId, clientId |
-| **CONTENT_PLAYBACK_** COMPLETEDspeched in TVSDK quando viene completato un contenuto. Questo potrebbe verificarsi se il flusso viene sostituito, il lettore immette uno stato di errore, il lettore viene reimpostato o il contenuto viene effettivamente completato. Questo evento sarà necessario per tenere traccia di un sessionId. | clientTimestamp, evento, clientId, url, stato, errorMessage |
-| **AD_PLAYBACK_** ERRORDinviato in TVSDK quando un annuncio presenta un errore di riproduzione (errori di flusso variante). | evento, errore, timestamp, manifestUrl, time, opportunitàId, url |
+| **CONTENT_RESOURCE_START** Inviato in TVSDK quando viene chiamato MediaPlayer::replaceCurrentResource. | clientTimestamp, fallbackOnInvalidCreative, showStaticBanners, hasPreroll, event, adSignalingMode, resourceUrl, creativeRepackagingFormat, delayAdLoadingTolerance, zoneID, hasLivePreroll, adRequestTimeout, delayAdLoading, resourceType, creativeRepackagingEnabled, mediaId, clientId |
+| **CONTENT_PLAYBACK_START** Inviato in TVSDK quando il contenuto è entrato nello stato preparato ed è pronto per la riproduzione. Questo evento non viene inviato per ogni caricamento del manifesto, ma solo per il caricamento iniziale. | clientTimestamp, contentURL, contentType, event, isLive, clientID |
+| **AD_OPPORTUNITY_GENERATED** Inviato in TVSDK quando viene generata un’opportunità. | clientTimestamp, evento, optionId, placementDuration, clientId |
+| **AD_OPPORTUNITY_RESOLVE_START** Inviato in TVSDK quando inizia la risoluzione di un’opportunità. | clientTimestamp, evento, optionId, placementDuration, clientId |
+| **AD_OPPORTUNITY_RESOLVE_FAILED** Inviato in TVSDK quando un ad resolver chiama MediaPlayerClient::notificationFailed(). È necessario compilare i dati | optionId, notificationAD |
+| **AD_RESOURCE_LOAD** Inviato quando una risorsa annuncio viene recuperata dall’URL. responseStartTime:Timestamp Unix per il momento in cui è iniziata la richiesta. responseTotalTime: quantità totale di tempo (in secondi) necessaria per caricare una risposta. responseStatus: codice di stato rilevato durante il recupero della risorsa. stato: &quot;error&quot; o &quot;success&quot; referrerAdId: ID dell’annuncio di riferimento che ha richiesto il recupero di questa risorsa (se presente). referrerUrl: URL di riferimento che ha richiesto il recupero della risorsa. errorMessage:se lo stato è &quot;error&quot;, il motivo dell’errore si troverà qui. | optionId, resourceType, responseTotalTime, responseStatus, responseStartTime, status, errorMessage, url, referrerURL, referrerAdId |
+| **AD_RESOURCE_LOAD_CRS** Inviato in TVSDK quando un CRS viene applicato a una risorsa, nonché la risposta per m3u8. resourceType:sempre &quot;crs&quot;. responseStartTime:Timestamp Unix per il momento in cui è iniziata la richiesta. responseTotalTime: quantità totale di tempo (in secondi) necessaria per caricare una risposta. responseStatus: codice di stato rilevato durante il recupero della risorsa. stato: &quot;error&quot; o &quot;success&quot;. errorMessage:se lo stato è &quot;error&quot;, il motivo dell’errore si troverà qui. mediaFileUrl:URL originale del file multimediale selezionato. mediaFileBitrate: il bitrate del file multimediale selezionato. mediaFileMimeType: il tipo mime del file multimediale selezionato. url: URL della risorsa finale. | optionId, resourceType, responseTotalTime, responseStatus, responseStartTime, status, errorMessage, url, mediaFileURL, mediaFileBitrate, mediaFileMimeType, url |
+| **AD_TIMELINE_PLACE** Inviato in TVSDK dopo che un adBreak è stato inserito nella timeline. Questo evento si verificherà una volta per ogni interruzione pubblicitaria. posedTime: ora in cui è stato richiesto l&#39;inserimento dell&#39;interruzione pubblicitaria. actualTime: ora in cui è stata effettivamente inserita l&#39;interruzione pubblicitaria. posedDuration: durata dell’interruzione pubblicitaria richiesta per l’inserimento. Per il contenuto live, questo sarebbe la durata del segnale. Per il contenuto VOD, questo sarebbe normalmente -1. actualDuration: durata effettiva dell&#39;interruzione pubblicitaria inserita. Calcolata come la durata somma di tutti gli annunci, definita dalle rispettive durate del segmento, aggiunti o sostituiti nella timeline del flusso originale. annunci proposti:numero di annunci nell’interruzione pubblicitaria proposta. totalAds: numero di annunci inseriti correttamente. annunci...n:Gli annunci inseriti correttamente verranno inseriti qui. È possibile recuperare informazioni complete sul manifesto dell&#39;annuncio da AD_OPPORTUNITY_RESOLVE_PROCESS | NomeOpportunità, stato, messaggioErrore, oraProposta, durataProposta, oraEffettiva, durataEffettiva, annunciProposti, totaleAnnunci, ID_annunci, tipo_annunci, durata_annunci, URL_annunci |
+| **AD_PLAYBACK_START** Inviato in TVSDK dopo che un annuncio inizia la riproduzione. | clientTimestamp, evento, id, url, durata, tipo, optionId, clientId |
+| **AD_PLAYBACK_COMPLETE** Inviato in TVSDK dopo che la riproduzione di un annuncio è stata completata. | clientTimestamp, evento, id, url, durata, tipo, optionId, clientId |
+| **ADBREAK_PLAYBACK_START** Inviato in TVSDK quando un’interruzione avvia la riproduzione. | clientTimestamp, evento, optionId, durata, ora, clientId |
+| **ADBREAK_PLAYBACK_COMPLETE** Inviato in TVSDK quando un’interruzione pubblicitaria completa la riproduzione. | clientTimestamp, evento, optionId, clientId |
+| **CONTENT_PLAYBACK_COMPLETE** Inviato in TVSDK quando viene completato qualsiasi contenuto. Ciò potrebbe verificarsi se il flusso viene sostituito, il lettore immette uno stato di errore, il lettore viene reimpostato o il contenuto viene effettivamente completato. Questo evento sarà necessario per tenere traccia di un sessionId. | clientTimestamp, event, clientId, url, status, errorMessage |
+| **AD_PLAYBACK_ERROR** Inviato in TVSDK quando un annuncio presenta un errore di riproduzione (errori di flusso delle varianti). | event, error, Timestamp, manifestUrl, time, optionId, url |

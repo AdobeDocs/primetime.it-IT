@@ -1,38 +1,37 @@
 ---
-description: La porzione di notifica della libreria TVSDK del browser consente di creare un sistema di registrazione e debug che può essere utile a scopo diagnostico e di convalida.
+description: La sezione di notifica della libreria TVSDK del browser consente di creare un sistema di registrazione e debug che può essere utile a scopo di diagnostica e convalida.
 title: Sistema di notifica
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 6a3a3c56-1580-4f43-ba81-220a5b0fe5c3
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 0%
 
 ---
 
-
 # Sistema di notifica {#notification-system}
 
-La porzione di notifica della libreria TVSDK del browser consente di creare un sistema di registrazione e debug che può essere utile a scopo diagnostico e di convalida.
+La sezione di notifica della libreria TVSDK del browser consente di creare un sistema di registrazione e debug che può essere utile a scopo di diagnostica e convalida.
 
 <!--<a id="section_EC5DBE8DDA434B70A01FA2F3EF4618BD"></a>-->
 
-Il browser TVSDK dispone di un criterio *nessun pull* per la relativa API. La maggior parte dei metodi restituisce un valore `PSDKErrorCode` per indicare se il metodo è stato eseguito correttamente. Per un elenco completo di tutti i possibili valori `PSDKErrorCode`, consulta Riferimenti API TVSDK per browser .
+Il TVSDK del browser dispone di un *nessun lancio* criterio per la relativa API. La maggior parte dei metodi restituisce un `PSDKErrorCode` valore per indicare se il metodo è stato eseguito correttamente. Per un elenco completo di tutti i possibili `PSDKErrorCode` , consulta Riferimenti dell&#39;API TVSDK del browser.
 
 Gli errori asincroni vengono notificati tramite gli eventi specifici.
 
-Il browser TVSDK invia eventi `MediaPlayer` per fornire informazioni sull’attività del lettore. È necessario implementare i listener di eventi per acquisire e rispondere a tali eventi.
+Invii TVSDK del browser `MediaPlayer` eventi per fornire informazioni sull’attività del lettore. Per acquisire e rispondere a tali eventi, è necessario implementare i listener di eventi.
 
 >[!TIP]
 >
->Gli eventi e le informazioni chiave sono registrati nella console del browser Web.
+>Gli eventi chiave e le informazioni vengono registrati nella console del browser web.
 
 ## Ascolta le notifiche {#section_06B96633433D497E842FB7ADD5F2C7DA}
 
-Puoi ascoltare le notifiche e aggiungere le tue notifiche alla cronologia delle notifiche. Il nucleo del sistema di notifica TVSDK per browser è la classe `Notification` che rappresenta una notifica autonoma.
+Puoi ascoltare le notifiche e aggiungere le tue notifiche alla cronologia delle notifiche. Il nucleo del sistema di notifica TVSDK del browser è il `Notification` che rappresenta una notifica autonoma.
 
-Per impostare l&#39;applicazione in modo che ascolti le notifiche:
+Per impostare l&#39;applicazione per l&#39;ascolto delle notifiche:
 
-1. Ascoltare le modifiche dello stato di MediaPlayer utilizzando l&#39;istanza MediaPlayer.
+1. Ascolta le modifiche di stato di MediaPlayer tramite l’istanza MediaPlayer.
 
    ```js
    player.addEventListener( 
@@ -41,6 +40,5 @@ Per impostare l&#39;applicazione in modo che ascolti le notifiche:
 
 1. Implementa il callback.
 
-   Il callback riceve un&#39;istanza del `AdobePSDK.MediaPlayerStatusChangeEvent` e il browser TVSDK passa questo oggetto evento al callback che contiene il nuovo stato del lettore.
-1. L&#39;applicazione può ascoltare altri eventi inviati dal browser TVSDK utilizzando l&#39;istanza `MediaPlayer` .
-
+   Il callback riceve un&#39;istanza del `AdobePSDK.MediaPlayerStatusChangeEvent`, e Browser TVSDK passa questo oggetto evento al callback che contiene il nuovo stato del lettore.
+1. L&#39;applicazione può ascoltare altri eventi inviati dal TVSDK del browser utilizzando `MediaPlayer` dell&#39;istanza.

@@ -1,18 +1,17 @@
 ---
-description: Queste classi forniscono informazioni sulla timeline di un particolare supporto, compreso il posizionamento degli annunci.
-title: Classi Timeline
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Queste classi forniscono informazioni sulla timeline di un particolare contenuto multimediale, incluso il posizionamento degli annunci.
+title: Classi della sequenza temporale
+exl-id: d6d3c683-2a58-4128-a5c7-36d0a965c0eb
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
 
 ---
 
+# Classi della sequenza temporale{#timeline-classes}
 
-# Classi Timeline{#timeline-classes}
-
-Queste classi forniscono informazioni sulla timeline di un particolare supporto, compreso il posizionamento degli annunci.
+Queste classi forniscono informazioni sulla timeline di un particolare contenuto multimediale, incluso il posizionamento degli annunci.
 
 <table frame="all" colsep="1" rowsep="1" id="table_6752E908BA6546549619994A3F7D5F87"> 
  <thead> 

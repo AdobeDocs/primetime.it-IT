@@ -1,6 +1,6 @@
 ---
 title: Esporta informazioni per account con punteggio di condivisione elevato
-description: Esporta le informazioni per gli account con un punteggio di condivisione elevato.
+description: Esporta informazioni per account con punteggio di condivisione elevato.
 exl-id: df41ddd2-fde3-4861-abd4-6e32f0be9ea5
 source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
@@ -11,97 +11,97 @@ ht-degree: 1%
 
 # Esporta informazioni per account con punteggio di condivisione elevato {#export-account-info-high-score}
 
-L&#39;account IQ ti offre la possibilità di esportare i dettagli di condivisione dell&#39;account per i 1000 account più abbonati in base ai loro [condivisione delle probabilità](/help/AccountIQ/product-concepts.md#account-sharing-probability-def). I dati nel file CSV esportato vengono ordinati in ordine decrescente delle probabilità di condivisione degli account degli abbonati, degli MVPD selezionati nella [segmento](/help/AccountIQ/product-concepts.md#segment-def), per [arco temporale specificato](/help/AccountIQ/product-concepts.md#time-frame-def).
+Account IQ consente di esportare i dettagli di condivisione dell’account per i primi 1000 account abbonati in base ai [condivisione delle probabilità](/help/AccountIQ/product-concepts.md#account-sharing-probability-def). I dati nel file CSV esportato vengono ordinati in base all&#39;ordine decrescente delle probabilità di condivisione degli account sottoscrittori, degli MVPD selezionati nell&#39; [segmento](/help/AccountIQ/product-concepts.md#segment-def), per un [intervallo di tempo specificato](/help/AccountIQ/product-concepts.md#time-frame-def).
 
-L’opzione per esportare le informazioni di condivisione dell’account è disponibile in [Rapporti generali sull’utilizzo](/help/AccountIQ/general-usage-reports.md) e [Report account condivisi](/help/AccountIQ/shared-acc-reports.md) pagine.
+L’opzione per esportare le informazioni di condivisione dell’account è disponibile su [Rapporti di utilizzo generali](/help/AccountIQ/general-usage-reports.md) e [Rapporti sugli account condivisi](/help/AccountIQ/shared-acc-reports.md) pagine.
 
 >[!NOTE]
 >
->I numeri nel file CSV scaricato sono diversi per le pagine dei rapporti Uso generale e Account condivisi . Questo perché la pagina Rapporti sull&#39;uso generale dispone di filtri aggiuntivi per i programmatori che selezionano Soglia per il numero di dispositivi, IP e codici postali. Pertanto, i dati esportati dai rapporti di utilizzo generale si basano sul filtro di soglia aggiuntivo applicato.
+>I numeri nel file CSV scaricato sono diversi per le pagine dei rapporti Utilizzo generale e Account condivisi. Questo perché la pagina dei report sull’utilizzo generale dispone di filtri aggiuntivi che consentono ai programmatori di selezionare la soglia per il numero di dispositivi, IP e codici postali. Pertanto, i dati esportati dai report di utilizzo generale si basano sul filtro di soglia aggiuntivo applicato.
 
-![Opzione Esporta in uso generale](assets/export.png)
+![Opzione Esporta in Utilizzo generale](assets/export.png)
 
-Per esportare le informazioni di condivisione degli account degli abbonati:
+Per esportare le informazioni sulla condivisione dell&#39;account degli abbonati:
 
 1. Definisci un segmento desiderato seguendo i passaggi descritti in [Come definire il segmento e selezionare l’intervallo temporale](/help/AccountIQ/howto-select-segment-timeframe.md) per la valutazione da [segmento e arco temporale](/help/AccountIQ/segments-timeframe.md) pannello.
 
-1. Seleziona la **Esporta i primi 1000 account** opzione per esportare le informazioni dell&#39;account per 1000 utenti con la probabilità di condivisione più elevata.
+1. Seleziona la **Esporta i primi 1000 account** opzione per esportare le informazioni sull’account per 1000 abbonati con la maggiore probabilità di condivisione.
 
-Quando si utilizza l&#39;opzione di esportazione, le statistiche per 1000 account con le maggiori probabilità di condivisione (per un intervallo di tempo definito) vengono scaricate nella cartella Download del computer locale.
+Quando si utilizza l&#39;opzione di esportazione, le statistiche relative a 1000 account con le maggiori probabilità di condivisione (per un intervallo di tempo definito) vengono scaricate nella cartella Download del computer locale.
 
 >[!NOTE]
 >
->Il file CSV scaricato può essere aperto utilizzando qualsiasi applicazione che legga il file CSV, ad esempio Microsoft Excel.
+>Il file CSV scaricato può essere aperto utilizzando qualsiasi applicazione che legge il file CSV, ad esempio Microsoft Excel.
 
 ![dati esportati in formato csv](assets/exported-csv.png)
 
-*Figura: Esportazione dei dati degli account condivisi in formato CSV*
+*Figura: Dati dell’account condiviso esportato in formato CSV*
 
-## Colonne del rapporto esportato {#columns-in-export}
+## Colonne nel report esportato {#columns-in-export}
 
 **Settimana/Mese**
 
-La settimana o il mese selezionato nella **Granularità e arco temporale** nel selettore del segmento, per il quale vengono richieste le statistiche di condivisione.
+La settimana o il mese selezionato il **Granularità e intervallo di tempo** nel selettore di segmenti, per il quale vengono richieste le statistiche di condivisione.
 
 **MVPD**
 
-Se sei un utente programmatore, la colonna mostra a quale MVPD appartiene l&#39;account utente iscritto.
+Se sei un utente programmatore, la colonna mostra a quale MVPD appartiene l’account abbonato.
 
-**ID sottoscrittore**
+**ID abbonato**
 
-Conto specifico di cui stiamo parlando in una fila.
+Account specifico di cui stiamo parlando in una fila.
 
 **Numero minimo di dispositivi**
 
-Il numero effettivo di dispositivi (il contenuto in streaming) è quasi certamente maggiore del numero minimo di dispositivi, specificato per un determinato account.
+Il numero effettivo di dispositivi (tale contenuto in streaming) è quasi certamente superiore al numero minimo di dispositivi specificato per un account specifico.
 
 >[!NOTE]
 >
->Il numero effettivo di dispositivi (il contenuto in streaming) è sicuramente maggiore del numero minimo di dispositivi, specificato per un determinato account.
+>Il numero effettivo di dispositivi (contenuti in streaming) è sicuramente maggiore del numero minimo di dispositivi specificato per un account specifico.
 
 **Numero minimo di persone**
 
-Il numero minimo assoluto di persone che utilizzavano tali dispositivi per lo streaming dei contenuti.
+Il numero minimo assoluto di persone che erano contenuti in streaming attivi utilizzando tali dispositivi.
 
 >[!NOTE]
 >
->Il numero effettivo di persone (il contenuto in streaming) è quasi certamente molto maggiore del numero minimo di persone, specificato per un determinato conto.
+>Il numero effettivo di persone (contenuto in streaming) è quasi certamente molto maggiore del numero minimo di persone, specificato per un account specifico.
 
 **N. IP**
 
-Numero di indirizzi IP da cui viene eseguito lo streaming del contenuto.
+Numero di indirizzi IP da cui il contenuto viene inviato in streaming.
 
 **N. posizioni**
 
-Numero di posizioni (basate sul codice postale) da cui viene eseguito lo streaming del contenuto.
+Numero di posizioni (in base al codice postale) da cui il contenuto viene inviato in streaming.
 
 **N. città**
 
-Numero di città in cui è stato effettuato lo streaming.
+Numero di città in cui ha avuto luogo lo streaming.
 
-**# Stati**
+**N. stati**
 
-Numero di stati in cui è stato effettuato lo streaming.
+Numero di stati in cui ha avuto luogo lo streaming.
 
 **N. cluster**
 
-Numero di elementi distinti [cluster](/help/AccountIQ/product-concepts.md#cluster-def) in cui è stato effettuato lo streaming.
+Numero di elementi distinti [cluster](/help/AccountIQ/product-concepts.md#cluster-def) dove ha avuto luogo lo streaming.
 
-**Intervallo geografico (miglia)**
+**Estensione geografica (miglia)**
 
 La distanza massima tra le posizioni di streaming associate all’account.
 
-**# AuthN OK**
+**N. autenticazione OK**
 
 Il numero di volte in cui gli utenti hanno effettuato l’accesso durante il periodo, utilizzando tale account.
 
 **# AuthZ OK**
 
-Numero di volte in cui un MVPD ha autorizzato un flusso o concesso l&#39;accesso (al contenuto) a tale account.
+Numero di volte in cui un MVPD ha autorizzato un flusso o concesso l’accesso (ai contenuti) a tale account.
 
 >[!NOTE]
 >
->La **# AuthZ OK** è correlato al **N. richieste Play**; è più piccolo del **N. richieste Play** perché, ad Adobe, le autorizzazioni che vengono fornite per gli MVPD in genere per 24 ore.
+>Il **# AuthZ OK** è correlato al **N. richieste Play**; è più piccolo del **N. richieste Play** perché Adobe memorizza in cache le autorizzazioni fornite per gli MVPD in genere per 24 ore.
 
 **N. richieste Play**
 
@@ -109,13 +109,13 @@ Il numero effettivo di flussi durante il periodo di tempo.
 
 **N. canali**
 
-Numero totale di canali diversi che l&#39;account ha guardato nel periodo di tempo.
+Numero totale di canali diversi guardati dall’account nel periodo di tempo.
 
 >[!NOTE]
 >
 >**N. canali** include i canali che non appartengono necessariamente al programmatore connesso.
 >
->Questo numero per l&#39;account è stato visualizzato perché l&#39;account ha guardato il tuo canale, ma ha anche effettuato l&#39;accesso ad altri canali durante quel periodo di tempo.
+>Questo numero per l’account viene visualizzato perché l’account ha guardato il tuo canale, ma ha anche effettuato l’accesso ad altri canali durante tale periodo di tempo.
 
 **Pattern di utilizzo**
 
@@ -125,13 +125,13 @@ I numeri in questa colonna sono identificatori che corrispondono a uno dei 14 pa
 
 | ID | 1 | 2 | 3 | 4 | 5 e 8 | 6 | 7 | 9 | 10 e 11 | 12 | 13 | 14 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Pattern di utilizzo | Utente regolare | Viaggiatore o pendolare | Famiglia grande | Chiudi familiari e amici | Condivisione di gruppi social | Grande gruppo di amici | Streaming simultaneo | Condivisione community | Comportamento incerto | Piccola famiglia | Seconda casa | Utilizzo anomalo |
+| Modelli di utilizzo | Utente normale | Viaggiatore o pendolare | Famiglia numerosa | Famiglia e amici intimi | Condivisione gruppo social network | Grande gruppo di amici | Streaming simultaneo | Condivisione community | Comportamento incerto | Famiglia piccola | Seconda pagina principale | Utilizzo anormale |
 
 {style="table-layout:auto"}
 
 **Probabilità di condivisione**
 
-La probabilità di condivisione è la probabilità che l&#39;account specifico stia condividendo le proprie credenziali.
+La probabilità di condivisione è la probabilità che l’account specifico condivida le proprie credenziali.
 
 >[!NOTE]
 >

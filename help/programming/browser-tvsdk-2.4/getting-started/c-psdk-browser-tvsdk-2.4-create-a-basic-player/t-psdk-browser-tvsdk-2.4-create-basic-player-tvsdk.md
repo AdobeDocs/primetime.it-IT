@@ -1,23 +1,22 @@
 ---
-description: Completa i seguenti passaggi per creare un lettore di base utilizzando il browser TVSDK.
+description: Per creare un lettore di base utilizzando il TVSDK del browser, completa i passaggi seguenti.
 title: Creare un lettore di base utilizzando TVSDK
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ea7485e0-5d15-469b-b8b6-f9604d283492
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%
 
 ---
 
-
 # Creare un lettore di base utilizzando TVSDK{#create-a-basic-player-using-tvsdk}
 
-Completa i seguenti passaggi per creare un lettore di base utilizzando il browser TVSDK.
+Per creare un lettore di base utilizzando il TVSDK del browser, completa i passaggi seguenti.
 
-1. Crea una nuova directory in cui puoi scaricare i file compressi per Browser TVSDK.
-1. Scarica Browser TVSDK da Zendesk, decomprimi i file e inserisci la cartella dei framework nella nuova directory.
-1. Crea un semplice modello HTML per il codice con un `div` al suo interno.
-1. Posiziona questo modello in un file HTML nella directory creata al punto 1.
+1. Crea una nuova directory in cui puoi scaricare i file compressi per il browser TVSDK.
+1. Scarica Browser TVSDK da Zendesk, decomprimi i file e inserisci la cartella frameworks nella nuova directory.
+1. Crea una semplice boilerplate HTML per il codice con un `div` in esso.
+1. Posizionate questa piastra di supporto in un file HTML nella directory creata al punto 1.
 
    ```
    <!DOCTYPE html> 
@@ -33,7 +32,7 @@ Completa i seguenti passaggi per creare un lettore di base utilizzando il browse
    </html>
    ```
 
-1. Aggiungi le librerie TVSDK per browser nella sezione head.
+1. Aggiungi le librerie TVSDK del browser nella sezione head.
 
    ```js
    <script src= "frameworks/player/dash.min.js"></script> 
@@ -42,16 +41,16 @@ Completa i seguenti passaggi per creare un lettore di base utilizzando il browse
    <script src= "frameworks/player/primetimeei.min.js"></script>
    ```
 
-1. Per il tag body, aggiungi la sezione `onLoad` .
+1. Per il tag body, aggiungi `onLoad` sezione.
 
    ```
    <body onload="startVideo()">
    ```
 
-1. Inizia a implementare la funzione `startVideo` .
-1. Aggiungi un tag script e crea la funzione `startVideo` nel tag .
+1. Inizia a implementare `startVideo` funzione.
+1. Aggiungi un tag script e crea il `startVideo` nel tag.
 
-   Questo dovrebbe essere nella sezione iniziale della pagina.
+   Questo dovrebbe essere nella sezione head della pagina.
 
    ```js
    <script> 
@@ -60,17 +59,17 @@ Completa i seguenti passaggi per creare un lettore di base utilizzando il browse
    </script>
    ```
 
-1. Crea il `Adobe.MediaPlayer`.
+1. Creare `Adobe.MediaPlayer`.
 
    ```js
    var player = new AdobePSDK.MediaPlayer();
    ```
 
-1. Crea il `MediaPlayerView`.
+1. Creare `MediaPlayerView`.
 
    >[!TIP]
    >
-   >In questo punto viene utilizzato il `div` creato in precedenza.
+   >Qui è dove `div` viene utilizzato quello creato in precedenza.
 
    ```js
    var view = new AdobePSDK.MediaPlayerView( 
@@ -84,7 +83,7 @@ Completa i seguenti passaggi per creare un lettore di base utilizzando il browse
    player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED, onStatusChange);
    ```
 
-1. Implementa il gestore eventi e inseriscilo prima del listener di eventi add.
+1. Implementa il gestore eventi e inseriscilo prima dell’aggiunta del listener di eventi.
 
    ```js
    var onStatusChange = function (event) { 
@@ -141,7 +140,7 @@ Completa i seguenti passaggi per creare un lettore di base utilizzando il browse
    }; 
    ```
 
-1. Crea il `MediaResource`, che passa il collegamento M3U8 (o mpd).
+1. Creare `MediaResource`, che passa il collegamento M3U8 (o mpd).
 
    ```js
    var resourceUrl = "https://example.com/a/yourUrl.m3u8"; 
@@ -149,7 +148,7 @@ Completa i seguenti passaggi per creare un lettore di base utilizzando il browse
    var mediaResource = new AdobePSDK.MediaResource(resourceUrl, resourceType, null, false);
    ```
 
-1. Crea una configurazione vuota e sostituisci la risorsa .
+1. Crea una configurazione vuota e sostituisci la risorsa.
 
    ```js
    var config = new AdobePSDK.MediaPlayerItemConfig(); 
@@ -157,7 +156,7 @@ Completa i seguenti passaggi per creare un lettore di base utilizzando il browse
    player.replaceCurrentResource(mediaResource, config);
    ```
 
-1. Quando il lettore è nello stato INITIALIZZATO, chiama `prepareToPlay`.
+1. Quando il lettore si trova nello stato INIZIALIZZATO, chiama `prepareToPlay`.
 
    ```js
    case INITIALIZED: 
@@ -165,11 +164,10 @@ Completa i seguenti passaggi per creare un lettore di base utilizzando il browse
     break;
    ```
 
-1. Una volta che il lettore è nello stato PREPARATO, chiama `play`.
+1. Quando il lettore è nello stato READY, chiama `play`.
 
    ```js
    case PREPARED: 
     player.play(); 
     break;
    ```
-

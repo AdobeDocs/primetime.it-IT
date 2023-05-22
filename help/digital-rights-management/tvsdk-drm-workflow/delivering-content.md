@@ -1,21 +1,20 @@
 ---
-title: Distribuzione di contenuti
-description: Distribuzione di contenuti
+title: Consegna dei contenuti
+description: Consegna dei contenuti
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: a55293f0-ef9b-468f-a1b2-8222ebab0b4b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 0%
 
 ---
 
+# Consegna dei contenuti {#delivering-content}
 
-# Distribuzione di contenuto {#delivering-content}
+Primetime DRM è indipendente dal meccanismo di distribuzione dei contenuti, in quanto il runtime estrae il livello di rete e fornisce semplicemente i contenuti protetti al sottosistema DRM di Primetime. Pertanto, il contenuto può essere distribuito tramite HTTP, HTTP Dynamic Streaming, RTMP o RTMPE, HLS e così via.
 
-Primetime DRM è agnostico del meccanismo di consegna del contenuto mentre il runtime estrae il livello di rete e fornisce semplicemente il contenuto protetto al sottosistema DRM di Primetime. Pertanto, il contenuto può essere distribuito tramite HTTP, HTTP Dynamic Streaming, RTMP o RTMPE, HLS, ecc.
-
-Tuttavia, a seconda del protocollo, potrebbero esserci intricazioni nel recupero dei metadati del contenuto protetto ( `DRMContentData` - di solito sotto forma di un file [!DNL .metadata] caricato su lato). Questi metadati DRM sono necessari per chiamare qualsiasi API `DRMManager`, ad esempio per prerecuperare la licenza, l’autenticazione DRM o per unirsi a un dominio del dispositivo. Ad esempio, con il protocollo RTMP/RTMPE, solo i dati FLV e F4V possono essere consegnati al cliente tramite il Flash Media Server (FMS). Per questo motivo, il client deve recuperare il BLOB di metadati in altri modi. Un&#39;opzione per risolvere questo problema è quella di ospitare i metadati su un server web HTTP e implementare il lettore video client per recuperare i metadati appropriati, a seconda del contenuto riprodotto.
+Tuttavia, a seconda del protocollo, possono essere necessarie complessità per recuperare i metadati del contenuto protetto ( `DRMContentData` - generalmente sotto forma di caricatore laterale [!DNL .metadata] file). Questi metadati DRM sono necessari per chiamare qualsiasi `DRMManager` API, come preacquisizione della licenza, autenticazione DRM o aggiunta a un dominio del dispositivo. Ad esempio, con il protocollo RTMP/RTMPE, è possibile inviare al client solo i dati FLV e F4V tramite il Flash Media Server (FMS). Per questo motivo, il client deve recuperare il BLOB di metadati in altri modi. Un&#39;opzione per risolvere questo problema è ospitare i metadati su un server web HTTP e implementare il lettore video client per recuperare i metadati appropriati, a seconda del contenuto riprodotto.
 
 ```
 private function getMetadata():void { 
@@ -37,4 +36,3 @@ private function getMetadata():void {
     } 
 } 
 ```
-

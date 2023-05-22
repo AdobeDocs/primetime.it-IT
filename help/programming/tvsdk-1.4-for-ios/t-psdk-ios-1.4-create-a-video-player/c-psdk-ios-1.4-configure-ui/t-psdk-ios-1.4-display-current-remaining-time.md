@@ -1,14 +1,13 @@
 ---
 description: È possibile visualizzare il tempo corrente e rimanente del contenuto in fase di riproduzione.
-title: Visualizza il tempo corrente e il tempo rimanente
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Visualizza l'ora corrente e il tempo rimanente
+exl-id: 61043b2c-949e-494a-9b93-9cf5104d5bde
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '84'
 ht-degree: 0%
 
 ---
-
 
 # Visualizza l&#39;ora corrente e il tempo rimanente {#display-the-current-time-and-remaining-time}
 
@@ -102,4 +101,3 @@ ht-degree: 0%
    ```
 
 <!--<a id="example_D2FC658F27FC42A0B3E1AEC99B36788B"></a>-->
-

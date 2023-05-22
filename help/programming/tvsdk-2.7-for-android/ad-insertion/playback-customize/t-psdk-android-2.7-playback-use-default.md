@@ -1,47 +1,46 @@
 ---
-description: Puoi scegliere di utilizzare i comportamenti degli annunci predefiniti.
-title: Utilizzare il comportamento di riproduzione predefinito
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Puoi scegliere di utilizzare i comportamenti di annuncio predefiniti.
+title: Utilizza il comportamento di riproduzione predefinito
+exl-id: eb4ce0b4-9dfd-4de8-8cbf-8aba093a5ddd
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 0%
 
 ---
 
+# Utilizza il comportamento di riproduzione predefinito  {#use-the-default-playback-behavior}
 
-# Utilizzare il comportamento di riproduzione predefinito {#use-the-default-playback-behavior}
+Puoi scegliere di utilizzare i comportamenti di annuncio predefiniti.
 
-Puoi scegliere di utilizzare i comportamenti degli annunci predefiniti.
+1. Per utilizzare i comportamenti predefiniti, completa una delle seguenti attività:
 
-1. Per utilizzare i comportamenti predefiniti, effettua una delle operazioni seguenti:
+   * Se implementi un `AdvertisingFactory` class, restituisce null per `createAdPolicySelector`.
 
-   * Se implementi la tua classe `AdvertisingFactory`, restituisce null per `createAdPolicySelector`.
+   * Se non hai un’implementazione personalizzata per `AdvertisingFactory` classe, TVSDK utilizza un selettore di criteri di annunci predefinito.
 
-   * Se non disponi di un’implementazione personalizzata per la classe `AdvertisingFactory` , TVSDK utilizza un selettore predefinito di criteri per gli annunci.
-
-## Imposta riproduzione personalizzata {#set-up-customized-playback}
+## Impostare la riproduzione personalizzata {#set-up-customized-playback}
 
 Puoi personalizzare o ignorare i comportamenti degli annunci.
 
-Prima di personalizzare o sostituire i comportamenti degli annunci, registra l’istanza di criteri degli annunci con TVSDK.
+Prima di personalizzare o ignorare i comportamenti degli annunci, registra l’istanza dei criteri degli annunci con TVSDK.
 
-* Implementa l’interfaccia `AdPolicySelector` e tutti i relativi metodi.
+* Implementare `AdPolicySelector` e tutti i relativi metodi.
 
-   Questa opzione è consigliata se devi sovrascrivere **all** i comportamenti di annunci predefiniti.
+   Questa opzione è consigliata se devi eseguire l’override di **tutto** i comportamenti di annuncio predefiniti.
 
-* Estendi la classe `DefaultAdPolicySelector` e fornisci implementazioni solo per quei comportamenti che richiedono personalizzazione.
+* Estendi il `DefaultAdPolicySelector` e forniscono implementazioni solo per i comportamenti che richiedono personalizzazione.
 
-   Questa opzione è consigliata se è necessario ignorare solo **alcuni** dei comportamenti predefiniti.
+   Questa opzione è consigliata solo se è necessario eseguire l&#39;override **alcuni** dei comportamenti predefiniti.
 
 Per personalizzare i comportamenti degli annunci:
 
-1. Implementa l&#39;interfaccia `AdPolicySelector` e tutti i relativi metodi.
-1. Assegna l’istanza dei criteri che deve essere utilizzata da TVSDK tramite advertising factory.
+1. Implementare `AdPolicySelector` e tutti i relativi metodi.
+1. Assegna l’istanza dei criteri che deve essere utilizzata da TVSDK tramite la advertising factory.
 
    >[!NOTE]
    >
-   >I criteri degli annunci personalizzati registrati all&#39;inizio della riproduzione vengono cancellati quando l&#39;istanza `MediaPlayer` viene deallocata. L&#39;applicazione deve registrare un&#39;istanza del selettore dei criteri ogni volta che viene creata una nuova sessione di riproduzione.
+   >I criteri di annuncio personalizzati registrati all’inizio della riproduzione vengono cancellati quando il `MediaPlayer` istanza deallocata. L’applicazione deve registrare un’istanza del selettore dei criteri ogni volta che viene creata una nuova sessione di riproduzione.
 
    Ad esempio:
 
@@ -63,4 +62,4 @@ Per personalizzare i comportamenti degli annunci:
    mediaPlayer.replaceCurrentResource(resource, config);
    ```
 
-1. Implementa le tue personalizzazioni.
+1. Implementare le personalizzazioni.

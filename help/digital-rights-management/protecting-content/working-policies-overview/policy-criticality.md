@@ -1,20 +1,19 @@
 ---
-title: Criticità politica del DRM
-description: Criticità politica del DRM
+title: Criticità delle politiche DRM
+description: Criticità delle politiche DRM
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: b9f5a095-9ec4-4ad7-8b70-9abae72d2a86
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '155'
 ht-degree: 0%
 
 ---
 
+# Criticità delle politiche DRM{#drm-policy-criticality}
 
-# Criterio DRM{#drm-policy-criticality}
+Se si prevede di applicare nuove regole di utilizzo in un criterio DRM e si prevede di utilizzare questo criterio DRM nel contenuto che è stato creato per i server licenze meno recenti (e quindi non interpreta correttamente le nuove regole di utilizzo), potrebbe essere necessario specificare il comportamento dei server licenze meno recenti. Per impostazione predefinita, la criticità dei criteri DRM è impostata su `true`.
 
-Se si prevede di applicare nuove regole di utilizzo in un criterio DRM e se si intende utilizzare questo criterio DRM in contenuti che sono stati assemblati per server licenze precedenti (e quindi non interpretano correttamente le nuove regole di utilizzo), potrebbe essere necessario specificare il comportamento dei server licenze precedenti. Per impostazione predefinita, la criticità dei criteri DRM è impostata su `true`.
+Questa impostazione indica che il server licenze deve elaborare tutte le parti del criterio DRM prima di poter generare una licenza che utilizzi il criterio DRM specificato. Se la criticità della policy DRM è impostata su `false`, un server licenze meno recente può ignorare le parti del criterio DRM che non è in grado di interpretare correttamente. Pertanto, le licenze generate dal server non includono nuove regole di utilizzo.
 
-Questa impostazione indica che il server licenze deve elaborare tutte le parti del criterio DRM prima di poter generare una licenza che utilizza il criterio DRM specificato. Se la criticità dei criteri DRM è impostata su `false`, un server licenze precedente può ignorare le parti del criterio DRM che non può interpretare correttamente. Pertanto, tutte le licenze generate dal server non includono nuove regole di utilizzo.
-
-I server DRM di Primetime che supportano la versione 2.0.2 dell&#39;SDK o versioni successive accettano l&#39;impostazione di criticità dei criteri DRM.
+I server DRM di Primetime che supportano la versione 2.0.2 dell’SDK o successiva accettano l’impostazione di criticità dei criteri DRM.

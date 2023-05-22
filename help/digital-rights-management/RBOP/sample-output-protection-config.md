@@ -1,26 +1,25 @@
 ---
 description: Questa sezione presenta una configurazione di esempio che illustra i concetti e la forma della configurazione.
-title: Esempio di configurazione RBOP
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Configurazione RBOP di esempio
+exl-id: 0f40be83-9c7f-482b-ac42-9aa4e3f46f58
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '158'
 ht-degree: 0%
 
 ---
 
-
-# Esempio di configurazione RBOP {#sample-rbop-configuration}
+# Configurazione RBOP di esempio {#sample-rbop-configuration}
 
 Questa sezione presenta una configurazione di esempio che illustra i concetti e la forma della configurazione.
 
-La seguente configurazione JSON di esempio definisce un criterio di output dei pixel che specifica quanto segue:
+La seguente configurazione JSON di esempio definisce un criterio di output in pixel che specifica quanto segue:
 
-* Limita la decrittografia del video alle risoluzioni di 1080 o inferiori
+* Limita la decrittografia del video a risoluzioni pari o inferiori a 1080
 * Imporre vincoli specifici per le risoluzioni 720 e 480:
 
-   * Per la risoluzione 720: richiedono HDCP per l&#39;uscita digitale; richiedere la protezione *Copy Generation Management System - Analogico* (CGMS-A) per l&#39;uscita analogica.
-   * Per la risoluzione 480: richiedono HDCP per l&#39;uscita digitale; non richiedono protezione per l&#39;analogico
+   * Per la risoluzione 720: richiede HDCP per l&#39;uscita digitale; richiede *Sistema di gestione generazione copie - Analogico* (CGMS-A) per uscita analogica.
+   * Per la risoluzione 480: richiede HDCP per l&#39;uscita digitale; non richiede protezione per l&#39;uscita analogica
 
 ```
 { 
@@ -47,10 +46,9 @@ La seguente configurazione JSON di esempio definisce un criterio di output dei p
 }
 ```
 
-Tieni presente quanto segue sulla configurazione di esempio precedente:
+Per quanto riguarda la configurazione di esempio precedente, tieni presente quanto segue:
 
-* Le specifiche `pixelCount` sono di un livello verso il basso nella struttura JSON, all&#39;interno della sezione `pixelConstraints`.
+* Il `pixelCount` le specifiche sono di un livello inferiore nella struttura JSON, all’interno del `pixelConstraints` sezione.
 
-* All&#39;interno di ogni specifica di conteggio dei pixel, la protezione dell&#39;output è specificata sia per l&#39;uscita digitale che per quella analogica.
-* Nelle specifiche di uscita digitale, vengono specificate le versioni HDCP, anche se il client al momento non supporta il controllo delle versioni HDCP. Per ulteriori informazioni, consulta le Domande frequenti .
-
+* All&#39;interno di ogni specifica di pixel, la protezione dell&#39;uscita è specificata sia per l&#39;uscita digitale che per quella analogica.
+* Nelle specifiche dell&#39;uscita digitale, sono specificate le versioni HDCP, anche se il client non supporta attualmente il controllo delle versioni HDCP. Per ulteriori informazioni, consulta le Domande frequenti.

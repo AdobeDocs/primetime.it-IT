@@ -1,30 +1,30 @@
 ---
-title: Impedisci la visualizzazione degli MVPD nella finestra di dialogo di selezione
-description: Impedisci la visualizzazione degli MVPD nella finestra di dialogo di selezione
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Impedisci la visualizzazione di MVPD nella finestra di dialogo per selezione
+description: Impedisci la visualizzazione di MVPD nella finestra di dialogo per selezione
+exl-id: 20faf501-c006-45e2-a725-fb1273ecaffe
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
 
 ---
 
-
-# Impedisci la visualizzazione degli MVPD nella finestra di dialogo di selezione
+# Impedisci la visualizzazione di MVPD nella finestra di dialogo per selezione
 
 >[!NOTE]
 >
->Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente a partire da Adobe. Non è consentito alcun uso non autorizzato.
+>Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente di Adobe. Non è consentito alcun uso non autorizzato.
 
 ## Problema {#issue-prevent-mvpd-sel-dialog}
 
-È necessario evitare che MVPD specifici (&quot;elenco Bloccati&quot;) vengano visualizzati nel selettore MVPD.
+È necessario impedire che MVPD specifici (&quot;elenco di blocchi&quot;) vengano visualizzati nel selettore MVPD.
 
 
 ## Soluzione {#solution-prevent-mvpd-sel-dialog}
 
-La soluzione è quella di creare un elenco Bloccati quando `displayProviderDialog()` viene chiamato.
+La soluzione consiste nell’eseguire un’inserzione di blocchi quando `displayProviderDialog()` viene chiamato.
 
-Ad esempio, se desideri che CableCompany_1 e CableCompany_2 non vengano visualizzati all&#39;interno del selettore MVPD, esegui una procedura simile a quella illustrata nell&#39;esempio seguente.
+Ad esempio, se si desidera che CableCompany_1 e CableCompany_2 non vengano visualizzati all&#39;interno del selettore MVPD, è necessario eseguire una procedura simile a quella illustrata nell&#39;esempio seguente.
 
 ```C
 function displayProviderDialog(mvpdList) {

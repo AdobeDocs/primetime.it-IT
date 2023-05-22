@@ -2,20 +2,19 @@
 title: Creare un’interfaccia utente di autenticazione
 description: Creare un’interfaccia utente di autenticazione
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 54853dcf-2241-44e6-9565-7eca94cc84cc
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 0%
 
 ---
 
+# Creare un’interfaccia utente di autenticazione {#create-an-authentication-ui}
 
-# Creare un&#39;interfaccia utente di autenticazione {#create-an-authentication-ui}
+1. Creare un&#39;interfaccia utente per recuperare le credenziali di autenticazione dell&#39;utente.
 
-1. Crea un&#39;interfaccia utente per recuperare le credenziali di autenticazione dell&#39;utente.
-
-   Di seguito è riportato un esempio Flex di una semplice interfaccia utente per il recupero delle credenziali utente. È costituito da un oggetto pannello contenente due oggetti `TextInput`, uno per ciascuna delle credenziali di nome utente e password. Il pannello contiene anche un pulsante che avvia il metodo `credentials()` .
+   Di seguito è riportato un esempio Flex di interfaccia utente semplice per il recupero delle credenziali utente. È costituito da un oggetto pannello contenente due `TextInput` oggetti, uno per ogni nome utente e password. Il pannello contiene anche un pulsante che avvia `credentials()` metodo.
 
    ```xml
    <mx:Panel x="236.5"  
@@ -44,9 +43,9 @@ ht-degree: 0%
    </mx:Panel>  
    ```
 
-1. Scrivere il metodo `credentials()` per elaborare i valori di autenticazione forniti dall&#39;utente.
+1. Scrivi il `credentials()` per elaborare i valori di autenticazione forniti dall&#39;utente.
 
-   Il metodo `credentials()` è un metodo definito dall&#39;utente che trasmette i valori di nome utente e password al metodo `setDRMAuthenticationCredentials()` . Una volta passati i valori, il metodo `credentials()` reimposta i valori degli oggetti `TextInput`.
+   Il `credentials()` è un metodo definito dall&#39;utente che trasmette i valori nome utente e password al `setDRMAuthenticationCredentials()` metodo. Una volta passati i valori, `credentials()` il metodo ripristina i valori del `TextInput` oggetti.
 
    ```
    <mx:Script> 
@@ -59,7 +58,7 @@ ht-degree: 0%
    </mx:Script> 
    ```
 
-   Un modo per implementare questo tipo di interfaccia semplice è includere il pannello come parte di un nuovo stato. Il nuovo stato proviene dallo stato base quando l&#39;oggetto `DRMAuthenticateEvent` viene lanciato. L&#39;esempio seguente contiene un oggetto `VideoDisplay` con un attributo di origine che punta a un file video protetto. In questo caso, il metodo `credentials()` viene modificato in modo da restituire l&#39;applicazione allo stato base. Questo metodo lo fa dopo aver passato le credenziali utente e aver reimpostato i valori dell&#39;oggetto TextInput.
+   Un modo per implementare questo tipo di interfaccia semplice consiste nell’includere il pannello come parte di un nuovo stato. Il nuovo stato ha origine dallo stato di base quando `DRMAuthenticateEvent` viene generato l&#39;oggetto. L’esempio seguente contiene un `VideoDisplay` oggetto con un attributo source che punta a un file video protetto. In questo caso, il `credentials()` viene modificato in modo da ripristinare anche lo stato di base dell&#39;applicazione. Questo metodo esegue questa operazione dopo aver passato le credenziali utente e aver reimpostato i valori dell&#39;oggetto TextInput.
 
    ```xml
    <?xml version="1.0" encoding="utf-8"?> 
@@ -133,4 +132,3 @@ ht-degree: 0%
                     source="https://www.example.com/flv/Video.flv" /> 
    </mx:WindowedApplication> 
    ```
-

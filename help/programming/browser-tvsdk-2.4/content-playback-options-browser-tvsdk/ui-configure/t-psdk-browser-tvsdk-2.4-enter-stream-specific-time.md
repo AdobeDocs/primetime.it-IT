@@ -1,27 +1,26 @@
 ---
-description: Per impostazione predefinita, all'avvio della riproduzione, il contenuto multimediale VOD inizia a 0 e il contenuto multimediale in tempo reale inizia dal punto live del client (MediaPlayer.LIVE_POINT). È possibile ignorare il comportamento predefinito.
+description: Per impostazione predefinita, all’avvio della riproduzione, il contenuto multimediale VOD inizia da 0 e il contenuto multimediale live inizia dal punto di attivazione del client (MediaPlayer.LIVE_POINT). È possibile ignorare il comportamento predefinito.
 title: Immettere un flusso in un momento specifico
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 2fb361c1-7133-4e17-a12b-e11f6f7c5479
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '103'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
 # Immettere un flusso in un momento specifico{#enter-a-stream-at-a-specific-time}
 
-Per impostazione predefinita, all&#39;avvio della riproduzione, il contenuto multimediale VOD inizia a 0 e il contenuto multimediale in tempo reale inizia dal punto live del client (MediaPlayer.LIVE_POINT). È possibile ignorare il comportamento predefinito.
+Per impostazione predefinita, all’avvio della riproduzione, il contenuto multimediale VOD inizia da 0 e il contenuto multimediale live inizia dal punto di attivazione del client (MediaPlayer.LIVE_POINT). È possibile ignorare il comportamento predefinito.
 
 1. Passa una posizione a `MediaPlayer.prepareToPlay`.
-1. Il browser TVSDK utilizza questa posizione come punto iniziale della risorsa.
+1. Il TVSDK del browser utilizza questa posizione come punto di partenza per la risorsa.
 
    >[!NOTE]
    >
    >Non è richiesta alcuna operazione di ricerca.
 
-1. Se la posizione non si trova all’interno dell’intervallo ricercabile, vengono utilizzate le posizioni predefinite.
+1. Se la posizione non è compresa nell&#39;intervallo ricercabile, vengono utilizzate le posizioni di default.
 
    Ad esempio:
 
@@ -34,4 +33,3 @@ Per impostazione predefinita, all&#39;avvio della riproduzione, il contenuto mul
            break; 
    } 
    ```
-

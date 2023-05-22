@@ -1,42 +1,40 @@
 ---
-description: I problemi comuni durante i test spesso coinvolgono gli autenticatori ExpressPlay, i protocolli di trasporto e i parametri richiesti per la richiesta del servizio.
+description: I problemi più comuni durante il test spesso coinvolgono gli autenticatori ExpressPlay, i protocolli di trasporto e i parametri di richiesta del servizio richiesti.
 title: Risoluzione dei problemi di avvio rapido
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: d8908f9c-98f4-4100-a003-d3b990105dee
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '446'
 ht-degree: 0%
 
 ---
 
-
 # Risoluzione dei problemi di avvio rapido{#troubleshooting-your-quick-start}
 
-I problemi comuni durante i test spesso coinvolgono gli autenticatori ExpressPlay, i protocolli di trasporto e i parametri richiesti per la richiesta del servizio.
+I problemi più comuni durante il test spesso coinvolgono gli autenticatori ExpressPlay, i protocolli di trasporto e i parametri di richiesta del servizio richiesti.
 
-Se le richieste [!DNL curl] di ExpressPlay per la generazione del token non riescono, il corpo della risposta conterrà un messaggio di errore che spiega il motivo dell’errore.
+Se il [!DNL curl] richieste a ExpressPlay per la generazione di token non riuscite, il corpo della risposta conterrà un messaggio di errore che spiega il motivo dell’errore.
 
-Se la generazione del token ha esito positivo, ma il contenuto continua a non essere riprodotto, controlla nei registri di rimborso del token ExpressPlay se sono presenti errori come &quot;Token scaduto&quot;.
+Se la generazione del token ha esito positivo, ma il contenuto non viene ancora riprodotto, controlla i registri di rimborso del token ExpressPlay per individuare eventuali errori, ad esempio &quot;Token scaduto&quot;.
 
-Se la generazione del token è riuscita e il riscatto non ha avuto alcun errore, ma il video non viene ancora riprodotto, verifica che la CEK corrisponda al contenuto e che il formato del contenuto corrisponda alle funzionalità del dispositivo di destinazione.
+Se la generazione del token ha avuto esito positivo e il rimborso non ha avuto alcun errore, ma il video non viene ancora riprodotto, controlla che il codice CEK corrisponda al contenuto e che il formato del contenuto corrisponda alle funzionalità del dispositivo di destinazione.
 
 Inoltre:
 
-* Verifica di utilizzare l&#39;Autenticatore cliente corretto nelle richieste di servizio. È facile utilizzare accidentalmente l&#39;autenticatore di produzione quando si intendeva utilizzare l&#39;autenticatore di test. Inoltre, assicurati di utilizzare *il tuo* autenticatore. Ad esempio, durante il test potresti prendere in prestito il comando `curl` di qualcun altro e dimenticare di scambiare nell&#39;autenticatore per il proprio.
+* Verifica di utilizzare l’Autenticatore cliente corretto nelle richieste di servizio. È facile utilizzare accidentalmente l’autenticatore di produzione quando intendevi utilizzare l’autenticatore di test. Inoltre, assicurati di utilizzare *tuo* autenticatore. Ad esempio, durante il test potresti prendere in prestito i `curl` e dimentica di sostituire nell&#39;autenticatore con il proprio.
 
-* Verifica di utilizzare il protocollo di trasporto appropriato nelle richieste o nei manifesti ( `https://` rispetto a `https://` oppure nel caso di FairPlay, `skd://` rispetto a `https://` rispetto a `https://`.
+* Verifica di utilizzare il protocollo di trasporto corretto nelle richieste o nei manifesti ( `https://` rispetto a `https://`, o nel caso di FairPlay, `skd://` rispetto a `https://` rispetto a `https://`.
 
-* Assicurati di includere tutti i parametri di query richiesti per la soluzione DRM con cui stai lavorando. È facile confondersi tra PlayReady e Widevine, ad esempio, perché entrambi lavorano con DASH, ma i parametri di richiesta e le configurazioni di packaging richiesti sono diversi.
-* Conferma che il tuo account ExpressPlay disponga di crediti token sufficienti e che non sia stato esaurito.
-* Verifica che il triplo dei dati DRM inviati al TVSDK sia corretto: Token ExpressPlay, URL del server di licenza e tipo DRM.
-* Conferma che tutti i componenti stiano presupponendo lo stesso ambiente ExpressPlay in uso in presenza di due ambienti, Test e Produzione.
-* Tieni presente che in genere i diversi browser supportano un solo DRM per il contenuto DASH.
-* A partire da TVSDK 2.4, è supportato solo il profilo di packaging DASH-LIVE. (Il supporto DASH-OnDemand è nella roadmap di .)
-* Il supporto per AndroidTV PlayReady è intermittente a causa di limitazioni del produttore del dispositivo. Per fornire esempi,
+* Assicurarsi di includere tutti i parametri di query richiesti per la soluzione DRM in uso. È facile confondersi tra PlayReady e Widevine, ad esempio, perché entrambi funzionano con DASH, ma i parametri di richiesta e le configurazioni di packaging richiesti sono diversi.
+* Verificare che l&#39;account ExpressPlay disponga di un numero sufficiente di token e che non sia stato esaurito.
+* Verificare che la tripletta dei dati DRM inviati a TVSDK sia corretta: token ExpressPlay, URL del server licenze e tipo di DRM.
+* Confermare che tutti i componenti si basano sullo stesso presupposto relativo all&#39;ambiente ExpressPlay in uso, in quanto sono presenti due ambienti, Test e Produzione.
+* Tieni presente che i diversi browser in genere supportano un solo DRM per i contenuti DASH.
+* A partire da TVSDK 2.4, è supportato solo il profilo di pacchetto DASH-LIVE. Il supporto DASH-OnDemand è incluso nella roadmap.
+* Il supporto per AndroidTV PlayReady è intermittente a causa di limitazioni del produttore del dispositivo. Per fare degli esempi,
 
-   * il dispositivo Razer Forge ha problemi con il contenuto PlayReady
-   * Amazon FireTV non può utilizzare contenuto DASH con traccia audio crittografata
+   * il dispositivo Razer Forge presenta problemi con il contenuto PlayReady
+   * Amazon FireTV non può utilizzare contenuti DASH con traccia audio crittografata
 
-* A partire da TVSDK 2.4, solo i dispositivi AndroidTV supportano in genere i DRM PlayReady e Widevine. Tutti gli altri dispositivi Android in genere supportano solo Widevine.
-* A partire da TVSDK 2.4, Android TVSDK attualmente richiede che la casella PSSH sia nel manifesto .mpd. Ciò è contrario allo standard DASH, che specifica che la casella PSSH può essere ovunque, come nel contenuto stesso, e non solo nel .mpd.
-
+* A partire da TVSDK 2.4, solo i dispositivi AndroidTV supportano in genere sia PlayReady che Widevine DRM. Tutti gli altri dispositivi Android in genere supportano solo Widevine.
+* A partire da TVSDK 2.4, Android TVSDK attualmente richiede che la casella PSSH sia nel manifesto .mpd. Questo è contrario allo standard DASH, che specifica che la casella PSSH può essere ovunque, come nel contenuto stesso, e non solo nel .mpd.

@@ -1,38 +1,38 @@
 ---
-title: Come migrare la pagina di accesso MVPD da iFrame a Popup
-description: Come migrare la pagina di accesso MVPD da iFrame a Popup
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Migrazione della pagina di accesso MVPD da iFrame a Popup
+description: Migrazione della pagina di accesso MVPD da iFrame a Popup
+exl-id: 389ea0ea-4e18-4c2e-a527-c84bffd808b4
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '689'
 ht-degree: 0%
 
 ---
 
-
-# Come migrare la pagina di accesso MVPD da iFrame a Popup {#migr-mvpd-login-iframe-popup}
+# Migrazione della pagina di accesso MVPD da iFrame a Popup {#migr-mvpd-login-iframe-popup}
 
 >[!NOTE]
 >
->Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente a partire da Adobe. Non è consentito alcun uso non autorizzato.
+>Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente di Adobe. Non è consentito alcun uso non autorizzato.
 
 ## Popup e iFrame {#popup-vs-iframe}
 
-Alcuni utenti hanno riscontrato problemi relativi ai cookie di terze parti con l&#39;implementazione iFrame di una pagina di accesso MVPD.
+Alcuni utenti hanno riscontrato problemi con i cookie di terze parti nell’implementazione iFrame di una pagina di accesso MVPD.
 <!--These issues are described in the tech notes linked below:
 
 * [Adobe Primetime authentication and Safari login issues](https://tve.helpdocsonline.com/adobe-pass)
 * [MVPD iFrame login and 3rd party cookies](https://tve.helpdocsonline.com/mvpd)-->
 
-Il team di autenticazione di Adobe Primetime **consiglia di implementare la finestra popup / nuova pagina di accesso alla finestra** invece della versione iFrame su Firefox e Safari.  Tuttavia, se si sta implementando una pagina di accesso per Internet Explorer, è possibile che si verifichino problemi con l&#39;implementazione popup. I problemi di IE sono causati dal fatto che, dopo che l&#39;utente si autentica con il proprio MVPD nella finestra a comparsa, l&#39;autenticazione di Adobe Primetime forza un reindirizzamento della pagina padre, che è visto come un popup blocker da Internet Explorer. Il team di autenticazione di Adobe Primetime **consiglia di implementare l&#39;accesso iFrame per Internet Explorer**.
+Il team di autenticazione di Adobe Primetime **consiglia di implementare la finestra popup/nuova pagina di accesso alla finestra** piuttosto che la versione iFrame su Firefox e Safari.  Tuttavia, se implementi una pagina di accesso per Internet Explorer, potrebbero verificarsi problemi con l’implementazione della finestra a comparsa. I problemi di Internet Explorer sono causati dal fatto che, dopo che l’utente si autentica con il proprio MVPD nella finestra popup, l’autenticazione di Adobe Primetime forza un reindirizzamento della pagina padre, che viene visto come un blocco popup da Internet Explorer. Il team di autenticazione di Adobe Primetime **consiglia di implementare l&#39;accesso iFrame per Internet Explorer**.
 
-Il codice di esempio presentato in questa nota tecnica utilizza un&#39;implementazione ibrida sia di iFrame che di popup - apertura di un iFrame su Internet Explorer e una finestra a comparsa sugli altri browser.
+Il codice di esempio presentato in questa nota tecnica utilizza un’implementazione ibrida sia di iFrame che di un elemento a comparsa, aprendo un iFrame su Internet Explorer e un elemento a comparsa sugli altri browser.
 
-Poiché esiste già un’implementazione iFrame, la prima parte della nota tecnica presenta il codice per l’implementazione iFrame e la seconda presenta le modifiche per adattarsi all’implementazione popup come impostazione predefinita.
+Considerando che esiste già un’implementazione iFrame, la prima parte della nota tecnica presenta il codice per l’implementazione iFrame e la seconda presenta le modifiche per adattarsi all’implementazione popup come impostazione predefinita.
 
 
 ## Selettore MVPD con pagina di accesso in un iFrame {#mvpd-pickr-iframe}
 
-Gli esempi di codice precedenti mostravano una pagina HTML contenente &lt;div> tag in cui deve essere creato l’iFrame insieme al pulsante Chiudi iFrame:
+Gli esempi di codice precedenti mostravano una pagina HTML contenente &lt;div> tag in cui deve essere creato l’iFrame insieme al pulsante chiudi iFrame:
 
 ```HTML
 <body> 
@@ -48,7 +48,7 @@ Gli esempi di codice precedenti mostravano una pagina HTML contenente &lt;div> t
 </body>
 ```
 
-Associato **JavaScript** codice:
+Ecco la **JavaScript** codice:
 
 ```JavaScript
 /*
@@ -103,12 +103,12 @@ function setSelectedProvider(providerID) {
 ```
 
 
-## Selezione MVPD con pagina di login in una finestra popup {#mvpd-pickr-popup}
+## Selettore MVPD con pagina di accesso in una finestra popup {#mvpd-pickr-popup}
 
-Poiché non utilizzeremo un **iFrame** inoltre, il codice HTML non conterrà l’iFrame o il pulsante per chiudere l’iFrame. Il div che in precedenza conteneva l’iFrame - **mvpddiv** - saranno conservati e utilizzati per i seguenti scopi:
+Poiché non utilizzeremo un’ **iFrame** il codice HTML non conterrà più l’iFrame né il pulsante per chiuderlo. Il div che in precedenza conteneva l&#39;iFrame - **mvpddiv** - sono conservati e utilizzati per:
 
-* per notificare all&#39;utente che la pagina di accesso MVPD è già aperta se l&#39;elemento attivo popup è perso
-* per fornire un collegamento per riattivare la finestra a comparsa
+* per notificare all&#39;utente che la pagina di accesso MVPD è già aperta se lo stato attivo della finestra a comparsa viene perso
+* per fornire un collegamento che consenta di riattivare la finestra a comparsa
 
 ```HTML
 <body onload="javascript:loadAccessEnabler();"> 
@@ -134,9 +134,9 @@ Poiché non utilizzeremo un **iFrame** inoltre, il codice HTML non conterrà l�
 </body>
 ```
 
-L’elenco degli MVPD verrà visualizzato nel div denominato **picker** come selezione **-mvpdList**.
+L’elenco degli MVPD verrà visualizzato nel div denominato **selettore** come selezione **-mvpdList**.
 
-Verrà utilizzato un nuovo callback API - **setConfig(configXML)**. Il callback viene attivato dopo aver chiamato la funzione setRequestor(requestorID) . Questo callback restituisce l’elenco degli MVPD integrati con il requestorID precedentemente impostato. Nel metodo di callback, il codice XML in entrata verrà analizzato e l&#39;elenco degli MVPD nella cache. Viene anche creato il selettore MVPD ma non viene visualizzato.
+Verrà utilizzato un nuovo callback API - **setConfig(configXML)**. Il callback viene attivato dopo la chiamata della funzione setRequestor(requestorID). Questo callback restituisce l&#39;elenco di MVPD integrati con requestorID precedentemente impostato. Nel metodo di callback verrà analizzato il codice XML in ingresso e verrà memorizzato nella cache l&#39;elenco di MVPD. Viene creato anche il selettore MVPD, ma non visualizzato.
 
 ```JavaScript
 var mvpdList;  // The list of cached MVPDs
@@ -168,7 +168,7 @@ function setConfig(configXML) {
 }
 ```
 
-Dopo la chiamata della funzione getAuthentication() o getAuthorization() , viene attivato il callback displayProviderDialog() . Normalmente, all&#39;interno di questo callback, l&#39;elenco MVPD sarebbe stato costruito e visualizzato. Poiché il selettore MVPD è già stato costruito, l&#39;unica cosa da fare è visualizzarlo all&#39;utente.
+Dopo aver chiamato la funzione getAuthentication() o getAuthorization(), viene attivato il callback displayProviderDialog(). Normalmente, all’interno di questo callback, l’elenco MVPD sarebbe stato generato e visualizzato. Poiché il selettore MVPD è già stato creato, l’unica cosa che rimane da fare è visualizzarlo all’utente.
 
 ```JavaScript
 /*
@@ -179,15 +179,15 @@ function displayProviderDialog(providers) {
 }
 ```
 
-Dopo che l’utente ha selezionato un MVPD dal selettore, è necessario creare il popup. Alcuni browser possono bloccare il popup se viene creato con about:blank o con una pagina che si trova su un altro dominio - quindi si consiglia di aprirlo con il nome host da cui viene caricato AccessEnabler.
+Dopo che l’utente ha selezionato un MVPD dal selettore, è necessario creare la finestra a comparsa. Alcuni browser possono bloccare la finestra a comparsa se viene creata con about:blank o con una pagina presente in un altro dominio, pertanto si consiglia di aprirla con il nome host da cui è caricato AccessEnabler.
 
-Nell’implementazione iFrame, il ripristino del flusso di autenticazione veniva eseguito dal pulsante btnCloseIframe e dalla funzione JavaScript closeIframeAction() , ma ora la decorazione dell’iFrame non è più possibile. Quindi, lo stesso comportamento si ottiene guardando per quando la finestra a comparsa è chiusa (dall&#39;utente o finendo il flusso di autenticazione). È stato aggiunto uno snippet di codice che aiuta anche nel caso in cui l&#39;utente perda lo stato attivo della finestra a comparsa:
+Nell’implementazione di iFrame, il ripristino del flusso di autenticazione veniva eseguito dal pulsante btnCloseIframe e dalla funzione JavaScript closeIframeAction(), ma ora la decorazione dell’iFrame non è più possibile. Quindi, lo stesso comportamento si ottiene osservando quando la finestra a comparsa viene chiusa (dall’utente o completando il flusso di autenticazione). È stato aggiunto uno snippet di codice che aiuta anche nel caso in cui l’utente perda lo stato attivo della finestra a comparsa:
 
 ```HTML
 "<a href="javascript:mvpdWindow.focus();">Click here to open it.</a>".
 ```
 
-Nel callback createIFrame() il **mvpddiv** verrà visualizzato div.
+Nel callback createIFrame() viene **mvpddiv** verrà visualizzato div.
 
 ```JavaScript
 function createIFrame(width, height) {
@@ -228,8 +228,8 @@ function checkClosed() {
 
 >[!IMPORTANT]
 >
->* Il codice di esempio contiene una variabile hardcoded per il requestorID utilizzato - &#39;REF&#39; che deve essere sostituita da un vero e proprio requestor id programmatore.
->* Il codice di esempio viene eseguito correttamente solo da un dominio inserito nella whitelist associato all’id richiedente utilizzato.
->* Poiché l’intero codice è disponibile per il download, il codice presentato in questa nota tecnica è stato troncato. Per un campione completo, vedi **Esempio di iFrame JS vs Popup**.
+>* Il codice di esempio contiene una variabile hardcoded per il requestorID - &#39;REF&#39; utilizzato che deve essere sostituito da un vero ID richiedente programmatore.
+>* Il codice di esempio verrà eseguito correttamente solo da un dominio inserito nella whitelist associato all’ID richiedente utilizzato.
+>* Poiché l’intero codice è disponibile per il download, il codice presentato in questa nota tecnica è stato troncato. Per un esempio completo, vedi **Esempio a comparsa e iFrame JS**.
 >* Le librerie JavaScript esterne sono state collegate da [Servizi in hosting Google](https://developers.google.com/speed/libraries/).
 

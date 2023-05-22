@@ -1,18 +1,17 @@
 ---
-title: Criteri DRM multipli
-description: Criteri DRM multipli
+title: Più criteri DRM
+description: Più criteri DRM
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 74c3a425-f771-46cc-bfb7-8665ed8dceda
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 0%
 
 ---
 
-
-# Criteri DRM multipli {#multiple-drm-policies}
+# Più criteri DRM {#multiple-drm-policies}
 
 È possibile specificare più criteri DRM di Primetime da associare a una singola sezione di contenuto. Il server licenze determina il criterio utilizzato.
 
-Esempio di utilizzo: Se la stessa risorsa viene utilizzata sia per i modelli di vendita elettronica che per i modelli di noleggio, questa opzione consente di specificare diversi set di regole di utilizzo per ciascun modello di business. Il server licenze può selezionare il criterio DRM Primetime da utilizzare in base al fatto che il cliente abbia acquistato o affittato il contenuto.
+Caso d’uso di esempio: se la stessa risorsa viene utilizzata sia per i modelli di vendita diretta che per quelli di noleggio elettronici, questa opzione consente di specificare set diversi di regole d’uso per ciascun modello aziendale. Il server licenze può selezionare il criterio DRM di Primetime da utilizzare in base all&#39;acquisto o alla locazione del contenuto da parte del cliente.

@@ -1,58 +1,57 @@
 ---
-description: La definizione dell'interfaccia di ad-serving del lettore video (VPAID) 2.0 fornisce un'interfaccia comune per la riproduzione di annunci video. Offre agli utenti un’esperienza multimediale avanzata e consente agli editori di eseguire meglio il targeting degli annunci, tenere traccia delle impressioni degli annunci e monetizzare i contenuti video.
-title: Supporto per annunci VPAID 2.0
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Il lettore video ad-serving interface definition (VPAID) 2.0 offre un’interfaccia comune per la riproduzione di annunci video. Fornisce agli utenti un’esperienza multimediale avanzata e consente agli editori di eseguire meglio il targeting degli annunci, tracciare le impressioni degli annunci e monetizzare i contenuti video.
+title: Supporto di annunci VPAID 2.0
+exl-id: ea3dcd1d-c4e2-46c6-b613-e86c3e161ca8
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 0%
 
 ---
 
+# Supporto di annunci VPAID 2.0 {#vpaid-ad-support}
 
-# Supporto per annunci VPAID 2.0 {#vpaid-ad-support}
+Il lettore video ad-serving interface definition (VPAID) 2.0 offre un’interfaccia comune per la riproduzione di annunci video. Fornisce agli utenti un’esperienza multimediale avanzata e consente agli editori di eseguire meglio il targeting degli annunci, tracciare le impressioni degli annunci e monetizzare i contenuti video.
 
-La definizione dell&#39;interfaccia di ad-serving del lettore video (VPAID) 2.0 fornisce un&#39;interfaccia comune per la riproduzione di annunci video. Offre agli utenti un’esperienza multimediale avanzata e consente agli editori di eseguire meglio il targeting degli annunci, tenere traccia delle impressioni degli annunci e monetizzare i contenuti video.
+Sono supportate le seguenti funzionalità:
 
-Sono supportate le seguenti funzioni:
-
-* Versione 2.0 della specifica VPAID
+* Versione 2.0 delle specifiche VPAID
 
    Per ulteriori informazioni, consulta [IAB VPAID 2.0](https://www.iab.com/guidelines/digital-video-player-ad-interface-definition-vpaid-2-0/).
-* Annunci VPAID lineari con contenuti video on demand (VOD)
-* Nel contenuto live, il browser TVSDK supporta gli annunci VPAID pre-roll JavaScript.
-* In modalità di fallback del Flash, il browser TVSDK supporta solo annunci VPAID basati sul Flash.
+* Annunci VPAID lineari con contenuto video-on-demand (VOD)
+* Nel contenuto Live, il browser TVSDK supporta gli annunci VPAID JavaScript pre-roll.
+* In modalità di fallback del Flash, l’SDK del browser supporta solo gli annunci VPAID basati sul Flash.
 * Annunci VPAID JavaScript lineari
 
-   Gli annunci VPAID devono essere basati su JavaScript e la risposta dell&#39;annuncio deve identificare il tipo di supporto dell&#39;annuncio VPAID come `application/javascript`.
+   Gli annunci VPAID devono essere basati su JavaScript e la risposta dell’annuncio deve identificare il tipo di file multimediale dell’annuncio VPAID come `application/javascript`.
 
-Le seguenti funzionalità non sono supportate:
+Le seguenti funzioni non sono supportate:
 
 * Versione 1.0 della specifica VPAID
-* Annunci copiosi
-* Annunci non lineari, come annunci sovrapposti, annunci dinamici complementari, annunci minimizzabili, annunci compressi e annunci espandibili.
-* Precaricamento degli annunci VPAID
+* Annunci saltabili
+* Annunci non lineari, come annunci sovrapposti, annunci dinamici di accompagnamento, annunci minimizzabili, annunci comprimibili e annunci espandibili.
+* Precaricamento di annunci VPAID
 * Annunci VPAID nel contenuto live
-* Annunci VPAID Flash
+* Flash annunci VPAID
 
 ## API {#section_0DB1D383CA5047B281BC808BC082C69B}
 
 I seguenti elementi API supportano gli annunci VPAID 2.0:
 
-* Il metodo `getCustomAdView` di `MediaPlayer` restituisce un oggetto `CustomAdView` che rappresenta la visualizzazione web che esegue il rendering dell&#39;annuncio VPAID.
+* Il `getCustomAdView` metodo di `MediaPlayer` restituisce un `CustomAdView` oggetto, che rappresenta la visualizzazione web che esegue il rendering dell’annuncio VPAID.
 
-   Per ulteriori informazioni sul metodo `getCustomAdView`, consulta la [documentazione API MediaPlayer](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/AdobePSDK.MediaPlayer.html).
+   Per ulteriori informazioni su `getCustomAdView` metodo, vedi [Documentazione API di MediaPlayer](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/AdobePSDK.MediaPlayer.html).
 
-* `MediaPlayer.setCustomAdTimeout(int milliseconds)` imposta il timeout sul processo di caricamento VPAID.
+* `MediaPlayer.setCustomAdTimeout(int milliseconds)` imposta il timeout del processo di caricamento VPAID.
 
-   Il valore di timeout predefinito è 10 secondi.
+   Il valore di timeout predefinito è di 10 secondi.
 
-* L’API `auditudeSettings.ignoreVPAIDAds` ti consente di ignorare gli annunci VPAID ricevuti dal server Auditude. L’API non funziona per Fallback di Flash.
+* API, `auditudeSettings.ignoreVPAIDAds`, consente di ignorare gli annunci VPAID ricevuti dal server Auditude. L’API non funziona per il fallback del Flash.
 
 Durante la riproduzione dell’annuncio VPAID:
 
-* L&#39;annuncio VPAID viene visualizzato in un contenitore di visualizzazione sopra la visualizzazione del lettore, pertanto il codice che si basa sui tocco degli utenti sulla visualizzazione del lettore non funziona.
-* Le chiamate per mettere in pausa e riprodurre l&#39;istanza del lettore mettono in pausa e riprendono l&#39;annuncio VPAID.
-* Gli annunci VPAID non hanno una durata predefinita, perché l&#39;annuncio può essere interattivo.
+* L’annuncio VPAID viene visualizzato in un contenitore di viste sopra la vista del lettore, pertanto non funziona il codice che si basa sulle digitazioni effettuate dagli utenti sulla vista del lettore.
+* Chiamate per la pausa e la riproduzione sull&#39;istanza del lettore pausa e ripresa dell&#39;annuncio VPAID.
+* Gli annunci VPAID non hanno una durata predefinita, perché l’annuncio può essere interattivo.
 
-   La durata dell&#39;annuncio e la durata totale dell&#39;interruzione dell&#39;annuncio specificati nella risposta del server dell&#39;annuncio potrebbero non essere precise.
+   La durata dell’annuncio e la durata totale dell’interruzione pubblicitaria specificate nella risposta dell’ad server potrebbero non essere precise.

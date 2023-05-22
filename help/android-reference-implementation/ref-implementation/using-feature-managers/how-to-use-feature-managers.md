@@ -1,20 +1,18 @@
 ---
-title: Come utilizzare i gestori di funzioni
-description: Come utilizzare i gestori di funzioni
+title: Come utilizzare i gestori di funzionalità
+description: Come utilizzare i gestori di funzionalità
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: b85e78f3-992e-4ebe-b9ee-f138db760304
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '66'
 ht-degree: 0%
 
 ---
 
+# Come utilizzare i gestori di funzionalità {#how-to-use-feature-managers}
 
-# Come utilizzare i gestori di funzioni {#how-to-use-feature-managers}
+Per abilitare, disabilitare e configurare le funzionalità, è possibile utilizzare Gestione funzionalità in due modi:
 
-Esistono due modi per utilizzare i gestori di funzioni per abilitare, disabilitare e configurare le funzioni:
-
-* Puoi creare e configurare un gestore di funzioni trasmettendo le informazioni di configurazione da un file di configurazione al lettore multimediale.
-* È possibile abilitare e disabilitare le funzionalità senza passare attraverso il codice utilizzando la fabbrica di gestione.
-
+* È possibile creare e configurare un gestore delle funzioni passando le informazioni di configurazione da un file di configurazione al lettore multimediale.
+* È possibile abilitare e disabilitare le funzionalità senza passare attraverso il codice utilizzando il manager factory.

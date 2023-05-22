@@ -2,24 +2,23 @@
 title: Panoramica della topologia di rete
 description: Panoramica della topologia di rete
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: a4737ea3-407a-48fd-ae3e-4df56a4c1812
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 0%
 
 ---
 
-
 # Panoramica {#network-topology-overview}
 
-Dopo aver implementato correttamente Adobe Primetime DRM, è necessario mantenere la sicurezza del server di produzione DRM di Primetime.
+Dopo aver distribuito correttamente Adobe Primetime DRM, è necessario mantenere la sicurezza del server di produzione di Primetime DRM.
 
 >[!NOTE]
 >
->Primetime DRM era noto in precedenza come Adobe Access e prima di questo, Flash Access.
+>DRM di Primetime era noto in precedenza come accesso di Adobe e prima ancora come Flash Access.
 
-È possibile utilizzare un *reverse proxy* per garantire che diversi set di URL per le applicazioni web DRM di Primetime siano disponibili per gli utenti esterni e interni. *Il* proxy inverso è più sicuro che consentire agli utenti di connettersi direttamente al server dell&#39;applicazione su cui viene eseguito DRM di Primetime e questa configurazione esegue tutte le richieste HTTP per il server dell&#39;applicazione che esegue DRM di Primetime. Gli utenti possono accedere solo al proxy inverso e possono tentare solo le connessioni URL supportate dal proxy inverso.
+È possibile utilizzare una *proxy inverso* per garantire la disponibilità di diversi set di URL per le applicazioni Web DRM Primetime per utenti esterni e interni. *Inverti proxy* è più sicuro di consentire agli utenti di connettersi direttamente al server applicazioni su cui viene eseguito Primetime DRM e questa configurazione esegue tutte le richieste HTTP per il server applicazioni che esegue Primetime DRM. Gli utenti possono accedere solo al proxy inverso e tentare solo le connessioni URL supportate dal proxy inverso.
 
 <!--<a id="fig_8083A8C794B646CD87985EC891B60663"></a>-->
 

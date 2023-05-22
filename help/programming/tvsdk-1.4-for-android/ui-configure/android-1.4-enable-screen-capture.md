@@ -1,22 +1,21 @@
 ---
 keywords: setSecure;VideoEngineView
-title: Abilita l’acquisizione dello schermo
-description: Abilita l’acquisizione dello schermo
+title: Abilita acquisizione schermo
+description: Abilita acquisizione schermo
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 5dd1bf4e-ab50-4b57-89e4-eacc291a9fe3
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '59'
 ht-degree: 0%
 
 ---
 
+# Abilita acquisizione schermo{#enable-screen-capture}
 
-# Abilita l&#39;acquisizione dello schermo{#enable-screen-capture}
+Per impostazione predefinita, TVSDK non consente l’acquisizione dello schermo. Il lettore chiama `setSecure(true)` il `com.adobe.ave.VideoEngineView` oggetto al momento della costruzione. Si dispone dell&#39;accesso a questo oggetto, poiché è necessario creare un `VideoEngineView` e fornirlo al `VideoEngine` oggetto.
 
-TVSDK disabilita l’acquisizione dello schermo per impostazione predefinita. Il lettore chiama `setSecure(true)` sull&#39;oggetto `com.adobe.ave.VideoEngineView` in fase di costruzione. È possibile accedere a questo oggetto, in quanto è necessario creare un oggetto `VideoEngineView` e fornirlo all&#39;oggetto `VideoEngine`.
+Per abilitare l’acquisizione schermata nell’app:
 
-Per abilitare l’acquisizione da schermo nell’app:
-
-1. Crea l&#39;oggetto `com.adobe.ave.VideoEngineView` .
-1. Chiama `setSecure(false)` sull&#39;oggetto `VideoEngineView`.
+1. Creare `com.adobe.ave.VideoEngineView` oggetto.
+1. Chiamata `setSecure(false)` sul tuo `VideoEngineView` oggetto.

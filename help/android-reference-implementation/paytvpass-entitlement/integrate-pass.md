@@ -1,43 +1,42 @@
 ---
 description: Personalizza l’implementazione di riferimento per integrare l’autenticazione Adobe Primetime per l’ambiente di produzione.
 title: Integrare l’autenticazione Primetime
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ef6dc75d-d00f-481f-a620-4ec402cbebb6
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '767'
 ht-degree: 0%
 
 ---
 
-
-# Integrare l&#39;autenticazione Primetime {#integrate-primetime-authentication}
+# Integrare l’autenticazione Primetime {#integrate-primetime-authentication}
 
 Personalizza l’implementazione di riferimento per integrare l’autenticazione Adobe Primetime per l’ambiente di produzione.
 
-L’integrazione Implementazione di riferimento del servizio di autenticazione Primetime funziona come una dimostrazione predefinita. Tuttavia, per utilizzare l’integrazione in un lettore pronto per la produzione, è necessario implementare le seguenti personalizzazioni:
+L’integrazione dell’implementazione di riferimento del servizio di autenticazione Primetime funziona come dimostrazione preconfigurata. Tuttavia, per utilizzare l’integrazione in un lettore pronto per la produzione, è necessario implementare le seguenti personalizzazioni:
 
 1. Attiva o disattiva i flussi di adesione.
 
-   Per prima cosa è necessario inizializzare `EntitlementManager` e ottenere un&#39;istanza dell&#39;SDK di autenticazione Primetime. Se la `EntitlementManager` non inizializza questa libreria, la gestione verrà disabilitata.
-1. Abilita `EntitlementManger` dalla classe dell&#39;applicazione principale:
+   Il `EntitlementManager` deve prima inizializzare e ottenere un’istanza dell’SDK di autenticazione Primetime da abilitare. Se il `EntitlementManager` non inizializza questa libreria, il gestore verrà disabilitato.
+1. Abilita `EntitlementManger`, dalla classe dell&#39;applicazione principale:
 
    ```java
    // initialize the AccessEnabler library, required for Primetime PayTV Pass entitlement workflows 
    EntitlementManager.initializeAccessEnabler(this); // comment out this line to disable entitlement workflows
    ```
 
-1. Utilizza la classe `ManagerFactory` per ottenere un&#39;istanza del `EntitlementManager`.
+1. Utilizza il `ManagerFactory` classe per ottenere un&#39;istanza di `EntitlementManager`.
 
-   È sempre necessario utilizzare il `ManagerFactory` per ottenere un&#39;istanza del `EntitlementManager`, in quanto il `ManagerFactory` mantiene una singola istanza di EntitlementManager per l&#39;applicazione. Non creare mai un&#39;istanza delle classi `EntitlementManager` o `EntitlementManagerOn` utilizzando i relativi costruttori.
+   È sempre necessario utilizzare `ManagerFactory` per ottenere un&#39;istanza di `EntitlementManager`, come `ManagerFactory` mantiene una singola istanza di EntitlementManager per l&#39;applicazione. Non creare mai un&#39;istanza di `EntitlementManager` o `EntitlementManagerOn` classi mediante i relativi costruttori.
 
    ```java
    EntitlementManager entitlementManager =  
    ManagerFactory.getEntitlementManager();
    ```
 
-   Il `ManagerFactory` restituisce un&#39;istanza di `EntitlementManagerOn`, con i flussi di adesione abilitati, se hai precedentemente chiamato `EntitlementManager.initializeAccessEnabler`. Se non chiami prima `EntitlementManager.initializeAccessEnabler`, il `ManagerFactory` restituirà un&#39;istanza di `EntitlementManager`, con i flussi di adesione disattivati. 1. Configura l&#39;ID del richiedente.
+   Il `ManagerFactory` restituisce un&#39;istanza di `EntitlementManagerOn`, con i flussi di adesione abilitati, se in precedenza hai chiamato `EntitlementManager.initializeAccessEnabler`. Se non chiami prima `EntitlementManager.initializeAccessEnabler`, quindi `ManagerFactory` restituirà un’istanza di `EntitlementManager`, con i flussi dei diritti disabilitati. 1. Configura l’ID richiedente.
 
-   L’implementazione di riferimento è preconfigurata con l’ID del richiedente del test impostato su: &quot;REF&quot;. Puoi utilizzare questo ID richiedente per testare l’applicazione. Quando sei pronto a utilizzare l’ID richiedente fornito dal tuo rappresentante di autenticazione Primetime, aggiorna il file [!DNL res/values/strings.xml] dell’applicazione con il tuo ID richiedente.
+   L’implementazione di riferimento è preconfigurata con l’ID richiedente del test impostato su: &quot;REF&quot;. Puoi usare questo ID richiedente per testare l’applicazione. Quando sei pronto a utilizzare l’ID richiedente fornito dal rappresentante di autenticazione di Primetime, aggiorna i [!DNL res/values/strings.xml] file con il tuo ID richiedente.
 
    ```xml
    <!-- Programmer Requestor ID, change to ID provided by your Adobe  
@@ -53,24 +52,24 @@ L’integrazione Implementazione di riferimento del servizio di autenticazione P
    <string name="adobepass_sp_url_staging">sp.auth-staging.adobe.com</string>
    ```
 
-   Inoltre, potrebbe essere necessario modificare gli URL utilizzati dall&#39;applicazione per connettersi ai servizi di autenticazione di Primetime. tra cui gli URL del server di staging e produzione di Primetime Authentication e un URL per un servizio di verifica dei token. Per ulteriori informazioni, rivolgiti al tuo rappresentante Adobe Primetime. 1. Firma l&#39;ID richiedente.
+   Inoltre, potrebbe essere necessario modificare gli URL utilizzati dall’applicazione per connettersi ai servizi di autenticazione di Primetime. Questi includono gli URL del server di staging e produzione per l’autenticazione Primetime e l’URL di un servizio di verifica dei token. Per ulteriori informazioni, rivolgiti al tuo rappresentante Adobe Primetime. 1. Firma l’ID richiedente.
 
-   Per stabilire l&#39;identità del programmatore all&#39;interno del sistema di autenticazione Primetime, l&#39;ID del richiedente del programmatore viene inviato al sistema di autenticazione Primetime. Come ulteriore livello di sicurezza, il Requestor ID deve essere firmato dal programmatore prima di inviarlo all&#39;Adobe. L&#39;Adobe consiglia al programmatore di impostare un servizio per firmare l&#39;ID del richiedente su una rete attendibile.
+   Al fine di stabilire l&#39;identità del programmatore all&#39;interno del sistema di autenticazione Primetime, l&#39;ID del richiedente del programmatore viene inviato al sistema di autenticazione Primetime. Come ulteriore livello di sicurezza, l’ID richiedente deve essere firmato dal programmatore prima di essere inviato all’Adobe. L’Adobe consiglia al programmatore di impostare un servizio per firmare l’ID richiedente su una rete attendibile.
 
-   L’implementazione di riferimento di Primetime dimostra come firmare l’ID del richiedente, tuttavia questo è solo a scopo dimostrativo. L’Adobe consiglia vivamente di non includere il certificato di firma e il codice del generatore di firme sotto `com.adobe.primetime.reference.crypto` all’interno di un’applicazione di produzione. Invece, devi spostarlo in un servizio di rete affidabile.
+   L’implementazione di riferimento di Primetime illustra come firmare l’ID richiedente, ma questo serve solo a scopo dimostrativo. L’Adobe consiglia vivamente che il certificato di firma e il codice del generatore di firme, in `com.adobe.primetime.reference.crypto`, non devono essere inclusi in un&#39;applicazione di produzione. È invece consigliabile spostarlo in un servizio di rete attendibile.
 
-1. Configura l&#39;ambiente server.
+1. Configurare l’ambiente server.
 
    Il servizio di autenticazione Primetime può essere eseguito in due ambienti separati:
 
-   * Staging : l&#39;ambiente di staging viene utilizzato per testare l&#39;applicazione.
+   * Staging: l’ambiente di staging viene utilizzato per testare l’applicazione.
    * Produzione: l’ambiente di produzione viene utilizzato per le implementazioni live dell’applicazione.
 
-   È possibile impostare gli URI sia per gli ambienti di staging che per quelli di produzione utilizzando l’applicazione. Tuttavia, è necessario impostare quali di questi vengono utilizzati dall’applicazione all’interno del codice. Nella classe `com.adobe.primetime.reference.manager.EntitlementManger` , imposta la variabile `environmentUri` su `STAGING_URI` o `PRODUCTION_URI` a seconda dell’ambiente del servizio di autenticazione Primetime in uso.
+   È possibile impostare gli URI sia per gli ambienti di staging che per quelli di produzione utilizzando l’applicazione, ma è necessario impostare quali di questi vengono utilizzati dall’applicazione all’interno del codice. In `com.adobe.primetime.reference.manager.EntitlementManger` classe, imposta `environmentUri` variabile a uno dei due `STAGING_URI` o `PRODUCTION_URI` a seconda dell’ambiente del servizio di autenticazione Primetime in uso.
 
    >[!NOTE]
    >
-   >L&#39;ID richiedente fornito (&quot;REF&quot;) deve essere utilizzato solo con l&#39;ambiente di staging.
+   >L’ID richiedente (&quot;REF&quot;) fornito deve essere utilizzato solo con l’ambiente di staging.
 
    `com.adobe.primetime.reference.manager.EntitlementManager`:
 
@@ -94,9 +93,9 @@ L’integrazione Implementazione di riferimento del servizio di autenticazione P
      TVS_URL = "https://" + environmentUri + "/tvs/v1/validate";
    ```
 
-1. Personalizza la griglia di selezione MVPD.
+1. Personalizzare la griglia di selezione MVPD.
 
-   Nella pagina di selezione del provider di contenuti viene visualizzata una tabella dei primi nove MVPD selezionati dall’utente. L&#39;applicazione estrae i primi nove MVPD da un elenco ordinato all&#39;interno dell&#39;applicazione che corrispondono agli MVPD disponibili integrati con il programmatore nel sistema di autenticazione Primetime. L&#39;elenco ordinato degli MVPD principali è basato sull&#39;ID MVPD all&#39;interno del sistema di autenticazione Primetime, non sul nome visualizzato MVPD. È importante verificare che gli ID MVPD nell’elenco degli MVPD principali corrispondano agli ID MVPD integrati con l’account del programmatore, in quanto in alcuni casi gli ID possono essere diversi tra le integrazioni. Di seguito è riportato l&#39;elenco ordinato degli MVPD principali che si trova nella classe `com.adobe.primetime.reference.ui.entitlement.MvpdPickerFragment`.
+   Nella pagina di selezione del provider di contenuti viene visualizzata una tabella dei primi nove MVPD selezionabili dall’utente. L&#39;applicazione richiama i primi nove MVPD da un elenco ordinato all&#39;interno dell&#39;applicazione che corrispondono agli MVPD disponibili integrati con il Programmatore nel sistema di autenticazione Primetime. L&#39;elenco ordinato degli MVPD primari è basato sull&#39;ID MVPD all&#39;interno del sistema di autenticazione Primetime, non sul nome visualizzato MVPD. È importante verificare che gli ID MVPD nell&#39;elenco degli MVPD primari corrispondano agli ID MVPD integrati con l&#39;account del programmatore, in quanto in alcuni casi gli ID possono essere diversi tra le integrazioni. Di seguito è riportato l’elenco ordinato di MVPD primari presenti nella classe `com.adobe.primetime.reference.ui.entitlement.MvpdPickerFragment`.
 
    ```java
    /* Array of MVPDs to display in a Grid of icons 
@@ -131,10 +130,10 @@ L’integrazione Implementazione di riferimento del servizio di autenticazione P
    };
    ```
 
-   Nella tabella seguente è riportato un esempio di utilizzo dell’elenco ordinato degli MVPD principali. La prima colonna elenca gli MVPD integrati con il programmatore. La seconda colonna è l&#39;elenco (abbreviato) ordinato degli MVPD. La terza colonna è l’elenco dei risultati utilizzati per visualizzare i primi sei MVPD per l’utente.
+   La tabella seguente fornisce un esempio di come viene utilizzato l’elenco ordinato di MVPD primari. La prima colonna elenca gli MVPD integrati con il Programmatore. La seconda colonna è l&#39;elenco ordinato (abbreviato) degli MVPD. La terza colonna è l’elenco dei risultati utilizzato per visualizzare i primi sei MVPD per l’utente.
 
-   Questo esempio utilizza i primi sei MVPD invece dei nove effettivi solo per mantenere l&#39;esempio semplice. Tenere presente che l’elenco dei risultati contiene l’intersezione dei primi due elenchi e ha lo stesso ordine del secondo elenco. Inoltre, notare che AT&amp;T U-verse non è nella lista finale, in quanto vengono presi solo i primi sei MVPD corrispondenti.
+   Questo esempio utilizza i primi sei MVPD invece dei nove effettivi solo per mantenere l’esempio semplice. L&#39;elenco dei risultati contiene l&#39;intersezione dei primi due elenchi e ha lo stesso ordine del secondo elenco. Inoltre, si noti che AT&amp;T U-verse non è nella lista finale, in quanto vengono presi solo i primi sei MVPD corrispondenti.
 
-| MVPD disponibili | MVPD principali | Visualizzati 6 MVPD |
+| MVPD disponibili | MVPD primari | Visualizzati 6 MVPD |
 |--- |--- |--- |
-| <ol><li>XFINITÀ COMcast</li><li>TWC</li><li>Mediacom</li><li>RCN</li><li>Piatto</li><li>AT&amp;T verso U</li><li>CableOne</li><li>Faro</li><li>Broadband atlantica</li><li>WOW!</li><li>MetroCast</li><li>DirectTV </li><li>Cox</li><li>Ottimizzazione della visione</li></ol> | <ol><li>XFINITÀ COMcast</li><li>DirectTV</li><li>Piatto</li><li> TWC</li><li>Cox</li><li>Carta</li><li>Verizon FiOS</li><li>Ottimizzazione della visione</li><li>AT&amp;T verso U</li></ol> | <ol><li>XFINITÀ COMcast</li><li>DirectTV</li><li>Piatto</li><li>TWC</li><li>Cox</li><li>Ottimizzazione della visione</li></ol> |
+| <ol><li>XFINITY compresso</li><li>TWC</li><li>Mediacom</li><li>RCN</li><li>Piatto</li><li>A&amp;T U-verso</li><li>CableOne</li><li>Brighthouse</li><li>Banda larga atlantica</li><li>WOW!</li><li>MetroCast</li><li>DirectTV </li><li>Cox</li><li>Ottimo Cablevision</li></ol> | <ol><li>XFINITY compresso</li><li>DirectTV</li><li>Piatto</li><li> TWC</li><li>Cox</li><li>Carta</li><li>Verizon FiOS</li><li>Ottimo Cablevision</li><li>A&amp;T U-verso</li></ol> | <ol><li>XFINITY compresso</li><li>DirectTV</li><li>Piatto</li><li>TWC</li><li>Cox</li><li>Ottimo Cablevision</li></ol> |

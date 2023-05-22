@@ -1,25 +1,24 @@
 ---
 description: È possibile leggere le statistiche di riproduzione, buffering e dispositivo dalla classe QOSProvider.
-title: Leggi le statistiche relative a riproduzione, buffering e dispositivo QOS
-translation-type: tm+mt
+title: Leggi le statistiche su riproduzione, buffering e dispositivo QOS
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '122'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
 
-# Leggi le statistiche relative a riproduzione, buffering e dispositivo QOS{#read-qos-playback-buffering-and-device-statistics}
+# Leggi le statistiche su riproduzione, buffering e dispositivo QOS{#read-qos-playback-buffering-and-device-statistics}
 
 È possibile leggere le statistiche di riproduzione, buffering e dispositivo dalla classe QOSProvider.
 
-La classe `QOSProvider` fornisce diverse statistiche, tra cui buffering, bit rate, frame rate, dati temporali e così via.
+Il `QOSProvider` class fornisce varie statistiche, tra cui informazioni su buffering, bit rate, frame rate, dati temporali e così via.
 
-Fornisce inoltre informazioni sul dispositivo, ad esempio il produttore, il modello, il sistema operativo, la versione SDK e la dimensione/densità dello schermo.
+Fornisce inoltre informazioni sul dispositivo, ad esempio produttore, modello, sistema operativo, versione SDK e dimensioni/densità dello schermo.
 
-1. Creare un&#39;istanza di un lettore multimediale.
-1. Crea un oggetto `QOSProvider` e allegalo al lettore multimediale.
+1. Crea un&#39;istanza di un lettore multimediale.
+1. Creare un `QOSProvider` e collegarlo al lettore multimediale.
 
    ```
    // Create Media Player. 
@@ -27,9 +26,9 @@ Fornisce inoltre informazioni sul dispositivo, ad esempio il produttore, il mode
    _mediaQosProvider.attachMediaPlayer(_mediaPlayer);
    ```
 
-1. (Facoltativo) Leggere le statistiche di riproduzione.
+1. (Facoltativo) Leggi le statistiche di riproduzione.
 
-   Una soluzione per leggere le statistiche di riproduzione è avere un timer, che recupera periodicamente i nuovi valori QoS dal `QOSProvider`. Ad esempio:
+   Una soluzione per leggere le statistiche di riproduzione è disporre di un timer, che recupera periodicamente i nuovi valori QoS dalla `QOSProvider`. Ad esempio:
 
    ```
    var qosTimer:Timer = new Timer(1000); // every 1 second  

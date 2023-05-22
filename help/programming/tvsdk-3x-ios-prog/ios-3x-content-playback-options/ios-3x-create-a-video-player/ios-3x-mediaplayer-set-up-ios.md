@@ -1,26 +1,25 @@
 ---
-description: L'interfaccia PTMediaPlayer incapsula la funzionalità e il comportamento di un oggetto Media Player.
+description: L'interfaccia PTMediaPlayer incapsula la funzionalità e il comportamento di un oggetto lettore multimediale.
 title: Configurare PTMediaPlayer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 6d16bfd2-8d1d-4261-b343-c2e999c4d28b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 0%
 
 ---
 
-
 # Configurare PTMediaPlayer {#set-up-the-ptmediaplayer}
 
-TVSDK fornisce gli strumenti per la creazione di un’applicazione di lettore video avanzata (il lettore Primetime), che puoi integrare con altri componenti Primetime.
+TVSDK fornisce gli strumenti per creare un’applicazione video player avanzata (il lettore Primetime), che puoi integrare con altri componenti di Primetime.
 
-Utilizza gli strumenti della piattaforma per creare un lettore e collegarlo alla visualizzazione del lettore multimediale in TVSDK, che dispone di metodi per riprodurre e gestire i video. Ad esempio, TVSDK fornisce metodi di riproduzione e pausa. Puoi creare pulsanti dell’interfaccia utente sulla piattaforma e impostare i pulsanti per chiamare tali metodi TVSDK.
+Utilizza gli strumenti della tua piattaforma per creare un lettore e collegarlo alla visualizzazione del lettore multimediale in TVSDK, che dispone di metodi per riprodurre e gestire i video. Ad esempio, TVSDK fornisce metodi di riproduzione e pausa. Puoi creare pulsanti dell’interfaccia utente sulla tua piattaforma e impostarli per chiamare tali metodi TVSDK.
 
-L&#39;interfaccia PTMediaPlayer incapsula la funzionalità e il comportamento di un oggetto Media Player.
+L&#39;interfaccia PTMediaPlayer incapsula la funzionalità e il comportamento di un oggetto lettore multimediale.
 
-Per impostare il `PTMediaPlayer`:
+Per impostare `PTMediaPlayer`:
 
-1. Recupera l’URL del file multimediale dall’interfaccia utente, ad esempio in un campo di testo.
+1. Recupera l’URL del file multimediale dall’interfaccia utente, ad esempio, in un campo di testo.
 
    ```
    NSURL *url = [NSURL URLWithString:textFieldURL.text];
@@ -28,13 +27,13 @@ Per impostare il `PTMediaPlayer`:
 
 1. Crea `PTMetadata`.
 
-   Supponi che il tuo metodo `createMetada` prepari i metadati (vedi [Pubblicità](../../ios-3x-advertising/ios-3x-advertising-requirements.md)).
+   Supponiamo che il tuo metodo `createMetada` prepara i metadati (vedere [Pubblicità](../../ios-3x-advertising/ios-3x-advertising-requirements.md)).
 
    ```
    PTMetadata *metadata = [self createMetadata]
    ```
 
-1. Crea `PTMediaPlayerItem` utilizzando l&#39;istanza `PTMetadata`.
+1. Crea `PTMediaPlayerItem` utilizzando `PTMetadata` dell&#39;istanza.
 
    ```
    PTMediaPlayerItem *item = [[[PTMediaPlayerItem alloc] 
@@ -47,7 +46,7 @@ Per impostare il `PTMediaPlayer`:
    [self addObservers]
    ```
 
-1. Crea `PTMediaPlayer` utilizzando il nuovo `PTMediaPlayerItem`.
+1. Crea `PTMediaPlayer` utilizzo del nuovo `PTMediaPlayerItem`.
 
    ```
    PTMediaPlayer *player = [PTMediaPlayer playerWithMediaPlayerItem:item];
@@ -55,7 +54,7 @@ Per impostare il `PTMediaPlayer`:
 
 1. Imposta le proprietà sul lettore.
 
-   Di seguito sono elencate alcune delle proprietà disponibili `PTMediaPlayer` :
+   Ecco alcune delle opzioni disponibili `PTMediaPlayer` proprietà:
 
    ```
    player.autoPlay                    = YES;  
@@ -77,14 +76,14 @@ Per impostare il `PTMediaPlayer`:
          ( UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight )];
    ```
 
-1. Aggiungi la visualizzazione del lettore nella visualizzazione secondaria della visualizzazione corrente.
+1. Aggiungi la vista del lettore nella vista secondaria della vista corrente.
 
    ```
    [self.adPlayerView  setAutoresizesSubviews:YES];  
    [self.adPlayerView addSubview:(UIView *)player.view];
    ```
 
-1. Chiama `play` per avviare la riproduzione multimediale.
+1. Chiamata `play` per avviare la riproduzione di contenuti multimediali.
 
    ```
    [player play];

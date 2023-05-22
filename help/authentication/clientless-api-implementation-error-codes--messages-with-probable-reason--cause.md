@@ -1,59 +1,59 @@
 ---
-title: Implementazione dell'API senza client - Codici di errore / Messaggi con motivo probabile / causa
-description: Implementazione dell'API senza client - Codici di errore / Messaggi con motivo probabile / causa
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Implementazione API senza client - Codici di errore/messaggi con motivo/causa probabile
+description: Implementazione API senza client - Codici di errore/messaggi con motivo/causa probabile
+exl-id: 616e35fc-9b72-422b-9a05-e6248bd52490
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 0%
 
 ---
 
-
-# Implementazione dell&#39;API senza client - Codici di errore / Messaggi con motivo probabile / causa {#clientless-api-implementation--error-codes-messages-with-probable-reason-cause}
+# Implementazione API senza client - Codici di errore/messaggi con motivo/causa probabile {#clientless-api-implementation--error-codes-messages-with-probable-reason-cause}
 
 >[!NOTE]
 >
->Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente a partire da Adobe. Non è consentito alcun uso non autorizzato.
+>Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente di Adobe. Non è consentito alcun uso non autorizzato.
 
 </br>
 
 
-## Errore: Non autorizzato
+## Errore: non autorizzato
 
 ### Cause:
 
-1. Intestazione di autorizzazione mancante in POST
-1. Problema con l&#39;intestazione di autorizzazione - verifica se il tempo di richiesta è in millisecondi.
+1. Intestazione di autorizzazione mancante nel POST
+1. Problema con l’intestazione di autorizzazione: verifica se il tempo della richiesta è in millisecondi.
 
-## Errore: SC 400 durante l&#39;autenticazione
-
-### Cause:
-
-1. Il server non ha trovato il codice di registrazione, creato per un richiedente specifico e per un ambiente specifico.
-1. È possibile che si verifichino problemi di scripting tra domini diversi
-1. Lo spoofing appropriato deve essere aggiunto al file /etc/hosts
-
-## Errore: 400 Richiesta non valida
+## Errore: SC 400 durante l’autenticazione
 
 ### Cause:
 
-1. URL non valido per POST/GET
-1. SAMLAssertionParserException - Impossibile decrittografare l&#39;asserzione SAML crittografata al termine dell&#39;Adobe
+1. Il server non ha trovato il codice di registrazione, che è stato creato per un richiedente e un ambiente specifici.
+1. Potresti riscontrare problemi di scripting tra domini
+1. Il spoofing corretto deve essere aggiunto al file /etc/hosts
 
-## Errore: 403 Vietato
-
-### Cause:
-
-1. Troppe richieste rapide - una funzione della gestione API per prevenire attacchi DoS.
-2. Se utilizzi un ambiente preuguale, aggiungi lo spoofing, altrimenti assicurati che lo spoofing sia stato rimosso dal file /etc/hosts
-
-## Errore: Impossibile accedere alla pagina MVPD
+## Errore: richiesta 400 non valida
 
 ### Cause:
 
-1. Nome utente e password non corrispondenti 
-2. L&#39;accesso potrebbe essere stato disattivato
-3. Controlla se l&#39;accesso è per la produzione o lo staging
+1. URL in formato non valido per POST/GET
+1. SAMLAssertionParserException: impossibile decrittografare l’asserzione SAML crittografata alla fine di Adobe
+
+## Errore: 403 - Non consentito
+
+### Cause:
+
+1. Troppe richieste rapide: una funzione della gestione API per prevenire gli attacchi DoS.
+2. Se utilizzi l’ambiente preuguale, aggiungi lo spoofing, altrimenti assicurati che lo spoofing sia stato rimosso dal file /etc/hosts
+
+## Errore: impossibile accedere alla pagina MVPD
+
+### Cause:
+
+1. Nome utente e password non corrispondono 
+2. L’accesso potrebbe essere stato disabilitato
+3. Controlla se l&#39;accesso è per la produzione o la gestione temporanea
 
 
 <!--

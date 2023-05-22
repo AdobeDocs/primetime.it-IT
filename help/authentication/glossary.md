@@ -1,19 +1,19 @@
 ---
 title: Glossario
 description: Glossario
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: e64a94f6-7460-4aa8-8d6b-e0553ba1e4ec
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '836'
 ht-degree: 0%
 
 ---
 
-
 # Glossario {#glossary}
 
 >[!NOTE]
 >
->Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente a partire da Adobe. Non è consentito alcun uso non autorizzato.
+>Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente di Adobe. Non è consentito alcun uso non autorizzato.
 
 ## AccessEnabler {#accessEnabler}
 
@@ -21,12 +21,12 @@ Il componente client dell’autenticazione Adobe Primetime. L’autenticazione A
 
 ## AuthN {#authn}
 
-Utilizzato come abbreviazione per &quot;authentication&quot;, come in &quot;AuthN Token&quot; o &quot;AuthN Flow&quot;.
+Utilizzato come abbreviazione per &quot;authentication&quot; (autenticazione), come in &quot;AuthN Token&quot; (Token di autenticazione) o &quot;AuthN Flow&quot; (Flusso di autenticazione).
 
 
 ## Token AuthN{#authn-token}
 
-Token di autenticazione, generato dall’autenticazione Adobe Primetime dopo che un utente è stato autenticato con un MVPD. A seconda della piattaforma di integrazione del programmatore, il token viene memorizzato sul dispositivo dell’utente o sui server di autenticazione di Adobe Primetime.
+Token di autenticazione, generato dall’autenticazione di Adobe Primetime dopo che un utente è stato autenticato correttamente con un MVPD. A seconda della piattaforma di integrazione del programmatore, il token viene memorizzato sul dispositivo dell’utente o sui server di autenticazione di Adobe Primetime.
 
 ## AuthZ {#authz}
 
@@ -34,7 +34,7 @@ Utilizzato come abbreviazione per &quot;autorizzazione&quot;, come in &quot;Toke
 
 ## Token AuthZ {#authz-token}
 
-Token di autorizzazione, generato dall’autenticazione Adobe Primetime dopo che un utente è stato autorizzato a visualizzare il contenuto protetto. Il token AuthZ viene memorizzato sui server di autenticazione Adobe Primetime e viene utilizzato per generare un [Token multimediale di breve durata](#short-lived-token).
+Token di autorizzazione, generato dall’autenticazione di Adobe Primetime dopo che un utente è stato autorizzato a visualizzare il contenuto protetto. Il token AuthZ viene memorizzato nei server di autenticazione di Adobe Primetime e utilizzato per generare un [Token multimediale di breve durata](#short-lived-token).
 
 ## ID canale (obsoleto) {#channel_id}
 
@@ -42,89 +42,89 @@ Termine precedente per ID risorsa.
 
 ## API senza client {#clientless-api}
 
-Una soluzione di integrazione di autenticazione Adobe Primetime che utilizza i servizi web invece del componente client AccessEnabler.
+Soluzione di integrazione dell&#39;autenticazione Adobe Primetime che utilizza servizi Web anziché il componente client AccessEnabler.
 
 ## ID dispositivo {#device-id}
 
-Identifica in modo univoco un dispositivo (ad esempio un telefono, un tablet, ecc.) all’interno dell’autenticazione Adobe Primetime. Questo ID viene ottenuto / fornito dall&#39;applicazione del programmatore.
+Identifica in modo univoco un dispositivo (ad esempio un telefono, un tablet, ecc.) nell’autenticazione di Adobe Primetime. Questo ID viene ottenuto/fornito dall’applicazione del programmatore.
 
 
-## Flusso di adesione{#entitlement_flow}
+## Flusso diritto{#entitlement_flow}
 
-Il termine utilizzato nella documentazione di autenticazione di Adobe Primetime per fare riferimento all&#39;intero processo di registrazione di un dispositivo/utente con autenticazione Adobe Primetime, autenticazione di un utente con un MVPD, autorizzazione di una risorsa per un utente e disconnessione di un utente.
+Il termine utilizzato nella documentazione di autenticazione di Adobe Primetime fa riferimento all’intero processo di registrazione di un dispositivo o utente con autenticazione di Adobe Primetime, autenticazione di un utente con MVPD, autorizzazione di una risorsa per un utente e disconnessione di un utente.
 
 
 ## GUID {#guid}
 
-Vedi [ID utente](#user-id).
+Consulta [ID utente](#user-id).
 
 ## IdP {#idp}
 
-Identificare il fornitore; sinonimo di MVPD nel contesto del ruolo di un MVPD in un’integrazione di autenticazione Adobe Primetime. (I clienti devono verificare la propria identità tramite la pagina di accesso del provider di Pay TV.)
+Identifica il provider; sinonimo di MVPD nel contesto del ruolo di un MVPD in un’integrazione di autenticazione Adobe Primetime. (I clienti devono verificare la propria identificazione tramite la pagina di accesso del provider di Pay TV).
 
-## Verificatore token multimediale {#media-token-verifier}
+## Media Token Verifier {#media-token-verifier}
 
-Libreria fornita da un Adobe utilizzata dai programmatori per verificare il token multimediale di breve durata generato dall&#39;autenticazione Adobe Primetime dopo il completamento di un flusso di adesione.
+Libreria fornita da Adobe e utilizzata dai programmatori per verificare il token multimediale di breve durata generato dall’autenticazione Adobe Primetime dopo il completamento di un flusso di adesione.
 
 ## MVPD {#mvpd}
 
-Distributore di programmi video multicanale; sinonimo di &quot;Pay TV Provider&quot;.
+Distributore di programmi video multicanale, sinonimo di &quot;provider di servizi di televisione a pagamento&quot;.
 
 ## ID MVPD {#mvpd-id}
 
-Vedi [ID utente](#user-id).
+Consulta [ID utente](#user-id).
 
 ## ID partner {#partner-id}
 
-Un identificatore che viene trasmesso in Adobe agli MVPD, che lo utilizzano per identificare per conto del quale l’autenticazione Adobe Primetime richiede l’autenticazione. A volte viene utilizzato per configurare le loro interfacce utente per particolari programmatori, a volte è lo stesso in tutti i programmatori, dipende dalle esigenze del MVPD.
+Un identificatore che Adobe passa agli MVPD, che lo utilizzano per identificare per conto dei quali l’autenticazione Adobe Primetime richiede l’autenticazione. A volte viene utilizzato per configurare le loro UI per programmatori particolari, a volte è lo stesso in tutti i programmatori, dipende dalle esigenze del MVPD.
 
-## Provider TV a pagamento {#pay-tv-provider}
+## Provider di servizi di televisione a pagamento {#pay-tv-provider}
 
 Sinonimo di [MVPD](#mvpd).
 
 ## Programmatore {#programmer}
 
-Sinonimo di &quot;fornitore di contenuti&quot;, &quot;account&quot;, &quot;canale&quot;, &quot;fornitore di servizi&quot;, &quot;marchio&quot; e così via.
+Sinonimo di &quot;provider di contenuti&quot;, &quot;account&quot;, &quot;canale&quot;, &quot;provider di servizi&quot;, &quot;brand&quot; e così via.
 
 ## MVPD proxy {#proxy-mvpd}
 
-MVPD che fornisce servizi di identità per altri MVPD; direttamente integrato con l’autenticazione Adobe Primetime.
+MVPD che fornisce servizi di identità per altri MVPD; integrato direttamente con l’autenticazione Adobe Primetime.
 
 ## MVPD proxy {#proxied-mvpd}
 
-Un MVPD che non ha un&#39;integrazione diretta con l&#39;SP di Adobe, ma è integrato tramite un MVPD proxy.
+MVPD che non ha un&#39;integrazione diretta con l&#39;SP Adobe, ma è integrato tramite un MVPD proxy.
 
 ## ID richiedente {#requestor-id}
 
-Identifica in modo univoco un [Programmatore](#programmer) (un account, un marchio, un canale o una proprietà) nell’autenticazione Adobe Primetime. Questo ID è determinato tra il programmatore e l&#39;Adobe durante la configurazione iniziale dell&#39;account. Sul web, l’ID del richiedente è associato a un set di domini inseriti nella whitelist; tutte le chiamate che utilizzano un ID da un dominio esterno verranno rifiutate. I programmatori utilizzano anche l’ID del richiedente per l’analisi. In genere esiste un solo ID richiedente per programmatore. Una funzionalità aggiuntiva relativa all’ID richiedente è che il programmatore deve fornire ad Adobe un certificato pubblico, in quanto la chiamata API setRequestor prevede l’invio di dati crittografati, utilizzati per autenticare il programmatore nel sistema di autenticazione Adobe Primetime.
+Identifica in modo univoco un elemento [Programmatore](#programmer) (un account, un marchio, un canale o una proprietà) nell’autenticazione di Adobe Primetime. Questo ID viene determinato tra il Programmatore e l’Adobe durante la configurazione iniziale dell’account. Sul web, l’ID richiedente è associato a un set di domini inseriti nella whitelist; tutte le chiamate che utilizzano un ID proveniente da un dominio esterno verranno rifiutate. I programmatori utilizzano anche l’ID richiedente per l’analisi. In genere esiste un solo ID richiedente per programmatore. Una funzione aggiuntiva relativa all’ID richiedente è che il programmatore deve fornire all’Adobe un certificato pubblico, poiché la chiamata API setRequestor prevede l’invio di dati crittografati, utilizzati per autenticare il programmatore nel sistema di autenticazione di Adobe Primetime.
 
 ## ID risorsa {#resource-id}
 
-Una stringa o una risorsa mRSS che identifica un [Programmatore](#programmer) agli MVPD. è concordato tra il programmatore e gli MVPD; L’autenticazione Adobe Primetime passa l’ID risorsa senza essere toccato, quindi deve essere lo stesso per tutti gli MVPD. Un programmatore può utilizzare più ID di risorse purché gli MVPD siano consapevoli di ciò che ogni ID rappresenta.
+Una stringa o una risorsa mRSS che identifica un [Programmatore](#programmer) agli MVPD. È concordato tra il programmatore e gli MVPD; l&#39;autenticazione Adobe Primetime trasmette l&#39;ID risorsa attraverso intatto, quindi deve essere la stessa per tutti gli MVPD. Un programmatore può utilizzare più ID di risorse purché gli MVPD siano consapevoli di ciò che ogni ID rappresenta.
 
-## SessionGUID {#sessionGUID}
+## GUID sessione {#sessionGUID}
 
-Vedi [ID utente](#user-id).
+Consulta [ID utente](#user-id).
 
 ## Token multimediale di breve durata {#short-lived-token}
 
-Questo token viene generato dall&#39;autenticazione Adobe Primetime al completamento del processo di adesione per un particolare utente. Il token viene passato al programmatore, che utilizza il verificatore dei token di autenticazione di Adobe Primetime sul token di autenticazione breve per verificare la sicurezza del processo di adesione.
+Questo token viene generato dall’autenticazione di Adobe Primetime al completamento del processo di adesione per un particolare utente. Il token viene passato al Programmatore, che utilizza Adobe Primetime Authentication Token Verifier sul token multimediale di breve durata per verificare la sicurezza del processo di adesione.
 
-## Dispositivo avanzato {#smart-device}
+## Smart Device {#smart-device}
 
-Termine utilizzato in tutta la documentazione di autenticazione di Adobe Primetime per fare riferimento a set-top box, console giochi e smart TV. Si tratta di dispositivi con funzionalità di rete ma che non sono in grado di eseguire il rendering di pagine web.
+Termine utilizzato nella documentazione di autenticazione di Adobe Primetime per fare riferimento a set-top box, console giochi e smart TV. Si tratta di dispositivi che dispongono di funzionalità di rete ma non sono in grado di eseguire il rendering di pagine web.
 
 ## SP{#sp}
 
-Fornitore di servizi; si riferisce solitamente al *ruolo* di SP, eseguito da Adobe Primetime Authentication, che agisce per conto di un programmatore in un&#39;integrazione con un [MVPD](#mvpd).
+Service Provider; in genere si riferisce al *ruolo* di SP, riprodotto dall’autenticazione Adobe Primetime, che agisce per conto di un programmatore in un’integrazione con un [MVPD](#mvpd).
 
-## Passaggio Temp {#temp-pass}
+## Passaggio temporaneo {#temp-pass}
 
-Funzione che consente ai programmatori di fornire un accesso temporaneo e gratuito al contenuto a pagamento. L&#39;accesso è per richiedente, per un periodo di tempo specificato dal programmatore.
+Funzione che consente ai programmatori di fornire accesso gratuito temporaneo ai contenuti a pagamento. L&#39;accesso è per richiedente, per un periodo di tempo specificato dal programmatore.
 
 ## TTL {#ttl}
 
-È Ora Di Vivere. Indica il periodo di tempo specificato per la validità di un token.
+Time To Live. Periodo di tempo specificato per la validità di un token.
 
 ## TVE {#tve}
 
@@ -132,12 +132,12 @@ Televisione Ovunque.
 
 ## ID utente {#user-id}
 
-Identifica in modo univoco l&#39;utente dell&#39;app di un programmatore, ma proviene dall&#39;MVPD. Disponibile in diversi moduli per diversi casi d’uso. Vedi [Informazioni sugli ID utente nella panoramica del programmatore](/help/authentication/programmer-overview.md#user-ids).
+Identifica in modo univoco l’utente dell’app di un programmatore, ma ha origine dall’MVPD. Disponibile in diversi moduli per diversi casi d’uso. Consulta [Informazioni sugli ID utente nella panoramica del programmatore](/help/authentication/programmer-overview.md#user-ids).
 
 ## Elenco Consentiti {#whitelist}
 
-Un elenco di domini dichiarati legittimi ai fini della comunicazione con l’autenticazione Adobe Primetime.
+Elenco di domini designati come legittimi ai fini della comunicazione con l’autenticazione Adobe Primetime.
 
 ## Token XSTS {#xsts-token}
 
-Un token di sicurezza rilasciato da Microsoft per lo sviluppo di app per console Xbox, utilizzato nell&#39;integrazione di autenticazione Xbox/Adobe Primetime.
+Un token di sicurezza rilasciato da Microsoft per lo sviluppo di app console Xbox, utilizzato nell&#39;integrazione di autenticazione Xbox/Adobe Primetime.

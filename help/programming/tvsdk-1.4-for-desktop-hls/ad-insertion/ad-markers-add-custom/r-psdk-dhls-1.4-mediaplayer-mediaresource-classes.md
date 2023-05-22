@@ -1,29 +1,28 @@
 ---
-description: MediaResource rappresenta il contenuto che sta per essere caricato dall'istanza MediaPlayer.
+description: Un oggetto MediaResource rappresenta il contenuto che verrà caricato dall'istanza di MediaPlayer.
 title: Classi MediaPlayer e MediaResource
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: c431c9f9-98a3-402c-b799-450f30f668dd
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '232'
 ht-degree: 0%
 
 ---
 
-
 # Classi MediaPlayer e MediaResource{#mediaplayer-and-mediaresource-classes}
 
-MediaResource rappresenta il contenuto che sta per essere caricato dall&#39;istanza MediaPlayer.
+Un oggetto MediaResource rappresenta il contenuto che verrà caricato dall&#39;istanza di MediaPlayer.
 
 <!--<a id="section_B09A012C97454AF58CE2269B800D8027"></a>-->
 
-La libreria TVSDK fornisce un mezzo semplice per caricare e preparare il contenuto per la riproduzione utilizzando il metodo `replaceCurrentResource` nell&#39;interfaccia `MediaPlayer` . Questo metodo riceve un&#39;istanza della classe `MediaResource` come unico argomento di input. La classe `MediaResource` è composta dalle seguenti informazioni:
+La libreria TVSDK fornisce un modo semplice per caricare e preparare il contenuto per la riproduzione utilizzando `replaceCurrentResource` metodo in `MediaPlayer` di rete. Questo metodo riceve un&#39;istanza del `MediaResource` come unico argomento di input. Il `MediaResource` la classe è composta dalle seguenti informazioni:
 
-* Un URL che rappresenta la posizione del contenuto che sta per essere caricato.
+* Un URL, che rappresenta la posizione del contenuto che sta per essere caricato.
 * Un tipo, che è il tipo di contenuto che sta per essere caricato.
 
    Si tratta di una stringa che definisce i tipi di contenuto che possono essere caricati da `MediaPlayer`. I valori possibili sono HLS e HDS. Ogni valore è associato alla stringa che rappresenta le estensioni di file comunemente utilizzate, &quot;m3u8&quot; per HLS e &quot;f4m&quot; per HDS.
-* Alcuni metadati, che è un&#39;istanza della classe `Metadata`.
+* Alcuni metadati, che è un’istanza di `Metadata` classe.
 
-   Questa struttura simile a un dizionario potrebbe contenere informazioni aggiuntive sul contenuto che sta per essere caricato, ad esempio informazioni sul contenuto alternativo/annuncio che deve essere inserito nel contenuto principale.
+   Questa struttura simile al dizionario può contenere informazioni aggiuntive sul contenuto che sta per essere caricato, ad esempio informazioni sul contenuto alternativo/annuncio che deve essere inserito nel contenuto principale.
 
-I metadati sono il mezzo tramite il quale le informazioni relative al contenuto alternativo vengono trasmesse a TVSDK. L’interfaccia `Metadata` definisce l’API per un archivio chiave-valore generico, in cui sia la chiave che il valore sono stringhe semplici.
+I metadati sono il mezzo attraverso il quale le informazioni relative al contenuto alternativo vengono passate a TVSDK. Il `Metadata` L’interfaccia definisce l’API per un archivio chiave-valore generico, dove sia la chiave che il valore sono stringhe semplici.

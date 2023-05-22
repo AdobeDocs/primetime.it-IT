@@ -2,29 +2,28 @@
 title: Aggiornare il file WAR del server licenze
 description: Aggiornare il file WAR del server licenze
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: a70d04e2-24a4-4848-9e9b-97467f2c1749
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '166'
 ht-degree: 0%
 
 ---
 
-
 # Aggiornare il file WAR del server licenze{#update-the-license-server-war-file}
 
-Per supportare i client che sono stati personalizzati tramite un server On Premises Individualization, è necessario aggiornare la radice del trust del certificato del server licenze per includere la credenziale CA di Individualization appena acquisita. Uno script Python ( [!DNL addIndivCert.py]) è incluso nella cartella [!DNL update_license_server] .
+Per supportare i client individualizzati tramite un server di personalizzazione locale, è necessario aggiornare la radice di attendibilità del certificato del server licenze in modo da includere le credenziali della CA di personalizzazione appena acquisite. Uno script Python ( [!DNL addIndivCert.py]) è incluso nel [!DNL update_license_server] cartella.
 
 Per aggiornare il server licenze, effettuare le seguenti operazioni:
 
-1. Crea una copia dei file WAR da aggiornare (esempi: [!DNL flashaccess.war], [!DNL faxsks.war]).
-1. Assicurati che i file WAR siano sbloccati e che le relative autorizzazioni siano impostate in modo che possano essere modificate.
-1. Esegui lo script [!DNL addIndivCert.py] Python per aggiornare i file WAR del server licenze.
+1. Creare una copia dei file WAR da aggiornare (esempi: [!DNL flashaccess.war], [!DNL faxsks.war]).
+1. Assicurati che i file WAR siano sbloccati e che le relative autorizzazioni siano impostate in modo che possano essere modificati.
+1. Esegui il [!DNL addIndivCert.py] Script Python per aggiornare i file WAR del server licenze.
 
    Gli input per lo script sono i seguenti:
 
-   * `cert`: File PKCS12 contenente il certificato CA per l’individuazione delle persone
-   * `war`: File WAR da aggiornare
+   * `cert`: file PKCS12 contenente il certificato CA di Personalizzazione
+   * `war`: file WAR da aggiornare
 
    Il file di output è un file WAR aggiornato.
 
@@ -32,4 +31,4 @@ Per aggiornare il server licenze, effettuare le seguenti operazioni:
    ./addIndivCert.py -cert NEW_IndivCA.cer -war flashaccess.war
    ```
 
-I file WAR saranno modificati in posizione. Se necessario, è possibile modificare lo script Python in base alle esigenze specifiche. Dopo aver eseguito gli aggiornamenti, è possibile distribuire normalmente i file WAR.
+I file WAR verranno modificati. Se necessario, puoi modificare lo script Python in base alle tue esigenze. Dopo aver eseguito gli aggiornamenti, è possibile distribuire i file WAR normalmente.

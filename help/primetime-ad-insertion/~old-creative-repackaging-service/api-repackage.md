@@ -1,7 +1,6 @@
 ---
-description: È possibile utilizzare l'API di ricompilazione CRS per transcodificare in anticipo i contenuti non HLS e creativi, in modo che una versione HLS sia disponibile quando è necessario eseguirla, eliminando il ritardo di 2-4 minuti associato al riconfezionamento just-in-time (JIT).
-title: API di repackaging
-translation-type: tm+mt
+description: Puoi utilizzare l’API di repackaging CRS per transcodificare in anticipo contenuti pubblicitari non HLS, in modo da rendere disponibile una versione HLS quando è necessario eseguirla, eliminando il ritardo di 2-4 minuti associato al repackaging just-in-time (JIT).
+title: Riconfezionamento API
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '605'
@@ -10,15 +9,15 @@ ht-degree: 0%
 ---
 
 
-# API di repackaging {#repackaging-api}
+# Riconfezionamento API {#repackaging-api}
 
-È possibile utilizzare l&#39;API di ricompilazione CRS per transcodificare in anticipo i contenuti non HLS e creativi, in modo che una versione HLS sia disponibile quando è necessario eseguirla, eliminando il ritardo di 2-4 minuti associato al riconfezionamento just-in-time (JIT).
+Puoi utilizzare l’API di repackaging CRS per transcodificare in anticipo contenuti pubblicitari non HLS, in modo da rendere disponibile una versione HLS quando è necessario eseguirla, eliminando il ritardo di 2-4 minuti associato al repackaging just-in-time (JIT).
 
 ## Richiesta HTTP {#section_F616F5722F0B4AB7939EE2ECBEDDB297}
 
-Invia un comando HTTP POST all&#39;URL specificato per indicare a CRS quale annuncio creativo desideri transcodificare e quali opzioni desideri utilizzare. Il codice di risposta segnala il successo o l’errore e altre informazioni.
+Invia un comando HTTP POST all’URL specificato per indicare a CRS quale annuncio creativo desideri trascodificare e quali opzioni desideri utilizzare. Il codice di risposta segnala l’esito positivo o negativo e altre informazioni.
 
-Questa richiesta richiede un nome utente e una password. Puoi ottenerli dal tuo account manager tecnico Adobe. Se hai bisogno di informazioni sull’autenticazione, contatta il tuo rappresentante di abilitazione Adobe Primetime.
+Questa richiesta richiede un nome utente e una password. Puoi ottenerli dal tuo account manager tecnico Adobe. Per informazioni sull’autenticazione, contatta il rappresentante Adobe Primetime Enablement.
 
 Per inviare una richiesta di transcodifica a CRS, invia un messaggio HTTP come segue:
 
@@ -26,11 +25,11 @@ Per inviare una richiesta di transcodifica a CRS, invia un messaggio HTTP come s
 
 * **Metodo -** `POST`
 
-* **Auth -** `Digest`
+* **Autenticazione -** `Digest`
 
-* **Intestazione -** `Content-Type: text/xml`
+* **Intestazione** `Content-Type: text/xml`
 
-* **Body -** XML come nell&#39;esempio seguente:
+* **Corpo -** XML come nell&#39;esempio seguente:
 
    ```xml
    <RepackageList>
@@ -52,7 +51,7 @@ Per inviare una richiesta di transcodifica a CRS, invia un messaggio HTTP come s
    </RepackageList>
    ```
 
-Il blocco `RepackageList` nel corpo può contenere da 1 a 300 blocchi `Repackage`. Se il numero di blocchi `Repackage` nel corpo supera 300, la richiesta HTTP avrà esito negativo con il seguente errore:
+Il `RepackageList` Il blocco nel corpo può contenere da 1 a 300 `Repackage` blocchi. Se il numero di `Repackage` I blocchi nel corpo superano i 300, quindi la richiesta HTTP non riuscirà e restituirà il seguente errore:
 
 ```
 <codeph>
@@ -62,47 +61,47 @@ Il blocco `RepackageList` nel corpo può contenere da 1 a 300 blocchi `Repackage
 ```
 
 
-I parametri richiesti e facoltativi in un blocco `Repackage` sono i seguenti:
+I parametri obbligatori e facoltativi in una `Repackage` i blocchi sono i seguenti:
 
-* **`AdSystem`** (Obbligatorio) - Il server dell&#39;annuncio sorgente, ad esempio  `Auditude`,  `FreeWheel`,  `Apad.tv`. Si tratta di un valore stringa che corrisponde all’elemento VAST `AdSystem`.
+* **`AdSystem`** (Obbligatorio): l’ad server di origine, ad esempio, `Auditude`, `FreeWheel`, `Apad.tv`. Si tratta di un valore stringa che corrisponde all&#39;elemento VAST `AdSystem`.
 
-* **`AdId`** (Obbligatorio) - Questo è un identificatore per il server di annunci di terze parti specificato nella richiesta. Corrisponde all&#39;attributo `id` dell&#39;elemento `Ad` in una risposta VAST.
+* **`AdId`** (Obbligatorio) - Identificatore del server di annunci di terze parti specificato nella richiesta. Corrisponde al `id` attributo del `Ad` in una risposta VAST.
 
-* **`CreativeURL`** (Obbligatorio) - La posizione (URI) dell’annuncio creativo da transcodificare. Questo corrisponde all’elemento VAST `MediaFile` .
+* **`CreativeURL`** (Obbligatorio): posizione (URI) della creatività dell’annuncio da transcodificare. Questo corrisponde al VAST `MediaFile` elemento.
 
-* `CreativeID` (facoltativo) - Identificatore dell&#39;annuncio creativo da includere come parte dell&#39;esperienza pubblicitaria.
-* **`Zone`** (Obbligatorio) - ID zona per il tuo account (ottieni dal tuo account manager tecnico). Si tratta di un valore numerico che corrisponde all’impostazione della piattaforma Auditude `publisher_site_id` .
+* `CreativeID` (facoltativo): identificatore della creatività dell’annuncio da includere nell’esperienza dell’annuncio.
+* **`Zone`** (Obbligatorio) - ID zona per il tuo account (ottieni dal tuo account manager tecnico). Questo è un valore numerico che corrisponde alla piattaforma Auditude `publisher_site_id` impostazione.
 
-* **`Format`** (facoltativo) - Parametri per controllare il modo in cui CRS transcodifica l&#39;annuncio creativo:
+* **`Format`** (facoltativo) - Parametri per controllare il modo in cui CRS transcodifica la creatività dell’annuncio:
 
-   * `clientside` - Genera un output compatibile con l’URL utilizzato da TVSDK per comunicare con la CDN.
+   * `clientside` : genera un output compatibile con l’URL utilizzato da TVSDK per comunicare con la rete CDN.
    >[!IMPORTANT]
    >
-   >È necessario fornire questo parametro se si desidera che l’annuncio ricalcolato sia compatibile con Client Side Ad Insertion. Se non fornisci questo, l&#39;annuncio reinserito nel pacchetto sarà compatibile solo con Server Side Ad Insertion.
+   >Devi fornire questo parametro se desideri che l’annuncio ricompilato sia compatibile con l’Ad Insertion lato client. In caso contrario, l’annuncio riconfezionato sarà compatibile solo con Server Side Ad Insertion.
 
-   * `hls` - Genera un annuncio pubblicitario transcodificato compatibile con HLS.
-   * `dash` - Genera un annuncio pubblicitario transcodificato compatibile con DASH.
-   * `id3` - Inserisci i tag dei metadati temporizzati ID3 nei contenuti creativi e transcodificati.
-   * `targetdur` - Durata del segmento (in secondi) per l’annuncio creativo transcodificato. Il valore predefinito è `targetdur=4`. Questo valore deve corrispondere al valore specificato nel manifesto per `<s>` nel tag di durata target: `#EXT-X-TARGETDURATION:<s>`.
+   * `hls` : genera un annuncio transcodificato e creativo compatibile con HLS.
+   * `dash` : genera un annuncio transcodificato e creativo compatibile con DASH.
+   * `id3` : inserisci i tag di metadati temporizzati ID3 nella creatività dell’annuncio transcodificato.
+   * `targetdur` - Durata del segmento (in secondi) per l’annuncio transcodificato e creativo. Il valore predefinito è `targetdur=4`. Questo valore deve corrispondere al valore specificato nel manifesto per `<s>` nel tag durata target: `#EXT-X-TARGETDURATION:<s>`.
 
    >[!NOTE]
    >
-   >Le risorse compatibili con DASH non sono compatibili con l’inserimento di annunci in Adobe Primetime.
+   >Le risorse compatibili con DASH non sono compatibili con l’inserimento di annunci Adobe Primetime.
 
 >[!IMPORTANT]
 >
->Per garantire una riproduzione più fluida, impostare `targetdur` in modo che corrisponda alla durata del blocco del contenuto.
+>Per garantire una riproduzione ottimale, impostare `targetdur` affinché corrisponda alla durata del blocco di contenuto.
 
 ## Risposta HTTP {#section_B30D27E4A6AC4AAD9E758162EFF7D963}
 
 CRS risponde alla richiesta con uno dei seguenti codici di stato:
 
-* **HTTP 202**  - Accettato (con corpo vuoto). Indica il successo. CRS carica l&#39;annuncio transcodificato nel server CDN.
-* **HTTP 400**  - Richiesta non valida. XML inviato non valido.
-* **HTTP 500**  - Errore interno del server. Problema interno del server (ad esempio, impossibile connettersi a un database).
+* **HTTP 202** - Accettato (con corpo vuoto). Questo indica il successo. CRS carica l’annuncio transcodificato sul server CDN.
+* **HTTP 400** - Richiesta non valida. XML inviato non valido.
+* **HTTP 500** - Errore interno del server. Si è verificato un problema interno del server, ad esempio non è stato possibile connettersi a un database.
 
-## Pretranscodifica delle risorse per SSAI o CSAI {#section_098888BB74FD4DC1AD0BD507B2A48318}
+## Risorse pre-transcodifica per SSAI o CSAI {#section_098888BB74FD4DC1AD0BD507B2A48318}
 
-Utilizzando l’API di ricompilazione, puoi precodificare i futuri eventi SSAI o CSAI. Se le risorse saranno destinate in futuro a essere utilizzate con SSAI, assicurati che tutti i parametri nelle chiamate POST siano univoci. I parametri sono: AdSystem, AdId, CreativeURL, Zone, Format. Qualsiasi differenza in questo insieme di parametri, si traduce in una nuova richiesta di transcodifica per SSAI.
+Utilizzando l’API di riconfezionamento, puoi pre-trascodificare eventi SSAI o CSAI futuri. Se le risorse devono essere utilizzate con SSAI in futuro, assicurati che tutti i parametri nelle chiamate POST siano univoci. I parametri sono: AdSystem, AdId, CreativeURL, Zone, Format. Eventuali differenze in questo set di parametri determinano una nuova richiesta di transcodifica per SSAI.
 
-Per le risorse utilizzate in futuro con CSAI, l’univocità della risorsa dipende da Zone e CreativeURL. AdSystem e AdId non si traducono in risorse transcodificate diverse e sono disponibili per i client.
+Per le risorse utilizzate in futuro con CSAI, l’univocità delle risorse dipende da Zone e CreativeURL. AdSystem e AdId non generano risorse transcodificate diverse, disponibili per i client.

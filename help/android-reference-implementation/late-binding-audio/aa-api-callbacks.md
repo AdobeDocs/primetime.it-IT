@@ -2,14 +2,13 @@
 title: Documentazione API correlata
 description: Documentazione API correlata
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: e23b4d41-d5d1-4a9c-a471-746875c0d3fa
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '59'
 ht-degree: 0%
 
 ---
-
 
 # Documentazione API correlata {#related-api-documentation}
 

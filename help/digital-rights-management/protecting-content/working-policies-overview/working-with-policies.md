@@ -2,35 +2,34 @@
 title: Panoramica sull'utilizzo dei criteri DRM
 description: Panoramica sull'utilizzo dei criteri DRM
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 734d0be3-2abe-400c-bc34-00046ec52f4c
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 0%
 
 ---
 
-
 # Panoramica {#working-with-drm-policies-overview}
 
-I fornitori di contenuti possono applicare criteri DRM ai file multimediali utilizzando l’SDK DRM di Primetime. Gli amministratori possono quindi creare, visualizzare i dettagli e aggiornare i criteri DRM utilizzando le API di gestione dei criteri.
+I provider di contenuti possono applicare i criteri DRM ai file multimediali utilizzando l’SDK DRM di Primetime. Gli amministratori possono quindi creare, visualizzare i dettagli e aggiornare i criteri DRM utilizzando le API di gestione dei criteri.
 
-Un *`DRM policy`* è una raccolta di informazioni che include impostazioni di protezione, requisiti di autenticazione e diritti di utilizzo. Il criterio definisce il modo in cui gli utenti possono visualizzare il contenuto. I criteri, la crittografia e la firma DRM consentono ai fornitori di contenuti di mantenere il controllo dei contenuti indipendentemente dalla loro diffusione.
+A *`DRM policy`* è una raccolta di informazioni che include impostazioni di protezione, requisiti di autenticazione e diritti di utilizzo. Il criterio definisce il modo in cui gli utenti possono visualizzare il contenuto. Le regole DRM, la crittografia e la firma consentono ai provider di contenuto di mantenere il controllo dei contenuti, indipendentemente dalla loro distribuzione.
 
-Un criterio DRM funge da modello utilizzato dal server licenze quando genera una licenza. Un client può anche fare riferimento al criterio DRM prima di richiedere una licenza, per determinare se il client deve richiedere l&#39;autenticazione all&#39;utente prima di emettere una richiesta di licenza al server.
+Un criterio DRM funge da modello utilizzato dal server licenze per generare una licenza. Un client può anche fare riferimento al criterio DRM prima di richiedere una licenza, per determinare se deve richiedere l&#39;autenticazione all&#39;utente prima di inviare una richiesta di licenza al server.
 
-È possibile fornire contenuto protetto utilizzando un Flash Media Server di Adobe o un server HTTP. Gli utenti possono scaricare e riprodurre contenuti protetti in lettori personalizzati creati con Primetime DRM SDK.
+Puoi distribuire contenuti protetti utilizzando Adobe Flash Media Server o un server HTTP. Gli utenti possono scaricare e riprodurre contenuti protetti in lettori personalizzati generati con l’SDK di Primetime DRM.
 
-Un criterio DRM specifica uno o più diritti concessi al client. In genere, un criterio DRM include almeno *`Play Right`*. Puoi anche specificare più diritti di riproduzione, ciascuno con diverse restrizioni. Quando il cliente riceve una licenza con più diritti di riproduzione, utilizza la prima licenza che soddisfa tutte le restrizioni. Ad esempio, puoi applicare diverse impostazioni di protezione dell’output su piattaforme diverse.
+Un criterio DRM specifica uno o più diritti concessi al client. In genere, una regola DRM include almeno *`Play Right`*. È inoltre possibile specificare più diritti di riproduzione, ciascuno con restrizioni diverse. Quando il client riceve una licenza con più diritti di riproduzione, utilizza la prima licenza che soddisfa tutte le restrizioni. Ad esempio, puoi applicare impostazioni di protezione dell’output diverse su piattaforme diverse.
 
-Per un esempio di codice che illustra questo esempio, consulta `CreatePolicyWithOutputProtection.java` nella directory Strumenti della riga di comando per l’implementazione di riferimento [!DNL samples] .
+Consulta `CreatePolicyWithOutputProtection.java` negli strumenti della riga di comando per l’implementazione di riferimento [!DNL samples] per il codice di esempio che illustra questo esempio.
 
-Puoi completare le seguenti attività con le API di gestione dei criteri DRM di Primetime:
+È possibile completare le seguenti attività con le API di gestione dei criteri DRM di Primetime:
 
 * Creare e aggiornare i criteri
-* Visualizza i dettagli dei criteri DRM
-* Gestisci elenchi di aggiornamento dei criteri DRM
+* Visualizza dettagli criteri DRM
+* Gestire gli elenchi di aggiornamento dei criteri DRM
 
-Per informazioni dettagliate sull&#39;API Java, consulta *Riferimento API DRM di Primetime* .
+Consulta la *Riferimento API di Primetime DRM* per informazioni dettagliate sull’API Java.
 
-Per informazioni su Primetime DRM Policy Manager, consulta la guida *Using the Primetime DRM Reference Implementations* .
+Consulta la *Utilizzo delle implementazioni di riferimento DRM di Primetime* per informazioni su Primetime DRM Policy Manager.

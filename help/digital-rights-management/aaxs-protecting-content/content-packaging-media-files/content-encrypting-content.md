@@ -2,27 +2,26 @@
 title: Crittografia del contenuto
 description: Crittografia del contenuto
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 84a490ae-af0c-43c5-a849-ed832e83a28d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '261'
 ht-degree: 0%
 
 ---
 
+# Crittografia del contenuto{#encrypting-content}
 
-# Cifratura contenuto{#encrypting-content}
+La crittografia dei contenuti FLV e F4V comporta l&#39;utilizzo di un `MediaEncrypter` oggetto. È inoltre possibile creare pacchetti di file FLV e F4V che contengono solo tracce audio. Quando si crittografano i contenuti H.264 per i dispositivi di fascia bassa, può risultare pratico applicare solo una crittografia parziale per migliorare le prestazioni. In tali casi, un file F4V può essere parzialmente crittografato utilizzando `F4VDRMParameters.setVideoEncryptionLevel`metodo.
 
-La crittografia dei contenuti FLV e F4V comporta l’utilizzo di un oggetto `MediaEncrypter`. È inoltre possibile creare pacchetti di file FLV e F4V che contengono solo tracce audio. Quando si crittografano i contenuti H.264 per i dispositivi di fascia bassa, può essere pratico applicare solo la crittografia parziale per migliorare le prestazioni. In questi casi, un file F4V può essere parzialmente crittografato utilizzando il metodo `F4VDRMParameters.setVideoEncryptionLevel`.
+Per crittografare un file FLV o F4V utilizzando l&#39;API Java, effettuare le seguenti operazioni:
 
-Per crittografare un file FLV o F4V utilizzando l’API Java, esegui i seguenti passaggi:
+1. Configura l’ambiente di sviluppo e includi tutti i file JAR menzionati in Configurazione dell’ambiente di sviluppo all’interno del progetto.
+1. Creare un `ServerCredential` per caricare le credenziali necessarie per la firma.
+1. Creare un `MediaEncrypter` dell&#39;istanza. Utilizza un `MediaEncryperFactory` se non sai che tipo di file hai. Altrimenti puoi creare un’ `FLVEncrypter` o `F4VEncrypter` direttamente.
+1. Specificare le opzioni di crittografia utilizzando un `DRMParameters` oggetto.
+1. Impostare le opzioni di firma utilizzando un `SignatureParameters` e passare il `ServerCredential` istanza al relativo `setServerCredentials` metodo.
+1. Impostare la chiave e le informazioni sulla licenza utilizzando un `V2KeyParameters` oggetto. Impostare i criteri utilizzando `setPolicies` metodo. Impostare le informazioni necessarie al client per contattare il server licenze chiamando `setLicenseServerUrl` e `setLicenseServerTransportCertificate` metodi. Impostare le opzioni di crittografia CEK utilizzando `setKeyProtectionOptions` e le relative proprietà personalizzate utilizzando `setCustomProperties` metodo. Infine, a seconda del tipo di crittografia utilizzata, esegui il cast `DRMKeyParameters` oggetto a uno di `VideoDRMParameters`, `AudioDRMParameters`, `FLVDRMParameters`, o `F4VDRMParameters`e impostare le opzioni di crittografia.
+1. Crittografa il contenuto passando i file di input e di output e le opzioni di crittografia al `MediaEncrypter.encryptContent` metodo.
 
-1. Imposta l’ambiente di sviluppo e includi tutti i file JAR menzionati in Impostazione dell’ambiente di sviluppo all’interno del progetto.
-1. Crea un&#39;istanza `ServerCredential` per caricare le credenziali necessarie per la firma.
-1. Crea un&#39;istanza `MediaEncrypter`. Utilizza un `MediaEncryperFactory` se non sai che tipo di file hai. In caso contrario è possibile creare direttamente un `FLVEncrypter` o `F4VEncrypter`.
-1. Specificare le opzioni di crittografia utilizzando un oggetto `DRMParameters`.
-1. Impostare le opzioni di firma utilizzando un oggetto `SignatureParameters` e passare l&#39;istanza `ServerCredential` al relativo metodo `setServerCredentials`.
-1. Impostare le informazioni sulla chiave e sulla licenza utilizzando un oggetto `V2KeyParameters`. Impostare i criteri utilizzando il metodo `setPolicies` . Imposta le informazioni necessarie al client per contattare il server licenze richiamando i metodi `setLicenseServerUrl` e `setLicenseServerTransportCertificate` . Impostare le opzioni di crittografia CEK utilizzando il metodo `setKeyProtectionOptions` e le relative proprietà personalizzate utilizzando il metodo `setCustomProperties` . Infine, a seconda del tipo di crittografia utilizzato, eseguire il cast dell&#39;oggetto `DRMKeyParameters` su uno dei valori `VideoDRMParameters`, `AudioDRMParameters`, `FLVDRMParameters` o `F4VDRMParameters` e impostare le opzioni di crittografia.
-1. Cifrare il contenuto passando i file di input e di output e le opzioni di cifratura al metodo `MediaEncrypter.encryptContent` .
-
-Per un esempio di codice che illustra come cifrare il contenuto, consulta `com.adobe.flashaccess.samples.mediapackager.EncryptContent` nella directory &quot;amples&quot; degli strumenti della riga di comando per l’implementazione di riferimento.
+Per un codice di esempio che illustra come crittografare il contenuto, consulta `com.adobe.flashaccess.samples.mediapackager.EncryptContent` nella directory &quot;samples&quot; degli strumenti della riga di comando per l’implementazione di riferimento.

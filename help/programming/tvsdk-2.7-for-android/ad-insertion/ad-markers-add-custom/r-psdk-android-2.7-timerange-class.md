@@ -1,30 +1,29 @@
 ---
 description: I marcatori di annunci personalizzati ti consentono di trasmettere a TVSDK un set di specifiche TimeRange che rappresentano i segmenti della timeline.
-title: Classe TimeRange
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: TimeRange, classe
+exl-id: 623b287e-4441-4290-a332-713a5e8282b1
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 0%
 
 ---
 
-
-# Classe TimeRange {#timerange-class}
+# TimeRange, classe {#timerange-class}
 
 I marcatori di annunci personalizzati ti consentono di trasmettere a TVSDK un set di specifiche TimeRange che rappresentano i segmenti della timeline.
 
 <!--<a id="section_42EB6D62627A424ABA250E3246EFEFC3"></a>-->
 
-Ogni specifica `TimeRange` del set rappresenta un segmento nella timeline di riproduzione mantenuto internamente da TVSDK e che deve essere contrassegnato in modo appropriato come periodo correlato all’annuncio.
+Ogni `TimeRange` La specifica nel set rappresenta un segmento nella timeline di riproduzione gestito internamente da TVSDK e che deve essere contrassegnato in modo appropriato come periodo relativo agli annunci.
 
-La classe `TimeRange` è una semplice struttura di dati che espone la posizione iniziale e finale sulla timeline. Queste due proprietà di sola lettura astraggono l&#39;idea di un intervallo di tempo nella timeline di riproduzione.
+Il `TimeRange` La classe è una semplice struttura di dati che espone la posizione iniziale e finale sulla timeline. Queste due proprietà di sola lettura astraggono l’idea di un intervallo di tempo nella timeline di riproduzione.
 
 >[!TIP]
 >
 >Entrambi i valori sono espressi in millisecondi.
 
-Di seguito è riportato un riepilogo della classe `TimeRange`:
+Riepilogo del `TimeRange` classe:
 
 ```java
 public final class TimeRange {
@@ -37,4 +36,3 @@ public final class TimeRange {
     public long getDuration() {...}
 }
 ```
-

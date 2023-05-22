@@ -1,6 +1,6 @@
 ---
-description: È possibile implementare una barra di controllo con supporto DVR per VOD e streaming live. Il supporto DVR include il concetto di una finestra ricercabile e il punto live del cliente.
-title: Costruire una barra di controllo migliorata per il DVR
+description: È possibile implementare una barra di controllo con supporto DVR per VOD e streaming live. Il supporto DVR include il concetto di finestra ricercabile e il punto di attivazione del client.
+title: Creare una barra di controllo ottimizzata per DVR
 exl-id: 12e989f3-0e39-4224-89a7-ebfeb130f5fc
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,35 +9,35 @@ ht-degree: 0%
 
 ---
 
-# Costruire una barra di controllo migliorata per il DVR {#construct-a-control-bar-enhanced-for-dvr}
+# Creare una barra di controllo ottimizzata per DVR {#construct-a-control-bar-enhanced-for-dvr}
 
-È possibile implementare una barra di controllo con supporto DVR per VOD e streaming live. Il supporto DVR include il concetto di una finestra ricercabile e il punto live del cliente.
+È possibile implementare una barra di controllo con supporto DVR per VOD e streaming live. Il supporto DVR include il concetto di finestra ricercabile e il punto di attivazione del client.
 
 * Per VOD, la lunghezza della finestra ricercabile corrisponde alla durata dell’intera risorsa.
-* Per lo streaming dal vivo, la lunghezza della finestra DVR (ricercabile) è definita come l&#39;intervallo di tempo che inizia dalla finestra di riproduzione dal vivo e termina al punto live del client.
+* Per lo streaming live, la lunghezza della finestra del DVR (ricercabile) è definita come l’intervallo di tempo che inizia dalla finestra di riproduzione live e termina nel punto live del client.
 
-   Ricorda le seguenti informazioni:
+   Tenere presenti le seguenti informazioni:
 
-   * Il punto live del client viene calcolato sottraendo la lunghezza del buffered dall&#39;estremità della finestra live.
+   * Il punto di attivazione del client viene calcolato sottraendo la lunghezza nel buffer dalla fine della finestra attiva.
 
-      La durata di destinazione è un valore maggiore o uguale alla durata massima di un frammento nel manifesto.
+      La durata target è un valore maggiore o uguale alla durata massima di un frammento nel manifesto.
    * Il valore predefinito è 10000 ms.
-   * La barra di controllo per la riproduzione in diretta supporta il DVR posizionando prima il pollice nel punto di attivazione del client all&#39;avvio della riproduzione e visualizzando una regione che contrassegna l&#39;area in cui la ricerca non è consentita.
+   * La barra di controllo per la riproduzione dal vivo supporta DVR posizionando prima il pollice in corrispondenza del punto attivo del client all’avvio della riproduzione e visualizzando una regione che contrassegna l’area in cui non è consentita la ricerca.
 
 <!--<a id="fig_37A39A28BA714BA5A2C461357ED5BD41"></a>-->
 
 ![](assets/dvr-window.PNG){width="684"}
 
-1. Per implementare una barra di controllo con supporto DVR, segui i passaggi descritti in [Visualizza una barra di scorrimento con la posizione di riproduzione corrente.](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-seek-scrub-bar-display.md) con le seguenti differenze:
+1. Per implementare una barra di controllo con supporto DVR, seguire i passaggi descritti in [Visualizza una barra di scorrimento di ricerca con la posizione di riproduzione corrente.](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-seek-scrub-bar-display.md) con le seguenti differenze:
 
-   * È possibile implementare una barra di controllo mappata solo per l&#39;intervallo ricercabile anziché per l&#39;intervallo di riproduzione.
+   * È possibile implementare una barra di controllo mappata solo per l’intervallo ricercabile anziché per l’intervallo di riproduzione.
 
       Qualsiasi interazione dell’utente per la ricerca può essere considerata sicura nell’intervallo ricercabile.
-   * È possibile implementare una barra di controllo mappata per l&#39;intervallo di riproduzione, ma che visualizza anche l&#39;intervallo ricercabile.
+   * Puoi implementare una barra di controllo mappata per l’intervallo di riproduzione, ma che mostri anche l’intervallo ricercabile.
 
       Per una barra di controllo:
    1. Aggiungi una sovrapposizione alla barra di controllo che rappresenta l’intervallo di riproduzione.
-   1. Quando l&#39;utente inizia a cercare, controlla se la posizione di ricerca desiderata si trova nell&#39;intervallo ricercabile utilizzando `MediaPlayer.getSeekableRange`.
+   1. Quando l’utente inizia a cercare, verifica se la posizione di ricerca desiderata si trova all’interno dell’intervallo ricercabile utilizzando `MediaPlayer.getSeekableRange`.
 
       Ad esempio:
 
@@ -48,7 +48,7 @@ ht-degree: 0%
       }
       ```
 
-      Puoi anche scegliere di cercare il punto attivo del cliente utilizzando `MediaPlayer.LIVE_POINT` costante.
+      Puoi anche scegliere di effettuare una ricerca nel punto di attivazione del client utilizzando `MediaPlayer.LIVE_POINT` costante.
 
       ```
       mediaPlayer.seek(MediaPlayer.LIVE_POINT);

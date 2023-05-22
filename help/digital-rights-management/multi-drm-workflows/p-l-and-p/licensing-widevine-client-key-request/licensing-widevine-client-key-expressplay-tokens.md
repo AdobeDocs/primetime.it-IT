@@ -1,16 +1,15 @@
 ---
 description: Puoi generare token Expressplay per il contenuto crittografato inviando richieste di token al server token Expressplay appropriato.
-title: Token esplicativi
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Espressione dei token
+exl-id: 38faba06-6737-4dec-ac97-27db3124b993
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '131'
 ht-degree: 0%
 
 ---
 
-
-# Token espliciti {#expressplay-tokens}
+# Espressione dei token {#expressplay-tokens}
 
 Puoi generare token Expressplay per il contenuto crittografato inviando richieste di token al server token Expressplay appropriato.
 
@@ -25,7 +24,7 @@ token?customerAuthenticator=<your expressplay customer authenticator>
 &hdcpOutputControl=0
 ```
 
-L&#39;ID di archiviazione della chiave di crittografia del contenuto o CEKSID assegnato al parametro `kid` e la chiave di crittografia del contenuto o CEK fornita al parametro `contentKey` devono corrispondere all&#39;ID di archiviazione della chiave di crittografia del contenuto e alla chiave di crittografia del contenuto utilizzata per il package. Il testo seguente è un esempio della risposta del server token:
+L&#39;ID di archiviazione o CEKSID della chiave di crittografia del contenuto fornito al `kid` e la chiave di crittografia del contenuto o CEK assegnato al `contentKey` Il parametro deve corrispondere all&#39;ID di archiviazione della chiave di crittografia del contenuto e alla chiave di crittografia del contenuto utilizzate per la creazione del pacchetto. Il testo seguente è un esempio della risposta del server token:
 
 ```
 https://wv.service.expressplay.com/hms/wv/rights/
@@ -34,7 +33,7 @@ https://wv.service.expressplay.com/hms/wv/rights/
  SJ4o-d8teAkUZUtW3Od5V-SHsCLnAlbFW84K71h2xNUiMAvRcUFBG3bjxMQ
 ```
 
-È possibile
+È quindi possibile:
 
-* utilizza l’URL restituito e utilizza la query come URL del server licenze, oppure
-* elimina la query dall’URL e passa il token ExpressPlayToken separatamente come intestazione HTTP POST
+* utilizzare l&#39;URL restituito e la query come URL del server licenze oppure
+* elimina la query dall’URL e passa ExpressPlayToken separatamente come intestazione HTTP POST

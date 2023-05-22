@@ -1,41 +1,40 @@
 ---
-description: Questa guida fornisce informazioni su come sviluppare applicazioni di lettore video utilizzando TVSDK per Android, implementato in Java.
+description: Questa guida fornisce informazioni su come sviluppare applicazioni per lettore video utilizzando TVSDK per Android, implementato in Java.
 title: Panoramica del prodotto, pubblico e questa guida
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3dfef60a-5547-494b-9bbe-74eb0440ec92
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '259'
 ht-degree: 0%
 
 ---
 
-
 # Panoramica del prodotto, pubblico e questa guida {#product-overview-audience-and-this-guide}
 
-Questa guida fornisce informazioni su come sviluppare applicazioni di lettore video utilizzando TVSDK per Android, implementato in Java.
+Questa guida fornisce informazioni su come sviluppare applicazioni per lettore video utilizzando TVSDK per Android, implementato in Java.
 
 <!--<a id="section_FC24E86A2E6442B8A3769160769BBDFA"></a>-->
 
-* Per un elenco delle funzioni supportate da TVSDK, consulta [Funzioni TVSDK di Primetime](../../tvsdk-2.7-for-android/overview-prod-audience-guide/c-psdk-android-2.7-overview-of-the-player.md).
-* Per i requisiti hardware e software specifici per l&#39;utilizzo di TVSDK, consulta [Requisiti](../../tvsdk-2.7-for-android/c-psdk-android-2.7-requirements.md).
-* Per un elenco delle API disponibili, consulta [API TVSDK Android](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/).
+* Per un elenco delle funzioni supportate da TVSDK, vedi [Funzioni di Primetime TVSDK](../../tvsdk-2.7-for-android/overview-prod-audience-guide/c-psdk-android-2.7-overview-of-the-player.md).
+* Per i requisiti hardware e software specifici per l&#39;utilizzo di TVSDK, vedere [Requisiti](../../tvsdk-2.7-for-android/c-psdk-android-2.7-requirements.md).
+* Per un elenco delle API disponibili, consulta [API TVSDK per Android](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/).
 
 ## Panoramica del prodotto {#section_9664959F25C948878F2F7EF3D360CA95}
 
-TVSDK include descrizioni API ed esempi di codice che consentono di integrare funzionalità video avanzate, protezione dei contenuti e funzioni pubblicitarie nel lettore. Utilizza Java per creare un’interfaccia utente del lettore video. TVSDK consente di collegare l’interfaccia utente al relativo lettore multimediale. Questo consente di riprodurre video e pubblicità basati su manifesti multimediali. È inoltre possibile utilizzare TVSDK per recuperare informazioni sul video, gestire la sicurezza e controllare e monitorare la riproduzione.
+TVSDK include descrizioni API ed esempi di codice per aiutarti a integrare funzionalità video avanzate, protezione dei contenuti e funzioni pubblicitarie nel lettore. Puoi utilizzare Java per creare un’interfaccia utente del lettore video. TVSDK consente di collegare l’interfaccia utente al relativo lettore multimediale. Questo consente di riprodurre video e annunci pubblicitari in base a manifesti multimediali. È inoltre possibile utilizzare TVSDK per recuperare informazioni sul video, gestire la sicurezza e controllare e monitorare la riproduzione.
 
 ## Pubblico {#section_527860B373734D3BA89FCF5EC1F6DC37}
 
-Questa guida presuppone che tu comprenda come sviluppare applicazioni e lettori video utilizzando Java. Implementa l’interfaccia utente del lettore video in Java e incorpora le funzioni TVSDK necessarie.
+Questa guida presuppone che tu capisca come sviluppare applicazioni e lettori video utilizzando Java. Puoi implementare l’interfaccia utente del lettore video in Java e incorporare le funzioni TVSDK necessarie.
 
 ## Informazioni su questa guida {#section_9A5B2FC506B34B5DB71CA827B307A4D0}
 
-Questa guida fornisce informazioni che consentono di incorporare funzioni TVSDK in un lettore video che utilizza Java su dispositivi Android.
+Questa guida fornisce informazioni che consentono di incorporare le funzioni TVSDK in un lettore video utilizzando Java su dispositivi Android.
 
 ## Notazione dello spazio dei nomi in questa guida {#section_8B866054E9ED4B5F99DCA7A681404632}
 
 >[!TIP]
 >
->Il prefisso dello spazio dei nomi API TVSDK [!DNL com.adobe.mediacore] viene spesso omesso per motivi di brevità.
+>Prefisso dello spazio dei nomi API TVSDK [!DNL com.adobe.mediacore] viene spesso omesso per brevità.
 >
->Se il contesto è chiaro, vengono fatti riferimento a molti elementi API senza il relativo designatore di classe principale.
+>Se il contesto è chiaro, molti elementi API vengono indicati senza l’identificatore di classe principale.

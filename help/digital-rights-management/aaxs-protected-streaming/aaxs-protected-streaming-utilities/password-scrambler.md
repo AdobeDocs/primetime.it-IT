@@ -1,31 +1,30 @@
 ---
-title: Password Scrambler
-description: Password Scrambler
+title: Scrambler password
+description: Scrambler password
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ceedd61e-918b-453f-8d21-628b2d8713ff
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 0%
 
 ---
 
+# Scrambler password {#password-scrambler}
 
-# Scrambler di password {#password-scrambler}
-
-L&#39;utility Password Scrambler crittografa una password in modo che possa essere utilizzata in Adobe Access Server per i file di configurazione Protected Streaming. Per eseguire lo scrambler, esegui il comando:
+L&#39;utilità Scrambler password crittografa una password in modo che possa essere utilizzata nei file di configurazione di Adobe Access Server for Protected Streaming. Per eseguire lo scrambler, eseguire il comando:
 
 ```
 Scrambler.bat password 
 ```
 
-o il comando:
+oppure il comando:
 
 ```
 java -jar libs/flashaccess-scrambler.jar password  
 ```
 
-L&#39;utilità invia il seguente messaggio:
+L&#39;utility restituisce il seguente messaggio:
 
 ```
 Encrypted password: scrambled-password 
@@ -35,5 +34,4 @@ Tutte le password specificate in flashaccess-global.xml e flashaccess-tenant.xml
 
 >[!NOTE]
 >
->L&#39;utility Password Scrambler in Adobe Access Server per lo streaming protetto non è intercambiabile con lo scanner fornito con il server licenze di implementazione di riferimento.
-
+>L&#39;utilità Scrambler password in Adobe Access Server for Protected Streaming non è intercambiabile con lo scrambler fornito con Reference Implementation License Server.

@@ -1,42 +1,42 @@
 ---
-title: Errore Di Autenticazione iOS - Impossibile Trovare adobepass.ios.app
-description: Errore Di Autenticazione iOS - Impossibile Trovare adobepass.ios.app
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Errore di autenticazione iOS - Impossibile trovare adobepass.ios.app
+description: Errore di autenticazione iOS - Impossibile trovare adobepass.ios.app
+exl-id: cd97c6fb-f0fa-45c2-82c1-f28aa6b2fd12
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 0%
 
 ---
 
-
-# Errore Di Autenticazione iOS - Impossibile Trovare adobepass.ios.app {#ios-authentication-error-adobepass.ios.app-cannot-be-found}
+# Errore di autenticazione iOS - Impossibile trovare adobepass.ios.app {#ios-authentication-error-adobepass.ios.app-cannot-be-found}
 
 >[!NOTE]
 >
->Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente a partire da Adobe. Non è consentito alcun uso non autorizzato.
+>Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente di Adobe. Non è consentito alcun uso non autorizzato.
 
 ## Problema {#issue}
 
-L&#39;utente sta attraversando il flusso di autenticazione e dopo aver immesso le proprie credenziali con il proprio provider viene reindirizzato a una pagina di errore, a una pagina di ricerca o a un&#39;altra pagina personalizzata per informarli che `adobepass.ios.app` impossibile trovare/risolvere.
+L’utente sta attraversando il flusso di autenticazione e, dopo aver immesso correttamente le credenziali con il proprio provider, viene reindirizzato a una pagina di errore, a una pagina di ricerca o a un’altra pagina personalizzata che informa che `adobepass.ios.app` non trovato/risolto.
 
 ## Spiegazione {#explanation}
 
-Su iOS, `adobepass.ios.app` viene utilizzato come URL di reindirizzamento finale per indicare che il flusso AuthN è completo. A questo punto l’app deve effettuare una richiesta ad AccessEnabler per ottenere il token AuthN e finalizzare il flusso AuthN.
+Su iOS, `adobepass.ios.app` viene utilizzato come URL di reindirizzamento finale per indicare il completamento del flusso AuthN. A questo punto, l’app deve effettuare una richiesta all’AccessEnabler per ottenere il token AuthN e finalizzare il flusso AuthN.
 
-Il problema è che `adobepass.ios.app` in realtà non esiste e verrà attivato un messaggio di errore nel `webView`. Le versioni precedenti di iOS DemoApp presupponevano che questo errore sarebbe sempre stato attivato alla fine del flusso AuthN ed era configurato per gestirlo di conseguenza (`indidFailLoadWithError`).
+Il problema è che `adobepass.ios.app` non esiste e attiverà un messaggio di errore nel `webView`. Le versioni precedenti di iOS DemoApp presupponevano che questo errore sarebbe sempre stato attivato alla fine del flusso di autenticazione ed era configurato per gestirlo di conseguenza (`indidFailLoadWithError`).
 
-**Nota:** Questo problema è stato risolto nelle versioni successive di DemoApp (incluso nel download dell&#39;SDK di iOS).
+**Nota:** Questo problema è stato risolto nelle versioni successive di DemoApp (incluse con il download dell’SDK per iOS).
 
-Sfortunatamente, questo presupposto NON è corretto. Esistono alcuni dei cosiddetti server DNS o Proxy &quot;intelligenti&quot; che non passano semplicemente l&#39;errore generato, ma eseguono invece una delle seguenti operazioni: 
+Sfortunatamente, questo presupposto NON è corretto. Alcuni server DNS o proxy cosiddetti &quot;intelligenti&quot; non si limitano a trasferire l&#39;errore generato, ma eseguono una delle operazioni seguenti: 
 
 - Creare una pagina di errore personalizzata
-- Consente di inoltrare a una pagina di ricerca o a un altro tipo di pagina o portale del cliente.
+- Inoltra a una pagina di ricerca o a un altro tipo di pagina del cliente o di portale.
 
-In questi casi, la risposta che ritorna ad iOS webView sarà una risposta perfettamente valida per quanto riguarda webView e NON attiverà l&#39;errore a cui dipendeva la vecchia DemoApp.
+In questi casi, la risposta che ritorna a iOS webView sarà una risposta perfettamente valida per quanto riguarda webView, e NON attiverà l’errore da cui dipendeva la vecchia DemoApp.
 
 ## Soluzione {#solution}
 
-NON fare la stessa supposizione di DemoApp. Invece, intercetta la richiesta prima che venga eseguita (in `shouldStartLoadWithRequest`) e gestirla in modo appropriato.
+NON fare lo stesso presupposto che fa DemoApp. Invece, intercetta la richiesta prima di eseguirla (in `shouldStartLoadWithRequest`) e maneggiarla in modo appropriato.
 
 Esempio di come intercettare la richiesta prima che venga eseguita:
 
@@ -58,9 +58,8 @@ return YES;
 }
 ```
 
-Alcuni aspetti da tenere presente:
+Alcune cose da notare:
 
-- NON utilizzare mai `adobepass.ios.app` direttamente in qualsiasi punto del codice. Utilizza invece la costante `ADOBEPASS_REDIRECT_URL`
-- La `return NO;` impedirà il caricamento della pagina
-- Assicurati che il `getAuthenticationToken` La chiamata viene chiamata una volta e solo una volta nel codice. Chiamate multiple a `getAuthenticationToken` produrrà risultati non definiti.
-
+- NON usare MAI `adobepass.ios.app` direttamente ovunque nel codice. Utilizza invece la costante `ADOBEPASS_REDIRECT_URL`
+- Il `return NO;` impedisce il caricamento della pagina
+- Assicurati assolutamente che il `getAuthenticationToken` La chiamata di viene chiamata una sola volta nel codice. Più chiamate a `getAuthenticationToken` risulterà in risultati non definiti.

@@ -1,38 +1,37 @@
 ---
-description: TVSDK invia eventi/notifiche nelle sequenze generalmente previste. Il lettore può implementare azioni in base agli eventi nella sequenza prevista.
+description: TVSDK invia eventi/notifiche in sequenze generalmente previste. Il lettore può implementare azioni basate sugli eventi nella sequenza prevista.
 title: Ordine degli eventi di riproduzione
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: d03692f6-04b9-4962-92d1-fad671d06665
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 0%
 
 ---
 
-
 # Ordine degli eventi di riproduzione{#order-of-playback-events}
 
-TVSDK invia eventi/notifiche nelle sequenze generalmente previste. Il lettore può implementare azioni in base agli eventi nella sequenza prevista.
+TVSDK invia eventi/notifiche in sequenze generalmente previste. Il lettore può implementare azioni basate sugli eventi nella sequenza prevista.
 
 <!--<a id="section_6E34A6C7936245D88DEB3315DA64598B"></a>-->
 
 Gli esempi seguenti mostrano l’ordine di alcuni eventi che includono eventi di riproduzione.
 
-* Quando si carica correttamente una risorsa multimediale tramite `MediaPlayer.replaceCurrentResource`, l&#39;ordine degli eventi è:
+* Quando si carica correttamente una risorsa multimediale tramite `MediaPlayer.replaceCurrentResource`, l’ordine degli eventi è:
 
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` con stato  `MediaPlayerStatus.INITIALIZING`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` con stato `MediaPlayerStatus.INITIALIZING`
 
    * `MediaPlayerItemEvent.ITEM_CREATED`
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` con stato  `MediaPlayerStatus.INITIALIZED`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` con stato `MediaPlayerStatus.INITIALIZED`
 
-* Durante la preparazione della riproduzione tramite `MediaPlayer.prepareToPlay`, l&#39;ordine degli eventi è:
+* Durante la preparazione per la riproduzione tramite `MediaPlayer.prepareToPlay`, l’ordine degli eventi è:
 
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` con stato  `MediaPlayerStatus.PREPARING`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` con stato `MediaPlayerStatus.PREPARING`
 
    * `TimelineEvent.TIMELINE_UPDATED` se sono stati inseriti annunci
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` con stato  `MediaPlayerStatus.PREPARED`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` con stato `MediaPlayerStatus.PREPARED`
 
-* Per i flussi in tempo reale/lineare, durante la riproduzione con l&#39;avanzamento della finestra di riproduzione e la risoluzione di ulteriori opportunità, l&#39;ordine degli eventi è:
+* Per i flussi live/lineari, durante la riproduzione man mano che la finestra di riproduzione avanza e vengono risolte opportunità aggiuntive, l’ordine degli eventi è:
 
    * `MediaPlayerItemEvent.ITEM_UPDATED`
    * `TimelineEvent.TIMELINE_UPDATED` se sono stati inseriti annunci
@@ -68,4 +67,3 @@ public function onTimeChanged(event:TimeChangeEvent):void {
     ... 
 }
 ```
-

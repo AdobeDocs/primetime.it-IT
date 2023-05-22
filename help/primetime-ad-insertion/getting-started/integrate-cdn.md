@@ -1,38 +1,37 @@
 ---
 title: Integrare la rete CDN
 description: Integrazione della rete CDN
-translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+exl-id: b93031a2-6e66-4de1-9cf2-b0260f88fe13
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '184'
 ht-degree: 0%
 
 ---
 
-
 # Integrare la rete CDN {#integrating-cdn}
 
-Primetime  Ad Insertion funge da proxy tra l&#39;applicazione client e i manifesti, non i blocchi video stessi. Distribuite il contenuto alla rete CDN desiderata e passate l&#39;URL al Ad Insertion  Primetime utilizzando l&#39;API di Bootstrap. Per informazioni dettagliate sull&#39;integrazione, consultate [CDN supportati](/help/primetime-ad-insertion/technical-reference/supported-cdns.md).
+Primetime Ad Insertion funge da proxy tra l’applicazione client e i manifesti, non i blocchi video stessi. Distribuisci il contenuto su CDN desiderato e passa l’URL all’Ad Insertion di Primetime utilizzando l’API Bootstrap. Per informazioni dettagliate sull’integrazione, consulta [CDN supportati](/help/primetime-ad-insertion/technical-reference/supported-cdns.md).
 
-## Schemi di token CDN supportati {#cdn-tokenization-schemes}
+## Schemi di tokenizzazione CDN supportati {#cdn-tokenization-schemes}
 
-Le CDN dispongono spesso di diversi schemi di token per l’autorizzazione dei frammenti. Primetime  Ad Insertion supporta in modo nativo le principali reti CDN, tra cui:
+Le CDN spesso presentano diversi schemi di tokenizzazione per l’autorizzazione dei frammenti. Primetime Ad Insertion supporta in modo nativo le principali reti CDN, tra cui:
 
 * Akamai
 * Limelight
-* Centurylink / Livello3
-* Per un elenco completo dei CDN supportati, contattate il rappresentante di supporto Primetime
+* Centurylink/Livello3
+* Per un elenco completo dei CDN supportati, contatta il rappresentante del supporto Primetime
 
-Per ulteriori informazioni sul parametro `pttoken`, vedere [Bootstrap descrizione parametro API](/help/primetime-ad-insertion/technical-reference/bootstrap-api.md#parameter-description).
+Per ulteriori informazioni su `pttoken` parametro, vedi [Bootstrap descrizione parametro API](/help/primetime-ad-insertion/technical-reference/bootstrap-api.md#parameter-description).
 
-## Configurare gli annunci da distribuire dal contenuto CDN {#configure-ad-deliver-from-cdn}
+## Configurare gli annunci da distribuire dalla rete CDN dei contenuti {#configure-ad-deliver-from-cdn}
 
-Potreste desiderare di distribuire annunci e contenuti dalla stessa CDN per mantenere l&#39;affinità dei contenuti, aiutare a bypassare i blocchi di annunci e/o ottimizzare il numero di connessioni richieste dall&#39;applicazione client. Primetime  Ad Insertion supporta le regole di riscrittura dei frammenti per mappare i frammenti sulla rete CDN del contenuto. Per ulteriori informazioni, vedere [Riscrittura manifesto](/help/primetime-ad-insertion/technical-reference/manifest-rewriting.md).
+Puoi distribuire annunci e contenuti dalla stessa rete CDN per mantenere l’affinità tra i contenuti, evitare gli ad blocker e/o ottimizzare il numero di connessioni richieste dall’applicazione client. Primetime Ad Insertion supporta le regole di riscrittura dei frammenti per mappare i frammenti sulla rete CDN del contenuto. Per ulteriori informazioni, consulta [Riscrittura del manifesto](/help/primetime-ad-insertion/technical-reference/manifest-rewriting.md).
 
 ## Aumentare le prestazioni di avvio con la rete CDN {#increase-startup-performance}
 
-Per ulteriori informazioni, vedere [Ottimizzazione dell&#39;avvio](/help/primetime-ad-insertion/best-practices/optimize-video-startup-time.md).
+Per ulteriori informazioni, consulta [Ottimizzazione dell’avvio](/help/primetime-ad-insertion/best-practices/optimize-video-startup-time.md).
 
 ## Funzioni multi-CDN {#enable-multi-cdn-fetures}
 
-Contattate il rappresentante del supporto Primetime per abilitare le funzioni multi-CDN.
+Contatta il rappresentante del supporto Primetime per abilitare le funzioni multi-CDN.

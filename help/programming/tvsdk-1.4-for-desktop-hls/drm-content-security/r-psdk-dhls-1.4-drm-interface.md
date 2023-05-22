@@ -1,28 +1,27 @@
 ---
-description: L'elemento chiave lato client del sistema DRM (Digital Rights Management) di Primetime è il DRM Manager.
-title: Panoramica dell'interfaccia DRM di Primetime
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: L'elemento chiave lato client del sistema DRM (Digital Rights Management) di Primetime è DRM Manager.
+title: Panoramica dell’interfaccia DRM di Primetime
+exl-id: 8d6b9416-5d8a-4d1e-b8e6-47c43389f079
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 0%
 
 ---
 
+# Panoramica dell’interfaccia DRM di Primetime{#primetime-drm-interface-overview}
 
-# Panoramica dell&#39;interfaccia DRM di Primetime{#primetime-drm-interface-overview}
-
-L&#39;elemento chiave lato client del sistema DRM (Digital Rights Management) di Primetime è il DRM Manager.
+L&#39;elemento chiave lato client del sistema DRM (Digital Rights Management) di Primetime è DRM Manager.
 
 <!--<a id="section_4DD54E085AB345FE9BE00865E56B28DB"></a>-->
 
-Primetime DRM fornisce un flusso di lavoro scalabile ed efficiente per implementare la protezione dei contenuti nelle applicazioni TVSDK. È possibile proteggere e gestire i diritti relativi ai contenuti video creando una licenza per ogni file multimediale digitale.
+Primetime DRM fornisce un flusso di lavoro scalabile ed efficiente per implementare la protezione dei contenuti nelle applicazioni TVSDK. Per proteggere e gestire i diritti dei contenuti video, crea una licenza per ciascun file multimediale digitale.
 
-TVSDK supporta l’integrazione DRM di Primetime come flussi di lavoro DRM personalizzati. Ciò significa che l&#39;applicazione deve implementare i flussi di lavoro di autenticazione DRM prima di riprodurre il flusso utilizzando il Flash `DRMManager`. Per abilitare questo, il `MediaPlayer` ti fornisce il gestore DRM per l’autenticazione.
+TVSDK supporta l’integrazione di Primetime DRM come flussi di lavoro DRM personalizzati. Ciò significa che l&#39;applicazione deve implementare i flussi di lavoro di autenticazione DRM prima di riprodurre il flusso utilizzando il Flash `DRMManager`. Per abilitare questa funzione, `MediaPlayer` fornisce DRM Manager per l&#39;autenticazione.
 
-Questi sono gli elementi API più importanti per lavorare con DRM:
+Questi sono gli elementi API più importanti per l’utilizzo di DRM:
 
-* Un riferimento nel lettore multimediale all&#39;oggetto manager DRM che implementa il sottosistema DRM:
+* Riferimento nel lettore multimediale all&#39;oggetto di gestione DRM che implementa il sottosistema DRM:
 
    ```
    public function get drmManager():DRMManager 
@@ -30,7 +29,7 @@ Questi sono gli elementi API più importanti per lavorare con DRM:
 
 <!--<a id="section_4204CE2731A44F67A3664AEDE8CCCA47"></a>-->
 
-Altri elementi API rilevanti:
+Elementi API rilevanti aggiuntivi:
 
 * [flash.net.drm.DRMManager](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/drm/DRMManager.html)
 * [flash.net.drm.DRMContentData](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/drm/DRMContentData.html)
@@ -41,4 +40,4 @@ Altri elementi API rilevanti:
 
 <!--<a id="section_F58941D68EB94A5EBD1C7454D2A1B17A"></a>-->
 
-Per ulteriori informazioni su DRM, consulta la documentazione DRM di Adobe Primetime.
+Per ulteriori informazioni su DRM, consultare la documentazione di Adobe Primetime DRM.

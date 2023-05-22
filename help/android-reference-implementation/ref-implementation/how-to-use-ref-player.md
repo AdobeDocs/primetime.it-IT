@@ -1,27 +1,26 @@
 ---
-title: Come utilizzare l'implementazione di riferimento di Primetime
-description: Come utilizzare l'implementazione di riferimento di Primetime
+title: Come utilizzare l’implementazione di riferimento di Primetime
+description: Come utilizzare l’implementazione di riferimento di Primetime
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 45145f0d-c0e4-4d36-94fd-72f07619dc91
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '204'
 ht-degree: 0%
 
 ---
 
+# Come utilizzare l’implementazione di riferimento di Primetime {#how-to-use-the-primetime-reference-implementation}
 
-# Come utilizzare l&#39;implementazione di riferimento di Primetime {#how-to-use-the-primetime-reference-implementation}
-
-L’implementazione di riferimento Primetime è un player modulare suddiviso in singole funzioni che è possibile modificare facilmente tramite gestori di funzioni specializzati. Questi gestori di funzioni vengono utilizzati come bridge per collegare l’applicazione e la libreria TVSDK.
+L’implementazione di riferimento di Primetime è un lettore modulare suddiviso in singole funzioni che puoi modificare facilmente tramite gestori di funzioni specializzati. Questi gestori di funzioni vengono utilizzati come bridge per collegare l’applicazione e la libreria TVSDK.
 
 Puoi utilizzare l’implementazione di riferimento nei seguenti modi:
 
-* Utilizzalo così com’è senza modificare alcun codice (tutte le funzioni sono attivate con valori predefiniti).
-* Usalo come riferimento per capire come utilizzare la libreria TVSDK.
-* Scegliere e scegliere le caratteristiche che si applicano all&#39;applicazione disattivando le feature che non si utilizzano.
+* Utilizzatelo così com&#39;è senza modificare il codice (tutte le feature sono attivate con i valori di default).
+* Utilizzalo come riferimento per comprendere come utilizzare la libreria TVSDK.
+* Scegliete e scegliete le feature applicabili all&#39;applicazione disattivando quelle non utilizzate.
 * Personalizza i componenti dell’interfaccia utente senza apportare alcuna modifica alle funzioni.
 
-Forniamo l’implementazione di riferimento di Primetime per aiutarti a comprendere il TVSDK e modificare facilmente i gestori delle funzioni per personalizzare il tuo lettore. Tuttavia, per informazioni dettagliate sulla libreria TVSDK, fai riferimento alla [Guida per programmatori Android 1.4 per Android](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_android.pdf) .
+Forniamo l’implementazione di riferimento Primetime per aiutarti a comprendere il TVSDK e a modificare facilmente i gestori delle funzioni per personalizzare il lettore. Tuttavia, si prega di fare riferimento al [Guida per programmatori di TVSDK 1.4 per Android](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_android.pdf) per informazioni dettagliate sulla libreria TVSDK.
 
-Per un facile accesso alla documentazione API di implementazione di riferimento in formato Javadoc, fai clic [qui](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/index.html).
+Per accedere facilmente alla documentazione API di implementazione di riferimento in formato Java, fai clic su [qui](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/index.html).

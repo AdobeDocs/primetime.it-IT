@@ -1,21 +1,21 @@
 ---
-title: Elenco MVPD degli indirizzi IP
-description: Elenco MVPD degli indirizzi IP
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Elenco MVPD di indirizzi IP
+description: Elenco MVPD di indirizzi IP
+exl-id: be18084c-22f5-47b5-b088-d9032681113d
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 24%
 
 ---
 
-
-# Elenco MVPD degli indirizzi IP
+# Elenco MVPD di indirizzi IP
 
 >[!NOTE]
 >
->Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente a partire da Adobe. Non è consentito alcun uso non autorizzato.
+>Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente di Adobe. Non è consentito alcun uso non autorizzato.
 
-Per un&#39;integrazione di autenticazione MVPD / Adobe Primetime, alcuni IP devono essere consentiti in un firewall MVPD. Questi sono gli IP in uscita:
+Per un’integrazione di autenticazione MVPD/Adobe Primetime è necessario consentire alcuni IP nel firewall di un MVPD. Questi sono gli IP in uscita:
 
 * 34.233.60.171
 * 34.233.163.243

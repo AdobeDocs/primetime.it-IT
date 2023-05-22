@@ -1,17 +1,16 @@
 ---
-title: Dettagli per la notifica NATIVE_ERROR
-description: Dettagli per la notifica NATIVE_ERROR
+title: Dettagli della notifica NATIVE_ERROR
+description: Dettagli della notifica NATIVE_ERROR
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3819b932-47a2-4adb-830b-0a95a5fec70b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '212'
 ht-degree: 0%
 
 ---
 
-
-# Dettagli per la notifica NATIVE_ERROR {#details-for-the-native-error-notification}
+# Dettagli della notifica NATIVE_ERROR {#details-for-the-native-error-notification}
 
 Quando TVSDK gestisce un errore nativo, imposta alcuni o tutti i seguenti valori chiave di metadati.
 
@@ -24,32 +23,32 @@ Quando TVSDK gestisce un errore nativo, imposta alcuni o tutti i seguenti valori
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> NATIVE_ERROR_CODE  </span> </td> 
+   <td colname="col1"> <span class="codeph"> NATIVE_ERROR_CODE </span> </td> 
    <td colname="col2"> 
     <pre>
       Codice di errore nativo dall'AVE. 
-    </pre> Questi codici rappresentano quanto segue: 
+    </pre> Tali codici rappresentano i seguenti: 
     <ul id="ul_330C626DE27B45A09E8851CC24768A07"> 
-     <li id="li_0845A9BBB55545BDB49BD4F4802C0E54">Errori DRM (codici da 3300 a 3367). Sono gli stessi codici di errore Flash Player equivalenti. </li> 
-     <li id="li_98A571480C154CF0AE1DC101FF0834C4">Errori di riproduzione video (-1 a 89). </li> 
+     <li id="li_0845A9BBB55545BDB49BD4F4802C0E54">Errori DRM (codici da 3300 a 3367). Sono identici ai codici di errore di Flash Player equivalenti. </li> 
+     <li id="li_98A571480C154CF0AE1DC101FF0834C4">Errori di riproduzione video (da -1 a 89). </li> 
      <li id="li_D7C19955DEF94DA88B822C8C57D6D2F4">Errori di crittografia (da 300 a 307). </li> 
     </ul> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> NATIVE_ERROR_NAME  </span> </td> 
-   <td colname="col2"> Una stringa contenente il nome dell'errore; ad esempio, <span class="codeph"> AAXS_InvalidVoucher </span> o <span class="codeph"> DECODER_FAILED </span>. </td> 
+   <td colname="col1"> <span class="codeph"> NOME_ERRORE_NATIVO </span> </td> 
+   <td colname="col2"> Una stringa che contiene il nome dell’errore, ad esempio: <span class="codeph"> AAXS_InvalidVoucher </span> o <span class="codeph"> DECODER_FAILED </span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> NATIVE_SUBERROR_CODE  </span> </td> 
-   <td colname="col2"> Per gli errori DRM, vengono restituiti anche i codici di errore secondario. Questi codici corrispondono al codice del sottoerrore <span class="codeph"> DRMErrorEvents </span> restituito dal Flash Player. Quando si segnalano errori all’Adobe, includere questo valore numerico per l’assistenza nella risoluzione dei problemi. </td> 
+   <td colname="col1"> <span class="codeph"> NATIVE_SUBERROR_CODE </span> </td> 
+   <td colname="col2"> Per gli errori DRM, vengono restituiti anche i codici di errore secondario. Questi codici corrispondono ai seguenti <span class="codeph"> DRMErrorEvents </span> codice di errore secondario restituito dal Flash Player. Quando segnali gli errori ad Adobe, includi questo valore numerico per assistenza nella risoluzione dei problemi. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> DRM_ERROR_STRING  </span> </td> 
-   <td colname="col2"> Per DRM, questa è la stringa di errore personalizzata dalla distribuzione del server DRM, se ne hai definita una. Includilo anche quando si segnalano gli errori agli Adobi. </td> 
+   <td colname="col1"> <span class="codeph"> DRM_ERROR_STRING </span> </td> 
+   <td colname="col2"> Per DRM, questa è la stringa di errore personalizzata della distribuzione del server DRM, se ne è stata definita una. Includi anche questo quando segnali errori ad Adobe. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> DESCRIZIONE  </span> </td> 
-   <td colname="col2"> Descrizione stringa dell'errore. Di solito l'URL del contenuto multimediale. </td> 
+   <td colname="col1"> <span class="codeph"> DESCRIZIONE </span> </td> 
+   <td colname="col2"> Descrizione stringa dell'errore. Di solito l’URL del file multimediale. </td> 
   </tr> 
  </tbody> 
 </table>
@@ -58,4 +57,4 @@ TVSDK riceve questi codici di errore e stringhe dal motore video.
 
 >[!IMPORTANT]
 >
->Per un elenco completo dei codici di errore client DRM di Adobe Primetime, consulta [Riferimento messaggio di errore client DRM](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_client_error_message_reference.pdf).
+>Per un elenco completo dei codici di errore del client Adobe Primetime DRM, vedere [Riferimento messaggio di errore client DRM](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_client_error_message_reference.pdf).

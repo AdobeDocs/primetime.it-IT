@@ -1,23 +1,23 @@
 ---
-title: Note sulla versione di Adobe Primetime Authentication 2.64
-description: Note sulla versione di Adobe Primetime Authentication 2.64
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Note sulla versione di Adobe Primetime authentication 2.64
+description: Note sulla versione di Adobe Primetime authentication 2.64
+exl-id: 4db21026-a0c2-4e33-b01f-4ccae824a110
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 0%
 
 ---
 
-
-# Note sulla versione di Adobe Primetime Authentication 2.64 {#authn-264-rn}
+# Note sulla versione di Adobe Primetime authentication 2.64 {#authn-264-rn}
 
 >[!NOTE]
 >
->Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente a partire da Adobe. Non è consentito alcun uso non autorizzato.
+>Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente di Adobe. Non è consentito alcun uso non autorizzato.
 
 Questa pagina descrive nuove funzioni, modifiche e problemi noti relativi a questa versione:
 
-## Client lato server e Web {#ss-web-clients}
+## Client Web e lato server {#ss-web-clients}
 
 * [Numero build](#build-no-264)
 * [Nuove funzioni](#new-featres-264)
@@ -28,15 +28,15 @@ Questa pagina descrive nuove funzioni, modifiche e problemi noti relativi a ques
 
 Autenticazione Adobe Primetime: adobe-pass-**2,64**
 
-Data di rilascio: **08/11/2022 - 10/11/2022**
+Data di rilascio: **11/08/2022 - 11/10/2022**
 
 ### Nuove funzioni {#new-featres-264}
 
-* Aggiornamenti dell&#39;infrastruttura mirati a ridurre i tempi di risposta dei server, a migliorare le prestazioni complessive del sistema.
-* Miglioramenti al nuovo meccanismo di identificazione della piattaforma.
-* Possibilità di bloccare le risposte di autenticazione non richieste dagli MVPD in cui manca il parametro &quot;in_response_to&quot; dall&#39;asserzione SAML.
+* Aggiornamenti dell&#39;infrastruttura, con l&#39;obiettivo di ridurre i tempi di risposta dei server e migliorare le prestazioni complessive del sistema.
+* Miglioramenti al nuovo meccanismo di identificazione delle piattaforme.
+* Possibilità di bloccare le risposte di autenticazione non richieste provenienti da MVPD in cui il parametro &quot;in_response_to&quot; non è presente nell’asserzione SAML.
 
 ### Correzioni di bug {#bug-fixes-264}
 
 * È stata corretta la formattazione errata di alcuni token TempPass legacy.
-* Sono stati risolti problemi minori nel flusso di autenticazione secondo schermo.
+* Sono stati risolti alcuni problemi minori relativi al flusso di autenticazione nella seconda schermata.

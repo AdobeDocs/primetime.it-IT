@@ -2,20 +2,19 @@
 title: Gestire le richieste di restituzione delle licenze
 description: Gestire le richieste di restituzione delle licenze
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: de577cb9-4ede-440e-8b71-1b39c6cc3c5b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 0%
 
 ---
 
-
 # Gestire le richieste di restituzione delle licenze{#handle-license-return-requests}
 
-Se l’applicazione client deve restituire una licenza, richiama l’ API `DRMManager.returnVoucher()` Actionscript per avviare il processo. Questa API può funzionare in modalità `immediateCommit` o `confirmFirst`. Se `immediateCommit` è impostato su `true`, il client elimina immediatamente le licenze locali senza attendere la conferma dal server licenze di aver ricevuto la richiesta di restituzione delle licenze. Il server di licenza Adobe Primetime DRM deve elaborare la richiesta e inviare una risposta al client. Il server licenze decide se il server licenze elabora o meno la richiesta, ad esempio ridurre il numero di licenze per un utente specificato.
+Se l&#39;applicazione client deve restituire una licenza, richiama `DRMManager.returnVoucher()` API Actionscript per avviare il processo. Questa API può funzionare in un `immediateCommit` modalità o un `confirmFirst` modalità. Se `immediateCommit` è impostato su `true`, il client elimina immediatamente le licenze locali senza attendere la conferma da parte del server licenze che ha ricevuto la richiesta di restituire le licenze. Il server licenze Adobe Primetime DRM deve elaborare la richiesta e inviare una risposta al client. Il server licenze decide se elaborare o meno la richiesta, ad esempio decrementare il numero di licenze per un utente specificato.
 
 * La classe del gestore richieste è `com.adobe.flashaccess.sdk.protocol.licensereturn.LicenseReturnHandler`
 * La classe del messaggio di richiesta è `com.adobe.flashaccess.sdk.protocol.licensereturn.LicenseReturnRequestMessage`
 
-La versione minima `Adobe Primetime DRM` SDK richiesta è la versione 5; l&#39;URL della richiesta è &quot; [!DNL /flashaccess/lreturn/v5]&quot;. Come per la cancellazione del dominio, il server utilizza `getRequestPhase()` per determinare se il client può visualizzare in anteprima la restituzione di una licenza.
+Il minimo `Adobe Primetime DRM` La versione dell’SDK richiesta è la versione 5; l’URL della richiesta è &quot; [!DNL /flashaccess/lreturn/v5]&quot;. Come per la cancellazione del dominio, il server utilizza `getRequestPhase()` per determinare se il client può visualizzare in anteprima una licenza restituita.

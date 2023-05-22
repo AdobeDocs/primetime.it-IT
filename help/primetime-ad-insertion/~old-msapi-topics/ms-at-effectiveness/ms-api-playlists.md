@@ -1,7 +1,6 @@
 ---
-description: Il server manifest restituisce le playlist master in formato M3U8, in conformità allo standard HTTP Live Streaming proposto. È costituito da una serie di flussi di trasporto varianti (TS), ciascuno contenente rappresentazioni dello stesso contenuto per diversi bit rate e formati. L'inserimento di annunci Adobe Primetime aggiunge il tag di direttiva EXT-X-MARKER, che deve essere interpretato dai lettori video client.
-title: Direttiva EXT-X MARKER
-translation-type: tm+mt
+description: Il server manifest restituisce playlist master in formato M3U8, conformi allo standard HTTP Live Streaming proposto. È costituito da un set di flussi di trasporto varianti (TS), ciascuno contenente rappresentazioni dello stesso contenuto per bit rate e formati diversi. Adobe Primetime ad insertion aggiunge il tag di direttiva EXT-X-MARKER, che deve essere interpretato dai lettori video client.
+title: Direttiva EXT-X-MARKER
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '748'
@@ -12,63 +11,63 @@ ht-degree: 0%
 
 # Direttiva EXT-X-MARKER {#ext-x-marker-directive}
 
-Il server manifest restituisce le playlist master in formato M3U8, in conformità allo standard HTTP Live Streaming proposto. È costituito da una serie di flussi di trasporto varianti (TS), ciascuno contenente rappresentazioni dello stesso contenuto per diversi bit rate e formati. L&#39;inserimento di annunci Adobe Primetime aggiunge il tag di direttiva EXT-X-MARKER, che deve essere interpretato dai lettori video client.
+Il server manifest restituisce playlist master in formato M3U8, conformi allo standard HTTP Live Streaming proposto. È costituito da un set di flussi di trasporto varianti (TS), ciascuno contenente rappresentazioni dello stesso contenuto per bit rate e formati diversi. Adobe Primetime ad insertion aggiunge il tag di direttiva EXT-X-MARKER, che deve essere interpretato dai lettori video client.
 
-Per informazioni dettagliate sul tag EXT-X-MARKER, consulta [Profilo Adobe Primetime HTTP Live Streaming](https://wwwimages2.adobe.com/content/dam/acom/en/devnet/primetime/PrimetimeHLS_April2014.pdf).
-
->[!NOTE]
->
->Questa funzionalità è disponibile solo se l&#39;URL del server manifesto di bootstrap non contiene il parametro `pttrackingmode` .
+Per informazioni dettagliate sul tag EXT-X-MARKER, consulta [Profilo streaming HTTP Adobe Primetime](https://wwwimages2.adobe.com/content/dam/acom/en/devnet/primetime/PrimetimeHLS_April2014.pdf).
 
 >[!NOTE]
 >
->Il tag EXT-X-MARKER viene aggiunto ai segmenti di annunci e non ai segmenti di contenuto.
+>Questa funzionalità è disponibile solo se l&#39;URL del server del manifesto di avvio non contiene `pttrackingmode` parametro.
 
-Il progetto di standard su [HTTP Live Streaming](https://tools.ietf.org/html/draft-pantos-http-live-streaming-23) descrive il contenuto e il formato delle playlist varianti. Il tag EXT-X-MARKER indirizza il client a richiamare un callback. Contiene i seguenti componenti:
+>[!NOTE]
+>
+>Il tag EXT-X-MARKER viene aggiunto ai segmenti di annuncio e non ai segmenti di contenuto.
 
-* **** Identificatore IDUnique (stringa) per questo evento di callback nel contesto del flusso di programma.
+La bozza di standard in [HTTP Live Streaming](https://tools.ietf.org/html/draft-pantos-http-live-streaming-23) descrive il contenuto e il formato delle playlist varianti. Il tag EXT-X-MARKER indica al client di richiamare un callback. Contiene i seguenti componenti:
 
-* **** TYPETType (stringa) dell&#39;evento di callback: PodBegin, PodEnd, PrerollPodBegin, PrerollPodEnd o AdBegin
+* **ID** Identificatore univoco (stringa) per questo evento di callback nel contesto del flusso del programma.
 
-* **** Durata del tempo (in secondi) dall’inizio del segmento che contiene il tag per il quale la direttiva rimane valida.
+* **TIPO** Tipo (stringa) dell&#39;evento di callback: PodBegin, PodEnd, PrerollPodBegin, PrerollPodEnd o AdBegin
 
-* **** OFFSETOfacoltativo. L’offset (in secondi) relativo all’inizio della riproduzione del segmento, quando deve essere invocato il callback.
+* **DURATA** Periodo di tempo (in secondi) dall’inizio del segmento su cui è apposto il tag per il quale la direttiva resta valida.
 
-   * `PodBegin` e  `PrerollPodBegin` contengono informazioni sul beacon nell&#39;attributo DATA e vengono attivate all&#39;inizio del segmento. Pertanto, il tag `OFFSET` non è disponibile qui.
+* **OFFSET** Facoltativo. Offset (in secondi) relativo all’inizio della riproduzione del segmento, quando deve essere richiamato il callback.
 
-   * `AdBegin` contiene informazioni sul beacon nell’attributo DATA e i tag impression vengono attivati all’inizio del segmento. Pertanto anche il tag `OFFSET` non è disponibile qui.
+   * `PodBegin` e `PrerollPodBegin` contengono informazioni sul beacon nell’attributo DATA e vengono attivati all’inizio del segmento. Quindi il `OFFSET` non è disponibile qui.
 
-   * `PodEnd` e  `PrerollPodEnd` contengono informazioni sul beacon nell’attributo DATA , ma vengono attivate alla fine del segmento corrente, perché si prevede che questi tag vengano attivati alla fine dell’ultimo segmento dell’ultimo annuncio nel pod. In questo caso, `OFFSET` è impostato su `<duration of segment>` per specificare che il beacon deve essere attivato alla fine del segmento corrente.
+   * `AdBegin` contiene le informazioni sul beacon nell’attributo DATA e i tag di impression vengono attivati all’inizio di quel segmento. Quindi il `OFFSET` Il tag non è disponibile neanche qui.
 
-* **** Stringa con codifica DATABase64 racchiusa tra virgolette doppie contenente i dati da passare all&#39;applicazione quando si richiama il callback. Contiene informazioni di tracciamento degli annunci conformi alle specifiche VMAP1.0 e VAST3.0.
+   * `PodEnd` e `PrerollPodEnd` contengono informazioni sul beacon nell’attributo DATA, ma vengono attivati alla fine del segmento corrente perché si prevede che questi tag vengano attivati alla fine dell’ultimo segmento dell’ultimo annuncio nel pod. In questo caso, `OFFSET` è impostato su `<duration of segment>` per specificare che il beacon deve essere attivato alla fine del segmento corrente.
 
-* **** COUNTNnumero di annunci che verranno uniti nell’interruzione pubblicitaria.
+* **DATI** Stringa con codifica Base64 racchiusa tra virgolette doppie contenenti i dati da passare all&#39;applicazione quando si richiama il callback. Contiene informazioni di tracciamento degli annunci conformi alle specifiche VMAP1.0 e VAST3.0.
+
+* **COUNT** Numero di annunci che verranno uniti nell’interruzione pubblicitaria.
 
    Applicabile solo se il componente TYPE è impostato su PodBegin o PrerollPodBegin.
 
-* **** BREAKDURTodifica totale (in secondi) dell’interruzione pubblicitaria riempita.
+* **BREAKDUR** Durata totale (in secondi) dell’interruzione pubblicitaria riempita.
 
    Applicabile solo se il componente TYPE è impostato su PodBegin o PrerollPodBegin.
 
-Durante la costruzione del callback, interpreta i componenti EXT-X-MARKER come segue:
+Durante la costruzione del callback, interpretare i componenti EXT-X-MARKER come segue:
 
-* Quando il tag contiene `OFFSET`, attiva il callback in corrispondenza dell’offset specificato rispetto all’inizio della riproduzione del contenuto in quel segmento. In caso contrario, attiva il callback non appena inizia la riproduzione del contenuto in quel segmento.
-* Utilizza `DURATION` per tenere traccia dell’avanzamento del contenuto dell’annuncio e per richiedere gli URL per il tracciamento degli eventi.
-* Passa `ID`, `TYPE` e `DATA` al callback.
+* Quando il tag contiene `OFFSET`, attiva il callback all&#39;offset specificato rispetto all&#39;inizio della riproduzione del contenuto in quel segmento. In caso contrario, attiva il callback non appena inizia la riproduzione del contenuto in tale segmento.
+* Utilizzare `DURATION` per tenere traccia dell’avanzamento del contenuto dell’annuncio e per richiedere URL per il tracciamento degli eventi.
+* Superato `ID`, `TYPE`, e `DATA` al callback.
 
-Utilizza i valori `PrerollPodBegin` e `PrerollPodEnd` per `TYPE` per decidere quale segmento TS riprodurre per primo nei flussi live/lineari.
+Utilizza il `PrerollPodBegin`, e `PrerollPodEnd` valori per `TYPE` per decidere quale segmento TS riprodurre per primo nei flussi live/lineari.
 
 >[!NOTE]
 >
->I valori `PrerollPodBegin` e `PrerollPodEnd` sono disponibili solo quando un annuncio pre-roll viene inserito in un flusso live.
+>Il `PrerollPodBegin`, e `PrerollPodEnd` i valori sono disponibili solo quando un annuncio pre-roll viene inserito in un flusso live.
 
-Il server manifesto include i tag EXT-X-MARKER nei seguenti segmenti:
+Il server manifest include i tag EXT-X-MARKER nei seguenti segmenti:
 
-* Il primo segmento nell’interruzione pubblicitaria, per tracciare l’inizio di un annuncio pod.
-* Il primo segmento dell’annuncio, per tenere traccia dell’inizio/completamento/avanzamento di un singolo annuncio all’interno di un ad pod.
-* L’ultimo segmento nell’interruzione pubblicitaria, per tracciare la fine di un annuncio pod.
+* Il primo segmento nell’interruzione pubblicitaria, per tracciare l’inizio di un pod dell’annuncio.
+* Il primo segmento dell’annuncio, per monitorare l’inizio/completamento/avanzamento di un singolo annuncio all’interno di un pod dell’annuncio.
+* L’ultimo segmento nell’interruzione pubblicitaria, per tracciare la fine di un pod dell’annuncio.
 
-Il server manifest invia un documento XML `VMAP1.0-conformant` per tenere traccia dell&#39;inizio e della fine di ogni interruzione pubblicitaria. Si tratta di una versione filtrata dell&#39;effettiva risposta VMAP1.0 restituita dal server di annunci e contiene principalmente gli eventi di tracciamento come mostrato qui:
+Il server manifesto invia un `VMAP1.0-conformant` Documento XML per tenere traccia dell’inizio e della fine di ogni interruzione pubblicitaria. Si tratta di una versione filtrata della risposta VMAP1.0 effettiva restituita dal server di annunci e contiene principalmente gli eventi di tracciamento come mostrato di seguito:
 
 ```xml
 <?xml version="1.0"?> 
@@ -93,7 +92,7 @@ Il server manifest invia un documento XML `VMAP1.0-conformant` per tenere tracci
 </AdTrackingFragments>
 ```
 
-Per ogni annuncio creativo il server manifest inserisce nel contenuto del programma, invia un documento XML conforme a VAST3.0 per tenere traccia di quell&#39;annuncio. Ogni documento XML contiene un elemento `<InLine>` che descrive l’annuncio lineare inserito o un elemento `<Wrapper>` nel caso di annunci wrapper (ovvero annunci collegati o reindirizzati) e di annunci ed estensioni associate. Se la risposta VAST contiene un attributo di sequenza, ad esempio quando l’annuncio fa parte di un ad pod, il documento include tale attributo. Di seguito è riportato un documento XML conforme a VAST3.0 di esempio per il tracciamento di un singolo annuncio:
+Per ogni annuncio creativo inserito dal server manifesto nel contenuto del programma, invia un documento XML conforme a VAST3.0 per tenere traccia dell’annuncio. Ogni documento XML contiene un `<InLine>` elemento che descrive l’annuncio lineare e creativo inserito, oppure `<Wrapper>` nel caso di annunci wrapper (vale a dire, annunci collegati o reindirizzati) e di eventuali annunci ed estensioni correlati associati. Se la risposta VAST contiene un attributo di sequenza, ad esempio quando l’annuncio fa parte di un pod dell’annuncio, il documento lo include. Di seguito è riportato un esempio di documento XML conforme a VAST3.0 per il tracciamento di un singolo annuncio:
 
 ```xml
 <?xml version="1.0"?> 

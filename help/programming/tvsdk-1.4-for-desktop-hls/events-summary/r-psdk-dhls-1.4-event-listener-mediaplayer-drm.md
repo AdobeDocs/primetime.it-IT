@@ -1,20 +1,19 @@
 ---
-description: TVSDK invia eventi di gestione dei diritti digitali (DRM) in risposta a operazioni relative a DRM, come quando nuovi metadati DRM diventano disponibili.
+description: TVSDK invia eventi DRM (Digital Rights Management) in risposta alle operazioni relative a DRM, ad esempio quando diventano disponibili nuovi metadati DRM.
 title: Eventi DRM
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 65a02744-8973-418d-9a9c-53a2a313f631
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '88'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
 # Eventi DRM{#drm-events}
 
-TVSDK invia eventi di gestione dei diritti digitali (DRM) in risposta a operazioni relative a DRM, come quando nuovi metadati DRM diventano disponibili.
+TVSDK invia eventi DRM (Digital Rights Management) in risposta alle operazioni relative a DRM, ad esempio quando diventano disponibili nuovi metadati DRM.
 
-Per ricevere notifiche su tutti gli eventi relativi a DRM, ascolta `DRMMetadataInfoEvent` per gli eventi DRM con l’oggetto `MediaPlayer` .
+Per ricevere notifiche su tutti gli eventi relativi a DRM, attendere `DRMMetadataInfoEvent` per gli eventi DRM con `MediaPlayer` oggetto.
 
 | Evento | Significato |
 |---|---|

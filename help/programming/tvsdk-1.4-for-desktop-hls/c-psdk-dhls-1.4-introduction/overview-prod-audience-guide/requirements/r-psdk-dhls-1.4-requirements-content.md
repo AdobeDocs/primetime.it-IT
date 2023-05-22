@@ -1,20 +1,19 @@
 ---
-description: Controlla le restrizioni e i requisiti per i flussi e le playlist (manifesti), incluse le chiavi di crittografia DRM.
-title: Requisiti relativi al contenuto e al manifesto
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Controllare le restrizioni e i requisiti per i flussi e le playlist (manifesti), incluse le chiavi di crittografia DRM.
+title: Requisiti del contenuto e del manifesto
+exl-id: 96b2b245-558b-4606-87c0-22140430c326
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '99'
 ht-degree: 0%
 
 ---
 
+# Requisiti del contenuto e del manifesto {#content-and-manifest-requirements}
 
-# Requisiti relativi al contenuto e al manifesto {#content-and-manifest-requirements}
+Controllare le restrizioni e i requisiti per i flussi e le playlist (manifesti), incluse le chiavi di crittografia DRM.
 
-Controlla le restrizioni e i requisiti per i flussi e le playlist (manifesti), incluse le chiavi di crittografia DRM.
-
-| Includi e imposta la proprietà `RESOLUTION` per ogni flusso ABR nel file manifesto. È necessario utilizzare il Flash Player 14 o versione successiva. |
+| Includi e imposta `RESOLUTION` per ogni flusso ABR nel file manifesto. Deve usare il Flash Player 14 o successivo. |
 |---|
-| Se il flusso protetto da DRM è a bit rate multiplo (MBR), la chiave di crittografia DRM utilizzata per l&#39;MBR deve essere la stessa della chiave utilizzata in tutti i flussi a bit rate. |
+| Se il flusso protetto da DRM è a velocità bit multipla (MBR), la chiave di crittografia DRM utilizzata per l&#39;MBR deve essere la stessa della chiave utilizzata in tutti i flussi di velocità bit. |
 | Deve avere le stesse rappresentazioni a bit rate delle rappresentazioni del contenuto principale. |

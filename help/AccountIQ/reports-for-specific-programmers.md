@@ -1,23 +1,24 @@
 ---
-title: Visualizza rapporti di condivisione account per un programmatore specifico
-description: Visualizza rapporti di condivisione account per un programmatore specifico
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Visualizzare i rapporti di condivisione account per un programmatore specifico
+description: Visualizzare i rapporti di condivisione account per un programmatore specifico
+exl-id: 34b198e1-dbb9-4486-b688-92780eec0a56
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '105'
 ht-degree: 0%
 
 ---
 
-# Visualizza rapporti di condivisione account per un programmatore specifico {#report-sp-programmers}
+# Visualizzare i rapporti di condivisione account per un programmatore specifico {#report-sp-programmers}
 
-Per visualizzare i rapporti in Account IQ, dopo aver effettuato l&#39;accesso all&#39;applicazione come MVPD:
+Per visualizzare i rapporti in Account IQ, dopo aver effettuato correttamente l’accesso all’applicazione come MVPD:
 
-1. Seleziona il programmatore specifico quando definisci il segmento dell&#39;utente iscritto per l&#39;analisi e la visualizzazione dei rapporti utilizzando i passaggi in [Come definire il segmento](/help/AccountIQ/howto-select-segment-timeframe.md).
+1. Seleziona il programmatore specifico mentre definisci il segmento di abbonato per l’analisi e la visualizzazione dei rapporti seguendo i passaggi descritti in [Come definire il segmento](/help/AccountIQ/howto-select-segment-timeframe.md).
 
    ![seleziona canali](assets/programmer-selection.png)
 
 
-1. Seleziona la pagina dei rapporti desiderata dal menu di navigazione a sinistra:
+1. Seleziona una pagina di rapporti desiderata dal menu di navigazione a sinistra:
 
 * [Utilizzo generale](/help/AccountIQ/general-usage-reports.md)
 
@@ -25,12 +26,12 @@ Per visualizzare i rapporti in Account IQ, dopo aver effettuato l&#39;accesso al
 * [Account condivisi](/help/AccountIQ/shared-acc-reports.md)
 
    ![](assets/specific-mvpd-shared-acc.png)
-* [Pattern di utilizzo](/help/AccountIQ/usage-patterns.md)
+* [Modelli di utilizzo](/help/AccountIQ/usage-patterns.md)
 
    ![](assets/specific-mvpd-usage-pattern.png)
 
-* [Dashboard](/help/AccountIQ/dashboard.md) (il dashboard fornisce un&#39;occhiata ai grafici selezionati da diverse pagine dei rapporti).
+* [Dashboard](/help/AccountIQ/dashboard.md) (il dashboard offre un’occhiata ai grafici selezionati da diverse pagine di rapporti).
 
    ![](assets/specific-mvpd-dashboard.png)
 
-Ciascuna di queste pagine riflette l’attività del segmento selezionato.
+Ognuna di queste pagine riflette l’attività del segmento selezionato.

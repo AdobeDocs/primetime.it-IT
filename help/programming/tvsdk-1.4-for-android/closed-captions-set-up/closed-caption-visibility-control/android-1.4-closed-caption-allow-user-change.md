@@ -1,20 +1,19 @@
 ---
-description: Questo è un esempio di come creare un pulsante che consente all’utente di selezionare una traccia a didascalia chiusa.
+description: Questo è un esempio di come creare un pulsante che consente a un utente di selezionare una traccia di sottotitoli.
 title: Esempio Consenti agli utenti di modificare la traccia della didascalia
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: d7ba19ac-cbfa-4fb4-a92d-21a3d0f7c23f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '107'
 ht-degree: 0%
 
 ---
 
+# Esempio: consenti agli utenti di modificare la traccia della didascalia{#example-allow-users-to-change-the-caption-track}
 
-# Esempio: Consenti agli utenti di modificare la traccia della didascalia{#example-allow-users-to-change-the-caption-track}
+Questo è un esempio di come creare un pulsante che consente a un utente di selezionare una traccia di sottotitoli.
 
-Questo è un esempio di come creare un pulsante che consente all’utente di selezionare una traccia a didascalia chiusa.
-
-1. Crea un pulsante semplice per modificare la traccia dei sottotitoli.
+1. Create un semplice pulsante per modificare la traccia dei sottotitoli.
 
    ```xml
       <Button 
@@ -28,7 +27,7 @@ Questo è un esempio di come creare un pulsante che consente all’utente di sel
      android:text="CC" /> 
    ```
 
-1. Convertire l&#39;elenco delle tracce di didascalia chiusa disponibili in una matrice di stringhe. Le tracce a sottotitoli contenenti attività, ovvero canali per i quali TVSDK ha rilevato dati, vengono contrassegnate di conseguenza:
+1. Converte l&#39;elenco delle tracce di sottotitoli codificati disponibili in una matrice di stringhe. I sottotitoli codificati che presentano attività, ovvero i canali per i quali TVSDK ha rilevato i dati, vengono contrassegnati di conseguenza:
 
    ```java
    /** 
@@ -54,7 +53,7 @@ Questo è un esempio di come creare un pulsante che consente all’utente di sel
    } 
    ```
 
-1. Quando l&#39;utente fa clic sul pulsante, visualizza una finestra di dialogo in cui sono elencate tutte le tracce CC predefinite.
+1. Quando l&#39;utente fa clic sul pulsante, visualizza una finestra di dialogo in cui sono elencati tutti i brani CC predefiniti.
 
    ```java
       public void selectClosedCaptioningClick(View view) { 
@@ -82,4 +81,3 @@ Questo è un esempio di come creare un pulsante che consente all’utente di sel
        ab.show(); 
    } 
    ```
-

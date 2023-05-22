@@ -1,54 +1,51 @@
 ---
-description: La risoluzione degli annunci e il caricamento degli annunci possono causare un ritardo inaccettabile per un utente in attesa dell'avvio della riproduzione. La funzione Lazy Ad Loading Resolving può ridurre questo ritardo di avvio. Gli annunci possono ora essere risolti a un intervallo specificato prima della posizione dell’interruzione pubblicitaria. Ciò si ottiene utilizzando un approccio a doppio player.
-title: Soluzione per annunci just-in-time
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: La risoluzione e il caricamento degli annunci possono causare un ritardo inaccettabile per l’utente in attesa dell’avvio della riproduzione. La funzione di risoluzione Lazy Ad Loading può ridurre questo ritardo di avvio. Gli annunci possono ora essere risolti a un intervallo specificato prima della posizione dell’interruzione pubblicitaria. Ciò si ottiene utilizzando un approccio basato sul doppio lettore.
+title: Risoluzione degli annunci just-in-time
+exl-id: dd5342c5-9f34-4778-a47a-91ff2eb03155
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '439'
 ht-degree: 0%
 
 ---
 
-
 # Risoluzione degli annunci just-in-time {#just-in-time-ad-resolving}
 
-La risoluzione degli annunci e il caricamento degli annunci possono causare un ritardo inaccettabile per un utente in attesa dell&#39;avvio della riproduzione. La funzione Lazy Ad Loading Resolving può ridurre questo ritardo di avvio. Gli annunci possono ora essere risolti a un intervallo specificato prima della posizione dell’interruzione pubblicitaria. Ciò si ottiene utilizzando un approccio a doppio player.
+La risoluzione e il caricamento degli annunci possono causare un ritardo inaccettabile per l’utente in attesa dell’avvio della riproduzione. La funzione di risoluzione Lazy Ad Loading può ridurre questo ritardo di avvio. Gli annunci possono ora essere risolti a un intervallo specificato prima della posizione dell’interruzione pubblicitaria. Ciò si ottiene utilizzando un approccio basato sul doppio lettore.
 
-**Processo di risoluzione e caricamento degli annunci di base:**
+**Processo di base di risoluzione e caricamento degli annunci:**
 
 1. TVSDK scarica un manifesto (playlist) e *risolve* tutti gli annunci.
-1. TVSDK *carica* tutti gli annunci e unisce i segmenti di annunci nei manifesti.
-1. TVSDK sposta il lettore nello stato PREPARATO e inizia la riproduzione del contenuto.
+1. TVSDK *Carichi* tutti gli annunci e unisce i segmenti dell’annuncio nei manifesti.
+1. TVSDK sposta il lettore nello stato READY e inizia la riproduzione del contenuto.
 
-Il lettore utilizza gli URL nel manifesto per ottenere il contenuto dell’annuncio (creativi), assicura che il contenuto dell’annuncio sia in un formato che TVSDK può riprodurre e TVSDK inserisce gli annunci nella timeline. Questo processo di base di risoluzione e caricamento degli annunci può causare un ritardo inaccettabilmente lungo per un utente che aspetta di riprodurre il proprio contenuto, soprattutto se il manifesto contiene diversi URL di annunci.
+Il lettore utilizza gli URL nel manifesto per ottenere il contenuto dell’annuncio (creativi), si assicura che il contenuto dell’annuncio sia in un formato riproducibile da TVSDK e che TVSDK inserisca gli annunci nella timeline. Questo processo di base di risoluzione e caricamento degli annunci può causare un ritardo inaccettabilmente lungo per un utente in attesa di riprodurre il proprio contenuto, soprattutto se il manifesto contiene diversi URL di annunci.
 
-**Lazy Ad Resolving:**
+**Risoluzione annunci lazy:**
 
 1. TVSDK scarica la playlist.
-1. TVSDK *risolve e carica* qualsiasi annuncio pre-roll, sposta il lettore nello stato PREPARATO e inizia la riproduzione del contenuto.
-1. TVSDK *risolve* ogni annuncio prima della sua posizione in base al valore definito in `PTAdMetadata::delayAdLoadingTolerance`.
+1. TVSDK *risolve e carica* qualsiasi annuncio pre-roll, sposta il lettore nello stato READY e inizia la riproduzione del contenuto.
+1. TVSDK *risolve* ogni annuncio si interrompe prima della sua posizione in base al valore definito in `PTAdMetadata::delayAdLoadingTolerance`.
 
-Ad esempio, per impostazione predefinita `delayAdLoadingTolerance` è impostato su 5 secondi. Se un AdBreak è impostato per essere riprodotto alle 3:00, verrà risolto alle 2:55:00. Puoi aumentare questo valore se ritieni che la risoluzione dell’annuncio richieda più di 5 secondi.
+Ad esempio, per impostazione predefinita `delayAdLoadingTolerance` è impostato su 5 secondi. Se un AdBreak è impostato per essere riprodotto alle 3:00, la risoluzione avverrà alle 2:55:00. Puoi aumentare questo valore se pensi che la risoluzione dell’annuncio richiederà più di 5 secondi.
 
 >[!IMPORTANT]
 >
 >**Fattori da considerare con Lazy Ad Resolving:**
->* Lazy Ad Resolving è supportato solo per i flussi VOD solo con le modalità SERVER_MAP e di segnalazione.
->* La risoluzione degli annunci pigri non è abilitata per impostazione predefinita. È necessario impostare `PTAdMetadata::delayAdLoading` = YES per attivarlo.
->* La risoluzione degli annunci pigri non è compatibile con la funzione Instant On. Per ulteriori informazioni su Attivato istantaneo, vedere [Attivato istantaneo](../../tvsdk-3x-ios-prog/ios-3x-instant-on-ios.md).
->* La modalità Picture-in-Picture non è supportata con Lazy Ad Resolving. Disattivare le modalità Picture-in-Picture se si abilita Lazy Ad Resolving.
->* La risoluzione degli annunci pigri non influisce sugli annunci pre-roll.
-
+>* La risoluzione degli annunci lazy è supportata solo per i flussi VOD solo con modalità SERVER_MAP modalità di segnalazione degli annunci.
+>* La funzione Lazy Ad Resolving non è attivata per impostazione predefinita. È necessario impostare `PTAdMetadata::delayAdLoading` = SÌ per abilitarlo.
+>* Lazy Ad Resolving non è compatibile con la funzione Instant On. Per ulteriori informazioni su Instant On, vedere [Istantanea attiva](../../tvsdk-3x-ios-prog/ios-3x-instant-on-ios.md).
+>* La modalità Picture-in-Picture non è supportata con Lazy Ad Resolving. Disattiva le modalità Picture-in-Picture se abiliti Lazy Ad Resolving.
+>* La risoluzione lenta degli annunci non influisce sugli annunci pre-roll.
 >
 
-
-**Abilita risoluzione annunci pigri**
+**Abilita lazy ad resolving**
 
 Puoi abilitare o disabilitare la funzione Lazy Ad Resolving utilizzando il meccanismo esistente Lazy Ad Loading (Lazy Ad Resolving è disabilitato per impostazione predefinita).
 
-Puoi abilitare Lazy Ad Resolving impostando `PTAdMetadata::delayAdLoading`= YES durante la configurazione dei metadati dell&#39;annuncio.
+Puoi abilitare Lazy Ad Resolving impostando `PTAdMetadata::delayAdLoading`= YES (SÌ) durante la configurazione dei metadati dell’annuncio.
 
-**API rilevanti per la risoluzione degli annunci pigri:**
+**API rilevanti per la risoluzione lazy degli annunci:**
 
 ```
 Class:    PTAdMetadata 

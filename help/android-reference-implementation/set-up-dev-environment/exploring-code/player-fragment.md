@@ -1,26 +1,25 @@
 ---
 description: La classe PlayerFragment è il luogo in cui si modifica il codice per creare i gestori di funzioni completamente abilitati.
 title: PlayerFragment
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 9060f0f5-9148-48cd-b89b-718607dd70bc
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 0%
 
 ---
 
-
 # PlayerFragment {#playerfragment}
 
 La classe PlayerFragment è il luogo in cui si modifica il codice per creare i gestori di funzioni completamente abilitati.
 
-La classe `PlayerFragment` contiene tutti i componenti dell&#39;interfaccia utente quali `playerFrame`, `ControlBar`, `playerClickableAdFragment` e `adOverlay`.
+Il `PlayerFragment` La classe contiene tutti i componenti dell&#39;interfaccia utente, ad esempio `playerFrame`, `ControlBar`, `playerClickableAdFragment`, e `adOverlay`.
 
-Gestisce l’inizializzazione di tutti questi componenti, nonché la creazione del lettore, l’impostazione delle visualizzazioni, la creazione di gestori di funzioni per il lettore multimediale, la gestione di eventi multimediali come la ripresa, la riproduzione e la pausa e la gestione degli ascoltatori di eventi per `QoSManager`, `DRMManager`, `CCManager`, `AAManager`, `AdsManager`, `PlaybackManager` e `EntitlementManager`.
+Gestisce l’inizializzazione di tutti questi componenti, nonché la creazione del lettore, la configurazione delle visualizzazioni, la creazione di gestori di funzionalità per il lettore multimediale, la gestione di eventi multimediali come la ripresa, la riproduzione, la pausa e la gestione dei listener di eventi per `QoSManager`, `DRMManager`, `CCManager`, `AAManager`, `AdsManager`, `PlaybackManager`, e `EntitlementManager`.
 
 Il file XML che include i parametri di configurazione per `PlayerFragment` è `res/layout/fragment_player.xml`.
 
-Prima di creare i gestori di funzioni è necessario creare il lettore multimediale assicurandosi che il seguente codice sia nel file `PlayerFragment.java` :
+Prima di creare i gestori delle funzioni, è necessario creare il lettore multimediale verificando che nel `PlayerFragment.java` file:
 
 ```java
 private MediaPlayer createMediaPlayer() { 

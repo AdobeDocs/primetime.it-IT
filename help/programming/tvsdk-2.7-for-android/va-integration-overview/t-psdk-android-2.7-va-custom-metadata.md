@@ -1,22 +1,21 @@
 ---
-description: Puoi fornire metadati personalizzati su contenuti, annunci e chiamate di tracciamento dei capitoli utilizzando le funzioni di callback.
+description: Puoi fornire metadati personalizzati su contenuti, annunci e chiamate di tracciamento dei capitoli utilizzando funzioni di callback.
 title: Implementazione del supporto per metadati personalizzati
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: b14d3550-db25-4521-babd-ddfa6bc9f4f6
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '74'
 ht-degree: 0%
 
 ---
 
+# Implementazione del supporto per metadati personalizzati {#implement-custom-metadata-support}
 
-# Implementare il supporto per i metadati personalizzati {#implement-custom-metadata-support}
+Puoi fornire metadati personalizzati su contenuti, annunci e chiamate di tracciamento dei capitoli utilizzando funzioni di callback.
 
-Puoi fornire metadati personalizzati su contenuti, annunci e chiamate di tracciamento dei capitoli utilizzando le funzioni di callback.
+Le funzioni di callback vengono richiamate immediatamente prima della chiamata di tracciamento, in modo che l’applicazione possa allegare i metadati specifici di un annuncio o di un capitolo.
 
-Le funzioni di callback vengono richiamate immediatamente prima della chiamata di tracciamento, in modo che l&#39;applicazione possa allegare i metadati specifici di un annuncio o di un capitolo.
-
-1. Richiama le funzioni di callback per contenuti, annunci pubblicitari e capitoli.
+1. Richiama le funzioni di callback per contenuto, annunci e capitoli.
 
    ```java
    // Video Metadata Block 
@@ -105,4 +104,3 @@ Le funzioni di callback vengono richiamate immediatamente prima della chiamata d
    vaMetadata.setChapterMetadataBlock( 
      new ChapterMetadataBlockImpl("chapter-1234", "1.2.3.4")); 
    ```
-

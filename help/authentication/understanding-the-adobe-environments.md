@@ -1,7 +1,8 @@
 ---
 title: Informazioni sugli ambienti Adobe
 description: Informazioni sugli ambienti Adobe
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: bb6cf37f-48cd-47bb-b3c2-f7a96e49b12d
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '208'
 ht-degree: 0%
@@ -12,25 +13,25 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente a partire da Adobe. Non è consentito alcun uso non autorizzato.
+>Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente di Adobe. Non è consentito alcun uso non autorizzato.
 
-È disponibile la documentazione ufficiale che descrive gli ambienti di Adobe [Configurazione dell’ambiente e test in Pre-equal](/help/authentication/setting-up-your-environment-and-testing-in-prequal.md):
+È disponibile la documentazione ufficiale che descrive gli ambienti Adobe [Configurazione dell’ambiente e test in Pre-qual](/help/authentication/setting-up-your-environment-and-testing-in-prequal.md):
 
-Gli ambienti di Adobe, riassunti in poche parole:
+L’Adobe Ambienti, riassunto in poche parole:
 
-Adobe dispone di due ambienti: **Pre-Qualificazione** e **Versione**.
+Adobe dispone di due ambienti: **Pre-qualificazione** e **Versione**.
 
 * Nell’ambiente di pre-qualificazione stiamo preparando la nuova build da rilasciare.
 
 * La build della versione corrente si trova nell’ambiente di rilascio.
 
-Ogni ambiente dispone di due profili : **staging** e **produzione**.
+Ogni ambiente ha due profili: **staging** e **produzione**.
 
 * Il profilo di staging si connette al server di staging MVPD
-* Il profilo di produzione si collega al profilo di produzione MVPD.
+* Il profilo di produzione si connette al profilo di produzione MVPD.
 
-Il motivo per avere i due profili è che sul profilo di staging stiamo preparando nuovi partner ad andare in diretta, e loro vorrebbero testare il sistema con la prossima build (Pre-Qualification) o con il rilascio uno (più stabile).
+Il motivo per cui disponiamo dei due profili è che sul profilo di staging stiamo preparando nuovi partner per la pubblicazione e desiderano testare il sistema con la prossima build (Pre-Qualificazione) o con la versione uno (più stabile).
 
-Se un partner desidera testare la nuova versione, è necessario eseguire alcuni passaggi aggiuntivi. Vedi [Configurazione dell’ambiente e test in Pre-equal](/help/authentication/setting-up-your-environment-and-testing-in-prequal.md).
+Se un partner desidera testare la nuova versione, è necessario eseguire alcuni passaggi aggiuntivi. Vedi, [Configurazione dell’ambiente e test in Pre-qual](/help/authentication/setting-up-your-environment-and-testing-in-prequal.md).
 
-Seguendo i passaggi descritti in precedenza, è sicuro che la prossima versione verrà testata nell’ambiente di pre-qualificazione.
+Seguendo i passaggi precedenti, si garantisce che la prossima versione verrà testata nell’ambiente di pre-qualifica.

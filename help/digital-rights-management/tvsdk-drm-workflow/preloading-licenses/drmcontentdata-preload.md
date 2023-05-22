@@ -2,7 +2,6 @@
 title: Utilizzo di DRMContentData per precaricare le licenze
 description: Utilizzo di DRMContentData per precaricare le licenze
 copied-description: true
-translation-type: tm+mt
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '130'
@@ -13,12 +12,12 @@ ht-degree: 0%
 
 # Utilizzo di DRMContentData per precaricare le licenze{#using-drmcontentdata-to-pre-load-licenses}
 
-I passaggi seguenti descrivono il flusso di lavoro per il precaricamento della licenza per un file multimediale protetto utilizzando un oggetto `DRMContentData` .
+I passaggi seguenti descrivono il flusso di lavoro per precaricare la licenza per un file multimediale protetto utilizzando un `DRMContentData` oggetto.
 
-1. Ottieni i metadati DRM binari per il contenuto incluso nel pacchetto.
+1. Ottenere i metadati DRM binari per il contenuto del pacchetto.
 
-   Se utilizzi Primetime DRM Java Reference Implementations Packager, questo file di metadati viene generato automaticamente con un&#39;estensione [!DNL .metadata]. Ad esempio, puoi scaricare i metadati utilizzando la classe `URLLoader` . Se si utilizza contenuto HLS o HDS, i metadati vengono referenziati nel file manifesto del contenuto ( [!DNL .m3u8] o [!DNL .f4m]) o inclusi *all&#39;interno* come stringa codificata Base64 (che deve essere decodificata Base64 prima del consumo).
-1. Creare un oggetto `DRMContentData`, passando i metadati alla funzione di costruzione:
+   Se si utilizza Primetime DRM Java Reference Implementations Packager, questo file di metadati viene generato automaticamente con un [!DNL .metadata] estensione. Ad esempio, puoi scaricare questi metadati utilizzando `URLLoader` classe. Se si utilizza contenuto HLS o HDS, nel file del manifesto del contenuto viene fatto riferimento ai metadati ( [!DNL .m3u8] o [!DNL .f4m]) o incluso *entro* il file manifesto come stringa con codifica Base64 (che deve essere decodificata Base64 prima del consumo).
+1. Creare un `DRMContentData` , passando i metadati alla funzione di costruzione:
 
    ```
    var drmData:DRMContentData = new DRMContentData( metadata );

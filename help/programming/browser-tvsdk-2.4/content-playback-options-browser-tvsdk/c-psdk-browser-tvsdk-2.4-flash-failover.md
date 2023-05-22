@@ -1,26 +1,25 @@
 ---
-description: Il browser TVSDK fornisce strumenti per la creazione di un’applicazione di lettore video avanzata (il lettore Primetime), che puoi integrare con altri componenti Primetime.
-title: Failover Flash
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Il browser TVSDK fornisce gli strumenti per creare un’applicazione video player avanzata (il lettore Primetime), che puoi integrare con altri componenti di Primetime.
+title: Failover del Flash
+exl-id: 76bd9214-767a-4f26-977d-81fbac3e0c42
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '278'
 ht-degree: 0%
 
 ---
 
+# Failover del Flash {#flash-failover}
 
-# Failover Flash {#flash-failover}
+Il browser TVSDK fornisce gli strumenti per creare un’applicazione video player avanzata (il lettore Primetime), che puoi integrare con altri componenti di Primetime.
 
-Il browser TVSDK fornisce strumenti per la creazione di un’applicazione di lettore video avanzata (il lettore Primetime), che puoi integrare con altri componenti Primetime.
+Utilizza gli strumenti della tua piattaforma per creare un lettore e collegarlo alla visualizzazione del lettore multimediale in Browser TVSDK, che dispone di metodi per riprodurre e gestire i video. Ad esempio, Browser TVSDK fornisce metodi di riproduzione e pausa. Puoi creare pulsanti dell’interfaccia utente sulla tua piattaforma e impostarli per chiamare tali metodi TVSDK del browser.
 
-Utilizza gli strumenti della piattaforma per creare un lettore e collegarlo alla visualizzazione del lettore multimediale nel browser TVSDK, che dispone di metodi per riprodurre e gestire i video. Ad esempio, il browser TVSDK fornisce metodi di riproduzione e pausa. Puoi creare pulsanti dell’interfaccia utente sulla piattaforma e impostare i pulsanti per chiamare tali metodi del browser TVSDK.
+## Fallback Flash {#section_92D3884A13A6431F9A9CC5C79715D888}
 
-## Flash fallback {#section_92D3884A13A6431F9A9CC5C79715D888}
+In Browser TVSDK, l’applicazione interagisce solo con `Primetime.js` API. L’implementazione Browser TVSDK sottostante determina la tecnologia del lettore da utilizzare in base alla piattaforma corrente e al tipo di risorsa del file multimediale da riprodurre.
 
-Nel browser TVSDK, l&#39;applicazione interagisce solo con l&#39; `Primetime.js` API. L’implementazione TVSDK del browser sottostante determina la tecnologia del lettore da utilizzare in base alla piattaforma corrente e al tipo di risorsa del supporto da riprodurre.
-
-La decisione relativa alla tecnologia del lettore viene presa solo dopo aver chiamato `MediaPlayer.replaceCurrentResource` per riprodurre una risorsa specifica.
+La decisione per la tecnologia del lettore non viene presa fino a quando non chiami `MediaPlayer.replaceCurrentResource` per riprodurre una risorsa specifica.
 
 Ad esempio:
 
@@ -40,14 +39,13 @@ Questa procedura di esempio illustra il processo di determinazione della tecnolo
 >
 >Il processo può variare a seconda dell’URL e dell’ambiente.
 
-1. Se è supportato, utilizzalo senza limitazioni note.
-1. Se supportato, utilizza il tag `<video>` direttamente senza MSE.
-1. Assicurati di utilizzare almeno la versione 23.0 di Adobe Flash Player.
+1. Se sono supportate le estensioni dell’origine multimediale, utilizzale senza limitazioni note.
+1. Se supportato, utilizza `<video>` direttamente senza MSE.
+1. Assicurati di utilizzare almeno la versione 23.0 del Flash Player Adobe.
 1. Se non viene trovata alcuna tecnologia di riproduzione adatta, `replaceCurrentResource` restituisce un errore.
 
-Una successiva chiamata `replaceCurrentResource` sulla stessa istanza `MediaPlayer` segue lo stesso processo. Questo consente di riprodurre vari tipi di risorse utilizzando la stessa istanza `MediaPlayer` nello stesso tag `<DIV>` padre specificato al momento della creazione dell&#39;istanza `MediaPlayerView`.
+Una successiva `replaceCurrentResource` invoca lo stesso `MediaPlayer` segue lo stesso processo. Questo consente di riprodurre vari tipi di risorse utilizzando lo stesso `MediaPlayer` istanza nello stesso elemento padre `<DIV>` che hai specificato quando `MediaPlayerView` istanza creata.
 
 >[!TIP]
 >
->L&#39;oggetto SWF e il tag `<video>` sono nidificati nel tag `<DIV>` principale.
-
+>L&#39;oggetto SWF e `<video>` i tag sono nidificati nell&#39;elemento padre `<DIV>` tag.

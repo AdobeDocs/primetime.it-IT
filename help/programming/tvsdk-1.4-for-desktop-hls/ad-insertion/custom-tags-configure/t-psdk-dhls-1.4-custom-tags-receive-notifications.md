@@ -1,34 +1,33 @@
 ---
 description: Per ricevere notifiche sui tag nel manifesto, registra i listener di eventi appropriati.
-title: Aggiungi i listener per le notifiche dei metadati temporizzati
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Aggiungere listener per le notifiche di metadati temporizzate
+exl-id: 1df8a4fc-8368-4a80-8f8b-00c1207e6602
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%
 
 ---
 
-
-# Aggiungi i listener per le notifiche dei metadati temporizzati{#add-listeners-for-timed-metadata-notifications}
+# Aggiungere listener per le notifiche di metadati temporizzate{#add-listeners-for-timed-metadata-notifications}
 
 Per ricevere notifiche sui tag nel manifesto, registra i listener di eventi appropriati.
 
-Puoi monitorare i metadati temporizzati ascoltando i seguenti eventi, che notificano all’applicazione le relative attività:
+Puoi monitorare i metadati temporizzati ascoltando i seguenti eventi, che notificano all’applicazione l’attività correlata:
 
-* `MediaPlayerItemEvent.ITEM_CREATED`: L’elenco iniziale di  `TimedMetadata` oggetti è disponibile dopo la creazione  `MediaPlayerItem` di .
+* `MediaPlayerItemEvent.ITEM_CREATED`: elenco iniziale di `TimedMetadata` Gli oggetti sono disponibili dopo il `MediaPlayerItem` viene creato.
 
-   Questo evento notifica l&#39;applicazione quando si verifica questa situazione.
+   Questo evento avvisa l&#39;applicazione quando si verifica.
 
-* `MediaPlayerItemEvent.ITEM_UPDATED`: Per i flussi in diretta/lineare in cui il manifesto/playlist si aggiorna periodicamente, potrebbero essere visualizzati tag personalizzati aggiuntivi nella playlist/manifesto aggiornato, pertanto è possibile aggiungere  `TimedMetadata` oggetti aggiuntivi alla  `MediaPlayerItem.timedMetadata` proprietà.
+* `MediaPlayerItemEvent.ITEM_UPDATED`: per i flussi live/lineari in cui il manifesto/la playlist viene aggiornato periodicamente, nella playlist/il manifesto aggiornato potrebbero essere visualizzati tag personalizzati aggiuntivi `TimedMetadata` Gli oggetti possono essere aggiunti al `MediaPlayerItem.timedMetadata` proprietà.
 
-   Questo evento notifica l&#39;applicazione quando si verifica questa situazione.
+   Questo evento avvisa l&#39;applicazione quando si verifica.
 
-* `TimedMetadataEvent.TIMED_METADATA_AVAILABLE`: Ogni volta che viene creato un nuovo  `TimedMetadata` oggetto, questo evento viene inviato da MediaPlayer.
+* `TimedMetadataEvent.TIMED_METADATA_AVAILABLE`: ogni volta che un nuovo `TimedMetadata` viene creato, l&#39;evento viene inviato da MediaPlayer.
 
-   Questo evento non viene inviato per l&#39;oggetto `TimedMetadata` creato durante la fase di inizializzazione.
+   Questo evento non viene inviato per `TimedMetadata` oggetto creato durante la fase di inizializzazione.
 
-1. Implementa gli ascoltatori appropriati.
+1. Implementare i listener appropriati.
 
    ```
    private function onItemCreated(event:MediaPlayerItemEvent):void { 
@@ -47,7 +46,7 @@ Puoi monitorare i metadati temporizzati ascoltando i seguenti eventi, che notifi
    }
    ```
 
-1. Registra i listener di eventi.
+1. Registrare i listener di eventi.
 
    ```
    player.addEventListener(MediaPlayerItemEvent.ITEM_CREATED, onItemCreated); 
@@ -56,4 +55,4 @@ Puoi monitorare i metadati temporizzati ascoltando i seguenti eventi, che notifi
                            onTimedMetadataAvailable);
    ```
 
-I metadati ID3 vengono inviati attraverso lo stesso `TimedMetadataEvent.TIMED_METADATA_AVAILABLE`. Tuttavia, questo non deve causare confusione, perché è possibile utilizzare la proprietà `type` di un oggetto TimedMetadata per distinguere tra TAG e ID3. Per ulteriori informazioni sui tag ID3, consulta [ID3 tags](../../../tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/t-psdk-dhls-1.4-id3-metadata-retrieve.md).
+I metadati ID3 vengono inviati tramite lo stesso `TimedMetadataEvent.TIMED_METADATA_AVAILABLE`. Tuttavia, questo non dovrebbe causare confusione, perché è possibile utilizzare un oggetto TimedMetadata `type` per distinguere tra TAG e ID3. Per ulteriori informazioni sui tag ID3, consulta [Tag ID3](../../../tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/t-psdk-dhls-1.4-id3-metadata-retrieve.md).

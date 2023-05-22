@@ -1,22 +1,21 @@
 ---
-description: Questa tabella illustra informazioni dettagliate sulle notifiche di tipo WARN.
-title: Codici di notifica di AVVISO
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Questa tabella fornisce informazioni dettagliate sulle notifiche di tipo WARN.
+title: Codici di notifica WARNING
+exl-id: de922934-9775-463f-a28f-fc891d7a914b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '341'
 ht-degree: 3%
 
 ---
 
+# Codici di notifica WARNING {#warning-notification-codes}
 
-# CODICI DI NOTIFICA {#warning-notification-codes}
-
-Questa tabella illustra informazioni dettagliate sulle notifiche di tipo WARN.
+Questa tabella fornisce informazioni dettagliate sulle notifiche di tipo WARN.
 
 <!--<a id="section_F25366B6703040E3ADA993C113618F01"></a>-->
 
-La maggior parte degli avvisi contiene metadati rilevanti, ad esempio l’URL della risorsa che non è stato possibile scaricare. Alcune notifiche contengono metadati per specificare se il problema si è verificato nel contenuto video principale, nel contenuto audio alternativo o in un annuncio.
+La maggior parte degli avvisi contiene metadati rilevanti, ad esempio l’URL della risorsa che non è stata scaricata. Alcune notifiche contengono metadati che consentono di specificare se il problema si è verificato nel contenuto video principale, nel contenuto audio alternativo o in un annuncio.
 
 <table frame="all" colsep="1" rowsep="1" id="table_C24772DF203B4DB2ACE6B475698C4C58"> 
  <thead> 
@@ -41,32 +40,32 @@ La maggior parte degli avvisi contiene metadati rilevanti, ad esempio l’URL de
    <td colname="2"><span class="codeph"> AD_ASSET_ FAILED_TO_LOAD</span> </td> 
    <td colname="3"> <p>Nessuno </p> </td> 
    <td colname="4"><span class="codeph"> AD_ASSET, INTERNAL_ERROR</span> </td> 
-   <td colname="5"> <p>Si è verificato un errore durante il tentativo di caricamento di un annuncio creativo. </p> </td> 
+   <td colname="5"> <p>Si è verificato un errore durante il caricamento di un contenuto creativo dell’annuncio. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 201003</span> </td> 
-   <td colname="2"><span class="codeph"> AD_RESOLVER_RETURNED_NO_ADS</span> </td> 
+   <td colname="2"><span class="codeph"> AD_RESOLVER_ RETURNS_NO_ADS</span> </td> 
    <td colname="3"> <p>Nessuno </p> </td> 
-   <td colname="4"><span class="codeph"> INTERNAL_ERROR, AD_ID,DESCRIPTION</span> </td> 
+   <td colname="4"><span class="codeph"> INTERNAL_ERROR, AD_ID,DESCRIZIONE</span> </td> 
    <td colname="5"> <p>Risoluzione dell'annuncio non riuscita a causa di un URL VAST non valido o perché non è stato restituito alcun annuncio dal wrapper VAST. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><b>Manifesti di fondo</b> </td> 
+   <td colname="1"><b>Manifesti di sfondo</b> </td> 
    <td colname="2"> </td>
    <td colname="3"> </td>
    <td colname="4"> </td>
    <td colname="5"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 204000  </span> </td> 
+   <td colname="1"><span class="codeph"> 204000 </span> </td> 
    <td colname="2"><span class="codeph"> BACKGROUND_MANIFEST_ WARNING</span> </td> 
    <td colname="3"> <p>Nessuno </p> </td> 
-   <td colname="4"><span class="codeph"> BACKGROUND_MANIFEST_WARNING_</span> <span class="codeph"> ERRORBACKGROUND_MANIFEST_WARNING_</span> <span class="codeph"> NAMEDESCRIPTION</span> </td> 
-   <td colname="5"> <p> Errore nel download del manifesto in background. Qualsiasi problema nell'aggiornamento del manifesto di sfondo viene inviato come avviso TVSDK e non causa l'arresto della riproduzione. </p> </td> 
+   <td colname="4"><span class="codeph"> BACKGROUND_MANIFEST_ WARNING_ERROR</span> <span class="codeph"> BACKGROUND_MANIFEST_ WARNING_NAME</span> <span class="codeph"> DESCRIZIONE</span> </td> 
+   <td colname="5"> <p> Errore nel download del manifesto in background. Qualsiasi problema nell’aggiornamento del manifesto in background viene inviato come avviso TVSDK e non causa l’interruzione della riproduzione. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 204001  </span> </td> 
-   <td colname="2"><span class="codeph"> AVVERTENZA INVALID_SEEK_</span> </td> 
+   <td colname="1"><span class="codeph"> 204001 </span> </td> 
+   <td colname="2"><span class="codeph"> INVALID_SEEK_ WARNING</span> </td> 
    <td colname="3"> <p>Nessuno </p> </td> 
    <td colname="4"><span class="codeph"> DESCRIZIONE</span> </td> 
    <td colname="5"> <p></p> </td> 
@@ -79,80 +78,80 @@ La maggior parte degli avvisi contiene metadati rilevanti, ad esempio l’URL de
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 210000  </span> </td> 
-   <td colname="2"><span class="codeph"> UNDEFINED_ TIME_RANGES  </span> </td> 
+   <td colname="1"><span class="codeph"> 210000 </span> </td> 
+   <td colname="2"><span class="codeph"> UNDEFINED_ TIME_RANGES </span> </td> 
    <td colname="3"> <p>Nessuno </p> </td> 
    <td colname="4"> Nessuno </td> 
-   <td colname="5"> La modalità di segnalazione degli annunci è definita come intervalli personalizzati, ma non sono definiti intervalli. </td> 
+   <td colname="5"> La modalità di segnalazione degli annunci è definita come intervallo personalizzato, ma non sono definiti intervalli. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 210001  </span> </td> 
-   <td colname="2"><span class="codeph"> INTERVALLI INVALID_TIME_  </span> </td> 
+   <td colname="1"><span class="codeph"> 210001 </span> </td> 
+   <td colname="2"><span class="codeph"> INTERVALLI_TIME_NON VALIDI </span> </td> 
    <td colname="3"> <p>Nessuno </p> </td> 
-   <td colname="4"><span class="codeph"> DESCRIZIONE  </span> </td> 
+   <td colname="4"><span class="codeph"> DESCRIZIONE </span> </td> 
    <td colname="5"> <p> Uno o più intervalli di tempo non sono validi e verranno ignorati o modificati. </p> <p> DESCRIPTION è una stringa contenente la descrizione degli intervalli non validi. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><b>Specifiche per iOS</b> </td> 
+   <td colname="1"><b>Specifico di iOS</b> </td> 
    <td colname="2"> </td> 
    <td colname="3"> </td> 
    <td colname="4"> </td> 
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270000  </span> </td> 
-   <td colname="2"><span class="codeph"> PLAYER_NOT_READY  </span> </td> 
+   <td colname="1"><span class="codeph"> 270000 </span> </td> 
+   <td colname="2"><span class="codeph"> PLAYER_NOT_READY </span> </td> 
    <td colname="3"> <p>Nessuno </p> </td> 
-   <td colname="4"><span class="codeph"> DESCRIZIONE  </span> </td> 
+   <td colname="4"><span class="codeph"> DESCRIZIONE </span> </td> 
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270001  </span> </td> 
-   <td colname="2"><span class="codeph"> AD_NOT_INSERTED  </span> </td> 
+   <td colname="1"><span class="codeph"> 270001 </span> </td> 
+   <td colname="2"><span class="codeph"> AD_NOT_INSERTED </span> </td> 
    <td colname="3"> <p>Nessuno </p> </td> 
    <td colname="4"> <p>Nessuno </p> </td> 
    <td colname="5"> <p>AD non è stato inserito nel flusso. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270002  </span> </td> 
-   <td colname="2"><span class="codeph"> AD_HLS_AUDIOONLY_MISSING  </span> </td> 
-   <td colname="3"><span class="codeph"> AD_NOT_INSERTED  </span> </td> 
+   <td colname="1"><span class="codeph"> 270002 </span> </td> 
+   <td colname="2"><span class="codeph"> AD_HLS_AUDIOONLY_MISSING </span> </td> 
+   <td colname="3"><span class="codeph"> AD_NOT_INSERTED </span> </td> 
    <td colname="4"> <p>Nessuno </p> </td> 
-   <td colname="5"> <p>L'annuncio non contiene flusso solo audio </p> </td> 
+   <td colname="5"> <p>L’annuncio non contiene un flusso di sola audio </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270003  </span> </td> 
-   <td colname="2"><span class="codeph"> AD_HLS_MATCHING_BITRATE_MISSING  </span> </td> 
-   <td colname="3"><span class="codeph"> AD_NOT_INSERTED  </span> </td> 
+   <td colname="1"><span class="codeph"> 270003 </span> </td> 
+   <td colname="2"><span class="codeph"> AD_HLS_MATCHING_BITRATE_MISSING </span> </td> 
+   <td colname="3"><span class="codeph"> AD_NOT_INSERTED </span> </td> 
    <td colname="4"> <p>Nessuno </p> </td> 
-   <td colname="5"> <p>Nessun flusso di annunci corrispondente trovato per il bitrate corrente del contenuto. </p> <p>  </p> </td> 
+   <td colname="5"> <p>Non è stato trovato alcun flusso di annunci corrispondente per il bitrate corrente del contenuto. </p> <p>  </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270005  </span> </td> 
-   <td colname="2"><span class="codeph"> AVASSET_FAILED_TO_CREATE  </span> </td> 
-   <td colname="3"><span class="codeph"> PLAYBACK_ERROR  </span> </td> 
+   <td colname="1"><span class="codeph"> 270005 </span> </td> 
+   <td colname="2"><span class="codeph"> AVASSET_FAILED_TO_CREATE </span> </td> 
+   <td colname="3"><span class="codeph"> PLAYBACK_ERROR </span> </td> 
    <td colname="4"> <p>Nessuno </p> </td> 
-   <td colname="5"> <p>Errore durante la creazione del set AVA. </p> </td> 
+   <td colname="5"> <p>Errore durante la creazione dell’insieme AVA. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270006  </span> </td> 
-   <td colname="2"><span class="codeph"> SITECATALYST_WARNING  </span> </td> 
+   <td colname="1"><span class="codeph"> 270006 </span> </td> 
+   <td colname="2"><span class="codeph"> SITECATALYST_WARNING </span> </td> 
    <td colname="3"> <p>Nessuno </p> </td> 
-   <td colname="4"><span class="codeph"> DESCRIZIONE  </span> </td> 
-   <td colname="5"> <p>Avviso: Consultare la descrizione dell’avviso SiteCatalyst. </p> </td> 
+   <td colname="4"><span class="codeph"> DESCRIZIONE </span> </td> 
+   <td colname="5"> <p>Avvertenza: consulta la descrizione dell’avviso sitecatalyst. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270007  </span> </td> 
-   <td colname="2"><span class="codeph"> NETWORK_ERROR  </span> </td> 
+   <td colname="1"><span class="codeph"> 270007 </span> </td> 
+   <td colname="2"><span class="codeph"> ERRORE_DI_RETE </span> </td> 
    <td colname="3"> <p>Nessuno </p> </td> 
-   <td colname="4"><span class="codeph"> URL  </span> </td> 
-   <td colname="5"> <p>Errore durante il recupero dei dati dalla rete. </p> </td> 
+   <td colname="4"><span class="codeph"> URL </span> </td> 
+   <td colname="5"> <p>Errore nell’ottenere dati dalla rete. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 >[!NOTE]
 >
->AdID e sorgente (URL) possono essere recuperati tramite PTAdAsset nei metadati di notifica con la chiave `AD_ASSET` .
+>AdID e sorgente (URL) possono essere recuperati tramite PTAdAsset nei metadati di notifica con `AD_ASSET` chiave.
 >
->L&#39;attributo [] specifica una chiave opzionale per la notifica.
+>Il [] attribute specifica una chiave facoltativa per la notifica.

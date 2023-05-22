@@ -1,18 +1,17 @@
 ---
-description: La classe di utilità ReplaceTimeRange è un'estensione della classe TimeRange da utilizzare con CustomRangeMetadata.
+description: La classe dell'utilità ReplaceTimeRange è un'estensione della classe TimeRange da utilizzare con CustomRangeMetadata.
 title: ReplaceTimeRange, classe
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 61885c52-d40a-4c72-97a0-51e56da9d449
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '36'
 ht-degree: 0%
 
 ---
 
+# ReplaceTimeRange, classe {#replacetimerange-class}
 
-# Classe ReplaceTimeRange {#replacetimerange-class}
-
-La classe di utilità ReplaceTimeRange è un&#39;estensione della classe TimeRange da utilizzare con CustomRangeMetadata.
+La classe dell&#39;utilità ReplaceTimeRange è un&#39;estensione della classe TimeRange da utilizzare con CustomRangeMetadata.
 
 ```java
 public class ReplaceTimeRange extends TimeRange {
@@ -33,4 +32,3 @@ public class ReplaceTimeRange extends TimeRange {
     }
 }
 ```
-

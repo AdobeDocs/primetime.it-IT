@@ -1,34 +1,34 @@
 ---
-title: Impostazione dell'ambiente e test in Pre-Qual
-description: Impostazione dell'ambiente e test in Pre-Qual
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Configurazione dell’ambiente e test in Pre-Qual
+description: Configurazione dell’ambiente e test in Pre-Qual
+exl-id: f822c0a1-045a-401f-a44f-742ed25bfcdc
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 0%
 
 ---
 
-
-# Impostazione dell&#39;ambiente e test in Pre-Qual{#setting-up-your-environment-and-testing-in-prequal}
+# Configurazione dell’ambiente e test in Pre-Qual{#setting-up-your-environment-and-testing-in-prequal}
 
 >[!NOTE]
 >
->Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente a partire da Adobe. Non è consentito alcun uso non autorizzato.
+>Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente di Adobe. Non è consentito alcun uso non autorizzato.
 
-Lo scopo di questa nota tecnica è aiutare i nostri partner a configurare il loro ambiente e iniziare a testare una nuova build implementata nell’ambiente di pre-qualificazione Adobe.
+Questa nota tecnica ha lo scopo di aiutare i nostri partner a configurare il proprio ambiente e a iniziare a testare una nuova build implementata nell’ambiente di prequalifica Adobe.
 
-Dal momento che ci sono due sapori da costruzione: ***produzione*** e ***staging*** In questo documento ci concentreremo sulla configurazione di produzione con la menzione che tutti i passaggi sono gli stessi per la gestione temporanea, solo gli URL sono diversi.
+Poiché esistono due tipi di build: ***produzione*** e ***staging***, in questo documento ci concentreremo sulla configurazione di produzione con la menzione che tutti i passaggi sono gli stessi per la gestione temporanea, solo gli URL sono diversi.
 
-I passaggi 1 e 2 impostano l&#39;ambiente di prova su una delle macchine di prova, il passaggio 3 è una verifica del flusso di base e i passaggi 4 e 5 presentano alcune linee guida di prova.
+I passaggi 1 e 2 stanno configurando l’ambiente di test su una delle macchine di test, il passaggio 3 è una verifica del flusso di base e i passaggi 4 e 5 presentano alcune linee guida per i test.
 
 >[!IMPORTANT]
 >
-> È molto importante eseguire i passaggi 1 e 2 ogni volta che si desidera modificare l’ambiente di test (passaggio dalla fase di staging al profilo di produzione o viceversa)
+> È molto importante eseguire i passaggi 1 e 2 ogni volta che desideri modificare l’ambiente di test (passando dalla gestione temporanea al profilo di produzione o viceversa)
  
 
-## PASSAGGIO 1. Risoluzione del dominio Pass su un IP {#resolving-pass-domain-to-an-ip}
+## PASSAGGIO 1: Risoluzione del passaggio del dominio a un IP {#resolving-pass-domain-to-an-ip}
 
-* Per trovare un IP del load balancer che può essere utilizzato per lo spoofing, esegui il seguente comando:
+* Per trovare un IP del load balancer che possa essere utilizzato per lo spoofing, eseguire il comando seguente:
 
 * **Su Windows**
 
@@ -56,44 +56,43 @@ I passaggi 1 e 2 impostano l&#39;ambiente di prova su una delle macchine di prov
 
 >[!NOTE]
 >
->Domini esclusi dalla risposta in quanto non sono rilevanti e potrebbero differire da utente a utente.
+>Domini esclusi dalla risposta in quanto non rilevanti e possono differire da utente a utente.
 
 >[!IMPORTANT]
 >
-> Questi indirizzi IP potrebbero cambiare in futuro e potrebbero non essere gli stessi per gli utenti di diverse aree geografiche.
+> Questi indirizzi IP potrebbero cambiare in futuro e potrebbero non essere gli stessi per gli utenti in diverse aree geografiche.
 
 
-## PASSAGGIO 2.  Come spoofing dell’ambiente di pre-qualificazione per la produzione {#spoofing-the-prequalification-environment}
+## PASSAGGIO 2:  Spoofing dell’ambiente di pre-qualificazione per la produzione {#spoofing-the-prequalification-environment}
 
-* Modifica le *c:\\windows\\System32\\drivers\\etc\\hosts* file (in Windows) o */etc/hosts* file (su Macintosh/Linux/Android) e aggiungi quanto segue:
+* Modifica il *c:\\windows\\System32\\drivers\\etc\\hosts* file (in Windows) o */etc/hosts* (su Macintosh/Linux/Android) e aggiungere quanto segue:
 
-* Profilo di produzione spogliato
+* Profilo di produzione spoof
    * 52.13.71.11 http://entitlement.auth.adobe.com, http://sp.auth.adobe.com, http://api.auth.adobe.com
 
-**Spoofing su Android:** Per spoof su Android, è necessario utilizzare un emulatore Android.
+**Spoofing su Android:** Per falsificare su Android, devi utilizzare un emulatore Android.
 
-* Una volta implementato lo spoofing, puoi semplicemente utilizzare gli URL regolari per i profili di produzione e di staging: (ossia `http://sp.auth-staging.adobe.com` e `http://entitlement.auth-staging.adobe.com` e colpirai il *ambiente/produzione pre-qualificazione* della nuova build*.
-
-
-## PASSAGGIO 3.  Verifica di puntare all’ambiente corretto {#Verify-you-are-pointing-to-the-right-environment}
-
-**Questo è un passo facile:**
-
-* carico [ambiente prepari di adesione](https://entitlement-prequal.auth.adobe.com/environment.html) e [diritto](https://entitlement.auth.adobe.com/environment.html). Dovrebbero dare la stessa risposta.
+* Una volta attivato lo spoofing, puoi semplicemente utilizzare gli URL regolari per i profili di produzione e staging: `http://sp.auth-staging.adobe.com` e `http://entitlement.auth-staging.adobe.com` e si raggiungerà il *ambiente/produzione di pre-qualificazione* della nuova build*.
 
 
-## PASSAGGIO 4.  Eseguire un semplice flusso di autenticazione/autorizzazione utilizzando il sito web del programmatore {#peform-a-simple-auth-flow}
+## PASSAGGIO 3:  Verifica che tu stia puntando all’ambiente giusto {#Verify-you-are-pointing-to-the-right-environment}
 
-* Questo passaggio richiede l&#39;indirizzo del sito web del programmatore e alcune credenziali MVPD valide (un utente autenticato e autorizzato).
+**Questo è un passaggio semplice:**
 
-## PASSAGGIO 5.  Eseguire test di scenario utilizzando i siti web del programmatore {#perform-scenario-testing-using-programmer-website}
-
-* Dopo aver completato la configurazione dell&#39;ambiente e aver verificato il funzionamento del flusso di autorizzazione dell&#39;autenticazione di base, puoi procedere con il test di scenari più complessi.
+* carica [diritto preuguale ambiente](https://entitlement-prequal.auth.adobe.com/environment.html) e [adesione](https://entitlement.auth.adobe.com/environment.html). Devono restituire la stessa risposta.
 
 
-## PASSAGGIO 6.  Esegui test utilizzando il sito di test API {#perform-testing-using-api-testing-site}
+## PASSAGGIO 4:  Eseguire un semplice flusso di autenticazione/autorizzazione utilizzando il sito Web del programmatore {#peform-a-simple-auth-flow}
 
-* Per approfondire la verifica dell’autenticazione di Adobe Primetime, ti consigliamo di utilizzare il [Sito di test API](http://entitlement-prequal.auth.adobe.com/apitest/api.html).
+* Questo passaggio richiede l’indirizzo del sito web del programmatore e alcune credenziali MVPD valide (un utente autenticato e autorizzato).
 
-Per ulteriori dettagli sul sito di test API, visita [Come testare i flussi di autenticazione e autorizzazione utilizzando il sito di test API di Adobe](/help/authentication/test-authn-authz-flows-using-adobes-api-test-site.md).
+## PASSAGGIO 5:  Eseguire il test dello scenario utilizzando i siti Web del programmatore {#perform-scenario-testing-using-programmer-website}
 
+* Dopo aver completato la configurazione dell’ambiente e aver verificato il funzionamento del flusso di autenticazione-autorizzazione di base, puoi procedere con il test di scenari più complessi.
+
+
+## PASSAGGIO 6:  Eseguire test utilizzando il sito di test API {#perform-testing-using-api-testing-site}
+
+* Per una verifica più approfondita dell’autenticazione di Adobe Primetime, ti consigliamo di utilizzare [Sito di test API](http://entitlement-prequal.auth.adobe.com/apitest/api.html).
+
+Per ulteriori dettagli sul sito di test API, consulta [Verificare i flussi di autenticazione e autorizzazione utilizzando il sito di test API di Adobe](/help/authentication/test-authn-authz-flows-using-adobes-api-test-site.md).

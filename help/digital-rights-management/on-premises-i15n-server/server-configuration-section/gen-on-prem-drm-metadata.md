@@ -1,39 +1,38 @@
 ---
-title: Generare i metadati DRM dei locali attivi
-description: Generare i metadati DRM dei locali attivi
+title: Generare i metadati DRM locali
+description: Generare i metadati DRM locali
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: b42e3491-081b-45bf-bd00-8fb769a97446
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '172'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Generare i metadati DRM locali{#generate-the-on-premises-drm-metadata}
 
-# Generare i metadati DRM dei locali in cui si trovano{#generate-the-on-premises-drm-metadata}
+A [!DNL CreateMetadata.jar] l&#39;utilità è inclusa nel [!DNL create_metadata] cartella. Lo scopo di questa utility è quello di creare un Metadati DRM On Premises che avvierà il client nell&#39;esecuzione del processo di individualizzazione sul server di individualizzazione On Premises specificato.
 
-Un&#39;utilità [!DNL CreateMetadata.jar] è inclusa nella cartella [!DNL create_metadata]. Lo scopo di questa utility è quello di creare un metadati DRM dei locali attivi che avvierà il client a eseguire il processo di individualizzazione rispetto al server di Individualizzazione dei locali specificato.
-
-1. Aggiorna l’implementazione di riferimento DRM di Primetime - Strumenti della riga di comando con i seguenti file:
+1. Aggiornare Primetime DRM Reference Implementation - Command Line Tools con i file seguenti:
 
    * [!DNL CreateMetadata.jar]
    * [!DNL commons-cli-1.2.jar]
    * [!DNL createMetadata.properties]
 
-      I due file JAR possono risiedere nella cartella [!DNL Command Line Tools/libs] . Il file [!DNL createMetadata.properties] può trovarsi accanto al file [!DNL flashaccesstools.properties].
+      I due file JAR possono risiedere nel [!DNL Command Line Tools/libs] cartella. Il [!DNL createMetadata.properties] il file può trovarsi accanto al file [!DNL flashaccesstools.properties] file.
 
 <!--<a id="example_2116349CA33642CD9293EAD94A532ED8"></a>-->
 
-Incluso è uno script [!DNL examplecreate.sh] che illustra un esempio di creazione di metadati. Prima di generare i metadati, assicurati di configurare l’URL del server licenze e l’URL del server di Individualizzazione sia nei file di script che nelle proprietà.
+Incluso è un [!DNL examplecreate.sh] script che illustra un esempio di creazione di metadati. Prima di tentare di generare i metadati, è necessario configurare l&#39;URL del server licenze e l&#39;URL del server di personalizzazione sia nel file di script che in quello delle proprietà.
 
 Gli input per l&#39;utilità sono i seguenti:
 
-* `createMetadata.properties` - File di proprietà contenente un criterio predefinito, posizioni del certificato e password, ecc.
-* `indivCert` - File PKCS12 contenente il certificato di trasporto dell&#39;individuazione
-* `indivURL` - URL del server di Individualization On Premises
+* `createMetadata.properties` : file di proprietà contenente un criterio predefinito, posizioni e password dei certificati, ecc.
+* `indivCert` - File PKCS12 contenente il certificato di trasporto per l&#39;individuazione
+* `indivURL` - URL del server di personalizzazione locale
 
-Il file di output è un file di metadati DRM On Premises che verrà utilizzato dal client DRM. Ad esempio:
+Il file di output è un file di metadati DRM locale che verrà utilizzato dal client DRM. Ad esempio:
 
 ```
 java -jar libs/CreateMetadata.jar -c createMetadata.properties -indivCert i15n_transport.cer

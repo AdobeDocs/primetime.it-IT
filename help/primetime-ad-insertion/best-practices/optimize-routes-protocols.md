@@ -1,15 +1,14 @@
 ---
-title: Ottimizzazione di route e protocolli
+title: Ottimizzare route e protocolli
 description: Ottimizzazione di route e protocolli
-translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+exl-id: 837e4582-5813-48fd-a1a6-3143a06edacb
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 0%
 
 ---
 
+# Ottimizzare route e protocolli {#optimize-routes-and-protocols}
 
-# Ottimizzazione di route e protocolli {#optimize-routes-and-protocols}
-
-Primetime  Ad Insertion fornisce una riscrittura URL basata su regola per ottimizzare i protocolli client e la distribuzione CDN.  Ad esempio, è possibile creare regole per imporre a Primetime  Ad Insertion di recuperare risorse dalla CDN solo in base al protocollo HTTP, anche se il protocollo a Primetime  Ad Insertion è sotto HTTPS.  È possibile creare regole aggiuntive per la mappatura degli URL di frammenti di video annuncio alla CDN del contenuto, in modo da garantire una singola consegna CDN.
+Primetime Ad Insertion fornisce la riscrittura di URL basati su regole per ottimizzare i protocolli client e la distribuzione CDN.  Ad esempio, è possibile creare regole per forzare Primetime Ad Insertion a recuperare risorse dalla rete CDN solo con il protocollo HTTP, anche se il protocollo per Primetime Ad Insertion è in HTTPS.  È possibile creare regole aggiuntive per mappare gli URL di frammenti e video sulla rete CDN dei contenuti, in modo da garantire la distribuzione di una singola rete CDN.

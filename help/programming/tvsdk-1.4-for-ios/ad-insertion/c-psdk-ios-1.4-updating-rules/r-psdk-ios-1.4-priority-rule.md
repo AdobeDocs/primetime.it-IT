@@ -1,21 +1,20 @@
 ---
-description: La regola di priorità definisce l'ordine di priorità delle creatività degli annunci che verranno selezionate per la riproduzione da una risposta VAST/VMAP.
+description: La regola di priorità definisce l’ordine di priorità delle creatività dell’annuncio che verranno selezionate per la riproduzione da una risposta VAST/VMAP.
 keywords: regola di priorità;regole di selezione creativa
 title: Regole di priorità
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 927815fc-1910-43cc-9e83-e57e9659dd23
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '169'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
 # Regole di priorità{#priority-rules}
 
-La regola di priorità definisce l&#39;ordine di priorità delle creatività degli annunci che verranno selezionate per la riproduzione da una risposta VAST/VMAP.
+La regola di priorità definisce l’ordine di priorità delle creatività dell’annuncio che verranno selezionate per la riproduzione da una risposta VAST/VMAP.
 
-## Una regola di priorità ha i seguenti attributi e valori possibili:
+## Una regola Priority dispone dei seguenti attributi e valori possibili:
 
 <table id="table_ljp_tgx_hz">  
  <thead> 
@@ -31,39 +30,39 @@ La regola di priorità definisce l&#39;ordine di priorità delle creatività deg
    <td><span class="codeph"> priorità</span></td> 
    <td><span class="codeph"> Array</span></td> 
    <td></td> 
-   <td> Matrice di tipi di mime in minuscolo che definiscono la priorità in cui devono essere selezionate le creazioni di origine per la riproduzione.</td> 
+   <td> Array di tipi mime minuscoli che definiscono la priorità con cui selezionare le creatività sorgente da riprodurre.</td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> item</span></td> 
+   <td><span class="codeph"> elemento</span></td> 
    <td><span class="codeph"> Stringa</span></td> 
    <td><span class="codeph"> host</span></td> 
-   <td>Attualmente è supportato solo <span class="codeph"> host</span>. Questo attributo deve essere presente quando sono definiti gli attributi <span class="codeph"> corrisponde a</span> e <span class="codeph"> valori</span> .</td> 
+   <td>Attualmente solo <span class="codeph"> host</span> è supportato. Questo attributo deve essere presente quando <span class="codeph"> corrisponde a</span> e <span class="codeph"> valori</span> attributi definiti.</td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> matches</span></td> 
+   <td><span class="codeph"> corrisponde a</span></td> 
    <td><span class="codeph"> Stringa</span></td> 
    <td><span class="codeph"> multiplo</span></td> 
    <td>Valori possibili:
     <ul id="ul_tnf_2hx_hz"> 
-     <li><span class="codeph"> eq</span>  - è uguale a</li> 
-     <li><span class="codeph"> ne</span>  - not equals</li> 
-     <li><span class="codeph"> co</span>  - contiene</li> 
-     <li><span class="codeph"> nc</span>  - non contiene</li> 
-     <li><span class="codeph"> sw</span>  - inizia con</li> 
-     <li><span class="codeph"> </span>  - termina con</li> 
+     <li><span class="codeph"> eq</span> - è uguale a</li> 
+     <li><span class="codeph"> ne</span> - non è uguale a</li> 
+     <li><span class="codeph"> co</span> - contiene</li> 
+     <li><span class="codeph"> nc</span> - non contiene</li> 
+     <li><span class="codeph"> sw</span> - inizia con</li> 
+     <li><span class="codeph"> ew</span> - termina con</li> 
     </ul></td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> type</span></td> 
+   <td><span class="codeph"> tipo</span></td> 
    <td><span class="codeph"> Stringa</span></td> 
    <td><span class="codeph"> priorità</span></td> 
-   <td>Il valore deve sempre essere <span class="codeph"> priority</span></td> 
+   <td>Il valore deve essere sempre <span class="codeph"> priorità</span></td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> values</span></td> 
+   <td><span class="codeph"> valori</span></td> 
    <td><span class="codeph"> Array</span></td> 
    <td></td> 
-   <td> <p>TVSDK utilizzerà l'attributo <span class="codeph"> corrisponde</span> sull' <span class="codeph"> elemento</span> del creativo sorgente e corrisponde ai valori definiti in questo array</p> </td> 
+   <td> <p>TVSDK utilizzerà <span class="codeph"> corrisponde a</span> attributo su <span class="codeph"> elemento</span> della creatività sorgente e confrontarla con i valori definiti in questo array</p> </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> flusso</span></td> 
@@ -104,4 +103,3 @@ La regola di priorità definisce l&#39;ordine di priorità delle creatività deg
     }
 }
 ```
-

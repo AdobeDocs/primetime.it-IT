@@ -1,21 +1,21 @@
 ---
-title: Controlla il flusso di autenticazione in base all'app Web a seconda schermata
-description: Controlla il flusso di autenticazione in base all'app Web a seconda schermata
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Controlla il flusso di autenticazione tramite l’app web Second Screen
+description: Controlla il flusso di autenticazione tramite l’app web Second Screen
+exl-id: 5807f372-a520-4069-b837-67ae41b7f79b
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%
 
 ---
 
-
-# Controlla il flusso di autenticazione in base all&#39;app Web a seconda schermata {#check-authentication-flow-by-second-screen-web-app}
+# Controlla il flusso di autenticazione tramite l’app web Second Screen {#check-authentication-flow-by-second-screen-web-app}
 
 >[!NOTE]
 >
->Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente a partire da Adobe. Non è consentito alcun uso non autorizzato.
+>Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente di Adobe. Non è consentito alcun uso non autorizzato.
 
-## Endpoint API REST {#clientless-endpoints}
+## Endpoint REST API {#clientless-endpoints}
 
 &lt;reggie_fqdn>:
 
@@ -31,22 +31,22 @@ ht-degree: 0%
 
 ## Descrizione {#description}
 
-Questa API deve essere utilizzata dall&#39;app Web di accesso alla seconda schermata per confermare che l&#39;autenticazione Adobe Primetime ha riconosciuto l&#39;accesso corretto da MVPD. È consigliabile richiamare questa API prima di mostrare all’utente finale un messaggio di successo che gli istruisca di passare alla console dei dispositivi per continuare i flussi di lavoro.
+Questa API deve essere utilizzata dalla seconda app web di accesso schermata per confermare che l’autenticazione Adobe Primetime ha confermato il corretto accesso da MVPD. È consigliabile chiamare questa API prima di mostrare un messaggio di successo all’utente finale che gli indica di passare alla console del dispositivo per continuare con i flussi di lavoro.
 
 
-| Endpoint | Chiamato  </br>Da | Ingresso   </br>Parametri | HTTP  </br>Metodo | Risposta | HTTP  </br>Risposta |
+| Endpoint | Chiamato  </br>Da | Input   </br>Parametri | HTTP  </br>Metodo | Risposta | HTTP  </br>Risposta |
 | --- | --- | --- | --- | --- | --- |
-| SP_FQDN/api/v1/checkauthn/{codice di registrazione} | App Web di accesso | 1. codice di registrazione  </br>    (componente Percorso)</br>2.  richiedente  </br>    (Obbligatorio) | GET | XML o JSON contenente i dettagli dell’errore in caso di errore. | 200 - Successo   </br>403 - Vietato |
+| SP_FQDN/api/v1/checkauthn/{codice di registrazione} | Accedi all’app web | 1. codice di registrazione  </br>    (componente Percorso)</br>2.  richiedente  </br>    (Obbligatorio) | GET | XML o JSON contenente i dettagli dell’errore in caso di esito negativo. | 200 - Operazione completata   </br>403 - Non consentito |
 
 </br>
 
 | Parametro di input | Descrizione |
 | ----------------- | --------------------------------------------------------------------------------------------- |
-| codice di registrazione | Valore del codice di registrazione fornito dall&#39;utente all&#39;inizio del flusso di autenticazione. |
-| richiedente | Il requestorId del programmatore per il quale l&#39;operazione è valida. |
+| codice di registrazione | Il valore del codice di registrazione fornito dall’utente all’inizio del flusso di autenticazione. |
+| richiedente | ID richiedente del programmatore per il quale è valida questa operazione. |
 
 
-### Risposta del campione (in caso di errore) {#response}
+### Risposta di esempio (in caso di errore) {#response}
 
 ```JSON
     {

@@ -1,7 +1,6 @@
 ---
-description: Puoi ascoltare le notifiche e aggiungere le tue notifiche personalizzate alla cronologia delle notifiche.
-title: Imposta il sistema di notifica
-translation-type: tm+mt
+description: Puoi ascoltare le notifiche e aggiungere le tue notifiche alla cronologia delle notifiche.
+title: Configurare il sistema di notifica
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '111'
@@ -10,23 +9,23 @@ ht-degree: 0%
 ---
 
 
-# Imposta il sistema di notifica{#set-up-your-notification-system}
+# Configurare il sistema di notifica{#set-up-your-notification-system}
 
-Puoi ascoltare le notifiche e aggiungere le tue notifiche personalizzate alla cronologia delle notifiche.
+Puoi ascoltare le notifiche e aggiungere le tue notifiche alla cronologia delle notifiche.
 
-Il nucleo del sistema di notifica di Primetime Player è la classe `Notification` che rappresenta una notifica autonoma.
+Il nucleo del sistema di notifica del lettore Primetime è `Notification` che rappresenta una notifica autonoma.
 
-La classe `NotificationHistory` fornisce un meccanismo per l&#39;accumulo di notifiche. Memorizza un registro di oggetti di notifica (NotificationHistoryItem) che rappresenta un insieme di Notifiche.
+Il `NotificationHistory` La classe fornisce un meccanismo per l&#39;accumulo di notifiche. Memorizza un registro di oggetti di notifica (NotificationHistoryItem) che rappresenta un insieme di notifiche.
 
 Per ricevere le notifiche:
 
-* Ascoltare notifiche
-* Aggiungi notifiche alla cronologia delle notifiche
+* Ascolta le notifiche
+* Aggiungere notifiche alla cronologia delle notifiche
 
-1. Ascoltare le modifiche allo stato.
-1. Implementa il callback `MediaPlayer.PlaybackEventListener.onStateChanged` .
+1. Ascolta le modifiche di stato.
+1. Implementare `MediaPlayer.PlaybackEventListener.onStateChanged` callback.
 1. TVSDK passa due parametri al callback:
 
    * Il nuovo stato ( `MediaPlayer.PlayerState`)
-   * Un oggetto `MediaPlayerNotification`
+   * A `MediaPlayerNotification` oggetto
 

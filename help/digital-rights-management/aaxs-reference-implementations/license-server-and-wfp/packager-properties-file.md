@@ -1,16 +1,15 @@
 ---
-title: File delle proprietà del pacchetto
-description: File delle proprietà del pacchetto
+title: File delle proprietà del Packager
+description: File delle proprietà del Packager
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 7d78576b-fd77-460d-92d9-c2e69e37006e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 0%
 
 ---
 
+# File delle proprietà del Packager {#packager-properties-file}
 
-# File delle proprietà del pacchetto {#packager-properties-file}
-
-Utilizza il file [!DNL flashaccess-refimpl-packager.properties] per configurare il componente Pacchetto cartelle controllate dell&#39;implementazione di riferimento. Come minimo, assicurati di impostare l’URL del server di licenza, il certificato del server di licenza, le credenziali del packager e le opzioni di protezione chiave. Questo file contiene anche il percorso di ogni cartella controllata (packager.watchfolder.source. `n`). Eventuali modifiche apportate ai valori in questo file di proprietà avranno effetto al successivo avvio del gestore di cartelle controllate (non è necessario riavviare il server). Tuttavia, se si verifica un errore di configurazione nel packager, il thread del packager di cartelle controllate verrà chiuso e il server dovrà essere riavviato per riavviare il thread del packager.
+Utilizza il [!DNL flashaccess-refimpl-packager.properties] per configurare il componente Packager delle cartelle controllate dell’implementazione di riferimento. Impostare almeno l&#39;URL del server licenze, il certificato del server licenze, le credenziali del packager e le opzioni di protezione delle chiavi. Questo file contiene anche il percorso di ogni cartella controllata (packager.watchfolder.source. `n`). Eventuali modifiche apportate ai valori di questo file di proprietà avranno effetto alla successiva esecuzione del programma di creazione pacchetti cartelle controllato (non è necessario riavviare il server). Tuttavia, se si verifica un errore di configurazione nel packager, il thread del packager della cartella controllata verrà chiuso e il server dovrà essere riavviato per riavviare il thread del packager.

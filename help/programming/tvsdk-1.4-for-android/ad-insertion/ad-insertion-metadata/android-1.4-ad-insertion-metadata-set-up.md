@@ -1,32 +1,31 @@
 ---
-description: Utilizza la classe helper AuditudeSettings, che estende la classe MetadataNode, per configurare i metadati di Adobe Primetime e delle decisioni.
+description: Utilizza la classe helper AuditudeSettings, che estende la classe MetadataNode, per impostare i metadati di Adobe Primetime ad decisioning.
 title: Impostare i metadati di inserimento annunci
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 5afcdd51-a611-4ea9-88e1-5aa15b8a504a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 0%
 
 ---
 
-
 # Impostare i metadati di inserimento annunci {#set-up-ad-insertion-metadata}
 
-Utilizza la classe helper AuditudeSettings, che estende la classe MetadataNode, per configurare i metadati di Adobe Primetime e delle decisioni.
+Utilizza la classe helper AuditudeSettings, che estende la classe MetadataNode, per impostare i metadati di Adobe Primetime ad decisioning.
 
 >[!TIP]
 >
->Adobe Primetime ad decision era noto in precedenza come Auditude.
+>Adobe Primetime ad decisioning era precedentemente noto come Auditude.
 
-I metadati della pubblicità si trovano nella proprietà `MediaResource.Metadata` . Quando si avvia la riproduzione di un nuovo video, l&#39;applicazione è responsabile dell&#39;impostazione dei metadati pubblicitari corretti.
+I metadati della pubblicità si trovano in `MediaResource.Metadata` proprietà. All’avvio della riproduzione di un nuovo video, l’applicazione è responsabile dell’impostazione dei metadati pubblicitari corretti.
 
-1. Crea l&#39;istanza `AuditudeSettings` .
+1. Creare `AuditudeSettings` dell&#39;istanza.
 
    ```java
    AuditudeSettings auditudeSettings = new AuditudeSettings();
    ```
 
-1. Imposta i parametri di targeting facoltativi `mediaID`, `zoneID`, `domain` di Adobe Primetime e .
+1. Impostare Adobe Primetime ad decisioning `mediaID`, `zoneID`, `domain`e i parametri di targeting facoltativi.
 
    ```java
    auditudeSettings.setZoneId("yourZoneId"); 
@@ -44,7 +43,7 @@ I metadati della pubblicità si trovano nella proprietà `MediaResource.Metadata
 
    >[!TIP]
    >
-   >L&#39;ID del file multimediale viene utilizzato da TVSDK come stringa, che viene convertita in un valore md5 e viene utilizzato per il valore `u` nella richiesta URL Primetime ad decision ioning. Ad esempio:
+   >L&#39;ID del file multimediale viene utilizzato da TVSDK come stringa, che viene convertito in un valore md5 e viene utilizzato per `u` valore nella richiesta URL di Primetime ad decisioning. Ad esempio:
    >
    >
    ```
@@ -57,25 +56,25 @@ I metadati della pubblicità si trovano nella proprietà `MediaResource.Metadata
    >   &g=1000002
    >```
 
-1. Crea un&#39;istanza `MediaResource` utilizzando l&#39;URL del flusso multimediale e i metadati pubblicitari creati in precedenza.
+1. Creare un `MediaResource` utilizzando l’URL del flusso multimediale e i metadati pubblicitari creati in precedenza.
 
    ```java
    MediaResource mediaResource = new MediaResource( 
    "https://example.com/media/test_media.m3u8", MediaResource.Type.HLS, Metadata);
    ```
 
-1. Caricare l&#39;oggetto `MediaResource` attraverso il metodo `MediaPlayer.replaceCurrentResource`.
+1. Carica `MediaResource` oggetto tramite `MediaPlayer.replaceCurrentResource` metodo.
 
    Il `MediaPlayer` inizia a caricare ed elaborare il manifesto del flusso multimediale.
 
-1. Quando il `MediaPlayer` passa allo stato `INITIALIZED`, ottieni le caratteristiche del flusso multimediale sotto forma di un&#39;istanza `MediaPlayerItem` tramite il metodo `MediaPlayer.CurrentItem` .
-1. (Facoltativo) Esegui una query sull&#39;istanza `MediaPlayerItem` per verificare se il flusso è attivo, indipendentemente dal fatto che abbia tracce audio alternative o se il flusso sia protetto.
+1. Quando `MediaPlayer` transizioni a `INITIALIZED` stato, ottieni le caratteristiche del flusso multimediale sotto forma di `MediaPlayerItem` tramite il `MediaPlayer.CurrentItem` metodo.
+1. (Facoltativo) Esegui una query su `MediaPlayerItem` per vedere se il flusso è in diretta, indipendentemente dal fatto che abbia tracce audio alternative o che sia protetto.
 
-   Queste informazioni sono utili per preparare l’interfaccia utente per la riproduzione. Ad esempio, se sai che ci sono due tracce audio, puoi includere un controllo dell’interfaccia utente che passa da una traccia all’altra.
+   Queste informazioni possono essere utili per preparare l’interfaccia utente per la riproduzione. Ad esempio, se sai che esistono due tracce audio, puoi includere un controllo dell’interfaccia utente che attiva o disattiva queste tracce.
 
-1. Chiama `MediaPlayer.prepareToPlay` per avviare il flusso di lavoro pubblicitario.
+1. Chiamata `MediaPlayer.prepareToPlay` per avviare il flusso di lavoro di advertising.
 
-   Una volta risolti e inseriti gli annunci nella timeline, lo stato `MediaPlayer` passa allo stato `PREPARED` .
-1. Richiama `MediaPlayer.play` per avviare la riproduzione.
+   Dopo aver risolto gli annunci e averli inseriti nella timeline, il `MediaPlayer` transizioni a `PREPARED` stato.
+1. Chiamata `MediaPlayer.play` per avviare la riproduzione.
 
 TVSDK ora include gli annunci durante la riproduzione dei contenuti multimediali.

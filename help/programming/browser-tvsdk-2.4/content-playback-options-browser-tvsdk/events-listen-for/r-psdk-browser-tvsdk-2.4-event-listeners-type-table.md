@@ -1,24 +1,23 @@
 ---
-description: Quando registri i listener di eventi con il browser TVSDK, specifica un tipo di evento da ascoltare e il nome del callback. Quando si verifica un evento, il browser TVSDK chiama il callback e gli trasmette un oggetto evento del tipo appropriato.
+description: Quando si registrano i listener di eventi con il TVSDK del browser, è necessario specificare un tipo di evento per cui eseguire l'ascolto e il nome del callback. Quando si verifica un evento, il TVSDK del browser chiama il callback e gli trasmette un oggetto evento del tipo appropriato.
 title: Tipi di eventi e classi per i callback
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 94c571ea-6dd2-4c15-89db-7015d89c9208
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%
 
 ---
 
-
 # Tipi di eventi e classi per i callback{#event-types-and-classes-for-callbacks}
 
-Quando registri i listener di eventi con il browser TVSDK, specifica un tipo di evento da ascoltare e il nome del callback. Quando si verifica un evento, il browser TVSDK chiama il callback e gli trasmette un oggetto evento del tipo appropriato.
+Quando si registrano i listener di eventi con il TVSDK del browser, è necessario specificare un tipo di evento per cui eseguire l&#39;ascolto e il nome del callback. Quando si verifica un evento, il TVSDK del browser chiama il callback e gli trasmette un oggetto evento del tipo appropriato.
 
 <table frame="all" colsep="1" rowsep="1" id="table_FE58AD65AF3B4483816C00D7EAD2FB4F"> 
  <thead> 
   <tr rowsep="1"> 
    <th colname="2" class="entry"> Quando ascolti questo nome evento (AdobePSDK.EventType) </th> 
-   <th class="entry">frasi/browser-tvsdk-name passa un evento al callback di questo tipo di oggetto (<span class="codeph"> AdobePSDK.Event</span>) </th> 
+   <th class="entry">frases/browser-tvsdk-name trasmette un evento al callback di questo tipo di oggetto (<span class="codeph"> AdobePSDK.Event</span>) </th> 
   </tr> 
  </thead>
  <tbody> 
@@ -47,7 +46,7 @@ Quando registri i listener di eventi con il browser TVSDK, specifica un tipo di 
   <tr rowsep="1"> 
    <td colname="2"> 
     <ul id="ul_eny_tc4_2y"> 
-     <li id="li_13F95E4BF905425CA5A95ECC138CC078"><span class="codeph"> BUFFERING_BEGIN</span> </li> 
+     <li id="li_13F95E4BF905425CA5A95ECC138CC078"><span class="codeph"> INIZIO_BUFFERING</span> </li> 
      <li id="li_BA6F4E38E2F440FAAA4E70DF906A3350"><span class="codeph"> BUFFERING_END</span> </li> 
     </ul> </td> 
    <td><span class="codeph"> BufferEvent</span> </td> 
@@ -64,30 +63,30 @@ Quando registri i listener di eventi con il browser TVSDK, specifica un tipo di 
    <td colname="2"> 
     <ul id="ul_kwy_cd4_2y"> 
      <li id="li_D5455D287EA5472D95A45AD1A8835D61"><span class="codeph"> AUDIO_AGGIORNATO</span> </li> 
-     <li id="li_AFF5B14338AB4AA8B4DF3963F2FDD4CF"><span class="codeph"> CAPTIONS_AGGIORNATO</span> </li> 
-     <li id="li_F7C9B933C6A44E80B57EB5274640A17B"><span class="codeph"> MASTER_AGGIORNATO</span> </li> 
-     <li id="li_C9FDF852BF4F4B638A8A1CAAFC27A23F"><span class="codeph"> ITEM_CREATED</span> </li> 
-     <li id="li_85E13B35A6DB44A4BA0F93EA52B9D08A"><span class="codeph"> ITEM_AGGIORNATO</span> </li> 
+     <li id="li_AFF5B14338AB4AA8B4DF3963F2FDD4CF"><span class="codeph"> DIDASCALIE_AGGIORNATE</span> </li> 
+     <li id="li_F7C9B933C6A44E80B57EB5274640A17B"><span class="codeph"> MASTER_UPDATED</span> </li> 
+     <li id="li_C9FDF852BF4F4B638A8A1CAAFC27A23F"><span class="codeph"> ELEMENTO_CREATO</span> </li> 
+     <li id="li_85E13B35A6DB44A4BA0F93EA52B9D08A"><span class="codeph"> ELEMENTO_AGGIORNATO</span> </li> 
     </ul> </td> 
    <td><span class="codeph"> MediaPlayerItemEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> STATUS_CHANGED</span> </td> 
+   <td colname="2"><span class="codeph"> STATO_MODIFICATO</span> </td> 
    <td><span class="codeph"> StatusChangeEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> OPERATION_FAILED</span> </td> 
+   <td colname="2"><span class="codeph"> OPERAZIONE_NON RIUSCITA</span> </td> 
    <td><span class="codeph"> NotificationEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> RESERVATION_REACHED</span> </td> 
+   <td colname="2"><span class="codeph"> PRENOTAZIONE_RAGGIUNTA</span> </td> 
    <td><span class="codeph"> ReservationEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> 
     <ul id="ul_jfl_224_2y"> 
      <li id="li_02B430978FA14A41A000DF8F9A345793"><span class="codeph"> RATE_SELECTED</span> </li> 
-     <li id="li_1EDC0664B59E49448040DF312C928FAA"><span class="codeph"> RATE_PLAYING</span> </li> 
+     <li id="li_1EDC0664B59E49448040DF312C928FAA"><span class="codeph"> RIPRODUCI_ZIONE</span> </li> 
     </ul> </td> 
    <td><span class="codeph"> PlaybackRateEvent</span> </td> 
   </tr> 
@@ -109,11 +108,11 @@ Quando registri i listener di eventi con il browser TVSDK, specifica un tipo di 
    <td><span class="codeph"> SeekEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> SIZE_DISPONIBILE</span> </td> 
+   <td colname="2"><span class="codeph"> SIZE_AVAILABLE</span> </td> 
    <td><span class="codeph"> SizeAvailableEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> TIME_CHANGED</span> </td> 
+   <td colname="2"><span class="codeph"> ORA_MODIFICATA</span> </td> 
    <td><span class="codeph"> TimeChangeEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -121,13 +120,12 @@ Quando registri i listener di eventi con il browser TVSDK, specifica un tipo di 
    <td><span class="codeph"> TimedMetadataEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> TIMELINE_AGGIORNATO</span> </td> 
+   <td colname="2"><span class="codeph"> TIMELINE_UPDATED</span> </td> 
    <td><span class="codeph"> TimelineEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> PLAYBACK_RANGE_AGGIORNATO</span> </td> 
+   <td colname="2"><span class="codeph"> PLAYBACK_RANGE_UPDATED</span> </td> 
    <td></td> 
   </tr> 
  </tbody> 
 </table>
-

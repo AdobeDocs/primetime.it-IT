@@ -1,23 +1,22 @@
 ---
-description: Il browser TVSDK fornisce all’app video le informazioni necessarie per rispondere al clic di un utente su un annuncio cliccabile.
+description: Il browser TVSDK fornisce alla tua app video le informazioni necessarie per rispondere al clic di un utente su un annuncio cliccabile.
 title: Annunci cliccabili
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 5fd8b38d-bde7-4d80-bfb0-3390c8f2665c
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '184'
 ht-degree: 0%
 
 ---
 
-
 # Panoramica {#clickable-ads-overview}
 
-Il browser TVSDK fornisce all’app video le informazioni necessarie per rispondere al clic di un utente su un annuncio cliccabile.
+Il browser TVSDK fornisce alla tua app video le informazioni necessarie per rispondere al clic di un utente su un annuncio cliccabile.
 
-Quando un utente fa clic su un annuncio selezionabile, una risposta tipica da un&#39;app video consiste nell&#39;aprire una nuova finestra del browser e passare all&#39;URL associato all&#39;annuncio. Per facilitare questa fase, il browser TVSDK attiva e invia notifiche che la tua app può utilizzare per gestire il processo di click-through.
+Quando un utente fa clic su un annuncio cliccabile, una risposta tipica da un’app video consiste nell’aprire una nuova finestra del browser e passare all’URL associato all’annuncio. Per facilitare questa fase, il TVSDK del browser attiva notifiche e notifiche che l’app può utilizzare per gestire il processo di click-through.
 
-Nell’app, puoi fornire all’utente un controllo su cui fare clic (ad esempio, un pulsante) durante la riproduzione dell’annuncio su cui è possibile fare clic. È necessario creare gestori per gli eventi attivati dal browser TVSDK associati all’annuncio (ad esempio, inizio dell’annuncio, clic dell’annuncio e completamento dell’annuncio). Infine, devi implementare i comportamenti specifici che la tua app seguirà al clic dell’annuncio (ad esempio, se mettere in pausa o meno l’annuncio, visualizzare l’URL di click-through e così via).
+Nell’app, puoi fornire all’utente un controllo su cui fare clic (ad esempio un pulsante) durante la riproduzione dell’annuncio cliccabile. È necessario creare gestori per gli eventi generati dal TVSDK del browser associati all’annuncio (ad esempio, avvio, clic e completamento dell’annuncio). Infine, devi implementare i comportamenti specifici che l’app seguirà al clic dell’annuncio di un utente (ad esempio, se mettere in pausa o meno l’annuncio, visualizzare l’URL di click-through e così via).
 
 >[!NOTE]
 >
->Il lettore di riferimento incluso nel browser TVSDK include una possibile soluzione di lavoro per l&#39;elaborazione degli annunci click-through.
+>Il lettore di riferimento incluso in Browser TVSDK include una possibile soluzione di lavoro per l’elaborazione di annunci click-through.

@@ -1,14 +1,13 @@
 ---
 description: Queste classi forniscono l'interfaccia tra TVSDK e Adobe Video Analytics.
 title: Classi di Video Analytics
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 2517eead-b9dc-4ee0-b0a8-af4b6dd47d5e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '79'
 ht-degree: 0%
 
 ---
-
 
 # Classi di Video Analytics {#video-analytics-classes}
 
@@ -16,5 +15,5 @@ Queste classi forniscono l&#39;interfaccia tra TVSDK e Adobe Video Analytics.
 
 | **Nome** | **Descrizione** |
 |---|---|
-| [PTVideoAnalyticsTracker](https://help.adobe.com/en_US/primetime/api/psdk/vhl_tvsdk_ios/Classes/PTVideoAnalyticsTracker.html) | Allega l&#39;istanza `PTMediaPlayer` al modulo VideoHeartbeat per il tracciamento della riproduzione. |
-| [MetadatiTrackingMetadata del video PTVideoAnalytics](https://help.adobe.com/en_US/primetime/api/psdk/vhl_tvsdk_ios/Classes/PTVideoAnalyticsTrackingMetadata.html) | Contiene metadati di proprietà specifici per il tracciamento VideoHeartbeat nel TVSDK. |
+| [PTVideoAnalyticsTracker](https://help.adobe.com/en_US/primetime/api/psdk/vhl_tvsdk_ios/Classes/PTVideoAnalyticsTracker.html) | Allega il `PTMediaPlayer` al modulo VideoHeartbeat per il tracciamento della riproduzione. |
+| [PTVideoAnalyticsTrackingMetadata](https://help.adobe.com/en_US/primetime/api/psdk/vhl_tvsdk_ios/Classes/PTVideoAnalyticsTrackingMetadata.html) | Contiene i metadati di proprietà specifici per il tracciamento VideoHeartbeat in TVSDK. |

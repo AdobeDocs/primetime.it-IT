@@ -1,22 +1,21 @@
 ---
-description: Le seguenti nuove API ti consentono di definire callback DRM.
+description: Le nuove API seguenti consentono di definire i callback DRM.
 title: Implementazione dei callback DRM
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3aaa502d-9273-4320-a022-642fee75dafd
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 0%
 
 ---
 
-
 # Implementazione dei callback DRM{#implementing-drm-callbacks}
 
-Le seguenti nuove API ti consentono di definire callback DRM.
+Le nuove API seguenti consentono di definire i callback DRM.
 
 <!--<a id="section_1090BFDB2C1D4EA4AAC9F9A6EC9DCD51"></a>-->
 
-Puoi definire una funzione di chiamata di ritorno (ad esempio, `parseContentIdCallback`) per analizzare l’ID del contenuto e impostarlo su `drmManager` utilizzando l’ API `setParseContentIdCallback`.
+È possibile definire una funzione di richiamata (ad esempio, `parseContentIdCallback`) per analizzare l&#39;ID contenuto e impostarlo su `drmManager` utilizzando `setParseContentIdCallback` API.
 
 ```js
 var arrayToString = function (array) { 
@@ -39,7 +38,7 @@ drmManager.setParseContentIdCallback(parseContentIdCallback);
 
 <!--<a id="section_1E082B428EA74D9CA11C052158A83947"></a>-->
 
-È possibile definire una funzione di chiamata di ritorno (ad esempio, `onCertificateResponseCallback`) per elaborare una risposta a un certificato di testo e impostare la funzione su `drmManager` utilizzando l&#39;API `setCertificateResponseCallback`. È possibile impostare `setCertificateResponseCallback` per ignorare il comportamento predefinito. Ad esempio, se disponi di un `certificateResponseType` diverso da `ArrayBuffer`, puoi utilizzare questo callback per convertire la risposta del certificato nel tipo `ArrayBuffer`.
+È possibile definire una funzione di richiamata (ad esempio, `onCertificateResponseCallback`) per elaborare una risposta di certificato di testo e impostare la funzione su `drmManager` utilizzando `setCertificateResponseCallback` API. È possibile impostare `setCertificateResponseCallback` per ignorare il comportamento predefinito. Ad esempio, se hai un `certificateResponseType` diverso da `ArrayBuffer`, puoi utilizzare questo callback per convertire la risposta del certificato in `ArrayBuffer` tipo.
 
 ```js
 var base64DecodeUint8Array = function (input) { 
@@ -66,7 +65,7 @@ drmManager.setCertificateResponseCallback(onCertificateResponseCallback);
 
 <!--<a id="section_4DCC1B3ABCED484EB5340A558C9A770A"></a>-->
 
-Puoi definire le funzioni di callback per analizzare il messaggio di licenza e la risposta della licenza e trasmetterle in una chiamata a `drmManager.acquireLicense`. `onLicenseResponseCallback` è un nuovo parametro nell’ `acquireLicense` API.
+È possibile definire funzioni di callback per analizzare il messaggio di licenza e la risposta alla licenza e trasmetterli in una chiamata a `drmManager.acquireLicense`. `onLicenseResponseCallback` è un nuovo parametro in `acquireLicense` API.
 
 ```js
 var base64EncodeUint8Array = function (input) { 
@@ -121,7 +120,7 @@ var base64EncodeUint8Array = function (input) {
 drmManager.acquireLicense(drmMetadata, null, acquireLicenseListener, onLicenseMessageCallback, onLicenseResponseCallback);
 ```
 
-Nei dati di protezione, il nuovo campo **[!UICONTROL certificateResponseType]** viene utilizzato per impostare il tipo di risposta del certificato. Ecco un esempio di dati di protezione:
+In Protezione dei dati, il nuovo **[!UICONTROL certificateResponseType]** viene utilizzato per impostare il tipo di risposta del certificato. Di seguito è riportato un esempio di dati di protezione:
 
 ```js
 { 
@@ -137,4 +136,4 @@ Nei dati di protezione, il nuovo campo **[!UICONTROL certificateResponseType]** 
 }
 ```
 
-L’utilizzo del campo `certificateResponseType` è facoltativo. Se non viene utilizzato, si presume che il valore sia `ArrayBuffer`.
+Utilizzo di `certificateResponseType` è facoltativo. Se non viene utilizzato, il valore viene considerato essere `ArrayBuffer`.

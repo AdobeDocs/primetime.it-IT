@@ -1,26 +1,25 @@
 ---
 description: Quando i metadati DRM di un video sono inclusi nel flusso multimediale, eseguire l'autenticazione durante la riproduzione.
-title: Autenticazione DRM durante la riproduzione
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: autenticazione DRM durante la riproduzione
+exl-id: 3f190d37-291e-4a5e-811d-7e9984a6a44a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%
 
 ---
 
-
-# Autenticazione DRM durante la riproduzione {#drm-authentication-during-playback}
+# autenticazione DRM durante la riproduzione {#drm-authentication-during-playback}
 
 Quando i metadati DRM di un video sono inclusi nel flusso multimediale, eseguire l&#39;autenticazione durante la riproduzione.
 
-Considera la funzione di rotazione della licenza, in cui una risorsa viene crittografata con più licenze DRM. Ogni volta che vengono rilevati nuovi metadati DRM, utilizza i metodi `DRMHelper` per verificare se i metadati DRM richiedono l’autenticazione DRM.
+Consideriamo la funzione di rotazione delle licenze, in cui una risorsa è crittografata con più licenze DRM. Ogni volta che vengono rilevati nuovi metadati DRM, utilizzare `DRMHelper` metodi per verificare se i metadati DRM richiedono l&#39;autenticazione DRM.
 
 >[!NOTE]
 >
->Questa esercitazione non gestisce le licenze associate al dominio. Idealmente, prima di avviare la riproduzione, controlla se hai a che fare con una licenza associata a un dominio. Se sì, esegui l’autenticazione del dominio (se necessario) e unisciti al dominio .
+>Questa esercitazione non gestisce le licenze associate al dominio. Idealmente, prima di iniziare la riproduzione, verifica se si sta trattando con una licenza legata al dominio. In caso affermativo, esegui l’autenticazione del dominio (se necessario) e aggiungi al dominio.
 
-1. Quando in una risorsa vengono rilevati nuovi metadati DRM, viene inviato un evento a livello di applicazione.
+1. Quando vengono rilevati nuovi metadati DRM in una risorsa, viene inviato un evento a livello di applicazione.
 
    ```java
    mediaPlayer.addEventListener(MediaPlayerEvent.DRM_METADATA,  
@@ -34,9 +33,9 @@ Considera la funzione di rotazione della licenza, in cui una risorsa viene critt
    };
    ```
 
-1. Utilizza il `DRMMetadata` per verificare se è necessaria l’autenticazione. In caso contrario, non fare nulla; la riproduzione continua senza interruzioni.
-1. In caso contrario, esegui l’autenticazione DRM. Poiché questa operazione è asincrona e viene gestita in un thread diverso, non ha alcun impatto sull&#39;interfaccia utente né sulla riproduzione video.
-1. Se l’autenticazione non riesce, l’utente non può continuare a visualizzare il video e la riproduzione cessa. In caso contrario, la riproduzione continuerà ininterrottamente.
+1. Utilizza il `DRMMetadata` per verificare se è necessaria l&#39;autenticazione. In caso contrario, non viene eseguita alcuna operazione; la riproduzione continua senza interruzioni.
+1. In caso contrario, eseguire l&#39;autenticazione DRM. Poiché questa operazione è asincrona e viene gestita in un thread diverso, non ha alcun impatto sull’interfaccia utente o sulla riproduzione video.
+1. Se l’autenticazione non riesce, l’utente non può continuare a visualizzare il video e la riproduzione cessa. In caso contrario, la riproduzione continuerà senza interruzioni.
 
 ```java
 DRMMetadataInfoEventListener drmMetadataInfoEventListener =  

@@ -1,42 +1,41 @@
 ---
-description: Per impostazione predefinita, TVSDK forza la riproduzione di un’interruzione pubblicitaria quando l’utente cerca tramite un’interruzione pubblicitaria. Puoi personalizzare il comportamento per saltare un’interruzione pubblicitaria se il tempo trascorso da un precedente completamento dell’interruzione si trova entro un certo numero di minuti.
-title: Ignora interruzioni pubblicitarie per un periodo di tempo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Per impostazione predefinita, TVSDK forza la riproduzione di un’interruzione pubblicitaria quando l’utente cerca sopra un’interruzione pubblicitaria. Puoi personalizzare il comportamento per saltare un’interruzione pubblicitaria se il tempo trascorso dal completamento di un’interruzione precedente è entro un determinato numero di minuti.
+title: Ignorare le interruzioni pubblicitarie per un periodo di tempo
+exl-id: 13e34c05-2c43-4459-88ec-5c6cfa8c363d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 0%
 
 ---
 
+# Ignorare le interruzioni pubblicitarie per un periodo di tempo {#skip-ad-breaks-for-a-period-of-time}
 
-# Ignora interruzioni pubblicitarie per un periodo di tempo {#skip-ad-breaks-for-a-period-of-time}
-
-Per impostazione predefinita, TVSDK forza la riproduzione di un’interruzione pubblicitaria quando l’utente cerca tramite un’interruzione pubblicitaria. Puoi personalizzare il comportamento per saltare un’interruzione pubblicitaria se il tempo trascorso da un precedente completamento dell’interruzione si trova entro un certo numero di minuti.
+Per impostazione predefinita, TVSDK forza la riproduzione di un’interruzione pubblicitaria quando l’utente cerca sopra un’interruzione pubblicitaria. Puoi personalizzare il comportamento per saltare un’interruzione pubblicitaria se il tempo trascorso dal completamento di un’interruzione precedente è entro un determinato numero di minuti.
 
 >[!IMPORTANT]
 >
->Se devi completare una ricerca interna per perdonare un annuncio, potrebbe verificarsi una leggera pausa durante la riproduzione.
+>Se devi completare una ricerca interna per perdonare un annuncio, potrebbe esserci una leggera pausa durante la riproduzione.
 
-Per ignorare il comportamento predefinito di un’interruzione pubblicitaria TVSDK, puoi estendere il selettore predefinito dei criteri per gli annunci. Sono disponibili quattro criteri di interruzione pubblicitaria:
+Per ignorare il comportamento predefinito dell’interruzione pubblicitaria TVSDK, puoi estendere il selettore dei criteri dell’annuncio predefinito. Sono disponibili quattro criteri di interruzione pubblicitaria:
 
 * PLAY
-* SALTARE
+* IGNORA
 
    >[!NOTE]
    >
-   >I criteri di interruzione degli annunci SKIP potrebbero non funzionare come previsto per i flussi in diretta quando un annuncio è presente nel punto in cui è attivo. Ad esempio, per un pre-roll, SKIP causerà una ricerca alla fine dell’interruzione pubblicitaria, che potrebbe essere maggiore del punto attivo. In questo caso, TVSDK potrebbe cercare al centro di un annuncio.
+   >Il criterio per ignorare l’interruzione dell’annuncio potrebbe non funzionare come previsto per i flussi live quando un annuncio è presente nel punto live. Ad esempio, per un pre-roll, SKIP causerà una ricerca fino alla fine dell’interruzione pubblicitaria, che potrebbe essere maggiore del punto di attivazione. In questo caso, TVSDK potrebbe cercare di posizionarsi al centro di un annuncio.
 
-* REMOVE_AFTER
+* RIMUOVI_DOPO
 * RIMUOVI
 
    >[!NOTE]
    >
-   >Il criterio `REMOVE` di interruzione annunci è dichiarato obsoleto. L’Adobe consiglia di utilizzare il criterio di interruzione annunci `SKIP` anziché `REMOVE`.
+   >Il `REMOVE` il criterio di interruzione annuncio è impostato come obsoleto. L’Adobe consiglia di utilizzare il `SKIP` criterio di interruzione annuncio al posto di `REMOVE`.
 
-L&#39;esempio seguente di un selettore di criteri di annunci personalizzati salta gli annunci nei cinque minuti successivi (tempo di clock della bacheca) dopo che un utente ha guardato un&#39;interruzione di pubblicità.
+L’esempio seguente di selettore di criteri di annuncio personalizzato ignora gli annunci nei successivi cinque minuti (tempo di clock a parete) dopo che un utente ha guardato un’interruzione pubblicitaria.
 
-1. Al termine della visualizzazione di un annuncio pubblicitario, salva l&#39;ora di sistema corrente.
+1. Quando l’utente termina di guardare un’interruzione pubblicitaria, salva l’ora di sistema corrente.
 
    ```java
    @Override 
@@ -212,4 +211,3 @@ L&#39;esempio seguente di un selettore di criteri di annunci personalizzati salt
        } 
    } 
    ```
-

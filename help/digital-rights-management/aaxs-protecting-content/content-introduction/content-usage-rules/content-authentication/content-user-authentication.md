@@ -2,17 +2,16 @@
 title: Autenticazione utente
 description: Autenticazione utente
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 7e21ff0e-ee0f-474f-9f22-8a4a77470c63
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
 
 ---
 
-
 # Autenticazione utente {#user-authentication}
 
-Specifica se è richiesta una credenziale, ad esempio nome utente e password, per acquisire una licenza. Se è specificata una licenza autenticata (basata sull&#39;identità), il server esegue l&#39;autenticazione dell&#39;utente prima di rilasciare una licenza.
+Specifica se per acquisire una licenza è necessaria una credenziale, ad esempio nome utente e password. Se si specifica una licenza autenticata (basata su identità), il server autentica l&#39;utente prima di rilasciare una licenza.
 
-**Esempio di utilizzo:** un servizio di abbonamento potrebbe richiedere l’immissione di un nome utente/password prima di rilasciare una licenza per contenuti. Un DVD o un disco Blu-ray con copia digitale può fornire un codice o altro token come prova di pagamento, che può essere riscattato per un download elettronico.
+**Esempio di utilizzo:** Un servizio di abbonamento potrebbe richiedere l’immissione di un nome utente o di una password prima di rilasciare una licenza per contenuti. Un DVD o un disco Blu-ray con copia digitale potrebbe fornire un codice o un altro token come prova di pagamento, che può essere riscattato per un download elettronico.

@@ -1,30 +1,29 @@
 ---
 description: Puoi tenere traccia dell’utilizzo dei video integrando TVSDK con Adobe Analytics.
-title: Analisi video
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Analisi dei video
+exl-id: 8999ce57-681b-44f1-b337-3216b3883ad9
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '127'
 ht-degree: 0%
 
 ---
 
-
-# Integrazione di analisi video {#video-analytics-integration}
+# Integrazione di Video Analytics {#video-analytics-integration}
 
 Puoi tenere traccia dell’utilizzo dei video integrando TVSDK con Adobe Analytics.
 
-Il tracciamento video in TVSDK utilizza il servizio **Adobe Analytics Video Essentials**, che fornisce metriche di coinvolgimento video, come visualizzazioni video, visualizzazioni complete di video, impressioni di annunci, tempo trascorso sul video e così via. Per ulteriori informazioni su questo servizio, contatta il tuo rappresentante di Adobe.
+Il tracciamento video in TVSDK utilizza **Adobe Analytics Video Essentials** servizio, che fornisce metriche di coinvolgimento video, come visualizzazioni video, completamenti video, impressioni di annunci, tempo trascorso su video e così via. Per ulteriori informazioni su questo servizio, contatta il rappresentante del tuo Adobe.
 
-La procedura seguente riassume i passaggi per attivare il tracciamento video nel lettore:
+La procedura seguente riepiloga i passaggi per attivare il tracciamento video nel lettore:
 
-1. Inizializzare e/o configurare i seguenti componenti di tracciamento video:
+1. Inizializza e/o configura i seguenti componenti di tracciamento video:
 
    Su iOS, questi componenti fanno parte di TVSDK:
 
    * File di configurazione JSON
-   * Oggetto metadati analisi video
+   * Oggetto metadati di analisi video
    * Oggetto metadati globale
    * Oggetto tracker di analisi video
 
-1. Imposta i rapporti di analisi video sul lato server utilizzando gli strumenti di amministrazione di Adobe Analytics.
+1. Imposta la generazione di rapporti di analisi video sul lato server utilizzando gli Strumenti di amministrazione di Adobe Analytics.

@@ -1,22 +1,21 @@
 ---
-description: Il browser TVSDK invia le metriche di fatturazione ad Adobe in un formato XML.
+description: Il TVSDK del browser invia le metriche di fatturazione all’Adobe in formato XML.
 title: Trasmettere le metriche di fatturazione
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f6ed72be-a5a8-48f2-b518-76c710300ea7
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '61'
 ht-degree: 0%
 
 ---
 
-
 # Trasmettere le metriche di fatturazione{#transmit-billing-metrics}
 
-Il browser TVSDK invia le metriche di fatturazione ad Adobe in un formato XML.
+Il TVSDK del browser invia le metriche di fatturazione all’Adobe in formato XML.
 
 <!--<a id="example_13ABDB1CC0B549968A534765378DA3A0"></a>-->
 
-Se utilizzi uno strumento di acquisizione di rete per monitorare le statistiche Le trasmissioni di Browser TVSDK ad Adobe, dovresti vedere unità come le seguenti:
+Se utilizzi uno strumento di acquisizione di rete per monitorare le statistiche trasmesse da TVSDK del browser all’Adobe, dovresti vedere unità come segue:
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -40,4 +39,4 @@ Se utilizzi uno strumento di acquisizione di rete per monitorare le statistiche 
 </request>
 ```
 
-Le proprietà booleane `drmProtected`, `adsEnabled` e `midrollEnabled` vengono visualizzate solo se sono vere.
+Le proprietà booleane `drmProtected`, `adsEnabled`, e `midrollEnabled` vengono visualizzate solo se sono vere.

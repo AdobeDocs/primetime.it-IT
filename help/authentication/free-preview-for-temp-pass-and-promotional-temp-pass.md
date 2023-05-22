@@ -1,21 +1,21 @@
 ---
-title: Anteprima gratuita per Temp Pass e Promozionale Temp Pass
-description: Anteprima gratuita per Temp Pass e Promozionale Temp Pass
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Anteprima gratuita per Passaggio temporaneo e Passaggio temporaneo promozionale
+description: Anteprima gratuita per Passaggio temporaneo e Passaggio temporaneo promozionale
+exl-id: c584bf0c-15c4-4a4d-b6a2-8d15ee786fe3
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 1%
 
 ---
 
-
-# Anteprima gratuita per Temp Pass e Promozionale Temp Pass {#free-preview-for-temp-pass-and-promotional-temp-pass}
+# Anteprima gratuita per Passaggio temporaneo e Passaggio temporaneo promozionale {#free-preview-for-temp-pass-and-promotional-temp-pass}
 
 >[!NOTE]
 >
->Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente a partire da Adobe. Non è consentito alcun uso non autorizzato.
+>Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente di Adobe. Non è consentito alcun uso non autorizzato.
 
-## Endpoint API REST {#clientless-endpoints}
+## Endpoint REST API {#clientless-endpoints}
 
 &lt;reggie_fqdn>:
 
@@ -31,26 +31,26 @@ ht-degree: 1%
 
 ## Descrizione {#description}
 
-Consente la creazione di un token di autenticazione per Temp Pass e Promozionale Temp Pass senza la necessità di una seconda schermata.
+Consente di creare un token di autenticazione per Passaggio temporaneo e Passaggio temporaneo promozionale senza la necessità di una seconda schermata.
 
 
-| Endpoint | Chiamato  </br>Da | Ingresso   </br>Parametri | HTTP  </br>Metodo | Risposta | HTTP  </br>Risposta |
+| Endpoint | Chiamato  </br>Da | Input   </br>Parametri | HTTP  </br>Metodo | Risposta | HTTP  </br>Risposta |
 | --- | --- | --- | --- | --- | --- |
-| &lt;sp_fqdn>/api/v1/authenticate/freepreview | App in streaming</br></br>o</br></br>Servizio programmatore | 1. requestor_id (obbligatorio)</br>    </br>2.  deviceId (obbligatorio)</br>    </br>3.  mso_id (obbligatorio)</br>    </br>4.  nome_dominio (obbligatorio)</br>    </br>5.  device_info/X-Device-Info (obbligatorio)</br>6.  deviceType</br>    </br>7.  deviceUser (obsoleto)</br>    </br>8.  appId (obsoleto)</br>    </br>9.  generic_data (facoltativo) | POST | La risposta corretta sarà No Content (Nessun contenuto) 204, il che indica che il token è stato creato correttamente ed è pronto per l’uso per i flussi di autenticazione. | 204 - Nessun contenuto   </br>400 - Richiesta errata |
+| &lt;sp_fqdn>/api/v1/authenticate/freepreview | App di streaming</br></br>o</br></br>Servizio programmatore | 1. requestor_id (obbligatorio)</br>    </br>2.  deviceId (obbligatorio)</br>    </br>3.  mso_id (obbligatorio)</br>    </br>4.  domain_name (obbligatorio)</br>    </br>5.  device_info/X-Device-Info (Obbligatorio)</br>6.  deviceType</br>    </br>7.  deviceUser (obsoleto)</br>    </br>8.  appId (obsoleto)</br>    </br>9.  generic_data (facoltativo) | POST | In caso di esito positivo, la risposta sarà No Content (Nessun contenuto) 204, che indica che il token è stato creato correttamente ed è pronto per l’utilizzo per i flussi di autenticazione. | 204 - Nessun contenuto   </br>400 - Richiesta non valida |
 
 <div>
 
 
 | Parametro di input | Descrizione |
 | --- | --- |
-| requestor_id | Il requestorId del programmatore per il quale l&#39;operazione è valida. |
-| deviceId | Byte dell&#39;ID dispositivo. |
-| mso_id | ID MVPD per il quale l&#39;operazione è valida. |
-| nome_dominio | Nome di dominio per il quale verrà concesso un token. Questo viene confrontato con i domini del provider di servizi quando viene concesso un token di autorizzazione. |
-| device_info/</br></br>X-Device-Info | Informazioni sul dispositivo in streaming.</br></br>**Nota**: QUESTO PUÒ essere passato a device_info come parametro URL, ma a causa della dimensione potenziale di questo parametro e delle limitazioni della lunghezza di un URL GET, DEVE essere passato come X-Device-Info nell&#39;intestazione http. </br></br><!--See the full details in [Passing Device and Connection Information](http://tve.helpdocsonline.com/passing-device-information)-->. |
-| _deviceType_ | Tipo di dispositivo (ad esempio Roku, PC).</br></br>Se questo parametro è impostato correttamente, ESM offre metriche che [suddivisi per tipo di dispositivo](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) quando utilizzi Clientless, in modo che sia possibile eseguire diversi tipi di analisi per esempio Roku, AppleTV, Xbox ecc.</br></br>Vedi [Vantaggi dell&#39;utilizzo di parametri di tipo dispositivo senza client ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**Nota**: il parametro device_info sostituirà questo parametro. |
-| _deviceUser_ | Identificatore utente del dispositivo.</br></br>**Nota**: se utilizzato, deviceUser deve avere gli stessi valori di nel [Crea codice di registrazione](/help/authentication/registration-code-request.md) richiesta. |
-| _appId_ | ID/nome dell&#39;applicazione. </br></br>**Nota**: device_info sostituisce questo parametro. Se utilizzato, `appId` deve avere gli stessi valori di nel [Crea codice di registrazione](/help/authentication/registration-code-request.md) richiesta. |
+| requestor_id | ID richiedente del programmatore per il quale è valida questa operazione. |
+| deviceId | Byte ID dispositivo. |
+| mso_id | L&#39;ID MVPD per il quale è valida questa operazione. |
+| nome_dominio | Il nome di dominio per il quale verrà concesso un token. Questo viene confrontato con i domini del fornitore di servizi quando viene concesso un token di autorizzazione. |
+| device_info/</br></br>X-Device-Info | Informazioni sul dispositivo di streaming.</br></br>**Nota**: questo PUÒ essere trasmesso device_info come parametro URL, ma a causa delle dimensioni potenziali del parametro e delle limitazioni alla lunghezza di un URL GET, DEVE essere trasmesso come X-Device-Info nell’intestazione http. </br></br><!--See the full details in [Passing Device and Connection Information](http://tve.helpdocsonline.com/passing-device-information)-->. |
+| _deviceType_ | Il tipo di dispositivo (ad esempio, Roku, PC).</br></br>Se questo parametro è impostato correttamente, ESM offre metriche che sono [suddiviso per tipo di dispositivo](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) quando utilizzi Clientless, in modo che possano essere eseguiti diversi tipi di analisi per, ad esempio, Roku, AppleTV, Xbox, ecc.</br></br>Consulta [Vantaggi dell’utilizzo di parametri per tipi di dispositivi senza client ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**Nota**: device_info sostituirà questo parametro. |
+| _deviceUser_ | L’identificatore utente del dispositivo.</br></br>**Nota**: se utilizzato, deviceUser deve avere gli stessi valori di [Crea codice di registrazione](/help/authentication/registration-code-request.md) richiesta. |
+| _appId_ | ID/nome dell’applicazione. </br></br>**Nota**: device_info sostituisce questo parametro. Se utilizzato, `appId` deve avere gli stessi valori di [Crea codice di registrazione](/help/authentication/registration-code-request.md) richiesta. |
 | generic_data | Utilizzato per limitare l’ambito del token per il passaggio temporaneo promozionale. |
 
 

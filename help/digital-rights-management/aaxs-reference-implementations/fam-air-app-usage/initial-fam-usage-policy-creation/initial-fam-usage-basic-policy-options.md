@@ -1,33 +1,31 @@
 ---
-title: Opzioni dei criteri di base
-description: Opzioni dei criteri di base
+title: Opzioni di base dei criteri
+description: Opzioni di base dei criteri
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: d5ddd54d-9301-42da-b7fd-0b838eb6cf9d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '211'
 ht-degree: 0%
 
 ---
 
+# Opzioni di base dei criteri {#basic-policy-options}
 
-# Opzioni dei criteri di base {#basic-policy-options}
-
-Nella tabella seguente sono descritte le preferenze di Criteri di base:
+Nella tabella seguente vengono descritte le preferenze dei criteri di base:
 
 | Preferenza | Descrizione |
 |---|---|
-| Durata dei criteri | Specifica il periodo di validità del contenuto protetto da questo criterio. |
+| Durata criterio | Specifica il periodo di validità del contenuto protetto con questo criterio. |
 |  | Inizia da | Le licenze non possono essere utilizzate fino a questa data/ora. |
-|  | Fine a | Le licenze non possono essere utilizzate dopo questa data/ora. |
-|  | Fine dopo | Specifica il tempo di validità di una licenza (in minuti) a partire dal momento in cui viene imballata. |
-| Memorizzazione in cache delle licenze | Specifica se le licenze possono essere memorizzate nella cache del client. |
+|  | Termina a | Le licenze non possono essere utilizzate dopo questa data/ora. |
+|  | Termina dopo | Specifica la durata di validità (in minuti) di una licenza, a partire dal momento in cui viene compilata. |
+| Caching delle licenze | Specifica se le licenze possono essere memorizzate nella cache dal client. |
 |  |  | Le licenze non possono essere utilizzate dopo questa data/ora. |
-|  | Elimina dopo | Specifica il tempo di validità di una licenza (in minuti) a partire dal momento in cui la licenza viene rilasciata dal server licenze. |
-|  | Cache indefinitamente | La licenza può essere memorizzata nella cache del client a tempo indeterminato. |
-|  | Nessun caching delle licenze | La licenza non può essere memorizzata nella cache dal client. È necessario ottenere una nuova licenza dal server ogni volta che l’utente riproduce il contenuto. |
+|  | Elimina dopo | Specifica la durata di validità (in minuti) di una licenza, a partire dal momento in cui la licenza viene rilasciata dal server licenze. |
+|  | Memorizza nella cache a tempo indefinito | La licenza può essere memorizzata nella cache del client a tempo indeterminato. |
+|  | Nessuna memorizzazione nella cache delle licenze | La licenza non può essere memorizzata nella cache dal client. È necessario ottenere una nuova licenza dal server ogni volta che l’utente riproduce il contenuto. |
 | Autenticazione |  |
-|  | Anonimo | Per visualizzare il contenuto non è necessaria alcuna autenticazione. |
-|  | Autenticato | È richiesta l’autenticazione tramite nome utente/password. |
-| Abilita concatenamento licenze | Consente di aggiornare una licenza utilizzando una licenza principale per l&#39;aggiornamento batch delle licenze. Una volta scaduta la licenza foglia, il server può rilasciare al client una licenza root, che rinnoverà tutti i contenuti protetti con questo criterio. |
-
+|  | Anonimo | Non è richiesta alcuna autenticazione per visualizzare il contenuto. |
+|  | Autenticato | È richiesta l&#39;autenticazione nome utente/password. |
+| Abilita concatenamento licenze | Consente di aggiornare una licenza utilizzando una licenza radice padre per l&#39;aggiornamento in batch delle licenze. Una volta scaduta la licenza foglia, il server può rilasciare al client una licenza root, che rinnoverà tutto il contenuto protetto con questo criterio. |

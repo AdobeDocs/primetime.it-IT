@@ -1,22 +1,21 @@
 ---
-description: 'Quando determini le regole del firewall, considera i seguenti tipi di URL '
+description: Quando determini le regole del firewall, considera i seguenti tipi di URL
 title: Regole del firewall
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3f6f6d1a-5759-43b3-9f62-6feb02e0a5c5
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%
 
 ---
 
-
 # Regole del firewall {#firewall-rules}
 
 Quando determini le regole del firewall, considera i seguenti tipi di URL:
 
-## URL in arrivo {#section_F111526A9DB844CBBF21A3CAE5F50880}
+## URL in ingresso {#section_F111526A9DB844CBBF21A3CAE5F50880}
 
-È possibile configurare il firewall esterno in modo che esponga solo gli URL per la funzionalità dell’applicazione che si desidera fornire agli utenti finali.
+Puoi configurare il firewall esterno in modo che esponga solo gli URL per la funzionalità dell’applicazione che desideri fornire agli utenti finali.
 
 Gli utenti esterni possono accedere ai seguenti URL utilizzando il firewall esterno:
 
@@ -41,7 +40,7 @@ Gli utenti esterni possono accedere ai seguenti URL utilizzando il firewall este
      <li id="li_01B2E17BF4DB456383FD6E18E9DE28F5"><span class="filepath"> /flashaccess/authn/v5/*</span> </li> 
      <li id="li_096D349CCD7945B387CB80C3E99063C7"><span class="filepath"> /flashaccess/authn/v6/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Per autenticare gli utenti. </p> <p>Questo URL deve essere accessibile se utilizzi le API client Adobe Primetime DRM per l’autenticazione degli utenti. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Per autenticare gli utenti. </p> <p>Questo URL deve essere accessibile se si utilizzano le API client Adobe Primetime DRM per l'autenticazione utente. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -62,7 +61,7 @@ Gli utenti esterni possono accedere ai seguenti URL utilizzando il firewall este
      <li id="li_2222D27F73D0421396A4F0E18140B3F9"><span class="filepath"> /flashaccess/sync/v5</span> </li> 
      <li id="li_18020B7CE36B4C209F65FF01A00B6737"><span class="filepath"> /flashaccess/sync/v6/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Per sincronizzare le richieste </p> <p>Questo URL deve essere accessibile se specifichi i requisiti di sincronizzazione nelle licenze. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Per sincronizzare le richieste. </p> <p>Questo URL deve essere accessibile se si specificano i requisiti di sincronizzazione nelle licenze. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -72,7 +71,7 @@ Gli utenti esterni possono accedere ai seguenti URL utilizzando il firewall este
      <li id="li_CF7590FDAF694EDF9685434BE8EE10CA"><span class="filepath"> /flashaccess/domain/v5</span> </li> 
      <li id="li_CA73424FDFAA4BD8BBE2C1AD165D2C31"><span class="filepath"> /flashaccess/domain/v6/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Per registrare i domini. </p> <p>Se implementi il supporto per il dominio, questo URL deve essere accessibile. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Per registrare i domini. </p> <p>Questo URL deve essere accessibile se implementi il supporto del dominio. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -82,15 +81,15 @@ Gli utenti esterni possono accedere ai seguenti URL utilizzando il firewall este
      <li id="li_C761F14F3C97479CBA5C255739E01A28"><span class="filepath"> /flashaccess/dereg/v5</span> </li> 
      <li id="li_23A8AABE7499488EB61B7ED27CC65098"><span class="filepath"> /flashaccess/dereg/v6/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Per annullare la registrazione dei domini. </p> <p>Se implementi il supporto per il dominio, questo URL deve essere accessibile. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Per annullare la registrazione dei domini. </p> <p>Questo URL deve essere accessibile se implementi il supporto del dominio. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/headerconversion/v1/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Consentire al client di convertire i metadati DRM FMRMS 1.x in metadati DRM di Primetime. </p> <p>Nota:  Questo URL deve utilizzare SSL (HTTPS). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Consentire al client di convertire i metadati DRM FMRMS 1.x in metadati DRM Primetime. </p> <p>Nota: questo URL deve utilizzare SSL (HTTPS). </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="filepath"> /edcws/services/urn:EDCLicenseService/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL del servizio Web LiveCycle Rights Management ES. Se il contenuto è stato pubblicato utilizzando una versione precedente di FMRMS, questo URL consente ai client meno recenti di connettersi al server. A questi client viene richiesto di eseguire l’aggiornamento ad Adobe Primetime DRM. </p> <p class="- topic/p ">Nota: Questo URL deve utilizzare SSL (HTTPS). </p> </td> 
+   <td colname="1" class="- topic/entry "><span class="filepath"> /edcws/services/urn:Servizio licenze EDCL/*</span> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL servizio web LiveCycle Rights Management ES. Se il contenuto è stato pubblicato utilizzando una versione precedente di FMRMS, questo URL consente ai client meno recenti di connettersi al server. A questi client viene richiesto di eseguire l'aggiornamento a Adobe Primetime DRM. </p> <p class="- topic/p ">Nota: questo URL deve utilizzare SSL (HTTPS). </p> </td> 
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "> 
@@ -98,23 +97,22 @@ Gli utenti esterni possono accedere ai seguenti URL utilizzando il firewall este
      <li id="li_24B4D42BECF8405281C73B782F8E7310"><span class="filepath"> /flashaccess/lreturn/v5</span> </li> 
      <li id="li_6B79563205D1421F89131E650D71E83B"><span class="filepath"> /flashaccess/lreturn/v6</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p>Per restituire le licenze. </p> <p> L’URL deve essere accessibile se implementi il supporto per la restituzione della licenza. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>Per restituire le licenze. </p> <p> L’URL deve essere accessibile se si implementa il supporto per la restituzione della licenza. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 >[!NOTE]
 >
->Il firewall interno dovrebbe consentire solo le connessioni al server di licenza DRM di Primetime attraverso il proxy inverso e solo agli URL nella tabella. Per migliorare la scalabilità, utilizza HTTP per le connessioni tra il proxy inverso e DRM di Primetime.
+>Il firewall interno deve consentire connessioni solo al server licenze DRM Primetime tramite il proxy inverso e solo agli URL nella tabella. Per migliorare la scalabilità, utilizza HTTP per le connessioni tra il proxy inverso e Primetime DRM.
 
 ## URL in uscita {#section_FFF9F7BB353149F4A27F8788E9934A48}
 
 Gli URL in uscita consentono al server licenze di scaricare i CRL da Adobe.
 
-Elenco degli URL in uscita utilizzabili:
+Elenco degli URL in uscita che puoi utilizzare:
 
 * `https://crl2.adobe.com/Adobe/FlashAccessRootCA.crl`
 * `https://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl`
 * `https://crl3.adobe.com/AdobeSystemsIncorporatedFlashAccessRuntime/LatestCRL.crl`
 * `https://crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl`
-

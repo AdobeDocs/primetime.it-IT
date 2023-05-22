@@ -1,21 +1,21 @@
 ---
 title: Avvia autenticazione
 description: Avvia autenticazione
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 55dddd29-68d6-4aae-8744-307fea285e29
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '290'
 ht-degree: 0%
 
 ---
 
-
 # Avvia autenticazione {#initiate-authentication}
 
 >[!NOTE]
 >
->Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente a partire da Adobe. Non è consentito alcun uso non autorizzato.
+>Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente di Adobe. Non è consentito alcun uso non autorizzato.
 
-## Endpoint API REST {#clientless-endpoints}
+## Endpoint REST API {#clientless-endpoints}
 
 &lt;reggie_fqdn>:
 
@@ -32,24 +32,24 @@ ht-degree: 0%
 
 ## Descrizione {#description}
 
-Avvia il processo di autenticazione informando di un evento di selezione MVPD. Crea un record nel database di autenticazione Primetime, riconciliato quando viene ricevuta una risposta corretta dall&#39;MVPD. 
+Avvia il processo di autenticazione informando di un evento di selezione MVPD. Crea un record nel database di autenticazione di Primetime che viene riconciliato quando viene ricevuta una risposta corretta da MVPD. 
 
 
 
-| Endpoint | Chiamato  </br>Da | Ingresso   </br>Parametri | HTTP  </br>Metodo | Risposta | HTTP  </br>Risposta |
+| Endpoint | Chiamato  </br>Da | Input   </br>Parametri | HTTP  </br>Metodo | Risposta | HTTP  </br>Risposta |
 | --- | --- | --- | --- | --- | --- |
-| &lt;sp_fqdn>/api/v1/authenticate | Modulo AuthN | 1. requestor_id (obbligatorio)</br>2.  mso_id (obbligatorio)</br>3.  reg_code (obbligatorio)</br>4.  nome_dominio (obbligatorio)</br>5.  noflash=true -  </br>    (Obbligatorio, parametro residuo)</br>6.  no_iframe=true (obbligatorio, parametro residuo)</br>7.  parametri aggiuntivi (facoltativo)</br>8.  redirect_url (obbligatorio) | GET | L&#39;app Web di accesso viene reindirizzata alla pagina di accesso MVPD. | 302 per le implementazioni di reindirizzamento complete |
+| &lt;sp_fqdn>/api/v1/authenticate | Modulo AuthN | 1. requestor_id (obbligatorio)</br>2.  mso_id (obbligatorio)</br>3.  reg_code (obbligatorio)</br>4.  domain_name (obbligatorio)</br>5.  noflash=true -  </br>    (Obbligatorio, parametro residuo)</br>6.  no_iframe=true (obbligatorio, parametro residuo)</br>7.  parametri aggiuntivi (facoltativo)</br>8.  redirect_url (obbligatorio) | GET | L&#39;app Web di accesso viene reindirizzata alla pagina di accesso MVPD. | 302 per implementazioni di reindirizzamento complete |
 
 {style="table-layout:auto"}
 
 
 | Parametro di input | Descrizione |
 | --- | --- |
-| requestor_id | Richiedente programmatore per il quale l&#39;operazione è valida. |
-| mso_id | ID MVPD per il quale l&#39;operazione è valida. |
-| reg_code | Codice di registrazione generato dal servizio Reggie. |
-| nome_dominio | Dominio di origine. |
-| redirect_url | L’url di reindirizzamento dell’app Web di accesso dopo il completamento dell’autenticazione. |
+| requestor_id | Il richiedente Programmer per il quale è valida questa operazione. |
+| mso_id | ID MVPD per il quale è valida questa operazione. |
+| reg_code | Il codice di registrazione generato dal servizio Reggie. |
+| nome_dominio | Il dominio di origine. |
+| redirect_url | URL di reindirizzamento dell&#39;app Web di accesso al termine dell&#39;autenticazione. |
 
 {style="table-layout:auto"}
 
@@ -57,7 +57,7 @@ Avvia il processo di autenticazione informando di un evento di selezione MVPD. C
 
 >[!IMPORTANT]
 > 
->**Importante: Parametri obbligatori -** Indipendentemente dall’implementazione lato client, tutti i parametri di cui sopra sono obbligatori.
+>**Importante: parametri obbligatori -** Indipendentemente dall’implementazione lato client, tutti i parametri di cui sopra sono obbligatori.
 >
 >
 >Esempio:    
@@ -74,11 +74,11 @@ Avvia il processo di autenticazione informando di un evento di selezione MVPD. C
 
 >[!IMPORTANT]
 > 
->**Importante: Parametri opzionali**
+>**Importante: parametri facoltativi**
 >
->La chiamata può anche contenere parametri facoltativi che abilitano altre funzionalità come:
+>La chiamata di può anche contenere parametri opzionali che abilitano altre funzionalità come:
 >
-> * generico\_data - consente l&#39;utilizzo di [TempPass promozionale](/help/authentication/promotional-temp-pass.md)
+> * generic\_data - consente l&#39;utilizzo di [TempPass promozionale](/help/authentication/promotional-temp-pass.md)
 >
 >```JSON
 >Example:
@@ -88,12 +88,10 @@ Avvia il processo di autenticazione informando di un evento di selezione MVPD. C
 
 ### **Note** {#notes}
 
-* Il valore del `domain_name` deve essere impostato su uno dei nomi di dominio registrati con l&#39;autenticazione Primetime. Per ulteriori informazioni, consulta [Registrazione e inizializzazione](/help/authentication/programmer-overview.md).
+* Il valore della proprietà `domain_name` Il parametro deve essere impostato su uno dei nomi di dominio registrati con l’autenticazione Primetime. Per ulteriori informazioni, consulta [Registrazione e inizializzazione](/help/authentication/programmer-overview.md).
 
-* [Evita di usare &#39;&amp;&#39;reg\_code nella richiesta /authenticate (Nota tecnica)](/help/authentication/clientless-avoid-using-reg-code-in-authenticate-request.md)
+* [Evita di usare &#39;&amp;&#39;reg\_code nella richiesta /authenticate (nota tecnica)](/help/authentication/clientless-avoid-using-reg-code-in-authenticate-request.md)
 
-* La `redirect_url` Il parametro deve essere l&#39;ultimo nell&#39;ordine
+* Il `redirect_url` il parametro deve essere l&#39;ultimo nell&#39;ordine
 
-* Il valore del `redirect_url` Il parametro deve essere codificato in URL
-
-
+* Il valore della proprietà `redirect_url` il parametro deve essere codificato in URL

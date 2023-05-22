@@ -1,26 +1,25 @@
 ---
-description: È possibile inserire annunci nel contenuto VOD.
+description: Puoi inserire annunci nel contenuto VOD.
 title: Sostituire gli intervalli di tempo con un annuncio
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f6675108-07a7-4d30-8a95-6029afe06ac5
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 0%
 
 ---
 
+# Sostituire gli intervalli di tempo con un annuncio {#replace-time-ranges-with-an-ad}
 
-# Sostituisci intervalli di tempo con un annuncio {#replace-time-ranges-with-an-ad}
+Puoi inserire annunci nel contenuto VOD.
 
-È possibile inserire annunci nel contenuto VOD.
-
-I valori `TimeRanges` tra `begin` e `end` in `localTime` vengono rimossi dalla timeline. Questi intervalli vengono sostituiti da `AdBreak` di `begin` a `begin+replaceDuration`. Se il `replacement-duration` non esiste come parametro, il server determina il valore restituito `Adbreak`.
+Il `TimeRanges` tra `begin` e `end` in `localTime` vengono rimossi dalla timeline. Questi intervalli sono sostituiti da un `AdBreak` di `begin` a `begin+replaceDuration`. Se il `replacement-duration` non esiste come parametro, il server effettua la determinazione sul restituito `Adbreak`.
 
 >[!TIP]
 >
->È sempre necessario fornire un `replacement-duration` per intervalli personalizzati. Se non sono previsti annunci per sostituire questo intervallo personalizzato, fornisci `replacement-duration` di 0.
+>Devi sempre fornire un `replacement-duration` per intervalli personalizzati. Se nessun annuncio intende sostituire questo intervallo personalizzato, fornisci un `replacement-duration` di 0.
 
-1. Per sostituire gli intervalli con gli annunci ad decision di Primetime:
+1. Per sostituire gli intervalli con annunci di Primetime ad decisioningads:
 
    ```
    {   
@@ -80,4 +79,3 @@ I valori `TimeRanges` tra `begin` e `end` in `localTime` vengono rimossi dalla t
        "id": "vod_003"
    }
    ```
-

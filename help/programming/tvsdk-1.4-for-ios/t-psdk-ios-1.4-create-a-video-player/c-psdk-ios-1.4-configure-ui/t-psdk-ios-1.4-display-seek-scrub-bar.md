@@ -1,16 +1,15 @@
 ---
 description: È possibile visualizzare il tempo corrente e rimanente del contenuto in fase di riproduzione.
-title: Visualizza una barra di scorrimento con la posizione corrente del tempo di riproduzione
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Visualizza una barra di scorrimento di ricerca con la posizione del tempo di riproduzione corrente
+exl-id: a8b34cf4-4dfd-4799-9408-87c4d60eff4c
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '62'
 ht-degree: 0%
 
 ---
 
-
-# Visualizzare una barra di scorrimento con la posizione corrente del tempo di riproduzione {#display-a-seek-scrub-bar-with-the-current-playback-time-position}
+# Visualizza una barra di scorrimento di ricerca con la posizione del tempo di riproduzione corrente {#display-a-seek-scrub-bar-with-the-current-playback-time-position}
 
 È possibile visualizzare il tempo corrente e rimanente del contenuto in fase di riproduzione.
 

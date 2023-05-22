@@ -1,32 +1,31 @@
 ---
-title: Livello di cifratura parziale
-description: Livello di cifratura parziale
+title: Livello di crittografia parziale
+description: Livello di crittografia parziale
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 47bcd5e1-f45a-44b8-8a00-209a6d0abd0d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 0%
 
 ---
 
-
 # Livello di crittografia parziale {#partial-encryption-level}
 
-Questa opzione di packaging specifica se tutti i frame, o solo un sottoinsieme di frame, devono essere crittografati. Sono disponibili tre livelli di crittografia: bassa, media e alta.
+Questa opzione di creazione pacchetti specifica se tutti i fotogrammi o solo un sottoinsieme di fotogrammi devono essere crittografati. Sono disponibili tre livelli di crittografia: basso, medio e alto.
 
 >[!NOTE]
 >
->La crittografia parziale si applica solo alla traccia video in file F4V/MP4.
+>La crittografia parziale si applica solo alla traccia video nei file F4V/MP4.
 
-La cifratura parziale è progettata per dare ai fornitori di contenuti granularità necessaria per codificare il contenuto in parti. La crittografia del contenuto aggiunge il sovraccarico della CPU al dispositivo che sta decrittografando e visualizzando il contenuto. Utilizza la crittografia parziale per ridurre il sovraccarico della CPU mantenendo al tempo stesso una protezione molto elevata del contenuto. L’utilizzo di questa funzione è motivato da un singolo contenuto destinato a essere riprodotto su dispositivi a basso, medio e alto consumo energetico.
+La crittografia parziale è progettata per fornire ai provider di contenuti granularità per codificare il contenuto in parti. La crittografia del contenuto aggiunge un sovraccarico della CPU al dispositivo che decrittografa e visualizza il contenuto. Utilizzare la crittografia parziale per ridurre il sovraccarico della CPU mantenendo al contempo una protezione molto elevata del contenuto. Una motivazione per l&#39;utilizzo di questa funzione è un singolo contenuto destinato ad essere riproducibile su dispositivi a bassa, media e alta potenza.
 
-A causa della natura della codifica video, non è necessario crittografare il 100% del video per renderlo non riproducibile in caso di furto. La cifratura parziale dispone di tre impostazioni: bassa, media e alta; le percentuali di cifratura associate dipendono dalla modalità di codifica del video. A causa di questa dipendenza di codifica, la percentuale di contenuto crittografato rientra nei seguenti intervalli:
+A causa della natura della codifica video, non è necessario crittografare il 100% del video per renderlo non riproducibile in caso di furto. La cifratura parziale dispone di tre impostazioni, bassa, media e alta, e le percentuali di cifratura associate dipendono da come il video è codificato. A causa di questa dipendenza di codifica, la percentuale di contenuto crittografato rientra nei seguenti intervalli:
 
-* Alta: Cifra tutti i campioni.
-* Media: Cifra una destinazione pari al 50% dei dati.
-* Bassa: Cifra una destinazione dal 20 al 30% dei dati.
+* Alta: crittografa tutti i campioni.
+* Medio: crittografa il 50% dei dati di destinazione.
+* Bassa: crittografa una destinazione dal 20 al 30% dei dati.
 
-Queste impostazioni sono state progettate utilizzando la seguente regola: Anche qualsiasi contenuto crittografato con l’impostazione bassa viene crittografato con l’impostazione media. In tal modo, lo stesso contenuto distribuito a bassa crittografia da una parte e distribuito a crittografia media da un’altra parte non compromette la protezione del contenuto.
+Queste impostazioni sono state progettate utilizzando la seguente regola: Anche qualsiasi contenuto crittografato con l’impostazione bassa viene crittografato con l’impostazione media. In questo modo, lo stesso contenuto distribuito a bassa crittografia da una parte e distribuito a media crittografia da un&#39;altra parte non compromette la protezione del contenuto.
 
-Esempio di utilizzo: La riduzione del livello di crittografia riduce il sovraccarico della decrittografia sul client e migliora le prestazioni di riproduzione su computer di fascia bassa.
+Caso d’uso di esempio: la riduzione del livello di crittografia riduce il sovraccarico di decrittografia sul client e migliora le prestazioni di riproduzione sui computer di fascia bassa.

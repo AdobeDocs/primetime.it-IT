@@ -1,20 +1,19 @@
 ---
-description: Rimuovi gli intervalli di tempo tra inizio e fine in localTime dalla timeline.
-title: Elimina intervalli con annunci ad decisioning di Primetime
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Rimuovi dalla timeline gli intervalli di tempo compresi tra inizio e fine in localTime.
+title: Eliminare gli intervalli con l’annuncio di Ad Decisioning di Primetime
+exl-id: e097f92e-b4ce-4e33-9a71-213cf19188fb
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '42'
 ht-degree: 0%
 
 ---
 
+# Eliminare gli intervalli con l’annuncio di Ad Decisioning di Primetime{#delete-ranges-with-primetime-ad-decisioning-ad}
 
-# Elimina intervalli con Primetime ad decisioning ad{#delete-ranges-with-primetime-ad-decisioning-ad}
+Rimuovi dalla timeline gli intervalli di tempo compresi tra inizio e fine in localTime.
 
-Rimuovi gli intervalli di tempo tra inizio e fine in localTime dalla timeline.
-
-Elimina intervalli con un annuncio di frase.
+Eliminare gli intervalli con un annuncio di frase.
 
 ```
 {   
@@ -66,4 +65,3 @@ Elimina intervalli con un annuncio di frase.
     "id": "vod_003"
 }
 ```
-

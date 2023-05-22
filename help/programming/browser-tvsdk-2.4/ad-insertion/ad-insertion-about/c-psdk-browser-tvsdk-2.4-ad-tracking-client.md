@@ -1,17 +1,16 @@
 ---
-description: Il browser TVSDK traccia automaticamente gli annunci per VOD e lo streaming live/lineare.
+description: Browser TVSDK tiene traccia automaticamente degli annunci per VOD e streaming live/lineare.
 title: Tracciamento degli annunci client
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: dc1d94f2-82b4-46fd-a720-610b71786b71
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 0%
 
 ---
 
+# Tracciamento degli annunci client{#client-ad-tracking}
 
-# Tracciamento annunci client{#client-ad-tracking}
+Browser TVSDK tiene traccia automaticamente degli annunci per VOD e streaming live/lineare.
 
-Il browser TVSDK traccia automaticamente gli annunci per VOD e lo streaming live/lineare.
-
-Le notifiche vengono utilizzate per informare l&#39;applicazione sull&#39;avanzamento di un annuncio, incluse informazioni su quando inizia e quando termina.
+Le notifiche vengono utilizzate per informare l’applicazione sull’avanzamento di un annuncio, incluse informazioni su quando inizia e termina un annuncio.

@@ -1,6 +1,6 @@
 ---
-title: Uso della riga di comando
-description: Uso della riga di comando
+title: Utilizzo della riga di comando
+description: Utilizzo della riga di comando
 copied-description: true
 exl-id: 67056085-beb5-4f54-8962-369bc32d7907
 source-git-commit: 79cab347d0daa01549fbf8a9b37bf0a91c14648e
@@ -10,7 +10,7 @@ ht-degree: 0%
 
 ---
 
-# Uso della riga di comando {#command-line-usage}
+# Utilizzo della riga di comando {#command-line-usage}
 
 Per eseguire lo strumento, utilizzare la sintassi seguente:
 
@@ -27,10 +27,10 @@ java -jar AdobePublisherIDUtility.jar
 </i class="+ topic>
 ```
 
-* `signaturefile` specifica il percorso del file signatures.xml dell’applicazione AIR, che si trova nelle applicazioni [!DNL META-INF] directory
+* `signaturefile` specifica il percorso del file signatures.xml dell&#39;applicazione AIR, che si trova nelle applicazioni [!DNL META-INF] directory
 
 * `signingcert` specifica il certificato utilizzato per firmare l’applicazione AIR
 
 >[!NOTE]
 >
->Per determinare l&#39;ID editore per un&#39;applicazione iOS, utilizza l&#39; `-s` e specifica il certificato utilizzato per firmare l’applicazione iOS. ***Adobe Primetime è necessario per creare applicazioni iOS in grado di riprodurre contenuti protetti da Access***.
+>Per determinare l’ID dell’editore di un’applicazione iOS, utilizza `-s` e specifica il certificato utilizzato per firmare l’applicazione iOS. ***Adobe Primetime è richiesto per creare applicazioni iOS in grado di riprodurre contenuti protetti da Access***.

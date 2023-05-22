@@ -2,27 +2,26 @@
 title: Panoramica
 description: Panoramica
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f1a55d5c-c7df-4b8f-8c1e-875d30026069
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '404'
 ht-degree: 0%
 
 ---
 
-
 # Panoramica{#overview}
 
-Per richiedere una licenza, il client invia i metadati incorporati nel contenuto durante la creazione del pacchetto. Il server licenze utilizza le informazioni nei metadati del contenuto per generare una licenza.
+Per richiedere una licenza, il client invia i metadati incorporati nel contenuto durante la creazione del pacchetto. Il server licenze utilizza le informazioni contenute nei metadati del contenuto per generare una licenza.
 
-Il `LicenseHandler` legge una richiesta di licenza e analizza la richiesta. `LicenseHandler`si estende  `BatchHandlerBase` per soddisfare le richieste di licenze batch, anche se questa funzione non è attualmente supportata dai client di Adobe Access. Il metodo `getRequests()` restituirà un Elenco di oggetti `LicenseRequestMessage`. Il chiamante deve eseguire un&#39;iterazione attraverso `LicenseRequestMessages` e per ogni richiesta, generare una licenza o impostare un codice di errore (per ulteriori informazioni, consulta la documentazione di riferimento API `LicenseRequestMessage` ). Per ogni richiesta di licenza, il server determina se rilascerà una licenza. Chiama `LicenseRequestMessage.getContentInfo()` per ottenere informazioni estratte dai metadati del contenuto, inclusi l’ID del contenuto, l’ID della licenza e i criteri.
+Il `LicenseHandler` legge una richiesta di licenza e la analizza. `LicenseHandler`si estende `BatchHandlerBase` per soddisfare richieste di licenze in batch, sebbene questa funzione non sia attualmente supportata dai client Adobe Access. Il `getRequests()` il metodo restituirà un elenco di `LicenseRequestMessage` oggetti. Il chiamante deve eseguire l&#39;iterazione attraverso `LicenseRequestMessages`, e per ogni richiesta, genera una licenza o imposta un codice di errore (vedi `LicenseRequestMessage` documentazione di riferimento API). Per ogni richiesta di licenza, il server determina se emetterà una licenza. Chiamata `LicenseRequestMessage.getContentInfo()` per ottenere informazioni estratte dai metadati del contenuto, tra cui l’ID contenuto, l’ID licenza e i criteri.
 
 * La classe del gestore richieste è `com.adobe.flashaccess.sdk.protocol.license.LicenseHandler`
 * La classe del messaggio di richiesta è `com.adobe.flashaccess.sdk.protocol.license.LicenseRequestMessage`
-* Se il protocollo di supporto client e server versione 5, l’URL della richiesta è &quot;URL del server licenze nei metadati: + &quot;/flashaccess/license/v4&quot;. Se il protocollo versione 3 è il massimo supportato dal client o dal server, i client di Adobe Access invieranno richieste di autenticazione a &quot;URL del server licenze nei metadati&quot; + &quot;/flashaccess/license/v3&quot;. In caso contrario, le richieste di autenticazione vengono inviate a &quot;URL server licenze nei metadati&quot; + &quot;/flashaccess/license/v1&quot;
+* Se sia il client che il server supportano la versione 5 del protocollo, l&#39;URL della richiesta è &quot;License Server URL in metadata: + &quot;/flashaccess/license/v4&quot;. Se il protocollo versione 3 è il massimo supportato dal client o dal server, i client Adobe Access invieranno richieste di autenticazione a &quot;URL del server licenze nei metadati&quot; + &quot;/flashaccess/license/v3&quot;. In caso contrario, le richieste di autenticazione vengono inviate a &quot;URL del server licenze nei metadati&quot; + &quot;/flashaccess/license/v1&quot;
 
-Se si verifica un errore durante l’analisi della richiesta, viene generato un `HandlerParsingException`. Questa eccezione contiene informazioni di errore da restituire al client. Per recuperare le informazioni sull’errore, chiama `HandlerParsingException.getErrorData()`. Se durante la generazione di una licenza si verifica un errore perché i requisiti dei criteri non sono stati soddisfatti, viene lanciato un `PolicyEvaluationException`. Questa eccezione include anche `ErrorData` da restituire al client. Per informazioni dettagliate su come valutare i criteri durante la generazione delle licenze, consulta la documentazione API per `LicenseRequestMessage.generateLicense()` .
+Se si verifica un errore durante l’analisi della richiesta, viene `HandlerParsingException` viene lanciato. Questa eccezione contiene informazioni sull&#39;errore da restituire al client. Per recuperare le informazioni sull’errore, chiama `HandlerParsingException.getErrorData()`. Se si verifica un errore durante la generazione di una licenza perché i requisiti dei criteri non sono stati soddisfatti, viene visualizzato un messaggio `PolicyEvaluationException` viene lanciato. Questa eccezione include anche `ErrorData` da restituire al client. Consulta la documentazione API per `LicenseRequestMessage.generateLicense()` per informazioni dettagliate su come vengono valutati i criteri durante la generazione della licenza.
 
-Le licenze e gli errori vengono inviati contemporaneamente alla chiamata di `LicenseHandler.close()`.
+Le licenze e gli errori vengono inviati contemporaneamente quando `LicenseHandler.close()` viene chiamato.
 
-Un dispositivo può avere più licenze per lo stesso contenuto (stesso ID licenza), ma può avere una sola licenza per un particolare ID licenza e ID criterio. Se riceve una licenza con un LicenseID/PolicyID duplicato, la nuova licenza sostituirà quella precedente solo se la data di rilascio della nuova licenza è successiva alla data di rilascio della licenza esistente. Questa logica viene utilizzata per elaborare le licenze incorporate nel contenuto, pertanto si sconsiglia di incorporare più di una licenza con lo stesso ID criterio in un blocco di contenuto. La stessa logica si applica alle licenze passate al client tramite l’ API `DRMManager.storeVoucher()` ActionScript3; se il cliente dispone già di una licenza con una data di rilascio successiva, la licenza fornita potrebbe essere ignorata.
+Un dispositivo può disporre di più licenze per lo stesso contenuto (stesso ID licenza), ma può disporre di una sola licenza per uno specifico ID licenza e ID criterio. Se viene ricevuta una licenza con un LicenseID/PolicyID duplicato, la nuova licenza sostituirà quella precedente solo se la data di rilascio della nuova licenza è successiva alla data di rilascio della licenza esistente. Questa logica viene utilizzata per elaborare le licenze incorporate nel contenuto. Pertanto, si sconsiglia di incorporare più di una licenza con lo stesso ID policy in un blocco di contenuto. La stessa logica si applica alle licenze passate al client tramite `DRMManager.storeVoucher()` API ActionScript 3; se il client dispone già di una licenza con una data di rilascio successiva, la licenza fornita potrebbe essere ignorata.

@@ -1,20 +1,19 @@
 ---
-description: Il flag forceflash nell'elenco di origine forza la fallback di Flash per un URL. Per questo URL, puoi utilizzare il Flash Player Adobe per riprodurre il contenuto.
-title: Forzare il fallback del Flash utilizzando l'elenco delle sorgenti multimediali
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Il flag forceflash nell’elenco di origine forza il fallback del Flash per un URL. Per questo URL, puoi utilizzare Adobe Flash Player per riprodurre il contenuto.
+title: Forzare il fallback del Flash utilizzando l’elenco di origini dei contenuti multimediali
+exl-id: 657bf9b1-d911-489d-80ca-2956b008431b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '86'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
+# Forzare il fallback del Flash utilizzando l’elenco di origini dei contenuti multimediali{#forcing-the-flash-fallback-using-the-media-source-list}
 
-# Forzare il fallback del Flash utilizzando l&#39;elenco di origine dei file multimediali{#forcing-the-flash-fallback-using-the-media-source-list}
+Il flag forceflash nell’elenco di origine forza il fallback del Flash per un URL. Per questo URL, puoi utilizzare Adobe Flash Player per riprodurre il contenuto.
 
-Il flag forceflash nell&#39;elenco di origine forza la fallback di Flash per un URL. Per questo URL, puoi utilizzare il Flash Player Adobe per riprodurre il contenuto.
-
-Nell’elenco delle sorgenti multimediali (ad esempio nel file `sources.js`), puoi impostare `forceflash` su `true`. Ad esempio:
+Nell’elenco delle origini dei file multimediali (ad esempio nel `sources.js` file), è possibile impostare `forceflash` a `true`. Ad esempio:
 
 ```js
 { 
@@ -31,4 +30,3 @@ Nell’elenco delle sorgenti multimediali (ad esempio nel file `sources.js`), pu
         "forceflash" : true
 },
 ```
-

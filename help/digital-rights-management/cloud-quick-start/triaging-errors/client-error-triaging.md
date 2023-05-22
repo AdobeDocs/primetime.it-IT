@@ -1,27 +1,25 @@
 ---
-description: A volte, si verificano casi in cui il contenuto non può essere riprodotto. Qualsiasi numero di situazioni può causare questo, inclusi gli errori nello stack di rete del browser, livello di trasporto, sistema operativo, runtime di Flash Player o sistema DRM Primetime.
+description: Talvolta può accadere che il contenuto non possa essere riprodotto. Ciò può essere causato da qualsiasi numero di situazioni, inclusi errori nello stack di rete del browser, nel livello di trasporto, nel sistema operativo, nel runtime di Flash Player o nel sistema DRM Primetime.
 title: Panoramica sugli errori di verifica
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: fe94d0a4-4f3c-4b0e-b830-a7a83bac1e85
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 0%
 
 ---
 
+# Errori di valutazione {#triaging-errors}
 
-# Errori di verifica {#triaging-errors}
+Talvolta può accadere che il contenuto non possa essere riprodotto. Ciò può essere causato da qualsiasi numero di situazioni, inclusi errori nello stack di rete del browser, nel livello di trasporto, nel sistema operativo, nel runtime di Flash Player o nel sistema DRM Primetime.
 
-A volte, si verificano casi in cui il contenuto non può essere riprodotto. Qualsiasi numero di situazioni può causare questo, inclusi gli errori nello stack di rete del browser, livello di trasporto, sistema operativo, runtime di Flash Player o sistema DRM Primetime.
+Il primo passaggio diagnostico consiste nel determinare se il problema si manifesta senza la crittografia DRM introdotta nell&#39;equazione. Tenta di creare un pacchetto del contenuto, ma ordina al packager di non crittografarlo. Se il problema persiste, è probabile che si tratti di un problema di codifica o creazione di pacchetti del contenuto o di un percorso all&#39;interno dell&#39;infrastruttura di rete. Se il problema scompare quando il contenuto viene collocato senza crittografia, è probabile che la riproduzione non riesca a causa di un problema DRM e si consiglia di effettuare una prova client/server.
 
-Il primo passo diagnostico è quello di determinare se il problema si manifesta senza la crittografia DRM introdotta nell&#39;equazione. Tentativo di creare un pacchetto per il contenuto, ma istruzione al gestore di pacchetti di non crittografare il contenuto. Se il problema esiste ancora, è probabile che si tratti di un problema di codifica o creazione di pacchetti del contenuto o di un punto qualsiasi dell&#39;infrastruttura di rete. Se il problema scompare quando il contenuto viene assemblato senza crittografia, l&#39;errore di riproduzione è probabilmente dovuto a un problema DRM e dovresti effettuare una valutazione client/server.
+Primetime DRM (al di fuori di Primetime Cloud DRM) è presente sul mercato da diversi anni. Di conseguenza, esistono numerose informazioni di origine comunitaria sulla risoluzione dei problemi e la configurazione di Primetime DRM. Adobe ha fornito un forum per gli utenti di Primetime DRM (precedentemente denominato Accesso agli Adobi) per aggregare e condividere problemi e risoluzioni. Per determinare se il problema è stato discusso in precedenza, controlla: [https://forums.adobe.com/community/adobe_access](https://forums.adobe.com/community/adobe_access)
 
-Primetime DRM (al di fuori di Primetime Cloud DRM) è sul mercato da diversi anni. In quanto tale, esistono numerose informazioni provenienti dalla community sulla risoluzione dei problemi e sulla configurazione di DRM di Primetime. Adobe ha fornito un forum per gli utenti DRM di Primetime (precedentemente denominato Adobe Access) per aggregare e condividere problemi e risoluzioni. Per determinare se il problema è già stato discusso, controlla: [https://forums.adobe.com/community/adobe_access](https://forums.adobe.com/community/adobe_access)
+## Tentativo di errori client {#section_D0EBAEB0C27F4B01BD44124DEE62F6BA}
 
-## Prova degli errori client {#section_D0EBAEB0C27F4B01BD44124DEE62F6BA}
+Se il contenuto non viene riprodotto, esamina il pannello a destra dei lettori video di esempio, in cui verranno registrate le `DRMErrorEvent` che si verifica. Se si verifica un evento di errore, verrà correlato a uno degli errori di runtime del Flash Player:
 
-Se il contenuto non viene riprodotto, esaminare il pannello laterale destro dei lettori video di esempio, che registra qualsiasi `DRMErrorEvent` che si verifica. Se si verifica un evento di errore, questa verrà correlata a uno dei Flash Player Errori di runtime :
-
-* [Riferimento](https://help.adobe.com/en_US/primetime/drm/index.html#reference-DRM_Client_Error_Messages) messaggio di errore client DRM; o
-* [Errori di runtime di Flash AS3](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/runtimeErrors.html)  (i problemi DRM iniziano a 3300)
-
+* [Riferimento messaggio di errore client DRM](https://help.adobe.com/en_US/primetime/drm/index.html#reference-DRM_Client_Error_Messages); o
+* [Errori di runtime del Flash AS3](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/runtimeErrors.html) (problemi DRM iniziano a 3300)

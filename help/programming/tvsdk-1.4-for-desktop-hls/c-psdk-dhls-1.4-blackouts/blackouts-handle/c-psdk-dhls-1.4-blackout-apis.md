@@ -1,44 +1,41 @@
 ---
-description: TVSDK fornisce elementi API utili per l’implementazione delle blackout, inclusi metodi, metadati e notifiche.
-title: Elementi dell’API Blackout
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK fornisce elementi API che sono utili quando si implementano sospensioni attività, inclusi metodi, metadati e notifiche.
+title: Elementi API di sospensione attività
+exl-id: 9dae236b-0bd8-4fce-9163-628d4ed94f02
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '239'
 ht-degree: 0%
 
 ---
 
-
 # Elementi API di sospensione attività{#blackout-api-elements}
 
-TVSDK fornisce elementi API utili per l’implementazione delle blackout, inclusi metodi, metadati e notifiche.
+TVSDK fornisce elementi API che sono utili quando si implementano sospensioni attività, inclusi metodi, metadati e notifiche.
 
-Quando si implementa una soluzione blackout nel lettore, è possibile utilizzare quanto segue.
+Puoi utilizzare quanto segue durante l’implementazione di una soluzione di sospensione attività nel lettore.
 
 * **MediaPlayer**
 
-   * `registerCurrentItemAsBackgroundItem` Salva la risorsa attualmente caricata come risorsa in background. Se `replaceCurrentResource` viene chiamato dopo questo metodo, TVSDK continua a scaricare il manifesto dell&#39;elemento in background fino a quando non chiami `unregisterCurrentBackgroundItem`.
+   * `registerCurrentItemAsBackgroundItem` Salva la risorsa caricata come risorsa di sfondo. Se `replaceCurrentResource` chiamato dopo questo metodo, TVSDK continua a scaricare il manifesto dell&#39;elemento in background fino a quando non chiami `unregisterCurrentBackgroundItem`.
 
-   * `unregisterCurrentBackgroundItem`  Cancella la risorsa in background attualmente impostata e interrompe il recupero e l&#39;analisi del manifesto in background.
+   * `unregisterCurrentBackgroundItem`  Cancella la risorsa di sfondo attualmente impostata e interrompe il recupero e l&#39;analisi del manifesto di sfondo.
 
-* **** BlackoutMetadataUn tipo di metadati specifico per le blackout.
+* **MetadatiSospensione attività** Tipo di metadati specifico per le sospensioni attività.
 
-   Questo consente di impostare intervalli non ricercabili (un attributo aggiuntivo `TimeRange` denominato `nonseekableRange`) su TVSDK. TVSDK controlla questi intervalli (se la posizione di ricerca desiderata rientra in un `nonseekableRange`) ogni volta che l’utente cerca. Se è impostato e l’utente cerca in un intervallo non ricercabile, TVSDK forza il visualizzatore all’ora di fine del `seekableRange`.
+   Questo consente di impostare intervalli non ricercabili (un `TimeRange` attributo chiamato `nonseekableRange`) su TVSDK. TVSDK controlla questi intervalli (se la posizione di ricerca desiderata rientra in un `nonseekableRange`) ogni volta che l’utente cerca. Se è impostato e l’utente cerca in un intervallo non ricercabile, TVSDK forza il visualizzatore all’ora di fine del `seekableRange`.
 
-* **AVVIA QUI** **** NEXTDefaultMetadataKeysAttiva o disattiva la preroll su un flusso live impostando  `ENABLE_LIVE_PREROLL` su true o false. Se false, TVSDK non effettua una chiamata ad server esplicita per gli annunci pre-scorrimento prima della riproduzione del contenuto, e quindi non riproduce il pre-roll. Questo non ha alcun impatto sui rulli medi. Il valore predefinito è true.
+* **INIZIA QUI DOPO** **DefaultMetadataKeys** Abilita o disabilita la funzione di preroll su un flusso live impostando `ENABLE_LIVE_PREROLL` su true o false. Se false, TVSDK non effettua una chiamata esplicita al server degli annunci pre-roll prima della riproduzione del contenuto e quindi non riproduce il pre-roll. Questo non ha alcun impatto sulle mid-roll. Il valore predefinito è true.
 
 * **TimedMetadataEvent**
 
-   * `TIMED_METADATA_IN_BACKGROUND_AVAILABLE` sottotipo evento : inviato quando TVSDK rileva un tag con sottoscrizione nel manifesto di background.
+   * `TIMED_METADATA_IN_BACKGROUND_AVAILABLE` sottotipo evento: inviato quando TVSDK rileva un tag sottoscritto nel manifesto in background.
 
 * **Notifiche**
 
    * `BACKGROUND_MANIFEST_WARNING`
 
       * Codice: 204000
-      * Tipo: Avviso
+      * Tipo: avvertenza
       * Errore nel download del manifesto in background.
    * `SeekEvent.SEEK_POSITION_ADJUSTED` Inviato quando si tenta una ricerca in un intervallo non ricercabile.
-
-

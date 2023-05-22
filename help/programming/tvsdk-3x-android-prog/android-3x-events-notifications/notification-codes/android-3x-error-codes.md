@@ -1,22 +1,21 @@
 ---
-title: Codici di errore PSDK
+title: Codici errore PSDK
 description: Informazioni su vari codici di errore, avvisi e codici di errore nativi.
-translation-type: tm+mt
-source-git-commit: eddc327087411a6214cfd8dafef66b850a603f97
+exl-id: 90d66c13-c40c-4602-83da-186c2b623375
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '1897'
 ht-degree: 6%
 
 ---
 
+# Codici errore PSDK {#psdk-error-codes}
 
-# Codici di errore PSDK {#psdk-error-codes}
-
-Continua a leggere per conoscere i codici di errore PSDK, gli avvisi e i codici di errore nativi.
+Continua a leggere per informazioni sui codici di errore PSDK, gli avvisi e i codici di errore nativi.
 
 ## Errori
 
-La tabella seguente fornisce informazioni dettagliate sulle notifiche di tipo ERRORE. La maggior parte degli errori contiene metadati pertinenti; ad esempio, l&#39;URL della risorsa che non è stato possibile scaricare. Alcune notifiche contengono metadati per specificare se il problema si è verificato nel contenuto video principale, nel contenuto audio alternativo o in un annuncio.
+Nella tabella seguente vengono fornite informazioni dettagliate sulle notifiche di tipo ERRORE. La maggior parte degli errori contiene metadati rilevanti, ad esempio l’URL della risorsa che non è stata scaricata. Alcune notifiche contengono metadati che consentono di specificare se il problema si è verificato nel contenuto video principale, nel contenuto audio alternativo o in un annuncio.
 
 <table frame="all" colsep="1" rowsep="1">
   <tr> 
@@ -25,49 +24,49 @@ La tabella seguente fornisce informazioni dettagliate sulle notifiche di tipo ER
    <th><b>Descrizione</b></th>
   </tr>
   <tr>
-    <td>SUCCESSO</td>
+    <td>OPERAZIONE RIUSCITA</td>
     <td>0</td>
-    <td>L'operazione eseguita dall'API sottostante ha esito positivo.</td>
+    <td>L’operazione eseguita dall’API sottostante è riuscita.</td>
   </tr>
   <tr>
-    <td>INVALID_ARGUMENT</td>
+    <td>ARGOMENTO_NON VALIDO</td>
     <td>1</td>
-    <td>I dati o il formato dell'argomento fornito all'API sottostante non sono validi.</td>
+    <td>I dati o il formato dell’argomento fornito all’API sottostante non sono validi.</td>
   </tr>
   <tr>
-    <td>NULL_POINTER</td>
+    <td>PUNTATORE_NULL</td>
     <td>2</td>
-    <td>Uno degli argomenti passati è NULL O uno dei membri interni non è stato inizializzato.</td>
+    <td>Uno degli argomenti passati è NULL oppure uno dei membri interni non è stato inizializzato.</td>
   </tr>
   <tr>
     <td>ILLEGAL_STATE</td>
-    <td>1</td>
-    <td>L'operazione non è supportata nello stato corrente del lettore.</td>
+    <td>3</td>
+    <td>Operazione non supportata nello stato corrente del lettore.</td>
   </tr>
   <tr>
     <td>INTERFACE_NOT_FOUND</td>
     <td>4</td>
-    <td>Il metodo interfaceCast genera questo errore quando l'interfaccia richiesta non è implementata/ereditata da questo.</td>
+    <td>Il metodo interfaceCast genera questo errore quando l'interfaccia richiesta non viene implementata o ereditata da questo metodo.</td>
   </tr>
   <tr>  
     <td>CREATION_FAILED</td>
     <td>5</td>
-    <td>Creazione di una delle risorse interne non riuscita.</td>
+    <td>Impossibile creare una delle risorse interne.</td>
   </tr>
   <tr>
     <td>UNSUPPORTED_OPERATION</td>
     <td>6</td>
-    <td>Al momento l'operazione richiesta non è supportata.</td>
+    <td>L'operazione richiesta non è attualmente supportata.</td>
   </tr>
   <tr>
     <td>DATA_NOT_AVAILABLE</td>
     <td>7</td>
-    <td>I dati richiesti non sono attualmente disponibili.</td>
+    <td>I dati richiesti non sono al momento disponibili.</td>
   </tr>
   <tr>
     <td>SEEK_ERROR</td>
     <td>8</td>
-    <td>Errore durante l'esecuzione di un'operazione di ricerca.</td>
+    <td>Si è verificato un errore durante l'esecuzione di un'operazione di ricerca.</td>
   </tr>
   <tr>
     <td>UNSUPPORTED_FEATURE</td>
@@ -87,40 +86,40 @@ La tabella seguente fornisce informazioni dettagliate sulle notifiche di tipo ER
   <tr>
     <td>MEDIA_ERROR</td>
     <td>12</td>
-    <td>Il supporto specificato non è stato trovato.</td>
+    <td>Impossibile trovare il supporto specificato.</td>
   </tr>
   <tr>
-    <td>NETWORK_ERROR</td>
+    <td>ERRORE_DI_RETE</td>
     <td>13</td>
-    <td>Si è verificato un errore durante il download di un frammento o segmento (sia video che audio).</td>
+    <td>Si è verificato un errore durante il download di un frammento o di un segmento (sia video che audio).</td>
   </tr>
   <tr>
     <td>GENERIC_ERROR</td>
     <td>14</td>
-    <td>Evento di errore generico. Non emesso da TVSDK. Questo è solo un indicatore per la fine dell'intervallo di codici numerici corrispondenti agli eventi di errore TVSDK.</td>
+    <td>Errore generico. Non effettivamente emesso da TVSDK. Questo è solo un marcatore per la fine dell’intervallo di codici numerici corrispondenti agli eventi di errore TVSDK.</td>
   </tr>
   <tr>
     <td>INVALID_SEEK_TIME</td>
     <td>15</td>
-    <td>Il tempo di ricerca specificato non è valido.</td>
+    <td>Il tempo di ricerca fornito non è valido.</td>
   </tr>
   <tr>
     <td>AUDIO_TRACK_ERROR</td>
     <td>16</td>
-    <td>Si è verificato un errore relativo a una traccia audio (audio alternativo)</td>
+    <td>Si è verificato un errore relativo a una traccia audio (Audio alternativo)</td>
   </tr>
   <tr>
-    <td>ACCESS_FROM_DIFFERENT_THREAD</td>
+    <td>ACCESS_FROM_DIFFERENTI_THREAD</td>
     <td>17</td>
-    <td>L'API PSDK viene chiamata da un thread diverso da quello in cui è stato inizializzato PSDK.</td>
+    <td>L’API PSDK viene chiamata da un thread diverso da quello in cui è stato inizializzato PSDK.</td>
   </tr>
   <tr>
     <td>ELEMENT_NOT_FOUND</td>
     <td>18</td>
-    <td>L'elemento non è stato trovato.</td>
+    <td>Elemento non trovato.</td>
   </tr>
   <tr>
-    <td>NOT_IMPLEMENTED</td>
+    <td>NOT_IMPLEMENTATO</td>
     <td>19</td>
     <td>Funzionalità non implementata.</td>
   </tr>
@@ -137,35 +136,35 @@ La tabella seguente fornisce informazioni dettagliate sulle notifiche di tipo ER
   <tr>
     <td>NETWORK_TIMEOUT</td>
     <td>58</td>
-    <td>Timeout della rete durante il recupero di una risorsa/la connessione a un server.</td>
+    <td>Timeout della rete durante il recupero di una risorsa o la connessione a un server.</td>
   </tr>
 </table>
 
 ## Avvisi
 
-La tabella seguente fornisce informazioni dettagliate sulle notifiche di tipo WARN.
-La maggior parte delle avvertenze contiene metadati pertinenti; ad esempio, l&#39;URL della risorsa che non è stato possibile scaricare. Alcune notifiche contengono metadati per specificare se il problema si è verificato nel contenuto video principale, nel contenuto audio alternativo o in un annuncio.
+Nella tabella seguente vengono fornite informazioni dettagliate sulle notifiche di tipo WARN.
+La maggior parte degli avvisi contiene metadati rilevanti, ad esempio l’URL della risorsa che non è stata scaricata. Alcune notifiche contengono metadati che consentono di specificare se il problema si è verificato nel contenuto video principale, nel contenuto audio alternativo o in un annuncio.
 
 <table frame="all" colsep="1" rowsep="1">
   <tr>
     <th><b>Nome errore</b></th>
-    <th><b>Code</b></th>
+    <th><b>Codice</b></th>
     <th><b>Descrizione</b></th>
   </tr>
   <tr>
     <td>PLAYBACK_OPERATION_FAILED</td>
     <td>200</td>
-    <td>Errore durante l'operazione di riproduzione. Operazione relativa alla riproduzione non riuscita</td>
+    <td>Si è verificato un errore durante l’operazione di riproduzione. Operazione relativa alla riproduzione non riuscita</td>
   </tr>
   <tr>  
-    <td>NATIVE_WARNING</td>
+    <td>AVVISO_NATIVO</td>
     <td>201</td>
     <td>Errore della libreria AVE di basso livello.</td>
   </tr>
   <tr>
     <td>AD_RESOLVER_FAILED</td>
     <td>202</td>
-    <td>Impossibile risolvere gli annunci.</td>
+    <td>Il plug-in dell’annuncio non è riuscito a risolvere gli annunci.</td>
   </tr>
   <tr>
     <td>AD_MANIFEST_LOAD_FAILED</td>
@@ -173,61 +172,61 @@ La maggior parte delle avvertenze contiene metadati pertinenti; ad esempio, l&#3
     <td>Impossibile caricare il manifesto dell'annuncio.</td>
   </tr>
   <tr>
-    <td>AD_RESO_IN_PROGRESS</td>
+    <td>AD_RESOLUTION_IN_PROGRESS</td>
     <td>204</td>
-    <td>Operazione per la risoluzione degli annunci è in corso.</td>
+    <td>Operazione per la risoluzione degli annunci in corso.</td>
   </tr>
   </table>
 
-## Informazioni
+## Info
 
 <table frame="all" colsep="1" rowsep="1">
   <tr> 
     <th><b>Nome errore</b></th>
-    <th><b>Code</b></th>
+    <th><b>Codice</b></th>
     <th><b>Descrizione</b></th>
   </tr>
   <tr>
     <td>REVENUE_OPTIMIZATION_REPORTING</td>
     <td>300</td>
-    <td>Notifiche dettagliate TVSDK per ulteriori reporting e analisi.</td>
+    <td>Notifiche dettagliate di TVSDK per ulteriori reporting e analisi.</td>
   </tr>
  </table>
 
 ## Codici di errore nativi
 
-L&#39;interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione video nell&#39;oggetto metadati NATIVE_ERROR.
+L&#39;interfaccia Video Encoder di AVE restituisce queste notifiche di riproduzione video nell&#39;oggetto metadati NATIVE_ERROR.
 
 <table frame="all" colsep="1" rowsep="1">
   <tr>
     <th><b>Nome errore</b></th>
-    <th><b>Code</b></th>
+    <th><b>Codice</b></th>
     <th><b>Descrizione</b></th>
   </tr>
   <tr>  
-    <td>END_OF_PERIOD</td>
+    <td>FINE_PERIODO</td>
     <td>-1</td>
     <td>Fine del periodo.</td>
   </tr>
   <tr>
-    <td>SUCCESSO</td>
+    <td>OPERAZIONE RIUSCITA</td>
     <td>0</td>
     <td>Operazione completata.</td>
   </tr>
   <tr>
     <td>ASYNC_OPERATION_IN_PROGRESS</td>
     <td>1</td>
-    <td>Operazione asincrona. La richiesta di operazione è stata effettuata. Le informazioni sul successo/fallimento saranno disponibili in seguito.</td>
+    <td>Operazione asincrona. La richiesta di operazione è stata effettuata. Le informazioni di esito positivo o negativo saranno disponibili in seguito.</td>
   </tr>
   <tr>
     <td>EOF</td>
     <td>2</td>
-    <td>Operazione non possibile a causa della condizione di fine del file (EOF).</td>
+    <td>Operazione non possibile a causa della condizione di fine file (EOF).</td>
   </tr>
   <tr>
     <td>DECODER_FAILED</td>
-    <td>1</td>
-    <td>Il decodificatore non è riuscito in fase di esecuzione.</td>
+    <td>3</td>
+    <td>Errore del decodificatore in fase di esecuzione.</td>
   </tr>
   <tr>
     <td>DEVICE_OPEN_ERROR</td>
@@ -247,12 +246,12 @@ L&#39;interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione 
   <tr>
     <td>IRRECOVERABLE_ERROR</td>
     <td>7</td>
-    <td>Una condizione di errore per la quale il motore video non è in grado di eseguire il ripristino.</td>
+    <td>Condizione di errore da cui il motore video non può essere ripristinato.</td>
   </tr>
   <tr>
-    <td>LOST_CONNECTION_RECOVERABLE</td>
+    <td>LOST_CONNECTION_RECOVERY</td>
     <td>8</td>
-    <td>Errore di rete, tentativo di ripristino.</td>
+    <td>Errore di rete, tentativo di ripristino in corso.</td>
   </tr>
   <tr> 
     <td>NO_FIXED_SIZE</td>
@@ -260,12 +259,12 @@ L&#39;interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione 
     <td>Impossibile determinare la dimensione della risorsa.</td>
   </tr>
   <tr>
-    <td>NOT_IMPLEMENTED</td>
+    <td>NOT_IMPLEMENTATO</td>
     <td>10</td>
     <td>Funzionalità non implementata.</td>
   </tr>
   <tr>
-    <td>OUT_OF_MEMORY</td>
+    <td>MEMORIA_ESAURITA</td>
     <td>11</td>
     <td>Memoria insufficiente.</td>
   </tr>
@@ -312,17 +311,17 @@ L&#39;interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione 
   <tr>
     <td>OP_ONLY_ALLOWED_IN_PAUSED_STATE</td>
     <td>20</td>
-    <td>L'operazione è consentita solo in pausa.</td>
+    <td>Operazione consentita solo se in pausa.</td>
   </tr>
   <tr> 
     <td>OP_INVALID_WITH_AUDIO_ONLY_FILE</td>
     <td>21</td>
-    <td>L'operazione non può essere utilizzata solo sui file audio.</td>
+    <td>Impossibile utilizzare l'operazione su file solo audio.</td>
   </tr>
   <tr>
     <td>PREVIOUS_STEP_SEEK_IN_PROGRESS</td>
     <td>22</td>
-    <td>L'operazione di ricerca precedente è ancora in corso.</td>
+    <td>L’operazione di ricerca precedente è ancora in corso.</td>
   </tr>
   <tr> 
     <td>SOURCE_NOT_SPECIFIED</td>
@@ -370,14 +369,14 @@ L&#39;interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione 
     <td>Codec non supportato.</td>
   </tr>
   <tr>
-    <td>NETWORK_UNAVAILABLE</td>
+    <td>RETE_NON DISPONIBILE</td>
     <td>32</td>
     <td>Rete non disponibile.</td>
   </tr>
   <tr>  
-    <td>NETWORK_ERROR</td>
+    <td>ERRORE_DI_RETE</td>
     <td>33</td>
-    <td>Errore durante il recupero dei dati dalla rete.</td>
+    <td>Errore nell’ottenere dati dalla rete.</td>
   </tr>
   <tr>
     <td>OVERFLOW</td>
@@ -392,7 +391,7 @@ L&#39;interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione 
   <tr>
     <td>PERIOD_NOT_LOADED</td>
     <td>36</td>
-    <td>È stata tentata un'operazione su un periodo HOLD o su un periodo non ancora caricato.</td>
+    <td>Tentativo di operazione su un periodo di blocco o su un periodo non ancora caricato.</td>
   </tr>
   <tr> 
     <td>INVALID_REPLACE_DURATION</td>
@@ -400,19 +399,19 @@ L&#39;interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione 
     <td>La durata di sostituzione specificata non è valida o si estende oltre la fine del flusso.</td>
   </tr>
   <tr>
-    <td>CALLED_FROM_WRONG_THREAD</td>
+    <td>CHIAMATO_DA_SBAGLIATO_THREAD</td>
     <td>38</td>
-    <td>L'API non può essere chiamata dal thread sbagliato. Principalmente, per gli elementi API che dovrebbero essere richiamati solo dal thread principale.</td>
+    <td>Impossibile chiamare l'API dal thread errato. Principalmente, per gli elementi API che devono essere chiamati solo dal thread principale.</td>
   </tr>
   <tr>
     <td>FRAGMENT_READ_ERROR</td>
     <td>39</td>
-    <td>Errore di lettura del frammento. Nessun failover presente. Il motore tenterà di leggere il frammento successivo.</td>
+    <td>Errore di lettura del frammento. Nessun failover presente. Il motore proverà a leggere il frammento successivo.</td>
   </tr>
   <tr>
-    <td>ABORTO</td>
+    <td>INTERROTTO</td>
     <td>40</td>
-    <td>L'operazione è stata interrotta da una chiamata Abort o Destroy esplicita.</td>
+    <td>Operazione interrotta da una chiamata di interruzione o eliminazione esplicita.</td>
   </tr>
   <tr>
     <td>UNSUPPORTED_HLS_VERSION</td>
@@ -432,62 +431,62 @@ L&#39;interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione 
   <tr>
     <td>NETWORK_DOWN</td>
     <td>44</td>
-    <td>La connessione di rete dell'utente non è attiva. La riproduzione potrebbe arrestarsi in qualsiasi momento e riprenderà quando la connessione sarà disponibile.</td>
+    <td>La connessione di rete dell'utente non è attiva. La riproduzione potrebbe interrompersi in qualsiasi momento e riprenderà quando la connessione sarà disponibile.</td>
   </tr>
   <tr>
     <td>NO_USABLE_BITRATE_PROFILE</td>
     <td>45</td>
-    <td>Nessun profilo di bitrate utilizzabile trovato nel flusso.</td>
+    <td>Nessun profilo di velocità in bit utilizzabile trovato nel flusso.</td>
   </tr>
   <tr>
     <td>BAD_MANIFEST_SIGNATURE</td>
     <td>46</td>
-    <td>Il manifesto ha una firma errata. Il test di firma del manifesto non è riuscito.</td>
+    <td>Il manifesto ha una firma non valida. Il test della firma del manifesto non è riuscito.</td>
   </tr>
   <tr>
-    <td>CANNOT_LOAD_PLAYLIST</td>
+    <td>IMPOSSIBILE_CARICARE_PLAYLIST</td>
     <td>47</td>
     <td>Impossibile caricare una playlist.</td>
   </tr>
   <tr>
     <td>REPLACEMENT_FAILED</td>
     <td>48</td>
-    <td>La sostituzione specificata in un'API Insert non è riuscita. Ciò significa che l'inserimento è riuscito ma non è stato sostituito. La sostituzione potrebbe non riuscire se il manifesto da sostituire è stato rimosso dalla timeline.</td>
+    <td>Impossibile eseguire la sostituzione specificata in un'API di inserimento. Ciò significa che l'inserimento è riuscito, ma la sostituzione non è riuscita. La sostituzione potrebbe non riuscire se il manifesto da sostituire è stato rimosso dalla timeline.</td>
   </tr>
   <tr>
-    <td>SWITCH_TO_ASYMMETRIC_PROFILE</td>
+    <td>SWITCH_TO_AYMMETRIC_PROFILE</td>
     <td>49</td>
-    <td>DRM sta passando a un profilo asimmetrico. Tutti i profili devono essere allineati in base alla durata. In caso contrario, l'avviso verrà visualizzato e potrebbero verificarsi salti durante la riproduzione.</td>
+    <td>DRM sta passando a un profilo asimmetrico. È previsto che tutti i profili siano allineati in durata. In caso contrario, verrà visualizzato questo avviso e potrebbero verificarsi salti nella riproduzione.</td>
   </tr>
   <tr>
-    <td>LIVE_WINDOW_MOVED_BACKWARD</td>
+    <td>LIVE_WINDOW_MOVE_BACKWARD</td>
     <td>50</td>
-    <td>La finestra Live deve essere spostata solo in avanti. In caso contrario, verrà visualizzato questo avviso e la finestra non verrà letta. A causa di ciò, durante la riproduzione potrebbero verificarsi salti (o interruzioni/pause lunghe).</td>
+    <td>La finestra Live deve essere spostata solo in avanti. In caso contrario, questo avviso verrà generato e la finestra non verrà letta. Per questo motivo, potrebbero verificarsi salti (o pause lunghe/di arresto) nella riproduzione.</td>
   </tr>
   <tr>
     <td>CURRENT_PERIOD_EXPIRED</td>
     <td>51</td>
-    <td>La finestra Live si è spostata oltre il periodo corrente.</td>
+    <td>La finestra Live è stata spostata oltre il periodo corrente.</td>
   </tr>
   <tr>
     <td>CONTENT_LENGTH_MISMATCH</td>
     <td>52</td>
-    <td>La lunghezza del contenuto indicata dal server HTTP non corrisponde alla dimensione effettiva del supporto.</td>
+    <td>La lunghezza del contenuto segnalata dal server HTTP non corrisponde alla dimensione effettiva del file multimediale.</td>
   </tr>
   <tr>
     <td>PERIOD_HOLD</td>
     <td>53</td>
-    <td>Il lettore multimediale non è in grado di leggere ulteriormente perché ha raggiunto il tempo impostato dall'API setHoldAt.</td>
+    <td>Il lettore multimediale non è in grado di leggere ulteriormente perché ha raggiunto l’ora impostata dall’API setHoldAt.</td>
   </tr>
   <tr>  
     <td>LIVE_HOLD</td>
     <td>54</td>
-    <td>Il lettore multimediale non è in grado di caricare i segmenti perché ha raggiunto la fine della finestra dal vivo. Il caricamento del segmento riprenderà quando il server aggiungerà nuovi supporti alla finestra dal vivo. Questo stato viene generalmente raggiunto se:<ul><li>Il valore bufferTime è troppo alto (uguale o superiore alla durata della finestra attiva).</li><li>Una combinazione di una o più API insert/delete ha sostituito più supporti rispetto a quelli aggiunti.</li><li>Il periodo successivo è un periodo live con una sostituzione di supporti in sospeso (a causa della chiamata API InsertBy)</li></ul></td>
+    <td>Il lettore multimediale non è in grado di caricare i segmenti perché ha raggiunto la fine della finestra live. Il caricamento del segmento riprenderà quando il server aggiunge nuovi file multimediali alla finestra live. Questo stato viene generalmente raggiunto se:<ul><li>BufferTime troppo alto (uguale o superiore alla durata della finestra attiva).</li><li>Una combinazione di una o più API di inserimento/cancellazione ha sostituito più supporti rispetto a quelli aggiunti.</li><li>Il periodo successivo è un periodo live con una sostituzione dei contenuti multimediali in sospeso (a causa della chiamata API InsertBy)</li></ul></td>
   </tr>
   <tr>
     <td>BAD_MEDIA_INTERLEAVING</td>
     <td>55</td>
-    <td>L'interfoliazione audio e video nel supporto non viene eseguita correttamente. Si tratta di un errore di package. L'avviso viene inviato quando la differenza supera i due secondi.</td>
+    <td>L'interfoliazione audio e video nel supporto non viene eseguita correttamente. Si tratta di un errore di packaging. L’avviso viene inviato quando la differenza supera i due secondi.</td>
   </tr>
   <tr>
     <td>DRM_NOT_AVAILABLE</td>
@@ -502,47 +501,47 @@ L&#39;interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione 
   <tr>
     <td>BAD_MEDIA_SAMPLE_FOUND</td>
     <td>58</td>
-    <td>Il decodificatore ha ricevuto un campione errato che non può essere decodificato. In genere non si tratta di un errore fatale, ma indica che potrebbero verificarsi dei problemi nell’audio/video. Troppe istanze di questo errore indicano una codifica non valida o un file non valido.</td>
+    <td>Il decodificatore ha ricevuto un campione non valido che non può essere decodificato. In genere non si tratta di un errore irreversibile, ma indica che potrebbero verificarsi errori nell’audio/video. Troppe istanze di questo errore indicano una codifica non valida o un file non valido.</td>
   </tr>
   <tr>
     <td>RANGE_SPANS_READ_HEAD</td>
     <td>59</td>
-    <td>Dopo l'avvio della riproduzione, l'intervallo Inserisci/Sostituisci non deve contenere la testina di lettura.</td>
+    <td>Dopo l'avvio della riproduzione, l'intervallo Inserisci/Sostituisci non deve contenere l'intestazione di lettura.</td>
   </tr>
   <tr> 
     <td>POSTROLL_WITH_LIVE_NOT_ALLOWED</td>
     <td>60</td>
-    <td>Gli inserimenti post-roll non sono consentiti su un supporto live. Tuttavia, sono consentiti dopo che il server contrassegna il supporto come completo.</td>
+    <td>Gli inserimenti post-roll non sono consentiti nei file multimediali live. Sono tuttavia consentiti dopo che il server ha contrassegnato il supporto come completo.</td>
   </tr>
   <tr>
     <td>INTERNAL_ERROR</td>
-    <td>81</td>
-    <td>Una questione molto rara che non dovrebbe mai accadere.</td>
+    <td>61</td>
+    <td>Un problema molto raro che non dovrebbe mai accadere.</td>
   </tr>
   <tr>  
     <td>SPS_PPS_FOUND_OUTSIDE_AVCC</td>
     <td>62</td>
-    <td>Il flusso non segue la raccomandazione del package di inserire sempre H264 SPS/PPS in un AVCC. È possibile che si verifichino problemi di ricerca/riproduzione.</td>
+    <td>Il flusso non segue la raccomandazione di imballaggio di inserire sempre H264 SPS/PPS in un AVCC. Potrebbero essere visualizzati problemi di ricerca/riproduzione.</td>
   </tr>
   <tr>  
-    <td>PARAL_REPLACEMENT</td>
+    <td>PARZIALE_SOSTITUZIONE</td>
     <td>63</td>
-    <td>La sostituzione specificata in un'API Insert è stata eseguita solo in parte. Questo accade quando replaceDuration si estende sulla durata della timeline.</td>
+    <td>La sostituzione specificata in un’API di inserimento è stata eseguita solo parzialmente. Ciò si verifica quando replaceDuration si estende sulla durata della sequenza temporale.</td>
   </tr>
   <tr>
-    <td>RENDITION_M3U8_ERROR</td>
+    <td>RAPPRESENTAZIONE_M3U8_ERROR</td>
     <td>64</td>
-    <td>Errore durante il caricamento della playlist della rappresentazione. Questo è solo per AVE, non per Flash Player.</td>
+    <td>Errore durante il caricamento della playlist della rappresentazione. Questo è solo per AVE, non per FlashPlayer.</td>
   </tr>
   <tr>
     <td>NULL_OPERATION</td>
     <td>65</td>
-    <td>L'operazione non ha alcun effetto.</td>
+    <td>L'operazione non esegue alcuna operazione.</td>
   </tr>
   <tr>
     <td>SEGMENT_SKIPPED_ON_FAILURE</td>
     <td>66</td>
-    <td>Il segmento non può essere riprodotto e viene ignorato in caso di errore.</td>
+    <td>Il segmento non può essere riprodotto e viene saltato in caso di errore.</td>
   </tr>
   <tr>
     <td>INCOMPATIBLE_RENDER_MODE</td>
@@ -567,12 +566,12 @@ L&#39;interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione 
   <tr>
     <td>CANNOT_SPLIT_TIMELINE</td>
     <td>71</td>
-    <td>Impossibile eseguire un'operazione di divisione su una timeline.</td>
+    <td>Impossibile eseguire un'operazione di divisione su una sequenza temporale.</td>
   </tr>
   <tr>
     <td>CANNOT_ERASE_TIMELINE</td>
     <td>72</td>
-    <td>Impossibile eseguire un'operazione di cancellazione su una timeline.</td>
+    <td>Impossibile eseguire un'operazione di cancellazione su una sequenza temporale.</td>
   </tr>
   <tr>
     <td>DID_NOT_GET_NEXT_FRAGMENT</td>
@@ -582,7 +581,7 @@ L&#39;interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione 
   <tr>
     <td>NO_TIMELINE</td>
     <td>74</td>
-    <td>Nessuna timeline presente in una struttura dati interna.</td>
+    <td>Nessuna timeline presente in una struttura di dati interna.</td>
   </tr>
   <tr>
     <td>LISTENER_NOT_FOUND</td>
@@ -597,7 +596,7 @@ L&#39;interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione 
   <tr>
     <td>NO_AUDIO_SINK</td>
     <td>77</td>
-    <td>Nessun lavello audio presente in una struttura dati interna.</td>
+    <td>Nessun sink audio presente in una struttura di dati interna.</td>
   </tr>
   <tr>  
     <td>FILE_OPEN_ERROR</td>
@@ -607,7 +606,7 @@ L&#39;interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione 
   <tr>
     <td>FILE_WRITE_ERROR</td>
     <td>79</td>
-    <td>Impossibile scrivere in un file.</td>
+    <td>Impossibile scrivere su un file.</td>
   </tr>
   <tr>
     <td>FILE_READ_ERROR</td>
@@ -617,7 +616,7 @@ L&#39;interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione 
   <tr>
     <td>ID3PARSE_ERROR</td>
     <td>81</td>
-    <td>Errore durante l'analisi dei dati ID3.</td>
+    <td>Errore nell’analisi dei dati ID3.</td>
   </tr>
   <tr>
     <td>SECURITY_ERROR</td>
@@ -627,32 +626,32 @@ L&#39;interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione 
   <tr>
     <td>TIMELINE_TOO_SHORT</td>
     <td>83</td>
-    <td>La durata della timeline è troppo breve. Se si tratta di un flusso live, possono verificarsi frequenti buffering.</td>
+    <td>La durata della sequenza temporale è troppo breve. Se si tratta di un flusso live, può verificarsi un buffering frequente.</td>
   </tr>
   <tr>
     <td>AUDIO_ONLY_STREAM_START</td>
     <td>84</td>
-    <td>Lo streaming è stato commutato in un flusso solo audio.</td>
+    <td>Lo streaming è stato convertito in streaming solo audio.</td>
   </tr>
   <tr>  
     <td>AUDIO_ONLY_STREAM_END</td>
     <td>85</td>
-    <td>Lo streaming è stato commutato da solo audio a un flusso con video.</td>
+    <td>Lo streaming è stato cambiato da "solo audio" a "video".</td>
   </tr>
   <tr>
-    <td>KEY_NOT_FOUND</td>
+    <td>CHIAVE_NON_TROVATA</td>
     <td>87</td>
     <td>Impossibile trovare la chiave.</td>
   </tr>
   <tr>
     <td>INVALID_KEY</td>
     <td>88</td>
-    <td>La chiave non è valida.</td>
+    <td>Chiave non valida.</td>
   </tr>
   <tr>
     <td>KEY_SERVER_NOT_FOUND</td>
     <td>89</td>
-    <td>Il server delle chiavi non restituisce una chiave.</td>
+    <td>Il server chiavi non restituisce alcuna chiave.</td>
   </tr>
   <tr>
     <td>MAIN_MANIFEST_UPDATE_TO_BE_HANDLED</td>
@@ -660,23 +659,23 @@ L&#39;interfaccia Video Encoder di AVE restituisce le notifiche di riproduzione 
     <td>Impossibile gestire l'aggiornamento del manifesto principale.</td>
   </tr>
   <tr>
-    <td>UNREPORTED_TIME_DISCONTINUITY_FOUND</td>
+    <td>UNREPORTS_TIME_DISCONTINUITY_FOUND</td>
     <td>91</td>
-    <td>Discontinuità dell'ora non segnalata (PTS) trovata.</td>
+    <td>È stata rilevata una discontinuità nell’ora non segnalata (PTS).</td>
   </tr>
   <tr>
     <td>UNMATCHED_AV_DISCONTINUITY_FOUND</td>
     <td>92</td>
-    <td>Discontinuità audio e video non corrispondente rilevata.</td>
+    <td>È stata rilevata una discontinuità audio e video senza corrispondenza.</td>
   </tr>
   <tr>
     <td>TRICKPLAY_ENDED_DUE_TO_ERROR</td>
     <td>93</td>
-    <td>Si è verificato un errore durante la riproduzione del file multimediale in modalità di riproduzione trucco. La modalità di riproduzione dei mattoni è terminata e il flusso viene messo in pausa. Chiamate Play() per riprodurre il supporto in modalità normale.</td>
+    <td>Si è verificato un errore durante la riproduzione di contenuti multimediali in modalità di riproduzione con trucco. La modalità di riproduzione dei brani viene terminata e il flusso viene messo in pausa. Chiamare Play() per riprodurre il contenuto multimediale in modalità normale.</td>
   </tr>
   <tr>
-    <td>LIVE_WINDOW_MOVED_AHEAD</td>
+    <td>LIVE_WINDOW_MOVE_AHEAD</td>
     <td>95</td>
-    <td>Il giocatore è fuori dalla finestra dal vivo e deve cercare di recuperare.</td>
+    <td>Il giocatore è fuori dalla finestra dal vivo e deve cercare in avanti per recuperare.</td>
   </tr>
 </table>

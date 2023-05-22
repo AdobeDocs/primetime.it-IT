@@ -1,21 +1,19 @@
 ---
-description: TVSDK invia eventi di metadati temporizzati e genera metadati temporizzati ogni volta che si incontrano tag predefiniti o personalizzati o quando una playlist cambia in un manifesto. Gli eventi vengono inviati nell'ordine in cui compaiono nel manifesto.
-title: Eventi di metadati temporizzati
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK invia eventi di metadati temporizzati e genera metadati temporizzati ogni volta che vengono rilevati tag predefiniti o personalizzati o quando una playlist viene modificata in un manifesto. Gli eventi vengono inviati nell’ordine in cui compaiono nel manifesto.
+title: Eventi metadati temporizzati
+exl-id: 4c58b06e-5f70-452c-a743-55c4b6206711
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '108'
 ht-degree: 0%
 
 ---
 
-
 # Eventi metadati temporizzati{#timed-metadata-events}
 
-TVSDK invia eventi di metadati temporizzati e genera metadati temporizzati ogni volta che si incontrano tag predefiniti o personalizzati o quando una playlist cambia in un manifesto. Gli eventi vengono inviati nell&#39;ordine in cui compaiono nel manifesto.
+TVSDK invia eventi di metadati temporizzati e genera metadati temporizzati ogni volta che vengono rilevati tag predefiniti o personalizzati o quando una playlist viene modificata in un manifesto. Gli eventi vengono inviati nell’ordine in cui compaiono nel manifesto.
 
 Il lettore implementa azioni basate sui seguenti eventi:
 
-* `TimedMetadataEvent.TIMED_METADATA_ID3_ADDED`: Inviato quando sono stati elaborati i metadati temporizzati ID3.
-* `TimedMetadataEvent.TIMED_METADATA_SKIPPED`: Inviato quando i metadati temporizzati sono stati elaborati e non è stata rilevata alcuna opportunità.
-
+* `TimedMetadataEvent.TIMED_METADATA_ID3_ADDED`: inviato quando è stato elaborato un metadati con tempistica ID3.
+* `TimedMetadataEvent.TIMED_METADATA_SKIPPED`: inviato quando sono stati elaborati i metadati temporizzati e non è stata rilevata alcuna opportunità.
