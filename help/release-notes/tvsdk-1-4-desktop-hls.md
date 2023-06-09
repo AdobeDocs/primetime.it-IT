@@ -5,9 +5,9 @@ contentOwner: asgupta
 products: SG_PRIMETIME
 topic-tags: release-notes
 exl-id: 5e227c99-acf6-4b16-a35a-68e2928fdbfd
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
 workflow-type: tm+mt
-source-wordcount: '5195'
+source-wordcount: '5194'
 ht-degree: 0%
 
 ---
@@ -102,7 +102,7 @@ Supporto per le installazioni on-premise di Adobe Individualization Server per p
 
 * #33777 Zendesk - Token SWF Localhost scaduto per la build di distribuzione DHLS.
 
-   Aggiornamento del token localhost per la demo PMP su DHLS.
+  Aggiornamento del token localhost per la demo PMP su DHLS.
 
 ### Problemi risolti nelle versioni precedenti {#resolved-issues-previous}
 
@@ -110,11 +110,11 @@ Supporto per le installazioni on-premise di Adobe Individualization Server per p
 
 * Zendesk #30731 - TVSDK non riproduce più annunci VPAID in un AdBreak.
 
-   È stata corretta la riproduzione di più annunci VPAID in un AdBreak.
+  È stata corretta la riproduzione di più annunci VPAID in un AdBreak.
 
 * Zendesk #29968 - Cartellone doppio.
 
-   Il lettore video può ripetere l&#39;ultimo segmento di un periodo quando si verifica un interruttore ABR. Per questo motivo, a volte, l’ultimo segmento di preroll si è ripetuto. Questo problema è stato risolto.
+  Il lettore video può ripetere l&#39;ultimo segmento di un periodo quando si verifica un interruttore ABR. Per questo motivo, a volte, l’ultimo segmento di preroll si è ripetuto. Questo problema è stato risolto.
 
 **Versione 1.4.35** (879)
 
@@ -124,31 +124,31 @@ Supporto per le installazioni on-premise di Adobe Individualization Server per p
 
 * Zendesk #21701 - Invia l’URL creativo originale per la richiesta 1401 CRS invece dell’URL normalizzato.
 
-   È stato risolto il problema relativo alla richiesta di transcodifica di URL già inseriti nel pacchetto, in base a quanto richiesto dal back-end CRS.
+  È stato risolto il problema relativo alla richiesta di transcodifica di URL già inseriti nel pacchetto, in base a quanto richiesto dal back-end CRS.
 * Zendesk #26197 - Compressione anamorfica non riprodotta nella risoluzione desiderata del display.
 
-   **Nota**: questo problema richiede Flash Player 24.0.0.194 o versione successiva.
+  **Nota**: questo problema richiede Flash Player 24.0.0.194 o versione successiva.
 
-   È stato risolto il problema per cui le voci mancanti nelle tabelle delle proporzioni venivano utilizzate per calcolare la larghezza dell’output.
+  È stato risolto il problema per cui le voci mancanti nelle tabelle delle proporzioni venivano utilizzate per calcolare la larghezza dell’output.
 
 * Zendesk #26840 - Rilevamento HDCP non riuscito su IE11 + Windows7 dopo il secondo tentativo.
 
-   **Nota**: questo problema richiede il lettore Flash 24.0.0.218 o versione successiva.
+  **Nota**: questo problema richiede il lettore Flash 24.0.0.218 o versione successiva.
 
-   Questo problema è stato risolto modificando l’elaborazione della coda di messaggi principale di AdobeCP in modo da eseguire l’iterazione nell’intera coda, invece di bloccare solo il primo messaggio.
+  Questo problema è stato risolto modificando l’elaborazione della coda di messaggi principale di AdobeCP in modo da eseguire l’iterazione nell’intera coda, invece di bloccare solo il primo messaggio.
 
 * Zendesk #27460 - Il nuovo account Akamai non è in grado di gestire una richiesta CDN di POST.
 
-   Il nuovo account CDN non è in grado di gestire una richiesta CDN di POST. Questo problema è stato risolto aggiornando il codice in modo che la richiesta dell’annuncio cdn.auditude.com sia GET anziché POST.
+  Il nuovo account CDN non è in grado di gestire una richiesta CDN di POST. Questo problema è stato risolto aggiornando il codice in modo che la richiesta dell’annuncio cdn.auditude.com sia GET anziché POST.
 * Zendesk #27619 - Arresto anomalo del Flash su Windows 10
 
-   **Nota**: questo problema richiede il lettore Flash 24.0.0.218 o versione successiva.
+  **Nota**: questo problema richiede il lettore Flash 24.0.0.218 o versione successiva.
 
-   Questo problema è stato risolto evitando un errore dovuto alla presenza di URL lunghi.
+  Questo problema è stato risolto evitando un errore dovuto alla presenza di URL lunghi.
 
 * Zendesk #28218 - L’evento di tracciamento non si attiva durante il plackback dal punto di ripresa
 
-   Questo problema è lo stesso di Zendesk #26592. È stato risolto il problema per cui le operazioni di ricerca erano consentite quando il lettore multimediale è in stato PREPARATO per i flussi VOD.
+  Questo problema è lo stesso di Zendesk #26592. È stato risolto il problema per cui le operazioni di ricerca erano consentite quando il lettore multimediale è in stato PREPARATO per i flussi VOD.
 
 **Versione 1.4.32** (867)
 
@@ -695,7 +695,7 @@ I tipi mime per il formato HLS facevano distinzione tra maiuscole e minuscole, e
 
 **Versione 1.4.6**
 
-* Zendesk #2652 - Documentazione di Auditude per desktop HLS, documentazione di Auditude media_id per desktop HLS
+* Zendesk #2652 - Documentazione di Auditude per HLS desktop, Auditude chiarita di media_id per HLS desktop
 
 **Versione 1.4.5**
 
@@ -754,7 +754,7 @@ _playbackManager.pause();
 
    * PTPLAY-1634 - Lo stesso tag Abbonato ha marche temporali diverse in finestre live diverse. Quando si spostano le finestre live, lo stesso tag in ciascuna di esse deve avere gli stessi timestamp. Tuttavia, a volte gli stessi tag hanno marche temporali diverse.
    * PTPLAY-28 - La timeline di MediaPlayer non include interruzioni vuote.
-   * È necessario un file dei criteri per più domini (crossdomain.xml) per consentire lo streaming del contenuto da un dominio diverso. [Impostazione di un file crossdomain.xml per il flusso HTTP](https://www.adobe.com/devnet/adobe-media-server/articles/cross-domain-xml-for-streaming.html).
+   * È necessario un file dei criteri per più domini (crossdomain.xml) per consentire lo streaming del contenuto da un dominio diverso. [Impostazione di un file crossdomain.xml per il flusso HTTP](https://helpx.adobe.com/adobe-media-server/dev/configure-dynamic-streaming-live-streaming.html).
    * #3694203 bug: in un flusso DVR, la ricerca dall’interno di un mid-roll di riproduzione a un altro annuncio mid-roll può causare il blocco del browser
    * #3753725 bug: selectPolicyForSeekIntoAd non tiene conto se l’interruzione pubblicitaria è stata guardata
    * #3754529 bug: gli annunci pre-roll non vengono rimossi dal flusso durante il ripristino in un flusso DVR live

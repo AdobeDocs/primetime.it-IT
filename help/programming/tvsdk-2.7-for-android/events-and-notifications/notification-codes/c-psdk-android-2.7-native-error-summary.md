@@ -3,9 +3,9 @@ title: Dettagli della notifica NATIVE_ERROR
 description: Dettagli della notifica NATIVE_ERROR
 copied-description: true
 exl-id: 51c75349-0fa8-405d-9e09-b51b425fe21b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
 workflow-type: tm+mt
-source-wordcount: '6888'
+source-wordcount: '6868'
 ht-degree: 2%
 
 ---
@@ -352,7 +352,7 @@ Quando si segnalano gli errori DRM a Adobe, assicurarsi di includere `NATIVE_SUB
    <td colname="col2"><span class="codeph"> AAXS_I15nNon riuscito </span> </td> 
    <td colname="col3"> <p>Il processo di provisioning del client con le chiavi non è riuscito. subErrorId contiene un errore di riga o specifico del client o del server. </p> 
     <ul id="ul_98D919B9060A441AACB6106F6D8E8DA7"> 
-     <li id="li_DCAB00A8AC4A426CBBD377374B3F71AE">Il software del distributore deve ritentare l'operazione almeno una volta. <p>Se utilizzi Google Chrome su Windows, fornisci una spiegazione su come consentire l’accesso al plug-in che non è in una sandbox. Per ulteriori informazioni, consulta <a href="https://helpx.adobe.com/adobe-access/kb/error-3321.html" format="html" scope="external"> Accesso alla sandbox di Google Chrome negato</a>. </p> </li> 
+     <li id="li_DCAB00A8AC4A426CBBD377374B3F71AE">Il software del distributore deve ritentare l'operazione almeno una volta. <p>Se utilizzi Google Chrome su Windows, fornisci una spiegazione su come consentire l’accesso al plug-in che non è in una sandbox. Accesso alla sandbox di Google Chrome negato</a>. </p> </li> 
      <li id="li_7FB7681FE32D444BB1BDBA3E5953A2C3">Il distributore deve completare una delle seguenti attività: 
       <ul id="ul_486B64F187C44AE3B4775953A6142836"> 
        <li id="li_095B1D4CD051427CB2BFA7082B454056">Se l’errore è coerente tra le piattaforme, devi segnalare il problema con un Adobe. </li> 
@@ -685,7 +685,7 @@ Quando si segnalano gli errori DRM a Adobe, assicurarsi di includere `NATIVE_SUB
   <tr> 
    <td colname="col1"> 3368 </td> 
    <td colname="col2"><span class="codeph"> AAXS_UserSettingsNoAccess</span> </td> 
-   <td colname="col3"> <p>L’utente ha annullato l’operazione o ha immesso impostazioni che impediscono l’accesso al sistema. </p> <p>Questo errore viene generato solo quando la versione di SWF è 19 o successiva. Per compatibilità con le versioni precedenti, 3321 viene generato quando il SWF è versione 18 o precedente. </p> <p>Il software del distributore deve guidare l'utente a una spiegazione di come consentire l'accesso al plug-in non in modalità sandbox. Per ulteriori informazioni, consulta <a href="https://helpx.adobe.com/adobe-access/kb/error-3321.html" format="html" scope="external"> Accesso alla sandbox di Google Chrome negato</a> e <a href="https://forums.adobe.com/message/5520902" format="https" scope="external"> Errore DRM 3322/3346/3368 in Chrome (problemi della barra informazioni)</a>. </p> </td> 
+   <td colname="col3"> <p>L’utente ha annullato l’operazione o ha immesso impostazioni che impediscono l’accesso al sistema. </p> <p>Questo errore viene generato solo quando la versione di SWF è 19 o successiva. Per compatibilità con le versioni precedenti, 3321 viene generato quando il SWF è versione 18 o precedente. </p> <p>Il software del distributore deve guidare l'utente a una spiegazione di come consentire l'accesso al plug-in non in modalità sandbox. Accesso alla sandbox di Google Chrome negato</a> e <a href="https://forums.adobe.com/message/5520902" format="https" scope="external"> Errore DRM 3322/3346/3368 in Chrome (problemi della barra informazioni)</a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3369 </td> 

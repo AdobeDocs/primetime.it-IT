@@ -2,9 +2,9 @@
 title: Appendice B "Suggerimenti per il debug"
 description: Appendice B "Suggerimenti per il debug"
 exl-id: ea024797-315e-47c0-99ea-1ac49c8c9697
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
 workflow-type: tm+mt
-source-wordcount: '173'
+source-wordcount: '170'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ L’autenticazione di Adobe Primetime memorizza dati temporanei come la cache de
 
 - [Cancellazione della cache e dei cookie del browser](#clearing-the-browser-cache-and-cookies)
 - [Cancellazione cache LSO](#clearing-lsos-cache)\
-    
+   
 
 ## Cancellazione della cache e dei cookie del browser {#clearing-the-browser-cache-and-cookies}
 
@@ -41,8 +41,7 @@ Seleziona la ```entitlement.\*``` (a seconda di ciò che viene testato) e fare c
 I tecnici dell’autenticazione di Adobe Primetime utilizzano i seguenti strumenti di debug:
 
 - Firebug - <http://www.getfirebug.com/>
-- Flashbug (funziona con la versione di debug di Flash Player) <https://addons.mozilla.org/en-US/firefox/addon/14465/>
-- Intestazioni http live - <https://addons.mozilla.org/en-US/firefox/addon/3829/>
+- Flashbug (funziona con la versione di debug di Flash Player)
 - Filtro - <http://www.fiddler2.com/fiddler2/>
 - Charles <http://www.charlesproxy.com/>
 - Wireshark <http://www.wireshark.org/>

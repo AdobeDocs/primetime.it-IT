@@ -2,9 +2,9 @@
 title: Usa Ad Insertion in streaming live/lineare
 description: Utilizzo dell’Ad Insertion in streaming live/lineare
 exl-id: d56ed723-ec72-4bbd-befc-6858c7c9d800
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
 workflow-type: tm+mt
-source-wordcount: '274'
+source-wordcount: '265'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Primetime Ad Insertion supporta un’ampia gamma di formati cue standard e non s
 
 * DPI SCTE-35 (marcatori annuncio avanzati SCTE-35)
 
-* [Adobe Digital Program Insertion Segnalazione Specifica](https://www.adobe.com/content/dam/acom/en/devnet/primetime/PrimetimeDigitalProgramInsertionSignalingSpecification.pdf)
+* [Adobe Digital Program Insertion Segnalazione Specifica](assets/PrimetimeDigitalProgramInsertionSignalingSpecification.pdf)
 
 * Binario SCTE-35 (sia HLS che DASH)
 
