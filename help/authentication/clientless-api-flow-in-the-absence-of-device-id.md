@@ -2,7 +2,7 @@
 title: Flusso API senza client in assenza di ID dispositivo
 description: Flusso API senza client in assenza di ID dispositivo
 exl-id: 6549a6d6-03a9-4d95-99fb-d3ada832323d
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## Problema
 
-Non tutte le app per Smart Device sono in grado di fornire un ID dispositivo univoco.  Poiché deviceId è un parametro obbligatorio, se non viene passato il servizio restituisce un errore 400.
+Non tutte le app per Smart Device sono in grado di fornire un ID dispositivo univoco.  Poiché deviceId è un parametro obbligatorio, se non viene passato il servizio restituisce un errore 400.
 
 
 ## Soluzione temporanea/Soluzione alternativa

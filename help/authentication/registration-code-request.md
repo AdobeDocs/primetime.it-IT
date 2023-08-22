@@ -2,7 +2,7 @@
 title: Pagina di registrazione
 description: Pagina di registrazione
 exl-id: 581b8e2e-7420-4511-88b9-f2cd43a41e10
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 0%
@@ -19,23 +19,23 @@ ht-degree: 0%
 
 &lt;reggie_fqdn>:
 
-* Produzione - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produzione - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
-* Produzione - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produzione - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
- </br>
+</br>
 
 ## Descrizione {#create-reg-code-svc}
 
 Restituisce l&#39;URI del codice di registrazione e della pagina di accesso generati in modo casuale.
 
-| Endpoint | Chiamato  </br>Da | Input   </br>Parametro | HTTP  </br>Metodo | Risposta | HTTP  </br>Risposta |
+| Endpoint | Chiamato  </br>Da | Input   </br>Parametro | HTTP  </br>Metodo | Risposta | HTTP  </br>Risposta |
 | --- | --- | --- | --- | --- | --- |
-| &lt;reggie_fqdn>/reggie/v1/{requestor}/regcode</br>Ad esempio:</br>REGGIE_FQDN/reggie/v1/sampleRequestorId/regcode | App di streaming</br>o</br>Servizio programmatore | 1. richiedente  </br>    (componente Percorso)</br>2.  deviceId (Hashed)   </br>    (Obbligatorio)</br>3.  device_info/X-Device-Info (Obbligatorio)</br>4.  mvpd (facoltativo)</br>5.  ttl (facoltativo)</br>6.  _deviceType_</br> 7.  _deviceUser_ (Obsoleto)</br>8.  _appId_ (Obsoleto) | POST | XML o JSON contenente un codice di registrazione e informazioni o dettagli sull’errore in caso di esito negativo. Consulta schemi ed esempi di seguito. | 201 |
+| &lt;reggie_fqdn>/reggie/v1/{requestor}/regcode</br>Ad esempio:</br>REGGIE_FQDN/reggie/v1/sampleRequestorId/regcode | App di streaming</br>o</br>Servizio programmatore | 1. richiedente  </br>    (componente Percorso)</br>2.  deviceId (Hashed)   </br>    (Obbligatorio)</br>3.  device_info/X-Device-Info (Obbligatorio)</br>4.  mvpd (facoltativo)</br>5.  ttl (facoltativo)</br>6.  _deviceType_</br> 7.  _deviceUser_ (Obsoleto)</br>8.  _appId_ (Obsoleto) | POST | XML o JSON contenente un codice di registrazione e informazioni o dettagli sull’errore in caso di esito negativo. Consulta schemi ed esempi di seguito. | 201 |
 
 {style="table-layout:auto"}
 
@@ -43,12 +43,12 @@ Restituisce l&#39;URI del codice di registrazione e della pagina di accesso gene
 | --- | --- |
 | richiedente | ID richiedente del programmatore per il quale è valida questa operazione. |
 | deviceId | Byte ID dispositivo. |
-| device_info/</br>X-Device-Info | Informazioni sul dispositivo di streaming.</br>**Nota**: questo PUÒ essere trasmesso device_info come parametro URL, ma a causa delle dimensioni potenziali del parametro e delle limitazioni alla lunghezza di un URL GET, DEVE essere trasmesso come X-Device-Info nell’intestazione http. </br>Vedi tutti i dettagli in [Trasmissione delle informazioni sul dispositivo e sulla connessione](/help/authentication/passing-client-information-device-connection-and-application.md). |
+| device_info/</br>X-Device-Info | Informazioni sul dispositivo di streaming.</br>**Nota**: questo PUÒ essere trasmesso device_info come parametro URL, ma a causa delle dimensioni potenziali del parametro e delle limitazioni alla lunghezza di un URL GET, DEVE essere trasmesso come X-Device-Info nell’intestazione http. </br>Vedi tutti i dettagli in [Trasmissione delle informazioni sul dispositivo e sulla connessione](/help/authentication/passing-client-information-device-connection-and-application.md). |
 | mvpd | ID MVPD per il quale è valida questa operazione. |
-| ttl | Durata di questo codice regcode in secondi.</br>**Nota**: il valore massimo consentito per ttl è di 36000 secondi (10 ore). Valori più alti determinano una risposta HTTP 400 (richiesta non valida). Se `ttl` viene lasciato vuoto, l’autenticazione Primetime imposta un valore predefinito di 30 minuti. |
-| _deviceType_ | Il tipo di dispositivo (ad esempio, Roku, PC).</br>Se questo parametro è impostato correttamente, ESM offre metriche che sono [suddiviso per tipo di dispositivo](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) quando utilizzi Clientless, in modo da poter eseguire diversi tipi di analisi, ad esempio Roku, AppleTV e Xbox.</br>Vedi, [Vantaggi dell’utilizzo del parametro del tipo di dispositivo senza client nelle metriche di passaggio ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br>**Nota**: device_info sostituirà questo parametro. |
+| ttl | Durata di questo codice regcode in secondi.</br>**Nota**: il valore massimo consentito per ttl è di 36000 secondi (10 ore). Valori più alti determinano una risposta HTTP 400 (richiesta non valida). Se `ttl` viene lasciato vuoto, l’autenticazione Primetime imposta un valore predefinito di 30 minuti. |
+| _deviceType_ | Il tipo di dispositivo (ad esempio, Roku, PC).</br>Se questo parametro è impostato correttamente, ESM offre metriche che sono [suddiviso per tipo di dispositivo](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) quando utilizzi Clientless, in modo da poter eseguire diversi tipi di analisi, ad esempio Roku, AppleTV e Xbox.</br>Vedi, [Vantaggi dell’utilizzo del parametro del tipo di dispositivo senza client nelle metriche di passaggio ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br>**Nota**: device_info sostituirà questo parametro. |
 | _deviceUser_ | L’identificatore utente del dispositivo. |
-| _appId_ | ID/nome dell’applicazione. </br>**Nota**: device_info sostituisce questo parametro. |
+| _appId_ | ID/nome dell’applicazione. </br>**Nota**: device_info sostituisce questo parametro. |
 
 {style="table-layout:auto"}
 
@@ -57,11 +57,10 @@ Restituisce l&#39;URI del codice di registrazione e della pagina di accesso gene
 >
 >**Indirizzo IP dispositivo di streaming**
 ></br>
->Per le implementazioni client-server, l&#39;indirizzo IP del dispositivo di streaming viene inviato implicitamente con questa chiamata.  Per le implementazioni server-to-server, in cui **regcode** Viene effettuata una chiamata al servizio Programmatore e non al dispositivo di streaming, è necessaria la seguente intestazione per trasmettere l&#39;indirizzo IP del dispositivo di streaming:
+>Per le implementazioni client-server, l&#39;indirizzo IP del dispositivo di streaming viene inviato implicitamente con questa chiamata.  Per le implementazioni server-to-server, in cui **regcode** Viene effettuata una chiamata al servizio Programmatore e non al dispositivo di streaming, è necessaria la seguente intestazione per trasmettere l&#39;indirizzo IP del dispositivo di streaming:
 >
 >
->
-```
+>```
 >X-Forwarded-For : <streaming_device_ip> 
 >```
 >
@@ -69,10 +68,10 @@ Restituisce l&#39;URI del codice di registrazione e della pagina di accesso gene
 ></br></br>
 >Esempio:</br>
 >
->
-```
+>```
 >POST /reggie/v1/{req_id}/regcode HTTP/1.1</br>X-Forwarded-For:203.45.101.20
 >```
+>
 </br>
 
 ### Schema XML di risposta {#xml-schema}
@@ -112,7 +111,7 @@ Restituisce l&#39;URI del codice di registrazione e della pagina di accesso gene
     </xs:schema>
 ```
 
- </br>
+</br>
 
 | Nome elemento | Descrizione |
 | --------------- | ------------------------------------------------------------------------------------ |
@@ -130,9 +129,9 @@ Restituisce l&#39;URI del codice di registrazione e della pagina di accesso gene
 | registrationURL | URL dell&#39;app Web di accesso da visualizzare all&#39;utente finale |
 
 {style="table-layout:auto"}
- </br>
+</br>
 
- 
+
 
 ### Messaggio di errore XSD  {#error-message}
 
@@ -153,7 +152,7 @@ Restituisce l&#39;URI del codice di registrazione e della pagina di accesso gene
         </xs:element>
     </xs:schema>
 ```
- 
+
 
 ### Risposta di esempio {#sample-response}
 
@@ -178,7 +177,7 @@ Restituisce l&#39;URI del codice di registrazione e della pagina di accesso gene
         </info>
     </ns2:regcode>
 ```
- 
+
 **JSON:**
 
 ```JSON

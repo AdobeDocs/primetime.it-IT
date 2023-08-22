@@ -2,7 +2,7 @@
 title: Appendice B "Suggerimenti per il debug"
 description: Appendice B "Suggerimenti per il debug"
 exl-id: ea024797-315e-47c0-99ea-1ac49c8c9697
-source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 0%
@@ -21,20 +21,20 @@ ht-degree: 0%
 L’autenticazione di Adobe Primetime memorizza dati temporanei come la cache del browser, la cache degli LSO e i cookie. La cancellazione dei dati temporanei è importante, per essere certi di ottenere un’area di lavoro pulita durante il test.
 
 - [Cancellazione della cache e dei cookie del browser](#clearing-the-browser-cache-and-cookies)
-- [Cancellazione cache LSO](#clearing-lsos-cache)\
-   
+- [Cancellazione cache LSO](#clearing-lsos-cache)
+
 
 ## Cancellazione della cache e dei cookie del browser {#clearing-the-browser-cache-and-cookies}
 
-È affidabile dal browser, ma in Firefox: &quot;Tools&quot; -\> &quot;Clear Recent History...&quot; -\> On &quot;Time range to clear:&quot; seleziona &quot;Everything&quot;; and on &quot;Details&quot;: check the &quot;Cookies&quot; and &quot;Cache&quot; -\> Fai clic su &quot;Clear Now&quot; (Cancella ora).\
- 
+È affidabile dal browser, ma in Firefox: &quot;Tools&quot; -\> &quot;Clear Recent History...&quot; -\> On &quot;Time range to clear:&quot; seleziona &quot;Everything&quot;; and on &quot;Details&quot;: check the &quot;Cookies&quot; and &quot;Cache&quot; -\> Fai clic su &quot;Clear Now&quot; (Cancella ora).
+
 
 ## Cancellazione cache LSO {#clearing-lsos-cache}
 
 Accedere a [Guida del Flash Player](http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager07.html).
 
-Seleziona la ```entitlement.\*``` (a seconda di ciò che viene testato) e fare clic su &quot;Elimina sito Web&quot;.\
- 
+Seleziona la ```entitlement.\*``` (a seconda di ciò che viene testato) e fare clic su &quot;Elimina sito Web&quot;.
+
 
 ## Strumenti di debug {#tools}
 

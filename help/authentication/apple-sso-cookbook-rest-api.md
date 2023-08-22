@@ -2,7 +2,7 @@
 title: Manuale Apple SSO (REST API)
 description: Manuale Apple SSO (REST API)
 exl-id: cb27c4b7-bdb4-44a3-8f84-c522a953426f
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '1435'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Questo documento funge da estensione della documentazione REST API esistente, ac
 
 ## Cookbook {#Cookbooks}
 
-Per beneficiare dell’esperienza utente SSO di Apple, un’applicazione dovrebbe integrare [Account abbonato video](https://developer.apple.com/documentation/videosubscriberaccount) framework sviluppato da Apple, per quanto riguarda la comunicazione API REST per l’autenticazione di Adobe Primetime, dovrebbe seguire la sequenza di suggerimenti presentata di seguito.
+Per beneficiare dell’esperienza utente SSO di Apple, un’applicazione dovrebbe integrare [Account abbonato video](https://developer.apple.com/documentation/videosubscriberaccount) framework sviluppato da Apple, per quanto riguarda la comunicazione API REST per l’autenticazione di Adobe Primetime, dovrebbe seguire la sequenza di suggerimenti presentata di seguito.
 
 </br>
 
@@ -43,7 +43,7 @@ Per beneficiare dell’esperienza utente SSO di Apple, un’applicazione dovrebb
 - [Avvia flusso di lavoro di autenticazione nella seconda schermata](#Initiate_second_screen_authentication_workflow)
 - [Procedi con i flussi di autorizzazione](#Proceed_with_authorization_flows)
 
- 
+
 
 ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/qu/platform-sso.jpeg)
 
@@ -53,7 +53,7 @@ Per beneficiare dell’esperienza utente SSO di Apple, un’applicazione dovrebb
 
 >[!TIP]
 >
-> **<u>Suggerimento</u>** Implementare questa soluzione tramite [Autenticazione Adobe Primetime](/help/authentication/check-authentication-token.md) servizio.
+> **<u>Suggerimento</u>** Implementare questa soluzione tramite [Autenticazione Adobe Primetime](/help/authentication/check-authentication-token.md) servizio.
 
 </br>
 
@@ -63,11 +63,11 @@ Per beneficiare dell’esperienza utente SSO di Apple, un’applicazione dovrebb
 >
 > **<u>Suggerimento</u>** Implementare questa soluzione tramite [Account abbonato video](https://developer.apple.com/documentation/videosubscriberaccount) infrastruttura.
 
-- L’applicazione dovrebbe verificare la presenza di [autorizzazione di accesso](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus) le informazioni di abbonamento dell’utente e procedi solo se l’utente lo ha consentito.
-- La domanda dovrebbe presentare una [richiesta](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest) per informazioni sull’account dell’abbonato.
-- L’applicazione deve attendere ed elaborare il [metadati](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadata) informazioni.
+- L’applicazione dovrebbe verificare la presenza di [autorizzazione di accesso](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus) le informazioni di abbonamento dell’utente e procedi solo se l’utente lo ha consentito.
+- La domanda dovrebbe presentare una [richiesta](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest) per informazioni sull’account dell’abbonato.
+- L’applicazione deve attendere ed elaborare il [metadati](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadata) informazioni.
 
- 
+
 
 >[!TIP]
 >
@@ -133,12 +133,12 @@ videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.pr
 
 >[!TIP]
 >
-> **<u>Suggerimento</u>** Implementare questa soluzione tramite [Autenticazione Adobe Primetime](/help/authentication/provide-mvpd-list.md) servizio.
+> **<u>Suggerimento</u>** Implementare questa soluzione tramite [Autenticazione Adobe Primetime](/help/authentication/provide-mvpd-list.md) servizio.
 
 
 >[!TIP]
 >
-> **<u>Suggerimento pro:</u>** Tieni presente le proprietà MVPD: *`enablePlatformServices`*, *`boardingStatus`*, *`displayInPlatformPicker`*, *`platformMappingId`*, *`requiredMetadataFields`* e prestare particolare attenzione ai commenti presentati nei frammenti di codice di altri passaggi.
+> **<u>Suggerimento pro:</u>** Tieni presente le proprietà MVPD: *`enablePlatformServices`*, *`boardingStatus`*, *`displayInPlatformPicker`*, *`platformMappingId`*, *`requiredMetadataFields`* e prestare particolare attenzione ai commenti presentati nei frammenti di codice di altri passaggi.
 
 </br>
 
@@ -148,12 +148,12 @@ videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.pr
 >
 > **<u>Suggerimento</u>** Implementare questa soluzione tramite [Account abbonato video](https://developer.apple.com/documentation/videosubscriberaccount) infrastruttura.
 
-- L’applicazione dovrebbe verificare la presenza di [autorizzazione di accesso](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus) le informazioni di abbonamento dell’utente e procedi solo se l’utente lo ha consentito.
-- La domanda dovrebbe fornire un [delegare](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanagerdelegate) per VSAccountManager.
-- La domanda dovrebbe presentare una [richiesta](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest) per informazioni sull’account dell’abbonato.
-- L’applicazione deve attendere ed elaborare il [metadati](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadata) informazioni.
+- L’applicazione dovrebbe verificare la presenza di [autorizzazione di accesso](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus) le informazioni di abbonamento dell’utente e procedi solo se l’utente lo ha consentito.
+- La domanda dovrebbe fornire un [delegare](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanagerdelegate) per VSAccountManager.
+- La domanda dovrebbe presentare una [richiesta](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest) per informazioni sull’account dell’abbonato.
+- L’applicazione deve attendere ed elaborare il [metadati](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadata) informazioni.
 
- 
+
 
 >[!TIP]
 >
@@ -261,7 +261,7 @@ videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.pr
 
 >[!TIP]
 >
-> **<u>Suggerimento pro:</u>** Tieni presente il frammento di codice da [&quot;Avvia il flusso di lavoro SSO di Platform con la configurazione Adobe&quot;](#Initiate_Platform_SSO_workflow_with_Adobe_config) passaggio. L’accesso utente ha esito positivo se *`vsaMetadata!.accountProviderIdentifier`* contiene un valore valido e la data corrente non ha superato il *`vsaMetadata!.authenticationExpirationDate`* valore.
+> **<u>Suggerimento pro:</u>** Tieni presente il frammento di codice da [&quot;Avvia il flusso di lavoro SSO di Platform con la configurazione Adobe&quot;](#Initiate_Platform_SSO_workflow_with_Adobe_config) passaggio. L’accesso utente ha esito positivo se *`vsaMetadata!.accountProviderIdentifier`* contiene un valore valido e la data corrente non ha superato il *`vsaMetadata!.authenticationExpirationDate`* valore.
 
 </br>
 
@@ -269,11 +269,11 @@ videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.pr
 
 >[!TIP]
 >
-> **<u>Suggerimento</u>** Implementare questa impostazione tramite l’autenticazione di Adobe Primetime [Richiesta profilo](/help/authentication/retrieve-profilerequest.md) servizio.
+> **<u>Suggerimento</u>** Implementare questa impostazione tramite l’autenticazione di Adobe Primetime [Richiesta profilo](/help/authentication/retrieve-profilerequest.md) servizio.
 
 >[!TIP]
 >
-> **<u>Suggerimento pro:</u>** L’identificatore del provider ottenuto dal framework dell’account dell’abbonato video rappresenta *`platformMappingId`* in termini di configurazione dell’autenticazione di Adobe Primetime. Pertanto, l&#39;applicazione deve determinare il valore della proprietà ID MVPD, utilizzando *`platformMappingId`* tramite Adobe Primetime Authentication [Fornisci elenco MVPD](/help/authentication/provide-mvpd-list.md) servizio.
+> **<u>Suggerimento pro:</u>** L’identificatore del provider ottenuto dal framework dell’account dell’abbonato video rappresenta *`platformMappingId`* in termini di configurazione dell’autenticazione di Adobe Primetime. Pertanto, l&#39;applicazione deve determinare il valore della proprietà ID MVPD, utilizzando *`platformMappingId`* tramite Adobe Primetime Authentication [Fornisci elenco MVPD](/help/authentication/provide-mvpd-list.md) servizio.
 
 </br>
 
@@ -284,11 +284,11 @@ videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.pr
 > **<u>Suggerimento</u>** Implementare questa soluzione tramite [Account abbonato video](https://developer.apple.com/documentation/videosubscriberaccount) infrastruttura.
 
 
-- L’applicazione dovrebbe verificare la presenza di [autorizzazione di accesso](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus) le informazioni di abbonamento dell’utente e procedi solo se l’utente lo ha consentito.
-- La domanda dovrebbe presentare una [richiesta](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest) per informazioni sull’account dell’abbonato.
-- L’applicazione deve attendere ed elaborare il [metadati](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadata) informazioni.
+- L’applicazione dovrebbe verificare la presenza di [autorizzazione di accesso](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus) le informazioni di abbonamento dell’utente e procedi solo se l’utente lo ha consentito.
+- La domanda dovrebbe presentare una [richiesta](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest) per informazioni sull’account dell’abbonato.
+- L’applicazione deve attendere ed elaborare il [metadati](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadata) informazioni.
 
- 
+
 
 >[!TIP]
 >
@@ -362,12 +362,12 @@ videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.pr
 
 >[!TIP]
 >
-> **<u>Suggerimento</u>** Implementare questa impostazione tramite l’autenticazione di Adobe Primetime [Scambio di token](/help/authentication/token-exchange.md) servizio.
+> **<u>Suggerimento</u>** Implementare questa impostazione tramite l’autenticazione di Adobe Primetime [Scambio di token](/help/authentication/token-exchange.md) servizio.
 
 
 >[!TIP]
 >
-> **<u>Suggerimento pro:</u>** Tieni presente il frammento di codice da [&quot;Inoltra la richiesta di Adobe all’SSO della piattaforma per ottenere il profilo&quot;](#Forward_the_Adobe_request_to_Platform_SSO_to_obtain_the_profile) passaggio. Questo *`vsaMetadata!.samlAttributeQueryResponse!`* rappresenta il *`SAMLResponse`*, che deve essere trasmesso [Scambio di token](/help/authentication/token-exchange.md) e richiede la manipolazione e la codifica delle stringhe (*Base64* codificato e *URL* codificati successivamente) prima di effettuare la chiamata.
+> **<u>Suggerimento pro:</u>** Tieni presente il frammento di codice da [&quot;Inoltra la richiesta di Adobe all’SSO della piattaforma per ottenere il profilo&quot;](#Forward_the_Adobe_request_to_Platform_SSO_to_obtain_the_profile) passaggio. Questo *`vsaMetadata!.samlAttributeQueryResponse!`* rappresenta il *`SAMLResponse`*, che deve essere trasmesso [Scambio di token](/help/authentication/token-exchange.md) e richiede la manipolazione e la codifica delle stringhe (*Base64* codificato e *URL* codificati successivamente) prima di effettuare la chiamata.
 
 </br>
 
@@ -375,7 +375,7 @@ videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.pr
 
 >[!TIP]
 >
-> **<u>Suggerimento</u>** Implementarlo tramite l’autenticazione Adobe Primetime di supporto [Scambio di token](/help/authentication/token-exchange.md) risposta corretta, che sarà un *`204 No Content`*, che indica che il token è stato creato correttamente ed è pronto per essere utilizzato per i flussi di autorizzazione.
+> **<u>Suggerimento</u>** Implementarlo tramite l’autenticazione Adobe Primetime di supporto [Scambio di token](/help/authentication/token-exchange.md) risposta corretta, che sarà un *`204 No Content`*, che indica che il token è stato creato correttamente ed è pronto per essere utilizzato per i flussi di autorizzazione.
 
 </br>
 
@@ -388,28 +388,28 @@ videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.pr
 >
 > **<u>Suggerimento</u>** Implementare questa impostazione tramite l’autenticazione di Adobe Primetime
 
-[Richiesta codice di registrazione](/help/authentication/registration-code-request.md), [Avvia autenticazione](/help/authentication/initiate-authentication.md) e [Recupero token di autenticazione API REST](/help/authentication/retrieve-authentication-token.md) o [Controlla token di autenticazione](/help/authentication/check-authentication-token.md) servizi.
+[Richiesta codice di registrazione](/help/authentication/registration-code-request.md), [Avvia autenticazione](/help/authentication/initiate-authentication.md) e [Recupero token di autenticazione API REST](/help/authentication/retrieve-authentication-token.md) o [Controlla token di autenticazione](/help/authentication/check-authentication-token.md) servizi.
 
 
 >[!TIP]
 >
 > **<u>Suggerimento pro:</u>** Segui i passaggi seguenti per le implementazioni tvOS.
 
-- L&#39;applicazione dovrebbe [ottenere un codice di registrazione](/help/authentication/registration-code-request.md) e presentarlo all&#39;utente finale sul primo dispositivo (schermo).
+- L&#39;applicazione dovrebbe [ottenere un codice di registrazione](/help/authentication/registration-code-request.md) e presentarlo all&#39;utente finale sul primo dispositivo (schermo).
 - L&#39;applicazione dovrebbe iniziare [polling per riconoscere lo stato di autenticazione](/help/authentication/retrieve-authentication-token.md) sul primo dispositivo (schermo) dopo aver ottenuto il codice di registrazione.
-- Un&#39;altra applicazione dovrebbe [avvia autenticazione](/help/authentication/initiate-authentication.md) su un secondo dispositivo (schermo) quando viene utilizzato il codice di registrazione.
-- L&#39;applicazione dovrebbe essere interrotta [sondaggio](/help/authentication/retrieve-authentication-token.md) sul primo dispositivo (schermata) quando viene generato il token di autenticazione.
+- Un&#39;altra applicazione dovrebbe [avvia autenticazione](/help/authentication/initiate-authentication.md) su un secondo dispositivo (schermo) quando viene utilizzato il codice di registrazione.
+- L&#39;applicazione dovrebbe essere interrotta [sondaggio](/help/authentication/retrieve-authentication-token.md) sul primo dispositivo (schermata) quando viene generato il token di autenticazione.
 
- 
+
 
 >[!TIP]
 >
 > **<u>Suggerimento pro:</u>** Segui i passaggi seguenti per le implementazioni iOS/iPadOS.
 
-- L&#39;applicazione dovrebbe [ottenere un codice di registrazione](/help/authentication/registration-code-request.md) che non deve essere presentato all&#39;utente finale sul primo dispositivo (schermo).
-- L&#39;applicazione dovrebbe [avvia autenticazione](/help/authentication/initiate-authentication.md) sul primo dispositivo (schermo) utilizzando il codice di registrazione e un [WKWebView](https://developer.apple.com/documentation/webkit/wkwebview) o un [SFSafariViewController](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller) componente.
-- L&#39;applicazione dovrebbe iniziare [polling per conoscere lo stato di autenticazione](/help/authentication/retrieve-authentication-token.md) sul primo dispositivo (schermo) dopo [WKWebView](https://developer.apple.com/documentation/webkit/wkwebview) o [SFSafariViewController](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller) il componente viene chiuso.
-- L&#39;applicazione dovrebbe essere interrotta [sondaggio](/help/authentication/retrieve-authentication-token.md) sul primo dispositivo (schermata) quando viene generato il token di autenticazione.
+- L&#39;applicazione dovrebbe [ottenere un codice di registrazione](/help/authentication/registration-code-request.md) che non deve essere presentato all&#39;utente finale sul primo dispositivo (schermo).
+- L&#39;applicazione dovrebbe [avvia autenticazione](/help/authentication/initiate-authentication.md) sul primo dispositivo (schermo) utilizzando il codice di registrazione e un [WKWebView](https://developer.apple.com/documentation/webkit/wkwebview) o un [SFSafariViewController](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller) componente.
+- L&#39;applicazione dovrebbe iniziare [polling per conoscere lo stato di autenticazione](/help/authentication/retrieve-authentication-token.md) sul primo dispositivo (schermo) dopo [WKWebView](https://developer.apple.com/documentation/webkit/wkwebview) o [SFSafariViewController](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller) il componente viene chiuso.
+- L&#39;applicazione dovrebbe essere interrotta [sondaggio](/help/authentication/retrieve-authentication-token.md) sul primo dispositivo (schermata) quando viene generato il token di autenticazione.
 
 </br>
 
@@ -417,37 +417,37 @@ videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.pr
 
 >[!TIP]
 >
-> **<u>Suggerimento</u>** Implementare questa impostazione tramite l’autenticazione di Adobe Primetime [Avvia autorizzazione](/help/authentication/initiate-authorization.md) e [Ottieni token multimediale breve](/help/authentication/obtain-short-media-token.md) servizi.
+> **<u>Suggerimento</u>** Implementare questa impostazione tramite l’autenticazione di Adobe Primetime [Avvia autorizzazione](/help/authentication/initiate-authorization.md) e [Ottieni token multimediale breve](/help/authentication/obtain-short-media-token.md) servizi.
 
 </br>
 
 ### Disconnetti {#Logout}
 
-Il [Account abbonato video](https://developer.apple.com/documentation/videosubscriberaccount) Il framework non fornisce un&#39;API per disconnettere programmaticamente gli utenti che hanno effettuato l&#39;accesso al proprio account di provider TV a livello di sistema del dispositivo. Pertanto, affinché la disconnessione diventi effettiva, l&#39;utente finale dovrà disconnettersi esplicitamente da *`Settings -> TV Provider`* su iOS/iPadOS o *`Settings -> Accounts -> TV Provider`* su tvOS. L&#39;altra opzione che l&#39;utente avrebbe è quella di revocare l&#39;autorizzazione per accedere alle informazioni sull&#39;abbonamento dell&#39;utente dalla sezione delle impostazioni specifiche dell&#39;applicazione (accesso al provider TV).
+Il [Account abbonato video](https://developer.apple.com/documentation/videosubscriberaccount) Il framework non fornisce un&#39;API per disconnettere programmaticamente gli utenti che hanno effettuato l&#39;accesso al proprio account di provider TV a livello di sistema del dispositivo. Pertanto, affinché la disconnessione diventi effettiva, l&#39;utente finale dovrà disconnettersi esplicitamente da *`Settings -> TV Provider`* su iOS/iPadOS o *`Settings -> Accounts -> TV Provider`* su tvOS. L&#39;altra opzione che l&#39;utente avrebbe è quella di revocare l&#39;autorizzazione per accedere alle informazioni sull&#39;abbonamento dell&#39;utente dalla sezione delle impostazioni specifiche dell&#39;applicazione (accesso al provider TV).
 
 >[!TIP]
 >
-> **<u>Suggerimento</u>** Implementare questa impostazione tramite l’autenticazione di Adobe Primetime [Chiamata metadati utente](/help/authentication/user-metadata.md) e [Disconnetti](/help/authentication/initiate-logout.md) servizi.
+> **<u>Suggerimento</u>** Implementare questa impostazione tramite l’autenticazione di Adobe Primetime [Chiamata metadati utente](/help/authentication/user-metadata.md) e [Disconnetti](/help/authentication/initiate-logout.md) servizi.
 
 
 >[!TIP]
 >
 > **<u>Suggerimento pro:</u>** Segui i passaggi seguenti per le implementazioni tvOS.
- 
 
-- L’applicazione dovrebbe determinare se l’autenticazione è avvenuta a seguito di un accesso tramite l’SSO della piattaforma o meno, utilizzando il comando &quot;*tokenSource&quot;* [metadati utente](/help/authentication/user-metadata.md) dal servizio Adobe Primetime Authentication.
-- L’applicazione deve indicare/richiedere all’utente di disconnettersi esplicitamente da *`Settings -> Accounts -> TV Provider`* su tvOS **solo** se il *&quot;tokenSource&quot;* il valore è uguale a &quot;*Apple&quot;.*
+
+- L’applicazione dovrebbe determinare se l’autenticazione è avvenuta a seguito di un accesso tramite l’SSO della piattaforma o meno, utilizzando il comando &quot;*tokenSource&quot;* [metadati utente](/help/authentication/user-metadata.md) dal servizio Adobe Primetime Authentication.
+- L’applicazione deve indicare/richiedere all’utente di disconnettersi esplicitamente da *`Settings -> Accounts -> TV Provider`* su tvOS **solo** se il *&quot;tokenSource&quot;* il valore è uguale a &quot;*Apple&quot;.*
 - L&#39;applicazione dovrebbe [avvia la disconnessione](/help/authentication/initiate-logout.md) dal servizio Adobe Primetime Authentication tramite una chiamata HTTP diretta. Ciò non faciliterebbe la pulizia delle sessioni da parte di MVPD.
 
- 
+
 
 >[!TIP]
 >
 > **<u>Suggerimento pro:</u>** Segui i passaggi seguenti per le implementazioni iOS/iPadOS.
 
-- L’applicazione dovrebbe determinare se l’autenticazione è avvenuta a seguito di un accesso tramite l’SSO della piattaforma o meno, utilizzando il comando &quot;*tokenSource&quot;* [metadati utente](/help/authentication/user-metadata.md) dal servizio Adobe Primetime Authentication.
-- L’applicazione deve indicare/richiedere all’utente di disconnettersi esplicitamente da *`Settings -> TV Provider`* su iOS/iPadOS **solo** se il *&quot;tokenSource&quot;* il valore è uguale a *&quot;Apple&quot;*.
-- L&#39;applicazione dovrebbe [avvia la disconnessione](/help/authentication/initiate-logout.md) dal servizio di autenticazione di Adobe Primetime tramite un [WKWebView](https://developer.apple.com/documentation/webkit/wkwebview) o un [SFSafariViewController](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller) componente. Questo faciliterebbe la pulizia delle sessioni da parte di MVPD.
+- L’applicazione dovrebbe determinare se l’autenticazione è avvenuta a seguito di un accesso tramite l’SSO della piattaforma o meno, utilizzando il comando &quot;*tokenSource&quot;* [metadati utente](/help/authentication/user-metadata.md) dal servizio Adobe Primetime Authentication.
+- L’applicazione deve indicare/richiedere all’utente di disconnettersi esplicitamente da *`Settings -> TV Provider`* su iOS/iPadOS **solo** se il *&quot;tokenSource&quot;* il valore è uguale a *&quot;Apple&quot;*.
+- L&#39;applicazione dovrebbe [avvia la disconnessione](/help/authentication/initiate-logout.md) dal servizio di autenticazione di Adobe Primetime tramite un [WKWebView](https://developer.apple.com/documentation/webkit/wkwebview) o un [SFSafariViewController](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller) componente. Questo faciliterebbe la pulizia delle sessioni da parte di MVPD.
 
 <!--
 
@@ -458,5 +458,5 @@ Il [Account abbonato video](https://developer.apple.com/documentation/videosubs
 - [REST API Cookbook (Server-to-Server)](/help/authentication/rest-api-cookbook-servertoserver.md)
 - [REST API Cookbook (Client-to-Server)](/help/authentication/rest-api-cookbook-clienttoserver.md)
 - [REST API Reference](/help/authentication/rest-api-reference.md)
-- [Apple Developer Documentation - Video Subscriber Account Framework](https://developer.apple.com/documentation/videosubscriberaccount)
+- [Apple Developer Documentation - Video Subscriber Account Framework](https://developer.apple.com/documentation/videosubscriberaccount)
 -->

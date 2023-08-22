@@ -2,7 +2,7 @@
 title: Informazioni sull’autenticazione di Adobe Primetime e TV Everywhere
 description: Informazioni sull’autenticazione di Adobe Primetime e TV Everywhere
 exl-id: 5edeaccb-f9fa-4395-83b4-706c518d5a03
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '6288'
 ht-degree: 0%
@@ -176,7 +176,7 @@ I server back-end di autenticazione Adobe Primetime, ospitati da Adobe:
 
 La soluzione Adobe Primetime per l’autenticazione è incentrata sulla generazione di parti specifiche di dati ottenuti al completamento dei flussi di lavoro di autenticazione/autorizzazione. Questi dati sono denominati token. Hanno una durata limitata e sono archiviati in modo sicuro, sia in posizioni dipendenti dalla piattaforma sul client che su server di Adobe, nel caso della soluzione API senza client. Alla scadenza, i token devono essere ririlasciati riavviando i flussi di lavoro di autenticazione e/o autorizzazione.
 
-Esistono tre tipi di token che l’autenticazione Adobe Primetime genera durante i flussi di lavoro di autenticazione/autorizzazione. Due sono &quot;di lunga durata&quot; e forniscono continuità nell’esperienza di visualizzazione dell’utente. Il terzo, un token di breve durata, fornisce supporto per le best practice del settore per mitigare le frodi (dove le frodi includono exploit come ad esempio la copia di flussi). I valori TTL (time-to-live) sono impostati in base agli accordi tra i programmatori e i provider di servizi di televisione a pagamento, che concordano su un valore più adatto a tutte le persone coinvolte.
+Esistono tre tipi di token che l’autenticazione Adobe Primetime genera durante i flussi di lavoro di autenticazione/autorizzazione. Due sono di &quot;lunga durata&quot; e forniscono continuità nell’esperienza di visualizzazione dell’utente. Il terzo, un token di breve durata, fornisce supporto per le best practice del settore per mitigare le frodi (dove le frodi includono exploit come ad esempio la copia di flussi). I valori TTL (time-to-live) sono impostati in base agli accordi tra i programmatori e i provider di servizi di televisione a pagamento, che concordano su un valore più adatto a tutte le persone coinvolte.
 
 #### Token di autenticazione (di lunga durata) {#long-lived-auth-token}
 
@@ -288,7 +288,6 @@ Quando un cliente richiede una risorsa protetta a un programmatore per la prima 
 >
 >* L’autenticazione si verifica come scambio SAML tra l’autenticazione di Adobe Primetime come provider di servizi (o &quot;SP&quot;) e un provider di Pay TV come provider di identità (o &quot;IdP&quot;).
 >* L’autorizzazione utilizza uno scambio di servizi web back-channel (server-to-server) tra l’autenticazione di Adobe Primetime (SP) e un provider di Pay TV (IdP).
-
 
 
 ##### Comunicazione dei programmatori tramite Access Enabler
@@ -410,7 +409,7 @@ L’Adobe è anche un membro attivo del **OATC (Open Authentication Technical Co
 **In che modo l’autenticazione Adobe Primetime gestisce la gestione federated identity management/single sign-on (SSO)?**
 L’autenticazione Adobe Primetime ti consente di fornire ai clienti l’autenticazione e l’autorizzazione Single Sign-On (SSO), utilizzando la comunicazione back-channel (server-to-server) tra l’autenticazione Adobe Primetime e gli operatori Pay TV partecipanti. Quindi, con l’autenticazione Adobe Primetime, non è necessario che gli abbonati effettuino nuovamente l’accesso dopo la prima autenticazione, fino a quando quest’ultima è consentita dall’operatore di Pay TV per persistere. In genere questo limite è impostato su 30 giorni. A tal fine, l’autenticazione Adobe Primetime fornisce ai clienti un dominio comune per i token di autenticazione. Queste informazioni sullo stato di autenticazione sono disponibili per tutti i siti partecipanti che sono integrati con un determinato operatore di Pay TV.
 
-Attualmente, la maggior parte delle integrazioni di autenticazione Adobe Primetime con gli operatori di Pay TV utilizza il protocollo SAML, uno degli standard di autenticazione primari. L’autenticazione Adobe Primetime funge da provider di servizi proxy nell’architettura SAML e mantiene la risposta di autenticazione SAML come token protetto nel dominio comune di Adobe. L’autenticazione di Adobe Primetime è conforme a SAML 2.0.
+Attualmente, la maggior parte delle integrazioni di autenticazione Adobe Primetime con gli operatori di Pay TV utilizza il protocollo SAML, uno degli standard di autenticazione primari. L’autenticazione Adobe Primetime funge da provider di servizi proxy nell’architettura SAML e mantiene la risposta di autenticazione SAML come token sicuro nel dominio comune di Adobe. L’autenticazione di Adobe Primetime è conforme a SAML 2.0.
 
 Anche se a questo punto l&#39;autenticazione Adobe Primetime viene tipicamente utilizzata con le soluzioni SAML SSO, l&#39;architettura di autenticazione Adobe Primetime astrae tutte le specifiche di protocollo dall&#39;integrazione del programmatore. Pertanto, è possibile aggiungere nel tempo il supporto di nuovi protocolli, come quelli basati su OAuth 2.0 o su protocolli personalizzati.
 
@@ -420,3 +419,4 @@ L’utilizzo dell’autenticazione Adobe Primetime non comporta costi aggiuntivi
 >[!NOTE]
 >
 >**Passaggi successivi:** Per ulteriori informazioni, contatta il rappresentante del tuo Adobe o compila il modulo di richiesta di informazioni [qui](https://www.adobe.com/cfusion/mmform/index.cfm?name=adobepass_rfi).
+>

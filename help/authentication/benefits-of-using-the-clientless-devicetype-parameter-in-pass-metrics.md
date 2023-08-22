@@ -2,7 +2,7 @@
 title: Vantaggi dell’utilizzo del parametro deviceType senza client nelle metriche di autenticazione di Primetime
 description: Vantaggi dell’utilizzo del parametro deviceType senza client nelle metriche di autenticazione di Primetime
 exl-id: a5004887-d5fa-468e-971b-10806519175b
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '342'
 ht-degree: 0%
@@ -19,22 +19,22 @@ ht-degree: 0%
 
 ## Contesto
 
-Anche se facoltativo, il parametro `deviceType` dall’API senza client, se presente, viene utilizzato nelle metriche di autenticazione di Primetime esposte tramite [Monitoraggio del servizio di adesione](/help/authentication/entitlement-service-monitoring-overview.md).
+Anche se facoltativo, il parametro `deviceType` dall’API senza client, se presente, viene utilizzato nelle metriche di autenticazione di Primetime esposte tramite [Monitoraggio del servizio di adesione](/help/authentication/entitlement-service-monitoring-overview.md).
 
-Considerando che la connessione tra `deviceType` parametro e relativi **vantaggi** Nelle metriche di autenticazione di Primetime non è stato inizialmente specificato, l’obiettivo di questa nota tecnica è quello di aggiungere ulteriori informazioni su di esse.
+Considerando che la connessione tra `deviceType` parametro e relativi **vantaggi** Nelle metriche di autenticazione di Primetime non è stato inizialmente specificato, l’obiettivo di questa nota tecnica è quello di aggiungere ulteriori informazioni su di esse.
 
 ## Spiegazione
 
-Il `deviceType` Il parametro era presente nell’API senza client dalla prima versione, ma le sue implicazioni sulle metriche di autenticazione di Primetime sono state aggiunte in una versione più recente.
+Il `deviceType` Il parametro era presente nell’API senza client dalla prima versione, ma le sue implicazioni sulle metriche di autenticazione di Primetime sono state aggiunte in una versione più recente.
 
 
 
 >[!IMPORTANT]
 >
->Se il parametro `deviceType` è impostato correttamente, presenta le seguenti caratteristiche **benefit** in Monitoraggio del servizio di adesione: offre metriche che sono [suddiviso per tipo di dispositivo](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) quando utilizzi Clientless, in modo che possano essere eseguiti diversi tipi di analisi per, ad esempio, Roku, AppleTV, Xbox, ecc.
+>Se il parametro `deviceType` è impostato correttamente, presenta le seguenti caratteristiche **benefit** in Monitoraggio del servizio di adesione: offre metriche che sono [suddiviso per tipo di dispositivo](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) quando utilizzi Clientless, in modo che possano essere eseguiti diversi tipi di analisi per, ad esempio, Roku, AppleTV, Xbox, ecc.
 
 
-Per ulteriori informazioni sull’API di monitoraggio di Entitlement Service, consulta [albero di espansione,](/help/authentication/entitlement-service-monitoring-api.md#drill-down_tree) che illustra [dimensioni](/help/authentication/entitlement-service-monitoring-overview.md#esm_dimensions) (risorse) disponibili nel MES 2.0.
+Per ulteriori informazioni sull’API di monitoraggio di Entitlement Service, consulta [albero di espansione,](/help/authentication/entitlement-service-monitoring-api.md#drill-down_tree) che illustra [dimensioni](/help/authentication/entitlement-service-monitoring-overview.md#esm_dimensions) (risorse) disponibili nel MES 2.0.
 
 >[!NOTE]
 >
@@ -45,12 +45,12 @@ Per ulteriori informazioni sull’API di monitoraggio di Entitlement Service, co
 
 ## Implementazione
 
-Per beneficiare appieno delle metriche di autenticazione di Primetime, sono disponibili 2 tipi di [API senza client](#web_srvs_summary) che sono attualmente in uso e che devono avere il corretto `deviceType` imposta:
+Per beneficiare appieno delle metriche di autenticazione di Primetime, sono disponibili 2 tipi di [API senza client](#web_srvs_summary) che sono attualmente in uso e che devono avere il corretto `deviceType` imposta:
 
-1. API che hanno `regcode` come parametro obbligatorio e utilizzerà il `deviceType` il parametro impostato durante la creazione del `regcode`, con la seguente chiamata API:
+1. API che hanno `regcode` come parametro obbligatorio e utilizzerà il `deviceType` il parametro impostato durante la creazione del `regcode`, con la seguente chiamata API:
    - [\&lt;reggie _fqdn=&quot;&quot;>/reggie/v1/{requestorId}/regcode](#reg_serv)
 
-1. API che hanno `deviceType` come parametro facoltativo:
+1. API che hanno `deviceType` come parametro facoltativo:
    - [\&lt;sp _fqdn=&quot;&quot;>/api/v1/checkauthn](#check_authn_token)
    - [&lt;span class=&quot;s1&quot;>](#retrieve_authn_token)
    - [\&lt;sp _fqdn=&quot;&quot;>/api/v1/authorize](#init_authz)
@@ -60,4 +60,4 @@ Per beneficiare appieno delle metriche di autenticazione di Primetime, sono disp
    - [\&lt;sp _fqdn=&quot;&quot;>/api/v1/preauthorize](#PreAuthZ_Resources)
    - [\&lt;sp _fqdn=&quot;&quot;>/api/v1/logout](#init_logout)
 
-Si consiglia di utilizzare il `deviceType` e passa il tipo di dispositivo senza client corretto per tutte le API.
+Si consiglia di utilizzare il `deviceType` e passa il tipo di dispositivo senza client corretto per tutte le API.

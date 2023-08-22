@@ -2,7 +2,7 @@
 title: Fornisci elenco MVPD
 description: Fornisci elenco MVPD
 exl-id: db2d8f19-d0b9-4195-bf0b-f9de0d96062b
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 0%
@@ -19,21 +19,21 @@ ht-degree: 0%
 
 &lt;reggie_fqdn>:
 
-* Produzione - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produzione - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
-* Produzione - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produzione - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
- </br>
+</br>
 
 ## Descrizione {#description}
 
 Restituisce l&#39;elenco di MVPD configurati per il richiedente.
 
-| Endpoint | Chiamato  </br>Da | Input   </br>Parametri | HTTP  </br>Metodo | Risposta | HTTP  </br>Risposta |
+| Endpoint | Chiamato  </br>Da | Input   </br>Parametri | HTTP  </br>Metodo | Risposta | HTTP  </br>Risposta |
 | --- | --- | --- | --- | --- | --- |
 | &lt;sp_fqdn>/api/v1/config/{requestorId}</br></br>Ad esempio:</br></br>&lt;sp_fqdn>/api/v1/config/sampleRequestorId | Autenticazione Primetime | 1. Richiedente</br>    (componente Percorso)</br>_2.  deviceType (obsoleto)_ | GET | XML o JSON contenente l’elenco degli MVPD. | 200 |
 

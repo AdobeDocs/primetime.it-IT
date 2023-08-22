@@ -2,7 +2,7 @@
 title: Identificazione delle risorse protette
 description: Identificazione delle risorse protette
 exl-id: e96aea02-54b2-491d-ba91-253c0d0e681c
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '255'
 ht-degree: 0%
@@ -23,15 +23,14 @@ Ogni richiesta di autorizzazione (o richiesta di verifica dell’autorizzazione)
    - Canale
       - Spettacolo
          - Episodio
-            - Risorsa\
-                
+            - Risorsa
 
 </br>
 
 ## Formato Media RSS {#media_rss}
 
-Le risorse possono essere identificate da una stringa semplice (un identificatore univoco per un canale) o possono essere rappresentate in formato Media RSS (MRSS), come concordato tra Adobe (o un partner autorizzato di autenticazione Adobe Primetime) e gli MVPD e i programmatori partecipanti. La stringa RSS utilizzata come identificatore di risorsa può includere informazioni aggiuntive, ad esempio valutazioni e metadati per il controllo genitori.\
- 
+Le risorse possono essere identificate da una semplice stringa (un identificatore univoco per un canale) o possono essere rappresentate in formato Media RSS (MRSS), come concordato tra Adobe (o un partner autorizzato di autenticazione Adobe Primetime) e gli MVPD e i programmatori partecipanti. La stringa RSS utilizzata come identificatore di risorsa può includere informazioni aggiuntive, ad esempio valutazioni e metadati per il controllo genitori.
+
 
 Se utilizzi un identificatore di risorsa semplice, ad esempio &quot;TNT&quot;, si presume che rappresenti un canale e viene convertito in questo identificatore di risorsa RSS:
 
@@ -42,7 +41,7 @@ Se utilizzi un identificatore di risorsa semplice, ad esempio &quot;TNT&quot;, s
         </channel>
     </rss>
 ```
- 
+
 
 Un identificatore più complesso potrebbe includere, ad esempio, informazioni di rating aggiuntive. È possibile passare l&#39;intera stringa RSS alle funzioni di Access Enabler che richiedono un ID risorsa, ad esempio [`getAuthorization()`](/help/authentication/rest-api-reference.md):
 

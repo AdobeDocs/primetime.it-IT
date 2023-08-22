@@ -2,7 +2,7 @@
 title: API di monitoraggio del servizio di adesione
 description: API di monitoraggio del servizio di adesione
 exl-id: a9572372-14a6-4caa-9ab6-4a6baababaa1
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '2026'
 ht-degree: 0%
@@ -23,13 +23,13 @@ Il monitoraggio del servizio di titolarità (ESM) è implementato come WOLAP (ba
 >
 >L’API ESM non è generalmente disponibile. Per domande sulla disponibilità, contatta il rappresentante di Adobe.
 
-L&#39;API ESM fornisce una visualizzazione gerarchica dei cubi OLAP sottostanti. Ogni risorsa ([dimensione](#esm_dimensions) nella gerarchia delle dimensioni, mappato come segmento di percorso URL) genera rapporti con (aggregato) [metriche](#esm_metrics) per la selezione corrente. Ogni risorsa punta alla relativa risorsa padre (per l’aggregazione) e alle relative risorse secondarie (per l’espansione). Le operazioni di suddivisione in porzioni e dicing vengono eseguite tramite parametri di stringa di query che fissano dimensioni a valori o intervalli specifici.
+L&#39;API ESM fornisce una visualizzazione gerarchica dei cubi OLAP sottostanti. Ogni risorsa ([dimensione](#esm_dimensions) nella gerarchia delle dimensioni, mappato come segmento di percorso URL) genera rapporti con (aggregato) [metriche](#esm_metrics) per la selezione corrente. Ogni risorsa punta alla relativa risorsa padre (per l’aggregazione) e alle relative risorse secondarie (per l’espansione). Le operazioni di suddivisione in porzioni e dicing vengono eseguite tramite parametri di stringa di query che fissano dimensioni a valori o intervalli specifici.
 
 L’API REST fornisce i dati disponibili entro un intervallo di tempo specificato nella richiesta (fallback ai valori predefiniti se non ne viene fornito alcuno), in base al percorso della dimensione, ai filtri forniti e alle metriche selezionate. L’intervallo di tempo non verrà applicato ai rapporti che non contengono dimensioni temporali (anno, mese, giorno, ora, minuto, secondo).
 
-Il percorso radice dell’URL dell’endpoint restituisce le metriche aggregate complessive all’interno di un singolo record, insieme ai collegamenti alle opzioni di drill-down disponibili. La versione API è mappata come segmento finale del percorso URI dell’endpoint. Ad esempio: `https://mgmt.auth.adobe.com/*v2*` significa che i client accederanno a WOLAP versione 2.
+Il percorso radice dell’URL dell’endpoint restituisce le metriche aggregate complessive all’interno di un singolo record, insieme ai collegamenti alle opzioni di drill-down disponibili. La versione API è mappata come segmento finale del percorso URI dell’endpoint. Ad esempio: `https://mgmt.auth.adobe.com/*v2*` significa che i client accederanno a WOLAP versione 2.
 
-I percorsi URL disponibili sono individuabili tramite i collegamenti contenuti nella risposta. I percorsi URL validi vengono mantenuti per mappare un percorso all’interno della struttura di drill-down sottostante che contiene le metriche (pre)aggregate. Un percorso nel modulo `/dimension1/dimension2/dimension3` rifletterà una preaggregazione di queste tre dimensioni (l&#39;equivalente di un SQL `clause GROUP` DA `dimension1`, `dimension2`, `dimension3`). Se tale preaggregazione non esiste e il sistema non è in grado di calcolarla immediatamente, l’API restituirà una risposta 404 Not Found.
+I percorsi URL disponibili sono individuabili tramite i collegamenti contenuti nella risposta. I percorsi URL validi vengono mantenuti per mappare un percorso all’interno della struttura di drill-down sottostante che contiene le metriche (pre)aggregate. Un percorso nel modulo `/dimension1/dimension2/dimension3` rifletterà una preaggregazione di queste tre dimensioni (l&#39;equivalente di un SQL `clause GROUP` DA `dimension1`, `dimension2`, `dimension3`). Se tale preaggregazione non esiste e il sistema non è in grado di calcolarla immediatamente, l’API restituirà una risposta 404 Not Found.
 
 ## Albero drill-down {#drill-down-tree}
 
@@ -44,7 +44,7 @@ Le seguenti strutture di espansione illustrano le dimensioni (risorse) disponibi
 
 ![](assets/esm-mvpd-dimensions.png)
 
-Un GET al `https://mgmt.auth.adobe.com/v2` L’endpoint API restituirà una rappresentazione contenente:
+Un GET al `https://mgmt.auth.adobe.com/v2` L’endpoint API restituirà una rappresentazione contenente:
 
 * Collegamenti ai percorsi di drill-down radice disponibili:
 
@@ -134,7 +134,7 @@ I dati sono disponibili nei seguenti formati:
 
 I client possono utilizzare le seguenti strategie di negoziazione dei contenuti (la precedenza è data dalla posizione nell&#39;elenco, prima le cose):
 
-1. &quot;Estensione file&quot; aggiunta all’ultimo segmento del percorso URL: ad esempio, `/esm/v2/media-company/year/month/day.xml`. Se l’URL contiene una stringa di query, l’estensione deve precedere il punto interrogativo: `/esm/v2/media-company/year/month/day.csv?mvpd= SomeMVPD`
+1. &quot;Estensione file&quot; aggiunta all’ultimo segmento del percorso URL: ad esempio, `/esm/v2/media-company/year/month/day.xml`. Se l’URL contiene una stringa di query, l’estensione deve precedere il punto interrogativo: `/esm/v2/media-company/year/month/day.csv?mvpd= SomeMVPD`
 1. Un parametro stringa query formato: ad esempio, `/esm/report?format=json`
 1. L’intestazione HTTP Accept standard: ad esempio, `Accept: application/xml`
 
@@ -198,32 +198,32 @@ Esempio (supponendo che sia presente una singola metrica denominata `clients` ed
    </resource>
 ```
 
-* https://mgmt.auth.adobe.com/esm/v2/year/month.json 
+* https://mgmt.auth.adobe.com/esm/v2/year/month.json
 
-   ```JSON
-       {
-         "_links" : {
-           "self" : {
-             "href" : "/esm/v2/year/month?start=2012-07-20T00:00:00&end=2012-08-20T14:35:21"
-           },
-           "roll-up" : {
-             "href" : "/esm/v2/year"
-           },
-           "drill-down" : {
-             "href" : "/esm/v2/year/month/day"
-           }
-         },
-         "report" : [ {
-           "month" : "6",
-           "year" : "2012",
-           "clients" : "205"
-         }, {
-           "month" : "7",
-           "year" : "2012",
-           "clients" : "466"
-         } ]
-       }
-   ```
+  ```JSON
+      {
+        "_links" : {
+          "self" : {
+            "href" : "/esm/v2/year/month?start=2012-07-20T00:00:00&end=2012-08-20T14:35:21"
+          },
+          "roll-up" : {
+            "href" : "/esm/v2/year"
+          },
+          "drill-down" : {
+            "href" : "/esm/v2/year/month/day"
+          }
+        },
+        "report" : [ {
+          "month" : "6",
+          "year" : "2012",
+          "clients" : "205"
+        }, {
+          "month" : "7",
+          "year" : "2012",
+          "clients" : "466"
+        } ]
+      }
+  ```
 
 ### CSV
 

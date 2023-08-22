@@ -2,14 +2,14 @@
 title: Autorizza in anticipo Android
 description: Autorizza in anticipo Android
 exl-id: b5337595-135f-4981-a578-2da432f125d6
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
 
 ---
 
-# Autorizza in anticipo {#preuthorize-android}
+# Autorizza in anticipo {#preuthorize-android}
 
 >[!NOTE]
 >
@@ -25,10 +25,10 @@ Il metodo API Preauthorize deve essere utilizzato dalle applicazioni al fine di 
 In caso di errore imprevisto (ad esempio, problema di rete, endpoint di autorizzazione MVPD non disponibile, ecc.) in corso, quando una richiesta API di preautorizzazione viene elaborata dai servizi di autenticazione di Adobe Primetime, verranno incluse una o più informazioni di errore separate per le risorse interessate come parte del risultato della risposta API di preautorizzazione.
 
 
-## `public void preauthorize(PreauthorizeRequest request, AccessEnablerCallback<PreauthorizeResponse> callback);`
+## `public void preauthorize(PreauthorizeRequest request, AccessEnablerCallback<PreauthorizeResponse> callback);`
 
 
-**Descrizione:** 
+**Descrizione:**
 
 **Disponibilità:** v3.6.0+
 
@@ -41,8 +41,7 @@ In caso di errore imprevisto (ad esempio, problema di rete, endpoint di autorizz
 
 ### public class PreauthorizeRequest {#androidpreauthorizerequest}
 
-**class PreauthorizeRequest.Builder**\
- 
+**class PreauthorizeRequest.Builder**
 
 ```java
     ///
@@ -129,18 +128,18 @@ In caso di errore imprevisto (ad esempio, problema di rete, endpoint di autorizz
 ### `abstract class AccessEnablerCallback<PreauthorizeResponse> {#accessenablercallback}`
 
 ```java
-    /// Response callback called by the SDK when the preauthorize API request was fulfilled. The result is either a successful or an error result containing a status.
+    /// Response callback called by the SDK when the preauthorize API request was fulfilled. The result is either a successful or an error result containing a status.
 
 **public void onResponse(PreauthorizeResponse result)**
 
- 
+ 
 
-    /// Failure callback called by the SDK when the preauthorize API request could not be serviced. The result is a failure result containing a status. 
+    /// Failure callback called by the SDK when the preauthorize API request could not be serviced. The result is a failure result containing a status. 
 
 **public void onFailure(PreauthorizeResponse result)**
 ```
 
- 
+
 
 ### class PreauthorizeResponse {#preauthorizeresponse}
 
@@ -150,16 +149,16 @@ In caso di errore imprevisto (ad esempio, problema di rete, endpoint di autorizz
     ///   Might hold a `null` value.
     ///
 
-**public [Status](#status) getStatus()**
+**public [Status](#status) getStatus()**
 
- 
+ 
 
     ///
     /// - Returns: The list of preauthorization decisions. One decision for each resource.
     ///            The list might be empty in case of failure.
     ///
 
-**public List\<[Decision](#status)\> getDecisions()**
+**public List\<[Decision](#status)\> getDecisions()**
 ```
 
 
@@ -172,7 +171,7 @@ In caso di errore imprevisto (ad esempio, problema di rete, endpoint di autorizz
 
 ///
 
-**public int getStatus()**
+**public int getStatus()**
 
     ///
     /// - Returns: The standard Adobe Primetime Authentication services error code.
@@ -236,9 +235,9 @@ In caso di errore imprevisto (ad esempio, problema di rete, endpoint di autorizz
     /// - Returns: The resource id for which the decision was obtained.
     ///
 
-    public Status getId()
+    public Status getId()
 
- 
+ 
 
     ///
     /// This is a getter function.
@@ -246,9 +245,9 @@ In caso di errore imprevisto (ad esempio, problema di rete, endpoint di autorizz
     /// - Returns: The value of the flag indicating if the decision is successful or not.
     ///
 
-**public boolean isAuthorized()**
+**public boolean isAuthorized()**
 
- 
+ 
 
     ///
     /// This is a getter function.
@@ -257,14 +256,14 @@ In caso di errore imprevisto (ad esempio, problema di rete, endpoint di autorizz
     ///            Might hold a `null` value.
     ///
 
-**public Status getError()**
+**public Status getError()**
 ```
 
 </br>
 
 
 
-Esempio: 
+Esempio:
 
 
 ```java

@@ -2,9 +2,9 @@
 title: Panoramica API REST
 description: Panoramica delle API REST
 exl-id: 5533d852-f644-417e-bf80-6f7aa1edd6b2
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
-source-wordcount: '1596'
+source-wordcount: '1594'
 ht-degree: 0%
 
 ---
@@ -18,39 +18,39 @@ ht-degree: 0%
 
 ## Panoramica {#over}
 
-L’API REST per l’autenticazione di Adobe Primetime fornisce accesso diretto ai servizi di autenticazione e autorizzazione di TV Everywhere (TVE). Questa API supporta due architetture primarie: server-to-server o dispositivi collegati (ad esempio console di giochi, Smart TV, set-top box e così via) applicazioni che non dispongono di funzionalità di esplorazione Web. 
+L’API REST per l’autenticazione di Adobe Primetime fornisce accesso diretto ai servizi di autenticazione e autorizzazione di TV Everywhere (TVE). Questa API supporta due architetture primarie: server-to-server o dispositivi collegati (ad esempio console di giochi, Smart TV, set-top box e così via) applicazioni che non dispongono di funzionalità di esplorazione Web.
 
- 
+
 
 ### Server-to-Server
 
 Le soluzioni server-to-server coinvolgono applicazioni client Programmer che si integrano con i servizi Programmer che si connettono con i servizi di autenticazione di Adobe Primetime per i flussi TVE. Questo approccio sposta la maggior parte dell&#39;implementazione TVE dal client al server, dove è possibile creare e gestire un singolo modulo di autorizzazione unificato. La responsabilità principale rimanente delle applicazioni client è la gestione di una visualizzazione web per l’autenticazione degli utenti.
 
- 
+
 
 ### Dispositivi collegati
 
 Le app Dispositivi connessi comunicano direttamente con l’autenticazione Primetime tramite le API REST per eseguire la configurazione, la registrazione, i controlli dello stato di autenticazione e i flussi di autorizzazione, mentre per il flusso di autenticazione è necessaria una seconda app schermata (browser). Di conseguenza, gli SDK nativi non vengono utilizzati.
 
- 
+
 
 ### Altre architetture
 
-Oltre alle due architetture principali basate su API REST, Server-to-Server e Direct client per dispositivi intelligenti, esistono altre architetture.  Tra questi, è primaria l’architettura SDK, che utilizza un componente client denominato Access Enabler che l’autenticazione Primetime fornisce ai programmatori.  L&#39;app utilizza le API Access Enabler per gestire l&#39;avvio, l&#39;autenticazione, l&#39;autorizzazione e la disconnessione.  Tutte le comunicazioni tra l’app del programmatore e i server di autenticazione Primetime avvengono tramite Access Enabler.  Access Enabler è disponibile in una versione diversa per le seguenti piattaforme: JavaScript, iOS, tvOS, Android e FireTV.
+Oltre alle due architetture principali basate su API REST, Server-to-Server e Direct client per dispositivi intelligenti, esistono altre architetture.  Tra questi, è primaria l’architettura SDK, che utilizza un componente client denominato Access Enabler che l’autenticazione Primetime fornisce ai programmatori.  L&#39;app utilizza le API Access Enabler per gestire l&#39;avvio, l&#39;autenticazione, l&#39;autorizzazione e la disconnessione.  Tutte le comunicazioni tra l’app del programmatore e i server di autenticazione Primetime avvengono tramite Access Enabler.  Access Enabler è disponibile in una versione diversa per le seguenti piattaforme: JavaScript, iOS, tvOS, Android e FireTV.
 
 Anche se è possibile utilizzare l’API REST direttamente sulle piattaforme client che supportano SDK nativi al di fuori di una soluzione server-to-server, questo approccio non è consigliato.
 
- 
+
 
 ## Pro e contro API REST {#ProsAndCons}
 
-L’API REST di autenticazione di Adobe Primetime è stata creata per fornire una soluzione TV Everywhere (TVE) per i dispositivi che non hanno funzionalità di navigazione web o archiviazione persistente. L’API REST supporta tutti i flussi di autenticazione e autorizzazione, ma perché non dispone di un componente SDK nativo. Gli SDK forniti e mantenuti tramite l’autenticazione di Adobe Primetime dispongono di funzionalità predefinite che implementano regole di business che, nel caso dell’API REST, devono essere implementate e gestite dai programmatori. Nella tabella Responsabilità del programmatore riportata di seguito vengono descritte le limitazioni dell’API REST corrente che devono essere risolte dai programmatori.
+L’API REST di autenticazione di Adobe Primetime è stata creata per fornire una soluzione TV Everywhere (TVE) per i dispositivi che non hanno funzionalità di navigazione web o archiviazione persistente. L’API REST supporta tutti i flussi di autenticazione e autorizzazione, ma perché non dispone di un componente SDK nativo. Gli SDK forniti e mantenuti tramite l’autenticazione di Adobe Primetime dispongono di funzionalità predefinite che implementano regole di business che, nel caso dell’API REST, devono essere implementate e gestite dai programmatori. Nella tabella Responsabilità del programmatore riportata di seguito vengono descritte le limitazioni dell’API REST corrente che devono essere risolte dai programmatori.
 
- 
+
 
 ### Pro e contro basati su server e client
 
-Un&#39;architettura server-to-server consente di consolidare la maggior parte della logica di autenticazione e autorizzazione in un&#39;unica unità logica o implementazione.  Questo approccio ha pro e contro.  I vantaggi includono:
+Un&#39;architettura server-to-server consente di consolidare la maggior parte della logica di autenticazione e autorizzazione in un&#39;unica unità logica o implementazione.  Questo approccio ha pro e contro.  I vantaggi includono:
 
 * Implementazione singola per la logica di business di autenticazione e autorizzazione.
 * Evita la necessità di implementare tale logica su ogni piattaforma supportata utilizzando gli strumenti nativi di tale piattaforma.
@@ -58,7 +58,7 @@ Un&#39;architettura server-to-server consente di consolidare la maggior parte de
 * **Più facilmente** estendere e personalizzare le funzionalità authN e authZ (ad esempio, aggiungere D2C).
 * Gestione diretta del traffico associato per un maggiore controllo, qualità e monitoraggio.
 
- 
+
 
 Anche in questo caso, i contro sono elencati nelle responsabilità del programmatore, ma includono quanto segue:
 
@@ -66,7 +66,7 @@ Anche in questo caso, i contro sono elencati nelle responsabilità del programma
 * Se necessario, i programmatori devono implementare una logica specifica per MVPD.
 * Tutte le piattaforme che utilizzano l’API REST condividono una singola configurazione che regola proprietà come i TTL di autenticazione.
 
- 
+
 
 ### Dispositivi collegati
 
@@ -86,15 +86,15 @@ Di seguito sono riportate le applicazioni Server-to-Server e Connected Device.
 | Ripristino degli errori dell’applicazione (nuovo tentativo in caso di errore, rilevamento del ciclo, ecc.) | Programmatori | Le implementazioni REST API devono creare i propri sistemi di ripristino delle applicazioni, mentre le implementazioni sopra gli SDK beneficiano del sistema di recupero degli errori SDK: ripristino da errori di rete transitori, ripetendo determinate chiamate di rete con logica in loco per evitare &quot;loop&quot;. |
 | Autenticazione per richiedente | Programmatori | Alcuni MVPD richiedono l&#39;autenticazione per ogni sito/app, per motivi aziendali o a causa di problemi tecnici. Gli SDK applicano automaticamente questo in base alla configurazione del dashboard TVE. I implementatori REST API devono implementare essi stessi questo, al fine di non violare gli accordi commerciali, o per essere in grado di completare l&#39;autorizzazione per quei MVPD che eseguono l&#39;ambito dei loro dati di autenticazione per applicazione. |
 | Autenticazione passiva | Programmatori | Alcuni MVPD supportano l&#39;autenticazione &quot;passiva&quot;, in cui l&#39;utente non è tenuto a immettere le credenziali e viene effettuato automaticamente un tentativo di autenticazione dell&#39;utente. Ciò è particolarmente utile per gli MVPD che hanno come requisito anche &quot;Autenticazione per richiedente&quot;. In questo caso, l’interfaccia utente abilitata dagli SDK è diretta, in cui l’utente si autentica una sola volta in un’applicazione e l’SDK esegue l’autenticazione &quot;passiva&quot; per altre applicazioni nell’ecosistema. L’utente non vede le chiamate passive aggiuntive, semplicemente sarà già autenticato, mentre l’MVPD raggiunge l’obiettivo di avere sessioni di autenticazione separate per ogni applicazione. |
-| Rilevamento di dispositivi implicito e uniforme | Programmatori | Gli SDK rilevano automaticamente il tipo di dispositivo e inviano tali informazioni in modo standard. Le implementazioni REST API sono soggette all’invio di informazioni diverse, a seconda dell’implementatore, distorcendo/violando le regole e le statistiche aziendali tra i siti. **I programmatori devono assicurarsi che ci abbiano inviato informazioni corrette sul dispositivo** su ciascuna delle loro app. Per le implementazioni server-to-server, l’API REST non identifica correttamente l’indirizzo IP dell’utente finale, a meno che non vengano eseguiti passaggi aggiuntivi. L&#39;indirizzo IP è importante in alcuni casi di utilizzo, ad esempio per la prevenzione delle frodi o l&#39;HBA. |
+| Rilevamento di dispositivi implicito e uniforme | Programmatori | Gli SDK rilevano automaticamente il tipo di dispositivo e inviano tali informazioni in modo standard. Le implementazioni REST API sono soggette all’invio di informazioni diverse, a seconda dell’implementatore, distorcendo/violando le regole e le statistiche aziendali tra i siti. **I programmatori devono assicurarsi che ci abbiano inviato informazioni corrette sul dispositivo** su ciascuna delle loro app. Per le implementazioni server-to-server, l’API REST non identifica correttamente l’indirizzo IP dell’utente finale, a meno che non vengano eseguiti passaggi aggiuntivi. L&#39;indirizzo IP è importante in alcuni casi di utilizzo, ad esempio per la prevenzione delle frodi o l&#39;HBA. |
 | TempPass anti-manomissione | Programmatori | L’applicazione di TempPass si basa su un ID dispositivo stabile. Gli SDK usano tecniche di impronte digitali/informazioni hardware per identificare il dispositivo e questo meccanismo non è pubblico, quindi più sicuro e privo di collisioni. Per le implementazioni REST API, i programmatori devono implementare i propri algoritmi per l’identificazione dei dispositivi e il fingerprinting. |
-| Associazione dispositivo | Programmatori | I token generati su un dispositivo con un’applicazione tramite SDK non sono portatili, rendendo difficile per un utente malintenzionato condividere i propri token e fornire l’accesso ad altri utenti. Si basa sullo stesso meccanismo di identificazione del dispositivo del &quot;TempPass a prova di manomissione&quot;. Per l’API REST, i token rimangono nel cloud, il che significa che due dispositivi con gli stessi deviceID che eseguono le stesse chiamate otterranno le stesse risposte/accesso. I programmatori devono assicurarsi di disporre di un meccanismo solido, sicuro e privo di collisioni per generare/allocare gli ID dispositivo. |
+| Associazione dispositivo | Programmatori | I token generati su un dispositivo con un’applicazione tramite SDK non sono portatili, rendendo difficile per un utente malintenzionato condividere i propri token e fornire l’accesso ad altri utenti. Si basa sullo stesso meccanismo di identificazione del dispositivo del &quot;TempPass a prova di manomissione&quot;. Per l’API REST, i token rimangono nel cloud, il che significa che due dispositivi con gli stessi deviceID che eseguono le stesse chiamate otterranno le stesse risposte/accesso. I programmatori devono accertarsi di disporre di un meccanismo solido, sicuro e privo di collisioni per la generazione/allocazione degli ID dispositivo. |
 | Set di funzioni prevedibili e certificate | Programmatori | Il set di funzioni esistente in ogni SDK è coerente, prevedibile, certificato e testato completamente. Alcuni requisiti aziendali vengono applicati tramite gli SDK, rendendo rischioso per il programmatore violare i contratti mentre utilizza l’API REST. Anche se l’API REST potrebbe essere più flessibile, Adobe garantisce che le implementazioni SDK applichino le decisioni aziendali e le impostazioni da TVE Dashboard. Nel caso di Clientless, ogni programmatore implementa il proprio sottoinsieme di regole di business che suite le sue applicazioni in un dato momento. |
 
 
-1. Come parte della nuova iniziativa One API, prevediamo di correggere questo limite e di poter applicare regole per piattaforma in base all’identificazione del dispositivo.
+1. Come parte della nuova iniziativa One API, prevediamo di correggere questo limite e di poter applicare regole per piattaforma in base all’identificazione del dispositivo.
 
-2. Adobe continua a lavorare con tutte le principali piattaforme per implementare Platform SSO che può essere utilizzato con la nostra API REST. La nostra iniziativa One API offrirà il supporto SSO tra le app implementate utilizzando SDK nativi e le app implementate utilizzando API REST.
+2. Adobe continua a lavorare con tutte le principali piattaforme per implementare Platform SSO che può essere utilizzato con la nostra API REST. La nostra iniziativa One API offrirà il supporto SSO tra le app implementate utilizzando SDK nativi e le app implementate utilizzando API REST.
 
 ## Requisiti minimi del dispositivo {#min_reqs}
 

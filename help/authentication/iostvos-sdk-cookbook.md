@@ -2,9 +2,9 @@
 title: Manuale di iOS/tvOS
 description: Manuale di iOS/tvOS
 exl-id: 4743521e-d323-4d1d-ad24-773127cfbe42
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
-source-wordcount: '2414'
+source-wordcount: '2413'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ L&#39;attività di rete di AccessEnabler si svolge nel proprio thread, pertanto 
 
 ## Configurazione dell’ID visitatore {#visitorIDSetup}
 
-Configurazione di un [ID visitatore Marketing Cloud](https://marketing.adobe.com/resources/help/en_US/mcvid/) il valore è molto importante dal punto di vista di analytics. Una volta impostato il valore visitorID, l’SDK invierà queste informazioni insieme a tutte le chiamate di rete e il server di autenticazione di Adobe Primetime le raccoglierà. In futuro, potrai correlare le analisi del servizio di autenticazione di Adobe Primetime con qualsiasi altro rapporto di analisi disponibile in altre applicazioni o siti Web. Puoi trovare informazioni su come impostare visitorID [qui](#setOptions).
+Configurazione di un [ID visitatore Marketing Cloud](https://experienceleague.adobe.com/docs/id-service/using/home.html) il valore è molto importante dal punto di vista di analytics. Una volta impostato il valore visitorID, l’SDK invierà queste informazioni insieme a tutte le chiamate di rete e il server di autenticazione di Adobe Primetime le raccoglierà. In futuro, potrai correlare le analisi del servizio di autenticazione di Adobe Primetime con qualsiasi altro rapporto di analisi disponibile in altre applicazioni o siti Web. Puoi trovare informazioni su come impostare visitorID [qui](#setOptions).
 
 ## Flussi di diritti {#entitlement}
 
@@ -69,51 +69,51 @@ I.  [Flusso di disconnessione con Apple SSO](#logout_flow_with_AppleSSO) </br>
    * [`displayProviderDialog(mvpds)`](#$dispProvDialog) </br>
       * Attivato da [`getAuthentication()`](#$getAuthN) solo se l’utente non ha selezionato un provider (MVPD) e non è ancora autenticato. </br>
       * Il `mvpds` Il parametro è un array di provider disponibili per l&#39;utente.
+
    * `setAuthenticationStatus(status, errorcode)` </br>
       * Attivato da `checkAuthentication()` ogni volta. </br>
       * Attivato da [`getAuthentication()`](#$getAuthN) solo se l’utente è già autenticato e ha selezionato un provider. </br>
       * Lo stato restituito è success o failure, il codice di errore descrive il tipo di errore.
+
    * [`navigateToUrl(url)`](#$nav2url) </br>
       * Attivato da [`getAuthentication()`](#$getAuthN) dopo che l’utente ha selezionato un MVPD. Il `url` Il parametro fornisce la posizione della pagina di accesso di MVPD.
+
    * `sendTrackingData(event, data)` </br>
       * Attivato da `checkAuthentication()`, [`getAuthentication()`](#$getAuthN), `checkAuthorization()`, [`getAuthorization()`](#$getAuthZ), `setSelectedProvider()`.
-      * Il `event` il parametro indica quale evento di adesione si è verificato; il `data` Il parametro è un elenco di valori relativi all’evento. 
+      * Il `event` il parametro indica quale evento di adesione si è verificato; il `data` Il parametro è un elenco di valori relativi all’evento.
+
    * `setToken(token, resource)`
 
       * Attivato da [checkAuthorization()](#checkAuthZ) e [getAuthorization()](#$getAuthZ) dopo un’autorizzazione riuscita a visualizzare una risorsa.
       * Il `token` è il token multimediale di breve durata; il `resource` Il parametro è il contenuto che l’utente è autorizzato a visualizzare.
+
    * `tokenRequestFailed(resource, code, description)` </br>
       * Attivato da [checkAuthorization()](#checkAuthZ) e [getAuthorization()](#$getAuthZ) dopo un’autorizzazione non riuscita.
-      * Il `resource` parametro è il contenuto che l&#39;utente stava tentando di visualizzare; il `code` parametro è il codice di errore che indica il tipo di errore che si è verificato; il `description` Il parametro descrive l&#39;errore associato al codice di errore.
+      * Il `resource` parametro è il contenuto che l&#39;utente stava tentando di visualizzare; il `code` parametro è il codice di errore che indica il tipo di errore che si è verificato; il `description` Il parametro descrive l’errore associato al codice di errore.
+
    * `selectedProvider(mvpd)` </br>
       * Attivato da [`getSelectedProvider()`](#getSelProv).
       * Il `mvpd` Il parametro fornisce informazioni sul provider selezionato dall&#39;utente.
+
    * `setMetadataStatus(metadata, key, arguments)`
       * Attivato da `getMetadata().`
       * Il `metadata` Il parametro fornisce i dati specifici richiesti; il `key` Il parametro è la chiave utilizzata nel [getMetadata()](#getMeta) richiesta; e `arguments` Il parametro è lo stesso dizionario che è stato passato a [getMetadata()](#getMeta).
+
    * [&quot;preauthorizedResources(authorizedResources)&quot;](#preauthResources)
 
       * Attivato da [`checkPreauthorizedResources()`](#checkPreauth).
 
       * Il `authorizedResources` Il parametro presenta le risorse che l’utente è autorizzato a visualizzare.
+
    * [&quot;presentTvProviderDialog(viewController)&quot;](#presentTvDialog)
 
       * Attivato da [getAuthentication()](#getAuthN) quando il richiedente corrente supporta almeno su MVPD che dispone di supporto SSO.
       * Il parametro viewController è la finestra di dialogo SSO di Apple e deve essere presentato sul controller della visualizzazione principale.
+
    * [&quot;dismissTvProviderDialog(viewController)&quot;](#dismissTvDialog)
 
       * Attivato da un’azione dell’utente (selezionando &quot;Annulla&quot; o &quot;Altri provider TV&quot; dalla finestra di dialogo SSO di Apple).
       * Il parametro viewController è la finestra di dialogo SSO di Apple e deve essere chiuso dal controller della visualizzazione principale.
-
-
-
-
-
-
-
-
-
-
 
 ![](assets/iOS-flows.png)
 
@@ -124,12 +124,14 @@ I.  [Flusso di disconnessione con Apple SSO](#logout_flow_with_AppleSSO) </br>
 
    a. Chiamata [`init`](#$init) per creare una singola istanza di AccessEnabler di autenticazione Adobe Primetime.
    * **Dipendenza:** Libreria iOS/tvOS nativa per l’autenticazione di Adobe Primetime (AccessEnabler)
+
    b. Chiamata `setRequestor()` per stabilire l&#39;identità del programmatore; passare nel `requestorID` e (facoltativamente) un array di endpoint di autenticazione Adobe Primetime. Per tvOS dovrai anche fornire la chiave pubblica e il segreto. Consulta [Documentazione senza client](#create_dev) per i dettagli.
 
    * **Dipendenza:** RequestorID di autenticazione Adobe Primetime valido (rivolgiti al tuo Account Manager di autenticazione Adobe Primetime per ottenere questo risultato).
 
    * **Trigger:**
-      [setRequestorComplete()](#$setReqComplete) callback.
+     [setRequestorComplete()](#$setReqComplete) callback.
+
    >[!NOTE]
    >
    >Non è possibile completare alcuna richiesta di adesione finché non viene stabilita l&#39;identità completa del richiedente. Ciò significa che mentre [`setRequestor()`](#$setReq)  è ancora in esecuzione, tutte le richieste di adesione successive. Ad esempio: [`checkAuthentication()`](#checkAuthN) sono bloccati.
@@ -139,8 +141,6 @@ I.  [Flusso di disconnessione con Apple SSO](#logout_flow_with_AppleSSO) </br>
    1. Attendi l&#39;attivazione di [`setRequestorComplete()`](#setReqComplete) callback (parte del delegato AccessEnabler). Questa opzione offre la massima certezza che [`setRequestor()`](#$setReq) è stato completato, quindi è consigliato per la maggior parte delle implementazioni.
 
    1. Continua senza attendere l&#39;attivazione di [`setRequestorComplete()`](#setReqComplete) richiamata e inizia a emettere richieste di adesione. Queste chiamate (checkAuthentication, checkAuthorization, getAuthentication, getAuthorization, checkPreauthorizedResource, getMetadata, logout) sono in coda dalla libreria AccessEnabler, che effettua le chiamate di rete effettive dopo [`setRequestor()`](#$setReq). Questa opzione può talvolta essere interrotta se, ad esempio, la connessione di rete è instabile.
-
-
 
 1. Chiamata `checkAuthentication()` per verificare la presenza di un&#39;autenticazione esistente senza avviare il flusso di autenticazione completo.  Se la chiamata ha esito positivo, puoi passare direttamente al flusso di autorizzazione. In caso contrario, passare al flusso di autenticazione.
 

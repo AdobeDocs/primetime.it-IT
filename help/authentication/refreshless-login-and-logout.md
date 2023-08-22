@@ -2,7 +2,7 @@
 title: Accesso e disconnessione senza aggiornamento
 description: Accesso e disconnessione senza aggiornamento
 exl-id: 3ce8dfec-279a-4d10-93b4-1fbb18276543
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '1772'
 ht-degree: 0%
@@ -17,13 +17,13 @@ ht-degree: 0%
 
 ## Panoramica {#overview}
 
-Per le applicazioni web, è necessario tenere conto di alcuni possibili scenari diversi per l’autenticazione e la disconnessione degli utenti.  Gli MVPD richiedono che gli utenti accedano alla pagina web di MVPD per autenticarsi, con i seguenti fattori aggiuntivi in gioco:
+Per le applicazioni web, è necessario tenere conto di alcuni possibili scenari diversi per l’autenticazione e la disconnessione degli utenti.  Gli MVPD richiedono che gli utenti accedano alla pagina web di MVPD per autenticarsi, con i seguenti fattori aggiuntivi in gioco:
 
 - Alcuni MVPD richiedono un reindirizzamento completo dal sito alla pagina di accesso
 - Alcuni MVPD richiedono di aprire un iFrame sul sito per visualizzare la pagina di accesso di MVPD
 - Alcuni browser non gestiscono bene lo scenario iFrame, quindi per questi browser un’alternativa migliore è utilizzare una finestra popup invece dell’iFrame
 
-Prima dell’autenticazione Adobe Primetime 2.7, tutti questi scenari per l’autenticazione di un utente richiedevano un aggiornamento dell’intera pagina del programmatore.Per la versione 2.7 e successive, il team di autenticazione di Adobe Primetime ha migliorato questi flussi in modo che l’utente non debba aggiornare la pagina dell’app durante l’accesso e la disconnessione.  
+Prima dell’autenticazione Adobe Primetime 2.7, tutti questi scenari per l’autenticazione di un utente richiedevano un aggiornamento dell’intera pagina del programmatore.Per la versione 2.7 e successive, il team di autenticazione di Adobe Primetime ha migliorato questi flussi in modo che l’utente non debba aggiornare la pagina dell’app durante l’accesso e la disconnessione.
 
 
 ## Descrizione dettagliata {#detailed_description}
@@ -44,18 +44,18 @@ Iniziamo con un riepilogo dei flussi di autenticazione e disconnessione original
 
 I client web di autenticazione di Adobe Primetime hanno due modi per autenticarsi, a seconda dei requisiti degli MVPD:
 
-1. **Reindirizzamento a pagina intera -** Dopo che l&#39;utente seleziona un provider (configurato con reindirizzamento a pagina intera) dal selettore MVPD sul sito web del programmatore, `setSelectedProvider(<mvpd>)` viene richiamato in AccessEnabler e l&#39;utente viene reindirizzato alla pagina di accesso di MVPD. Dopo che l&#39;utente ha fornito credenziali valide, viene reindirizzato al sito Web del programmatore. AccessEnabler viene inizializzato e il token di autenticazione viene recuperato dall&#39;autenticazione di Adobe Primetime durante `setRequestor`.
-1. **Finestra iFrame/Popup -** Dopo che l’utente ha selezionato un provider (configurato con iFrame), `setSelectedProvider(<mvpd>)` viene richiamato in AccessEnabler. Questa azione attiverà il `createIFrame(width, height)` callback, che notifica al programmatore di creare un iFrame (o pop-up, a seconda del browser/preferenze) con il nome `"mvpdframe"` e le dimensioni fornite. Dopo aver creato l&#39;iFrame/popup, AccessEnabler carica la pagina di accesso di MVPD nell&#39;iFrame/popup. L’utente fornisce credenziali valide e l’iFrame/popup viene reindirizzato all’autenticazione Adobe Primetime, che restituisce uno snippet JS che chiude l’iFrame/popup e ricarica la pagina padre (sito web Programmatore). Analogamente al flusso 1, il token di autenticazione viene recuperato durante `setRequestor`. 
+1. **Reindirizzamento a pagina intera -** Dopo che l&#39;utente seleziona un provider (configurato con reindirizzamento a pagina intera) dal selettore MVPD sul sito web del programmatore, `setSelectedProvider(<mvpd>)` viene richiamato in AccessEnabler e l&#39;utente viene reindirizzato alla pagina di accesso di MVPD. Dopo che l&#39;utente ha fornito credenziali valide, viene reindirizzato al sito Web del programmatore. AccessEnabler viene inizializzato e il token di autenticazione viene recuperato dall&#39;autenticazione di Adobe Primetime durante `setRequestor`.
+1. **Finestra iFrame/Popup -** Dopo che l’utente ha selezionato un provider (configurato con iFrame), `setSelectedProvider(<mvpd>)` viene richiamato in AccessEnabler. Questa azione attiverà il `createIFrame(width, height)` callback, che notifica al programmatore di creare un iFrame (o pop-up, a seconda del browser/preferenze) con il nome `"mvpdframe"` e le dimensioni fornite. Dopo aver creato l&#39;iFrame/popup, AccessEnabler carica la pagina di accesso di MVPD nell&#39;iFrame/popup. L’utente fornisce credenziali valide e l’iFrame/popup viene reindirizzato all’autenticazione Adobe Primetime, che restituisce uno snippet JS che chiude l’iFrame/popup e ricarica la pagina padre (sito web Programmatore). Analogamente al flusso 1, il token di autenticazione viene recuperato durante `setRequestor`.
 
-Il `displayProviderDialog` callback (attivato da `getAuthentication`/`getAuthorization`) restituisce un elenco di MVPD e delle relative impostazioni appropriate. Il `iFrameRequired` proprietà di un MVPD consente al programmatore di sapere se deve attivare il flusso 1 o il flusso 2. Si noti che il programmatore è tenuto a intraprendere azioni aggiuntive (creazione di un iFrame/popup) solo per il flusso 2.
+Il `displayProviderDialog` callback (attivato da `getAuthentication`/`getAuthorization`) restituisce un elenco di MVPD e delle relative impostazioni appropriate. Il `iFrameRequired` proprietà di un MVPD consente al programmatore di sapere se deve attivare il flusso 1 o il flusso 2. Si noti che il programmatore è tenuto a intraprendere azioni aggiuntive (creazione di un iFrame/popup) solo per il flusso 2.
 
 **Annulla autenticazione**
 
 Inoltre, l’utente annulla esplicitamente il flusso di autenticazione chiudendo la pagina di accesso. Di seguito sono riportati gli scenari e la soluzione proposta ai programmatori:
 
 1. **Reindirizzamento a pagina intera -** Quando la pagina di accesso viene chiusa, l&#39;utente dovrà nuovamente accedere al sito Web del programmatore e avviare l&#39;intero flusso dall&#39;inizio. In questo scenario non è richiesta alcuna azione esplicita da parte del programmatore.
-1. **iFrame -** Si consiglia al programmatore di ospitare l’iFrame all’interno di un `div` (o un componente simile dell’interfaccia utente) a cui è associato un pulsante Chiudi. Quando l&#39;utente preme il pulsante Chiudi, il programmatore distrugge l&#39;iFrame insieme all&#39;interfaccia utente associata ed esegue `setSelectedProvider(null)`. Questa chiamata consente ad AccessEnabler di cancellare il proprio stato interno e consente all&#39;utente di avviare un flusso di autenticazione successivo. `setAuthenticationStatus` e `sendTrackingData(AUTHENTICATION_DETECTION...)` verrà attivato per segnalare un flusso di autenticazione non riuscito (entrambi attivati `getAuthentication` e `getAuthorization`).
-1. **Popup -** Alcuni browser non sono in grado di rilevare con precisione l’evento di chiusura della finestra, pertanto è necessario adottare un approccio diverso (a differenza del flusso iFrame riportato sopra). L&#39;Adobe consiglia al programmatore di inizializzare un timer che verifichi periodicamente l&#39;esistenza della finestra popup di accesso. Se la finestra non esiste, il programmatore può essere sicuro che l&#39;utente ha annullato manualmente il flusso di accesso e il programmatore può procedere con la chiamata `setSelectedProvider(null)`. I callback attivati sono gli stessi del flusso 2 precedente.
+1. **iFrame -** Si consiglia al programmatore di ospitare l’iFrame all’interno di un `div` (o un componente simile dell’interfaccia utente) a cui è associato un pulsante Chiudi. Quando l&#39;utente preme il pulsante Chiudi, il programmatore distrugge l&#39;iFrame insieme all&#39;interfaccia utente associata ed esegue `setSelectedProvider(null)`. Questa chiamata consente ad AccessEnabler di cancellare il proprio stato interno e consente all&#39;utente di avviare un flusso di autenticazione successivo. `setAuthenticationStatus` e `sendTrackingData(AUTHENTICATION_DETECTION...)` verrà attivato per segnalare un flusso di autenticazione non riuscito (entrambi attivati `getAuthentication` e `getAuthorization`).
+1. **Popup -** Alcuni browser non sono in grado di rilevare con precisione l’evento di chiusura della finestra, pertanto è necessario adottare un approccio diverso (a differenza del flusso iFrame riportato sopra). L&#39;Adobe consiglia al programmatore di inizializzare un timer che verifichi periodicamente l&#39;esistenza della finestra popup di accesso. Se la finestra non esiste, il programmatore può essere sicuro che l&#39;utente ha annullato manualmente il flusso di accesso e il programmatore può procedere con la chiamata `setSelectedProvider(null)`. I callback attivati sono gli stessi del flusso 2 precedente.
 
 </br>
 
@@ -75,7 +75,7 @@ L&#39;API di logout di AccessEnabler cancella lo stato locale della libreria e c
 >
 >I flussi migliorati di accesso e disconnessione senza aggiornamento richiedono che il browser supporti le moderne tecnologie HTML5, tra cui la messaggistica web.
 
-I flussi di autenticazione (accesso) e disconnessione descritti in precedenza forniscono un’esperienza utente simile ricaricando la pagina principale al termine di ogni flusso.  La funzione corrente mira a migliorare l’esperienza utente fornendo un accesso e una disconnessione senza aggiornamento (in background). Il programmatore può abilitare/disabilitare l&#39;accesso in background e la disconnessione passando due flag booleani (`backgroundLogin` e `backgroundLogout`) al `configInfo` parametro di `setRequestor` API. Per impostazione predefinita, l’accesso o la disconnessione in background sono disabilitati (in questo modo si garantisce la compatibilità con l’implementazione precedente).
+I flussi di autenticazione (accesso) e disconnessione descritti in precedenza forniscono un’esperienza utente simile ricaricando la pagina principale al termine di ogni flusso.  La funzione corrente mira a migliorare l’esperienza utente fornendo un accesso e una disconnessione senza aggiornamento (in background). Il programmatore può abilitare/disabilitare l&#39;accesso in background e la disconnessione passando due flag booleani (`backgroundLogin` e `backgroundLogout`) al `configInfo` parametro di `setRequestor` API. Per impostazione predefinita, l’accesso o la disconnessione in background sono disabilitati (in questo modo si garantisce la compatibilità con l’implementazione precedente).
 
 **Esempio:**
 
@@ -92,15 +92,15 @@ I flussi di autenticazione (accesso) e disconnessione descritti in precedenza fo
 
 I punti seguenti descrivono la transizione tra i flussi di autenticazione originali e i flussi migliorati:
 
-1. Il reindirizzamento a pagina intera viene sostituito da una nuova scheda del browser in cui viene eseguito l’accesso MVPD. Il programmatore deve creare una nuova scheda (tramite `window.open`) denominato `mvpdwindow` quando l’utente seleziona un MVPD (con `iFrameRequired = false`). Il programmatore esegue quindi `setSelectedProvider(<mvpd>)`, che consente all’AccessEnabler di caricare l’URL di accesso MVPD nella nuova scheda. Dopo che l&#39;utente avrà fornito credenziali valide, l&#39;autenticazione Adobe Primetime chiuderà la scheda e invierà un window.postMessage al sito Web del programmatore che segnala ad AccessEnabler il completamento del flusso di autenticazione. Vengono attivati i seguenti callback:
+1. Il reindirizzamento a pagina intera viene sostituito da una nuova scheda del browser in cui viene eseguito l’accesso MVPD. Il programmatore deve creare una nuova scheda (tramite `window.open`) denominato `mvpdwindow` quando l’utente seleziona un MVPD (con `iFrameRequired = false`). Il programmatore esegue quindi `setSelectedProvider(<mvpd>)`, che consente all’AccessEnabler di caricare l’URL di accesso MVPD nella nuova scheda. Dopo che l&#39;utente avrà fornito credenziali valide, l&#39;autenticazione Adobe Primetime chiuderà la scheda e invierà un window.postMessage al sito Web del programmatore che segnala ad AccessEnabler il completamento del flusso di autenticazione. Vengono attivati i seguenti callback:
 
-   - Se il flusso è stato avviato da `getAuthentication`: `setAuthenticationStatus` e `sendTrackingData(AUTHENTICATION_DETECTION...)` verrà attivato per segnalare un’autenticazione riuscita/non riuscita.
+   - Se il flusso è stato avviato da `getAuthentication`: `setAuthenticationStatus` e `sendTrackingData(AUTHENTICATION_DETECTION...)` verrà attivato per segnalare un’autenticazione riuscita/non riuscita.
 
-   - Se il flusso è stato avviato da `getAuthorization`: `setToken/tokenRequestFailed` e `sendTrackingData(AUTHORIZATION_DETECTION...)` verrà attivato per segnalare un’autorizzazione riuscita/non riuscita.
+   - Se il flusso è stato avviato da `getAuthorization`: `setToken/tokenRequestFailed` e `sendTrackingData(AUTHORIZATION_DETECTION...)` verrà attivato per segnalare un’autorizzazione riuscita/non riuscita.
 
-1. Il flusso della finestra iFrame / popup rimane per lo più invariato, con la differenza che dopo che l&#39;utente ha fornito credenziali valide, la pagina padre non verrà ricaricata. L&#39;iFrame/popup si chiuderà automaticamente dopo l&#39;accesso e `window.postMessage` viene inviato alla pagina padre per notificare al AccessEnabler il completamento del flusso. Vengono attivati gli stessi callback del flusso precedente, **più il seguente nuovo callback: `destroyIFrame`**. Il `destroyIFrame` callback consente al programmatore di rimuovere qualsiasi componente iFrame associato/ausiliario, come le decorazioni dell’interfaccia utente. L’esistenza di questo callback non era necessaria nel vecchio flusso di autenticazione perché, al termine dell’accesso, l’autenticazione Adobe Primetime ricaricava la pagina del programmatore, distruggendo tutti i componenti dell’interfaccia utente.
+1. Il flusso della finestra iFrame / popup rimane per lo più invariato, con la differenza che dopo che l&#39;utente ha fornito credenziali valide, la pagina padre non verrà ricaricata. L&#39;iFrame/popup si chiuderà automaticamente dopo l&#39;accesso e `window.postMessage` viene inviato alla pagina padre per notificare al AccessEnabler il completamento del flusso. Vengono attivati gli stessi callback del flusso precedente, **più il seguente nuovo callback:`destroyIFrame`**. Il `destroyIFrame` callback consente al programmatore di rimuovere qualsiasi componente iFrame associato/ausiliario, come le decorazioni dell’interfaccia utente. L’esistenza di questo callback non era necessaria nel vecchio flusso di autenticazione perché, al termine dell’accesso, l’autenticazione Adobe Primetime ricaricava la pagina del programmatore, distruggendo tutti i componenti dell’interfaccia utente.
 
-</br>     
+</br>
 
 >[!IMPORTANT]
 > 
@@ -108,13 +108,13 @@ I punti seguenti descrivono la transizione tra i flussi di autenticazione origin
 
 </br>
 
- **Annulla autenticazione**
+**Annulla autenticazione**
 
 Di seguito sono riportati i flussi per annullare l’autenticazione:
 
-1. **Scheda Browser -** Poiché la scheda è fondamentalmente una nuova finestra, l’acquisizione del relativo evento di chiusura presenta le stesse limitazioni illustrate nello scenario 3 dai vecchi flussi di autenticazione. Inoltre, l’approccio basato sul timer non è possibile in questo caso, perché non è possibile distinguere tra una scheda chiusa manualmente dall’utente e una scheda chiusa automaticamente alla fine del flusso di accesso. In questo caso, la soluzione prevede che AccessEnabler rimanga &quot;invisibile all’utente&quot; (non vengono attivati callback) quando l’utente annulla il flusso. Inoltre, il programmatore non è tenuto a intraprendere alcuna azione specifica. L&#39;utente sarà in grado di avviare un altro flusso di autenticazione senza ricevere l&#39;errore &quot;Errore più richieste di autenticazione&quot; (questo errore è stato disabilitato in AccessEnabler per l&#39;accesso in background).
+1. **Scheda Browser -** Poiché la scheda è fondamentalmente una nuova finestra, l’acquisizione del relativo evento di chiusura presenta le stesse limitazioni illustrate nello scenario 3 dai vecchi flussi di autenticazione. Inoltre, l’approccio basato sul timer non è possibile in questo caso, perché non è possibile distinguere tra una scheda chiusa manualmente dall’utente e una scheda chiusa automaticamente alla fine del flusso di accesso. In questo caso, la soluzione prevede che AccessEnabler rimanga &quot;invisibile all’utente&quot; (non vengono attivati callback) quando l’utente annulla il flusso. Inoltre, il programmatore non è tenuto a intraprendere alcuna azione specifica. L&#39;utente sarà in grado di avviare un altro flusso di autenticazione senza ricevere l&#39;errore &quot;Errore più richieste di autenticazione&quot; (questo errore è stato disabilitato in AccessEnabler per l&#39;accesso in background).
 
-1. **iFrame -** Il programmatore può seguire l’approccio discusso nello scenario 2 dai vecchi flussi di autenticazione (creare un’interfaccia utente wrapper dall’iFrame e il relativo pulsante Chiudi che attiva `setSelectedProvider(null)`. Anche se questo approccio non è più un requisito importante (per l’accesso in background sono consentiti più flussi di autenticazione, come discusso nello scenario 1 di cui sopra), è ancora consigliato dall’Adobe.
+1. **iFrame -** Il programmatore può seguire l’approccio discusso nello scenario 2 dai vecchi flussi di autenticazione (creare un’interfaccia utente wrapper dall’iFrame e il relativo pulsante Chiudi che attiva `setSelectedProvider(null)`. Anche se questo approccio non è più un requisito importante (per l’accesso in background sono consentiti più flussi di autenticazione, come discusso nello scenario 1 di cui sopra), è ancora consigliato dall’Adobe.
 
 1. **Popup -** È identico al flusso della scheda Browser qui sopra.
 
@@ -122,9 +122,9 @@ Di seguito sono riportati i flussi per annullare l’autenticazione:
 
 ## Flusso di disconnessione migliorato {#improved_logout}
 
-Il nuovo flusso di logout verrà eseguito in un iFrame nascosto, eliminando in tal modo il reindirizzamento dell’intera pagina.  Ciò è possibile perché l&#39;utente non ha bisogno di intraprendere azioni specifiche sulla pagina di disconnessione di MVPD.
+Il nuovo flusso di logout verrà eseguito in un iFrame nascosto, eliminando in tal modo il reindirizzamento dell’intera pagina.  Ciò è possibile perché l&#39;utente non ha bisogno di intraprendere azioni specifiche sulla pagina di disconnessione di MVPD.
 
-Una volta completato il flusso di logout, l’iFrame verrà reindirizzato a un endpoint di autenticazione Adobe Primetime personalizzato. Questo distribuirà uno snippet JS che esegue un `window.postMessage` all&#39;elemento padre, notificando all&#39;AccessEnabler il completamento della disconnessione. Vengono attivati i seguenti callback: `setAuthenticationStatus()` e `sendTrackingData(AUTHENTICATION_DETECTION ...)`, che segnala che l’utente non è più autenticato. 
+Una volta completato il flusso di logout, l’iFrame verrà reindirizzato a un endpoint di autenticazione Adobe Primetime personalizzato. Questo distribuirà uno snippet JS che esegue un `window.postMessage` all&#39;elemento padre, notificando all&#39;AccessEnabler il completamento della disconnessione. Vengono attivati i seguenti callback: `setAuthenticationStatus()` e `sendTrackingData(AUTHENTICATION_DETECTION ...)`, che segnala che l’utente non è più autenticato.
 
 L’illustrazione seguente mostra il flusso senza aggiornamento che consente a un utente di accedere al proprio MVPD senza aggiornare la pagina principale dell’applicazione:
 
@@ -142,13 +142,13 @@ Poiché il flusso TempPass richiede che una finestra venga creata automaticament
 
 Di seguito sono riportati gli aspetti di cui il programmatore deve essere a conoscenza quando implementa TempPass per l’accesso e la disconnessione senza aggiornamento:
 
-- Prima di avviare l&#39;autenticazione, è necessario creare l&#39;iFrame o la finestra popup solo per gli MVPD non TempPass. Il programmatore può rilevare se un MVPD è TempPass o meno leggendo il `tempPass` proprietà dell&#39;oggetto MVPD (restituita da `setConfig()` / `displayProviderDialog()`).
+- Prima di avviare l&#39;autenticazione, è necessario creare l&#39;iFrame o la finestra popup solo per gli MVPD non TempPass. Il programmatore può rilevare se un MVPD è TempPass o meno leggendo il `tempPass` proprietà dell&#39;oggetto MVPD (restituita da `setConfig()` / `displayProviderDialog()`).
 
-- Il `createIFrame()` il callback deve contenere un controllo per TempPass e deve eseguirne la logica solo quando MVPD non è TempPass.
+- Il `createIFrame()` il callback deve contenere un controllo per TempPass e deve eseguirne la logica solo quando MVPD non è TempPass.
 
 - Il `destroyIFrame()` il callback deve contenere un controllo per TempPass e deve eseguirne la logica solo quando MVPD non è TempPass.
 
-- Il `setAuthenticationStatus()` e `sendTrackingData()` i callback vengono richiamati al termine dell’autenticazione (esattamente come nel flusso senza aggiornamento per i normali MVPD).
+- Il `setAuthenticationStatus()` e `sendTrackingData()` i callback vengono richiamati al termine dell’autenticazione (esattamente come nel flusso senza aggiornamento per i normali MVPD).
 
 >[!NOTE]
 >

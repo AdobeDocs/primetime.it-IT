@@ -2,7 +2,7 @@
 title: Record di registrazione di ritorno
 description: Record di registrazione di ritorno
 exl-id: 7b9e63a2-59b6-4123-a19b-ee1f021219ea
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 0%
@@ -20,27 +20,27 @@ ht-degree: 0%
 
 &lt;reggie_fqdn>:
 
-* Produzione - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produzione - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
-* Produzione - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produzione - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
- </br>
- 
+</br>
+
 
 ## Descrizione {#description}
 
-Restituisce il record del codice di registrazione contenente il codice di registrazione UUID, il codice di registrazione e l&#39;ID dispositivo con hash. 
+Restituisce il record del codice di registrazione contenente il codice di registrazione UUID, il codice di registrazione e l&#39;ID dispositivo con hash.
 
- 
+
 
 <div>
 
 
-| Endpoint | Chiamato  </br>Da | Input   </br>Parametri | HTTP  </br>Metodo | Risposta | HTTP  </br>Risposta |
+| Endpoint | Chiamato  </br>Da | Input   </br>Parametri | HTTP  </br>Metodo | Risposta | HTTP  </br>Risposta |
 | --- | --- | --- | --- | --- | --- |
 | &lt;reggie_fqdn>;/reggie/v1/{requestorId}/regcode/{registrationCode}</br></br>Ad esempio:</br></br>&lt;reggie_fqdn>/reggie/v1/sampleRequestorId/regcode/TJCFK?format=xml | App di streaming</br></br>o</br></br>Servizio programmatore | 1. richiedente  </br>    (componente Percorso)</br>2.  codice di registrazione  </br>    (componente Percorso) | GET | XML o JSON contenente un codice di registrazione e informazioni. Vedi lo schema e l’esempio di seguito. | 200 |
 

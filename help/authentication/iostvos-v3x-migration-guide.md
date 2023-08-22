@@ -2,7 +2,7 @@
 title: Guida alla migrazione ad iOS/tvOS v3.x
 description: Guida alla migrazione ad iOS/tvOS v3.x
 exl-id: 4c43013c-40af-48b7-af26-0bd7f8df2bdb
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '561'
 ht-degree: 0%
@@ -21,7 +21,6 @@ ht-degree: 0%
 >
 > - A partire dall’sdk di iOS versione 3.1, gli implementatori possono ora utilizzare WKWebView o UIWebView in modo intercambiabile. Poiché UIWebView è obsoleto, le app devono migrare a WKWebView per evitare problemi con le versioni future di iOS.
 > - Tieni presente che la migrazione implicherebbe semplicemente il passaggio della classe UIWebView a WKWebView; non è necessario eseguire alcun lavoro specifico in merito all’AccessEnabler di Adobe.
-
 
 </br>
 
@@ -69,9 +68,9 @@ Dopo aver ottenuto lo schema URL personalizzato, devi aggiungerlo al file info.p
 
 ## Intercettazione delle chiamate sullo schema URL personalizzato {#intercept}
 
-Questo vale solo nel caso in cui l&#39;applicazione abbia precedentemente abilitato la gestione manuale di Safari View Controller (SVC) tramite [setOptions(\[&quot;handleSVC&quot;:true&quot;\])](/help/authentication/iostvos-sdk-api-reference.md) e per MVPD specifici che richiedono Safari View Controller (SVC), richiedendo pertanto il caricamento degli URL degli endpoint di autenticazione e disconnessione da parte di un controller SFSafariViewController anziché da un controller UIWebView/WKWebView.
+Questo vale solo nel caso in cui l&#39;applicazione abbia precedentemente abilitato la gestione manuale di Safari View Controller (SVC) tramite [setOptions(\[&quot;handleSVC&quot;:true&quot;\])](/help/authentication/iostvos-sdk-api-reference.md) e per MVPD specifici che richiedono Safari View Controller (SVC), richiedendo pertanto il caricamento degli URL degli endpoint di autenticazione e disconnessione da parte di un controller SFSafariViewController anziché da un controller UIWebView/WKWebView.
 
-Durante i flussi di autenticazione e disconnessione, l&#39;applicazione deve monitorare l&#39;attività del `SFSafariViewController `il controller durante diversi reindirizzamenti. L&#39;applicazione deve rilevare il momento in cui carica un URL personalizzato specifico definito dal `application's custom URL scheme` (ad es.`adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com)`. Quando il controller carica questo URL personalizzato specifico, l&#39;applicazione deve chiudere `SFSafariViewController` e chiama AccessEnabler `handleExternalURL:url `metodo API.
+Durante i flussi di autenticazione e disconnessione, l&#39;applicazione deve monitorare l&#39;attività del `SFSafariViewController `il controller durante diversi reindirizzamenti. L&#39;applicazione deve rilevare il momento in cui carica un URL personalizzato specifico definito dal `application's custom URL scheme` (ad es.`adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com)`. Quando il controller carica questo URL personalizzato specifico, l&#39;applicazione deve chiudere `SFSafariViewController` e chiama AccessEnabler `handleExternalURL:url `metodo API.
 
 Nel tuo `AppDelegate` aggiungi il seguente metodo:
 

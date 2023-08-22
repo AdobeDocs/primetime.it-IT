@@ -2,7 +2,7 @@
 title: Metadati utente
 description: Metadati utente
 exl-id: 3d7b6429-972f-4ccb-80fd-a99870a02f65
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '491'
 ht-degree: 0%
@@ -19,13 +19,13 @@ ht-degree: 0%
 
 &lt;reggie_fqdn>:
 
-* Produzione - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produzione - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
-* Produzione - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produzione - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 </br>
 
@@ -36,19 +36,19 @@ Recupera i metadati condivisi da MVPD sull’utente autenticato.
 <div>
 
 
-| Endpoint | Chiamato  </br>Da | Input   </br>Parametri | HTTP  </br>Metodo | Risposta | HTTP  </br>Risposta |
+| Endpoint | Chiamato  </br>Da | Input   </br>Parametri | HTTP  </br>Metodo | Risposta | HTTP  </br>Risposta |
 | --- | --- | --- | --- | --- | --- |
-| &lt;sp_fqdn>/api/v1/tokens/usermetadata | App di streaming</br></br>o</br></br>Servizio programmatore | 1. richiedente</br>2.  deviceId (obbligatorio)</br>3.  device_info/X-Device-Info (Obbligatorio)</br>4.  deviceType</br>5.  deviceUser (obsoleto)</br>6.  appId (obsoleto) | GET | XML o JSON contenente i metadati dell’utente o i dettagli dell’errore se l’operazione non ha esito positivo. | 200 - Operazione completata</br></br>404 - Metadati non trovati</br></br>412 - Token AuthN non valido (ad esempio, token scaduto) |
+| &lt;sp_fqdn>/api/v1/tokens/usermetadata | App di streaming</br></br>o</br></br>Servizio programmatore | 1. richiedente</br>2.  deviceId (obbligatorio)</br>3.  device_info/X-Device-Info (Obbligatorio)</br>4.  deviceType</br>5.  deviceUser (obsoleto)</br>6.  appId (obsoleto) | GET | XML o JSON contenente i metadati dell’utente o i dettagli dell’errore in caso di esito negativo. | 200 - Operazione completata</br></br>404 - Metadati non trovati</br></br>412 - Token AuthN non valido (ad esempio, token scaduto) |
 
 
 | Parametro di input | Descrizione |
 | --- | --- |
 | richiedente | ID richiedente del programmatore per il quale è valida questa operazione. |
 | deviceId | Byte ID dispositivo. |
-| device_info/</br></br>X-Device-Info | Informazioni sul dispositivo di streaming.</br></br>**Nota**: questo PUÒ essere trasmesso device_info come parametro URL, ma a causa delle dimensioni potenziali del parametro e delle limitazioni alla lunghezza di un URL GET, DEVE essere trasmesso come X-Device-Info nell’intestazione http. </br></br>Vedi tutti i dettagli in **Trasmissione delle informazioni sul dispositivo e sulla connessione** <!--http://tve.helpdocsonline.com/passing-device-information-->. |
-| _deviceType_ | Il tipo di dispositivo (ad esempio, Roku, PC).</br></br>Se questo parametro è impostato correttamente, ESM offre metriche che sono [suddiviso per tipo di dispositivo](/help/authentication/entitlement-service-monitoring-overview.md#progr-filter-metrics) quando utilizzi Clientless, in modo che possano essere eseguiti diversi tipi di analisi per, ad esempio, Roku, AppleTV, Xbox, ecc.</br></br>Consulta [Vantaggi dell’utilizzo del parametro del tipo di dispositivo senza client nelle metriche di passaggio ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**Nota:** Il `device_info` sostituisce questo parametro. </br> |
-| _deviceUser_ | L’identificatore utente del dispositivo.</br></br>**Nota:**se utilizzato, `deviceUser` deve avere gli stessi valori di [Crea codice di registrazione](/help/authentication/registration-code-request.md) richiesta. |
-| _appId_ | ID/nome dell’applicazione. </br></br>**Nota:**Il `device_info` sostituisce questo parametro. Se utilizzato, `appId` deve avere gli stessi valori di **Crea codice di registrazione** richiesta. |
+| device_info/</br></br>X-Device-Info | Informazioni sul dispositivo di streaming.</br></br>**Nota**: questo PUÒ essere trasmesso device_info come parametro URL, ma a causa delle dimensioni potenziali del parametro e delle limitazioni alla lunghezza di un URL GET, DEVE essere trasmesso come X-Device-Info nell’intestazione http. </br></br>Vedi tutti i dettagli in **Trasmissione delle informazioni sul dispositivo e sulla connessione** <!--http://tve.helpdocsonline.com/passing-device-information-->. |
+| _deviceType_ | Il tipo di dispositivo (ad esempio, Roku, PC).</br></br>Se questo parametro è impostato correttamente, ESM offre metriche che sono [suddiviso per tipo di dispositivo](/help/authentication/entitlement-service-monitoring-overview.md#progr-filter-metrics) quando utilizzi Clientless, in modo che possano essere eseguiti diversi tipi di analisi per, ad esempio, Roku, AppleTV, Xbox, ecc.</br></br>Consulta [Vantaggi dell’utilizzo del parametro del tipo di dispositivo senza client nelle metriche di passaggio ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**Nota:** Il `device_info` sostituisce questo parametro. </br> |
+| _deviceUser_ | L’identificatore utente del dispositivo.</br></br>**Nota:**se utilizzato, `deviceUser` deve avere gli stessi valori di [Crea codice di registrazione](/help/authentication/registration-code-request.md) richiesta. |
+| _appId_ | ID/nome dell’applicazione. </br></br>**Nota:**Il `device_info` sostituisce questo parametro. Se utilizzato, `appId` deve avere gli stessi valori di **Crea codice di registrazione** richiesta. |
 
 >[!NOTE]
 > 

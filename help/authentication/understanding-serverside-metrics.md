@@ -2,9 +2,9 @@
 title: Informazioni sulle metriche lato server
 description: Informazioni sulle metriche lato server
 exl-id: 516884e9-6b0b-451a-b84a-6514f571aa44
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
-source-wordcount: '2187'
+source-wordcount: '2205'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## Introduzione {#intro}
 
-Questo documento descrive le metriche lato server di autenticazione di Adobe Primetime generate dal servizio di monitoraggio dei servizi di adesione (ESM). Non descrive gli stessi eventi visti dal punto di vista del lato client (ciò che i programmatori vedrebbero se implementassero un servizio di misurazione come Adobe Analytics sulla loro pagina/applicazione).  
+Questo documento descrive le metriche lato server di autenticazione di Adobe Primetime generate dal servizio di monitoraggio dei servizi di adesione (ESM). Non descrive gli stessi eventi visti dal punto di vista del lato client (ciò che i programmatori vedrebbero se implementassero un servizio di misurazione come Adobe Analytics sulla loro pagina/applicazione).
 
 ## Riepilogo eventi {#events_summary}
 
@@ -28,14 +28,14 @@ Dal punto di vista dell’autenticazione Adobe Primetime lato server, vengono ge
 
    * Notifica del tentativo di autenticazione: viene generato quando l’utente viene inviato al sito di accesso MVPD.
    * Notifica di AuthN in sospeso: se l’utente riesce ad accedere con il proprio MVPD, questo viene generato quando l’utente viene reindirizzato all’autenticazione Primetime.
-   * Notifica di autenticazione concessa: viene generata quando l’utente torna sul sito del programmatore e ha recuperato correttamente il token di autenticazione dall’autenticazione Primetime. 
+   * Notifica di autenticazione concessa: viene generata quando l’utente torna sul sito del programmatore e ha recuperato correttamente il token di autenticazione dall’autenticazione Primetime.
 * **Flusso di autorizzazione** (Solo un controllo per l&#39;autorizzazione con un MVPD)\
-   *Prerequisito:* Un token di autenticazione valido
+  *Prerequisito:* Un token di autenticazione valido
    * Notifica del tentativo di autenticazione
    * Notifica di concessione AuthZ
 * **Richiesta di riproduzione riuscita**\
-   *Prerequisito:* Token AuthN e AuthZ validi
-   * Notifica di un controllo con autenticazione Adobe Primetime 
+  *Prerequisito:* Token AuthN e AuthZ validi
+   * Notifica di un controllo con autenticazione Adobe Primetime
    * Una richiesta Play richiede sia un’autenticazione concessa sia un’autorizzazione concessa
 
 
@@ -51,7 +51,14 @@ Il numero di utenti univoci è trattato in dettaglio nella sezione [Utenti univo
 
 L’esempio seguente mostra le metriche lato server per un mese per un marchio:
 
-| Metrica | MVPD 1 | MVPD 2 | ... | MVPD n | Totale | | -------------------------- | ------ | ------ | - | ------ | ---------------------------------------------- | | Autenticazioni riuscite | 1125 | 2892 | | 2203 | SOMMA(MVP1+...MVPD n) | | Autorizzazioni riuscite | 2527 | 5603 | | 5904 | SOMMA(MVP1+...MVPD n) | | Richieste riproduzione riuscite | 4201 | 10518 | | 10737 | SOMMA(MVP1+...MVPD n) | | Utenti univoci | 1375 | 2400 | | 2890 | SOMMA di tutti gli utenti per tutti gli MVPD deduplicati\* | | Tentativi di autenticazione | 2147 | 3887 | | 3108 | SOMMA(MVP1+...MVPD n) | | Tentativi di autorizzazioni | 2889 | 6139 | | 6039 | SOMMA(MVP1+...MVPD n) |
+| Metrica | MVPD 1 | MVPD 2 | … | MVPD n | Totale |
+| -------------------------- | ------ | ------ | - | ------ | ---------------------------------------------- |
+| Autenticazioni riuscite | 1125 | 2892 |   | 2203 | SUM(MVP1+...MVPD n) |
+| Autorizzazioni riuscite | 2527 | 5603 |   | 5904 | SUM(MVP1+...MVPD n) |
+| Richieste riproduzione riuscite | 4201 | 10518 |   | 10737 | SUM(MVP1+...MVPD n) |
+| Utenti univoci | 1375 | 2400 |   | 2890 | SOMMA di tutti gli utenti per tutti gli MVPD deduplicati\* |
+| Tentativi di autenticazione | 2147 | 3887 |   | 3108 | SUM(MVP1+...MVPD n) |
+| Tentativi di autorizzazione | 2889 | 6139 |   | 6039 | SUM(MVP1+...MVPD n) |
 
 </br>
 
@@ -73,7 +80,7 @@ Il flusso prevede round trip a MVPD sia per l&#39;autenticazione (#5 a \#7) che 
 
 
 
-Al termine del flusso, i token di autenticazione e autorizzazione vengono memorizzati nella cache del dispositivo dell’utente. I valori TTL (Time-to-Live) dei token di autenticazione sono compresi tra 6 ore e 90 giorni. La scadenza di un token AuthN forza automaticamente la scadenza di un token AuthZ. Il valore TTL per il token di autorizzazione è in genere di 24 ore.
+Al termine del flusso, i token di autenticazione e autorizzazione vengono memorizzati nella cache del dispositivo dell’utente. I valori TTL (Time-to-Live) dei token di autenticazione sono compresi tra 6 ore e 90 giorni. La scadenza di un token AuthN forza automaticamente la scadenza di un token AuthZ. Il valore TTL per il token di autorizzazione è in genere di 24 ore.
 
 | Eventi lato server attivati | <ul><li>Tentativo di autenticazione, autenticazione in sospeso, autenticazione concessa</li><li>Tentativo di autorizzazione, autorizzazione concessa</li><li>Richiesta riproduzione riuscita</li></ul> |
 |---|---|
@@ -129,12 +136,12 @@ Questo evento si verifica all’avvio del processo di reindirizzamento all’aut
 
 L&#39;utente è un abbonato noto di MVPD, in genere con un abbonamento a Pay TV, ma a volte con solo accesso a Internet. Un’autenticazione corretta può verificarsi perché l’utente ha immesso esplicitamente credenziali valide con il proprio MVPD o perché aveva precedentemente inserito credenziali valide e aveva selezionato &quot;ricordami&quot; (e la sessione precedente non era scaduta).
 
-Pertanto, MVPD invia all’autenticazione di Adobe Primetime una risposta positiva alla richiesta di autenticazione e l’autenticazione di Adobe Primetime crea un *Token AuthN*.
+Pertanto, MVPD invia all’autenticazione di Adobe Primetime una risposta positiva alla richiesta di autenticazione e l’autenticazione di Adobe Primetime crea un *Token AuthN*.
 
 * L’autenticazione viene generalmente memorizzata nella cache per un lungo periodo di tempo (un mese o più). Per questo motivo, gli eventi di autenticazione non saranno più presenti fino alla scadenza del token e al riavvio del flusso.
 * L’accesso da un altro sito o app tramite Single Sign-On non attiva eventi di autenticazione.
 
- 
+
 
 ### Autenticazione Comcast {#comcast-authentication}
 
@@ -170,7 +177,7 @@ Alcune note sulle metriche:
 
 ### Tentativo di autorizzazione {#authorization_attempt}
 
-Oltre a ottenere un token di autenticazione, gli utenti devono ottenere anche un token di autorizzazione prima di riprodurre il contenuto. Ciò si verifica in genere dopo l’autenticazione o se la scadenza del token di autorizzazione. Poiché questo controllo viene eseguito lato server (dai server di autenticazione di Adobe Primetime ai server MVPD), l’utente non è tenuto a eseguire alcuna operazione.
+Oltre a ottenere un token di autenticazione, gli utenti devono ottenere anche un token di autorizzazione prima di riprodurre il contenuto. Ciò si verifica in genere dopo l’autenticazione o se la scadenza del token di autorizzazione. Poiché questo controllo viene eseguito lato server (dai server di autenticazione di Adobe Primetime ai server MVPD), l’utente non è tenuto a eseguire alcuna operazione.
 
 ### Autorizzazione concessa {#authorization-granted}
 

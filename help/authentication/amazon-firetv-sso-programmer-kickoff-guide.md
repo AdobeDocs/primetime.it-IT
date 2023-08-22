@@ -2,7 +2,7 @@
 title: Amazon fireTV SSO - Guida introduttiva per programmatori
 description: Amazon fireTV SSO - Guida introduttiva per programmatori
 exl-id: cf9ba614-57ad-46c3-b154-34204b38742d
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '792'
 ht-degree: 0%
@@ -56,7 +56,7 @@ Rispetto all’SDK Android esistente, su FireTV SDK il processo di autenticazion
 1. In che modo **SSO** lavoro?
 
    * SSO funziona su tutte le applicazioni per programmatori con autenticazione Adobe Primetime che utilizzano il nuovo SDK fireTV sullo stesso dispositivo Amazon fireTV
-   * SSO tra le app programmatrici implementate nell’API REST senza client e le app implementate nell’SDK fireTV **NON sarà supportato**
+   * SSO tra le app programmatrici implementate nell’API REST senza client e le app implementate nell’SDK fireTV **NON sarà supportato**
 
 1. Qual è la copertura MVPD di FireTV SSO?
 

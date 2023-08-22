@@ -2,7 +2,7 @@
 title: Panoramica sul monitoraggio dei servizi di adesione
 description: Panoramica sul monitoraggio dei servizi di adesione
 exl-id: ebd5d650-0a32-4583-9045-5156356494e2
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '1179'
 ht-degree: 0%
@@ -19,11 +19,11 @@ ht-degree: 0%
 
 I siti e le app TVE devono essere disponibili 24 ore su 24, 7 giorni su 7; pertanto, i clienti devono essere informati in tempo reale sugli eventi di adesione per poter rilevare e correggere i problemi il più rapidamente possibile. Inoltre, devono analizzare i dati mensili per determinare quali piattaforme forniscono la maggior parte del traffico, e quali piattaforme potrebbero avere una cattiva implementazione e tassi di conversione insoddisfacenti.
 
-Entitlement Service Monitoring (ESM) fornisce a programmatori e MVPD un feed di dati che offre visibilità in tempo reale sui loro eventi di autenticazione e autorizzazione. I dati vengono raccolti dai sistemi di autenticazione di Adobe Primetime e forniti tramite un’API RESTful.  I clienti possono utilizzare i dati in modo diretto o dall’interno delle proprie dashboard operative personalizzate.
+Entitlement Service Monitoring (ESM) fornisce a programmatori e MVPD un feed di dati che offre visibilità in tempo reale sui loro eventi di autenticazione e autorizzazione. I dati vengono raccolti dai sistemi di autenticazione di Adobe Primetime e forniti tramite un’API RESTful.  I clienti possono utilizzare i dati in modo diretto o dall’interno delle proprie dashboard operative personalizzate.
 
-Gli elementi principali del sistema ESM sono le metriche e le dimensioni. ESM genera rapporti che contengono metriche aggregate in base alla selezione della dimensione. Poiché gli eventi Adobe Pass vengono registrati nel fuso orario PST, i rapporti ESM sono disponibili anche nel fuso orario PST. 
+Gli elementi principali del sistema ESM sono le metriche e le dimensioni. ESM genera rapporti che contengono metriche aggregate in base alla selezione della dimensione. Poiché gli eventi Adobe Pass vengono registrati nel fuso orario PST, i rapporti ESM sono disponibili anche nel fuso orario PST.
 
-L’API ESM non è generalmente disponibile.  Per domande sulla disponibilità, contatta il rappresentante di Adobe.
+L’API ESM non è generalmente disponibile.  Per domande sulla disponibilità, contatta il rappresentante di Adobe.
 
 ## ESM per programmatori {#esm-for-programmers}
 
@@ -116,11 +116,11 @@ L’API ESM non è generalmente disponibile.  Per domande sulla disponibilità,
 
 Puoi utilizzare i dati ESM per i seguenti casi d’uso:
 
-- **Monitorare** - I gruppi operativi o di monitoraggio possono creare un dashboard o un grafico che richiama l’API ogni minuto. Utilizzando le informazioni visualizzate, è possibile rilevare un problema (con l’autenticazione Primetime o con un MVPD) nel momento in cui viene visualizzato.  
+- **Monitorare** - I gruppi operativi o di monitoraggio possono creare un dashboard o un grafico che richiama l’API ogni minuto. Utilizzando le informazioni visualizzate, è possibile rilevare un problema (con l’autenticazione Primetime o con un MVPD) nel momento in cui viene visualizzato.
 
-- **Debug/Test di qualità** - Poiché i dati vengono suddivisi anche per piattaforma, dispositivo, browser e sistema operativo, l’analisi dei pattern di utilizzo può individuare problemi relativi a combinazioni specifiche (ad esempio, Safari su OSX).  
+- **Debug/Test di qualità** - Poiché i dati vengono suddivisi anche per piattaforma, dispositivo, browser e sistema operativo, l’analisi dei pattern di utilizzo può individuare problemi relativi a combinazioni specifiche (ad esempio, Safari su OSX).
 
-- **Analytics** - I dati forniti possono essere utilizzati per integrare/controllare i dati lato client raccolti tramite Adobe Analytics o un altro strumento di analisi.
+- **Analytics** - I dati forniti possono essere utilizzati per integrare/controllare i dati lato client raccolti tramite Adobe Analytics o un altro strumento di analisi.
 
 <!--
 ## Related Information {#related-information}

@@ -2,9 +2,9 @@
 title: Manuale dell’SDK JavaScript
 description: Manuale dell’SDK JavaScript
 exl-id: d57f7a4a-ac77-4f3c-8008-0cccf8839f7c
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
-source-wordcount: '947'
+source-wordcount: '946'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ## Introduzione (#intro)
 
-Questo documento descrive i flussi di lavoro di adesione implementati dall’applicazione di livello superiore di un programmatore per un’integrazione JavaScript con il servizio di autenticazione di Adobe Primetime. I collegamenti alla documentazione API di riferimento per JavaScript sono inclusi in.
+Questo documento descrive i flussi di lavoro di adesione implementati dall’applicazione di livello superiore di un programmatore per un’integrazione JavaScript con il servizio di autenticazione di Adobe Primetime. I collegamenti alla documentazione API di riferimento per JavaScript sono inclusi in.
 
 Si noti inoltre che la [Informazioni correlate](#related) include un collegamento a un set di esempi di codice JavaScript.
 
@@ -44,51 +44,48 @@ Si noti inoltre che la [Informazioni correlate](#related) include un collegament
 Creare le funzioni di callback:
 
 - `entitlementLoaded`
-
 </br>
 
 **Attivatore:** L&#39;inizializzazione di AccessEnabler è stata caricata e completata.
 
 - `displayProviderDialog(mvpds)`
 
-   **Attivatore:** `getAuthentication(),` solo se l&#39;utente non ha selezionato un provider (un MVPD) e non è ancora autenticato Il parametro mvpds è un array di provider disponibili per l&#39;utente.
+  **Attivatore:** `getAuthentication(),` solo se l&#39;utente non ha selezionato un provider (un MVPD) e non è ancora autenticato Il parametro mvpds è un array di provider disponibili per l&#39;utente.
 
 - `setAuthenticationStatus(status, errorcode)`
 
-   **Attivatore:**
+  **Attivatore:**
    - `checkAuthentication()`ogni volta.
-   - `getAuthentication()` solo se l’utente è già autenticato e ha selezionato un provider.
+   - `getAuthentication()` solo se l’utente è già autenticato e ha selezionato un provider.
 
-   Lo stato restituito è success o failure; il codice di errore descrive il tipo di errore.
+  Lo stato restituito è success o failure; il codice di errore descrive il tipo di errore.
 
 - `createIFrame(width, height)`
 
-   **Attivatore:** `setSelectedProvider(providerID)`, solo se il provider selezionato è configurato per la visualizzazione in un IFrame.
+  **Attivatore:** `setSelectedProvider(providerID)`, solo se il provider selezionato è configurato per la visualizzazione in un IFrame.
 
-   >[!NOTE]
-   >
-   >Un provider è configurato per eseguire il rendering della schermata di autenticazione come reindirizzamento o in un iFrame e il programmatore deve tenere conto di entrambi.
+  >[!NOTE]
+  >
+  >Un provider è configurato per eseguire il rendering della schermata di autenticazione come reindirizzamento o in un iFrame e il programmatore deve tenere conto di entrambi.
 
 - `sendTrackingData(event, data)`
 
-   **Trigger:** `checkAuthentication(), getAuthentication(),checkAuthorization(), getAuthorization(), setSelectedProvider()`.  Il `event` il parametro indica quale evento di adesione si è verificato; il `data` Il parametro è un elenco di valori relativi all’evento. 
+  **Trigger:** `checkAuthentication(), getAuthentication(),checkAuthorization(), getAuthorization(), setSelectedProvider()`.  Il `event` il parametro indica quale evento di adesione si è verificato; il `data` Il parametro è un elenco di valori relativi all’evento.
 - `setToken(token, resource)`
-
-   **Attivatore:** `checkAuthorization()`e `getAuthorization()` dopo un’autorizzazione riuscita a visualizzare una risorsa.   Il `token` è il token multimediale di breve durata; il `resource` Il parametro è il contenuto che l’utente è autorizzato a visualizzare.
+  **Attivatore:** `checkAuthorization()`e `getAuthorization()` dopo un’autorizzazione riuscita a visualizzare una risorsa.   Il `token` è il token multimediale di breve durata; il `resource` Il parametro è il contenuto che l’utente è autorizzato a visualizzare.
 
 - `tokenRequestFailed(resource, code, description)`
-
-   **Attivatore:**`checkAuthorization()` e`getAuthorization()`  dopo un’autorizzazione non riuscita.\
-   Il `resource` parametro è il contenuto che l&#39;utente stava tentando di visualizzare; il `code` parametro è il codice di errore che indica il tipo di errore che si è verificato; il `description` Il parametro descrive l&#39;errore associato al codice di errore.
+  **Attivatore:**`checkAuthorization()` e`getAuthorization()`  dopo un’autorizzazione non riuscita.\
+  Il `resource` parametro è il contenuto che l&#39;utente stava tentando di visualizzare; il `code` parametro è il codice di errore che indica il tipo di errore che si è verificato; il `description` Il parametro descrive l’errore associato al codice di errore.
 
 - `selectedProvider(mvpd)`
 
-   **Attivatore:** [`getSelectedProvider()`](#$getSelProv `mvpd` Il parametro fornisce informazioni sul provider selezionato dall&#39;utente.
+  **Attivatore:** [`getSelectedProvider()`](#$getSelProv `mvpd` Il parametro fornisce informazioni sul provider selezionato dall&#39;utente.
 
 - `setMetadataStatus(metadata, key, arguments)`
 
-   **Attivatore:** `getMetadata().`\
-   Il `metadata` Il parametro fornisce i dati specifici richiesti; il parametro chiave è la chiave utilizzata nel `getMetadata()`richiesta; e `arguments` Il parametro è lo stesso dizionario che è stato passato a `getMetadata()`.
+  **Attivatore:** `getMetadata().`\
+  Il `metadata` Il parametro fornisce i dati specifici richiesti; il parametro chiave è la chiave utilizzata nel `getMetadata()`richiesta; e `arguments` Il parametro è lo stesso dizionario che è stato passato a `getMetadata()`.
 
 
 ## 2. Flusso di avvio
@@ -98,7 +95,7 @@ Creare le funzioni di callback:
 **Per il profilo di staging**
 
 ```JSON
-<script type="text/javascript"         
+<script type="text/javascript"         
 src="https://entitlement.auth-staging.adobe.com/entitlement/v4/AccessEnabler.js">
 </script>"
 ```
@@ -108,24 +105,24 @@ o...
 **Per il profilo di produzione**
 
 ```JSON
-<script type="text/javascript"         
+<script type="text/javascript"         
 src="https://entitlement.auth.adobe.com/entitlement/v4/AccessEnabler.js">
 </script>"
 ```
 
-**Trigger:** Al termine dell’inizializzazione, l’autenticazione Adobe Primetime chiama il `entitlementLoaded()` callback. Questo è il punto di ingresso per la comunicazione dell&#39;applicazione con AccessEnabler. 
+**Trigger:** Al termine dell’inizializzazione, l’autenticazione Adobe Primetime chiama il `entitlementLoaded()` callback. Questo è il punto di ingresso per la comunicazione dell&#39;applicazione con AccessEnabler.
 
- 
+
 **II.** Chiamata `setRequestor()`per stabilire l&#39;identità del programmatore; passare nel `requestorID` e (facoltativamente) un array di endpoint di autenticazione Adobe Primetime.
 
-**Trigger:** Nessuno, ma abilita `displayProviderDialog()` da chiamare quando necessario.
+**Trigger:** Nessuno, ma abilita `displayProviderDialog()` da chiamare quando necessario.
 
 
-**III.** Chiamata `checkAuthentication()` per verificare la presenza di un&#39;autenticazione esistente senza avviare il [flusso di autenticazione].  Se la chiamata ha esito positivo, puoi passare direttamente al `authorization flow`.  In caso contrario, passare alla `authentication flow`.
+**III.** Chiamata `checkAuthentication()` per verificare la presenza di un&#39;autenticazione esistente senza avviare il [flusso di autenticazione].  Se la chiamata ha esito positivo, puoi passare direttamente al `authorization flow`.  In caso contrario, passare alla `authentication flow`.
 
 **Dipendenza:** Chiamata a riuscita `setRequestor()`(questa dipendenza si applica anche a tutte le chiamate successive).
 
- **Trigger:** `setAuthenticationStatus()` callback
+**Trigger:** `setAuthenticationStatus()` callback
 
 </br>
 
@@ -161,7 +158,7 @@ Chiamata `getAuthorization()` e passa il ResourceID per il file multimediale ric
 
 Utilizza il Media Token Verifier per convalidare il shortMediaToken restituito da un `getAuthorization()` chiamare.
 
- 
+
 **Dipendenza:** Il verificatore short media token (incluso nella libreria AccessEnabler)
 
 - Se la convalida viene superata: visualizza/riproduce il supporto richiesto per l’utente.
@@ -170,25 +167,25 @@ Utilizza il Media Token Verifier per convalidare il shortMediaToken restituito d
 ## 5. Visualizzare il flusso dei supporti (#logout)
 
 - L’utente seleziona il file multimediale da visualizzare.
-   - Il supporto è protetto?\
-          - L’app verifica se il supporto è protetto:
-      - Se il supporto è protetto, l’app avvia il flusso di autorizzazione (AuthZ) qui sopra.
-      - Se il supporto non è protetto, procedere con il flusso Visualizza supporto.
-      - Supporti di riproduzione
+   - Il supporto è protetto?
+      - L’app controlla se il contenuto multimediale è protetto:
+         - Se il supporto è protetto, l’app avvia il flusso di autorizzazione (AuthZ) qui sopra.
+         - Se il supporto non è protetto, procedere con il flusso Visualizza supporto.
+         - Supporti di riproduzione
 
 ## Configurazione dell’ID visitatore (#visitorID)
 
-Configurazione di un [ID visitatore Experience Cloud](https://marketing.adobe.com/resources/help/en_US/mcvid/) il valore è molto importante dal punto di vista di analytics. Una volta impostato il valore EC visitorID, l’SDK invierà queste informazioni insieme a ogni chiamata di rete e il servizio di autenticazione di Adobe Primetime le raccoglierà. In questo modo potrai correlare i dati di analisi del servizio di autenticazione di Adobe Primetime con qualsiasi altro rapporto di analisi disponibile in altre applicazioni o siti Web. Puoi trovare informazioni su come impostare EC visitorID [qui](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=en).
+Configurazione di un [ID visitatore Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/home.html) il valore è molto importante dal punto di vista di analytics. Una volta impostato il valore EC visitorID, l’SDK invierà queste informazioni insieme a ogni chiamata di rete e il servizio di autenticazione di Adobe Primetime le raccoglierà. In questo modo potrai correlare i dati di analisi del servizio di autenticazione di Adobe Primetime con qualsiasi altro rapporto di analisi disponibile in altre applicazioni o siti Web. Puoi trovare informazioni su come impostare EC visitorID [qui](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=en).
 
- 
+
 >[!NOTE]
 >
->Questa funzionalità è disponibile a partire dalla versione 3.1.0 dell’SDK JS. 
+>Questa funzionalità è disponibile a partire dalla versione 3.1.0 dell’SDK JS.
 
 <!--
 ### Related Information (#related)
 
-* [JavaScript SDK Overview](/help/authentication/javascript-sdk-overview.md)
+* [JavaScript SDK Overview](/help/authentication/javascript-sdk-overview.md)
 * [JavaScript SDK API Reference](/help/authentication/javascript-sdk-api-reference.md)
 * **JavaScript SDK Code Samples**
 -->

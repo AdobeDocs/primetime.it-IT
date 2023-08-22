@@ -2,7 +2,7 @@
 title: Elimina record di registrazione
 description: Elimina record di registrazione
 exl-id: 42707070-2e1f-4847-93fd-30025aef56c1
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 0%
@@ -19,22 +19,22 @@ ht-degree: 0%
 
 &lt;reggie_fqdn>:
 
-* Produzione - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produzione - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
-* Produzione - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produzione - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 </br>
 
 
 ## Descrizione {#delete-record}
 
-Elimina il record del codice reg e rilascia il codice reg per il riutilizzo. 
+Elimina il record del codice reg e rilascia il codice reg per il riutilizzo.
 
-| Endpoint | Chiamato  </br>Da | Input   </br>Parametri | HTTP  </br>Metodo | Risposta | HTTP  </br>Risposta |
+| Endpoint | Chiamato  </br>Da | Input   </br>Parametri | HTTP  </br>Metodo | Risposta | HTTP  </br>Risposta |
 | --- | --- | --- | --- | --- | --- |
 | &lt;reggie_fqdn>/reggie/v1/{requestorId}/regcode/{registrationCode}</br></br>Ad esempio:</br></br>&lt;reggie_fqdn>/reggie/v1/regcode/ER45RTY | App di streaming</br></br>o</br></br>Servizio programmatore | 1. ID richiedente  </br>    (componente Percorso)</br>2.  Codice di registrazione  </br>    (componente Percorso) | DELETE | Nessuno | 204 |
 

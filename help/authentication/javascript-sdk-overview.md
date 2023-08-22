@@ -2,7 +2,7 @@
 title: Panoramica dell’SDK JavaScript
 description: Panoramica dell’SDK JavaScript
 exl-id: 8756c804-a4c1-4ee3-b2b9-be45f38bdf94
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '511'
 ht-degree: 0%
@@ -29,15 +29,15 @@ Il flusso di adesioni all’autenticazione generale di Adobe Primetime è tratta
 
 ## Creazione della finestra di dialogo di selezione MVPD {#creating-the-mvpd-selection-dialog}
 
-Affinché un utente possa accedere al proprio MVPD e autenticarsi, la pagina o il lettore deve fornire all’utente un modo per identificare il proprio MVPD. Viene fornita una versione predefinita della finestra di dialogo di selezione MVPD per lo sviluppo. Per l’utilizzo in produzione, devi implementare un selettore MVPD personalizzato. 
+Affinché un utente possa accedere al proprio MVPD e autenticarsi, la pagina o il lettore deve fornire all’utente un modo per identificare il proprio MVPD. Viene fornita una versione predefinita della finestra di dialogo di selezione MVPD per lo sviluppo. Per l’utilizzo in produzione, devi implementare un selettore MVPD personalizzato.
 
-Se sai già chi è il fornitore del cliente, puoi [impostare MVPD a livello di programmazione](/help/authentication/home.md), senza interazione dell’utente. La tecnica è la stessa, ma ignora il passaggio di richiamare la finestra di dialogo Selettore provider e chiedere al cliente di selezionare il proprio MVPD.
+Se sai già chi è il fornitore del cliente, puoi [impostare MVPD a livello di programmazione](/help/authentication/home.md), senza interazione dell’utente. La tecnica è la stessa, ma ignora il passaggio di richiamare la finestra di dialogo Selettore provider e chiedere al cliente di selezionare il proprio MVPD.
 
 ## Visualizzazione del provider di servizi {#displaying-the-service-provider}
 
 Nell&#39;esempio di codice riportato di seguito viene illustrato come individuare e visualizzare il provider di servizi per il cliente corrente:
 
- **HTML** - Questa pagina aggiunge una sezione alla pagina in cui viene visualizzato il provider scelto dal cliente, se questo ha già effettuato l’accesso:
+**HTML** - Questa pagina aggiunge una sezione alla pagina in cui viene visualizzato il provider scelto dal cliente, se questo ha già effettuato l’accesso:
 
 ```HTML
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
@@ -74,7 +74,7 @@ Nell&#39;esempio di codice riportato di seguito viene illustrato come individuar
     </body>
     </html>
 ```
- 
+
 
 **JavaScript** Se l&#39;utente ha già eseguito l&#39;accesso, questo file JavaScript esegue una query sull&#39;Access Enabler per il provider corrente e visualizza il risultato nella sezione della pagina riservata a tale provider. Implementa anche una finestra di dialogo del selettore MVPD:
 
@@ -197,13 +197,13 @@ Nell&#39;esempio di codice riportato di seguito viene illustrato come individuar
 
 ## Disconnessione {#logout}
 
-Chiamata `logout()` per avviare il processo di disconnessione. Questo metodo non accetta argomenti. Consente di disconnettere l&#39;utente corrente, cancellando tutte le informazioni di autenticazione e autorizzazione per tale utente ed eliminando tutti i token AuthN e AuthZ dal sistema locale.
+Chiamata `logout()` per avviare il processo di disconnessione. Questo metodo non accetta argomenti. Consente di disconnettere l&#39;utente corrente, cancellando tutte le informazioni di autenticazione e autorizzazione per tale utente ed eliminando tutti i token AuthN e AuthZ dal sistema locale.
 
 In alcuni casi, il lettore non è responsabile della gestione dei loghi utente:
 
- 
 
-- **Quando la disconnessione viene avviata da un sito non integrato con l&#39;autenticazione di Adobe Primetime.** In questo caso MVPD può richiamare il servizio di autenticazione Adobe Primetime Single Logout tramite un reindirizzamento del browser. La chiamata SLO tramite una chiamata backchannel non è attualmente supportata.
+
+- **Quando la disconnessione viene avviata da un sito non integrato con l&#39;autenticazione di Adobe Primetime.** In questo caso MVPD può richiamare il servizio di autenticazione Adobe Primetime Single Logout tramite un reindirizzamento del browser. La chiamata SLO tramite una chiamata backchannel non è attualmente supportata.
 
 >[!NOTE]
 >

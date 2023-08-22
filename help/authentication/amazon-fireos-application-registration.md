@@ -2,7 +2,7 @@
 title: Registrazione applicazione Amazon FireOS
 description: Registrazione applicazione Amazon FireOS
 exl-id: 650fd4a2-dfc3-4c74-9b5b-6bea832a28ca
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 0%
@@ -55,8 +55,8 @@ Dopo aver ottenuto l&#39;Informativa sul software, è necessario trasmetterla co
 
 ## Come utilizzare l&#39;Informativa sul software {#use-both}
 
-Nel file di risorse dell’applicazione `strings.xml` aggiungi il seguente codice:
+Nel file di risorse dell’applicazione `strings.xml` aggiungi il seguente codice:
 
 ```XML
-<string name="software_statement">softwarestatement value</string>
+<string name="software_statement">softwarestatement value</string>
 ```

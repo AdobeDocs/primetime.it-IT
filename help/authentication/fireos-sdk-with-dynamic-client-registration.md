@@ -2,7 +2,7 @@
 title: SDK Amazon FireOS con registrazione client dinamica
 description: SDK Amazon FireOS con registrazione client dinamica
 exl-id: 27acf3f5-8b7e-4299-b0f0-33dd6782aeda
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '1150'
 ht-degree: 0%
@@ -21,14 +21,14 @@ ht-degree: 0%
 
 L’SDK di FireOS AccessEnabler per FireTV è stato modificato per abilitare l’autenticazione senza utilizzare i cookie di sessione. Poiché sempre più browser limitano l’accesso ai cookie, era necessario un altro metodo per consentire l’autenticazione.
 
-**SDK FireOS 3.0.4** sostituisce l’attuale meccanismo di registrazione dell’app basato sull’ID richiedente firmato e sull’autenticazione dei cookie di sessione con [Registrazione client dinamici](/help/authentication/dynamic-client-registration.md).
- 
+**SDK FireOS 3.0.4** sostituisce l’attuale meccanismo di registrazione dell’app basato sull’ID richiedente firmato e sull’autenticazione dei cookie di sessione con [Registrazione client dinamici](/help/authentication/dynamic-client-registration.md).
+
 
 ## Modifiche API {#API}
 
 ### Factory.getInstance
 
-**Descrizione:** Crea istanze dell&#39;oggetto Access Enabler. Deve essere presente una singola istanza di Access Enabler per ogni istanza dell&#39;applicazione.
+**Descrizione:** Crea istanze dell&#39;oggetto Access Enabler. Deve essere presente una singola istanza di Access Enabler per ogni istanza dell&#39;applicazione.
 
 | Chiamata API: costruttore |
 | --- |
@@ -40,22 +40,22 @@ L’SDK di FireOS AccessEnabler per FireTV è stato modificato per abilitare l�
 
 - *appContext*: contesto dell’applicazione Android
 - *softwareStatement*: valore ottenuto da TVE Dashboard o *nulle* se &quot;software\_statement&quot; è impostato in strings.xml
-- *redirectUrl* : per le implementazioni FireTV questo parametro deve essere null. Qualsiasi impostazione su questo attributo verrà ignorata. 
+- *redirectUrl* : per le implementazioni FireTV questo parametro deve essere null. Qualsiasi impostazione su questo attributo verrà ignorata.
 
 **Note**
 
 - softwareStatement non valido impedirà all&#39;applicazione di inizializzare AccessEnabler o di registrare l&#39;applicazione per l&#39;autenticazione e l&#39;autorizzazione Adobe Pass
-- Il parametro redirectUrl per FireTV è impostato dall’SDK su adobepass://android.app as l’autenticazione è gestita da un’istanza AccessEnabler univoca.
+- Il parametro redirectUrl per FireTV è impostato dall’SDK su adobepass://android.app poiché l’autenticazione è gestita da un’istanza AccessEnabler univoca.
 
 ### setRequestor
 
-**Descrizione:** Stabilisce l’identità del canale. A ciascun canale viene assegnato un ID univoco al momento della registrazione all’Adobe per il sistema di autenticazione di Adobe Primetime. Quando si tratta di token SSO e remoti, lo stato di autenticazione può cambiare quando l&#39;applicazione è in background, setRequestor può essere richiamato nuovamente quando l&#39;applicazione viene portata in primo piano per sincronizzarsi con lo stato del sistema (recuperare un token remoto se SSO è abilitato o eliminare il token locale se nel frattempo si è verificato un logout).
+**Descrizione:** Stabilisce l’identità del canale. A ciascun canale viene assegnato un ID univoco al momento della registrazione all’Adobe per il sistema di autenticazione di Adobe Primetime. Quando si tratta di token SSO e remoti, lo stato di autenticazione può cambiare quando l&#39;applicazione è in background, setRequestor può essere richiamato nuovamente quando l&#39;applicazione viene portata in primo piano per sincronizzarsi con lo stato del sistema (recuperare un token remoto se SSO è abilitato o eliminare il token locale se nel frattempo si è verificato un logout).
 
 La risposta del server contiene un elenco di MVPD insieme ad alcune informazioni di configurazione associate all’identità del canale. La risposta del server viene utilizzata internamente dal codice di Access Enabler. Solo lo stato dell’operazione (ovvero SUCCESS/FAIL) viene presentato all’applicazione tramite il callback setRequestorComplete().
 
-Se il *url* non viene utilizzato, la chiamata di rete risultante è destinata all’URL predefinito del fornitore di servizi: l’ambiente di produzione Adobe Release.
+Se il *url* non viene utilizzato, la chiamata di rete risultante è destinata all’URL predefinito del fornitore di servizi: l’ambiente di produzione Adobe Release.
 
-Se per il campo *url* , la chiamata di rete risultante esegue il targeting di tutti gli URL forniti nel *url* parametro. Tutte le richieste di configurazione vengono attivate contemporaneamente in thread separati. Il primo responder ha la precedenza quando si compila l’elenco degli MVPD. Per ogni MVPD nell&#39;elenco, Access Enabler ricorda l&#39;URL del provider di servizi associato. Tutte le richieste di adesione successive vengono indirizzate all’URL associato al provider di servizi che è stato associato all’MVPD di destinazione durante la fase di configurazione.
+Se per il campo *url* , la chiamata di rete risultante esegue il targeting di tutti gli URL forniti nel *url* parametro. Tutte le richieste di configurazione vengono attivate contemporaneamente in thread separati. Il primo responder ha la precedenza quando si compila l’elenco degli MVPD. Per ogni MVPD nell&#39;elenco, Access Enabler ricorda l&#39;URL del provider di servizi associato. Tutte le richieste di adesione successive vengono indirizzate all’URL associato al provider di servizi che è stato associato all’MVPD di destinazione durante la fase di configurazione.
 
 | Chiamata API: configurazione richiedente |
 | --- |
@@ -72,19 +72,19 @@ Se per il campo *url* , la chiamata di rete risultante esegue il targeting di 
 **Parametri:**
 
 - *requestorID*: ID univoco associato al canale. La prima volta che ti registri al servizio di autenticazione di Adobe Primetime, passa l’ID univoco assegnato dall’Adobe al tuo sito.
-- *url*: parametro facoltativo; per impostazione predefinita, viene utilizzato il provider di servizi Adobe (http://sp.auth.adobe.com/). Questo array consente di specificare gli endpoint per i servizi di autenticazione e autorizzazione forniti da Adobe (a scopo di debug possono essere utilizzate istanze diverse). È possibile utilizzare questa opzione per specificare più istanze del provider di servizi di autenticazione di Adobe Primetime. In tal caso, l&#39;elenco MVPD è composto dagli endpoint di tutti i fornitori di servizi. Ogni MVPD è associato al provider di servizi più veloce, ovvero il provider che ha risposto per primo e che supporta tale MVPD.
+- *url*: parametro facoltativo; per impostazione predefinita, viene utilizzato il provider di servizi Adobe (http://sp.auth.adobe.com/). Questo array consente di specificare gli endpoint per i servizi di autenticazione e autorizzazione forniti da Adobe (a scopo di debug possono essere utilizzate istanze diverse). È possibile utilizzare questa opzione per specificare più istanze del provider di servizi di autenticazione di Adobe Primetime. In tal caso, l&#39;elenco MVPD è composto dagli endpoint di tutti i fornitori di servizi. Ogni MVPD è associato al provider di servizi più veloce, ovvero il provider che ha risposto per primo e che supporta tale MVPD.
 
 Obsoleto:
 
-- *signedRequestorID*: copia dell’ID richiedente con firma digitale nella chiave privata. <!--For more details, see [Registering Native Clients](http://tve.helpdocsonline.com/registering-native-clients)-->.
+- *signedRequestorID*: copia dell’ID richiedente con firma digitale nella chiave privata. <!--For more details, see [Registering Native Clients](http://tve.helpdocsonline.com/registering-native-clients)-->.
 
-**Callback attivati:** `setRequestorComplete()`
+**Callback attivati:** `setRequestorComplete()`
 
 </br>
 
 ### logout
 
-**Descrizione:** Utilizzare questo metodo per avviare il flusso di logout. La disconnessione è il risultato di una serie di operazioni di reindirizzamento HTTP dovute al fatto che l’utente deve essere disconnesso sia dai server di autenticazione di Adobe Primetime che dai server MVPD. Di conseguenza, questo flusso aprirà una finestra ChromeCustomTab per eseguire la disconnessione.
+**Descrizione:** Utilizzare questo metodo per avviare il flusso di logout. La disconnessione è il risultato di una serie di operazioni di reindirizzamento HTTP dovute al fatto che l’utente deve essere disconnesso sia dai server di autenticazione di Adobe Primetime che dai server MVPD. Di conseguenza, questo flusso aprirà una finestra ChromeCustomTab per eseguire la disconnessione.
 
 | Chiamata API: avvia il flusso di logout |
 | --- |
@@ -92,31 +92,31 @@ Obsoleto:
 
 **Disponibilità:** v3.0+
 
-**Parametri:** Nessuno
+**Parametri:** Nessuno
 
-**Callback attivati:** `setAuthenticationStatus()`
+**Callback attivati:** `setAuthenticationStatus()`
 
 ## Flusso di implementazione del programmatore {#Progr}
 
-### **1. Registra applicazione** 
+### **1. Registra applicazione**
 
 1. Ottenere il software\_statement da Adobe Pass ( Dashboard TVE )
 1. Esistono due opzioni per trasmettere questi valori all’SDK di Adobe Pass:
-   - In strings.xml aggiungi: 
+   - In strings.xml aggiungi:
 
-      ```
-      <string name>"software\_statement">[softwarestatement value]</string>
-      ```
+     ```
+     <string name>"software\_statement">[softwarestatement value]</string>
+     ```
 
    - Chiama AccessEnabler.getInstance(appContext,softwareStatement, null)
 
- 
+
 
 ### **2. Configura applicazione**
 
-- a. setRequestor(requestor\_id) 
+- a. setRequestor(requestor\_id)
 
-   L’SDK eseguirà le seguenti operazioni: 
+  L’SDK eseguirà le seguenti operazioni:
 
    - registra applicazione: utilizzando **software\_statement**, l’SDK otterrà un **client\_id, client\_secret, client\_id\_issued\_at, redirect\_uris, grant\_types**. Queste informazioni verranno archiviate nell&#39;archivio interno dell&#39;applicazione.
    - ottenere un **access\_token** utilizzando client\_id, client\_secret e grant\_type=&quot;client\_credentials&quot; . Questo accesso\_token verrà utilizzato a ogni chiamata effettuata dall&#39;SDK ai server Adobe Pass.
@@ -134,7 +134,7 @@ Obsoleto:
    - *true* : vai a Autorizzazione
    - *false* : vai a Seleziona MVPD
 
-- c. getAuthentication : l&#39;SDK includerà **access_token** nei parametri di chiamata 
+- c. getAuthentication : l&#39;SDK includerà **access_token** nei parametri di chiamata
 
    - mvpd memorizzato: vai a setSelectedProvider(mvpd\_id)
    - mvpd non selezionato: displayProviderDialog
@@ -147,23 +147,23 @@ Obsoleto:
    - accesso annullato: reimpostare la selezione MVPD
    - Lo schema URL viene impostato come &quot;adobepass://android.app&quot; da acquisire al termine dell’autenticazione
 
-- e. get/checkAuthorization : l’SDK includerà **access\_token **nell’intestazione come Authorization: Bearer **access\_token**
+- e. get/checkAuthorization : l’SDK includerà **access\_token **nell’intestazione come Authorization: Bearer **access\_token**
 
 - se l’autorizzazione viene rilasciata, verrà effettuata una chiamata per ottenere il token multimediale
 
-- f. logout: 
+- f. logout:
 
    - L&#39;SDK eliminerà il token valido per il richiedente corrente (le autenticazioni ottenute da altre applicazioni e non tramite SSO rimarranno valide)
    - L&#39;SDK aprirà le schede personalizzate di Chrome per raggiungere l&#39;endpoint mvpd\_id logout. Una volta completate, le schede personalizzate di Chrome verranno chiuse
    - Lo schema URL viene impostato come &quot;adobepass://logout&quot; per acquisire il momento in cui viene completato il logout
    - la disconnessione attiva sendTrackingData(new Event(EVENT\_LOGOUT,USER\_NOT\_AUTHENTICATED\_ERROR) e un callback : setAuthenticationStatus(0,&quot;Logout&quot;)
 
- 
 
-**Nota:** poiché ogni chiamata richiede un **access_token**, i possibili codici di errore seguenti vengono gestiti nell’SDK. 
+
+**Nota:** poiché ogni chiamata richiede un **access_token**, i possibili codici di errore seguenti vengono gestiti nell’SDK.
 
 | Risposte di errore |  |  |
 |--- | --- | --- |
-| invalid_request | 400 | Richiesta non valida. L’SDK deve interrompere l’esecuzione delle chiamate al server. |
+| invalid_request | 400 | Richiesta non valida. L’SDK deve interrompere l’esecuzione delle chiamate al server. |
 | invalid_client | 403 | L’ID client non è più autorizzato a eseguire richieste. L&#39;SDK DEVE eseguire nuovamente la registrazione client. |
 | accesso negato | 401 | Access_token non valido. L’sdk DEVE richiedere un nuovo access_token. |

@@ -2,7 +2,7 @@
 title: API di registrazione client dinamica
 description: API di registrazione client dinamica
 exl-id: 06a76c71-bb19-4115-84bc-3d86ebcb60f3
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '927'
 ht-degree: 0%
@@ -52,17 +52,17 @@ Dopo aver recuperato un&#39;istruzione software da TVE Dashboard, è necessario 
 
 **Richiesta**
 
-| Chiamata HTTP |  |
+| Chiamata HTTP |                    |
 |-----------|--------------------|
 | percorso | /o/client/register |
 | metodo | POST |
 
-| campi |  |  |
+| campi |                                                                           |           |
 |--------------------|---------------------------------------------------------------------------|-----------|
 | software_statement | L&#39;istruzione software creata in TVE Dashboard. | obbligatorio |
 | redirect_uri | URI utilizzato dall&#39;applicazione per completare il flusso di autenticazione. | facoltativo |
 
-| intestazioni di richiesta |  |  |
+| intestazioni di richiesta |                                                                                |           |
 |-----------------|--------------------------------------------------------------------------------|-----------|
 | Content-Type | application/json | obbligatorio |
 | X-Device-Info | Le informazioni sul dispositivo definite in Passing Device and Connection Information | obbligatorio |
@@ -70,11 +70,11 @@ Dopo aver recuperato un&#39;istruzione software da TVE Dashboard, è necessario 
 
 **Risposta**
 
-| intestazioni di risposta |  |  |
+| intestazioni di risposta |                  |           |
 |------------------|------------------|-----------|
 | Content-Type | application/json | obbligatorio |
 
-| campi di risposta |  |  |
+| campi di risposta |                 |                            |
 |---------------------|-----------------|----------------------------|
 | client_id | Stringa | obbligatorio |
 | client_secret | Stringa | obbligatorio |
@@ -160,12 +160,12 @@ Dopo aver recuperato l’identificatore client univoco (ID client e segreto clie
 **Richiesta**
 
 
-| **Chiamata HTTP** |  |
+| **Chiamata HTTP** | |
 | --- | --- |
 | percorso | `/o/client/token` |
 | metodo | POST |
 
-| **parametri di richiesta** |  |
+| **parametri di richiesta** | |
 | --- | --- |
 | `grant_type` | Ricevuto nel processo di registrazione del client.<br/> **Valore accettato**<br/>`client_credentials`: utilizzato per client non sicuri, come l’SDK per Android. |
 | `client_id` | Identificatore client ottenuto nel processo di registrazione client. |
@@ -173,13 +173,13 @@ Dopo aver recuperato l’identificatore client univoco (ID client e segreto clie
 
 **Risposta**
 
-| campi di risposta |  |  |
+| campi di risposta | | |
 | --- | --- | --- |
 | `access_token` | Il valore del token di accesso da utilizzare per chiamare le API Primetime | obbligatorio |
 | `expires_in` | Il tempo in secondi che deve trascorrere prima della scadenza del token di accesso | obbligatorio |
 | `token_type` | Tipo del token **portatore** | obbligatorio |
 | `created_at` | Ora di emissione del token | obbligatorio |
-| **intestazioni di risposta** |  |  |
+| **intestazioni di risposta** | | |
 | `Content-Type` | application/json | obbligatorio |
 
 **Risposta di errore**
@@ -240,7 +240,7 @@ Utilizza il token di accesso per eseguire Adobe Primetime [Chiamate API di auten
 
 In caso di errore, è possibile restituire le risposte di errore seguenti:
 
-| Risposte di errore |  |  |
+| Risposte di errore |     |                                                                                                        |
 |-----------------|-----|--------------------------------------------------------------------------------------------------------|
 | invalid_request | 400 | Richiesta non valida. |
 | invalid_client | 403 | L’ID client non è più autorizzato a eseguire richieste. È necessario generare nuove credenziali client. |

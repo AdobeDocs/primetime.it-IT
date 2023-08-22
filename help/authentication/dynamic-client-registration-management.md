@@ -2,7 +2,7 @@
 title: Dynamic Client Registration Management
 description: Dynamic Client Registration Management
 exl-id: 2c3ebb0b-c814-4b9e-af57-ce1403651e9e
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '1338'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ## Panoramica {#overview}
 
-Con l&#39;adozione generalizzata di [Schede personalizzate Android Chrome](https://developer.chrome.com/multidevice/android/customtabs){target_blank} e [Controller visualizzazione Apple Safari](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller){target_blank} nelle applicazioni dei nostri clienti, stiamo aggiornando il flusso di autenticazione degli utenti nell’autenticazione di Adobe Primetime. In particolare, non è più possibile raggiungere l’obiettivo di mantenere lo stato in modo che il flusso dell’agente utente di autenticazione di un abbonato MVPD possa essere tracciato tra i reindirizzamenti. Questa operazione era già stata eseguita in precedenza utilizzando i cookie HTTP. Questa limitazione è il driver per iniziare a migrare tutte le API a OAuth 2.0 [RFC6749](https://tools.ietf.org/html/rfc6749){target_blank}.
+Con l&#39;adozione generalizzata di [Schede personalizzate Android Chrome](https://developer.chrome.com/multidevice/android/customtabs){target_blanck} e [Controller visualizzazione Apple Safari](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller){target_blanck} nelle applicazioni dei nostri clienti, stiamo aggiornando il flusso di autenticazione degli utenti in Adobe Primetime Authentication. In particolare, non è più possibile raggiungere l’obiettivo di mantenere lo stato in modo che il flusso dell’agente utente di autenticazione di un abbonato MVPD possa essere tracciato tra i reindirizzamenti. Questa operazione era già stata eseguita in precedenza utilizzando i cookie HTTP. Questa limitazione è il driver per iniziare a migrare tutte le API a OAuth 2.0 [RFC6749](https://tools.ietf.org/html/rfc6749){target_blanck}.
 
 Con questo aggiornamento, i client di autenticazione Adobe diventano client OAuth 2.0 e viene distribuito un server di autorizzazione OAuth 2.0 personalizzato per soddisfare le esigenze del servizio di autenticazione Adobe Primetime.
 
@@ -63,13 +63,13 @@ Come mostrato nell’immagine seguente, i campi da compilare sono:
 
 * **Nome applicazione** - il nome della domanda
 
-* **Assegnato al canale** - il nome del canale, t</span>a cui è collegata l&#39;applicazione. L’impostazione predefinita nella maschera a discesa è **Tutti i canali.** L’interfaccia consente di selezionare un canale o tutti i canali.
+* **Assegnato al canale** - il nome del canale, t</span>a cui è collegata l&#39;applicazione. L’impostazione predefinita nella maschera a discesa è **Tutti i canali.** L’interfaccia consente di selezionare un canale o tutti i canali.
 
-* **Versione applicazione** : per impostazione predefinita, è impostato su &quot;1.0.0&quot;, ma si consiglia vivamente di modificarlo con la propria versione dell’applicazione. Come best practice, se decidi di modificare la versione dell’applicazione, rifletterla creando una nuova applicazione registrata.
+* **Versione applicazione** : per impostazione predefinita, è impostato su &quot;1.0.0&quot;, ma si consiglia vivamente di modificarlo con la propria versione dell’applicazione. Come best practice, se decidi di modificare la versione dell’applicazione, rifletterla creando una nuova applicazione registrata.
 
-* **Piattaforme applicative** - le piattaforme con cui l’applicazione deve essere collegata. È possibile selezionarli tutti o più valori.
+* **Piattaforme applicative** - le piattaforme con cui l’applicazione deve essere collegata. È possibile selezionarli tutti o più valori.
 
-* **Nomi dominio** : i domini con cui l’applicazione deve essere collegata. I domini nell’elenco a discesa sono una selezione unificata di tutti i domini da tutti i canali. È possibile selezionare più domini dall&#39;elenco. Il significato dei domini è URL di reindirizzamento [RFC6749](https://tools.ietf.org/html/rfc6749). Nel processo di registrazione del client, l’applicazione client può richiedere di essere autorizzata a utilizzare un URL di reindirizzamento per la finalizzazione del flusso di autenticazione. Quando un’applicazione client richiede un URL di reindirizzamento specifico, questo viene convalidato in base ai domini inseriti nella whitelist di questa applicazione registrata associata all’istruzione software.
+* **Nomi dominio** : i domini con cui l’applicazione deve essere collegata. I domini nell’elenco a discesa sono una selezione unificata di tutti i domini da tutti i canali. È possibile selezionare più domini dall&#39;elenco. Il significato dei domini è URL di reindirizzamento [RFC6749](https://tools.ietf.org/html/rfc6749). Nel processo di registrazione del client, l’applicazione client può richiedere di essere autorizzata a utilizzare un URL di reindirizzamento per la finalizzazione del flusso di autenticazione. Quando un’applicazione client richiede un URL di reindirizzamento specifico, questo viene convalidato in base ai domini inseriti nella whitelist di questa applicazione registrata associata all’istruzione software.
 
 
 ![](assets/new-reg-app.png)
@@ -94,7 +94,7 @@ Come mostrato di seguito, ciò che qui differisce leggermente, rispetto alla ste
 
 Dopo aver creato l&#39;applicazione registrata, è possibile ottenere una dichiarazione software per presentare il server di autorizzazione come parte di una richiesta.
 
-Per eseguire questa operazione, passare al Programmatore o al Canale per il quale sono state create le applicazioni registrate, dove sono elencate. 
+Per eseguire questa operazione, passare al Programmatore o al Canale per il quale sono state create le applicazioni registrate, dove sono elencate.
 
 Come illustrato di seguito, ogni voce dell’elenco sarà identificata da un nome, una versione e dei simboli relativi alle piattaforme alle quali è stata associata.
 
@@ -124,7 +124,7 @@ Il nome del file viene identificato in modo univoco tramite il prefisso &quot;so
 
 Si noti che, per la stessa applicazione registrata, ogni volta che si fa clic sul pulsante di download verranno ricevute istruzioni software diverse, ma ciò non invalida le istruzioni software ottenute in precedenza per l&#39;applicazione. Questo accade perché vengono generate sul posto, per richiesta di azione.
 
-Ce n&#39;è uno **limitazione** per quanto riguarda l’azione di download. Se un’istruzione software viene richiesta facendo clic sul pulsante &quot;Scarica&quot; poco dopo la creazione dell’applicazione registrata e tale istruzione non è stata ancora salvata e il json di configurazione non è stato sincronizzato, nella parte inferiore della pagina viene visualizzato il seguente messaggio di errore. 
+Ce n&#39;è uno **limitazione** per quanto riguarda l’azione di download. Se un’istruzione software viene richiesta facendo clic sul pulsante &quot;Scarica&quot; poco dopo la creazione dell’applicazione registrata e tale istruzione non è stata ancora salvata e il json di configurazione non è stato sincronizzato, nella parte inferiore della pagina viene visualizzato il seguente messaggio di errore.
 
 ![](assets/error-sw-statement-notready.png)
 
