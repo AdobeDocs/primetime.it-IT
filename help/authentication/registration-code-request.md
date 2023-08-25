@@ -2,7 +2,7 @@
 title: Pagina di registrazione
 description: Pagina di registrazione
 exl-id: 581b8e2e-7420-4511-88b9-f2cd43a41e10
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 58657dda8528e9f33b3cee4a84904cc5ae28d81f
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 0%
@@ -129,9 +129,9 @@ Restituisce l&#39;URI del codice di registrazione e della pagina di accesso gene
 | registrationURL | URL dell&#39;app Web di accesso da visualizzare all&#39;utente finale |
 
 {style="table-layout:auto"}
+
+
 </br>
-
-
 
 ### Messaggio di errore XSD  {#error-message}
 
