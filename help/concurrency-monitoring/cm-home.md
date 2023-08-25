@@ -1,7 +1,7 @@
 ---
 title: Introduzione al monitoraggio della concorrenza
 description: Introduzione al monitoraggio della concorrenza
-source-git-commit: ac0c15b951f305e29bb8fa0bd45aa2c53de6ad15
+source-git-commit: 9bc4298edb22d72131156bf92717284866728ec5
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%
@@ -15,9 +15,9 @@ Per saperne di più [Procedure di riassegnazione](/help/concurrency-monitoring/c
 
 Il monitoraggio della concorrenza consente ai provider di identità e di contenuti (MVPD e programmatori) di definire e applicare limiti all’utilizzo simultaneo in più applicazioni (potenzialmente di proprietà di più partner).
 
-**L’API di monitoraggio della concorrenza è ospitata nella seguente posizione:
+**L’API di monitoraggio della concorrenza è ospitata nella seguente posizione:**
 
-* V2.0: [API di monitoraggio della concorrenza](http://docs.adobeptime.io/cm-api-v2/)**
+* **V2.0: [API di monitoraggio della concorrenza](http://docs.adobeptime.io/cm-api-v2/)**
 
 Per iscriverti al nostro servizio di monitoraggio della concorrenza, contatta il nostro [Team di supporto](mailto:tve-support@adobe.com). Specifica le seguenti informazioni e il nostro team sarà lieto di aiutarti:
 
