@@ -2,7 +2,7 @@
 title: Panoramica dell’SDK per Android
 description: Panoramica dell’SDK per Android
 exl-id: a1d98325-32a1-4881-8635-9a3c38169422
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 4b858a06080ec221c60548e2a2a0f3b6010ede15
 workflow-type: tm+mt
 source-wordcount: '2707'
 ht-degree: 0%
@@ -113,7 +113,7 @@ In caso di autenticazione e autorizzazione corrette, l’autenticazione Primetim
 
 #### Token di autenticazione
 
-- **AccessEnabler 1.6 e versioni precedenti** - **** Il modo in cui i token di autenticazione vengono memorizzati nella cache del dispositivo dipende dalla &quot;**Autenticazione per richiedente&quot;** Flag associato all&#39;MVPD corrente:
+- **AccessEnabler 1.6 e versioni precedenti** - Il modo in cui i token di autenticazione vengono memorizzati nella cache del dispositivo dipende dalla &quot;**Autenticazione per richiedente&quot;** Flag associato all&#39;MVPD corrente:
 
 
 1. Se la funzione &quot;Autenticazione per richiedente&quot; è *disabilitato*, quindi un singolo token di autenticazione verrà archiviato localmente nel tavolo di montaggio globale. Questo token verrà condiviso tra tutte le applicazioni integrate con l&#39;MVPD corrente.
