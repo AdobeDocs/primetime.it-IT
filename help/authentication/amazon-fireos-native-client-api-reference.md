@@ -2,7 +2,7 @@
 title: Riferimento API client nativo Amazon FireOS
 description: Riferimento API client nativo Amazon FireOS
 exl-id: 8ac9f976-fd6b-4b19-a80d-49bfe57134b5
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 220c571db04afbd6bafc026b3179f78f60543372
 workflow-type: tm+mt
 source-wordcount: '3416'
 ht-degree: 0%
@@ -98,7 +98,7 @@ Se per il campo *url* , la chiamata di rete risultante esegue il targeting di tu
 | ```public void setRequestor(String requestorId)``` |
 
 
-**Disponibilità:**v 3.0+
+**Disponibilità:** v3.0+
 
 
 | Chiamata API: configurazione richiedente |
