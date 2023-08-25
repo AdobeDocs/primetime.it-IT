@@ -2,9 +2,9 @@
 title: Manuale dell’SDK JavaScript
 description: Manuale dell’SDK JavaScript
 exl-id: d57f7a4a-ac77-4f3c-8008-0cccf8839f7c
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: df9d2bbef16cceb6a7e594f9b81262d475a5b334
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '940'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 0%
 >
 >Il contenuto di questa pagina viene fornito solo a scopo informativo. L’utilizzo di questa API richiede una licenza corrente di Adobe. Non è consentito alcun uso non autorizzato.
 
-## Introduzione (#intro)
+## Introduzione {#intro}
 
 Questo documento descrive i flussi di lavoro di adesione implementati dall’applicazione di livello superiore di un programmatore per un’integrazione JavaScript con il servizio di autenticazione di Adobe Primetime. I collegamenti alla documentazione API di riferimento per JavaScript sono inclusi in.
 
 Si noti inoltre che la [Informazioni correlate](#related) include un collegamento a un set di esempi di codice JavaScript.
 
-## Flussi di diritti (#entitlement)
+## Flussi di diritti {#entitlement}
 
 1. [Prerequisiti](#prereq)
 2. [Flusso di avvio](#startup)
@@ -34,7 +34,7 @@ Si noti inoltre che la [Informazioni correlate](#related) include un collegament
 ![](assets/javascript-flows.png)
 
 
-## Prerequisiti(#prereq)
+## Prerequisiti {#prereq}
 
 **Dipendenze:**
 
@@ -141,7 +141,7 @@ Chiamata `getAuthentication()` per ottenere lo stato di autenticazione OPPURE pe
 
 Il completamento del flusso di autenticazione viene raggiunto quando AccessEnabler chiama `setAuthenticationStatus()`con `isAuthenticated == 1`.
 
-## 4. Flusso di autorizzazione (#authz)
+## 4. Flusso di autorizzazione {#authz}
 
 **Dipendenze:**
 
@@ -164,7 +164,7 @@ Utilizza il Media Token Verifier per convalidare il shortMediaToken restituito d
 - Se la convalida viene superata: visualizza/riproduce il supporto richiesto per l’utente.
 - In caso contrario: il token AuthZ non è valido, la richiesta del supporto deve essere rifiutata e deve essere visualizzato un messaggio di errore.
 
-## 5. Visualizzare il flusso dei supporti (#logout)
+## 5. Visualizza flusso multimediale {#logout}
 
 - L’utente seleziona il file multimediale da visualizzare.
    - Il supporto è protetto?
@@ -173,7 +173,7 @@ Utilizza il Media Token Verifier per convalidare il shortMediaToken restituito d
          - Se il supporto non è protetto, procedere con il flusso Visualizza supporto.
          - Supporti di riproduzione
 
-## Configurazione dell’ID visitatore (#visitorID)
+## Configurazione dell’ID visitatore {#visitorID}
 
 Configurazione di un [ID visitatore Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/home.html) il valore è molto importante dal punto di vista di analytics. Una volta impostato il valore EC visitorID, l’SDK invierà queste informazioni insieme a ogni chiamata di rete e il servizio di autenticazione di Adobe Primetime le raccoglierà. In questo modo potrai correlare i dati di analisi del servizio di autenticazione di Adobe Primetime con qualsiasi altro rapporto di analisi disponibile in altre applicazioni o siti Web. Puoi trovare informazioni su come impostare EC visitorID [qui](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=en).
 
