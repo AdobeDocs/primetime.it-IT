@@ -2,7 +2,7 @@
 title: Autenticazione tramite il protocollo OAuth 2.0
 description: Autenticazione tramite il protocollo OAuth 2.0
 exl-id: 0c1f04fe-51dc-4b4d-88e7-66e8f4609e02
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: d7d284e7e8563c5ca1ab1c8627cb75ecb1e1cbe5
 workflow-type: tm+mt
 source-wordcount: '1074'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Il protocollo offre anche maggiore flessibilità in termini di dati esposti come
 
 Per supportare l’autenticazione con OAuth 2.0, un MVPD deve soddisfare i seguenti prerequisiti:
 
-In primo luogo, l&#39;MVPD deve assicurarsi che supporti il *[Concessione codice di autorizzazione](https://oauthlib.readthedocs.io/en/latest/oauth2/grants/authcode.html) flusso.
+In primo luogo, l&#39;MVPD deve assicurarsi che supporti [Concessione codice di autorizzazione](https://oauthlib.readthedocs.io/en/latest/oauth2/grants/authcode.html) flusso.
 
 Dopo aver confermato che supporta il flusso, il MVPD deve fornirci le seguenti informazioni:
 
