@@ -2,7 +2,7 @@
 title: Metadati utente
 description: Metadati utente
 exl-id: 3d7b6429-972f-4ccb-80fd-a99870a02f65
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 6779e20e37f1396402f36564e2c85d48d8c581a3
 workflow-type: tm+mt
 source-wordcount: '491'
 ht-degree: 0%
@@ -33,8 +33,6 @@ ht-degree: 0%
 
 Recupera i metadati condivisi da MVPD sull’utente autenticato.
 
-<div>
-
 
 | Endpoint | Chiamato  </br>Da | Input   </br>Parametri | HTTP  </br>Metodo | Risposta | HTTP  </br>Risposta |
 | --- | --- | --- | --- | --- | --- |
@@ -54,7 +52,8 @@ Recupera i metadati condivisi da MVPD sull’utente autenticato.
 > 
 >Le informazioni sui metadati dell’utente devono essere disponibili al termine del flusso di autenticazione, ma possono essere aggiornate in base al flusso di autorizzazione, a seconda dell’MVPD e del tipo di metadati.
 
-</br>
+
+
 
 ## Risposta di esempio {#sample-response}
 
@@ -87,6 +86,6 @@ Nella radice dell&#39;oggetto ci saranno tre nodi:
 
 In caso di errore, il server restituirà un oggetto XML o JSON che specifica un messaggio di errore dettagliato.
 
-Per ulteriori informazioni, consulta [Metadati utente](/help/authentication/user-metadata.md).
+Per ulteriori informazioni, consulta [Metadati utente](/help/authentication/user-metadata-feature.md).
 
 ### [Torna a Riferimento API REST](/help/authentication/rest-api-reference.md).
