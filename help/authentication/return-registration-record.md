@@ -2,9 +2,9 @@
 title: Record di registrazione di ritorno
 description: Record di registrazione di ritorno
 exl-id: 7b9e63a2-59b6-4123-a19b-ee1f021219ea
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 622767e06f3b25222286a09a41e6a0cecff1967a
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
@@ -18,12 +18,12 @@ ht-degree: 0%
 
 ## Endpoint REST API {#clientless-endpoints}
 
-&lt;reggie_fqdn>:
+`<REGGIE_FQDN>`:
 
 * Produzione - [api.auth.adobe.com](http://api.auth.adobe.com/)
 * Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
-&lt;sp_fqdn>:
+`<SP_FQDN>`:
 
 * Produzione - [api.auth.adobe.com](http://api.auth.adobe.com/)
 * Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
@@ -42,7 +42,7 @@ Restituisce il record del codice di registrazione contenente il codice di regist
 
 | Endpoint | Chiamato  </br>Da | Input   </br>Parametri | HTTP  </br>Metodo | Risposta | HTTP  </br>Risposta |
 | --- | --- | --- | --- | --- | --- |
-| &lt;reggie_fqdn>;/reggie/v1/{requestorId}/regcode/{registrationCode}</br></br>Ad esempio:</br></br>&lt;reggie_fqdn>/reggie/v1/sampleRequestorId/regcode/TJCFK?format=xml | App di streaming</br></br>o</br></br>Servizio programmatore | 1. richiedente  </br>    (componente Percorso)</br>2.  codice di registrazione  </br>    (componente Percorso) | GET | XML o JSON contenente un codice di registrazione e informazioni. Vedi lo schema e l’esempio di seguito. | 200 |
+| `<REGGIE_FQDN>`;/reggie/v1/`{requestorId}`/regcode/`{registrationCode}`<p>Ad esempio:<p>`<REGGIE_FQDN>`/reggie/v1/sampleRequestorId/regcode/TJCFK?format=xml | App di streaming</br></br>o</br></br>Servizio programmatore | 1. richiedente  </br>    (componente Percorso)</br>2.  codice di registrazione  </br>    (componente Percorso) | GET | XML o JSON contenente un codice di registrazione e informazioni. Vedi lo schema e l’esempio di seguito. | 200 |
 
 {style="table-layout:auto"}
 
@@ -98,7 +98,7 @@ Restituisce il record del codice di registrazione contenente il codice di regist
 | richiedente | ID richiedente |
 | mvpd | ID MVPD |
 | generato | Timestamp di creazione del codice di registrazione (in millisecondi dal 1° gennaio 1970 GMT) |
-| scade | Timestamp di scadenza del codice di registrazione (in millisecondi dal 1° gennaio 1970 GMT) |
+| scade | Timestamp in cui scade il codice di registrazione (in millisecondi dal 1° gennaio 1970 GMT) |
 | deviceId | ID dispositivo univoco (o token XSTS) |
 | deviceType | Tipo di dispositivo |
 | deviceUser | Utente connesso al dispositivo |
