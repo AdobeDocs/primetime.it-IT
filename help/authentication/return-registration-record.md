@@ -2,7 +2,7 @@
 title: Record di registrazione di ritorno
 description: Record di registrazione di ritorno
 exl-id: 7b9e63a2-59b6-4123-a19b-ee1f021219ea
-source-git-commit: 622767e06f3b25222286a09a41e6a0cecff1967a
+source-git-commit: 9e1d178e00c49cab7bcf9693c3b16234cb29ba4c
 workflow-type: tm+mt
 source-wordcount: '243'
 ht-degree: 0%
@@ -28,7 +28,7 @@ ht-degree: 0%
 * Produzione - [api.auth.adobe.com](http://api.auth.adobe.com/)
 * Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
-</br>
+
 
 
 ## Descrizione {#description}
@@ -37,7 +37,7 @@ Restituisce il record del codice di registrazione contenente il codice di regist
 
 
 
-<div>
+
 
 
 | Endpoint | Chiamato  </br>Da | Input   </br>Parametri | HTTP  </br>Metodo | Risposta | HTTP  </br>Risposta |
@@ -46,14 +46,16 @@ Restituisce il record del codice di registrazione contenente il codice di regist
 
 {style="table-layout:auto"}
 
-</br>
+
+
 
 | Parametro di input | Descrizione |
 | --- | --- |
 | richiedente | ID richiedente del programmatore per il quale è valida questa operazione. |
 | codice di registrazione | Il valore del codice di registrazione che verrebbe visualizzato sul dispositivo di streaming (da inserire nel flusso di autenticazione). |
 
-</br>
+
+
 
 ## Schema XML di risposta {#response-xml-schema}
 
