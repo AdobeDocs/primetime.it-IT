@@ -2,7 +2,7 @@
 title: Metadati utente
 description: Metadati utente
 exl-id: 3d7b6429-972f-4ccb-80fd-a99870a02f65
-source-git-commit: 4479df7985da16e8632a538f1042de05109f2392
+source-git-commit: 895438e2b915f8745d685dfc76340b18eccd48bc
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 0%
@@ -43,10 +43,10 @@ Recupera i metadati condivisi da MVPD sull’utente autenticato.
 | --- | --- |
 | richiedente | ID richiedente del programmatore per il quale è valida questa operazione. |
 | deviceId | Byte ID dispositivo. |
-| device_info/<p>X-Device-Info | Informazioni sul dispositivo di streaming.<p>**Nota**: questo PUÒ essere trasmesso device_info come parametro URL, ma a causa delle dimensioni potenziali del parametro e delle limitazioni alla lunghezza di un URL GET, DEVE essere trasmesso come X-Device-Info nell’intestazione http. </br></br>Vedi tutti i dettagli in **Trasmissione delle informazioni sul dispositivo e sulla connessione** <!--http://tve.helpdocsonline.com/passing-device-information-->. |
-| _deviceType_ | Il tipo di dispositivo (ad esempio, Roku, PC).<p>Se questo parametro è impostato correttamente, ESM offre metriche che sono [suddiviso per tipo di dispositivo](/help/authentication/entitlement-service-monitoring-overview.md#progr-filter-metrics) quando utilizzi Clientless, in modo che possano essere eseguiti diversi tipi di analisi per, ad esempio, Roku, AppleTV, Xbox, ecc.<p>Consulta [Vantaggi dell’utilizzo del parametro del tipo di dispositivo senza client nelle metriche di passaggio](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)<p>**Nota:** Il `device_info` sostituisce questo parametro. |
-| _deviceUser_ | L’identificatore utente del dispositivo.</br></br>**Nota:**se utilizzato, `deviceUser` deve avere gli stessi valori di [Crea codice di registrazione](/help/authentication/registration-code-request.md) richiesta. |
-| _appId_ | ID/nome dell’applicazione. <p>**Nota:**Il `device_info` sostituisce questo parametro. Se utilizzato, `appId` deve avere gli stessi valori di **Crea codice di registrazione** richiesta. |
+| device_info/<p>X-Device-Info | Informazioni sul dispositivo di streaming.</br></br> **Nota:** Questo PUÒ essere trasmesso device_info come parametro URL, ma a causa delle dimensioni potenziali di questo parametro e delle limitazioni alla lunghezza di un URL GET, DEVE essere trasmesso come X-Device-Info nell’intestazione http. </br></br> Vedi tutti i dettagli in [Trasmissione delle informazioni sul dispositivo e sulla connessione](/help/authentication/passing-client-information-device-connection-and-application.md). |
+| _deviceType_ | Il tipo di dispositivo (ad esempio, Roku, PC).</br></br> Se questo parametro è impostato correttamente, ESM offre metriche che sono [suddiviso per tipo di dispositivo](/help/authentication/entitlement-service-monitoring-overview.md#progr-filter-metrics) quando utilizzi Clientless, in modo che possano essere eseguiti diversi tipi di analisi per, ad esempio, Roku, AppleTV, Xbox, ecc.</br></br> Consulta [Vantaggi dell’utilizzo del parametro del tipo di dispositivo senza client nelle metriche di passaggio](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md) </br></br> **Nota:** Il `device_info` sostituisce questo parametro. |
+| _deviceUser_ | L’identificatore utente del dispositivo.</br></br> **Nota:** Se utilizzato, `deviceUser` deve avere gli stessi valori di [Crea codice di registrazione](/help/authentication/registration-code-request.md) richiesta. |
+| _appId_ | ID/nome dell’applicazione. </br></br> **Nota:** Il `device_info` sostituisce questo parametro. Se utilizzato, `appId` deve avere gli stessi valori di [Crea codice di registrazione](/help/authentication/registration-code-request.md) richiesta. |
 
 >[!NOTE]
 > 
@@ -80,9 +80,9 @@ Dopo una chiamata corretta, il server risponderà con un oggetto XML (predefinit
 
 Nella radice dell&#39;oggetto ci saranno tre nodi:
 
-* **aggiornato**: specifica una marca temporale UNIX che rappresenta l’ultimo aggiornamento dei metadati. Questa proprietà verrà impostata inizialmente dal server durante la generazione dei metadati durante la fase di autenticazione. Le chiamate successive (dopo l’aggiornamento dei metadati) genereranno un timestamp incrementato.
-* **dati**: contiene i valori effettivi dei metadati.
-* **crittografato**: array in cui sono elencate le proprietà crittografate. Per decrittografare un valore di metadati specifico, il programmatore deve eseguire una decodifica Base64 sui metadati e quindi applicare una decrittografia RSA sul valore risultante, utilizzando la propria chiave privata (ad Adobe, crittografa i metadati sul server utilizzando il certificato pubblico del programmatore).
+* *aggiornato*: specifica una marca temporale UNIX che rappresenta l’ultimo aggiornamento dei metadati. Questa proprietà verrà impostata inizialmente dal server durante la generazione dei metadati durante la fase di autenticazione. Le chiamate successive (dopo l’aggiornamento dei metadati) genereranno un timestamp incrementato.
+* *dati*: contiene i valori effettivi dei metadati.
+* *crittografato*: array in cui sono elencate le proprietà crittografate. Per decrittografare un valore di metadati specifico, il programmatore deve eseguire una decodifica Base64 sui metadati e quindi applicare una decrittografia RSA sul valore risultante, utilizzando la propria chiave privata (ad Adobe, crittografa i metadati sul server utilizzando il certificato pubblico del programmatore).
 
 In caso di errore, il server restituirà un oggetto XML o JSON che specifica un messaggio di errore dettagliato.
 
