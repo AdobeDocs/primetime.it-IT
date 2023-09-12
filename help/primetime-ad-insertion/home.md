@@ -2,9 +2,9 @@
 title: Ad Insertion Adobe Primetime
 description: Guida di Adobe Primetime Ad Insertion
 exl-id: e758044e-a1f5-498a-a809-b6a351dfe8f0
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '320'
 ht-degree: 0%
 
 ---
@@ -49,4 +49,3 @@ Questa guida mostra come Primetime Ad Insertion aiuta gli editori a massimizzare
 
 * [Forum Adobe Primetime DRM](https://forums.adobe.com/community/adobe_access)
 
-* [Risorse per sviluppatori Adobe Primetime](https://www.adobe.com/devnet/primetime.html)

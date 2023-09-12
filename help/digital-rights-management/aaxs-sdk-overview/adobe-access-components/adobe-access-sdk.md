@@ -2,9 +2,9 @@
 description: I componenti principali di Adobe Access sono costituiti da un SDK Java e dagli ambienti di runtime client Flash Player e Adobe AIR.
 title: Java SDK, Flash Player e client Adobe AIR
 exl-id: 2df4da13-8df9-442b-8638-317c41d62fbe
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
 workflow-type: tm+mt
-source-wordcount: '924'
+source-wordcount: '910'
 ht-degree: 0%
 
 ---
@@ -35,11 +35,11 @@ Queste API vengono utilizzate per definire i diritti e preparare i contenuti per
 
 * Gestione delle policy
 
-   L’API di gestione dei criteri viene utilizzata per creare e modificare i criteri da applicare al contenuto. È possibile creare o aggiornare i criteri, incluso ottenere/impostare tutte le regole di utilizzo e consentire parametri aggiuntivi in uno spazio dei nomi personalizzato.
+  L’API di gestione dei criteri viene utilizzata per creare e modificare i criteri da applicare al contenuto. È possibile creare o aggiornare i criteri, incluso ottenere/impostare tutte le regole di utilizzo e consentire parametri aggiuntivi in uno spazio dei nomi personalizzato.
 
 * Confezionamento dei contenuti
 
-   L’API per la creazione di pacchetti di contenuti viene utilizzata per crittografare i contenuti e recuperare i metadati dai contenuti inclusi nel pacchetto.
+  L’API per la creazione di pacchetti di contenuti viene utilizzata per crittografare i contenuti e recuperare i metadati dai contenuti inclusi nel pacchetto.
 
 ## API Java per il rilascio di licenze {#java-apis-for-issuing-licenses}
 
@@ -47,15 +47,15 @@ Queste API vengono utilizzate quando un client richiede una licenza dal server. 
 
 * Autenticazione
 
-   L’API di autenticazione può essere utilizzata per gestire le richieste di autenticazione e generare token di autenticazione.
+  L’API di autenticazione può essere utilizzata per gestire le richieste di autenticazione e generare token di autenticazione.
 
 * Generazione e acquisizione di licenze
 
-   L’API di generazione e acquisizione delle licenze viene utilizzata per generare una licenza per l’utente.
+  L’API di generazione e acquisizione delle licenze viene utilizzata per generare una licenza per l’utente.
 
 * Supporto per client e contenuti Adobe AIR versione 1.5
 
-   Ai fini della compatibilità con le versioni precedenti, l’SDK dispone di API per gestire le richieste provenienti da applicazioni AIR create per l’utilizzo con AIR versione 1.5 e precedenti client e contenuti protetti.
+  Ai fini della compatibilità con le versioni precedenti, l’SDK dispone di API per gestire le richieste provenienti da applicazioni AIR create per l’utilizzo con AIR versione 1.5 e precedenti client e contenuti protetti.
 
 ## Implementazione di riferimento {#reference-implementation}
 
@@ -73,11 +73,9 @@ Per ulteriori informazioni sul Flash Player, visitare il sito: [www.adobe.com/go
 
 ## Adobe AIR {#adobe-air}
 
-Adobe AIR è un runtime cross-operation system che consente ai produttori di contenuti di estendere al desktop gli investimenti esistenti sul web progettando applicazioni multimediali personalizzate. Basato su tecnologie aperte e comprovate, offre alle aziende un modo affidabile e semplificato di sviluppare e implementare applicazioni personalizzate affidabili per offrire un&#39;esperienza utente più sicura e piacevole. Adobe AIR consente alle aziende di integrare facilmente i rich media per creare un’esperienza utente più coinvolgente e interattiva. Consente agli sviluppatori di utilizzare strumenti familiari come HTML, JavaScript, Flex® o Adobe® Flash per distribuire la combinazione unica di applicazioni Internet avanzate su Windows, Macintosh o Linux.
+Adobe AIR è un runtime cross-operation system che consente ai produttori di contenuti di estendere al desktop gli investimenti esistenti sul web progettando applicazioni multimediali personalizzate. Basata su tecnologie aperte e comprovate, rappresenta un modo affidabile e semplificato per le aziende di sviluppare e implementare applicazioni personalizzate affidabili per offrire un&#39;esperienza utente più sicura e piacevole. Adobe AIR consente alle aziende di integrare facilmente i rich media per creare un’esperienza utente più coinvolgente e interattiva. Consente agli sviluppatori di utilizzare strumenti familiari come HTML, JavaScript, Flex® o Adobe® Flash per distribuire la combinazione unica di applicazioni Internet avanzate su Windows, Macintosh o Linux.
 
 Le aziende hanno il controllo completo dell&#39;interfaccia utente e possono progettare un&#39;esperienza utente per riflettere e rafforzare il proprio marchio. Grazie al supporto integrato per la riproduzione di contenuti protetti con l’SDK Adobe Access, Adobe AIR consente di creare catene di distribuzione dei contenuti personalizzate e complete.
-
-Per ulteriori informazioni su Adobe AIR, visita: [www.adobe.com/go/air](https://www.adobe.com/go/air)
 
 ## Applicazioni native iOS e Android {#native-ios-and-android-applications}
 

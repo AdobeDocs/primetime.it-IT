@@ -3,9 +3,9 @@ title: Note sulla versione di Primetime
 description: Note sulla versione di Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 1782a6b1d5f1c56d39648d73616bdefddd8a51bc
+source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '301'
 ht-degree: 0%
 
 ---
@@ -54,4 +54,3 @@ Per altre correzioni e dettagli, consulta [Note sulla versione di TVSDK per iOS]
 
 * [Forum Adobe Primetime DRM](https://forums.adobe.com/community/adobe_access)
 
-* [Risorse per sviluppatori Adobe Primetime](https://www.adobe.com/devnet/primetime.html)

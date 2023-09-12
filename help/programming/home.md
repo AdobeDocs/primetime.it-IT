@@ -3,9 +3,9 @@ title: Guida alla programmazione di Adobe Primetime
 description: Guida alla programmazione di Adobe Primetime
 copied-description: true
 exl-id: 4abaa7a7-4302-4471-88fd-a23eb6af6175
-source-git-commit: 5619a2170d85871c7a92221181cd05e929ce6ce2
+source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '225'
 ht-degree: 0%
 
 ---
@@ -38,5 +38,3 @@ Consulta per ulteriori informazioni su [versione rilasciata corrente](tvsdk-3x-i
 * [Autenticazione Primetime](https://tve.helpdocsonline.com/home)
 
 * [Forum Adobe Primetime DRM](https://forums.adobe.com/community/adobe_access)
-
-* [Risorse per sviluppatori Adobe Primetime](https://www.adobe.com/devnet/primetime.html)

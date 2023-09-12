@@ -2,9 +2,9 @@
 description: L'accesso Adobe può essere utilizzato con altre soluzioni di streaming di contenuti di terze parti per configurare un ecosistema di distribuzione dei contenuti multimediali basato su DRM completo e sicuro.
 title: Supporto UltraViolet e accesso agli Adobi
 exl-id: cca476a4-1961-46d8-aad4-bc7c996d7b02
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '486'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 L&#39;accesso Adobe può essere utilizzato con altre soluzioni di streaming di contenuti di terze parti per configurare un ecosistema di distribuzione dei contenuti multimediali basato su DRM completo e sicuro.
 
-UltraViolet ( [](https://www.uvvu.com/)) è un sistema di autenticazione dei diritti digitali e di distribuzione basato su cloud che consente ai consumatori di contenuti di intrattenimento digitale domestico di eseguire lo streaming e il download dei contenuti acquistati tramite più piattaforme e dispositivi. Il contenuto UltraViolet verrà scaricato (o inviato in streaming) in un Common File Format (CFF) utilizzando Common Encryption (CENC).
+UltraViolet è un sistema di autenticazione dei diritti digitali e di distribuzione basato su cloud che consente ai consumatori di contenuti di intrattenimento digitale domestico di eseguire lo streaming e il download dei contenuti acquistati tramite più piattaforme e dispositivi. Il contenuto UltraViolet verrà scaricato (o inviato in streaming) in un Common File Format (CFF) utilizzando Common Encryption (CENC).
 
 È facile impostare un sistema UltraViolet insieme all&#39;accesso Adobe. Il seguente caso d’uso illustra il comportamento del flusso di contenuto:
 
