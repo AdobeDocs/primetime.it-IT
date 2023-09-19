@@ -1,14 +1,14 @@
 ---
-title: Note sulla versione di Autenticazione Android 3.7.3
-description: Note sulla versione di Autenticazione Android 3.7.3
-source-git-commit: fbc0e710d205532d268213ca0bdc81449e9c9835
+title: Note sulla versione di Adobe Pass Authentication Android 3.7.3
+description: Note sulla versione di Adobe Pass Authentication Android 3.7.3
+source-git-commit: a294b5628ec7184491cf8b67a60fd6cf9410c431
 workflow-type: tm+mt
-source-wordcount: '144'
+source-wordcount: '141'
 ht-degree: 0%
 
 ---
 
-# Note sulla versione di Autenticazione Android 3.7.3 {#android-sdk-370-release-notes}
+# Note sulla versione di Adobe Pass Authentication Android 3.7.3 {#android-sdk-373-release-notes}
 
 >[!NOTE]
 >
@@ -18,13 +18,13 @@ Questa pagina descrive nuove funzioni, modifiche e problemi noti relativi a ques
 
 ## Numero build {#build-no-android-sdk-373}
 
-Autenticazione Adobe Primetime: Android 3.7.3
+Autenticazione Adobe Pass: Android 3.7.3
 
 Data di rilascio: 09/19/2023
 
 
 
-## Panoramica sulla versione {#overview-android-sdk-370}
+## Panoramica sulla versione {#overview-android-sdk-373}
 
 * Modifiche per il supporto di Android 14 e delle applicazioni che eseguono il targeting dell’API al livello 34
    * Aggiungi il flag richiesto da [Ricevitori di trasmissioni registrati runtime Android 14](https://developer.android.com/about/versions/14/behavior-changes-14#runtime-receivers-exported).
@@ -32,8 +32,6 @@ Data di rilascio: 09/19/2023
    * Nota: una soluzione alternativa per questo problema sull’SDK &lt;3.7.3 consiste nell’aprire l’app Chrome sull’emulatore e completarne la configurazione prima di tentare l’accesso MVPD
 
 
-## Pacchetto di rilascio {#rel=pkg-android373}
+## Pacchetto di rilascio {#rel-pkg-android373}
 
 Puoi scaricare l&#39;SDK Android v3.7.3 da [qui](https://tve.zendesk.com/hc/en-us/articles/204963219-Android-Native-AccessEnabler-Library).
-
-Prima di eseguire l&#39;aggiornamento a questa versione, controllare questa nota tecnica.
