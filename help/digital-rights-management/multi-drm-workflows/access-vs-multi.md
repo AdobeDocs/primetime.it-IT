@@ -1,8 +1,7 @@
 ---
 description: Per chi conosce la soluzione DRM di accesso Primetime di Adobe, esistono alcune differenze fondamentali a livello di architettura tra Access e Primetime Cloud DRM, con tecnologia ExpressPlay.
 title: Migrazione dall'accesso a Multi-DRM
-exl-id: f5e4cd88-091d-4049-933d-1c72ceeb2efb
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '395'
 ht-degree: 0%

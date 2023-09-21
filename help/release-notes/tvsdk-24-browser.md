@@ -4,8 +4,7 @@ description: Le note sulla versione del browser TVSDK 2.4 descrivono le funzioni
 contentOwner: dekalra
 topic-tags: release-notes
 products: SG_PRIMETIME
-exl-id: 83fdf530-5cbb-41d9-ab2a-28e117f04488
-source-git-commit: 3b051c3188c81673129e12dfeb573aaf85c15c97
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '6812'
 ht-degree: 0%
@@ -52,7 +51,7 @@ La seguente aggiunta è disponibile come parte dell’aggiornamento del browser 
 
 * L’implementazione dell’API del volume di AdobePSDK.MediaPlayer viene modificata per consentire la riproduzione automatica su iOS quando la riproduzione viene disattivata.
 
-· Una nuova API, `auditudeSettings.ignoreVPAIDAds`, viene aggiunto per consentire di ignorare gli annunci VPAID ricevuti dal server Auditude. L’API non funziona per il fallback del Flash.
+· Una nuova API, `auditudeSettings.ignoreVPAIDAds`, viene aggiunto per consentire di ignorare gli annunci VPAID ricevuti dal server di Auditude. L’API non funziona per il fallback del Flash.
 
 **Versione 2.4.11**
 
@@ -104,7 +103,7 @@ I seguenti miglioramenti e aggiunte sono disponibili come parte della versione B
 
 · Il framework dell’interfaccia utente ora supporta l’accesso HLS DRM nel flusso di lavoro Flash, Solo annuncio e Informazioni di targeting.
 
-· L&#39;API setDRMAuthenticateData viene aggiunta al Framework dell&#39;interfaccia utente. Per riprodurre i flussi protetti con Adobe Access DRM, richiama questa API. In alternativa, è possibile specificare l’attributo drmAuthenticateData nel lettore. Consulta [AdobePSDK.videoBehavior ](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/VideoBehavior.html)per i dettagli.
+· L&#39;API setDRMAuthenticateData viene aggiunta al Framework dell&#39;interfaccia utente. Per riprodurre i flussi protetti con Adobe Access DRM, richiama questa API. In alternativa, è possibile specificare l’attributo drmAuthenticateData nel lettore. Consulta [AdobePSDK.videoBehavior](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/VideoBehavior.html)per i dettagli.
 
 **Versione 2.4.7**
 
@@ -188,15 +187,15 @@ Nella versione 2.4.5 sono state introdotte le seguenti funzioni:
 
 * **Riproduzioni e annunci di eventi completi**
 
-   I flussi FER (Full Event Replay) HLS ora supportano la risoluzione degli annunci e i comportamenti degli annunci. Per abilitare questo supporto, imposta la modalità di segnalazione dell’annuncio su `MANIFEST_CUES` durante la creazione di `MediaPlayerItemConfig` oggetto.
+  I flussi FER (Full Event Replay) HLS ora supportano la risoluzione degli annunci e i comportamenti degli annunci. Per abilitare questo supporto, imposta la modalità di segnalazione dell’annuncio su `MANIFEST_CUES` durante la creazione di `MediaPlayerItemConfig` oggetto.
 
 * **Supporto di MediaplayerView ScalePolicy**
 
-   Gli sviluppatori di applicazioni possono ora specificare un ScalePolicy diverso per la visualizzazione utilizzando la proprietà scalePolicy di MediaplayerView.
+  Gli sviluppatori di applicazioni possono ora specificare un ScalePolicy diverso per la visualizzazione utilizzando la proprietà scalePolicy di MediaplayerView.
 
 * **Supporto di contenuti anamorfici**
 
-   La riproduzione di contenuti anamorfici è ora supportata quando si utilizza MSE e la riproduzione di Flash.
+  La riproduzione di contenuti anamorfici è ora supportata quando si utilizza MSE e la riproduzione di Flash.
 
 * **Applicazione selettiva di`withCredentials`**
 
@@ -220,11 +219,11 @@ Nella versione 2.4.3 erano state introdotte le seguenti funzioni:
 
 * **Tag personalizzati per DASH VOD**
 
-   I tag personalizzati in linea (Eventi) possono essere sottoscritti e ricevuti come oggetto TimedMetadata.
+  I tag personalizzati in linea (Eventi) possono essere sottoscritti e ricevuti come oggetto TimedMetadata.
 
 * **Riproduzione di flussi senza estensioni**
 
-   Sono ora supportati i flussi HLS e DASH senza estensioni. Per il file manifesto, è necessario specificare resourceType durante il caricamento della risorsa. Per i segmenti e i file VTT, l’intestazione di risposta Content-Type viene utilizzata per determinare il tipo di contenuto.
+  Sono ora supportati i flussi HLS e DASH senza estensioni. Per il file manifesto, è necessario specificare resourceType durante il caricamento della risorsa. Per i segmenti e i file VTT, l’intestazione di risposta Content-Type viene utilizzata per determinare il tipo di contenuto.
 
 **Versione 2.4.2**
 
@@ -236,15 +235,15 @@ Per un elenco completo della parità API, vedi [Guida alla migrazione da TVSDK p
 
 * **Esempio di supporto AES**
 
-   Questa versione aggiunge il supporto per la riproduzione di contenuti crittografati Sample-AES su MSE e fallback di Flash. È stato rimosso il requisito per l’hosting di contenuti AES su un’origine sicura in Google Chrome.
+  Questa versione aggiunge il supporto per la riproduzione di contenuti crittografati Sample-AES su MSE e fallback di Flash. È stato rimosso il requisito per l’hosting di contenuti AES su un’origine sicura in Google Chrome.
 
 * **Supporto per contenitori AAC**
 
-   È ora supportata la riproduzione di file con estensione .aac. Può trattarsi di flussi solo audio o di audio alternativo.
+  È ora supportata la riproduzione di file con estensione .aac. Può trattarsi di flussi solo audio o di audio alternativo.
 
-   >[!NOTE]
-   >
-   >I codec AC3 e AC3 avanzati non sono ancora supportati.
+  >[!NOTE]
+  >
+  >I codec AC3 e AC3 avanzati non sono ancora supportati.
 
 * **Riproduzione di flussi con token**
 
@@ -280,11 +279,11 @@ Nella versione 2.4 erano disponibili le seguenti funzioni:
 
 * **Riproduzione audio MP3**
 
-   Questa versione supporta la riproduzione audio MP3 sui browser con Media Source Extensions (MSE) e con il tag video Safari.
+  Questa versione supporta la riproduzione audio MP3 sui browser con Media Source Extensions (MSE) e con il tag video Safari.
 
 * **Riproduzione video MP4**
 
-   Sono supportate le seguenti funzionalità:
+  Sono supportate le seguenti funzionalità:
 
    * Riproduzione a flusso singolo
    * Annunci MP4 pre-roll e post-roll con comportamenti e tracciamento degli annunci
@@ -1240,7 +1239,7 @@ Sono stati risolti i seguenti problemi nella versione 2.4.12 del browser TVSDK U
 
 · **21442**: abilita la riproduzione automatica del contenuto su iOS Web, dopo la riproduzione dell’annuncio preroll con un gesto dell’utente.
 
-· **21240**: API fornita per filtrare gli annunci VPAID analizzati da Auditude/VMAP.
+· **21240**: API fornita per filtrare gli annunci VPAID analizzati dall’Auditude/VMAP.
 
 **Problemi risolti nella versione 2.4.11**
 
@@ -1336,7 +1335,7 @@ Sono stati risolti i seguenti problemi nell’aggiornamento TVSDK versione 2.4.8
 
 · **14126:** La riproduzione potrebbe bloccarsi su Firefox (problema #1316024) a causa di un gap interno nel buffer sorgente MSE. Prova a cercare per riprendere la riproduzione
 
-· **19608:** Correzione per rispettare il valore di scostamento temporale dalla risposta di Auditude VMAP.
+· **19608:** Correzione per rispettare il valore di scostamento temporale dall’Auditude della risposta VMAP.
 
 · **19635:** Corregge il blocco video in Internet Explorer 11 su Windows 10.
 
@@ -1386,7 +1385,7 @@ Sono stati risolti i seguenti problemi nella versione Browser TVSDK 2.4.8:
 
 Nella versione 2.4.7 sono stati risolti i seguenti problemi:
 
-· **8397**: i flussi HLS Live generati tramite Adobe Medium Server potrebbero non essere riprodotti se i segmenti non iniziano con un fotogramma chiave.
+· **8397**: i flussi HLS Live generati tramite Adobe Media Server potrebbero non essere riprodotti se i segmenti non iniziano con un fotogramma chiave.
 
 · **13606**: sono stati risolti diversi problemi relativi alla ricerca per il flusso HLS sul browser Chrome.
 

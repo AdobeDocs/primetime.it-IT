@@ -1,8 +1,7 @@
 ---
 description: Un rilevatore di opportunità è un componente TVADK che rileva i tag personalizzati in un flusso e identifica le opportunità di posizionamento. Queste opportunità vengono inviate al resolver dei contenuti, che personalizza il flusso di lavoro di inserimento di contenuti/annunci in base alle proprietà e ai metadati dell’opportunità di posizionamento.
 title: Personalizzare i rilevatori di opportunità e i risolutori di contenuti
-exl-id: 0721278c-e128-4afc-ae81-4f23c2644859
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 0%

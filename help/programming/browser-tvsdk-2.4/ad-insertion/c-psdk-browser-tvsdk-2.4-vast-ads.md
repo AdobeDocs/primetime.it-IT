@@ -1,8 +1,7 @@
 ---
 description: Quando il browser TVSDK richiede un annuncio che non si trova sul server dell’annuncio principale, il lettore deve richiedere l’annuncio dal server secondario. Video Ad Server Template (VAST) imposta lo standard di comunicazione tra i server di annunci e i lettori video e rappresenta la risposta inviata dal server di annunci secondario quando l’annuncio viene richiesto.
 title: VAST ads
-exl-id: b0ebade5-b5da-413d-84f4-abebac579f45
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 0%
@@ -29,7 +28,7 @@ Sono supportati i seguenti elementi:
 * `AdTitle`
 * `Impression`
 
-   Sono supportati i seguenti elementi facoltativi:
+  Sono supportati i seguenti elementi facoltativi:
 
 * `Description`
 * `Survey`
@@ -56,17 +55,17 @@ Seguono ulteriori informazioni sui tipi di annunci:
 
       * `MediaFile`
 
-         >[!TIP]
-         >
-         >In questo elemento, il `id`, `bitrate`, `delivery`, `width`, `height`, `scalable`, `maintainAspectRatio`, `apiFramework`, e `type` Gli attributi sono supportati.
+        >[!TIP]
+        >
+        >In questo elemento, il `id`, `bitrate`, `delivery`, `width`, `height`, `scalable`, `maintainAspectRatio`, `apiFramework`, e `type` Gli attributi sono supportati.
 
 * **Annunci non lineari** Sono supportati i seguenti elementi:
 
    * `Non-linear`
 
-      >[!TIP]
-      >
-      >In questo elemento, il `id`, `width`, `height`, `apiFramework`, `expandedWidth`, `expandedHeight`, `scalable`, `maintainAspectRatio`, e `minSuggestedDuration` Gli attributi sono supportati.
+     >[!TIP]
+     >
+     >In questo elemento, il `id`, `width`, `height`, `apiFramework`, `expandedWidth`, `expandedHeight`, `scalable`, `maintainAspectRatio`, e `minSuggestedDuration` Gli attributi sono supportati.
 
       * `StaticResource`
       * `IFrameResource`
@@ -78,9 +77,9 @@ Seguono ulteriori informazioni sui tipi di annunci:
 
    * `Companion`
 
-      >[!TIP]
-      >
-      >In questo elemento, il `id`, `width`, `height`, `apiFramework`, `expandedWidth`, e `expandedHeight` Gli attributi sono supportati.
+     >[!TIP]
+     >
+     >In questo elemento, il `id`, `width`, `height`, `apiFramework`, `expandedWidth`, e `expandedHeight` Gli attributi sono supportati.
 
       * `StaticResource`
       * `IFrameResource`
@@ -91,6 +90,6 @@ Seguono ulteriori informazioni sui tipi di annunci:
 
 >[!TIP]
 >
->Sono supportate solo le estensioni specifiche per Auditude.
+>Sono supportate solo le estensioni specifiche per le Auditudi.
 
 * `Extension`

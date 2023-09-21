@@ -2,8 +2,7 @@
 title: Imposta il token XSTS nel lettore
 description: Imposta il token XSTS nel lettore
 copied-description: true
-exl-id: 1b83baac-e6a6-4e84-8ea5-07bd7e4afd9d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '841'
 ht-degree: 0%
@@ -67,7 +66,7 @@ Sono necessari ulteriori passaggi di configurazione per supportare la decrittogr
 | Proprietà di sistema | Valore predefinito | Commento |
 |---|---|---|
 | xsts-keystore | xsts.jks | keystore in formato JKS utilizzato dalla convalida. |
-| xsts-keystore-password |  | Password per il keystore |
+| xsts-keystore-password | | Password per il keystore |
 | xsts-alias | xsts | Alias utilizzato per recuperare la chiave di decrittografia dal keystore |
 | xsts-verify-cert-alias | xsts-verify-cert | Alias utilizzato per recuperare il certificato di convalida dal keystore |
 

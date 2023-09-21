@@ -1,8 +1,7 @@
 ---
 title: Segmenti di Abbonato e intervallo di tempo
 description: Definisci le coorti o seleziona i segmenti di abbonati per misurare le possibilità e i pattern di condivisione dell’account da parte dei tuoi visualizzatori di canale, per utilizzare strumenti grafici e rapporti in Account IQ.
-exl-id: c38cde37-70d9-486d-b8d0-7c1cbd2baf2e
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '321'
 ht-degree: 0%
@@ -26,7 +25,7 @@ Per definire i segmenti vengono utilizzate le seguenti opzioni a discesa:
 
 **MVPD nel segmento**
 
-Il **MVPD nel segmento** selettore consente di scegliere [MVPD](/help/AccountIQ/product-concepts.md#mvpd-def) (singoli utenti o gruppo) per il cui sottoscrittore si desidera visualizzare i report di condivisione account.
+Il **MVPD nel segmento** selettore consente di scegliere [MVPD](/help/AccountIQ/product-concepts.md#mvpd-def) (singoli utenti o gruppo) per il cui sottoscrittore si desidera visualizzare i rapporti di condivisione dell&#39;account.
 
 In questo selettore, oltre a selezionare i singoli MVPD, puoi anche selezionare i seguenti gruppi:
 

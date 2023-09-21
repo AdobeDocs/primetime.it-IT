@@ -1,8 +1,7 @@
 ---
 description: La playlist di un video può specificare un numero illimitato di tracce audio alternative per il contenuto video principale. Ad esempio, potrebbe essere utile aggiungere lingue diverse al contenuto video o consentire all'utente di passare da un brano all'altro del dispositivo durante la riproduzione del contenuto.
 title: Brani audio alternativi nella playlist
-exl-id: 2706a38c-b103-4f8c-a639-4650b4d515a1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '291'
 ht-degree: 0%

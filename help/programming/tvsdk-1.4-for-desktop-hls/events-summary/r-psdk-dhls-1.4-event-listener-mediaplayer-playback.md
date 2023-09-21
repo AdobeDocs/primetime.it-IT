@@ -1,8 +1,7 @@
 ---
 description: L’applicazione può monitorare l’attività nel lettore e il cambiamento dello stato del lettore mediante l’ascolto degli eventi inviati da TVSDK.
 title: Eventi di riproduzione
-exl-id: 9fb77b57-be6c-4dab-b779-d8c606938e46
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Questo esempio mostra il modo consigliato per includere le specifiche TimeRange nella timeline di riproduzione.
 title: Posizionare i marcatori degli annunci TimeRange sulla timeline
-exl-id: 53b48d5b-7725-48ae-848a-ccd2a54b132a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 0%
@@ -24,7 +23,7 @@ Questo esempio mostra il modo consigliato per includere le specifiche TimeRange 
 * Si presume che l’elemento del lettore multimediale che viene caricato punti a una risorsa VOD. TVSDK controlla questo valore ogni volta che l’applicazione tenta di caricare una risorsa multimediale i cui metadati contengono `TimeRange` specifiche che possono essere utilizzate solo nel contesto della funzione marcatori annuncio personalizzati. Se la risorsa sottostante non è di tipo VOD, la libreria TVSDK genera un’eccezione.
 * Quando si tratta di marcatori di annunci personalizzati, TVSDK disattiva altri meccanismi di risoluzione degli annunci (tramite Adobe Primetime ad decisioning (precedentemente noto come Auditude) o altro sistema di provisioning di annunci). Puoi utilizzare uno dei vari moduli ad-resolver forniti da TVSDK o il meccanismo personalizzato per i marcatori degli annunci. Quando utilizzi l’API per i marcatori di annunci personalizzati, il contenuto dell’annuncio viene considerato già risolto e inserito nella timeline.
 
-Il seguente frammento di codice fornisce un semplice esempio in cui un set di tre specifiche TimeRange viene inserito sulla timeline come marcatori annuncio personalizzati.
+Il seguente snippet di codice fornisce un semplice esempio in cui un set di tre specifiche TimeRange viene inserito sulla timeline come marcatori annuncio personalizzati.
 
 ```java>
 // Assume that the 3 timerange specs are obtained through external means: CMS, etc. 

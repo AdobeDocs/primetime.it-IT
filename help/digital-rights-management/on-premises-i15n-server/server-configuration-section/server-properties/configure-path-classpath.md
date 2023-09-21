@@ -2,8 +2,7 @@
 title: Configurare il percorso e il percorso di classe
 description: Configurare il percorso e il percorso di classe
 copied-description: true
-exl-id: e6e9f837-4e3d-43e1-971d-3fa0ccaeff39
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '149'
 ht-degree: 0%
@@ -19,6 +18,7 @@ Il [!DNL flashaccess.war] contiene [!DNL jsafeWithNative.jar], che è la libreri
    * **Linux/ [!DNL libjsafe.so] -** La directory contenente [!DNL libjsafe.so] deve trovarsi sul percorso (le librerie Crypto-J native sono disponibili anche per altre piattaforme). Ad esempio, imposta [!DNL libjsafe.so] il `LD_LIBRARY_PATH`.
 
    * **Windows / [!DNL jsafe.dll] -** La controparte di Windows a [!DNL libjsafe.so] è appropriato [!DNL jsafe.dll].
+
    Queste librerie sono disponibili nel [!DNL thirdparty] cartella della libreria.
 1. Inserisci uno dei [!DNL adobe-flashaccess-certs] file jar nel percorso di classe.
 

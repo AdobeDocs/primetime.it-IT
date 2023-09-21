@@ -1,8 +1,7 @@
 ---
 description: In alcuni casi può essere utile impedire agli utenti finali di riprodurre contenuti su più dispositivi quando il contenuto viene acquistato o noleggiato. Se il cliente utilizza Expressplay, è possibile utilizzare le API Expressplay per associare il token Expressplay dell’utente al computer dell’utente.
 title: Binding dispositivo
-exl-id: 96ead794-e3eb-4059-91d3-a2c351a17ea3
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%
@@ -26,6 +25,6 @@ Puoi utilizzare le API nel modo seguente.
 
    * Fornisci questo token all’utente.
 
-      Questo processo genera un token per il contenuto associato al device_id dell’utente. Quando il computer dell’utente invia una richiesta di licenza con questo token, il back-end di Expressplay controllerà il device_id del token con il device_id della richiesta di licenza.
+     Questo processo genera un token per il contenuto associato al device_id dell’utente. Quando il computer dell’utente invia una richiesta di licenza con questo token, il back-end di Expressplay controllerà il device_id del token con il device_id della richiesta di licenza.
 
-      Un esempio di Expressplay server di adesione implementa questo flusso di lavoro.
+     Un esempio di Expressplay server di adesione implementa questo flusso di lavoro.

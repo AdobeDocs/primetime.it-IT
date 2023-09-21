@@ -2,8 +2,7 @@
 description: È possibile utilizzare le funzioni del Digital Rights Management Primetime (DRM) per fornire un accesso sicuro al contenuto video. In alternativa, è possibile utilizzare soluzioni DRM di terze parti in alternativa alla soluzione DRM di Primetime integrata di Adobe.
 keywords: DRM;TRATTINO;HLS
 title: Panoramica dell’interfaccia DRM di Primetime
-exl-id: e07c1551-5a9b-4907-94ea-6b7536918b91
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '426'
 ht-degree: 0%
@@ -30,9 +29,9 @@ Questi sono gli elementi API più importanti per l’utilizzo di DRM:
 
 * Riferimento nel lettore multimediale all&#39;oggetto di gestione DRM che implementa il sottosistema DRM:
 
-   ```
-   @property (readonly, nonatomic) DRMManager *drmManager
-   ```
+  ```
+  @property (readonly, nonatomic) DRMManager *drmManager
+  ```
 
 <!--<a id="section_F986DB1EDD6F44CD8E57419CCA0921E8"></a>-->
 

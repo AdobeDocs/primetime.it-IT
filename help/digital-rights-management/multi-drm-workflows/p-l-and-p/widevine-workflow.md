@@ -1,8 +1,7 @@
 ---
 description: Questo flusso di lavoro multi-DRM consente di configurare, creare pacchetti, concedere licenze e riprodurre contenuti DASH crittografati con Widevine e PlayReady.
 title: Flusso di lavoro DRM multiplo per Widevine e PlayReady
-exl-id: 97adfa69-52ef-470b-903a-eff1f075b7be
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '354'
 ht-degree: 0%

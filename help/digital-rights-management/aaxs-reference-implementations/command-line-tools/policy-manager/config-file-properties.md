@@ -2,8 +2,7 @@
 title: Proprietà del file di configurazione
 description: Proprietà del file di configurazione
 copied-description: true
-exl-id: 6405126d-4cf2-4ffc-821d-fbfdc00b60ef
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1119'
 ht-degree: 0%

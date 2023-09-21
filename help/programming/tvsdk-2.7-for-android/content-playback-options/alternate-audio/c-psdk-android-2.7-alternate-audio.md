@@ -1,8 +1,7 @@
 ---
 description: L'audio alternativo consente di alternare le tracce audio disponibili per una traccia video. Gli utenti possono selezionare la traccia nella lingua preferita durante la riproduzione del video.
 title: Audio alternativo
-exl-id: c2eb10dc-3fe0-472b-8450-2fbfc6b09487
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '247'
 ht-degree: 0%

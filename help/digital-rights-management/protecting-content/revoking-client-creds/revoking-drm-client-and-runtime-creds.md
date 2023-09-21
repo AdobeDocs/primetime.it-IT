@@ -2,8 +2,7 @@
 title: Revoca delle credenziali di runtime e del client DRM
 description: Revoca delle credenziali di runtime e del client DRM
 copied-description: true
-exl-id: 3a91a256-ab01-48d8-99f3-854195faae6f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '413'
 ht-degree: 0%

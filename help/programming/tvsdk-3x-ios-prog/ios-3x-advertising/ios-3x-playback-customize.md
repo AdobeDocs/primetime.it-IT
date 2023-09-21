@@ -1,8 +1,7 @@
 ---
 description: Quando la riproduzione raggiunge un’interruzione pubblicitaria, passa un’interruzione pubblicitaria o termina in un’interruzione pubblicitaria, TVSDK definisce alcuni comportamenti predefiniti per il posizionamento della testina di riproduzione corrente.
 title: Personalizzare la riproduzione con gli annunci
-exl-id: 522f0b55-dcc4-4175-91ab-757b72bbad23
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '982'
 ht-degree: 0%
@@ -25,7 +24,7 @@ Puoi personalizzare il comportamento di riproduzione degli annunci nei seguenti 
 * Se viene presentata all’utente un’interruzione pubblicitaria, non verranno mostrati annunci aggiuntivi per un numero di minuti, anche se l’utente cerca di trovare una nuova posizione.
 * Se dopo alcuni minuti il contenuto non viene riprodotto correttamente, riavviare il flusso o eseguire il failover su un&#39;origine diversa per lo stesso contenuto.
 
-   Nella sessione di riproduzione del failover, per consentire all’utente di saltare gli annunci e riprendere la precedente posizione di errore, puoi disabilitare gli annunci pre-roll e/o mid-roll. TVSDK fornisce metodi per consentire di saltare gli annunci pre-roll e mid-roll.
+  Nella sessione di riproduzione del failover, per consentire all’utente di saltare gli annunci e riprendere la precedente posizione di errore, puoi disabilitare gli annunci pre-roll e/o mid-roll. TVSDK fornisce metodi per consentire di saltare gli annunci pre-roll e mid-roll.
 
 ## Elementi API per la riproduzione di annunci {#section_296ADE00CFEA40CBA1B46142720D13A5}
 
@@ -76,11 +75,11 @@ Per personalizzare i comportamenti degli annunci, effettuare una delle seguenti 
 
 * Conforme a `PTAdPolicySelector` e implementare tutti i metodi di selezione dei criteri richiesti.
 
-   Questa opzione è consigliata se devi eseguire l’override di **tutto** i comportamenti di annuncio predefiniti.
+  Questa opzione è consigliata se devi eseguire l’override di **tutto** i comportamenti di annuncio predefiniti.
 
 * Ignora `PTDefaultAdPolicySelector` e forniscono implementazioni solo per i comportamenti che richiedono personalizzazione.
 
-   Questa opzione è consigliata solo se è necessario eseguire l&#39;override **alcuni** dei comportamenti predefiniti.
+  Questa opzione è consigliata solo se è necessario eseguire l&#39;override **alcuni** dei comportamenti predefiniti.
 
 Per entrambe le opzioni, completa le seguenti attività:
 

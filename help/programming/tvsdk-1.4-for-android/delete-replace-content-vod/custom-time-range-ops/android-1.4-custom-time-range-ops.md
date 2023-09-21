@@ -1,8 +1,7 @@
 ---
 description: TVSDK supporta l’eliminazione e la sostituzione programmatica del contenuto di annunci nei flussi VOD.
 title: Operazioni per intervalli di tempo personalizzati
-exl-id: 10aa3609-d5d0-49e2-959f-d72d8dbd6ef4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '388'
 ht-degree: 0%
@@ -20,24 +19,21 @@ L’eliminazione e la sostituzione degli annunci sono implementate con `TimeRang
 Per l’eliminazione e la sostituzione degli annunci, TVSDK utilizza quanto segue *operazione intervallo di tempo personalizzato* modalità:
 
 * **CONTRASSEGNA**
-Nelle versioni precedenti di TVSDK, questi sono stati denominati marcatori di annunci personalizzati. Segnano l’ora di inizio e di fine per gli annunci già inseriti nel flusso VOD. Quando nel flusso sono presenti marcatori intervallo di tempo di tipo MARK, viene inserito un 
-`Mode.MARK` viene generato e risolto da `CustomAdMarkersContentResolver`. Nessun annuncio inserito.
+Nelle versioni precedenti di TVSDK, questi sono stati denominati marcatori di annunci personalizzati. Segnano l’ora di inizio e di fine per gli annunci già inseriti nel flusso VOD. Quando nel flusso sono presenti marcatori intervallo di tempo di tipo MARK, viene inserito un `Mode.MARK` viene generato e risolto da `CustomAdMarkersContentResolver`. Nessun annuncio inserito.
 
 * **DELETE**
-Per gli intervalli di tempo DELETE, un 
-`placementInformation` di tipo `Mode.DELETE` viene creato e risolto dal corrispondente `DeleteContentResolver`. `ContentRemoval` è un nuovo `timelineOperation` che definisce gli intervalli da rimuovere dalla timeline. TVSDK utilizza `removeByLocalTime` dall’API Adobe Video Engine (AVE) per facilitare tale operazione. Se sono presenti intervalli di DELETE e metadati di Adobe Primetime ad decisioning (precedentemente noti come Auditude), questi vengono eliminati prima, quindi `AuditudeResolver` risolve gli annunci utilizzando il normale flusso di lavoro di Adobe Primetime ad decisioning.
+Per gli intervalli di tempo DELETE, un `placementInformation` di tipo `Mode.DELETE` viene creato e risolto dal corrispondente `DeleteContentResolver`. `ContentRemoval` è un nuovo `timelineOperation` che definisce gli intervalli da rimuovere dalla timeline. TVSDK utilizza `removeByLocalTime` dall’API Adobe Video Engine (AVE) per facilitare tale operazione. Se sono presenti intervalli di DELETE e metadati di Adobe Primetime ad decisioning (precedentemente noti come Auditude), questi vengono eliminati prima, quindi `AuditudeResolver` risolve gli annunci utilizzando il normale flusso di lavoro di Adobe Primetime ad decisioning.
 
 * **SOSTITUISCI**
-Per gli intervalli di tempo REPLACE, due 
-`placementInformations` vengono creati, uno `Mode.DELETE` e uno `Mode.REPLACE`. Il `DeleteContentResolver` elimina prima gli intervalli di tempo e quindi `AuditudeResolver` inserisce annunci del `replaceDuration` nella timeline. In caso negativo `replaceDuration` è specificato, il server determina l&#39;elemento da inserire.
+Per gli intervalli di tempo REPLACE, due `placementInformations` vengono creati, uno `Mode.DELETE` e uno `Mode.REPLACE`. Il `DeleteContentResolver` elimina prima gli intervalli di tempo e quindi `AuditudeResolver` inserisce annunci del `replaceDuration` nella timeline. In caso negativo `replaceDuration` è specificato, il server determina l&#39;elemento da inserire.
 
 Per supportare queste operazioni dell&#39;intervallo di tempo personalizzato, TVSDK fornisce quanto segue:
 
 * Più sistemi di risoluzione dei contenuti
 
-   Un flusso può avere più risolutori di contenuto in base alla modalità di segnalazione degli annunci e ai metadati degli annunci. Il comportamento cambia con diverse combinazioni di modalità di segnalazione degli annunci e metadati degli annunci.
+  Un flusso può avere più risolutori di contenuto in base alla modalità di segnalazione degli annunci e ai metadati degli annunci. Il comportamento cambia con diverse combinazioni di modalità di segnalazione degli annunci e metadati degli annunci.
 * Iniziali multiple `PlacementInformations` Il `DefaultMediaPlayer` crea un elenco di `PlacementInformations` in base alla modalità di segnalazione degli annunci e ai metadati degli annunci che devono essere risolti da `MediaPlayerClient`.
 
 * Nuova modalità di segnalazione degli annunci: intervalli di tempo personalizzati
 
-   Gli annunci vengono inseriti in base ai dati dell’intervallo di tempo provenienti da un’origine esterna (ad esempio un file JSON).
+  Gli annunci vengono inseriti in base ai dati dell’intervallo di tempo provenienti da un’origine esterna (ad esempio un file JSON).

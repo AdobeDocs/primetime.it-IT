@@ -1,8 +1,7 @@
 ---
 description: È possibile visualizzare i sottotitoli durante la riproduzione di contenuti video.
 title: Sottotitoli
-exl-id: 2144a6b2-0b9a-49ea-ad44-997adf36cbe6
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '55'
 ht-degree: 0%

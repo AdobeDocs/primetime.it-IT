@@ -1,8 +1,7 @@
 ---
 description: I gestori di eventi consentono a TVSDK di rispondere agli eventi.
 title: Implementare listener di eventi e callback
-exl-id: eda5cd4e-4ee8-4b37-a179-242e8697f61f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 0%
@@ -25,13 +24,13 @@ Per un elenco completo degli eventi per l’analisi dei video, consulta Tracciar
 
    * **Eventi richiesti**: ascolta tutti gli eventi di riproduzione.
 
-      >[!IMPORTANT]
-      >
-      >Evento di riproduzione `onStateChanged` fornisce lo stato del lettore, compresi gli errori. Uno qualsiasi degli stati potrebbe influire sul passaggio successivo del lettore
+     >[!IMPORTANT]
+     >
+     >Evento di riproduzione `onStateChanged` fornisce lo stato del lettore, compresi gli errori. Uno qualsiasi degli stati potrebbe influire sul passaggio successivo del lettore
 
    * **Altri eventi**: facoltativo, a seconda dell’applicazione.
 
-      Ad esempio, se incorpori la pubblicità nella riproduzione, implementa i callback AdPlaybackEventListener.
+     Ad esempio, se incorpori la pubblicità nella riproduzione, implementa i callback AdPlaybackEventListener.
 
 1. Implementa listener di eventi per ogni evento.
 

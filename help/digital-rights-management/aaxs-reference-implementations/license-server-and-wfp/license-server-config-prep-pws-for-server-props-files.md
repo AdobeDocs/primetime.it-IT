@@ -2,8 +2,7 @@
 title: Preparazione delle password per i file delle proprietà del server
 description: Preparazione delle password per i file delle proprietà del server
 copied-description: true
-exl-id: 70f75640-7075-450a-8191-dc348bd269b8
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 0%
@@ -21,9 +20,9 @@ Per eseguire lo strumento utilizzando lo script ANT fornito:
 * Assicurati che `sdkdir` proprietà in [!DNL build-refimpl.xml] punta alla directory contenente l’SDK di accesso agli Adobi
 * Esegui il comando seguente utilizzando ANT:
 
-   ```
-       ant -f build-refimpl.xml
-   ```
+  ```
+      ant -f build-refimpl.xml
+  ```
 
 * Quando richiesto, digitare la password delle credenziali
 
@@ -35,17 +34,17 @@ Per eseguire lo strumento utilizzando Java:
 
 * In Windows:
 
-   ```
-   java -classpath path_to_adobe-flashaccess-sdk.jar;.  
-   com.adobe.flashaccess.refimpl.util.ScrambleUtil your_pfx_password
-   ```
+  ```
+  java -classpath path_to_adobe-flashaccess-sdk.jar;.  
+  com.adobe.flashaccess.refimpl.util.ScrambleUtil your_pfx_password
+  ```
 
 * Su Linux:
 
-   ```
-       java -classpath path_to_adobe-flashaccess-sdk.jar;.  
-       com.adobe.flashaccess.refimpl.util.ScrambleUtil your_pfx_password
-   ```
+  ```
+      java -classpath path_to_adobe-flashaccess-sdk.jar;.  
+      com.adobe.flashaccess.refimpl.util.ScrambleUtil your_pfx_password
+  ```
 
 L&#39;utility restituisce la password crittografata, che è necessario copiare nel file .properties.
 

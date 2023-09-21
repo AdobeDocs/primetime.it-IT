@@ -1,8 +1,7 @@
 ---
 description: I metodi della classe MediaPlayerItem consentono di ottenere informazioni sul flusso di contenuto rappresentato da un oggetto MediaResource caricato.
 title: Metodi MediaPlayerItem per accedere alle informazioni MediaResource
-exl-id: d6a547f3-0267-4a49-93a4-628b4879aef4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 0%

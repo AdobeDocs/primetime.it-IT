@@ -1,8 +1,7 @@
 ---
 title: Guida utente di Primetime TVE Dashboard
 description: Guida utente di Primetime TVE Dashboard
-exl-id: 6f7f7901-db3a-4c68-ac6a-27082db9240a
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '4386'
 ht-degree: 0%
@@ -101,20 +100,20 @@ Questa sezione consente di visualizzare e modificare le impostazioni per i canal
    * **Configurazione analisi** : configura gli eventi di autenticazione di Adobe Primetime da inoltrare ad Adobe Analytics. Contatta l’Adobe per ulteriori dettagli su come configurare l’ID suite di rapporti (RSID) prima di abilitare questa funzione.
 * **Certificati**
 
-   Contiene l’elenco dei certificati utilizzati nel flusso di autenticazione insieme all’organizzazione di emissione, alla data di rilascio e alla data di scadenza. Questi certificati fungono da chiavi pubbliche/private e vengono utilizzati a scopo di convalida.
+  Contiene l’elenco dei certificati utilizzati nel flusso di autenticazione insieme all’organizzazione di emissione, alla data di rilascio e alla data di scadenza. Questi certificati fungono da chiavi pubbliche/private e vengono utilizzati a scopo di convalida.
 * **Domini**
 
-   Contiene l’elenco dei domini da cui il rispettivo Canale comunicherà con l’autenticazione di Adobe Primetime.
+  Contiene l’elenco dei domini da cui il rispettivo Canale comunicherà con l’autenticazione di Adobe Primetime.
 * **Integrazioni**
 
-   Contiene l’elenco delle integrazioni con gli MVPD disponibili, insieme allo stato di ogni integrazione che potrebbe essere abilitata o meno. Per accedere alla pagina Integrazione, fai clic su una voce specifica.
+  Contiene l’elenco delle integrazioni con gli MVPD disponibili, insieme allo stato di ogni integrazione che potrebbe essere abilitata o meno. Per accedere alla pagina Integrazione, fai clic su una voce specifica.
 * **Applicazioni registrate**
 
-   Contiene l’elenco delle registrazioni delle applicazioni. Per ulteriori dettagli, consulta il documento [Gestione registrazione client dinamici](/help/authentication/dynamic-client-registration-management.md).
+  Contiene l’elenco delle registrazioni delle applicazioni. Per ulteriori dettagli, consulta il documento [Gestione registrazione client dinamici](/help/authentication/dynamic-client-registration-management.md).
 
 * **Schemi personalizzati**
 
-   Contiene l’elenco degli schemi personalizzati. Per ulteriori dettagli, consulta [Registrazione applicazione iOS/tvOS](/help/authentication/iostvos-application-registration.md) e [Gestione registrazione client dinamici](/help/authentication/dynamic-client-registration-management.md)
+  Contiene l’elenco degli schemi personalizzati. Per ulteriori dettagli, consulta [Registrazione applicazione iOS/tvOS](/help/authentication/iostvos-application-registration.md) e [Gestione registrazione client dinamici](/help/authentication/dynamic-client-registration-management.md)
 
 
 #### Aggiungi/Elimina domini {#add-delete-domains}
@@ -137,19 +136,19 @@ Questa sezione consente di visualizzare e modificare le impostazioni per i progr
 
 * **Certificati**
 
-   Contiene l’elenco dei certificati utilizzati nel flusso di autenticazione insieme all’organizzazione di emissione, alla data di rilascio e alla data di scadenza. Questi certificati fungono da chiavi pubbliche/private e vengono utilizzati a scopo di convalida.
+  Contiene l’elenco dei certificati utilizzati nel flusso di autenticazione insieme all’organizzazione di emissione, alla data di rilascio e alla data di scadenza. Questi certificati fungono da chiavi pubbliche/private e vengono utilizzati a scopo di convalida.
 
 * **Canali**
 
-   Contiene l’elenco dei canali appartenenti a questo programmatore specifico. Per passare alla sezione Canali, fai clic su una voce specifica.
+  Contiene l’elenco dei canali appartenenti a questo programmatore specifico. Per passare alla sezione Canali, fai clic su una voce specifica.
 
 * **Applicazioni registrate**
 
-   Contiene l’elenco delle registrazioni delle applicazioni. Per ulteriori dettagli, consulta [Gestione registrazione client dinamici](/help/authentication/dynamic-client-registration-management.md).
+  Contiene l’elenco delle registrazioni delle applicazioni. Per ulteriori dettagli, consulta [Gestione registrazione client dinamici](/help/authentication/dynamic-client-registration-management.md).
 
 * **Schemi personalizzati**
 
-   Contiene l’elenco degli schemi personalizzati. Per ulteriori dettagli, consulta [Registrazione applicazione iOS/tvOS](/help/authentication/iostvos-application-registration.md) e [Gestione registrazione client dinamici](/help/authentication/dynamic-client-registration-management.md).
+  Contiene l’elenco degli schemi personalizzati. Per ulteriori dettagli, consulta [Registrazione applicazione iOS/tvOS](/help/authentication/iostvos-application-registration.md) e [Gestione registrazione client dinamici](/help/authentication/dynamic-client-registration-management.md).
 
 
 ### Integrazioni {#tve-db-integrations-sec}
@@ -250,13 +249,13 @@ Per abilitare/disabilitare l&#39;accesso Single Sign On per un&#39;integrazione 
 * selezionare la piattaforma desiderata su cui si desidera attivare o disattivare Single Sign-On
 * attiva/disattiva **Abilita Single Sign-On** contrassegno al valore desiderato (Sì / No)
 
-   >[!IMPORTANT]
-   >È importante notare che il **Abilita Single Sign-On** Il flag è disponibile solo per le piattaforme iOS, tvOS, Roku e FireTV e solo per le integrazioni con MVPD che supportano il Single Sign On per tali piattaforme.
+  >[!IMPORTANT]
+  >È importante notare che il **Abilita Single Sign-On** Il flag è disponibile solo per le piattaforme iOS, tvOS, Roku e FireTV e solo per le integrazioni con MVPD che supportano il Single Sign On per tali piattaforme.
 
 * attiva/disattiva **Applica autorizzazione piattaforma** contrassegno al valore desiderato (Sì / No)
 
-   >[!IMPORTANT]
-   >È importante notare che il **Applica autorizzazione piattaforma** Il flag controlla se la decisione dell’utente di consentire o negare l’accesso alla piattaforma al proprio abbonamento al provider TV verrà applicata o meno. Considerare lo scenario quando **Abilita Single Sign-On** il flag è impostato su &quot;Sì&quot;, **Applica autorizzazione piattaforma** Inoltre, il flag è impostato su &quot;Sì&quot; e l’utente sceglie di negare l’accesso della piattaforma al proprio abbonamento al provider TV, in modo che la rispettiva applicazione (canale) non possa utilizzare il token di autenticazione di Adobe Primetime ottenuto da un’altra applicazione (canale).
+  >[!IMPORTANT]
+  >È importante notare che il **Applica autorizzazione piattaforma** Il flag controlla se la decisione dell’utente di consentire o negare l’accesso alla piattaforma al proprio abbonamento al provider TV verrà applicata o meno. Considerare lo scenario quando **Abilita Single Sign-On** il flag è impostato su &quot;Sì&quot;, **Applica autorizzazione piattaforma** Inoltre, il flag è impostato su &quot;Sì&quot; e l’utente sceglie di negare l’accesso della piattaforma al proprio abbonamento al provider TV, in modo che la rispettiva applicazione (canale) non possa utilizzare il token di autenticazione di Adobe Primetime ottenuto da un’altra applicazione (canale).
 
 
 #### Abilita autenticazione basata sulla home page {#enable-hba}
@@ -481,7 +480,7 @@ Questa sezione consente agli utenti di inviare feedback. Segui i passaggi per fo
 
 ![modulo di feedback del dashboard di tve](assets/tve-dashboard-feedback.png)
 
-*Figura 11: sezione Feedback del dashboard di Adobe Primetime TVE*
+*Figura 11: sezione Feedback sul dashboard di Adobe Primetime TVE*
 
 Per istruzioni su come acquisire le schermate, consulta i collegamenti seguenti:
 

@@ -1,8 +1,7 @@
 ---
 description: Per utilizzare il Flash Player, assicurati che l’ambiente soddisfi i requisiti necessari.
 title: Requisiti Flash Player
-exl-id: 26531d0d-d34c-4134-8a05-0604f00a3107
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '142'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Il processo di inserimento di annunci video-on-demand (VOD) è costituito dalle fasi di risoluzione, inserimento e riproduzione degli annunci. Per il tracciamento degli annunci, TVSDK deve informare un server di tracciamento remoto sull’avanzamento della riproduzione di ciascun annuncio. In caso di situazioni impreviste, TVSDK adotta le misure appropriate.
 title: Inserimento e failover di annunci per VOD
-exl-id: d0bb720e-3309-4346-88fe-053b0291ad64
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '689'
 ht-degree: 0%
@@ -21,20 +20,20 @@ TVSDK supporta i seguenti tipi di provider di annunci:
 
 * Provider di annunci metadati
 
-   I dati dell’annuncio sono codificati in file JSON di testo normale.
+  I dati dell’annuncio sono codificati in file JSON di testo normale.
 * Provider di annunci di Ad Decisioning di Primetime
 
-   TVSDK invia una richiesta, contenente un set di parametri di targeting e un numero di identificazione della risorsa, al server back-end Primetime ad decisioning. Primetime ad decisioningrisponde con un documento SMIL (Synchronized Multimedia Integration Language) contenente le informazioni sull’annuncio richieste.
+  TVSDK invia una richiesta, contenente un set di parametri di targeting e un numero di identificazione della risorsa, al server back-end Primetime ad decisioning. Primetime ad decisioningrisponde con un documento SMIL (Synchronized Multimedia Integration Language) contenente le informazioni sull’annuncio richieste.
 * Provider di marcatori annunci personalizzati
 
-   Gestisce la situazione in cui gli annunci vengono masterizzati nel flusso, dal lato server. TVSDK non esegue l’inserimento effettivo dell’annuncio, ma deve tenere traccia degli annunci inseriti sul lato server. Questo provider imposta i marcatori annuncio utilizzati da TVSDK per eseguire il tracciamento degli annunci.
+  Gestisce la situazione in cui gli annunci vengono masterizzati nel flusso, dal lato server. TVSDK non esegue l’inserimento effettivo dell’annuncio, ma deve tenere traccia degli annunci inseriti sul lato server. Questo provider imposta i marcatori annuncio utilizzati da TVSDK per eseguire il tracciamento degli annunci.
 
 Durante questa fase può verificarsi una delle seguenti situazioni di failover:
 
 * Non è possibile recuperare i dati a causa, ad esempio, della mancanza di connettività o di un errore sul lato server, ad esempio l’impossibilità di trovare una risorsa e così via.
 * I dati sono stati recuperati, ma il formato non è valido.
 
-   Ciò potrebbe verificarsi, ad esempio, perché l’analisi dei dati in entrata non è riuscita.
+  Ciò potrebbe verificarsi, ad esempio, perché l’analisi dei dati in entrata non è riuscita.
 
 TVSDK invia una notifica di avviso relativa all’errore e continua l’elaborazione.
 
@@ -66,6 +65,6 @@ TVSDK inoltra gli eventi attivati all&#39;applicazione, inclusi gli eventi di no
 * Il profilo viene modificato a causa dell&#39;algoritmo di failover.
 * Sono state prese in considerazione tutte le opzioni di failover e non è possibile eseguire automaticamente alcuna azione aggiuntiva.
 
-   L&#39;applicazione deve intraprendere l&#39;azione appropriata.
+  L&#39;applicazione deve intraprendere l&#39;azione appropriata.
 
 Indipendentemente dal fatto che si verifichino errori, chiamate TVSDK `onAdBreakComplete` per ogni `onAdBreakStart` e `onAdComplete` per ogni `onAdStart`. Tuttavia, se non è stato possibile scaricare i segmenti, potrebbero esserci degli spazi nella timeline. Quando gli spazi sono sufficientemente ampi, i valori nella posizione della testina di riproduzione e l’avanzamento dell’annuncio riportato potrebbero mostrare discontinuità.

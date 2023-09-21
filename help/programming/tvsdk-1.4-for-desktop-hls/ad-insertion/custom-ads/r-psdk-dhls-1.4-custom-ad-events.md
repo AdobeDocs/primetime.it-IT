@@ -1,8 +1,7 @@
 ---
 description: Il lettore TVSDK invia gli eventi per visualizzare lo stato di caricamento degli annunci personalizzati o per ignorare un annuncio che richiede troppo tempo o presenta errori. Questi eventi sono definiti in events.CustomAdEvents.
 title: Eventi pubblicitari personalizzati
-exl-id: 44f32584-7f6c-4071-82b6-9cc9584418ee
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '175'
 ht-degree: 0%

@@ -4,8 +4,7 @@ description: Le note sulla versione di TVSDK per HLS desktop descrivono le novit
 contentOwner: asgupta
 products: SG_PRIMETIME
 topic-tags: release-notes
-exl-id: 5e227c99-acf6-4b16-a35a-68e2928fdbfd
-source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '5194'
 ht-degree: 0%
@@ -194,7 +193,7 @@ Questo problema è stato risolto tenendo traccia delle modifiche del bitrate in 
 
 **Versione 1.4.28** (848)
 
-* #25027 Zendesk - Auditude non funziona nella versione desktop 1.4.27
+* #25027 Zendesk - L’Auditude non funziona nella versione desktop 1.4.27
 
 Il problema è stato risolto aggiungendo il codice per controllare AUDITUDE_METADATA_KEY e rendendo intercambiabili AUDITUDE_METADATA_KEY e ADVERTISING_METADATA_KEY.
 
@@ -380,9 +379,9 @@ Questo problema è stato risolto per comportarsi correttamente e non inviare eve
 
 **Nota**: questo problema richiede il lettore Flash 21.0.0.182 o versione successiva.
 
-La richiesta Auditude analizza le impostazioni Auditude per i parametri personalizzati durante la creazione di un’unità pubblicitaria per le richieste pubblicitarie.
+La richiesta di Auditude analizza le impostazioni Auditude per i parametri personalizzati durante la creazione di un’unità pubblicitaria per le richieste pubblicitarie.
 
-Questo comportamento è stato modificato per includere nella richiesta parametri personalizzati dall’oggetto Opportunity. Inoltre, non è possibile comprimere più opportunità con parametri personalizzati diversi in una sola richiesta Auditude.
+Questo comportamento è stato modificato per includere nella richiesta parametri personalizzati dall’oggetto Opportunity. Inoltre, non è possibile comprimere più opportunità con parametri personalizzati diversi in una singola richiesta di Auditude.
 
 * Zendesk #21227 - m3u8 non viene eseguito correttamente
 

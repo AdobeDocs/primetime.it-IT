@@ -1,8 +1,7 @@
 ---
 title: Feature manager
 description: I gestori di funzioni consentono di controllare singole funzioni senza attraversare l’intero TVSDK alla ricerca di codice per una funzione che potrebbe essere dispersa in più posizioni.
-exl-id: dbf2dc8b-6067-4d94-9c3c-553452b7ffd9
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '390'
 ht-degree: 0%
@@ -16,16 +15,13 @@ I gestori di funzioni consentono di controllare singole funzioni senza attravers
 I gestori di funzionalità eseguono i seguenti task:
 
 * **Attiva le funzioni di TVSDK.**
-Si tratta di chiamate di funzione per attivare una funzione TVSDK. Ad esempio: 
-`PlaybackManager.play()` viene chiamato quando l’applicazione del lettore deve avviare la riproduzione del video.
+Si tratta di chiamate di funzione per attivare una funzione TVSDK. Ad esempio: `PlaybackManager.play()` viene chiamato quando l’applicazione del lettore deve avviare la riproduzione del video.
 
 * **Ascolta gli eventi TVSDK.**
-Il gestore delle funzioni deve ascoltare gli eventi TVSDK per acquisire informazioni da TVSDK. Ad esempio: 
-`AdsManager` ascolta gli eventi TVSDK Ads per ricevere notifiche all’avvio delle interruzioni pubblicitarie.
+Il gestore delle funzioni deve ascoltare gli eventi TVSDK per acquisire informazioni da TVSDK. Ad esempio: `AdsManager` ascolta gli eventi TVSDK Ads per ricevere notifiche all’avvio delle interruzioni pubblicitarie.
 
 * **Invia eventi al gestore.**
-Dopo aver ricevuto ed elaborato gli eventi da TVSDK, i gestori delle funzioni inviano una notifica al lato client per gestire l’evento. Ad esempio, dopo 
-`AdsManager` riceve un evento di inizio dell’interruzione pubblicitaria, che indica al frammento del lettore di riflettere questa modifica nell’interfaccia utente (disabilita la barra di scorrimento, mostra la sovrapposizione pubblicitaria, ecc.).
+Dopo aver ricevuto ed elaborato gli eventi da TVSDK, i gestori delle funzioni inviano una notifica al lato client per gestire l’evento. Ad esempio, dopo `AdsManager` riceve un evento di inizio dell’interruzione pubblicitaria, che indica al frammento del lettore di riflettere questa modifica nell’interfaccia utente (disabilita la barra di scorrimento, mostra la sovrapposizione pubblicitaria, ecc.).
 
 L’implementazione di riferimento di Primetime include i seguenti gestori di funzioni:
 

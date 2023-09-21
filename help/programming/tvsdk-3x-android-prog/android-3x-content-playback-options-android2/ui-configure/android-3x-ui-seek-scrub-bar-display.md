@@ -1,8 +1,7 @@
 ---
 description: TVSDK supporta la ricerca in una posizione specifica (tempo) in cui il flusso è una playlist a finestra scorrevole, in flussi video on-demand (VOD) e live.
 title: Visualizza una barra di scorrimento di ricerca con la posizione di riproduzione corrente
-exl-id: d5bc3a54-7dfd-435e-abb4-323639732e0a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%

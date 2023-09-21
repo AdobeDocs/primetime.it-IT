@@ -1,8 +1,7 @@
 ---
 description: TVSDK offre un’esperienza simile alla TV, ovvero la possibilità di partecipare nel mezzo di un annuncio in streaming live.
 title: Inserimento parziale di interruzione pubblicitaria
-exl-id: d1a4b347-a86d-423c-bd19-f7e166a171ce
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 0%

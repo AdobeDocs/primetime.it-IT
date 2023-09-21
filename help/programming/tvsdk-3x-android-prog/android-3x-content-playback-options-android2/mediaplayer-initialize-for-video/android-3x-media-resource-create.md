@@ -1,8 +1,7 @@
 ---
 description: La classe MediaResource rappresenta il contenuto da caricare dall'istanza MediaPlayer.
 title: Creare una risorsa multimediale
-exl-id: d9693ee5-c192-4ac5-925a-d64e629920b4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 0%

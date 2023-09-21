@@ -1,8 +1,7 @@
 ---
 description: I sottotitoli codificati e i sottotitoli presentano alcune differenze uniche e possono essere attivati in modi diversi.
 title: Sottotitoli e sottotitoli
-exl-id: 6602e9cf-d1e8-405b-83b7-bdd7d93b88f1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '224'
 ht-degree: 0%
@@ -28,13 +27,13 @@ Devi conoscere i seguenti requisiti per i sottotitoli codificati e i sottotitoli
    * I sottotitoli sono in genere in una lingua diversa e non includono i suoni di sottofondo.
    * I sottotitoli sono in flussi che vengono eseguiti in parallelo al contenuto principale.
 
-      Il `PTMediaPlayer` riproduce il contenuto principale e gli annunci, dove il contenuto principale potrebbe essere live/lineare o VOD, e gli annunci potrebbero essere pre-roll, mid-roll o post-roll.
-   Di seguito sono riportati alcuni requisiti aggiuntivi per i sottotitoli in iOS:
+     Il `PTMediaPlayer` riproduce il contenuto principale e gli annunci, dove il contenuto principale potrebbe essere live/lineare o VOD, e gli annunci potrebbero essere pre-roll, mid-roll o post-roll.
+
+  Di seguito sono riportati alcuni requisiti aggiuntivi per i sottotitoli in iOS:
 
    * Per i timestamp, `X-TIMESTAMP-MAP` valore specificato nella sezione dell&#39;intestazione del `WebVTT` deve corrispondere al timestamp del video.
 
    * Per il sistema, è necessario utilizzare iOS 6.1 o versione successiva.
-
 
 >[!IMPORTANT]
 >

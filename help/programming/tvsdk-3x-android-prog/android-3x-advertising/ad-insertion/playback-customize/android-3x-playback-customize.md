@@ -1,8 +1,7 @@
 ---
 description: Quando la riproduzione raggiunge un’interruzione pubblicitaria, passa un’interruzione pubblicitaria o termina in un’interruzione pubblicitaria, TVSDK definisce alcuni comportamenti predefiniti per il posizionamento della testina di riproduzione corrente.
 title: Personalizzare la riproduzione con gli annunci
-exl-id: 5606c9c6-58ff-42a7-974e-3a445f3d3f28
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '221'
 ht-degree: 0%

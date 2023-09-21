@@ -2,8 +2,7 @@
 description: La sospensione e il ripristino di TVSDK MediaPlayer quando lo schermo di un dispositivo è spento e acceso devono essere gestiti dall'applicazione.
 keywords: SurfaceView;Sospendi;Ripristina;BroadcastReceiver
 title: Sospendi e ripristina MediaPlayer
-exl-id: 159f0f4f-2bb7-40a1-9747-be970dfbb04d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '159'
 ht-degree: 0%

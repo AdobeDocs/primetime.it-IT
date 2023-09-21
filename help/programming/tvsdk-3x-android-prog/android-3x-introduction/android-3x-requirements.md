@@ -1,8 +1,7 @@
 ---
-description: TVSDK ha requisiti specifici per i contenuti multimediali, il contenuto manifesto, DRM e le versioni software.
+description: TVSDK ha requisiti specifici per le versioni media contenuto, manifest contenuto, DRM e software.
 title: Requisiti
-exl-id: 85bf7b85-5f4b-4ed5-aa4f-765dabc5d4d8
-source-git-commit: 3b051c3188c81673129e12dfeb573aaf85c15c97
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '310'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # Requisiti {#requirements}
 
-TVSDK ha requisiti specifici per i contenuti multimediali, il contenuto manifesto, DRM e le versioni software.
+TVSDK ha requisiti specifici per le versioni media contenuto, manifest contenuto, DRM e software.
 
 ## Requisiti di sistema e software {#section_96E5B079900246E78682AE44D3F23068}
 
@@ -30,18 +29,18 @@ Controllare le restrizioni e i requisiti per i flussi e le playlist (manifesti),
 
 | DRM accesso Adobe | Se il flusso protetto da DRM è a velocità bit multipla (MBR), la chiave di crittografia DRM utilizzata per l&#39;MBR deve essere la stessa della chiave utilizzata in tutti i flussi di velocità bit. |
 |---|---|
-| Manifesti della variante dell’annuncio | Deve avere le stesse rappresentazioni a bit rate delle rappresentazioni del contenuto principale. |
+| Manifesti della variante dell’annuncio | Devono avere le stesse rappresentazioni con bitrate delle rappresentazioni del contenuto principale. |
 
-## #EXT-X-VERSION requirements {#section_49A33664651A46EC9ED888BA9C1C3F6D}
+## Requisiti #EXT-X-VERSION {#section_49A33664651A46EC9ED888BA9C1C3F6D}
 
-La versione di `#EXT-X-VERSION` nel file manifesto di [!DNL .m3u8] influisce sulle caratteristiche disponibili per l&#39;applicazione e sui tag `EXT` validi.
+La versione del `#EXT-X-VERSION` file manifesto [!DNL .m3u8] influisce sulle funzioni disponibili per il applicazione e sui tag `EXT` validi.
 
-Seguono alcune informazioni sul tag `#EXT-X-VERSION`, che specifica la versione del protocollo HLS:
+Di seguito sono riportate alcune informazioni sul `#EXT-X-VERSION` tag, che specifica la versione del protocollo HLS:
 
-* La versione deve corrispondere alle funzioni e agli attributi nella playlist HLS; in caso contrario, potrebbero verificarsi errori di riproduzione. Per ulteriori informazioni, consulta [Specifiche di HTTP Live Streaming](https://datatracker.ietf.org/doc/draft-pantos-http-live-streaming/?include_text=1).
+* La versione deve corrispondere alle caratteristiche e agli attributi della playlist HLS; In caso contrario, potrebbero verificarsi errori di riproduzione. Per ulteriori informazioni, consulta [Specifiche di HTTP Live Streaming](https://datatracker.ietf.org/doc/draft-pantos-http-live-streaming/?include_text=1).
 * L’Adobe consiglia di utilizzare almeno la versione 2 di HLS per la riproduzione nei client basati su TVSDK.
 
-   Client e server devono implementare le versioni nel modo seguente:
+  Client e server devono implementare le versioni nel modo seguente:
 
 <table frame="all" colsep="1" rowsep="1" id="table_62EB98EDD9DE49EC84CB1C7D59BC40E6"> 
  <thead> 
@@ -52,18 +51,18 @@ Seguono alcune informazioni sul tag `#EXT-X-VERSION`, che specifica la versione 
  </thead>
  <tbody> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> EXT-X-VERSION:2 </span> </td> 
+   <td colname="1"> <span class="codeph"> VERSIONE EXT-X:2 </span> </td> 
    <td colname="2"> L'attributo IV del <span class="codeph"> TASTO EXT-X </span> tag. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> EXT-X-VERSION:3 </span> </td> 
+   <td colname="1"> <span class="codeph"> VERSIONE EXT-X:3 </span> </td> 
    <td colname="2"> 
     <ul id="ul_C9500D3F934848639C204BF248F139FF"> 
-     <li id="li_535A7E3FABCB46FE872A7EA5DE2A1784">Valori di durata <span class="codeph"> EXTINF a virgola mobile </span> <p>I tag di durata ( <span class="codeph"> #EXTINF: </span>&lt;durata&gt;,&lt;titolo&gt;) nella versione 2 sono stati arrotondati a valori interi. La versione 3 e successive richiedono che le durate siano specificate esattamente, in virgola mobile. </p> </li> 
+     <li id="li_535A7E3FABCB46FE872A7EA5DE2A1784">Valori di durata EXTINF </span> a virgola <span class="codeph"> mobile <p>I tag di durata ( <span class="codeph"> #EXTINF: </span>&lt;duration&gt;,&lt;title&gt;) nella versione 2 sono stati arrotondati a valori interi. &lt;/title&gt;&lt;/duration&gt; Versione 3 e superiori richiedono che le durate siano specificate esattamente, in virgola mobile. </p> </li> 
     </ul> </td> 
   </tr> 
   <tr rowsep="0"> 
-   <td colname="1"> <span class="codeph"> EXT-X-VERSION:4 </span> </td> 
+   <td colname="1"> <span class="codeph"> VERSIONE EXT-X:4 </span> </td> 
    <td colname="2"> 
     <ul id="ul_3355A6CBBE2141DDB92660BB4B604D70"> 
      <li id="li_5E73D41AF6DC4CEE88D6C029FFCFC350">Il <span class="codeph"> INT-X-BYTERANGE </span> tag </li> 

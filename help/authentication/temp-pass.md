@@ -1,8 +1,7 @@
 ---
 title: Passaggio temporaneo
 description: Passaggio temporaneo
-exl-id: 1df14090-8e71-4e3e-82d8-f441d07c6f64
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '2210'
 ht-degree: 0%
@@ -26,7 +25,7 @@ Temp Pass consente ai programmatori di offrire accesso temporaneo ai loro conten
 * I programmatori specificano la durata (Time-To-Live, TTL) della loro Temp Pass.
 * Il passaggio temporaneo funziona per richiedente.  Ad esempio, la NBC potrebbe impostare una Temp Pass di 4 ore per il richiedente &quot;NBCOlympics&quot;.
 * I programmatori possono reimpostare tutti i token concessi a un particolare richiedente.  Il &quot;MVPD temporaneo&quot; utilizzato per implementare il passaggio Temp deve essere configurato con &quot;Autenticazione per richiedente&quot; abilitato.
-* **L’accesso Passaggio Temp è concesso a singoli utenti su dispositivi specifici**. Dopo la scadenza dell’accesso Passaggio temporaneo per un utente, quest’ultimo non potrà ottenere l’accesso temporaneo sullo stesso dispositivo fino alla scadenza dell’utente [token di autorizzazione](/help/authentication/glossary.md#authz-token) viene cancellato dal server di autenticazione di Adobe Primetime.
+* **L’accesso Passaggio temporaneo è concesso a singoli utenti su dispositivi specifici**. Dopo la scadenza dell’accesso Passaggio temporaneo per un utente, quest’ultimo non potrà ottenere l’accesso temporaneo sullo stesso dispositivo fino alla scadenza dell’utente [token di autorizzazione](/help/authentication/glossary.md#authz-token) viene cancellato dal server di autenticazione di Adobe Primetime.
 
 
 >[!NOTE]
@@ -38,8 +37,8 @@ Temp Pass consente ai programmatori di offrire accesso temporaneo ai loro conten
 * **Calcolo del tempo di visualizzazione** - Il tempo di validità di un passaggio temporaneo non è correlato al tempo di visualizzazione del contenuto nell&#39;applicazione del programmatore.  Al momento della richiesta iniziale di autorizzazione da parte dell’utente tramite Passaggio temporale, viene calcolato un tempo di scadenza aggiungendo il tempo della richiesta corrente iniziale al TTL specificato dal programmatore. Questa data di scadenza è associata all&#39;ID dispositivo dell&#39;utente e all&#39;ID richiedente del programmatore ed è memorizzata nel database di autenticazione di Primetime. Ogni volta che l’utente tenta di accedere al contenuto utilizzando Temp Pass dallo stesso dispositivo, l’autenticazione Primetime confronta il tempo di richiesta del server con il tempo di scadenza associato all’ID dispositivo dell’utente e all’ID richiedente del programmatore. Se il tempo di richiesta del server è inferiore al tempo di scadenza, l&#39;autorizzazione verrà concessa; in caso contrario, l&#39;autorizzazione verrà negata.
 * **Parametri di configurazione** - I seguenti parametri di Passaggio Temp possono essere specificati da un programmatore per creare una regola di Passaggio Temp:
    * **TTL token** - La quantità di tempo che un utente può osservare senza accedere a un MVPD. L’ora è basata sull’orologio e scade nel caso in cui l’utente stia guardando il contenuto o meno.
-   >[!NOTE]
-   >A un ID richiedente non può essere associata più di una regola di passaggio temporaneo.
+  >[!NOTE]
+  >A un ID richiedente non può essere associata più di una regola di passaggio temporaneo.
 * **Autenticazione/autorizzazione** - Nel flusso Passata temporanea, specificare MVPD come &quot;Passata temporanea&quot;.  L’autenticazione Primetime non comunica con un MVPD effettivo nel flusso di Passaggio Temp, pertanto l’MVPD &quot;Passaggio Temp&quot; autorizza qualsiasi risorsa. I programmatori possono specificare una risorsa accessibile utilizzando Temp Pass, come fanno per le altre risorse sul loro sito. La libreria Media Verifier può essere utilizzata come di consueto per verificare il token multimediale corto Temp Pass e applicare il controllo delle risorse prima della riproduzione.
 * **Tracciamento dei dati nel flusso di passaggio temporaneo** - Due punti relativi al tracciamento dei dati durante un flusso di adesione Temp Pass:
    * L’ID di tracciamento passato dall’autenticazione Primetime al tuo **sendTrackingData()** il callback è un hash dell&#39;ID dispositivo.

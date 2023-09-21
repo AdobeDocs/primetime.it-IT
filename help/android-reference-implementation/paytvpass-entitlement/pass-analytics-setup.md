@@ -1,8 +1,7 @@
 ---
 description: Per utilizzare le funzioni di reporting di Adobe Analytics, puoi impostare l’implementazione di riferimento.
 title: Configurare il reporting di Adobe Analytics
-exl-id: 3607f9d4-1069-4722-af0b-121223125112
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '379'
 ht-degree: 0%
@@ -24,14 +23,14 @@ La tabella seguente presenta i dati inviati ad Adobe Analytics:
 |---|---|---|
 | Dati contestuali | `a.media.pass.MvpdId (String)` | MVPD selezionato dall&#39;utente |
 |  | `a.media.pass.ClientType` | (Stringa) Il tipo di client è &quot;flash&quot;, &quot;html5&quot;, &quot;ios&quot; o &quot;android&quot; |
-|  |  |  |
+|  | | |
 | Nome azione | `a.media.pass.event.AuthenticationDetection` | Flusso di lavoro di autenticazione completato |
 | Dati contestuali | `a.media.pass.Successful` | (Booleano) Indica se la richiesta del token è riuscita, true o false |
 |  | `a.media.pass.MvpdId` | (Stringa) MVPD selezionato dall&#39;utente |
 |  | `a.media.pass.Guid` | (Stringa) Un ID di tracciamento |
 |  | `a.media.pass.Cached` | (Booleano) Token già nella cache, true o false |
 |  | `a.media.pass.ClientType` | (Stringa) Il tipo di client è &quot;flash&quot;, &quot;html5&quot;, &quot;ios&quot; o &quot;android&quot; |
-|  |  |  |
+|  | | |
 | Nome azione | `a.media.pass.event.AuthorizationDetection` | Un flusso di lavoro di autorizzazione è stato completato |
 | Dati contestuali | `a.media.pass.Successful` | (Booleano) Indica se la richiesta del token è riuscita, true o false |
 |  | `a.media.pass.MvpdId` | (Stringa) MVPD selezionato dall&#39;utente |

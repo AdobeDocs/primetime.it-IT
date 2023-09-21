@@ -2,8 +2,7 @@
 description: Puoi abilitare o disabilitare la funzione Lazy Ad Resolving utilizzando il meccanismo esistente Lazy Ad Loading (Lazy Ad Resolving è abilitato per impostazione predefinita).
 keywords: Lazy;Risoluzione annuncio;Caricamento annuncio;delayLoading
 title: Abilita lazy ad resolving
-exl-id: 4cd53ace-b0f5-4eef-93c3-644c2f48ce49
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 0%
@@ -22,22 +21,22 @@ Puoi abilitare o disabilitare Lazy Ad Resolving chiamando [AdvertisingMetadata.s
    * Se `hasDelayAdLoading` restituisce true, TVSDK risolve solo gli annunci e le transizioni iniziali nello stato PREPARATO. Gli annunci rimanenti vengono risolti e posizionati durante la riproduzione.
    * Quando `hasPreroll` o `hasLivePreroll` return false, TVSDK presuppone che non vi sia alcun annuncio preroll e avvia immediatamente la riproduzione del contenuto. Per impostazione predefinita sono true.
 
-      API rilevanti per la risoluzione lazy degli annunci:
+     API rilevanti per la risoluzione lazy degli annunci:
 
-      ```
-      Class: 
-         com.adobe.mediacore.metadata.AdvertisingMetadata 
-      
-      Methods: 
-      […] 
-          public final boolean hasDelayAdLoading() // Check if Lazy Ad Resolving enabled 
-          public final void setDelayAdLoading()    // Enable or disable Lazy Ad Resolving 
-          public final boolean hasPreroll()        // Check for existence of pre-roll ads 
-          public final void setPreroll()           // Set pre-roll true or false 
-          public final boolean hasLivePreroll()    // Check for live pre-roll ads 
-          public final void setLivePreroll()       // Set live pre-roll true or false 
-      […]
-      ```
+     ```
+     Class: 
+        com.adobe.mediacore.metadata.AdvertisingMetadata 
+     
+     Methods: 
+     […] 
+         public final boolean hasDelayAdLoading() // Check if Lazy Ad Resolving enabled 
+         public final void setDelayAdLoading()    // Enable or disable Lazy Ad Resolving 
+         public final boolean hasPreroll()        // Check for existence of pre-roll ads 
+         public final void setPreroll()           // Set pre-roll true or false 
+         public final boolean hasLivePreroll()    // Check for live pre-roll ads 
+         public final void setLivePreroll()       // Set live pre-roll true or false 
+     […]
+     ```
 
 1. Per riflettere accuratamente gli annunci come spunti su una barra di scorrimento, ascolta la `TimelineEvent` e ridisegnare la barra di scorrimento ogni volta che si riceve questo evento.
 

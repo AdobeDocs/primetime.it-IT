@@ -1,8 +1,7 @@
 ---
 title: Integrazione dei dati lato server di autenticazione Primetime in Adobe Analytics
 description: Integrazione dei dati lato server di autenticazione Primetime in Adobe Analytics
-exl-id: c1f1f2a3-c98c-4aed-92ad-1f9bfd80b82b
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1133'
 ht-degree: 4%
@@ -80,7 +79,6 @@ Il rapporto deve avere una marca temporale in quanto gli eventi verranno inviati
 >
 >* Contatore (nessuna relazione secondaria)
 
-
 | Evento | Evento Adobe Analytics |
 |---------------------------------------|-----------------------|
 | AuthN richiesta | event1 |
@@ -112,7 +110,6 @@ Il rapporto deve avere una marca temporale in quanto gli eventi verranno inviati
 >* Allocazione: più recente (ultimo)
 >* Scadenza dopo: hit
 >* Tipo: Stringa di testo
-
 
 | Proprietà | eVar |
 |-----------------------------------|--------------------------------|

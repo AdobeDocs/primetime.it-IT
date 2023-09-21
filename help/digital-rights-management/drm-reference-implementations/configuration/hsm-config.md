@@ -1,8 +1,7 @@
 ---
 description: È possibile configurare l'implementazione di riferimento con il provider Sun PKCS#11 che supporta HSM. Sebbene non sia richiesto, l’uso di un HSM è consigliato.
 title: Configurazione HSM
-exl-id: 87a7d242-8202-4749-91a6-e6697be6a61d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: 'Adobe Access Server for Protected Streaming richiede due tipi di file di configurazione: un file di configurazione globale (flashaccess-global.xml) e un file di configurazione tenant per ogni tenant (flashaccess-tenant.xml).'
 title: Struttura directory di configurazione
-exl-id: 6561c001-798c-4503-8afb-93580d957372
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 0%

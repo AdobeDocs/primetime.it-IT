@@ -1,8 +1,7 @@
 ---
 description: Il flag forceflash nell’elenco di origine forza il fallback del Flash per un URL. Per questo URL, puoi utilizzare Adobe Flash Player per riprodurre il contenuto.
 title: Forzare il fallback del Flash utilizzando l’elenco di origini dei contenuti multimediali
-exl-id: 657bf9b1-d911-489d-80ca-2956b008431b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 0%

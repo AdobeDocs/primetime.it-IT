@@ -1,8 +1,7 @@
 ---
 description: Il browser TVSDK prepara gli oggetti TimedMetadata per i tag sottoscritti ogni volta che questi oggetti vengono rilevati nel file MPD (Media Presentation Description).
 title: Iscriviti ai tag annuncio personalizzati
-exl-id: d4b9ec3a-9c3f-4adf-984e-b45862e97140
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 0%

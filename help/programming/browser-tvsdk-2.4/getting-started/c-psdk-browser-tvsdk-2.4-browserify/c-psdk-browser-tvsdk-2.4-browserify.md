@@ -1,8 +1,7 @@
 ---
 description: Puoi creare un lettore compatibile con Browserify utilizzando i file JS forniti dal TVSDK del browser.
 title: Lettore compatibile con Browserify
-exl-id: 3e9751d8-7a7e-465b-8d46-d07e4ccb1f5b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%

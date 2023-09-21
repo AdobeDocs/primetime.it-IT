@@ -1,8 +1,7 @@
 ---
 description: Questo esempio mostra il modo consigliato per includere le specifiche TimeRange nella timeline di riproduzione.
 title: Posizionare i marcatori degli annunci TimeRange sulla timeline
-exl-id: a4d45395-38a4-4345-9ba3-87cd9200b9f6
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 0%

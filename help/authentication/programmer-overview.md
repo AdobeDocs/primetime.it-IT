@@ -1,8 +1,7 @@
 ---
 title: Panoramica sui programmatori
 description: Panoramica sui programmatori
-exl-id: 64a12e49-0ecb-4b81-977d-60c10925bb59
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '4272'
 ht-degree: 0%
@@ -215,7 +214,6 @@ La comunicazione tra Access Enabler e la pagina web o l’app del lettore è asi
 >* L’autenticazione si verifica come scambio SAML, tra Adobe Primetime authentication as the Service Provider (SP) e MVPD as the Identity Provider (IdP).
 >
 >* L’autorizzazione utilizza uno scambio di servizi web back-channel (server-to-server) tra l’autenticazione Adobe Primetime (l’SP) e un MVPD (l’IdP).
-
 
 
 #### 2 ter. Interfaccia Utente Di Adesione {#entitlement-ui}

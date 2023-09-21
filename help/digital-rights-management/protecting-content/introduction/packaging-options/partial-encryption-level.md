@@ -2,8 +2,7 @@
 title: Livello di crittografia parziale
 description: Livello di crittografia parziale
 copied-description: true
-exl-id: 47bcd5e1-f45a-44b8-8a00-209a6d0abd0d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 0%

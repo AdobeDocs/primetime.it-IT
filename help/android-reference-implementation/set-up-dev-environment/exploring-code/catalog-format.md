@@ -1,8 +1,7 @@
 ---
 description: L’implementazione di riferimento di Primetime utilizza un formato di feed basato su JSON per le risposte. Questo formato viene analizzato utilizzando un'implementazione dell'interfaccia IFeedItemAdapter.
 title: Formato catalogo
-exl-id: faaeb647-9c01-4290-be1e-2b8461c8ad27
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 0%
@@ -137,7 +136,7 @@ Il seguente blocco di codice definisce **oggetto metadati**:
 | Proprietà | Descrizione |
 |--- |--- |
 | annuncio | Metadati relativi all’annuncio. |
-| tipo | Il valore può essere Annunci Primetime, Interruzioni pubblicitarie dirette o Marcatori annuncio personalizzati. <br/><br/>Il PSDK fornisce il supporto integrato per i seguenti tipi di metadati: metadati relativi al pubblico per Primetime Ad Server (annunci Primetime), interruzioni pubblicitarie dirette con URL di annunci (interruzioni pubblicitarie dirette) e marcatori pubblicitari personalizzati che forniscono l’intervallo di tempo per ciascun marcatore pubblicitario (marcatori pubblicitari personalizzati). Ogni tipo dispone di un AdProvider integrato nel PSDK che elabora i metadati.  <br/><br/>Il formato JSON per ciascuno di questi è stato definito di seguito. |
+| tipo | Il valore può essere Annunci Primetime, Interruzioni pubblicitarie dirette o Marcatori annuncio personalizzati. <br/><br/>Il PSDK fornisce il supporto integrato per i seguenti tipi di metadati: metadati relativi all’Auditude per Primetime Ad Server (annunci Primetime), interruzioni pubblicitarie dirette con URL di annunci (interruzioni pubblicitarie dirette) e marcatori pubblicitari personalizzati che forniscono l’intervallo di tempo per ciascun marcatore pubblicitario (marcatori pubblicitari personalizzati). Ogni tipo dispone di un AdProvider integrato nel PSDK che elabora i metadati.  <br/><br/>Il formato JSON per ciascuno di questi è stato definito di seguito. |
 | dettagli | Include gli attributi dei metadati dell’annuncio. Entrambi i tipi di metadati di annunci dispongono di un proprio set di attributi definito di seguito. Per i tipi incorporati, gli attributi inclusi definiscono i dati previsti dal PSDK per quel tipo. |
 | adesione | Metadati relativi all’adesione |
 | id | ID risorsa multimediale utilizzato per le richieste di autorizzazione per il servizio pass Adobe Primetime per TV a pagamento. L’ID può essere una stringa di testo o una stringa mRSS con codifica HTML. Qualsiasi contenuto multimediale che richiede l’autorizzazione deve contenere un ID risorsa valido. |

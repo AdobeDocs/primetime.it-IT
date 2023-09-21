@@ -1,8 +1,7 @@
 ---
 description: È possibile reimpostare, riutilizzare o rilasciare un'istanza di MediaPlayer non più necessaria.
 title: Riutilizzare o rimuovere un'istanza MediaPlayer
-exl-id: 8b84c7f1-713a-46b4-8eb7-d699a79e74b7
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 0%
@@ -21,13 +20,13 @@ Questa operazione è utile nei seguenti casi:
 
 * Si desidera riutilizzare un `MediaPlayer` ma deve caricare un nuovo `MediaResource` (contenuto video) e sostituisci l’istanza precedente.
 
-   Il ripristino consente di riutilizzare `MediaPlayer` senza il sovraccarico di rilasciare le risorse, ricreando il `MediaPlayer`e la riallocazione delle risorse.
+  Il ripristino consente di riutilizzare `MediaPlayer` senza il sovraccarico di rilasciare le risorse, ricreando il `MediaPlayer`e la riallocazione delle risorse.
 
 * Quando `MediaPlayer` è nello stato ERROR e deve essere cancellato.
 
-   >[!IMPORTANT]
-   >
-   >Questo è l’unico modo per recuperare dallo stato ERROR.
+  >[!IMPORTANT]
+  >
+  >Questo è l’unico modo per recuperare dallo stato ERROR.
 
    1. Chiamata `reset` per restituire il `MediaPlayer` istanza al relativo stato non inizializzato:
 
@@ -57,10 +56,10 @@ Di seguito sono riportati alcuni motivi per cui è necessario rilasciare una `Me
 
 * Rilasciare `MediaPlayer`.
 
-   ```java
-   void release() throws MediaPlayerException;
-   ```
+  ```java
+  void release() throws MediaPlayerException;
+  ```
 
-   >[!NOTE]
-   >
-   >Dopo il `MediaPlayer` è stata rilasciata, non è più possibile utilizzarla. Se è stato utilizzato un metodo `MediaPlayer` viene chiamata dopo il rilascio, un `MediaPlayerException` viene lanciato.
+  >[!NOTE]
+  >
+  >Dopo il `MediaPlayer` è stata rilasciata, non è più possibile utilizzarla. Se è stato utilizzato un metodo `MediaPlayer` viene chiamata dopo il rilascio, un `MediaPlayerException` viene lanciato.

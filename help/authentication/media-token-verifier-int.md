@@ -1,8 +1,7 @@
 ---
 title: Integrazione di Media Token Verifier
 description: Integrazione di Media Token Verifier
-exl-id: 1688889a-2e30-4d66-96ff-1ddf4b287f68
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '916'
 ht-degree: 0%

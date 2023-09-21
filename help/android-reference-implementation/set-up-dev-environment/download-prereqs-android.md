@@ -1,8 +1,7 @@
 ---
 title: Scaricare e configurare i prerequisiti software
 description: Il processo di installazione è semplice. Se sul sistema è già installato JDK, puoi saltare questo passaggio, ma tieni presente che JDK, Eclipse IDE e il sistema operativo devono essere compatibili.
-exl-id: c2884a55-4f5e-4da8-807d-633625d7fef9
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '354'
 ht-degree: 0%
@@ -30,18 +29,18 @@ ht-degree: 0%
 
       * Per Mac OS X/Unix:
 
-         ```
-         chmod +x android 
-         android update sdk --no-ui
-         ```
+        ```
+        chmod +x android 
+        android update sdk --no-ui
+        ```
 
       * Per Windows:
 
-         ```
-         android update sdk --no-ui
-         ```
+        ```
+        android update sdk --no-ui
+        ```
 
-         Questo processo richiede un po&#39; di tempo.
+        Questo processo richiede un po&#39; di tempo.
 
 1. Configura Eclipse.
    1. Avvia Eclipse.

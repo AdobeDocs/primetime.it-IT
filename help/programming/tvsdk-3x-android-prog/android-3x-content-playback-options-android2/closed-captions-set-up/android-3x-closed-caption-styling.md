@@ -1,8 +1,7 @@
 ---
 description: È possibile fornire informazioni sullo stile per le tracce di sottotitoli codificati utilizzando la classe TextFormat, che imposta lo stile per i sottotitoli codificati visualizzati dal lettore.
 title: Controlla lo stile dei sottotitoli
-exl-id: 43c1391d-a937-464f-99fd-fe8deda7da44
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '842'
 ht-degree: 0%
@@ -53,90 +52,89 @@ Questa classe racchiude informazioni sullo stile dei sottotitoli codificati, ad 
 
    * Ottieni tutte le impostazioni di stile con `MediaPlayer.getCCStyle` Il valore restituito è un&#39;istanza del `TextFormat` di rete.
 
-      ```java
-      /** 
-      * @return the current closed captioning style.  
-      * If no style was previously set, it returns a TextFormat object 
-      * with default values for each attribute. 
-      * @throws MediaPlayerException if media player was already released. 
-      */ 
-      public TextFormat getCCStyle() throws MediaPlayerException;
-      ```
+     ```java
+     /** 
+     * @return the current closed captioning style.  
+     * If no style was previously set, it returns a TextFormat object 
+     * with default values for each attribute. 
+     * @throws MediaPlayerException if media player was already released. 
+     */ 
+     public TextFormat getCCStyle() throws MediaPlayerException;
+     ```
 
    * Ottenere le impostazioni una alla volta tramite `TextFormat` metodi getter dell&#39;interfaccia.
 
-      ```java
-      public java.lang.String getFontColor(); 
-      public java.lang.String getBackgroundColor(); 
-      public java.lang.String getFillColor(); // retrieve the font fill color 
-      public java.lang.String getEdgeColor(); // retrieve the font edge color 
-      public TextFormat.Size getSize(); // retrieve the font size 
-      public TextFormat.FontEdge getFontEdge(); // retrieve the font edge type 
-      public TextFormat.Font getFont(); // retrieve the font type 
-      public int getFontOpacity(); 
-      public int getBackgroundOpacity(); 
-      public java.lang.String getBottomInset(java.lang.String bi); 
-      public java.lang.String getSafeArea(java.lang.String sa);
-      ```
+     ```java
+     public java.lang.String getFontColor(); 
+     public java.lang.String getBackgroundColor(); 
+     public java.lang.String getFillColor(); // retrieve the font fill color 
+     public java.lang.String getEdgeColor(); // retrieve the font edge color 
+     public TextFormat.Size getSize(); // retrieve the font size 
+     public TextFormat.FontEdge getFontEdge(); // retrieve the font edge type 
+     public TextFormat.Font getFont(); // retrieve the font type 
+     public int getFontOpacity(); 
+     public int getBackgroundOpacity(); 
+     public java.lang.String getBottomInset(java.lang.String bi); 
+     public java.lang.String getSafeArea(java.lang.String sa);
+     ```
 
 1. Per modificare le impostazioni di stile, effettuare una delle seguenti operazioni:
 
    * Utilizzare il metodo setter `MediaPlayer.setCCStyle`, passaggio di un&#39;istanza di `TextFormat` Interfaccia:
 
-      ```java
-      /** 
-      * Sets the closed captioning style. Used to control the closed captioning font, 
-      * size, color, edge and opacity.  
-      * 
-      * This method is safe to use even if the current media stream doesn't have closed 
-      * captions. 
-      * 
-      * @param textFormat 
-      * @throws MediaPlayerException 
-      */ 
-      public void setCCStyle(TextFormat textFormat) throws MediaPlayerException;
-      ```
+     ```java
+     /** 
+     * Sets the closed captioning style. Used to control the closed captioning font, 
+     * size, color, edge and opacity.  
+     * 
+     * This method is safe to use even if the current media stream doesn't have closed 
+     * captions. 
+     * 
+     * @param textFormat 
+     * @throws MediaPlayerException 
+     */ 
+     public void setCCStyle(TextFormat textFormat) throws MediaPlayerException;
+     ```
 
-   * Utilizza il `TextFormatBuilder` che definisce i singoli metodi di impostazione.
+   * Utilizza il `TextFormatBuilder` classe, che definisce i singoli metodi di impostazione.
 
-      Il `TextFormat` L&#39;interfaccia definisce un oggetto immutabile in modo che esistano solo metodi getter e nessun setter. È possibile impostare i parametri di stile dei sottotitoli solo con `TextFormatBuilder` classe:
+     Il `TextFormat` L&#39;interfaccia definisce un oggetto immutabile in modo che esistano solo metodi getter e nessun setter. È possibile impostare i parametri di stile dei sottotitoli solo con `TextFormatBuilder` classe:
 
-      ```java
-      // set font type 
-      public void setFont(Font font)  
-      public void setBackgroundColor(String backgroundColor) 
-      public void setFillColor(String fillColor) 
-      // set the font-edge color 
-      public void setEdgeColor(String edgeColor)  
-      // set the font size 
-      public void setSize(Size size)  
-      // set the font edge type 
-      public void setFontEdge(FontEdge fontEdge)  
-      public void setFontOpacity(int fontOpacity) 
-      public void setBackgroundOpacity(int backgroundOpacity) 
-      // set the font-fill opacity level 
-      public void setFillOpacity(int fillOpacity)  
-      public void setFontColor(String fontColor) 
-      public void setBottomInset(String bi) 
-      public void setSafeArea(String sa) 
-      public void setTreatSpaceAsAlphaNum(bool)
-      ```
+     ```java
+     // set font type 
+     public void setFont(Font font)  
+     public void setBackgroundColor(String backgroundColor) 
+     public void setFillColor(String fillColor) 
+     // set the font-edge color 
+     public void setEdgeColor(String edgeColor)  
+     // set the font size 
+     public void setSize(Size size)  
+     // set the font edge type 
+     public void setFontEdge(FontEdge fontEdge)  
+     public void setFontOpacity(int fontOpacity) 
+     public void setBackgroundOpacity(int backgroundOpacity) 
+     // set the font-fill opacity level 
+     public void setFillOpacity(int fillOpacity)  
+     public void setFontColor(String fontColor) 
+     public void setBottomInset(String bi) 
+     public void setSafeArea(String sa) 
+     public void setTreatSpaceAsAlphaNum(bool)
+     ```
 
-      >[!IMPORTANT]
-      >
-      >**Impostazioni colore:** In Android TVSDK 2.X, è stato apportato un miglioramento allo stile dei colori dei sottotitoli. Questo miglioramento consente di impostare i colori dei sottotitoli codificati utilizzando una stringa esadecimale che rappresenta i valori dei colori RGB. La rappresentazione colore esadecimale RGB è la nota stringa da 6 byte utilizzata in applicazioni come Photoshop:
-      >
-      >* FFFFFF = Nero
-      >* 000000 = bianco
-      >* FF0000 = rosso
-      >* 00FF00 = Verde
-      >* 0000FF = Blu
-         >e così via.
-
-      >
-      >Nell&#39;applicazione, ogni volta che trasmettete le informazioni sullo stile del colore a `TextFormatBuilder`, si utilizza ancora il `Color` come prima, ma ora è necessario aggiungere `getValue()` al colore per ottenere il valore come stringa. Ad esempio:
-      >
-      >`tfb = tfb.setBackgroundColor(TextFormat.Color.RED      <b>.getValue()</b>);`
+     >[!IMPORTANT]
+     >
+     >**Impostazioni colore:** In Android TVSDK 2.X, è stato apportato un miglioramento allo stile dei colori dei sottotitoli. Questo miglioramento consente di impostare i colori dei sottotitoli codificati utilizzando una stringa esadecimale che rappresenta i valori dei colori RGB. La rappresentazione colore esadecimale RGB è la nota stringa da 6 byte utilizzata in applicazioni come Photoshop:
+     >
+     >* FFFFFF = Nero
+     >* 000000 = bianco
+     >* FF0000 = rosso
+     >* 00FF00 = Verde
+     >* 0000FF = Blu
+     >e così via.
+     >
+     >Nell&#39;applicazione, ogni volta che trasmettete le informazioni sullo stile del colore a `TextFormatBuilder`, si utilizza ancora il `Color` come prima, ma ora è necessario aggiungere `getValue()` al colore per ottenere il valore come stringa. Ad esempio:
+     >
+     >`tfb = tfb.setBackgroundColor(TextFormat.Color.RED      <b>.getValue()</b>);`
 
 Poiché l&#39;impostazione dello stile sottotitoli è un&#39;operazione asincrona, la visualizzazione delle modifiche sullo schermo potrebbe richiedere alcuni secondi.
 

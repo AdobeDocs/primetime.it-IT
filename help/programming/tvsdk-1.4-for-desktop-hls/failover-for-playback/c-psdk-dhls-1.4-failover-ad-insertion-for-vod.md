@@ -1,8 +1,7 @@
 ---
 description: Il processo di inserimento di annunci video-on-demand (VOD) è costituito dalle fasi di risoluzione, inserimento e riproduzione degli annunci. Per il tracciamento degli annunci, TVSDK deve informare un server di tracciamento remoto sull’avanzamento della riproduzione di ciascun annuncio. Quando si verificano situazioni impreviste, adotta le misure appropriate.
 title: Inserimento e failover di annunci per VOD
-exl-id: 5af5bef6-e948-4215-a89f-ee46fd2d8a38
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 0%
@@ -21,17 +20,17 @@ TVSDK supporta i seguenti tipi di provider di annunci:
 
 * Provider di annunci metadati
 
-   I dati dell’annuncio sono codificati in file JSON di testo normale.
+  I dati dell’annuncio sono codificati in file JSON di testo normale.
 * Provider di annunci di Ad Decisioning di Primetime
 
-   TVSDK invia una richiesta, contenente un set di parametri di targeting e un numero di identificazione della risorsa, al server back-end di Primetime ad decisioning. Primetime ad decisioning risponde con un documento SMIL (Synchronized Multimedia Integration Language) contenente le informazioni sull’annuncio richieste.
+  TVSDK invia una richiesta, contenente un set di parametri di targeting e un numero di identificazione della risorsa, al server back-end di Primetime ad decisioning. Primetime ad decisioning risponde con un documento SMIL (Synchronized Multimedia Integration Language) contenente le informazioni sull’annuncio richieste.
 
 Durante questa fase può verificarsi una delle seguenti situazioni di failover:
 
 * Non è possibile recuperare i dati per motivi quali mancanza di connettività o errore lato server, ad esempio l’impossibilità di trovare una risorsa e così via.
 * I dati sono stati recuperati, ma il formato non è valido.
 
-   Ciò potrebbe verificarsi, ad esempio, perché l’analisi dei dati in entrata non è riuscita.
+  Ciò potrebbe verificarsi, ad esempio, perché l’analisi dei dati in entrata non è riuscita.
 
 TVSDK invia una notifica di avviso relativa all’errore e continua l’elaborazione.
 
@@ -63,6 +62,6 @@ Per tutte e tre le classi di errore, TVSDK inoltra gli eventi attivati all’app
 * Eventi di notifica quando il profilo viene modificato a causa dell’algoritmo di failover.
 * Gli eventi di notifica vengono attivati quando tutte le opzioni di failover sono state considerate e non è possibile eseguire alcuna azione aggiuntiva automaticamente.
 
-   L&#39;applicazione deve intraprendere l&#39;azione appropriata.
+  L&#39;applicazione deve intraprendere l&#39;azione appropriata.
 
 Se si verificano o meno errori, chiamate TVSDK `AdBreakPlaybackEvent.AD_BREAK_COMPLETE` per ogni `AdBreakPlaybackEvent.AD_BREAK_STARTED` e `AdPlaybackEvent.AD_COMPLETED` per ogni `AdPLaybackEvent.AD_STARTED`. Tuttavia, se non è stato possibile scaricare i segmenti, potrebbero esserci degli spazi nella timeline. Quando gli spazi sono sufficientemente ampi, i valori nella posizione della testina di riproduzione e l’avanzamento dell’annuncio riportato potrebbero mostrare discontinuità.

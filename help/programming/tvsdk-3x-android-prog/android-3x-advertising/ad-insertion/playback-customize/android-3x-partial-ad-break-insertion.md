@@ -2,8 +2,7 @@
 title: Inserimento parziale dell’interruzione pubblicitaria
 description: Inserimento parziale dell’interruzione pubblicitaria
 copied-description: true
-exl-id: c86f1e99-7f1e-4a1e-b285-568ad6659f45
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: È possibile utilizzare le seguenti informazioni per personalizzare il lettore. Per ogni costrutto visivo, i comportamenti corrispondenti sono menzionati nel comportamento predefinito.
 title: Scuoiamento del lettore
-exl-id: 4ad50f96-d174-401f-a731-21e5fbfdbe31
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1422'
 ht-degree: 0%
@@ -546,7 +545,7 @@ Di seguito sono riportati gli stili per configurare la condivisione:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-btn-share-video-twitter</span> </td>
-   <td colname="col2"> <p>Voce di menu che consente di condividere contenuti su Twitter. </p> </td>
+   <td colname="col2"> <p>Voce di menu che consente di condividere il contenuto sul Twitter. </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-btn-share-video-google-plus</span> </td>

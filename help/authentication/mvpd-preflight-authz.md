@@ -1,8 +1,7 @@
 ---
 title: Autorizzazione di verifica preliminare MVPD
 description: Autorizzazione di verifica preliminare MVPD
-exl-id: da2e7150-b6a8-42f3-9930-4bc846c7eee9
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '745'
 ht-degree: 0%
@@ -125,7 +124,7 @@ Nella tabella seguente sono elencati gli MVPD che supportano l&#39;autorizzazion
 
 | Approccio di verifica preliminare | MVPD | Note |
 |:-------------------------------:|:--------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------:|
-| AuthZ multicanale | Comcast AT&amp;T Proxy Clearleap Charter_Direct Proxy GLDS Rogers Verizon OSN Bell Sasktel Optimum AlticeOne |  |
+| AuthZ multicanale | Comcast AT&amp;T Proxy Clearleap Charter_Direct Proxy GLDS Rogers Verizon OSN Bell Sasktel Optimum AlticeOne |                                                                    |
 | Linea di canali nei metadati dell’utente | Suddenlink HTC | Tutte le integrazioni dirette Synacor supportano anche questo approccio. |
 | Fork e join | Tutti gli altri non elencati sopra | Numero massimo predefinito di risorse controllate = 5. |
 

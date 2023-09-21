@@ -1,8 +1,7 @@
 ---
 description: Per i contenuti live e video-on-demand (VOD), TVSDK avvia la riproduzione scaricando la playlist associata al bitrate a risoluzione media e scaricando i segmenti multimediali definiti da tale playlist. Seleziona rapidamente la playlist con bitrate ad alta risoluzione e i relativi contenuti e continua il processo di download.
 title: Riproduzione e failover dei contenuti multimediali
-exl-id: 3da1bde3-b685-4331-8bbe-a4c8ccdc68ed
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '595'
 ht-degree: 0%
@@ -54,3 +53,4 @@ Se il motore video non è in grado di ottenere segmenti in modo continuo, limita
 >* Durante un&#39;operazione di failover può essere presente uno switch di profilo.
 >
 >  Se si verifica un errore durante il download di uno dei segmenti della playlist, i parametri di controllo ABR, come la velocità bit minima/massima consentita, vengono ignorati.
+>

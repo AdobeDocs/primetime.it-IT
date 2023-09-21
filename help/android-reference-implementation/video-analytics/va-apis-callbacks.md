@@ -1,8 +1,7 @@
 ---
 description: Video Analytics Manager espone queste classi per implementare il tracciamento video nel lettore.
 title: Documentazione API correlata
-exl-id: ad806952-5f51-4f43-8ca3-cbd416789a43
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '85'
 ht-degree: 0%

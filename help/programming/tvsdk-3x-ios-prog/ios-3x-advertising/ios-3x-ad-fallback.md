@@ -1,8 +1,7 @@
 ---
 description: Per gli annunci (o creativi) Digital Video Ad Serving Template (VAST) che hanno la regola di fallback abilitata, TVSDK tratta un annuncio con un tipo di contenuto multimediale non valido come un annuncio vuoto e tenta di utilizzare gli annunci di fallback al suo posto. Puoi configurare alcuni aspetti del comportamento di fallback.
 title: Fallback degli annunci per annunci VAST e VMAP
-exl-id: 8e33793c-d278-4c82-ad9b-7c6c7ee69cd2
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 0%

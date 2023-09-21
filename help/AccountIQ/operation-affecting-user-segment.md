@@ -1,8 +1,7 @@
 ---
 title: Creare un'operazione su un segmento utente e tenere traccia dell'effetto
 description: Come creare un'operazione che abbia effetto e ne tenga traccia su un segmento definito di utenti.
-exl-id: ab74f857-e178-4120-8f9c-655ec921d096
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 0%

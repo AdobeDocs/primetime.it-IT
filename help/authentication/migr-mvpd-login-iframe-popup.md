@@ -1,8 +1,7 @@
 ---
 title: Migrazione della pagina di accesso MVPD da iFrame a Popup
 description: Migrazione della pagina di accesso MVPD da iFrame a Popup
-exl-id: 389ea0ea-4e18-4c2e-a527-c84bffd808b4
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '689'
 ht-degree: 0%
@@ -232,4 +231,3 @@ function checkClosed() {
 >* Il codice di esempio verrà eseguito correttamente solo da un dominio inserito nella whitelist associato all’ID richiedente utilizzato.
 >* Poiché l’intero codice è disponibile per il download, il codice presentato in questa nota tecnica è stato troncato. Per un esempio completo, vedi **Esempio a comparsa e iFrame JS**.
 >* Le librerie JavaScript esterne sono state collegate da [Servizi in hosting Google](https://developers.google.com/speed/libraries/).
-

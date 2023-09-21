@@ -1,8 +1,7 @@
 ---
 description: Per l’inserimento di annunci in streaming live, potrebbe essere necessario uscire da un’interruzione pubblicitaria prima che tutti gli annunci dell’interruzione vengano riprodotti fino al completamento.
 title: Implementazione di un ritorno a inizio annuncio
-exl-id: 584e870e-1408-41a9-bb6f-e82b921fe99e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '382'
 ht-degree: 0%
@@ -21,13 +20,13 @@ Di seguito sono riportati alcuni requisiti da considerare:
 
 * Analizzare marcatori quali `EXT-X-CUE-IN` (o tag di marker equivalente) che appaiono nei flussi lineari o FER.
 
-   Registrate i marcatori come marcatori per il punto di ritorno iniziale dell&#39;annuncio. Solo riproduzione `adBreaks` fino a questa posizione del marcatore durante la riproduzione, che sostituisce la durata del `adBreak` contrassegnato dall&#39;interlinea `EXE-X-CUE-OUT` marcatore.
+  Registrate i marcatori come marcatori per il punto di ritorno iniziale dell&#39;annuncio. Solo riproduzione `adBreaks` fino a questa posizione del marcatore durante la riproduzione, che sostituisce la durata del `adBreak` contrassegnato dall&#39;interlinea `EXE-X-CUE-OUT` marcatore.
 
 * Se due `EXT-X-CUE-IN` esistono marcatori per lo stesso `EXT-X-CUE-OUT` marcatore, il primo `EXT-X-CUE-IN` l&#39;indicatore visualizzato è quello che conta.
 
 * Se il `EXE-X-CUE-IN` il marcatore viene visualizzato nella timeline senza interlinea `EXT-X-CUE-OUT` marcatore, il `EXE-X-CUE-IN` il marcatore viene eliminato.
 
-   In un flusso live, se l&#39;interlinea `EXT-X-CUE-OUT` il marcatore è appena stato spostato fuori dalla finestra, il TVSDK non risponderà.
+  In un flusso live, se l&#39;interlinea `EXT-X-CUE-OUT` il marcatore è appena stato spostato fuori dalla finestra, il TVSDK non risponderà.
 
 * Quando si verifica un ritorno anticipato da un’interruzione pubblicitaria, il `adBreak` viene riprodotto finché l’indicatore di riproduzione non ritorna nella posizione originale quando l’interruzione pubblicitaria doveva terminare e riprende la riproduzione del contenuto principale da tale posizione.
 

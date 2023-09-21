@@ -1,8 +1,7 @@
 ---
 description: È possibile visualizzare il tempo corrente e rimanente del contenuto in fase di riproduzione.
 title: Visualizza una barra di scorrimento di ricerca con la posizione del tempo di riproduzione corrente
-exl-id: a8b34cf4-4dfd-4799-9408-87c4d60eff4c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '62'
 ht-degree: 0%

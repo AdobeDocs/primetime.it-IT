@@ -4,8 +4,7 @@ description: Le note sulla versione di TVSDK 1.4 per Android descrivono le novit
 contentOwner: asgupta
 products: SG_PRIMETIME
 topic-tags: release-notes
-exl-id: 1e3ec3b7-25be-4640-870e-928e832fe12d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '7802'
 ht-degree: 0%
@@ -58,22 +57,22 @@ Nessuna nuova funzione.
 * TVSDK supporta la versione Android Oreo.
 * Viene aggiunta una nuova funzione a `AdClientFactory` classe per supportare la registrazione di più rilevatori opportunità:
 
-   ```
-   public List<PlacementOpportunityDetector> createOpportunityDetectors(MediaPlayerItem item);
-   ```
+  ```
+  public List<PlacementOpportunityDetector> createOpportunityDetectors(MediaPlayerItem item);
+  ```
 
-   Questo dovrebbe restituire un array di PlacementOpportunityDetector. Ora è possibile registrare più rilevatori di opportunità. Ad esempio, per la funzione di uscita anticipata dagli annunci, erano necessari due rilevatori di opportunità, uno per l’inserimento di annunci e un altro per l’uscita anticipata dagli annunci. È necessario implementare questa nuova funzione solo se è stato implementato AdvertisingFactory (e non si utilizza DefaultAdvertisingfactory). Per ottenere il comportamento esistente, è necessario creare un singolo rilevatore di opportunità, come nella funzione createOpportunityDetector(), inserirlo in un array e restituire:
+  Questo dovrebbe restituire un array di PlacementOpportunityDetector. Ora è possibile registrare più rilevatori di opportunità. Ad esempio, per la funzione di uscita anticipata dagli annunci, erano necessari due rilevatori di opportunità, uno per l’inserimento di annunci e un altro per l’uscita anticipata dagli annunci. È necessario implementare questa nuova funzione solo se è stato implementato AdvertisingFactory (e non si utilizza DefaultAdvertisingfactory). Per ottenere il comportamento esistente, è necessario creare un singolo rilevatore di opportunità, come nella funzione createOpportunityDetector(), inserirlo in un array e restituire:
 
-   ```
-   public class MyAdvertisingFactory extends AdvertisingFactory {  
-   …  
-   @Override  
-   public List&lt;PlacementOpportunityDetector&gt; createOpportunityDetectors(MediaPlayerItem mediaPlayerItem) {  
-   List&lt;PlacementOpportunityDetector&gt; opportunityDetectors = new ArrayList&lt;PlacementOpportunityDetector&gt;();  
-   opportunityDetectors.add(createOpportunityDetector(mediaPlayerItem));  
-   return opportunityDetectors;  
-   } }
-   ```
+  ```
+  public class MyAdvertisingFactory extends AdvertisingFactory {  
+  …  
+  @Override  
+  public List&lt;PlacementOpportunityDetector&gt; createOpportunityDetectors(MediaPlayerItem mediaPlayerItem) {  
+  List&lt;PlacementOpportunityDetector&gt; opportunityDetectors = new ArrayList&lt;PlacementOpportunityDetector&gt;();  
+  opportunityDetectors.add(createOpportunityDetector(mediaPlayerItem));  
+  return opportunityDetectors;  
+  } }
+  ```
 
 >[!NOTE]
 >
@@ -87,7 +86,7 @@ Correzione di bug per il contenuto Ignora su Android.
 
 * **Informazioni sugli annunci di rete**
 
-   Le API TVSDK ora forniscono informazioni aggiuntive sulle risposte VAST di terze parti. L’ID annuncio, il sistema di annunci e le estensioni degli annunci VAST sono forniti nella classe NetworkAdInfo accessibile tramite la proprietà networkAdInfo su una risorsa annuncio. Queste informazioni possono essere utilizzate per l’integrazione con altre piattaforme Ad Analytics come **Moat Analytics**.
+  Le API TVSDK ora forniscono informazioni aggiuntive sulle risposte VAST di terze parti. L’ID annuncio, il sistema di annunci e le estensioni degli annunci VAST sono forniti nella classe NetworkAdInfo accessibile tramite la proprietà networkAdInfo su una risorsa annuncio. Queste informazioni possono essere utilizzate per l’integrazione con altre piattaforme Ad Analytics come **Moat Analytics**.
 
 **Versione 1.4.31**
 
@@ -139,26 +138,26 @@ Per ulteriori informazioni, consulta [Fallback degli annunci per annunci VAST e 
 * L&#39;interfaccia PlaybackEventListener dispone di un nuovo metodo denominato onReplaceMediaPlayerItem, che è possibile utilizzare per ascoltare un nuovo evento. `ITEM_REPLACED`. Questo evento viene inviato ogni volta che un&#39;istanza MediaPlayeritem viene sostituita in MediaPlayer. L&#39;applicazione client che implementa PlaybackEventListener deve implementare o eseguire l&#39;override del nuovo metodo.
 * AdClientFactory ha aggiunto una nuova funzione alla classe per la registrazione di più rilevatori di opportunità:
 
-   ```
-   public List&lt;PlacementOpportunityDetector&gt; createOpportunityDetectors(MediaPlayerItem item);
-   
-   For example for early ad exit feature, you need two Opportunity Detectors - one for ad insertion and another for  early  exit from  `ad`.
-   
-   To override this new function create a single Opportunity Detector, and put into an array and return:
-   
-   @Override
-   
-   public List&lt;PlacementOpportunityDetector&gt; createOpportunityDetectors(MediaPlayerItem mediaPlayerItem) {
-   
-   List&lt;PlacementOpportunityDetector&gt; opportunityDetectors = new ArrayList&lt;PlacementOpportunityDetector&gt;();
-   
-   opportunityDetectors.add(createOpportunityDetector(mediaPlayerItem));
-   
-   return opportunityDetectors;
-   }
-   
-   }
-   ```
+  ```
+  public List&lt;PlacementOpportunityDetector&gt; createOpportunityDetectors(MediaPlayerItem item);
+  
+  For example for early ad exit feature, you need two Opportunity Detectors - one for ad insertion and another for  early  exit from  `ad`.
+  
+  To override this new function create a single Opportunity Detector, and put into an array and return:
+  
+  @Override
+  
+  public List&lt;PlacementOpportunityDetector&gt; createOpportunityDetectors(MediaPlayerItem mediaPlayerItem) {
+  
+  List&lt;PlacementOpportunityDetector&gt; opportunityDetectors = new ArrayList&lt;PlacementOpportunityDetector&gt;();
+  
+  opportunityDetectors.add(createOpportunityDetector(mediaPlayerItem));
+  
+  return opportunityDetectors;
+  }
+  
+  }
+  ```
 
 ## Modifiche TVSDK per 1.4 {#tvsdk-changes}
 
@@ -198,7 +197,6 @@ return opportunityDetectors;
 >
 >* Slow motion, su qualsiasi piattaforma o versione.
 >* Gioco di trucco dal vivo.
-
 
 **Versione 1.4.43**
 
@@ -477,7 +475,7 @@ Per correggere il blocco, la chiamata al metodo mediaPlayer.setCustomConfigurati
 
 * #19038 Zendesk - Nessun flusso in diretta su Asus Zenpad 10.
 
-   Questo problema è stato risolto precaricando le informazioni del codec multimediale, in modo da non eseguire query sulla funzione in fase di esecuzione.
+  Questo problema è stato risolto precaricando le informazioni del codec multimediale, in modo da non eseguire query sulla funzione in fase di esecuzione.
 
 * I seguenti problemi sono gli stessi di Zendesk #19038:
    * Zendesk #19483 - Il TVSDK si sta bloccando sulla piattaforma Intel.
@@ -507,7 +505,7 @@ Questo problema è stato risolto verificando le dimensioni dei metadati DRM del 
 
 **Versione 1.4.16 (1454)**
 
-* Zendesk #3875 - La scheda S si blocca durante la riproduzione Ripristinare la dipendenza di OKHTTP su Auditude per CRS perché TVSDK ora utilizza direttamente httpurlconnection invece di curl. Il problema è stato risolto cancellando le eccezioni prima di effettuare qualsiasi altra chiamata JNI.
+* Zendesk #3875 - Tab S Si blocca durante la riproduzione Ripristinare la dipendenza di OKHTTP sull’Auditude di CRS perché TVSDK ora utilizza direttamente httpurlconnection anziché curl. Il problema è stato risolto cancellando le eccezioni prima di effettuare qualsiasi altra chiamata JNI.
 
 * Zendesk #4487 - Tracciamento del canale lineare del contenuto Il problema è stato risolto consentendo la reinizializzazione del tracciamento heartbeat video durante una sessione di riproduzione lineare.
 
@@ -620,7 +618,7 @@ I lettori di riferimento di esempio Android sono stati migliorati con un’opzio
 
 Dopo una ricerca, possibile caso in cui il motore video imposta lo stato su RIPRODUZIONE prima che il presentatore video sia pronto per la riproduzione. Si verifica quando lo stato del buffer è elevato prima della ricerca. Correzione tramite notifica al motore video dello stato del buffer insufficiente. Con lo stato del buffer basso del motore video, la chiamata Play causa la modifica dello stato in BUFFERING invece di PLAY. La riproduzione riprende quando lo stato cambia in RIPRODUZIONE.
 
-* Zendesk #2846 - Richiesta di miglioramento: consente di impostare una stringa agente utente diversa per le chiamate effettuate dalla libreria Auditude
+* Zendesk #2846 - Richiesta di miglioramento: consente di impostare una stringa agente utente diversa per le chiamate effettuate dalla libreria di Auditudi
 
 È stata aggiunta una nuova API per impostare l’agente utente per le chiamate relative agli annunci, auditudeSettings.setUserAgent(&quot;user/agent&quot;). Se non è impostato alcun agente utente, verrà utilizzato il valore predefinito. Questo influisce solo sull’agente utente per le chiamate relative agli annunci; l’agente utente per le chiamate multimediali è invariato, ovvero &quot;Adobe Primetime&quot;+&lt;default useragent=&quot;&quot;>.
 
@@ -640,7 +638,7 @@ Dopo una ricerca, possibile caso in cui il motore video imposta lo stato su RIPR
 * Zendesk #2805 - Arresto anomalo del lettore all’inizio della riproduzione, stessa correzione di Zendesk #2719
 * Zendesk #2817 - lettore Android - Il lettore a volte si blocca e smette di giocare, risolto estendendo i buffer di decodifica da 2,0 a 3,0 secondi
 * Zendesk #2839 - Adobe Primetime PSDK supporta i chipset ARMv8?, è stata aggiunta una correzione per arresti anomali rilevati su Galaxy S6.
-* Zendesk #2885 - Riproduzione di Auditude Crashing, stessa correzione di Zendesk #2719
+* Zendesk #2885 - Auditude della riproduzione in arresto anomalo, stessa correzione di Zendesk #2719
 * #2895 Zendesk - Errore HLS in tempo reale dopo 10 minuti di riproduzione
 * Zendesk #2925 - Feedback riguardante Android dev build (1.4.5), su alcuni dispositivi quando mettiamo in coda il pacchetto alla coda di input, se il PTS è negativo, il decodificatore va in uno stato strano che otteniamo sempre un PTS di output negativo per i pacchetti futuri. La correzione imposta il PTS di input su zero se è negativo per evitare questo problema.
 * PTPLAY-4645 - Disattivare il supporto cifratura RC4 in openssl. Ci sono exploit noti per RC4. Ciò significa che se si tenta di connettersi a un server che supporta solo RC4, questo non riuscirà.

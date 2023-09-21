@@ -1,8 +1,7 @@
 ---
 description: Il TVSDK di Flash Runtime richiede un token firmato per verificare di disporre dei diritti per chiamare l’API TVSDK sul dominio in cui risiede l’applicazione.
 title: Carica il token firmato
-exl-id: fef6b764-dc65-412e-a990-3f0b1fef94dd
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 0%
@@ -19,11 +18,11 @@ Il TVSDK di Flash Runtime richiede un token firmato per verificare di disporre d
    
    * Un [!DNL .xml] file che funge da token per un singolo dominio o dominio jolly.
 
-      >[!NOTE]
-      >
-      >Un token per un dominio con caratteri jolly copre tale dominio e tutti i relativi sottodomini. Ad esempio, un token jolly per il dominio [!DNL mycompany.com] coprirebbe anche [!DNL vids.mycompany.com] e [!DNL private.vids.mycompany.com]; un token jolly per [!DNL vids.mycompany.com] coprirebbe anche [!DNL private.vids.mycompany.com]. *I token di dominio con caratteri jolly sono supportati solo per determinate versioni del Flash Player.*
+     >[!NOTE]
+     >
+     >Un token per un dominio con caratteri jolly copre tale dominio e tutti i relativi sottodomini. Ad esempio, un token jolly per il dominio [!DNL mycompany.com] coprirebbe anche [!DNL vids.mycompany.com] e [!DNL private.vids.mycompany.com]; un token jolly per [!DNL vids.mycompany.com] coprirebbe anche [!DNL private.vids.mycompany.com]. *I token di dominio con caratteri jolly sono supportati solo per determinate versioni del Flash Player.*
 
-   * A [!DNL .swf] file contenente informazioni sui token per più domini (esclusi i caratteri jolly) (singolo o jolly), che l’applicazione può caricare in modo dinamico.
+   * A [!DNL .swf] file contenente informazioni token per più domini (esclusi i caratteri jolly) (singolo o jolly), che l’applicazione può caricare in modo dinamico.
 
 1. Memorizza il file token nella stessa posizione o nello stesso dominio dell’applicazione.
 
@@ -36,6 +35,7 @@ Il TVSDK di Flash Runtime richiede un token firmato per verificare di disporre d
    1. TVSDK invia `COMPLETED` evento se il caricamento ha esito positivo o un `FAILED` in caso contrario. Agisci in modo appropriato quando rilevi uno di questi eventi.
 
       Affinché l&#39;applicazione fornisca il necessario `authorizedFeatures` oggetti a TVSDK sotto forma di `MediaPlayerContext`.
+
    Questo esempio mostra come utilizzare un token singolo [!DNL .xml] file.
 
    ```

@@ -1,8 +1,7 @@
 ---
 title: Modelli di utilizzo
 description: Visualizza il comportamento di condivisione dell’account per diverse tipologie di utenti.
-exl-id: 2faa7e75-b3a1-491b-bb7d-bd3a149cbe79
-source-git-commit: 560611f2af2605ba399e4cf5ddfd331b6e8e0231
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 0%

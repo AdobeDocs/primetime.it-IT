@@ -1,8 +1,7 @@
 ---
 description: Per consentire il funzionamento del resolver dell’annuncio, i provider di annunci, come Adobe Primetime ad decisioning, richiedono valori di configurazione per abilitare la connessione al provider.
 title: Metadati di inserimento annuncio
-exl-id: 83c0fd25-dbc3-4529-b81a-16ff78012c80
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '397'
 ht-degree: 0%
@@ -17,13 +16,13 @@ TVSDK include la libreria Ad Decisioning di Primetime. Affinché il contenuto in
 
 * `mediaID`, che è un identificatore univoco del video da riprodurre.
 
-   L’editore assegna il mediaID quando invia il contenuto video e le informazioni sugli annunci al server Adobe Primetime ad decisioning. Questo ID viene utilizzato da Primetime ad Decisioning per recuperare dal server le informazioni pubblicitarie correlate al video.
+  L’editore assegna il mediaID quando invia il contenuto video e le informazioni sugli annunci al server Adobe Primetime ad decisioning. Questo ID viene utilizzato da Primetime ad Decisioning per recuperare dal server le informazioni pubblicitarie correlate al video.
 
 * Il tuo `zoneID`, che viene assegnato da Adobe, identifica la tua azienda o il tuo sito web.
 * Il dominio del server di annunci assegnato.
 * Altri parametri di targeting.
 
-   Puoi includere questi parametri in base alle tue esigenze e a quelle del provider di annunci.
+  Puoi includere questi parametri in base alle tue esigenze e a quelle del provider di annunci.
 
 ## Impostare i metadati di inserimento annunci {#set-up-ad-insertion-metadata}
 
@@ -31,7 +30,7 @@ Utilizza la classe helper AuditudeSettings , che estende la classe MetadataNode,
 
 >[!TIP]
 >
->Adobe Primetime ad decisioning era precedentemente noto come Auditude.
+>Adobe Primetime ad decisioning era noto in precedenza come Auditude.
 
 I metadati della pubblicità si trovano in `MediaResource.metadata` proprietà. All’avvio della riproduzione di un nuovo video, l’applicazione è responsabile dell’impostazione dei metadati pubblicitari corretti.
 

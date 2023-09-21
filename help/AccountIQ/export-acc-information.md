@@ -1,8 +1,7 @@
 ---
 title: Esporta informazioni per account con punteggio di condivisione elevato
 description: Esporta informazioni per account con punteggio di condivisione elevato.
-exl-id: df41ddd2-fde3-4861-abd4-6e32f0be9ea5
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '728'
 ht-degree: 1%

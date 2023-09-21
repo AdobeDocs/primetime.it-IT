@@ -1,8 +1,7 @@
 ---
 description: Browser TVSDK tiene traccia automaticamente degli annunci per VOD e streaming live/lineare.
 title: Tracciamento degli annunci client
-exl-id: dc1d94f2-82b4-46fd-a720-610b71786b71
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 0%

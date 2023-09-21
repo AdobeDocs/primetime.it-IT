@@ -1,8 +1,7 @@
 ---
 description: Puoi utilizzare l’API del lettore Primetime per personalizzare il comportamento del lettore. Queste classi descrivono il lettore multimediale e la relativa risorsa.
 title: Classi Mediacore
-exl-id: 8948484d-a48d-49b4-ac11-b68f1abaf706
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '667'
 ht-degree: 0%

@@ -2,8 +2,7 @@
 description: La regola di normalizzazione definisce una trasformazione URL da applicare a un URL creativo di origine ottenuto da una risposta VAST/VMAP.
 keywords: normalizza regola;regole di selezione creativa
 title: Normalizza regole
-exl-id: 731e0cfd-cabd-4e34-a01e-537c23be6a2d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '157'
 ht-degree: 0%

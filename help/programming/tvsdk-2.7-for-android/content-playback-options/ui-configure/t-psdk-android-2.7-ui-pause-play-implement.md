@@ -1,8 +1,7 @@
 ---
 description: È possibile aggiungere pulsanti di pausa e riproduzione per mettere in pausa o riprodurre il video.
 title: Riprodurre e mettere in pausa un video
-exl-id: cb13ae62-f96b-4329-841f-aba885725d70
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '105'
 ht-degree: 0%
@@ -13,7 +12,7 @@ ht-degree: 0%
 
 È possibile aggiungere pulsanti di pausa e riproduzione per mettere in pausa o riprodurre il video.
 
-1. Per creare un pulsante di pausa o di riproduzione:
+1. Per creare un pulsante di pausa o riproduzione:
    1. Attendi che il lettore sia almeno nello stato preparato.
    1. Per avviare la riproduzione, chiamare il `play` metodo:
 

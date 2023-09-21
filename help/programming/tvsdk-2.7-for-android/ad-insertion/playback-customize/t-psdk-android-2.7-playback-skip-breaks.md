@@ -1,8 +1,7 @@
 ---
 description: Per impostazione predefinita, TVSDK forza la riproduzione di un’interruzione pubblicitaria quando l’utente cerca sopra un’interruzione pubblicitaria. Puoi personalizzare il comportamento per saltare un’interruzione pubblicitaria se il tempo trascorso dal completamento di un’interruzione precedente è entro un determinato numero di minuti.
 title: Ignorare le interruzioni pubblicitarie per un periodo di tempo
-exl-id: 13e34c05-2c43-4459-88ec-5c6cfa8c363d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 0%
@@ -22,16 +21,16 @@ Per ignorare il comportamento predefinito dell’interruzione pubblicitaria TVSD
 * PLAY
 * IGNORA
 
-   >[!NOTE]
-   >
-   >Il criterio per ignorare l’interruzione dell’annuncio potrebbe non funzionare come previsto per i flussi live quando un annuncio è presente nel punto live. Ad esempio, per un pre-roll, SKIP causerà una ricerca fino alla fine dell’interruzione pubblicitaria, che potrebbe essere maggiore del punto di attivazione. In questo caso, TVSDK potrebbe cercare di posizionarsi al centro di un annuncio.
+  >[!NOTE]
+  >
+  >Il criterio per ignorare l’interruzione dell’annuncio potrebbe non funzionare come previsto per i flussi live quando un annuncio è presente nel punto live. Ad esempio, per un pre-roll, SKIP causerà una ricerca fino alla fine dell’interruzione pubblicitaria, che potrebbe essere maggiore del punto di attivazione. In questo caso, TVSDK potrebbe cercare di posizionarsi al centro di un annuncio.
 
 * RIMUOVI_DOPO
 * RIMUOVI
 
-   >[!NOTE]
-   >
-   >Il `REMOVE` il criterio di interruzione annuncio è impostato come obsoleto. L’Adobe consiglia di utilizzare il `SKIP` criterio di interruzione annuncio al posto di `REMOVE`.
+  >[!NOTE]
+  >
+  >Il `REMOVE` il criterio di interruzione annuncio è impostato come obsoleto. L’Adobe consiglia di utilizzare il `SKIP` criterio di interruzione annuncio al posto di `REMOVE`.
 
 L’esempio seguente di selettore di criteri di annuncio personalizzato ignora gli annunci nei successivi cinque minuti (tempo di clock a parete) dopo che un utente ha guardato un’interruzione pubblicitaria.
 

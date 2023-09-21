@@ -3,8 +3,7 @@ title: Note sulla versione di TVSDK 2.4.1 per Android
 description: Le note sulla versione di TVSDK 2.4.1 per Android descrivono le funzioni nuove e supportate e i problemi e le limitazioni noti in TVSDK Android 2.4.1.
 topic-tags: release-notes
 products: SG_PRIMETIME
-exl-id: 3de09048-ae32-43b4-a019-34b217931a4c
-source-git-commit: 3b051c3188c81673129e12dfeb573aaf85c15c97
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1962'
 ht-degree: 0%
@@ -59,7 +58,7 @@ Di seguito sono elencate le nuove funzioni chiave della versione 2.4.1:
 
 * Funzioni di protezione dei contenuti
 
-   * **DRM per HLS.** Tutte le API di riproduzione video funzionano con contenuti video crittografati protetti da Accesso Adobe. Sono supportate le seguenti funzionalità DRM:
+   * **DRM per HLS.** Tutte le API di riproduzione video funzionano con contenuti video crittografati protetti da Adobe Access. Sono supportate le seguenti funzionalità DRM:
 
       * Rotazione delle licenze
       * Rotazione chiave
@@ -74,7 +73,7 @@ Di seguito sono elencate le nuove funzioni chiave della versione 2.4.1:
 
    * **Tracciamento per annunci inseriti lato server.** TVSDK può tenere traccia degli annunci inseriti dal servizio di inserimento di annunci Adobe Cloud. Supporta gli annunci lineari nei formati VAST2, VAST3 e VMAP per i flussi VOD e live/lineari.
    * **Tag HLS personalizzati.** TVSDK utilizza `MediaPlayerConfig` per abilitare la notifica all’applicazione lettore quando nel flusso vengono visualizzati tag HLS personalizzati.
-   * **Inserimento di annunci lato client.** La libreria di inserimento di annunci Auditude funziona con i server Adobe Auditude per risolvere dinamicamente gli annunci da inserire nei contenuti live, lineari e VOD, nelle posizioni pre-roll, mid-roll o post-roll.
+   * **Inserimento di annunci lato client.** La libreria di Auditude degli annunci di inserimento funziona con i server Adobe Auditude per risolvere dinamicamente gli annunci da inserire nei contenuti live, lineari e VOD, nelle posizioni pre-roll, mid-roll o post-roll.
    * **Ad resolver personalizzati.** Il `ContentResolver, OpportunityGenerator,` e `MediaPlayerClientFactory` Le interfacce consentono di implementare un agente di risoluzione dei contenuti personalizzato/alternativo e di registrare un rilevatore di opportunità personalizzato per l’utilizzo con TVSDK. Il `TestAdResolver` e `AuditudeResolver` Le classi forniscono esempi C++ di implementazione di un resolver di contenuti. Un esempio JavaScript è disponibile all’indirizzo `samples/jspsdk/testapp/psdk.js`.
    * **Comportamento coerente degli annunci.** Utilizza il `AdPolicySelector` per abilitare un comportamento coerente in tutti i lettori per operazioni come la ricerca e la riproduzione con trucco quando gli annunci sono presenti nel contenuto. Se non implementi il tuo, TVSDK utilizza `DefaultAdPolicySelector`.
    * **Rimuovere/sostituire gli annunci C3.** Utilizza l’API TVSDK appropriata per rimuovere intervalli di contenuti personalizzati e inserire dinamicamente nuovi annunci senza ulteriore lavoro di preparazione. Questa funzione è particolarmente utile per la trasmissione di contenuti live o lineari, che vengono immediatamente resi disponibili on-demand senza bisogno di interventi di pulizia.

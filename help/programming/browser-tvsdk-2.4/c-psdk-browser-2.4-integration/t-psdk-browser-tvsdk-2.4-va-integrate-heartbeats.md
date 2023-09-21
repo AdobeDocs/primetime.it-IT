@@ -1,8 +1,7 @@
 ---
 description: Puoi configurare il lettore per il tracciamento e l’analisi dell’utilizzo dei video.
 title: Inizializzare e configurare l’analisi video
-exl-id: e0bf461b-a431-4fba-bd3d-c38be307a92f
-source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '689'
 ht-degree: 0%
@@ -54,11 +53,11 @@ Per configurare il tracciamento video nel lettore:
    
    * La creazione di un&#39;istanza richiede un parametro di input dell&#39;ID organizzazione del Marketing Cloud fornito da Adobe.
 
-      Questo è un valore stringa.
+     Questo è un valore stringa.
    * L’unica opzione di configurazione per la libreria VisitorAPI è l’URL dell’endpoint back-end che fornisce l’identificatore univoco per l’utente corrente.
    * L’URL del server di tracciamento dei visitatori è uguale all’URL del server di tracciamento di Analytics.
 
-      Per informazioni sull&#39;implementazione del servizio ID visitatori, vedi [Implementazione del servizio ID visitatori](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en).
+     Per informazioni sull&#39;implementazione del servizio ID visitatori, vedi [Implementazione del servizio ID visitatori](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en).
 
    ```js
    var_visitor = new Visitor("MARKETING_CLOUD_ORG_ID");
@@ -67,11 +66,11 @@ Per configurare il tracciamento video nel lettore:
 
 2. Crea un’istanza e configura il componente AppMeasurement.
 
-   L’istanza AppMeasurement dispone di molte opzioni di configurazione. Per ulteriori informazioni, consulta [Sviluppatore Adobe Analytics](https://microsite.omniture.com/t2/help/en_US/reference/#Developer) documentazione. Le opzioni nel codice di esempio seguente ( `account`, `visitorNamespace`, e `trackingServer`) e i valori sono forniti da Adobe.
+   L’istanza di AppMeasurement dispone di molte opzioni di configurazione. Per ulteriori informazioni, consulta [Sviluppatore Adobe Analytics](https://microsite.omniture.com/t2/help/en_US/reference/#Developer) documentazione. Le opzioni nel codice di esempio seguente ( `account`, `visitorNamespace`, e `trackingServer`) e i valori sono forniti da Adobe.
 
    >[!IMPORTANT]
    >
-   >È necessario assicurarsi che la catena di dipendenze sia impostata correttamente. L’istanza AppMeasurement aggrega (dipende da) il componente API visitatore.
+   >È necessario assicurarsi che la catena di dipendenze sia impostata correttamente. L’istanza di AppMeasurement aggrega (dipende da) il componente API visitatore.
 
    ```js
    var appMeasurement = new AppMeasurement();
@@ -119,11 +118,12 @@ Tenere presente quanto segue:
       * Crea sempre una nuova istanza di tracciamento per ogni sessione di riproduzione del contenuto e rimuovi il riferimento precedente (dopo aver staccato l’istanza del lettore multimediale).
       * I metadati creati nel passaggio secondario 1 devono essere forniti nel costruttore del tracciatore di Video Analytics.
 
-         ```js
-         var videoAnalyticsMetadata = getVideoAnalyticsMetadata();
-         videoAnalyticsProvider = new AdobePSDK.VA.VideoAnalyticsProvider(videoAnalyticsMetadata);
-         videoAnalyticsProvider.attachMediaPlayer(player);
-         ```
+        ```js
+        var videoAnalyticsMetadata = getVideoAnalyticsMetadata();
+        videoAnalyticsProvider = new AdobePSDK.VA.VideoAnalyticsProvider(videoAnalyticsMetadata);
+        videoAnalyticsProvider.attachMediaPlayer(player);
+        ```
+
    3. Distruggi il tracker di Video Analytics.
 Prima di iniziare una nuova sessione di riproduzione del contenuto, elimina l’istanza precedente del tracciatore video. Dopo aver ricevuto l’evento di completamento del contenuto (o la notifica), attendi alcuni minuti prima di eliminare l’istanza di tracciamento video. Distruggere immediatamente l’istanza potrebbe interferire con la capacità del tracciatore di Video Analytics di inviare un ping video completo.
 

@@ -1,8 +1,7 @@
 ---
 description: I gestori eventi consentono di rispondere agli eventi TVSDK.
 title: Implementare listener di eventi e callback
-exl-id: c8825a6c-3d48-412f-81f5-542c7731a122
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 0%
@@ -23,9 +22,9 @@ L&#39;applicazione deve implementare listener di eventi per tutti gli eventi TVS
 
    * Eventi richiesti: ascolta tutti gli eventi di riproduzione.
 
-      >[!IMPORTANT]
-      >
-      >Ascolta l’evento di modifica dello stato, che si verifica quando lo stato del lettore cambia in un modo che devi sapere. Le informazioni fornite includono errori che potrebbero influire sulle operazioni successive del lettore.
+     >[!IMPORTANT]
+     >
+     >Ascolta l’evento di modifica dello stato, che si verifica quando lo stato del lettore cambia in un modo che devi sapere. Le informazioni fornite includono errori che potrebbero influire sulle operazioni successive del lettore.
 
    * Per altri eventi, a seconda dell’applicazione, consulta Riepilogo eventi .
 

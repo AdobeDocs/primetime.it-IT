@@ -2,8 +2,7 @@
 title: Gestione degli aggiornamenti dei certificati alla scadenza dei certificati rilasciati dagli Adobi
 description: Gestione degli aggiornamenti dei certificati alla scadenza dei certificati rilasciati dagli Adobi
 copied-description: true
-exl-id: 9768544e-7e92-4c3a-9863-af9aed74a0c0
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '514'
 ht-degree: 0%
@@ -46,23 +45,23 @@ Per aggiornare il server con i nuovi certificati, attenersi alla procedura descr
 
       * Nell’implementazione di riferimento, impostala tramite `LicenseHandler.ServerCredential` proprietà.
       * In Adobe Access Server for Protected Streaming, le credenziali correnti devono essere le prime credenziali specificate in `LicenseServerCredential` nel file flashaccess-tenant.xml.
+
    * Assicurati che le credenziali attuali e precedenti siano fornite a `AsymmetricKeyRetrieval`
 
       * Nell’implementazione di riferimento, impostala tramite `LicenseHandler.ServerCredential` e `AsymmetricKeyRetrieval.ServerCredential. n` proprietà.
       * In Adobe Access Server for Protected Streaming, le vecchie credenziali vengono specificate dopo la prima credenziale in `LicenseServerCredential` nel file flashaccess-tenant.xml.
+
    Per le credenziali trasporto:
 
    * Assicurati che le credenziali correnti siano passate nel `HandlerConfiguration.setServerTransportCredential()` metodo:
 
       * Nell’implementazione di riferimento, impostala tramite `HandlerConfiguration.ServerTransportCredential` proprietà.
       * In Adobe Access Server per lo streaming protetto, le credenziali correnti devono essere le prime credenziali specificate in `TransportCredential` nel file flashaccess-tenant.xml.
+
    * Assicurati che le vecchie credenziali vengano fornite a `HandlerConfiguration.setAdditionalServerTransportCredentials`():
 
       * Nell’implementazione di riferimento, impostala tramite `HandlerConfiguration.AdditionalServerTransportCredential. n` proprietà.
       * In Adobe Access Server per lo streaming protetto, questo viene specificato dopo la prima credenziale nel `TransportCredential` nel file flashaccess-tenant.xml.
-
-
-
 
 1. Aggiorna gli strumenti di creazione pacchetti per assicurarti che stiano creando pacchetti di contenuto con le credenziali correnti. Verificare che per la creazione di pacchetti vengano utilizzati il certificato del server licenze, il certificato di trasporto e le credenziali del packager più recenti.
 1. Per aggiornare il certificato del server licenze del server chiavi:

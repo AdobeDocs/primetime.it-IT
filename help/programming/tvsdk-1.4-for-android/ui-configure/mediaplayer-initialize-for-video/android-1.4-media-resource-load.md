@@ -1,8 +1,7 @@
 ---
 description: Carica una risorsa creando direttamente un’istanza di MediaResource e caricando il contenuto video da riprodurre. Questo è uno dei modi per caricare una risorsa multimediale.
 title: Caricare una risorsa multimediale in MediaPlayer
-exl-id: 2d5e95bc-3962-4356-b90f-e550066f7a70
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 0%
@@ -36,7 +35,6 @@ Carica una risorsa creando direttamente un’istanza di MediaResource e caricand
 >* A `state` parametro di tipo `MediaPlayer.PlayerState` con il valore di `MediaPlayer.PlayerState.ERROR`.
 >
 >* A `notification` parametro di tipo `MediaPlayerNotification` che contiene informazioni di diagnostica sull’evento di errore.
-
 
 Il seguente codice di esempio semplificato illustra il processo di caricamento di una risorsa multimediale:
 

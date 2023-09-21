@@ -1,8 +1,7 @@
 ---
 title: Supporto Single Sign-On
 description: Supporto Single Sign-On
-exl-id: edc3719e-c627-464c-9b10-367a425698c6
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1132'
 ht-degree: 0%
@@ -35,10 +34,10 @@ Dopo che un utente effettua l’accesso con le proprie credenziali MVPD, l’aut
 | tvOS - nuova Apple TV | Sì | SSO piattaforma - scambio token | A seconda del supporto di Apple: l’elenco è qui | Da tvOS 10, Apple e Adobe hanno introdotto la funzionalità SSO per i programmatori e gli MVPD partecipanti. Utilizzando l’SDK per tvOS di Adobe più recente o utilizzando l’API REST senza client di Adobe e implementando la funzionalità SSO di Apple è possibile beneficiare dell’SSO sui dispositivi tvOS. Maggiori dettagli su tvOS SDK: qui e qui e ulteriori dettagli sull’implementazione senza client qui. |
 | Roku | Sì | Token di autenticazione condivisa (Adobe SSO) | L&#39;elenco completo delle coperture significative sarà fornito a breve. | Roku SSO funziona con l’API senza client per tutti i clienti che rispettano le linee guida Roku, senza richiedere alcuna implementazione speciale. L’SSO si basa sulle informazioni di identificazione del dispositivo che Roku invia in modo sicuro all’Adobe. |
 | Amazon FireTV | Sì | Token di autenticazione condivisa (Adobe SSO) | L&#39;elenco completo delle coperture significative sarà fornito a breve. | L’SDK di FireTV fornisce il supporto per Single Sign-On basato sulle funzionalità Android. L’SSO su questa piattaforma è possibile solo tra app che per il momento utilizzano l’SDK Adobe FireTV. Ulteriori informazioni sul nuovo SDK di FireTV qui. Le app FireTV implementate sopra l’API Clientless potranno beneficiare dell’SSO entro EOY 2018. |
-| Xbox 360 | No |  |  | Nessun ID dispositivo utilizzabile. Esiste un ID app, quindi gli utenti non devono autenticarsi ogni volta. |
-| Xbox One | No |  |  | Nessun ID dispositivo utilizzabile. Esiste un ID app, quindi gli utenti non devono autenticarsi ogni volta. |
-| Windows 8/10 | No |  |  | Nessun ID dispositivo utilizzabile. Esiste un ID app, quindi gli utenti non devono autenticarsi ogni volta. |
-| TV Samsung | No |  |  | Nessun ID dispositivo utilizzabile. Esiste un ID app, quindi gli utenti non devono autenticarsi ogni volta. |
+| Xbox 360 | No |                                         |                                                     | Nessun ID dispositivo utilizzabile. Esiste un ID app, quindi gli utenti non devono autenticarsi ogni volta. |
+| Xbox One | No |                                         |                                                     | Nessun ID dispositivo utilizzabile. Esiste un ID app, quindi gli utenti non devono autenticarsi ogni volta. |
+| Windows 8/10 | No |                                         |                                                     | Nessun ID dispositivo utilizzabile. Esiste un ID app, quindi gli utenti non devono autenticarsi ogni volta. |
+| TV Samsung | No |                                         |                                                     | Nessun ID dispositivo utilizzabile. Esiste un ID app, quindi gli utenti non devono autenticarsi ogni volta. |
 
 ### Note su Xbox 360 e Xbox One {#notes-xbox-360}
 

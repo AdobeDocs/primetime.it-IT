@@ -1,8 +1,7 @@
 ---
 description: Per rendere i sottotitoli codificati disponibili per il lettore client, devi abilitarli. L’utente può attivare o disattivare i sottotitoli codificati e selezionare la formattazione.
 title: Mostra sottotitoli codificati
-exl-id: 57168c6e-a958-4a89-b22b-0c9f1cab3a49
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 0%

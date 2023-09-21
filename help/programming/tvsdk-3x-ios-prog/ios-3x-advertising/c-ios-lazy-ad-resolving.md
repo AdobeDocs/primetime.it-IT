@@ -1,8 +1,7 @@
 ---
 description: La risoluzione e il caricamento degli annunci possono causare un ritardo inaccettabile per l’utente in attesa dell’avvio della riproduzione. La funzione di risoluzione Lazy Ad Loading può ridurre questo ritardo di avvio. Gli annunci possono ora essere risolti a un intervallo specificato prima della posizione dell’interruzione pubblicitaria. Ciò si ottiene utilizzando un approccio basato sul doppio lettore.
 title: Risoluzione degli annunci just-in-time
-exl-id: dd5342c5-9f34-4778-a47a-91ff2eb03155
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '439'
 ht-degree: 0%
@@ -38,7 +37,6 @@ Ad esempio, per impostazione predefinita `delayAdLoadingTolerance` è impostato 
 >* La modalità Picture-in-Picture non è supportata con Lazy Ad Resolving. Disattiva le modalità Picture-in-Picture se abiliti Lazy Ad Resolving.
 >* La risoluzione lenta degli annunci non influisce sugli annunci pre-roll.
 >
-
 **Abilita lazy ad resolving**
 
 Puoi abilitare o disabilitare la funzione Lazy Ad Resolving utilizzando il meccanismo esistente Lazy Ad Loading (Lazy Ad Resolving è disabilitato per impostazione predefinita).

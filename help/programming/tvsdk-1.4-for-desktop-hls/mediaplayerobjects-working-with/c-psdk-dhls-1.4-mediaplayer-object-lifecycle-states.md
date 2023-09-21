@@ -1,8 +1,7 @@
 ---
 description: Dal momento in cui viene creata l'istanza MediaPlayer al momento in cui viene terminata (riutilizzata o rimossa), questa istanza completa una serie di transizioni tra gli stati.
 title: Ciclo di vita dell'oggetto MediaPlayer
-exl-id: 0f2f3699-b745-4b14-8b7e-68696960ccab
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '434'
 ht-degree: 0%
@@ -19,9 +18,9 @@ Per utilizzare gli stati:
 
 * È possibile recuperare lo stato corrente del `MediaPlayer` oggetto utilizzando `MediaPlayer.status` proprietà.
 
-   ```
-   function get status():String;
-   ```
+  ```
+  function get status():String;
+  ```
 
 * L’elenco degli stati è definito in `MediaPlayer.PlayerStatus`.
 

@@ -1,8 +1,7 @@
 ---
 description: TVSDK notifica al client del lettore la disponibilità di AVAsset interno disponibileMediaCharacteristicsWithMediaSelectionOptions utilizzando la notifica PTMediaPlayerMediaSelectionOptionsAvailableNotification.
 title: Esposizione sottotitoli
-exl-id: 42f15536-39ea-4d83-b501-b05086a0056b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '90'
 ht-degree: 0%

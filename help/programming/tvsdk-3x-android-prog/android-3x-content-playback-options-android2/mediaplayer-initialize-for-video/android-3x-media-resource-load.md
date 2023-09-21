@@ -1,8 +1,7 @@
 ---
 description: Carica una risorsa creando direttamente un’istanza di MediaResource e caricando il contenuto video da riprodurre. Questo è uno dei modi per caricare una risorsa multimediale.
 title: Caricare una risorsa multimediale nel lettore multimediale
-exl-id: f39d3aa2-8912-4dac-9f10-91b6d20395ea
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 0%

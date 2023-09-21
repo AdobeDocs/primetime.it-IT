@@ -1,8 +1,7 @@
 ---
 description: TVSDK per HLS desktop include una serie di funzioni e fornisce le seguenti funzionalità principali
 title: Funzioni di Primetime TVSDK
-exl-id: d78ca77e-b29c-4fae-8ab9-edc55ab12847
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '243'
 ht-degree: 0%

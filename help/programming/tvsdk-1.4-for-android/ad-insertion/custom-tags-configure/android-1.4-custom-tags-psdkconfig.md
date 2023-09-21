@@ -1,8 +1,7 @@
 ---
 description: È possibile configurare nomi di tag personalizzati in TVSDK a livello globale con la classe MediaPlayerItemConfig.
 title: Metodi di classe di configurazione per i tag
-exl-id: 6b3e344f-1d50-4743-9cc4-bd0bc82a0b9c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 0%
@@ -50,8 +49,8 @@ Tenere presente quanto segue:
 
 * I metodi setter non consentono che il parametro tags contenga valori null.
 
-   Se rilevato, TVSDK genera un `IllegalArgumentException`.
+  Se rilevato, TVSDK genera un `IllegalArgumentException`.
 * Il nome del tag personalizzato deve contenere il prefisso #.
 
-   Ad esempio: `#EXT-X-ASSET` è un nome di tag personalizzato corretto, ma `EXT-X-ASSET` non è corretto.
+  Ad esempio: `#EXT-X-ASSET` è un nome di tag personalizzato corretto, ma `EXT-X-ASSET` non è corretto.
 * Non è possibile modificare la configurazione dopo il caricamento del flusso multimediale.

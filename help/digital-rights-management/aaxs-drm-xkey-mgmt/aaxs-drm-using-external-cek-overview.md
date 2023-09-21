@@ -1,8 +1,7 @@
 ---
 description: I clienti possono utilizzare Adobe Access (AAXS) DRM con il proprio sistema di gestione delle chiavi di contenuto (CKMS) con la funzione External CEK.
 title: Panoramica sul controllo esterno DRM di accesso Adobe
-exl-id: 4131863b-5773-4222-aae9-d984267cdb86
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%

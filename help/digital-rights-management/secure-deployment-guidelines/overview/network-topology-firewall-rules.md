@@ -1,8 +1,7 @@
 ---
 description: Quando determini le regole del firewall, considera i seguenti tipi di URL
 title: Regole del firewall
-exl-id: 3f6f6d1a-5759-43b3-9f62-6feb02e0a5c5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%

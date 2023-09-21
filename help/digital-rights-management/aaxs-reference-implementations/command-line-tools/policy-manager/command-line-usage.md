@@ -2,8 +2,7 @@
 title: Utilizzo della riga di comando
 description: Utilizzo della riga di comando
 copied-description: true
-exl-id: 2142cb76-e71c-4443-8b5d-348e45587331
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1023'
 ht-degree: 0%

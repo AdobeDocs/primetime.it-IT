@@ -1,8 +1,7 @@
 ---
 title: Verifica preliminare, come abilitare, risolvere o determinare il problema
 description: Verifica preliminare, come abilitare, risolvere o determinare il problema
-exl-id: 9e4ec343-371f-4116-915f-191e5f42cb47
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 0%
@@ -24,7 +23,7 @@ Esistono tre modi per calcolare le risorse Verifica preliminare:
 * **Line-up dei canali**: MVPD espone la linea di canali per l’utente connesso nella risposta di autenticazione SAML e l’Adobe restituisce le risorse autorizzate in base a tale risposta. La risposta SAML authN nel tracciatore SAML deve esporre tale elenco.
 * **Autorizzazione multicanale**: l’autenticazione client e Adobe effettua una singola chiamata a MVPD per un set di risorse.
 
-Indipendentemente da MVPD, l’applicazione client effettuerà una singola chiamata all’endpoint di verifica preliminare (checkPreauthorizedResources API), trasmettendo un set di resourceID. In base a uno dei modi sopra supportati da MVPD, Adobe restituirà quindi gli ID risorsa preautorizzati.
+Indipendentemente da MVPD, l’applicazione client effettuerà una singola chiamata all’endpoint di verifica preliminare (checkPreauthorizedResources API), trasmettendo un set di resourceID. In base a uno dei modi precedenti supportati da MVPD, Adobe restituirà quindi gli ID risorsa preautorizzati.
 
 Se la verifica preliminare è basata sul metodo fork &amp; join, il backend di autenticazione Adobe Primetime controlla un valore impostato per il numero massimo di chiamate di preautorizzazione nella relativa configurazione. È configurato dall’Adobe.
 

@@ -1,8 +1,7 @@
 ---
 description: Alcuni annunci di terze parti (o creativi) non possono essere uniti nel flusso di contenuto HTTP Live Streaming (HLS) perché il loro formato video è incompatibile con HLS. Primetime ad insertion e TVSDK possono opzionalmente tentare di ricompilare gli annunci incompatibili in video M3U8 compatibili.
 title: Reimpacchettare annunci incompatibili utilizzando Adobe Creative Repackaging Service (CRS)
-exl-id: 7e1f9ffd-cd7e-488b-bbb7-f78e1623b697
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '303'
 ht-degree: 0%
@@ -28,10 +27,9 @@ Per attivare questa funzione CRS opzionale, contatta il rappresentante del tuo A
 >* CRS 3.1 riduce notevolmente le chiamate di rete, migliorando i tempi di avvio dei video.
 >
 
-
 ## Abilitare CRS nelle applicazioni TVSDK {#enable-crs-in-tvsdk-applications}
 
-Per abilitare CRS nelle applicazioni TVSDK, devi impostare le seguenti informazioni nelle impostazioni Auditude:
+Per abilitare CRS nelle applicazioni TVSDK, è necessario impostare le seguenti informazioni nelle impostazioni di Auditude:
 
 1. Abilitare CRS in `AuditudeSettings`.
 

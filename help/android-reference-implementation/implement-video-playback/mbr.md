@@ -1,8 +1,7 @@
 ---
 description: Il TVSDK può riprodurre video che hanno più profili con velocità bit diverse, passando da un livello di qualità all'altro in base alla larghezza di banda disponibile.
 title: Velocità bit multiple
-exl-id: 5f71d69e-993a-4985-accd-7ce2104f837e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '767'
 ht-degree: 0%
@@ -29,7 +28,6 @@ L’implementazione di riferimento configura i seguenti parametri ABR in [IPlayb
 >* Il meccanismo di failover di TVSDK potrebbe ignorare queste impostazioni, perché TVSDK favorisce un’esperienza di riproduzione continua rispetto al rispetto rigoroso dei parametri di controllo.
 >* Quando la velocità di trasmissione cambia, TVSDK invia `onProfileChanged` eventi in `PlaybackEventListener`.
 
-
 ## Abilitazione del controllo ABR personalizzato nell’implementazione di riferimento {#section_72A6E7263E1441DD8D7E0690285515E6}
 
 Per impostazione predefinita, in TVSDK è abilitato il bit rate adattivo (ABR). È possibile utilizzare l&#39;interfaccia utente Impostazioni Primetime per sostituire il comportamento TVSDK predefinito nell&#39;implementazione di riferimento configurando il controllo ABR personalizzato.
@@ -39,7 +37,7 @@ Per attivare l&#39;ABR personalizzato tramite l&#39;interfaccia utente Impostazi
 * Apri la finestra di dialogo Impostazioni Primetime.
 * Seleziona **[!UICONTROL ABR controls]**.
 
-   ![](assets/abr-configuration.jpg)
+  ![](assets/abr-configuration.jpg)
 
 * Tocca il [!UICONTROL Enable ON] in modo che venga visualizzato `OFF`.
 

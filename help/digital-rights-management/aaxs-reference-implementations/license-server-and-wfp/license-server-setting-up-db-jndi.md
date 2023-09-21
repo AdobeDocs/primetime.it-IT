@@ -2,8 +2,7 @@
 title: Configurazione del database e dell’origine dati JNDI
 description: Configurazione del database e dell’origine dati JNDI
 copied-description: true
-exl-id: ed22f095-924b-4792-8a10-e7548fab2c3b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '521'
 ht-degree: 0%
@@ -43,7 +42,7 @@ Sarà quindi necessario installare MySQL JDBC Driver 5.1.7. Per eseguire questa 
 >
 >MySQL JDBC Driver 5.1.7 funziona con Tomcat 6.0. Le versioni precedenti di Tomcat non sono supportate.
 
-Impostare il database di esempio impostando lo schema del database e popolando il database con dati di esempio. A questo scopo, effettua le seguenti operazioni:
+Impostare il database di esempio impostando lo schema del database e popolandolo con dati di esempio. A questo scopo, effettua le seguenti operazioni:
 
 1. Vai a  **[!UICONTROL Window's Start Menu]** > **[!UICONTROL MySQL]** > **[!UICONTROL MySQL Server 5.1]** > **[!UICONTROL MySQL Command Line Client]** .
 1. Dopo aver digitato la password, eseguire lo script SQL seguente per aggiungere l&#39;account utente `dbuser` per stabilire una connessione tramite un’applicazione web e creare uno schema di database (assicurati che non sia presente &quot;;&quot; alla fine. Premere Invio.):

@@ -1,8 +1,7 @@
 ---
 description: Il sistema di notifica TVSDK genera vari avvisi di errore, di avvertenza e informativi che forniscono metadati diagnostici.
 title: Codici di notifica ERROR
-exl-id: 2354aad6-dc18-4c55-a1e7-a4938597e124
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '448'
 ht-degree: 5%

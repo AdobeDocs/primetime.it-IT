@@ -1,8 +1,7 @@
 ---
 description: Puoi implementare i resolver in base a quelli predefiniti.
 title: Implementare un’opportunità personalizzata/risolutore contenuti
-exl-id: a73f62e1-7e6e-4b16-9bf8-118ec0381c41
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 0%
@@ -63,11 +62,12 @@ Puoi implementare i resolver in base a quelli predefiniti.
 
          * A `CMTimeRange` con l’ora di inizio e la durata dell’interruzione.
 
-            Viene impostata come proprietà intervallo di `PTAdBreak`.
+           Viene impostata come proprietà intervallo di `PTAdBreak`.
 
          * `NSArray` di `PTAd`s.
 
-            Viene impostata come proprietà ads di `PTAdBreak`.
+           Viene impostata come proprietà ads di `PTAdBreak`.
+
    * A `PTAd` rappresenta l’annuncio, e ogni `PTAd` presenta le seguenti caratteristiche:
 
       * A `PTAdHLSAsset` impostata come proprietà della risorsa principale dell’annuncio.

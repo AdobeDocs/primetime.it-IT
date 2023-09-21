@@ -1,8 +1,7 @@
 ---
 description: Quando la riproduzione raggiunge un’interruzione pubblicitaria, passa un’interruzione pubblicitaria o termina in un’interruzione pubblicitaria, TVSDK definisce alcuni comportamenti predefiniti per il posizionamento della testina di riproduzione corrente.
 title: Personalizzare la riproduzione con gli annunci
-exl-id: 3e945113-f44f-4b53-b952-10307f8d2d2f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '222'
 ht-degree: 0%
@@ -25,4 +24,4 @@ Puoi personalizzare il comportamento di riproduzione degli annunci nei seguenti 
 * Se viene presentata all’utente un’interruzione pubblicitaria, non verranno mostrati annunci aggiuntivi per un numero di minuti, anche se l’utente cerca di trovare una nuova posizione.
 * Se dopo alcuni minuti il contenuto non viene riprodotto correttamente, riavviare il flusso o eseguire il failover su un&#39;origine diversa per lo stesso contenuto.
 
-   Nella sessione di riproduzione del failover, per consentire all’utente di saltare gli annunci e riprendere la precedente posizione di errore, puoi disabilitare gli annunci pre-roll e/o mid-roll. TVSDK fornisce metodi per consentire di saltare gli annunci pre-roll e mid-roll.
+  Nella sessione di riproduzione del failover, per consentire all’utente di saltare gli annunci e riprendere la precedente posizione di errore, puoi disabilitare gli annunci pre-roll e/o mid-roll. TVSDK fornisce metodi per consentire di saltare gli annunci pre-roll e mid-roll.

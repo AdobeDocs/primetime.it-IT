@@ -1,8 +1,7 @@
 ---
 description: L’applicazione può monitorare l’attività nel lettore e il cambiamento dello stato del lettore ascoltando gli eventi inviati da TVSDK.
 title: Riepilogo eventi del lettore Primetime
-exl-id: 3912f140-1600-41fb-9dc4-306646b7cd85
-source-git-commit: 59f7f8aa82be59c4012ee80648032600590bc4e1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '567'
 ht-degree: 0%

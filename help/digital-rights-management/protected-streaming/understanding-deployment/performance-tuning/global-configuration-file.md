@@ -1,8 +1,7 @@
 ---
 description: In questo argomento vengono descritte le considerazioni relative alle prestazioni. Qualsiasi impostazione nel file di configurazione globale denominato flashaccess-global.xml influisce sulle prestazioni.
 title: File di configurazione globale
-exl-id: 52d41476-d352-4c02-8af6-25c0fe6bcaa7
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 0%
@@ -25,15 +24,15 @@ Il file di configurazione include i seguenti elementi delle impostazioni:
 
 * `refreshDelaySeconds` Controlla la frequenza con cui il server verifica la disponibilità di aggiornamenti per i file di configurazione. Un valore basso per `refreshDelaySeconds` influisce negativamente sulle prestazioni, mentre un valore più elevato può migliorarle.
 
-   Consulta *Aggiornamento dei file di configurazione* per ulteriori informazioni su `refreshDelaySeconds`.
+  Consulta *Aggiornamento dei file di configurazione* per ulteriori informazioni su `refreshDelaySeconds`.
 
 * `numTenants` specifica il numero di tenant. Un valore inferiore al numero di tenant influisce sulle prestazioni perché le richieste ai tenant rimanenti causano errori nella cache. Un mancato riscontro nella cache per qualsiasi dato di configurazione influisce negativamente sulle prestazioni. Pertanto, si consiglia di impostare questo valore su un valore maggiore del numero di tenant configurati per il server, a meno che non vi siano limitazioni di memoria da considerare.
 
 * `<Logging>` Il `<Logging>` specifica il livello di registrazione e la frequenza con cui vengono eseguiti i rollback dei file di registro. Il `<Logging>` supporta la seguente sintassi:
 
-   ```
-   <Logging level="..." rollingFrequency="..."/>
-   ```
+  ```
+  <Logging level="..." rollingFrequency="..."/>
+  ```
 
 * `<level>`  `level` specifica i messaggi in un registro. Un valore di `DEBUG` genera molti messaggi di registro, che possono influire negativamente sulle prestazioni. Si consiglia di applicare un&#39;impostazione `WARN` per prestazioni ottimali. Tuttavia, questo valore può comportare la perdita di informazioni di runtime essenziali, ad esempio i controlli delle licenze. Se desideri salvare le informazioni di registro con un impatto minimo sulle prestazioni, devi applicare un valore di `INFO`.
 

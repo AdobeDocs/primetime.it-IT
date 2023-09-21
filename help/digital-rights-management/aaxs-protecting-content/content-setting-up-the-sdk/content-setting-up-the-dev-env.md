@@ -1,8 +1,7 @@
 ---
 description: Per impostare l'Adobe ® Access™, copiare i file dal DVD. Questi file includono file JAR contenenti codice, certificati e classi di terze parti. Inoltre, richiedi un certificato a Adobe Systems Incorporated. Verranno rilasciate più credenziali utilizzate per proteggere l'integrità dei pacchetti di contenuto, licenze e comunicazioni tra client e server.
 title: Configurazione dell’ambiente di sviluppo
-exl-id: 66310fc8-7513-4aab-81d6-1370ce216cbf
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 0%

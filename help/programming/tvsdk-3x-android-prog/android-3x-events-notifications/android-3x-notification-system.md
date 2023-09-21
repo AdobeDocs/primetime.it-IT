@@ -1,8 +1,7 @@
 ---
 description: Eventi e notifiche consentono di gestire gli aspetti asincroni dell’applicazione video.
 title: Notifiche ed eventi per stato, attività, errori e registrazione del lettore
-exl-id: 39149c41-920b-4016-9f31-83e772f41cab
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '480'
 ht-degree: 0%
@@ -76,7 +75,6 @@ Ecco un esempio di come recuperare le notifiche:
    >1. Diminuire l&#39;intervallo di tempo che guida il thread che esegue il polling per i nuovi eventi.
    >
    >1. Aumenta le dimensioni dell’elenco di notifiche.
-
 
 1. Serializza le voci più recenti dell’evento di notifica in formato JSON e invia le voci a un server remoto per la post-elaborazione.
 

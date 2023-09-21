@@ -1,8 +1,7 @@
 ---
 description: Per visualizzare gli annunci pubblicitari dei banner, devi creare istanze di banner e consentire a TVSDK del browser di rilevare gli eventi relativi agli annunci.
 title: Visualizza banner pubblicitari
-exl-id: 331c10a4-ae31-4d3b-aaca-9497e2970ecf
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 0%

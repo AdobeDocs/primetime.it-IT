@@ -1,8 +1,7 @@
 ---
 description: Quando un consumatore acquisisce un file di contenuto protetto da un sito web o da una rete CDN, deve anche acquisire una licenza che contenga una chiave per decrittografare il video prima che possa essere riprodotto. I passaggi seguenti illustrano un flusso di lavoro comune per la modalità di accesso ai contenuti protetti da parte di un computer che esegue un Flash Player o Adobe AIR
 title: Acquisizione dei contenuti
-exl-id: 92d51928-6021-4284-9310-4e6ce758bffc
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '695'
 ht-degree: 0%

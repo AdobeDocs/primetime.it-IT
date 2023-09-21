@@ -1,8 +1,7 @@
 ---
 description: TVSDK fornisce elementi API che sono utili quando si implementano sospensioni attività, inclusi metodi, metadati e notifiche.
 title: Elementi API di sospensione attività
-exl-id: 76d99d8d-1aae-4faa-aaf2-bb7b535a1c71
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 0%
@@ -23,7 +22,7 @@ Puoi utilizzare quanto segue durante l’implementazione di una soluzione di sos
 
 * **PTMetadata.PTBlackoutMetadata** A `PTMetadata` classe specifica per le sospensioni attività.
 
-   Questo consente di impostare intervalli non ricercabili (un array di `CMTimeRanges`) su TVSDK. TVSDK controlla questi intervalli ogni volta che l’utente cerca. Se è impostato e l’utente cerca in un intervallo non ricercabile, TVSDK forza il visualizzatore alla fine dell’intervallo non ricercabile.
+  Questo consente di impostare intervalli non ricercabili (un array di `CMTimeRanges`) su TVSDK. TVSDK controlla questi intervalli ogni volta che l’utente cerca. Se è impostato e l’utente cerca in un intervallo non ricercabile, TVSDK forza il visualizzatore alla fine dell’intervallo non ricercabile.
 
 * **INIZIA QUI DOPO** **PTAdMetadata** Abilita o disabilita il pre-roll su un flusso live impostando `enableLivePreroll` a YES o NO. Se NO, TVSDK non effettua una chiamata esplicita ad server per gli annunci pre-roll prima della riproduzione del contenuto e quindi non riproduce il pre-roll. Questo non ha alcun impatto sulle mid-roll. Il valore predefinito è YES.
 
@@ -40,4 +39,5 @@ Puoi utilizzare quanto segue durante l’implementazione di una soluzione di sos
       * Codice: 204000
       * Tipo: avvertenza
       * Errore nel download del manifesto in background.
+
    * `INVALID_SEEK_WARNING` Inviato quando si tenta una ricerca in un intervallo non ricercabile (in `nonSeekableRanges` imposta in `PTBlackoutMetadata`).

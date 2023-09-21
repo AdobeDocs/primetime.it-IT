@@ -2,8 +2,7 @@
 title: Memorizzazione delle credenziali
 description: Memorizzazione delle credenziali
 copied-description: true
-exl-id: 42bccf3a-307f-4763-8b02-f983bcc2e131
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '363'
 ht-degree: 0%
@@ -26,4 +25,4 @@ L’SDK supporta diversi modi per archiviare le credenziali (un certificato a ch
 
 Il provider SunPKCS11 è un esempio di provider JCE che può essere utilizzato per accedere a una chiave privata su un HSM (per istruzioni sull&#39;utilizzo di questo provider, vedere la documentazione di Sun Java). Alcuni HSM sono dotati anche di un SDK Java che include un provider JCE.
 
-PEM e DER sono due modi per codificare un certificato a chiave pubblica. PEM è una codifica base 64 e DER è una codifica binaria. I file di certificato in genere utilizzano l’estensione .cer, .pem. o .der. I certificati vengono utilizzati in luoghi in cui è richiesta solo la chiave pubblica. Se un componente richiede solo la chiave pubblica per funzionare, è meglio fornire a tale componente il certificato anziché le credenziali o il file PKCS12.
+PEM e DER sono due modi per codificare un certificato a chiave pubblica. PEM è una codifica base 64 e DER è una codifica binaria. I file di certificato utilizzano in genere l’estensione .cer, .pem. o .der. I certificati vengono utilizzati in luoghi in cui è richiesta solo la chiave pubblica. Se un componente richiede solo la chiave pubblica per funzionare, è meglio fornire a tale componente il certificato anziché le credenziali o il file PKCS12.

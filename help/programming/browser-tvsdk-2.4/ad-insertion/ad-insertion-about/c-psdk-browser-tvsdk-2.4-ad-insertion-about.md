@@ -1,8 +1,7 @@
 ---
 description: L’inserimento di annunci risolve gli annunci per video on-demand (VOD) , per lo streaming live e per lo streaming lineare con tracciamento degli annunci e riproduzione degli annunci. Il browser TVSDK effettua le richieste necessarie al server di annunci, riceve informazioni sugli annunci per il contenuto specificato e inserisce gli annunci nel contenuto in fasi.
 title: Inserimento annunci
-exl-id: 285e9c6d-76fd-4a26-b7ee-d96a59865026
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '123'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Quando la riproduzione include annunci, il TVSDK del browser invia eventi/notifiche in sequenze generalmente previste. Il lettore può implementare azioni basate sugli eventi nella sequenza prevista.
 title: Ordine degli eventi pubblicitari
-exl-id: fcc40aa8-9364-40a8-b2f2-9327e24819af
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 0%

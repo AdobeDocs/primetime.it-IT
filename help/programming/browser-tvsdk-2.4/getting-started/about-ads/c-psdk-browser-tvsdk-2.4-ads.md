@@ -1,8 +1,7 @@
 ---
 description: Durante la riproduzione del contenuto, il browser TVSDK può visualizzare annunci e trasmettere informazioni sugli annunci durante la creazione dell’oggetto MediaResource.
 title: Annunci
-exl-id: a44ad0fa-841f-474b-89f4-39666190231f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '100'
 ht-degree: 0%

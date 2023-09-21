@@ -2,8 +2,7 @@
 title: Utilizzo della panoramica della classe DRMManager
 description: Utilizzo della panoramica della classe DRMManager
 copied-description: true
-exl-id: 941a69fb-3085-45d6-9176-08ebb93cada4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 0%
@@ -26,7 +25,7 @@ Per precaricare una licenza, utilizzare una `DRMContentData` oggetto. Il `DRMCon
 
 ## Gestione degli eventi DRMStatus {#handling-drmstatus-events}
 
-Il `DRMManager` invia un `DRMStatusEvent` oggetto dopo una chiamata al `loadVoucher()` metodo completato correttamente. Se viene ottenuta una licenza, il valore della proprietà detail dell&#39;oggetto evento è il seguente: `DRM.voucherObtained`e la proprietà voucher contiene `DRMVoucher` oggetto. Se non si ottiene una licenza, il valore della proprietà Corpo rimane invariato: `DRM.voucherObtained`; tuttavia, la proprietà del voucher è null. Non è possibile ottenere una licenza se, ad esempio, si utilizza `LoadVoucherSetting` di `localOnly` e non esiste una licenza memorizzata nella cache locale. Se il `loadVoucher()` chiamata non completata correttamente, probabilmente a causa di un errore di autenticazione o comunicazione, il `DRMManager` invia un `DRMErrorEvent` o `DRMAuthenticationErrorEvent` oggetto.
+Il `DRMManager` invia un `DRMStatusEvent` oggetto dopo una chiamata al `loadVoucher()` metodo completato correttamente. Se viene ottenuta una licenza, il valore della proprietà detail dell&#39;oggetto evento è il seguente: `DRM.voucherObtained`e la proprietà voucher contiene `DRMVoucher` oggetto. Se non si ottiene una licenza, la proprietà detail ha ancora il valore: `DRM.voucherObtained`; tuttavia, la proprietà del voucher è null. Non è possibile ottenere una licenza se, ad esempio, si utilizza `LoadVoucherSetting` di `localOnly` e non esiste una licenza memorizzata nella cache locale. Se il `loadVoucher()` chiamata non completata correttamente, probabilmente a causa di un errore di autenticazione o comunicazione, `DRMManager` invia un `DRMErrorEvent` o `DRMAuthenticationErrorEvent` oggetto.
 
 ## Gestione degli eventi DRMAuthenticationComplete{#handling-drmauthenticationcomplete-events}
 

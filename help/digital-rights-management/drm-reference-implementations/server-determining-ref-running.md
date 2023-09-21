@@ -2,8 +2,7 @@
 title: Determinare se il server licenze di implementazione di riferimento funziona correttamente
 description: Determinare se il server licenze di implementazione di riferimento funziona correttamente
 copied-description: true
-exl-id: 97ca0b6c-2661-4cdc-b8d0-dcc545f009f6
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Gestione della compatibilità FMRMS
 title: Aggiornamento dei client
-exl-id: 7774b408-c2cb-400b-be41-74cc9739e0e9
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 0%
@@ -20,7 +19,7 @@ Se un client FMRMS 1.x contatta un server Adobe Primetime DRM, il server deve ri
 * La classe del gestore richieste è `com.adobe.flashaccess.sdk.protocol.compatibility.FMRMSv1RequestHandler`.
 * L’URL della richiesta è &quot;*URL di base da contenuto 1.x*&quot; + &quot; [!DNL /edcws/services/urn:EDCLicenseService]&quot;
 
-   A differenza di altri gestori di richieste di Adobe Primetime, questo gestore non fornisce l’accesso ad alcuna informazione di richiesta o richiede l’impostazione di dati di risposta. Crea un&#39;istanza di `FMRMSv1RequestHandler`, quindi chiama `close()`
+  A differenza di altri gestori di richieste di Adobe Primetime, questo gestore non fornisce l’accesso ad alcuna informazione di richiesta o richiede l’impostazione di dati di risposta. Crea un&#39;istanza di `FMRMSv1RequestHandler`, quindi chiama `close()`
 
 ## Aggiornamento dei metadati {#upgrading-metadata}
 

@@ -1,16 +1,15 @@
 ---
-title: Preferenze elenco aggiornamento criteri
-description: Preferenze elenco aggiornamento criteri
+title: Preferenze elenco aggiornamenti criteri
+description: Preferenze elenco aggiornamenti criteri
 copied-description: true
-exl-id: bca45ad8-8cc2-48cb-8d83-0fb77da11489
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '73'
 ht-degree: 0%
 
 ---
 
-# Preferenze elenco aggiornamento criteri {#policy-update-list-preferences}
+# Preferenze elenco aggiornamenti criteri {#policy-update-list-preferences}
 
 Questa scheda contiene le impostazioni necessarie per la creazione degli elenchi di aggiornamento dei criteri. La tabella seguente descrive le preferenze:
 

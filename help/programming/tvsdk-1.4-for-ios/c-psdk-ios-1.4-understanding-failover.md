@@ -1,8 +1,7 @@
 ---
 description: La gestione del failover si verifica quando una playlist di varianti presenta più copie trasformate per la stessa velocità bit e una di esse smette di funzionare. Il TVSDK passa da un rendering all’altro.
 title: Failover
-exl-id: 8c215e2b-e601-4991-a66f-0e810176a511
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '222'
 ht-degree: 0%

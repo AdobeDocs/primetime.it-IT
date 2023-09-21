@@ -2,8 +2,7 @@
 title: Creare un amministratore secondario
 description: Creare un amministratore secondario
 copied-description: true
-exl-id: c3c58361-d173-425c-b59d-ab4427640cdf
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '355'
 ht-degree: 0%
@@ -19,13 +18,13 @@ L&#39;amministratore dell&#39;account può creare un amministratore secondario. 
 
    * **[!UICONTROL Add user]**.
 
-      Se il dipendente dispone di un account di Adobe, immettere l&#39;indirizzo di posta elettronica. Clic **[!UICONTROL Add]** e continua.
+     Se il dipendente dispone di un account di Adobe, immettere l&#39;indirizzo di posta elettronica. Clic **[!UICONTROL Add]** e continua.
 
    * **[!UICONTROL Invite user]** Se il dipendente non dispone di un account Adobe, invitalo a crearne uno. Inserire l&#39;indirizzo di posta elettronica e il nome del dipendente e fare clic su **[!UICONTROL Send an invitation]**. Il sito invia un invito tramite posta elettronica all&#39;invitato. L&#39;e-mail contiene un collegamento a adobe.com in cui l&#39;invitato può creare un account. L&#39;invitato deve utilizzare l&#39;indirizzo di posta elettronica a cui è stato inviato l&#39;invito.
 
-      >[!NOTE]
-      >
-      >L’amministratore non riceve alcuna notifica quando un utente ha creato un account. Controlla la **[!UICONTROL User accounts]** nel sito di registrazione certificati per verificare se un invitato ha creato un account.
+     >[!NOTE]
+     >
+     >L’amministratore non riceve alcuna notifica quando un utente ha creato un account. Controlla la **[!UICONTROL User accounts]** nel sito di registrazione certificati per verificare se un invitato ha creato un account.
 
 1. Se hai aggiunto un utente, la schermata della sezione del ruolo nel **[!UICONTROL User accounts]** viene visualizzata la scheda. Effettua le seguenti operazioni:
 

@@ -1,8 +1,7 @@
 ---
 description: Puoi ottenere una descrizione della timeline associata all’elemento attualmente selezionato riprodotto da TVSDK. Questa funzione è particolarmente utile quando l’applicazione visualizza un controllo barra di scorrimento personalizzato in cui vengono identificate le sezioni di contenuto corrispondenti al contenuto dell’annuncio.
 title: Inspect la timeline di riproduzione
-exl-id: af373f1e-ed5b-40a9-a91e-9eb0e4a181de
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 0%

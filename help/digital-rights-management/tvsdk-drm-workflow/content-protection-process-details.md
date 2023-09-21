@@ -2,8 +2,7 @@
 title: Dettagli del processo di acquisizione delle licenze
 description: Dettagli del processo di acquisizione delle licenze
 copied-description: true
-exl-id: d772339a-8d05-401b-b5c1-18169b3627b6
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '968'
 ht-degree: 0%
@@ -99,7 +98,7 @@ Innanzitutto, prova a caricare una licenza memorizzata localmente per riprodurre
 
       >[!NOTE]
       >
-      >In alternativa, indipendentemente dal metodo di autenticazione, `.setAuthenticationToken()` può essere utilizzato per inviare dati personalizzati dal client al server licenze. Si tratta di un sovraccarico dell’API, in quanto questo meccanismo è l’unico modo per inviare dati dinamici personalizzati dal client al server licenze al momento dell’acquisizione della licenza. Questo metodo di trasporto dei dati personalizzati viene discusso in modo approfondito in diversi post del forum in [Forum DRM (Adobe Access) di Primetime ](https://forums.adobe.com/community/adobe_access).
+      >In alternativa, indipendentemente dal metodo di autenticazione, `.setAuthenticationToken()` può essere utilizzato per inviare dati personalizzati dal client al server licenze. Si tratta di un sovraccarico dell’API, in quanto questo meccanismo è l’unico modo per inviare dati dinamici personalizzati dal client al server licenze al momento dell’acquisizione della licenza. Questo metodo di trasporto dei dati personalizzati viene discusso in modo approfondito in diversi post del forum in [Forum DRM (Adobe Access) di Primetime](https://forums.adobe.com/community/adobe_access).
 
 1. Se l&#39;autenticazione non riesce, l&#39;applicazione deve tornare al passaggio 6.
 

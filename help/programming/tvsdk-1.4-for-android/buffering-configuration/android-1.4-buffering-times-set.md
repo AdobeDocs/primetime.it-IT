@@ -1,8 +1,7 @@
 ---
 description: Per offrire un’esperienza di visualizzazione più fluida, TVSDK a volte archivia il flusso video. Puoi configurare il modo in cui il lettore effettua il buffer.
 title: Impostare i tempi di buffering
-exl-id: 4542d10a-b6f8-430d-8b9a-5a358d1c0e9d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '311'
 ht-degree: 0%
@@ -31,20 +30,20 @@ Il `MediaPlayer` fornisce metodi per impostare e ottenere il tempo di buffering 
    
    * Per impostare il tempo del buffer iniziale uguale al tempo del buffer di riproduzione:
 
-      ```java
-      public static BufferControlParameters createSimple( 
-          long bufferTime)
-      ```
+     ```java
+     public static BufferControlParameters createSimple( 
+         long bufferTime)
+     ```
 
    * Per impostare i tempi del buffer iniziale e di riproduzione:
 
-      ```java
-      public static BufferControlParameters createDual( 
-          long initialBuffer,   
-          long bufferTime)
-      ```
+     ```java
+     public static BufferControlParameters createDual( 
+         long initialBuffer,   
+         long bufferTime)
+     ```
 
-      Questi metodi generano un `IllegalArgumentException` se i parametri non sono validi, ad esempio quando:
+     Questi metodi generano un `IllegalArgumentException` se i parametri non sono validi, ad esempio quando:
 
    * Il tempo del buffer iniziale è inferiore a zero.
    * Il tempo del buffer iniziale è maggiore del tempo del buffer.

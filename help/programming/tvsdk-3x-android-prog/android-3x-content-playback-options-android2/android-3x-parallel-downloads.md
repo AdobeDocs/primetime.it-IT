@@ -1,8 +1,7 @@
 ---
 description: Il download di video e audio in parallelo, anziché in una serie, riduce i ritardi di avvio.
 title: Download paralleli
-exl-id: 7cc9afbf-e495-40b0-a8ff-86d4939d1b15
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 0%
@@ -39,7 +38,7 @@ La connessione HTTP potrebbe subire ritardi nelle seguenti fasi:
 
 * Quando si stabilisce la connessione TCP/IP al server
 
-   Sebbene il client e il server abbiano accettato di comunicare, non si è ancora verificata alcuna comunicazione HTTP. Questo tipo di ritardo dipende dall’infrastruttura tra il client e il server. Questo processo richiede di trovare un percorso attraverso Internet tra il client e il server e di assicurarsi che tutti i dispositivi, come router e firewall, sulla route accettino il trasferimento di dati.
+  Sebbene il client e il server abbiano accettato di comunicare, non si è ancora verificata alcuna comunicazione HTTP. Questo tipo di ritardo dipende dall’infrastruttura tra il client e il server. Questo processo richiede di trovare un percorso attraverso Internet tra il client e il server e di assicurarsi che tutti i dispositivi, come router e firewall, sulla route accettino il trasferimento di dati.
 * Quando si invia una richiesta HTTP per un segmento o un manifesto tramite la connessione TCP/IP.
 
-   Il server riceve la richiesta, la elabora e inizia a inviare nuovamente i dati al client. Il grado di ritardo dipende dal carico e dalla complessità del software sul server e in qualche modo dalla velocità di connessione del caricamento quando il client invia la richiesta.
+  Il server riceve la richiesta, la elabora e inizia a inviare nuovamente i dati al client. Il grado di ritardo dipende dal carico e dalla complessità del software sul server e in qualche modo dalla velocità di connessione del caricamento quando il client invia la richiesta.

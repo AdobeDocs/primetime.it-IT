@@ -1,8 +1,7 @@
 ---
 title: Verificare i flussi di autenticazione e autorizzazione utilizzando il sito di test API di Adobe
 description: Verificare i flussi di autenticazione e autorizzazione utilizzando il sito di test API di Adobe
-exl-id: 04af4aed-35e4-44cb-98ce-7643165a8869
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 0%

@@ -2,8 +2,7 @@
 title: Consumo di CRL generati localmente
 description: Consumo di CRL generati localmente
 copied-description: true
-exl-id: d96418d0-8fd3-4f6d-8480-191fe540080a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 0%
@@ -16,8 +15,8 @@ Per utilizzare gli elenchi di revoche di certificati (CRL) generati localmente e
 
 * Chiamata `RevocationList.verifySignature` per controllare la firma prima di fornire RevocationList a qualsiasi API.
 
-   Per ulteriori informazioni, consulta `RevocationListFactory` nel *Riferimento API per l’accesso agli Adobi*.
+  Per ulteriori informazioni, consulta `RevocationListFactory` nel *Riferimento API per l’accesso agli Adobi*.
 
 * Chiamata `PolicyUpdateList.verifySignature`per verificare la firma prima di fornire `PolicyUpdateList` a qualsiasi API.
 
-   Per ulteriori informazioni, consulta `PolicyUpdateList` nel *Riferimento API per l’accesso agli Adobi*.
+  Per ulteriori informazioni, consulta `PolicyUpdateList` nel *Riferimento API per l’accesso agli Adobi*.

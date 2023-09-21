@@ -1,8 +1,7 @@
 ---
 description: La definizione VPAID (Video Player Ad-Serving Interface Definition) fornisce un’interfaccia comune per la riproduzione di annunci video. VPAID offre agli utenti un’esperienza multimediale avanzata e consente agli editori di eseguire meglio il targeting degli annunci, tenere traccia delle impression pubblicitarie e monetizzare i contenuti video.
 title: Requisiti degli annunci personalizzati
-exl-id: c13748d6-23f1-4f34-95b4-7b532db6e536
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%
@@ -23,7 +22,7 @@ TVSDK supporta le seguenti funzionalità:
 * Annunci VPAID lineari su contenuti video-on-demand (VOD)
 * Flash annunci VPAID
 
-   Gli annunci VPAID devono essere basati su Flash e la risposta dell’annuncio deve identificare il tipo di file multimediale dell’annuncio VPAID come `application/x-shockwave-flash`.
+  Gli annunci VPAID devono essere basati su Flash e la risposta dell’annuncio deve identificare il tipo di file multimediale dell’annuncio VPAID come `application/x-shockwave-flash`.
 
 Le seguenti funzioni non sono supportate:
 

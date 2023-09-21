@@ -2,8 +2,7 @@
 title: Timeout per i token di autenticazione
 description: Timeout per i token di autenticazione
 copied-description: true
-exl-id: ee9c5b2c-6a79-499c-bd60-718e33bc3a9b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%

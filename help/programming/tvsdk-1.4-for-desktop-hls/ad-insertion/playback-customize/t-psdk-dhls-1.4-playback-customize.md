@@ -1,8 +1,7 @@
 ---
 description: Puoi personalizzare o ignorare i comportamenti degli annunci.
 title: Impostare la riproduzione personalizzata
-exl-id: 28c28589-9e94-40de-b921-1bffc0392c29
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 0%
@@ -18,11 +17,11 @@ Per personalizzare i comportamenti degli annunci, effettuare una delle seguenti 
 
 * Implementare `AdPolicySelector` e tutti i relativi metodi.
 
-   Questa opzione è consigliata se devi eseguire l’override di **tutto** i comportamenti di annuncio predefiniti.
+  Questa opzione è consigliata se devi eseguire l’override di **tutto** i comportamenti di annuncio predefiniti.
 
 * Estendi il `DefaultAdPolicySelector` e forniscono implementazioni solo per i comportamenti che richiedono personalizzazione.
 
-   Questa opzione è consigliata solo se è necessario eseguire l&#39;override **alcuni** dei comportamenti predefiniti.
+  Questa opzione è consigliata solo se è necessario eseguire l&#39;override **alcuni** dei comportamenti predefiniti.
 
 Per entrambe le opzioni, completa le seguenti attività:
 

@@ -1,8 +1,7 @@
 ---
 description: Lavora con il SEES per scoprire come abilitare un servizio di adesione basato sul tempo utilizzando ExpressPlay.
 title: Autorizzazione basata su tempo del servizio di riferimento
-exl-id: a37b0e71-ba7b-4f03-9866-5e8b062e0b7d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 0%

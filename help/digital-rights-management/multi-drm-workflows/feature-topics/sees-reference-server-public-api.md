@@ -1,8 +1,7 @@
 ---
 description: La richiesta e la risposta di adesione vengono trasmesse tramite una connessione SSL reciprocamente autenticata tra il server licenze e il servizio di adesione del cliente.
 title: API PUBBLICA SEES
-exl-id: b78cd74d-06ea-4d31-a1f2-0f0d84d23670
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 0%

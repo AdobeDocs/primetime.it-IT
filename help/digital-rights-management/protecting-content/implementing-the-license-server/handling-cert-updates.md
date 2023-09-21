@@ -2,8 +2,7 @@
 title: Gestione degli aggiornamenti dei certificati alla scadenza dei certificati rilasciati dagli Adobi
 description: Gestione degli aggiornamenti dei certificati alla scadenza dei certificati rilasciati dagli Adobi
 copied-description: true
-exl-id: 9051a647-87ed-4df6-8bbc-bb5c112383ee
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '534'
 ht-degree: 0%
@@ -48,24 +47,24 @@ Per aggiornare un server con nuovi certificati:
 
       * Nell’implementazione di riferimento, impostala con `LicenseHandler.ServerCredential` proprietà.
       * Nel server Adobe Primetime DRM per lo streaming protetto, le credenziali correnti devono essere le prime credenziali specificate nel `LicenseServerCredential` nel file flashaccess-tenant.xml.
+
    * Assicurati che le credenziali attuali e precedenti siano fornite a `AsymmetricKeyRetrieval`
 
       * Nell’implementazione di riferimento, impostala con `LicenseHandler.ServerCredential` e `AsymmetricKeyRetrieval.ServerCredential. n` proprietà.
 
       * Nel server DRM Primetime per lo streaming protetto, le vecchie credenziali vengono specificate dopo la prima credenziale nel `LicenseServerCredential` nel file flashaccess-tenant.xml.
+
    Per le credenziali trasporto:
 
    * Assicurati che le credenziali correnti siano passate al `HandlerConfiguration.setServerTransportCredential()` metodo:
 
       * Nell’implementazione di riferimento, impostala con `HandlerConfiguration.ServerTransportCredential` proprietà.
       * Nel server DRM di Primetime per lo streaming protetto, le credenziali correnti devono essere le prime credenziali specificate in `TransportCredential` elemento nel [!DNL flashaccess-tenant.xml] file.
+
    * Assicurati che le vecchie credenziali vengano fornite a `HandlerConfiguration.setAdditionalServerTransportCredentials`():
 
       * Nell’implementazione di riferimento, impostala con `HandlerConfiguration.AdditionalServerTransportCredential. n` proprietà.
       * Nel server DRM Primetime per lo streaming protetto, questo viene specificato dopo la prima credenziale nel `TransportCredential` nel file flashaccess-tenant.xml.
-
-
-
 
 1. Aggiorna gli strumenti di creazione pacchetti per assicurarti che stiano creando pacchetti di contenuto con le credenziali correnti. Verificare che per la creazione di pacchetti vengano utilizzati il certificato del server licenze, il certificato di trasporto e le credenziali del packager più recenti.
 1. Aggiornare il certificato del server licenze del server chiavi nel modo seguente:

@@ -1,8 +1,7 @@
 ---
 description: Il termine "instant on" (attivazione immediata) si riferisce al precaricamento di uno o più canali, in modo che l’utente che seleziona un canale o cambia canale possa vedere i contenuti riprodotti immediatamente. Il buffering viene già eseguito nel momento in cui l’utente inizia a guardare.
 title: Istantanea attiva
-exl-id: f640f208-d1b3-467a-be97-38690e10b7ed
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 0%

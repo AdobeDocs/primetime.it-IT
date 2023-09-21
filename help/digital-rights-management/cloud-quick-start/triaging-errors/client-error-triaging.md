@@ -1,8 +1,7 @@
 ---
 description: Talvolta può accadere che il contenuto non possa essere riprodotto. Ciò può essere causato da qualsiasi numero di situazioni, inclusi errori nello stack di rete del browser, nel livello di trasporto, nel sistema operativo, nel runtime di Flash Player o nel sistema DRM Primetime.
 title: Panoramica sugli errori di verifica
-exl-id: fe94d0a4-4f3c-4b0e-b830-a7a83bac1e85
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 0%

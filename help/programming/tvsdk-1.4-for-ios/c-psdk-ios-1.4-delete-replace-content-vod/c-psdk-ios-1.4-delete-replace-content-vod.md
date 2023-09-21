@@ -1,8 +1,7 @@
 ---
 description: TVSDK supporta l’eliminazione e la sostituzione programmatica del contenuto di annunci nei flussi VOD.
 title: Eliminare e sostituire gli annunci nei flussi VOD
-exl-id: 44d75250-23ee-4ce3-a0c1-59bd488a5aba
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '372'
 ht-degree: 0%
@@ -24,11 +23,11 @@ Le seguenti modifiche in TVSDK supportano l’eliminazione e la sostituzione deg
    * `property PTTimeRangeCollectionType type` indica il tipo di intervallo di tempo.
    * `property NSArray* ranges` viene utilizzato per impostare gli intervalli di tempo.
 
-      Il tipo di oggetti previsto nell’array è `PTReplacementTimeRange` o `CMTimeRange`.
+     Il tipo di oggetti previsto nell’array è `PTReplacementTimeRange` o `CMTimeRange`.
 
-      >[!TIP]
-      >
-      >Tutti gli oggetti dell&#39;array devono essere dello stesso tipo.
+     >[!TIP]
+     >
+     >Tutti gli oggetti dell&#39;array devono essere dello stesso tipo.
 
    * `PTTimeRangeCollectionType` è un&#39;enumerazione che definisce il comportamento degli intervalli definiti nel `PTTimeRangeCollection`:
 
@@ -56,11 +55,11 @@ Le seguenti modifiche in TVSDK supportano l’eliminazione e la sostituzione deg
 
       * Tipo - Avvertenza
       * Descrizione: la modalità di segnalazione degli annunci è definita come intervallo personalizzato, ma non sono definiti intervalli personalizzati.
+
    * `INVALID_TIME_RANGES`
 
       * Tipo - Avvertenza
       * Descrizione: uno o più intervalli di tempo non sono validi e verranno ignorati o modificati.
-
 
 **API obsolete**
 

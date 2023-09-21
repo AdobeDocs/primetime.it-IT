@@ -1,8 +1,7 @@
 ---
 description: Collabora con il tuo rappresentante di Adobe per ottenere i certificati e impostare un account amministrativo su ExpressPlay. Una volta impostati gli account Adobe ed ExpressPlay, è possibile iniziare a implementare e testare i flussi di lavoro per diverse soluzioni DRM.
 title: Panoramica rapida di Primetime DRM Cloud
-exl-id: b44d0f69-c8c4-47c8-b246-a3a6f0b9442b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '116'
 ht-degree: 0%

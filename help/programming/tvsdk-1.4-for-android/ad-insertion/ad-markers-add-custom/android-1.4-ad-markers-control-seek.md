@@ -1,8 +1,7 @@
 ---
 description: Quando utilizzi i marcatori di annunci personalizzati, puoi sovrascrivere il comportamento predefinito per la ricerca di TVSDK sugli annunci.
 title: Controlla il comportamento di riproduzione per la ricerca sui marcatori di annunci personalizzati
-exl-id: 83faa5a4-4416-499e-8cf2-d016cd9a379d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '155'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Queste modifiche nell'API Android TVSDK supportano l'eliminazione e la sostituzione degli annunci.
 title: Modifiche all’API di eliminazione e sostituzione dell’annuncio
-exl-id: bde8bd6e-0afe-42d0-b716-f33f75de757e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 0%
@@ -24,7 +23,7 @@ Queste modifiche nell&#39;API Android TVSDK supportano l&#39;eliminazione e la s
 
 * Nuovo `ContentRemoval` classe
 
-   `TimelineOperation` classe che definisce l’intervallo di tempo da rimuovere dalla timeline
+  `TimelineOperation` classe che definisce l’intervallo di tempo da rimuovere dalla timeline
 
 * `AuditudeResolver`
 

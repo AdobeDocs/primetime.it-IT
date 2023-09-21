@@ -2,8 +2,7 @@
 title: Panoramica
 description: Panoramica
 copied-description: true
-exl-id: 9aebdbd0-a6f0-4c9d-be2f-a8789cadf287
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 0%
@@ -23,7 +22,7 @@ java -jar AdobeLicenseEmbedder.jar sourcefile destfile [options]
 * `sourcefile` rappresenta un file crittografato.
 * `destfile` specifica il nome del file in cui viene salvato il contenuto crittografato con la licenza incorporata.
 
-   Se si specifica una directory, il file viene salvato nella directory di destinazione. Il nome del file di origine diventa anche il nome del file salvato nella directory di destinazione.
+  Se si specifica una directory, il file viene salvato nella directory di destinazione. Il nome del file di origine diventa anche il nome del file salvato nella directory di destinazione.
 
 Nella tabella seguente vengono descritte le opzioni della riga di comando che è possibile specificare:
 

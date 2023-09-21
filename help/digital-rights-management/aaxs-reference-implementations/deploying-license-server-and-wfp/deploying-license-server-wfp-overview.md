@@ -2,8 +2,7 @@
 title: Panoramica sulla distribuzione del server licenze e del packager delle cartelle controllate
 description: Panoramica sulla distribuzione del server licenze e del packager delle cartelle controllate
 copied-description: true
-exl-id: b44aec8b-f1d7-4dce-bc51-0ce2b74ae0c1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 0%

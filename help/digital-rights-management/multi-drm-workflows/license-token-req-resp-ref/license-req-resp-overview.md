@@ -1,8 +1,7 @@
 ---
 description: ExpressPlay fornisce documentazione di riferimento sul proprio sito. Per comodità, è disponibile qui anche una parte della documentazione di riferimento per richieste/risposte di ExpressPlay relativa a Primetime Cloud DRM, con tecnologia ExpressPlay.
 title: Panoramica di riferimento della richiesta/risposta del token di licenza ExpressPlay
-exl-id: 4f603dcb-6e9d-4c0b-967b-281d560704a2
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '85'
 ht-degree: 0%

@@ -2,8 +2,7 @@
 title: Installare gli strumenti della riga di comando
 description: Installare gli strumenti della riga di comando
 copied-description: true
-exl-id: a4775d96-3a3b-4896-bdfb-c7bc51347166
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '81'
 ht-degree: 0%
@@ -20,6 +19,6 @@ ht-degree: 0%
    * [!DNL libs/] - Contiene i file JAR degli strumenti della riga di comando
    * [!DNL samples/] - Contiene lo script di generazione della formica ( [!DNL build-samples.xml]) e i file Java di origine.
 
-      >[!NOTE]
-      >
-      >I file di origine Java mostrano come utilizzare le API SDK di Primetime DRM. Per generare ed eseguire i campioni, eseguire la [!DNL build-samples.xml] Script di formica in [!DNL samples/].
+     >[!NOTE]
+     >
+     >I file di origine Java mostrano come utilizzare le API SDK di Primetime DRM. Per generare ed eseguire i campioni, eseguire la [!DNL build-samples.xml] Script di formica in [!DNL samples/].

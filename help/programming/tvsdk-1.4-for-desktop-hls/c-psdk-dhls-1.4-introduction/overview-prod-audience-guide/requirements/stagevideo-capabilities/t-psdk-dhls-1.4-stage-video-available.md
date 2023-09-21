@@ -1,8 +1,7 @@
 ---
 description: Se StageVideo non è disponibile e l'applicazione tenta di utilizzare StageVideo, TVSDK non genera un errore. L'applicazione può determinare se StageVideo è disponibile ascoltando StageVideoAvailabilityEvent.
 title: Verifica se StageVideo è disponibile
-exl-id: 24136a14-8d7d-4569-9911-fac4e2de3227
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 0%

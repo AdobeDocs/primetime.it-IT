@@ -2,8 +2,7 @@
 title: Ottimizzazione delle prestazioni
 description: Ottimizzazione delle prestazioni
 copied-description: true
-exl-id: 1b54b7c2-da32-47db-b57f-b2afbaf386c4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '404'
 ht-degree: 0%
@@ -17,9 +16,9 @@ Utilizza i seguenti suggerimenti per migliorare le prestazioni:
 * L&#39;utilizzo di un HSM di rete può essere notevolmente più lento rispetto all&#39;utilizzo di un HSM a connessione diretta.
 * Per migliorare le prestazioni, è possibile abilitare il supporto nativo per le operazioni di crittografia distribuendo le librerie specifiche della piattaforma che si trovano in [!DNL thirdparty/cryptoj] cartella dell’SDK. Per abilitare il supporto nativo, aggiungi la libreria per la piattaforma (jsafe.dll per Windows o libjsafe.so per Linux) al percorso.
 
-   >[!NOTE]
-   >
-   >Se esegui più applicazioni web nella stessa istanza Tomcat e disponi di `jsafe.dll` sul percorso, solo la prima applicazione web che carica è in grado di caricare `jsafe.dll` libreria. Pertanto, solo la prima applicazione web ottiene il vantaggio del supporto nativo. In questi casi, per migliorare le prestazioni di tutte le applicazioni web, inserisci `cryptoj.jar`all&#39;esterno del file WAR. Ad esempio, nel `<tomcat_installation_folder>/lib` directory.
+  >[!NOTE]
+  >
+  >Se esegui più applicazioni web nella stessa istanza Tomcat e disponi di `jsafe.dll` sul percorso, solo la prima applicazione web che carica è in grado di caricare `jsafe.dll` libreria. Pertanto, solo la prima applicazione web ottiene il vantaggio del supporto nativo. In questi casi, per migliorare le prestazioni di tutte le applicazioni web, inserisci `cryptoj.jar`all&#39;esterno del file WAR. Ad esempio, nel `<tomcat_installation_folder>/lib` directory.
 
 * Un sistema operativo a 64 bit, come la versione a 64 bit di Red Hat® o Windows, offre prestazioni molto migliori rispetto a un sistema operativo a 32 bit.
 
@@ -29,7 +28,7 @@ In determinate condizioni gli ambienti Linux possono essere messi in pausa duran
 
 * Avvio del server licenze Adobe Primetime DRM
 * Generazione di criteri tramite [!DNL AdobePolicyManager] utilità
-* Creazione di pacchetti di contenuti protetti da DRM con Adobe Medium Server o OfflinePackager di Primetime
+* Creazione di pacchetti di contenuti protetti da DRM con Adobe Media Server o OfflinePackager di Primetime
 
 I ritardi durante queste operazioni sono spesso il risultato di un pool entropico basso sul server Linux.
 

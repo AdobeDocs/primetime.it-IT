@@ -2,8 +2,7 @@
 title: Informazioni sui file di configurazione degli strumenti della riga di comando
 description: Informazioni sui file di configurazione degli strumenti della riga di comando
 copied-description: true
-exl-id: 0ec4917e-7c70-4b84-86ac-c34c8a522018
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '144'
 ht-degree: 0%
@@ -18,7 +17,7 @@ I file di configurazione degli strumenti della riga di comando utilizzano *File 
 
 * Esci dalle barre rovesciate con una barra rovesciata aggiuntiva.
 
-   Ad esempio, in un computer Windows per specificare [!DNL C:\credentials.pfx] file, è necessario immetterlo come [!DNL C:\\credentials.pfx] o `C:/credentials.pfx`. Per specificare un file in un server di rete Windows, è necessario immettere `\\\\server\\folder\\filename.pfx`
+  Ad esempio, in un computer Windows per specificare [!DNL C:\credentials.pfx] file, è necessario immetterlo come [!DNL C:\\credentials.pfx] o `C:/credentials.pfx`. Per specificare un file in un server di rete Windows, è necessario immettere `\\\\server\\folder\\filename.pfx`
 * Solo inclusione *Latin-1* caratteri.
 
-   Per utilizzare non *Latin-1* caratteri, è necessario utilizzare la sequenza di escape Unicode appropriata. Facoltativamente, puoi applicare [!DNL native2ascii] (incluso in Java) alle voci del file di configurazione.
+  Per utilizzare non *Latin-1* caratteri, è necessario utilizzare la sequenza di escape Unicode appropriata. Facoltativamente, puoi applicare [!DNL native2ascii] (incluso in Java) alle voci del file di configurazione.

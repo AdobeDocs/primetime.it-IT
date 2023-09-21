@@ -1,8 +1,7 @@
 ---
 description: Dopo aver utilizzato una visualizzazione MediaPlayer per riprodurre il video, è possibile nasconderla e visualizzarla nuovamente utilizzando un metodo TVSDK o manualmente.
 title: Nascondere una visualizzazione video
-exl-id: 92354cd3-f0ed-4434-a7af-a3545e0e2460
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '156'
 ht-degree: 0%
@@ -22,9 +21,9 @@ Dopo aver utilizzato una visualizzazione MediaPlayer per riprodurre il video, è
    * Metti in pausa il video che desideri nascondere.
    * Spostate la vista fuori dallo stage. Ad esempio:
 
-      ```
-      view.x = -300; 
-      view.y = -300;
-      ```
+     ```
+     view.x = -300; 
+     view.y = -300;
+     ```
 
    * Per visualizzare nuovamente il video, spostate la vista nell&#39;area di visualizzazione.

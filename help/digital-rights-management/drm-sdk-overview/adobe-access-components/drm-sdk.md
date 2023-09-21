@@ -1,8 +1,7 @@
 ---
 description: I componenti principali di Primetime DRM sono un SDK Java e gli ambienti di runtime client Flash Player e Adobe AIR.
 title: Java SDK, Flash Player e client Adobe AIR
-exl-id: 5422d282-da9c-4810-a782-3c3af5fdeb3f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '433'
 ht-degree: 0%
@@ -27,11 +26,11 @@ Queste API vengono utilizzate per definire i diritti e preparare i contenuti per
 
 * Gestione delle policy
 
-   L’API di gestione dei criteri viene utilizzata per creare e modificare i criteri da applicare al contenuto. È possibile creare o aggiornare i criteri, incluso ottenere/impostare tutte le regole di utilizzo e consentire parametri aggiuntivi in uno spazio dei nomi personalizzato.
+  L’API di gestione dei criteri viene utilizzata per creare e modificare i criteri da applicare al contenuto. È possibile creare o aggiornare i criteri, incluso ottenere/impostare tutte le regole di utilizzo e consentire parametri aggiuntivi in uno spazio dei nomi personalizzato.
 
 * Confezionamento dei contenuti
 
-   L’API per la creazione di pacchetti di contenuti viene utilizzata per crittografare i contenuti e recuperare i metadati dai contenuti inclusi nel pacchetto.
+  L’API per la creazione di pacchetti di contenuti viene utilizzata per crittografare i contenuti e recuperare i metadati dai contenuti inclusi nel pacchetto.
 
 ## API Java per il rilascio di licenze{#java-apis-for-issuing-licenses}
 
@@ -39,15 +38,15 @@ Queste API vengono utilizzate quando un client richiede una licenza dal server. 
 
 * Autenticazione
 
-   L’API di autenticazione può essere utilizzata per gestire le richieste di autenticazione e generare token di autenticazione.
+  L’API di autenticazione può essere utilizzata per gestire le richieste di autenticazione e generare token di autenticazione.
 
 * Generazione e acquisizione di licenze
 
-   L’API di generazione e acquisizione delle licenze viene utilizzata per generare una licenza per l’utente.
+  L’API di generazione e acquisizione delle licenze viene utilizzata per generare una licenza per l’utente.
 
 * Supporto per client e contenuti Adobe AIR versione 1.5
 
-   Ai fini della compatibilità con le versioni precedenti, l’SDK dispone di API per gestire le richieste provenienti da applicazioni AIR create per l’utilizzo con AIR versione 1.5 e precedenti client e contenuti protetti.
+  Ai fini della compatibilità con le versioni precedenti, l’SDK dispone di API per gestire le richieste provenienti da applicazioni AIR create per l’utilizzo con AIR versione 1.5 e precedenti client e contenuti protetti.
 
 ## Implementazione di riferimento {#reference-implementation}
 

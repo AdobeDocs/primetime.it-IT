@@ -1,8 +1,7 @@
 ---
 description: L'audio alternativo o di associazione tardiva consente di passare tra le tracce audio disponibili per una traccia video. In questo modo, gli utenti possono selezionare una traccia della lingua durante la riproduzione del video.
 title: Audio alternativo
-exl-id: ce3dbdd3-9cc2-4732-b980-33b091667f70
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 0%

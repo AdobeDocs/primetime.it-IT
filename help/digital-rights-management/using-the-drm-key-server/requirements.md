@@ -2,8 +2,7 @@
 title: Requisiti per l'utilizzo di Primetime DRM Key Server
 description: Requisiti per l'utilizzo di Primetime DRM Key Server
 copied-description: true
-exl-id: a5c0db05-15a1-45b0-abb9-11f857f5e34c
-source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%

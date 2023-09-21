@@ -2,8 +2,7 @@
 title: Elabora richieste Adobe Primetime DRM
 description: Elabora richieste Adobe Primetime DRM
 copied-description: true
-exl-id: ca9c2ccc-b848-4271-88bc-e7e3ced135ce
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1251'
 ht-degree: 0%
@@ -33,7 +32,7 @@ Tutte le richieste DRM di Adobe Primetime (ad eccezione delle richieste che supp
 Puoi utilizzare un identificatore come segue:
 
 * Il `getUniqueId()` Il metodo restituisce una stringa assegnata a un dispositivo durante l&#39;individualizzazione. È possibile memorizzare le stringhe in un database e cercare per identificatore. Tuttavia, questo identificatore cambia se l&#39;utente riformatta il disco rigido e individualizza nuovamente. Questo identificatore ha anche un valore diverso tra Adobe AIR e il Flash Player Adobe in browser diversi sulla stessa macchina.
-* Se si desidera contare con maggiore precisione i macchinari, è possibile utilizzare `getBytes()` per memorizzare l&#39;intero identificatore. Per determinare se il computer è già stato visto in precedenza, ottieni tutti gli identificatori per un nome utente e una chiamata `matches()` per verificare eventuali corrispondenze. Perché il `matches()` per confrontare i valori restituiti da è necessario utilizzare il metodo `MachineId.getBytes`, questa opzione è utile solo quando è presente un numero limitato di valori da confrontare, ad esempio i computer associati a un utente specifico.
+* Se si desidera contare con maggiore precisione i macchinari, è possibile utilizzare `getBytes()` per memorizzare l&#39;intero identificatore. Per determinare se il computer è già stato visto in precedenza, ottieni tutti gli identificatori per un nome utente e una chiamata `matches()` per verificare eventuali corrispondenze. Perché il `matches()` deve essere utilizzato per confrontare i valori restituiti da `MachineId.getBytes`, questa opzione è utile solo quando è presente un numero limitato di valori da confrontare, ad esempio i computer associati a un utente specifico.
 
 ## Autenticazione utente {#user-authentication}
 

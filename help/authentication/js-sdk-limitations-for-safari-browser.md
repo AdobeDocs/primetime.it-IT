@@ -1,8 +1,7 @@
 ---
 title: Limitazioni dell’SDK JS per il browser Safari
 description: Limitazioni dell’SDK JS per il browser Safari
-exl-id: 5e5c3b36-ee09-49e0-b5b7-83b24854d69d
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1804'
 ht-degree: 0%

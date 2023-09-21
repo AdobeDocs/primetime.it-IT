@@ -1,8 +1,7 @@
 ---
 description: Un altro modo per risolvere una risorsa multimediale è con MediaPlayerItemLoader. Questa opzione è utile quando si desidera ottenere informazioni su un particolare flusso multimediale senza creare un'istanza di MediaPlayer.
 title: Caricare una risorsa multimediale tramite MediaPlayerItemLoader
-exl-id: 9d129497-8a71-433a-a542-f49be519893b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 0%
@@ -13,7 +12,7 @@ ht-degree: 0%
 
 Un altro modo per risolvere una risorsa multimediale è con MediaPlayerItemLoader. Questa opzione è utile quando si desidera ottenere informazioni su un particolare flusso multimediale senza creare un&#39;istanza di MediaPlayer.
 
-Attraverso il `MediaPlayerItemLoader` , è possibile scambiare una risorsa multimediale con la `MediaPlayerItem` senza associare una visualizzazione a un `MediaPlayer` che porterebbe all&#39;allocazione delle risorse hardware di decodifica video. Il processo di ottenimento `MediaPlayerItem` l&#39;istanza è asincrona.
+Attraverso il `MediaPlayerItemLoader` , è possibile scambiare una risorsa multimediale con la corrispondente `MediaPlayerItem` senza associare una visualizzazione a un `MediaPlayer` che porterebbe all&#39;allocazione delle risorse hardware di decodifica video. Il processo di ottenimento `MediaPlayerItem` l&#39;istanza è asincrona.
 
 1. Implementare `MediaPlayerItemLoader.LoaderListener` interfaccia di callback.
 
@@ -21,11 +20,11 @@ Attraverso il `MediaPlayerItemLoader` , è possibile scambiare una risorsa multi
    
    * `LoaderListener.onError` funzione di callback
 
-      TVSDK utilizza questa funzione per informare l’applicazione che si è verificato un errore. TVSDK fornisce un codice di errore come parametri e una stringa di descrizione che contiene informazioni di diagnostica.
+     TVSDK utilizza questa funzione per informare l’applicazione che si è verificato un errore. TVSDK fornisce un codice di errore come parametri e una stringa di descrizione che contiene informazioni di diagnostica.
 
    * `LoaderListener.onError` funzione di callback
 
-      TVSDK utilizza questo per informare l’applicazione che le informazioni richieste sono disponibili sotto forma di `MediaPlayerItem` istanza passata come parametro al callback.
+     TVSDK utilizza questo per informare l’applicazione che le informazioni richieste sono disponibili sotto forma di `MediaPlayerItem` istanza passata come parametro al callback.
 
 1. Registra questa istanza in TVSDK trasmettendola come parametro al costruttore del `MediaPlayerItemLoader`.
 1. Chiamata `MediaPlayerItemLoader.load`, passaggio di un&#39;istanza di un `MediaResource` oggetto.

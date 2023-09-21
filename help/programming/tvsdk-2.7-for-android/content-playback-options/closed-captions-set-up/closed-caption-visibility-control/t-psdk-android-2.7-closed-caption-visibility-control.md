@@ -1,8 +1,7 @@
 ---
 description: Potete controllare la visibilità dei sottotitoli codificati. Quando la visibilità è attivata, viene visualizzato il brano attualmente selezionato. Se modificate la traccia corrente, l'impostazione di visibilità rimane invariata.
 title: Controlla la visibilità dei sottotitoli
-exl-id: 358e32d8-7a3b-42bd-900b-dafe8eae3edf
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '171'
 ht-degree: 0%
@@ -19,13 +18,13 @@ Potete controllare la visibilità dei sottotitoli codificati. Quando la visibili
 >
 >I valori di visibilità per i sottotitoli codificati sono definiti in `MediaPlayer.Visibility`.
 >
->
-```java
+>```java
 >enum Visibility {  
 >       VISIBLE,  
 >       INVISIBLE 
 >}
 >```
+>
 
 1. Attendi `MediaPlayer` essere almeno nello stato PREPARATO.
 

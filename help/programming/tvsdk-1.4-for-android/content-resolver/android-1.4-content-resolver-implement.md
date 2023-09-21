@@ -1,8 +1,7 @@
 ---
 description: Puoi implementare dei resolver di contenuto personalizzati in base ai resolver predefiniti.
 title: Implementare un sistema di risoluzione dei contenuti personalizzato
-exl-id: 96468f6d-80ad-4721-8ed3-4dbfa2a64b9e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '241'
 ht-degree: 0%
@@ -101,7 +100,6 @@ Quando TVSDK rileva una nuova opportunità, scorre attraverso i risolutori di co
       metadata.setValue("NATIVE_ERROR_CODE", exception.getCause().toString()); 
       error.setMetadata(metadata);
       ```
-
 
 <!--<a id="example_4F0D7692A92E480A835D6FDBEDBE75E7"></a>-->
 

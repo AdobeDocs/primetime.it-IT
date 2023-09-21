@@ -1,8 +1,7 @@
 ---
 description: Se l'applicazione deve gestire gli eventi inviati dal gestore di funzionalità, deve registrare il gestore nel file PlayerFragment.java.
 title: Gestione degli eventi
-exl-id: 4c9a76bb-071e-4408-819c-a7611fe615cd
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 0%

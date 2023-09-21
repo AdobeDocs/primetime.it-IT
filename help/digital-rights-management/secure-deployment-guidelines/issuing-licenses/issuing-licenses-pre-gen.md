@@ -1,8 +1,7 @@
 ---
 description: Se si pregenerano licenze che includono regole di utilizzo basate sul tempo, la licenza deve includere i requisiti di sincronizzazione per applicare in modo sicuro la scadenza della licenza.
 title: Pre-generazione delle licenze
-exl-id: f3b6927d-66cf-4aa2-802d-d4b3a5652c63
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '97'
 ht-degree: 0%

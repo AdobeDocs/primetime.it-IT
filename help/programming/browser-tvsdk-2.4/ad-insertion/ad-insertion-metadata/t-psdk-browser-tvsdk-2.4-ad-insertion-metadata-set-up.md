@@ -1,8 +1,7 @@
 ---
 description: Utilizza la classe helper AuditudeSettings per configurare i metadati di Adobe Primetime ad decisioning.
 title: Impostare i metadati di inserimento annunci
-exl-id: 03b2237b-6b3b-46cf-bc0b-691513033463
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 0%
@@ -15,7 +14,7 @@ Utilizza la classe helper AuditudeSettings per configurare i metadati di Adobe P
 
 >[!TIP]
 >
->Adobe Primetime ad decisioning era precedentemente noto come Auditude .
+>Adobe Primetime ad decisioning era noto in precedenza come Auditude.
 
 1. Creare `AuditudeSettings` dell&#39;istanza.
 

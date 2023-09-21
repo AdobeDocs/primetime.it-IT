@@ -1,8 +1,7 @@
 ---
 title: Visualizzare i rapporti di condivisione account per un programmatore specifico
 description: Visualizzare i rapporti di condivisione account per un programmatore specifico
-exl-id: 34b198e1-dbb9-4486-b688-92780eec0a56
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '105'
 ht-degree: 0%
@@ -22,16 +21,16 @@ Per visualizzare i rapporti in Account IQ, dopo aver effettuato correttamente l�
 
 * [Utilizzo generale](/help/AccountIQ/general-usage-reports.md)
 
-   ![](assets/specific-mvpd-gen-usage.png)
+  ![](assets/specific-mvpd-gen-usage.png)
 * [Account condivisi](/help/AccountIQ/shared-acc-reports.md)
 
-   ![](assets/specific-mvpd-shared-acc.png)
+  ![](assets/specific-mvpd-shared-acc.png)
 * [Modelli di utilizzo](/help/AccountIQ/usage-patterns.md)
 
-   ![](assets/specific-mvpd-usage-pattern.png)
+  ![](assets/specific-mvpd-usage-pattern.png)
 
 * [Dashboard](/help/AccountIQ/dashboard.md) (il dashboard offre un’occhiata ai grafici selezionati da diverse pagine di rapporti).
 
-   ![](assets/specific-mvpd-dashboard.png)
+  ![](assets/specific-mvpd-dashboard.png)
 
 Ognuna di queste pagine riflette l’attività del segmento selezionato.

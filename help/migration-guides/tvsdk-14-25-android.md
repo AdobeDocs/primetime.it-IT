@@ -4,8 +4,7 @@ description: TVSDK 2.5 offre diversi vantaggi rispetto alla versione 1.4 in term
 contentOwner: vishgupt
 products: SG_PRIMETIME
 topic-tags: migration
-exl-id: 3b7f8355-ebea-4322-aef4-5393308391b5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '2323'
 ht-degree: 0%
@@ -364,7 +363,7 @@ new MediaPlayer(getActivity().getApplicationContext()); return mediaPlayer;
 Altre classi che non seguono questo schema ma utilizzano `create()` i metodi di cui al punto 1.4 comprendono:
 
 * MediaResource\
-   Precedentemente utilizzato `MediaResource.createFromUrl()`. Ora utilizza il costruttore, che accetta un URL, un tipo di risorsa e metadati. Ad esempio:
+  Precedentemente utilizzato `MediaResource.createFromUrl()`. Ora utilizza il costruttore, che accetta un URL, un tipo di risorsa e metadati. Ad esempio:
 
 ```java
 //TVSDK v1.4

@@ -1,8 +1,7 @@
 ---
 description: Questa sezione presenta una configurazione di esempio che illustra i concetti e la forma della configurazione.
 title: Configurazione RBOP di esempio
-exl-id: 0f40be83-9c7f-482b-ac42-9aa4e3f46f58
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '158'
 ht-degree: 0%

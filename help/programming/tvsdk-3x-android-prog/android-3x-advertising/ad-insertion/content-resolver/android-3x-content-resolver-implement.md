@@ -1,8 +1,7 @@
 ---
 description: Puoi implementare dei resolver di contenuto personalizzati in base ai resolver predefiniti.
 title: Implementare un sistema di risoluzione dei contenuti personalizzato
-exl-id: 1f442e2b-65fc-4040-ada2-7a49e488bdef
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 0%
@@ -116,22 +115,22 @@ Quando TVSDK genera una nuova opportunità, scorre attraverso i risolutori di co
 
       * Se la risoluzione dell’annuncio ha esito positivo, chiama `process(List<TimelineOperation> proposals)` e `notifyCompleted(Opportunity opportunity)` il `ContentResolverClient`
 
-         ```java
-         _client.process(timelineOperations); 
-         _client.notifyCompleted(opportunity); 
-         ```
+        ```java
+        _client.process(timelineOperations); 
+        _client.notifyCompleted(opportunity); 
+        ```
 
       * Se la risoluzione dell’annuncio non riesce, chiama `notifyResolveError` il `ContentResolverClient`
 
-         ```java
-         _client.notifyFailed(Opportunity opportunity, PSDKErrorCode error);
-         ```
+        ```java
+        _client.notifyFailed(Opportunity opportunity, PSDKErrorCode error);
+        ```
 
-         Ad esempio:
+        Ad esempio:
 
-         ```java
-         _client.notifyFailed(opportunity, UNSUPPORTED_OPERATION);
-         ```
+        ```java
+        _client.notifyFailed(opportunity, UNSUPPORTED_OPERATION);
+        ```
 
 <!--<a id="example_463B718749504A978F0B887786844C39"></a>-->
 

@@ -1,8 +1,7 @@
 ---
 description: TVSDK invia gli eventi degli elementi del lettore multimediale in risposta al caricamento di un elemento multimediale.
 title: Eventi del caricatore
-exl-id: ee5be2d4-5c77-4af4-b8fe-8cef18d7c0d9
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '122'
 ht-degree: 0%

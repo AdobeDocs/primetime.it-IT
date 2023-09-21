@@ -1,8 +1,7 @@
 ---
 description: Puoi inserire annunci nel VOD e nel contenuto live/lineare utilizzando l’interfaccia di Adobe Primetime ad decisioning. Primetime ad decisioning funziona con il browser TVSDK per identificare opportunità di annunci, risolvere gli annunci e inserire annunci risolti nei flussi video.
 title: Requisiti pubblicitari
-exl-id: 8832515c-0b67-4311-8880-faea0105babd
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 0%

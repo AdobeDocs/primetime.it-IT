@@ -1,8 +1,7 @@
 ---
-description: È possibile selezionare un brano da un elenco di brani con sottotitoli attualmente disponibili. Questa diventa la traccia corrente, che viene visualizzata quando la visibilità è attiva. Alcuni brani potrebbero non essere disponibili inizialmente, quindi ascolta l’evento che indica che sono stati resi disponibili altri brani.
+description: È possibile selezionare un brano da un elenco di brani con sottotitoli attualmente disponibili. Questa diventa la traccia corrente, che viene visualizzata quando la visibilità è attiva. Alcuni brani potrebbero non essere inizialmente disponibili, quindi ascolta l’evento che indica che sono stati resi disponibili altri brani.
 title: Seleziona una traccia di didascalia corrente tra le tracce disponibili
-exl-id: d604dedc-f3c3-4c97-9b0f-84da326c0678
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '198'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # Seleziona una traccia di didascalia corrente tra le tracce disponibili {#select-a-current-caption-track-from-among-available-tracks}
 
-È possibile selezionare un brano da un elenco di brani con sottotitoli attualmente disponibili. Questa diventa la traccia corrente, che viene visualizzata quando la visibilità è attiva. Alcuni brani potrebbero non essere disponibili inizialmente, quindi ascolta l’evento che indica che sono stati resi disponibili altri brani.
+È possibile selezionare un brano da un elenco di brani con sottotitoli attualmente disponibili. Questa diventa la traccia corrente, che viene visualizzata quando la visibilità è attiva. Alcuni brani potrebbero non essere inizialmente disponibili, quindi ascolta l’evento che indica che sono stati resi disponibili altri brani.
 
 1. Attendi che il lettore multimediale si trovi almeno nel `PREPARED` stato.
 1. Ascolta questi eventi:

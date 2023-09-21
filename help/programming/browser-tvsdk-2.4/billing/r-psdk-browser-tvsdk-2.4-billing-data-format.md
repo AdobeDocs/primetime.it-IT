@@ -1,8 +1,7 @@
 ---
 description: Il TVSDK del browser invia le metriche di fatturazione all’Adobe in formato XML.
 title: Trasmettere le metriche di fatturazione
-exl-id: f6ed72be-a5a8-48f2-b518-76c710300ea7
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '61'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: I flussi di lavoro DRM prevedono la creazione di pacchetti di contenuti, la concessione di licenze per i contenuti e la riproduzione di contenuti protetti dalla propria applicazione video. Il flusso di lavoro è generalmente simile per ogni soluzione DRM, ma con alcune differenze è nei dettagli.
 title: Flusso di lavoro DRM multiplo per FairPlay
-exl-id: a66cecda-762b-48f7-afed-6fef6303d169
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1470'
 ht-degree: 0%
@@ -202,44 +201,44 @@ Per aggiungere la rotazione delle licenze, eseguire le operazioni seguenti:
 
 * Inserire un nuovo tag chiave FairPlay durante il tempo di rotazione della licenza.
 
-   È possibile aggiungere un numero qualsiasi di tag chiave.
+  È possibile aggiungere un numero qualsiasi di tag chiave.
 
-   Per i contenuti lineari, assicurati di mantenere il tag chiave più recente nella finestra M3U8. iOS richiederà il prossimo M3U8 quando saranno rimasti circa due segmenti TS da riprodurre (circa 20 secondi). Se il nuovo M3U8 contiene nuovi tag chiave, tutte le richieste chiave avverranno immediatamente. Le chiavi esistenti precedenti non verranno richieste di nuovo. iOS attenderà il completamento di tutte le richieste chiave prima di avviare la riproduzione.
+  Per i contenuti lineari, assicurati di mantenere il tag chiave più recente nella finestra M3U8. iOS richiederà il prossimo M3U8 quando saranno rimasti circa due segmenti TS da riprodurre (circa 20 secondi). Se il nuovo M3U8 contiene nuovi tag chiave, tutte le richieste chiave avverranno immediatamente. Le chiavi esistenti precedenti non verranno richieste di nuovo. iOS attenderà il completamento di tutte le richieste chiave prima di avviare la riproduzione.
 
-   Per i contenuti VOD con rotazione delle licenze, tutte le richieste chiave si verificheranno all’inizio della riproduzione.
+  Per i contenuti VOD con rotazione delle licenze, tutte le richieste chiave si verificheranno all’inizio della riproduzione.
 
-   Di seguito è riportato un esempio di M3U8 con rotazione dei tasti:
+  Di seguito è riportato un esempio di M3U8 con rotazione dei tasti:
 
-   ```
-   #EXTM3U
-   #EXT-X-TARGETDURATION:10
-   #EXT-X-VERSION:5
-   #EXT-X-MEDIA-SEQUENCE:0
-   #EXT-X-PLAYLIST-TYPE:VOD
-   #EXT-X-KEY:METHOD=SAMPLE-AES,URI="skd://one?cek=1dc2cc71d913f4f74eca0c4632
-   212b25&iv=e21f0f72b6363ff6143737cb1e9ca8d7",KEYFORMAT="com.apple.streaming
-   keydelivery",KEYFORMATVERSIONS="1"
-   #EXTINF:10,
-   fileSequence0.ts
-   #EXTINF:10,
-   fileSequence1.ts
-   #EXTINF:10,
-   fileSequence2.ts
-   #EXTINF:10,
-   fileSequence3.ts
-   #EXTINF:10,
-   fileSequence4.ts
-   #EXTINF:10,
-   fileSequence5.ts
-   #EXTINF:10,
-   fileSequence6.ts
-   #EXTINF:10,
-   fileSequence7.ts
-   #EXTINF:10,
-   #EXT-X-KEY:METHOD=SAMPLE-AES,URI="skd://two?cek=f6efc698b96cf8f4fa46d5237d
-   337c77&iv=18401077091784bcda8079acf978dc95",KEYFORMAT="com.apple.streaming
-   keydelivery",KEYFORMATVERSIONS="1"
-   #EXTINF:10,
-   fileSequence8.ts
-   #EXTINF:10,
-   ```
+  ```
+  #EXTM3U
+  #EXT-X-TARGETDURATION:10
+  #EXT-X-VERSION:5
+  #EXT-X-MEDIA-SEQUENCE:0
+  #EXT-X-PLAYLIST-TYPE:VOD
+  #EXT-X-KEY:METHOD=SAMPLE-AES,URI="skd://one?cek=1dc2cc71d913f4f74eca0c4632
+  212b25&iv=e21f0f72b6363ff6143737cb1e9ca8d7",KEYFORMAT="com.apple.streaming
+  keydelivery",KEYFORMATVERSIONS="1"
+  #EXTINF:10,
+  fileSequence0.ts
+  #EXTINF:10,
+  fileSequence1.ts
+  #EXTINF:10,
+  fileSequence2.ts
+  #EXTINF:10,
+  fileSequence3.ts
+  #EXTINF:10,
+  fileSequence4.ts
+  #EXTINF:10,
+  fileSequence5.ts
+  #EXTINF:10,
+  fileSequence6.ts
+  #EXTINF:10,
+  fileSequence7.ts
+  #EXTINF:10,
+  #EXT-X-KEY:METHOD=SAMPLE-AES,URI="skd://two?cek=f6efc698b96cf8f4fa46d5237d
+  337c77&iv=18401077091784bcda8079acf978dc95",KEYFORMAT="com.apple.streaming
+  keydelivery",KEYFORMATVERSIONS="1"
+  #EXTINF:10,
+  fileSequence8.ts
+  #EXTINF:10,
+  ```

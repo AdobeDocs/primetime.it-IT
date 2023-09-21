@@ -2,8 +2,7 @@
 title: Panoramica
 description: Panoramica
 copied-description: true
-exl-id: 67c3d98f-8c17-4b5a-8abb-00f6f0f1e823
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '867'
 ht-degree: 0%
@@ -12,7 +11,7 @@ ht-degree: 0%
 
 # Panoramica {#overview}
 
-*Imballaggio* si riferisce al processo di crittografia e applicazione di una policy ai file FLV o F4V. Utilizza le API Media Packaging per creare pacchetti di file. L’SDK Java per accesso Adobe può creare pacchetti solo per contenuti AIR e Flash a download progressivo, come FLV, F4V e MP4. Per creare un pacchetto di contenuti con Adobe Access DRM per altri formati di contenuti, come Adobe HTTP Dynamic Streaming (HDS) o Apple HTTP Live Streaming (HLS), è necessario utilizzare altri strumenti, come Adobe Medium Server ( [https://www.adobe.com/products/adobe-media-server-family.html](https://www.adobe.com/products/adobe-media-server-family.html)) o un codificatore che implementa l&#39;SDK di trasmissione Adobe ( [https://help.adobe.com/en_US/primetime/packagers/hdkb_api_overview_3.5.pdf](https://help.adobe.com/en_US/primetime/packagers/hdkb_api_overview_3.5.pdf)). In alternativa, i clienti possono scegliere di utilizzare il set di strumenti di Adobe Java Primetime Packager, che può creare pacchetti di contenuti per diversi formati di destinazione, come HDS, HLS e DASH.
+*Imballaggio* si riferisce al processo di crittografia e applicazione di una policy ai file FLV o F4V. Utilizza le API Media Packaging per creare pacchetti di file. L’SDK Java per accesso Adobe può creare pacchetti solo per contenuti AIR e Flash a download progressivo, come FLV, F4V e MP4. Per creare un pacchetto di contenuti utilizzando Adobe Access DRM per altri formati di contenuti, come Adobe HTTP Dynamic Streaming (HDS) o Apple HTTP Live Streaming (HLS), è necessario utilizzare altri strumenti, come Adobe Media Server ( [https://www.adobe.com/products/adobe-media-server-family.html](https://www.adobe.com/products/adobe-media-server-family.html)) o un codificatore che implementa l&#39;SDK di trasmissione Adobe ( [https://help.adobe.com/en_US/primetime/packagers/hdkb_api_overview_3.5.pdf](https://help.adobe.com/en_US/primetime/packagers/hdkb_api_overview_3.5.pdf)). In alternativa, i clienti possono scegliere di utilizzare il set di strumenti di Adobe Java Primetime Packager, che può creare pacchetti di contenuti per diversi formati di destinazione, come HDS, HLS e DASH.
 
 Il pacchetto viene disaccoppiato dal server licenze. Non è necessario che il responsabile del pacchetto si connetta al server licenze per scambiare informazioni sul contenuto. Tutto ciò che il server licenze deve sapere per rilasciare la licenza è incluso nei metadati del contenuto.
 
@@ -24,7 +23,7 @@ Quando un file viene crittografato, il relativo contenuto non può essere analiz
 >
 >L’architettura consente di specificare i criteri di utilizzo e di associarli al contenuto quando viene creato il pacchetto. Prima che un client possa riprodurre il contenuto, deve acquisire una licenza per tale computer. La licenza specifica le regole di utilizzo applicate e fornisce la chiave utilizzata per decrittografare il contenuto. Il criterio è un modello per la generazione della licenza, ma il server licenze può scegliere di ignorare le regole di utilizzo durante il rilascio della licenza. Tieni presente che la licenza potrebbe non essere valida a causa di vincoli quali i tempi di scadenza o le finestre di riproduzione.
 
-Sono disponibili numerose opzioni per la creazione di pacchetti di contenuto. Questi sono specificati nella `DRMParameters` e le classi che implementano tale interfaccia, ovvero `F4VDRMParameters` e `FLVDRMParameters`. Con queste classi è possibile impostare la firma e i parametri chiave, nonché indicare se crittografare il contenuto audio, il contenuto video o i dati di script. Per vedere come questi vengono implementati nell’implementazione di riferimento, consulta le descrizioni delle opzioni della riga di comando di Media Packager discusse in *Utilizzo delle implementazioni di riferimento di accesso Adobe*. Queste opzioni si basano sull’API Java e sono quindi disponibili per l’utilizzo a livello di programmazione.
+Sono disponibili numerose opzioni per la creazione di pacchetti di contenuto. Questi sono specificati nella `DRMParameters` e le classi che implementano tale interfaccia, ovvero `F4VDRMParameters` e `FLVDRMParameters`. Con queste classi è possibile impostare la firma e i parametri chiave, nonché indicare se crittografare il contenuto audio, il contenuto video o i dati script. Per vedere come questi vengono implementati nell’implementazione di riferimento, consulta le descrizioni delle opzioni della riga di comando di Media Packager discusse in *Utilizzo delle implementazioni di riferimento di accesso Adobe*. Queste opzioni si basano sull’API Java e sono quindi disponibili per l’utilizzo a livello di programmazione.
 
 Le opzioni di packaging includono:
 

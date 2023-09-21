@@ -1,8 +1,7 @@
 ---
 description: Puoi scegliere di utilizzare i comportamenti di annuncio predefiniti.
 title: Utilizza il comportamento di riproduzione predefinito
-exl-id: 0ea3d2bb-b4d4-4090-ab5f-b6c31c1abe32
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 0%
@@ -28,11 +27,11 @@ Per personalizzare i comportamenti degli annunci, effettuare una delle seguenti 
 
 * Implementare `AdPolicySelector` e tutti i relativi metodi.
 
-   Questa opzione è consigliata se devi eseguire l’override di **tutto** i comportamenti di annuncio predefiniti.
+  Questa opzione è consigliata se devi eseguire l’override di **tutto** i comportamenti di annuncio predefiniti.
 
 * Estendi il `DefaultAdPolicySelector` e forniscono implementazioni solo per i comportamenti che richiedono personalizzazione.
 
-   Questa opzione è consigliata solo se è necessario eseguire l&#39;override **alcuni** dei comportamenti predefiniti.
+  Questa opzione è consigliata solo se è necessario eseguire l&#39;override **alcuni** dei comportamenti predefiniti.
 
 Per personalizzare i comportamenti degli annunci:
 

@@ -1,8 +1,7 @@
 ---
 description: Il browser TVSDK invia eventi/notifiche in sequenze generalmente previste. Il lettore può implementare azioni basate sugli eventi nella sequenza prevista.
 title: Ordine degli eventi di riproduzione
-exl-id: fd9dc0d5-0f39-4a6d-9d88-1fd49946fedf
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 0%

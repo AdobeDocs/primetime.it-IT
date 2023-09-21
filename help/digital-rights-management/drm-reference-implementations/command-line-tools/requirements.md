@@ -2,8 +2,7 @@
 title: Requisiti degli strumenti della riga di comando
 description: Requisiti degli strumenti della riga di comando
 copied-description: true
-exl-id: b19512d0-0865-4c24-a6d8-1f26cd3f210c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '79'
 ht-degree: 0%
@@ -15,7 +14,7 @@ ht-degree: 0%
 * Java 1.5 o versione successiva.
 * Credenziali del Packager, del trasporto e del server licenze (certificato e password) rilasciate da Adobe.
 
-   Si tratta di credenziali utilizzate per crittografare e firmare file video, per firmare elenchi di aggiornamento e revoca della policy e per pregenerare licenze.
+  Si tratta di credenziali utilizzate per crittografare e firmare file video, per firmare elenchi di aggiornamento e revoca della policy e per pregenerare licenze.
 
 >[!NOTE]
 >

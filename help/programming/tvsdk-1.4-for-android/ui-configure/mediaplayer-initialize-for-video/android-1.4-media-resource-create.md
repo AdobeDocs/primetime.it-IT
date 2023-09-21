@@ -1,8 +1,7 @@
 ---
 description: Per ogni nuovo contenuto video, inizializza un’istanza MediaResource con informazioni sul contenuto video e carica la risorsa multimediale. La classe MediaResource rappresenta il contenuto da caricare dall'istanza MediaPlayer.
 title: Creare una risorsa multimediale
-exl-id: cda70f91-7f30-4e37-9dfa-888b707e3d61
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '306'
 ht-degree: 0%
@@ -71,8 +70,9 @@ Per ogni nuovo contenuto video, inizializza un’istanza MediaResource con infor
 
    * Istanza MediaPlayer in uso.
 
-      Per ulteriori informazioni, consulta [Caricare una risorsa multimediale in MediaPlayer](../../../tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-resource-load.md).
+     Per ulteriori informazioni, consulta [Caricare una risorsa multimediale in MediaPlayer](../../../tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-resource-load.md).
    * A `MediaPlayerItemLoader` Per ulteriori informazioni, consulta [Caricare una risorsa multimediale tramite MediaPlayerItemLoader](../../../tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-mediaplayeritemloader.md).
+
    >[!IMPORTANT]
    >
    >Non caricare la risorsa multimediale su un thread in background. La maggior parte delle operazioni TVSDK devono essere eseguite sul thread principale e la loro esecuzione su un thread in background può causare la generazione di un errore e l&#39;uscita dall&#39;operazione.

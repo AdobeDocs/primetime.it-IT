@@ -1,8 +1,7 @@
 ---
 description: Devi configurare le proprietà del server in modo che riflettano il tuo ambiente. Puoi eseguire questa operazione utilizzando uno dei seguenti elementi
 title: Applicare le proprietà agli ambienti server
-exl-id: 0c78011a-e8c8-43a8-8c2d-a5c4ed54a8d7
-source-git-commit: 0019a95fa9ca6d21249533d559ce844897ab67cf
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 0%
@@ -17,14 +16,14 @@ Devi configurare le proprietà del server in modo che riflettano il tuo ambiente
 
 * [!DNL AdobeInitial.properties] - Campione situato nella [!DNL /shared] cartella sul DVD
 
-   È possibile utilizzare questo file per sostituire le proprietà impostate nel file WAR nel modo seguente:
+  È possibile utilizzare questo file per sostituire le proprietà impostate nel file WAR nel modo seguente:
 
    1. Impostare i valori delle proprietà di sostituzione in [!DNL AdobeInitial.properties]
    1. Luogo [!DNL AdobeInitial.properties] nel percorso di classe.
 
-   >[!NOTE]
-   >
-   >L’Adobe consiglia di utilizzare [!DNL AdobeInitial.properties] , poiché questo consente di aggiornare i file WAR dell&#39;applicazione senza rischiare di perdere eventuali configurazioni di proprietà precedenti eseguite in [!DNL flashaccess-i15n.properties] file.
+  >[!NOTE]
+  >
+  >L’Adobe consiglia di utilizzare [!DNL AdobeInitial.properties] , poiché questo consente di aggiornare i file WAR dell&#39;applicazione senza rischiare di perdere eventuali configurazioni di proprietà precedenti eseguite in [!DNL flashaccess-i15n.properties] file.
 
 * Meccanismo di proprietà del sistema Java.
 
@@ -65,4 +64,4 @@ Il server utilizza questo ordine di ricerca per le proprietà:
 >[!NOTE]
 >
 >All’avvio del server è necessario specificare il nome dell’ambiente del server come proprietà del sistema Java. Ad esempio, quando si avvia Tomcat con [!DNL catalina.bat], imposta `CATALINA_OPTS` variabile di ambiente come segue:
->-DENVIRONMENT_NAME=[ DEV | FASE PROD ]
+>-DENVIRONMENT_NAME=[DEV | FASE PROD]

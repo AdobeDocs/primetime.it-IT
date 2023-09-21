@@ -1,8 +1,7 @@
 ---
 title: Note sulla versione di PTAI 20.12.1
 description: Le note sulla versione PTAI descrivono le novità o le modifiche, i problemi risolti e noti in Primetime Ad Insertion nel 2020.
-exl-id: 47e36e42-b6a0-408c-93da-f63c929396b5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1081'
 ht-degree: 0%
@@ -66,9 +65,9 @@ Per ulteriori informazioni o per attivare questa funzione, contattare il rappres
 
 * Fornito supporto per limitare i tempi complessivi di risoluzione degli annunci, se i provider impiegano troppo tempo per rispondere. Per abilitare la limitazione, imposta il parametro API bootstrap `ptadtimeout` a un valore in millisecondi.
 
-   >[!NOTE]
-   >
-   >Questo timeout si applica solo alle richieste di annunci, non alle richieste creative di annunci.
+  >[!NOTE]
+  >
+  >Questo timeout si applica solo alle richieste di annunci, non alle richieste creative di annunci.
 
 ### Versione 20.9.1
 
@@ -195,11 +194,11 @@ Contatta il supporto Adobe per abilitare le seguenti nuove funzioni tramite la c
 
 * **VMAP con supporto FER per nbc CueFormat**
 
-   Converte i segnali dal flusso FER in parametri di override della timeline FW, quando `ptcueformat=nbc` viene utilizzato e il flusso è un flusso VOD con suggerimenti nel manifesto e annunci al forno.
+  Converte i segnali dal flusso FER in parametri di override della timeline FW, quando `ptcueformat=nbc` viene utilizzato e il flusso è un flusso VOD con suggerimenti nel manifesto e annunci al forno.
 
 * Proteggi il campo user-agent nell’intestazione HTTP prima di inoltrarlo a provider di annunci/CDN di terze parti.
 
-* Escludi i caratteri di controllo/non stampabili (codice ASCII &lt; 32) dalle intestazioni HTTP dell’agente utente prima di inviarli ad Auditude e ad altri provider di annunci, CDN. Il servizio Auditude Ad-Call non riusciva per le intestazioni non valide.
+* Escludi i caratteri di controllo/non stampabili (codice ASCII &lt; 32) dalle intestazioni HTTP dell’agente utente prima di inviarli all’Auditude e ad altri provider di annunci, CDN. L’Auditude Ad-Call non riusciva per intestazioni non valide.
 
 * Rimuovere i vecchi oggetti V1 dai gruppi NetStorage per mantenere il conteggio degli oggetti entro i limiti sicuri di Akamai.
 

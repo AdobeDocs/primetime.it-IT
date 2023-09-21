@@ -2,8 +2,7 @@
 title: Informazioni sulle implementazioni di riferimento
 description: Informazioni sulle implementazioni di riferimento
 copied-description: true
-exl-id: fe387330-9449-4977-be15-069c814354bf
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 0%
@@ -27,7 +26,7 @@ Le implementazioni di riferimento DRM di Primetime includono i seguenti componen
 
 * **Implementazioni di riferimento DRM di Primetime** - Oggetto di questa guida, questa implementazione di riferimento è dotata di un robusto server di licenze DRM che presenta tutte le funzioni fornite dall&#39;SDK di Primetime DRM. Questa implementazione viene fornita con il codice sorgente e le istruzioni per la creazione del codice. Questa implementazione non deve essere utilizzata così com’è (anche se un [!DNL .war] è incluso e può essere implementato rapidamente). Si tratta principalmente di un riferimento da utilizzare per creare un server licenze personalizzato.
 
-   Funzionalità server licenze:
+  Funzionalità server licenze:
 
    * Gestisce le richieste di autenticazione utilizzando un database per convalidare nome utente/password.
    * Gestisce le richieste di licenza e determina il tipo di licenza rilasciata quando viene applicato il concatenamento licenze.
@@ -41,13 +40,13 @@ Le implementazioni di riferimento DRM di Primetime includono i seguenti componen
    * Crittografa le password specificate in un file di proprietà.
    * Specifica più credenziali di trasporto o server licenze dopo il rinnovo delle credenziali.
 
-      Le vecchie credenziali vengono mantenute sul server, in modo che gli utenti possano continuare a visualizzare il contenuto esistente senza dover creare un nuovo pacchetto.
+     Le vecchie credenziali vengono mantenute sul server, in modo che gli utenti possano continuare a visualizzare il contenuto esistente senza dover creare un nuovo pacchetto.
    * Limita le versioni DRM/Runtime che possono effettuare richieste a un server licenze.
    * Imposta le preferenze di ritorno a capo dell&#39;orologio del client.
    * Limita la differenza di tempo consentita tra il tempo della richiesta e quello del server per evitare attacchi di ripetizione.
    * Gestisce le richieste dei client FMRMS 1.x
 
-      Ad esempio, il client FMRMS 1.x viene attivato per l’aggiornamento a Primetime DRM 2.0 o versione successiva.
+     Ad esempio, il client FMRMS 1.x viene attivato per l’aggiornamento a Primetime DRM 2.0 o versione successiva.
    * Converte i metadati FMRMS 1.x in metadati DRM Primetime su richiesta utilizzando le informazioni sulla licenza FMRMS 1.x memorizzate in un database.
    * Converte i criteri FMRMS 1.x in criteri DRM di Primetime per il codice di esempio.
    * Importa le informazioni sulle licenze FMRMS 1.x da un database esistente per gli script di esempio.

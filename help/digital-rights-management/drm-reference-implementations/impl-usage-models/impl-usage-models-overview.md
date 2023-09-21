@@ -2,8 +2,7 @@
 title: Panoramica
 description: Panoramica
 copied-description: true
-exl-id: 974b9a5e-43f6-4ec8-8048-dfcc1cff0f6f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '316'
 ht-degree: 0%
@@ -18,9 +17,9 @@ L’implementazione di riferimento include un’opzione in modalità demo che il
 * **Noleggio/Video on demand (VOD)** - I contenuti disponibili sono soggetti a restrizioni temporali. Ad esempio, gli utenti possono riprodurre i contenuti durante un periodo di 30 giorni. Una volta avviata la riproduzione, l’utente dispone di un massimo di 48 ore per terminare la visualizzazione del contenuto. Il contenuto deve essere visualizzato in 30 giorni.
 * **Abbonamento (tutto ciò che puoi mangiare)** - Alcuni servizi offrono abbonamenti a pagamento che consentono agli utenti di accedere illimitatamente a un&#39;ampia raccolta di contenuti, a condizione che continuino a pagare una tariffa mensile. Il server licenze rilascia una licenza univoca per ciascun segmento di contenuto e una licenza radice che scade alla fine del periodo di abbonamento. Ogni mese, quando gli utenti rinnovano l’abbonamento, è necessario rinnovare anche la licenza root.
 
-   >[!NOTE]
-   >
-   >Per i modelli di utilizzo precedenti, dopo l&#39;acquisizione di una licenza, gli utenti devono immettere le credenziali in modo che il server possa verificare che gli utenti dispongano di un account di noleggio.
+  >[!NOTE]
+  >
+  >Per i modelli di utilizzo precedenti, dopo l&#39;acquisizione di una licenza, gli utenti devono immettere le credenziali in modo che il server possa verificare che gli utenti dispongano di un account di noleggio.
 
 * **Finanziato da annunci** - Il contenuto viene monetizzato includendo la pubblicità come parte dell’esperienza. Con questo modello, il contenuto può essere distribuito e non richiede l’autenticazione dell’utente.
 

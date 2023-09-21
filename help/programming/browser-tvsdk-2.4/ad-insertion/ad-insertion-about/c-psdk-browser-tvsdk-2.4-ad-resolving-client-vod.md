@@ -1,8 +1,7 @@
 ---
 description: Per il contenuto video-on-demand (VOD), il browser TVSDK inserisce interruzioni pubblicitarie unendo gli annunci nel contenuto principale in modo che la durata della timeline aumenti.
 title: Risoluzione e inserimento di annunci VOD
-exl-id: c2a2f14b-c90d-47fc-9dcc-eff8b1491dde
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 0%
@@ -25,7 +24,7 @@ All’avvio della riproduzione, il contenuto non subirà ulteriori modifiche. Gl
 * Inserito
 * Eliminato
 
-   Ad esempio, non puoi eliminare gli annunci incorporati dal contenuto per offrire un’esperienza senza annunci.
+  Ad esempio, non puoi eliminare gli annunci incorporati dal contenuto per offrire un’esperienza senza annunci.
 * Sostituito
 
-   Ad esempio, non puoi sostituire gli annunci incorporati con annunci mirati.
+  Ad esempio, non puoi sostituire gli annunci incorporati con annunci mirati.

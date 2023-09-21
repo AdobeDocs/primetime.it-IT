@@ -1,8 +1,7 @@
 ---
 description: È possibile salvare la posizione di riproduzione corrente in un video e riprendere la riproduzione nella stessa posizione in una sessione futura.
 title: Salva la posizione del video e riprendi in un secondo momento
-exl-id: a06897a6-bf57-4902-b1b4-e931419b56ba
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '398'
 ht-degree: 0%
@@ -43,9 +42,9 @@ Gli annunci inseriti in modo dinamico differiscono tra le sessioni utente, perta
 
    * Per riprendere la riproduzione del video dalla posizione salvata da una sessione precedente, utilizzare `seekToLocal`.
 
-      >[!TIP]
-      >
-      >Questo metodo viene chiamato solo con valori di ora locali. Se il metodo viene chiamato con i risultati dell&#39;ora corrente, si verifica un comportamento errato.
+     >[!TIP]
+     >
+     >Questo metodo viene chiamato solo con valori di ora locali. Se il metodo viene chiamato con i risultati dell&#39;ora corrente, si verifica un comportamento errato.
 
    * Per cercare fino all&#39;ora corrente, utilizzare `seek`.
 

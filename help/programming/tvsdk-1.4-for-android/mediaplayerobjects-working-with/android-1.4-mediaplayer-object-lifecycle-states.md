@@ -1,8 +1,7 @@
 ---
 description: Dal momento in cui viene creata l'istanza MediaPlayer al momento in cui viene terminata (riutilizzata o rimossa), questa istanza completa una serie di transizioni tra gli stati.
 title: Ciclo di vita dell'oggetto MediaPlayer
-exl-id: efb39fea-1050-41e5-93d8-1175a54f81e5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '446'
 ht-degree: 0%
@@ -19,9 +18,9 @@ Per utilizzare gli stati:
 
 * È possibile recuperare lo stato corrente del `MediaPlayer` oggetto con `MediaPlayer.getStatus`.
 
-   ```java
-   PlayerState getStatus() throws IllegalStateException;
-   ```
+  ```java
+  PlayerState getStatus() throws IllegalStateException;
+  ```
 
 * L’elenco degli stati è definito in `MediaPlayer.PlayerState`.
 

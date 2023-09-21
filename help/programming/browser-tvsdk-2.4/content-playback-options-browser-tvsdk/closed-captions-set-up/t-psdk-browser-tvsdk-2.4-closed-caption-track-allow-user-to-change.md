@@ -1,8 +1,7 @@
 ---
 description: Di seguito è riportato un esempio di come un utente può selezionare una traccia di sottotitoli.
 title: Consenti all'utente di modificare il brano
-exl-id: 103ca0ad-2707-4e4f-87ee-f55041e4527a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '77'
 ht-degree: 0%

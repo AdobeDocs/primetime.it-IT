@@ -1,8 +1,7 @@
 ---
 title: Risoluzione dei problemi
 description: Impossibile visualizzare o caricare un pannello dei rapporti? O non sei in grado di esportare un rapporto? Scopri come risolvere i problemi più comuni del prodotto.
-exl-id: 2c3f22c4-5534-424c-b321-b57045bcb7a6
-source-git-commit: b83105b94dc1c78de84908f5676ade6a62486349
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 0%
@@ -15,7 +14,7 @@ Riscontri problemi dovuti a dati e grafici che richiedono troppo tempo per esser
 
 * Se il caricamento di una pagina o di singoli pannelli richiede troppo tempo, prova ad aggiornare la pagina. Per la versione corrente, a seconda della selezione di MVPD e programmatori, il caricamento di una pagina può richiedere fino a un minuto.
 
-   ![](assets/troubleshoot.png)
+  ![](assets/troubleshoot.png)
 
 * Se non riesci a visualizzare dati o grafici anche dopo l’aggiornamento, esci da Account IQ e accedi di nuovo.
 

@@ -1,8 +1,7 @@
 ---
 description: I flussi HLS e DASH forniscono codifiche (profili) di bitrate diverse per lo stesso breve burst di video. TVSDK può selezionare il livello di qualità per ogni burst in base al livello di buffering corrente e alla larghezza di banda disponibile.
 title: Velocità bit adattive (ABR) per la qualità video
-exl-id: ed062ef9-138d-446a-a454-3cb19c3bb388
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '683'
 ht-degree: 0%
@@ -35,7 +34,7 @@ TVSDK controlla costantemente il bit rate per garantire che il contenuto venga r
      <ul id="ul_AC9C99D84A3B4A8DBD1A05CC05DEE771"> 
       <li id="li_B79C0AA2CBFB42FF98A257CEC9C400BA"><span class="codeph"> ABR_CONSERVATIVE</span>: passa al profilo con la velocità in bit successiva più elevata quando la larghezza di banda è del 50% superiore alla velocità in bit corrente. </li> 
       <li id="li_38CC3A95D8634F359D0F7C273D0108C0"><span class="codeph"> ABR_MODERATE</span>: passa al profilo con velocità in bit successiva più elevata quando la larghezza di banda è del 20% superiore alla velocità in bit corrente. </li> 
-      <li id="li_E845C035420D4B3FB2B179F448F8CA85"><span class="codeph"> ABR_AGGRESSIVO</span>: passa immediatamente al profilo del bitrate più alto quando la larghezza di banda è superiore al bitrate corrente. </li> 
+      <li id="li_E845C035420D4B3FB2B179F448F8CA85"><span class="codeph"> ABR_AGGRESSIVO</span>: passa immediatamente al profilo del bit rate più alto quando la larghezza di banda è superiore al bit rate corrente. </li> 
      </ul> </p> <p>Se la velocità in bit iniziale è zero, o non viene specificata ma viene specificato un criterio, la riproduzione inizia con il profilo di velocità in bit più basso per un criterio conservativo, il profilo più vicino alla velocità in bit mediana dei profili disponibili per un criterio moderato e il profilo di velocità in bit più alto per un criterio aggressivo. </p> <p>Se specificate, le velocità bit minima e massima funzionano in modo limitato. </p> <p> <span class="codeph"> getABRPolicy</span> restituisce l'impostazione corrente dalla <span class="codeph"> ABRControlParameters</span> enum: <span class="codeph"> ABR_CONSERVATIVE</span>, <span class="codeph"> ABR_MODERATE</span>, o <span class="codeph"> ABR_AGGRESSIVO</span>. </p> <p>Per ulteriori informazioni, consulta il documento API sui parametri di controllo ABR. </p> </td> 
   </tr> 
  </tbody> 

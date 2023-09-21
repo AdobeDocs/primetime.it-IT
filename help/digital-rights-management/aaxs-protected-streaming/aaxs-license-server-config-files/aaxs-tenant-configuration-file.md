@@ -2,8 +2,7 @@
 title: File di configurazione tenant
 description: File di configurazione tenant
 copied-description: true
-exl-id: 0f6cafbe-99d9-43bc-9a7f-d87c4da1f37f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '727'
 ht-degree: 0%
@@ -28,7 +27,7 @@ Il file di configurazione tenant include:
 
    * **Caching delle licenze** — Facoltativo. Specifica per quanto tempo la licenza può essere archiviata sul client. Per impostazione predefinita, il caching delle licenze è disabilitato. Per abilitare il caching delle licenze per un periodo di tempo limitato, impostare la data di fine o il numero di secondi per i quali la licenza deve essere archiviata (a partire dal momento del rilascio della licenza). Se si imposta il numero di secondi su 0, il caching delle licenze viene disattivato.
 
-      Tutte le licenze rilasciate dal server per lo streaming protetto hanno un periodo di scadenza di 24 ore (86400 secondi). Questo valore si applica quindi implicitamente come limite superiore a qualsiasi data di fine o durata impostata anche per il caching delle licenze, con un valore massimo di 86400 secondi, anche se lo schema applica limiti più elevati.
+     Tutte le licenze rilasciate dal server per lo streaming protetto hanno un periodo di scadenza di 24 ore (86400 secondi). Questo valore si applica quindi implicitamente come limite superiore a qualsiasi data di fine o durata impostata anche per il caching delle licenze, con un valore massimo di 86400 secondi, anche se lo schema applica limiti più elevati.
 
    * **Riproduci a destra** — Specificare almeno un diritto. Se vengono specificati più diritti, il client utilizzerà il primo diritto per il quale soddisfa tutti i requisiti.
 
@@ -40,13 +39,12 @@ Il file di configurazione tenant include:
          * `model`
          * `screenType`
 
-         I seguenti attributi sono ora facoltativi:
+        I seguenti attributi sono ora facoltativi:
 
          * `osVersion`
          * `version`
+
       * **Requisiti di funzionalità del dispositivo** — specifica facoltativamente le funzionalità hardware necessarie per accedere al contenuto.
       * **Requisiti di rilevamento jailbreak** — Facoltativamente specifica che la riproduzione non è consentita per i dispositivi su cui viene rilevato jailbreak.
-
-
 
 Per ulteriori dettagli, vedi i commenti nel file di configurazione del tenant di esempio.

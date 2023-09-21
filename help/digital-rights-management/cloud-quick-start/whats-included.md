@@ -1,8 +1,7 @@
 ---
 description: Adobe fornisce un servizio Cloud DRM ai clienti di Adobe Primetime DRM che non desiderano sviluppare e mantenere il proprio server di licenze DRM Primetime. Grazie a questo servizio, i clienti possono ridurre la complessità operativa e di sviluppo legata al rilascio delle licenze DRM. Primetime Cloud DRM può rilasciare licenze DRM a tutti i dispositivi in grado di eseguire un’applicazione video abilitata per Primetime Browser TVSDK, come iOS, Android, Desktops e Xbox360. Questo servizio DRM è ospitato e gestito da Adobe, con un tempo di attività 24 ore su 24, 7 giorni su 7.
 title: Sfondo
-exl-id: bb5ad080-5b1d-43a6-8d0e-9b5735c82d96
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 0%

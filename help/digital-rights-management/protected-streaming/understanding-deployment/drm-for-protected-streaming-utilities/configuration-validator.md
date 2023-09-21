@@ -1,8 +1,7 @@
 ---
 description: L'Adobe consiglia di eseguire l'utilità Convalida configurazione prima di avviare il server se si apportano modifiche al file di configurazione. Questa utility può rilevare la maggior parte degli errori di configurazione in anticipo, prima che causino errori durante l’elaborazione delle richieste.
 title: Convalida configurazione
-exl-id: 41d0a926-4e12-442c-886e-5f12cf10eed8
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '219'
 ht-degree: 0%
@@ -51,12 +50,12 @@ La convalida basata sulla distribuzione può essere eseguita ai seguenti livelli
 
 * `Tenant` — convalida il file di configurazione e le credenziali per un tenant specifico. Se desideri convalidare la configurazione per `<tenant1>`, tipo:
 
-   ```
-       Validator --<root-path-to-LicenseServer.ConfigRoot> -d flashaccessserver/tenant1 -t
-   ```
+  ```
+      Validator --<root-path-to-LicenseServer.ConfigRoot> -d flashaccessserver/tenant1 -t
+  ```
 
 * `Global` — convalida il file di configurazione globale e la convalida del tenant per tutti i tenant. Se si desidera eseguire la convalida globale basata sulla distribuzione, digitare:
 
-   ```
-       Validator --<root-path-to-LicenseServer.ConfigRoot> -g
-   ```
+  ```
+      Validator --<root-path-to-LicenseServer.ConfigRoot> -g
+  ```

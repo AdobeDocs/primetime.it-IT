@@ -1,8 +1,7 @@
 ---
 description: È possibile utilizzare TVSDK per recuperare informazioni sul supporto che è possibile visualizzare sulla barra di ricerca.
 title: Visualizza la durata, l'ora corrente e il tempo rimanente del video
-exl-id: 58288501-7d61-4cf3-ae62-d92b83c73a58
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '380'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: L'interfaccia del token di licenza PlayReady fornisce servizi di produzione e test.
 title: Richiesta/risposta token di licenza PlayReady
-exl-id: 12f925f7-336b-42b2-95a9-e806801bab8c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '898'
 ht-degree: 4%
@@ -25,27 +24,27 @@ Questa richiesta HTTP restituisce un token che può essere riscattato per una li
 
 * **Richiesta di esempio:**
 
-   ```
-   <xref href="https: pr-gen.test.expressplay.com="" hms="" pr="" token?customerAuthenticator="201722,1ad8eed133edf43cbcc185f0236828ae&kid=b366360da82e9c6e0b0984002a362cf2&contentKey=b366360da82e9c6e0b0984002a362cf2&rightsType=BuyToOwn&analogVideoOPL=0&compressedDigitalAudioOPL=0&compressedDigitalVideoOPL=0&uncompressedDigitalAudioOPL=0&uncompressedDigitalVideoOPL=0&quot; format=&quot;html&quot; scope=&quot;external&quot;">
-   https://pr-gen.test.expressplay.com/hms/pr/token?customerAuthenticator=
-    <ExpressPlay customer authenticator identifier>
-    &kid=<CEKSID>
-    &contentKey=<CEK>
-    &rightsType=BuyToOwn
-    &analogVideoOPL=0
-    &compressedDigitalAudioOPL=0
-    &compressedDigitalVideoOPL=0
-    &uncompressedDigitalAudioOPL=0
-    &uncompressedDigitalVideoOPL=0
-   </xref href="https:>
-   ```
+  ```
+  <xref href="https: pr-gen.test.expressplay.com="" hms="" pr="" token?customerAuthenticator="201722,1ad8eed133edf43cbcc185f0236828ae&kid=b366360da82e9c6e0b0984002a362cf2&contentKey=b366360da82e9c6e0b0984002a362cf2&rightsType=BuyToOwn&analogVideoOPL=0&compressedDigitalAudioOPL=0&compressedDigitalVideoOPL=0&uncompressedDigitalAudioOPL=0&uncompressedDigitalVideoOPL=0&quot; format=&quot;html&quot; scope=&quot;external&quot;">
+  https://pr-gen.test.expressplay.com/hms/pr/token?customerAuthenticator=
+   <ExpressPlay customer authenticator identifier>
+   &kid=<CEKSID>
+   &contentKey=<CEK>
+   &rightsType=BuyToOwn
+   &analogVideoOPL=0
+   &compressedDigitalAudioOPL=0
+   &compressedDigitalVideoOPL=0
+   &uncompressedDigitalAudioOPL=0
+   &uncompressedDigitalVideoOPL=0
+  </xref href="https:>
+  ```
 
 * **Risposta di esempio:**
 
-   ```
-   {"licenseAcquisitionUrl":"https://expressplay-licensing.axprod.net/LicensingService.ashx",
-               "token":"<base64-encoded ExpressPlay token>"}
-   ```
+  ```
+  {"licenseAcquisitionUrl":"https://expressplay-licensing.axprod.net/LicensingService.ashx",
+              "token":"<base64-encoded ExpressPlay token>"}
+  ```
 
 ## Parametri query richiesta {#section_26F8856641A64A46A3290DBE61ACFAD2}
 

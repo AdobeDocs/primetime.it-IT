@@ -1,8 +1,7 @@
 ---
 description: Puoi configurare il lettore per il tracciamento e l’analisi dell’utilizzo dei video.
 title: Inizializzare e configurare l’analisi video
-exl-id: 58d560d1-f668-4e1d-a817-b2e02008fdbe
-source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '697'
 ht-degree: 0%
@@ -55,11 +54,11 @@ Per configurare il tracciamento video nel lettore:
    
    * La creazione di un&#39;istanza richiede un parametro di input dell&#39;ID organizzazione del Marketing Cloud fornito da Adobe.
 
-      Questo è un valore stringa.
+     Questo è un valore stringa.
    * L’unica opzione di configurazione per la libreria VisitorAPI è l’URL dell’endpoint back-end che fornisce l’identificatore univoco per l’utente corrente.
    * L’URL del server di tracciamento dei visitatori è uguale all’URL del server di tracciamento di Analytics.
 
-      Per informazioni sull’implementazione del servizio ID visitatori, consulta Implementazione del servizio ID visitatori.
+     Per informazioni sull’implementazione del servizio ID visitatori, consulta Implementazione del servizio ID visitatori.
 
    ```
    var_visitor = new Visitor("MARKETING_CLOUD_ORG_ID"); 
@@ -68,11 +67,11 @@ Per configurare il tracciamento video nel lettore:
 
 1. Crea un’istanza e configura il componente AppMeasurement.
 
-   L’istanza AppMeasurement dispone di molte opzioni di configurazione. Per ulteriori informazioni, vedere [Sviluppatore Adobe Analytics](https://microsite.omniture.com/t2/help/en_US/reference/#Developer) documentazione. Le opzioni nel codice di esempio seguente ( `account`, `visitorNamespace`, e `trackingServer`) e i valori sono forniti da Adobe.
+   L’istanza di AppMeasurement dispone di molte opzioni di configurazione. Per ulteriori informazioni, vedere [Sviluppatore Adobe Analytics](https://microsite.omniture.com/t2/help/en_US/reference/#Developer) documentazione. Le opzioni nel codice di esempio seguente ( `account`, `visitorNamespace`, e `trackingServer`) e i valori sono forniti da Adobe.
 
    >[!IMPORTANT]
    >
-   >È necessario assicurarsi che la catena di dipendenze sia impostata correttamente. L’istanza AppMeasurement aggrega (dipende da) il componente API visitatore.
+   >È necessario assicurarsi che la catena di dipendenze sia impostata correttamente. L’istanza di AppMeasurement aggrega (dipende da) il componente API visitatore.
 
    ```
    // Instantiate and configure AppMeasurement 

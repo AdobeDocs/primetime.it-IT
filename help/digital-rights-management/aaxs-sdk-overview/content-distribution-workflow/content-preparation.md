@@ -1,8 +1,7 @@
 ---
 description: Qualsiasi utilizzo di Adobe Access consiste in due passaggi chiave in punti diversi del flusso di lavoro. La preparazione dei contenuti deve essere eseguita una volta per ogni risorsa e comporta la creazione di contenuto protetto. L’acquisizione dei contenuti viene eseguita più volte, una volta per ogni consumatore che desidera guardare la risorsa protetta.
 title: Preparazione dei contenuti
-exl-id: c658c7e9-2583-4d74-a94b-800023cf5196
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 0%

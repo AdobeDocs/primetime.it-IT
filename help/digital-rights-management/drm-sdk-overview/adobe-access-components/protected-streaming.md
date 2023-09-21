@@ -2,8 +2,7 @@
 title: Server Adobe Primetime DRM per lo streaming protetto
 description: Server Adobe Primetime DRM per lo streaming protetto
 copied-description: true
-exl-id: 490babeb-eb94-4dd9-a572-eba1d7f65278
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '79'
 ht-degree: 0%

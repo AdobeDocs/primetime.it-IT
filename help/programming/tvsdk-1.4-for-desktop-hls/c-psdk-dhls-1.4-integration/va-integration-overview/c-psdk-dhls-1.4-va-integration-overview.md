@@ -1,8 +1,7 @@
 ---
 description: Puoi tenere traccia dell’utilizzo dei video integrando TVSDK con Adobe Analytics.
 title: Analisi dei video
-exl-id: 02303511-2713-4974-ada7-6f50fc500325
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '235'
 ht-degree: 0%
@@ -22,11 +21,12 @@ La procedura seguente riepiloga i passaggi per attivare il tracciamento video ne
    * **Libreria AppMeasurement** : contiene la logica di base per la raccolta dati di basso livello. Qui vengono accumulati i dati heartbeat video e inviati tramite la rete.
    * **Libreria heartbeat video** : contiene la logica di base per la raccolta dati video-heartbeat. La libreria heartbeat video accede a un sottoinsieme del `AppMeasurement` API della libreria.
 
-      >[!TIP]
-      >
-      >L&#39;app non interagisce direttamente con il codice heartbeat video. Al contrario, l’app utilizza le API TVSDK per configurare le funzionalità di tracciamento video del lettore.
+     >[!TIP]
+     >
+     >L&#39;app non interagisce direttamente con il codice heartbeat video. Al contrario, l’app utilizza le API TVSDK per configurare le funzionalità di tracciamento video del lettore.
 
    * **Libreria VisitorID** : identifica in modo univoco i visitatori della pagina web che ospita il lettore video.
+
    >[!IMPORTANT]
    >
    >La funzionalità di tracciamento video integrata di TVSDK dipende da una `AppMeasurement` dell&#39;istanza. Gli elementi di tracciamento presuppongono che `AppMeasurement` la libreria è già stata creata e configurata prima di configurare e attivare il tracciamento video. Le funzionalità di tracciamento video TVSDK dipendono dall’esistenza di un’istanza completamente funzionale e configurata correttamente del `AppMeasurement` libreria.

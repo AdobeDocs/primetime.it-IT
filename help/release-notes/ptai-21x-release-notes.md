@@ -1,8 +1,7 @@
 ---
 title: Note sulla versione di PTAI 21.11.1
 description: Le note sulla versione PTAI descrivono le novità o le modifiche, i problemi risolti e noti in Primetime Ad Insertion nel 2021.
-exl-id: 39a05f6d-431a-4416-81b1-21d82c0dbd69
-source-git-commit: f4c6ef44c7f13bf8170a1f23a7ae8eba0171316a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '389'
 ht-degree: 0%
@@ -33,7 +32,7 @@ Quando: martedì 12 ottobre 2021 dalle 07:45 alle 13:45 fuso orientale
 
 Quando: martedì 28 settembre 2021 dalle 05:00 alle 06:00 ora orientale
 
-* Aggiornamenti allo stack del load balancer da Elastic Load Balancer di AWS a Application Load Balancer di AWS per funzionalità e scalabilità migliorate. Questi load balancer vengono utilizzati per indirizzare e richiedere il traffico al backend Auditude dal livello Ad Insertion (SSAI/CSAI).
+* Aggiornamenti allo stack del load balancer da Elastic Load Balancer di AWS a Application Load Balancer di AWS per funzionalità e scalabilità migliorate. Questi load balancer vengono utilizzati per indirizzare e richiedere il traffico al backend di Auditude dal livello Ad Insertion (SSAI/CSAI).
 
 ### Versione 21.9.1
 

@@ -1,8 +1,7 @@
 ---
 description: Per l’inserimento di annunci in streaming live, potrebbe essere necessario uscire da un’interruzione pubblicitaria prima che tutti gli annunci dell’interruzione vengano riprodotti fino al completamento.
 title: Implementare un ritorno rapido dell’annuncio pubblicitario
-exl-id: 38386ab7-0e3b-4628-84eb-470d585eb929
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '176'
 ht-degree: 0%

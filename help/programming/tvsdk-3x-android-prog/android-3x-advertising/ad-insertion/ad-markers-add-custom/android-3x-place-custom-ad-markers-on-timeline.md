@@ -1,8 +1,7 @@
 ---
 description: Questo esempio mostra il modo consigliato per includere marcatori annuncio personalizzati nella timeline di riproduzione.
 title: Posizionare marcatori annuncio personalizzati sulla timeline
-exl-id: 32a4b342-1f26-42c5-9682-789c541f0fa6
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 0%
@@ -25,7 +24,7 @@ Ecco il risultato del completamento delle attività in questo esempio:
 
 * Se un `ReplaceTimeRange` si sovrappone a un altro nella timeline di riproduzione, ad esempio, la posizione iniziale di un `ReplaceTimeRange` è precedente a una posizione finale già posizionata, TVSDK regola automaticamente l’inizio dell’offesa `ReplaceTimeRange` per evitare il conflitto.
 
-   In questo modo le `ReplaceTimeRange` più breve di quello specificato in origine. Se la regolazione porta a una durata pari a zero, TVSDK rilascia silenziosamente l’offensiva `ReplaceTimeRange`.
+  In questo modo le `ReplaceTimeRange` più breve di quello specificato in origine. Se la regolazione porta a una durata pari a zero, TVSDK rilascia silenziosamente l’offensiva `ReplaceTimeRange`.
 
 * TVSDK cerca intervalli di tempo adiacenti per le interruzioni pubblicitarie personalizzate e li raggruppa in interruzioni pubblicitarie separate.
 
@@ -35,7 +34,7 @@ Gli intervalli di tempo non adiacenti a nessun altro intervallo di tempo vengono
 
 * Quando si tratta di marcatori di annunci personalizzati, TVSDK disattiva altri meccanismi di risoluzione degli annunci (ad esempio, Adobe Primetime ad decisioning).
 
-   Puoi utilizzare qualsiasi modulo TVSDK ad-resolver o il meccanismo personalizzato per i marcatori degli annunci. Quando utilizzi marcatori annuncio personalizzati, il contenuto dell’annuncio viene considerato risolto e posizionato sulla timeline.
+  Puoi utilizzare qualsiasi modulo TVSDK ad-resolver o il meccanismo personalizzato per i marcatori degli annunci. Quando utilizzi marcatori annuncio personalizzati, il contenuto dell’annuncio viene considerato risolto e posizionato sulla timeline.
 
 Il seguente frammento di codice inserisce tre intervalli di tempo sulla timeline come marcatori di annunci personalizzati.
 

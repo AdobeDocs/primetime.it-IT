@@ -2,8 +2,7 @@
 title: Distribuire Adobe Primetime DRM
 description: Distribuire Adobe Primetime DRM
 copied-description: true
-exl-id: 64a96d70-502c-48b8-9f43-59f4001a7ab6
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '770'
 ht-degree: 0%

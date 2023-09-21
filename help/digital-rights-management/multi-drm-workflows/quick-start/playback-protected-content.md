@@ -1,8 +1,7 @@
 ---
 description: Per testare la soluzione DRM, è necessario disporre di un'applicazione video in grado di elaborare la specifica soluzione DRM utilizzata. Questo lettore può essere un sample player reso disponibile da Adobe, o dalla tua applicazione video basata su TVSDK.
 title: Riprodurre il contenuto protetto
-exl-id: b0e09474-f752-495f-a702-93f288535403
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '550'
 ht-degree: 0%
@@ -29,15 +28,15 @@ Per testare la soluzione DRM, è necessario disporre di un&#39;applicazione vide
 
    * Lettore di riferimento HTML5:
 
-      ```
-      https://ptdemos.com/html5/internal/1_2/2.4_GM/samples/reference/reference_player.html
-      ```
+     ```
+     https://ptdemos.com/html5/internal/1_2/2.4_GM/samples/reference/reference_player.html
+     ```
 
    * Giocatore Shaka:
 
-      ```
-      https://shaka-player-demo.appspot.com
-      ```
+     ```
+     https://shaka-player-demo.appspot.com
+     ```
 
    * Lettore TVSDK di esempio (in sviluppo) -
 

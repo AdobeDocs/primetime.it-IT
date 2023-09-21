@@ -1,8 +1,7 @@
 ---
 description: Quando l'utente avanza o riavvolge rapidamente il supporto, si trova nella modalità di riproduzione con trucco. Per accedere alla modalità di riproduzione con trucco, è necessario impostare la velocità di riproduzione di MediaPlayer su un valore diverso da 1.
 title: Implementazione di avanzamento rapido e riavvolgimento
-exl-id: c1d70d46-449b-494b-9b89-5553e9bcdbc3
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '775'
 ht-degree: 0%
@@ -20,9 +19,9 @@ Per cambiare la velocità, è necessario impostare un valore.
    * Il `MediaPlayerItem` classe definisce le velocità di riproduzione consentite.
    * Se la tariffa specificata non è consentita, TVSDK seleziona la tariffa consentita più vicina.
 
-      Quando la frequenza di trickplay viene cambiata da 0 (pausa) o 1 (riproduzione normale) a una frequenza maggiore di 1 o minore di -1, tutti gli annunci sulla timeline vengono rimossi. È disponibile un solo punto sull’intera timeline che facilita un’azione di trickplay per consentire di inoltrare e riavvolgere rapidamente il contenuto senza fermarsi in nessuna posizione dell’annuncio. Questa azione è abilitata da un’azione di distacco della timeline su TVSDK per rimuovere tutti gli adBreak risolti. Quando la riproduzione trickplay riprende a 0 o 1, gli adBreaks vengono ripristinati per la prima volta dall’azione di allegato della timeline.
+     Quando la frequenza di trickplay viene cambiata da 0 (pausa) o 1 (riproduzione normale) a una frequenza maggiore di 1 o minore di -1, tutti gli annunci sulla timeline vengono rimossi. È disponibile un solo punto sull’intera timeline che facilita un’azione di trickplay per consentire di inoltrare e riavvolgere rapidamente il contenuto senza fermarsi in nessuna posizione dell’annuncio. Questa azione è abilitata da un’azione di distacco della timeline su TVSDK per rimuovere tutti gli adBreak risolti. Quando la riproduzione trickplay riprende a 0 o 1, gli adBreaks vengono ripristinati per la prima volta dall’azione di allegato della timeline.
 
-      Tenere presenti le seguenti informazioni:
+     Tenere presenti le seguenti informazioni:
 
    * Se l’azione di trickplay consiste nel riavvolgere il contenuto, la riproduzione riprende quando la frequenza viene modificata in 1.
    * Se l’azione di trickplay consiste nell’avanzare rapidamente il contenuto, l’ultimo adBreak saltato viene riprodotto nella posizione di ripresa.
@@ -71,7 +70,7 @@ Utilizza i seguenti elementi API per modificare le percentuali di riproduzione:
 
 ## Limitazioni e comportamento per la riproduzione con trucco {#limitations-behavior-trick-play}
 
-Di seguito sono riportate le limitazioni relative alla modalità di riproduzione con trucco:
+Di seguito sono riportate le limitazioni della modalità di riproduzione con trucco:
 
 * La playlist master deve contenere segmenti di solo I-frame. Sullo schermo vengono visualizzati solo i fotogrammi chiave della traccia I-frame.
 * La traccia audio e i sottotitoli sono disattivati.
@@ -90,4 +89,4 @@ Di seguito sono riportate le limitazioni relative alla modalità di riproduzione
    * Il `AdBreakPlaybackEvent.AD_BREAK_SKIPPED` viene inviato immediatamente prima che un’interruzione pubblicitaria stia per essere ignorata. Il lettore può utilizzare questo evento per implementare una logica personalizzata relativa alle interruzioni pubblicitarie saltate.
    * L’uscita dalla modalità di riproduzione con trucco richiama lo stesso criterio di riproduzione degli annunci utilizzato all’uscita dalla ricerca.
 
-      Pertanto, come nella ricerca, il comportamento dipende dal fatto che i criteri di riproduzione dell’applicazione siano diversi da quelli predefiniti. L’impostazione predefinita prevede che l’ultima interruzione pubblicitaria saltata venga riprodotta nel punto in cui si esce dalla riproduzione con i trucchi.
+     Pertanto, come nella ricerca, il comportamento dipende dal fatto che i criteri di riproduzione dell’applicazione siano diversi da quelli predefiniti. L’impostazione predefinita prevede che l’ultima interruzione pubblicitaria saltata venga riprodotta nel punto in cui si esce dalla riproduzione con i trucchi.

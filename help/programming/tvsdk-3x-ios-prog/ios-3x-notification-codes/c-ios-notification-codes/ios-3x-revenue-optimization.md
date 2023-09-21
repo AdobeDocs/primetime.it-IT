@@ -1,8 +1,7 @@
 ---
 description: Questa tabella fornisce informazioni dettagliate sulle notifiche di ottimizzazione dei ricavi.
 title: Codice ottimizzazione RICAVI
-exl-id: 3657ba70-ec35-495b-ae7b-4198429bdf6a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '752'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # Codice ottimizzazione RICAVI {#revenue-optimization-code}
 
-Questa tabella fornisce informazioni dettagliate sulle notifiche di OTTIMIZZAZIONE DELLE ENTRATE.
+Questa tabella fornisce informazioni dettagliate sulle notifiche di OTTIMIZZAZIONE RICAVI.
 
 ## Abilita report di ottimizzazione dei ricavi {#enable-revenue-optimization-reporting}
 

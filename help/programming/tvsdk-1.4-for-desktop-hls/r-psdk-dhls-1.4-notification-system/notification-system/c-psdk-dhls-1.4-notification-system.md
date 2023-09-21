@@ -1,8 +1,7 @@
 ---
 description: Gli oggetti MediaPlayerNotification forniscono informazioni sulle modifiche dello stato del lettore, avvisi ed errori. Gli errori che interrompono la riproduzione del video causano anche un cambiamento nello stato del lettore.
 title: Notifiche per stato, attività, errori e registrazione del lettore
-exl-id: cce634aa-5394-46c0-a031-70d6fc1b754b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '109'
 ht-degree: 0%

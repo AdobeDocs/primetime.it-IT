@@ -1,8 +1,7 @@
 ---
 title: Come effettuare l’onboarding e iniziare a utilizzare Account IQ
 description: Come iniziare a utilizzare Account IQ, prerequisiti e informazioni introduttive.
-exl-id: 840ab081-0073-492f-86b2-ba174ae93256
-source-git-commit: b83105b94dc1c78de84908f5676ade6a62486349
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 0%
@@ -44,7 +43,7 @@ Account IQ è compatibile con le versioni più recenti dei seguenti browser:
       >
       >Nel prossimo futuro, l’Account IQ Primetime si dividerà da TVE Dashboard.
 
-   1. Da qui puoi creare gruppi di utenti o selezionare gruppi esistenti a cui aggiungere utenti.
+   1. Da qui puoi creare gruppi di utenti o selezionare gruppi esistenti a cui aggiungere gli utenti.
 
       ![](assets/add-users-2profile.png)
 

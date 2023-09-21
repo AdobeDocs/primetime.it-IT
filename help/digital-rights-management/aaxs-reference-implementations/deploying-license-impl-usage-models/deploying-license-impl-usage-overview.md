@@ -2,8 +2,7 @@
 title: Panoramica sull’implementazione dei modelli di utilizzo
 description: Panoramica sull’implementazione dei modelli di utilizzo
 copied-description: true
-exl-id: 48e7db54-484f-4c46-9a4e-a51bae7c84b4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 0%
@@ -46,11 +45,11 @@ Quando un utente richiede una licenza, il server di implementazione di riferimen
          * Se `CustomerAuthorization.UsageType` è `DTO`, genera una licenza per *Scarica su Proprietario* modello di utilizzo e inviarlo all&#39;utente.
 
          * Se `CustomerAuthorization.UsageType` è `VOD`, genera una licenza per *Video On Demand* modello di utilizzo e inviarlo all&#39;utente.
+
    * Se nessuno dei criteri consente l’accesso anonimo:
 
       * Se nella richiesta non è presente un token di autenticazione valido, viene restituito un errore di tipo &quot;autenticazione richiesta&quot;.
       * In caso contrario, viene restituito un errore &quot;non autorizzato&quot;.
-
 
 * Se uno dei criteri consente l’accesso anonimo, genera una licenza per il modello di utilizzo finanziato dall’annuncio e inviala all’utente.
 

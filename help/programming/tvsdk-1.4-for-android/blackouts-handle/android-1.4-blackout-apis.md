@@ -1,8 +1,7 @@
 ---
 description: È possibile gestire le sospensioni attività nei flussi video live e fornire contenuto alternativo durante una sospensione attività.
 title: Elementi API di sospensione attività
-exl-id: 8e4f1dc3-f2f6-4db9-b9d0-3e79d21032e9
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 0%
@@ -19,7 +18,7 @@ Per gestire le sospensioni attività nei flussi live:
 
 1. Imposta l&#39;app per rilevare i tag di sospensione attività mediante l&#39;iscrizione a tali tag in un manifesto live-stream.
 
-   TVSDK non rileva i tag di sospensione attività da solo. È necessario sottoscrivere i tag di sospensione attività per ricevere una notifica quando i tag vengono rilevati durante l&#39;analisi del file manifesto.
+   TVSDK non rileva i tag di sospensione attività di per sé; è necessario sottoscrivere i tag di sospensione attività per ricevere una notifica quando i tag vengono rilevati durante l&#39;analisi del file manifesto.
 1. Crea listener di eventi per i tag a cui il lettore è abbonato (in questo caso, tag PLAYBACK e BLACKOUT).
 
    Quando si verifica un tag a cui il lettore si è abbonato (ad esempio, un tag di sospensione attività) nei manifesti di flusso in primo piano (contenuto principale) o in background (contenuto alternativo), TVSDK invia un tag `TimedMetadataEvent` e crea un `TimedMetadataObject` per `TimedMetadataEvent`.
@@ -46,9 +45,9 @@ Puoi utilizzare quanto segue durante l’implementazione di una soluzione di sos
 
 * **MetadatiSospensione attività** -
 
-   Classe di metadati specifica per le sospensioni attività.
+  Classe di metadati specifica per le sospensioni attività.
 
-   Questo consente di impostare intervalli non ricercabili (un array di `TimeRanges`) su TVSDK. TVSDK controlla questi intervalli ogni volta che l’utente cerca. Se è impostato e l’utente cerca in un intervallo non ricercabile, TVSDK forza il visualizzatore alla fine dell’intervallo non ricercabile.
+  Questo consente di impostare intervalli non ricercabili (un array di `TimeRanges`) su TVSDK. TVSDK controlla questi intervalli ogni volta che l’utente cerca. Se è impostato e l’utente cerca in un intervallo non ricercabile, TVSDK forza il visualizzatore alla fine dell’intervallo non ricercabile.
 
 * **INIZIA QUI IL PROSSIMO AdvertisingMetadata** Abilita o disabilita la funzione di preroll su un flusso live impostando `enableLivePreroll` su true o false. Se false, TVSDK non effettua una chiamata esplicita al server degli annunci pre-roll prima della riproduzione del contenuto e quindi non riproduce il pre-roll. Questo non ha alcun impatto sulle mid-roll. Il valore predefinito è true.
 

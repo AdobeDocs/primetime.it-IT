@@ -1,8 +1,7 @@
 ---
 description: I sottotitoli codificati visualizzano la porzione audio di un video come testo sullo schermo quando l'audio non è udibile o lo spettatore è ipoudente.
 title: Seleziona una traccia di didascalia corrente tra le tracce disponibili
-exl-id: ff3e0c59-bcd9-4831-804c-35e13d96f499
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '212'
 ht-degree: 0%

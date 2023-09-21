@@ -1,8 +1,7 @@
 ---
 description: Per il contenuto live/lineare, TVSDK sostituisce un blocco del contenuto del flusso principale con un’interruzione pubblicitaria della stessa durata, in modo che la durata della timeline rimanga invariata.
 title: Risoluzione e inserimento di annunci live/lineari
-exl-id: b0fbdddf-8529-4f7a-aef2-1764320307f1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '289'
 ht-degree: 0%

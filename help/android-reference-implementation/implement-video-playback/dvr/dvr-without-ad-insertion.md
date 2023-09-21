@@ -1,8 +1,7 @@
 ---
 description: Per impostazione predefinita, uno streaming live con supporto DVR espone un intervallo ricercabile in cui il visualizzatore può mettere in pausa e cercare.
 title: DVR senza inserimento di annunci
-exl-id: 96f39465-0225-4725-90dc-e7ec6e478339
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '136'
 ht-degree: 0%
@@ -19,5 +18,5 @@ Per impostazione predefinita, uno streaming live con supporto DVR espone un inte
 * Evidenzia l’intervallo ricercabile nella barra di controllo.
 * Modifica la durata della barra di controllo in modo che corrisponda all’intervallo del flusso ricercabile anziché all’intervallo di riproduzione del flusso.
 
-   L’intervallo ricercabile è un sottoinsieme dell’intervallo riproducibile in cui gli annunci possono essere inseriti in modo sicuro.
+  L’intervallo ricercabile è un sottoinsieme dell’intervallo riproducibile in cui gli annunci possono essere inseriti in modo sicuro.
 * Scegli un punto di partenza personalizzato per l’immissione di un flusso.

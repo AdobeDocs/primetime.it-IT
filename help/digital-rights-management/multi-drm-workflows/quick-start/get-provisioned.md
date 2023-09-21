@@ -1,8 +1,7 @@
 ---
 description: Per iniziare a utilizzare Primetime DRM Cloud, con tecnologia ExpressPlay, devi configurare gli account Adobe Cert ed ExpressPlay con l’aiuto del tuo rappresentante Adobe.
 title: Effettua il provisioning (account, ecc.)
-exl-id: 2543d997-3495-4545-9395-072c07431aba
-source-git-commit: a0917e128862184ce18050792c2ee2ac265050d2
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 0%

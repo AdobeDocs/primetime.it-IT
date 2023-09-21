@@ -1,8 +1,7 @@
 ---
 description: È possibile aggiungere il comportamento TVSDK per mettere in pausa e riprodurre i pulsanti.
 title: Riprodurre e mettere in pausa un video
-exl-id: 62e77f50-5133-4db5-bf10-fde7d28e959d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 0%

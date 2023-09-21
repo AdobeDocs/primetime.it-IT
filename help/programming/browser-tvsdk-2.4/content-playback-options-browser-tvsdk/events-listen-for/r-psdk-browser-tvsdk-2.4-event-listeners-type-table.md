@@ -1,8 +1,7 @@
 ---
 description: Quando si registrano i listener di eventi con il TVSDK del browser, è necessario specificare un tipo di evento per cui eseguire l'ascolto e il nome del callback. Quando si verifica un evento, il TVSDK del browser chiama il callback e gli trasmette un oggetto evento del tipo appropriato.
 title: Tipi di eventi e classi per i callback
-exl-id: 94c571ea-6dd2-4c15-89db-7015d89c9208
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%

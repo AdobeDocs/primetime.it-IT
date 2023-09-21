@@ -1,8 +1,7 @@
 ---
 description: TVSDK invia eventi ad-serving in risposta a operazioni di metadati a tempo.
 title: Eventi di metadati ad serving/temporizzati
-exl-id: 875afa2a-a5cc-4192-91e2-5ba7b61abd57
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '174'
 ht-degree: 0%

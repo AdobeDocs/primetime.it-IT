@@ -2,8 +2,7 @@
 title: Memorizzazione delle credenziali
 description: Memorizzazione delle credenziali
 copied-description: true
-exl-id: ceb1bc19-56a0-47ce-affd-ce4ecb896c3b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '396'
 ht-degree: 0%
@@ -24,7 +23,7 @@ L’SDK di Primetime DRM supporta diversi modi per memorizzare le credenziali, i
 
 >[!NOTE]
 >
->A partire da Java 1.7, Sun Java per Windows a 64 bit non supporta più le interfacce PKCS11 che Primetime DRM richiede per la comunicazione con i dispositivi HSM. Se prevedi di utilizzare un HSM, devi utilizzare una versione a 32 bit di Java o un JDK che supporti le interfacce PKCS11 complete.
+>A partire da Java 1.7, Sun Java per Windows a 64 bit non supporta più le interfacce PKCS11 che Primetime DRM richiede per la comunicazione con i dispositivi HSM. Se prevedi di utilizzare un HSM, devi utilizzare una versione a 32 bit di Java oppure un JDK che supporti le interfacce PKCS11 complete.
 
 Puoi mantenere una chiave privata su un HSM e utilizzare l’SDK di Primetime DRM per passare le credenziali che ottieni da HSM. Se desideri utilizzare una credenziale memorizzata in un HSM, devi utilizzare un provider JCE in grado di comunicare con un HSM per ottenere un handle per la chiave privata. Quindi devi passare l’handle della chiave privata, il nome del provider e il certificato che include la chiave pubblica a `ServerCredentialFactory.getServerCredential()`.
 

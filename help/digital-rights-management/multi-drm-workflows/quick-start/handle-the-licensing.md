@@ -1,8 +1,7 @@
 ---
 description: La concessione di licenze è il meccanismo principale mediante il quale agli utenti viene consentita o negata la possibilità di riprodurre un contenuto video protetto. A un utente legittimo (autorizzato) può essere rilasciata una licenza (una chiave) per decrittografare e riprodurre una parte specifica del contenuto crittografato del provider di contenuti.
 title: Licenze
-exl-id: 60aa3e77-f821-41b3-ba0e-1a2c05b2bb1a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '346'
 ht-degree: 0%
@@ -22,7 +21,6 @@ Il server autorizzato o storefront richiederà un token di licenza al server Exp
 >Impossibile effettuare la richiesta del token di licenza dal client stesso:
 >1. i diritti devono essere verificati in un ambiente attendibile; e
 >1. L’autenticatore del cliente deve essere tenuto segreto.
-
 
 1. Effettuare la richiesta del token di licenza.
 

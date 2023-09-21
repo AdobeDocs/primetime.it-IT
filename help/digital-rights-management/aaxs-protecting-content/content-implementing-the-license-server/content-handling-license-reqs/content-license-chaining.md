@@ -2,8 +2,7 @@
 title: Concatenamento licenze
 description: Concatenamento licenze
 copied-description: true
-exl-id: 2f439e21-c748-45aa-a87c-36e70ee3722a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '97'
 ht-degree: 0%

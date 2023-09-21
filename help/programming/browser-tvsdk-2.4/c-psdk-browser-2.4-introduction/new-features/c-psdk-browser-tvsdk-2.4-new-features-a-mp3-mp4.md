@@ -1,8 +1,7 @@
 ---
 description: Browser TVSDK supporta una serie di funzioni MP3 e MP4 che è possibile implementare per aggiungere funzionalità alle applicazioni.
 title: Caratteristiche MP3 e MP4 supportate
-exl-id: 742d9d52-0dc7-44f9-8d42-d2738057a0ee
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%

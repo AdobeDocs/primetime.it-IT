@@ -1,8 +1,7 @@
 ---
 description: I flussi multimediali possono contenere metadati aggiuntivi sotto forma di tag nel file di playlist/manifesto e questo file indica il posizionamento della pubblicità. È possibile specificare nomi di tag personalizzati e ricevere una notifica quando determinati tag vengono visualizzati nel file manifesto.
 title: Tag personalizzati
-exl-id: 1b660b2a-c48b-49f9-af14-8b2318119e9a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 0%

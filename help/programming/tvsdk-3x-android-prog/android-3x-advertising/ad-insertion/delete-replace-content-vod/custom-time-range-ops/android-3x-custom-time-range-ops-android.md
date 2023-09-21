@@ -1,8 +1,7 @@
 ---
 description: La classe CustomRangeMetadata identifica diversi tipi di intervalli di tempo in un flusso VOD, contrassegnandoli, eliminandoli e sostituendoli. Per ciascuno di questi tipi di intervallo di tempo personalizzati, puoi eseguire le operazioni corrispondenti, inclusa l’eliminazione e la sostituzione del contenuto dell’annuncio.
 title: Operazioni per intervalli di tempo personalizzati
-exl-id: ae457ee6-5649-469b-b5f1-1e0b16b6eb9c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 0%
@@ -27,8 +26,8 @@ Per supportare queste operazioni dell&#39;intervallo di tempo personalizzato, TV
 
 * Più sistemi di risoluzione dei contenuti
 
-   Un flusso può avere più risolutori di contenuto in base alla modalità di segnalazione degli annunci e ai metadati degli annunci. Il comportamento cambia con diverse combinazioni di modalità di segnalazione degli annunci e metadati degli annunci.
+  Un flusso può avere più risolutori di contenuto in base alla modalità di segnalazione degli annunci e ai metadati degli annunci. Il comportamento cambia con diverse combinazioni di modalità di segnalazione degli annunci e metadati degli annunci.
 * Più opportunità iniziali utilizzando `CustomMarkerOpportunityGenerator`.
 * Una nuova modalità di segnalazione pubblicitaria, `CUSTOM_RANGES`.
 
-   Gli annunci vengono inseriti in base ai dati dell’intervallo di tempo provenienti da un’origine esterna, ad esempio un file JSON.
+  Gli annunci vengono inseriti in base ai dati dell’intervallo di tempo provenienti da un’origine esterna, ad esempio un file JSON.

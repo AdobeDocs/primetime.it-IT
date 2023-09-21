@@ -1,8 +1,7 @@
 ---
 description: TVSDK fornisce gli strumenti per creare un’applicazione video player avanzata (il lettore Primetime) che puoi integrare con altri componenti di Primetime. Offre inoltre una serie di funzioni progettate per ottimizzare la qualità della riproduzione video.
 title: Configurare il lettore multimediale
-exl-id: 99fdc4c1-0c67-4de5-87a5-b42d76f43ae9
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 0%

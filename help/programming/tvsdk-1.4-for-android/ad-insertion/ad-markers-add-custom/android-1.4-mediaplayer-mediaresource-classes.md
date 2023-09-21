@@ -1,8 +1,7 @@
 ---
 description: Un oggetto MediaResource rappresenta il contenuto che verrà caricato dall'istanza di MediaPlayer.
 title: Classi MediaPlayer e MediaResource
-exl-id: d3ac1a8d-3549-417a-83e9-c561a3d12127
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 0%
@@ -20,9 +19,9 @@ La libreria TVSDK fornisce un modo semplice per caricare e preparare il contenut
 * Un URL, che rappresenta la posizione del contenuto che sta per essere caricato.
 * Un tipo, che è il tipo di contenuto che sta per essere caricato.
 
-   Questa è una semplice enumerazione nel `MediaResource` classe che definisce i tipi di contenuto che possono essere caricati da MediaPlayer. I valori possibili sono HLS e HDS. Ogni valore è associato alla stringa che rappresenta le estensioni di file comunemente utilizzate, `m3u8` per HLS e `f4m` per HDS.
+  Questa è una semplice enumerazione nel `MediaResource` classe che definisce i tipi di contenuto che possono essere caricati da MediaPlayer. I valori possibili sono HLS e HDS. Ogni valore è associato alla stringa che rappresenta le estensioni di file comunemente utilizzate, `m3u8` per HLS e `f4m` per HDS.
 * Alcuni metadati, che è un’istanza di `Metadata` classe.
 
-   Questa struttura simile al dizionario può contenere informazioni aggiuntive sul contenuto che sta per essere caricato, ad esempio informazioni sul contenuto alternativo/annuncio che deve essere inserito nel contenuto principale.
+  Questa struttura simile al dizionario può contenere informazioni aggiuntive sul contenuto che sta per essere caricato, ad esempio informazioni sul contenuto alternativo/annuncio che deve essere inserito nel contenuto principale.
 
 I metadati sono il mezzo attraverso il quale le informazioni relative al contenuto alternativo vengono passate a TVSDK. Il `Metadata` L’interfaccia definisce l’API per un archivio chiave-valore generico, dove sia la chiave che il valore sono stringhe semplici.

@@ -1,8 +1,7 @@
 ---
 description: Questa sezione descrive la grammatica dell’input di configurazione, enfatizza le opzioni di input valide e non valide e spiega come vengono interpretati i campi facoltativi omessi.
 title: Grammatica RBOP
-exl-id: 311194ec-e59b-4145-b22b-6983e212fcab
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 0%
@@ -238,23 +237,23 @@ Il *Esempio di configurazione della protezione dell&#39;output* L&#39;argomento 
 
 * Non è possibile definire più vincoli pixel con lo stesso numero di pixel.
 
-   ```
-   {  
-     "pixelConstraints":  
-       [  
-         { "pixelCount": 720 }  
-       ]  
-    }  
-   ```
+  ```
+  {  
+    "pixelConstraints":  
+      [  
+        { "pixelCount": 720 }  
+      ]  
+   }  
+  ```
 
 * Un numero di pixel non deve superare la risoluzione massima specificata.
 
-   ```
-   { 
-     "maxPixel": 720, 
-     "pixelConstraints": 
-       [ 
-         {"pixelCount": 1080} 
-       ] 
-   } 
-   ```
+  ```
+  { 
+    "maxPixel": 720, 
+    "pixelConstraints": 
+      [ 
+        {"pixelCount": 1080} 
+      ] 
+  } 
+  ```

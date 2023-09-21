@@ -1,8 +1,7 @@
 ---
 description: Per riprodurre il contenuto DASH risultante dal pacchetto del contenuto, il client TVSDK dovrà ottenere la chiave di decrittografia del contenuto passata durante il processo di creazione del pacchetto nel flusso di lavoro di acquisizione della chiave. La chiave di decrittografia del contenuto client viene in genere distribuita al client da un server licenze Widevine/PlayReady in risposta a uno o più post HTTP/HTTPS dal client.
 title: Panoramica del flusso di lavoro Richiesta chiave client
-exl-id: ae600cbd-415b-441a-bf01-f259993071f2
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 0%

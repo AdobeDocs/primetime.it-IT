@@ -2,8 +2,7 @@
 title: Informazioni sui certificati
 description: Informazioni sui certificati
 copied-description: true
-exl-id: 24ca19bb-a71e-461a-9c3c-558d650e2d99
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 0%
@@ -24,16 +23,16 @@ Per consentire la massima flessibilità e una maggiore sicurezza nelle opzioni d
 
 * Certificato server licenze
 
-   L’SDK utilizza questo certificato per firmare le licenze per contenuti rilasciate ai client.
+  L’SDK utilizza questo certificato per firmare le licenze per contenuti rilasciate ai client.
 * Certificato Packager
 
-   L’SDK utilizza questo certificato per generare metadati DRM durante la creazione del pacchetto (crittografia) del contenuto.
+  L’SDK utilizza questo certificato per generare metadati DRM durante la creazione del pacchetto (crittografia) del contenuto.
 * Certificato di trasporto
 
-   L’SDK utilizza questo certificato per proteggere la comunicazione tra i client e il server licenze.
+  L’SDK utilizza questo certificato per proteggere la comunicazione tra i client e il server licenze.
 * Certificato CA di dominio
 
-   I clienti che desiderano implementare un server di dominio devono disporre del certificato CA di dominio. A differenza degli altri certificati, il certificato CA del dominio non viene emesso da Adobe.
+  I clienti che desiderano implementare un server di dominio devono disporre del certificato CA di dominio. A differenza degli altri certificati, il certificato CA del dominio non viene emesso da Adobe.
 
 >[!NOTE]
 >

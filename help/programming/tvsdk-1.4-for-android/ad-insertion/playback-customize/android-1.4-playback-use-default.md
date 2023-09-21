@@ -1,8 +1,7 @@
 ---
 description: Puoi scegliere di utilizzare i comportamenti di annuncio predefiniti.
 title: Utilizza il comportamento di riproduzione predefinito
-exl-id: c277db2a-546e-4097-96ce-83914b726576
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '60'
 ht-degree: 0%

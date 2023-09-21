@@ -1,8 +1,7 @@
 ---
 title: Note sulla versione di PTAI 19.11.1
 description: Le note sulla versione di PTAI 19.11.1 descrivono le novità o le modifiche, i problemi risolti e noti in Primetime Ad Insertion nell’anno 2019.
-exl-id: 0cc9067c-cd46-48f4-afa4-de8b15193723
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1971'
 ht-degree: 0%
@@ -62,6 +61,7 @@ Aggiornamenti di sicurezza
       * Richieste/risposte di annunci
       * Annunci inseriti
       * Beacon attivati (solo tracciamento lato server)
+
    * Puoi cercare l’attività per un ID sessione specifico fino a 30 giorni dopo lo svolgimento della sessione SSAI
    * Puoi esportare gli eventi
 * Database: aggiornamenti di sicurezza
@@ -87,10 +87,9 @@ Aggiornamenti di sicurezza
    * Aggiunta regola di normalizzazione URL creativo per Innovid, utilizzata da SSAI
    * La regola di normalizzazione utilizzata da CRS è stata aggiunta in una versione precedente
    * TVSDK: la regola di normalizzazione da aggiungere nelle regole CRS JSON è stata fornita dopo una versione precedente, ma per sicurezza, parla con il tuo Technical Account Manager per rivedere tutte le regole di normalizzazione in vigore.
-
-      >[!NOTE]
-      >
-      >La maggior parte degli URL creativi di Innovid verrà transcodificata e unita correttamente senza la regola di normalizzazione. Occasionalmente, tuttavia, si verificano URL creativi Innovid con parametri dinamici. Per gestire queste istanze è necessaria la regola di normalizzazione.
+     >[!NOTE]
+     >
+     >La maggior parte degli URL creativi di Innovid verrà transcodificata e unita correttamente senza la regola di normalizzazione. Occasionalmente, tuttavia, si verificano URL creativi Innovid con parametri dinamici. Per gestire queste istanze è necessaria la regola di normalizzazione.
 
 ### Versione 19.5.2
 
@@ -176,9 +175,9 @@ Aggiornamenti di sicurezza
 
 * CRS: è stata aggiunta la possibilità di elenco Bloccati/elenco consentiti di richieste CRS da sistemi di annunci specifici, ID di annunci, ID creativi, URL creativi e/o formato creativo
 
-   >Nota
-   >
-   >Adobe aggiungerà regole di elenco Bloccati quando vengono trovati provider di annunci con valori dinamici (ad esempio, parametro dinamico nell’URL) per lo stesso annuncio. Tali regole di elenco Bloccati verranno disattivate dopo la risoluzione del componente dinamico, da parte del provider o tramite una regola di normalizzazione.
+  >Nota
+  >
+  >Adobe aggiungerà regole di elenco Bloccati quando vengono trovati provider di annunci con valori dinamici (ad esempio, parametro dinamico nell’URL) per lo stesso annuncio. Tali regole di elenco Bloccati verranno disattivate dopo la risoluzione del componente dinamico, da parte del provider o tramite una regola di normalizzazione.
 
    * Se desideri aggiungere un elenco Bloccati o una regola di elenco consentiti per la tua zona, contatta il tuo Technical Account Manager per assistenza.
 

@@ -1,8 +1,7 @@
 ---
 description: Il TVSDK del browser attualmente supporta la riproduzione di flussi in cui i manifesti e i frammenti non contengono estensioni.
 title: Flussi senza estensione
-exl-id: ef81bfd2-2bfa-4ff7-b826-fd80802b3c07
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '149'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Puoi implementare dei resolver di contenuto personalizzati in base ai resolver predefiniti.
 title: Implementare un sistema di risoluzione dei contenuti personalizzato
-exl-id: f594840b-ff56-49c5-baf5-ac2800411215
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '191'
 ht-degree: 0%
@@ -19,7 +18,7 @@ Tenere presenti le seguenti informazioni:
 
 * Chiamate del resolver dei contenuti `client.process` per specificare l&#39;operazione della timeline da eseguire per TVSDK.
 
-   L’operazione consiste solitamente nel posizionamento di un’interruzione pubblicitaria.
+  L’operazione consiste solitamente nel posizionamento di un’interruzione pubblicitaria.
 
 * Chiamate del resolver dei contenuti `client.notifyCompleted` se il processo di risoluzione ha esito positivo o `client.notifyFailed` se il processo non riesce.
 

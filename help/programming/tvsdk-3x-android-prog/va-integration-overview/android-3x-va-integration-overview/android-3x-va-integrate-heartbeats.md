@@ -2,8 +2,7 @@
 title: Inizializzare e configurare l’analisi video
 description: Inizializzare e configurare l’analisi video
 copied-description: true
-exl-id: 26bdc11e-b8f6-414f-a3e9-53bc895d25ce
-source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 0%
@@ -18,7 +17,7 @@ Prima di attivare il tracciamento video (heartbeat video), assicurati di disporr
 * TVSDK 3.0 per Android.
 * Informazioni su configurazione/inizializzazione
 
-   Contatta il rappresentante di Adobe per informazioni specifiche sull’account di tracciamento video:
+  Contatta il rappresentante di Adobe per informazioni specifiche sull’account di tracciamento video:
 
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
@@ -89,7 +88,7 @@ Per configurare il tracciamento video nel lettore:
    1. Compila e genera l’applicazione.
    1. Distribuire ed eseguire l&#39;applicazione in bundle.
 
-      Per ulteriori informazioni su queste impostazioni AppMeasurement, vedi [Misurazione dei video in Adobe Analytics](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=en).
+      Per ulteriori informazioni su queste impostazioni di AppMeasurement, vedi [Misurazione dei video in Adobe Analytics](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=en).
 
 1. Inizializza e configura i metadati di tracciamento heartbeat video.
 

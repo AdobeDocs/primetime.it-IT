@@ -1,8 +1,7 @@
 ---
 title: Stato HBA per MVPD
 description: Stato HBA per MVPD
-exl-id: 9e506417-0886-4306-9b9f-5fde24a792d3
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '139'
 ht-degree: 0%
@@ -24,24 +23,24 @@ ht-degree: 0%
 
 | MVPD | Funzionalità di base disponibili? | Invia un flag alla risposta di autenticazione | SSO? | Commenti |
 |---|---|---|---|---|
-| DirecTV | Sì | No |  |  |
-| Piatto | In corso | In corso |  |  |
-| Spettro | Sì | Sì |  |  |
-| Carta | Sì | No |  |  |
-| Cox | Sì | No |  | È necessario abilitare Controllo genitori |
-| AT&amp;T | Sì | No |  |  |
-| Verizon | Sì | Sì |  |  |
-| Cablevision | In corso | In corso |  |  |
-| Collegamento improvviso | Sì | In corso |  |  |
-| Mediacom | Sì | In corso |  |  |
-| Midcontinente | Sì | In corso |  |  |
-| Massilon | Sì | No |  |  |
-| Fibra Google | Sì | In corso |  |  |
-| AlticeOne | Sì | Sì |  |  |
+| DirecTV | Sì | No |      |                                      |
+| Piatto | In corso | In corso |      |                                      |
+| Spettro | Sì | Sì |      |                                      |
+| Carta | Sì | No |      |                                      |
+| Cox | Sì | No |      | È necessario abilitare Controllo genitori |
+| AT&amp;T | Sì | No |      |                                      |
+| Verizon | Sì | Sì |      |                                      |
+| Cablevision | In corso | In corso |      |                                      |
+| Collegamento improvviso | Sì | In corso |      |                                      |
+| Mediacom | Sì | In corso |      |                                      |
+| Midcontinente | Sì | In corso |      |                                      |
+| Massilon | Sì | No |      |                                      |
+| Fibra Google | Sì | In corso |      |                                      |
+| AlticeOne | Sì | Sì |      |                                      |
 
 
 ## HBA con MVPD abilitati per OAuth 2.0 {#hba-with-oauth2-enabled-mvpds}
 
 | MVPD | Funzionalità di base disponibili? | Invia un flag alla risposta di autenticazione | SSO? | Commenti |
 |---|---|---|---|---|
-| Comcast | Sì | Sì |  |  |
+| Comcast | Sì | Sì | | |

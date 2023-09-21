@@ -1,8 +1,7 @@
 ---
 description: Ci sono alcune limitazioni e alcuni problemi nel modo in cui la modalità di riproduzione con trucco si comporta.
 title: Limitazioni e comportamento per la riproduzione con trucco
-exl-id: 98558970-9e5e-4dc1-a327-63d9db1d4fed
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 0%
@@ -33,4 +32,4 @@ Di seguito sono riportate le limitazioni della modalità di riproduzione con tru
    * Il `MediaPlayerEvent.AD_BREAK_SKIPPED` viene inviato immediatamente prima che un’interruzione pubblicitaria stia per essere ignorata. Il lettore può utilizzare questo evento per implementare una logica personalizzata relativa alle interruzioni pubblicitarie saltate.
    * L’uscita dalla modalità di riproduzione con trucco richiama lo stesso criterio di riproduzione degli annunci utilizzato all’uscita dalla ricerca.
 
-      Pertanto, come nella ricerca, il comportamento dipende dal fatto che i criteri di riproduzione dell’applicazione siano diversi da quelli predefiniti. L’impostazione predefinita prevede che l’ultima interruzione pubblicitaria saltata venga riprodotta nel punto in cui si esce dalla modalità di riproduzione con trucco.
+     Pertanto, come nella ricerca, il comportamento dipende dal fatto che i criteri di riproduzione dell’applicazione siano diversi da quelli predefiniti. L’impostazione predefinita prevede che l’ultima interruzione pubblicitaria saltata venga riprodotta nel punto in cui si esce dalla modalità di riproduzione con trucco.

@@ -1,8 +1,7 @@
 ---
 description: Dal momento in cui viene creata l’istanza MediaPlayer al momento in cui viene terminata, questa istanza passa da uno stato all’altro.
 title: Ciclo di vita e stati dell'oggetto MediaPlayer
-exl-id: 26cad982-ef85-42fb-aaa7-e5d494088766
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '372'
 ht-degree: 0%

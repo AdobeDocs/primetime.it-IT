@@ -1,8 +1,7 @@
 ---
 description: È possibile impostare i valori di controllo ABR solo con ABRControlParameters, ma è possibile crearne uno nuovo in qualsiasi momento.
 title: Configurare velocità bit adattivi utilizzando ABRControlParameters
-exl-id: fc7887bd-37e8-48e7-8afb-3946fb3f1e77
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '116'
 ht-degree: 0%

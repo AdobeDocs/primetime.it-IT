@@ -1,8 +1,7 @@
 ---
 description: Quando TVSDK rileva un tag sottoscritto nella playlist/manifesto, il lettore tenta automaticamente di elaborare il tag e di esporlo sotto forma di un oggetto PTTimedMetadata.
 title: Classe metadati temporizzati
-exl-id: 969a3cd8-f8db-4b41-8826-c2d7aa8e5df1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 0%
@@ -57,15 +56,15 @@ Tenere presente quanto segue:
 
 * TVSDK estrae automaticamente l&#39;elenco degli attributi in coppie chiave-valore e memorizza gli attributi nella proprietà dei metadati.
 
-   >[!TIP]
-   >
-   >I dati complessi nei tag personalizzati del manifesto, ad esempio le stringhe con caratteri speciali, devono essere racchiusi tra virgolette. Ad esempio:
-   >
-   >
-   ```
-   >#EXT-CUSTOM-TAG:type=SpliceOut,ID=1,time=71819.7222,duration=30.0,url=
-   >"www.example.com:8090?parameter1=xyz&parameter2=abc"
-   >```
+  >[!TIP]
+  >
+  >I dati complessi nei tag personalizzati del manifesto, ad esempio le stringhe con caratteri speciali, devono essere racchiusi tra virgolette. Ad esempio:
+  >
+  >```
+  >#EXT-CUSTOM-TAG:type=SpliceOut,ID=1,time=71819.7222,duration=30.0,url=
+  >"www.example.com:8090?parameter1=xyz&parameter2=abc"
+  >```
+  >
 
 * Se l’estrazione non riesce a causa di un formato di tag personalizzato, la proprietà content contiene sempre i dati non elaborati del tag, che è la stringa dopo i due punti. In questo caso non viene generato alcun errore.
 

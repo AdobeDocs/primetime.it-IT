@@ -1,8 +1,7 @@
 ---
 description: Il lettore video ad-serving interface definition (VPAID) 2.0 offre un’interfaccia comune per la riproduzione di annunci video. Fornisce agli utenti un’esperienza multimediale avanzata e consente agli editori di eseguire meglio il targeting degli annunci, tracciare le impressioni degli annunci e monetizzare i contenuti video.
 title: Supporto di annunci VPAID 2.0
-exl-id: 8cc08999-6047-4bd0-a09f-8a2e28e09766
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 0%
@@ -17,11 +16,11 @@ Sono supportate le seguenti funzionalità:
 
 * Versione 2.0 delle specifiche VPAID
 
-   Per ulteriori informazioni, consulta [IAB VPAID 2.0](https://www.iab.com/wp-content/uploads/2015/06/VPAID_2_0_Final_04-10-2012.pdf).
+  Per ulteriori informazioni, consulta [IAB VPAID 2.0](https://www.iab.com/wp-content/uploads/2015/06/VPAID_2_0_Final_04-10-2012.pdf).
 * Annunci VPAID lineari con contenuto video-on-demand (VOD)
 * JavaScript per annunci VPAID
 
-   Gli annunci VPAID devono essere basati su JavaScript e la risposta dell’annuncio deve identificare il tipo di file multimediale dell’annuncio VPAID come `application/javascript`.
+  Gli annunci VPAID devono essere basati su JavaScript e la risposta dell’annuncio deve identificare il tipo di file multimediale dell’annuncio VPAID come `application/javascript`.
 
 Le seguenti funzioni non sono supportate:
 
@@ -47,4 +46,4 @@ Durante la riproduzione dell’annuncio VPAID:
 
 * Gli annunci VPAID non hanno una durata predefinita, perché l’annuncio può essere interattivo.
 
-   La durata dell’annuncio e la durata totale dell’interruzione pubblicitaria specificate nella risposta dell’ad server potrebbero non essere precise.
+  La durata dell’annuncio e la durata totale dell’interruzione pubblicitaria specificate nella risposta dell’ad server potrebbero non essere precise.

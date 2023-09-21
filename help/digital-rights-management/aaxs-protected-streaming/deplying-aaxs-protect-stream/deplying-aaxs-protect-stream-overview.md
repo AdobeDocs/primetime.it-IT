@@ -2,8 +2,7 @@
 title: Panoramica sulla distribuzione di Adobe Access Server for Protected Streaming
 description: Panoramica sulla distribuzione di Adobe Access Server for Protected Streaming
 copied-description: true
-exl-id: fdefa13a-14ec-4301-ab39-2ceea830463d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 0%
@@ -14,7 +13,7 @@ ht-degree: 0%
 
 Prima di distribuire Adobe Access Server for Protected Streaming, accertarsi di aver installato le versioni di Java e Tomcat elencate nella sezione Requisiti.
 
-Il pacchetto Adobe Access Server for Protected Streaming include [!DNL flashaccesserver.war]. Per distribuire questo file WAR, copialo nel file Tomcat [!DNL webapps] directory. Se il file WAR è stato distribuito in precedenza, potrebbe essere necessario eliminare manualmente la directory WAR decompressa ( [!DNL flashaccessserver] in Tomcat [!DNL webapps] directory). Per evitare che Tomcat decomprima i file WAR, modificare la [!DNL server.xml] file in Tomcat [!DNL conf] e impostare `unpackWARs` attribuire a `false`.
+Il pacchetto Adobe Access Server for Protected Streaming include [!DNL flashaccesserver.war]. Per distribuire questo file WAR, copialo in Tomcat [!DNL webapps] directory. Se il file WAR è stato distribuito in precedenza, potrebbe essere necessario eliminare manualmente la directory WAR decompressa ( [!DNL flashaccessserver] in Tomcat [!DNL webapps] directory). Per evitare che Tomcat decomprima i file WAR, modificare la [!DNL server.xml] file in Tomcat [!DNL conf] e impostare `unpackWARs` attribuire a `false`.
 
 >[!NOTE]
 >

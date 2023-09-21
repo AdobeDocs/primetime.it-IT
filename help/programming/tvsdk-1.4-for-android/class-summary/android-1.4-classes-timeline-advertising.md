@@ -1,8 +1,7 @@
 ---
 description: Queste classi forniscono informazioni sugli annunci che si verificano in una timeline.
 title: Classi di pubblicità Timeline
-exl-id: fb31a235-6578-4da1-b732-713a2f9b24be
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '570'
 ht-degree: 0%

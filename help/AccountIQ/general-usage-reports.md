@@ -1,8 +1,7 @@
 ---
 title: Rapporti di utilizzo generali
 description: Rapporti di utilizzo generali
-exl-id: 1272073a-61fe-47ec-aced-2e8055b6b11e
-source-git-commit: a2181a8fd7334f19b8387a31c71527d4f689ab9d
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1281'
 ht-degree: 0%
@@ -66,28 +65,28 @@ L’asse x presenta le unità entro l’intervallo di tempo corrente e l’asse 
 
 * **AuthN OK**
 
-   AuthN OK è il numero di autenticazioni riuscite. Per ulteriori informazioni e definizioni consulta [Concetti del prodotto: AuthN OK](/help/AccountIQ/product-concepts.md#authn-ok-def).
+  AuthN OK è il numero di autenticazioni riuscite. Per ulteriori informazioni e definizioni consulta [Concetti del prodotto: AuthN OK](/help/AccountIQ/product-concepts.md#authn-ok-def).
 
 * **AuthZ OK**
 
-   AuthZ OK indica il numero di autorizzazioni completate. Per ulteriori informazioni e definizioni consulta [Concetti del prodotto: AuthZ OK](/help/AccountIQ/product-concepts.md#authz-ok-def).
+  AuthZ OK indica il numero di autorizzazioni completate. Per ulteriori informazioni e definizioni consulta [Concetti del prodotto: AuthZ OK](/help/AccountIQ/product-concepts.md#authz-ok-def).
 
 * **Riproduci richieste**
 
-   Richieste Play indica il numero di richieste Play. Per ulteriori informazioni e definizioni consulta [Concetti di prodotto: Riproduci richieste](/help/AccountIQ/product-concepts.md#play-requests-def)
+  Richieste Play indica il numero di richieste Play. Per ulteriori informazioni e definizioni consulta [Concetti di prodotto: Riproduci richieste](/help/AccountIQ/product-concepts.md#play-requests-def)
 
-   >[!NOTE]
-   >
-   >Il grafico a linee delle richieste di riproduzione non è disponibile per gli utenti MVPD.
+  >[!NOTE]
+  >
+  >Il grafico a linee delle richieste di riproduzione non è disponibile per gli utenti MVPD.
 
 
 * **Abbonati univoci**
 
-   Abbonati univoci indica il numero di abbonati univoci riusciti. Per ulteriori informazioni e definizioni consulta [Concetti di prodotto: abbonati univoci](/help/AccountIQ/product-concepts.md#unique-subscriber-def)
+  Abbonati univoci indica il numero di abbonati univoci riusciti. Per ulteriori informazioni e definizioni consulta [Concetti di prodotto: abbonati univoci](/help/AccountIQ/product-concepts.md#unique-subscriber-def)
 
-   >[!NOTE]
-   >
-   >Il numero totale di abbonati univoci include anche il numero di dispositivi univoci se l’utilizzo da parte di un programmatore di TempPass Adobe (ovvero anteprima gratuita) fa parte del segmento.
+  >[!NOTE]
+  >
+  >Il numero totale di abbonati univoci include anche il numero di dispositivi univoci se l’utilizzo da parte di un programmatore di TempPass Adobe (ovvero anteprima gratuita) fa parte del segmento.
 
 ## Panoramica snapshot - Conti superiori alle soglie {#snapshot-overview}
 
@@ -123,7 +122,7 @@ Il grafico mostra:
 
 * percentuale del totale dei conti degli abbonati in quel segmento,
 
-   che utilizzano il numero X di dispositivi, il numero Y di IP e il numero Z di codici postali per utilizzare contenuti dal canale per gli MVPD (segmenti definiti di), per un intervallo di tempo.
+  che utilizzano il numero X di dispositivi, il numero Y di IP e il numero Z di codici postali per utilizzare contenuti dal canale per gli MVPD (segmenti definiti di), per un intervallo di tempo.
 
 ![](assets/select-thresholds.png)
 
@@ -204,4 +203,3 @@ Il grafico a barre Visualizzazione cronologica consente di confrontare le metric
 >[!MORELIKETHIS]
 >
 >* Scopri come esportare rapporti per i primi 1000 abbonati nel segmento selezionato utilizzando i filtri in Rapporto di utilizzo generale utilizzando [Esporta i primi 1000 account](/help/AccountIQ/export-acc-information.md) opzione.
-

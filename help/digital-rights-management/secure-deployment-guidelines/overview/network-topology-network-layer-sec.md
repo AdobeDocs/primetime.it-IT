@@ -1,8 +1,7 @@
 ---
 description: Le vulnerabilità relative alla sicurezza di rete sono tra le prime minacce per qualsiasi server applicazioni che si affaccia su Internet o su una rete Intranet e pertanto è necessario proteggere gli host della rete da tali vulnerabilità.
 title: Protezione a livello di rete
-exl-id: 0a45d18a-66aa-4ecc-8eaf-e2af599eb3b8
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 0%

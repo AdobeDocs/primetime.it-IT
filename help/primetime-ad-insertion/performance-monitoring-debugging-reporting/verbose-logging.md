@@ -2,8 +2,7 @@
 title: Registrazione dettagliata
 description: Registrazione dettagliata
 copied-description: true
-exl-id: f2d1b0c2-ba28-4fba-9a4e-71d1421f37fe
-source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '2155'
 ht-degree: 0%
@@ -107,7 +106,7 @@ I record di questo tipo registrano i risultati delle richieste di annunci del se
 | stato | stringa | Codice di stato HTTP restituito |
 | request_duration | numero intero | Tempo (millisecondi) dalla richiesta alla risposta |
 | ad_server_query_url | stringa | URL per la chiamata dell’annuncio, inclusi i parametri di query |
-| ad_system_id | stringa | Sistema di annunci, dalla risposta del server di annunci (Auditude se non specificato) |
+| ad_system_id | stringa | Ad system, dalla risposta dell’ad server (Auditude se non specificata) |
 | avail_id | stringa | ID del valore, dal cue dell’annuncio nel file del manifesto del contenuto (N/D per VOD) |
 | avail_duration | numero | Durata (secondi) del valore disponibile, dalla segnalazione dell’annuncio nel file manifesto del contenuto (N/D per VOD) |
 | ad_server_response | stringa | Risposta con codifica Base64 da ad server |
@@ -130,7 +129,7 @@ I record di questo tipo registrano i risultati delle richieste di annunci indica
 | ad_duration | numero intero | Durata (secondi) dell’annuncio, dalla risposta del server di annunci. |
 | ad_content_url | stringa | URL del file manifesto dell’annuncio, dalla risposta dell’ad server. |
 | **†** ad_content_url_actual | stringa | URL del file manifesto dell’annuncio inserito. Vuoto per TRACE_AD_REDIRECT. |
-| ad_system_id | stringa | Sistema di annunci, dalla risposta del server di annunci (Auditude se non specificato). |
+| ad_system_id | stringa | Ad system, dalla risposta dell’ad server (Auditude se non specificata). |
 | ad_id | stringa | ID dell’annuncio, dalla risposta dell’ad server. |
 | creative_id | stringa | ID della creatività, dal nodo dell’annuncio, dalla risposta dell’ad server. |
 | **†** ad_call_id | stringa | Non utilizzato. Riservato per uso futuro. |
@@ -328,15 +327,13 @@ https://manifest.auditude.com/auditude/{live/vod}/{publisherAssetID}/{rendition}
 ```
 
 * **live/vod**
-Il server manifesto imposta questo valore in base al tipo di playlist del contenuto: Live/linear (
-`#EXT-X-PLAYLIST-TYPE:EVENT`) o VOD (`#EXT-X-PLAYLIST-TYPE:VOD`)
+Il server manifesto imposta questo valore in base al tipo di playlist del contenuto: Live/linear (`#EXT-X-PLAYLIST-TYPE:EVENT`) o VOD (`#EXT-X-PLAYLIST-TYPE:VOD`)
 
 * **publisherAssetID**
 ID univoco dell’editore per il contenuto specifico fornito nella richiesta URL Bootstrap.
 
 * **rendering**
-Il server manifesto imposta questo valore in base al 
-`BANDWIDTH` del flusso di contenuto e lo utilizza per far corrispondere la velocità bit dell’annuncio alla velocità bit del contenuto. La velocità in bit dell’annuncio non può superare la velocità in bit del contenuto, a meno che non lo faccia la rappresentazione dell’annuncio con la velocità in bit più bassa.
+Il server manifesto imposta questo valore in base al `BANDWIDTH` del flusso di contenuto e lo utilizza per far corrispondere la velocità bit dell’annuncio alla velocità bit del contenuto. La velocità in bit dell’annuncio non può superare la velocità in bit del contenuto, a meno che non lo faccia la rappresentazione dell’annuncio con la velocità in bit più bassa.
 
 * **groupID**
 Il server manifest genera questo valore e lo utilizza per garantire che inserisca gli annunci in modo coerente, indipendentemente dalla velocità di trasmissione dei rendering richiesta dal client.

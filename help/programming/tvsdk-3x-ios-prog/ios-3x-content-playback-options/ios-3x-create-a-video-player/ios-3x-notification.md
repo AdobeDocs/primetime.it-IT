@@ -1,8 +1,7 @@
 ---
 description: Il lettore può ascoltare una serie di eventi che indicano lo stato del lettore.
 title: Impostare le notifiche
-exl-id: 52039895-5529-4fc3-8e58-13309de12e80
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '332'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: L'attivazione immediata comporta il precaricamento di uno o più canali. Quando gli utenti selezionano un canale o cambiano canale, il contenuto viene riprodotto immediatamente. Il buffering viene completato nel momento in cui l’utente inizia a guardare.
 title: Istantanea attiva
-exl-id: 59293e07-160a-41a2-8ffe-7ca9323048f5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 0%
@@ -27,18 +26,18 @@ Per ulteriori informazioni su `MediaPlayerItemLoader`, vedi [Caricare una risors
 
 * Creare e collegare un provider QoS a un `mediaPlayerItemLoader` istanza
 
-   ```
-   // Create an instance of QoSProvider  
-   private QOSProvider _qosProvider = new QOSProvider(this._context);  
-   
-   // Attach the QoSProvider instance to the mediaPlayerItemLoaderInstance  
-   // (before calling load API on mediaPlayerItemLoader instance)  
-   _qosProvider.attachMediaPlayerItemLoader(this._loader); 
-   ```
+  ```
+  // Create an instance of QoSProvider  
+  private QOSProvider _qosProvider = new QOSProvider(this._context);  
+  
+  // Attach the QoSProvider instance to the mediaPlayerItemLoaderInstance  
+  // (before calling load API on mediaPlayerItemLoader instance)  
+  _qosProvider.attachMediaPlayerItemLoader(this._loader); 
+  ```
 
-   Una volta avviata la riproduzione, utilizzare `_qosProvider` per ottenere `timeToLoad` e `timeToPrepare` QoSdata. Le metriche QoS rimanenti possono essere recuperate utilizzando `QoSProvider` collegato al `mediaPlayer`.
+  Una volta avviata la riproduzione, utilizzare `_qosProvider` per ottenere `timeToLoad` e `timeToPrepare` QoSdata. Le metriche QoS rimanenti possono essere recuperate utilizzando `QoSProvider` collegato al `mediaPlayer`.
 
-   Per ulteriori informazioni su `MediaPlayerItemLoader`, vedi [Caricare una risorsa multimediale tramite MediaPlayerItemLoader](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-mediaplayeritemloader.md).
+  Per ulteriori informazioni su `MediaPlayerItemLoader`, vedi [Caricare una risorsa multimediale tramite MediaPlayerItemLoader](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-mediaplayeritemloader.md).
 
 ## Configurare il buffering per Instant On {#section_4FE346B7BE434BA8A2203896D6E52146}
 

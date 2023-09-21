@@ -1,8 +1,7 @@
 ---
 description: Queste classi descrivono i messaggi relativi a errori, avvisi e alcune attività che TVSDK genera a scopo di registrazione e debug.
 title: Classi di notifica
-exl-id: b869c201-2731-42e5-a20e-282edd2caddc
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '434'
 ht-degree: 0%

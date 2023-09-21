@@ -1,8 +1,7 @@
 ---
 description: Gestione diritti è il gestore delle funzioni che supporta l’implementazione dell’autenticazione Primetime.
 title: Panoramica di Gestione diritti
-exl-id: a66e131e-283f-4378-b834-7cfa887b3ec9
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '518'
 ht-degree: 0%
@@ -29,9 +28,9 @@ L’attività principale dell’implementazione di riferimento, `CatalogActivity
 
 Il `EntitlementDialogFragment` class genera messaggi di dialogo in base allo stato di adesione passato al costruttore di classe. Questa classe viene utilizzata per i messaggi di successo dell’autenticazione e per tutti i messaggi di errore. Il `CatalogActivity` visualizza le finestre di dialogo di adesione quando riceve eventi specifici dal `EntitlementManager`. Inoltre, la `CatalogActivity` implementa `EntitlementDialogListener` che include metodi di callback da segnalare quando una finestra di dialogo viene chiusa o quando l’utente si disconnette dal servizio di autenticazione di Primetime.
 
-### Selezione e accesso del provider di contenuti
+### Selezione e accesso al provider di contenuti
 
-Durante l’autenticazione con l’autenticazione Primetime, due nuove attività: `MvpdPickerActivity` e `MvpdLoginActivity`, consente all’utente di selezionare il proprio provider di contenuti e di accedere. Entrambe queste attività sono avviate dal `CatalogActivity` tramite `EntitlementManager`. Inoltre, entrambi i `MvpdPickerActivity` e `MvpdLoginActivity` restituisce i risultati al `CatalogActivity` e pertanto `CatalogActivity` deve ignorare `Activity.onActivityResult` metodo.
+Durante l’autenticazione con l’autenticazione Primetime, due nuove attività: `MvpdPickerActivity` e `MvpdLoginActivity`, consente all’utente di selezionare il proprio provider di contenuti e di effettuare l’accesso. Entrambe queste attività sono avviate dal `CatalogActivity` tramite `EntitlementManager`. Inoltre, entrambi i `MvpdPickerActivity` e `MvpdLoginActivity` restituisce i risultati al `CatalogActivity` e pertanto `CatalogActivity` deve ignorare `Activity.onActivityResult` metodo.
 
 ### Pulsante Accedi
 

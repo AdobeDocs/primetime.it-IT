@@ -1,8 +1,7 @@
 ---
 description: L’implementazione di riferimento illustra come impostare il lettore per gli annunci, che include la configurazione dei metadati video per l’inserimento di annunci e la risoluzione degli annunci pre, mid e post-roll in flussi video VOD o live/lineari. Illustra inoltre come gestire gli annunci cliccabili.
 title: Inserimento di annunci
-exl-id: 3c2d8fca-2a0e-4577-81f3-7b390f6396e1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 0%

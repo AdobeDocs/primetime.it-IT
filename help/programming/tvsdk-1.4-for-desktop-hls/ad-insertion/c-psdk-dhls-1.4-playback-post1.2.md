@@ -1,8 +1,7 @@
 ---
 description: Il comportamento della riproduzione multimediale è influenzato dalla ricerca, dalla messa in pausa, dall’avanzamento rapido o dal riavvolgimento (modalità di riproduzione con trucco) e dall’inclusione della pubblicità.
 title: Comportamento di riproduzione predefinito e personalizzato con annunci
-exl-id: 03c2b398-c595-4344-b816-ef0184cfadc3
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '542'
 ht-degree: 0%

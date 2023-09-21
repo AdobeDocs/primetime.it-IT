@@ -1,8 +1,7 @@
 ---
 description: Il caricamento istantaneo precarica parti del supporto su uno o più canali. Quando un utente seleziona o cambia canale, il contenuto inizia prima perché parte del buffering è già stato completato.
 title: Istantanea attiva
-exl-id: 3a1b2172-8036-40f1-86b6-8304ef771aa9
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 0%

@@ -2,8 +2,7 @@
 title: Rinnovare i certificati
 description: Rinnovare i certificati
 copied-description: true
-exl-id: db130ca5-4e26-447f-b2f4-4eee0838fd56
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 0%
@@ -16,13 +15,13 @@ Tieni presente le seguenti restrizioni per il rinnovo dei certificati basate sul
 
 * SDK di produzione DRM di Primetime
 
-   L&#39;Adobe fornisce il set iniziale di certificati gratuiti per Primetime DRM Production SDK quando si acquista un contratto di assistenza. Se non si dispone di un contratto di assistenza, è possibile acquistare un set di certificati di rinnovo validi per due anni.
+  L&#39;Adobe fornisce il set iniziale di certificati gratuiti per Primetime DRM Production SDK quando si acquista un contratto di assistenza. Se non si dispone di un contratto di assistenza, è possibile acquistare un set di certificati di rinnovo validi per due anni.
 * SDK di valutazione DRM di Primetime
 
-   Il certificato impostato per questo SDK è valido per un anno e non può essere rinnovato.
+  Il certificato impostato per questo SDK è valido per un anno e non può essere rinnovato.
 * SDK di prova di Primetime DRM
 
-   L’SDK di prova di Primetime DRM è valido per tre mesi e Adobe fornisce un set di certificati di rinnovo gratuiti.
+  L’SDK di prova di Primetime DRM è valido per tre mesi e Adobe fornisce un set di certificati di rinnovo gratuiti.
 
 ## Implementazione di nuovi certificati e utilizzo dei certificati precedenti per il contenuto esistente {#section_345C92D1C9794B0BBB9A9B0702EC95FF}
 

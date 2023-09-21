@@ -1,8 +1,7 @@
 ---
 description: Quando un utente fa clic su un annuncio o su un pulsante correlato, l’applicazione deve rispondere. TVSDK fornisce informazioni sull’URL di destinazione del clic.
 title: Rispondi ai clic sugli annunci
-exl-id: a313bb03-a857-48b6-ace7-b61574dbf75f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '325'
 ht-degree: 0%
@@ -32,10 +31,10 @@ Quando un utente fa clic su un annuncio o su un pulsante correlato, l’applicaz
    
    * Nell’applicazione, aprendo l’URL di click-through in un browser.
 
-      Sulle piattaforme desktop, l’area di riproduzione degli annunci video viene utilizzata per richiamare gli URL di click-through ai clic dell’utente.
+     Sulle piattaforme desktop, l’area di riproduzione degli annunci video viene utilizzata per richiamare gli URL di click-through ai clic dell’utente.
    * Reindirizza gli utenti al browser Web mobile esterno.
 
-      Sui dispositivi mobili, l’area di riproduzione e il video vengono utilizzati per altre funzioni, ad esempio per nascondere e visualizzare i comandi, mettere in pausa la riproduzione, espandersi a schermo intero e così via. Su questi dispositivi, per avviare l’URL di click-through viene utilizzata una visualizzazione separata, ad esempio un pulsante sponsor.
+     Sui dispositivi mobili, l’area di riproduzione e il video vengono utilizzati per altre funzioni, ad esempio per nascondere e visualizzare i controlli, mettere in pausa la riproduzione, espandersi a schermo intero e così via. Su questi dispositivi, per avviare l’URL di click-through viene utilizzata una visualizzazione separata, ad esempio un pulsante sponsor.
 
 1. Chiudete la finestra del browser in cui vengono visualizzate le informazioni di click-through e riprendete la riproduzione del video.
 

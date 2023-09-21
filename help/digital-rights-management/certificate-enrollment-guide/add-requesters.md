@@ -2,8 +2,7 @@
 title: Aggiungi richiedenti
 description: Aggiungi richiedenti
 copied-description: true
-exl-id: 66d9bc90-8287-4a07-9f60-4263888d5cce
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '344'
 ht-degree: 0%
@@ -20,14 +19,14 @@ Un licenziatario Adobe Primetime DRM può avere fino a cinque richiedenti. L’A
 
    * Aggiungi utente.
 
-      Se il dipendente dispone di un account di Adobe, immettere l&#39;indirizzo di posta elettronica. Clic **[!UICONTROL Add]** e continua.
+     Se il dipendente dispone di un account di Adobe, immettere l&#39;indirizzo di posta elettronica. Clic **[!UICONTROL Add]** e continua.
    * Invita utente.
 
-      Se il dipendente non dispone di un account Adobe, invitalo a crearne uno. Inserire l&#39;indirizzo di posta elettronica e il nome del dipendente e fare clic su **[!UICONTROL Send an invitation]**. Il sito invia un invito tramite posta elettronica all&#39;invitato. L&#39;e-mail contiene un collegamento a adobe.com in cui l&#39;invitato può creare un account. L&#39;invitato deve utilizzare l&#39;indirizzo di posta elettronica a cui è stato inviato l&#39;invito.
+     Se il dipendente non dispone di un account Adobe, invitalo a crearne uno. Inserire l&#39;indirizzo di posta elettronica e il nome del dipendente e fare clic su **[!UICONTROL Send an invitation]**. Il sito invia un invito tramite posta elettronica all&#39;invitato. L&#39;e-mail contiene un collegamento a adobe.com in cui l&#39;invitato può creare un account. L&#39;invitato deve utilizzare l&#39;indirizzo di posta elettronica a cui è stato inviato l&#39;invito.
 
-      >[!NOTE]
-      >
-      >L’amministratore non riceve alcuna notifica quando un utente ha creato un account. Controlla la **[!UICONTROL User accounts]** nel sito di registrazione certificati per verificare se un invitato ha creato un account.
+     >[!NOTE]
+     >
+     >L’amministratore non riceve alcuna notifica quando un utente ha creato un account. Controlla la **[!UICONTROL User accounts]** nel sito di registrazione certificati per verificare se un invitato ha creato un account.
 
 1. Se hai aggiunto un utente, la schermata della sezione del ruolo nel **[!UICONTROL User accounts]** viene visualizzata la scheda. Effettua le seguenti operazioni:
 

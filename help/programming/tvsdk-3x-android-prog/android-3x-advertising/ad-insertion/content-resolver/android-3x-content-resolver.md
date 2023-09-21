@@ -1,8 +1,7 @@
 ---
 description: Un generatore di opportunità identifica le opportunità di posizionamento tramite tag personalizzati in un flusso, indicatori personalizzati in modalità di segnalazione degli annunci e così via. Il generatore di opportunità invia queste opportunità di posizionamento al risolutore contenuti, che personalizza il flusso di lavoro di inserimento di contenuti/annunci in base alle proprietà e ai metadati dell’opportunità di posizionamento.
 title: Personalizzare i generatori di opportunità e i risolutori di contenuti
-exl-id: 5d0ebaa6-4708-4602-b9d7-882c389fb030
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 0%

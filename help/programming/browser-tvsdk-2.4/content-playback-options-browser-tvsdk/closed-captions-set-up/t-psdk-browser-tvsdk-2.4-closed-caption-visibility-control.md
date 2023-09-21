@@ -1,8 +1,7 @@
 ---
 description: Potete controllare la visibilità dei sottotitoli codificati. Quando la visibilità è attiva, viene visualizzato il brano attualmente selezionato.
 title: Controlla la visibilità dei sottotitoli
-exl-id: e74c0344-43f3-4ed7-bbf2-d89dd3df8a33
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '122'
 ht-degree: 0%

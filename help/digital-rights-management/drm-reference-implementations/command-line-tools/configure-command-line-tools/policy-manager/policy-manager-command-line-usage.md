@@ -2,8 +2,7 @@
 title: Utilizzo della riga di comando di Policy Manager
 description: Utilizzo della riga di comando di Policy Manager
 copied-description: true
-exl-id: 888be282-7eaa-4101-b4b1-4f8df99a967a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1223'
 ht-degree: 0%

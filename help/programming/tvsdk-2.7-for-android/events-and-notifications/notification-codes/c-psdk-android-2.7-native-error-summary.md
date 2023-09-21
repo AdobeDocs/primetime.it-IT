@@ -2,8 +2,7 @@
 title: Dettagli della notifica NATIVE_ERROR
 description: Dettagli della notifica NATIVE_ERROR
 copied-description: true
-exl-id: 51c75349-0fa8-405d-9e09-b51b425fe21b
-source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '6868'
 ht-degree: 2%
@@ -489,7 +488,7 @@ Quando si segnalano gli errori DRM a Adobe, assicurarsi di includere `NATIVE_SUB
   <tr> 
    <td colname="col1"> 3336 </td> 
    <td colname="col2"><span class="codeph"> AAXS_InvalidRuntimePlatform </span> </td> 
-   <td colname="col3"> <p>A questa piattaforma non è consentito riprodurre il contenuto perché, ad esempio, il provider di contenuti ha configurato Accesso per negare il contenuto a FP/AIR su una piattaforma. </p> </td> 
+   <td colname="col3"> <p>A questa piattaforma non è consentito riprodurre il contenuto perché, ad esempio, il provider di contenuti ha configurato l’accesso per negare il contenuto a FP/AIR su una piattaforma. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3337 </td> 

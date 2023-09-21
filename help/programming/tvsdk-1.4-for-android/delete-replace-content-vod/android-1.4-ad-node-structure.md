@@ -2,8 +2,7 @@
 title: Struttura dei nodi pubblicitari con intervalli di tempo
 description: Struttura dei nodi pubblicitari con intervalli di tempo
 copied-description: true
-exl-id: f7d8992c-cfcc-4bb0-babf-63fd8f73a67c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '15'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: L’inserimento di annunci risolve gli annunci per video on-demand (VOD) , per lo streaming live e per lo streaming lineare con tracciamento degli annunci e riproduzione degli annunci. TVSDK effettua le richieste richieste richieste al server di annunci, riceve informazioni sugli annunci per il contenuto specificato e inserisce gli annunci nel contenuto in fasi.
 title: Inserisci annunci
-exl-id: 94262bd5-3f8c-449d-934f-8177869707bc
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '580'
 ht-degree: 0%
@@ -65,7 +64,7 @@ Di seguito sono riportati alcuni esempi di ritorno rapido dell’annuncio:
 
 * La durata dell’interruzione pubblicitaria in alcuni eventi sportivi.
 
-   Anche se viene fornita una durata predefinita, se il gioco riprende prima del termine dell’interruzione, l’interruzione pubblicitaria deve essere chiusa.
+  Anche se viene fornita una durata predefinita, se il gioco riprende prima del termine dell’interruzione, l’interruzione pubblicitaria deve essere chiusa.
 * Un segnale di emergenza durante un’interruzione pubblicitaria in un flusso live.
 
 La possibilità di uscire anticipatamente da un’interruzione pubblicitaria viene identificata tramite un tag personalizzato nel manifesto noto come tag di collegamento o tag di collegamento. TVSDK consente all&#39;applicazione di sottoscrivere questi tag di unione per fornire un&#39;opportunità di unione.

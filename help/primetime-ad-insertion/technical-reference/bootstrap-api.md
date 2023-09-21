@@ -1,8 +1,7 @@
 ---
 title: API BOOTSTRAP
 description: API BOOTSTRAP
-exl-id: bc7fe244-8664-43ac-b9a1-3967ea8749b1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1148'
 ht-degree: 0%
@@ -42,7 +41,7 @@ L’API Bootstrap è in genere l’URL inviato alle API di riproduzione client/v
 
    **Richieste HTTP e HTTPS**
 
-   Il server manifesto crea URL utilizzando lo stesso protocollo HTTP della richiesta del client. Se un lettore effettua una richiesta HTTP (http) non sicura, il server manifesto restituisce gli URL del manifesto e gli URL di tracciamento di Auditude con il protocollo http. Se un lettore effettua una connessione HTTP sicura (https), il server manifest, restituisce gli URL manifest e gli URL di tracciamento Auditude con il protocollo https.
+   Il server manifesto crea URL utilizzando lo stesso protocollo HTTP della richiesta del client. Se un lettore effettua una richiesta HTTP (http) non sicura, il server manifesto restituisce gli URL del manifesto e gli URL di tracciamento dell’Auditude con il protocollo http. Se un lettore effettua una connessione HTTP sicura (https), il server manifest, restituisce gli URL del manifesto e gli URL di tracciamento dell’Auditude con il protocollo https.
 
    >[!NOTE]
    >
@@ -72,7 +71,7 @@ I parametri vengono passati al server di annunci.
 | ptparallelstream | Consente ai clienti con lettori che richiedono flussi audio o video demussi CMAF in parallelo per garantire che gli annunci nelle tracce audio e video siano coerenti. | Solo HLS |
 | ptprotoswitch | Abilita le regole di riscrittura del manifesto denominate e le regole di recupero degli annunci, che in genere vengono impostate dal rappresentante del supporto tecnico.<br>Esempio: adfetch_fw, cdn_akm | HLS/TRATTINO |
 | pttagds | Consente l&#39;inserimento di tag EXT-X-DISCONTINUITY-SEQUENCE nelle intestazioni HLS.Valori possibili:true per attivare la disattivazione (impostazione predefinita disattivata) | Solo HLS |
-| pttimeline | Stringa contenente la timeline desiderata per il posizionamento e il contenuto degli annunci, che si sovrappone e si interrompe nel flusso di contenuto. [ Consulta Formato timeline VOD ] | HLS/TRATTINO |
+| pttimeline | Stringa contenente la timeline desiderata per il posizionamento e il contenuto degli annunci, che si sovrappone e si interrompe nel flusso di contenuto. [Consulta Formato timeline VOD] | HLS/TRATTINO |
 | pttoken | Abilita gli schemi di protezione dei token di autorizzazione di frammenti di contenuto/segmenti per le reti CDN<br>Valori possibili:<br>akamai, lnw (limelight), ctl (centurylink) (la tokenizzazione predefinita è disabilitata) | HLS/TRATTINO |
 | pttrackingmode | Abilita gli schemi di tracciamento degli annunci.<br>Valori possibili:<br>semplice per il tracciamento degli annunci lato client<br>sstm per il tracciamento degli annunci lato server<br>simplesstm per il tracciamento degli annunci ibridi client/server (per impostazione predefinita, non viene eseguito alcun tracciamento degli annunci) | HLS/TRATTINO |
 | pttrackingposition | Indica al server manifesto di restituire solo le informazioni di tracciamento degli annunci. Non specificare questo parametro nella richiesta bootstrap.<br>Nota: il server manifest ignora tutti i valori passati. Tuttavia, se si passa una stringa nulla o vuota, il server manifesto restituisce M3U8 | HLS/TRATTINO<br>Tracciamento lato client |

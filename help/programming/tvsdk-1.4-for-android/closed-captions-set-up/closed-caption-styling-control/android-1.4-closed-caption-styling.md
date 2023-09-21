@@ -1,8 +1,7 @@
 ---
 description: È possibile fornire informazioni sullo stile dei brani con sottotitoli codificati utilizzando la classe TextFormat. Imposta lo stile per i sottotitoli che vengono visualizzati dal lettore.
 title: Controlla lo stile dei sottotitoli
-exl-id: 0083c141-9c03-46a2-902b-6e7eebaadea4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '656'
 ht-degree: 0%
@@ -52,31 +51,31 @@ Questa classe racchiude informazioni sullo stile dei sottotitoli codificati, ad 
 
    * Ottieni tutte le impostazioni di stile con `MediaPlayer.getCCStyle`.
 
-      Il valore restituito è un&#39;istanza del `TextFormat` di rete.
+     Il valore restituito è un&#39;istanza del `TextFormat` di rete.
 
-      ```js
-      /** 
-      * @return the current closed captioning style.  
-      * If no style was previously set, it returns a TextFormat object 
-      * with default values for each attribute. 
-      * @throws IllegalStateException if media player was already released. 
-      */ 
-      public TextFormat getCCStyle() throws IllegalStateException;
-      ```
+     ```js
+     /** 
+     * @return the current closed captioning style.  
+     * If no style was previously set, it returns a TextFormat object 
+     * with default values for each attribute. 
+     * @throws IllegalStateException if media player was already released. 
+     */ 
+     public TextFormat getCCStyle() throws IllegalStateException;
+     ```
 
    * Ottenere le impostazioni una alla volta tramite `TextFormat` metodi getter dell&#39;interfaccia.
 
-      ```js
-      public Color getFontColor(); 
-      public Color getBackgroundColor(); 
-      public Color getFillColor(); // retrieve the font fill color 
-      public Color getEdgeColor(); // retrieve the font edge color 
-      public Size getSize(); // retrieve the font size 
-      public FontEdge getFontEdge(); // retrieve the font edge type 
-      public Font getFont(); // retrieve the font type 
-      public int getFontOpacity(); 
-      public int getBackgroundOpacity();
-      ```
+     ```js
+     public Color getFontColor(); 
+     public Color getBackgroundColor(); 
+     public Color getFillColor(); // retrieve the font fill color 
+     public Color getEdgeColor(); // retrieve the font edge color 
+     public Size getSize(); // retrieve the font size 
+     public FontEdge getFontEdge(); // retrieve the font edge type 
+     public Font getFont(); // retrieve the font type 
+     public int getFontOpacity(); 
+     public int getBackgroundOpacity();
+     ```
 
 1. Per modificare le impostazioni di stile, effettuare una delle seguenti operazioni:
 
@@ -86,41 +85,41 @@ Questa classe racchiude informazioni sullo stile dei sottotitoli codificati, ad 
 
    * Utilizzare il metodo setter `MediaPlayer.setCCStyle`, passaggio di un&#39;istanza di `TextFormat` Interfaccia:
 
-      ```js
-      /** 
-      * Sets the closed captioning style. Used to control the closed captioning font, 
-      * size, color, edge and opacity.  
-      * 
-      * This method is safe to use even if the current media stream doesn't have closed 
-      * captions. 
-      * 
-      * @param textFormat 
-      * @throws IllegalStateException 
-      */ 
-      public void setCCStyle(TextFormat textFormat) throws IllegalStateException;
-      ```
+     ```js
+     /** 
+     * Sets the closed captioning style. Used to control the closed captioning font, 
+     * size, color, edge and opacity.  
+     * 
+     * This method is safe to use even if the current media stream doesn't have closed 
+     * captions. 
+     * 
+     * @param textFormat 
+     * @throws IllegalStateException 
+     */ 
+     public void setCCStyle(TextFormat textFormat) throws IllegalStateException;
+     ```
 
-   * Utilizza il `TextFormatBuilder` che definisce i singoli metodi di impostazione.
+   * Utilizza il `TextFormatBuilder` classe, che definisce i singoli metodi di impostazione.
 
-      Il `TextFormat` L&#39;interfaccia definisce un oggetto immutabile in modo che esistano solo metodi getter e nessun setter. È possibile impostare i parametri di stile dei sottotitoli solo con `TextFormatBuilder` classe:
+     Il `TextFormat` L&#39;interfaccia definisce un oggetto immutabile in modo che esistano solo metodi getter e nessun setter. È possibile impostare i parametri di stile dei sottotitoli solo con `TextFormatBuilder` classe:
 
-      ```js
-      // set font type 
-      public void setFont(Font font)  
-      public void setBackgroundColor(Color backgroundColor) 
-      public void setFillColor(Color fillColor) 
-      // set the font-edge color 
-      public void setEdgeColor(Color edgeColor)  
-      // set the font size 
-      public void setSize(Size size)  
-      // set the font edge type 
-      public void setFontEdge(FontEdge fontEdge)  
-      public void setFontOpacity(int fontOpacity) 
-      public void setBackgroundOpacity(int backgroundOpacity) 
-      // set the font-fill opacity level 
-      public void setFillOpacity(int fillOpacity)  
-      public void setFontColor(Color fontColor)
-      ```
+     ```js
+     // set font type 
+     public void setFont(Font font)  
+     public void setBackgroundColor(Color backgroundColor) 
+     public void setFillColor(Color fillColor) 
+     // set the font-edge color 
+     public void setEdgeColor(Color edgeColor)  
+     // set the font size 
+     public void setSize(Size size)  
+     // set the font edge type 
+     public void setFontEdge(FontEdge fontEdge)  
+     public void setFontOpacity(int fontOpacity) 
+     public void setBackgroundOpacity(int backgroundOpacity) 
+     // set the font-fill opacity level 
+     public void setFillOpacity(int fillOpacity)  
+     public void setFontColor(Color fontColor)
+     ```
 
 Poiché l&#39;impostazione dello stile sottotitoli è un&#39;operazione asincrona, la visualizzazione delle modifiche sullo schermo potrebbe richiedere alcuni secondi.
 

@@ -1,8 +1,7 @@
 ---
 description: È possibile utilizzare le funzioni del Digital Rights Management Primetime (DRM) per fornire un accesso sicuro al contenuto video. In alternativa, è possibile utilizzare soluzioni DRM di terze parti in alternativa alla soluzione DRM di Primetime integrata di Adobe.
 title: Sistemi DRM supportati
-exl-id: cc1ef9a9-f8a7-4ad3-802c-b572521d112b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '97'
 ht-degree: 0%

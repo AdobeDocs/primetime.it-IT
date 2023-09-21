@@ -1,8 +1,7 @@
 ---
 title: Come utilizzare le metriche Account IQ per un MVPD specifico
 description: Come utilizzare e dare un senso ai rapporti Account IQ.
-exl-id: ada9a80a-b31b-4bdc-838c-dcd94a0a6c59
-source-git-commit: 5963c55d87385fbd92646bfc45a3650fb568bca5
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '172'
 ht-degree: 0%
@@ -29,17 +28,17 @@ Per visualizzare i rapporti in Account IQ, dopo aver effettuato correttamente l�
 
 * [Utilizzo generale](/help/AccountIQ/general-usage-reports.md)
 
-   ![](assets/specific-mvpd-gen-usage.png)
+  ![](assets/specific-mvpd-gen-usage.png)
 * [Account condivisi](/help/AccountIQ/shared-acc-reports.md)
 
-   ![](assets/specific-mvpd-shared-acc.png)
+  ![](assets/specific-mvpd-shared-acc.png)
 * [Modelli di utilizzo](/help/AccountIQ/usage-patterns.md)
 
-   ![](assets/specific-mvpd-usage-pattern.png)
+  ![](assets/specific-mvpd-usage-pattern.png)
 
 * [Dashboard](/help/AccountIQ/dashboard.md) (il dashboard offre un’occhiata ai grafici selezionati da diverse pagine di rapporti).
 
-   ![](assets/specific-mvpd-dashboard.png)
+  ![](assets/specific-mvpd-dashboard.png)
 
 Ognuna di queste pagine riflette l’attività del segmento selezionato.
 

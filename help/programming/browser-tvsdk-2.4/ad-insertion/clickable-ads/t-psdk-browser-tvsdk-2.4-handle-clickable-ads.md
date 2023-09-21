@@ -1,8 +1,7 @@
 ---
 description: MediaPlayer fornisce una funzione notificationClick() che invia eventi relativi agli annunci durante la riproduzione di un annuncio cliccabile. Questi eventi forniscono informazioni su annunci e interruzioni pubblicitarie che l’app può utilizzare per fornire funzionalità di click-through.
 title: Gestire gli annunci cliccabili
-exl-id: 25738592-f3fe-4f13-b2bb-26a5f942cd18
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 0%

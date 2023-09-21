@@ -2,8 +2,7 @@
 title: Logica di registrazione del dominio basata su identità
 description: Logica di registrazione del dominio basata su identità
 copied-description: true
-exl-id: 6e391fce-00b4-45cf-b785-3b0ec734a11e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 0%
@@ -36,8 +35,8 @@ L’implementazione di riferimento applica la seguente logica per la registrazio
       1. Se si tratta di un nuovo computer, aggiungere una voce al `UserDomainMembership` tabella.
       1. Cerca i record corrispondenti in `UserDomainRefCount` tabella.
       1. Se non esiste una voce per questo GUID computer, aggiungere un record.
-   1. Se si tratta di un nuovo dispositivo, e `Max Membership` è stato raggiunto il valore, viene restituito un errore.
 
+   1. Se si tratta di un nuovo dispositivo, e `Max Membership` è stato raggiunto il valore, viene restituito un errore.
 
 1. Cerca tutte le chiavi di dominio per questo dominio nel `DomainKeys` tabella:
 
@@ -59,7 +58,7 @@ L’implementazione di riferimento applica la seguente logica per la cancellazio
 1. Confronta ogni ID computer trovato con l’ID computer nella richiesta.
 1. Individuare la voce corrispondente nella `UserDomainRefCount` tabella.
 
-   Se non si trova una voce corrispondente, viene restituito un errore.
+   Se non viene individuata una voce corrispondente, verrà restituito un errore.
 
 1. Se non si tratta di una richiesta di anteprima, elimina la voce dalla `UserDomainRefCount` tabella.
 1. Se nella tabella non sono presenti voci aggiuntive per il computer, eliminare la voce da `UserDomainMembership` e imposta [!DNL Key Rollover Required] contrassegno nel `DomainServerInfo` proprietà.

@@ -1,8 +1,7 @@
 ---
 description: TVSDK supporta la visualizzazione di annunci VPAID (Video Player-Ad Interface Definition) lineari in un’interruzione pubblicitaria. La versione 1.0 di VPAID richiede un Flash, mentre la versione 2.0 funziona anche con TVSDK per browser e JavaScript.
 title: Visualizzare annunci VPAID lineari in un’interruzione pubblicitaria
-exl-id: 316a38ac-ec2d-498c-b441-304e2fa75993
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 0%
@@ -47,10 +46,10 @@ Per impostare un contenitore di annunci per la visualizzazione di annunci VPAID 
    >
    >Quando ricevi un evento di modifica a schermo intero e imposti le nuove dimensioni sul contenitore dell’annuncio, passa lo stato di visualizzazione dell’area di visualizzazione come segue per garantire che il lettore venga ridimensionato correttamente:
    >
-   >
-   ```
+   >```
    >private function onFullScreenChange(event:FullScreenEvent):void { 
    >if (_adContainer) 
    >{ _adContainer.setSize(stage.stageWidth, stage.stageHeight, stage.displayState); } 
    >}
    >```
+   >

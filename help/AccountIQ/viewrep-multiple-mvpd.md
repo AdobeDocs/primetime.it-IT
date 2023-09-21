@@ -1,8 +1,7 @@
 ---
 title: Visualizzare i rapporti di condivisione account per più MVPD
 description: Come visualizzare i rapporti di condivisione per più MVPD.
-exl-id: c616e6e1-373c-471d-a2dc-c484b7cd5cf5
-source-git-commit: 5963c55d87385fbd92646bfc45a3650fb568bca5
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '153'
 ht-degree: 0%
@@ -25,9 +24,9 @@ Per visualizzare le statistiche di condivisione dell&#39;account del sottoscritt
 
 * [Dashboard](/help/AccountIQ/dashboard.md) (il dashboard offre un’occhiata ai grafici selezionati da diverse pagine di rapporti).
 
-   ![](assets/mult-mvpds-dashboard.png)
+  ![](assets/mult-mvpds-dashboard.png)
 
-   *Figura: Report del dashboard per più MVPD*
+  *Figura: Report del dashboard per più MVPD*
 
 * [Utilizzo generale](/help/AccountIQ/general-usage-reports.md)
 

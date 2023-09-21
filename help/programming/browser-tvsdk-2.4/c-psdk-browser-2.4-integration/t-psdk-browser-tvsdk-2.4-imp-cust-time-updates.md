@@ -1,8 +1,7 @@
 ---
 description: In alcune implementazioni di Analytics, l’applicazione client potrebbe voler fornire una posizione della testina di riproduzione diversa da quella riportata dal valore localTime di TVSDK del browser.
 title: Implementare aggiornamenti dell’ora personalizzati
-exl-id: 4d045c4d-298a-42ae-af61-0463a76bc872
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 0%

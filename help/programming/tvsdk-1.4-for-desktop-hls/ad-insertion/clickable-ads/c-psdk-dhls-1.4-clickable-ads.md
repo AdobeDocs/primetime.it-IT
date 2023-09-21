@@ -1,8 +1,7 @@
 ---
 description: TVSDK fornisce informazioni che consentono di agire sugli annunci click-through. Quando crei l’interfaccia utente del lettore, devi decidere come rispondere quando un utente fa clic su un annuncio cliccabile.
 title: Annunci cliccabili
-exl-id: 50c74c82-c5d8-43f6-accf-8330a426a7bd
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 0%
@@ -96,9 +95,9 @@ Questo esempio mostra un modo possibile per gestire i clic sugli annunci.
    
    * Apri l’URL di click-through in un browser all’interno dell’applicazione.
 
-      Sulle piattaforme desktop, l’area di riproduzione degli annunci video viene generalmente utilizzata per richiamare gli URL di click-through quando l’utente fa clic su di essa.
+     Sulle piattaforme desktop, l’area di riproduzione degli annunci video viene generalmente utilizzata per richiamare gli URL di click-through quando l’utente fa clic su di essa.
    * Reindirizza l’utente al browser web mobile esterno.
 
-      Sui dispositivi mobili, l’area di riproduzione e il video vengono utilizzati per altre funzioni, ad esempio per nascondere e visualizzare i comandi, mettere in pausa la riproduzione, espandersi a schermo intero e così via. Pertanto, sui dispositivi mobili, una visualizzazione separata, ad esempio un pulsante di sponsor, viene solitamente presentata all’utente come mezzo per avviare l’URL di click-through.
+     Sui dispositivi mobili, l’area di riproduzione e il video vengono utilizzati per altre funzioni, ad esempio per nascondere e visualizzare i controlli, mettere in pausa la riproduzione, espandersi a schermo intero e così via. Pertanto, sui dispositivi mobili, una visualizzazione separata, ad esempio un pulsante di sponsor, viene solitamente presentata all’utente come mezzo per avviare l’URL di click-through.
 
 1. Chiudete la finestra del browser in cui vengono visualizzate le informazioni di click-through e riprendete la riproduzione del video.

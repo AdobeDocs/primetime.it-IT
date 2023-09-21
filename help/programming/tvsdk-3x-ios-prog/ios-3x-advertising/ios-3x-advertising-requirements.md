@@ -1,8 +1,7 @@
 ---
 description: Puoi inserire annunci nel VOD e nel contenuto live/lineare utilizzando l’interfaccia di Adobe Primetime ad decisioning.
 title: Requisiti pubblicitari
-exl-id: 164a5e79-1634-4853-a2b9-d4b5bdbbf190
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: TVSDK gestisce gli errori di intervallo di tempo in base al problema specifico unendo o riordinando gli intervalli di tempo definiti in modo errato.
 title: Gestione degli errori di eliminazione e sostituzione degli annunci
-exl-id: 0d70bb63-bdc5-4741-81db-1408216234c2
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 0%
@@ -23,16 +22,16 @@ TVSDK gestisce gli errori di intervallo di tempo con le seguenti opzioni:
 
 * **Interseca** TVSDK unisce gli intervalli di tempo intersecanti.
 
-* **Conflitto relativo alla sostituzione degli intervalli** TVSDK seleziona la durata di sostituzione dal primo `timeRange` nel gruppo in conflitto.
+* **Conflitto di sostituisci intervalli** TVSDK seleziona la durata di sostituzione dal primo `timeRange` nel gruppo in conflitto.
 
 TVSDK gestisce i conflitti in modalità di segnalazione con i metadati degli annunci nei seguenti modi:
 
 * Se la modalità di segnalazione dell’annuncio è in conflitto con i metadati dell’intervallo di tempo, questi ultimi hanno sempre la priorità.
 
-   Ad esempio, se la modalità di segnalazione dell’annuncio è impostata come mappa del server o segnali manifesti e nei metadati dell’annuncio sono presenti anche intervalli di tempo MARK, il comportamento risultante è che gli intervalli vengono contrassegnati e non vengono inseriti annunci.
+  Ad esempio, se la modalità di segnalazione dell’annuncio è impostata come mappa del server o segnali manifesti e nei metadati dell’annuncio sono presenti anche intervalli di tempo MARK, il comportamento risultante è che gli intervalli vengono contrassegnati e non vengono inseriti annunci.
 * Per gli intervalli REPLACE, se la modalità di segnalazione è impostata come mappa del server o segnali manifest, gli intervalli vengono sostituiti come specificato negli intervalli REPLACE e non vi è inserimento di annunci tramite mappa del server o segnali manifest.
 
-   Per ulteriori informazioni, vedere *Comportamenti combinati modalità di segnalazione/metadati* tabella in [Effetto sull’inserimento e l’eliminazione di annunci dalla modalità di segnalazione degli annunci...](../../../../tvsdk-2.7-for-android/ad-insertion/delete-replace-content-vod/c-psdk-android-2.7-signaling-mode-metadata-combos-android.md#c_psdk_signaling-mode-metadata-combos-android).
+  Per ulteriori informazioni, vedere *Comportamenti combinati modalità di segnalazione/metadati* tabella in [Effetto sull’inserimento e l’eliminazione di annunci dalla modalità di segnalazione degli annunci...](../../../../tvsdk-2.7-for-android/ad-insertion/delete-replace-content-vod/c-psdk-android-2.7-signaling-mode-metadata-combos-android.md#c_psdk_signaling-mode-metadata-combos-android).
 
 Tenere presente quanto segue:
 

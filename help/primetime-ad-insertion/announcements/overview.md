@@ -1,8 +1,7 @@
 ---
 title: Annunci di Adobe Primetime Ad Insertion
 description: Annunci sulle ultime versioni di funzioni e altre notizie correlate su Primetime Ad Insertion
-exl-id: 7d85d3a2-6786-47bd-8d45-ec162aea0ab3
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 0%

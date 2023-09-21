@@ -2,8 +2,7 @@
 title: Requisiti pubblicitari
 description: Requisiti pubblicitari
 copied-description: true
-exl-id: 906f4910-396c-4909-8e22-119486ed13a0
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 0%
@@ -27,4 +26,4 @@ Per incorporare gli annunci nel contenuto video, assicurati che il contenuto pub
 * Se il contenuto principale è il bitrate multiplo (MBR), anche il contenuto pubblicitario deve essere MBR.
 * Se il contenuto principale ha tracce audio alternative, ogni annuncio deve avere almeno un flusso solo audio.
 
-   Se l’annuncio non dispone di almeno un flusso solo audio, l’annuncio viene saltato.
+  Se l’annuncio non dispone di almeno un flusso solo audio, l’annuncio viene saltato.

@@ -1,8 +1,7 @@
 ---
 description: L'applicazione deve utilizzare gli oggetti TimedMetadata appropriati nei momenti appropriati.
 title: Archivia gli oggetti metadati temporizzati durante l’invio
-exl-id: db8b303a-441e-4cc0-a80d-dc9afda482b8
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 0%

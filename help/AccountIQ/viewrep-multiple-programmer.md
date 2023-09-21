@@ -1,8 +1,7 @@
 ---
 title: Visualizzare i rapporti di condivisione account per più programmatori e canali
 description: Visualizzare i rapporti di condivisione account per più programmatori e canali
-exl-id: 8afa9e45-f0e3-43a3-970f-05a11adc0e42
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 0%
@@ -25,9 +24,9 @@ Per visualizzare le statistiche di condivisione dell&#39;account del sottoscritt
 
 * [Dashboard](/help/AccountIQ/dashboard.md) (il dashboard offre un’occhiata ai grafici selezionati da diverse pagine di rapporti).
 
-   ![](assets/mult-prog-dashboard.png)
+  ![](assets/mult-prog-dashboard.png)
 
-   *Figura: Report del dashboard per più programmatori*
+  *Figura: Report del dashboard per più programmatori*
 
 * [Utilizzo generale](/help/AccountIQ/general-usage-reports.md)
 

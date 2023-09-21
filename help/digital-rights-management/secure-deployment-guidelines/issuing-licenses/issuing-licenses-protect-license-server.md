@@ -1,8 +1,7 @@
 ---
 description: È necessario assicurarsi di rilasciare le licenze in modo sicuro. Considera queste best practice per proteggere il server licenze
 title: Protezione del server licenze
-exl-id: 88b8f44f-c140-4cbc-be0a-f67058548fc3
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1178'
 ht-degree: 0%
@@ -21,11 +20,11 @@ Le seguenti API verificano che gli elenchi non siano stati manomessi e che siano
 
 * Chiamata [RevocationList.verifySignature](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/revocation/RevocationList.html#verifySignature(java.security.cert.X509Certificate)) per verificare la firma prima di fornire [RevocationList](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/revocation/RevocationList.html) a qualsiasi API.
 
-   Per ulteriori informazioni, consulta [RevocationListFactory](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/revocation/RevocationListFactory.html).
+  Per ulteriori informazioni, consulta [RevocationListFactory](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/revocation/RevocationListFactory.html).
 
 * Chiamata [PolicyUpdateList.verifySignature](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/policyupdate/PolicyUpdateList.html#verifySignature(java.security.cert.X509Certificate)) per verificare la firma prima di fornire `PolicyUpdateList` a qualsiasi API.
 
-   Per ulteriori informazioni, consulta [PolicyUpdateList](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/policyupdate/PolicyUpdateList.html).
+  Per ulteriori informazioni, consulta [PolicyUpdateList](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/policyupdate/PolicyUpdateList.html).
 
 ## Utilizzo di CRL pubblicati da Adobe{#consuming-crls-published-by-adobe}
 
@@ -69,7 +68,7 @@ La protezione della ripetizione impedisce a un utente malintenzionato di riprodu
 
 Un attacco DoS è un tentativo da parte degli aggressori di impedire agli utenti legittimi di un servizio di utilizzare tale servizio. Ad esempio, un attacco di ripetizione che utilizza il contatore di rollback potrebbe essere utilizzato per &quot;ingannare&quot; il server licenze a pensare che il client DRM abbia ripristinato il suo stato, causando una sospensione dell’account.
 
-Per ulteriori informazioni sulla protezione dalla ripetizione, consulta [ AbstractRequestMessage.getMessageId()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/protocol/AbstractRequestMessage.html#getMessageId()).
+Per ulteriori informazioni sulla protezione dalla ripetizione, consulta [AbstractRequestMessage.getMessageId()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/protocol/AbstractRequestMessage.html#getMessageId()).
 
 ## Gestisci un elenco consentiti di pacchetti di contenuti attendibili {#maintain-a-allowlist-of-trusted-content-packagers}
 

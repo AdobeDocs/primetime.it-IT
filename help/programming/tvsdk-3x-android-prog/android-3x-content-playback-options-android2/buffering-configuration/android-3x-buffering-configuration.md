@@ -1,8 +1,7 @@
 ---
 description: Per offrire un’esperienza di visualizzazione più fluida, TVSDK a volte archivia il flusso video. Puoi configurare il modo in cui il lettore effettua il buffer.
 title: Buffering
-exl-id: 3b706420-878d-487a-8db7-cff2a12c2660
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '500'
 ht-degree: 0%
@@ -45,22 +44,22 @@ Il `MediaPlayer` fornisce metodi per impostare e ottenere il tempo di buffering 
 
    * Per impostare il tempo del buffer iniziale uguale al tempo del buffer di riproduzione:
 
-      ```
-      public static BufferControlParameters createSimple(long bufferTime)
-      ```
+     ```
+     public static BufferControlParameters createSimple(long bufferTime)
+     ```
 
    * Per impostare i tempi del buffer iniziale e di riproduzione:
 
-      ```
-      public static BufferControlParameters createDual( 
-        long initialBuffer,  
-        long bufferTime)
-      ```
+     ```
+     public static BufferControlParameters createDual( 
+       long initialBuffer,  
+       long bufferTime)
+     ```
+
    Se i parametri non sono validi, questi metodi generano `MediaPlayerException` con codice di errore `PSDKErrorCode.INVALID_ARGUMENT`, ad esempio quando sono soddisfatte le seguenti condizioni:
 
    * Il tempo del buffer iniziale è inferiore a zero.
    * Il tempo del buffer iniziale è maggiore del tempo del buffer.
-
 
 1. Per impostare i valori dei parametri del buffer, utilizzare quanto segue `MediaPlayer` metodo:
 

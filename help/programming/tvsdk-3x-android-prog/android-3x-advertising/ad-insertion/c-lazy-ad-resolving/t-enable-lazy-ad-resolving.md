@@ -2,8 +2,7 @@
 description: Puoi abilitare o disabilitare la funzione Lazy Ad Resolving utilizzando il meccanismo esistente Lazy Ad Loading (Lazy Ad Resolving è disabilitato per impostazione predefinita).
 keywords: Lazy;Risoluzione annuncio;Caricamento annuncio;delayLoading
 title: Abilita lazy ad resolving
-exl-id: a52a1f9a-3bf6-4193-8347-1ef248ba8884
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 0%
@@ -22,8 +21,8 @@ Puoi abilitare o disabilitare Lazy Ad Resolving chiamando [AdvertisingMetadata.s
    * Se *hasDelayAdLoading* restituisce true, TVSDK risolve solo gli annunci e le transizioni iniziali nello stato PREPARATO.
 
       * Gli annunci rimanenti vengono risolti e posizionati durante la riproduzione.
-   * Se *ha Preroll *o *hasLivePreroll* return false, TVSDK presuppone che non vi sia alcun annuncio preroll e avvia immediatamente la riproduzione del contenuto. Questi sono impostati per impostazione predefinita su true.
 
+   * Se *ha Preroll *o *hasLivePreroll* return false, TVSDK presuppone che non vi sia alcun annuncio preroll e avvia immediatamente la riproduzione del contenuto. Questi sono impostati per impostazione predefinita su true.
 
 **API rilevanti per la risoluzione lazy degli annunci:**
 

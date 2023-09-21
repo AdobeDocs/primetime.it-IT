@@ -1,8 +1,7 @@
 ---
 description: Gli errori client DRM sono un sottoinsieme degli errori lato client TVSDK.
 title: Riferimento messaggio di errore client DRM
-exl-id: 3d74cb92-c0a7-4eab-91b8-7e60a9c33df4
-source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '5173'
 ht-degree: 1%
@@ -96,5 +95,5 @@ Gli errori del client DRM sono un sottoinsieme degli errori TVSDK lato client, c
 |---|---|
 | 100-1000 | Riservato dal server licenze di Adobe |
 | 10000 - 20000 | Riservato dal server di personalizzazione di Adobe |
-| 20100-21000 | Riservato al keyserver Adobe Xbox.<br>Gli errori in questo intervallo vengono mappati sul riferimento generale ai messaggi di errore SDK del server DRM di Primetime nel modo seguente:<br>Errore del keyserver Xbox = Errore del server DRM + 0x20000<br>Ad esempio, il 20202 di errore del server chiave Xbox equivale all&#39;errore 202 dell&#39;SDK del server DRM |
+| 20100-21000 | Riservato al keyserver Adobe Xbox.<br>Gli errori in questo intervallo vengono mappati sul riferimento generale ai messaggi di errore SDK per Primetime DRM Server nel modo seguente:<br>Errore del keyserver Xbox = Errore del server DRM + 0x20000<br>Ad esempio, il 20202 di errore del server chiave Xbox equivale all&#39;errore 202 dell&#39;SDK del server DRM |
 | 100xxxx | Riservato per i codici di errore secondari del client |

@@ -1,8 +1,7 @@
 ---
 description: Per aggiungere il supporto VPAID 2.0, aggiungi una visualizzazione annuncio personalizzata e i listener appropriati.
 title: Implementazione dell’integrazione VPAID 2.0
-exl-id: 8a6b81e7-1034-48fc-87aa-4cb8ab305d15
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 0%
@@ -44,8 +43,7 @@ Per aggiungere il supporto VPAID 2.0:
    >
    >Elimina la visualizzazione dell’annuncio personalizzato solo quando viene chiamato il ripristino. Ad esempio:
    >
-   >
-   ```
+   >```
    >// on reset 
    >if (_mediaPlayer != null) { 
    >       _mediaPlayer.disposeCustomAdView(); 
@@ -55,8 +53,7 @@ Per aggiungere il supporto VPAID 2.0:
    >
    >Infine, prima di eliminare la visualizzazione dell’annuncio personalizzata, devi rimuoverla dal `FrameLayout`. Ad esempio:
    >
-   >
-   ```
+   >```
    >if (_playerFrame != null) 
    >       _playerFrame.removeAllViews(); 
    >```

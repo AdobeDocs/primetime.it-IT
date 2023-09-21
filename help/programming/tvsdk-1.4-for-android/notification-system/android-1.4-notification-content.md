@@ -1,8 +1,7 @@
 ---
 description: Gli oggetti MediaPlayerNotification forniscono informazioni sulle modifiche dello stato del lettore, avvisi ed errori. Gli errori che interrompono la riproduzione del video causano anche una modifica dello stato del lettore.
 title: Contenuto della notifica
-exl-id: b8298865-0389-4610-b495-b8735ef9cd56
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '707'
 ht-degree: 0%
@@ -74,7 +73,7 @@ Di seguito è riportato un esempio di come recuperare le notifiche.
 
 1. Serializza le voci più recenti dell’evento di notifica in formato JSON e invia le voci a un server remoto per la post-elaborazione.
 
-   Il server remoto potrebbe quindi visualizzare graficamente i dati forniti in tempo reale.
+   Il server remoto può quindi visualizzare graficamente i dati forniti in tempo reale.
 1. Per rilevare la perdita di eventi di notifica, cerca le lacune nella sequenza dei valori di indice degli eventi.
 
    Ogni evento di notifica ha un valore di indice che viene incrementato automaticamente da `session.NotificationHistory` classe.

@@ -1,8 +1,7 @@
 ---
 description: Gli eventi da TVSDK indicano lo stato del lettore, gli errori che si verificano, il completamento delle azioni richieste, ad esempio l’avvio della riproduzione di un video, o le azioni che si verificano implicitamente, ad esempio il completamento di un annuncio.
 title: Ascolta gli eventi di Primetime Player
-exl-id: 3a740245-a9e1-4e36-8761-f9f4b4e85b93
-source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 0%
@@ -19,13 +18,13 @@ Il runtime di Flash fornisce un meccanismo di eventi generico, che TVSDK utilizz
 
    * **Eventi richiesti**: ascolta tutti gli eventi di riproduzione.
 
-      >[!IMPORTANT]
-      >
-      >Evento di riproduzione `MediaPlayerStatusChangeEvent.STATUS_CHANGE` fornisce lo stato del lettore, compresi gli errori. Uno qualsiasi degli stati potrebbe influire sul passaggio successivo del lettore.
+     >[!IMPORTANT]
+     >
+     >Evento di riproduzione `MediaPlayerStatusChangeEvent.STATUS_CHANGE` fornisce lo stato del lettore, compresi gli errori. Uno qualsiasi degli stati potrebbe influire sul passaggio successivo del lettore.
 
    * **Altri eventi**: facoltativo, a seconda dell’applicazione.
 
-      Ad esempio, se incorpori pubblicità nella riproduzione, ascolta per tutti `AdBreakPlaybackEvent` e `AdPlaybackEvent` eventi.
+     Ad esempio, se incorpori pubblicità nella riproduzione, ascolta per tutti `AdBreakPlaybackEvent` e `AdPlaybackEvent` eventi.
 
 1. Implementa listener di eventi per ogni evento.
 

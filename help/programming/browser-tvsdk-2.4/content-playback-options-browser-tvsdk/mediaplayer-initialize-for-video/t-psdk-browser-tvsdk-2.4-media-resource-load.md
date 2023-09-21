@@ -1,8 +1,7 @@
 ---
 description: Carica una risorsa creando direttamente un’istanza di MediaResource e caricando il contenuto video da riprodurre.
 title: Caricare una risorsa multimediale in MediaPlayer
-exl-id: b775c33e-399c-4a03-a132-407944f07706
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '187'
 ht-degree: 0%
@@ -23,7 +22,7 @@ Carica una risorsa creando direttamente un’istanza di MediaResource e caricand
    * `MediaPlayerStatus.PREPARED`
    * `MediaPlayerStatus.ERROR`
 
-      Attraverso questi eventi, l&#39;oggetto MediaPlayer notifica all&#39;applicazione se la risorsa multimediale è stata caricata correttamente.
+     Attraverso questi eventi, l&#39;oggetto MediaPlayer notifica all&#39;applicazione se la risorsa multimediale è stata caricata correttamente.
 
 1. Quando lo stato del lettore multimediale cambia in `MediaPlayerStatus.INITIALIZED`, è possibile chiamare `MediaPlayer.prepareToPlay`.
 

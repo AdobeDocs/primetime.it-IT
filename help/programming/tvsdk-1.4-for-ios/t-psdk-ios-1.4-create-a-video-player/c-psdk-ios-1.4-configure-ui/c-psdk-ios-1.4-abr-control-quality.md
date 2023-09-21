@@ -1,8 +1,7 @@
 ---
 description: I flussi HLS e DASH forniscono codifiche (profili) di bitrate diverse per lo stesso breve burst di video. TVSDK può selezionare il livello di qualità per ogni burst in base alla larghezza di banda disponibile.
 title: Velocità bit adattive (ABR) per la qualità video
-exl-id: dd6d091a-58c9-4825-8c2c-a1257ef37f22
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '542'
 ht-degree: 0%
@@ -82,7 +81,7 @@ Tenere presente quanto segue:
 
 * L&#39;applicazione deve impostare `abrControlParameters` proprietà su `PTMediaPlayer` prima di configurare un `PTMediaPlayerItem` per rendere effettive le impostazioni iniziali e minime del bitrate.
 
-   Dopo l’avvio della riproduzione del contenuto, l’impostazione di una nuova istanza influisce solo sull’impostazione del bitrate massimo.
+  Dopo l’avvio della riproduzione del contenuto, l’impostazione di una nuova istanza influisce solo sull’impostazione del bitrate massimo.
 
 * Per aggiornare l&#39;impostazione del bitrate massimo durante la riproduzione, creare un nuovo `PTABRControlParameters` e impostarla sull’istanza del lettore.
 * È possibile aggiornare l’impostazione del bitrate massimo durante la riproduzione solo su iOS 8.0 e versioni successive. Per le versioni precedenti, il `maxBitrate` valore impostato prima dell’avvio della riproduzione del contenuto.

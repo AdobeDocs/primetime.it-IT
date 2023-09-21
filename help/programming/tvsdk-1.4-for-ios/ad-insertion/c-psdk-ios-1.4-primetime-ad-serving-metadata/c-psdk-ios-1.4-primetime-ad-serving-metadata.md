@@ -1,8 +1,7 @@
 ---
 description: TVSDK supporta la risoluzione e l’inserimento di annunci per flussi VOD e live/lineari.
 title: Metadati di Primetime ad server
-exl-id: 3723dd2f-292c-4ce5-9670-fda1b1f2b5df
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 0%
@@ -22,7 +21,6 @@ TVSDK supporta la risoluzione e l’inserimento di annunci per flussi VOD e live
 >* Il dominio dell’ad server, che specifica il dominio dell’ad server assegnato.
 >* Altri parametri di targeting.
 >
-
 
 ## Configurare i metadati di Primetime ad server {#section_86C4A3B2DF124770B9B7FD2511394313}
 

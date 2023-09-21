@@ -1,8 +1,7 @@
 ---
 title: Operazioni nell’account IQ
 description: Le operazioni in Account IQ comportano l’esecuzione di azioni per eseguire automazioni e operazioni in blocco sugli account degli abbonati e tenere traccia dei loro effetti.
-exl-id: ba6bceca-221c-42db-b207-804e4b9f6d54
-source-git-commit: 5b34fbe26078ae761d61179975366505c5628c9c
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 0%
@@ -68,6 +67,7 @@ Nella pagina Operazioni è possibile effettuare le operazioni riportate di segui
    * Un&#39;altra parte rappresenta il numero di conti attivi per quel periodo che erano originariamente nel segmento, ma che non soddisfano più i criteri del segmento di operazione.
 
    * La terza parte rappresenta i conti che non erano attivi in quel periodo.
+
    >[!NOTE]
    >
    >La prima barra rappresenta il numero di conti che soddisfano le condizioni del segmento di operazione all&#39;inizio del periodo di valutazione.

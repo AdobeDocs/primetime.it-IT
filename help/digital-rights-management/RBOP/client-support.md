@@ -1,8 +1,7 @@
 ---
 description: Questa sezione descrive le funzioni disponibili con diverse versioni di Flash Player e TVSDK.
 title: Supporto client RBOP
-exl-id: 1120587e-45cf-45cc-8b41-1886ab2ed2a4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 0%
@@ -23,11 +22,10 @@ Questa sezione descrive le funzioni disponibili con diverse versioni di Flash Pl
 >
 >* Tutte le piattaforme di Flash e mobili supportano Error Dispatch, tuttavia solo i client TVSDK elencati sopra elaborano gli errori relativi alla RBOP.
 >* Relativo a RBOP [Errori client DRM](https://help.adobe.com/en_US/primetime/drm/index.html#reference-DRM_Client_Error_Messages):
-   >    * **3371** - Risoluzione in formato non valido in base ai vincoli di protezione dell&#39;output nella licenza.
-   >    * **3372** - La risoluzione del contenuto è maggiore della risoluzione massima specificata nel vincolo di protezione dell&#39;output. (Questo può verificarsi se qualcuno ha tentato di inserire contenuto destinato a un altro dispositivo).
-   >    * **3373** - La risoluzione del contenuto è maggiore della risoluzione specificata dal vincolo di protezione dell&#39;output attualmente attivo. (Questo significa che dovremo effettuare il downgrade).
+>    * **3371** - Risoluzione in formato non valido in base ai vincoli di protezione dell&#39;output nella licenza.
+>    * **3372** - La risoluzione del contenuto è maggiore della risoluzione massima specificata nel vincolo di protezione dell&#39;output. (Questo può verificarsi se qualcuno ha tentato di inserire contenuto destinato a un altro dispositivo).
+>    * **3373** - La risoluzione del contenuto è maggiore della risoluzione specificata dal vincolo di protezione dell&#39;output attualmente attivo. (Questo significa che dovremo effettuare il downgrade).
 >
-
 
 **Downscaling automatico** - La tecnica utilizzata per effettuare il downscale varia in base alla piattaforma e alla versione del Flash Player:
 

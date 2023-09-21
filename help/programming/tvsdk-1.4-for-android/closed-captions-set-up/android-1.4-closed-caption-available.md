@@ -1,8 +1,7 @@
 ---
 description: I sottotitoli codificati visualizzano la porzione audio di un video come testo sullo schermo quando l'audio non è udibile o lo spettatore è ipoudente.
 title: Seleziona una traccia di didascalia corrente tra le tracce disponibili
-exl-id: 75970604-c318-4621-bad3-caab292c8a04
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '230'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # Seleziona una traccia di didascalia corrente tra le tracce disponibili{#select-a-current-caption-track-from-among-available-tracks}
 
-È possibile selezionare un brano da un elenco di brani con sottotitoli attualmente disponibili. Questa diventa la traccia corrente, che viene visualizzata quando la visibilità è attiva. Alcuni brani potrebbero non essere disponibili inizialmente, quindi ascolta l’evento che indica che sono stati resi disponibili altri brani.
+È possibile selezionare un brano da un elenco di brani con sottotitoli attualmente disponibili. Questa diventa la traccia corrente, che viene visualizzata quando la visibilità è attiva. Alcuni brani potrebbero non essere inizialmente disponibili, quindi ascolta l’evento che indica che sono stati resi disponibili altri brani.
 
 >[!TIP]
 >

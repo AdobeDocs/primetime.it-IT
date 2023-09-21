@@ -1,8 +1,7 @@
 ---
 description: Quando il lettore multimediale passa a un nuovo profilo, è possibile recuperare informazioni sullo switch, tra cui quando è stato cambiato, informazioni su larghezza e altezza o perché è stato utilizzato un bitrate diverso.
 title: Ottenere informazioni sul passaggio a un altro profilo
-exl-id: b46909fe-666a-4730-8922-15c3eb7a1cba
-source-git-commit: 0019a95fa9ca6d21249533d559ce844897ab67cf
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '274'
 ht-degree: 0%
@@ -22,7 +21,7 @@ Quando il lettore multimediale passa a un nuovo profilo, è possibile recuperare
    * `time`: ora del flusso in cui si è verificato il passaggio.
    * `description`: descrizione testuale del motivo di una modifica della velocità in bit, sotto forma di stringa di coppie chiave/valore separate da punto e virgola. Include un massimo di un elemento `Reason` e uno `Bitrate`. Se le informazioni non sono disponibili o la velocità in bit non è stata modificata, la stringa è vuota.
 
-      <table id="table_E400FD9C57FF40CBAC14AF6847CD8301"> 
+     <table id="table_E400FD9C57FF40CBAC14AF6847CD8301"> 
        <thead> 
          <tr> 
          <th colname="col1" class="entry"> Nome chiave </th> 
@@ -51,20 +50,20 @@ Quando il lettore multimediale passa a un nuovo profilo, è possibile recuperare
        </tbody> 
        </table>
 
-      Ecco alcuni esempi di restituiti `description` stringhe:
+     Ecco alcuni esempi di restituiti `description` stringhe:
 
-      ```
-      "Bitrate::=up;Reason::=Network Adaptation;" 
-      
-      "Bitrate::=down;Reason::=Failover;"
-      ```
+     ```
+     "Bitrate::=up;Reason::=Network Adaptation;" 
+     
+     "Bitrate::=down;Reason::=Failover;"
+     ```
 
    * `width`: numero intero che indica la larghezza in pixel.
    * `height`: numero intero che indica l’altezza in pixel.
 
-      >[!NOTE]
-      >
-      >I dati di larghezza e altezza sono disponibili solo quando sono inclusi nel `RESOLUTION` nel manifesto M3U8. Se le informazioni non sono incluse in M3U8, le proprietà width e height vengono impostate su 0, in quanto non fanno parte delle informazioni del profilo.
+     >[!NOTE]
+     >
+     >I dati di larghezza e altezza sono disponibili solo quando sono inclusi nel `RESOLUTION` nel manifesto M3U8. Se le informazioni non sono incluse in M3U8, le proprietà width e height vengono impostate su 0, in quanto non fanno parte delle informazioni del profilo.
 
 <!--<a id="example_A713D420AE2E4E3CB7B78C6BC732BE90"></a>-->
 

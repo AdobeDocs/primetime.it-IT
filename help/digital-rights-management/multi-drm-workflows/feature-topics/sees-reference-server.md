@@ -1,8 +1,7 @@
 ---
 description: Un modo per coordinare l’applicazione delle licenze e delle policy consiste nell’integrare queste funzioni in un server di adesione. L'Adobe fornisce il server di adesione di riferimento SEES con cui è possibile lavorare per creare il proprio server.
 title: Esempio di server di riferimento per il server dei diritti ExpressPlay (SEES)
-exl-id: aa5b63f4-dffc-4808-8aa6-6b8f63df592c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '189'
 ht-degree: 0%

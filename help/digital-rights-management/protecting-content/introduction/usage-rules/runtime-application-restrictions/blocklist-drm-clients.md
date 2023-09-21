@@ -2,8 +2,7 @@
 title: Elenco Bloccati di client DRM a cui è limitato l'accesso ai contenuti protetti
 description: Elenco Bloccati di client DRM a cui è limitato l'accesso ai contenuti protetti
 copied-description: true
-exl-id: 837e55ef-8dff-46eb-a952-c787d40d4a1b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 0%
@@ -23,7 +22,7 @@ Una versione client DRM di Primetime può essere identificata dagli attributi sp
 | Ambiente | `“PC”, “PortingKit”` | Corrispondenza esatta | Identifica se il client è in esecuzione su un desktop o su qualsiasi altro dispositivo. |
 | SO | `“Win”, “Mac”, “Linux”, “Android”, “iOS”, "ChromeOS"` | Corrispondenza esatta | Piattaforma |
 | Architettura | `“32”, “64”` | Corrispondenza esatta | 32 bit o 64 bit |
-| Tipo di schermo | `“PC”, “Mobile”, “TV”` | Corrispondenza esatta |  |
+| Tipo di schermo | `“PC”, “Mobile”, “TV”` | Corrispondenza esatta | |
 | Versione runtime | Numero di versione valido. Ad esempio: `“2.0.0”, "3.0", "4.0", "11.0"`, ecc. | Restituisce un risultato se la versione del client è minore o uguale alla versione specificata. | Il numero di versione viene specificato come combinazione di numeri e periodi (&quot;.&quot;) di qualsiasi lunghezza. |
 | Versione libreria DRM Primetime | Numero di versione valido. Ad esempio: `“2.0.0”`. | Restituisce un risultato se la versione del client è minore o uguale alla versione specificata. | Il numero di versione viene specificato come combinazione di numeri e periodi (&quot;.&quot;) di qualsiasi lunghezza. |
 | Fornitore OEM | Stringa del fornitore OEM che può trovarsi nel certificato di runtime rilasciato a un cliente che ha eseguito il porting di Primetime DRM su un dispositivo. | Corrispondenza esatta | Stringa di identificazione del fornitore OEM per il dispositivo che utilizza il kit di portabilità. |

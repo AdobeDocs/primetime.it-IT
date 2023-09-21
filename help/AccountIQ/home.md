@@ -1,8 +1,7 @@
 ---
 title: Panoramica di Account IQ
 description: Account IQ aiuta gli MVPD e i programmatori a comprendere i rischi per le loro entrate e le operazioni aziendali e a determinare le azioni più efficaci da intraprendere per mitigare gli impatti della frode delle credenziali.
-exl-id: c0d85fc8-b5ab-4284-802e-82f52eff401f
-source-git-commit: 4475faca828510153a7ec3e505704ee8d8b044d0
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '403'
 ht-degree: 0%
@@ -44,7 +43,6 @@ Approfondiamo i grafici e i rapporti in ciascuna di queste sezioni.
 >* [Modelli di utilizzo](/help/AccountIQ/usage-patterns.md)
 >* [Glossario dei termini di prodotto](/help/AccountIQ/product-concepts.md)
 >* [White paper su Account IQ](https://www.adobe.com/content/dam/dx/us/en/products/primetime/resources/primetime-account-iq-whitepaper.pdf)
-
 
 <!-- Credential sharing is rampant and prevalent among subscribers in the video streaming industry. To add to it, understanding, identifying, and acting on password sharing is a complex process. There is complexity involved in understanding the subscriber usage behavior and developing a holistic view of viewer activity—for example, distinguishing sharing among members within the same household and outside. Due to this challenge, streaming service providers have inhibitions in acting against password sharing.
 

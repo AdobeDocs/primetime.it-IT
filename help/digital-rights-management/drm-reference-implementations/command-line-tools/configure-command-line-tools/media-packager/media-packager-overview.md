@@ -2,8 +2,7 @@
 title: Panoramica
 description: Panoramica
 copied-description: true
-exl-id: 866b3147-c28b-41b0-8653-06ba867354c5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1315'
 ht-degree: 0%
@@ -40,7 +39,7 @@ java -jar AdobePackager.jar
 * `source` : nome del file da crittografare.
 * `dest` : nome del file crittografato risultante.
 
-   Se si specifica una directory, il file crittografato viene salvato automaticamente nella directory specificata con lo stesso nome specificato come file di origine. Tuttavia, non è possibile specificare una directory di destinazione che includa il file di origine.
+  Se si specifica una directory, il file crittografato viene salvato automaticamente nella directory specificata con lo stesso nome specificato come file di origine. Tuttavia, non è possibile specificare una directory di destinazione che includa il file di origine.
 
 **Creare pacchetti di più file con la stessa chiave** (per il supporto di velocità bit multiple):
 

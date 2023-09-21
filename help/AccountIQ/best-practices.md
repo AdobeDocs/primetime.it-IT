@@ -1,8 +1,7 @@
 ---
 title: Best practice
 description: Continua a leggere per scoprire come utilizzare al meglio lo strumento Account IQ.
-exl-id: 55901f5d-d9c1-4ee5-9349-afa28445b324
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 0%

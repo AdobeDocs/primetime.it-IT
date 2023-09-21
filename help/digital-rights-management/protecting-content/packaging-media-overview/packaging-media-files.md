@@ -2,8 +2,7 @@
 title: Panoramica sulla creazione di pacchetti di file multimediali
 description: Panoramica sulla creazione di pacchetti di file multimediali
 copied-description: true
-exl-id: 88c593a7-33b5-4773-b283-2ab16f9e8c3a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 0%
@@ -28,7 +27,7 @@ Un contenuto specifico può avere più criteri DRM. Ad esempio, è possibile con
 >
 >L’architettura consente di specificare i criteri DRM di utilizzo e di associarli al contenuto quando viene creato il pacchetto. Prima che un client possa riprodurre il contenuto, deve acquisire una licenza per un computer specifico. La licenza specifica le regole di utilizzo applicate e fornisce la chiave da utilizzare per decrittografare il contenuto. Il criterio DRM rappresenta un modello per la generazione di una licenza. Tuttavia, il server licenze può ignorare le regole di utilizzo quando rilascia una licenza. La licenza potrebbe non essere valida a causa di tali vincoli, ad esempio i tempi di scadenza o le finestre di riproduzione.
 
-Primetime DRM fornisce un’API per il passaggio nel CEK. Se non viene specificato alcun CEK, l’SDK lo genera in modo casuale. In genere è necessario un CEK diverso per ogni sezione di contenuto. Tuttavia, in Dynamic Streaming, è probabile che si utilizzi lo stesso CEK per tutti i file che compongono tale contenuto. Pertanto, un utente ha bisogno di una sola licenza per passare facilmente da una velocità bit a un’altra. Se desideri utilizzare la stessa chiave e la stessa licenza per più parti di contenuto, è necessario trasmettere lo stesso `DRMParameters` oggetto a `MediaEncrypter.encryptContent()`, o passa nel CEK utilizzando `V2KeyParameters.setContentEncryptionKey()`. Se desideri utilizzare una chiave e una licenza diverse per ogni sezione di contenuto, devi creare una nuova `DRMParameters` per ciascun file.
+Primetime DRM fornisce un’API per il passaggio nel CEK. Se non viene specificato alcun CEK, l’SDK lo genera in modo casuale. In genere è necessario un CEK diverso per ogni sezione di contenuto. Tuttavia, in Dynamic Streaming, è probabile che si utilizzi lo stesso CEK per tutti i file che compongono tale contenuto. Pertanto, un utente ha bisogno di una sola licenza per passare senza problemi da una velocità bit a un’altra. Se desideri utilizzare la stessa chiave e la stessa licenza per più parti di contenuto, è necessario trasmettere lo stesso `DRMParameters` oggetto a `MediaEncrypter.encryptContent()`, o passa nel CEK utilizzando `V2KeyParameters.setContentEncryptionKey()`. Se desideri utilizzare una chiave e una licenza diverse per ogni sezione di contenuto, devi creare una nuova `DRMParameters` per ciascun file.
 
 Quando si crea un pacchetto del contenuto utilizzando la rotazione dei tasti, è possibile controllare i tasti di rotazione utilizzati e la frequenza con cui cambiano i tasti. `F4VDRMParameters` e `FLVDRMParameters` implementare `KeyRotationParameters` di rete. Tramite questa interfaccia, puoi abilitare la rotazione dei tasti. È inoltre necessario specificare un `RotatingContentEncryptionKeyProvider`. Per ogni esempio crittografato, questa classe determina la chiave di rotazione da utilizzare. È possibile implementare un proprio provider o utilizzare `TimeBasedKeyProvider` incluso con l’SDK. Questa implementazione genera in modo casuale una nuova chiave dopo un numero specificato di secondi.
 

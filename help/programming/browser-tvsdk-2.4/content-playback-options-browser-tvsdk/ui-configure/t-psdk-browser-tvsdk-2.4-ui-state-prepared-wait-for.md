@@ -1,8 +1,7 @@
 ---
 description: Prima di poter utilizzare la maggior parte dei metodi del lettore TVSDK del browser, il lettore deve trovarsi in uno stato valido.
 title: Attesa di uno stato valido
-exl-id: 14f6a5db-4f81-448b-b291-487569a7bc4e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '130'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: In genere, tutte le licenze DRM di Primetime, al momento della creazione, sono associate a un dispositivo univoco. Questo binding impedisce agli utenti di condividere licenze tra dispositivi diversi senza autorizzazione. Oltre al binding per dispositivo, Primetime DRM consente di associare le licenze a un dominio dispositivo o a un gruppo di dispositivi.
 title: Riproduci contenuto crittografato utilizzando il supporto del dominio
-exl-id: 3c9badfc-046b-4c56-bde1-7b3b708bfaa2
-source-git-commit: 59f7f8aa82be59c4012ee80648032600590bc4e1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%
@@ -28,6 +27,7 @@ Per riprodurre contenuto crittografato con Primetime DRM, effettuare le seguenti
 
       * Ottenere il nome utente e la password dell&#39;utente e richiamare `DRMManager.authenticate(deviceGroup.serverURL, deviceGroup.domain, username, password)`.
       * Ottieni un token di autenticazione memorizzato nella cache/pregenerato e richiama `DRMManager.setAuthenticationToken()`.
+
    1. Richiama `DRMManager.addToDeviceGroup()`
 1. Ottenere la licenza per il contenuto eseguendo una delle attività seguenti:
    1. Utilizza il `DRMManager.loadVoucher()` metodo.

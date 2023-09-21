@@ -1,8 +1,7 @@
 ---
 title: Informazioni sugli ID utente
 description: Informazioni sugli ID utente
-exl-id: 813a8501-db72-4850-a387-c8db6120db80
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '602'
 ht-degree: 0%
@@ -24,7 +23,7 @@ Di seguito sono riportati i diversi modi in cui l’ID utente viene rappresentat
 | Proprietà | Finalità | Hash | Firma digitale | Descrizione |
 | --- | --- | --- | --- | --- |
 | Proprietà GUID sendTrackingData() | Tracciamento/analisi | Sì | No | : ID utente MVPD, con hash per Adobe. L&#39;ID utente non può essere ricondotto all&#39;origine all&#39;MVPD. </br> </br> - Questo tipo di ID non dispone di firma digitale, pertanto non è sicuro per la prevenzione delle frodi. Tuttavia, è sufficiente per l’analisi.  </br> </br> : questo modulo dell’ID utente viene fornito lato client su tutti gli eventi generati dall’autenticazione Adobe Primetime nel flusso AuthN/AuthZ. |
-| Proprietà sessionGUID del token multimediale corto | Tracciamento delle frodi relative all’utilizzo simultaneo | Sì | Sì | : corrisponde all’ID utente tramite sendTrackingData(), tuttavia è dotato di firma digitale per proteggerne l’integrità e può essere utilizzato per il monitoraggio delle frodi. </br> </br> - Deve essere elaborato sul lato server dopo aver utilizzato la libreria di convalida e può essere analizzato per individuare eventuali modelli di frode prima di rilasciare il flusso video al client.  È compito del programmatore eseguire una qualsiasi di queste operazioni. |
+| Proprietà sessionGUID del token multimediale breve | Tracciamento delle frodi relative all’utilizzo simultaneo | Sì | Sì | : corrisponde all’ID utente tramite sendTrackingData(), tuttavia è dotato di firma digitale per proteggerne l’integrità e può essere utilizzato per il monitoraggio delle frodi. </br> </br> - Deve essere elaborato sul lato server dopo aver utilizzato la libreria di convalida e può essere analizzato per individuare eventuali modelli di frode prima di rilasciare il flusso video al client.  È compito del programmatore eseguire una qualsiasi di queste operazioni. |
 | getMetadata(), proprietà userID | Collegamento di account, indagine antifrode con MVPD | No | No | - Questa proprietà consente ad Adobe di esporre l&#39;ID utente MVPD della sorgente effettiva al programmatore. </br> </br> - Nella configurazione di Adobe può essere impostato come crittografato o meno (a seconda della preferenza MVPD). Se crittografato, verrà crittografato con la chiave pubblica del certificato del programmatore fornito ad Adobe, in modo che non venga esposto in modo chiaro al client. </br> </br> - Questo fornisce al programmatore l&#39;ID utente effettivo dall&#39;MVPD, quindi è qualcosa che può essere utilizzato per il collegamento dell&#39;account o per l&#39;indagine antifrode direttamente con l&#39;MVPD. |
 
 

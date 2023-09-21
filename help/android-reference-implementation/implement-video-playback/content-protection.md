@@ -1,8 +1,7 @@
 ---
 description: Il lettore Primetime supporta l’integrazione di Primetime DRM come flussi di lavoro DRM personalizzati. Ciò significa che l'applicazione deve implementare i flussi di lavoro di autenticazione DRM prima di riprodurre il flusso.
 title: Protezione dei contenuti DRM
-exl-id: c1904d15-023f-49fb-95f9-d157d17b3516
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 0%
@@ -29,47 +28,47 @@ Per creare un gestore della protezione dei contenuti:
 
 * Inizializzare il sistema DRM.
 
-   Esempio Nell&#39;esempio di codice riportato di seguito viene illustrato come chiamare `loadDRMServices` nell’applicazione `onCreate()` per garantire che qualsiasi inizializzazione necessaria per il sistema DRM venga avviata prima dell&#39;avvio della riproduzione.
+  Esempio Nell&#39;esempio di codice riportato di seguito viene illustrato come chiamare `loadDRMServices` nell’applicazione `onCreate()` per garantire che qualsiasi inizializzazione necessaria per il sistema DRM venga avviata prima dell&#39;avvio della riproduzione.
 
-   ```java
-   @Override 
-    public void onCreate() { 
-        super.onCreate();  
-        DrmManager.loadDRMServices(getApplicationContext()); 
-    }
-   ```
+  ```java
+  @Override 
+   public void onCreate() { 
+       super.onCreate();  
+       DrmManager.loadDRMServices(getApplicationContext()); 
+   }
+  ```
 
 * Precaricare le licenze DRM.
 
-   Nell&#39;esempio di codice riportato di seguito viene illustrato come caricare `VideoItems` al termine del caricamento dell’elenco dei contenuti. In questo modo, le licenze DRM vengono acquisite dal server licenze e memorizzate nella cache locale, in modo che all’avvio della riproduzione il contenuto venga caricato con il minimo ritardo.
+  Nell&#39;esempio di codice riportato di seguito viene illustrato come caricare `VideoItems` al termine del caricamento dell’elenco dei contenuti. In questo modo, le licenze DRM vengono acquisite dal server licenze e memorizzate nella cache locale, in modo che all’avvio della riproduzione il contenuto venga caricato con il minimo ritardo.
 
-   ```java
-   DrmManager.preLoadDrmLicenses(item.getUrl(),  
-     new MediaPlayerItemLoader.LoaderListener() { 
-   
-       @Override 
-       public void onLoadComplete(MediaPlayerItem item) { 
-           Player.logger.w(LOG_TAG + "::DRMPreload#onLoadComplete", item.getResource().getUrl()); 
-       } 
-   
-       @Override 
-       public void onError(MediaErrorCode errorCode, String s) { 
-           Player.logger.e(LOG_TAG + "::DRMPreload#onError", s); 
-       } 
-   } 
-   ```
+  ```java
+  DrmManager.preLoadDrmLicenses(item.getUrl(),  
+    new MediaPlayerItemLoader.LoaderListener() { 
+  
+      @Override 
+      public void onLoadComplete(MediaPlayerItem item) { 
+          Player.logger.w(LOG_TAG + "::DRMPreload#onLoadComplete", item.getResource().getUrl()); 
+      } 
+  
+      @Override 
+      public void onError(MediaErrorCode errorCode, String s) { 
+          Player.logger.e(LOG_TAG + "::DRMPreload#onError", s); 
+      } 
+  } 
+  ```
 
-   >[!NOTE]
-   >
-   >È possibile impostare Precache DRM license (Licenze DRM precedenti) su ON (Attivate) nell&#39;interfaccia utente Settings (Impostazioni) per prememorizzare le licenze DRM nella cache durante il caricamento del contenuto. Tuttavia, si consiglia di precaricare un elemento specifico invece di prememorizzare nella cache tutte le licenze nel catalogo.
-   >
-   >![](assets/precache-drm-licenses.jpg)
+  >[!NOTE]
+  >
+  >È possibile impostare Precache DRM license (Licenze DRM precedenti) su ON (Attivate) nell&#39;interfaccia utente Settings (Impostazioni) per prememorizzare le licenze DRM nella cache durante il caricamento del contenuto. Tuttavia, si consiglia di precaricare un elemento specifico invece di prememorizzare nella cache tutte le licenze nel catalogo.
+  >
+  >![](assets/precache-drm-licenses.jpg)
 
 * Da utilizzare `ManagerFactory` per implementare la gestione degli errori DRM, assicurarsi che la seguente riga di codice sia nel [!DNL PlayerFragment.java] file:
 
-   ```java
-   drmManager = ManagerFactory.getDrmManager(config, mediaPlayer);
-   ```
+  ```java
+  drmManager = ManagerFactory.getDrmManager(config, mediaPlayer);
+  ```
 
 **Documentazione API correlata**
 

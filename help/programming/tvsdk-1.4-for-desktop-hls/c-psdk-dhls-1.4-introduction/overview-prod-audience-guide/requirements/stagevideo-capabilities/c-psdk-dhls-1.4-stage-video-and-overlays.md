@@ -1,8 +1,7 @@
 ---
 description: È possibile utilizzare le sovrapposizioni HTML con StageVideo per visualizzare gli elementi dell'interfaccia utente nel piano video dell'elenco di visualizzazione del Flash. Questo piano si trova sopra il piano StageVideo, pertanto StageVideo viene sempre visualizzato dietro qualsiasi elemento dell'elenco di visualizzazione del Flash.
 title: Sovrapposizioni StageVideo e HTML
-exl-id: 6beda4c8-0981-4a38-bd5e-5714b9ec7efa
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 0%
@@ -42,6 +41,6 @@ Di seguito sono riportati i requisiti minimi del browser per l’utilizzo delle 
 
 * Chrome versione 26 e successive
 
-   >[!IMPORTANT]
-   >
-   >Chrome Pepper su Windows XP e Windows Vista non è supportato.
+  >[!IMPORTANT]
+  >
+  >Chrome Pepper su Windows XP e Windows Vista non è supportato.

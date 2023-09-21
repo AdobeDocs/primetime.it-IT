@@ -2,8 +2,7 @@
 title: Conteggio computer al momento del rilascio delle licenze
 description: Conteggio computer al momento del rilascio delle licenze
 copied-description: true
-exl-id: de052e98-8ae3-4e12-8f77-787293edda39
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '208'
 ht-degree: 0%
@@ -18,6 +17,6 @@ Se le regole business richiedono la registrazione del numero di computer per un 
 
 >[!NOTE]
 >
->Questo confronto non è pratico per le distribuzioni che consentono l’accesso anonimo. In tali casi `MachineId.getUniqueID()` può essere utilizzato, tuttavia, questo ID non sarà lo stesso se l&#39;utente accede al contenuto sia dal Flash che da Adobe AIR® runtime e non sopravvivrà se l&#39;utente riformatta il proprio disco rigido.
+>Questo confronto non è pratico per le distribuzioni che consentono l’accesso anonimo. In tali casi `MachineId.getUniqueID()` può essere utilizzato, tuttavia, questo ID non sarà lo stesso se l&#39;utente accede al contenuto sia dal Flash che dai runtime di Adobe AIR® e non sopravvivrà se l&#39;utente riformatta il disco rigido.
 
 Per ulteriori informazioni su `MachineToken.getMachineId()`e `MachineId.matches()`, vedere *Riferimento API per l’accesso agli Adobi*.

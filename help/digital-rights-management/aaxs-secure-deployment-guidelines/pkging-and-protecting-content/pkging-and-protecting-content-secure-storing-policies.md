@@ -2,8 +2,7 @@
 title: Archiviazione sicura delle policy
 description: Archiviazione sicura delle policy
 copied-description: true
-exl-id: fd335a0c-7eb1-4159-958f-7302fce98cef
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '145'
 ht-degree: 0%

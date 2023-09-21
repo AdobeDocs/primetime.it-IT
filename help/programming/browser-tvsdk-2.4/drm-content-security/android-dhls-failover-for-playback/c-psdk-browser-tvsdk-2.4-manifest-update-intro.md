@@ -1,8 +1,7 @@
 ---
 description: Il browser TVSDK può rilevare le informazioni di riproduzione modificate nei manifesti master m3u8 per lo streaming live e aggiornare le informazioni di riproduzione durante la riproduzione del flusso. Il TVSDK del browser supporta un set dinamico di profili di velocità in bit quando i profili appaiono o scompaiono dal manifesto principale, incluse velocità in bit di profilo non sovrapposte tra gli aggiornamenti.
 title: Aggiornamento Live master-manifesto
-exl-id: 2f89131c-5204-465b-8757-b47e955f5894
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 0%

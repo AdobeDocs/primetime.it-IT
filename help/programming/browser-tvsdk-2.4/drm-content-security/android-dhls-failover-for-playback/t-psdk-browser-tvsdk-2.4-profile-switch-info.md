@@ -1,8 +1,7 @@
 ---
 description: Quando il lettore multimediale passa a un nuovo profilo, è possibile recuperare informazioni sullo switch, tra cui quando è stato cambiato, informazioni su larghezza e altezza o perché è stato utilizzato un bitrate diverso.
 title: Ottenere informazioni sul passaggio a un altro profilo
-exl-id: 3ef4b319-dd78-4abd-9c2d-ab1d608f6cea
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 0%

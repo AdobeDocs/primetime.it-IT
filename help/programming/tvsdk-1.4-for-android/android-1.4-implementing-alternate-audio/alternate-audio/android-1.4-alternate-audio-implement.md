@@ -1,8 +1,7 @@
 ---
 description: L'audio di associazione tardiva utilizza MediaPlayer per riprodurre un video specificato in una playlist HLS M3U8 e che può contenere diversi flussi audio alternativi.
 title: Accedere a tracce audio alternative
-exl-id: d357bcc9-2996-42f0-a733-482f59e938ac
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '107'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Browser TVSDK fornisce generatori di opportunità e resolver di contenuto predefiniti che inseriscono annunci nella timeline. Questi generatori e resolver si basano su tag non standard nel manifesto. L’applicazione potrebbe dover modificare la timeline in base alle opportunità identificate nel manifesto.
 title: Generatori di opportunità e risolutori di contenuti
-exl-id: a47acd22-8b1b-4c66-a7eb-a4d99afb5f17
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 0%

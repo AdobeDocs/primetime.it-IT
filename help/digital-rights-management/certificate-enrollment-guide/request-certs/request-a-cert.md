@@ -2,8 +2,7 @@
 title: Richiedi un certificato (richiedente)
 description: Richiedi un certificato (richiedente)
 copied-description: true
-exl-id: 290231ec-1146-4bfb-a449-b8ff85704197
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 0%
@@ -27,9 +26,9 @@ ht-degree: 0%
    * Carica il file CSR.
    * Copia le informazioni CSR dalla CSR e incollale nel modulo.
 
-      >[!NOTE]
-      >
-      >Per copiare le informazioni CSR, seleziona il testo tra il tag di inizio e non il tag di inizio `(-----BEGIN CERTIFICATE REQUEST-----)` e tag di fine `(-----END CERTIFICATE REQUEST-----)`.
+     >[!NOTE]
+     >
+     >Per copiare le informazioni CSR, seleziona il testo tra il tag di inizio e non il tag di inizio `(-----BEGIN CERTIFICATE REQUEST-----)` e tag di fine `(-----END CERTIFICATE REQUEST-----)`.
 
 1. Fai clic su **[!UICONTROL Submit Request]** pulsante.
 

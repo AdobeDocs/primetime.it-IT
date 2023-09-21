@@ -1,8 +1,7 @@
 ---
 description: TVSDK include metodi, proprietà ed eventi per determinare i tassi validi, i tassi correnti, se è supportata la riproduzione con trucco e altre funzionalità correlate all'avanzamento e al riavvolgimento rapido.
 title: Elementi API per la modifica della velocità
-exl-id: 282d0d12-5244-4abd-893a-7e3c4d2f4fe8
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 3%

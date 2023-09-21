@@ -1,8 +1,7 @@
 ---
 description: Il comportamento della riproduzione multimediale è influenzato dalla ricerca, dalla messa in pausa, dall’avanzamento o dal riavvolgimento rapido e dalla pubblicità.
 title: Comportamento di riproduzione predefinito e personalizzato con annunci
-exl-id: 50e2d3ea-77e0-494d-b558-55ea1798ce27
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '656'
 ht-degree: 0%
@@ -23,10 +22,10 @@ Ecco il comportamento di riproduzione per contenuti live/lineari:
 
 * La ripresa della riproduzione dopo una pausa determina la riproduzione del contenuto memorizzato nel buffer al momento della pausa.
 
-   Se la posizione di ripresa è ancora nell&#39;intervallo di riproduzione, la riproduzione deve essere continua. In caso contrario, TVSDK passa al nuovo punto di attivazione. È inoltre possibile eseguire un&#39;operazione di ricerca e selezionare un punto di riproduzione diverso.
+  Se la posizione di ripresa è ancora nell&#39;intervallo di riproduzione, la riproduzione deve essere continua. In caso contrario, TVSDK passa al nuovo punto di attivazione. È inoltre possibile eseguire un&#39;operazione di ricerca e selezionare un punto di riproduzione diverso.
 * TVSDK risolve gli annunci tra i segnali dopo la posizione in cui l’applicazione entra in riproduzione dal vivo.
 
-   La riproduzione inizia dopo la risoluzione del primo segnale. Il valore predefinito per l’immissione della riproduzione live è il punto live del client, ma puoi scegliere una posizione diversa. Tutti i segnali prima della posizione iniziale vengono risolti dopo che l&#39;applicazione esegue una ricerca nella finestra del DVR.
+  La riproduzione inizia dopo la risoluzione del primo segnale. Il valore predefinito per l’immissione della riproduzione live è il punto live del client, ma puoi scegliere una posizione diversa. Tutti i segnali prima della posizione iniziale vengono risolti dopo che l&#39;applicazione esegue una ricerca nella finestra del DVR.
 
 La tabella seguente descrive come TVSDK gestisce gli annunci e le interruzioni pubblicitarie durante la riproduzione:
 

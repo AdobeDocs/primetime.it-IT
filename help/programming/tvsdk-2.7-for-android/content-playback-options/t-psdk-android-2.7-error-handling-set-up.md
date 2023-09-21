@@ -1,8 +1,7 @@
 ---
 description: È possibile impostare una posizione per gestire gli errori.
 title: Configurare la gestione degli errori
-exl-id: 594cd9b8-491f-4972-990a-5657f87c7f89
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '90'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Questa procedura illustra come creare un pulsante che consenta all'utente di selezionare una traccia di sottotitoli codificati.
 title: Consenti agli utenti di modificare la traccia dei sottotitoli
-exl-id: b8c058ef-384c-4ad4-a289-dfd6bf3dfbdb
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%

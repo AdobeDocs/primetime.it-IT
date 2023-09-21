@@ -1,8 +1,7 @@
 ---
 description: La proprietà MediaPlayerItem.timedMetadata consente di accedere a tutti gli oggetti TimedMetadata creati dai tag playlist/manifest o dai tag ID3 all'interno del flusso multimediale. La proprietà MediaPlayerItem.hasTimedMetadata indica se nel supporto corrente è presente un tag personalizzato sottoscritto.
 title: Notifiche per i tag manifesto
-exl-id: 1a91fa47-edd5-4496-9755-17c906a3cf54
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 0%

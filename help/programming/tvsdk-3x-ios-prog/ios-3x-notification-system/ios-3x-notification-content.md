@@ -1,8 +1,7 @@
 ---
 description: Gli oggetti PTNotification forniscono informazioni sulle modifiche dello stato del lettore, avvisi ed errori. Gli errori che interrompono la riproduzione del video causano anche un cambiamento nello stato del lettore.
 title: Contenuto della notifica
-exl-id: 62423718-b154-4105-82b2-f6e389105ec8
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 0%

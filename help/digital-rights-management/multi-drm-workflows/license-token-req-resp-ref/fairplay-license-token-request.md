@@ -1,8 +1,7 @@
 ---
 description: L'interfaccia dei token di licenza FairPlay fornisce servizi di produzione e test.
 title: Richiesta/risposta token di licenza FairPlay
-exl-id: 7073a74b-d907-4d45-8550-4305655c33f5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '814'
 ht-degree: 4%
@@ -38,9 +37,9 @@ L&#39;interfaccia dei token di licenza FairPlay fornisce servizi di produzione e
 
 * **Risposta di esempio:**
 
-   ```
-   https://fp.service.expressplay.com:80/hms/fp/rights/?ExpressPlayToken=<base64-encoded ExpressPlay token>
-   ```
+  ```
+  https://fp.service.expressplay.com:80/hms/fp/rights/?ExpressPlayToken=<base64-encoded ExpressPlay token>
+  ```
 
 **Parametri query richiesta**
 

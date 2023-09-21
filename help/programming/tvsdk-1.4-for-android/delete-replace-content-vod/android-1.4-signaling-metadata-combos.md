@@ -1,8 +1,7 @@
 ---
 description: Puoi contrassegnare, eliminare e sostituire gli intervalli di tempo nei flussi VOD utilizzando diverse combinazioni di metadati e modalità di segnalazione degli annunci. Diverse combinazioni di modalità di segnalazione e metadati determinano comportamenti diversi.
 title: Effetto sull’inserimento e l’eliminazione di annunci dalla modalità di segnalazione degli annunci e dalle combinazioni di metadati di annunci
-exl-id: 0b265471-2d5c-432b-b1c9-c850ce99f2f5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '426'
 ht-degree: 0%
@@ -181,7 +180,7 @@ Puoi contrassegnare, eliminare e sostituire gli intervalli di tempo nei flussi V
   <tr> 
    <td></td> 
    <td> Contrassegna, Auditude </td> 
-   <td> Annuncio Personalizzato, Auditude </td> 
+   <td> Annuncio personalizzato, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
    <td> Intervalli contrassegnati, nessun annuncio inserito </td> 
   </tr> 

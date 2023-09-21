@@ -1,8 +1,7 @@
 ---
 description: Personalizza l’implementazione di riferimento per integrare l’autenticazione Adobe Primetime per l’ambiente di produzione.
 title: Integrare l’autenticazione Primetime
-exl-id: ef6dc75d-d00f-481f-a620-4ec402cbebb6
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '767'
 ht-degree: 0%

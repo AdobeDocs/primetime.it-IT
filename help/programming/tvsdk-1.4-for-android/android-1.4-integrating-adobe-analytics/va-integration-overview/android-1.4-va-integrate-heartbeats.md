@@ -1,8 +1,7 @@
 ---
 description: Puoi configurare il lettore per il tracciamento e l’analisi dell’utilizzo dei video.
 title: Inizializzare e configurare l’analisi video
-exl-id: 82013882-e314-44fd-82f2-0640575d3c68
-source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '615'
 ht-degree: 0%
@@ -89,7 +88,7 @@ Per configurare il tracciamento video nel lettore:
    1. Compila e genera l’applicazione.
    1. Distribuire ed eseguire l&#39;applicazione in bundle.
 
-      Per ulteriori informazioni su queste impostazioni AppMeasurement, vedi [Misurazione dei video in Adobe Analytics](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=en).
+      Per ulteriori informazioni su queste impostazioni di AppMeasurement, vedi [Misurazione dei video in Adobe Analytics](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=en).
 1. Inizializza e configura i metadati di tracciamento heartbeat video.
 
    >[!IMPORTANT]

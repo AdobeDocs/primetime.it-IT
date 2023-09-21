@@ -1,8 +1,7 @@
 ---
 title: Panoramica di MVPD
 description: Panoramica di MVPD
-exl-id: b918550b-96a8-4e80-af28-0a2f63a02396
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '2736'
 ht-degree: 0%
@@ -77,6 +76,7 @@ Servizi web senza client (per dispositivi non compatibili con il web): servizi w
 >[!NOTE]
 >
 >In qualità di MVPD, i servizi web devono essere in grado di riconoscere le richieste di autenticazione e autorizzazione dell’autenticazione Adobe Primetime e di rispondere con i dati richiesti nel formato previsto.
+>
 
 L’autenticazione Adobe Primetime consente di fornire ai clienti la gestione federata delle identità, nota anche come autenticazione e autorizzazione Single Sign-On (SSO). Con l’autenticazione Adobe Primetime, gli abbonati non dovranno effettuare di nuovo l’accesso dopo la prima autenticazione, fino a quando quest’ultima sarà consentita dall’MVPD. In genere, 30 giorni. A tal fine, l’autenticazione Adobe Primetime fornisce ai clienti un dominio comune per i token di autenticazione. Queste informazioni sullo stato di autenticazione sono disponibili per tutti i siti partecipanti che sono integrati con un dato MVPD.
 
@@ -84,7 +84,7 @@ L’autenticazione Adobe Primetime consente di fornire ai clienti la gestione fe
 Attualmente, la maggior parte delle integrazioni di autenticazione Adobe Primetime con MVPD utilizza il protocollo SAML, uno degli standard di autenticazione primari. L’autenticazione Adobe Primetime funge da provider di servizi proxy nell’architettura SAML e mantiene la risposta di autenticazione SAML come token sicuro nel dominio comune di Adobe. L’autenticazione di Adobe Primetime è conforme a SAML 2.0. Tuttavia, anche se a questo punto l’autenticazione Adobe Primetime viene generalmente utilizzata con le soluzioni SAML SSO, l’architettura di autenticazione Adobe Primetime non è associata ad alcun protocollo specifico. Pertanto, è possibile aggiungere nel tempo il supporto per nuovi protocolli, ad esempio quelli basati su OAuth 2.0 o su protocolli personalizzati.
 
 
-Adobe collabora con un team tecnico di MVPD per configurare l’autenticazione di Adobe Primetime in modo da soddisfare le esigenze di eventuali integrazioni esistenti. L&#39;integrazione è gratuita per gli MVPD, presumendo un&#39;integrazione &quot;standard&quot; e requisiti minimi di supporto (documentazione e supporto e-mail di base). Se un MVPD richiede un supporto significativo o una tempistica aumentata, è possibile che venga addebitata una tariffa di supporto o che il fornitore desideri collaborare con una terza parte che ha familiarità con la nostra soluzione, come Synacor.
+Adobe collabora con un team tecnico di MVPD per configurare l’autenticazione di Adobe Primetime in modo da soddisfare le esigenze di eventuali integrazioni esistenti. L&#39;integrazione è gratuita per gli MVPD, presumendo un&#39;integrazione &quot;standard&quot; e requisiti minimi di supporto (documentazione e supporto e-mail di base). Se un MVPD richiede un supporto significativo o una tempistica aumentata, può essere addebitata una tariffa di supporto, o il fornitore potrebbe voler lavorare con una terza parte a conoscenza della nostra soluzione, come Synacor.
 
 
 L’autenticazione Adobe Primetime supporta anche la gestione efficiente della logica di business MVPD, come segue:
@@ -136,7 +136,7 @@ Il server back-end di autenticazione di Adobe Primetime, ospitato da Adobe:
 
 La soluzione Adobe Primetime per l’autenticazione è incentrata sulla generazione di parti specifiche di dati ottenuti al completamento dei flussi di lavoro di autenticazione/autorizzazione. Questi dati sono denominati token. Hanno una durata limitata e sono archiviati in modo sicuro in posizioni dipendenti dalla piattaforma. Alla scadenza, i token devono essere ririlasciati riavviando i flussi di lavoro di autenticazione e/o autorizzazione.
 
-Esistono tre tipi di token rilasciati durante i flussi di lavoro di autenticazione/autorizzazione. Due sono &quot;di lunga durata&quot; e forniscono continuità nell’esperienza di visualizzazione dell’utente. Il terzo, un token di breve durata, fornisce supporto per le best practice del settore per ridurre le frodi attraverso la copia di flusso. I valori time-to-live (&quot;TTL&quot;) per i token sono impostati in base agli accordi tra MVPD e Programmatori. Puoi scegliere un valore TTL che soddisfi al meglio le esigenze della tua azienda e dei tuoi clienti.
+Esistono tre tipi di token rilasciati durante i flussi di lavoro di autenticazione/autorizzazione. Due sono di &quot;lunga durata&quot; e forniscono continuità nell’esperienza di visualizzazione dell’utente. Il terzo, un token di breve durata, fornisce supporto per le best practice del settore per ridurre le frodi attraverso la copia di flusso. I valori time-to-live (&quot;TTL&quot;) per i token sono impostati in base agli accordi tra MVPD e Programmatori. Puoi scegliere un valore TTL che soddisfi al meglio le esigenze della tua azienda e dei tuoi clienti.
 
 **Token di autenticazione di lunga durata**. L’autenticazione ha esito positivo quando un cliente utilizza l’autenticazione Adobe Primetime per accedere correttamente al proprio account MVPD. L’autenticazione Adobe Primetime genera quindi un token di autenticazione di lunga durata (&quot;authN&quot;) associato al dispositivo richiedente e (a seconda dell’MVPD) un identificatore univoco globale (&quot;GUID&quot;) che identifica l’utente in modo anonimo.
 

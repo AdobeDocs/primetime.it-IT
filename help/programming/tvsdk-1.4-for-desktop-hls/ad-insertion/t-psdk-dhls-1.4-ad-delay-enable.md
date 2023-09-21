@@ -1,8 +1,7 @@
 ---
 description: Puoi specificare se consentire la riproduzione prima che tutti gli annunci vengano caricati e posizionati nella timeline. Avviando la riproduzione in questo modo, l’utente può accedere più rapidamente al contenuto principale. Questa funzione è applicabile solo ai DVR live e non funziona, ad esempio, con le risorse VOD.
 title: Attiva il caricamento lento degli annunci
-exl-id: 6b70a7ae-28ce-4a19-9560-26e937c721cd
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: TVSDK gestisce gli errori di intervallo di tempo in base al problema specifico, unendo o riordinando gli intervalli di tempo definiti in modo errato.
 title: Gestione degli errori di eliminazione e sostituzione degli annunci
-exl-id: 86970989-82e0-4e6f-81fb-beee70870c69
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 0%

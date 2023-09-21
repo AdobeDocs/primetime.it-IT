@@ -1,8 +1,7 @@
 ---
 description: Gli oggetti MediaPlayerStatus forniscono informazioni sulle modifiche dello stato del lettore. Gli oggetti di notifica forniscono informazioni su avvisi ed errori. Gli errori che interrompono la riproduzione del video causano anche un cambiamento nello stato del lettore. È possibile implementare i listener di eventi per acquisire e rispondere agli eventi (oggetti MediaPlayerEvent).
 title: Notifiche ed eventi per stato, attività, errori e registrazione del lettore
-exl-id: c25e834e-ffa0-444c-9285-331e6841ac29
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 0%
@@ -75,7 +74,7 @@ Ecco un esempio di come recuperare le notifiche:
    >
    >1. Diminuire l&#39;intervallo di tempo che guida il thread che esegue il polling per i nuovi eventi.
    >1. Aumenta le dimensioni dell’elenco di notifiche.
-
+   >
 
 1. Serializza le voci più recenti dell’evento di notifica in formato JSON e invia le voci a un server remoto per la post-elaborazione.
 

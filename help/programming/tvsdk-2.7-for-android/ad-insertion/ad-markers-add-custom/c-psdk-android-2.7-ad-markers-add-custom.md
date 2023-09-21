@@ -1,8 +1,7 @@
 ---
 description: Utilizzando i marcatori di annunci personalizzati, puoi contrassegnare sezioni specifiche del contenuto principale come periodi di contenuto relativi agli annunci.
 title: Aggiungere marcatori annuncio personalizzati
-exl-id: 310b2b81-873f-4b37-b18d-d586e6408978
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 0%
@@ -21,7 +20,7 @@ Il tracciamento degli annunci non viene gestito internamente da TVSDK, ad esempi
 
 * L’interruzione pubblicitaria
 
-   Un’interruzione pubblicitaria è un elenco ordinato di singoli annunci consecutivi.
+  Un’interruzione pubblicitaria è un elenco ordinato di singoli annunci consecutivi.
 * Un singolo annuncio
 
 Gli eventi di riproduzione vengono attivati separatamente per le interruzioni e gli annunci all’inizio e alla fine di ogni annuncio.

@@ -1,8 +1,7 @@
 ---
 description: TVSDK supporta gli annunci banner correlati, ovvero gli annunci che accompagnano un annuncio lineare e che spesso rimangono sulla pagina al termine dell’annuncio lineare. L'applicazione è responsabile della visualizzazione dei banner correlati forniti con un annuncio lineare.
 title: Banner pubblicitari
-exl-id: e7b0ce38-e4b0-4e10-8d76-2d43d8eff665
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '557'
 ht-degree: 0%
@@ -18,15 +17,15 @@ Quando visualizzi gli annunci correlati, segui queste raccomandazioni:
 * Tenta di presentare tutti gli annunci banner associati a un annuncio video che rientrano nel layout del lettore.
 * Presentare un banner correlato solo se la posizione corrisponde esattamente all&#39;altezza e alla larghezza specificate.
 
-   >[!TIP]
-   >
-   >Non ridimensionare il banner.
+  >[!TIP]
+  >
+  >Non ridimensionare il banner.
 
 * Presenta il banner/i correlato/i il prima possibile dopo l’inizio dell’annuncio.
 * Non sovrapporre il contenitore principale annuncio/video con i banner correlati.
 * Continua a visualizzare i banner associati dopo la fine dell’annuncio.
 
-   Lo standard prevede la visualizzazione di ogni banner complementare fino a quando non si dispone di un banner sostitutivo.
+  Lo standard prevede la visualizzazione di ogni banner complementare fino a quando non si dispone di un banner sostitutivo.
 
 ## Dati banner aziendale {#companion-banner-data}
 
@@ -73,7 +72,7 @@ Ogni `PtAdAsset` fornisce informazioni sulla visualizzazione della risorsa.
 
 Per visualizzare gli annunci banner, devi creare istanze di banner e consentire a TVSDK di ascoltare eventi relativi agli annunci.
 
-TVSDK fornisce un elenco di banner pubblicitari correlati associati a un annuncio lineare tramite `PTMediaPlayerAdPlayStartedNotification` notifica.
+TVSDK fornisce un elenco di banner pubblicitari correlati associati a un annuncio lineare tramite `PTMediaPlayerAdPlayStartedNotification` evento di notifica.
 
 I manifesti possono specificare gli annunci banner correlati in base a:
 

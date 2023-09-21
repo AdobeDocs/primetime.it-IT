@@ -1,8 +1,7 @@
 ---
 description: I flussi HLS e DASH forniscono codifiche (profili) di bitrate diverse per lo stesso breve burst di video. TVSDK può selezionare il livello di qualità per ogni burst in base alla larghezza di banda disponibile.
 title: Velocità bit adattive (ABR) per la qualità video
-exl-id: 2fd24360-4159-4330-a479-02310c6aa525
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '973'
 ht-degree: 0%
@@ -37,7 +36,7 @@ TVSDK controlla costantemente il bit rate per garantire che il contenuto venga r
      <ul id="ul_058D0FFC944C476A83BB9E756B95DEBD"> 
       <li id="li_C690A12DC34C4754B01C2D0616FB6A0A"> <span class="codeph"> CONSERVATIVE_POLICY </span>: passa al profilo con la velocità in bit successiva più elevata quando la larghezza di banda è del 50% superiore alla velocità in bit corrente. </li> 
       <li id="li_FF5BDB099B554940AC296938C7A12B81"> <span class="codeph"> MODERATE_POLICY </span>: passa al profilo con velocità in bit successiva più elevata quando la larghezza di banda è del 20% superiore alla velocità in bit corrente. </li> 
-      <li id="li_E602508429864C279BF78360E95718A6"> <span class="codeph"> AGGRESSIVE_POLICY </span>: passa immediatamente al profilo del bitrate più alto quando la larghezza di banda è superiore al bitrate corrente. </li> 
+      <li id="li_E602508429864C279BF78360E95718A6"> <span class="codeph"> AGGRESSIVE_POLICY </span>: passa immediatamente al profilo del bit rate più alto quando la larghezza di banda è superiore al bit rate corrente. </li> 
      </ul> </p> <p>Se il bitrate iniziale è zero o non è specificato, ma è specificato un criterio, la riproduzione inizia con il profilo di bitrate più basso per conservativo, il profilo più vicino al bitrate mediano dei profili disponibili per moderato e il profilo di bitrate più alto per aggressivo. </p> <p>Se specificate, le velocità bit minima e massima funzionano in modo limitato. </p> <p> <span class="codeph"> ABRPolicy </span> restituisce l'impostazione corrente dalla <span class="codeph"> ABRControlParameters </span> enum: CONSERVATIVE_POLICY, MODERATE_POLICY o AGGRESSIVE_POLICY. </p> </td> 
   </tr> 
  </tbody> 
@@ -81,8 +80,7 @@ Questa classe include anche `toABRControlParameters()` metodo helper. Utilizzare
    >
    >Ad esempio, nell&#39;esempio seguente tutti i parametri vengono inizializzati in base ai valori predefiniti, quindi viene impostato solo il criterio su conservativo e la velocità in bit massima viene limitata a 1000000:
    >
-   >
-   ```
+   >```
    >var abrBuilder:ABRControlParametersBuilder =  
    >   new ABRControlParametersBuilder(); 
    >abrBuilder.policy = ABRControlParameters.CONSERVATIVE_POLICY; 
@@ -90,6 +88,7 @@ Questa classe include anche `toABRControlParameters()` metodo helper. Utilizzare
    >mediaPlayer.abrControlParameters =  
    >   abrBuilder.toABRControlParameters();
    >```
+   >
 
 1. Modificare i singoli parametri ABR in fase di runtime.
 
