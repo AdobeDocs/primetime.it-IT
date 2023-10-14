@@ -1,17 +1,17 @@
 ---
 product: adobe primetime
 audience: end-user
-user-guide-title: Guida al Digital Rights Management Primetime
+user-guide-title: Guida di Primetime Digital Rights Management
 user-guide-description: Consente di ottenere ulteriori informazioni sui vari scenari utente nel Digital Rights Management (DRM).
 source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
 source-wordcount: '2215'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 
-# Guida del Digital Rights Management {#drm}
+# Guida di Digital Rights Management {#drm}
 
 + [Panoramica di DRM](home.md)
 + Guida alla registrazione dei certificati {#certificate-enrollment-guide}
@@ -66,7 +66,7 @@ ht-degree: 0%
    + Opzioni di packaging {#packaging-options}
       + [Utilizza il pacchetto offline di Primetime incluso](cloud-quick-start/packaging-options/use-offline-packager.md)
       + [Utilizzare un codificatore di terze parti](cloud-quick-start/packaging-options/use-third-party-encoder.md)
-      + [Usa server Adobe Medium](cloud-quick-start/packaging-options/use-adobe-media-server.md)
+      + [Utilizza Adobe Media Server](cloud-quick-start/packaging-options/use-adobe-media-server.md)
    + [Testare il contenuto del pacchetto](cloud-quick-start/test-packaged-content.md)
    + [Errori di valutazione](cloud-quick-start/triaging-errors/client-error-triaging.md)
    + Autenticazione/adesione personalizzata {#custom-auth-ent}
@@ -508,7 +508,7 @@ ht-degree: 0%
    + [Creazione di lettori video](aaxs-protecting-content/content-creating-video-players.md)
 + Implementazioni di riferimento di accesso Adobe {#reference-implementation}
    + [Panoramica - Utilizzo delle implementazioni di riferimento](aaxs-reference-implementations/overview.md)
-   + [Strumenti della riga di comando per creare pacchetti di contenuto e creare elenchi di revoche ](aaxs-reference-implementations/command-line-tools/aaxs-ref-impl-command-line-overview.md)
+   + [Strumenti della riga di comando per creare pacchetti di contenuto e creare elenchi di revoche](aaxs-reference-implementations/command-line-tools/aaxs-ref-impl-command-line-overview.md)
    + Policy Manager {#policy-manager}
       + [Utilizzo di Policy Manager](aaxs-reference-implementations/command-line-tools/policy-manager/using-aaxs-policy-manager.md)
       + [Proprietà del file di configurazione](aaxs-reference-implementations/command-line-tools/policy-manager/config-file-properties.md)
@@ -574,7 +574,7 @@ ht-degree: 0%
       + Impostazione delle preferenze {#setting-preferences}
          + [Panoramica sull’impostazione delle preferenze](aaxs-reference-implementations/fam-air-app-usage/initial-fam-setup-set-prefs/initial-fam-setup-set-prefs-overview.md)
          + [Preferenze Packager](aaxs-reference-implementations/fam-air-app-usage/initial-fam-setup-set-prefs/initial-fam-setup-pkg-prefs.md)
-         + [Preferenze elenco aggiornamento criteri](aaxs-reference-implementations/fam-air-app-usage/initial-fam-setup-set-prefs/initial-fam-setup-pul-prefs.md)
+         + [Preferenze elenco aggiornamenti criteri](aaxs-reference-implementations/fam-air-app-usage/initial-fam-setup-set-prefs/initial-fam-setup-pul-prefs.md)
          + [Preferenze HSM](aaxs-reference-implementations/fam-air-app-usage/initial-fam-setup-set-prefs/initial-fam-setup-hsm-prefs.md)
       + Creazione di criteri {#policy-creation}
          + [Crea un nuovo criterio](aaxs-reference-implementations/fam-air-app-usage/initial-fam-usage-policy-creation/initial-fam-usage-policy-create-new.md)

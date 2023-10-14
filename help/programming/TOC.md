@@ -1,16 +1,16 @@
 ---
 audience: end-user
-user-guide-title: Guida alla programmazione di Primetime
+user-guide-title: Guida alla programmazione per Primetime
 user-guide-description: Consente di imparare a sviluppare applicazioni e lettori video utilizzando Java su dispositivi Android e Objective-C su dispositivi iOS.
 source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
 source-wordcount: '4342'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
 
-# Guida alla programmazione di Primetime {#programming}
+# Guida alla programmazione per Primetime {#programming}
 
 + [Panoramica sulla programmazione](home.md)
 + TVSDK 3x per Android {#tvsdk-3x-android-prog}
@@ -722,7 +722,7 @@ ht-degree: 0%
       + [Panoramica dell’interfaccia DRM di Primetime](tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/r-psdk-ios-1.4-drm-interface.md)
       + [Apple FairPlay nelle applicazioni TVSDK](tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/c-psdk-ios-1.4-apple-fairplay-tvsdk/c-psdk-ios-1.4-apple-fairplay-tvsdk.md)
       + [Elenco consentiti dell’applicazione iOS](tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/t-psdk-ios-1.4-allowlist-your-ios-application.md)
-   + [Notifica per stato, attività, errori e registri del lettore ](tvsdk-1.4-for-ios/c-psdk-ios-1.4-notification-system/c-psdk-ios-1.4-notification-system.md)
+   + [Notifica per stato, attività, errori e registri del lettore](tvsdk-1.4-for-ios/c-psdk-ios-1.4-notification-system/c-psdk-ios-1.4-notification-system.md)
    + [Registrazione personalizzata](tvsdk-1.4-for-ios/c-psdk-ios-1.4-customized-logging/c-psdk-ios-1.4-customized-logging.md)
    + [Failover](tvsdk-1.4-for-ios/c-psdk-ios-1.4-understanding-failover.md)
    + [Metriche di fatturazione](tvsdk-1.4-for-ios/c-psdk-ios-1.4-billing/c-psdk-ios-1.4-billing.md)

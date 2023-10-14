@@ -1,16 +1,16 @@
 ---
 product: adobe primetime
 audience: end-user
-user-guide-title: Guida per gli Ad Insertion di Primetime
+user-guide-title: Guida di Primetime Ad Insertion
 source-git-commit: 2b8aa2d4d20dac0f6f8467043dd2e55a88e9e9f1
 workflow-type: tm+mt
 source-wordcount: '176'
-ht-degree: 0%
+ht-degree: 7%
 
 ---
 
 
-# Guida per gli Ad Insertion di Primetime {#ad-insertion}
+# Guida di Primetime Ad Insertion {#ad-insertion}
 
 + [Ad Insertion Adobe Primetime](home.md)
 + Annunci Ad Insertion di Primetime{#announcements}

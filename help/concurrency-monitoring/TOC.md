@@ -2,17 +2,17 @@
 product: adobe primetime
 feature: Concurrency Monitoring
 audience: end-user
-user-guide-title: Monitoraggio concorrenza Primetime
+user-guide-title: Monitoraggio simultaneità di Primetime
 user-guide-description: Scopri come definire e applicare limiti all’utilizzo simultaneo in più applicazioni.
 source-git-commit: 11ca161ebaaeca08b6bdc84f9bd719dfc8509d09
 workflow-type: tm+mt
 source-wordcount: '145'
-ht-degree: 0%
+ht-degree: 15%
 
 ---
 
 
-# Guida al monitoraggio della concorrenza di Primetime {#cm}
+# Monitoraggio simultaneità di Primetime aiuto {#cm}
 
 + [Introduzione al monitoraggio della concorrenza](cm-home.md)
 + [Glossario del monitoraggio della concorrenza](cm-glossary.md)

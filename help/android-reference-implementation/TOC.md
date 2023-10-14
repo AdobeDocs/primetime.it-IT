@@ -6,7 +6,7 @@ user-guide-description: Consente di comprendere il TVSDK e modificare i gestori 
 source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
 source-wordcount: '246'
-ht-degree: 0%
+ht-degree: 8%
 
 ---
 

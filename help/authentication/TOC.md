@@ -2,17 +2,17 @@
 product: adobe primetime
 audience: end-user
 feature: Authentication
-user-guide-title: Autenticazione Primetime
-user-guide-description: Autenticazione Primetime è una soluzione di adesione per TV Everywhere, che fornisce un framework modulare per determinare se qualcuno che richiede l’accesso a una risorsa ne ha diritto.
+user-guide-title: Primetime Authentication
+user-guide-description: Primetime Authentication è una soluzione di gestione dei diritti per TV Everywhere, che fornisce un framework modulare per determinare se chi richiede l’accesso a una risorsa ne abbia diritto.
 source-git-commit: a294b5628ec7184491cf8b67a60fd6cf9410c431
 workflow-type: tm+mt
 source-wordcount: '750'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
 
-# Guida all’autenticazione di Primetime {#authentication}
+# Primetime Authentication Aiuto {#authentication}
 
 + [Panoramica sull’autenticazione Primetime](home.md)
 + Concetti di autenticazione Primetime {#authentication-concepts}
